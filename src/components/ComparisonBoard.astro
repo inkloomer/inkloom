@@ -1,0 +1,18 @@
+---
+// InkLoom/src/components/ComparisonBoard.astro
+---
+<div style="width: 100%; border: 1px solid var(--sl-color-hairline); border-radius: 12px; background-color: var(--sl-color-bg-sidebar); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05); overflow: hidden; margin-bottom: 32px; padding: 20px 16px;">
+  <!-- Board Header -->
+  <div style="display: flex; align-items: center; border-bottom: 2px solid var(--sl-color-hairline); padding-bottom: 12px; margin-bottom: 12px;">
+    <div style="width: 130px; font-weight: bold; font-size: 13px; color: var(--sl-color-text-muted);">对比维度</div>
+    <div style="flex: 1; display: flex; gap: 12px; min-width: 0;">
+      <div style="flex: 1; text-align: center; font-size: 13px; font-weight: bold; color: var(--sl-color-accent);">模型一 (物理截留)</div>
+      <div style="flex: 1; text-align: center; font-size: 13px; font-weight: bold; color: var(--sl-color-accent);">模型二 (告知明知)</div>
+      <div style="flex: 1; text-align: center; font-size: 13px; font-weight: bold; color: var(--sl-color-accent);">模型三 (隐瞒猜出)</div>
+    </div>
+  </div>
+  <!-- Slots for Rails -->
+  <div style="display: flex; flex-direction: column; gap: 6px;">
+    <slot />
+  </div>
+</div>

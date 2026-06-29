@@ -1,0 +1,22 @@
+---
+// InkLoom/src/components/ActionBlock.astro
+import MoneyBadge from './MoneyBadge.astro';
+
+interface Props {
+  label: string;
+  money?: string;
+  badge?: string;
+}
+
+const { label, money, badge } = Astro.props;
+---
+<div style="margin-bottom: 8px; padding: 8px 12px; background-color: var(--sl-color-bg); border: 1px solid var(--sl-color-hairline); border-radius: 6px; display: flex; align-items: center; justify-content: space-between; gap: 8px; transition: all 0.2s;" class="glow-capsule">
+  <div style="font-size: 12px; color: var(--sl-color-text); font-weight: 500; display: flex; align-items: center; gap: 6px;">
+    <span style="width: 4px; height: 4px; background-color: var(--sl-color-text-muted); border-radius: 50%;"></span>
+    {label}
+  </div>
+  <div style="display: flex; align-items: center; gap: 6px; flex-shrink: 0;">
+    {money && <MoneyBadge amount={money} />}
+    {badge && <span style="font-size: 10px; font-weight: bold; padding: 2px 6px; border-radius: 4px; background-color: var(--sl-color-accent-low); color: var(--sl-color-accent-high); border: 1px solid var(--sl-color-hairline);">{badge}</span>}
+  </div>
+</div>

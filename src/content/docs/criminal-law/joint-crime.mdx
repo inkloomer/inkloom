@@ -14,6 +14,10 @@ import VisualFlow from '../../../components/VisualFlow.astro';
 import ModelCard from '../../../components/ModelCard.astro';
 import ModelAnalysis from '../../../components/ModelAnalysis.astro';
 import ActorColumn from '../../../components/ActorColumn.astro';
+import ActionBlock from '../../../components/ActionBlock.astro';
+import ConclusionBlock from '../../../components/ConclusionBlock.astro';
+import ComparisonBoard from '../../../components/ComparisonBoard.astro';
+import ComparisonRail from '../../../components/ComparisonRail.astro';
 
 # 共同受贿与斡旋受贿定性图解
 
@@ -42,18 +46,20 @@ import ActorColumn from '../../../components/ActorColumn.astro';
   
   <ModelAnalysis>
     <ActorColumn actor="甲" title="行贿主体">
-      - 对乙行贿既遂 <MoneyBadge amount="40万" />
-      - 对丙行贿既遂 <MoneyBadge amount="60万" />
-      - **结论**：两罪**想象竞合**，从一重罪处断。
+      <ActionBlock label="对乙行贿既遂" money="40万" />
+      <ActionBlock label="对丙行贿既遂" money="60万" />
+      <ConclusionBlock type="想象竞合" label="从一重罪处断" />
     </ActorColumn>
     <ActorColumn actor="乙" title="中介主体">
-      - **收钱端**：收甲 100 万 ➔ 成立**斡旋受贿既遂** <MoneyBadge amount="40万" />。
-      - **送钱端**：给丙 60 万 ➔ 成立**行贿既遂** <MoneyBadge amount="60万" /> + 丙受贿罪**共犯**既遂 <MoneyBadge amount="60万" />（想象竞合择一重）。
-      - **整体罪数**：收钱端与送钱端构成**牵连犯**，择一重罪论处。
+      <ActionBlock label="收钱端：收甲 100 万" money="40万" badge="斡旋受贿既遂" />
+      <ActionBlock label="送钱端：给丙 60 万" money="60万" badge="行贿罪既遂" />
+      <ActionBlock label="送钱端：成立受贿共犯" money="60万" badge="共犯既遂" />
+      <ConclusionBlock type="牵连犯" label="收钱端与送钱端构成牵连关系，从一重罪处断" />
     </ActorColumn>
     <ActorColumn actor="丙" title="受贿主体">
-      - 物理上收受 60 万并为甲谋取利益。
-      - **结论**：成立**普通受贿罪既遂** <MoneyBadge amount="60万元" />。
+      <ActionBlock label="物理上收受钱款" money="60万" />
+      <ActionBlock label="承诺/实际为甲减税办事" />
+      <ConclusionBlock type="独立既遂" label="普通受贿罪既遂 (60万元)" />
     </ActorColumn>
   </ModelAnalysis>
 </ModelCard>
@@ -64,19 +70,20 @@ import ActorColumn from '../../../components/ActorColumn.astro';
   
   <ModelAnalysis>
     <ActorColumn actor="甲" title="行贿主体">
-      - 对乙行贿既遂 <MoneyBadge amount="100万" />
-      - 对丙行贿既遂 <MoneyBadge amount="100万" />
-      - **结论**：两罪**想象竞合**，从一重罪处断。
+      <ActionBlock label="对乙行贿既遂" money="100万" />
+      <ActionBlock label="对丙行贿既遂" money="100万" />
+      <ConclusionBlock type="想象竞合" label="从一重罪处断" />
     </ActorColumn>
     <ActorColumn actor="乙" title="中介主体">
-      - 成立**斡旋受贿既遂** <MoneyBadge amount="100万" />。
-      - 成立丙受贿罪的**共犯**（既遂 <MoneyBadge amount="100万" />）。
-      - **整体罪数**：两罪构成**想象竞合**，从一重罪处断。
-      - **注意**：因无给钱行为与意图，**不构成行贿罪**。
+      <ActionBlock label="斡旋受贿既遂" money="100万" />
+      <ActionBlock label="成立丙受贿共犯" money="100万" />
+      <ActionBlock label="因无给钱行为与意图" badge="不构成行贿罪" />
+      <ConclusionBlock type="想象竞合" label="两罪想象竞合，从一重罪处断" />
     </ActorColumn>
     <ActorColumn actor="丙" title="受贿主体">
-      - 明知乙收受了 100 万元并默许乙代为收受，仍利用职务便利为甲办事。
-      - **结论**：成立**受贿罪既遂** <MoneyBadge amount="100万元" />（共同犯罪）。
+      <ActionBlock label="明知乙收钱并办事" />
+      <ActionBlock label="合意由乙代为收受" money="100万" />
+      <ConclusionBlock type="共犯既遂" label="受贿罪既遂 (共同受贿 100万元)" />
     </ActorColumn>
   </ModelAnalysis>
 </ModelCard>
@@ -87,74 +94,60 @@ import ActorColumn from '../../../components/ActorColumn.astro';
   
   <ModelAnalysis>
     <ActorColumn actor="甲" title="行贿主体">
-      - 对乙与对丙行贿既遂各 <MoneyBadge amount="100万" />，**想象竞合**从一重。
+      <ActionBlock label="对乙与对丙行贿均既遂" money="100万" />
+      <ConclusionBlock type="想象竞合" label="想象竞合从一重罪处断" />
     </ActorColumn>
     <ActorColumn actor="乙" title="中介主体">
-      - 仅构成**斡旋受贿既遂** <MoneyBadge amount="100万" />。
-      - **注意**：因乙隐瞒收钱事实，双方无受贿故意联络，**不成立丙受贿罪的共犯**。
+      <ActionBlock label="仅构成斡旋受贿既遂" money="100万" />
+      <ActionBlock label="隐瞒收钱事实 ➔ 无共犯故意" badge="不成立共犯" />
+      <ActionBlock label="无送钱意图 ➔ 不成行贿" badge="不成立行贿" />
+      <ConclusionBlock type="独立既遂" label="仅成立斡旋受贿罪既遂" />
     </ActorColumn>
     <ActorColumn actor="丙" title="受贿主体">
-      - 单方猜出乙收受了 100 万，默认由乙代为收受，并为甲办事。
-      - **结论**：成立**受贿罪既遂** <MoneyBadge amount="100万元" />（不构成共犯，但个人受贿既遂）。
+      <ActionBlock label="单方猜出乙收钱并仍办事" />
+      <ActionBlock label="默认由中介人乙代收" money="100万" />
+      <ConclusionBlock type="独立既遂" label="受贿罪既遂 (独立既遂，非共犯)" />
     </ActorColumn>
   </ModelAnalysis>
 </ModelCard>
 
-{/* Pulse Glowing WarningBox using JSX elements to avoid parser conflicts */}
-<WarningBox type="danger" title="🚨 特别注意（2023年主观题真题核心陷阱）" class="pulse-warning">
-  <p style={{ margin: '0 0 8px 0' }}>当 <strong>甲</strong> 给 <strong>乙</strong> 送钱时说：<em>"这100万元就是专门给你的，如果终端办事人丙要钱，你再跟我说"</em>。</p>
-  <ol style={{ paddingLeft: '20px', margin: '0' }}>
-    <li><strong>排除概括故意</strong>：甲主观上无行贿丙的故意。</li>
-    <li><strong>定性结果</strong>：对乙构成 <strong>行贿罪</strong>；对丙 <strong>不构成行贿罪</strong>。</li>
-  </ol>
+{/* Pulse Glowing WarningBox */}
+<WarningBox type="danger" title="🚨 特别注意（2023年真题核心陷阱）" class="pulse-warning">
+  当 **甲** 给 **乙** 送钱时说：_"这100万元就是专门给你的，如果终端办事人丙要钱，你再跟我说"_。
+
+  1. **排除概括故意**：甲主观上无行贿丙的故意。
+  2. **定性结果**：对乙构成 **行贿罪**；对丙 **不构成行贿罪**。
 </WarningBox>
 
-## 📊 核心考点对比记忆矩阵 (Premium Matrix)
+## 📊 核心考点对比记忆矩阵 (Premium Board)
 
-<div style="width: 100%; overflow-x: auto; border-radius: 12px; border: 1px solid var(--sl-color-hairline); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05); overflow: hidden; margin-bottom: 32px;">
-  <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 13.5px;">
-    <thead>
-      <tr style="background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%); color: white;">
-        <th style="padding: 14px 16px; font-weight: 600; font-size: 14px;">判定维度</th>
-        <th style="padding: 14px 16px; font-weight: 600; font-size: 14px; border-left: 1px solid rgba(255,255,255,0.1);">模型一 (截留60万)</th>
-        <th style="padding: 14px 16px; font-weight: 600; font-size: 14px; border-left: 1px solid rgba(255,255,255,0.1);">模型二 (告知明知)</th>
-        <th style="padding: 14px 16px; font-weight: 600; font-size: 14px; border-left: 1px solid rgba(255,255,255,0.1);">模型三 (隐瞒猜出)</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr class="table-row" style="border-bottom: 1px solid var(--sl-color-hairline);">
-        <td style="padding: 14px 16px; font-weight: bold; background-color: var(--sl-color-bg-sidebar); color: var(--sl-color-text); width: 130px;">丙受贿罪定性</td>
-        <td style="padding: 14px 16px; border-left: 1px solid var(--sl-color-hairline);">普通受贿既遂 60万</td>
-        <td style="padding: 14px 16px; border-left: 1px solid var(--sl-color-hairline);">受贿既遂 100万 (默认代收)</td>
-        <td style="padding: 14px 16px; border-left: 1px solid var(--sl-color-hairline);">受贿既遂 100万 (默认代收)</td>
-      </tr>
-      <tr class="table-row" style="border-bottom: 1px solid var(--sl-color-hairline);">
-        <td style="padding: 14px 16px; font-weight: bold; background-color: var(--sl-color-bg-sidebar); color: var(--sl-color-text);">乙对丙的共犯</td>
-        <td style="padding: 14px 16px; border-left: 1px solid var(--sl-color-hairline);">✓ 构成共犯</td>
-        <td style="padding: 14px 16px; border-left: 1px solid var(--sl-color-hairline);">✓ 构成共犯</td>
-        <td style="padding: 14px 16px; border-left: 1px solid var(--sl-color-hairline);">✗ 不构成共犯 (无合意)</td>
-      </tr>
-      <tr class="table-row" style="border-bottom: 1px solid var(--sl-color-hairline);">
-        <td style="padding: 14px 16px; font-weight: bold; background-color: var(--sl-color-bg-sidebar); color: var(--sl-color-text);">乙对丙的行贿</td>
-        <td style="padding: 14px 16px; border-left: 1px solid var(--sl-color-hairline);">✓ 构成行贿罪</td>
-        <td style="padding: 14px 16px; border-left: 1px solid var(--sl-color-hairline);">✗ 不构成行贿 (无送钱)</td>
-        <td style="padding: 14px 16px; border-left: 1px solid var(--sl-color-hairline);">✗ 不构成行贿 (无送钱)</td>
-      </tr>
-      <tr class="table-row" style="border-bottom: 1px solid var(--sl-color-hairline);">
-        <td style="padding: 14px 16px; font-weight: bold; background-color: var(--sl-color-bg-sidebar); color: var(--sl-color-text);">乙的罪数认定</td>
-        <td style="padding: 14px 16px; border-left: 1px solid var(--sl-color-hairline);">斡旋受贿与行贿共犯 ➔ <strong>牵连犯</strong> 择一重</td>
-        <td style="padding: 14px 16px; border-left: 1px solid var(--sl-color-hairline);">斡旋受贿与共犯 ➔ <strong>想象竞合</strong> 择一重</td>
-        <td style="padding: 14px 16px; border-left: 1px solid var(--sl-color-hairline);">仅构成 <strong>斡旋受贿既遂 100 万</strong></td>
-      </tr>
-      <tr class="table-row">
-        <td style="padding: 14px 16px; font-weight: bold; background-color: var(--sl-color-bg-sidebar); color: var(--sl-color-text);">甲的罪数认定</td>
-        <td style="padding: 14px 16px; border-left: 1px solid var(--sl-color-hairline);">对乙与对丙行贿 ➔ <strong>想象竞合</strong> 择一重</td>
-        <td style="padding: 14px 16px; border-left: 1px solid var(--sl-color-hairline);">对乙与对丙行贿 ➔ <strong>想象竞合</strong> 择一重</td>
-        <td style="padding: 14px 16px; border-left: 1px solid var(--sl-color-hairline);">对乙与对丙行贿 ➔ <strong>想象竞合</strong> 择一重</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+<ComparisonBoard>
+  <ComparisonRail label="丙受贿罪定性">
+    <Badge slot="m1" variant="success">普通受贿 60万</Badge>
+    <Badge slot="m2" variant="success">代收既遂 100万</Badge>
+    <Badge slot="m3" variant="success">代收既遂 100万</Badge>
+  </ComparisonRail>
+  <ComparisonRail label="乙对丙的共犯">
+    <Badge slot="m1" variant="primary">✓ 构成共犯 (送钱)</Badge>
+    <Badge slot="m2" variant="primary">✓ 构成共犯 (合意)</Badge>
+    <Badge slot="m3" variant="danger">✗ 不构成共犯 (无合意)</Badge>
+  </ComparisonRail>
+  <ComparisonRail label="乙对丙的行贿">
+    <Badge slot="m1" variant="primary">✓ 构成行贿罪 (60万)</Badge>
+    <Badge slot="m2" variant="danger">✗ 不构成 (无送钱)</Badge>
+    <Badge slot="m3" variant="danger">✗ 不构成 (无送钱)</Badge>
+  </ComparisonRail>
+  <ComparisonRail label="乙的罪数认定">
+    <span slot="m1">斡旋 40万 + 共犯 60万 ➔ <strong>牵连犯</strong> 择一重</span>
+    <span slot="m2">斡旋 100万 + 共犯 100万 ➔ <strong>想象竞合</strong> 择一重</span>
+    <span slot="m3">仅构成 <strong>斡旋受贿既遂 100 万</strong></span>
+  </ComparisonRail>
+  <ComparisonRail label="甲的罪数认定">
+    <span slot="m1">对乙与对丙行贿 ➔ <strong>想象竞合</strong> 择一重</span>
+    <span slot="m2">对乙与对丙行贿 ➔ <strong>想象竞合</strong> 择一重</span>
+    <span slot="m3">对乙与对丙行贿 ➔ <strong>想象竞合</strong> 择一重</span>
+  </ComparisonRail>
+</ComparisonBoard>
 
 ## 🧠 核心概念背诵卡 (折叠点击记忆)
 
