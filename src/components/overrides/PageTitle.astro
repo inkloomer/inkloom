@@ -42,7 +42,7 @@ const { entry } = Astro.props;
         const copyWrapper = clone.querySelector('#copy-portable-html-btn')?.parentElement;
         if (copyWrapper) copyWrapper.remove();
 
-        // 🚨 REMOVE SCREEN-READER ANCHORS (This gets rid of the redundant "Section titled..." text)
+        // REMOVE SCREEN-READER ANCHORS
         clone.querySelectorAll('.sl-anchor-link').forEach(el => el.remove());
 
         // 2. Custom CSS animations and card variables for inlining
@@ -66,7 +66,12 @@ const { entry } = Astro.props;
             background-color: #f8fafc !important;
             margin-bottom: 32px !important;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05) !important;
-            transition: transform 0.3s, box-shadow 0.3s !important;
+            transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), border-color 0.3s !important;
+          }
+          .interactive-card:hover {
+            transform: translateY(-5px) !important;
+            box-shadow: 0 16px 32px rgba(79, 70, 229, 0.08) !important;
+            border-color: #4f46e5 !important;
           }
 
           /* Capsule scale hover */
@@ -76,6 +81,12 @@ const { entry } = Astro.props;
             padding: 12px !important;
             border-radius: 8px !important;
             box-shadow: 0 1px 3px rgba(0,0,0,0.05) !important;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+          }
+          .glow-capsule:hover {
+            transform: scale(1.04) translateY(-1px) !important;
+            box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2) !important;
+            filter: brightness(1.05);
           }
 
           /* Pulse Warning Animation */
@@ -110,6 +121,128 @@ const { entry } = Astro.props;
             cursor: pointer !important;
             outline: none !important;
             list-style: none !important;
+          }
+
+          /* ==================== SIBLING HOVER LINKAGES ==================== */
+          .interactive-card:has(.trigger-link-1:hover) .flow-link-1 {
+            stroke: #f59e0b !important;
+            stroke-width: 5px !important;
+            filter: drop-shadow(0 0 8px #f59e0b) !important;
+            animation-duration: 0.3s !important;
+          }
+          .interactive-card:has(.trigger-link-2:hover) .flow-link-2 {
+            stroke: #4f46e5 !important;
+            stroke-width: 5px !important;
+            filter: drop-shadow(0 0 8px #4f46e5) !important;
+            animation-duration: 0.3s !important;
+          }
+          .interactive-card:has(.trigger-link-1:hover) [data-actor="甲"],
+          .interactive-card:has(.trigger-link-1:hover) [data-actor="乙"] {
+            border-color: #f59e0b !important;
+            transform: scale(1.05) !important;
+            box-shadow: 0 0 12px rgba(245, 158, 11, 0.3) !important;
+          }
+          .interactive-card:has(.trigger-link-2:hover) [data-actor="乙"],
+          .interactive-card:has(.trigger-link-2:hover) [data-actor="丙"] {
+            border-color: #4f46e5 !important;
+            transform: scale(1.05) !important;
+            box-shadow: 0 0 12px rgba(79, 70, 229, 0.3) !important;
+          }
+
+          /* ==================== MEMORY MODE ==================== */
+          .memory-toggle-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 18px;
+            background-color: #f8fafc;
+            border: 2px solid #e2e8f0;
+            border-radius: 30px;
+            font-size: 13.5px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            user-select: none;
+            margin-bottom: 28px;
+          }
+          .memory-toggle-btn::after {
+            content: '关闭 (正常状态) 🔴';
+            color: #64748b;
+          }
+          #memory-challenge-toggle:checked + .memory-toggle-btn {
+            background-color: #f5f3ff;
+            border-color: #4f46e5;
+          }
+          #memory-challenge-toggle:checked + .memory-toggle-btn::after {
+            content: '激活 (消隐背诵中) 🟢';
+            color: #4f46e5;
+          }
+          #memory-challenge-toggle:checked ~ .note-content-wrapper .answer-node {
+            filter: blur(5px) grayscale(1) !important;
+            background-color: #e2e8f0 !important;
+            color: transparent !important;
+            border-color: #cbd5e1 !important;
+            cursor: help !important;
+            transition: all 0.25s ease !important;
+          }
+          #memory-challenge-toggle:checked ~ .note-content-wrapper .answer-node span,
+          #memory-challenge-toggle:checked ~ .note-content-wrapper .answer-node svg {
+            opacity: 0 !important;
+          }
+          #memory-challenge-toggle:checked ~ .note-content-wrapper .answer-node:hover {
+            filter: blur(0px) grayscale(0) !important;
+            background-color: #ffffff !important;
+            color: #1e293b !important;
+            border-color: #e2e8f0 !important;
+          }
+          #memory-challenge-toggle:checked ~ .note-content-wrapper .answer-node:hover span,
+          #memory-challenge-toggle:checked ~ .note-content-wrapper .answer-node:hover svg {
+            opacity: 1 !important;
+          }
+
+          /* ==================== MICRO-ICON ANIMATIONS ==================== */
+          @keyframes bounce-coin {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-3px); }
+          }
+          .glow-capsule:hover .icon-svg-bribe .coin-dot {
+            animation: bounce-coin 0.6s ease-in-out infinite;
+          }
+
+          @keyframes strike-gavel {
+            0%, 100% { transform: rotate(0deg); }
+            50% { transform: rotate(-25deg); }
+          }
+          .glow-capsule:hover .icon-svg-gavel {
+            animation: strike-gavel 0.4s ease-in-out infinite;
+          }
+
+          @keyframes flash-dot {
+            0%, 100% { opacity: 0.2; transform: scale(0.8); }
+            50% { opacity: 1; transform: scale(1.2); }
+          }
+          .glow-capsule:hover .chat-dot-1 {
+            animation: flash-dot 0.6s infinite 0s;
+            transform-origin: 8px 10px;
+          }
+          .glow-capsule:hover .chat-dot-2 {
+            animation: flash-dot 0.6s infinite 0.15s;
+            transform-origin: 12px 10px;
+          }
+          .glow-capsule:hover .chat-dot-3 {
+            animation: flash-dot 0.6s infinite 0.3s;
+            transform-origin: 16px 10px;
+          }
+
+          @keyframes shiver-eye {
+            0%, 100% { transform: translate(0, 0); }
+            20% { transform: translate(-1px, 0); }
+            40% { transform: translate(1px, -1px); }
+            60% { transform: translate(-1px, 1px); }
+            80% { transform: translate(1px, 0); }
+          }
+          .glow-capsule:hover .icon-svg-hidden {
+            animation: shiver-eye 0.4s linear infinite;
           }
         `;
 

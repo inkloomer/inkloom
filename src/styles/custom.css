@@ -179,3 +179,45 @@
   background-color: inherit !important;
   border-style: solid !important;
 }
+
+
+/* ==================== DIVERSE ALWAYS-ON GENTLE ANIMATIONS ==================== */
+
+/* Gentle vertical float */
+@keyframes float-gentle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+.anim-float {
+  animation: float-gentle 2.2s ease-in-out infinite !important;
+}
+
+/* Gentle pendulum swing */
+@keyframes swing-gentle {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(-8deg); }
+}
+.anim-swing {
+  animation: swing-gentle 2.8s ease-in-out infinite !important;
+}
+
+/* Gentle scale/opacity breath */
+@keyframes pulse-gentle {
+  0%, 100% { transform: scale(1); opacity: 0.9; }
+  50% { transform: scale(1.08); opacity: 1; }
+}
+.anim-pulse {
+  animation: pulse-gentle 2.4s ease-in-out infinite !important;
+}
+
+/* Gentle periodic shiver */
+@keyframes shiver-gentle {
+  0%, 88%, 100% { transform: translate(0, 0); }
+  90% { transform: translate(-1px, 0.5px); }
+  92% { transform: translate(1px, -0.5px); }
+  94% { transform: translate(-0.5px, -0.5px); }
+  96% { transform: translate(0.5px, 0.5px); }
+}
+.anim-shiver-gentle {
+  animation: shiver-gentle 4s ease-in-out infinite !important;
+}
