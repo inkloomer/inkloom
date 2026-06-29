@@ -26,17 +26,15 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22 # 🎯 升级为 Node 22 以原生支持 pnpm v11 的 node:sqlite 内置模块需求
+
       - name: Install pnpm
         uses: pnpm/action-setup@v3
         with:
           version: 11
-
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-style: 'pnpm'
-          node-version: 20
-          cache: 'pnpm'
 
       - name: Install dependencies
         run: pnpm install
