@@ -4,11 +4,11 @@ import starlight from '@astrojs/starlight';
 
 // https://astro.build/config
 export default defineConfig({
-	// 🎯 绑定你的个人 GitHub Pages 站点域名
-	site: 'https://HibernalGlow.github.io',
+	// 🎯 你的 GitHub 组织/用户账号域名：https://inkloomer.github.io
+	site: 'https://inkloomer.github.io',
 	
-	// 🎯 绑定项目名称（仓库名称）作为子路径
-	base: '/InkLoom',
+	// 🎯 你的 GitHub 仓库名称（子项目名路径）：/inkloom
+	base: '/inkloom',
 
 	integrations: [
 		starlight({
