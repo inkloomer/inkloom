@@ -70,3 +70,112 @@
 .self-test-summary:hover {
   background-color: var(--sl-color-bg-sidebar) !important;
 }
+
+/* ==================== ADVANCED VISUAL LINKAGE ANIMATIONS ==================== */
+
+/* Sibling Hover Linkage for Flow Lines */
+.interactive-card:has(.trigger-link-1:hover) .flow-link-1 {
+  stroke: #f59e0b !important;
+  stroke-width: 5px !important;
+  filter: drop-shadow(0 0 8px #f59e0b) !important;
+  animation-duration: 0.3s !important; /* Double flow speed! */
+}
+.interactive-card:has(.trigger-link-2:hover) .flow-link-2 {
+  stroke: #4f46e5 !important;
+  stroke-width: 5px !important;
+  filter: drop-shadow(0 0 8px #4f46e5) !important;
+  animation-duration: 0.3s !important; /* Double flow speed! */
+}
+
+/* Highlight the actors when hovering flow triggers */
+.interactive-card:has(.trigger-link-1:hover) [data-actor="甲"],
+.interactive-card:has(.trigger-link-1:hover) [data-actor="乙"] {
+  border-color: #f59e0b !important;
+  transform: scale(1.05) !important;
+  box-shadow: 0 0 12px rgba(245, 158, 11, 0.3) !important;
+}
+.interactive-card:has(.trigger-link-2:hover) [data-actor="乙"],
+.interactive-card:has(.trigger-link-2:hover) [data-actor="丙"] {
+  border-color: #4f46e5 !important;
+  transform: scale(1.05) !important;
+  box-shadow: 0 0 12px rgba(79, 70, 229, 0.3) !important;
+}
+
+
+/* ==================== MEMORY CHALLENGE (BLUR MODE) ==================== */
+
+/* Toggle Switch Styling */
+.memory-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 18px;
+  background-color: var(--sl-color-bg-sidebar);
+  border: 2px solid var(--sl-color-hairline);
+  border-radius: 30px;
+  font-size: 13.5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  user-select: none;
+  margin-bottom: 28px;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+}
+.memory-toggle-btn::after {
+  content: '关闭 (正常状态) 🔴';
+  color: var(--sl-color-text-muted);
+}
+.memory-toggle-btn:hover {
+  transform: translateY(-2px);
+  border-color: var(--sl-color-accent);
+}
+
+/* Checked Switch State */
+#memory-challenge-toggle:checked + .memory-toggle-btn {
+  background-color: var(--sl-color-accent-low);
+  border-color: var(--sl-color-accent);
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
+}
+#memory-challenge-toggle:checked + .memory-toggle-btn::after {
+  content: '激活 (消隐背诵中) 🟢';
+  color: var(--sl-color-accent-high);
+}
+
+/* Blur Key Content inside note-content-wrapper */
+#memory-challenge-toggle:checked ~ .note-content-wrapper .answer-node {
+  filter: blur(5px) grayscale(1) !important;
+  background-color: #e2e8f0 !important;
+  color: transparent !important;
+  border-color: #cbd5e1 !important;
+  cursor: help !important;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* Specifically hide nested spans, svgs and texts */
+#memory-challenge-toggle:checked ~ .note-content-wrapper .answer-node span,
+#memory-challenge-toggle:checked ~ .note-content-wrapper .answer-node svg {
+  opacity: 0 !important;
+  transition: opacity 0.2s;
+}
+
+/* Hover reveal */
+#memory-challenge-toggle:checked ~ .note-content-wrapper .answer-node:hover {
+  filter: blur(0px) grayscale(0) !important;
+  background-color: var(--sl-color-bg) !important;
+  color: var(--sl-color-text) !important;
+  border-color: var(--sl-color-hairline) !important;
+}
+#memory-challenge-toggle:checked ~ .note-content-wrapper .answer-node:hover span,
+#memory-challenge-toggle:checked ~ .note-content-wrapper .answer-node:hover svg {
+  opacity: 1 !important;
+}
+
+/* Specific styling for ConclusionBlock blur */
+#memory-challenge-toggle:checked ~ .note-content-wrapper div.answer-node {
+  background-color: #f1f5f9 !important;
+  border-style: dashed !important;
+}
+#memory-challenge-toggle:checked ~ .note-content-wrapper div.answer-node:hover {
+  background-color: inherit !important;
+  border-style: solid !important;
+}

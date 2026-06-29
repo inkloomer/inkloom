@@ -19,13 +19,24 @@ import ConclusionBlock from '../../../components/ConclusionBlock.astro';
 import ComparisonBoard from '../../../components/ComparisonBoard.astro';
 import ComparisonRail from '../../../components/ComparisonRail.astro';
 
+{/* Hidden checkbox for CSS-based Memory Challenge Mode */}
+<input type="checkbox" id="memory-challenge-toggle" style="display: none;" />
+
+{/* Interactive Toggle Button */}
+<label for="memory-challenge-toggle" class="memory-toggle-btn">
+  🧠 记忆背诵消隐模式：
+</label>
+
+{/* Note Content Wrapper that handles both blur logic and hover linkages */}
+<div class="note-content-wrapper">
+
 # 共同受贿与斡旋受贿定性图解
 
 <TagGroup>
   <Badge variant="primary">刑法分论</Badge>
   <Badge variant="warning">共犯认定</Badge>
   <Badge variant="danger">2023主观题重点</Badge>
-  <Badge variant="outline">InkLoom 驱动</Badge>
+  <Badge variant="outline">InkLoom 交互驱动</Badge>
 </TagGroup>
 
 <CaseCard title="共同前提事实（核心案例背景）" subject="刑法案例" year="2023主观题">
@@ -38,7 +49,7 @@ import ComparisonRail from '../../../components/ComparisonRail.astro';
 
 ## 🔍 三类判定模型流向图解（平铺式对比）
 
-以下为本专题衍生的三种核心司法模型，通过**动态资金流**与**主体行为管道**进行完全平铺对比：
+以下为本专题衍生的三种核心司法模型。你可以将鼠标**悬停在特定的“行为胶囊”上**，上方流向图的**对应连线会自动加粗、流动加速并亮起高亮光流**！
 
 {/* ==================== MODEL 1 ==================== */}
 <ModelCard title="模型一" subtitle="乙向丙游说并给丙 60 万，丙收钱办事" type="资金截留流转">
@@ -46,18 +57,18 @@ import ComparisonRail from '../../../components/ComparisonRail.astro';
   
   <ModelAnalysis>
     <ActorColumn actor="甲" title="行贿主体">
-      <ActionBlock label="对乙行贿既遂" money="40万" />
-      <ActionBlock label="对丙行贿既遂" money="60万" />
+      <ActionBlock class="trigger-link-1" label="对乙行贿既遂" money="40万" />
+      <ActionBlock class="trigger-link-2" label="对丙行贿既遂" money="60万" />
       <ConclusionBlock type="想象竞合" label="从一重罪处断" />
     </ActorColumn>
     <ActorColumn actor="乙" title="中介主体">
-      <ActionBlock label="收钱端：收甲 100 万" money="40万" badge="斡旋受贿既遂" />
-      <ActionBlock label="送钱端：给丙 60 万" money="60万" badge="行贿罪既遂" />
-      <ActionBlock label="送钱端：成立受贿共犯" money="60万" badge="共犯既遂" />
+      <ActionBlock class="trigger-link-1" label="收钱端：收甲 100 万" money="40万" badge="斡旋受贿既遂" />
+      <ActionBlock class="trigger-link-2" label="送钱端：给丙 60 万" money="60万" badge="行贿罪既遂" />
+      <ActionBlock class="trigger-link-2" label="送钱端：成立受贿共犯" money="60万" badge="共犯既遂" />
       <ConclusionBlock type="牵连犯" label="收钱端与送钱端构成牵连关系，从一重罪处断" />
     </ActorColumn>
     <ActorColumn actor="丙" title="受贿主体">
-      <ActionBlock label="物理上收受钱款" money="60万" />
+      <ActionBlock class="trigger-link-2" label="物理上收受钱款" money="60万" />
       <ActionBlock label="承诺/实际为甲减税办事" />
       <ConclusionBlock type="独立既遂" label="普通受贿罪既遂 (60万元)" />
     </ActorColumn>
@@ -70,19 +81,19 @@ import ComparisonRail from '../../../components/ComparisonRail.astro';
   
   <ModelAnalysis>
     <ActorColumn actor="甲" title="行贿主体">
-      <ActionBlock label="对乙行贿既遂" money="100万" />
-      <ActionBlock label="对丙行贿既遂" money="100万" />
+      <ActionBlock class="trigger-link-1" label="对乙行贿既遂" money="100万" />
+      <ActionBlock class="trigger-link-2" label="对丙行贿既遂" money="100万" />
       <ConclusionBlock type="想象竞合" label="从一重罪处断" />
     </ActorColumn>
     <ActorColumn actor="乙" title="中介主体">
-      <ActionBlock label="斡旋受贿既遂" money="100万" />
-      <ActionBlock label="成立丙受贿共犯" money="100万" />
+      <ActionBlock class="trigger-link-1" label="斡旋受贿既遂" money="100万" />
+      <ActionBlock class="trigger-link-2" label="成立丙受贿共犯" money="100万" />
       <ActionBlock label="因无给钱行为与意图" badge="不构成行贿罪" />
       <ConclusionBlock type="想象竞合" label="两罪想象竞合，从一重罪处断" />
     </ActorColumn>
     <ActorColumn actor="丙" title="受贿主体">
-      <ActionBlock label="明知乙收钱并办事" />
-      <ActionBlock label="合意由乙代为收受" money="100万" />
+      <ActionBlock class="trigger-link-2" label="明知乙收钱并办事" />
+      <ActionBlock class="trigger-link-2" label="合意由乙代为收受" money="100万" />
       <ConclusionBlock type="共犯既遂" label="受贿罪既遂 (共同受贿 100万元)" />
     </ActorColumn>
   </ModelAnalysis>
@@ -94,18 +105,18 @@ import ComparisonRail from '../../../components/ComparisonRail.astro';
   
   <ModelAnalysis>
     <ActorColumn actor="甲" title="行贿主体">
-      <ActionBlock label="对乙与对丙行贿均既遂" money="100万" />
+      <ActionBlock class="trigger-link-1" label="对乙与对丙行贿均既遂" money="100万" />
       <ConclusionBlock type="想象竞合" label="想象竞合从一重罪处断" />
     </ActorColumn>
     <ActorColumn actor="乙" title="中介主体">
-      <ActionBlock label="仅构成斡旋受贿既遂" money="100万" />
-      <ActionBlock label="隐瞒收钱事实 ➔ 无共犯故意" badge="不成立共犯" />
+      <ActionBlock class="trigger-link-1" label="仅构成斡旋受贿既遂" money="100万" />
+      <ActionBlock class="trigger-link-2" label="隐瞒收钱事实 ➔ 无共犯故意" badge="不成立共犯" />
       <ActionBlock label="无送钱意图 ➔ 不成行贿" badge="不成立行贿" />
       <ConclusionBlock type="独立既遂" label="仅成立斡旋受贿罪既遂" />
     </ActorColumn>
     <ActorColumn actor="丙" title="受贿主体">
-      <ActionBlock label="单方猜出乙收钱并仍办事" />
-      <ActionBlock label="默认由中介人乙代收" money="100万" />
+      <ActionBlock class="trigger-link-2" label="单方猜出乙收钱并仍办事" />
+      <ActionBlock class="trigger-link-2" label="默认由中介人乙代收" money="100万" />
       <ConclusionBlock type="独立既遂" label="受贿罪既遂 (独立既遂，非共犯)" />
     </ActorColumn>
   </ModelAnalysis>
@@ -170,3 +181,5 @@ import ComparisonRail from '../../../components/ComparisonRail.astro';
     因为在模型二中，乙只是口头向丙告知了自己收钱的事实，并且希望丙去办事，但<strong>并没有打算把任何钱分给或送给丙</strong>。成立行贿罪要求主观上有给予国家工作人员财物的意图，客观上有送钱行为。这里乙没有送钱意图，所以乙针对丙不成立行贿罪，仅成立受贿罪的共犯。
   </div>
 </details>
+
+</div>

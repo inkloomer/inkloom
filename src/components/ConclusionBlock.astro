@@ -17,7 +17,7 @@ const config = {
 
 const theme = config[type] || config.独立既遂;
 ---
-<div style={`margin-top: 10px; padding: 10px 12px; background-color: ${theme.bg}; border: 1px solid ${theme.border}; border-radius: 8px; color: ${theme.text}; font-size: 12px; font-weight: bold; display: flex; align-items: center; gap: 8px; transition: all 0.2s;`} class="glow-capsule">
+<div class="glow-capsule answer-node" style={`margin-top: 10px; padding: 10px 12px; background-color: ${theme.bg}; border: 1px solid ${theme.border}; border-radius: 8px; color: ${theme.text}; font-size: 12px; font-weight: bold; display: flex; align-items: center; gap: 8px; transition: all 0.25s;`}>
   <span style="font-size: 14px; line-height: 1;">{theme.icon}</span>
   <span style="line-height: 1.2;">{type}：{label}</span>
 </div>
