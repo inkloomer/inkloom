@@ -226,12 +226,36 @@
 /* ==================== CUSTOM RESPONSIVE BREAKPOINT SHIFT ==================== */
 
 /*
+  Desktop pages should adapt to the remaining viewport after the left nav.
+  Starlight's native right TOC reserves a full column and keeps the article
+  feeling like the narrow layout, so the floating tick TOC replaces it.
+*/
+.right-sidebar-container {
+  display: none !important;
+}
+
+@media (min-width: 72rem) {
+  html[data-has-sidebar] .main-pane {
+    width: 100% !important;
+    max-width: none !important;
+    --sl-content-margin-inline: 0;
+  }
+
+  html[data-has-sidebar] .content-panel .sl-container,
+  html[data-has-sidebar] .sl-markdown-content {
+    width: 100% !important;
+    max-width: none !important;
+    margin-inline: 0 !important;
+  }
+}
+
+/*
   Astro Starlight's native desktop sidebar breakpoint is 50rem (800px).
   This rule postpones the desktop sidebar expansion to 72rem (1152px).
   Between 800px and 1152px, the sidebar remains in mobile drawer mode (hidden behind menu toggle),
   preventing it from cramping the main content area inside split screens/iframes.
 */
-@media (min-width: 50rem) and (max-width: 72rem) {
+@media (min-width: 50rem) and (max-width: 71.999rem) {
   /* 1. Hide the fixed desktop sidebar wrapper */
   .sidebar-pane {
     display: none !important;
@@ -301,11 +325,10 @@ html[data-is-iframe="true"] .main-frame {
 
 /* ==================== MINIMALIST RIGHT SCROLLBAR TICK TOC (FABS) ==================== */
 
-/* Hide Starlight's native mobile TOC and right sidebar completely on narrow screens.
+/* Hide Starlight's native mobile TOC on narrow screens.
    Our custom scrollbar-tick TOC is rendered by PageTitle.astro instead. */
 @media (max-width: 72rem) {
-  mobile-starlight-toc,
-  .right-sidebar-container {
+  mobile-starlight-toc {
     display: none !important;
   }
 }
