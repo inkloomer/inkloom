@@ -30,7 +30,12 @@ export default defineConfig({
 			components: {
 				PageTitle: './src/components/overrides/PageTitle.astro',
 			},
-			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
+			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/inkloomer/inkloom' }],
+			editLink: {
+				base: 'https://github.com/inkloomer/inkloom/edit/main/',
+			},
+			lastUpdated: true,
+			pagefind: true,
 			sidebar: [
 				{
 					label: '客观题',
