@@ -1,0 +1,19 @@
+---
+// InkLoom/src/components/ModelCard.astro
+interface Props {
+  title: string;
+  subtitle: string;
+  type: string;
+}
+const { title, subtitle, type } = Astro.props;
+---
+<div class="interactive-card" style="margin-bottom: 32px; background-color: var(--sl-color-bg-sidebar); border: 1px solid var(--sl-color-hairline); border-radius: 12px; padding: 20px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); transition: all 0.3s; overflow: hidden;">
+  <div style="font-weight: bold; font-size: 16px; margin-bottom: 12px; color: var(--sl-color-accent); display: flex; align-items: center; justify-content: space-between; border-bottom: 2px solid var(--sl-color-hairline); padding-bottom: 8px;">
+    <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+      <span style="padding: 2px 8px; background-color: var(--sl-color-accent-low); color: var(--sl-color-accent-high); border-radius: 4px; font-size: 12px; font-weight: bold;">{title}</span>
+      <span style="font-size: 15px; font-weight: bold; color: var(--sl-color-text);">{subtitle}</span>
+    </div>
+    <span style="font-size: 12px; color: var(--sl-color-accent-high); font-weight: 600;">[{type}]</span>
+  </div>
+  <slot />
+</div>

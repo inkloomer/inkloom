@@ -1,0 +1,22 @@
+---
+// InkLoom/src/components/WarningBox.astro
+interface Props {
+  title?: string;
+}
+const { title = '考点注意' } = Astro.props;
+---
+<div class="pulse-warning" style="border: 2px solid #fecdd3; border-radius: 12px; margin-bottom: 36px; padding: 18px; background-color: #fff1f2; transition: all 0.3s; display: flex; gap: 12px;">
+  <div style="display: flex; align-items: center; margin-top: 2px;">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f43f5e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color: #f43f5e;"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+  </div>
+  <div style="flex: 1;">
+    {title && (
+      <div style="font-size: 15px; font-weight: bold; color: #9f1239; margin-bottom: 6px;">
+        {title}
+      </div>
+    )}
+    <div style="font-size: 13.5px; line-height: 1.6; color: #4c0519;">
+      <slot />
+    </div>
+  </div>
+</div>

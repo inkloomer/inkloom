@@ -1,0 +1,179 @@
+---
+title: 共同受贿与斡旋受贿定性
+description: 2023年刑法主观题核心考点图解与三类模型平铺对比
+sidebar:
+  order: 1
+---
+
+import Badge from '../../../components/Badge.astro';
+import TagGroup from '../../../components/TagGroup.astro';
+import CaseCard from '../../../components/CaseCard.astro';
+import MoneyBadge from '../../../components/MoneyBadge.astro';
+import WarningBox from '../../../components/WarningBox.astro';
+import VisualFlow from '../../../components/VisualFlow.astro';
+import ModelCard from '../../../components/ModelCard.astro';
+import ModelAnalysis from '../../../components/ModelAnalysis.astro';
+import ActorColumn from '../../../components/ActorColumn.astro';
+
+# 共同受贿与斡旋受贿定性图解
+
+<TagGroup>
+  <Badge variant="primary">刑法分论</Badge>
+  <Badge variant="warning">共犯认定</Badge>
+  <Badge variant="danger">2023主观题重点</Badge>
+  <Badge variant="outline">InkLoom 驱动</Badge>
+</TagGroup>
+
+<CaseCard title="共同前提事实（核心案例背景）" subject="刑法案例" year="2023主观题">
+  **甲** 为了让税务局局长**丙** 非法减免税款，送给本县财政局局长**乙** <MoneyBadge amount="100万元" />，对**乙** 讲：
+  
+  > "这笔钱，你自己看着办，只要办成事就行。"
+  
+  **乙** 答应办事，收了 100 万元。
+</CaseCard>
+
+## 🔍 三类判定模型流向图解（平铺式对比）
+
+以下为本专题衍生的三种核心司法模型，通过**动态资金流**与**主体行为管道**进行完全平铺对比：
+
+{/* ==================== MODEL 1 ==================== */}
+<ModelCard title="模型一" subtitle="乙向丙游说并给丙 60 万，丙收钱办事" type="资金截留流转">
+  <VisualFlow amountA="送 100 万元" action="给 60 万元" relationInfo="送钱办事 / 物理层流转" />
+  
+  <ModelAnalysis>
+    <ActorColumn actor="甲" title="行贿主体">
+      - 对乙行贿既遂 <MoneyBadge amount="40万" />
+      - 对丙行贿既遂 <MoneyBadge amount="60万" />
+      - **结论**：两罪**想象竞合**，从一重罪处断。
+    </ActorColumn>
+    <ActorColumn actor="乙" title="中介主体">
+      - **收钱端**：收甲 100 万 ➔ 成立**斡旋受贿既遂** <MoneyBadge amount="40万" />。
+      - **送钱端**：给丙 60 万 ➔ 成立**行贿既遂** <MoneyBadge amount="60万" /> + 丙受贿罪**共犯**既遂 <MoneyBadge amount="60万" />（想象竞合择一重）。
+      - **整体罪数**：收钱端与送钱端构成**牵连犯**，择一重罪论处。
+    </ActorColumn>
+    <ActorColumn actor="丙" title="受贿主体">
+      - 物理上收受 60 万并为甲谋取利益。
+      - **结论**：成立**普通受贿罪既遂** <MoneyBadge amount="60万元" />。
+    </ActorColumn>
+  </ModelAnalysis>
+</ModelCard>
+
+{/* ==================== MODEL 2 ==================== */}
+<ModelCard title="模型二" subtitle="乙向丙告知收了甲 100 万，希望丙办事但别拿钱" type="意思合意默许">
+  <VisualFlow amountA="送 100 万元" action="未给钱 / 告知事实" relationInfo="丙知道且默许办事" />
+  
+  <ModelAnalysis>
+    <ActorColumn actor="甲" title="行贿主体">
+      - 对乙行贿既遂 <MoneyBadge amount="100万" />
+      - 对丙行贿既遂 <MoneyBadge amount="100万" />
+      - **结论**：两罪**想象竞合**，从一重罪处断。
+    </ActorColumn>
+    <ActorColumn actor="乙" title="中介主体">
+      - 成立**斡旋受贿既遂** <MoneyBadge amount="100万" />。
+      - 成立丙受贿罪的**共犯**（既遂 <MoneyBadge amount="100万" />）。
+      - **整体罪数**：两罪构成**想象竞合**，从一重罪处断。
+      - **注意**：因无给钱行为与意图，**不构成行贿罪**。
+    </ActorColumn>
+    <ActorColumn actor="丙" title="受贿主体">
+      - 明知乙收受了 100 万元并默许乙代为收受，仍利用职务便利为甲办事。
+      - **结论**：成立**受贿罪既遂** <MoneyBadge amount="100万元" />（共同犯罪）。
+    </ActorColumn>
+  </ModelAnalysis>
+</ModelCard>
+
+{/* ==================== MODEL 3 ==================== */}
+<ModelCard title="模型三" subtitle="乙隐瞒收钱，但丙猜出乙收了 100 万并仍办事" type="无意思联络 / 单方明知">
+  <VisualFlow amountA="送 100 万元" action="隐瞒收钱" relationInfo="丙自行单方猜出并办事" />
+  
+  <ModelAnalysis>
+    <ActorColumn actor="甲" title="行贿主体">
+      - 对乙与对丙行贿既遂各 <MoneyBadge amount="100万" />，**想象竞合**从一重。
+    </ActorColumn>
+    <ActorColumn actor="乙" title="中介主体">
+      - 仅构成**斡旋受贿既遂** <MoneyBadge amount="100万" />。
+      - **注意**：因乙隐瞒收钱事实，双方无受贿故意联络，**不成立丙受贿罪的共犯**。
+    </ActorColumn>
+    <ActorColumn actor="丙" title="受贿主体">
+      - 单方猜出乙收受了 100 万，默认由乙代为收受，并为甲办事。
+      - **结论**：成立**受贿罪既遂** <MoneyBadge amount="100万元" />（不构成共犯，但个人受贿既遂）。
+    </ActorColumn>
+  </ModelAnalysis>
+</ModelCard>
+
+{/* Pulse Glowing WarningBox using JSX elements to avoid parser conflicts */}
+<WarningBox type="danger" title="🚨 特别注意（2023年主观题真题核心陷阱）" class="pulse-warning">
+  <p style={{ margin: '0 0 8px 0' }}>当 <strong>甲</strong> 给 <strong>乙</strong> 送钱时说：<em>"这100万元就是专门给你的，如果终端办事人丙要钱，你再跟我说"</em>。</p>
+  <ol style={{ paddingLeft: '20px', margin: '0' }}>
+    <li><strong>排除概括故意</strong>：甲主观上无行贿丙的故意。</li>
+    <li><strong>定性结果</strong>：对乙构成 <strong>行贿罪</strong>；对丙 <strong>不构成行贿罪</strong>。</li>
+  </ol>
+</WarningBox>
+
+## 📊 核心考点对比记忆矩阵 (Premium Matrix)
+
+<div style="width: 100%; overflow-x: auto; border-radius: 12px; border: 1px solid var(--sl-color-hairline); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05); overflow: hidden; margin-bottom: 32px;">
+  <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 13.5px;">
+    <thead>
+      <tr style="background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%); color: white;">
+        <th style="padding: 14px 16px; font-weight: 600; font-size: 14px;">判定维度</th>
+        <th style="padding: 14px 16px; font-weight: 600; font-size: 14px; border-left: 1px solid rgba(255,255,255,0.1);">模型一 (截留60万)</th>
+        <th style="padding: 14px 16px; font-weight: 600; font-size: 14px; border-left: 1px solid rgba(255,255,255,0.1);">模型二 (告知明知)</th>
+        <th style="padding: 14px 16px; font-weight: 600; font-size: 14px; border-left: 1px solid rgba(255,255,255,0.1);">模型三 (隐瞒猜出)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="table-row" style="border-bottom: 1px solid var(--sl-color-hairline);">
+        <td style="padding: 14px 16px; font-weight: bold; background-color: var(--sl-color-bg-sidebar); color: var(--sl-color-text); width: 130px;">丙受贿罪定性</td>
+        <td style="padding: 14px 16px; border-left: 1px solid var(--sl-color-hairline);">普通受贿既遂 60万</td>
+        <td style="padding: 14px 16px; border-left: 1px solid var(--sl-color-hairline);">受贿既遂 100万 (默认代收)</td>
+        <td style="padding: 14px 16px; border-left: 1px solid var(--sl-color-hairline);">受贿既遂 100万 (默认代收)</td>
+      </tr>
+      <tr class="table-row" style="border-bottom: 1px solid var(--sl-color-hairline);">
+        <td style="padding: 14px 16px; font-weight: bold; background-color: var(--sl-color-bg-sidebar); color: var(--sl-color-text);">乙对丙的共犯</td>
+        <td style="padding: 14px 16px; border-left: 1px solid var(--sl-color-hairline);">✓ 构成共犯</td>
+        <td style="padding: 14px 16px; border-left: 1px solid var(--sl-color-hairline);">✓ 构成共犯</td>
+        <td style="padding: 14px 16px; border-left: 1px solid var(--sl-color-hairline);">✗ 不构成共犯 (无合意)</td>
+      </tr>
+      <tr class="table-row" style="border-bottom: 1px solid var(--sl-color-hairline);">
+        <td style="padding: 14px 16px; font-weight: bold; background-color: var(--sl-color-bg-sidebar); color: var(--sl-color-text);">乙对丙的行贿</td>
+        <td style="padding: 14px 16px; border-left: 1px solid var(--sl-color-hairline);">✓ 构成行贿罪</td>
+        <td style="padding: 14px 16px; border-left: 1px solid var(--sl-color-hairline);">✗ 不构成行贿 (无送钱)</td>
+        <td style="padding: 14px 16px; border-left: 1px solid var(--sl-color-hairline);">✗ 不构成行贿 (无送钱)</td>
+      </tr>
+      <tr class="table-row" style="border-bottom: 1px solid var(--sl-color-hairline);">
+        <td style="padding: 14px 16px; font-weight: bold; background-color: var(--sl-color-bg-sidebar); color: var(--sl-color-text);">乙的罪数认定</td>
+        <td style="padding: 14px 16px; border-left: 1px solid var(--sl-color-hairline);">斡旋受贿与行贿共犯 ➔ <strong>牵连犯</strong> 择一重</td>
+        <td style="padding: 14px 16px; border-left: 1px solid var(--sl-color-hairline);">斡旋受贿与共犯 ➔ <strong>想象竞合</strong> 择一重</td>
+        <td style="padding: 14px 16px; border-left: 1px solid var(--sl-color-hairline);">仅构成 <strong>斡旋受贿既遂 100 万</strong></td>
+      </tr>
+      <tr class="table-row">
+        <td style="padding: 14px 16px; font-weight: bold; background-color: var(--sl-color-bg-sidebar); color: var(--sl-color-text);">甲的罪数认定</td>
+        <td style="padding: 14px 16px; border-left: 1px solid var(--sl-color-hairline);">对乙与对丙行贿 ➔ <strong>想象竞合</strong> 择一重</td>
+        <td style="padding: 14px 16px; border-left: 1px solid var(--sl-color-hairline);">对乙与对丙行贿 ➔ <strong>想象竞合</strong> 择一重</td>
+        <td style="padding: 14px 16px; border-left: 1px solid var(--sl-color-hairline);">对乙与对丙行贿 ➔ <strong>想象竞合</strong> 择一重</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+## 🧠 核心概念背诵卡 (折叠点击记忆)
+
+<details class="interactive-card" style="border: 1px solid var(--sl-color-hairline); border-radius: 8px; overflow: hidden; margin-bottom: 12px; background-color: var(--sl-color-bg);">
+  <summary class="self-test-summary" style="padding: 14px 16px; font-size: 14px; font-weight: 600; color: var(--sl-color-text); background-color: var(--sl-color-bg-sidebar); display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--sl-color-hairline);">
+    <span>Q1: 斡旋受贿在什么情况下可以与实行人成立共同受贿的共犯？</span>
+    <span style="font-size: 12px; color: var(--sl-color-accent); font-weight: 500;">点击揭晓答案 ➔</span>
+  </summary>
+  <div style="padding: 16px; font-size: 13.5px; line-height: 1.6; color: var(--sl-color-text-muted); background-color: var(--sl-color-bg); border-top: 1px solid var(--sl-color-hairline);">
+    必须有<strong>共同受贿的合意（意思联络）</strong>。如果中介人向实行人明确告知了收钱的事实（模型二），或者实行人虽然被隐瞒但在办事时明知/猜出中介人收了钱而为其办事（模型三），在法律评价上双方均成立共同犯罪。如果彻底隐瞒且实行人完全不知情（无联络），则不成立共犯。
+  </div>
+</details>
+
+<details class="interactive-card" style="border: 1px solid var(--sl-color-hairline); border-radius: 8px; overflow: hidden; margin-bottom: 24px; background-color: var(--sl-color-bg);">
+  <summary class="self-test-summary" style="padding: 14px 16px; font-size: 14px; font-weight: 600; color: var(--sl-color-text); background-color: var(--sl-color-bg-sidebar); display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--sl-color-hairline);">
+    <span>Q2: 为什么中介人乙在模型二中“不构成行贿罪”？</span>
+    <span style="font-size: 12px; color: var(--sl-color-accent); font-weight: 500;">点击揭晓答案 ➔</span>
+  </summary>
+  <div style="padding: 16px; font-size: 13.5px; line-height: 1.6; color: var(--sl-color-text-muted); background-color: var(--sl-color-bg); border-top: 1px solid var(--sl-color-hairline);">
+    因为在模型二中，乙只是口头向丙告知了自己收钱的事实，并且希望丙去办事，但<strong>并没有打算把任何钱分给或送给丙</strong>。成立行贿罪要求主观上有给予国家工作人员财物的意图，客观上有送钱行为。这里乙没有送钱意图，所以乙针对丙不成立行贿罪，仅成立受贿罪的共犯。
+  </div>
+</details>

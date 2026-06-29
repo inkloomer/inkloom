@@ -1,0 +1,72 @@
+/* D:\1STUDY\3-Resource\法考\InkLoom\src\styles\custom.css */
+
+/* Flowing line dash animation */
+@keyframes flow-dash {
+  to {
+    stroke-dashoffset: -20;
+  }
+}
+.flowing-line {
+  stroke-dasharray: 6 4;
+  animation: flow-dash 0.8s linear infinite !important;
+}
+
+/* Card Hover Lift & Glow */
+.interactive-card {
+  transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), border-color 0.3s !important;
+}
+.interactive-card:hover {
+  transform: translateY(-5px) !important;
+  box-shadow: 0 16px 32px rgba(79, 70, 229, 0.08) !important;
+  border-color: var(--sl-color-accent) !important;
+}
+
+/* Capsule scale hover */
+.glow-capsule {
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+.glow-capsule:hover {
+  transform: scale(1.04) translateY(-1px) !important;
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2) !important;
+  filter: brightness(1.05);
+}
+
+/* Pulse Warning Animation */
+@keyframes pulse-red {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.3);
+    border-color: #fecdd3;
+  }
+  50% {
+    box-shadow: 0 0 16px 6px rgba(239, 68, 68, 0.15);
+    border-color: #f43f5e;
+  }
+}
+.pulse-warning {
+  animation: pulse-red 2.5s infinite ease-in-out !important;
+}
+
+/* Table Row Hover Highlight */
+.table-row {
+  transition: background-color 0.2s ease-in-out !important;
+}
+.table-row:hover {
+  background-color: var(--sl-color-bg-sidebar) !important;
+}
+.table-row:hover td {
+  background-color: transparent !important;
+}
+
+/* Accordion Summary Style */
+.self-test-summary {
+  cursor: pointer;
+  outline: none;
+  list-style: none;
+  transition: background-color 0.2s;
+}
+.self-test-summary::-webkit-details-marker {
+  display: none;
+}
+.self-test-summary:hover {
+  background-color: var(--sl-color-bg-sidebar) !important;
+}

@@ -1,0 +1,151 @@
+---
+// src/components/overrides/PageTitle.astro
+import type { Props } from '@astrojs/starlight/props';
+import Default from '@astrojs/starlight/components/PageTitle.astro';
+
+const { entry } = Astro.props;
+---
+
+<Default {...Astro.props} />
+
+<!-- The Copy Button for Notion/Obsidian -->
+<div style="margin-top: 12px; margin-bottom: 24px;">
+  <button id="copy-portable-html-btn" class="glow-capsule" style="padding: 8px 16px; background-color: var(--sl-color-accent); color: white; border: none; border-radius: 20px; font-size: 13px; font-weight: bold; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; transition: all 0.2s; box-shadow: 0 4px 6px -1px rgba(79, 70, 229, 0.2); outline: none;">
+    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+    一键复制到笔记软件 (Notion/Obsidian)
+  </button>
+</div>
+
+<script>
+  const btn = document.getElementById('copy-portable-html-btn');
+  if (btn) {
+    btn.addEventListener('click', async () => {
+      try {
+        // 1. Target the main content area. We check the Markdown content body first, then fallback.
+        const contentEl = document.querySelector('.sl-markdown-content') || 
+                          document.querySelector('article') || 
+                          document.querySelector('main');
+                          
+        if (!contentEl) {
+          alert('未找到文档主要内容区域');
+          return;
+        }
+
+        // Clone the content so we don't mutate the live page
+        const clone = contentEl.cloneNode(true) as HTMLElement;
+
+        // Clear unwanted elements (like Starlight navigation footers, edit page links, etc.)
+        const footer = clone.querySelector('footer');
+        if (footer) footer.remove();
+        
+        // Remove the copy button itself from the clipboard content if it was copied in fallback
+        const copyWrapper = clone.querySelector('#copy-portable-html-btn')?.parentElement;
+        if (copyWrapper) copyWrapper.remove();
+
+        // 2. Custom CSS animations and card variables for inlining
+        const customStyles = `
+          /* Flowing line dash animation */
+          @keyframes flow-dash {
+            to {
+              stroke-dashoffset: -20;
+            }
+          }
+          .flowing-line {
+            stroke-dasharray: 6 4;
+            animation: flow-dash 0.8s linear infinite !important;
+          }
+
+          /* Card Hover Lift & Glow */
+          .interactive-card {
+            border: 1px solid #cbd5e1 !important;
+            border-radius: 12px !important;
+            padding: 20px !important;
+            background-color: #f8fafc !important;
+            margin-bottom: 32px !important;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05) !important;
+            transition: transform 0.3s, box-shadow 0.3s !important;
+          }
+
+          /* Capsule scale hover */
+          .glow-capsule {
+            background-color: #ffffff !important;
+            border: 1px solid #e2e8f0 !important;
+            padding: 12px !important;
+            border-radius: 8px !important;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05) !important;
+          }
+
+          /* Pulse Warning Animation */
+          @keyframes pulse-red {
+            0%, 100% {
+              box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.3);
+              border-color: #fecdd3;
+            }
+            50% {
+              box-shadow: 0 0 16px 6px rgba(239, 68, 68, 0.15);
+              border-color: #f43f5e;
+            }
+          }
+          .pulse-warning {
+            border: 2px solid #fecdd3 !important;
+            border-radius: 12px !important;
+            padding: 18px !important;
+            background-color: #fff1f2 !important;
+            animation: pulse-red 2.5s infinite ease-in-out !important;
+          }
+
+          /* Table Row Hover Highlight */
+          .table-row {
+            transition: background-color 0.2s ease-in-out !important;
+          }
+          .table-row:hover {
+            background-color: #f8fafc !important;
+          }
+          
+          /* Summary test fold */
+          .self-test-summary {
+            cursor: pointer !important;
+            outline: none !important;
+            list-style: none !important;
+          }
+        `;
+
+        // 3. Construct HTML document wrapper for rich-text clipboard
+        const htmlString = `
+          <div style="font-family: system-ui, -apple-system, sans-serif; line-height: 1.6; max-width: 800px; margin: 0 auto; color: #1e293b;">
+            <style>${customStyles}</style>
+            ${clone.innerHTML}
+          </div>
+        `;
+
+        // 4. Create clipboard blobs
+        const blob = new Blob([htmlString], { type: 'text/html' });
+        const textBlob = new Blob([clone.innerText], { type: 'text/plain' });
+
+        const clipboardItem = new ClipboardItem({
+          'text/html': blob,
+          'text/plain': textBlob
+        });
+
+        // 5. Write to clipboard
+        await navigator.clipboard.write([clipboardItem]);
+
+        // 6. Visual feedback
+        const originalHTML = btn.innerHTML;
+        btn.innerHTML = `✓ 复制成功！快去 Notion/Obsidian 粘贴吧`;
+        btn.style.backgroundColor = '#10b981';
+        btn.style.boxShadow = '0 4px 6px -1px rgba(16, 185, 129, 0.2)';
+        
+        setTimeout(() => {
+          btn.innerHTML = originalHTML;
+          btn.style.backgroundColor = 'var(--sl-color-accent)';
+          btn.style.boxShadow = '0 4px 6px -1px rgba(79, 70, 229, 0.2)';
+        }, 2000);
+
+      } catch (err: any) {
+        console.error(err);
+        alert('复制失败，请尝试升级浏览器或手动复制。错误: ' + err.message);
+      }
+    });
+  }
+</script>

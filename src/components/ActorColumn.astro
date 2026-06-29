@@ -1,0 +1,23 @@
+---
+// InkLoom/src/components/ActorColumn.astro
+interface Props {
+  actor: '甲' | '乙' | '丙';
+  title: string;
+}
+const { actor, title } = Astro.props;
+const colorMap = {
+  甲: { dot: '#3b82f6' },
+  乙: { dot: '#a855f7' },
+  丙: { dot: '#22c55e' }
+};
+const colors = colorMap[actor] || colorMap['甲'];
+---
+<div style="flex: 1 1 200px; min-width: 180px; background-color: var(--sl-color-bg); border: 1px solid var(--sl-color-hairline); border-radius: 8px; padding: 12px;" class="glow-capsule">
+  <div style="font-size: 13px; font-weight: bold; color: var(--sl-color-text); display: flex; align-items: center; border-bottom: 1px dashed var(--sl-color-hairline); padding-bottom: 6px; margin-bottom: 8px;">
+    <span style={`width: 8px; height: 8px; background-color: ${colors.dot}; border-radius: 50%; display: inline-block; margin-right: 6px;`}></span>
+    {actor} ({title})
+  </div>
+  <div style="font-size: 12.5px; line-height: 1.6; color: var(--sl-color-text);">
+    <slot />
+  </div>
+</div>

@@ -1,0 +1,56 @@
+---
+// InkLoom/src/components/VisualFlow.astro
+interface Props {
+  amountA?: string;
+  action: string;
+  relationInfo?: string;
+}
+const { amountA = '送100万', action, relationInfo = '意思联络' } = Astro.props;
+---
+<div style="margin-top: 16px; margin-bottom: 16px; padding: 16px; border-radius: 12px; border: 1px solid var(--sl-color-hairline); background-color: var(--sl-color-bg-sidebar);">
+  <div style="font-size: 12px; color: var(--sl-color-text-muted); margin-bottom: 12px;">资金与意图流向图：</div>
+  <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap;">
+    <!-- Actor A -->
+    <div style="text-align: center; min-width: 80px;">
+      <div style="padding: 8px 12px; border-radius: 8px; font-weight: bold; font-size: 14px; background-color: #eff6ff; color: #1d4ed8; border: 1px solid #bfdbfe;">
+        甲 (行贿人)
+      </div>
+    </div>
+    <!-- Link 1 -->
+    <div style="flex-grow: 1; text-align: center; min-width: 60px; position: relative; padding: 0 4px;">
+      <div style="font-size: 11px; color: #b45309; font-weight: 600; margin-bottom: 4px;">{amountA}</div>
+      <div style="position: relative; width: 100%; height: 12px; display: flex; align-items: center;">
+        <svg style="width: 100%; height: 6px; display: block; overflow: visible;">
+          <line x1="0" y1="3" x2="100%" y2="3" stroke="#cbd5e1" stroke-width="3" stroke-linecap="round" />
+          <line x1="0" y1="3" x2="100%" y2="3" stroke="#f59e0b" stroke-width="3" stroke-linecap="round" class="flowing-line" />
+        </svg>
+        <div style="position: absolute; right: -2px; top: 1px; width: 0; height: 0; border-top: 5px solid transparent; border-bottom: 5px solid transparent; border-left: 8px solid #f59e0b;"></div>
+      </div>
+      <div style="font-size: 10px; color: var(--sl-color-text-muted); margin-top: 4px;">概括故意</div>
+    </div>
+    <!-- Actor B -->
+    <div style="text-align: center; min-width: 90px;">
+      <div style="padding: 8px 12px; border-radius: 8px; font-weight: bold; font-size: 14px; background-color: #f5f3ff; color: #6d28d9; border: 1px solid #ddd6fe;">
+        乙 (中介人)
+      </div>
+    </div>
+    <!-- Link 2 -->
+    <div style="flex-grow: 1; text-align: center; min-width: 100px; position: relative; padding: 0 4px;">
+      <div style="font-size: 11px; color: #4338ca; font-weight: 600; margin-bottom: 4px;">{action}</div>
+      <div style="position: relative; width: 100%; height: 12px; display: flex; align-items: center;">
+        <svg style="width: 100%; height: 6px; display: block; overflow: visible;">
+          <line x1="0" y1="3" x2="100%" y2="3" stroke="#cbd5e1" stroke-width="3" stroke-linecap="round" />
+          <line x1="0" y1="3" x2="100%" y2="3" stroke="#4f46e5" stroke-width="3" stroke-linecap="round" class="flowing-line" />
+        </svg>
+        <div style="position: absolute; right: -2px; top: 1px; width: 0; height: 0; border-top: 5px solid transparent; border-bottom: 5px solid transparent; border-left: 8px solid #4f46e5;"></div>
+      </div>
+      <div style="font-size: 10px; color: var(--sl-color-text-muted); margin-top: 4px;">{relationInfo}</div>
+    </div>
+    <!-- Actor C -->
+    <div style="text-align: center; min-width: 80px;">
+      <div style="padding: 8px 12px; border-radius: 8px; font-weight: bold; font-size: 14px; background-color: #ecfdf5; color: #047857; border: 1px solid #a7f3d0;">
+        丙 (受贿人)
+      </div>
+    </div>
+  </div>
+</div>
