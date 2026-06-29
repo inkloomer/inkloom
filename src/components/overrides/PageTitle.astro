@@ -507,19 +507,20 @@ const { entry } = Astro.props;
     });
   }
 
-  // 2. Logic for copying iframe embed code (Forces production URL so it works when online!)
+  // 2. Logic for copying iframe embed code (Forces production URL and adds Date.now() cache-buster!)
   const iframeBtn = document.getElementById('copy-iframe-btn');
   if (iframeBtn) {
     iframeBtn.addEventListener('click', async () => {
       try {
-        // Resolve production URL instead of localhost:4321
         let path = window.location.pathname;
         if (!path.startsWith('/inkloom')) {
           path = '/inkloom' + (path.startsWith('/') ? path : '/' + path);
         }
         path = path.replace(/\/+/g, '/'); // Remove any duplicate slashes
         
-        const productionUrl = `https://inkloomer.github.io${path}`;
+        // Add a timestamp cache buster representing the exact time they clicked Copy
+        const timestamp = Date.now();
+        const productionUrl = `https://inkloomer.github.io${path}?t=${timestamp}`;
         
         const iframeCode = `<iframe src="${productionUrl}" width="100%" height="750px" style="border: none; border-radius: 12px; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05);" allow="clipboard-write"></iframe>`;
         
