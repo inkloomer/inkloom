@@ -12,7 +12,7 @@ const { entry } = Astro.props;
 <div style="margin-top: 12px; margin-bottom: 24px;">
   <button id="copy-portable-html-btn" class="glow-capsule" style="padding: 8px 16px; background-color: var(--sl-color-accent); color: white; border: none; border-radius: 20px; font-size: 13px; font-weight: bold; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; transition: all 0.2s; box-shadow: 0 4px 6px -1px rgba(79, 70, 229, 0.2); outline: none;">
     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-    一键复制到笔记软件 (Notion/Obsidian)
+    一键复制 HTML 源码 (Notion/Obsidian)
   </button>
 </div>
 
@@ -21,7 +21,7 @@ const { entry } = Astro.props;
   if (btn) {
     btn.addEventListener('click', async () => {
       try {
-        // 1. Target the main content area. We check the Markdown content body first, then fallback.
+        // 1. Target the main content area
         const contentEl = document.querySelector('.sl-markdown-content') || 
                           document.querySelector('article') || 
                           document.querySelector('main');
@@ -41,6 +41,9 @@ const { entry } = Astro.props;
         // Remove the copy button itself from the clipboard content if it was copied in fallback
         const copyWrapper = clone.querySelector('#copy-portable-html-btn')?.parentElement;
         if (copyWrapper) copyWrapper.remove();
+
+        // 🚨 REMOVE SCREEN-READER ANCHORS (This gets rid of the redundant "Section titled..." text)
+        clone.querySelectorAll('.sl-anchor-link').forEach(el => el.remove());
 
         // 2. Custom CSS animations and card variables for inlining
         const customStyles = `
@@ -120,7 +123,7 @@ const { entry } = Astro.props;
 
         // 4. Create clipboard blobs
         const blob = new Blob([htmlString], { type: 'text/html' });
-        const textBlob = new Blob([clone.innerText], { type: 'text/plain' });
+        const textBlob = new Blob([htmlString], { type: 'text/plain' });
 
         const clipboardItem = new ClipboardItem({
           'text/html': blob,
@@ -132,7 +135,7 @@ const { entry } = Astro.props;
 
         // 6. Visual feedback
         const originalHTML = btn.innerHTML;
-        btn.innerHTML = `✓ 复制成功！快去 Notion/Obsidian 粘贴吧`;
+        btn.innerHTML = `✓ 复制成功！已过滤冗余锚点`;
         btn.style.backgroundColor = '#10b981';
         btn.style.boxShadow = '0 4px 6px -1px rgba(16, 185, 129, 0.2)';
         
