@@ -1,6 +1,8 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
+import starlightAutoSidebar from 'starlight-auto-sidebar';
+import path from 'path';
 
 // https://astro.build/config
 export default defineConfig({
@@ -10,9 +12,18 @@ export default defineConfig({
 	// 🎯 你的 GitHub 仓库名称（子项目名路径）：/inkloom
 	base: '/inkloom',
 
+	vite: {
+		resolve: {
+			alias: {
+				'@': path.resolve('./src'),
+			},
+		},
+	},
+
 	integrations: [
 		starlight({
 			title: 'InkLoom',
+			plugins: [starlightAutoSidebar()],
 			customCss: [
 				'./src/styles/custom.css',
 			],
@@ -22,15 +33,9 @@ export default defineConfig({
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
 			sidebar: [
 				{
-					label: '刑法专题图解',
+					label: '客观题',
 					items: [
-						{ autogenerate: { directory: 'criminal-law' } }
-					],
-				},
-				{
-					label: 'Guides',
-					items: [
-						{ label: 'Example Guide', slug: 'guides/example' },
+						{ autogenerate: { directory: 'objective' } }
 					],
 				},
 			],

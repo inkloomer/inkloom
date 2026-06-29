@@ -11,8 +11,8 @@ const { entry } = Astro.props;
   
   <!-- ==================== QUICK ACTIONS LIQUID GLASS TOOLBAR ==================== -->
   <div id="inkloom-quick-toolbar" class="quick-toolbar-capsule">
-    <!-- Copy HTML Button -->
-    <button id="copy-portable-html-btn" class="toolbar-btn" data-tooltip="复制 HTML 源码">
+    <!-- Copy to notes Button -->
+    <button id="copy-portable-html-btn" class="toolbar-btn" data-tooltip="复制到笔记">
       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
     </button>
     
@@ -36,54 +36,92 @@ const { entry } = Astro.props;
 </div>
 
 <style is:global>
-  /* ==================== THEME VARIABLES (SPHERICAL LIQUID GLASS SYSTEM) ==================== */
+  /* ==================== THEME VARIABLES (LIQUID GLASS + SOLID PANEL) ==================== */
   :root, [data-theme="dark"] {
-    --toc-glass-bg: radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0.04) 50%, rgba(0, 0, 0, 0.25) 100%) !important;
-    --toc-glass-bg-hover: radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0.08) 50%, rgba(0, 0, 0, 0.35) 100%) !important;
-    --toc-glass-border: rgba(255, 255, 255, 0.3) !important;      /* Thick, bright liquid surface tension border */
-    
-    --toc-shadow: 
-      inset 0 4px 6px rgba(255, 255, 255, 0.45),                /* Bright top specular reflection glare */
-      inset 0 -4px 6px rgba(0, 0, 0, 0.35),                     /* Dark bottom refraction shading */
-      inset 0 12px 18px rgba(255, 255, 255, 0.12),              /* Smooth internal liquid volume glow */
-      0 12px 24px -10px rgba(0, 0, 0, 0.5) !important;          /* Soft diffuse outer drop shadow */
-      
-    --toc-shadow-hover: 
-      inset 0 4px 6px rgba(255, 255, 255, 0.55), 
+    --toolbar-glass-bg: radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0.04) 50%, rgba(0, 0, 0, 0.25) 100%) !important;
+    --toolbar-glass-bg-hover: radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0.08) 50%, rgba(0, 0, 0, 0.35) 100%) !important;
+    --toolbar-glass-border: rgba(255, 255, 255, 0.3) !important;
+    --toolbar-shadow:
+      inset 0 4px 6px rgba(255, 255, 255, 0.45),
+      inset 0 -4px 6px rgba(0, 0, 0, 0.35),
+      inset 0 12px 18px rgba(255, 255, 255, 0.12),
+      0 12px 24px -10px rgba(0, 0, 0, 0.5) !important;
+    --toolbar-shadow-hover:
+      inset 0 4px 6px rgba(255, 255, 255, 0.55),
       inset 0 -4px 6px rgba(0, 0, 0, 0.4),
       inset 0 12px 24px rgba(255, 255, 255, 0.18),
       0 20px 40px -15px rgba(0, 0, 0, 0.6) !important;
-      
-    --toc-text-inactive: rgba(241, 245, 249, 0.8) !important;   /* Clear inactive text */
-    --toc-text-active: #c084fc !important;                      /* Bright glowing lavender */
+    --toc-glass-bg:
+      radial-gradient(circle at 28% 12%, rgba(255, 255, 255, 0.34), rgba(255, 255, 255, 0.1) 30%, transparent 52%),
+      radial-gradient(circle at 78% 88%, rgba(255, 255, 255, 0.08), transparent 42%),
+      linear-gradient(145deg, rgba(255, 255, 255, 0.13), rgba(255, 255, 255, 0.04) 46%, rgba(15, 23, 42, 0.38)) !important;
+    --toc-glass-bg-hover: var(--toc-panel-bg) !important;
+    --toc-glass-border: rgba(255, 255, 255, 0.34) !important;
+    --toc-glass-edge:
+      linear-gradient(145deg, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.12) 34%, transparent 56%, rgba(0, 0, 0, 0.24)) !important;
+    --toc-glass-refract:
+      radial-gradient(ellipse at 72% 18%, rgba(255, 255, 255, 0.34), transparent 36%),
+      radial-gradient(ellipse at 18% 78%, rgba(255, 255, 255, 0.08), transparent 42%),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.16), transparent 36%, rgba(255, 255, 255, 0.08) 72%, transparent) !important;
+    --toc-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.72),
+      inset 8px 0 18px rgba(255, 255, 255, 0.08) !important;
+    --toc-shadow-hover: var(--toc-panel-shadow) !important;
+    --toc-panel-bg: linear-gradient(180deg, #151a25 0%, #0f141f 100%) !important;
+    --toc-panel-border: rgba(148, 163, 184, 0.22) !important;
+    --toc-panel-shadow: 0 20px 48px -22px rgba(0, 0, 0, 0.62), 0 2px 12px rgba(0, 0, 0, 0.26) !important;
+    --toc-panel-item-hover: rgba(255, 255, 255, 0.07) !important;
+    --toc-text-inactive: rgba(226, 232, 240, 0.78) !important;
+    --toc-text-active: #d8b4fe !important;
     --toc-text-hover: #ffffff !important;
-    --toc-tick-inactive: rgba(255, 255, 255, 0.4) !important;   /* Visible white ticks */
-    --toc-tick-active: #c084fc !important;
+    --toc-tick-inactive: rgba(226, 232, 240, 0.58) !important;
+    --toc-tick-active: #d8b4fe !important;
+    --toc-tick-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.78), 0 3px 12px rgba(0, 0, 0, 0.24) !important;
+    --toc-active-glow: 0 0 14px rgba(216, 180, 254, 0.52), inset 0 1px 0 rgba(255, 255, 255, 0.82) !important;
     --toc-item-hover: rgba(255, 255, 255, 0.08) !important;
   }
 
   [data-theme="light"] {
-    --toc-glass-bg: radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.65) 0%, rgba(255, 255, 255, 0.35) 50%, rgba(0, 0, 0, 0.06) 100%) !important;
-    --toc-glass-bg-hover: radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(0, 0, 0, 0.08) 100%) !important;
-    --toc-glass-border: rgba(0, 0, 0, 0.12) !important;         /* Darker refracting border */
-    
-    --toc-shadow: 
-      inset 0 4px 6px rgba(255, 255, 255, 0.95),                /* Bright white glare reflection */
+    --toolbar-glass-bg: radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.65) 0%, rgba(255, 255, 255, 0.35) 50%, rgba(0, 0, 0, 0.06) 100%) !important;
+    --toolbar-glass-bg-hover: radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(0, 0, 0, 0.08) 100%) !important;
+    --toolbar-glass-border: rgba(0, 0, 0, 0.12) !important;
+    --toolbar-shadow:
+      inset 0 4px 6px rgba(255, 255, 255, 0.95),
       inset 0 -4px 6px rgba(0, 0, 0, 0.06),
-      inset 0 10px 18px rgba(255, 255, 255, 0.45),              /* Specular volume highlight */
+      inset 0 10px 18px rgba(255, 255, 255, 0.45),
       0 12px 24px -10px rgba(0, 0, 0, 0.15) !important;
-      
-    --toc-shadow-hover: 
-      inset 0 4px 6px rgba(255, 255, 255, 1), 
+    --toolbar-shadow-hover:
+      inset 0 4px 6px rgba(255, 255, 255, 1),
       inset 0 -4px 6px rgba(0, 0, 0, 0.08),
       inset 0 10px 24px rgba(255, 255, 255, 0.55),
       0 20px 40px -15px rgba(0, 0, 0, 0.2) !important;
-      
-    --toc-text-inactive: rgba(15, 23, 42, 0.8) !important;
-    --toc-text-active: #7c3aed !important;                      /* Deep violet */
+    --toc-glass-bg:
+      radial-gradient(circle at 28% 12%, rgba(255, 255, 255, 0.96), rgba(255, 255, 255, 0.5) 32%, transparent 54%),
+      radial-gradient(circle at 76% 86%, rgba(15, 23, 42, 0.05), transparent 42%),
+      linear-gradient(145deg, rgba(255, 255, 255, 0.62), rgba(255, 255, 255, 0.24) 48%, rgba(255, 255, 255, 0.12)) !important;
+    --toc-glass-bg-hover: var(--toc-panel-bg) !important;
+    --toc-glass-border: rgba(15, 23, 42, 0.14) !important;
+    --toc-glass-edge:
+      linear-gradient(145deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.22) 34%, transparent 58%, rgba(15, 23, 42, 0.08)) !important;
+    --toc-glass-refract:
+      radial-gradient(ellipse at 72% 18%, rgba(255, 255, 255, 0.72), transparent 38%),
+      radial-gradient(ellipse at 18% 78%, rgba(15, 23, 42, 0.05), transparent 42%),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.48), transparent 38%, rgba(255, 255, 255, 0.2) 72%, transparent) !important;
+    --toc-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 1),
+      inset 8px 0 18px rgba(255, 255, 255, 0.46) !important;
+    --toc-shadow-hover: var(--toc-panel-shadow) !important;
+    --toc-panel-bg: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%) !important;
+    --toc-panel-border: rgba(15, 23, 42, 0.12) !important;
+    --toc-panel-shadow: 0 18px 42px -24px rgba(15, 23, 42, 0.28), 0 2px 10px rgba(15, 23, 42, 0.08) !important;
+    --toc-panel-item-hover: rgba(15, 23, 42, 0.06) !important;
+    --toc-text-inactive: rgba(15, 23, 42, 0.74) !important;
+    --toc-text-active: #6d28d9 !important;
     --toc-text-hover: #000000 !important;
-    --toc-tick-inactive: rgba(0, 0, 0, 0.3) !important;
-    --toc-tick-active: #7c3aed !important;
+    --toc-tick-inactive: rgba(15, 23, 42, 0.42) !important;
+    --toc-tick-active: #6d28d9 !important;
+    --toc-tick-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.92), 0 3px 12px rgba(15, 23, 42, 0.1) !important;
+    --toc-active-glow: 0 0 13px rgba(109, 40, 217, 0.26), inset 0 1px 0 rgba(255, 255, 255, 0.94) !important;
     --toc-item-hover: rgba(0, 0, 0, 0.06) !important;
   }
 
@@ -101,17 +139,17 @@ const { entry } = Astro.props;
     align-items: center !important;
     gap: 6px !important;
     padding: 4px 6px !important;
-    background: var(--toc-glass-bg) !important;
-    border: 1px solid var(--toc-glass-border) !important;
+    background: var(--toolbar-glass-bg) !important;
+    border: 1px solid var(--toolbar-glass-border) !important;
     border-radius: 20px !important;
-    box-shadow: var(--toc-shadow) !important;
+    box-shadow: var(--toolbar-shadow) !important;
     z-index: 99 !important;
     transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s !important;
   }
   
   .quick-toolbar-capsule:hover {
-    background: var(--toc-glass-bg-hover) !important;
-    box-shadow: var(--toc-shadow-hover) !important;
+    background: var(--toolbar-glass-bg-hover) !important;
+    box-shadow: var(--toolbar-shadow-hover) !important;
   }
 
   .toolbar-btn {
@@ -201,24 +239,52 @@ const { entry } = Astro.props;
     max-height: 80vh !important;
     
     background: var(--toc-glass-bg) !important;
-    backdrop-filter: none !important;
-    -webkit-backdrop-filter: none !important;
+    backdrop-filter: blur(18px) saturate(180%) contrast(1.05) !important;
+    -webkit-backdrop-filter: blur(18px) saturate(180%) contrast(1.05) !important;
     border: 1px solid var(--toc-glass-border) !important;
     border-radius: 20px !important;
     box-shadow: var(--toc-shadow) !important;
     z-index: 100000 !important;
+    isolation: isolate !important;
     
-    transition: width 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1),
-                background-color 0.3s,
+    transition: width 0.34s cubic-bezier(0.22, 1, 0.36, 1),
+                background 0.2s ease,
                 border-color 0.3s,
-                box-shadow 0.3s !important;
+                border-radius 0.3s,
+                box-shadow 0.3s,
+                backdrop-filter 0.2s !important;
                 
     cursor: pointer !important;
     overflow: hidden !important;
     box-sizing: border-box !important;
   }
 
+  .custom-toc-container::before,
+  .custom-toc-container::after {
+    content: '' !important;
+    position: absolute !important;
+    pointer-events: none !important;
+    border-radius: inherit !important;
+    transition: opacity 0.2s ease !important;
+  }
+
+  .custom-toc-container::before {
+    inset: 1px !important;
+    background: var(--toc-glass-edge) !important;
+    opacity: 0.9 !important;
+    z-index: 0 !important;
+  }
+
+  .custom-toc-container::after {
+    inset: 0 !important;
+    background: var(--toc-glass-refract) !important;
+    opacity: 0.86 !important;
+    z-index: 0 !important;
+  }
+
   .custom-toc-ticks-wrapper {
+    position: relative !important;
+    z-index: 1 !important;
     width: 100% !important;
     padding: 16px 0 !important;
     box-sizing: border-box !important;
@@ -265,6 +331,7 @@ const { entry } = Astro.props;
     height: 3px !important;
     background-color: var(--toc-tick-inactive) !important;
     border-radius: 2px !important;
+    box-shadow: var(--toc-tick-shadow) !important;
     transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.1) !important;
     flex-shrink: 0 !important;
   }
@@ -273,11 +340,12 @@ const { entry } = Astro.props;
   .toc-item a.active .toc-tick {
     background-color: var(--toc-tick-active) !important;
     width: 20px !important;
+    box-shadow: var(--toc-active-glow) !important;
   }
 
   /* Glowing active indicators for Dark Theme */
   [data-theme="dark"] .toc-item a.active .toc-tick {
-    box-shadow: 0 0 8px rgba(192, 132, 252, 0.8) !important;
+    box-shadow: var(--toc-active-glow) !important;
   }
 
   /* Text link titles (Collapsed: 100% display none to prevent browser width bugs) */
@@ -296,9 +364,18 @@ const { entry } = Astro.props;
   /* ==================== EXPANDED STATE (Hover to Reveal) ==================== */
 
   .custom-toc-container:hover {
-    width: 280px !important;
-    background: var(--toc-glass-bg-hover) !important;
+    width: min(280px, calc(100vw - 32px)) !important;
+    background: var(--toc-panel-bg) !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    border-color: var(--toc-panel-border) !important;
+    border-radius: 14px !important;
     box-shadow: var(--toc-shadow-hover) !important;
+  }
+
+  .custom-toc-container:hover::before,
+  .custom-toc-container:hover::after {
+    opacity: 0 !important;
   }
 
   .custom-toc-container:hover .custom-toc-ticks-wrapper {
@@ -317,7 +394,7 @@ const { entry } = Astro.props;
 
   /* Hover effect on expanded items */
   .custom-toc-container:hover .toc-item a:hover {
-    background-color: var(--toc-item-hover) !important;
+    background-color: var(--toc-panel-item-hover) !important;
   }
   .custom-toc-container:hover .toc-item a:hover .toc-text {
     color: var(--toc-text-hover) !important;
@@ -339,10 +416,11 @@ const { entry } = Astro.props;
     width: 8px !important;
     height: 8px !important;
     order: 2 !important;
+    box-shadow: none !important;
   }
 
   [data-theme="dark"] .custom-toc-container:hover .toc-item a.active .toc-tick {
-    box-shadow: 0 0 8px rgba(192, 132, 252, 0.8) !important;
+    box-shadow: none !important;
   }
 
   /* Show and fade-in heading texts on hover */
@@ -359,14 +437,7 @@ const { entry } = Astro.props;
     font-weight: 600 !important;
   }
   [data-theme="dark"] .custom-toc-container:hover .toc-item a.active .toc-text {
-    text-shadow: 0 0 8px rgba(192, 132, 252, 0.4) !important;
-  }
-
-  /* Hide on desktop, let native Starlight TOC run */
-  @media (min-width: 72rem) {
-    .custom-toc-container {
-      display: none !important;
-    }
+    text-shadow: none !important;
   }
 
   /* Hide inside iframe embeds */
@@ -568,44 +639,117 @@ const { entry } = Astro.props;
         clone.querySelectorAll('.sl-anchor-link').forEach(el => el.remove());
 
         const customStyles = `
+          :root {
+            color-scheme: light dark;
+            --copy-bg: #ffffff;
+            --copy-surface: #f8fafc;
+            --copy-surface-strong: #ffffff;
+            --copy-text: #1e293b;
+            --copy-muted: #475569;
+            --copy-border: #cbd5e1;
+            --copy-border-soft: #e2e8f0;
+            --copy-accent: #4f46e5;
+            --copy-accent-soft: #f5f3ff;
+            --copy-accent-text: #4338ca;
+            --copy-warning-bg: #fff1f2;
+            --copy-warning-border: #fecdd3;
+            --copy-warning-text: #9f1239;
+            --copy-money-bg: #fffbeb;
+            --copy-money-border: #fde68a;
+            --copy-money-text: #b45309;
+          }
+          @media (prefers-color-scheme: dark) {
+            :root {
+              --copy-bg: #0f172a;
+              --copy-surface: #111827;
+              --copy-surface-strong: #1e293b;
+              --copy-text: #e5e7eb;
+              --copy-muted: #cbd5e1;
+              --copy-border: #475569;
+              --copy-border-soft: #334155;
+              --copy-accent: #a5b4fc;
+              --copy-accent-soft: #1e1b4b;
+              --copy-accent-text: #c4b5fd;
+              --copy-warning-bg: #4c0519;
+              --copy-warning-border: #be123c;
+              --copy-warning-text: #fecdd3;
+              --copy-money-bg: #451a03;
+              --copy-money-border: #92400e;
+              --copy-money-text: #fbbf24;
+            }
+          }
+          * { box-sizing: border-box; }
+          .inkloom-copy-root {
+            font-family: system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            color: var(--copy-text);
+            background: var(--copy-bg);
+          }
+          .inkloom-copy-root * {
+            color: inherit;
+            border-color: var(--copy-border-soft);
+          }
+          .inkloom-copy-root p,
+          .inkloom-copy-root li,
+          .inkloom-copy-root details,
+          .inkloom-copy-root summary,
+          .inkloom-copy-root div {
+            color: var(--copy-text) !important;
+          }
+          .inkloom-copy-root svg {
+            color: inherit !important;
+            stroke: currentColor !important;
+          }
           @keyframes flow-dash { to { stroke-dashoffset: -20; } }
           .flowing-line { stroke-dasharray: 6 4; animation: flow-dash 0.8s linear infinite !important; }
           .interactive-card {
-            border: 1px solid #cbd5e1 !important;
+            border: 1px solid var(--copy-border) !important;
             border-radius: 12px !important;
             padding: 20px !important;
-            background-color: #f8fafc !important;
+            background-color: var(--copy-surface) !important;
             margin-bottom: 32px !important;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05) !important;
             transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), border-color 0.3s !important;
           }
-          .interactive-card:hover { transform: translateY(-5px) !important; box-shadow: 0 16px 32px rgba(79, 70, 229, 0.08) !important; border-color: #4f46e5 !important; }
+          .interactive-card:hover { transform: translateY(-5px) !important; box-shadow: 0 16px 32px rgba(79, 70, 229, 0.08) !important; border-color: var(--copy-accent) !important; }
           .glow-capsule {
-            background-color: #ffffff !important;
-            border: 1px solid #e2e8f0 !important;
+            background-color: var(--copy-surface-strong) !important;
+            border: 1px solid var(--copy-border-soft) !important;
             padding: 12px !important;
             border-radius: 8px !important;
             box-shadow: 0 1px 3px rgba(0,0,0,0.05) !important;
             transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
           }
           .glow-capsule:hover { transform: scale(1.04) translateY(-1px) !important; box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2) !important; filter: brightness(1.05); }
-          @keyframes pulse-red { 0%, 100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.3); border-color: #fecdd3; } 50% { box-shadow: 0 0 16px 6px rgba(239, 68, 68, 0.15); border-color: #f43f5e; } }
-          .pulse-warning { border: 2px solid #fecdd3 !important; border-radius: 12px !important; padding: 18px !important; background-color: #fff1f2 !important; animation: pulse-red 2.5s infinite ease-in-out !important; }
+          @keyframes pulse-red { 0%, 100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.3); border-color: var(--copy-warning-border); } 50% { box-shadow: 0 0 16px 6px rgba(239, 68, 68, 0.15); border-color: #f43f5e; } }
+          .pulse-warning { border: 2px solid var(--copy-warning-border) !important; border-radius: 12px !important; padding: 18px !important; background-color: var(--copy-warning-bg) !important; color: var(--copy-warning-text) !important; animation: pulse-red 2.5s infinite ease-in-out !important; }
           .table-row { transition: background-color 0.2s ease-in-out !important; }
-          .table-row:hover { background-color: #f8fafc !important; }
+          .table-row:hover { background-color: var(--copy-surface) !important; }
           .self-test-summary { cursor: pointer !important; outline: none !important; list-style: none !important; }
           .interactive-card:has(.trigger-link-1:hover) .flow-link-1 { stroke: #f59e0b !important; stroke-width: 5px !important; filter: drop-shadow(0 0 8px #f59e0b) !important; animation-duration: 0.3s !important; }
           .interactive-card:has(.trigger-link-2:hover) .flow-link-2 { stroke: #4f46e5 !important; stroke-width: 5px !important; filter: drop-shadow(0 0 8px #4f46e5) !important; animation-duration: 0.3s !important; }
           .interactive-card:has(.trigger-link-1:hover) [data-actor="甲"], .interactive-card:has(.trigger-link-1:hover) [data-actor="乙"] { border-color: #f59e0b !important; transform: scale(1.05) !important; box-shadow: 0 0 12px rgba(245, 158, 11, 0.3) !important; }
           .interactive-card:has(.trigger-link-2:hover) [data-actor="乙"], .interactive-card:has(.trigger-link-2:hover) [data-actor="丙"] { border-color: #4f46e5 !important; transform: scale(1.05) !important; box-shadow: 0 0 12px rgba(79, 70, 229, 0.3) !important; }
-          .memory-toggle-btn { display: inline-flex; align-items: center; gap: 10px; padding: 8px 18px; background-color: #f8fafc; border: 2px solid #e2e8f0; border-radius: 30px; font-size: 13.5px; font-weight: bold; cursor: pointer; transition: all 0.3s ease; user-select: none; margin-bottom: 28px; }
-          .memory-toggle-btn::after { content: '关闭 (正常状态) 🔴'; color: #64748b; }
-          #memory-challenge-toggle:checked + .memory-toggle-btn { background-color: #f5f3ff; border-color: #4f46e5; }
-          #memory-challenge-toggle:checked + .memory-toggle-btn::after { content: '激活 (消隐背诵中) 🟢'; color: #4f46e5; }
-          #memory-challenge-toggle:checked ~ .note-content-wrapper .answer-node { filter: blur(5px) grayscale(1) !important; background-color: #e2e8f0 !important; color: transparent !important; border-color: #cbd5e1 !important; cursor: help !important; transition: all 0.25s ease !important; }
+          .memory-toggle-btn { display: inline-flex; align-items: center; gap: 10px; padding: 8px 18px; background-color: var(--copy-surface); border: 2px solid var(--copy-border-soft); border-radius: 30px; font-size: 13.5px; font-weight: bold; cursor: pointer; transition: all 0.3s ease; user-select: none; margin-bottom: 28px; }
+          .memory-toggle-btn::after { content: '关闭 (正常状态) 🔴'; color: var(--copy-muted); }
+          #memory-challenge-toggle:checked + .memory-toggle-btn { background-color: var(--copy-accent-soft); border-color: var(--copy-accent); }
+          #memory-challenge-toggle:checked + .memory-toggle-btn::after { content: '激活 (消隐背诵中) 🟢'; color: var(--copy-accent-text); }
+          #memory-challenge-toggle:checked ~ .note-content-wrapper .answer-node { filter: blur(5px) grayscale(1) !important; background-color: var(--copy-border-soft) !important; color: transparent !important; border-color: var(--copy-border) !important; cursor: help !important; transition: all 0.25s ease !important; }
           #memory-challenge-toggle:checked ~ .note-content-wrapper .answer-node span, #memory-challenge-toggle:checked ~ .note-content-wrapper .answer-node svg { opacity: 0 !important; }
-          #memory-challenge-toggle:checked ~ .note-content-wrapper .answer-node:hover { filter: blur(0px) grayscale(0) !important; background-color: #ffffff !important; color: #1e293b !important; border-color: #e2e8f0 !important; }
+          #memory-challenge-toggle:checked ~ .note-content-wrapper .answer-node:hover { filter: blur(0px) grayscale(0) !important; background-color: var(--copy-surface-strong) !important; color: var(--copy-text) !important; border-color: var(--copy-border-soft) !important; }
           #memory-challenge-toggle:checked ~ .note-content-wrapper .answer-node:hover span, #memory-challenge-toggle:checked ~ .note-content-wrapper .answer-node:hover svg { opacity: 1 !important; }
+          .answer-node { color: var(--copy-text) !important; }
+          .answer-node span { color: inherit !important; }
+          [style*="var(--sl-color-text-muted)"] { color: var(--copy-muted) !important; }
+          [style*="var(--sl-color-text)"] { color: var(--copy-text) !important; }
+          [style*="var(--sl-color-accent)"] { color: var(--copy-accent-text) !important; }
+          [style*="var(--sl-color-bg-sidebar)"] { background-color: var(--copy-surface) !important; }
+          [style*="var(--sl-color-bg)"] { background-color: var(--copy-surface-strong) !important; }
+          [style*="var(--sl-color-hairline)"] { border-color: var(--copy-border-soft) !important; }
+          [style*="#fffbeb"] { background-color: var(--copy-money-bg) !important; color: var(--copy-money-text) !important; border-color: var(--copy-money-border) !important; }
+          [style*="#fff1f2"] { background-color: var(--copy-warning-bg) !important; color: var(--copy-warning-text) !important; border-color: var(--copy-warning-border) !important; }
           @keyframes bounce-coin { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }
           .glow-capsule:hover .icon-svg-bribe .coin-dot { animation: bounce-coin 0.6s ease-in-out infinite; }
           @keyframes strike-gavel { 0%, 100% { transform: rotate(0deg); } 50% { transform: rotate(-25deg); } }
@@ -619,7 +763,7 @@ const { entry } = Astro.props;
         `;
 
         const htmlString = `
-          <div style="font-family: system-ui, -apple-system, sans-serif; line-height: 1.6; max-width: 800px; margin: 0 auto; color: #1e293b;">
+          <div class="inkloom-copy-root">
             <style>${customStyles}</style>
             ${clone.innerHTML}
           </div>
