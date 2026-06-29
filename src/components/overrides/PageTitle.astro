@@ -6,19 +6,26 @@ import Default from '@astrojs/starlight/components/PageTitle.astro';
 const { entry } = Astro.props;
 ---
 
-<Default {...Astro.props} />
-
-<!-- The Copy Buttons (HTML and iframe) -->
-<div id="inkloom-copy-toolbar" style="margin-top: 12px; margin-bottom: 24px; display: flex; gap: 12px; flex-wrap: wrap;">
-  <button id="copy-portable-html-btn" class="glow-capsule" style="padding: 8px 16px; background-color: var(--sl-color-accent); color: white; border: none; border-radius: 20px; font-size: 13px; font-weight: bold; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; transition: all 0.2s; box-shadow: 0 4px 6px -1px rgba(79, 70, 229, 0.2); outline: none;">
-    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-    一键复制 HTML 源码 (Notion/Obsidian)
-  </button>
+<div class="page-header-wrapper">
+  <Default {...Astro.props} />
   
-  <button id="copy-iframe-btn" class="glow-capsule" style="padding: 8px 16px; background-color: #0d9488; color: white; border: none; border-radius: 20px; font-size: 13px; font-weight: bold; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; transition: all 0.2s; box-shadow: 0 4px 6px -1px rgba(13, 148, 136, 0.2); outline: none;">
-    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-    一键复制 iframe 嵌入代码 (本地/在线)
-  </button>
+  <!-- ==================== QUICK ACTIONS LIQUID GLASS TOOLBAR ==================== -->
+  <div id="inkloom-quick-toolbar" class="quick-toolbar-capsule">
+    <!-- Copy HTML Button -->
+    <button id="copy-portable-html-btn" class="toolbar-btn" data-tooltip="复制 HTML 源码">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+    </button>
+    
+    <!-- Copy Iframe Button -->
+    <button id="copy-iframe-btn" class="toolbar-btn" data-tooltip="复制 iframe 代码">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+    </button>
+    
+    <!-- Memory Mode Button -->
+    <button id="toolbar-memory-btn" class="toolbar-btn" data-tooltip="消隐背诵模式">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="icon-brain"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96-.44 2.5 2.5 0 0 1 0-3.12 3 3 0 0 1 0-4.88 2.5 2.5 0 0 1 0-3.12A2.5 2.5 0 0 1 9.5 2Z"></path><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96-.44 2.5 2.5 0 0 0 0-3.12 3 3 0 0 0 0-4.88 2.5 2.5 0 0 0 0-3.12A2.5 2.5 0 0 0 14.5 2Z"></path></svg>
+    </button>
+  </div>
 </div>
 
 <!-- ==================== PREMIUM LIQUID GLASS SCROLLBAR TOC ==================== -->
@@ -31,12 +38,10 @@ const { entry } = Astro.props;
 <style is:global>
   /* ==================== THEME VARIABLES (SPHERICAL LIQUID GLASS SYSTEM) ==================== */
   :root, [data-theme="dark"] {
-    /* 3D Radial Spherical Gradient simulating a light-source reflection from top-left (30% 20%) */
     --toc-glass-bg: radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0.04) 50%, rgba(0, 0, 0, 0.25) 100%) !important;
     --toc-glass-bg-hover: radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0.08) 50%, rgba(0, 0, 0, 0.35) 100%) !important;
     --toc-glass-border: rgba(255, 255, 255, 0.3) !important;      /* Thick, bright liquid surface tension border */
     
-    /* 3D Liquid Specular Refraction Shadows (High gloss liquid droplet shadows) */
     --toc-shadow: 
       inset 0 4px 6px rgba(255, 255, 255, 0.45),                /* Bright top specular reflection glare */
       inset 0 -4px 6px rgba(0, 0, 0, 0.35),                     /* Dark bottom refraction shading */
@@ -49,7 +54,7 @@ const { entry } = Astro.props;
       inset 0 12px 24px rgba(255, 255, 255, 0.18),
       0 20px 40px -15px rgba(0, 0, 0, 0.6) !important;
       
-    --toc-text-inactive: rgba(241, 245, 249, 0.8) !important;   /* Clear high-contrast inactive text */
+    --toc-text-inactive: rgba(241, 245, 249, 0.8) !important;   /* Clear inactive text */
     --toc-text-active: #c084fc !important;                      /* Bright glowing lavender */
     --toc-text-hover: #ffffff !important;
     --toc-tick-inactive: rgba(255, 255, 255, 0.4) !important;   /* Visible white ticks */
@@ -58,7 +63,6 @@ const { entry } = Astro.props;
   }
 
   [data-theme="light"] {
-    /* 3D Radial Spherical Gradient for Light Mode */
     --toc-glass-bg: radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.65) 0%, rgba(255, 255, 255, 0.35) 50%, rgba(0, 0, 0, 0.06) 100%) !important;
     --toc-glass-bg-hover: radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(0, 0, 0, 0.08) 100%) !important;
     --toc-glass-border: rgba(0, 0, 0, 0.12) !important;         /* Darker refracting border */
@@ -83,6 +87,108 @@ const { entry } = Astro.props;
     --toc-item-hover: rgba(0, 0, 0, 0.06) !important;
   }
 
+  /* ==================== QUICK ACTIONS TOOLBAR ==================== */
+  .page-header-wrapper {
+    position: relative !important;
+    width: 100% !important;
+  }
+
+  .quick-toolbar-capsule {
+    position: absolute !important;
+    top: 6px !important;
+    right: 0 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    padding: 4px 6px !important;
+    background: var(--toc-glass-bg) !important;
+    border: 1px solid var(--toc-glass-border) !important;
+    border-radius: 20px !important;
+    box-shadow: var(--toc-shadow) !important;
+    z-index: 99 !important;
+    transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s !important;
+  }
+  
+  .quick-toolbar-capsule:hover {
+    background: var(--toc-glass-bg-hover) !important;
+    box-shadow: var(--toc-shadow-hover) !important;
+  }
+
+  .toolbar-btn {
+    position: relative !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 32px !important;
+    height: 32px !important;
+    background: transparent !important;
+    border: none !important;
+    border-radius: 50% !important;
+    color: var(--toc-text-inactive) !important;
+    cursor: pointer !important;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1), color 0.2s !important;
+    outline: none !important;
+  }
+
+  .toolbar-btn:hover {
+    background-color: var(--toc-item-hover) !important;
+    color: var(--toc-text-hover) !important;
+    transform: scale(1.1) !important;
+  }
+
+  /* Active brain state */
+  .toolbar-btn.active {
+    color: var(--toc-text-active) !important;
+    background-color: var(--toc-item-hover) !important;
+  }
+  [data-theme="dark"] .toolbar-btn.active {
+    filter: drop-shadow(0 0 6px rgba(192, 132, 252, 0.7)) !important;
+  }
+
+  /* Success state */
+  .toolbar-btn.success {
+    color: #10b981 !important;
+  }
+  [data-theme="dark"] .toolbar-btn.success {
+    filter: drop-shadow(0 0 6px rgba(16, 185, 129, 0.7)) !important;
+  }
+
+  /* Tooltip styling using pure CSS */
+  .toolbar-btn[data-tooltip]::after {
+    content: attr(data-tooltip) !important;
+    position: absolute !important;
+    bottom: -32px !important;
+    left: 50% !important;
+    transform: translateX(-50%) translateY(4px) !important;
+    padding: 4px 8px !important;
+    font-size: 11px !important;
+    font-weight: 500 !important;
+    color: #ffffff !important;
+    background: rgba(15, 23, 42, 0.9) !important;
+    border-radius: 4px !important;
+    white-space: nowrap !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transition: all 0.15s ease !important;
+    z-index: 100002 !important;
+    pointer-events: none !important;
+  }
+
+  .toolbar-btn[data-tooltip]:hover::after {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateX(-50%) translateY(0) !important;
+  }
+
+  /* Mobile responsive stacking */
+  @media (max-width: 50rem) {
+    .quick-toolbar-capsule {
+      position: static !important;
+      margin-top: 12px !important;
+      margin-bottom: 8px !important;
+    }
+  }
+
   /* ==================== CONTAINERS ==================== */
 
   .custom-toc-container {
@@ -94,7 +200,6 @@ const { entry } = Astro.props;
     height: auto !important;
     max-height: 80vh !important;
     
-    /* 100% Clear Glossy Liquid Glass - Removed backdrop-filter to eliminate frosted look! */
     background: var(--toc-glass-bg) !important;
     backdrop-filter: none !important;
     -webkit-backdrop-filter: none !important;
@@ -103,7 +208,6 @@ const { entry } = Astro.props;
     box-shadow: var(--toc-shadow) !important;
     z-index: 100000 !important;
     
-    /* Smooth liquid transition curve */
     transition: width 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1),
                 background-color 0.3s,
                 border-color 0.3s,
@@ -389,11 +493,53 @@ const { entry } = Astro.props;
     if (topEl) topObserver.observe(topEl);
   }
 
-  // Setup event listeners
-  document.addEventListener('DOMContentLoaded', initCustomTOC);
+  // Sync Memory Mode Button with actual checkbox input
+  function initMemoryBtn() {
+    const checkbox = document.getElementById('memory-challenge-toggle') as HTMLInputElement | null;
+    const memoryBtn = document.getElementById('toolbar-memory-btn');
+    
+    if (checkbox && memoryBtn) {
+      memoryBtn.style.display = 'flex'; // Ensure visible
+      
+      // Initial sync state
+      if (checkbox.checked) {
+        memoryBtn.classList.add('active');
+      } else {
+        memoryBtn.classList.remove('active');
+      }
+      
+      // React to checkbox change (could be triggered elsewhere)
+      checkbox.addEventListener('change', () => {
+        if (checkbox.checked) {
+          memoryBtn.classList.add('active');
+        } else {
+          memoryBtn.classList.remove('active');
+        }
+      });
+      
+      // Add trigger click action
+      memoryBtn.addEventListener('click', () => {
+        checkbox.checked = !checkbox.checked;
+        checkbox.dispatchEvent(new Event('change'));
+      });
+    } else {
+      // If there is no memory mode toggle checkbox on this page, hide the brain button
+      if (memoryBtn) {
+        memoryBtn.style.display = 'none';
+      }
+    }
+  }
+
+  // Combined DOM and Astro Transitions initializer
+  function runAllInitializations() {
+    initCustomTOC();
+    initMemoryBtn();
+  }
+
+  document.addEventListener('DOMContentLoaded', runAllInitializations);
   if (typeof window !== 'undefined') {
     // Handles Astro View Transitions page loads
-    document.addEventListener('astro:page-load', initCustomTOC);
+    document.addEventListener('astro:page-load', runAllInitializations);
   }
 </script>
 
@@ -416,7 +562,7 @@ const { entry } = Astro.props;
         const footer = clone.querySelector('footer');
         if (footer) footer.remove();
         
-        const toolbar = clone.querySelector('#inkloom-copy-toolbar');
+        const toolbar = clone.querySelector('#inkloom-quick-toolbar');
         if (toolbar) toolbar.remove();
 
         clone.querySelectorAll('.sl-anchor-link').forEach(el => el.remove());
@@ -489,15 +635,14 @@ const { entry } = Astro.props;
 
         await navigator.clipboard.write([clipboardItem]);
 
-        const originalHTML = htmlBtn.innerHTML;
-        htmlBtn.innerHTML = `✓ HTML 源码复制成功！`;
-        htmlBtn.style.backgroundColor = '#10b981';
-        htmlBtn.style.boxShadow = '0 4px 6px -1px rgba(16, 185, 129, 0.2)';
+        // Tooltip feedback
+        const originalTooltip = htmlBtn.getAttribute('data-tooltip') || '';
+        htmlBtn.setAttribute('data-tooltip', '✓ 复制成功！');
+        htmlBtn.classList.add('success');
         
         setTimeout(() => {
-          htmlBtn.innerHTML = originalHTML;
-          htmlBtn.style.backgroundColor = 'var(--sl-color-accent)';
-          htmlBtn.style.boxShadow = '0 4px 6px -1px rgba(79, 70, 229, 0.2)';
+          htmlBtn.setAttribute('data-tooltip', originalTooltip);
+          htmlBtn.classList.remove('success');
         }, 2000);
 
       } catch (err: any) {
@@ -526,15 +671,14 @@ const { entry } = Astro.props;
         
         await navigator.clipboard.writeText(iframeCode);
         
-        const originalHTML = iframeBtn.innerHTML;
-        iframeBtn.innerHTML = `✓ iframe 嵌入代码复制成功！`;
-        iframeBtn.style.backgroundColor = '#10b981';
-        iframeBtn.style.boxShadow = '0 4px 6px -1px rgba(16, 185, 129, 0.2)';
+        // Tooltip feedback
+        const originalTooltip = iframeBtn.getAttribute('data-tooltip') || '';
+        iframeBtn.setAttribute('data-tooltip', '✓ 复制成功！');
+        iframeBtn.classList.add('success');
         
         setTimeout(() => {
-          iframeBtn.innerHTML = originalHTML;
-          iframeBtn.style.backgroundColor = '#0d9488';
-          iframeBtn.style.boxShadow = '0 4px 6px -1px rgba(13, 148, 136, 0.2)';
+          iframeBtn.setAttribute('data-tooltip', originalTooltip);
+          iframeBtn.classList.remove('success');
         }, 2000);
 
       } catch (err: any) {
