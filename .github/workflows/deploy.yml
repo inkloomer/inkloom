@@ -29,12 +29,13 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 22 # 🎯 升级为 Node 22 以原生支持 pnpm v11 的 node:sqlite 内置模块需求
+          node-version: 22 # 🎯 锁定使用 Node 22
 
-      - name: Install pnpm
-        uses: pnpm/action-setup@v3
-        with:
-          version: 11
+      - name: Enable Corepack & Install pnpm
+        run: |
+          corepack enable
+          corepack prepare pnpm@11.5.2 --activate
+        # 🎯 通过 Node.js 22 自带的 Corepack 直接启用 pnpm，彻底避免第三方 setup-pnpm 插件的版本识别 Bug
 
       - name: Install dependencies
         run: pnpm install
