@@ -8,20 +8,400 @@ const { entry } = Astro.props;
 
 <Default {...Astro.props} />
 
-<!-- The Copy Button for Notion/Obsidian -->
-<div style="margin-top: 12px; margin-bottom: 24px;">
+<!-- The Copy Buttons (HTML and iframe) -->
+<div id="inkloom-copy-toolbar" style="margin-top: 12px; margin-bottom: 24px; display: flex; gap: 12px; flex-wrap: wrap;">
   <button id="copy-portable-html-btn" class="glow-capsule" style="padding: 8px 16px; background-color: var(--sl-color-accent); color: white; border: none; border-radius: 20px; font-size: 13px; font-weight: bold; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; transition: all 0.2s; box-shadow: 0 4px 6px -1px rgba(79, 70, 229, 0.2); outline: none;">
     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
     一键复制 HTML 源码 (Notion/Obsidian)
   </button>
+  
+  <button id="copy-iframe-btn" class="glow-capsule" style="padding: 8px 16px; background-color: #0d9488; color: white; border: none; border-radius: 20px; font-size: 13px; font-weight: bold; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; transition: all 0.2s; box-shadow: 0 4px 6px -1px rgba(13, 148, 136, 0.2); outline: none;">
+    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+    一键复制 iframe 嵌入代码 (本地/在线)
+  </button>
 </div>
 
+<!-- ==================== PREMIUM LIQUID GLASS SCROLLBAR TOC ==================== -->
+<div id="custom-float-toc" class="custom-toc-container">
+  <div class="custom-toc-ticks-wrapper">
+    <ul id="custom-toc-list"></ul>
+  </div>
+</div>
+
+<style is:global>
+  /* ==================== THEME VARIABLES (CLEAR GLOSSY LIQUID GLASS) ==================== */
+  :root, [data-theme="dark"] {
+    /* Clear (No Blur/Frosted effect) highly transparent liquid glass background */
+    --toc-glass-bg: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%) !important;
+    --toc-glass-bg-hover: linear-gradient(135deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.04) 100%) !important;
+    --toc-glass-border: rgba(255, 255, 255, 0.22) !important;    /* Bright refracting border */
+    
+    /* 3D Specular Glare & Inset Refraction Shadows (Plump Water Droplet effect) */
+    --toc-shadow: 
+      inset 0 2px 4px rgba(255, 255, 255, 0.4),                 /* Bright top edge reflection */
+      inset 0 12px 14px rgba(255, 255, 255, 0.1),               /* Liquid inner volume reflection */
+      inset 0 -12px 14px rgba(0, 0, 0, 0.25),                   /* Bottom dark refraction shading */
+      0 12px 24px -10px rgba(0, 0, 0, 0.5) !important;          /* Soft diffuse outer shadow */
+      
+    --toc-shadow-hover: 
+      inset 0 2px 4px rgba(255, 255, 255, 0.55), 
+      inset 0 12px 20px rgba(255, 255, 255, 0.15),
+      inset 0 -12px 20px rgba(0, 0, 0, 0.3),
+      0 20px 40px -15px rgba(0, 0, 0, 0.6) !important;
+      
+    --toc-text-inactive: rgba(241, 245, 249, 0.8) !important;   /* Clean high-contrast white text */
+    --toc-text-active: #c084fc !important;                      /* Glowing lavender */
+    --toc-text-hover: #ffffff !important;
+    --toc-tick-inactive: rgba(255, 255, 255, 0.35) !important;  /* Soft white ticks */
+    --toc-tick-active: #c084fc !important;
+    --toc-item-hover: rgba(255, 255, 255, 0.08) !important;
+  }
+
+  [data-theme="light"] {
+    --toc-glass-bg: linear-gradient(135deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.3) 100%) !important;
+    --toc-glass-bg-hover: linear-gradient(135deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.5) 100%) !important;
+    --toc-glass-border: rgba(0, 0, 0, 0.1) !important;
+    
+    --toc-shadow: 
+      inset 0 2px 4px rgba(255, 255, 255, 0.9),                 /* Top white edge glare */
+      inset 0 10px 14px rgba(255, 255, 255, 0.4),               /* Specular volume highlight */
+      inset 0 -10px 14px rgba(0, 0, 0, 0.05),
+      0 12px 24px -10px rgba(0, 0, 0, 0.15) !important;
+      
+    --toc-shadow-hover: 
+      inset 0 2px 4px rgba(255, 255, 255, 0.95), 
+      inset 0 10px 20px rgba(255, 255, 255, 0.5),
+      inset 0 -10px 20px rgba(0, 0, 0, 0.06),
+      0 20px 40px -15px rgba(0, 0, 0, 0.2) !important;
+      
+    --toc-text-inactive: rgba(15, 23, 42, 0.8) !important;
+    --toc-text-active: #7c3aed !important;                      /* Deep violet */
+    --toc-text-hover: #000000 !important;
+    --toc-tick-inactive: rgba(0, 0, 0, 0.25) !important;
+    --toc-tick-active: #7c3aed !important;
+    --toc-item-hover: rgba(0, 0, 0, 0.06) !important;
+  }
+
+  /* ==================== CONTAINERS ==================== */
+
+  .custom-toc-container {
+    position: fixed !important;
+    top: 50% !important;
+    right: 16px !important;
+    transform: translateY(-50%) !important;
+    width: 36px !important;
+    height: auto !important;
+    max-height: 80vh !important;
+    
+    /* Clear Glassmorphism background - REMOVED backdrop-filter blur to eliminate frosted effect! */
+    background: var(--toc-glass-bg) !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    border: 1px solid var(--toc-glass-border) !important;
+    border-radius: 20px !important;
+    box-shadow: var(--toc-shadow) !important;
+    z-index: 100000 !important;
+    
+    /* Fluid ease-out transition */
+    transition: width 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1),
+                background-color 0.3s,
+                border-color 0.3s,
+                box-shadow 0.3s !important;
+                
+    cursor: pointer !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+  }
+
+  .custom-toc-ticks-wrapper {
+    width: 100% !important;
+    padding: 16px 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  #custom-toc-list {
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  .toc-item {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    height: 36px !important; /* Constant height prevents height recalculation jumps */
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
+  }
+
+  .toc-item a {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    height: 100% !important;
+    text-decoration: none !important;
+    box-sizing: border-box !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+    transition: background-color 0.25s, padding 0.3s !important;
+  }
+
+  /* The Tick Line (Collapsed State) */
+  .toc-item a .toc-tick {
+    display: block !important;
+    width: 12px !important;
+    height: 3px !important;
+    background-color: var(--toc-tick-inactive) !important;
+    border-radius: 2px !important;
+    transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.1) !important;
+    flex-shrink: 0 !important;
+  }
+
+  /* Active Tick Style (longer and glowing) */
+  .toc-item a.active .toc-tick {
+    background-color: var(--toc-tick-active) !important;
+    width: 20px !important;
+  }
+
+  /* Glowing active indicators for Dark Theme */
+  [data-theme="dark"] .toc-item a.active .toc-tick {
+    box-shadow: 0 0 8px rgba(192, 132, 252, 0.8) !important;
+  }
+
+  /* Text link titles (Collapsed: 100% display none to prevent browser rendering width bugs) */
+  .toc-item a .toc-text {
+    display: none !important; /* 👈 Robust display: none ensures no layout conflicts */
+    opacity: 0 !important;
+    overflow: hidden !important;
+    white-space: nowrap !important;
+    color: var(--toc-text-inactive) !important;
+    font-size: 13px !important;
+    text-align: right !important;
+    transform: translateX(10px) !important;
+    transition: opacity 0.25s ease, transform 0.25s ease !important;
+  }
+
+  /* ==================== EXPANDED STATE (Hover to Reveal) ==================== */
+
+  .custom-toc-container:hover {
+    width: 280px !important;
+    background: var(--toc-glass-bg-hover) !important;
+    box-shadow: var(--toc-shadow-hover) !important;
+  }
+
+  .custom-toc-container:hover .custom-toc-ticks-wrapper {
+    padding: 16px 12px !important;
+  }
+
+  .custom-toc-container:hover .toc-item {
+    justify-content: flex-end !important;
+  }
+
+  .custom-toc-container:hover .toc-item a {
+    justify-content: flex-end !important;
+    padding: 0 12px !important;
+    border-radius: 8px !important;
+  }
+
+  /* Hover effect on expanded items */
+  .custom-toc-container:hover .toc-item a:hover {
+    background-color: var(--toc-item-hover) !important;
+  }
+  .custom-toc-container:hover .toc-item a:hover .toc-text {
+    color: var(--toc-text-hover) !important;
+  }
+
+  /* Morph ticks into neat circular bullets when expanded */
+  .custom-toc-container:hover .toc-item a .toc-tick {
+    width: 6px !important;
+    height: 6px !important;
+    border-radius: 50% !important;
+    margin-left: 10px !important; /* Spacing next to text */
+    background-color: var(--toc-tick-inactive) !important;
+    order: 2 !important; /* Align bullet to the right of text */
+  }
+
+  /* Active bullet glow when expanded */
+  .custom-toc-container:hover .toc-item a.active .toc-tick {
+    background-color: var(--toc-tick-active) !important;
+    width: 8px !important;
+    height: 8px !important;
+    order: 2 !important;
+  }
+
+  [data-theme="dark"] .custom-toc-container:hover .toc-item a.active .toc-tick {
+    box-shadow: 0 0 8px rgba(192, 132, 252, 0.8) !important;
+  }
+
+  /* Show and fade-in heading texts on hover */
+  .custom-toc-container:hover .toc-item a .toc-text {
+    display: inline-block !important; /* 👈 Force show */
+    opacity: 1 !important;
+    transform: translateX(0) !important;
+    order: 1 !important; /* Text on the left */
+  }
+
+  /* Highlight active text */
+  .custom-toc-container:hover .toc-item a.active .toc-text {
+    color: var(--toc-text-active) !important;
+    font-weight: 600 !important;
+  }
+  [data-theme="dark"] .custom-toc-container:hover .toc-item a.active .toc-text {
+    text-shadow: 0 0 8px rgba(192, 132, 252, 0.4) !important;
+  }
+
+  /* Hide on desktop, let native Starlight TOC run */
+  @media (min-width: 72rem) {
+    .custom-toc-container {
+      display: none !important;
+    }
+  }
+
+  /* Hide inside iframe embeds */
+  html[data-is-iframe="true"] .custom-toc-container {
+    display: none !important;
+  }
+</style>
+
 <script>
-  const btn = document.getElementById('copy-portable-html-btn');
-  if (btn) {
-    btn.addEventListener('click', async () => {
+  // Self-contained dynamic TOC builder script
+  function initCustomTOC() {
+    const tocList = document.getElementById('custom-toc-list');
+    const container = document.getElementById('custom-float-toc');
+    if (!tocList || !container) return;
+
+    // Clear previous items
+    tocList.innerHTML = '';
+
+    // Find headings inside main content area
+    const contentArea = document.querySelector('.sl-markdown-content') || 
+                        document.querySelector('article') || 
+                        document.querySelector('main');
+    if (!contentArea) return;
+
+    const headings = Array.from(contentArea.querySelectorAll('h2, h3'));
+    if (headings.length === 0) {
+      container.style.display = 'none';
+      return;
+    } else {
+      container.style.display = 'block';
+    }
+
+    // 1. Add "Overview / Top" link first
+    const topLi = document.createElement('li');
+    topLi.className = 'toc-item';
+    const topA = document.createElement('a');
+    topA.href = '#_top';
+    topA.className = 'active'; // Default active
+
+    const topTick = document.createElement('div');
+    topTick.className = 'toc-tick';
+
+    const topSpan = document.createElement('span');
+    topSpan.className = 'toc-text';
+    topSpan.textContent = 'Overview';
+
+    topA.appendChild(topTick);
+    topA.appendChild(topSpan);
+    topLi.appendChild(topA);
+    tocList.appendChild(topLi);
+
+    topA.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      history.pushState(null, '', '#_top');
+    });
+
+    // 2. Add headings
+    headings.forEach((heading, index) => {
+      const id = heading.id || `heading-custom-${index}`;
+      heading.id = id; // Ensure ID exists
+
+      // Clean screen reader text in Starlight heading
+      const text = heading.textContent?.replace(/Section titled.*/, '').trim() || '';
+
+      const li = document.createElement('li');
+      li.className = `toc-item depth-${heading.tagName.toLowerCase()}`;
+
+      const a = document.createElement('a');
+      a.href = `#${id}`;
+
+      const tick = document.createElement('div');
+      tick.className = 'toc-tick';
+
+      const span = document.createElement('span');
+      span.className = 'toc-text';
+      span.textContent = text;
+
+      a.appendChild(tick);
+      a.appendChild(span);
+      li.appendChild(a);
+      tocList.appendChild(li);
+
+      // Smooth scroll click handler
+      a.addEventListener('click', (e) => {
+        e.preventDefault();
+        const target = document.getElementById(id);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+          history.pushState(null, '', `#${id}`);
+        }
+      });
+    });
+
+    // 3. Highlight ticks on scroll using IntersectionObserver
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const id = entry.target.id;
+          document.querySelectorAll('#custom-toc-list .toc-item a').forEach((el) => {
+            el.classList.remove('active');
+          });
+          const activeLink = document.querySelector(`#custom-toc-list .toc-item a[href="#${id}"]`);
+          if (activeLink) activeLink.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-10% 0px -75% 0px' });
+
+    headings.forEach((heading) => observer.observe(heading));
+
+    // Also observe the top of page to reset to "Overview"
+    const topObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          document.querySelectorAll('#custom-toc-list .toc-item a').forEach((el) => {
+            el.classList.remove('active');
+          });
+          topA.classList.add('active');
+        }
+      });
+    }, { rootMargin: '0px 0px -90% 0px' });
+    
+    const topEl = document.getElementById('_top') || document.querySelector('h1');
+    if (topEl) topObserver.observe(topEl);
+  }
+
+  // Setup event listeners
+  document.addEventListener('DOMContentLoaded', initCustomTOC);
+  if (typeof window !== 'undefined') {
+    // Handles Astro View Transitions page loads
+    document.addEventListener('astro:page-load', initCustomTOC);
+  }
+</script>
+
+<script>
+  // Clipboard copy logics
+  const htmlBtn = document.getElementById('copy-portable-html-btn');
+  if (htmlBtn) {
+    htmlBtn.addEventListener('click', async () => {
       try {
-        // 1. Target the main content area
         const contentEl = document.querySelector('.sl-markdown-content') || 
                           document.querySelector('article') || 
                           document.querySelector('main');
@@ -31,34 +411,18 @@ const { entry } = Astro.props;
           return;
         }
 
-        // Clone the content so we don't mutate the live page
         const clone = contentEl.cloneNode(true) as HTMLElement;
-
-        // Clear unwanted elements (like Starlight navigation footers, edit page links, etc.)
         const footer = clone.querySelector('footer');
         if (footer) footer.remove();
         
-        // Remove the copy button itself from the clipboard content if it was copied in fallback
-        const copyWrapper = clone.querySelector('#copy-portable-html-btn')?.parentElement;
-        if (copyWrapper) copyWrapper.remove();
+        const toolbar = clone.querySelector('#inkloom-copy-toolbar');
+        if (toolbar) toolbar.remove();
 
-        // REMOVE SCREEN-READER ANCHORS
         clone.querySelectorAll('.sl-anchor-link').forEach(el => el.remove());
 
-        // 2. Custom CSS animations and card variables for inlining
         const customStyles = `
-          /* Flowing line dash animation */
-          @keyframes flow-dash {
-            to {
-              stroke-dashoffset: -20;
-            }
-          }
-          .flowing-line {
-            stroke-dasharray: 6 4;
-            animation: flow-dash 0.8s linear infinite !important;
-          }
-
-          /* Card Hover Lift & Glow */
+          @keyframes flow-dash { to { stroke-dashoffset: -20; } }
+          .flowing-line { stroke-dasharray: 6 4; animation: flow-dash 0.8s linear infinite !important; }
           .interactive-card {
             border: 1px solid #cbd5e1 !important;
             border-radius: 12px !important;
@@ -68,13 +432,7 @@ const { entry } = Astro.props;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05) !important;
             transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), border-color 0.3s !important;
           }
-          .interactive-card:hover {
-            transform: translateY(-5px) !important;
-            box-shadow: 0 16px 32px rgba(79, 70, 229, 0.08) !important;
-            border-color: #4f46e5 !important;
-          }
-
-          /* Capsule scale hover */
+          .interactive-card:hover { transform: translateY(-5px) !important; box-shadow: 0 16px 32px rgba(79, 70, 229, 0.08) !important; border-color: #4f46e5 !important; }
           .glow-capsule {
             background-color: #ffffff !important;
             border: 1px solid #e2e8f0 !important;
@@ -83,170 +441,36 @@ const { entry } = Astro.props;
             box-shadow: 0 1px 3px rgba(0,0,0,0.05) !important;
             transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
           }
-          .glow-capsule:hover {
-            transform: scale(1.04) translateY(-1px) !important;
-            box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2) !important;
-            filter: brightness(1.05);
-          }
-
-          /* Pulse Warning Animation */
-          @keyframes pulse-red {
-            0%, 100% {
-              box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.3);
-              border-color: #fecdd3;
-            }
-            50% {
-              box-shadow: 0 0 16px 6px rgba(239, 68, 68, 0.15);
-              border-color: #f43f5e;
-            }
-          }
-          .pulse-warning {
-            border: 2px solid #fecdd3 !important;
-            border-radius: 12px !important;
-            padding: 18px !important;
-            background-color: #fff1f2 !important;
-            animation: pulse-red 2.5s infinite ease-in-out !important;
-          }
-
-          /* Table Row Hover Highlight */
-          .table-row {
-            transition: background-color 0.2s ease-in-out !important;
-          }
-          .table-row:hover {
-            background-color: #f8fafc !important;
-          }
-          
-          /* Summary test fold */
-          .self-test-summary {
-            cursor: pointer !important;
-            outline: none !important;
-            list-style: none !important;
-          }
-
-          /* ==================== SIBLING HOVER LINKAGES ==================== */
-          .interactive-card:has(.trigger-link-1:hover) .flow-link-1 {
-            stroke: #f59e0b !important;
-            stroke-width: 5px !important;
-            filter: drop-shadow(0 0 8px #f59e0b) !important;
-            animation-duration: 0.3s !important;
-          }
-          .interactive-card:has(.trigger-link-2:hover) .flow-link-2 {
-            stroke: #4f46e5 !important;
-            stroke-width: 5px !important;
-            filter: drop-shadow(0 0 8px #4f46e5) !important;
-            animation-duration: 0.3s !important;
-          }
-          .interactive-card:has(.trigger-link-1:hover) [data-actor="甲"],
-          .interactive-card:has(.trigger-link-1:hover) [data-actor="乙"] {
-            border-color: #f59e0b !important;
-            transform: scale(1.05) !important;
-            box-shadow: 0 0 12px rgba(245, 158, 11, 0.3) !important;
-          }
-          .interactive-card:has(.trigger-link-2:hover) [data-actor="乙"],
-          .interactive-card:has(.trigger-link-2:hover) [data-actor="丙"] {
-            border-color: #4f46e5 !important;
-            transform: scale(1.05) !important;
-            box-shadow: 0 0 12px rgba(79, 70, 229, 0.3) !important;
-          }
-
-          /* ==================== MEMORY MODE ==================== */
-          .memory-toggle-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 8px 18px;
-            background-color: #f8fafc;
-            border: 2px solid #e2e8f0;
-            border-radius: 30px;
-            font-size: 13.5px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            user-select: none;
-            margin-bottom: 28px;
-          }
-          .memory-toggle-btn::after {
-            content: '关闭 (正常状态) 🔴';
-            color: #64748b;
-          }
-          #memory-challenge-toggle:checked + .memory-toggle-btn {
-            background-color: #f5f3ff;
-            border-color: #4f46e5;
-          }
-          #memory-challenge-toggle:checked + .memory-toggle-btn::after {
-            content: '激活 (消隐背诵中) 🟢';
-            color: #4f46e5;
-          }
-          #memory-challenge-toggle:checked ~ .note-content-wrapper .answer-node {
-            filter: blur(5px) grayscale(1) !important;
-            background-color: #e2e8f0 !important;
-            color: transparent !important;
-            border-color: #cbd5e1 !important;
-            cursor: help !important;
-            transition: all 0.25s ease !important;
-          }
-          #memory-challenge-toggle:checked ~ .note-content-wrapper .answer-node span,
-          #memory-challenge-toggle:checked ~ .note-content-wrapper .answer-node svg {
-            opacity: 0 !important;
-          }
-          #memory-challenge-toggle:checked ~ .note-content-wrapper .answer-node:hover {
-            filter: blur(0px) grayscale(0) !important;
-            background-color: #ffffff !important;
-            color: #1e293b !important;
-            border-color: #e2e8f0 !important;
-          }
-          #memory-challenge-toggle:checked ~ .note-content-wrapper .answer-node:hover span,
-          #memory-challenge-toggle:checked ~ .note-content-wrapper .answer-node:hover svg {
-            opacity: 1 !important;
-          }
-
-          /* ==================== MICRO-ICON ANIMATIONS ==================== */
-          @keyframes bounce-coin {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-3px); }
-          }
-          .glow-capsule:hover .icon-svg-bribe .coin-dot {
-            animation: bounce-coin 0.6s ease-in-out infinite;
-          }
-
-          @keyframes strike-gavel {
-            0%, 100% { transform: rotate(0deg); }
-            50% { transform: rotate(-25deg); }
-          }
-          .glow-capsule:hover .icon-svg-gavel {
-            animation: strike-gavel 0.4s ease-in-out infinite;
-          }
-
-          @keyframes flash-dot {
-            0%, 100% { opacity: 0.2; transform: scale(0.8); }
-            50% { opacity: 1; transform: scale(1.2); }
-          }
-          .glow-capsule:hover .chat-dot-1 {
-            animation: flash-dot 0.6s infinite 0s;
-            transform-origin: 8px 10px;
-          }
-          .glow-capsule:hover .chat-dot-2 {
-            animation: flash-dot 0.6s infinite 0.15s;
-            transform-origin: 12px 10px;
-          }
-          .glow-capsule:hover .chat-dot-3 {
-            animation: flash-dot 0.6s infinite 0.3s;
-            transform-origin: 16px 10px;
-          }
-
-          @keyframes shiver-eye {
-            0%, 100% { transform: translate(0, 0); }
-            20% { transform: translate(-1px, 0); }
-            40% { transform: translate(1px, -1px); }
-            60% { transform: translate(-1px, 1px); }
-            80% { transform: translate(1px, 0); }
-          }
-          .glow-capsule:hover .icon-svg-hidden {
-            animation: shiver-eye 0.4s linear infinite;
-          }
+          .glow-capsule:hover { transform: scale(1.04) translateY(-1px) !important; box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2) !important; filter: brightness(1.05); }
+          @keyframes pulse-red { 0%, 100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.3); border-color: #fecdd3; } 50% { box-shadow: 0 0 16px 6px rgba(239, 68, 68, 0.15); border-color: #f43f5e; } }
+          .pulse-warning { border: 2px solid #fecdd3 !important; border-radius: 12px !important; padding: 18px !important; background-color: #fff1f2 !important; animation: pulse-red 2.5s infinite ease-in-out !important; }
+          .table-row { transition: background-color 0.2s ease-in-out !important; }
+          .table-row:hover { background-color: #f8fafc !important; }
+          .self-test-summary { cursor: pointer !important; outline: none !important; list-style: none !important; }
+          .interactive-card:has(.trigger-link-1:hover) .flow-link-1 { stroke: #f59e0b !important; stroke-width: 5px !important; filter: drop-shadow(0 0 8px #f59e0b) !important; animation-duration: 0.3s !important; }
+          .interactive-card:has(.trigger-link-2:hover) .flow-link-2 { stroke: #4f46e5 !important; stroke-width: 5px !important; filter: drop-shadow(0 0 8px #4f46e5) !important; animation-duration: 0.3s !important; }
+          .interactive-card:has(.trigger-link-1:hover) [data-actor="甲"], .interactive-card:has(.trigger-link-1:hover) [data-actor="乙"] { border-color: #f59e0b !important; transform: scale(1.05) !important; box-shadow: 0 0 12px rgba(245, 158, 11, 0.3) !important; }
+          .interactive-card:has(.trigger-link-2:hover) [data-actor="乙"], .interactive-card:has(.trigger-link-2:hover) [data-actor="丙"] { border-color: #4f46e5 !important; transform: scale(1.05) !important; box-shadow: 0 0 12px rgba(79, 70, 229, 0.3) !important; }
+          .memory-toggle-btn { display: inline-flex; align-items: center; gap: 10px; padding: 8px 18px; background-color: #f8fafc; border: 2px solid #e2e8f0; border-radius: 30px; font-size: 13.5px; font-weight: bold; cursor: pointer; transition: all 0.3s ease; user-select: none; margin-bottom: 28px; }
+          .memory-toggle-btn::after { content: '关闭 (正常状态) 🔴'; color: #64748b; }
+          #memory-challenge-toggle:checked + .memory-toggle-btn { background-color: #f5f3ff; border-color: #4f46e5; }
+          #memory-challenge-toggle:checked + .memory-toggle-btn::after { content: '激活 (消隐背诵中) 🟢'; color: #4f46e5; }
+          #memory-challenge-toggle:checked ~ .note-content-wrapper .answer-node { filter: blur(5px) grayscale(1) !important; background-color: #e2e8f0 !important; color: transparent !important; border-color: #cbd5e1 !important; cursor: help !important; transition: all 0.25s ease !important; }
+          #memory-challenge-toggle:checked ~ .note-content-wrapper .answer-node span, #memory-challenge-toggle:checked ~ .note-content-wrapper .answer-node svg { opacity: 0 !important; }
+          #memory-challenge-toggle:checked ~ .note-content-wrapper .answer-node:hover { filter: blur(0px) grayscale(0) !important; background-color: #ffffff !important; color: #1e293b !important; border-color: #e2e8f0 !important; }
+          #memory-challenge-toggle:checked ~ .note-content-wrapper .answer-node:hover span, #memory-challenge-toggle:checked ~ .note-content-wrapper .answer-node:hover svg { opacity: 1 !important; }
+          @keyframes bounce-coin { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }
+          .glow-capsule:hover .icon-svg-bribe .coin-dot { animation: bounce-coin 0.6s ease-in-out infinite; }
+          @keyframes strike-gavel { 0%, 100% { transform: rotate(0deg); } 50% { transform: rotate(-25deg); } }
+          .glow-capsule:hover .icon-svg-gavel { animation: strike-gavel 0.4s ease-in-out infinite; }
+          @keyframes flash-dot { 0%, 100% { opacity: 0.2; transform: scale(0.8); } 50% { opacity: 1; transform: scale(1.2); } }
+          .glow-capsule:hover .chat-dot-1 { animation: flash-dot 0.6s infinite 0s; transform-origin: 8px 10px; }
+          .glow-capsule:hover .chat-dot-2 { animation: flash-dot 0.6s infinite 0.15s; transform-origin: 12px 10px; }
+          .glow-capsule:hover .chat-dot-3 { animation: flash-dot 0.6s infinite 0.3s; transform-origin: 16px 10px; }
+          @keyframes shiver-eye { 0%, 100% { transform: translate(0, 0); } 20% { transform: translate(-1px, 0); } 40% { transform: translate(1px, -1px); } 60% { transform: translate(-1px, 1px); } 80% { transform: translate(1px, 0); } }
+          .glow-capsule:hover .icon-svg-hidden { animation: shiver-eye 0.4s linear infinite; }
         `;
 
-        // 3. Construct HTML document wrapper for rich-text clipboard
         const htmlString = `
           <div style="font-family: system-ui, -apple-system, sans-serif; line-height: 1.6; max-width: 800px; margin: 0 auto; color: #1e293b;">
             <style>${customStyles}</style>
@@ -254,7 +478,6 @@ const { entry } = Astro.props;
           </div>
         `;
 
-        // 4. Create clipboard blobs
         const blob = new Blob([htmlString], { type: 'text/html' });
         const textBlob = new Blob([htmlString], { type: 'text/plain' });
 
@@ -263,24 +486,51 @@ const { entry } = Astro.props;
           'text/plain': textBlob
         });
 
-        // 5. Write to clipboard
         await navigator.clipboard.write([clipboardItem]);
 
-        // 6. Visual feedback
-        const originalHTML = btn.innerHTML;
-        btn.innerHTML = `✓ 复制成功！已过滤冗余锚点`;
-        btn.style.backgroundColor = '#10b981';
-        btn.style.boxShadow = '0 4px 6px -1px rgba(16, 185, 129, 0.2)';
+        const originalHTML = htmlBtn.innerHTML;
+        htmlBtn.innerHTML = `✓ HTML 源码复制成功！`;
+        htmlBtn.style.backgroundColor = '#10b981';
+        htmlBtn.style.boxShadow = '0 4px 6px -1px rgba(16, 185, 129, 0.2)';
         
         setTimeout(() => {
-          btn.innerHTML = originalHTML;
-          btn.style.backgroundColor = 'var(--sl-color-accent)';
-          btn.style.boxShadow = '0 4px 6px -1px rgba(79, 70, 229, 0.2)';
+          htmlBtn.innerHTML = originalHTML;
+          htmlBtn.style.backgroundColor = 'var(--sl-color-accent)';
+          htmlBtn.style.boxShadow = '0 4px 6px -1px rgba(79, 70, 229, 0.2)';
         }, 2000);
 
       } catch (err: any) {
         console.error(err);
-        alert('复制失败，请尝试升级浏览器或手动复制。错误: ' + err.message);
+        alert('HTML 复制失败。错误: ' + err.message);
+      }
+    });
+  }
+
+  // 2. Logic for copying iframe embed code
+  const iframeBtn = document.getElementById('copy-iframe-btn');
+  if (iframeBtn) {
+    iframeBtn.addEventListener('click', async () => {
+      try {
+        const currentUrl = window.location.href;
+        
+        const iframeCode = `<iframe src="${currentUrl}" width="100%" height="750px" style="border: none; border-radius: 12px; box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05);" allow="clipboard-write"></iframe>`;
+        
+        await navigator.clipboard.writeText(iframeCode);
+        
+        const originalHTML = iframeBtn.innerHTML;
+        iframeBtn.innerHTML = `✓ iframe 嵌入代码复制成功！`;
+        iframeBtn.style.backgroundColor = '#10b981';
+        iframeBtn.style.boxShadow = '0 4px 6px -1px rgba(16, 185, 129, 0.2)';
+        
+        setTimeout(() => {
+          iframeBtn.innerHTML = originalHTML;
+          iframeBtn.style.backgroundColor = '#0d9488';
+          iframeBtn.style.boxShadow = '0 4px 6px -1px rgba(13, 148, 136, 0.2)';
+        }, 2000);
+
+      } catch (err: any) {
+        console.error(err);
+        alert('iframe 复制失败。错误: ' + err.message);
       }
     });
   }

@@ -221,3 +221,91 @@
 .anim-shiver-gentle {
   animation: shiver-gentle 4s ease-in-out infinite !important;
 }
+
+
+/* ==================== CUSTOM RESPONSIVE BREAKPOINT SHIFT ==================== */
+
+/*
+  Astro Starlight's native desktop sidebar breakpoint is 50rem (800px).
+  This rule postpones the desktop sidebar expansion to 72rem (1152px).
+  Between 800px and 1152px, the sidebar remains in mobile drawer mode (hidden behind menu toggle),
+  preventing it from cramping the main content area inside split screens/iframes.
+*/
+@media (min-width: 50rem) and (max-width: 72rem) {
+  /* 1. Hide the fixed desktop sidebar wrapper */
+  .sidebar-pane {
+    display: none !important;
+  }
+
+  /* 2. Show the sidebar wrapper only as a mobile drawer overlay when expanded */
+  [data-mobile-menu-expanded] .sidebar-pane {
+    display: block !important;
+    position: fixed !important;
+    top: var(--sl-nav-height) !important;
+    inset-inline-start: 0 !important;
+    width: 100% !important;
+    height: calc(100vh - var(--sl-nav-height)) !important;
+    background-color: var(--sl-color-bg) !important;
+    z-index: 100 !important;
+  }
+
+  /* 3. Re-enable the mobile menu button */
+  starlight-menu-button {
+    display: flex !important;
+  }
+
+  /* 4. Remove left sidebar indentation from the content frame */
+  .main-frame {
+    padding-inline-start: 0 !important;
+  }
+
+  /* 5. Force content containers to expand 100%, removing the right-side gap */
+  .main-pane {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .content-panel {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  .content-panel .sl-container {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+  }
+
+  .sl-markdown-content {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+}
+
+
+/* ==================== IFRAME DISPLAY OPTIMIZATIONS (NATIVE STARLIGHT) ==================== */
+
+/* Hide headers, left sidebars and menu toggles inside iframe */
+html[data-is-iframe="true"] .header,
+html[data-is-iframe="true"] nav.sidebar,
+html[data-is-iframe="true"] starlight-menu-button {
+  display: none !important;
+}
+
+/* Reset layout grid offsets to make content flush to the left edge */
+html[data-is-iframe="true"] .main-frame {
+  padding-top: 0 !important;
+  padding-inline-start: 0 !important;
+}
+
+
+/* ==================== MINIMALIST RIGHT SCROLLBAR TICK TOC (FABS) ==================== */
+
+/* Hide Starlight's native mobile TOC and right sidebar completely on narrow screens.
+   Our custom scrollbar-tick TOC is rendered by PageTitle.astro instead. */
+@media (max-width: 72rem) {
+  mobile-starlight-toc,
+  .right-sidebar-container {
+    display: none !important;
+  }
+}
