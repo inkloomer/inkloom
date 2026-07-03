@@ -21,3 +21,11 @@ pnpm-debug.log*
 .DS_Store
 ref/
 .playwright-cli
+*.jpg
+*.png
+*.jpeg
+*.gif
+*.webp
+*.avif
+notes/
+*.pdf
