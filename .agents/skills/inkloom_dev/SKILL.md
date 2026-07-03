@@ -76,6 +76,17 @@ Starlight's layout is overridden using custom styling and scripts in `src/compon
      .content-panel, .sl-container, .sl-markdown-content, main { width: 100% !important; max-width: none !important; margin-inline: 0 !important; }
      ```
 
+## 📝 Conversion Guidelines (Note Markdown to MDX)
+
+When importing raw notes from `notes/` into `src/content/docs/objective/`:
+
+1. **Distinguish Native Note Tables vs. Hand-written Custom HTML**:
+   - **Native Tables**: Note apps (like Siyuan Note) store standard tables using HTML `<table>` elements. These are **not** hand-written HTML. Leave them as simple `<table>` elements (if using `rowspan`/`colspan`) or convert them to standard Markdown tables. Do not over-engineer them.
+   - **Hand-written Custom HTML**: Look for custom styled blocks with inline CSS layouts (e.g., `display: flex`, `flex: 1`, custom borders, box-shadows, colors, such as the `⚡ 电力案核心区分` boxes). These are hand-written structures that should be converted to clean, modern MDX elements or Starlight grids/cards.
+2. **Relative Asset Resolving**:
+   - Copy any referenced images from the notes `assets/` folder to the target directory's `assets/` subfolder.
+   - Update image paths in MDX to relative `./assets/...` syntax so that Astro's image optimizer can build them.
+
 ---
 
 ## 💻 Development Commands
