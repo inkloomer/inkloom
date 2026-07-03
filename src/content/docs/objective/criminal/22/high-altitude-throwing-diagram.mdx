@@ -4,14 +4,14 @@ description: 高空抛物罪场景对比与想象竞合犯认定图解
 slug: objective/criminal/22/high-altitude-throwing-diagram
 ---
 
-import { Mermaid, Tabs, TabItem, Aside } from '@astrojs/starlight/components';
+import { Tabs, TabItem, Steps, Aside } from '@astrojs/starlight/components';
 
 《刑法》第 291 条之二：从建筑物或者其他高空抛掷物品，情节严重。同时构成其他犯罪的，依照处罚较重的规定定罪处罚（想象竞合择一重）。
 
 ## 场景示意图 · 哪些属于「高空抛物」？
 
 <Tabs>
-  <TabItem title="✅ 属于高空抛物">
+  <TabItem label="✅ 属于高空抛物">
 
 - **建筑物抛物**：从楼房向下抛掷物品
 - **山上/树上/巨轮**：从高处向下抛掷物品
@@ -22,7 +22,7 @@ import { Mermaid, Tabs, TabItem, Aside } from '@astrojs/starlight/components';
 </Aside>
 
   </TabItem>
-  <TabItem title="❌ 不属于高空抛物">
+  <TabItem label="❌ 不属于高空抛物">
 
 - **过失导致坠落**：不构成本罪（要求故意，含直接/间接故意）
 - **从地面向上抛**（再下落）：不属于高空抛物
@@ -33,28 +33,17 @@ import { Mermaid, Tabs, TabItem, Aside } from '@astrojs/starlight/components';
 
 ## 主观要件与罪数关系
 
-<Mermaid>
-flowchart TD
-    A["高空抛物行为"] --> B["故意（直接/间接）"]
-    B --> C["情节严重"]
-    C --> D["高空抛物罪<br/>基础刑 ≤ 1 年"]
-    D --> E{"同时构成<br/>其他犯罪？"}
-    E -- "否" --> F["以高空抛物罪论处"]
-    E -- "是" --> G["想象竞合 → 择一重罪处罚"]
-    G --> H["放火罪 / 以危险方法危害<br/>公共安全罪 / 故意杀人罪<br/>/ 过失致人死亡罪等"]
+<Steps>
 
-    classDef base fill:var(--sl-color-bg-sidebar),stroke:var(--sl-color-text),stroke-width:1px,color:var(--sl-color-text)
-    classDef decision fill:var(--sl-color-bg),stroke:var(--sl-color-accent),stroke-width:2px,color:var(--sl-color-text)
-    classDef result fill:var(--sl-color-accent-low),stroke:var(--sl-color-accent),stroke-width:2px,color:var(--sl-color-text-accent)
+1. **高空抛物行为 → 故意（直接/间接）** — 过失导致物品坠落不构成本罪，本罪要求故意（直接或间接）
+2. **情节严重 → 高空抛物罪（基础刑 ≤ 1 年）** — 入罪门槛是「情节严重」，不要求实害结果
+3. **同时构成其他犯罪？→ 想象竞合，择一重罪处罚** — 依照处罚较重的规定定罪处罚：
+   - **放火罪**：引发火灾危险，危害公共安全
+   - **以危险方法危害公共安全罪**：抛洒硫酸等危害公共安全
+   - **故意杀人罪**：故意砸死人且致死
+   - **过失致人死亡罪**：过失砸死人
 
-    class A,B,C,D base
-    class E decision
-    class F,G,H result
-</Mermaid>
-
-<Aside type="warning">
-**过失**导致物品坠落 → 不构成本罪。本罪要求**故意**（直接或间接）。
-</Aside>
+</Steps>
 
 ## 典型示例 · 想象竞合具体适用
 

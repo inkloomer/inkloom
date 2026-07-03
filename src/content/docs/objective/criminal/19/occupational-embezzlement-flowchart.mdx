@@ -4,37 +4,27 @@ description: 职务侵占罪逻辑判断流程图解
 slug: objective/criminal/19/occupational-embezzlement-flowchart
 ---
 
-import { Mermaid, Aside } from '@astrojs/starlight/components';
+import { Steps, Aside } from '@astrojs/starlight/components';
 
-职务侵占罪的认定需依次满足三个特殊构成要件（B₁＋B₂＋B₃），任一不满足即退回基础罪名（侵占／盗窃／诈骗）。下方流程图展示完整判断路径。
+职务侵占罪的认定需依次满足三个特殊构成要件（B₁＋B₂＋B₃），任一不满足即退回基础罪名（侵占／盗窃／诈骗）。下方按判断顺序展示完整流程。
 
-<Mermaid>
-flowchart TD
-    A["⚖️ 行为人的基础行为 A"] --> B1{"🔍 行为主体是<br/>非国家工作人员？<br/>B₁"}
-    B1 -- "❌ 否" --> N1["🚫 不构成职务侵占罪<br/>可能构成贪污罪"]
-    B1 -- "✅ 是" --> B2{"📦 行为对象是<br/>本单位财物？<br/>B₂"}
-    B2 -- "❌ 否" --> N2["🔄 退回基础罪名<br/>侵占 / 盗窃 / 诈骗"]
-    B2 -- "✅ 是" --> B3{"🔑 利用<br/>职务便利？<br/>B₃"}
-    B3 -- "❌ 否" --> N3["🔄 退回基础罪名<br/>侵占 / 盗窃 / 诈骗"]
-    B3 -- "✅ 是" --> R["⚡ 职务侵占罪成立<br/>= A + B₁ + B₂ + B₃"]
+<Steps>
 
-    classDef start fill:var(--sl-color-bg-sidebar),stroke:var(--sl-color-text),stroke-width:2px,color:var(--sl-color-text)
-    classDef decision fill:var(--sl-color-bg),stroke:var(--sl-color-accent),stroke-width:2px,color:var(--sl-color-text)
-    classDef negative fill:var(--sl-color-bg-sidebar),stroke:var(--sl-color-gray-3),stroke-width:1px,color:var(--sl-color-text-muted)
-    classDef result fill:var(--sl-color-accent-low),stroke:var(--sl-color-accent),stroke-width:2px,color:var(--sl-color-text-accent)
+1. **⚖️ 基础行为 (A)** — 行为人实施了侵占、盗窃或诈骗等基础行为，是职务侵占罪认定的起点。
+2. **🔍 行为主体是非国家工作人员？(B₁)**
+   - ❌ 否 → 不构成职务侵占罪，**可能构成贪污罪**
+   - ✅ 是 → 继续判断
+3. **📦 行为对象是本单位财物？(B₂)**
+   - ❌ 否 → **退回基础罪名**（侵占／盗窃／诈骗）
+   - ✅ 是 → 继续判断
+4. **🔑 利用职务便利？(B₃)**
+   - ❌ 否 → **退回基础罪名**（侵占／盗窃／诈骗）
+   - ✅ 是 → **职务侵占罪成立** = A ＋ B₁ ＋ B₂ ＋ B₃
 
-    class A start
-    class B1,B2,B3 decision
-    class N1,N2,N3 negative
-    class R result
-</Mermaid>
+</Steps>
 
-<Aside type="tip" title="公式记忆">
+<Aside type="note" title="公式记忆">
 **职务侵占罪** = 基础行为 (A) ＋ 非国家工作人员 (B₁) ＋ 本单位财物 (B₂) ＋ 利用职务便利 (B₃)
 
-三个特殊要件层层递进、缺一不可：主体不符→贪污罪；对象不符或未利用职务便利→退回侵占／盗窃／诈骗基础罪名。
-</Aside>
-
-<Aside type="note">
-逻辑判断流程 · 依据刑法第二百七十一条
+三个特殊要件层层递进、缺一不可：主体不符→贪污罪；对象不符或未利用职务便利→退回侵占／盗窃／诈骗基础罪名。逻辑判断流程 · 依据刑法第二百七十一条。
 </Aside>
