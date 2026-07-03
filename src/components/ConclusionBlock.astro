@@ -1,5 +1,5 @@
 ---
-// InkLoom/src/components/ConclusionBlock.astro
+// src/components/ConclusionBlock.astro
 interface Props {
   type: '想象竞合' | '牵连犯' | '独立既遂' | '不构成犯罪' | '共犯既遂';
   label: string;
@@ -8,16 +8,135 @@ interface Props {
 const { type, label } = Astro.props;
 
 const config = {
-  想象竞合: { bg: '#f5f3ff', border: '#ddd6fe', text: '#6d28d9', icon: '⚖️' },
-  牵连犯: { bg: '#fff7ed', border: '#ffedd5', text: '#c2410c', icon: '🔗' },
-  独立既遂: { bg: '#ecfdf5', border: '#a7f3d0', text: '#047857', icon: '✓' },
-  共犯既遂: { bg: '#f0fdfa', border: '#99f6e4', text: '#0d9488', icon: '👥' },
-  不构成犯罪: { bg: '#fef2f2', border: '#fecdd3', text: '#be123c', icon: '✗' }
+  想象竞合: { class: 'conclusion-purple', icon: '⚖️' },
+  牵连犯: { class: 'conclusion-orange', icon: '🔗' },
+  独立既遂: { class: 'conclusion-green', icon: '✓' },
+  共犯既遂: { class: 'conclusion-teal', icon: '👥' },
+  不构成犯罪: { class: 'conclusion-red', icon: '✗' }
 };
 
 const theme = config[type] || config.独立既遂;
 ---
-<div class="glow-capsule answer-node" style={`margin-top: 10px; padding: 10px 12px; background-color: ${theme.bg}; border: 1px solid ${theme.border}; border-radius: 8px; color: ${theme.text}; font-size: 12px; font-weight: bold; display: flex; align-items: center; gap: 8px; transition: all 0.25s;`}>
-  <span style="font-size: 14px; line-height: 1;">{theme.icon}</span>
-  <span style="line-height: 1.2;">{type}：{label}</span>
+<div class={`conclusion-block-bubble answer-node ${theme.class}`}>
+  <span class="conclusion-icon">{theme.icon}</span>
+  <span class="conclusion-label"><strong class="conclusion-type">{type}</strong>：{label}</span>
 </div>
+
+<style is:global>
+  /* ==================== CONCLUSION BLOCK GLOWING BUBBLE ==================== */
+  .conclusion-block-bubble {
+    margin-top: 10px !important;
+    padding: 10px 12px !important;
+    border-radius: 16px !important;
+    font-size: 12px !important;
+    font-weight: 700 !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    transition: all 0.25s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+    border: 1px solid transparent !important;
+    box-sizing: border-box !important;
+    user-select: none !important;
+  }
+
+  .conclusion-icon {
+    font-size: 14px !important;
+    line-height: 1 !important;
+  }
+
+  .conclusion-label {
+    line-height: 1.3 !important;
+  }
+
+  .conclusion-type {
+    text-transform: uppercase !important;
+    font-size: 11.5px !important;
+  }
+
+  /* Liquid Glass theme colors & glowing box shadows */
+  
+  /* 1. Purple (Imaginary Joinder) */
+  .conclusion-purple {
+    background: radial-gradient(circle at 10% 10%, rgba(167, 139, 250, 0.2) 0%, rgba(167, 139, 250, 0.05) 100%) !important;
+    border-color: rgba(167, 139, 250, 0.3) !important;
+    color: #a78bfa !important;
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.2), 0 4px 10px rgba(167, 139, 250, 0.05) !important;
+  }
+  .conclusion-purple:hover {
+    box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.35), 0 0 12px rgba(167, 139, 250, 0.2) !important;
+    border-color: rgba(167, 139, 250, 0.5) !important;
+  }
+  [data-theme="light"] .conclusion-purple {
+    background: radial-gradient(circle at 10% 10%, rgba(109, 40, 217, 0.12) 0%, rgba(109, 40, 217, 0.04) 100%) !important;
+    border-color: rgba(109, 40, 217, 0.2) !important;
+    color: #6d28d9 !important;
+  }
+
+  /* 2. Orange (Implication / Entrapment) */
+  .conclusion-orange {
+    background: radial-gradient(circle at 10% 10%, rgba(249, 115, 22, 0.2) 0%, rgba(249, 115, 22, 0.05) 100%) !important;
+    border-color: rgba(249, 115, 22, 0.3) !important;
+    color: #fb923c !important;
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.2), 0 4px 10px rgba(249, 115, 22, 0.05) !important;
+  }
+  .conclusion-orange:hover {
+    box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.35), 0 0 12px rgba(249, 115, 22, 0.2) !important;
+    border-color: rgba(249, 115, 22, 0.5) !important;
+  }
+  [data-theme="light"] .conclusion-orange {
+    background: radial-gradient(circle at 10% 10%, rgba(194, 65, 12, 0.12) 0%, rgba(194, 65, 12, 0.04) 100%) !important;
+    border-color: rgba(194, 65, 12, 0.2) !important;
+    color: #c2410c !important;
+  }
+
+  /* 3. Green (Independent) */
+  .conclusion-green {
+    background: radial-gradient(circle at 10% 10%, rgba(52, 211, 153, 0.2) 0%, rgba(52, 211, 153, 0.05) 100%) !important;
+    border-color: rgba(52, 211, 153, 0.3) !important;
+    color: #34d399 !important;
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.2), 0 4px 10px rgba(52, 211, 153, 0.05) !important;
+  }
+  .conclusion-green:hover {
+    box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.35), 0 0 12px rgba(52, 211, 153, 0.2) !important;
+    border-color: rgba(52, 211, 153, 0.5) !important;
+  }
+  [data-theme="light"] .conclusion-green {
+    background: radial-gradient(circle at 10% 10%, rgba(4, 120, 87, 0.12) 0%, rgba(4, 120, 87, 0.04) 100%) !important;
+    border-color: rgba(4, 120, 87, 0.2) !important;
+    color: #047857 !important;
+  }
+
+  /* 4. Teal (Co-principal) */
+  .conclusion-teal {
+    background: radial-gradient(circle at 10% 10%, rgba(20, 184, 166, 0.2) 0%, rgba(20, 184, 166, 0.05) 100%) !important;
+    border-color: rgba(20, 184, 166, 0.3) !important;
+    color: #2dd4bf !important;
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.2), 0 4px 10px rgba(20, 184, 166, 0.05) !important;
+  }
+  .conclusion-teal:hover {
+    box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.35), 0 0 12px rgba(20, 184, 166, 0.2) !important;
+    border-color: rgba(20, 184, 166, 0.5) !important;
+  }
+  [data-theme="light"] .conclusion-teal {
+    background: radial-gradient(circle at 10% 10%, rgba(13, 148, 136, 0.12) 0%, rgba(13, 148, 136, 0.04) 100%) !important;
+    border-color: rgba(13, 148, 136, 0.2) !important;
+    color: #0d9488 !important;
+  }
+
+  /* 5. Red (Non-criminal) */
+  .conclusion-red {
+    background: radial-gradient(circle at 10% 10%, rgba(239, 68, 68, 0.2) 0%, rgba(239, 68, 68, 0.05) 100%) !important;
+    border-color: rgba(239, 68, 68, 0.3) !important;
+    color: #f87171 !important;
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.2), 0 4px 10px rgba(239, 68, 68, 0.05) !important;
+  }
+  .conclusion-red:hover {
+    box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.35), 0 0 12px rgba(239, 68, 68, 0.2) !important;
+    border-color: rgba(239, 68, 68, 0.5) !important;
+  }
+  [data-theme="light"] .conclusion-red {
+    background: radial-gradient(circle at 10% 10%, rgba(190, 18, 60, 0.12) 0%, rgba(190, 18, 60, 0.04) 100%) !important;
+    border-color: rgba(190, 18, 60, 0.2) !important;
+    color: #be123c !important;
+  }
+</style>

@@ -1,9 +1,55 @@
 ---
-// InkLoom/src/components/ModelAnalysis.astro
+// src/components/ModelAnalysis.astro
 ---
-<div style="margin-top: 16px; margin-bottom: 8px;">
-  <div style="font-size: 13px; font-weight: bold; color: var(--sl-color-text-muted); margin-bottom: 12px; border-bottom: 2px solid var(--sl-color-hairline); padding-bottom: 4px;">司法定想定性分析：</div>
-  <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 8px;">
+<div class="model-analysis-wrapper">
+  <div class="model-analysis-header">司法分析与罪数定性：</div>
+  <div class="model-analysis-grid">
     <slot />
   </div>
 </div>
+
+<style is:global>
+  .model-analysis-wrapper {
+    margin-top: 0px; /* Seamless border-free fit with flow threads above */
+    padding: 0;
+  }
+
+  .model-analysis-header {
+    font-size: 11px;
+    font-weight: bold;
+    color: var(--sl-color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 8px;
+    padding-left: 8px;
+  }
+
+  /* Matching 5-Column Grid with empty spaces matching the flow arrow links */
+  @media (min-width: 60rem) {
+    .model-analysis-grid {
+      display: grid !important;
+      grid-template-columns: 1fr 120px 1.2fr 120px 1fr !important;
+      align-items: start !important;
+      gap: 0 !important;
+    }
+
+    /* Grid alignment placement for the three ActorColumns */
+    .model-analysis-grid > *:nth-child(1) {
+      grid-column: 1 !important;
+    }
+    .model-analysis-grid > *:nth-child(2) {
+      grid-column: 3 !important;
+    }
+    .model-analysis-grid > *:nth-child(3) {
+      grid-column: 5 !important;
+    }
+  }
+
+  @media (max-width: 59.999rem) {
+    .model-analysis-grid {
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 16px !important;
+    }
+  }
+</style>
