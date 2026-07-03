@@ -277,8 +277,9 @@
     z-index: 100 !important;
   }
 
-  /* 3. Re-enable the mobile menu button */
-  starlight-menu-button {
+  /* 3. Re-enable the mobile menu button and its inner toggle trigger */
+  starlight-menu-button,
+  starlight-menu-button button {
     display: flex !important;
   }
 
