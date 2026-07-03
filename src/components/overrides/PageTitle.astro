@@ -6,11 +6,41 @@ import Default from '@astrojs/starlight/components/PageTitle.astro';
 const { entry } = Astro.props;
 ---
 
+<script is:inline>
+  (() => {
+    const saved = localStorage.getItem('inkloom-theme-style') || 'default';
+    document.documentElement.setAttribute('data-theme-style', saved);
+  })();
+</script>
+
 <div class="page-header-wrapper">
   <Default {...Astro.props} />
   
   <!-- ==================== QUICK ACTIONS LIQUID GLASS TOOLBAR ==================== -->
   <div id="inkloom-quick-toolbar" class="quick-toolbar-capsule">
+    <!-- Theme Select Dropdown -->
+    <div class="theme-select-wrapper">
+      <select id="inkloom-theme-select" class="toolbar-select" data-tooltip="切换界面主题">
+        <option value="default">默认主题 (Default)</option>
+        <option value="rapide">极速 (Rapide)</option>
+        <option value="catppuccin">柔和 (Catppuccin)</option>
+        <option value="ion">时尚 (Ion)</option>
+        <option value="black">极简 (Black)</option>
+        <option value="flexoki">温暖 (Flexoki)</option>
+        <option value="nova">现代 (Nova)</option>
+        <option value="nextjs">Next.js</option>
+        <option value="galaxy">星系 (Galaxy)</option>
+        <option value="page">流畅 (Page)</option>
+        <option value="gruvbox">复古 (Gruvbox)</option>
+        <option value="six">现代 (Six)</option>
+        <option value="vintage">经典 (Vintage)</option>
+        <option value="rose-pine">松石 (Rosé Pine)</option>
+        <option value="nord">北极 (Nord)</option>
+        <option value="terminal">终端 (Terminal)</option>
+        <option value="celestia">天青 (Celestia)</option>
+        <option value="lucode">精制 (Lucode)</option>
+      </select>
+    </div>
     <!-- Copy to notes Button -->
     <button id="copy-portable-html-btn" class="toolbar-btn" data-tooltip="复制到笔记">
       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
@@ -150,6 +180,60 @@ const { entry } = Astro.props;
   .quick-toolbar-capsule:hover {
     background: var(--toolbar-glass-bg-hover) !important;
     box-shadow: var(--toolbar-shadow-hover) !important;
+  }
+
+  .theme-select-wrapper {
+    position: relative !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    margin-right: 4px !important;
+  }
+
+  .toolbar-select {
+    background: transparent !important;
+    border: none !important;
+    color: var(--toc-text-inactive) !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    outline: none !important;
+    padding: 4px 28px 4px 10px !important;
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    border-radius: 14px !important;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  }
+
+  /* Custom dropdown arrow using SVG */
+  .theme-select-wrapper::after {
+    content: '' !important;
+    position: absolute !important;
+    right: 8px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    width: 10px !important;
+    height: 10px !important;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='rgba(226, 232, 240, 0.78)' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E") !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    pointer-events: none !important;
+  }
+  
+  [data-theme="light"] .theme-select-wrapper::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='rgba(15, 23, 42, 0.74)' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E") !important;
+  }
+
+  .toolbar-select:hover {
+    color: var(--toc-text-hover) !important;
+    background-color: var(--toc-item-hover) !important;
+  }
+
+  .toolbar-select option {
+    background-color: var(--sl-color-bg-sidebar) !important;
+    color: var(--sl-color-text) !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
   }
 
   .toolbar-btn {
@@ -601,10 +685,28 @@ const { entry } = Astro.props;
     }
   }
 
+  // Sync Theme Style Select
+  function initThemeStyle() {
+    const select = document.getElementById('inkloom-theme-select') as HTMLSelectElement | null;
+    const saved = localStorage.getItem('inkloom-theme-style') || 'default';
+    
+    document.documentElement.setAttribute('data-theme-style', saved);
+    
+    if (select) {
+      select.value = saved;
+      select.onchange = () => {
+        const val = select.value;
+        document.documentElement.setAttribute('data-theme-style', val);
+        localStorage.setItem('inkloom-theme-style', val);
+      };
+    }
+  }
+
   // Combined DOM and Astro Transitions initializer
   function runAllInitializations() {
     initCustomTOC();
     initMemoryBtn();
+    initThemeStyle();
   }
 
   document.addEventListener('DOMContentLoaded', runAllInitializations);
