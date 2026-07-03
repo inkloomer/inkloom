@@ -4,6 +4,76 @@ description: 高空抛物罪场景对比与想象竞合犯认定图解
 slug: objective/criminal/22/high-altitude-throwing-diagram
 ---
 
-import Diagram from '@/components/diagrams/HighAltitudeThrowingDiagram.astro';
+import { Mermaid, Tabs, TabItem, Aside } from '@astrojs/starlight/components';
 
-<Diagram />
+《刑法》第 291 条之二：从建筑物或者其他高空抛掷物品，情节严重。同时构成其他犯罪的，依照处罚较重的规定定罪处罚（想象竞合择一重）。
+
+## 场景示意图 · 哪些属于「高空抛物」？
+
+<Tabs>
+  <TabItem title="✅ 属于高空抛物">
+
+- **建筑物抛物**：从楼房向下抛掷物品
+- **山上/树上/巨轮**：从高处向下抛掷物品
+- **明知井下有人**：从井口向下抛掷（「高空」是相对概念，参照二层楼/约 3 米）
+
+<Aside type="tip" title="「高空」是相对概念">
+高度参照**二层楼/约 3 米**；从井口、热气球、巨轮上向下扔都算高空抛物。本罪是**情节犯**，不要求实害结果。
+</Aside>
+
+  </TabItem>
+  <TabItem title="❌ 不属于高空抛物">
+
+- **过失导致坠落**：不构成本罪（要求故意，含直接/间接故意）
+- **从地面向上抛**（再下落）：不属于高空抛物
+- **高度明显不足 3 米且无危险性**：不构成本罪
+
+  </TabItem>
+</Tabs>
+
+## 主观要件与罪数关系
+
+<Mermaid>
+flowchart TD
+    A["高空抛物行为"] --> B["故意（直接/间接）"]
+    B --> C["情节严重"]
+    C --> D["高空抛物罪<br/>基础刑 ≤ 1 年"]
+    D --> E{"同时构成<br/>其他犯罪？"}
+    E -- "否" --> F["以高空抛物罪论处"]
+    E -- "是" --> G["想象竞合 → 择一重罪处罚"]
+    G --> H["放火罪 / 以危险方法危害<br/>公共安全罪 / 故意杀人罪<br/>/ 过失致人死亡罪等"]
+
+    classDef base fill:var(--sl-color-bg-sidebar),stroke:var(--sl-color-text),stroke-width:1px,color:var(--sl-color-text)
+    classDef decision fill:var(--sl-color-bg),stroke:var(--sl-color-accent),stroke-width:2px,color:var(--sl-color-text)
+    classDef result fill:var(--sl-color-accent-low),stroke:var(--sl-color-accent),stroke-width:2px,color:var(--sl-color-text-accent)
+
+    class A,B,C,D base
+    class E decision
+    class F,G,H result
+</Mermaid>
+
+<Aside type="warning">
+**过失**导致物品坠落 → 不构成本罪。本罪要求**故意**（直接或间接）。
+</Aside>
+
+## 典型示例 · 想象竞合具体适用
+
+| 案例 | 行为 | 构成罪名 | 想象竞合结论 |
+| --- | --- | --- | --- |
+| 🍾 扔酒瓶（未危害公共安全） | 楼下有人行走，扔酒瓶子 | 高空抛物罪 | 过失砸死人→择一重：**过失致人死亡罪**；故意砸死人→择一重：**故意杀人罪** |
+| 🧪 抛洒硫酸（危害公共安全） | 向楼下有人处抛洒硫酸 | 高空抛物罪 ＋ 以危险方法危害公共安全罪 | 择一重：**以危险方法危害公共安全罪** |
+| 🔥 扔燃烧蜂窝煤球（火灾危险） | 引发火灾危险，危害公共安全 | 放火罪 ＋ 高空抛物罪 | 择一重：**放火罪**（2022年试题观点） |
+
+## 入罪门槛 · 「情节严重」考量要素
+
+| 情节严重考量 | 典型不构成本罪情形 |
+| --- | --- |
+| 物品重量/数量/高度 | 过失坠落 |
+| 危险程度（尖锐/易燃/腐蚀） | 地面向上抛（再下落） |
+| 抛掷时间/地点（人流密集） | 高度明显不足 3 米且无危险性 |
+| 造成财产损失/恐慌 | |
+| **不需要实害结果** | |
+
+<Aside type="note" title="法律依据">
+《刑法》第 291 条之二第 2 款：同时构成其他犯罪的，依照处罚较重的规定定罪处罚。图示依据《刑法修正案（十一）》及学理解析，相对高空概念、想象竞合择一重。所有场景均为示意，具体案件以司法认定为准。
+</Aside>
