@@ -2,6 +2,7 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import starlightAutoSidebar from 'starlight-auto-sidebar';
+import starlightCatppuccin from '@catppuccin/starlight';
 import path from 'path';
 
 // https://astro.build/config
@@ -23,7 +24,13 @@ export default defineConfig({
 	integrations: [
 		starlight({
 			title: 'InkLoom',
-			plugins: [starlightAutoSidebar()],
+			plugins: [
+				starlightAutoSidebar(),
+				starlightCatppuccin({
+					dark: { flavor: 'mocha', accent: 'mauve' },
+					light: { flavor: 'latte', accent: 'mauve' }
+				})
+			],
 			customCss: [
 				'./src/styles/custom.css',
 			],
