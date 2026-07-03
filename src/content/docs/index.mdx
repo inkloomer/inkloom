@@ -1,40 +1,39 @@
 ---
-title: Welcome to Starlight
-description: Get started building your docs site with Starlight.
-template: splash # Remove or comment out this line to display the site sidebar on this page.
+title: InkLoom 法考交互笔记
+description: 刑法主客观题核心考点交互式流向图与记忆消隐系统
+template: splash
 hero:
-  tagline: Congrats on setting up a new Starlight project!
+  tagline: 交互式刑法案例模型与记忆消隐系统，深度契合客观题与主观题备考需求
   image:
     file: ../../assets/houston.webp
   actions:
-    - text: Example Guide
-      link: /guides/example/
+    - text: 进入 共同受贿与斡旋受贿定性
+      link: /objective/criminal/23/joint-crime/
       icon: right-arrow
-    - text: Read the Starlight docs
-      link: https://starlight.astro.build
-      icon: external
-      variant: minimal
+    - text: 进入 利用影响力受贿与共犯认定
+      link: /objective/criminal/23/influence-bribery/
+      icon: right-arrow
+      variant: secondary
 ---
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
 
-## Next steps
+## 🚀 核心交互功能介绍
 
 <CardGrid stagger>
-	<Card title="Update content" icon="pencil">
-		Edit `src/content/docs/index.mdx` to see this page change.
-	</Card>
-	<Card title="Change page layout" icon="document">
-		Delete `template: splash` in `src/content/docs/index.mdx` to display a
-		sidebar on this page.
-	</Card>
-	<Card title="Add new content" icon="add-document">
-		Add Markdown or MDX files to `src/content/docs` to create new pages.
-	</Card>
-	<Card title="Configure your site" icon="setting">
-		Edit your `sidebar` and other config in `astro.config.mjs`.
-	</Card>
-	<Card title="Read the docs" icon="open-book">
-		Learn more in [the Starlight Docs](https://starlight.astro.build/).
-	</Card>
+  <Card title="🧠 记忆背诵消隐模式" icon="open-book">
+    一键开启消隐遮罩，模糊关键犯罪定性、数额等结论词，鼠标悬停即可单独显现，专门针对法考主客观题的背诵设计。
+  </Card>
+  
+  <Card title="🔍 交互式行为流向图" icon="magnifier">
+    图形化行为流向图支持关联高亮，鼠标悬停于“行为胶囊”上即可自动点亮资金流向并加速流动，直观解析复杂多方共犯关系。
+  </Card>
+  
+  <Card title="📋 一键无缝复用" icon="document">
+    支持一键生成带有完全交互效果的纯净 HTML 源码，或生成自动防止 Obsidian/Notion 强缓存的 iframe 嵌入代码，轻松拉取在线版最新渲染效果。
+  </Card>
+  
+  <Card title="⚖️ 考点对比记忆矩阵" icon="setting">
+    整合司法解释多重截留、代收、隐瞒、猜出等演变模型，通过精美对比矩阵列出主体罪名差异与罪数处断，杜绝考点混淆。
+  </Card>
 </CardGrid>
