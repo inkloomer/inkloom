@@ -13,7 +13,7 @@ const { amountA = '送100万', action, relationInfo = '意思联络' } = Astro.p
     <!-- Actor A (Jia) -->
     <div class="flow-actor-node-wrapper" data-actor="甲">
       <div class="flow-actor-bubble bubble-甲">甲</div>
-      <div class="flow-actor-label">行贿人 (甲)</div>
+      <div class="flow-actor-label">行贿人</div>
       <div class="flow-vertical-thread"></div>
     </div>
     
@@ -33,7 +33,7 @@ const { amountA = '送100万', action, relationInfo = '意思联络' } = Astro.p
     <!-- Actor B (Yi) -->
     <div class="flow-actor-node-wrapper" data-actor="乙">
       <div class="flow-actor-bubble bubble-乙">乙</div>
-      <div class="flow-actor-label">中介人 (乙)</div>
+      <div class="flow-actor-label">中介人</div>
       <div class="flow-vertical-thread"></div>
     </div>
     
@@ -53,22 +53,22 @@ const { amountA = '送100万', action, relationInfo = '意思联络' } = Astro.p
     <!-- Actor C (Bing) -->
     <div class="flow-actor-node-wrapper" data-actor="丙">
       <div class="flow-actor-bubble bubble-丙">丙</div>
-      <div class="flow-actor-label">受贿人 (丙)</div>
+      <div class="flow-actor-label">受贿人</div>
       <div class="flow-vertical-thread"></div>
     </div>
   </div>
 </div>
 
 <style is:global>
-  /* ==================== INTEGRATED LIQUID FLOW DESIGN SYSTEM ==================== */
+  /* ==================== MINIMALIST INTEGRATED FLOW DESIGN ==================== */
   
   .visual-flow-wrapper {
-    margin-top: 24px;
-    margin-bottom: 0px; /* Merges seamlessly with analysis container below */
-    padding: 0 8px;
+    margin-top: 12px;
+    margin-bottom: 0px;
+    padding: 0;
   }
 
-  /* 5-Column Grid Layout for Desktop alignment (Node, Arrow, Node, Arrow, Node) */
+  /* 5-Column Grid Layout for Desktop alignment */
   @media (min-width: 60rem) {
     .visual-flow-grid {
       display: grid !important;
@@ -84,11 +84,10 @@ const { amountA = '送100万', action, relationInfo = '意思联络' } = Astro.p
       align-items: center !important;
       justify-content: space-between !important;
       gap: 4px !important;
-      padding: 12px 6px !important;
-      background: var(--toc-glass-bg) !important;
-      border: 1px solid var(--toc-glass-border) !important;
-      border-radius: 16px !important;
-      box-shadow: var(--toc-shadow) !important;
+      padding: 8px 12px !important;
+      background: var(--sl-color-bg-sidebar) !important;
+      border: 1px solid var(--sl-color-hairline) !important;
+      border-radius: 8px !important;
     }
   }
 
@@ -102,73 +101,70 @@ const { amountA = '送100万', action, relationInfo = '意思联络' } = Astro.p
   }
 
   .flow-actor-bubble {
-    width: 56px !important;
-    height: 56px !important;
+    width: 36px !important;
+    height: 36px !important;
     border-radius: 50% !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    font-size: 20px !important;
-    font-weight: 800 !important;
-    color: #ffffff !important;
-    box-shadow: 
-      inset 0 4px 6px rgba(255, 255, 255, 0.45),
-      inset 0 -4px 6px rgba(0, 0, 0, 0.3),
-      0 8px 16px -6px rgba(0, 0, 0, 0.4) !important;
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    transition: all 0.2s ease !important;
     user-select: none !important;
   }
 
-  /* 3D Liquid Specular Gradients */
+  /* Sleek flat semi-translucent themes for nodes in dark mode */
   .bubble-甲 {
-    background: radial-gradient(circle at 30% 30%, #60a5fa 0%, #1d4ed8 70%, #1e3a8a 100%) !important;
-    text-shadow: 0 2px 4px rgba(29, 78, 216, 0.5) !important;
+    background-color: rgba(59, 130, 246, 0.1) !important;
+    color: #60a5fa !important;
+    border: 1px solid rgba(59, 130, 246, 0.4) !important;
   }
   .bubble-乙 {
-    background: radial-gradient(circle at 30% 30%, #c084fc 0%, #7c3aed 70%, #4c1d95 100%) !important;
-    text-shadow: 0 2px 4px rgba(124, 58, 237, 0.5) !important;
+    background-color: rgba(168, 85, 247, 0.1) !important;
+    color: #c084fc !important;
+    border: 1px solid rgba(168, 85, 247, 0.4) !important;
   }
   .bubble-丙 {
-    background: radial-gradient(circle at 30% 30%, #34d399 0%, #059669 70%, #064e3b 100%) !important;
-    text-shadow: 0 2px 4px rgba(5, 150, 105, 0.5) !important;
+    background-color: rgba(34, 197, 94, 0.1) !important;
+    color: #34d399 !important;
+    border: 1px solid rgba(34, 197, 94, 0.4) !important;
+  }
+
+  /* Light Theme overrides for nodes */
+  [data-theme="light"] .bubble-甲 {
+    background-color: #eff6ff !important;
+    color: #1d4ed8 !important;
+    border: 1px solid #bfdbfe !important;
+  }
+  [data-theme="light"] .bubble-乙 {
+    background-color: #f5f3ff !important;
+    color: #6d28d9 !important;
+    border: 1px solid #ddd6fe !important;
+  }
+  [data-theme="light"] .bubble-丙 {
+    background-color: #ecfdf5 !important;
+    color: #047857 !important;
+    border: 1px solid #a7f3d0 !important;
   }
 
   .flow-actor-node-wrapper:hover .flow-actor-bubble {
-    transform: scale(1.12) translateY(-2px) !important;
-    box-shadow: 
-      inset 0 4px 8px rgba(255, 255, 255, 0.65),
-      inset 0 -4px 8px rgba(0, 0, 0, 0.35),
-      0 12px 20px -6px rgba(0, 0, 0, 0.5) !important;
+    transform: scale(1.05) !important;
   }
 
   .flow-actor-label {
     font-size: 11px !important;
-    font-weight: bold !important;
-    margin-top: 8px !important;
+    font-weight: 500 !important;
+    margin-top: 4px !important;
     color: var(--sl-color-text-muted) !important;
   }
 
-  /* --- Glowing Vertical Thread Hanging the Cards (Desktop Only) --- */
+  /* --- Simple Clean Vertical Connection Lines (Desktop Only) --- */
   @media (min-width: 60rem) {
     .flow-vertical-thread {
-      width: 2px !important;
-      height: 36px !important; /* Visual connection down to the columns below */
-      background: linear-gradient(to bottom, rgba(148, 163, 184, 0.6) 0%, rgba(148, 163, 184, 0) 100%) !important;
-      margin-top: 6px !important;
-      position: relative !important;
-    }
-    /* Flow indicator pulsing dots along the vertical threads */
-    .flow-vertical-thread::after {
-      content: '' !important;
-      position: absolute !important;
-      top: 0 !important;
-      left: -2px !important;
-      width: 6px !important;
-      height: 6px !important;
-      background-color: var(--sl-color-accent);
-      border-radius: 50% !important;
-      opacity: 0.8 !important;
-      animation: thread-drip 2.2s infinite linear !important;
+      width: 1px !important;
+      height: 24px !important;
+      background-color: var(--sl-color-hairline) !important;
+      margin-top: 4px !important;
     }
   }
 
@@ -178,19 +174,12 @@ const { amountA = '送100万', action, relationInfo = '意思联络' } = Astro.p
     }
   }
 
-  @keyframes thread-drip {
-    0% { top: 0; opacity: 1; transform: scale(1); }
-    80% { opacity: 0.6; }
-    100% { top: 30px; opacity: 0; transform: scale(0.6); }
-  }
-
   /* --- Flow Links / Arrows --- */
   .flow-link-column {
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
     position: relative !important;
-    box-sizing: border-box !important;
   }
 
   @media (max-width: 59.999rem) {
@@ -202,55 +191,55 @@ const { amountA = '送100万', action, relationInfo = '意思联络' } = Astro.p
 
   .flow-link-amount {
     font-size: 11px !important;
-    font-weight: 700 !important;
+    font-weight: 600 !important;
     margin-bottom: 2px !important;
   }
   .text-gold { color: #d97706 !important; }
   .text-indigo { color: #4f46e5 !important; }
 
+  /* Light Theme Adjustments for Link colors */
+  [data-theme="light"] .text-gold { color: #b45309 !important; }
+  [data-theme="light"] .text-indigo { color: #4338ca !important; }
+
   .flow-link-line-container {
     position: relative !important;
     width: 100% !important;
-    height: 10px !important;
+    height: 8px !important;
     display: flex !important;
     align-items: center !important;
   }
 
   .flow-link-svg {
     width: 100% !important;
-    height: 6px !important;
+    height: 4px !important;
     display: block !important;
     overflow: visible !important;
   }
 
   .flow-link-svg line.bg-line {
     stroke: var(--sl-color-hairline) !important;
-    stroke-width: 3 !important;
-    stroke-linecap: round !important;
+    stroke-width: 2 !important;
   }
 
   .flow-link-svg line.flowing-line {
-    stroke-width: 3 !important;
-    stroke-linecap: round !important;
-    transition: stroke-width 0.25s, filter 0.25s !important;
+    stroke-width: 2 !important;
   }
 
-  /* Flow colors */
+  /* Simple colors */
   .flow-link-1 { stroke: #d97706 !important; }
   .flow-link-2 { stroke: #4f46e5 !important; }
 
   .flow-arrow {
     position: absolute !important;
     right: -2px !important;
-    top: 0px !important;
+    top: -1px !important;
     width: 0 !important;
     height: 0 !important;
-    border-top: 5px solid transparent !important;
-    border-bottom: 5px solid transparent !important;
-    transition: border-left-color 0.2s !important;
+    border-top: 4px solid transparent !important;
+    border-bottom: 4px solid transparent !important;
   }
-  .arrow-1 { border-left: 8px solid #d97706 !important; }
-  .arrow-2 { border-left: 8px solid #4f46e5 !important; }
+  .arrow-1 { border-left: 6px solid #d97706 !important; }
+  .arrow-2 { border-left: 6px solid #4f46e5 !important; }
 
   .flow-link-caption {
     font-size: 9px !important;
@@ -261,7 +250,7 @@ const { amountA = '送100万', action, relationInfo = '意思联络' } = Astro.p
 
   @media (max-width: 59.999rem) {
     .flow-link-caption {
-      display: none !important; /* Hide captions on mobile to save space */
+      display: none !important;
     }
   }
 </style>

@@ -2,7 +2,6 @@
 // src/components/ModelAnalysis.astro
 ---
 <div class="model-analysis-wrapper">
-  <div class="model-analysis-header">司法分析与罪数定性：</div>
   <div class="model-analysis-grid">
     <slot />
   </div>
@@ -10,18 +9,8 @@
 
 <style is:global>
   .model-analysis-wrapper {
-    margin-top: 0px; /* Seamless border-free fit with flow threads above */
+    margin-top: 4px;
     padding: 0;
-  }
-
-  .model-analysis-header {
-    font-size: 11px;
-    font-weight: bold;
-    color: var(--sl-color-text-muted);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin-bottom: 8px;
-    padding-left: 8px;
   }
 
   /* Matching 5-Column Grid with empty spaces matching the flow arrow links */
@@ -49,7 +38,7 @@
     .model-analysis-grid {
       display: flex !important;
       flex-direction: column !important;
-      gap: 16px !important;
+      gap: 12px !important;
     }
   }
 </style>
