@@ -1,0 +1,215 @@
+---
+import type { Props } from '@astrojs/starlight/props';
+import config from 'virtual:starlight/user-config';
+
+import LanguageSelect from 'virtual:starlight/components/LanguageSelect';
+import Search from 'virtual:starlight/components/Search';
+import SiteTitle from 'virtual:starlight/components/SiteTitle';
+import SocialIcons from 'virtual:starlight/components/SocialIcons';
+import ThemeSelect from 'virtual:starlight/components/ThemeSelect';
+
+const shouldRenderSearch =
+	config.pagefind || config.components.Search !== '@astrojs/starlight/components/Search.astro';
+---
+
+{/* Block rendering FOUC prevention script */}
+<script is:inline>
+  (() => {
+    const saved = localStorage.getItem('inkloom-theme-style') || 'default';
+    document.documentElement.setAttribute('data-theme-style', saved);
+  })();
+</script>
+
+<div class="header">
+	<div class="title-wrapper sl-flex">
+		<SiteTitle />
+	</div>
+	<div class="sl-flex print:hidden">
+		{shouldRenderSearch && <Search />}
+	</div>
+	<div class="sl-flex print:hidden right-group-custom">
+		<div class="sl-hidden md:sl-flex social-icons">
+			<SocialIcons />
+		</div>
+		
+		{/* Global Theme Style Switcher */}
+		<div class="theme-select-wrapper">
+			<select id="inkloom-theme-select" class="toolbar-select" data-tooltip="切换界面主题">
+				<option value="default">默认主题 (Default)</option>
+				<option value="rapide">极速 (Rapide)</option>
+				<option value="catppuccin">柔和 (Catppuccin)</option>
+				<option value="ion">时尚 (Ion)</option>
+				<option value="black">极简 (Black)</option>
+				<option value="flexoki">温暖 (Flexoki)</option>
+				<option value="nova">现代 (Nova)</option>
+				<option value="nextjs">Next.js</option>
+				<option value="galaxy">星系 (Galaxy)</option>
+				<option value="page">流畅 (Page)</option>
+				<option value="gruvbox">复古 (Gruvbox)</option>
+				<option value="six">现代 (Six)</option>
+				<option value="vintage">经典 (Vintage)</option>
+				<option value="rose-pine">松石 (Rosé Pine)</option>
+				<option value="nord">北极 (Nord)</option>
+				<option value="terminal">终端 (Terminal)</option>
+				<option value="celestia">天青 (Celestia)</option>
+				<option value="lucode">精制 (Lucode)</option>
+			</select>
+		</div>
+
+		<div class="sl-hidden md:sl-flex">
+			<ThemeSelect />
+			<LanguageSelect />
+		</div>
+	</div>
+</div>
+
+<script>
+  function initThemeStyleGlobal() {
+    const select = document.getElementById('inkloom-theme-select') as HTMLSelectElement | null;
+    const saved = localStorage.getItem('inkloom-theme-style') || 'default';
+    
+    document.documentElement.setAttribute('data-theme-style', saved);
+    
+    if (select) {
+      select.value = saved;
+      select.onchange = () => {
+        const val = select.value;
+        document.documentElement.setAttribute('data-theme-style', val);
+        localStorage.setItem('inkloom-theme-style', val);
+      };
+    }
+  }
+
+  // Bind to DOM and Astro View Transitions
+  document.addEventListener('DOMContentLoaded', initThemeStyleGlobal);
+  if (typeof window !== 'undefined') {
+    document.addEventListener('astro:page-load', initThemeStyleGlobal);
+  }
+</script>
+
+<style>
+	@layer starlight.core {
+		.header {
+			display: flex;
+			gap: var(--sl-nav-gap);
+			justify-content: space-between;
+			align-items: center;
+			height: 100%;
+		}
+
+		.title-wrapper {
+			overflow: clip;
+			padding: 0.25rem;
+			margin: -0.25rem;
+			min-width: 0;
+		}
+
+		.right-group-custom {
+			gap: 1rem;
+			align-items: center;
+		}
+
+		.social-icons {
+			gap: 1rem;
+			align-items: center;
+		}
+		.social-icons::after {
+			content: '';
+			height: 2rem;
+			border-inline-end: 1px solid var(--sl-color-gray-5);
+		}
+
+		/* Liquid glass theme dropdown styles */
+		.theme-select-wrapper {
+			position: relative !important;
+			display: inline-flex !important;
+			align-items: center !important;
+		}
+
+		.toolbar-select {
+			background: rgba(255, 255, 255, 0.05) !important;
+			border: 1px solid rgba(255, 255, 255, 0.15) !important;
+			color: var(--sl-color-text-muted) !important;
+			font-size: 12.5px !important;
+			font-weight: 600 !important;
+			cursor: pointer !important;
+			outline: none !important;
+			padding: 4px 28px 4px 10px !important;
+			appearance: none !important;
+			-webkit-appearance: none !important;
+			-moz-appearance: none !important;
+			border-radius: 14px !important;
+			transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+		}
+
+		[data-theme="light"] .toolbar-select {
+			background: rgba(0, 0, 0, 0.03) !important;
+			border: 1px solid rgba(0, 0, 0, 0.1) !important;
+		}
+
+		/* Custom dropdown arrow using SVG */
+		.theme-select-wrapper::after {
+			content: '' !important;
+			position: absolute !important;
+			right: 8px !important;
+			top: 50% !important;
+			transform: translateY(-50%) !important;
+			width: 10px !important;
+			height: 10px !important;
+			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='rgba(226, 232, 240, 0.78)' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E") !important;
+			background-size: contain !important;
+			background-repeat: no-repeat !important;
+			pointer-events: none !important;
+		}
+		
+		[data-theme="light"] .theme-select-wrapper::after {
+			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='rgba(15, 23, 42, 0.74)' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E") !important;
+		}
+
+		.toolbar-select:hover {
+			color: var(--sl-color-text) !important;
+			background-color: rgba(255, 255, 255, 0.1) !important;
+			border-color: rgba(255, 255, 255, 0.25) !important;
+		}
+
+		[data-theme="light"] .toolbar-select:hover {
+			background-color: rgba(0, 0, 0, 0.06) !important;
+			border-color: rgba(0, 0, 0, 0.18) !important;
+		}
+
+		.toolbar-select option {
+			background-color: var(--sl-color-bg-sidebar) !important;
+			color: var(--sl-color-text) !important;
+			font-size: 13px !important;
+			font-weight: 500 !important;
+		}
+
+		@media (min-width: 50rem) {
+			:global(:root[data-has-sidebar]) {
+				--__sidebar-pad: calc(2 * var(--sl-nav-pad-x));
+			}
+			:global(:root:not([data-has-toc])) {
+				--__toc-width: 0rem;
+			}
+			.header {
+				--__sidebar-width: max(0rem, var(--sl-content-inline-start, 0rem) - var(--sl-nav-pad-x));
+				--__main-column-fr: calc(
+					(
+							100% + var(--__sidebar-pad, 0rem) - var(--__toc-width, var(--sl-sidebar-width)) -
+								(2 * var(--__toc-width, var(--sl-nav-pad-x))) - var(--sl-content-inline-start, 0rem) -
+								var(--sl-content-width)
+						) / 2
+				);
+				display: grid;
+				grid-template-columns:
+					minmax(
+						calc(var(--__sidebar-width) + max(0rem, var(--__main-column-fr) - var(--sl-nav-gap))),
+						auto
+					)
+					1fr
+					auto;
+				align-content: center;
+			}
+		}
+	}
+</style>

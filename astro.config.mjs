@@ -29,6 +29,7 @@ export default defineConfig({
 			],
 			components: {
 				PageTitle: './src/components/overrides/PageTitle.astro',
+				Header: './src/components/overrides/Header.astro',
 			},
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/inkloomer/inkloom' }],
 			editLink: {
