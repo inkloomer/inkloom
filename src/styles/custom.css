@@ -234,15 +234,19 @@
   display: none !important;
 }
 
+/* Widescreen layout optimization to ensure full width for interactive diagrams */
 @media (min-width: 72rem) {
-  html[data-has-sidebar] .main-pane {
+  .main-pane {
     width: 100% !important;
     max-width: none !important;
+    grid-template-columns: 1fr !important; /* Eliminate the empty column reserved for native TOC */
     --sl-content-margin-inline: 0;
   }
 
-  html[data-has-sidebar] .content-panel .sl-container,
-  html[data-has-sidebar] .sl-markdown-content {
+  .content-panel,
+  .content-panel .sl-container,
+  .sl-markdown-content,
+  main {
     width: 100% !important;
     max-width: none !important;
     margin-inline: 0 !important;
