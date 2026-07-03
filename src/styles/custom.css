@@ -339,6 +339,40 @@ html[data-is-iframe="true"] .main-frame {
 }
 
 
+/* ==================== SIDEBAR NAVIGATION READABILITY FORCING ==================== */
+
+/* Force folder names (summaries) and inactive page links to be clean, readable neutral text */
+.sidebar-content summary,
+.sidebar-content a:not([aria-current="page"]) {
+  color: var(--sl-color-gray-2) !important;
+  font-weight: 500 !important;
+}
+
+/* Brighten folder names and page links slightly on hover */
+.sidebar-content summary:hover,
+.sidebar-content a:not([aria-current="page"]):hover {
+  color: var(--sl-color-text) !important;
+  background-color: var(--sl-color-accent-low) !important;
+  border-radius: 4px !important;
+}
+
+/* Caret / folder icon color matching */
+.sidebar-content summary .caret {
+  color: var(--sl-color-gray-3) !important;
+}
+.sidebar-content summary:hover .caret {
+  color: var(--sl-color-text) !important;
+}
+
+/* Active page highlighting: clean capsule styling with the selected theme accent color */
+.sidebar-content a[aria-current="page"] {
+  color: var(--sl-color-text-accent) !important;
+  background-color: var(--sl-color-accent-low) !important;
+  font-weight: 600 !important;
+  border-radius: 4px !important;
+}
+
+
 /* ==================== COMMUNITY THEMES INTEGRATION ==================== */
 
 /* Theme: Rapide */
