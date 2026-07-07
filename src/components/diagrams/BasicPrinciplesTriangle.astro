@@ -1,0 +1,147 @@
+---
+// 民事诉讼法基本原则三角形关系图
+// 使用 SVG + CSS 变量实现主题适配
+---
+
+<div class="principles-triangle-wrapper">
+  <svg viewBox="0 0 520 420" xmlns="http://www.w3.org/2000/svg" class="principles-triangle-svg">
+    <!-- 定义箭头标记 -->
+    <defs>
+      <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+        <polygon points="0 0, 10 3.5, 0 7" fill="var(--sl-color-text)" />
+      </marker>
+    </defs>
+
+    <!-- 三角形连线 -->
+    <!-- 法院 → 原告 -->
+    <line x1="260" y1="80" x2="100" y2="280" stroke="var(--sl-color-text)" stroke-width="2" />
+    <!-- 法院 → 被告 -->
+    <line x1="260" y1="80" x2="420" y2="280" stroke="var(--sl-color-text)" stroke-width="2" />
+    <!-- 原告 → 被告（上）-->
+    <line x1="100" y1="280" x2="420" y2="280" stroke="var(--sl-color-text)" stroke-width="2" />
+    <!-- 原告 → 被告（下，虚线）-->
+    <line x1="100" y1="330" x2="420" y2="330" stroke="var(--sl-color-text)" stroke-width="2" stroke-dasharray="8,4" />
+    <!-- 原告向下 -->
+    <line x1="100" y1="280" x2="100" y2="330" stroke="var(--sl-color-text)" stroke-width="2" />
+    <!-- 被告向下 -->
+    <line x1="420" y1="280" x2="420" y2="330" stroke="var(--sl-color-text)" stroke-width="2" />
+
+    <!-- 检察监督箭头（指向法院） -->
+    <line x1="420" y1="40" x2="300" y2="60" stroke="var(--sl-color-text)" stroke-width="2" marker-end="url(#arrowhead)" />
+
+    <!-- 节点圆圈与文字 -->
+    <!-- 法院 -->
+    <circle cx="260" cy="80" r="28" fill="var(--sl-color-black)" stroke="var(--sl-color-text-accent)" stroke-width="2" />
+    <text x="260" y="85" text-anchor="middle" fill="var(--sl-color-text-invert)" font-size="14" font-weight="bold">法院</text>
+
+    <!-- 原告 -->
+    <circle cx="100" cy="280" r="28" fill="var(--sl-color-black)" stroke="var(--sl-color-text-accent)" stroke-width="2" />
+    <text x="100" y="285" text-anchor="middle" fill="var(--sl-color-text-invert)" font-size="14" font-weight="bold">原告</text>
+
+    <!-- 被告 -->
+    <circle cx="420" cy="280" r="28" fill="var(--sl-color-black)" stroke="var(--sl-color-text-accent)" stroke-width="2" />
+    <text x="420" y="285" text-anchor="middle" fill="var(--sl-color-text-invert)" font-size="14" font-weight="bold">被告</text>
+
+    <!-- 连线标签 -->
+    <!-- 平等原则 -->
+    <rect x="230" y="258" width="60" height="22" rx="4" fill="var(--sl-color-bg)" stroke="var(--sl-color-text-accent)" stroke-width="1" />
+    <text x="260" y="273" text-anchor="middle" fill="var(--sl-color-text)" font-size="12">平等原则</text>
+
+    <!-- 辩论原则 -->
+    <rect x="230" y="288" width="60" height="22" rx="4" fill="var(--sl-color-bg)" stroke="var(--sl-color-text-accent)" stroke-width="1" />
+    <text x="260" y="303" text-anchor="middle" fill="var(--sl-color-text)" font-size="12">辩论原则</text>
+
+    <!-- 处分原则 -->
+    <rect x="60" y="318" width="60" height="22" rx="4" fill="var(--sl-color-bg)" stroke="var(--sl-color-text-accent)" stroke-width="1" />
+    <text x="90" y="333" text-anchor="middle" fill="var(--sl-color-text)" font-size="12">处分原则</text>
+
+    <!-- 诚信原则 -->
+    <rect x="400" y="318" width="60" height="22" rx="4" fill="var(--sl-color-bg)" stroke="var(--sl-color-text-accent)" stroke-width="1" />
+    <text x="430" y="333" text-anchor="middle" fill="var(--sl-color-text)" font-size="12">诚信原则</text>
+
+    <!-- 检察监督 -->
+    <text x="430" y="35" text-anchor="middle" fill="var(--sl-color-text)" font-size="13" font-weight="bold">检察监督</text>
+  </svg>
+
+  <!-- 右侧补充说明 -->
+  <div class="principles-notes">
+    <div class="note-item">
+      <h4>1. 国际视野</h4>
+      <ul>
+        <li><strong>同等原则</strong></li>
+        <li><strong>对等原则</strong></li>
+      </ul>
+    </div>
+    <div class="note-item">
+      <h4>2. 与时俱进</h4>
+      <p>在线诉讼与线下诉讼<strong>效力相同</strong></p>
+    </div>
+  </div>
+</div>
+
+<style>
+  .principles-triangle-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: flex-start;
+    margin: 1.5rem 0;
+  }
+
+  .principles-triangle-svg {
+    flex: 1 1 320px;
+    max-width: 520px;
+    height: auto;
+  }
+
+  .principles-notes {
+    flex: 1 1 200px;
+    min-width: 200px;
+  }
+
+  .note-item {
+    margin-bottom: 1rem;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    background: var(--sl-color-bg-inline-code);
+    border-left: 3px solid var(--sl-color-text-accent);
+  }
+
+  .note-item h4 {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.95rem;
+    color: var(--sl-color-text);
+  }
+
+  .note-item ul {
+    margin: 0;
+    padding-left: 1.2rem;
+    color: var(--sl-color-text);
+  }
+
+  .note-item li {
+    margin-bottom: 0.25rem;
+  }
+
+  .note-item p {
+    margin: 0;
+    color: var(--sl-color-text);
+    font-size: 0.9rem;
+  }
+
+  @media (max-width: 640px) {
+    .principles-triangle-wrapper {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .principles-triangle-svg {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .principles-notes {
+      width: 100%;
+    }
+  }
+</style>
