@@ -17,7 +17,6 @@ export interface Edge {
   to: string;   // 对应 Node.id
   label?: string;
   dashed?: boolean;
-  curve?: 'up' | 'down'; // 同向边弯曲偏移，避免重叠
 }
 
 export interface Arrow {
@@ -38,25 +37,13 @@ export interface Props {
 
 const { nodes, edges, arrows = [], width = 520, height = 380 } = Astro.props;
 
+// 计算连线中点，用于放置标签
 function getNodeById(id: string) {
   return nodes.find((n) => n.id === id)!;
 }
 
 function midPoint(a: Node, b: Node) {
   return { x: (a.x + b.x) / 2, y: (a.y + b.y) / 2 };
-}
-
-// 计算二次贝塞尔曲线的控制点，使连线向垂直方向偏移
-function curveControl(a: Node, b: Node, direction: 'up' | 'down') {
-  const m = midPoint(a, b);
-  const dx = b.x - a.x;
-  const dy = b.y - a.y;
-  const len = Math.sqrt(dx * dx + dy * dy) || 1;
-  // 垂直单位向量
-  const nx = -dy / len;
-  const ny = dx / len;
-  const offset = 40 * (direction === 'up' ? -1 : 1);
-  return { x: m.x + nx * offset, y: m.y + ny * offset };
 }
 ---
 
@@ -67,6 +54,7 @@ function curveControl(a: Node, b: Node, direction: 'up' | 'down') {
   aria-label="关系图"
 >
   <defs>
+    <!-- 箭头标记 -->
     <marker
       id="rd-arrowhead"
       markerWidth="10"
@@ -77,6 +65,7 @@ function curveControl(a: Node, b: Node, direction: 'up' | 'down') {
     >
       <polygon points="0 0, 10 3.5, 0 7" fill="var(--sl-color-text-accent)" />
     </marker>
+    <!-- 节点阴影滤镜 -->
     <filter id="rd-shadow" x="-20%" y="-20%" width="140%" height="140%">
       <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="var(--sl-color-black)" flood-opacity="0.25" />
     </filter>
@@ -87,45 +76,24 @@ function curveControl(a: Node, b: Node, direction: 'up' | 'down') {
     edges.map((edge) => {
       const a = getNodeById(edge.from);
       const b = getNodeById(edge.to);
-      const m = midPoint(a, b);
-      const hasCurve = edge.curve === 'up' || edge.curve === 'down';
-      const cp = hasCurve ? curveControl(a, b, edge.curve!) : null;
-      const pathD = hasCurve && cp
-        ? `M ${a.x} ${a.y} Q ${cp.x} ${cp.y} ${b.x} ${b.y}`
-        : null;
-      // 标签放在中点（曲线时沿曲线中点稍偏移）
-      const labelPos = hasCurve && cp
-        ? { x: (a.x + 2 * cp.x + b.x) / 4, y: (a.y + 2 * cp.y + b.y) / 4 }
-        : m;
-
       return (
         <g class="rd-edge">
-          {hasCurve && pathD ? (
-            <path
-              d={pathD}
-              stroke="var(--sl-color-gray-4)"
-              stroke-width="2"
-              stroke-linecap="round"
-              fill="none"
-              stroke-dasharray={edge.dashed ? "8,5" : undefined}
-            />
-          ) : (
-            <line
-              x1={a.x}
-              y1={a.y}
-              x2={b.x}
-              y2={b.y}
-              stroke="var(--sl-color-gray-4)"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-dasharray={edge.dashed ? "8,5" : undefined}
-            />
-          )}
+          <line
+            x1={a.x}
+            y1={a.y}
+            x2={b.x}
+            y2={b.y}
+            stroke="var(--sl-color-gray-4)"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-dasharray={edge.dashed ? "8,5" : undefined}
+          />
           {edge.label && (
             <g>
+              {/* 标签背景 */}
               <rect
-                x={labelPos.x - edge.label.length * 6 - 4}
-                y={labelPos.y - 11}
+                x={midPoint(a, b).x - edge.label.length * 6 - 4}
+                y={midPoint(a, b).y - 11}
                 width={edge.label.length * 12 + 8}
                 height="22"
                 rx="11"
@@ -133,9 +101,10 @@ function curveControl(a: Node, b: Node, direction: 'up' | 'down') {
                 stroke="var(--sl-color-gray-3)"
                 stroke-width="1"
               />
+              {/* 标签文字 */}
               <text
-                x={labelPos.x}
-                y={labelPos.y + 4}
+                x={midPoint(a, b).x}
+                y={midPoint(a, b).y + 4}
                 text-anchor="middle"
                 fill="var(--sl-color-text)"
                 font-size="12"
@@ -152,7 +121,7 @@ function curveControl(a: Node, b: Node, direction: 'up' | 'down') {
 
   <!-- 箭头层 -->
   {
-    arrows.map((arrow) => (
+    arrows.map((arrow, idx) => (
       <g class="rd-arrow">
         <line
           x1={arrow.fromX}
@@ -184,6 +153,7 @@ function curveControl(a: Node, b: Node, direction: 'up' | 'down') {
   {
     nodes.map((node) => (
       <g class="rd-node" filter="url(#rd-shadow)">
+        {/* 节点圆形背景 */}
         <circle
           cx={node.x}
           cy={node.y}
@@ -192,6 +162,7 @@ function curveControl(a: Node, b: Node, direction: 'up' | 'down') {
           stroke="var(--sl-color-text-accent)"
           stroke-width="2.5"
         />
+        {/* 节点文字 */}
         <text
           x={node.x}
           y={node.y + 1}
@@ -222,8 +193,7 @@ function curveControl(a: Node, b: Node, direction: 'up' | 'down') {
     transition: opacity 0.2s ease;
   }
 
-  .rd-edge line,
-  .rd-edge path {
+  .rd-edge line {
     transition: stroke 0.2s ease;
   }
 </style>
