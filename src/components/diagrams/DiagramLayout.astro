@@ -1,0 +1,49 @@
+---
+/**
+ * 关系图 + 侧边笔记布局组件
+ * 把 SVG 图和右侧/底部说明卡片组合在一起
+ */
+---
+
+<div class="diagram-layout">
+  <div class="diagram-svg">
+    <slot name="diagram" />
+  </div>
+  <div class="diagram-notes">
+    <slot name="notes" />
+  </div>
+</div>
+
+<style>
+  .diagram-layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: flex-start;
+    margin: 1.5rem 0;
+  }
+
+  .diagram-svg {
+    flex: 1 1 320px;
+    max-width: 560px;
+  }
+
+  .diagram-notes {
+    flex: 1 1 200px;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  @media (max-width: 640px) {
+    .diagram-layout {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .diagram-notes {
+      width: 100%;
+    }
+  }
+</style>

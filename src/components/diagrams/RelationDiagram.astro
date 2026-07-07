@@ -1,0 +1,199 @@
+---
+/**
+ * 通用关系图组件
+ * 通过传入节点、连线、箭头数据，渲染 SVG 关系图
+ * 所有颜色使用 Starlight CSS 变量，自动适配主题
+ */
+
+export interface Node {
+  id: string;
+  label: string;
+  x: number;
+  y: number;
+}
+
+export interface Edge {
+  from: string; // 对应 Node.id
+  to: string;   // 对应 Node.id
+  label?: string;
+  dashed?: boolean;
+}
+
+export interface Arrow {
+  fromX: number;
+  fromY: number;
+  toX: number;
+  toY: number;
+  label?: string;
+}
+
+export interface Props {
+  nodes: Node[];
+  edges: Edge[];
+  arrows?: Arrow[];
+  width?: number;
+  height?: number;
+}
+
+const { nodes, edges, arrows = [], width = 520, height = 380 } = Astro.props;
+
+// 计算连线中点，用于放置标签
+function getNodeById(id: string) {
+  return nodes.find((n) => n.id === id)!;
+}
+
+function midPoint(a: Node, b: Node) {
+  return { x: (a.x + b.x) / 2, y: (a.y + b.y) / 2 };
+}
+---
+
+<svg
+  viewBox={`0 0 ${width} ${height}`}
+  xmlns="http://www.w3.org/2000/svg"
+  class="relation-diagram"
+  aria-label="关系图"
+>
+  <defs>
+    <!-- 箭头标记 -->
+    <marker
+      id="rd-arrowhead"
+      markerWidth="10"
+      markerHeight="7"
+      refX="9"
+      refY="3.5"
+      orient="auto"
+    >
+      <polygon points="0 0, 10 3.5, 0 7" fill="var(--sl-color-text-accent)" />
+    </marker>
+    <!-- 节点阴影滤镜 -->
+    <filter id="rd-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="var(--sl-color-black)" flood-opacity="0.25" />
+    </filter>
+  </defs>
+
+  <!-- 连线层 -->
+  {
+    edges.map((edge) => {
+      const a = getNodeById(edge.from);
+      const b = getNodeById(edge.to);
+      return (
+        <g class="rd-edge">
+          <line
+            x1={a.x}
+            y1={a.y}
+            x2={b.x}
+            y2={b.y}
+            stroke="var(--sl-color-gray-4)"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-dasharray={edge.dashed ? "8,5" : undefined}
+          />
+          {edge.label && (
+            <g>
+              {/* 标签背景 */}
+              <rect
+                x={midPoint(a, b).x - edge.label.length * 6 - 4}
+                y={midPoint(a, b).y - 11}
+                width={edge.label.length * 12 + 8}
+                height="22"
+                rx="11"
+                fill="var(--sl-color-bg)"
+                stroke="var(--sl-color-gray-3)"
+                stroke-width="1"
+              />
+              {/* 标签文字 */}
+              <text
+                x={midPoint(a, b).x}
+                y={midPoint(a, b).y + 4}
+                text-anchor="middle"
+                fill="var(--sl-color-text)"
+                font-size="12"
+                font-weight="500"
+              >
+                {edge.label}
+              </text>
+            </g>
+          )}
+        </g>
+      );
+    })
+  }
+
+  <!-- 箭头层 -->
+  {
+    arrows.map((arrow, idx) => (
+      <g class="rd-arrow">
+        <line
+          x1={arrow.fromX}
+          y1={arrow.fromY}
+          x2={arrow.toX}
+          y2={arrow.toY}
+          stroke="var(--sl-color-text-accent)"
+          stroke-width="2"
+          marker-end="url(#rd-arrowhead)"
+          stroke-linecap="round"
+        />
+        {arrow.label && (
+          <text
+            x={arrow.fromX}
+            y={arrow.fromY - 8}
+            text-anchor="middle"
+            fill="var(--sl-color-text-accent)"
+            font-size="12"
+            font-weight="600"
+          >
+            {arrow.label}
+          </text>
+        )}
+      </g>
+    ))
+  }
+
+  <!-- 节点层 -->
+  {
+    nodes.map((node) => (
+      <g class="rd-node" filter="url(#rd-shadow)">
+        {/* 节点圆形背景 */}
+        <circle
+          cx={node.x}
+          cy={node.y}
+          r="30"
+          fill="var(--sl-color-bg)"
+          stroke="var(--sl-color-text-accent)"
+          stroke-width="2.5"
+        />
+        {/* 节点文字 */}
+        <text
+          x={node.x}
+          y={node.y + 1}
+          text-anchor="middle"
+          dominant-baseline="middle"
+          fill="var(--sl-color-text)"
+          font-size="14"
+          font-weight="700"
+        >
+          {node.label}
+        </text>
+      </g>
+    ))
+  }
+</svg>
+
+<style>
+  .relation-diagram {
+    width: 100%;
+    max-width: 560px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .rd-node {
+    cursor: default;
+    transition: opacity 0.2s ease;
+  }
+
+  .rd-edge line {
+    transition: stroke 0.2s ease;
+  }
+</style>
