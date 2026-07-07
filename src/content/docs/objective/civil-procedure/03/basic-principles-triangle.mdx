@@ -23,8 +23,8 @@ import { Aside } from '@astrojs/starlight/components';
     edges={[
       { from: 'court', to: 'plaintiff' },
       { from: 'court', to: 'defendant' },
-      { from: 'plaintiff', to: 'defendant', label: '平等原则' },
-      { from: 'plaintiff', to: 'defendant', label: '辩论原则', dashed: true },
+      { from: 'plaintiff', to: 'defendant', label: '平等原则', curve: 'up' },
+      { from: 'plaintiff', to: 'defendant', label: '辩论原则', curve: 'down' },
       { from: 'plaintiff', to: 'disposition' },
       { from: 'defendant', to: 'goodfaith' },
       { from: 'disposition', to: 'goodfaith' },
@@ -39,10 +39,13 @@ import { Aside } from '@astrojs/starlight/components';
   <div slot="notes" style="display: flex; flex-direction: column; gap: 0.75rem;">
     <div style="padding: 0.75rem 1rem; border-radius: 0.5rem; background: var(--sl-color-bg-inline-code); border-left: 3px solid var(--sl-color-text-accent);">
       <h4 style="margin: 0 0 0.4rem 0; font-size: 0.9rem; color: var(--sl-color-text);">1. 国际视野</h4>
-      <ul style="margin: 0; padding-left: 1.2rem; color: var(--sl-color-text); font-size: 0.9rem;">
-        <li><strong>同等原则</strong></li>
-        <li><strong>对等原则</strong></li>
-      </ul>
+      <div style="display: flex; align-items: center; gap: 0.25rem; margin-left: 0.25rem;">
+        <div style="display: flex; flex-direction: column; gap: 0.25rem;">
+          <span style="color: var(--sl-color-text); font-size: 0.9rem;"><strong>同等原则</strong></span>
+          <span style="color: var(--sl-color-text); font-size: 0.9rem;"><strong>对等原则</strong></span>
+        </div>
+        <span style="font-size: 2.5rem; line-height: 1; color: var(--sl-color-text);">}</span>
+      </div>
     </div>
     <div style="padding: 0.75rem 1rem; border-radius: 0.5rem; background: var(--sl-color-bg-inline-code); border-left: 3px solid var(--sl-color-text-accent);">
       <h4 style="margin: 0 0 0.4rem 0; font-size: 0.9rem; color: var(--sl-color-text);">2. 与时俱进</h4>
@@ -58,40 +61,4 @@ import { Aside } from '@astrojs/starlight/components';
   </div>
 </DiagramLayout>
 
-## 原则详解
 
-### 平等原则
-
-原告与被告在诉讼中地位平等，享有对等的诉讼权利。无论实体上谁强谁弱，程序上双方武装对等。
-
-### 辩论原则
-
-法院审理案件以当事人提出的**事实**和**证据**为基础，未经当事人辩论的事实和证据不得作为裁判依据。辩论贯穿诉讼全过程。
-
-### 处分原则
-
-当事人有权在法律规定的范围内**自主处分**自己的民事权利和诉讼权利。法院原则上不得主动干预当事人的处分行为。
-
-### 诚信原则
-
-当事人行使诉讼权利、履行诉讼义务应当遵循**诚实信用**原则，禁止滥用诉讼权利、恶意诉讼和虚假诉讼。
-
-<Aside type="note" title="处分原则与诚信原则的关系">
-处分原则强调当事人自治，诚信原则为处分权划定边界。二者相辅相成：处分是自由，诚信是约束——自由不能以损害他人利益或司法公正为代价。
-</Aside>
-
-### 检察监督原则
-
-人民检察院有权对民事诉讼实行**法律监督**，重点监督审判权和执行权的合法行使，维护司法公正和法制统一。
-
-## 扩展原则
-
-| 原则 | 含义 |
-| --- | --- |
-| **同等原则** | 外国人、无国籍人、外国企业和组织在法院起诉、应诉，同中国公民、法人和其他组织有**同等**的诉讼权利义务 |
-| **对等原则** | 外国法院对中华人民共和国公民、法人和其他组织的民事诉讼权利加以限制的，中华人民共和国法院对该国公民、企业和组织的民事诉讼权利，实行**对等**限制 |
-| **在线诉讼效力原则** | 在线诉讼与线下诉讼具有**同等法律效力**，经当事人同意，诉讼活动可以通过信息网络平台在线进行 |
-
-<Aside type="tip" title="记忆口诀">
-三角形框架记核心：**平等辩论在中间，处分诚信守底线，检察监督在上方，法院居中居间判**。
-</Aside>
