@@ -4,29 +4,8 @@ description: 用路径、边界、司法确认和仲裁前置关系理解民事�
 slug: objective/civil-procedure/03/jurisdiction-animation
 ---
 
-import { Aside } from '@astrojs/starlight/components';
 import AnimationSource from '@/components/AnimationSource.astro';
-
-这份资料不再把内容压缩成一张表，而是把“主管”拆成几个可以看见的动作：
-
-- **主管** = 法院的受理权限范围
-- **范围** = 平等主体之间的财产关系、人身关系争议
-- **关系** = 人民调解、仲裁、劳动仲裁分别经过不同的门槛
-
-<Aside type="tip" title="观看重点">
-先看路径和状态变化，再回看关键词。司法确认会把“有合同约束力”推进到“可强制执行”；有效仲裁协议则会挡住同一争议的司法路径；劳动争议显示“仲裁前置”。
-</Aside>
 
 ## 动态关系图
 
 <AnimationSource title="民事诉讼主管 · HyperFrames 源码与预览" />
-
-## 记忆锚点
-
-| 路径 | 关键门槛 | 结果 |
-| --- | --- | --- |
-| 人民调解 | 法院司法确认 | 可强制执行 |
-| 仲裁 | 有效仲裁协议 | 或裁或审，排斥司法管辖 |
-| 劳动仲裁 | 仲裁前置 | 不服裁决，可向法院起诉 |
-
-源码按文件分页展示，`index.html` 负责时间轴和场景，`styles.css` 负责视觉系统，`ledger.json` 记录跨场景动势。

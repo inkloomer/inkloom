@@ -7,11 +7,19 @@ interface SourceFile {
   filename: string;
 }
 
+interface AnimationScene {
+  number: string;
+  title: string;
+  start: number;
+  end: number;
+}
+
 interface Props {
   title?: string;
   previewPath?: string;
   sourceDirectory?: string;
   files?: SourceFile[];
+  scenes?: AnimationScene[];
 }
 
 const {
@@ -23,6 +31,15 @@ const {
     { label: 'styles.css', filename: 'styles.css' },
     { label: 'ledger.json', filename: 'ledger.json' },
     { label: 'DESIGN.md', filename: 'DESIGN.md' },
+  ],
+  scenes = [
+    { number: '01', title: '主管是什么？', start: 0, end: 4.666666666666667 },
+    { number: '02', title: '哪些争议归法院？', start: 4.666666666666667, end: 10.833333333333334 },
+    { number: '03', title: '三种纠纷处理关系', start: 10.833333333333334, end: 14.166666666666666 },
+    { number: '04', title: '人民调解与司法确认', start: 14.166666666666666, end: 23.333333333333332 },
+    { number: '05', title: '仲裁：或裁或审', start: 23.333333333333332, end: 30 },
+    { number: '06', title: '劳动仲裁前置', start: 30, end: 36.666666666666664 },
+    { number: '07', title: '最终关系图', start: 36.666666666666664, end: 43.333333333333336 },
   ],
 } = Astro.props;
 
@@ -40,27 +57,74 @@ const baseUrl = import.meta.env.BASE_URL.endsWith('/')
   ? import.meta.env.BASE_URL
   : `${import.meta.env.BASE_URL}/`;
 const previewUrl = `${baseUrl}${previewPath.replace(/^\/+/, '')}`;
+const firstScene = scenes[0];
+const firstSceneUrl = `${previewUrl}?start=${firstScene.start}&end=${firstScene.end}&loop=1`;
 ---
 
-<section class="animation-source" data-animation-source>
+<section
+  class="animation-source"
+  data-animation-source
+  data-preview-url={previewUrl}
+  data-scenes={JSON.stringify(scenes)}
+>
   <div class="source-heading">
     <div>
-      <p class="source-eyebrow">SOURCE / MOTION</p>
+      <p class="source-eyebrow">SCENE LEDGER / SOURCE</p>
       <h3>{title}</h3>
     </div>
-    <span class="source-count">{sources.length} 个文件</span>
+    <span class="source-count">{scenes.length} 页 · {sources.length} 个文件</span>
   </div>
 
-  <details class="preview-disclosure">
-    <summary>打开动画预览</summary>
-    <div class="preview-frame">
-      <iframe
-        src={previewUrl}
-        title={`${title}预览`}
-        loading="lazy"
-        allow="fullscreen"
-      ></iframe>
+  <details class="preview-disclosure" open>
+    <summary>动画分页预览</summary>
+
+    <div class="preview-toolbar">
+      <div class="preview-mode-switch" role="group" aria-label="预览布局">
+        <button type="button" class="active" data-preview-mode="single">单页</button>
+        <button type="button" data-preview-mode="row">并排</button>
+        <button type="button" data-preview-mode="matrix">矩阵</button>
+      </div>
+      <span>每页独立循环</span>
     </div>
+
+    <div class="single-preview" data-single-preview>
+      <article class="scene-card scene-card-featured">
+        <header class="scene-card-meta">
+          <span data-scene-number>{firstScene.number}</span>
+          <strong data-scene-title>{firstScene.title}</strong>
+        </header>
+        <div class="preview-frame">
+          <iframe
+            src={firstSceneUrl}
+            title={`${firstScene.number} ${firstScene.title}`}
+            loading="lazy"
+            allow="fullscreen"
+            data-single-frame
+          ></iframe>
+        </div>
+      </article>
+
+      <div class="scene-navigation">
+        <button type="button" data-scene-prev aria-label="上一页">← 上一页</button>
+        <div class="scene-strip" role="tablist" aria-label="动画页">
+          {scenes.map((scene, index) => (
+            <button
+              type="button"
+              role="tab"
+              aria-selected={index === 0 ? 'true' : 'false'}
+              data-scene-tab={index}
+              class:list={{ active: index === 0 }}
+              title={scene.title}
+            >
+              {scene.number}
+            </button>
+          ))}
+        </div>
+        <button type="button" data-scene-next aria-label="下一页">下一页 →</button>
+      </div>
+    </div>
+
+    <div class="multi-preview" data-multi-preview hidden></div>
   </details>
 
   <div class="source-tabs" role="tablist" aria-label="源码文件">
@@ -101,31 +165,125 @@ const previewUrl = `${baseUrl}${previewPath.replace(/^\/+/, '')}`;
   (() => {
     const roots = document.querySelectorAll('[data-animation-source]');
     roots.forEach((root) => {
-      const tabs = [...root.querySelectorAll('[data-source-tab]')];
-      const panels = [...root.querySelectorAll('[data-source-panel]')];
-      const previous = root.querySelector('[data-source-prev]');
-      const next = root.querySelector('[data-source-next]');
-      const status = root.querySelector('[data-source-status]');
-      let current = 0;
+      const scenes = JSON.parse(root.dataset.scenes || '[]');
+      const previewUrl = root.dataset.previewUrl;
+      const singlePreview = root.querySelector('[data-single-preview]');
+      const multiPreview = root.querySelector('[data-multi-preview]');
+      const singleFrame = root.querySelector('[data-single-frame]');
+      const sceneNumber = root.querySelector('[data-scene-number]');
+      const sceneTitle = root.querySelector('[data-scene-title]');
+      const sceneTabs = [...root.querySelectorAll('[data-scene-tab]')];
+      const modeButtons = [...root.querySelectorAll('[data-preview-mode]')];
+      const scenePrevious = root.querySelector('[data-scene-prev]');
+      const sceneNext = root.querySelector('[data-scene-next]');
+      let currentScene = 0;
+      let currentMode = 'single';
 
-      const select = (index) => {
-        current = Math.max(0, Math.min(index, panels.length - 1));
-        tabs.forEach((tab, tabIndex) => {
-          const selected = tabIndex === current;
+      const sceneUrl = (scene, compact = false) => {
+        const url = new URL(previewUrl, window.location.origin);
+        url.searchParams.set('start', String(scene.start));
+        url.searchParams.set('end', String(scene.end));
+        url.searchParams.set('loop', '1');
+        if (compact) url.searchParams.set('fps', '30');
+        return `${url.pathname}${url.search}`;
+      };
+
+      const selectScene = (index) => {
+        currentScene = (index + scenes.length) % scenes.length;
+        const scene = scenes[currentScene];
+        singleFrame.src = sceneUrl(scene);
+        singleFrame.title = `${scene.number} ${scene.title}`;
+        sceneNumber.textContent = scene.number;
+        sceneTitle.textContent = scene.title;
+        sceneTabs.forEach((tab, tabIndex) => {
+          const selected = tabIndex === currentScene;
           tab.setAttribute('aria-selected', String(selected));
           tab.classList.toggle('active', selected);
         });
-        panels.forEach((panel, panelIndex) => {
-          panel.hidden = panelIndex !== current;
-        });
-        previous.disabled = current === 0;
-        next.disabled = current === panels.length - 1;
-        status.textContent = `${current + 1} / ${panels.length}`;
       };
 
-      tabs.forEach((tab, index) => tab.addEventListener('click', () => select(index)));
-      previous.addEventListener('click', () => select(current - 1));
-      next.addEventListener('click', () => select(current + 1));
+      const createSceneCard = (scene) => {
+        const card = document.createElement('article');
+        card.className = 'scene-card';
+
+        const meta = document.createElement('header');
+        meta.className = 'scene-card-meta';
+        const number = document.createElement('span');
+        number.textContent = scene.number;
+        const title = document.createElement('strong');
+        title.textContent = scene.title;
+        meta.append(number, title);
+
+        const frame = document.createElement('div');
+        frame.className = 'preview-frame';
+        const iframe = document.createElement('iframe');
+        iframe.src = sceneUrl(scene, true);
+        iframe.title = `${scene.number} ${scene.title}`;
+        iframe.loading = 'lazy';
+        iframe.allow = 'fullscreen';
+        frame.append(iframe);
+        card.append(meta, frame);
+        return card;
+      };
+
+      const renderMultiPreview = (mode) => {
+        multiPreview.replaceChildren(...scenes.map(createSceneCard));
+        multiPreview.dataset.layout = mode;
+      };
+
+      const setMode = (mode) => {
+        currentMode = mode;
+        modeButtons.forEach((button) => {
+          const selected = button.dataset.previewMode === mode;
+          button.classList.toggle('active', selected);
+          button.setAttribute('aria-pressed', String(selected));
+        });
+
+        if (mode === 'single') {
+          multiPreview.hidden = true;
+          multiPreview.replaceChildren();
+          singlePreview.hidden = false;
+          selectScene(currentScene);
+        } else {
+          singlePreview.hidden = true;
+          singleFrame.src = 'about:blank';
+          multiPreview.hidden = false;
+          renderMultiPreview(mode);
+        }
+      };
+
+      sceneTabs.forEach((tab, index) => tab.addEventListener('click', () => selectScene(index)));
+      scenePrevious.addEventListener('click', () => selectScene(currentScene - 1));
+      sceneNext.addEventListener('click', () => selectScene(currentScene + 1));
+      modeButtons.forEach((button) => {
+        button.addEventListener('click', () => setMode(button.dataset.previewMode));
+      });
+
+      const sourceTabs = [...root.querySelectorAll('[data-source-tab]')];
+      const sourcePanels = [...root.querySelectorAll('[data-source-panel]')];
+      const sourcePrevious = root.querySelector('[data-source-prev]');
+      const sourceNext = root.querySelector('[data-source-next]');
+      const sourceStatus = root.querySelector('[data-source-status]');
+      let currentSource = 0;
+
+      const selectSource = (index) => {
+        currentSource = Math.max(0, Math.min(index, sourcePanels.length - 1));
+        sourceTabs.forEach((tab, tabIndex) => {
+          const selected = tabIndex === currentSource;
+          tab.setAttribute('aria-selected', String(selected));
+          tab.classList.toggle('active', selected);
+        });
+        sourcePanels.forEach((panel, panelIndex) => {
+          panel.hidden = panelIndex !== currentSource;
+        });
+        sourcePrevious.disabled = currentSource === 0;
+        sourceNext.disabled = currentSource === sourcePanels.length - 1;
+        sourceStatus.textContent = `${currentSource + 1} / ${sourcePanels.length}`;
+      };
+
+      sourceTabs.forEach((tab, index) => tab.addEventListener('click', () => selectSource(index)));
+      sourcePrevious.addEventListener('click', () => selectSource(currentSource - 1));
+      sourceNext.addEventListener('click', () => selectSource(currentSource + 1));
     });
   })();
 </script>
@@ -139,11 +297,17 @@ const previewUrl = `${baseUrl}${previewPath.replace(/^\/+/, '')}`;
   }
 
   .source-heading,
-  .source-pagination {
+  .source-pagination,
+  .preview-toolbar,
+  .scene-navigation {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
+  }
+
+  .source-heading,
+  .source-pagination {
     padding: 1rem 1.1rem;
   }
 
@@ -165,7 +329,8 @@ const previewUrl = `${baseUrl}${previewPath.replace(/^\/+/, '')}`;
   }
 
   .source-count,
-  .source-pagination span {
+  .source-pagination span,
+  .preview-toolbar > span {
     color: var(--sl-color-text-muted);
     font: 600 0.78rem/1 ui-monospace, SFMono-Regular, Consolas, monospace;
   }
@@ -181,6 +346,78 @@ const previewUrl = `${baseUrl}${previewPath.replace(/^\/+/, '')}`;
     font-weight: 600;
   }
 
+  .preview-toolbar {
+    padding: 0.75rem 1.1rem;
+    border-block: 1px solid var(--sl-color-hairline);
+    background: var(--sl-color-bg);
+  }
+
+  .preview-mode-switch {
+    display: inline-flex;
+  }
+
+  .preview-mode-switch button,
+  .scene-navigation button,
+  .scene-strip button,
+  .source-tabs button,
+  .source-pagination button {
+    border: 1px solid var(--sl-color-hairline);
+    background: transparent;
+    color: var(--sl-color-text-muted);
+    cursor: pointer;
+    font: 600 0.8rem/1.2 ui-monospace, SFMono-Regular, Consolas, monospace;
+    padding: 0.45rem 0.65rem;
+  }
+
+  .preview-mode-switch button + button {
+    border-left: 0;
+  }
+
+  .preview-mode-switch button.active,
+  .scene-strip button.active,
+  .source-tabs button.active,
+  .preview-mode-switch button:hover,
+  .scene-navigation button:hover,
+  .scene-strip button:hover,
+  .source-tabs button:hover,
+  .source-pagination button:not(:disabled):hover {
+    border-color: var(--sl-color-text-accent);
+    color: var(--sl-color-text-accent);
+  }
+
+  .single-preview,
+  .multi-preview {
+    padding: 1rem 1.1rem 1.1rem;
+  }
+
+  .scene-card {
+    min-width: 0;
+    border: 1px solid var(--sl-color-hairline);
+    background: var(--sl-color-bg);
+  }
+
+  .scene-card-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    min-height: 2.6rem;
+    padding: 0.55rem 0.75rem;
+    border-bottom: 1px solid var(--sl-color-hairline);
+  }
+
+  .scene-card-meta span {
+    color: var(--sl-color-text-accent);
+    font: 700 0.75rem/1 ui-monospace, SFMono-Regular, Consolas, monospace;
+  }
+
+  .scene-card-meta strong {
+    overflow: hidden;
+    color: var(--sl-color-text);
+    font-size: 0.88rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
   .preview-frame {
     aspect-ratio: 16 / 9;
     background: #f3f5f2;
@@ -193,28 +430,49 @@ const previewUrl = `${baseUrl}${previewPath.replace(/^\/+/, '')}`;
     border: 0;
   }
 
+  .scene-navigation {
+    margin-top: 0.75rem;
+  }
+
+  .scene-strip {
+    display: flex;
+    justify-content: center;
+    gap: 0.3rem;
+    min-width: 0;
+    overflow-x: auto;
+  }
+
+  .scene-strip button {
+    min-width: 2.35rem;
+  }
+
+  .multi-preview {
+    display: grid;
+    gap: 0.85rem;
+  }
+
+  .multi-preview[data-layout='row'] {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .multi-preview[data-layout='matrix'] {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .multi-preview .scene-card-meta {
+    min-height: 2.35rem;
+    padding: 0.45rem 0.6rem;
+  }
+
+  .multi-preview .scene-card-meta strong {
+    font-size: 0.76rem;
+  }
+
   .source-tabs {
     display: flex;
     gap: 0.35rem;
     overflow-x: auto;
     padding: 0.7rem 1.1rem 0;
-  }
-
-  .source-tabs button,
-  .source-pagination button {
-    border: 1px solid var(--sl-color-hairline);
-    background: transparent;
-    color: var(--sl-color-text-muted);
-    cursor: pointer;
-    font: 600 0.8rem/1.2 ui-monospace, SFMono-Regular, Consolas, monospace;
-    padding: 0.45rem 0.65rem;
-  }
-
-  .source-tabs button.active,
-  .source-tabs button:hover,
-  .source-pagination button:not(:disabled):hover {
-    border-color: var(--sl-color-text-accent);
-    color: var(--sl-color-text-accent);
   }
 
   .source-pagination button:disabled {
@@ -242,16 +500,42 @@ const previewUrl = `${baseUrl}${previewPath.replace(/^\/+/, '')}`;
     font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
   }
 
+  @media (max-width: 960px) {
+    .multi-preview[data-layout='matrix'] {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
   @media (max-width: 640px) {
     .source-heading,
-    .source-pagination {
+    .source-pagination,
+    .preview-toolbar {
       align-items: flex-start;
       flex-direction: column;
     }
 
-    .source-pagination {
+    .source-pagination,
+    .scene-navigation {
       align-items: center;
       flex-direction: row;
+    }
+
+    .preview-toolbar > span {
+      display: none;
+    }
+
+    .scene-navigation {
+      flex-wrap: wrap;
+    }
+
+    .scene-strip {
+      order: 3;
+      width: 100%;
+    }
+
+    .multi-preview[data-layout='row'],
+    .multi-preview[data-layout='matrix'] {
+      grid-template-columns: 1fr;
     }
 
     .source-pages pre {
