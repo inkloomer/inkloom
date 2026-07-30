@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="1200" height="140" viewBox="0 0 1200 140"
+     role="img" aria-labelledby="ftitle fdesc">
+  <title id="ftitle">核心交互功能</title>
+  <desc id="fdesc">Section header for core interactive features.</desc>
+
+  <rect width="1200" height="140" rx="14" fill="#181825"/>
+  <line x1="60" y1="139" x2="1140" y2="139" stroke="#313244" stroke-width="1"/>
+
+  <!-- Title -->
+  <text x="60" y="72"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif"
+        font-size="36" font-weight="700"
+        fill="#cdd6f4">核心交互功能</text>
+
+  <text x="60" y="100"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif"
+        font-size="14" font-weight="500"
+        fill="#6c7086">Core Interactive Features</text>
+
+  <!-- Decorative node trio -->
+  <g transform="translate(1020, 52)">
+    <circle cx="16" cy="16" r="14" fill="none" stroke="#89b4fa" stroke-width="1.5" opacity="0.6"/>
+    <text x="16" y="21" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif"
+          font-size="12" font-weight="600" text-anchor="middle" fill="#89b4fa" opacity="0.8">甲</text>
+
+    <line x1="34" y1="16" x2="66" y2="16" stroke="#313244" stroke-width="1.5"/>
+
+    <circle cx="84" cy="16" r="14" fill="none" stroke="#cba6f7" stroke-width="1.5" opacity="0.6"/>
+    <text x="84" y="21" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif"
+          font-size="12" font-weight="600" text-anchor="middle" fill="#cba6f7" opacity="0.8">乙</text>
+  </g>
+</svg>

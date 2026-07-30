@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="1200" height="140" viewBox="0 0 1200 140"
+     role="img" aria-labelledby="stitle sdesc">
+  <title id="stitle">可视化组件预览</title>
+  <desc id="sdesc">Section header for visual component showcase.</desc>
+
+  <rect width="1200" height="140" rx="14" fill="#181825"/>
+  <line x1="60" y1="139" x2="1140" y2="139" stroke="#313244" stroke-width="1"/>
+
+  <text x="60" y="72"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif"
+        font-size="36" font-weight="700"
+        fill="#cdd6f4">可视化组件预览</text>
+
+  <text x="60" y="100"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif"
+        font-size="14" font-weight="500"
+        fill="#6c7086">Visual Component Showcase</text>
+
+  <!-- Decorative comparison bars -->
+  <g transform="translate(980, 58)">
+    <rect x="0" y="0" width="24" height="32" rx="4" fill="#89b4fa" opacity="0.2"/>
+    <rect x="32" y="8" width="24" height="24" rx="4" fill="#cba6f7" opacity="0.2"/>
+    <rect x="64" y="16" width="24" height="16" rx="4" fill="#a6e3a1" opacity="0.2"/>
+    <rect x="96" y="4" width="24" height="28" rx="4" fill="#f38ba8" opacity="0.2"/>
+  </g>
+</svg>

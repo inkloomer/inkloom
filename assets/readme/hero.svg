@@ -1,0 +1,180 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="1200" height="360" viewBox="0 0 1200 360"
+     role="img" aria-labelledby="title desc">
+  <title id="title">InkLoom 法考交互式知识库</title>
+  <desc id="desc">InkLoom 项目标题与交互式法考学习功能预览，包含节点流向图与对比矩阵示意。</desc>
+
+  <defs>
+    <!-- Catppuccin Mocha palette -->
+    <linearGradient id="nodeGradA" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#89b4fa" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#89b4fa" stop-opacity="0.08"/>
+    </linearGradient>
+    <linearGradient id="nodeGradB" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#cba6f7" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#cba6f7" stop-opacity="0.08"/>
+    </linearGradient>
+    <linearGradient id="nodeGradC" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#a6e3a1" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#a6e3a1" stop-opacity="0.08"/>
+    </linearGradient>
+    <linearGradient id="lineGrad1" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#f9e2af"/>
+      <stop offset="100%" stop-color="#fab387"/>
+    </linearGradient>
+    <linearGradient id="lineGrad2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#cba6f7"/>
+      <stop offset="100%" stop-color="#89b4fa"/>
+    </linearGradient>
+    <clipPath id="matrixClip">
+      <rect x="660" y="50" width="480" height="110" rx="12"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="360" rx="20" fill="#1e1e2e"/>
+
+  <!-- Subtle top accent line -->
+  <rect x="60" y="0" width="1080" height="3" rx="1.5" fill="#cba6f7" opacity="0.6"/>
+
+  <!-- ========== LEFT: Title Block ========== -->
+  <g id="title-block" transform="translate(60, 72)">
+    <!-- Eyebrow -->
+    <text x="0" y="0"
+          font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif"
+          font-size="14" font-weight="600" letter-spacing="2"
+          fill="#cba6f7">
+      INTERACTIVE LEGAL STUDY
+    </text>
+
+    <!-- Project name -->
+    <text x="0" y="58"
+          font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif"
+          font-size="56" font-weight="800"
+          fill="#cdd6f4">
+      InkLoom
+    </text>
+
+    <!-- Subtitle -->
+    <text x="0" y="100"
+          font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif"
+          font-size="24" font-weight="500"
+          fill="#a6adc8">
+      法考交互式知识库
+    </text>
+
+    <!-- Description -->
+    <text x="0" y="142"
+          font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif"
+          font-size="18" font-weight="400"
+          fill="#6c7086">
+      将静态讲义转化为可交互的沉浸式学案
+    </text>
+    <text x="0" y="168"
+          font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif"
+          font-size="18" font-weight="400"
+          fill="#6c7086">
+      记忆消隐 · 行为流向图 · 考点对比矩阵 · Remotion 动画
+    </text>
+  </g>
+
+  <!-- ========== RIGHT: Project Proof ========== -->
+  <g id="project-proof">
+
+    <!-- Comparison Matrix Card (top-right) -->
+    <g transform="translate(660, 50)">
+      <rect width="480" height="110" rx="12" fill="#181825" stroke="#313244" stroke-width="1"/>
+      <!-- Header row -->
+      <rect x="16" y="16" width="80" height="22" rx="4" fill="#313244" opacity="0.6"/>
+      <rect x="120" y="16" width="100" height="22" rx="4" fill="#cba6f7" opacity="0.15"/>
+      <rect x="236" y="16" width="100" height="22" rx="4" fill="#cba6f7" opacity="0.15"/>
+      <rect x="352" y="16" width="100" height="22" rx="4" fill="#cba6f7" opacity="0.15"/>
+      <!-- Data rows -->
+      <rect x="16" y="50" width="60" height="14" rx="3" fill="#45475a" opacity="0.5"/>
+      <rect x="120" y="50" width="80" height="14" rx="3" fill="#89b4fa" opacity="0.25"/>
+      <rect x="260" y="50" width="60" height="14" rx="3" fill="#a6e3a1" opacity="0.25"/>
+      <rect x="380" y="50" width="60" height="14" rx="3" fill="#f38ba8" opacity="0.25"/>
+
+      <rect x="16" y="76" width="60" height="14" rx="3" fill="#45475a" opacity="0.5"/>
+      <rect x="140" y="76" width="60" height="14" rx="3" fill="#f38ba8" opacity="0.25"/>
+      <rect x="260" y="76" width="80" height="14" rx="3" fill="#89b4fa" opacity="0.25"/>
+      <rect x="400" y="76" width="40" height="14" rx="3" fill="#a6e3a1" opacity="0.25"/>
+    </g>
+
+    <!-- Flow Diagram (bottom-right) -->
+    <g transform="translate(660, 185)">
+      <!-- Card bg -->
+      <rect width="480" height="125" rx="12" fill="#181825" stroke="#313244" stroke-width="1"/>
+
+      <!-- Node A -->
+      <circle cx="70" cy="62" r="28" fill="url(#nodeGradA)" stroke="#89b4fa" stroke-width="1.5"/>
+      <text x="70" y="68"
+            font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif"
+            font-size="16" font-weight="700" text-anchor="middle" fill="#89b4fa">甲</text>
+      <text x="70" y="106"
+            font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif"
+            font-size="11" font-weight="500" text-anchor="middle" fill="#6c7086">行贿人</text>
+
+      <!-- Link 1 -->
+      <line x1="108" y1="62" x2="192" y2="62" stroke="#313244" stroke-width="2"/>
+      <line x1="108" y1="62" x2="180" y2="62" stroke="url(#lineGrad1)" stroke-width="2" stroke-dasharray="6 4"/>
+      <polygon points="192,62 184,58 184,66" fill="#fab387"/>
+      <text x="150" y="48"
+            font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif"
+            font-size="11" font-weight="600" text-anchor="middle" fill="#f9e2af">100万</text>
+
+      <!-- Node B -->
+      <circle cx="230" cy="62" r="28" fill="url(#nodeGradB)" stroke="#cba6f7" stroke-width="1.5"/>
+      <text x="230" y="68"
+            font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif"
+            font-size="16" font-weight="700" text-anchor="middle" fill="#cba6f7">乙</text>
+      <text x="230" y="106"
+            font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif"
+            font-size="11" font-weight="500" text-anchor="middle" fill="#6c7086">中介人</text>
+
+      <!-- Link 2 -->
+      <line x1="268" y1="62" x2="352" y2="62" stroke="#313244" stroke-width="2"/>
+      <line x1="268" y1="62" x2="340" y2="62" stroke="url(#lineGrad2)" stroke-width="2" stroke-dasharray="6 4"/>
+      <polygon points="352,62 344,58 344,66" fill="#cba6f7"/>
+      <text x="310" y="48"
+            font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif"
+            font-size="11" font-weight="600" text-anchor="middle" fill="#cba6f7">转交</text>
+
+      <!-- Node C -->
+      <circle cx="390" cy="62" r="28" fill="url(#nodeGradC)" stroke="#a6e3a1" stroke-width="1.5"/>
+      <text x="390" y="68"
+            font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif"
+            font-size="16" font-weight="700" text-anchor="middle" fill="#a6e3a1">丙</text>
+      <text x="390" y="106"
+            font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif"
+            font-size="11" font-weight="500" text-anchor="middle" fill="#6c7086">受贿人</text>
+
+      <!-- Blur hint overlay (memory challenge) -->
+      <rect x="360" y="18" width="96" height="28" rx="6" fill="#313244" opacity="0.9"/>
+      <text x="408" y="37"
+            font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif"
+            font-size="11" font-weight="600" text-anchor="middle" fill="#6c7086" filter="blur(1.5px)">罪名待定</text>
+    </g>
+  </g>
+
+  <!-- Bottom metadata strip -->
+  <g transform="translate(60, 322)">
+    <rect x="0" y="0" width="6" height="6" rx="1.5" fill="#a6e3a1"/>
+    <text x="16" y="6"
+          font-family="ui-monospace, SFMono-Regular, Menlo, monospace"
+          font-size="13" font-weight="500"
+          fill="#6c7086">Astro + Starlight + Remotion</text>
+
+    <rect x="230" y="0" width="6" height="6" rx="1.5" fill="#89b4fa"/>
+    <text x="246" y="6"
+          font-family="ui-monospace, SFMono-Regular, Menlo, monospace"
+          font-size="13" font-weight="500"
+          fill="#6c7086">React + TypeScript</text>
+
+    <rect x="420" y="0" width="6" height="6" rx="1.5" fill="#f9e2af"/>
+    <text x="436" y="6"
+          font-family="ui-monospace, SFMono-Regular, Menlo, monospace"
+          font-size="13" font-weight="500"
+          fill="#6c7086">Catppuccin Theme</text>
+  </g>
+</svg>

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="1200" height="140" viewBox="0 0 1200 140"
+     role="img" aria-labelledby="qtitle qdesc">
+  <title id="qtitle">快速开始</title>
+  <desc id="qdesc">Section header for quick start guide.</desc>
+
+  <rect width="1200" height="140" rx="14" fill="#181825"/>
+  <line x1="60" y1="139" x2="1140" y2="139" stroke="#313244" stroke-width="1"/>
+
+  <text x="60" y="72"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif"
+        font-size="36" font-weight="700"
+        fill="#cdd6f4">快速开始</text>
+
+  <text x="60" y="100"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif"
+        font-size="14" font-weight="500"
+        fill="#6c7086">Quick Start</text>
+
+  <!-- Decorative terminal prompt -->
+  <g transform="translate(1020, 62)">
+    <rect x="0" y="0" width="120" height="28" rx="6" fill="#1e1e2e" stroke="#313244" stroke-width="1"/>
+    <text x="10" y="19"
+          font-family="ui-monospace, SFMono-Regular, Menlo, monospace"
+          font-size="12" font-weight="500"
+          fill="#a6e3a1">$</text>
+    <rect x="22" y="10" width="80" height="8" rx="2" fill="#6c7086" opacity="0.4"/>
+  </g>
+</svg>
