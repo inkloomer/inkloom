@@ -203,8 +203,8 @@ export const RemotionDeck = ({
           {mode === 'single'
             ? autoPage
               ? '播放完进入下一页'
-              : '当前页循环'
-            : '全部页面独立循环'}
+              : '播放结束停在末帧'
+            : '全部页面播放结束停在末帧'}
         </span>
       </div>
 
@@ -217,7 +217,7 @@ export const RemotionDeck = ({
           <div className="remotion-deck__player-frame" style={playerFrameStyle}>
             <Player
               {...interactivePlayerProps}
-              key={`${selectedScene.number}-${autoPage ? 'auto' : 'loop'}-${reducedMotion ? 'still' : 'motion'}`}
+              key={`${selectedScene.number}-${autoPage ? 'auto' : 'once'}-${reducedMotion ? 'reduced' : 'motion'}`}
               ref={playerRef}
               component={component}
               durationInFrames={durationInFrames}
@@ -228,7 +228,7 @@ export const RemotionDeck = ({
               outFrame={selectedEnd}
               initialFrame={reducedMotion ? selectedEnd : selectedScene.start}
               autoPlay={!reducedMotion}
-              loop={!autoPage && !reducedMotion}
+              loop={false}
             />
           </div>
           <div className="remotion-deck__navigation">
@@ -277,7 +277,7 @@ export const RemotionDeck = ({
                   outFrame={frameEnd(scene)}
                   initialFrame={reducedMotion ? frameEnd(scene) : scene.start}
                   autoPlay={!reducedMotion}
-                  loop={!reducedMotion}
+                  loop={false}
                 />
               </div>
             </article>
