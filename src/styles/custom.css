@@ -316,8 +316,13 @@
 
 /* Hide headers, left sidebars and menu toggles inside iframe */
 html[data-is-iframe="true"] .header,
+html[data-is-iframe="true"] .sidebar-pane,
 html[data-is-iframe="true"] nav.sidebar,
-html[data-is-iframe="true"] starlight-menu-button {
+html[data-is-iframe="true"] starlight-menu-button,
+html[data-is-iframe="true"] .page-header-wrapper,
+html[data-is-iframe="true"] .right-sidebar-container,
+html[data-is-iframe="true"] mobile-starlight-toc,
+html[data-is-iframe="true"] footer {
   display: none !important;
 }
 
@@ -325,6 +330,44 @@ html[data-is-iframe="true"] starlight-menu-button {
 html[data-is-iframe="true"] .main-frame {
   padding-top: 0 !important;
   padding-inline-start: 0 !important;
+}
+
+html[data-iframe-fit="animation"],
+html[data-iframe-fit="animation"] body,
+html[data-iframe-fit="animation"] .main-frame,
+html[data-iframe-fit="animation"] .main-pane,
+html[data-iframe-fit="animation"] main,
+html[data-iframe-fit="animation"] .content-panel,
+html[data-iframe-fit="animation"] .content-panel .sl-container {
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: none !important;
+  min-height: 100dvh;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+html[data-iframe-fit="animation"] .sl-markdown-content {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: none !important;
+  min-height: 100dvh;
+  margin: 0 !important;
+  padding: clamp(0.5rem, 2vmin, 1.25rem) !important;
+}
+
+html[data-iframe-fit="animation"] .sl-markdown-content > :not([data-animation-viewport]) {
+  display: none !important;
+}
+
+html[data-iframe-fit="animation"] [data-animation-viewport] {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  margin: 0;
 }
 
 

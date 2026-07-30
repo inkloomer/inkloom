@@ -25,6 +25,26 @@ interface Props {
 
 const frameEnd = (scene: RemotionScene) => scene.start + scene.duration - 1;
 
+const interactivePlayerProps = {
+  controls: true,
+  showVolumeControls: true,
+  allowFullscreen: true,
+  clickToPlay: true,
+  doubleClickToFullscreen: true,
+  spaceKeyToPlayOrPause: true,
+  alwaysShowControls: true,
+  showPlaybackRateControl: [0.5, 0.6, 0.8, 1, 1.25, 1.5, 2],
+  acknowledgeRemotionLicense: true,
+  className: 'remotion-deck__player',
+  style: {
+    width: '100%',
+    height: '100%',
+    maxWidth: '100%',
+    maxHeight: '100%',
+    margin: 0,
+  },
+};
+
 const ModeButton = ({
   active,
   label,
@@ -89,6 +109,7 @@ export const RemotionDeck = ({
     duration: 1,
   };
   const selectedEnd = frameEnd(selectedScene);
+  const playerFrameStyle = {aspectRatio: `${compositionWidth} / ${compositionHeight}`};
 
   useEffect(() => {
     const player = playerRef.current;
@@ -153,8 +174,9 @@ export const RemotionDeck = ({
             <span>{selectedScene.number}</span>
             <strong>{selectedScene.title}</strong>
           </header>
-          <div className="remotion-deck__player-frame">
+          <div className="remotion-deck__player-frame" style={playerFrameStyle}>
             <Player
+              {...interactivePlayerProps}
               key={`${selectedScene.number}-${autoPage ? 'auto' : 'loop'}-${reducedMotion ? 'still' : 'motion'}`}
               ref={playerRef}
               component={component}
@@ -167,10 +189,6 @@ export const RemotionDeck = ({
               initialFrame={reducedMotion ? selectedEnd : selectedScene.start}
               autoPlay={!reducedMotion}
               loop={!autoPage && !reducedMotion}
-              controls
-              clickToPlay
-              acknowledgeRemotionLicense
-              className="remotion-deck__player"
             />
           </div>
           <div className="remotion-deck__navigation">
@@ -207,8 +225,9 @@ export const RemotionDeck = ({
                 <span>{scene.number}</span>
                 <strong>{scene.title}</strong>
               </header>
-              <div className="remotion-deck__player-frame">
+              <div className="remotion-deck__player-frame" style={playerFrameStyle}>
                 <Player
+                  {...interactivePlayerProps}
                   component={component}
                   durationInFrames={durationInFrames}
                   fps={fps}
@@ -219,10 +238,6 @@ export const RemotionDeck = ({
                   initialFrame={reducedMotion ? frameEnd(scene) : scene.start}
                   autoPlay={!reducedMotion}
                   loop={!reducedMotion}
-                  controls={false}
-                  clickToPlay={false}
-                  acknowledgeRemotionLicense
-                  className="remotion-deck__player"
                 />
               </div>
             </article>

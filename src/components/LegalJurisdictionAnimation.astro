@@ -1,21 +1,14 @@
 ---
-import AnimationSource from './AnimationSource.astro';
 import LegalJurisdictionPlayer from './LegalJurisdictionPlayer';
-
-const files = [
-  {label: 'LegalJurisdiction.tsx', filename: 'LegalJurisdiction.tsx'},
-  {label: 'ConceptScenes.tsx', filename: 'scenes/ConceptScenes.tsx'},
-  {label: 'RelationshipScenes.tsx', filename: 'scenes/RelationshipScenes.tsx'},
-  {label: 'visual-system.tsx', filename: 'visual-system.tsx'},
-  {label: 'storyboard.ts', filename: 'storyboard.ts'},
-  {label: 'Root.tsx', filename: 'Root.tsx'},
-];
 ---
 
-<AnimationSource
-  title="民事诉讼主管 · Remotion 源码与预览"
-  sourceDirectory="src/animations/legal-jurisdiction/remotion"
-  {files}
->
-  <LegalJurisdictionPlayer slot="preview" client:load />
-</AnimationSource>
+<div class="legal-jurisdiction-animation" data-animation-viewport>
+  <LegalJurisdictionPlayer client:load />
+</div>
+
+<style>
+  .legal-jurisdiction-animation {
+    width: 100%;
+    min-width: 0;
+  }
+</style>

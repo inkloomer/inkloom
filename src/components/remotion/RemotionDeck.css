@@ -33,6 +33,7 @@
 .remotion-deck__auto,
 .remotion-deck__navigation button,
 .remotion-deck__scene-strip button {
+  box-sizing: border-box;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -44,6 +45,7 @@
   color: var(--deck-muted);
   cursor: pointer;
   font: 600 0.78rem/1.1 ui-monospace, SFMono-Regular, Consolas, monospace;
+  margin: 0;
   padding: 0.35rem 0.55rem;
 }
 
@@ -137,6 +139,7 @@
 
 .remotion-deck__scene-strip {
   display: flex;
+  align-items: center;
   justify-content: center;
   gap: 0.3rem;
   min-width: 0;
@@ -144,6 +147,8 @@
 }
 
 .remotion-deck__scene-strip button {
+  flex: 0 0 2.25rem;
+  height: 2rem;
   min-width: 2.25rem;
 }
 
