@@ -1,22 +1,42 @@
-export const FPS = 30;
-export const DURATION_FRAMES = 360;
-const previewScene = (start: number, duration: number) => ({start, duration, previewEndTrimFrames: 14});
+export const FPS = 60;
+export const PLAYBACK_RATE = 1;
+export const SOURCE_DURATION_SECONDS = 22;
+
+const toPlaybackFrames = (sourceFrames: number) => Math.round(sourceFrames / PLAYBACK_RATE);
+const PREVIEW_EXIT_TRIM_FRAMES = toPlaybackFrames(14);
+const scene = (start: number, duration: number) => ({
+  start: toPlaybackFrames(start),
+  duration: toPlaybackFrames(duration),
+  previewEndTrimFrames: PREVIEW_EXIT_TRIM_FRAMES,
+});
+
+export const DURATION_FRAMES = toPlaybackFrames(SOURCE_DURATION_SECONDS * FPS);
+export const DURATION_SECONDS = DURATION_FRAMES / FPS;
+export const toSourceFrame = (playbackFrame: number) => playbackFrame * PLAYBACK_RATE;
 
 export const SCENES = {
-  overview: previewScene(0, 120),
-  detail: previewScene(120, 130),
-  summary: previewScene(250, 110),
-};
+  overview: scene(0, 180),
+  standard: scene(180, 420),
+  recap: scene(600, 300),
+} as const;
 
 export const PALETTE = {
-  background: '#F5F5F0',
+  background: '#F3F5F2',
   paper: '#FFFFFF',
-  ink: '#1A1A1A',
+  ink: '#17201D',
+  muted: '#66716C',
+  line: '#CBD2CE',
   red: '#C83F35',
-  teal: '#2A9D8F',
-  blue: '#264653',
-  gold: '#E9C46A',
-  gray: '#8D99AE',
-};
+  redSoft: '#F7E5E2',
+  teal: '#087C73',
+  tealSoft: '#DFF0EC',
+  gold: '#A8791D',
+  goldSoft: '#F7EFD6',
+  blue: '#3768A5',
+  blueSoft: '#E4ECF7',
+} as const;
 
-export const toSourceFrame = (frame: number) => frame;
+export type Accent = 'red' | 'teal' | 'gold' | 'blue';
+
+export const accentColor = (accent: Accent) => PALETTE[accent];
+export const accentSoftColor = (accent: Accent) => PALETTE[`${accent}Soft`];

@@ -3,9 +3,9 @@ import {LawAttributes} from '@/animations/civil-procedure/01/law-attributes/remo
 import {DURATION_FRAMES, FPS, SCENES} from '@/animations/civil-procedure/01/law-attributes/remotion/storyboard';
 
 const scenes: readonly RemotionScene[] = [
-  {id: 'overview', number: '01', title: '四重属性概览', ...SCENES.overview},
-  {id: 'detail', number: '02', title: '区分标准详解', ...SCENES.detail},
-  {id: 'summary', number: '03', title: '总结记忆', ...SCENES.summary},
+  {id: 'overview', number: '01', title: '四重属性，四个角度', ...SCENES.overview},
+  {id: 'standard', number: '02', title: '四重属性的判断依据', ...SCENES.standard},
+  {id: 'recap', number: '03', title: '四重属性速记', ...SCENES.recap},
 ];
 
 export const LawAttributesPlayer = () => (
