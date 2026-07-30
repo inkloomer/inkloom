@@ -2,9 +2,11 @@ import {useEffect, useRef, useState} from 'react';
 import type {ComponentType, KeyboardEvent, ReactNode} from 'react';
 import {Player, type PlayerRef} from '@remotion/player';
 import {ChevronLeft, ChevronRight, Columns2, Grid3X3, MonitorPlay, Repeat2} from 'lucide-react';
+import {sceneIndexFromSearch, urlWithScene} from './scene-location';
 import './RemotionDeck.css';
 
 export interface RemotionScene {
+  readonly id?: string;
   readonly number: string;
   readonly title: string;
   readonly start: number;
@@ -21,6 +23,7 @@ interface Props {
   readonly compositionWidth?: number;
   readonly compositionHeight?: number;
   readonly title?: string;
+  readonly sceneQueryParameter?: string;
 }
 
 const frameEnd = (scene: RemotionScene) => scene.start + scene.duration - 1;
@@ -81,6 +84,7 @@ export const RemotionDeck = ({
   compositionWidth = 1920,
   compositionHeight = 1080,
   title = 'Remotion 动画',
+  sceneQueryParameter = 'scene',
 }: Props) => {
   const [currentScene, setCurrentScene] = useState(0);
   const [mode, setMode] = useState<PreviewMode>('single');
@@ -100,8 +104,28 @@ export const RemotionDeck = ({
     if (reducedMotion) setAutoPage(false);
   }, [reducedMotion]);
 
-  const selectScene = (index: number) => {
-    setCurrentScene((index + scenes.length) % scenes.length);
+  const selectScene = (index: number, historyMode: 'push' | 'replace' | 'none' = 'push') => {
+    if (scenes.length === 0) return;
+
+    const selectedIndex = (index + scenes.length) % scenes.length;
+    setCurrentScene(selectedIndex);
+
+    if (historyMode === 'none' || typeof window === 'undefined') return;
+
+    const nextUrl = urlWithScene(
+      window.location.href,
+      scenes[selectedIndex],
+      sceneQueryParameter,
+    );
+    const currentUrl = `${window.location.pathname}${window.location.search}${window.location.hash}`;
+    if (nextUrl === currentUrl) return;
+
+    if (historyMode === 'replace') {
+      window.history.replaceState(window.history.state, '', nextUrl);
+      return;
+    }
+
+    window.history.pushState(window.history.state, '', nextUrl);
   };
 
   const selectedScene = scenes[currentScene] ?? scenes[0] ?? {
@@ -117,10 +141,20 @@ export const RemotionDeck = ({
     const player = playerRef.current;
     if (mode !== 'single' || !autoPage || !player) return;
 
-    const advance = () => selectScene(currentScene + 1);
+    const advance = () => selectScene(currentScene + 1, 'replace');
     player.addEventListener('ended', advance);
     return () => player.removeEventListener('ended', advance);
-  }, [autoPage, currentScene, mode, scenes.length]);
+  }, [autoPage, currentScene, mode, sceneQueryParameter, scenes]);
+
+  useEffect(() => {
+    const selectSceneFromLocation = () => {
+      setCurrentScene(sceneIndexFromSearch(scenes, window.location.search, sceneQueryParameter));
+    };
+
+    selectSceneFromLocation();
+    window.addEventListener('popstate', selectSceneFromLocation);
+    return () => window.removeEventListener('popstate', selectSceneFromLocation);
+  }, [sceneQueryParameter, scenes]);
 
   const handleKeyDown = (event: KeyboardEvent<HTMLDivElement>) => {
     if (event.target !== event.currentTarget) return;
