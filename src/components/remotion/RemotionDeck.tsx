@@ -357,49 +357,6 @@ export const RemotionDeck = ({
       tabIndex={0}
       onKeyDown={handleKeyDown}
     >
-      <div className="remotion-deck__toolbar">
-        <div className="remotion-deck__modes" role="group" aria-label="预览布局">
-          <ModeButton active={mode === 'single'} label="单页" mode="single" onClick={setMode} icon={<MonitorPlay size={15} />} />
-          <ModeButton active={mode === 'row'} label="并排" mode="row" onClick={setMode} icon={<Columns2 size={15} />} />
-          <ModeButton active={mode === 'matrix'} label="矩阵" mode="matrix" onClick={setMode} icon={<Grid3X3 size={15} />} />
-        </div>
-        <label className="remotion-deck__auto">
-          <input
-            type="checkbox"
-            checked={autoPage}
-            disabled={reducedMotion || mode !== 'single'}
-            onChange={(event) => setAutoPage(event.target.checked)}
-          />
-          <Repeat2 size={15} aria-hidden="true" />
-          自动翻页
-        </label>
-        <label className="remotion-deck__speed">
-          <Gauge size={15} aria-hidden="true" />
-          <span>速度</span>
-          <select value={speedScope} onChange={(event) => setSpeedScope(event.target.value as PlaybackScope)}>
-            <option value="global">全局</option>
-            {playbackScopeKeys.topic ? <option value="topic">本专题</option> : null}
-            {playbackScopeKeys.page ? <option value="page">本页</option> : null}
-          </select>
-          <select
-            value={scopedPlaybackSpeed === undefined ? 'inherit' : String(scopedPlaybackSpeed)}
-            onChange={(event) => updatePlaybackPreference(
-              event.target.value === 'inherit' ? undefined : Number(event.target.value) as PlaybackSpeed,
-            )}
-          >
-            {speedScope !== 'global' ? <option value="inherit">继承 {inheritedSpeed}×</option> : null}
-            {PLAYBACK_SPEEDS.map((speed) => <option key={speed} value={speed}>{speed}×</option>)}
-          </select>
-        </label>
-        <span className="remotion-deck__status" aria-live="polite">
-          {mode === 'single'
-            ? autoPage
-              ? `播放完进入下一页 · ${effectivePlaybackSpeed}×`
-              : `播放结束停在稳定画面 · ${effectivePlaybackSpeed}×`
-            : `全部页面播放结束停在稳定画面 · ${effectivePlaybackSpeed}×`}
-        </span>
-      </div>
-
       {mode === 'single' ? (
         <div className="remotion-deck__single">
           <header className="remotion-deck__scene-heading">
@@ -474,6 +431,49 @@ export const RemotionDeck = ({
           ))}
         </div>
       )}
+
+      <div className="remotion-deck__toolbar">
+        <div className="remotion-deck__modes" role="group" aria-label="预览布局">
+          <ModeButton active={mode === 'single'} label="单页" mode="single" onClick={setMode} icon={<MonitorPlay size={15} />} />
+          <ModeButton active={mode === 'row'} label="并排" mode="row" onClick={setMode} icon={<Columns2 size={15} />} />
+          <ModeButton active={mode === 'matrix'} label="矩阵" mode="matrix" onClick={setMode} icon={<Grid3X3 size={15} />} />
+        </div>
+        <label className="remotion-deck__auto">
+          <input
+            type="checkbox"
+            checked={autoPage}
+            disabled={reducedMotion || mode !== 'single'}
+            onChange={(event) => setAutoPage(event.target.checked)}
+          />
+          <Repeat2 size={15} aria-hidden="true" />
+          自动翻页
+        </label>
+        <label className="remotion-deck__speed">
+          <Gauge size={15} aria-hidden="true" />
+          <span>速度</span>
+          <select value={speedScope} onChange={(event) => setSpeedScope(event.target.value as PlaybackScope)}>
+            <option value="global">全局</option>
+            {playbackScopeKeys.topic ? <option value="topic">本专题</option> : null}
+            {playbackScopeKeys.page ? <option value="page">本页</option> : null}
+          </select>
+          <select
+            value={scopedPlaybackSpeed === undefined ? 'inherit' : String(scopedPlaybackSpeed)}
+            onChange={(event) => updatePlaybackPreference(
+              event.target.value === 'inherit' ? undefined : Number(event.target.value) as PlaybackSpeed,
+            )}
+          >
+            {speedScope !== 'global' ? <option value="inherit">继承 {inheritedSpeed}×</option> : null}
+            {PLAYBACK_SPEEDS.map((speed) => <option key={speed} value={speed}>{speed}×</option>)}
+          </select>
+        </label>
+        <span className="remotion-deck__status" aria-live="polite">
+          {mode === 'single'
+            ? autoPage
+              ? `播放完进入下一页 · ${effectivePlaybackSpeed}×`
+              : `播放结束停在稳定画面 · ${effectivePlaybackSpeed}×`
+            : `全部页面播放结束停在稳定画面 · ${effectivePlaybackSpeed}×`}
+        </span>
+      </div>
     </section>
   );
 };
