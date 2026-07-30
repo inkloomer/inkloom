@@ -86,7 +86,11 @@ export const RemotionDeck = ({
   title = 'Remotion 动画',
   sceneQueryParameter = 'scene',
 }: Props) => {
-  const [currentScene, setCurrentScene] = useState(0);
+  const [currentScene, setCurrentScene] = useState(() =>
+    typeof window === 'undefined'
+      ? 0
+      : sceneIndexFromSearch(scenes, window.location.search, sceneQueryParameter),
+  );
   const [mode, setMode] = useState<PreviewMode>('single');
   const [autoPage, setAutoPage] = useState(false);
   const [reducedMotion, setReducedMotion] = useState(false);
