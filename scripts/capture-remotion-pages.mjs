@@ -10,6 +10,7 @@ const PROJECT_ROOT = path.resolve(import.meta.dirname, '..');
 const ANIMATIONS_ROOT = path.join(PROJECT_ROOT, 'src', 'animations');
 const DEFAULT_OUTPUT_ROOT = path.join(PROJECT_ROOT, '.artifacts', 'animation-pages');
 const DEFAULT_CAPTURE_RATIO = 0.82;
+const DEFAULT_MOTION_RATIOS = [0.68, 0.76, 0.84];
 const ANIMATION_ID_PATTERN = /^[a-z0-9][a-z0-9-]*$/;
 const animationDirectories = new Map();
 
@@ -21,11 +22,13 @@ Usage:
   pnpm animation:pages legal-jurisdiction      Capture one animation
   pnpm animation:pages proper-party party-change
   pnpm animation:pages --at 0.75               Change the scene capture position
+  pnpm animation:pages legal-jurisdiction --motion
   pnpm animation:pages --output D:\\captures   Choose an output root
 
 Options:
   --all              Capture every discovered animation (the default)
   --at <0..1>        Position within each scene (default: ${DEFAULT_CAPTURE_RATIO})
+  --motion           Capture ${DEFAULT_MOTION_RATIOS.join(', ')} checkpoints per scene for sustained-motion QA
   --output <path>    Output root (default: .artifacts/animation-pages)
   --help             Show this help
 `;
@@ -33,7 +36,9 @@ Options:
 const parseArguments = (rawArguments) => {
   const animationIds = [];
   let captureRatio = DEFAULT_CAPTURE_RATIO;
+  let captureRatioProvided = false;
   let outputRoot = DEFAULT_OUTPUT_ROOT;
+  let motionCheck = false;
   let captureAll = rawArguments.length === 0;
 
   for (let index = 0; index < rawArguments.length; index += 1) {
@@ -47,7 +52,12 @@ const parseArguments = (rawArguments) => {
     }
     if (argument === '--at') {
       captureRatio = Number(rawArguments[index + 1]);
+      captureRatioProvided = true;
       index += 1;
+      continue;
+    }
+    if (argument === '--motion') {
+      motionCheck = true;
       continue;
     }
     if (argument === '--output') {
@@ -65,9 +75,12 @@ const parseArguments = (rawArguments) => {
   if (!Number.isFinite(captureRatio) || captureRatio < 0 || captureRatio > 1) {
     throw new Error('--at must be a number from 0 to 1.');
   }
+  if (motionCheck && captureRatioProvided) {
+    throw new Error('--motion and --at cannot be used together.');
+  }
   if (!captureAll && animationIds.length === 0) captureAll = true;
 
-  return {animationIds, captureAll, captureRatio, help: false, outputRoot};
+  return {animationIds, captureAll, captureRatio, help: false, motionCheck, outputRoot};
 };
 
 const fileExists = async (filePath) => {
@@ -218,8 +231,9 @@ const createContactSheet = async ({imagePaths, outputPath, width, height}) => {
     .toFile(outputPath);
 };
 
-const captureAnimation = async ({animationId, browser, captureRatio, outputRoot}) => {
+const captureAnimation = async ({animationId, browser, captureRatio, motionCheck, outputRoot}) => {
   const scenes = await loadScenes(animationId);
+  const captureRatios = motionCheck ? DEFAULT_MOTION_RATIOS : [captureRatio];
   const runDirectory = await makeRunDirectory(outputRoot, animationId);
   const bundleDirectory = await mkdtemp(path.join(tmpdir(), `inkloom-${animationId}-`));
   const entryPoint = path.join(getAnimationDirectory(animationId), 'remotion', 'index.ts');
@@ -246,27 +260,31 @@ const captureAnimation = async ({animationId, browser, captureRatio, outputRoot}
 
     for (let index = 0; index < scenes.length; index += 1) {
       const scene = scenes[index];
-      const frame = Math.min(
-        composition.durationInFrames - 1,
-        scene.start + Math.floor((scene.duration - 1) * captureRatio),
-      );
       const pageNumber = String(index + 1).padStart(2, '0');
-      const fileName = `page-${pageNumber}-${scene.key}.png`;
-      const outputPath = path.join(runDirectory, fileName);
 
-      console.log(`[${animationId}] ${pageNumber}/${String(scenes.length).padStart(2, '0')} ${scene.key} @ frame ${frame}`);
-      await renderStill({
-        composition,
-        serveUrl,
-        output: outputPath,
-        frame,
-        imageFormat: 'png',
-        overwrite: true,
-        puppeteerInstance: browser,
-        logLevel: 'error',
-      });
+      for (const ratio of captureRatios) {
+        const frame = Math.min(
+          composition.durationInFrames - 1,
+          scene.start + Math.floor((scene.duration - 1) * ratio),
+        );
+        const ratioSuffix = motionCheck ? `-at-${String(Math.round(ratio * 100)).padStart(2, '0')}` : '';
+        const fileName = `page-${pageNumber}-${scene.key}${ratioSuffix}.png`;
+        const outputPath = path.join(runDirectory, fileName);
 
-      pages.push({...scene, file: fileName, frame});
+        console.log(`[${animationId}] ${pageNumber}/${String(scenes.length).padStart(2, '0')} ${scene.key} @ ${ratio.toFixed(2)} frame ${frame}`);
+        await renderStill({
+          composition,
+          serveUrl,
+          output: outputPath,
+          frame,
+          imageFormat: 'png',
+          overwrite: true,
+          puppeteerInstance: browser,
+          logLevel: 'error',
+        });
+
+        pages.push({...scene, file: fileName, frame, ...(motionCheck ? {ratio} : {})});
+      }
     }
 
     const contactSheetPath = path.join(runDirectory, 'contact-sheet.png');
@@ -279,9 +297,10 @@ const captureAnimation = async ({animationId, browser, captureRatio, outputRoot}
 
     const manifest = {
       animationId,
-      captureRatio,
+      ...(motionCheck ? {captureRatios} : {captureRatio}),
       compositionId: composition.id,
       capturedAt: new Date().toISOString(),
+      mode: motionCheck ? 'motion' : 'page',
       size: {width: composition.width, height: composition.height},
       pages,
     };

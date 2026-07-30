@@ -423,6 +423,13 @@ export const ExclusiveScene = () => {
 
       {exclusiveRows.map((row, index) => {
         const rowProgress = reveal(frame, 44 + index * 28, 98 + index * 28);
+        const cueStart = 150 + index * 12;
+        const cueFrame = Math.max(0, frame - cueStart);
+        const cuePhase = (cueFrame % 120) / 120;
+        const cueOpacity = reveal(frame, cueStart, cueStart + 18) * interpolate(cuePhase, [0, 0.08, 0.72, 0.84, 1], [0, 1, 1, 0, 0], {
+          extrapolateLeft: 'clamp',
+          extrapolateRight: 'clamp',
+        });
         const top = 280 + index * 160;
         return (
           <div key={row.label}>
@@ -470,18 +477,25 @@ export const ExclusiveScene = () => {
                   <div style={{fontSize: 26, fontWeight: 900}}>{row.label}</div>
                   <div style={{marginTop: 6, color: PALETTE.muted, fontSize: 17, fontWeight: 700}}>{row.scope}</div>
                 </div>
-                <div
-                  style={{
-                    color: PALETTE.red,
-                    fontSize: 19,
-                    fontWeight: 900,
-                    textAlign: 'right',
-                    lineHeight: 1.35,
-                    maxWidth: 240,
-                    whiteSpace: 'pre-line',
-                  }}
-                >
-                  {row.detail}
+                <div style={{position: 'relative', minWidth: 230, padding: '10px 12px 15px 42px', color: PALETTE.red, backgroundColor: PALETTE.redSoft, borderRadius: 8}}>
+                  <MapPinned size={27} strokeWidth={2.3} style={{position: 'absolute', left: 10, top: 12}} />
+                  <div style={{fontSize: 19, fontWeight: 900, textAlign: 'right', lineHeight: 1.35, whiteSpace: 'pre-line'}}>{row.detail}</div>
+                  <div style={{position: 'absolute', left: 12, right: 12, bottom: 7, height: 2, overflow: 'hidden', backgroundColor: 'rgba(200, 63, 53, 0.22)', borderRadius: 999}}>
+                    <div
+                      style={{
+                        position: 'absolute',
+                        left: `${cuePhase * 100}%`,
+                        top: -2,
+                        width: 34,
+                        height: 6,
+                        translate: '-50% 0',
+                        opacity: cueOpacity,
+                        backgroundColor: PALETTE.red,
+                        borderRadius: 999,
+                        boxShadow: `0 0 10px ${PALETTE.red}`,
+                      }}
+                    />
+                  </div>
                 </div>
               </div>
             </div>
@@ -874,8 +888,12 @@ export const ThreeStepScene = () => {
             ...baseTextStyle,
             display: 'flex',
             alignItems: 'center',
+            justifyContent: 'center',
             gap: 10,
             padding: '8px 18px',
+            minWidth: interpolate(hold, [0, 1], [320, 600]),
+            minHeight: 42,
+            position: 'relative',
             color: PALETTE.blue,
             backgroundColor: PALETTE.blueSoft,
             border: `1.5px solid ${PALETTE.blue}`,
@@ -885,8 +903,14 @@ export const ThreeStepScene = () => {
             whiteSpace: 'nowrap',
           }}
         >
-          <ArrowDown size={22} strokeWidth={2.6} />
-          进入第三步：两地并行判断
+          <span style={{position: 'absolute', display: 'flex', alignItems: 'center', gap: 10, opacity: 1 - hold}}>
+            <ArrowDown size={22} strokeWidth={2.6} />
+            进入第三步：两地并行判断
+          </span>
+          <span style={{position: 'absolute', display: 'flex', alignItems: 'center', gap: 10, opacity: hold}}>
+            <CheckCircle2 size={22} strokeWidth={2.6} />
+            专属优先 → 协议次之 → 法定兜底
+          </span>
         </div>
         <div style={{flex: 1, height: 2, backgroundColor: PALETTE.blue, opacity: 0.35}} />
       </div>
@@ -981,25 +1005,6 @@ export const ThreeStepScene = () => {
         </div>
       </div>
 
-      <ImpactReveal delay={355} style={{position: 'absolute', left: 280, top: 820, width: 1360}}>
-        <div
-          style={{
-            ...baseTextStyle,
-            textAlign: 'center',
-            padding: '16px 24px',
-            backgroundColor: PALETTE.paper,
-            border: `2px solid ${PALETTE.blue}`,
-            borderRadius: 10,
-            fontSize: 24,
-            fontWeight: 900,
-            color: PALETTE.ink,
-            opacity: 0.45 + hold * 0.55,
-            boxShadow: '0 10px 24px rgba(23, 32, 29, 0.06)',
-          }}
-        >
-          专属优先 · 协议次之 · 法定兜底 — 不要跳步套法条
-        </div>
-      </ImpactReveal>
     </div>
   );
 };
