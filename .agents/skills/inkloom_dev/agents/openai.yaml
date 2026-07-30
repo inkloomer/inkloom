@@ -1,0 +1,6 @@
+interface:
+  display_name: "InkLoom Developer"
+  short_description: "Build InkLoom MDX notes and legal flowcharts"
+  default_prompt: "Use $inkloom-dev to update an InkLoom MDX page while preserving its Starlight routes, component contracts, and interactive recall behavior."
+policy:
+  allow_implicit_invocation: true
