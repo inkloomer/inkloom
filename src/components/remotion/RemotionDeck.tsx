@@ -1,0 +1,234 @@
+import {useEffect, useRef, useState} from 'react';
+import type {ComponentType, KeyboardEvent, ReactNode} from 'react';
+import {Player, type PlayerRef} from '@remotion/player';
+import {ChevronLeft, ChevronRight, Columns2, Grid3X3, MonitorPlay, Repeat2} from 'lucide-react';
+import './RemotionDeck.css';
+
+export interface RemotionScene {
+  readonly number: string;
+  readonly title: string;
+  readonly start: number;
+  readonly duration: number;
+}
+
+type PreviewMode = 'single' | 'row' | 'matrix';
+
+interface Props {
+  readonly component: ComponentType<Record<string, never>>;
+  readonly scenes: readonly RemotionScene[];
+  readonly durationInFrames: number;
+  readonly fps: number;
+  readonly compositionWidth?: number;
+  readonly compositionHeight?: number;
+  readonly title?: string;
+}
+
+const frameEnd = (scene: RemotionScene) => scene.start + scene.duration - 1;
+
+const ModeButton = ({
+  active,
+  label,
+  mode,
+  onClick,
+  icon,
+}: {
+  readonly active: boolean;
+  readonly label: string;
+  readonly mode: PreviewMode;
+  readonly onClick: (mode: PreviewMode) => void;
+  readonly icon: ReactNode;
+}) => (
+  <button
+    type="button"
+    className="remotion-deck__mode"
+    data-active={active ? 'true' : 'false'}
+    aria-pressed={active}
+    title={label}
+    onClick={() => onClick(mode)}
+  >
+    {icon}
+    <span>{label}</span>
+  </button>
+);
+
+export const RemotionDeck = ({
+  component,
+  scenes,
+  durationInFrames,
+  fps,
+  compositionWidth = 1920,
+  compositionHeight = 1080,
+  title = 'Remotion 动画',
+}: Props) => {
+  const [currentScene, setCurrentScene] = useState(0);
+  const [mode, setMode] = useState<PreviewMode>('single');
+  const [autoPage, setAutoPage] = useState(false);
+  const [reducedMotion, setReducedMotion] = useState(false);
+  const playerRef = useRef<PlayerRef>(null);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const update = () => setReducedMotion(mediaQuery.matches);
+    update();
+    mediaQuery.addEventListener('change', update);
+    return () => mediaQuery.removeEventListener('change', update);
+  }, []);
+
+  useEffect(() => {
+    if (reducedMotion) setAutoPage(false);
+  }, [reducedMotion]);
+
+  const selectScene = (index: number) => {
+    setCurrentScene((index + scenes.length) % scenes.length);
+  };
+
+  const selectedScene = scenes[currentScene] ?? scenes[0] ?? {
+    number: '00',
+    title: 'Empty',
+    start: 0,
+    duration: 1,
+  };
+  const selectedEnd = frameEnd(selectedScene);
+
+  useEffect(() => {
+    const player = playerRef.current;
+    if (mode !== 'single' || !autoPage || !player) return;
+
+    const advance = () => selectScene(currentScene + 1);
+    player.addEventListener('ended', advance);
+    return () => player.removeEventListener('ended', advance);
+  }, [autoPage, currentScene, mode, scenes.length]);
+
+  const handleKeyDown = (event: KeyboardEvent<HTMLDivElement>) => {
+    if (event.target !== event.currentTarget) return;
+    if (event.key === 'ArrowLeft') {
+      event.preventDefault();
+      selectScene(currentScene - 1);
+    }
+    if (event.key === 'ArrowRight') {
+      event.preventDefault();
+      selectScene(currentScene + 1);
+    }
+  };
+
+  if (scenes.length === 0) {
+    return <div className="remotion-deck remotion-deck__empty">没有可播放的场景。</div>;
+  }
+
+  return (
+    <section
+      className="remotion-deck"
+      aria-label={title}
+      tabIndex={0}
+      onKeyDown={handleKeyDown}
+    >
+      <div className="remotion-deck__toolbar">
+        <div className="remotion-deck__modes" role="group" aria-label="预览布局">
+          <ModeButton active={mode === 'single'} label="单页" mode="single" onClick={setMode} icon={<MonitorPlay size={15} />} />
+          <ModeButton active={mode === 'row'} label="并排" mode="row" onClick={setMode} icon={<Columns2 size={15} />} />
+          <ModeButton active={mode === 'matrix'} label="矩阵" mode="matrix" onClick={setMode} icon={<Grid3X3 size={15} />} />
+        </div>
+        <label className="remotion-deck__auto">
+          <input
+            type="checkbox"
+            checked={autoPage}
+            disabled={reducedMotion || mode !== 'single'}
+            onChange={(event) => setAutoPage(event.target.checked)}
+          />
+          <Repeat2 size={15} aria-hidden="true" />
+          自动翻页
+        </label>
+        <span className="remotion-deck__status" aria-live="polite">
+          {mode === 'single'
+            ? autoPage
+              ? '播放完进入下一页'
+              : '当前页循环'
+            : '全部页面独立循环'}
+        </span>
+      </div>
+
+      {mode === 'single' ? (
+        <div className="remotion-deck__single">
+          <header className="remotion-deck__scene-heading">
+            <span>{selectedScene.number}</span>
+            <strong>{selectedScene.title}</strong>
+          </header>
+          <div className="remotion-deck__player-frame">
+            <Player
+              key={`${selectedScene.number}-${autoPage ? 'auto' : 'loop'}-${reducedMotion ? 'still' : 'motion'}`}
+              ref={playerRef}
+              component={component}
+              durationInFrames={durationInFrames}
+              fps={fps}
+              compositionWidth={compositionWidth}
+              compositionHeight={compositionHeight}
+              inFrame={selectedScene.start}
+              outFrame={selectedEnd}
+              initialFrame={reducedMotion ? selectedEnd : selectedScene.start}
+              autoPlay={!reducedMotion}
+              loop={!autoPage && !reducedMotion}
+              controls
+              clickToPlay
+              acknowledgeRemotionLicense
+              className="remotion-deck__player"
+            />
+          </div>
+          <div className="remotion-deck__navigation">
+            <button type="button" onClick={() => selectScene(currentScene - 1)} title="上一页">
+              <ChevronLeft size={17} />
+              <span>上一页</span>
+            </button>
+            <div className="remotion-deck__scene-strip" role="tablist" aria-label="动画页">
+              {scenes.map((scene, index) => (
+                <button
+                  key={scene.number}
+                  type="button"
+                  role="tab"
+                  aria-selected={index === currentScene}
+                  data-active={index === currentScene ? 'true' : 'false'}
+                  title={scene.title}
+                  onClick={() => selectScene(index)}
+                >
+                  {scene.number}
+                </button>
+              ))}
+            </div>
+            <button type="button" onClick={() => selectScene(currentScene + 1)} title="下一页">
+              <span>下一页</span>
+              <ChevronRight size={17} />
+            </button>
+          </div>
+        </div>
+      ) : (
+        <div className="remotion-deck__multi" data-layout={mode}>
+          {scenes.map((scene) => (
+            <article className="remotion-deck__card" key={scene.number}>
+              <header className="remotion-deck__card-heading">
+                <span>{scene.number}</span>
+                <strong>{scene.title}</strong>
+              </header>
+              <div className="remotion-deck__player-frame">
+                <Player
+                  component={component}
+                  durationInFrames={durationInFrames}
+                  fps={fps}
+                  compositionWidth={compositionWidth}
+                  compositionHeight={compositionHeight}
+                  inFrame={scene.start}
+                  outFrame={frameEnd(scene)}
+                  initialFrame={reducedMotion ? frameEnd(scene) : scene.start}
+                  autoPlay={!reducedMotion}
+                  loop={!reducedMotion}
+                  controls={false}
+                  clickToPlay={false}
+                  acknowledgeRemotionLicense
+                  className="remotion-deck__player"
+                />
+              </div>
+            </article>
+          ))}
+        </div>
+      )}
+    </section>
+  );
+};

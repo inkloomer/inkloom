@@ -1,5 +1,6 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
+import react from '@astrojs/react';
 import starlight from '@astrojs/starlight';
 import starlightAutoSidebar from 'starlight-auto-sidebar';
 import starlightCatppuccin from '@catppuccin/starlight';
@@ -22,6 +23,7 @@ export default defineConfig({
 	},
 
 	integrations: [
+		react(),
 		starlight({
 			title: 'InkLoom',
 			plugins: [
