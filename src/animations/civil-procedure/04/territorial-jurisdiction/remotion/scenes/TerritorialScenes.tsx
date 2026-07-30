@@ -14,6 +14,10 @@ import {
   CheckCircle2,
   ArrowRight,
   ArrowDown,
+  Scale,
+  MessageCircleOff,
+  Link2,
+  CircleDot,
 } from 'lucide-react';
 import {Easing, interpolate, useCurrentFrame} from 'remotion';
 import {accentColor, accentSoftColor, PALETTE, toSourceFrame, type Accent} from '../storyboard';
@@ -542,86 +546,220 @@ export const ExclusiveScene = () => {
   );
 };
 
-const agreementTargets = ['被告住所地', '合同履行地', '合同签订地', '原告住所地', '标的物所在地'];
+const agreementTargets: Array<{label: string; icon: typeof MapPinned}> = [
+  {label: '被告住所地', icon: Home},
+  {label: '合同履行地', icon: MapPinned},
+  {label: '合同签订地', icon: FileCheck2},
+  {label: '原告住所地', icon: UserRound},
+  {label: '标的物所在地', icon: CircleDot},
+];
 
 /** 05 协议管辖：书面 + 实际联系 + 两条红线 */
 export const AgreementScene = () => {
   const frame = toSourceFrame(useCurrentFrame());
   const pathProgress = reveal(frame, 24, 88);
   const redlineProgress = reveal(frame, 150, 200);
+  const cueStart = 170;
+  const cueFrame = Math.max(0, frame - cueStart);
+  const cuePhase = (cueFrame % 110) / 110;
+  const cueOpacity =
+    reveal(frame, cueStart, cueStart + 16) *
+    interpolate(cuePhase, [0, 0.08, 0.7, 0.85, 1], [0, 1, 1, 0, 0], {
+      extrapolateLeft: 'clamp',
+      extrapolateRight: 'clamp',
+    });
 
   return (
     <div style={{position: 'absolute', inset: 0}}>
-      <SceneHeading index="05" eyebrow="协议管辖" title="可以约定，但不能越过红线" accent="teal" />
+      {/* 标题：关键词双通道强调，避免普通大标题纯字 */}
+      <MaskedReveal delay={4} duration={24} style={{position: 'absolute', left: 92, top: 68}}>
+        <div style={{display: 'flex', alignItems: 'center', gap: 20}}>
+          <div
+            style={{
+              ...baseTextStyle,
+              display: 'grid',
+              width: 54,
+              height: 54,
+              placeItems: 'center',
+              color: PALETTE.teal,
+              border: `2px solid ${PALETTE.teal}`,
+              fontSize: 20,
+              fontWeight: 800,
+            }}
+          >
+            05
+          </div>
+          <div>
+            <div style={{...baseTextStyle, color: PALETTE.teal, fontSize: 20, fontWeight: 800, letterSpacing: 1}}>协议管辖</div>
+            <div style={{...baseTextStyle, marginTop: 5, fontSize: 44, fontWeight: 900, lineHeight: 1.08, display: 'flex', alignItems: 'center', gap: 10, flexWrap: 'wrap'}}>
+              <Keyword accent="teal">可以约定</Keyword>
+              <span style={{color: PALETTE.muted, fontWeight: 800}}>，但</span>
+              <Keyword accent="red">不能越过红线</Keyword>
+            </div>
+          </div>
+        </div>
+      </MaskedReveal>
 
       {/* 左：书面协议 */}
-      <FadeSlide delay={12} style={{position: 'absolute', left: 112, top: 290}}>
+      <FadeSlide delay={12} style={{position: 'absolute', left: 112, top: 270}}>
         <div
           style={{
             ...baseTextStyle,
-            width: 340,
-            minHeight: 320,
+            width: 360,
+            minHeight: 380,
             boxSizing: 'border-box',
-            padding: '28px 24px',
+            padding: '26px 24px',
             backgroundColor: PALETTE.tealSoft,
-            border: `2px solid ${PALETTE.teal}`,
-            borderRadius: 12,
-            boxShadow: '0 14px 32px rgba(23, 32, 29, 0.07)',
+            border: `3px solid ${PALETTE.teal}`,
+            borderRadius: 14,
+            boxShadow: '0 14px 32px rgba(23, 32, 29, 0.08)',
           }}
         >
-          <FileText size={48} color={PALETTE.teal} strokeWidth={2.1} />
-          <div style={{marginTop: 18, fontSize: 30, fontWeight: 950}}>书面协议</div>
-          <div style={{marginTop: 10, color: PALETTE.muted, fontSize: 18, fontWeight: 750, lineHeight: 1.4}}>
-            合同 / 其他财产权益
-            <br />
-            口头协议无效
+          <div style={{display: 'flex', alignItems: 'center', gap: 14}}>
+            <div
+              style={{
+                display: 'grid',
+                width: 64,
+                height: 64,
+                placeItems: 'center',
+                color: PALETTE.teal,
+                backgroundColor: PALETTE.paper,
+                border: `2px solid ${PALETTE.teal}`,
+                borderRadius: 10,
+              }}
+            >
+              <FileText size={36} strokeWidth={2.2} />
+            </div>
+            <div>
+              <div style={{fontSize: 30, fontWeight: 950, color: PALETTE.teal}}>书面协议</div>
+              <div style={{marginTop: 4, height: 4, width: 92, backgroundColor: PALETTE.teal, borderRadius: 999}} />
+            </div>
           </div>
-          <div style={{marginTop: 22, paddingTop: 16, borderTop: `2px solid ${PALETTE.teal}`}}>
-            <div style={{fontSize: 18, fontWeight: 850, color: PALETTE.teal}}>改变特殊地域</div>
-            <div style={{marginTop: 6, fontSize: 20, fontWeight: 800}}>但不能突破红线</div>
+
+          <div style={{marginTop: 22, display: 'flex', flexDirection: 'column', gap: 12}}>
+            <div
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: 12,
+                padding: '12px 14px',
+                backgroundColor: PALETTE.paper,
+                borderRadius: 10,
+                border: `1.5px solid ${PALETTE.teal}`,
+              }}
+            >
+              <FileCheck2 size={24} color={PALETTE.teal} strokeWidth={2.3} />
+              <span style={{fontSize: 18, fontWeight: 850, color: PALETTE.ink}}>合同 / 财产权益</span>
+            </div>
+            <div
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: 12,
+                padding: '12px 14px',
+                backgroundColor: PALETTE.redSoft,
+                borderRadius: 10,
+                border: `1.5px solid ${PALETTE.red}`,
+              }}
+            >
+              <MessageCircleOff size={24} color={PALETTE.red} strokeWidth={2.3} />
+              <span style={{fontSize: 18, fontWeight: 900, color: PALETTE.red}}>口头协议 · 无效</span>
+            </div>
+          </div>
+
+          <div
+            style={{
+              marginTop: 20,
+              paddingTop: 16,
+              borderTop: `2px dashed ${PALETTE.teal}`,
+              display: 'flex',
+              flexDirection: 'column',
+              gap: 10,
+            }}
+          >
+            <div style={{display: 'flex', alignItems: 'center', gap: 10}}>
+              <Link2 size={22} color={PALETTE.teal} strokeWidth={2.3} />
+              <span style={{fontSize: 18, fontWeight: 850, color: PALETTE.teal}}>可改特殊地域</span>
+            </div>
+            <div style={{display: 'flex', alignItems: 'center', gap: 10}}>
+              <Ban size={22} color={PALETTE.red} strokeWidth={2.3} />
+              <span style={{fontSize: 20, fontWeight: 950, color: PALETTE.red}}>不能突破红线</span>
+            </div>
           </div>
         </div>
       </FadeSlide>
 
-      <FlowArrow left={480} top={400} width={120} progress={pathProgress} accent="teal" />
+      <FlowArrow left={500} top={420} width={110} progress={pathProgress} accent="teal" label="选择地点" />
 
-      {/* 中：可选地点网格 */}
+      {/* 中：实际联系地点 */}
       <div
         style={{
           position: 'absolute',
           left: 640,
-          top: 290,
-          width: 700,
+          top: 270,
+          width: 720,
           opacity: pathProgress,
         }}
       >
-        <div style={{...baseTextStyle, color: PALETTE.teal, fontSize: 20, fontWeight: 900, marginBottom: 16}}>
-          与争议有实际联系的地点
+        <div
+          style={{
+            ...baseTextStyle,
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: 10,
+            marginBottom: 16,
+            padding: '8px 14px',
+            backgroundColor: PALETTE.tealSoft,
+            border: `1.5px solid ${PALETTE.teal}`,
+            borderRadius: 999,
+          }}
+        >
+          <MapPinned size={22} color={PALETTE.teal} strokeWidth={2.3} />
+          <span style={{color: PALETTE.teal, fontSize: 18, fontWeight: 900}}>与争议有</span>
+          <Keyword accent="teal">实际联系</Keyword>
+          <span style={{color: PALETTE.teal, fontSize: 18, fontWeight: 900}}>的地点</span>
         </div>
+
         <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14}}>
           {agreementTargets.map((target, index) => {
             const targetProgress = reveal(frame, 40 + index * 12, 84 + index * 12);
+            const Icon = target.icon;
             return (
               <div
-                key={target}
+                key={target.label}
                 style={{
                   opacity: targetProgress,
                   translate: `0px ${(1 - targetProgress) * 18}px`,
                   ...baseTextStyle,
                   display: 'flex',
                   alignItems: 'center',
-                  minHeight: 64,
-                  padding: '14px 18px',
+                  gap: 12,
+                  minHeight: 68,
+                  padding: '12px 16px',
                   backgroundColor: PALETTE.paper,
                   border: `2px solid ${PALETTE.teal}`,
-                  borderRadius: 10,
-                  fontSize: 22,
-                  fontWeight: 850,
+                  borderRadius: 12,
                   boxShadow: '0 8px 20px rgba(23, 32, 29, 0.05)',
                 }}
               >
-                <MapPinned size={24} color={PALETTE.teal} strokeWidth={2.2} style={{marginRight: 12, flex: '0 0 auto'}} />
-                {target}
+                <div
+                  style={{
+                    display: 'grid',
+                    width: 40,
+                    height: 40,
+                    placeItems: 'center',
+                    color: PALETTE.teal,
+                    backgroundColor: PALETTE.tealSoft,
+                    borderRadius: 8,
+                    flex: '0 0 auto',
+                  }}
+                >
+                  <Icon size={22} strokeWidth={2.3} />
+                </div>
+                <div>
+                  <div style={{fontSize: 21, fontWeight: 900, color: PALETTE.ink}}>{target.label}</div>
+                  <div style={{marginTop: 4, height: 3, width: 48, backgroundColor: PALETTE.teal, borderRadius: 999}} />
+                </div>
               </div>
             );
           })}
@@ -631,96 +769,202 @@ export const AgreementScene = () => {
               ...baseTextStyle,
               display: 'flex',
               alignItems: 'center',
-              minHeight: 64,
-              padding: '14px 18px',
+              gap: 12,
+              minHeight: 68,
+              padding: '12px 16px',
               backgroundColor: PALETTE.goldSoft,
               border: `2px dashed ${PALETTE.gold}`,
-              borderRadius: 10,
-              fontSize: 20,
-              fontWeight: 850,
-              color: PALETTE.gold,
+              borderRadius: 12,
             }}
           >
-            等实际联系地
+            <div
+              style={{
+                display: 'grid',
+                width: 40,
+                height: 40,
+                placeItems: 'center',
+                color: PALETTE.gold,
+                backgroundColor: PALETTE.paper,
+                borderRadius: 8,
+                flex: '0 0 auto',
+              }}
+            >
+              <Link2 size={22} strokeWidth={2.3} />
+            </div>
+            <div>
+              <div style={{fontSize: 20, fontWeight: 950, color: PALETTE.gold}}>等实际联系地</div>
+              <div style={{marginTop: 4, height: 3, width: 56, backgroundColor: PALETTE.gold, borderRadius: 999}} />
+            </div>
           </div>
         </div>
       </div>
 
-      {/* 右：择一起诉 */}
-      <ImpactReveal delay={100} style={{position: 'absolute', left: 1400, top: 320}}>
+      {/* 右：择一起诉 + 无效条件 */}
+      <ImpactReveal delay={100} style={{position: 'absolute', left: 1400, top: 270}}>
         <div
           style={{
             ...baseTextStyle,
             width: 400,
+            minHeight: 380,
             boxSizing: 'border-box',
-            padding: '26px 24px',
+            padding: '24px 22px',
             backgroundColor: PALETTE.paper,
-            border: `2px solid ${PALETTE.teal}`,
-            borderRadius: 12,
+            border: `3px solid ${PALETTE.teal}`,
+            borderRadius: 14,
             boxShadow: '0 14px 32px rgba(23, 32, 29, 0.08)',
+            display: 'flex',
+            flexDirection: 'column',
+            gap: 18,
           }}
         >
-          <div style={{fontSize: 22, fontWeight: 900, color: PALETTE.teal}}>约定多处时</div>
-          <div style={{marginTop: 14, fontSize: 32, fontWeight: 950, lineHeight: 1.25}}>
-            原告可向
-            <br />
-            其中一个起诉
+          <div style={{display: 'flex', alignItems: 'center', gap: 12}}>
+            <div
+              style={{
+                display: 'grid',
+                width: 48,
+                height: 48,
+                placeItems: 'center',
+                color: PALETTE.teal,
+                backgroundColor: PALETTE.tealSoft,
+                borderRadius: 10,
+              }}
+            >
+              <Users size={28} strokeWidth={2.3} />
+            </div>
+            <div>
+              <div style={{fontSize: 18, fontWeight: 900, color: PALETTE.teal}}>约定多处时</div>
+              <div style={{marginTop: 4, height: 3, width: 64, backgroundColor: PALETTE.teal, borderRadius: 999}} />
+            </div>
           </div>
-          <div style={{marginTop: 18, color: PALETTE.muted, fontSize: 17, fontWeight: 750, lineHeight: 1.4}}>
-            起诉时不能确定管辖法院
+
+          <div style={{fontSize: 26, fontWeight: 950, lineHeight: 1.45, color: PALETTE.ink}}>
+            <span style={{display: 'inline-flex', alignItems: 'center', gap: 8}}>
+              <UserRound size={26} color={PALETTE.teal} strokeWidth={2.3} />
+              <Keyword accent="teal">原告</Keyword>
+              <span style={{color: PALETTE.muted, fontWeight: 800}}>可向</span>
+            </span>
             <br />
-            → 协议无效
+            <Keyword accent="teal">其中一个</Keyword>
+            <span style={{marginLeft: 8, color: PALETTE.teal, borderBottom: `4px solid ${PALETTE.teal}`}}>起诉</span>
+          </div>
+
+          <div
+            style={{
+              marginTop: 'auto',
+              padding: '16px 16px',
+              backgroundColor: PALETTE.goldSoft,
+              border: `2px solid ${PALETTE.gold}`,
+              borderRadius: 12,
+            }}
+          >
+            <div style={{display: 'flex', alignItems: 'center', gap: 10, color: PALETTE.gold, fontSize: 17, fontWeight: 900}}>
+              <Ban size={22} strokeWidth={2.4} />
+              起诉时不能确定
+            </div>
+            <div style={{marginTop: 10, fontSize: 24, fontWeight: 950, color: PALETTE.gold, lineHeight: 1.25}}>
+              管辖协议
+              <Keyword accent="gold">无效</Keyword>
+            </div>
           </div>
         </div>
       </ImpactReveal>
 
-      {/* 底部双红线 */}
-      <ImpactReveal delay={145} style={{position: 'absolute', left: 112, top: 720, width: 1696}}>
+      {/* 底部双红线：图标 + 徽章 + 扫光轨迹 */}
+      <ImpactReveal delay={145} style={{position: 'absolute', left: 112, top: 700, width: 1696}}>
         <div
           style={{
             ...baseTextStyle,
             display: 'grid',
             gridTemplateColumns: '1fr 1fr',
             gap: 28,
-            opacity: 0.4 + redlineProgress * 0.6,
+            opacity: 0.45 + redlineProgress * 0.55,
           }}
         >
-          <div
-            style={{
-              boxSizing: 'border-box',
-              padding: '22px 28px',
-              backgroundColor: PALETTE.redSoft,
-              border: `3px solid ${PALETTE.red}`,
-              borderRadius: 12,
-              display: 'flex',
-              alignItems: 'center',
-              gap: 20,
-            }}
-          >
-            <Ban size={42} color={PALETTE.red} strokeWidth={2.2} />
-            <div>
-              <div style={{color: PALETTE.red, fontSize: 18, fontWeight: 900}}>红线一</div>
-              <div style={{marginTop: 4, fontSize: 28, fontWeight: 950}}>不得违反级别管辖</div>
-            </div>
-          </div>
-          <div
-            style={{
-              boxSizing: 'border-box',
-              padding: '22px 28px',
-              backgroundColor: PALETTE.redSoft,
-              border: `3px solid ${PALETTE.red}`,
-              borderRadius: 12,
-              display: 'flex',
-              alignItems: 'center',
-              gap: 20,
-            }}
-          >
-            <LockKeyhole size={42} color={PALETTE.red} strokeWidth={2.2} />
-            <div>
-              <div style={{color: PALETTE.red, fontSize: 18, fontWeight: 900}}>红线二</div>
-              <div style={{marginTop: 4, fontSize: 28, fontWeight: 950}}>不得违反专属管辖</div>
-            </div>
-          </div>
+          {[
+            {badge: '红线一', title: '不得违反级别管辖', icon: Scale},
+            {badge: '红线二', title: '不得违反专属管辖', icon: LockKeyhole},
+          ].map((item) => {
+            const Icon = item.icon;
+            return (
+              <div
+                key={item.badge}
+                style={{
+                  position: 'relative',
+                  boxSizing: 'border-box',
+                  padding: '22px 26px',
+                  backgroundColor: PALETTE.redSoft,
+                  border: `3px solid ${PALETTE.red}`,
+                  borderRadius: 14,
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: 18,
+                  overflow: 'hidden',
+                }}
+              >
+                <div
+                  style={{
+                    display: 'grid',
+                    width: 64,
+                    height: 64,
+                    placeItems: 'center',
+                    color: PALETTE.paper,
+                    backgroundColor: PALETTE.red,
+                    borderRadius: 12,
+                    flex: '0 0 auto',
+                  }}
+                >
+                  <Icon size={34} strokeWidth={2.2} />
+                </div>
+                <div style={{flex: 1, minWidth: 0}}>
+                  <div
+                    style={{
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: 8,
+                      padding: '4px 12px',
+                      backgroundColor: PALETTE.paper,
+                      border: `1.5px solid ${PALETTE.red}`,
+                      borderRadius: 999,
+                      color: PALETTE.red,
+                      fontSize: 16,
+                      fontWeight: 950,
+                    }}
+                  >
+                    <Ban size={16} strokeWidth={2.5} />
+                    {item.badge}
+                  </div>
+                  <div style={{marginTop: 10, fontSize: 28, fontWeight: 950, color: PALETTE.red, lineHeight: 1.2}}>
+                    {item.title}
+                  </div>
+                  <div
+                    style={{
+                      position: 'relative',
+                      marginTop: 12,
+                      height: 4,
+                      backgroundColor: 'rgba(200, 63, 53, 0.22)',
+                      borderRadius: 999,
+                      overflow: 'hidden',
+                    }}
+                  >
+                    <div
+                      style={{
+                        position: 'absolute',
+                        left: `${cuePhase * 100}%`,
+                        top: -2,
+                        width: 42,
+                        height: 8,
+                        translate: '-50% 0',
+                        opacity: cueOpacity,
+                        backgroundColor: PALETTE.red,
+                        borderRadius: 999,
+                        boxShadow: `0 0 12px ${PALETTE.red}`,
+                      }}
+                    />
+                  </div>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </ImpactReveal>
     </div>
