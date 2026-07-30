@@ -31,6 +31,7 @@
 
 .remotion-deck__mode,
 .remotion-deck__auto,
+.remotion-deck__speed,
 .remotion-deck__navigation button,
 .remotion-deck__scene-strip button {
   box-sizing: border-box;
@@ -73,6 +74,19 @@
 
 .remotion-deck__auto {
   border-color: transparent;
+}
+
+.remotion-deck__speed {
+  border-color: transparent;
+}
+
+.remotion-deck__speed select {
+  min-height: 1.7rem;
+  border: 1px solid var(--deck-line);
+  border-radius: 3px;
+  background: var(--sl-color-bg);
+  color: inherit;
+  font: inherit;
 }
 
 .remotion-deck__auto input {
@@ -195,6 +209,10 @@
 
   .remotion-deck__status {
     display: none;
+  }
+
+  .remotion-deck__speed {
+    flex-wrap: wrap;
   }
 
   .remotion-deck__single,

@@ -1,7 +1,22 @@
 import {useEffect, useRef, useState} from 'react';
 import type {ComponentType, KeyboardEvent, ReactNode} from 'react';
 import {Player, type PlayerRef} from '@remotion/player';
-import {ChevronLeft, ChevronRight, Columns2, Grid3X3, MonitorPlay, Repeat2} from 'lucide-react';
+import {ChevronLeft, ChevronRight, Columns2, Gauge, Grid3X3, MonitorPlay, Repeat2} from 'lucide-react';
+import {
+  DEFAULT_PLAYBACK_PREFERENCES,
+  PLAYBACK_PREFERENCE_CHANGE_EVENT,
+  PLAYBACK_PREFERENCE_STORAGE_KEY,
+  PLAYBACK_SPEEDS,
+  configuredPlaybackSpeed,
+  inheritedPlaybackSpeed,
+  parsePlaybackPreferences,
+  playbackScopeKeysFromPathname,
+  resolvedPlaybackSpeed,
+  type PlaybackPreferences,
+  type PlaybackScope,
+  type PlaybackSpeed,
+  withPlaybackPreference,
+} from './playback-preferences';
 import {sceneIndexFromSearch, urlWithScene} from './scene-location';
 import './RemotionDeck.css';
 
@@ -44,7 +59,6 @@ const interactivePlayerProps = {
   initiallyShowControls: true,
   alwaysShowControls: false,
   hideControlsWhenPointerDoesntMove: true,
-  showPlaybackRateControl: [0.5, 0.6, 0.8, 1, 1.25, 1.5, 2],
   acknowledgeRemotionLicense: true,
   className: 'remotion-deck__player',
   style: {
@@ -100,7 +114,33 @@ export const RemotionDeck = ({
   const [mode, setMode] = useState<PreviewMode>('single');
   const [autoPage, setAutoPage] = useState(false);
   const [reducedMotion, setReducedMotion] = useState(false);
+  const [speedScope, setSpeedScope] = useState<PlaybackScope>('global');
+  const [playbackPreferences, setPlaybackPreferences] = useState<PlaybackPreferences>(DEFAULT_PLAYBACK_PREFERENCES);
   const playerRef = useRef<PlayerRef>(null);
+  const playbackScopeKeys = typeof window === 'undefined'
+    ? {}
+    : playbackScopeKeysFromPathname(window.location.pathname);
+  const effectivePlaybackSpeed = resolvedPlaybackSpeed(playbackPreferences, playbackScopeKeys);
+  const scopedPlaybackSpeed = configuredPlaybackSpeed(playbackPreferences, speedScope, playbackScopeKeys);
+  const inheritedSpeed = speedScope === 'global'
+    ? undefined
+    : inheritedPlaybackSpeed(playbackPreferences, speedScope, playbackScopeKeys);
+
+  const persistPlaybackPreferences = (preferences: PlaybackPreferences) => {
+    window.localStorage.setItem(PLAYBACK_PREFERENCE_STORAGE_KEY, JSON.stringify(preferences));
+    window.dispatchEvent(new Event(PLAYBACK_PREFERENCE_CHANGE_EVENT));
+  };
+
+  const updatePlaybackPreference = (speed: PlaybackSpeed | undefined) => {
+    const nextPreferences = withPlaybackPreference(
+      playbackPreferences,
+      speedScope,
+      playbackScopeKeys,
+      speed,
+    );
+    setPlaybackPreferences(nextPreferences);
+    persistPlaybackPreferences(nextPreferences);
+  };
 
   useEffect(() => {
     const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -108,6 +148,23 @@ export const RemotionDeck = ({
     update();
     mediaQuery.addEventListener('change', update);
     return () => mediaQuery.removeEventListener('change', update);
+  }, []);
+
+  useEffect(() => {
+    const syncPlaybackPreferences = () => {
+      setPlaybackPreferences(parsePlaybackPreferences(window.localStorage.getItem(PLAYBACK_PREFERENCE_STORAGE_KEY)));
+    };
+    const syncFromAnotherTab = (event: StorageEvent) => {
+      if (event.key === PLAYBACK_PREFERENCE_STORAGE_KEY) syncPlaybackPreferences();
+    };
+
+    syncPlaybackPreferences();
+    window.addEventListener(PLAYBACK_PREFERENCE_CHANGE_EVENT, syncPlaybackPreferences);
+    window.addEventListener('storage', syncFromAnotherTab);
+    return () => {
+      window.removeEventListener(PLAYBACK_PREFERENCE_CHANGE_EVENT, syncPlaybackPreferences);
+      window.removeEventListener('storage', syncFromAnotherTab);
+    };
   }, []);
 
   useEffect(() => {
@@ -206,12 +263,30 @@ export const RemotionDeck = ({
           <Repeat2 size={15} aria-hidden="true" />
           自动翻页
         </label>
+        <label className="remotion-deck__speed">
+          <Gauge size={15} aria-hidden="true" />
+          <span>速度</span>
+          <select value={speedScope} onChange={(event) => setSpeedScope(event.target.value as PlaybackScope)}>
+            <option value="global">全局</option>
+            {playbackScopeKeys.topic ? <option value="topic">本专题</option> : null}
+            {playbackScopeKeys.page ? <option value="page">本页</option> : null}
+          </select>
+          <select
+            value={scopedPlaybackSpeed === undefined ? 'inherit' : String(scopedPlaybackSpeed)}
+            onChange={(event) => updatePlaybackPreference(
+              event.target.value === 'inherit' ? undefined : Number(event.target.value) as PlaybackSpeed,
+            )}
+          >
+            {speedScope !== 'global' ? <option value="inherit">继承 {inheritedSpeed}×</option> : null}
+            {PLAYBACK_SPEEDS.map((speed) => <option key={speed} value={speed}>{speed}×</option>)}
+          </select>
+        </label>
         <span className="remotion-deck__status" aria-live="polite">
           {mode === 'single'
             ? autoPage
-              ? '播放完进入下一页'
-              : '播放结束停在稳定画面'
-            : '全部页面播放结束停在稳定画面'}
+              ? `播放完进入下一页 · ${effectivePlaybackSpeed}×`
+              : `播放结束停在稳定画面 · ${effectivePlaybackSpeed}×`
+            : `全部页面播放结束停在稳定画面 · ${effectivePlaybackSpeed}×`}
         </span>
       </div>
 
@@ -236,6 +311,7 @@ export const RemotionDeck = ({
               initialFrame={reducedMotion ? selectedEnd : selectedScene.start}
               autoPlay={!reducedMotion}
               loop={false}
+              playbackRate={effectivePlaybackSpeed}
             />
           </div>
           <div className="remotion-deck__navigation">
@@ -285,6 +361,7 @@ export const RemotionDeck = ({
                   initialFrame={reducedMotion ? frameEnd(scene) : scene.start}
                   autoPlay={!reducedMotion}
                   loop={false}
+                  playbackRate={effectivePlaybackSpeed}
                 />
               </div>
             </article>

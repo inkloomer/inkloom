@@ -1,5 +1,5 @@
 export const FPS = 60;
-export const PLAYBACK_RATE = 0.6;
+export const PLAYBACK_RATE = 1;
 export const SOURCE_DURATION_SECONDS = 26;
 
 const toPlaybackFrames = (sourceFrames: number) => Math.round(sourceFrames / PLAYBACK_RATE);
