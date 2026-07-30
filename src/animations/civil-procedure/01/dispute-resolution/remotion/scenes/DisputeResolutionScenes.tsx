@@ -17,10 +17,13 @@ import {
   FadeIn,
   FlowArrow,
   IconNode,
+  Enter,
   ImpactReveal,
   Keyword,
+  KeywordFocus,
   MaskedReveal,
   SceneHeading,
+  StaggerEnter,
   baseTextStyle,
 } from '../visual-system';
 
@@ -539,7 +542,7 @@ export const EnforceabilityScene = () => {
 
       <ImpactReveal delay={220} style={{position: 'absolute', left: 280, top: 840}}>
         <div style={{...baseTextStyle, fontSize: 30, fontWeight: 850}}>
-          难点：调解本身不可执行 · 经 <Keyword accent="gold">司法确认</Keyword> 后方可执行
+          难点：调解本身不可执行 · 经 <KeywordFocus accent="gold" delay={40}>司法确认</KeywordFocus> 后方可执行
         </div>
       </ImpactReveal>
     </div>

@@ -498,11 +498,24 @@ const captureAnimation = async ({
     });
     const compositions = await getCompositions(serveUrl, {puppeteerInstance: browser});
 
-    if (compositions.length !== 1) {
-      throw new Error(`${animationId}: expected exactly one composition, found ${compositions.length}.`);
+    if (compositions.length === 0) {
+      throw new Error(`${animationId}: no compositions found.`);
     }
 
-    const composition = compositions[0];
+    // Prefer the full deck composition when Root also registers per-scene comps for Studio.
+    // Convention: deck id is PascalCase of animation-id (dispute-resolution → DisputeResolution).
+    const deckId = animationId
+      .split('-')
+      .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+      .join('');
+    const composition =
+      compositions.find((item) => item.id === deckId) ??
+      compositions.find((item) => !item.id.includes('-')) ??
+      [...compositions].sort((a, b) => b.durationInFrames - a.durationInFrames)[0];
+
+    if (!composition) {
+      throw new Error(`${animationId}: could not resolve main composition among ${compositions.map((c) => c.id).join(', ')}.`);
+    }
     const carrierPath = publishStills ? await resolveCarrierPath((await loadAnimationMetadata(animationId)).route) : null;
     const playerSceneMetadata = publishStills ? await loadPlayerSceneMetadata(animationId, scenes) : null;
     const pages = [];

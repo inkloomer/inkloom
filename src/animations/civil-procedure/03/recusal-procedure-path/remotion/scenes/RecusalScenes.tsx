@@ -27,9 +27,12 @@ import {
   GateChip,
   IconNode,
   ImpactReveal,
+  Enter,
   Keyword,
+  KeywordFocus,
   MaskedReveal,
   SceneHeading,
+  StaggerEnter,
   baseTextStyle,
 } from '../visual-system';
 
@@ -471,7 +474,7 @@ export const PauseVsContinueScene = () => {
 
       <MaskedReveal delay={10} duration={22} style={{position: 'absolute', left: 120, top: 236}}>
         <div style={{...baseTextStyle, fontSize: 38, fontWeight: 900, lineHeight: 1.22}}>
-          两段效力必须拆开记 · 切勿 <Keyword accent="purple">混成一段</Keyword>
+          两段效力必须拆开记 · 切勿 <KeywordFocus accent="purple" delay={36}>混成一段</KeywordFocus>
         </div>
       </MaskedReveal>
 

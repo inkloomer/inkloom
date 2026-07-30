@@ -18,10 +18,13 @@ import {
   BranchConnector,
   FlowArrow,
   IconNode,
+  Enter,
   ImpactReveal,
   Keyword,
+  KeywordFocus,
   MaskedReveal,
   SceneHeading,
+  StaggerEnter,
   baseTextStyle,
 } from '../visual-system';
 
@@ -50,7 +53,7 @@ export const CriterionScene = () => {
 
       <MaskedReveal delay={8} duration={20} style={{position: 'absolute', left: 120, top: 230}}>
         <div style={{...baseTextStyle, fontSize: 36, fontWeight: 900}}>
-          分类唯一标尺：是否 <Keyword accent="red">解决民事权利义务纠纷</Keyword>
+          分类唯一标尺：是否 <KeywordFocus accent="red" delay={30}>解决民事权利义务纠纷</KeywordFocus>
         </div>
       </MaskedReveal>
 
@@ -543,7 +546,7 @@ export const VoterExceptionScene = () => {
           }}
         >
           <FileWarning size={34} color={PALETTE.red} />
-          原因：解决的是 <Keyword accent="red">政治权利</Keyword>，不是民事权利义务
+          原因：解决的是 <KeywordFocus accent="red" delay={40}>政治权利</KeywordFocus>，不是民事权利义务
         </div>
       </ImpactReveal>
     </div>

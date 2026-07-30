@@ -1,5 +1,4 @@
-import type {ReactNode} from 'react';
-import {AbsoluteFill, Easing, Sequence, interpolate, useCurrentFrame} from 'remotion';
+import {useCurrentFrame} from 'remotion';
 import {
   ComparisonScene,
   CriterionScene,
@@ -7,71 +6,14 @@ import {
   NonLitigationScene,
   VoterExceptionScene,
 } from './scenes/TrialProcedureScenes';
-import {DURATION_FRAMES, PALETTE, SCENES, toSourceFrame} from './storyboard';
-import {ENTER_EASING, EXIT_EASING, FilmRail} from './visual-system';
-
-const SceneMotion = ({children, duration}: {readonly children: ReactNode; readonly duration: number}) => {
-  const frame = toSourceFrame(useCurrentFrame());
-  const sourceDuration = toSourceFrame(duration);
-
-  return (
-    <div
-      style={{
-        position: 'absolute',
-        inset: 0,
-        translate: `${interpolate(frame, [0, 18, sourceDuration - 14, sourceDuration], [-86, 0, 0, 86], {
-          extrapolateLeft: 'clamp',
-          extrapolateRight: 'clamp',
-          easing: [ENTER_EASING, Easing.linear, EXIT_EASING],
-        })}px 0px`,
-      }}
-    >
-      {children}
-    </div>
-  );
-};
-
-const BackgroundStructure = () => (
-  <>
-    {[320, 640, 960, 1280, 1600].map((left) => (
-      <div
-        key={left}
-        style={{
-          position: 'absolute',
-          left,
-          top: 0,
-          width: 1,
-          height: 1080,
-          backgroundColor: 'rgba(203, 210, 206, 0.26)',
-        }}
-      />
-    ))}
-    <div style={{position: 'absolute', left: 0, top: 206, width: 1920, height: 1, backgroundColor: 'rgba(203, 210, 206, 0.55)'}} />
-  </>
-);
-
-const SceneSequence = ({
-  start,
-  duration,
-  name,
-  children,
-}: {
-  readonly start: number;
-  readonly duration: number;
-  readonly name: string;
-  readonly children: ReactNode;
-}) => (
-  <Sequence from={start} durationInFrames={duration} name={name} layout="none">
-    <SceneMotion duration={duration}>{children}</SceneMotion>
-  </Sequence>
-);
+import {DURATION_FRAMES, SCENES} from './storyboard';
+import {DeckShell, SceneSequence} from './visual-system';
 
 export const TrialProcedure = () => {
   const frame = useCurrentFrame();
 
   return (
-    <AbsoluteFill style={{backgroundColor: PALETTE.background, overflow: 'hidden'}}>
-      <BackgroundStructure />
+    <DeckShell frame={frame} totalFrames={DURATION_FRAMES}>
       <SceneSequence name="01-criterion" {...SCENES.criterion}>
         <CriterionScene />
       </SceneSequence>
@@ -81,13 +23,13 @@ export const TrialProcedure = () => {
       <SceneSequence name="03-non-litigation" {...SCENES.nonLitigation}>
         <NonLitigationScene />
       </SceneSequence>
-      <SceneSequence name="04-voter-exception" {...SCENES.voterException}>
+      {/* Intentional cut: 选民资格 is a classification exception, not a branch of the prior lane */}
+      <SceneSequence name="04-voter-exception" {...SCENES.voterException} cut>
         <VoterExceptionScene />
       </SceneSequence>
       <SceneSequence name="05-comparison" {...SCENES.comparison}>
         <ComparisonScene />
       </SceneSequence>
-      <FilmRail frame={frame} totalFrames={DURATION_FRAMES} />
-    </AbsoluteFill>
+    </DeckShell>
   );
 };

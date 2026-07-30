@@ -22,9 +22,12 @@ import {
   GateChip,
   IconNode,
   ImpactReveal,
+  Enter,
   Keyword,
+  KeywordFocus,
   MaskedReveal,
   SceneHeading,
+  StaggerEnter,
   baseTextStyle,
 } from '../visual-system';
 
@@ -226,7 +229,7 @@ export const SecondInstanceScene = () => {
 
       <MaskedReveal delay={10} duration={22} style={{position: 'absolute', left: 120, top: 236}}>
         <div style={{...baseTextStyle, fontSize: 38, fontWeight: 900, lineHeight: 1.22}}>
-          二审原则合议 · 独任须 <Keyword accent="gold">四条件齐备</Keyword>
+          二审原则合议 · 独任须 <KeywordFocus accent="gold" delay={32}>四条件齐备</KeywordFocus>
         </div>
       </MaskedReveal>
 
@@ -339,104 +342,107 @@ export const MidCourtBanScene = () => {
 
       <MaskedReveal delay={10} duration={22} style={{position: 'absolute', left: 120, top: 236}}>
         <div style={{...baseTextStyle, fontSize: 38, fontWeight: 900, lineHeight: 1.22}}>
-          中级法院一审的案件 · 一审与二审 <Keyword accent="red">均不能独任</Keyword>
+          中级法院一审的案件 · 一审与二审 <KeywordFocus accent="red" delay={36}>均不能独任</KeywordFocus>
         </div>
       </MaskedReveal>
 
       <div
         style={{
           position: 'absolute',
-          left: 160,
-          top: 380,
-          width: 1600,
-          height: 180,
+          left: 100,
+          top: 340,
+          width: 1720,
+          height: 200,
           boxSizing: 'border-box',
-          padding: '28px 36px',
+          padding: '28px 40px',
           backgroundColor: PALETTE.paper,
-          border: `3px solid ${PALETTE.red}`,
-          borderRadius: 14,
+          border: `4px solid ${PALETTE.red}`,
+          borderRadius: 16,
           display: 'flex',
           alignItems: 'center',
-          justifyContent: 'center',
+          justifyContent: 'space-between',
           gap: 28,
           opacity: p1,
         }}
       >
-        <IconNode icon={Landmark} label="中院一审案件" detail="起点锁定" accent="red" style={{width: 420, minHeight: 120}} />
-        <div style={{width: 180, position: 'relative', height: 80}}>
-          <FlowArrow left={10} top={18} width={140} progress={line} accent="red" label="推导" />
+        <IconNode icon={Landmark} label="中院一审案件" detail="起点锁定 · 非基层" accent="red" style={{width: 520, minHeight: 140}} />
+        <div style={{width: 220, position: 'relative', height: 80}}>
+          <FlowArrow left={10} top={18} width={180} progress={line} accent="red" label="审级链条" />
         </div>
-        <IconNode icon={Ban} label="组织禁区" detail="审级链条全锁" accent="red" style={{width: 380, minHeight: 120}} />
+        <IconNode icon={Ban} label="组织禁区" detail="一审+二审全锁" accent="red" style={{width: 520, minHeight: 140}} />
       </div>
 
       <div
         style={{
           position: 'absolute',
-          left: 160,
-          top: 620,
+          left: 100,
+          top: 580,
+          width: 1720,
           display: 'flex',
-          gap: 32,
+          gap: 28,
           opacity: p2,
         }}
       >
         <div
           style={{
-            width: 760,
+            flex: 1,
+            minHeight: 200,
             boxSizing: 'border-box',
-            padding: '30px 34px',
+            padding: '32px 36px',
             backgroundColor: PALETTE.redSoft,
             border: `3px solid ${PALETTE.red}`,
             borderRadius: 14,
             display: 'flex',
             alignItems: 'center',
-            gap: 22,
+            gap: 24,
             ...baseTextStyle,
           }}
         >
-          <Ban size={52} color={PALETTE.red} strokeWidth={2.3} />
+          <Ban size={56} color={PALETTE.red} strokeWidth={2.3} />
           <div>
-            <div style={{fontSize: 34, fontWeight: 900, color: PALETTE.red}}>一审不能独任</div>
-            <div style={{marginTop: 10, fontSize: 22, fontWeight: 750, color: PALETTE.muted}}>非基层法院 · 无普通独任例外</div>
+            <div style={{fontSize: 36, fontWeight: 900, color: PALETTE.red}}>一审不能独任</div>
+            <div style={{marginTop: 12, fontSize: 24, fontWeight: 750, color: PALETTE.muted}}>非基层法院 · 无普通独任例外</div>
           </div>
         </div>
         <div
           style={{
-            width: 760,
+            flex: 1,
+            minHeight: 200,
             boxSizing: 'border-box',
-            padding: '30px 34px',
+            padding: '32px 36px',
             backgroundColor: PALETTE.redSoft,
             border: `3px solid ${PALETTE.red}`,
             borderRadius: 14,
             display: 'flex',
             alignItems: 'center',
-            gap: 22,
+            gap: 24,
             ...baseTextStyle,
           }}
         >
-          <Ban size={52} color={PALETTE.red} strokeWidth={2.3} />
+          <Ban size={56} color={PALETTE.red} strokeWidth={2.3} />
           <div>
-            <div style={{fontSize: 34, fontWeight: 900, color: PALETTE.red}}>二审也不能独任</div>
-            <div style={{marginTop: 10, fontSize: 22, fontWeight: 750, color: PALETTE.muted}}>来源非基层简易 / 条件链断裂</div>
+            <div style={{fontSize: 36, fontWeight: 900, color: PALETTE.red}}>二审也不能独任</div>
+            <div style={{marginTop: 12, fontSize: 24, fontWeight: 750, color: PALETTE.muted}}>来源非基层简易 / 条件链断裂</div>
           </div>
         </div>
       </div>
 
-      <ImpactReveal delay={190} style={{position: 'absolute', left: 280, top: 840, opacity: p3}}>
+      <ImpactReveal delay={190} style={{position: 'absolute', left: 220, top: 830, opacity: p3}}>
         <div
           style={{
             ...baseTextStyle,
             display: 'flex',
             alignItems: 'center',
             gap: 18,
-            padding: '18px 28px',
+            padding: '18px 32px',
             backgroundColor: PALETTE.goldSoft,
             border: `2px solid ${PALETTE.gold}`,
             borderRadius: 10,
-            fontSize: 28,
+            fontSize: 32,
             fontWeight: 850,
           }}
         >
-          <ShieldAlert size={36} color={PALETTE.gold} />
+          <ShieldAlert size={38} color={PALETTE.gold} />
           口诀：中院一审案 → 一审合议 · 二审合议
         </div>
       </ImpactReveal>
