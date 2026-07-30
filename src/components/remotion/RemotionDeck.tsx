@@ -1,7 +1,7 @@
 import {useEffect, useRef, useState} from 'react';
 import type {ComponentType, KeyboardEvent, ReactNode} from 'react';
 import {Player, type PlayerRef} from '@remotion/player';
-import {ChevronLeft, ChevronRight, Columns2, Gauge, Grid3X3, MonitorPlay, Repeat2} from 'lucide-react';
+import {ChevronLeft, ChevronRight, Columns2, Gauge, Grid3X3, MonitorPlay, Pause, Play, Repeat2, RotateCcw} from 'lucide-react';
 import {
   DEFAULT_PLAYBACK_PREFERENCES,
   PLAYBACK_PREFERENCE_CHANGE_EVENT,
@@ -96,6 +96,128 @@ const ModeButton = ({
   </button>
 );
 
+type PlayerStatus = 'playing' | 'paused' | 'ended';
+
+interface PlayerFrameProps {
+  readonly component: ComponentType<Record<string, never>>;
+  readonly durationInFrames: number;
+  readonly fps: number;
+  readonly compositionWidth: number;
+  readonly compositionHeight: number;
+  readonly inFrame: number;
+  readonly outFrame: number;
+  readonly initialFrame: number;
+  readonly autoPlay: boolean;
+  readonly loop: boolean;
+  readonly playbackRate: number;
+  readonly onEnded?: () => void;
+}
+
+const PlayerFrame = ({
+  component,
+  durationInFrames,
+  fps,
+  compositionWidth,
+  compositionHeight,
+  inFrame,
+  outFrame,
+  initialFrame,
+  autoPlay,
+  loop,
+  playbackRate,
+  onEnded,
+}: PlayerFrameProps) => {
+  const playerRef = useRef<PlayerRef>(null);
+  const [status, setStatus] = useState<PlayerStatus>(() =>
+    initialFrame >= outFrame ? 'ended' : autoPlay ? 'playing' : 'paused',
+  );
+  const [hovered, setHovered] = useState(false);
+
+  useEffect(() => {
+    const player = playerRef.current;
+    if (!player) return;
+
+    const onPlay = () => setStatus('playing');
+    const onPause = () => setStatus('paused');
+    const onSeek = ({detail}: {detail: {frame: number}}) => {
+      if (detail.frame < outFrame) setStatus('paused');
+    };
+    const onPlayerEnded = () => {
+      setStatus('ended');
+      onEnded?.();
+    };
+
+    player.addEventListener('play', onPlay);
+    player.addEventListener('pause', onPause);
+    player.addEventListener('seeked', onSeek);
+    player.addEventListener('ended', onPlayerEnded);
+    return () => {
+      player.removeEventListener('play', onPlay);
+      player.removeEventListener('pause', onPause);
+      player.removeEventListener('seeked', onSeek);
+      player.removeEventListener('ended', onPlayerEnded);
+    };
+  }, [onEnded, outFrame]);
+
+  const togglePlayback = () => {
+    const player = playerRef.current;
+    if (!player) return;
+
+    if (status === 'playing') {
+      player.pause();
+      return;
+    }
+
+    if (status === 'ended') player.seekTo(inFrame);
+    player.play();
+  };
+
+  const buttonLabel = status === 'playing'
+    ? '暂停当前页'
+    : status === 'ended'
+      ? '重播当前页'
+      : '播放当前页';
+  const ButtonIcon = status === 'playing' ? Pause : status === 'ended' ? RotateCcw : Play;
+
+  return (
+    <div
+      className="remotion-deck__player-frame"
+      style={{aspectRatio: `${compositionWidth} / ${compositionHeight}`}}
+      onPointerEnter={() => setHovered(true)}
+      onPointerLeave={() => setHovered(false)}
+    >
+      <Player
+        {...interactivePlayerProps}
+        ref={playerRef}
+        component={component}
+        durationInFrames={durationInFrames}
+        fps={fps}
+        compositionWidth={compositionWidth}
+        compositionHeight={compositionHeight}
+        inFrame={inFrame}
+        outFrame={outFrame}
+        initialFrame={initialFrame}
+        autoPlay={autoPlay}
+        loop={loop}
+        playbackRate={playbackRate}
+      />
+      <button
+        type="button"
+        className="remotion-deck__center-control"
+        data-visible={status !== 'playing' || hovered ? 'true' : 'false'}
+        aria-label={buttonLabel}
+        title={buttonLabel}
+        onClick={(event) => {
+          event.stopPropagation();
+          togglePlayback();
+        }}
+      >
+        <ButtonIcon size={28} strokeWidth={2.25} aria-hidden="true" />
+      </button>
+    </div>
+  );
+};
+
 export const RemotionDeck = ({
   component,
   scenes,
@@ -116,7 +238,6 @@ export const RemotionDeck = ({
   const [reducedMotion, setReducedMotion] = useState(false);
   const [speedScope, setSpeedScope] = useState<PlaybackScope>('global');
   const [playbackPreferences, setPlaybackPreferences] = useState<PlaybackPreferences>(DEFAULT_PLAYBACK_PREFERENCES);
-  const playerRef = useRef<PlayerRef>(null);
   const playbackScopeKeys = typeof window === 'undefined'
     ? {}
     : playbackScopeKeysFromPathname(window.location.pathname);
@@ -203,17 +324,6 @@ export const RemotionDeck = ({
     previewEndTrimFrames: 0,
   };
   const selectedEnd = frameEnd(selectedScene);
-  const playerFrameStyle = {aspectRatio: `${compositionWidth} / ${compositionHeight}`};
-
-  useEffect(() => {
-    const player = playerRef.current;
-    if (mode !== 'single' || !autoPage || !player) return;
-
-    const advance = () => selectScene(currentScene + 1, 'replace');
-    player.addEventListener('ended', advance);
-    return () => player.removeEventListener('ended', advance);
-  }, [autoPage, currentScene, mode, sceneQueryParameter, scenes]);
-
   useEffect(() => {
     const selectSceneFromLocation = () => {
       setCurrentScene(sceneIndexFromSearch(scenes, window.location.search, sceneQueryParameter));
@@ -296,11 +406,8 @@ export const RemotionDeck = ({
             <span>{selectedScene.number}</span>
             <strong>{selectedScene.title}</strong>
           </header>
-          <div className="remotion-deck__player-frame" style={playerFrameStyle}>
-            <Player
-              {...interactivePlayerProps}
-              key={`${selectedScene.number}-${autoPage ? 'auto' : 'once'}-${reducedMotion ? 'reduced' : 'motion'}`}
-              ref={playerRef}
+          <PlayerFrame
+            key={`${selectedScene.number}-${autoPage ? 'auto' : 'once'}-${reducedMotion ? 'reduced' : 'motion'}`}
               component={component}
               durationInFrames={durationInFrames}
               fps={fps}
@@ -312,8 +419,10 @@ export const RemotionDeck = ({
               autoPlay={!reducedMotion}
               loop={false}
               playbackRate={effectivePlaybackSpeed}
+              onEnded={mode === 'single' && autoPage
+                ? () => selectScene(currentScene + 1, 'replace')
+                : undefined}
             />
-          </div>
           <div className="remotion-deck__navigation">
             <button type="button" onClick={() => selectScene(currentScene - 1)} title="上一页">
               <ChevronLeft size={17} />
@@ -348,9 +457,7 @@ export const RemotionDeck = ({
                 <span>{scene.number}</span>
                 <strong>{scene.title}</strong>
               </header>
-              <div className="remotion-deck__player-frame" style={playerFrameStyle}>
-                <Player
-                  {...interactivePlayerProps}
+              <PlayerFrame
                   component={component}
                   durationInFrames={durationInFrames}
                   fps={fps}
@@ -362,8 +469,7 @@ export const RemotionDeck = ({
                   autoPlay={!reducedMotion}
                   loop={false}
                   playbackRate={effectivePlaybackSpeed}
-                />
-              </div>
+              />
             </article>
           ))}
         </div>
