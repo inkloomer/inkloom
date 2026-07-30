@@ -1,10 +1,16 @@
-import type { ReactNode } from 'react';
-import { AbsoluteFill, Easing, Sequence, interpolate, useCurrentFrame } from 'remotion';
-import { ConceptScene, LitigationScene, NonLitigationScene, ComparisonScene } from './scenes/TrialProcedureScenes';
-import { DURATION_FRAMES, PALETTE, SCENES, toSourceFrame } from './storyboard';
-import { ENTER_EASING, EXIT_EASING, FilmRail } from './visual-system';
+import type {ReactNode} from 'react';
+import {AbsoluteFill, Easing, Sequence, interpolate, useCurrentFrame} from 'remotion';
+import {
+  ComparisonScene,
+  LitigationScene,
+  NonLitigationScene,
+  OverviewScene,
+  TaxonomyScene,
+} from './scenes/TrialProcedureScenes';
+import {DURATION_FRAMES, PALETTE, SCENES, toSourceFrame} from './storyboard';
+import {ENTER_EASING, EXIT_EASING, FilmRail} from './visual-system';
 
-const SceneMotion = ({ children, duration }: { readonly children: ReactNode; readonly duration: number }) => {
+const SceneMotion = ({children, duration}: {readonly children: ReactNode; readonly duration: number}) => {
   const frame = toSourceFrame(useCurrentFrame());
   const sourceDuration = toSourceFrame(duration);
 
@@ -13,16 +19,11 @@ const SceneMotion = ({ children, duration }: { readonly children: ReactNode; rea
       style={{
         position: 'absolute',
         inset: 0,
-        translate: `${interpolate(
-          frame,
-          [0, 18, sourceDuration - 14, sourceDuration],
-          [-86, 0, 0, 86],
-          {
-            extrapolateLeft: 'clamp',
-            extrapolateRight: 'clamp',
-            easing: [ENTER_EASING, Easing.linear, EXIT_EASING],
-          }
-        )}px 0px`,
+        translate: `${interpolate(frame, [0, 18, sourceDuration - 14, sourceDuration], [-86, 0, 0, 86], {
+          extrapolateLeft: 'clamp',
+          extrapolateRight: 'clamp',
+          easing: [ENTER_EASING, Easing.linear, EXIT_EASING],
+        })}px 0px`,
       }}
     >
       {children}
@@ -45,16 +46,7 @@ const BackgroundStructure = () => (
         }}
       />
     ))}
-    <div
-      style={{
-        position: 'absolute',
-        left: 0,
-        top: 206,
-        width: 1920,
-        height: 1,
-        backgroundColor: 'rgba(203, 210, 206, 0.55)',
-      }}
-    />
+    <div style={{position: 'absolute', left: 0, top: 206, width: 1920, height: 1, backgroundColor: 'rgba(203, 210, 206, 0.55)'}} />
   </>
 );
 
@@ -78,18 +70,21 @@ export const TrialProcedure = () => {
   const frame = useCurrentFrame();
 
   return (
-    <AbsoluteFill style={{ backgroundColor: PALETTE.background, overflow: 'hidden' }}>
+    <AbsoluteFill style={{backgroundColor: PALETTE.background, overflow: 'hidden'}}>
       <BackgroundStructure />
-      <SceneSequence name="01-concept" {...SCENES.concept}>
-        <ConceptScene />
+      <SceneSequence name="01-overview" {...SCENES.overview}>
+        <OverviewScene />
       </SceneSequence>
-      <SceneSequence name="02-litigation" {...SCENES.litigation}>
+      <SceneSequence name="02-taxonomy" {...SCENES.taxonomy}>
+        <TaxonomyScene />
+      </SceneSequence>
+      <SceneSequence name="03-litigation" {...SCENES.litigation}>
         <LitigationScene />
       </SceneSequence>
-      <SceneSequence name="03-non-litigation" {...SCENES.nonLitigation}>
+      <SceneSequence name="04-non-litigation" {...SCENES.nonLitigation}>
         <NonLitigationScene />
       </SceneSequence>
-      <SceneSequence name="04-comparison" {...SCENES.comparison}>
+      <SceneSequence name="05-comparison" {...SCENES.comparison}>
         <ComparisonScene />
       </SceneSequence>
       <FilmRail frame={frame} totalFrames={DURATION_FRAMES} />
