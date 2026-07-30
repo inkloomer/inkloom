@@ -35,6 +35,7 @@ const interactivePlayerProps = {
   clickToPlay: true,
   doubleClickToFullscreen: true,
   spaceKeyToPlayOrPause: true,
+  moveToBeginningWhenEnded: false,
   initiallyShowControls: true,
   alwaysShowControls: false,
   hideControlsWhenPointerDoesntMove: true,
