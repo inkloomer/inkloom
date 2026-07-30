@@ -6,6 +6,7 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
+    "animation:pages": "node scripts/capture-remotion-pages.mjs",
     "preview": "astro preview",
     "astro": "astro"
   },
@@ -23,6 +24,8 @@
     "starlight-auto-sidebar": "^0.4.0"
   },
   "devDependencies": {
+    "@remotion/bundler": "4.0.501",
+    "@remotion/renderer": "4.0.501",
     "@types/react": "19.2.14",
     "@types/react-dom": "19.2.3"
   }

@@ -89,6 +89,21 @@ astro dev --background
 pnpm build
 ```
 
+### 检查 Remotion 分页画面
+
+一次生成动画每个分页的完整静帧、总览图和帧信息：
+
+```bash
+# 检查全部动画
+pnpm animation:pages
+
+# 只检查一个动画
+pnpm animation:pages legal-jurisdiction
+```
+
+结果位于 `.artifacts/animation-pages/<动画 ID>/<时间戳>/`。脚本会自动发现包含
+`remotion/index.ts` 与 `remotion/storyboard.ts` 的动画，无需维护单独的截图清单。
+
 站点通过 GitHub Actions 自动部署至 `https://inkloomer.github.io/inkloom`。
 
 <br>
