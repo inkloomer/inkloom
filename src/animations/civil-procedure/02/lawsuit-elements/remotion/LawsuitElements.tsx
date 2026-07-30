@@ -1,6 +1,12 @@
 import type {ReactNode} from 'react';
 import {AbsoluteFill, Easing, Sequence, interpolate, useCurrentFrame} from 'remotion';
-import {ConceptScene, DistinctionScene, RecapScene, TransformationScene} from './scenes/ElementScenes';
+import {
+  ClassificationScene,
+  ConceptScene,
+  DistinctionScene,
+  RecapScene,
+  TransformationScene,
+} from './scenes/ElementScenes';
 import {DURATION_FRAMES, PALETTE, SCENES, toSourceFrame} from './storyboard';
 import {ENTER_EASING, EXIT_EASING, FilmRail} from './visual-system';
 
@@ -25,6 +31,25 @@ const SceneMotion = ({children, duration}: {readonly children: ReactNode; readon
   );
 };
 
+const BackgroundStructure = () => (
+  <>
+    {[320, 640, 960, 1280, 1600].map((left) => (
+      <div
+        key={left}
+        style={{
+          position: 'absolute',
+          left,
+          top: 0,
+          width: 1,
+          height: 1080,
+          backgroundColor: 'rgba(203, 210, 206, 0.26)',
+        }}
+      />
+    ))}
+    <div style={{position: 'absolute', left: 0, top: 206, width: 1920, height: 1, backgroundColor: 'rgba(203, 210, 206, 0.55)'}} />
+  </>
+);
+
 const SceneSequence = ({
   start,
   duration,
@@ -46,16 +71,20 @@ export const LawsuitElements = () => {
 
   return (
     <AbsoluteFill style={{backgroundColor: PALETTE.background, overflow: 'hidden'}}>
+      <BackgroundStructure />
       <SceneSequence name="01-concept" {...SCENES.concept}>
         <ConceptScene />
       </SceneSequence>
       <SceneSequence name="02-distinction" {...SCENES.distinction}>
         <DistinctionScene />
       </SceneSequence>
-      <SceneSequence name="03-transformation" {...SCENES.transformation}>
+      <SceneSequence name="03-classification" {...SCENES.classification}>
+        <ClassificationScene />
+      </SceneSequence>
+      <SceneSequence name="04-transformation" {...SCENES.transformation}>
         <TransformationScene />
       </SceneSequence>
-      <SceneSequence name="04-recap" {...SCENES.recap}>
+      <SceneSequence name="05-recap" {...SCENES.recap}>
         <RecapScene />
       </SceneSequence>
       <FilmRail frame={frame} totalFrames={DURATION_FRAMES} />

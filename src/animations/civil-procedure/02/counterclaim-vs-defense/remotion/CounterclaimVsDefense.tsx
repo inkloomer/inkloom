@@ -1,6 +1,12 @@
 import type {ReactNode} from 'react';
 import {AbsoluteFill, Easing, Sequence, interpolate, useCurrentFrame} from 'remotion';
-import {CasesScene, ConceptScene, RecapScene, TechniqueScene} from './scenes/CounterclaimScenes';
+import {
+  CasesScene,
+  ConceptScene,
+  IndependenceScene,
+  RecapScene,
+  TechniqueScene,
+} from './scenes/CounterclaimScenes';
 import {DURATION_FRAMES, PALETTE, SCENES, toSourceFrame} from './storyboard';
 import {ENTER_EASING, EXIT_EASING, FilmRail} from './visual-system';
 
@@ -25,6 +31,25 @@ const SceneMotion = ({children, duration}: {readonly children: ReactNode; readon
   );
 };
 
+const BackgroundStructure = () => (
+  <>
+    {[320, 640, 960, 1280, 1600].map((left) => (
+      <div
+        key={left}
+        style={{
+          position: 'absolute',
+          left,
+          top: 0,
+          width: 1,
+          height: 1080,
+          backgroundColor: 'rgba(203, 210, 206, 0.26)',
+        }}
+      />
+    ))}
+    <div style={{position: 'absolute', left: 0, top: 206, width: 1920, height: 1, backgroundColor: 'rgba(203, 210, 206, 0.55)'}} />
+  </>
+);
+
 const SceneSequence = ({
   start,
   duration,
@@ -46,6 +71,7 @@ export const CounterclaimVsDefense = () => {
 
   return (
     <AbsoluteFill style={{backgroundColor: PALETTE.background, overflow: 'hidden'}}>
+      <BackgroundStructure />
       <SceneSequence name="01-concept" {...SCENES.concept}>
         <ConceptScene />
       </SceneSequence>
@@ -55,7 +81,10 @@ export const CounterclaimVsDefense = () => {
       <SceneSequence name="03-cases" {...SCENES.cases}>
         <CasesScene />
       </SceneSequence>
-      <SceneSequence name="04-recap" {...SCENES.recap}>
+      <SceneSequence name="04-independence" {...SCENES.independence}>
+        <IndependenceScene />
+      </SceneSequence>
+      <SceneSequence name="05-recap" {...SCENES.recap}>
         <RecapScene />
       </SceneSequence>
       <FilmRail frame={frame} totalFrames={DURATION_FRAMES} />
