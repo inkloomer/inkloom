@@ -49,7 +49,6 @@ const frameEnd = (scene: RemotionScene) => {
 };
 
 const interactivePlayerProps = {
-  controls: true,
   showVolumeControls: true,
   allowFullscreen: true,
   clickToPlay: true,
@@ -188,6 +187,7 @@ const PlayerFrame = ({
     >
       <Player
         {...interactivePlayerProps}
+        controls={hovered}
         ref={playerRef}
         component={component}
         durationInFrames={durationInFrames}
