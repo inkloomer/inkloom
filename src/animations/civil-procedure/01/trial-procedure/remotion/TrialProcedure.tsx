@@ -2,10 +2,10 @@ import type {ReactNode} from 'react';
 import {AbsoluteFill, Easing, Sequence, interpolate, useCurrentFrame} from 'remotion';
 import {
   ComparisonScene,
+  CriterionScene,
   LitigationScene,
   NonLitigationScene,
-  OverviewScene,
-  TaxonomyScene,
+  VoterExceptionScene,
 } from './scenes/TrialProcedureScenes';
 import {DURATION_FRAMES, PALETTE, SCENES, toSourceFrame} from './storyboard';
 import {ENTER_EASING, EXIT_EASING, FilmRail} from './visual-system';
@@ -72,17 +72,17 @@ export const TrialProcedure = () => {
   return (
     <AbsoluteFill style={{backgroundColor: PALETTE.background, overflow: 'hidden'}}>
       <BackgroundStructure />
-      <SceneSequence name="01-overview" {...SCENES.overview}>
-        <OverviewScene />
+      <SceneSequence name="01-criterion" {...SCENES.criterion}>
+        <CriterionScene />
       </SceneSequence>
-      <SceneSequence name="02-taxonomy" {...SCENES.taxonomy}>
-        <TaxonomyScene />
-      </SceneSequence>
-      <SceneSequence name="03-litigation" {...SCENES.litigation}>
+      <SceneSequence name="02-litigation" {...SCENES.litigation}>
         <LitigationScene />
       </SceneSequence>
-      <SceneSequence name="04-non-litigation" {...SCENES.nonLitigation}>
+      <SceneSequence name="03-non-litigation" {...SCENES.nonLitigation}>
         <NonLitigationScene />
+      </SceneSequence>
+      <SceneSequence name="04-voter-exception" {...SCENES.voterException}>
+        <VoterExceptionScene />
       </SceneSequence>
       <SceneSequence name="05-comparison" {...SCENES.comparison}>
         <ComparisonScene />

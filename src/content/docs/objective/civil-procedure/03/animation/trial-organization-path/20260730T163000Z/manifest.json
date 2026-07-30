@@ -1,0 +1,14 @@
+{
+  "version": "20260730T163000Z",
+  "generatedAt": "2026-07-30T16:30:00Z",
+  "animationId": "trial-organization-path",
+  "dimensions": { "width": 1920, "height": 1080 },
+  "scenes": [
+    { "id": "path-gate", "title": "先锁审级与程序", "frame": 327, "file": "path-gate.png" },
+    { "id": "first-instance", "title": "一审：简易与普通", "frame": 809, "file": "first-instance.png" },
+    { "id": "second-instance", "title": "二审四道门", "frame": 1309, "file": "second-instance.png" },
+    { "id": "mid-court-ban", "title": "中院一审双禁独任", "frame": 1809, "file": "mid-court-ban.png" },
+    { "id": "misconceptions", "title": "组织≠程序类型", "frame": 2309, "file": "misconceptions.png" },
+    { "id": "jurors", "title": "陪审员双要件", "frame": 2891, "file": "jurors.png" }
+  ]
+}

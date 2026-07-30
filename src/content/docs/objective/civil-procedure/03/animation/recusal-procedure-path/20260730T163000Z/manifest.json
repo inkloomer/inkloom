@@ -1,0 +1,14 @@
+{
+  "version": "20260730T163000Z",
+  "generatedAt": "2026-07-30T16:30:00Z",
+  "animationId": "recusal-procedure-path",
+  "dimensions": { "width": 1920, "height": 1080 },
+  "scenes": [
+    { "id": "scope", "title": "中立期待分叉", "frame": 368, "file": "scope.png" },
+    { "id": "timing", "title": "申请时间窗口", "frame": 777, "file": "timing.png" },
+    { "id": "pending-effect", "title": "申请后暂停", "frame": 1218, "file": "pending-effect.png" },
+    { "id": "decision", "title": "决定主体映射", "frame": 1709, "file": "decision.png" },
+    { "id": "remedy", "title": "救济：复议一次", "frame": 2168, "file": "remedy.png" },
+    { "id": "pause-vs-continue", "title": "审查停·复议不停", "frame": 2864, "file": "pause-vs-continue.png" }
+  ]
+}

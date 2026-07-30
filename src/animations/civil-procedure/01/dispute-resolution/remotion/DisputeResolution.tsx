@@ -1,10 +1,10 @@
 import type {ReactNode} from 'react';
 import {AbsoluteFill, Easing, Sequence, interpolate, useCurrentFrame} from 'remotion';
 import {
-  ArbitrationLitigationScene,
   EnforceabilityScene,
+  FormalScene,
+  InformalScene,
   RecapScene,
-  SettlementMediationScene,
   SpectrumScene,
 } from './scenes/DisputeResolutionScenes';
 import {DURATION_FRAMES, PALETTE, SCENES, toSourceFrame} from './storyboard';
@@ -19,16 +19,11 @@ const SceneMotion = ({children, duration}: {readonly children: ReactNode; readon
       style={{
         position: 'absolute',
         inset: 0,
-        translate: `${interpolate(
-          frame,
-          [0, 18, sourceDuration - 14, sourceDuration],
-          [-86, 0, 0, 86],
-          {
-            extrapolateLeft: 'clamp',
-            extrapolateRight: 'clamp',
-            easing: [ENTER_EASING, Easing.linear, EXIT_EASING],
-          }
-        )}px 0px`,
+        translate: `${interpolate(frame, [0, 18, sourceDuration - 14, sourceDuration], [-86, 0, 0, 86], {
+          extrapolateLeft: 'clamp',
+          extrapolateRight: 'clamp',
+          easing: [ENTER_EASING, Easing.linear, EXIT_EASING],
+        })}px 0px`,
       }}
     >
       {children}
@@ -80,11 +75,11 @@ export const DisputeResolution = () => {
       <SceneSequence name="01-spectrum" {...SCENES.spectrum}>
         <SpectrumScene />
       </SceneSequence>
-      <SceneSequence name="02-settlement-mediation" {...SCENES.settlementMediation}>
-        <SettlementMediationScene />
+      <SceneSequence name="02-informal" {...SCENES.informal}>
+        <InformalScene />
       </SceneSequence>
-      <SceneSequence name="03-arbitration-litigation" {...SCENES.arbitrationLitigation}>
-        <ArbitrationLitigationScene />
+      <SceneSequence name="03-formal" {...SCENES.formal}>
+        <FormalScene />
       </SceneSequence>
       <SceneSequence name="04-enforceability" {...SCENES.enforceability}>
         <EnforceabilityScene />

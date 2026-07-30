@@ -1,6 +1,6 @@
 export const FPS = 60;
 export const PLAYBACK_RATE = 1;
-export const SOURCE_DURATION_SECONDS = 24;
+export const SOURCE_DURATION_SECONDS = 28;
 
 const toPlaybackFrames = (sourceFrames: number) => Math.round(sourceFrames / PLAYBACK_RATE);
 const PREVIEW_EXIT_TRIM_FRAMES = toPlaybackFrames(14);
@@ -15,11 +15,11 @@ export const DURATION_SECONDS = DURATION_FRAMES / FPS;
 export const toSourceFrame = (playbackFrame: number) => playbackFrame * PLAYBACK_RATE;
 
 export const SCENES = {
-  overview: scene(0, 240),
-  taxonomy: scene(240, 300),
-  litigation: scene(540, 300),
-  nonLitigation: scene(840, 300),
-  comparison: scene(1140, 300),
+  criterion: scene(0, 270),
+  litigation: scene(270, 300),
+  nonLitigation: scene(570, 300),
+  voterException: scene(870, 330),
+  comparison: scene(1200, 480),
 } as const;
 
 export const PALETTE = {

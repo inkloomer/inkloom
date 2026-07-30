@@ -1,4 +1,4 @@
-import {mkdtemp, mkdir, readdir, rm, stat, writeFile} from 'node:fs/promises';
+import {mkdtemp, mkdir, readFile, readdir, rename, rm, stat, writeFile} from 'node:fs/promises';
 import {homedir, tmpdir} from 'node:os';
 import path from 'node:path';
 import {pathToFileURL} from 'node:url';
@@ -8,10 +8,16 @@ import sharp from 'sharp';
 
 const PROJECT_ROOT = path.resolve(import.meta.dirname, '..');
 const ANIMATIONS_ROOT = path.join(PROJECT_ROOT, 'src', 'animations');
+const COMPONENTS_ROOT = path.join(PROJECT_ROOT, 'src', 'components');
+const DOCS_ROOT = path.join(PROJECT_ROOT, 'src', 'content', 'docs');
 const DEFAULT_OUTPUT_ROOT = path.join(PROJECT_ROOT, '.artifacts', 'animation-pages');
 const DEFAULT_CAPTURE_RATIO = 0.82;
 const DEFAULT_MOTION_RATIOS = [0.68, 0.76, 0.84];
+const FINAL_FRAME_WEBP_QUALITY = 60;
 const ANIMATION_ID_PATTERN = /^[a-z0-9][a-z0-9-]*$/;
+const SCENE_ID_PATTERN = /^[a-z0-9][a-z0-9-]*$/;
+const FINAL_FRAME_BLOCK_START = '<!-- inkloom-animation-final-frames:start -->';
+const FINAL_FRAME_BLOCK_END = '<!-- inkloom-animation-final-frames:end -->';
 const animationDirectories = new Map();
 
 const usage = `
@@ -24,11 +30,15 @@ Usage:
   pnpm animation:pages --at 0.75               Change the scene capture position
   pnpm animation:pages legal-jurisdiction --motion
   pnpm animation:pages --output D:\\captures   Choose an output root
+  pnpm animation:publish-stills legal-jurisdiction
 
 Options:
   --all              Capture every discovered animation (the default)
   --at <0..1>        Position within each scene (default: ${DEFAULT_CAPTURE_RATIO})
   --motion           Capture ${DEFAULT_MOTION_RATIOS.join(', ')} checkpoints per scene for sustained-motion QA
+  --publish           Promote stable final frames to versioned WebP q60 assets and update the MDX carrier
+  --version <value>   Use an explicit timestamp version when publishing
+  --dry-run           Render and validate publish assets without changing the carrier or its asset directory
   --output <path>    Output root (default: .artifacts/animation-pages)
   --help             Show this help
 `;
@@ -39,6 +49,9 @@ const parseArguments = (rawArguments) => {
   let captureRatioProvided = false;
   let outputRoot = DEFAULT_OUTPUT_ROOT;
   let motionCheck = false;
+  let publishStills = false;
+  let publishVersion = null;
+  let dryRun = false;
   let captureAll = rawArguments.length === 0;
 
   for (let index = 0; index < rawArguments.length; index += 1) {
@@ -60,6 +73,21 @@ const parseArguments = (rawArguments) => {
       motionCheck = true;
       continue;
     }
+    if (argument === '--publish') {
+      publishStills = true;
+      continue;
+    }
+    if (argument === '--version') {
+      const versionArgument = rawArguments[index + 1];
+      if (!versionArgument) throw new Error('--version requires a value.');
+      publishVersion = versionArgument;
+      index += 1;
+      continue;
+    }
+    if (argument === '--dry-run') {
+      dryRun = true;
+      continue;
+    }
     if (argument === '--output') {
       const outputArgument = rawArguments[index + 1];
       if (!outputArgument) throw new Error('--output requires a path.');
@@ -78,14 +106,28 @@ const parseArguments = (rawArguments) => {
   if (motionCheck && captureRatioProvided) {
     throw new Error('--motion and --at cannot be used together.');
   }
+  if (publishStills && motionCheck) throw new Error('--publish and --motion cannot be used together.');
+  if (publishStills && captureRatioProvided) throw new Error('--publish chooses each scene final frame; do not pass --at.');
+  if ((publishVersion || dryRun) && !publishStills) {
+    throw new Error('--version and --dry-run require --publish.');
+  }
   if (!captureAll && animationIds.length === 0) captureAll = true;
 
-  return {animationIds, captureAll, captureRatio, help: false, motionCheck, outputRoot};
+  return {animationIds, captureAll, captureRatio, dryRun, help: false, motionCheck, outputRoot, publishStills, publishVersion};
 };
 
 const fileExists = async (filePath) => {
   try {
     return (await stat(filePath)).isFile();
+  } catch {
+    return false;
+  }
+};
+
+const pathExists = async (targetPath) => {
+  try {
+    await stat(targetPath);
+    return true;
   } catch {
     return false;
   }
@@ -184,7 +226,11 @@ const loadScenes = async (animationId) => {
       throw new Error(`${animationId}: scene "${key}" has an invalid start or duration.`);
     }
 
-    return {duration: scene.duration, key, start: scene.start};
+    if (!Number.isInteger(scene.previewEndTrimFrames) || scene.previewEndTrimFrames < 0 || scene.previewEndTrimFrames >= scene.duration) {
+      throw new Error(`${animationId}: scene "${key}" must declare previewEndTrimFrames from 0 to duration - 1.`);
+    }
+
+    return {duration: scene.duration, key, previewEndTrimFrames: scene.previewEndTrimFrames, start: scene.start};
   });
 };
 
@@ -231,7 +277,208 @@ const createContactSheet = async ({imagePaths, outputPath, width, height}) => {
     .toFile(outputPath);
 };
 
-const captureAnimation = async ({animationId, browser, captureRatio, motionCheck, outputRoot}) => {
+const listFiles = async (directory, predicate) => {
+  const entries = await readdir(directory, {withFileTypes: true});
+  const files = [];
+
+  for (const entry of entries) {
+    const entryPath = path.join(directory, entry.name);
+    if (entry.isDirectory()) {
+      files.push(...(await listFiles(entryPath, predicate)));
+    } else if (entry.isFile() && predicate(entry.name)) {
+      files.push(entryPath);
+    }
+  }
+
+  return files;
+};
+
+const loadAnimationMetadata = async (animationId) => {
+  const metadataPath = path.join(getAnimationDirectory(animationId), 'animation.meta.ts');
+  if (!(await fileExists(metadataPath))) throw new Error(`${animationId}: animation.meta.ts is required to publish final frames.`);
+
+  const metadataModule = await import(`${pathToFileURL(metadataPath).href}?publish=${Date.now()}`);
+  const metadata = metadataModule.default;
+  if (!metadata || metadata.id !== animationId || typeof metadata.route !== 'string' || metadata.route.length === 0) {
+    throw new Error(`${animationId}: animation.meta.ts must export matching id and route values.`);
+  }
+  if (typeof metadata.title !== 'string' || metadata.title.length === 0) {
+    throw new Error(`${animationId}: animation.meta.ts must export a title.`);
+  }
+
+  return metadata;
+};
+
+const resolveCarrierPath = async (route) => {
+  const normalizedRoute = route.replaceAll('\\', '/').replace(/^\/+|\/+$/g, '');
+  if (!normalizedRoute || normalizedRoute.split('/').some((part) => part === '.' || part === '..')) {
+    throw new Error(`Invalid animation carrier route: ${route}`);
+  }
+
+  for (const extension of ['.mdx', '.md']) {
+    const candidate = path.join(DOCS_ROOT, `${normalizedRoute}${extension}`);
+    if (await fileExists(candidate)) return candidate;
+  }
+
+  throw new Error(`No MDX or Markdown carrier found for route: ${route}`);
+};
+
+const extractPlayerSceneMetadata = (source, componentPath) => {
+  const descriptors = [];
+  const sceneObjectPattern = /\{([^{}]*?)\.\.\.SCENES\.([A-Za-z0-9_]+)([^{}]*?)\}/g;
+
+  for (const match of source.matchAll(sceneObjectPattern)) {
+    const objectSource = `${match[1]}${match[3]}`;
+    const id = objectSource.match(/\bid:\s*['"]([^'"]+)['"]/u)?.[1];
+    const number = objectSource.match(/\bnumber:\s*['"]([^'"]+)['"]/u)?.[1];
+    const title = objectSource.match(/\btitle:\s*['"]([^'"]+)['"]/u)?.[1];
+    const storyboardKey = match[2];
+
+    if (!id || !number || !title || !SCENE_ID_PATTERN.test(id)) {
+      throw new Error(`${componentPath}: every player scene must declare kebab-case id, number, and title before its SCENES spread.`);
+    }
+    descriptors.push({id, number, storyboardKey, title});
+  }
+
+  return descriptors;
+};
+
+const loadPlayerSceneMetadata = async (animationId, scenes) => {
+  const animationRelativeDirectory = path.relative(ANIMATIONS_ROOT, getAnimationDirectory(animationId)).replaceAll(path.sep, '/');
+  const storyboardImport = `@/animations/${animationRelativeDirectory}/remotion/storyboard`;
+  const componentPaths = await listFiles(COMPONENTS_ROOT, (fileName) => fileName.endsWith('Player.tsx'));
+  const matchingComponents = [];
+
+  for (const componentPath of componentPaths) {
+    const source = await readFile(componentPath, 'utf8');
+    if (source.includes(storyboardImport)) matchingComponents.push({componentPath, source});
+  }
+
+  if (matchingComponents.length !== 1) {
+    throw new Error(`${animationId}: expected one player component importing ${storyboardImport}, found ${matchingComponents.length}.`);
+  }
+
+  const descriptors = extractPlayerSceneMetadata(matchingComponents[0].source, matchingComponents[0].componentPath);
+  const descriptorByStoryboardKey = new Map(descriptors.map((descriptor) => [descriptor.storyboardKey, descriptor]));
+
+  if (descriptorByStoryboardKey.size !== scenes.length || scenes.some((scene) => !descriptorByStoryboardKey.has(scene.key))) {
+    throw new Error(`${animationId}: player scene metadata must map every storyboard SCENES key exactly once.`);
+  }
+
+  return descriptorByStoryboardKey;
+};
+
+const timestampVersion = () => new Date().toISOString().replaceAll('-', '').replaceAll(':', '').replace('.', '');
+
+const finalFrameForScene = (scene, composition) => Math.min(
+  composition.durationInFrames - 1,
+  scene.start + scene.duration - 1 - scene.previewEndTrimFrames,
+);
+
+const finalFrameAssetDirectory = (carrierPath, version) => {
+  const basename = path.basename(carrierPath, path.extname(carrierPath));
+  return path.join(path.dirname(carrierPath), 'animation', basename, version);
+};
+
+const markdownImageBlock = ({carrierPath, version, scenes}) => {
+  const carrierDirectory = path.dirname(carrierPath);
+  const lines = [FINAL_FRAME_BLOCK_START, '## 可停读最终帧'];
+
+  for (const scene of scenes) {
+    const assetPath = finalFrameAssetDirectory(carrierPath, version);
+    const relativePath = path.relative(carrierDirectory, path.join(assetPath, `${scene.id}.webp`)).replaceAll(path.sep, '/');
+    lines.push(`### ${scene.number}｜${scene.title}`, `![${scene.title}](./${relativePath})`);
+  }
+
+  lines.push(FINAL_FRAME_BLOCK_END);
+  return lines.join('\n\n');
+};
+
+const updateCarrierFinalFrames = async ({carrierPath, version, scenes}) => {
+  const source = await readFile(carrierPath, 'utf8');
+  const block = markdownImageBlock({carrierPath, version, scenes});
+  const startIndex = source.indexOf(FINAL_FRAME_BLOCK_START);
+  const endIndex = source.indexOf(FINAL_FRAME_BLOCK_END);
+
+  if ((startIndex === -1) !== (endIndex === -1) || (startIndex !== -1 && endIndex < startIndex)) {
+    throw new Error(`${carrierPath}: final-frame marker pair is malformed.`);
+  }
+
+  const updated = startIndex === -1
+    ? `${source.trimEnd()}\n\n${block}\n`
+    : `${source.slice(0, startIndex)}${block}${source.slice(endIndex + FINAL_FRAME_BLOCK_END.length)}`;
+
+  await writeFile(carrierPath, updated, 'utf8');
+};
+
+const publishFinalStills = async ({animationId, carrierPath, composition, dryRun, pages, runDirectory, version}) => {
+  const finalDirectory = finalFrameAssetDirectory(carrierPath, version);
+  const stagingDirectory = dryRun
+    ? path.join(runDirectory, 'publish-preview')
+    : `${finalDirectory}.staging-${process.pid}`;
+
+  if (await pathExists(finalDirectory)) throw new Error(`${animationId}: final-frame version already exists: ${finalDirectory}`);
+  if (!dryRun) await mkdir(path.dirname(finalDirectory), {recursive: true});
+  await mkdir(stagingDirectory, {recursive: false});
+
+  const publishedScenes = [];
+  try {
+    for (const page of pages) {
+      const targetFile = `${page.scene.id}.webp`;
+      const targetPath = path.join(stagingDirectory, targetFile);
+      await sharp(path.join(runDirectory, page.file))
+        .webp({effort: 4, quality: FINAL_FRAME_WEBP_QUALITY})
+        .toFile(targetPath);
+      const metadata = await sharp(targetPath).metadata();
+      if (metadata.format !== 'webp' || metadata.width !== composition.width || metadata.height !== composition.height) {
+        throw new Error(`${animationId}: ${targetFile} was not encoded as full-resolution WebP.`);
+      }
+      publishedScenes.push({
+        file: targetFile,
+        frame: page.frame,
+        id: page.scene.id,
+        number: page.scene.number,
+        title: page.scene.title,
+      });
+    }
+
+    const manifest = {
+      animationId,
+      compositionId: composition.id,
+      format: 'webp',
+      generatedAt: new Date().toISOString(),
+      quality: FINAL_FRAME_WEBP_QUALITY,
+      size: {height: composition.height, width: composition.width},
+      version,
+      scenes: publishedScenes,
+    };
+    await writeFile(path.join(stagingDirectory, 'manifest.json'), `${JSON.stringify(manifest, null, 2)}\n`, 'utf8');
+
+    if (dryRun) {
+      console.log(`[${animationId}] Publish dry run: ${stagingDirectory}`);
+      return {directory: stagingDirectory, dryRun: true, version};
+    }
+
+    await rename(stagingDirectory, finalDirectory);
+    await updateCarrierFinalFrames({carrierPath, scenes: publishedScenes, version});
+    console.log(`[${animationId}] Published final stills: ${finalDirectory}`);
+    return {directory: finalDirectory, dryRun: false, version};
+  } catch (error) {
+    await rm(stagingDirectory, {force: true, recursive: true});
+    throw error;
+  }
+};
+
+const captureAnimation = async ({
+  animationId,
+  browser,
+  captureRatio,
+  dryRun,
+  motionCheck,
+  outputRoot,
+  publishStills,
+  publishVersion,
+}) => {
   const scenes = await loadScenes(animationId);
   const captureRatios = motionCheck ? DEFAULT_MOTION_RATIOS : [captureRatio];
   const runDirectory = await makeRunDirectory(outputRoot, animationId);
@@ -256,6 +503,8 @@ const captureAnimation = async ({animationId, browser, captureRatio, motionCheck
     }
 
     const composition = compositions[0];
+    const carrierPath = publishStills ? await resolveCarrierPath((await loadAnimationMetadata(animationId)).route) : null;
+    const playerSceneMetadata = publishStills ? await loadPlayerSceneMetadata(animationId, scenes) : null;
     const pages = [];
 
     for (let index = 0; index < scenes.length; index += 1) {
@@ -263,15 +512,20 @@ const captureAnimation = async ({animationId, browser, captureRatio, motionCheck
       const pageNumber = String(index + 1).padStart(2, '0');
 
       for (const ratio of captureRatios) {
-        const frame = Math.min(
-          composition.durationInFrames - 1,
-          scene.start + Math.floor((scene.duration - 1) * ratio),
-        );
+        const frame = publishStills
+          ? finalFrameForScene(scene, composition)
+          : Math.min(
+              composition.durationInFrames - 1,
+              scene.start + Math.floor((scene.duration - 1) * ratio),
+            );
         const ratioSuffix = motionCheck ? `-at-${String(Math.round(ratio * 100)).padStart(2, '0')}` : '';
         const fileName = `page-${pageNumber}-${scene.key}${ratioSuffix}.png`;
         const outputPath = path.join(runDirectory, fileName);
 
-        console.log(`[${animationId}] ${pageNumber}/${String(scenes.length).padStart(2, '0')} ${scene.key} @ ${ratio.toFixed(2)} frame ${frame}`);
+        const captureDescription = publishStills
+          ? `final stable frame ${frame}`
+          : `@ ${ratio.toFixed(2)} frame ${frame}`;
+        console.log(`[${animationId}] ${pageNumber}/${String(scenes.length).padStart(2, '0')} ${scene.key} ${captureDescription}`);
         await renderStill({
           composition,
           serveUrl,
@@ -283,7 +537,13 @@ const captureAnimation = async ({animationId, browser, captureRatio, motionCheck
           logLevel: 'error',
         });
 
-        pages.push({...scene, file: fileName, frame, ...(motionCheck ? {ratio} : {})});
+        pages.push({
+          ...scene,
+          file: fileName,
+          frame,
+          ...(publishStills ? {scene: playerSceneMetadata.get(scene.key)} : {}),
+          ...(motionCheck ? {ratio} : {}),
+        });
       }
     }
 
@@ -297,13 +557,24 @@ const captureAnimation = async ({animationId, browser, captureRatio, motionCheck
 
     const manifest = {
       animationId,
-      ...(motionCheck ? {captureRatios} : {captureRatio}),
+      ...(motionCheck ? {captureRatios} : publishStills ? {finalFrameStrategy: 'preview-end-trim'} : {captureRatio}),
       compositionId: composition.id,
       capturedAt: new Date().toISOString(),
-      mode: motionCheck ? 'motion' : 'page',
+      mode: motionCheck ? 'motion' : publishStills ? 'publish' : 'page',
       size: {width: composition.width, height: composition.height},
       pages,
     };
+    if (publishStills) {
+      manifest.published = await publishFinalStills({
+        animationId,
+        carrierPath,
+        composition,
+        dryRun,
+        pages,
+        runDirectory,
+        version: publishVersion ?? timestampVersion(),
+      });
+    }
     await writeFile(path.join(runDirectory, 'manifest.json'), `${JSON.stringify(manifest, null, 2)}\n`, 'utf8');
 
     console.log(`[${animationId}] Complete: ${runDirectory}`);

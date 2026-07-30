@@ -1,6 +1,19 @@
-import {Easing, interpolate, useCurrentFrame} from 'remotion';
-import {PALETTE, accentColor, toSourceFrame, type Accent} from '../storyboard';
 import {
+  Ban,
+  CheckCircle2,
+  FileCheck2,
+  Gavel,
+  Handshake,
+  Landmark,
+  Scale,
+  ScrollText,
+  Users,
+  Zap,
+} from 'lucide-react';
+import {interpolate, useCurrentFrame} from 'remotion';
+import {PALETTE, accentColor, accentSoftColor, toSourceFrame, type Accent} from '../storyboard';
+import {
+  ENTER_EASING,
   FadeIn,
   FlowArrow,
   IconNode,
@@ -8,19 +21,25 @@ import {
   Keyword,
   MaskedReveal,
   SceneHeading,
-  VerticalArrow,
   baseTextStyle,
 } from '../visual-system';
-import {Handshake, Landmark, Scale, Users, Zap} from 'lucide-react';
 
-const METHODS: {key: string; label: string; icon: typeof Handshake; accent: Accent; detail: string; x: number}[] = [
-  {key: 'settlement', label: '和解', icon: Handshake, accent: 'gold', detail: '自行协商', x: 340},
-  {key: 'mediation', label: '调解', icon: Users, accent: 'teal', detail: '第三方主持', x: 700},
-  {key: 'arbitration', label: '仲裁', icon: Scale, accent: 'blue', detail: '民间组织裁决', x: 1060},
-  {key: 'litigation', label: '诉讼', icon: Landmark, accent: 'red', detail: '国家审判权', x: 1420},
+const METHODS: {
+  key: string;
+  label: string;
+  icon: typeof Handshake;
+  accent: Accent;
+  detail: string;
+  force: string;
+  x: number;
+}[] = [
+  {key: 'settlement', label: '和解', icon: Handshake, accent: 'gold', detail: '自行协商', force: '无强制力', x: 280},
+  {key: 'mediation', label: '调解', icon: Users, accent: 'teal', detail: '第三方主持', force: '合同效力', x: 640},
+  {key: 'arbitration', label: '仲裁', icon: Scale, accent: 'blue', detail: '民间裁决', force: '可强制执行', x: 1000},
+  {key: 'litigation', label: '诉讼', icon: Landmark, accent: 'red', detail: '国家审判权', force: '可强制执行', x: 1360},
 ];
 
-const DisputeIcon = ({size = 64}: {size?: number}) => (
+const DisputeToken = ({size = 72}: {size?: number}) => (
   <div
     style={{
       display: 'grid',
@@ -30,375 +49,618 @@ const DisputeIcon = ({size = 64}: {size?: number}) => (
       borderRadius: '50%',
       backgroundColor: PALETTE.redSoft,
       color: PALETTE.red,
+      border: `3px solid ${PALETTE.red}`,
     }}
   >
-    <Zap size={size * 0.55} strokeWidth={2.4} />
+    <Zap size={size * 0.5} strokeWidth={2.4} />
   </div>
 );
 
-// 场景1：纠纷解决方式光谱
+/* ========== 01 光谱：四种路径 ========== */
 export const SpectrumScene = () => {
   const frame = toSourceFrame(useCurrentFrame());
-  const axisProgress = interpolate(frame, [30, 90], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: Easing.bezier(0.45, 0, 0.2, 1)});
+  const axis = interpolate(frame, [28, 90], [0, 1], {
+    extrapolateLeft: 'clamp',
+    extrapolateRight: 'clamp',
+    easing: ENTER_EASING,
+  });
 
   return (
     <div style={{position: 'absolute', inset: 0}}>
-      <SceneHeading index="01" eyebrow="多元纠纷解决机制" title="从非正式到正式" accent="blue" />
+      <SceneHeading index="01" eyebrow="多元纠纷解决机制" title="四条路径 · 非正式到正式" accent="blue" />
 
-      {/* 纠纷起点 - 左侧 */}
-      <FadeIn delay={10} duration={30} style={{position: 'absolute', left: 92, top: 440}}>
-        <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 14}}>
-          <DisputeIcon size={80} />
-          <div style={{...baseTextStyle, fontSize: 24, fontWeight: 800, color: PALETTE.red}}>民事纠纷</div>
+      <FadeIn delay={12} duration={26} style={{position: 'absolute', left: 90, top: 360}}>
+        <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 12}}>
+          <DisputeToken size={96} />
+          <div style={{...baseTextStyle, fontSize: 26, fontWeight: 900, color: PALETTE.red}}>民事纠纷</div>
         </div>
       </FadeIn>
 
-      {/* 主连接箭头：从纠纷指向解决路径 */}
       <FlowArrow
-        left={200}
-        top={490}
-        width={300}
-        progress={interpolate(frame, [40, 80], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'})}
+        left={210}
+        top={400}
+        width={160}
+        progress={interpolate(frame, [30, 70], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'})}
         accent="ink"
-        thickness={5}
         label="解决路径"
       />
 
-      {/* 效力光谱轴 */}
-      <div style={{position: 'absolute', left: 500, top: 640, width: 1260, height: 8, backgroundColor: PALETTE.line, borderRadius: 4}}>
+      {/* 主光谱轴 */}
+      <div style={{position: 'absolute', left: 380, top: 720, width: 1400, height: 8, backgroundColor: PALETTE.line, borderRadius: 4}}>
         <div
           style={{
             position: 'absolute',
             left: 0,
             top: 0,
             height: '100%',
-            width: `${axisProgress * 100}%`,
+            width: `${axis * 100}%`,
             backgroundColor: PALETTE.ink,
             borderRadius: 4,
             transformOrigin: 'left center',
           }}
         />
       </div>
-      <div style={{...baseTextStyle, position: 'absolute', left: 500, top: 670, fontSize: 20, fontWeight: 700, color: PALETTE.muted}}>
+      <div style={{...baseTextStyle, position: 'absolute', left: 380, top: 744, fontSize: 22, fontWeight: 800, color: PALETTE.muted}}>
         非正式
       </div>
-      <div style={{...baseTextStyle, position: 'absolute', right: 160, top: 670, fontSize: 20, fontWeight: 700, color: PALETTE.muted}}>
-        正式 / 强制
+      <div style={{...baseTextStyle, position: 'absolute', right: 120, top: 744, fontSize: 22, fontWeight: 800, color: PALETTE.muted}}>
+        正式 / 国家强制
       </div>
 
-      {/* 四种方式节点 - 沿光谱轴上方排列 */}
       {METHODS.map((method, index) => {
-        const delay = 60 + index * 22;
-        const progress = interpolate(frame, [delay, delay + 34], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: Easing.bezier(0.16, 1, 0.3, 1)});
+        const delay = 55 + index * 28;
+        const p = interpolate(frame, [delay, delay + 36], [0, 1], {
+          extrapolateLeft: 'clamp',
+          extrapolateRight: 'clamp',
+          easing: ENTER_EASING,
+        });
         return (
           <div
             key={method.key}
             style={{
               position: 'absolute',
               left: method.x,
-              top: 470,
-              opacity: progress,
-              transform: `translateY(${interpolate(progress, [0, 1], [40, 0])}px) scale(${interpolate(progress, [0, 1], [0.92, 1])})`,
+              top: 340,
+              opacity: p,
+              translate: `0px ${interpolate(p, [0, 1], [36, 0])}px`,
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              gap: 16,
             }}
           >
-            <IconNode icon={method.icon} label={method.label} detail={method.detail} accent={method.accent} compact />
+            <IconNode icon={method.icon} label={method.label} detail={method.detail} accent={method.accent} style={{width: 300, minHeight: 120}} />
+            <div
+              style={{
+                width: 4,
+                height: 80,
+                backgroundColor: accentColor(method.accent),
+                opacity: p,
+                scale: `1 ${p}`,
+                transformOrigin: 'top center',
+              }}
+            />
+            <div
+              style={{
+                ...baseTextStyle,
+                padding: '10px 16px',
+                borderRadius: 8,
+                backgroundColor: accentSoftColor(method.accent),
+                color: accentColor(method.accent),
+                fontSize: 22,
+                fontWeight: 850,
+                border: `2px solid ${accentColor(method.accent)}`,
+              }}
+            >
+              {method.force}
+            </div>
           </div>
         );
       })}
 
-      {/* 节点与轴的垂直连线 */}
-      {METHODS.map((method, index) => {
-        const delay = 100 + index * 16;
-        const progress = interpolate(frame, [delay, delay + 24], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
-        return (
-          <div
-            key={`drop-${method.key}`}
-            style={{
-              position: 'absolute',
-              left: method.x + 130,
-              top: 564,
-              width: 3,
-              height: 76,
-              backgroundColor: accentColor(method.accent),
-              opacity: progress,
-              scale: `1 ${progress}`,
-              transformOrigin: 'center top',
-            }}
-          />
-        );
-      })}
-
-      <ImpactReveal delay={160} style={{position: 'absolute', left: 420, top: 770}}>
-        <div style={{...baseTextStyle, fontSize: 32, fontWeight: 800}}>
-          民事纠纷发生后，当事人有 <Keyword accent="blue">四种解决路径</Keyword>
+      <ImpactReveal delay={180} style={{position: 'absolute', left: 420, top: 830}}>
+        <div style={{...baseTextStyle, fontSize: 32, fontWeight: 850}}>
+          纠纷发生后，当事人可在 <Keyword accent="blue">四条路径</Keyword> 中选择
         </div>
       </ImpactReveal>
     </div>
   );
 };
 
-// 场景2：和解 vs 调解
-export const SettlementMediationScene = () => {
+/* ========== 02 非正式：和解 vs 调解 ========== */
+export const InformalScene = () => {
   const frame = toSourceFrame(useCurrentFrame());
+  const p1 = interpolate(frame, [18, 60], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: ENTER_EASING});
+  const p2 = interpolate(frame, [70, 115], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: ENTER_EASING});
+  const p3 = interpolate(frame, [140, 190], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: ENTER_EASING});
 
   return (
     <div style={{position: 'absolute', inset: 0}}>
-      <SceneHeading index="02" eyebrow="非正式解决方式" title="和解 · 调解" accent="gold" />
+      <SceneHeading index="02" eyebrow="非正式路径" title="和解 · 调解" accent="gold" />
 
-      {/* 共享纠纷节点 */}
-      <FadeIn delay={10} duration={28} style={{position: 'absolute', left: 92, top: 360}}>
-        <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 12}}>
-          <DisputeIcon size={72} />
-          <div style={{...baseTextStyle, fontSize: 22, fontWeight: 800, color: PALETTE.red}}>民事纠纷</div>
+      <MaskedReveal delay={10} duration={22} style={{position: 'absolute', left: 120, top: 236}}>
+        <div style={{...baseTextStyle, fontSize: 36, fontWeight: 900}}>
+          共同点：靠自愿履行 · 自身 <Keyword accent="red">无强制执行力</Keyword>
         </div>
-      </FadeIn>
+      </MaskedReveal>
 
-      {/* 和解分支 */}
-      <div style={{position: 'absolute', left: 280, top: 300, opacity: interpolate(frame, [30, 60], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'})}}>
-        <IconNode icon={Handshake} label="和解" detail="双方当事人自行协商" accent="gold" />
-      </div>
-      <FlowArrow left={590} top={370} width={220} progress={interpolate(frame, [50, 80], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'})} accent="gold" label="达成协议" />
-      <MaskedReveal delay={80} duration={28} style={{position: 'absolute', left: 830, top: 320}}>
+      {/* 和解轨 */}
+      <div
+        style={{
+          position: 'absolute',
+          left: 100,
+          top: 340,
+          width: 1720,
+          height: 200,
+          boxSizing: 'border-box',
+          padding: '24px 28px',
+          backgroundColor: PALETTE.paper,
+          border: `3px solid ${PALETTE.gold}`,
+          borderRadius: 14,
+          display: 'flex',
+          alignItems: 'center',
+          gap: 22,
+          opacity: p1,
+          translate: `0px ${interpolate(frame, [18, 60], [28, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: ENTER_EASING})}px`,
+        }}
+      >
+        <IconNode icon={Handshake} label="和解" detail="当事人自行协商" accent="gold" style={{width: 320}} />
+        <div style={{position: 'relative', width: 200, height: 70}}>
+          <FlowArrow
+            left={0}
+            top={10}
+            width={180}
+            progress={interpolate(frame, [40, 80], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'})}
+            accent="gold"
+            label="达成协议"
+          />
+        </div>
+        <IconNode icon={CheckCircle2} label="消灭争议" detail="协议约束双方" accent="gold" style={{width: 300}} />
+        <div style={{width: 40, height: 4, backgroundColor: PALETTE.line}} />
         <div
           style={{
             ...baseTextStyle,
-            fontSize: 28,
-            fontWeight: 800,
-            color: PALETTE.gold,
-            padding: '18px 26px',
+            display: 'flex',
+            alignItems: 'center',
+            gap: 12,
+            padding: '18px 22px',
             backgroundColor: PALETTE.goldSoft,
             border: `2px solid ${PALETTE.gold}`,
-            borderRadius: 8,
+            borderRadius: 10,
+            fontSize: 26,
+            fontWeight: 900,
+            color: PALETTE.gold,
           }}
         >
-          消灭争议
+          <Ban size={32} strokeWidth={2.4} />
+          无强制执行力
         </div>
-      </MaskedReveal>
-
-      {/* 调解分支 */}
-      <div style={{position: 'absolute', left: 280, top: 560, opacity: interpolate(frame, [90, 120], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'})}}>
-        <IconNode icon={Users} label="调解" detail="第三人主持调停" accent="teal" />
       </div>
-      <FlowArrow left={590} top={630} width={220} progress={interpolate(frame, [110, 140], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'})} accent="teal" label="调解协议" />
-      <MaskedReveal delay={140} duration={28} style={{position: 'absolute', left: 830, top: 580}}>
+
+      {/* 调解轨 */}
+      <div
+        style={{
+          position: 'absolute',
+          left: 100,
+          top: 580,
+          width: 1720,
+          height: 200,
+          boxSizing: 'border-box',
+          padding: '24px 28px',
+          backgroundColor: PALETTE.paper,
+          border: `3px solid ${PALETTE.teal}`,
+          borderRadius: 14,
+          display: 'flex',
+          alignItems: 'center',
+          gap: 22,
+          opacity: p2,
+          translate: `0px ${interpolate(frame, [70, 115], [28, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: ENTER_EASING})}px`,
+        }}
+      >
+        <IconNode icon={Users} label="调解" detail="调解组织主持" accent="teal" style={{width: 320}} />
+        <div style={{position: 'relative', width: 200, height: 70}}>
+          <FlowArrow
+            left={0}
+            top={10}
+            width={180}
+            progress={interpolate(frame, [95, 135], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'})}
+            accent="teal"
+            label="调解协议"
+          />
+        </div>
+        <IconNode icon={ScrollText} label="合同效力" detail="有约束力" accent="teal" style={{width: 300}} />
+        <div style={{width: 40, height: 4, backgroundColor: PALETTE.line}} />
         <div
           style={{
             ...baseTextStyle,
+            display: 'flex',
+            alignItems: 'center',
+            gap: 12,
+            padding: '18px 22px',
+            backgroundColor: PALETTE.redSoft,
+            border: `2px solid ${PALETTE.red}`,
+            borderRadius: 10,
             fontSize: 26,
-            fontWeight: 800,
-            color: PALETTE.teal,
-            padding: '18px 26px',
-            backgroundColor: PALETTE.tealSoft,
-            border: `2px solid ${PALETTE.teal}`,
-            borderRadius: 8,
+            fontWeight: 900,
+            color: PALETTE.red,
           }}
         >
-          有法律效力，<span style={{color: PALETTE.red}}>无强制执行力</span>
+          <Ban size={32} strokeWidth={2.4} />
+          仍无强制执行力
         </div>
-      </MaskedReveal>
+      </div>
 
-      <ImpactReveal delay={180} style={{position: 'absolute', left: 320, top: 820}}>
-        <div style={{...baseTextStyle, fontSize: 30, fontWeight: 800}}>
-          调解协议效力类似 <Keyword accent="teal">合同</Keyword>，对双方有约束力
+      <ImpactReveal delay={165} style={{position: 'absolute', left: 180, top: 830}}>
+        <div style={{...baseTextStyle, fontSize: 30, fontWeight: 850, opacity: p3}}>
+          记忆点：调解协议 ≈ <Keyword accent="teal">合同</Keyword> · 不等于可直接申请执行
         </div>
       </ImpactReveal>
     </div>
   );
 };
 
-// 场景3：仲裁 vs 诉讼
-export const ArbitrationLitigationScene = () => {
+/* ========== 03 正式：仲裁 vs 诉讼 ========== */
+export const FormalScene = () => {
   const frame = toSourceFrame(useCurrentFrame());
+  const p1 = interpolate(frame, [16, 55], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: ENTER_EASING});
+  const p2 = interpolate(frame, [70, 115], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: ENTER_EASING});
+  const gate = interpolate(frame, [40, 85], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: ENTER_EASING});
+  const p3 = interpolate(frame, [140, 185], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: ENTER_EASING});
 
   return (
     <div style={{position: 'absolute', inset: 0}}>
-      <SceneHeading index="03" eyebrow="正式解决方式" title="仲裁 · 诉讼" accent="blue" />
+      <SceneHeading index="03" eyebrow="正式路径" title="仲裁 · 诉讼" accent="blue" />
 
-      {/* 共享纠纷节点 */}
-      <FadeIn delay={10} duration={28} style={{position: 'absolute', left: 92, top: 360}}>
-        <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 12}}>
-          <DisputeIcon size={72} />
-          <div style={{...baseTextStyle, fontSize: 22, fontWeight: 800, color: PALETTE.red}}>民事纠纷</div>
-        </div>
-      </FadeIn>
-
-      {/* 仲裁分支 */}
-      <div style={{position: 'absolute', left: 280, top: 300, opacity: interpolate(frame, [30, 60], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'})}}>
-        <IconNode icon={Scale} label="仲裁" detail="仲裁机构裁决" accent="blue" />
-      </div>
-      <FlowArrow left={590} top={370} width={220} progress={interpolate(frame, [50, 80], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'})} accent="blue" label="民间组织" />
-      <MaskedReveal delay={80} duration={28} style={{position: 'absolute', left: 830, top: 320}}>
-        <div
-          style={{
-            ...baseTextStyle,
-            fontSize: 26,
-            fontWeight: 800,
-            color: PALETTE.blue,
-            padding: '18px 26px',
-            backgroundColor: PALETTE.blueSoft,
-            border: `2px solid ${PALETTE.blue}`,
-            borderRadius: 8,
-          }}
-        >
-          裁决书有法律约束力 + 强制执行力
+      <MaskedReveal delay={8} duration={20} style={{position: 'absolute', left: 120, top: 236}}>
+        <div style={{...baseTextStyle, fontSize: 34, fontWeight: 900}}>
+          二者均可强制执行 · 权力来源不同
         </div>
       </MaskedReveal>
 
-      {/* 诉讼分支 */}
-      <div style={{position: 'absolute', left: 280, top: 560, opacity: interpolate(frame, [90, 120], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'})}}>
-        <IconNode icon={Landmark} label="诉讼" detail="人民法院审理" accent="red" />
-      </div>
-      <FlowArrow left={590} top={630} width={220} progress={interpolate(frame, [110, 140], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'})} accent="red" label="国家审判权" />
-      <MaskedReveal delay={140} duration={28} style={{position: 'absolute', left: 830, top: 580}}>
-        <div
-          style={{
-            ...baseTextStyle,
-            fontSize: 26,
-            fontWeight: 800,
-            color: PALETTE.red,
-            padding: '18px 26px',
-            backgroundColor: PALETTE.redSoft,
-            border: `2px solid ${PALETTE.red}`,
-            borderRadius: 8,
-          }}
-        >
-          法院判决代表国家行使审判权
+      {/* 仲裁列 */}
+      <div
+        style={{
+          position: 'absolute',
+          left: 100,
+          top: 340,
+          width: 840,
+          minHeight: 430,
+          boxSizing: 'border-box',
+          padding: '28px 30px',
+          backgroundColor: PALETTE.paper,
+          border: `3px solid ${PALETTE.blue}`,
+          borderRadius: 14,
+          opacity: p1,
+          translate: `0px ${interpolate(frame, [16, 55], [30, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: ENTER_EASING})}px`,
+        }}
+      >
+        <div style={{display: 'flex', alignItems: 'center', gap: 14, marginBottom: 22}}>
+          <Scale size={42} color={PALETTE.blue} strokeWidth={2.2} />
+          <div style={{...baseTextStyle, fontSize: 36, fontWeight: 900, color: PALETTE.blue}}>仲裁</div>
         </div>
-      </MaskedReveal>
+        <div style={{display: 'grid', gap: 16}}>
+          <IconNode icon={Users} label="民间组织裁决" detail="非国家审判机关" accent="blue" style={{width: '100%'}} />
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: 16,
+              padding: '16px 18px',
+              backgroundColor: PALETTE.goldSoft,
+              border: `3px solid ${PALETTE.gold}`,
+              borderRadius: 10,
+              opacity: gate,
+              scale: interpolate(gate, [0, 1], [0.94, 1]),
+            }}
+          >
+            <FileCheck2 size={36} color={PALETTE.gold} strokeWidth={2.3} />
+            <div style={{...baseTextStyle}}>
+              <div style={{fontSize: 26, fontWeight: 900, color: PALETTE.gold}}>前置门闩</div>
+              <div style={{marginTop: 4, fontSize: 22, fontWeight: 750}}>
+                必须有 <Keyword accent="gold">有效仲裁协议</Keyword>
+              </div>
+            </div>
+          </div>
+          <IconNode icon={Gavel} label="裁决书" detail="法律约束力 + 强制执行力" accent="blue" style={{width: '100%'}} />
+        </div>
+      </div>
 
-      <ImpactReveal delay={180} style={{position: 'absolute', left: 340, top: 820}}>
-        <div style={{...baseTextStyle, fontSize: 30, fontWeight: 800}}>
-          <Keyword accent="blue">仲裁</Keyword> 是民间组织，<Keyword accent="red">诉讼</Keyword> 是国家审判机关
+      {/* 诉讼列 */}
+      <div
+        style={{
+          position: 'absolute',
+          left: 980,
+          top: 340,
+          width: 840,
+          minHeight: 430,
+          boxSizing: 'border-box',
+          padding: '28px 30px',
+          backgroundColor: PALETTE.paper,
+          border: `3px solid ${PALETTE.red}`,
+          borderRadius: 14,
+          opacity: p2,
+          translate: `0px ${interpolate(frame, [70, 115], [30, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: ENTER_EASING})}px`,
+        }}
+      >
+        <div style={{display: 'flex', alignItems: 'center', gap: 14, marginBottom: 22}}>
+          <Landmark size={42} color={PALETTE.red} strokeWidth={2.2} />
+          <div style={{...baseTextStyle, fontSize: 36, fontWeight: 900, color: PALETTE.red}}>民事诉讼</div>
+        </div>
+        <div style={{display: 'grid', gap: 16}}>
+          <IconNode icon={Landmark} label="人民法院" detail="行使国家审判权" accent="red" style={{width: '100%'}} />
+          <IconNode icon={ScrollText} label="无需仲裁协议" detail="起诉即启动公力救济" accent="red" style={{width: '100%'}} />
+          <IconNode icon={Gavel} label="判决 / 裁定" detail="国家强制力保障" accent="red" style={{width: '100%'}} />
+        </div>
+      </div>
+
+      <ImpactReveal delay={165} style={{position: 'absolute', left: 220, top: 830}}>
+        <div style={{...baseTextStyle, fontSize: 30, fontWeight: 850, opacity: p3}}>
+          仲裁 = 民间裁决 + 协议门闩 · 诉讼 = <Keyword accent="red">国家审判权</Keyword>
         </div>
       </ImpactReveal>
     </div>
   );
 };
 
-// 场景4：执行力阶梯
+/* ========== 04 执行力：阶梯 + 司法确认转化 ========== */
 export const EnforceabilityScene = () => {
   const frame = toSourceFrame(useCurrentFrame());
+  const ladder = interpolate(frame, [20, 100], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: ENTER_EASING});
+  const transform = interpolate(frame, [120, 180], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: ENTER_EASING});
+  const result = interpolate(frame, [175, 220], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: ENTER_EASING});
 
-  const levels = [
-    {label: '和解', icon: Handshake, accent: 'gold' as const, outcome: '无强制执行力', detail: '靠自觉履行'},
-    {label: '调解', icon: Users, accent: 'teal' as const, outcome: '无强制执行力', detail: '类似合同效力'},
-    {label: '仲裁', icon: Scale, accent: 'blue' as const, outcome: '有强制执行力', detail: '可申请法院执行'},
-    {label: '诉讼', icon: Landmark, accent: 'red' as const, outcome: '有强制执行力', detail: '法院判决/裁定'},
+  const steps = [
+    {label: '和解', accent: 'gold' as const, outcome: '无强制执行力', icon: Handshake},
+    {label: '调解', accent: 'teal' as const, outcome: '仅合同效力', icon: Users},
+    {label: '仲裁', accent: 'blue' as const, outcome: '可强制执行', icon: Scale},
+    {label: '诉讼', accent: 'red' as const, outcome: '可强制执行', icon: Landmark},
   ];
 
   return (
     <div style={{position: 'absolute', inset: 0}}>
-      <SceneHeading index="04" eyebrow="效力阶梯" title="四种方式的执行力" accent="red" />
+      <SceneHeading index="04" eyebrow="效力难点" title="执行力阶梯 · 司法确认" accent="red" />
 
-      {/* 阶梯轴 */}
-      <VerticalArrow left={92} top={240} height={520} progress={interpolate(frame, [20, 80], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'})} accent="ink" label="强制执行力" />
+      <MaskedReveal delay={8} duration={20} style={{position: 'absolute', left: 120, top: 236}}>
+        <div style={{...baseTextStyle, fontSize: 34, fontWeight: 900}}>
+          从无强制力 → 有强制力 · 调解可被“升级”
+        </div>
+      </MaskedReveal>
 
-      {levels.map((level, index) => {
-        const delay = 40 + index * 30;
-        const progress = interpolate(frame, [delay, delay + 34], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: Easing.bezier(0.16, 1, 0.3, 1)});
-        const y = 700 - index * 130;
-        return (
-          <div key={level.label}>
+      {/* 四阶梯 */}
+      <div style={{position: 'absolute', left: 100, top: 330, display: 'flex', gap: 24, width: 1720}}>
+        {steps.map((step, index) => {
+          const delay = 24 + index * 22;
+          const p = interpolate(frame, [delay, delay + 34], [0, 1], {
+            extrapolateLeft: 'clamp',
+            extrapolateRight: 'clamp',
+            easing: ENTER_EASING,
+          });
+          const Icon = step.icon;
+          return (
             <div
+              key={step.label}
               style={{
-                position: 'absolute',
-                left: 200,
-                top: y,
-                opacity: progress,
-                transform: `translateX(${interpolate(progress, [0, 1], [-40, 0])}px)`,
-              }}
-            >
-              <IconNode icon={level.icon} label={level.label} accent={level.accent} compact />
-            </div>
-            <div
-              style={{
-                position: 'absolute',
-                left: 520,
-                top: y + 20,
-                opacity: progress,
+                flex: 1,
+                minHeight: 230,
+                boxSizing: 'border-box',
+                padding: '24px 18px',
+                backgroundColor: PALETTE.paper,
+                border: `3px solid ${accentColor(step.accent)}`,
+                borderRadius: 14,
+                opacity: p * ladder,
+                translate: `0px ${interpolate(p, [0, 1], [28, 0])}px`,
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                gap: 14,
                 ...baseTextStyle,
-                fontSize: 26,
-                fontWeight: 800,
-                color: PALETTE[level.accent],
               }}
             >
-              {level.outcome}
+              <div
+                style={{
+                  width: 68,
+                  height: 68,
+                  display: 'grid',
+                  placeItems: 'center',
+                  borderRadius: 10,
+                  backgroundColor: accentSoftColor(step.accent),
+                  color: accentColor(step.accent),
+                }}
+              >
+                <Icon size={38} strokeWidth={2.2} />
+              </div>
+              <div style={{fontSize: 32, fontWeight: 900}}>{step.label}</div>
+              <div
+                style={{
+                  padding: '10px 16px',
+                  borderRadius: 8,
+                  backgroundColor: accentSoftColor(step.accent),
+                  color: accentColor(step.accent),
+                  fontSize: 22,
+                  fontWeight: 850,
+                  textAlign: 'center',
+                }}
+              >
+                {step.outcome}
+              </div>
             </div>
-            <div
-              style={{
-                position: 'absolute',
-                left: 520,
-                top: y + 58,
-                opacity: progress,
-                ...baseTextStyle,
-                fontSize: 20,
-                fontWeight: 600,
-                color: PALETTE.muted,
-              }}
-            >
-              {level.detail}
-            </div>
-          </div>
-        );
-      })}
+          );
+        })}
+      </div>
 
-      <ImpactReveal delay={180} style={{position: 'absolute', left: 320, top: 860}}>
-        <div style={{...baseTextStyle, fontSize: 30, fontWeight: 800}}>
-          从 <Keyword accent="gold">非正式</Keyword> 到 <Keyword accent="red">正式</Keyword>，强制执行力逐步增强
+      {/* 司法确认转化带 */}
+      <div
+        style={{
+          position: 'absolute',
+          left: 100,
+          top: 620,
+          width: 1720,
+          height: 180,
+          boxSizing: 'border-box',
+          padding: '24px 28px',
+          backgroundColor: PALETTE.paper,
+          border: `3px solid ${PALETTE.teal}`,
+          borderRadius: 14,
+          display: 'flex',
+          alignItems: 'center',
+          gap: 18,
+          opacity: transform,
+          translate: `0px ${interpolate(transform, [0, 1], [24, 0])}px`,
+        }}
+      >
+        <IconNode icon={ScrollText} label="调解协议" detail="合同效力" accent="teal" compact style={{width: 280}} />
+        <div style={{position: 'relative', width: 180, height: 70}}>
+          <FlowArrow left={0} top={10} width={160} progress={transform} accent="gold" label="法院" />
+        </div>
+        <IconNode icon={FileCheck2} label="司法确认" detail="裁定确认" accent="gold" compact style={{width: 280}} />
+        <div style={{position: 'relative', width: 180, height: 70}}>
+          <FlowArrow left={0} top={10} width={160} progress={result} accent="red" label="升级" />
+        </div>
+        <div
+          style={{
+            opacity: result,
+            ...baseTextStyle,
+            display: 'flex',
+            alignItems: 'center',
+            gap: 14,
+            padding: '18px 24px',
+            backgroundColor: PALETTE.redSoft,
+            border: `3px solid ${PALETTE.red}`,
+            borderRadius: 12,
+            fontSize: 28,
+            fontWeight: 900,
+            color: PALETTE.red,
+          }}
+        >
+          <Gavel size={36} strokeWidth={2.3} />
+          可申请强制执行
+        </div>
+      </div>
+
+      <ImpactReveal delay={220} style={{position: 'absolute', left: 280, top: 840}}>
+        <div style={{...baseTextStyle, fontSize: 30, fontWeight: 850}}>
+          难点：调解本身不可执行 · 经 <Keyword accent="gold">司法确认</Keyword> 后方可执行
         </div>
       </ImpactReveal>
     </div>
   );
 };
 
-// 场景5：总结
+/* ========== 05 收束 ========== */
 export const RecapScene = () => {
   const frame = toSourceFrame(useCurrentFrame());
 
   return (
     <div style={{position: 'absolute', inset: 0}}>
-      <SceneHeading index="05" eyebrow="总结" title="四种纠纷解决方式" accent="red" />
+      <SceneHeading index="05" eyebrow="总结" title="四路径对照总表" accent="red" />
 
-      {/* 横向光谱 */}
-      <div style={{position: 'absolute', left: 150, top: 580, width: 1620, height: 8, backgroundColor: PALETTE.line, borderRadius: 4}}>
+      <MaskedReveal delay={8} duration={20} style={{position: 'absolute', left: 120, top: 236}}>
+        <div style={{...baseTextStyle, fontSize: 34, fontWeight: 900}}>
+          选路径的核心：是否需要 <Keyword accent="red">国家强制力</Keyword>
+        </div>
+      </MaskedReveal>
+
+      <div
+        style={{
+          position: 'absolute',
+          left: 100,
+          top: 340,
+          width: 1720,
+          display: 'grid',
+          gridTemplateColumns: 'repeat(4, 1fr)',
+          gap: 22,
+        }}
+      >
+        {METHODS.map((method, index) => {
+          const delay = 20 + index * 26;
+          const p = interpolate(frame, [delay, delay + 36], [0, 1], {
+            extrapolateLeft: 'clamp',
+            extrapolateRight: 'clamp',
+            easing: ENTER_EASING,
+          });
+          const Icon = method.icon;
+          const tags =
+            method.key === 'settlement'
+              ? ['自行协商', '无强制力']
+              : method.key === 'mediation'
+                ? ['第三人主持', '合同效力', '确认后可执行']
+                : method.key === 'arbitration'
+                  ? ['有效协议', '民间裁决', '可强制执行']
+                  : ['国家审判权', '可强制执行'];
+          return (
+            <div
+              key={method.key}
+              style={{
+                minHeight: 380,
+                boxSizing: 'border-box',
+                padding: '26px 22px',
+                backgroundColor: PALETTE.paper,
+                border: `3px solid ${accentColor(method.accent)}`,
+                borderRadius: 14,
+                opacity: p,
+                translate: `0px ${interpolate(p, [0, 1], [30, 0])}px`,
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                gap: 16,
+                ...baseTextStyle,
+              }}
+            >
+              <div
+                style={{
+                  width: 72,
+                  height: 72,
+                  display: 'grid',
+                  placeItems: 'center',
+                  borderRadius: 12,
+                  backgroundColor: accentSoftColor(method.accent),
+                  color: accentColor(method.accent),
+                }}
+              >
+                <Icon size={40} strokeWidth={2.2} />
+              </div>
+              <div style={{fontSize: 34, fontWeight: 900, color: accentColor(method.accent)}}>{method.label}</div>
+              <div style={{fontSize: 20, color: PALETTE.muted, fontWeight: 700}}>{method.detail}</div>
+              <div style={{width: '100%', height: 2, backgroundColor: PALETTE.line, margin: '4px 0'}} />
+              {tags.map((tag) => (
+                <div
+                  key={tag}
+                  style={{
+                    width: '100%',
+                    textAlign: 'center',
+                    padding: '10px 8px',
+                    borderRadius: 8,
+                    backgroundColor: accentSoftColor(method.accent),
+                    color: accentColor(method.accent),
+                    fontSize: 22,
+                    fontWeight: 850,
+                  }}
+                >
+                  {tag}
+                </div>
+              ))}
+            </div>
+          );
+        })}
+      </div>
+
+      <ImpactReveal delay={160} style={{position: 'absolute', left: 240, top: 800}}>
         <div
           style={{
-            position: 'absolute',
-            left: 0,
-            top: 0,
-            height: '100%',
-            width: `${interpolate(frame, [20, 80], [0, 100], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'})}%`,
-            backgroundColor: PALETTE.ink,
-            borderRadius: 4,
-            transformOrigin: 'left center',
+            ...baseTextStyle,
+            fontSize: 28,
+            fontWeight: 850,
+            display: 'flex',
+            alignItems: 'center',
+            gap: 16,
+            padding: '16px 24px',
+            backgroundColor: PALETTE.goldSoft,
+            border: `2px solid ${PALETTE.gold}`,
+            borderRadius: 10,
           }}
-        />
-      </div>
-      <div style={{...baseTextStyle, position: 'absolute', left: 150, top: 610, fontSize: 20, fontWeight: 700, color: PALETTE.muted}}>非正式</div>
-      <div style={{...baseTextStyle, position: 'absolute', right: 150, top: 610, fontSize: 20, fontWeight: 700, color: PALETTE.muted}}>正式 / 国家强制</div>
-
-      {METHODS.map((method, index) => {
-        const delay = 30 + index * 22;
-        const progress = interpolate(frame, [delay, delay + 34], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: Easing.bezier(0.16, 1, 0.3, 1)});
-        return (
-          <div
-            key={method.key}
-            style={{
-              position: 'absolute',
-              left: method.x,
-              top: 420,
-              opacity: progress,
-              transform: `translateY(${interpolate(progress, [0, 1], [30, 0])}px)`,
-            }}
-          >
-            <IconNode icon={method.icon} label={method.label} detail={method.detail} accent={method.accent} compact />
-          </div>
-        );
-      })}
-
-      <ImpactReveal delay={140} style={{position: 'absolute', left: 260, top: 760}}>
-        <div style={{...baseTextStyle, fontSize: 30, fontWeight: 800}}>
-          选择路径的关键：是否需要 <Keyword accent="red">国家强制力</Keyword> 保障实现权利
+        >
+          <FileCheck2 size={32} color={PALETTE.gold} />
+          调解例外通道：协议 → 司法确认 → 强制执行
         </div>
       </ImpactReveal>
     </div>

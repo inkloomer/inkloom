@@ -1,0 +1,13 @@
+{
+  "version": "20260730T162652Z",
+  "generatedAt": "2026-07-30T16:26:52Z",
+  "animationId": "trial-procedure",
+  "dimensions": { "width": 1920, "height": 1080 },
+  "scenes": [
+    { "id": "criterion", "title": "分类标准：是否解决纠纷", "frame": 220, "file": "criterion.png" },
+    { "id": "litigation", "title": "诉讼程序", "frame": 515, "file": "litigation.png" },
+    { "id": "non-litigation", "title": "非讼程序", "frame": 815, "file": "non-litigation.png" },
+    { "id": "voter-exception", "title": "选民资格例外", "frame": 1139, "file": "voter-exception.png" },
+    { "id": "comparison", "title": "三类定位对照", "frame": 1592, "file": "comparison.png" }
+  ]
+}

@@ -1,13 +1,48 @@
-export const FPS = 30;
-const previewScene = (start: number, duration: number) => ({start, duration, previewEndTrimFrames: 0});
+export const FPS = 60;
+export const PLAYBACK_RATE = 0.6;
+export const SOURCE_DURATION_SECONDS = 30;
+
+const toPlaybackFrames = (sourceFrames: number) => Math.round(sourceFrames / PLAYBACK_RATE);
+const PREVIEW_EXIT_TRIM_FRAMES = toPlaybackFrames(14);
+const slowScene = (start: number, duration: number) => ({
+  start: toPlaybackFrames(start),
+  duration: toPlaybackFrames(duration),
+  previewEndTrimFrames: PREVIEW_EXIT_TRIM_FRAMES,
+});
+
+export const DURATION_FRAMES = toPlaybackFrames(SOURCE_DURATION_SECONDS * FPS);
+export const DURATION_SECONDS = DURATION_FRAMES / FPS;
+export const toSourceFrame = (playbackFrame: number) => playbackFrame * PLAYBACK_RATE;
 
 export const SCENES = {
-  overview: previewScene(0, 180),
-  firstInstance: previewScene(180, 210),
-  secondInstance: previewScene(390, 210),
-  specialProcedures: previewScene(600, 210),
-  misconceptions: previewScene(810, 180),
-  conversion: previewScene(990, 210),
+  pathGate: slowScene(0, 240),
+  firstInstance: slowScene(240, 300),
+  secondInstance: slowScene(540, 300),
+  midCourtBan: slowScene(840, 300),
+  misconceptions: slowScene(1140, 300),
+  jurors: slowScene(1440, 360),
 } as const;
 
-export const DURATION_FRAMES = 1200;
+export const PALETTE = {
+  background: '#F3F5F2',
+  paper: '#FFFFFF',
+  ink: '#17201D',
+  muted: '#66716C',
+  line: '#CBD2CE',
+  red: '#C83F35',
+  redSoft: '#F7E5E2',
+  teal: '#087C73',
+  tealSoft: '#DFF0EC',
+  gold: '#A8791D',
+  goldSoft: '#F7EFD6',
+  blue: '#3768A5',
+  blueSoft: '#E4ECF7',
+  purple: '#7C3AED',
+  purpleSoft: '#EDE9FE',
+} as const;
+
+export type Accent = 'red' | 'teal' | 'gold' | 'blue' | 'purple';
+
+export const accentColor = (accent: Accent) => PALETTE[accent];
+
+export const accentSoftColor = (accent: Accent) => PALETTE[`${accent}Soft`];

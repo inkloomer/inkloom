@@ -1,0 +1,13 @@
+{
+  "version": "20260730T162652Z",
+  "generatedAt": "2026-07-30T16:26:52Z",
+  "animationId": "dispute-resolution",
+  "dimensions": { "width": 1920, "height": 1080 },
+  "scenes": [
+    { "id": "spectrum", "title": "四条路径光谱", "frame": 195, "file": "spectrum.png" },
+    { "id": "informal", "title": "和解 · 调解", "frame": 509, "file": "informal.png" },
+    { "id": "formal", "title": "仲裁 · 诉讼", "frame": 839, "file": "formal.png" },
+    { "id": "enforceability", "title": "执行力与司法确认", "frame": 1194, "file": "enforceability.png" },
+    { "id": "recap", "title": "四路径总览", "frame": 1603, "file": "recap.png" }
+  ]
+}
