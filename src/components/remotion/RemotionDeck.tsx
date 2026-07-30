@@ -56,7 +56,7 @@ const interactivePlayerProps = {
   doubleClickToFullscreen: true,
   spaceKeyToPlayOrPause: true,
   moveToBeginningWhenEnded: false,
-  initiallyShowControls: true,
+  initiallyShowControls: false,
   alwaysShowControls: false,
   hideControlsWhenPointerDoesntMove: true,
   acknowledgeRemotionLicense: true,
@@ -204,7 +204,7 @@ const PlayerFrame = ({
       <button
         type="button"
         className="remotion-deck__center-control"
-        data-visible={status !== 'playing' || hovered ? 'true' : 'false'}
+        data-visible={hovered ? 'true' : 'false'}
         aria-label={buttonLabel}
         title={buttonLabel}
         onClick={(event) => {
