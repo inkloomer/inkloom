@@ -11,6 +11,8 @@ export interface RemotionScene {
   readonly title: string;
   readonly start: number;
   readonly duration: number;
+  /** Frames omitted from the webpage preview so it freezes before an authored exit. */
+  readonly previewEndTrimFrames?: number;
 }
 
 type PreviewMode = 'single' | 'row' | 'matrix';
@@ -26,7 +28,11 @@ interface Props {
   readonly sceneQueryParameter?: string;
 }
 
-const frameEnd = (scene: RemotionScene) => scene.start + scene.duration - 1;
+const frameEnd = (scene: RemotionScene) => {
+  const finalFrame = scene.start + scene.duration - 1;
+  const previewEndTrimFrames = scene.previewEndTrimFrames ?? 0;
+  return Math.max(scene.start + 1, finalFrame - previewEndTrimFrames);
+};
 
 const interactivePlayerProps = {
   controls: true,
@@ -204,8 +210,8 @@ export const RemotionDeck = ({
           {mode === 'single'
             ? autoPage
               ? '播放完进入下一页'
-              : '播放结束停在末帧'
-            : '全部页面播放结束停在末帧'}
+              : '播放结束停在稳定画面'
+            : '全部页面播放结束停在稳定画面'}
         </span>
       </div>
 

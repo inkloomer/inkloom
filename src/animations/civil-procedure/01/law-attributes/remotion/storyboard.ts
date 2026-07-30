@@ -1,10 +1,11 @@
 export const FPS = 30;
 export const DURATION_FRAMES = 360;
+const previewScene = (start: number, duration: number) => ({start, duration, previewEndTrimFrames: 14});
 
 export const SCENES = {
-  overview: { start: 0, duration: 120 },
-  detail: { start: 120, duration: 130 },
-  summary: { start: 250, duration: 110 },
+  overview: previewScene(0, 120),
+  detail: previewScene(120, 130),
+  summary: previewScene(250, 110),
 };
 
 export const PALETTE = {

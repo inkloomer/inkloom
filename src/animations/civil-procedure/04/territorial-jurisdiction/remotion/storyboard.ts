@@ -3,9 +3,11 @@ export const PLAYBACK_RATE = 0.6;
 export const SOURCE_DURATION_SECONDS = 27;
 
 const toPlaybackFrames = (sourceFrames: number) => Math.round(sourceFrames / PLAYBACK_RATE);
+const PREVIEW_EXIT_TRIM_FRAMES = toPlaybackFrames(14);
 const slowScene = (start: number, duration: number) => ({
   start: toPlaybackFrames(start),
   duration: toPlaybackFrames(duration),
+  previewEndTrimFrames: PREVIEW_EXIT_TRIM_FRAMES,
 });
 
 export const DURATION_FRAMES = toPlaybackFrames(SOURCE_DURATION_SECONDS * FPS);

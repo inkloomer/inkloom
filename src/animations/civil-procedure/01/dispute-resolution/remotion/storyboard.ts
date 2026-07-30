@@ -1,11 +1,12 @@
 export const FPS = 30;
 export const DURATION_FRAMES = 450;
+const previewScene = (start: number, duration: number) => ({start, duration, previewEndTrimFrames: 14});
 
 export const SCENES = {
-  overview: { start: 0, duration: 100 },
-  mediation: { start: 100, duration: 120 },
-  arbitration: { start: 220, duration: 120 },
-  comparison: { start: 340, duration: 110 },
+  overview: previewScene(0, 100),
+  mediation: previewScene(100, 120),
+  arbitration: previewScene(220, 120),
+  comparison: previewScene(340, 110),
 };
 
 export const PALETTE = {

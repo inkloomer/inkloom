@@ -1,11 +1,12 @@
 export const FPS = 30;
 export const DURATION_FRAMES = 450;
+const previewScene = (start: number, duration: number) => ({start, duration, previewEndTrimFrames: 14});
 
 export const SCENES = {
-  concept: { start: 0, duration: 100 },
-  litigation: { start: 100, duration: 120 },
-  nonLitigation: { start: 220, duration: 120 },
-  comparison: { start: 340, duration: 110 },
+  concept: previewScene(0, 100),
+  litigation: previewScene(100, 120),
+  nonLitigation: previewScene(220, 120),
+  comparison: previewScene(340, 110),
 };
 
 export const PALETTE = {
