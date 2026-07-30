@@ -1,9 +1,0 @@
-# pnpm-workspace.yaml
-packages:
-  - '.'
-allowBuilds:
-  esbuild: true
-  sharp: true
-minimumReleaseAgeExclude:
-  - '@remotion/player@4.0.501'
-  - remotion@4.0.501
