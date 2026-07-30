@@ -1,10 +1,10 @@
-import type { ReactNode } from 'react';
-import { AbsoluteFill, Easing, Sequence, interpolate, useCurrentFrame } from 'remotion';
-import { OverviewScene, DetailScene, SummaryScene } from './scenes/LawAttributesScenes';
-import { DURATION_FRAMES, PALETTE, SCENES, toSourceFrame } from './storyboard';
-import { ENTER_EASING, EXIT_EASING, FilmRail } from './visual-system';
+import type {ReactNode} from 'react';
+import {AbsoluteFill, Easing, Sequence, interpolate, useCurrentFrame} from 'remotion';
+import {OverviewScene, RecapScene, StandardScene} from './scenes/LawAttributesScenes';
+import {DURATION_FRAMES, PALETTE, SCENES, toSourceFrame} from './storyboard';
+import {ENTER_EASING, EXIT_EASING, FilmRail} from './visual-system';
 
-const SceneMotion = ({ children, duration }: { readonly children: ReactNode; readonly duration: number }) => {
+const SceneMotion = ({children, duration}: {readonly children: ReactNode; readonly duration: number}) => {
   const frame = toSourceFrame(useCurrentFrame());
   const sourceDuration = toSourceFrame(duration);
 
@@ -45,16 +45,7 @@ const BackgroundStructure = () => (
         }}
       />
     ))}
-    <div
-      style={{
-        position: 'absolute',
-        left: 0,
-        top: 206,
-        width: 1920,
-        height: 1,
-        backgroundColor: 'rgba(203, 210, 206, 0.55)',
-      }}
-    />
+    <div style={{position: 'absolute', left: 0, top: 206, width: 1920, height: 1, backgroundColor: 'rgba(203, 210, 206, 0.55)'}} />
   </>
 );
 
@@ -78,16 +69,16 @@ export const LawAttributes = () => {
   const frame = useCurrentFrame();
 
   return (
-    <AbsoluteFill style={{ backgroundColor: PALETTE.background, overflow: 'hidden' }}>
+    <AbsoluteFill style={{backgroundColor: PALETTE.background, overflow: 'hidden'}}>
       <BackgroundStructure />
       <SceneSequence name="01-overview" {...SCENES.overview}>
         <OverviewScene />
       </SceneSequence>
-      <SceneSequence name="02-detail" {...SCENES.detail}>
-        <DetailScene />
+      <SceneSequence name="02-standard" {...SCENES.standard}>
+        <StandardScene />
       </SceneSequence>
-      <SceneSequence name="03-summary" {...SCENES.summary}>
-        <SummaryScene />
+      <SceneSequence name="03-recap" {...SCENES.recap}>
+        <RecapScene />
       </SceneSequence>
       <FilmRail frame={frame} totalFrames={DURATION_FRAMES} />
     </AbsoluteFill>
