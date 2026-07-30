@@ -1,80 +1,104 @@
-import type {CSSProperties, ReactNode} from 'react';
-import {ArrowRight, type LucideIcon} from 'lucide-react';
-import {Easing, interpolate, spring, useCurrentFrame, useVideoConfig} from 'remotion';
-import {accentColor, accentSoftColor, PALETTE, toSourceFrame, type Accent} from './storyboard';
+import type { CSSProperties } from 'react';
+import { Easing, interpolate, useCurrentFrame } from 'remotion';
+import { PALETTE } from './storyboard';
 
-export const FONT_FAMILY = '"Microsoft YaHei", "PingFang SC", sans-serif';
-export const ENTER_EASING = Easing.bezier(0.16, 1, 0.3, 1);
-export const EXIT_EASING = Easing.bezier(0.7, 0, 0.84, 0);
+export const ENTER_EASING = Easing.bezier(0.22, 1, 0.36, 1);
+export const EXIT_EASING = Easing.bezier(0.55, 0, 1, 0.45);
 
 export const baseTextStyle: CSSProperties = {
+  fontFamily:
+    '"PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif',
   color: PALETTE.ink,
-  fontFamily: FONT_FAMILY,
-  letterSpacing: 0,
+  letterSpacing: '0.02em',
 };
 
-export const MaskedReveal = ({
-  children,
-  delay = 0,
-  duration = 28,
-  distance = 36,
-  style,
+export const SceneHeading = ({
+  index,
+  eyebrow,
+  title,
+  accent,
 }: {
-  readonly children: ReactNode;
-  readonly delay?: number;
-  readonly duration?: number;
-  readonly distance?: number;
-  readonly style?: CSSProperties;
+  index: string;
+  eyebrow: string;
+  title: string;
+  accent: 'red' | 'teal' | 'blue' | 'gold';
 }) => {
-  const frame = toSourceFrame(useCurrentFrame());
-  const hiddenRight = interpolate(frame, [delay, delay + duration], [100, 0], {
+  const frame = useCurrentFrame();
+  const opacity = interpolate(frame, [0, 20], [0, 1], {
     extrapolateLeft: 'clamp',
     extrapolateRight: 'clamp',
-    easing: ENTER_EASING,
   });
 
   return (
     <div
       style={{
-        ...style,
-        clipPath: `inset(0 ${hiddenRight}% 0 0)`,
+        position: 'absolute',
+        left: 120,
+        top: 80,
+        opacity,
       }}
     >
       <div
         style={{
-          translate: interpolate(frame, [delay, delay + duration], [`-${distance}px 0px`, '0px 0px'], {
-            extrapolateLeft: 'clamp',
-            extrapolateRight: 'clamp',
-            easing: ENTER_EASING,
-          }),
+          ...baseTextStyle,
+          fontSize: 22,
+          fontWeight: 600,
+          color: PALETTE.gray,
+          marginBottom: 8,
         }}
       >
-        {children}
+        {eyebrow}
+      </div>
+      <div
+        style={{
+          ...baseTextStyle,
+          fontSize: 56,
+          fontWeight: 900,
+          color: PALETTE[accent],
+        }}
+      >
+        {title}
       </div>
     </div>
   );
 };
 
-export const FadeIn = ({
+export const Keyword = ({
   children,
-  delay = 0,
-  duration = 24,
-  distance = 24,
+  accent,
+}: {
+  children: React.ReactNode;
+  accent: 'red' | 'teal' | 'blue' | 'gold';
+}) => (
+  <span
+    style={{
+      color: PALETTE[accent],
+      fontWeight: 900,
+      padding: '0 4px',
+    }}
+  >
+    {children}
+  </span>
+);
+
+export const MaskedReveal = ({
+  children,
+  delay,
+  duration,
   style,
 }: {
-  readonly children: ReactNode;
-  readonly delay?: number;
-  readonly duration?: number;
-  readonly distance?: number;
-  readonly style?: CSSProperties;
+  children: React.ReactNode;
+  delay: number;
+  duration: number;
+  style?: CSSProperties;
 }) => {
-  const frame = toSourceFrame(useCurrentFrame());
-  const opacity = interpolate(frame, [delay, delay + duration * 0.6], [0, 1], {
+  const frame = useCurrentFrame();
+  const opacity = interpolate(frame, [delay, delay + duration * 0.5], [0, 1], {
     extrapolateLeft: 'clamp',
     extrapolateRight: 'clamp',
     easing: ENTER_EASING,
   });
-  const translateY = interpolate(frame, [delay, delay + duration], [distance, 0], {
+  const translateX = interpolate(frame, [delay, delay + duration], [-30, 0], {
     extrapolateLeft: 'clamp',
     extrapolateRight: 'clamp',
     easing: ENTER_EASING,
@@ -85,7 +109,7 @@ export const FadeIn = ({
       style={{
         ...style,
         opacity,
-        transform: `translateY(${translateY}px)`,
+        transform: `translateX(${translateX}px)`,
       }}
     >
       {children}
@@ -98,27 +122,26 @@ export const ImpactReveal = ({
   delay,
   style,
 }: {
-  readonly children: ReactNode;
-  readonly delay: number;
-  readonly style?: CSSProperties;
+  children: React.ReactNode;
+  delay: number;
+  style?: CSSProperties;
 }) => {
-  const frame = toSourceFrame(useCurrentFrame());
-  const {fps} = useVideoConfig();
+  const frame = useCurrentFrame();
+  const scale = interpolate(frame, [delay, delay + 10, delay + 20], [0.8, 1.05, 1], {
+    extrapolateLeft: 'clamp',
+    extrapolateRight: 'clamp',
+  });
+  const opacity = interpolate(frame, [delay, delay + 15], [0, 1], {
+    extrapolateLeft: 'clamp',
+    extrapolateRight: 'clamp',
+  });
 
   return (
     <div
       style={{
         ...style,
-        opacity: interpolate(frame, [delay, delay + 3], [0, 1], {
-          extrapolateLeft: 'clamp',
-          extrapolateRight: 'clamp',
-        }),
-        scale: spring({
-          frame: frame - delay,
-          fps,
-          config: {damping: 16, mass: 0.65, stiffness: 180},
-          durationInFrames: 30,
-        }),
+        transform: `scale(${scale})`,
+        opacity,
       }}
     >
       {children}
@@ -126,204 +149,36 @@ export const ImpactReveal = ({
   );
 };
 
-export const Keyword = ({children, accent = 'red'}: {readonly children: ReactNode; readonly accent?: Accent}) => (
-  <span
-    style={{
-      display: 'inline-block',
-      padding: '3px 10px 5px',
-      color: accentColor(accent),
-      backgroundColor: accentSoftColor(accent),
-      borderBottom: `4px solid ${accentColor(accent)}`,
-      fontWeight: 800,
-    }}
-  >
-    {children}
-  </span>
-);
-
-export const SceneHeading = ({
-  index,
-  eyebrow,
-  title,
-  accent,
+export const FilmRail = ({
+  frame,
+  totalFrames,
 }: {
-  readonly index: string;
-  readonly eyebrow: string;
-  readonly title: string;
-  readonly accent: Accent;
-}) => (
-  <MaskedReveal delay={4} duration={24} style={{position: 'absolute', left: 92, top: 68}}>
-    <div style={{display: 'flex', alignItems: 'center', gap: 20}}>
-      <div
-        style={{
-          ...baseTextStyle,
-          display: 'grid',
-          width: 54,
-          height: 54,
-          placeItems: 'center',
-          color: accentColor(accent),
-          border: `2px solid ${accentColor(accent)}`,
-          fontSize: 20,
-          fontWeight: 800,
-        }}
-      >
-        {index}
-      </div>
-      <div>
-        <div style={{...baseTextStyle, color: accentColor(accent), fontSize: 20, fontWeight: 800}}>{eyebrow}</div>
-        <div style={{...baseTextStyle, marginTop: 5, fontSize: 52, fontWeight: 900, lineHeight: 1}}>{title}</div>
-      </div>
-    </div>
-  </MaskedReveal>
-);
+  frame: number;
+  totalFrames: number;
+}) => {
+  const progress = (frame / totalFrames) * 100;
 
-export const IconNode = ({
-  icon: Icon,
-  label,
-  detail,
-  accent,
-  style,
-  compact = false,
-}: {
-  readonly icon: LucideIcon;
-  readonly label: string;
-  readonly detail?: string;
-  readonly accent: Accent;
-  readonly style?: CSSProperties;
-  readonly compact?: boolean;
-}) => (
-  <div
-    style={{
-      ...baseTextStyle,
-      ...style,
-      display: 'flex',
-      width: compact ? 260 : 310,
-      minHeight: compact ? 94 : 122,
-      alignItems: 'center',
-      gap: compact ? 16 : 22,
-      boxSizing: 'border-box',
-      padding: compact ? '16px 18px' : '20px 24px',
-      backgroundColor: PALETTE.paper,
-      border: `2px solid ${accentColor(accent)}`,
-      borderRadius: 8,
-      boxShadow: '0 14px 34px rgba(23, 32, 29, 0.09)',
-    }}
-  >
+  return (
     <div
       style={{
-        display: 'grid',
-        width: compact ? 54 : 66,
-        height: compact ? 54 : 66,
-        flex: '0 0 auto',
-        placeItems: 'center',
-        color: accentColor(accent),
-        backgroundColor: accentSoftColor(accent),
-        borderRadius: 6,
+        position: 'absolute',
+        left: 0,
+        right: 0,
+        bottom: 0,
+        height: 6,
+        backgroundColor: 'rgba(203, 210, 206, 0.3)',
       }}
     >
-      <Icon size={compact ? 32 : 40} strokeWidth={2.2} />
-    </div>
-    <div>
-      <div style={{fontSize: compact ? 25 : 31, fontWeight: 850, lineHeight: 1.15}}>{label}</div>
-      {detail ? <div style={{marginTop: 7, color: PALETTE.muted, fontSize: compact ? 18 : 20, fontWeight: 650}}>{detail}</div> : null}
-    </div>
-  </div>
-);
-
-export const FlowArrow = ({
-  left,
-  top,
-  width,
-  progress,
-  accent,
-  label,
-  thickness = 5,
-  labelPosition = 'top',
-}: {
-  readonly left: number;
-  readonly top: number;
-  readonly width: number;
-  readonly progress: number;
-  readonly accent: Accent | 'ink';
-  readonly label?: string;
-  readonly thickness?: number;
-  readonly labelPosition?: 'top' | 'bottom';
-}) => {
-  const color = accent === 'ink' ? PALETTE.ink : accentColor(accent);
-  return (
-    <div style={{position: 'absolute', left, top, width, height: 70}}>
-      {label ? (
-        <div
-          style={{
-            ...baseTextStyle,
-            position: 'absolute',
-            left: 0,
-            top: labelPosition === 'top' ? -34 : 42,
-            color,
-            fontSize: 20,
-            fontWeight: 800,
-            opacity: progress,
-          }}
-        >
-          {label}
-        </div>
-      ) : null}
       <div
         style={{
           position: 'absolute',
           left: 0,
-          top: 24,
-          width,
-          height: thickness,
-          backgroundColor: color,
-          scale: `${progress} 1`,
-          transformOrigin: 'left center',
-        }}
-      />
-      <ArrowRight
-        size={42}
-        strokeWidth={2.5}
-        style={{
-          position: 'absolute',
-          right: -13,
-          top: 4,
-          color,
-          opacity: interpolate(progress, [0.82, 1], [0, 1], {
-            extrapolateLeft: 'clamp',
-            extrapolateRight: 'clamp',
-          }),
+          top: 0,
+          bottom: 0,
+          width: `${progress}%`,
+          backgroundColor: PALETTE.red,
         }}
       />
     </div>
   );
 };
-
-export const FilmRail = ({frame, totalFrames}: {readonly frame: number; readonly totalFrames: number}) => (
-  <>
-    <div
-      style={{
-        position: 'absolute',
-        right: 92,
-        top: 84,
-        ...baseTextStyle,
-        color: PALETTE.muted,
-        fontSize: 18,
-        fontWeight: 800,
-      }}
-    >
-      CIVIL PROCEDURE / 01
-    </div>
-    <div style={{position: 'absolute', left: 92, right: 92, bottom: 50, height: 3, backgroundColor: PALETTE.line}}>
-      <div
-        style={{
-          width: `${interpolate(frame, [0, totalFrames - 1], [0, 100], {
-            extrapolateLeft: 'clamp',
-            extrapolateRight: 'clamp',
-          })}%`,
-          height: '100%',
-          backgroundColor: PALETTE.ink,
-        }}
-      />
-    </div>
-  </>
-);
