@@ -1,0 +1,262 @@
+---
+import fs from 'node:fs';
+import path from 'node:path';
+
+interface SourceFile {
+  label: string;
+  filename: string;
+}
+
+interface Props {
+  title?: string;
+  previewPath?: string;
+  sourceDirectory?: string;
+  files?: SourceFile[];
+}
+
+const {
+  title = 'HyperFrames 源码',
+  previewPath = 'animations/legal-jurisdiction/hyperframes/index.html',
+  sourceDirectory = 'animations/legal-jurisdiction/hyperframes',
+  files = [
+    { label: 'index.html', filename: 'index.html' },
+    { label: 'styles.css', filename: 'styles.css' },
+    { label: 'ledger.json', filename: 'ledger.json' },
+    { label: 'DESIGN.md', filename: 'DESIGN.md' },
+  ],
+} = Astro.props;
+
+const sourceRoot = path.join(process.cwd(), 'public', sourceDirectory);
+const sources = files
+  .map((file) => {
+    const filePath = path.join(sourceRoot, file.filename);
+    return fs.existsSync(filePath)
+      ? { ...file, content: fs.readFileSync(filePath, 'utf8') }
+      : null;
+  })
+  .filter((file): file is SourceFile & { content: string } => file !== null);
+
+const baseUrl = import.meta.env.BASE_URL.endsWith('/')
+  ? import.meta.env.BASE_URL
+  : `${import.meta.env.BASE_URL}/`;
+const previewUrl = `${baseUrl}${previewPath.replace(/^\/+/, '')}`;
+---
+
+<section class="animation-source" data-animation-source>
+  <div class="source-heading">
+    <div>
+      <p class="source-eyebrow">SOURCE / MOTION</p>
+      <h3>{title}</h3>
+    </div>
+    <span class="source-count">{sources.length} 个文件</span>
+  </div>
+
+  <details class="preview-disclosure">
+    <summary>打开动画预览</summary>
+    <div class="preview-frame">
+      <iframe
+        src={previewUrl}
+        title={`${title}预览`}
+        loading="lazy"
+        allow="fullscreen"
+      ></iframe>
+    </div>
+  </details>
+
+  <div class="source-tabs" role="tablist" aria-label="源码文件">
+    {sources.map((file, index) => (
+      <button
+        type="button"
+        role="tab"
+        aria-selected={index === 0 ? 'true' : 'false'}
+        aria-controls={`source-panel-${index}`}
+        data-source-tab={index}
+        class:list={{ active: index === 0 }}
+      >
+        {file.label}
+      </button>
+    ))}
+  </div>
+
+  <div class="source-pages">
+    {sources.map((file, index) => (
+      <pre
+        id={`source-panel-${index}`}
+        role="tabpanel"
+        aria-label={file.label}
+        data-source-panel={index}
+        hidden={index !== 0}
+      ><code>{file.content}</code></pre>
+    ))}
+  </div>
+
+  <div class="source-pagination">
+    <button type="button" data-source-prev disabled aria-label="上一份源码">上一份</button>
+    <span data-source-status>1 / {sources.length}</span>
+    <button type="button" data-source-next aria-label="下一份源码">下一份</button>
+  </div>
+</section>
+
+<script is:inline>
+  (() => {
+    const roots = document.querySelectorAll('[data-animation-source]');
+    roots.forEach((root) => {
+      const tabs = [...root.querySelectorAll('[data-source-tab]')];
+      const panels = [...root.querySelectorAll('[data-source-panel]')];
+      const previous = root.querySelector('[data-source-prev]');
+      const next = root.querySelector('[data-source-next]');
+      const status = root.querySelector('[data-source-status]');
+      let current = 0;
+
+      const select = (index) => {
+        current = Math.max(0, Math.min(index, panels.length - 1));
+        tabs.forEach((tab, tabIndex) => {
+          const selected = tabIndex === current;
+          tab.setAttribute('aria-selected', String(selected));
+          tab.classList.toggle('active', selected);
+        });
+        panels.forEach((panel, panelIndex) => {
+          panel.hidden = panelIndex !== current;
+        });
+        previous.disabled = current === 0;
+        next.disabled = current === panels.length - 1;
+        status.textContent = `${current + 1} / ${panels.length}`;
+      };
+
+      tabs.forEach((tab, index) => tab.addEventListener('click', () => select(index)));
+      previous.addEventListener('click', () => select(current - 1));
+      next.addEventListener('click', () => select(current + 1));
+    });
+  })();
+</script>
+
+<style>
+  .animation-source {
+    margin: 2rem 0;
+    border: 1px solid var(--sl-color-hairline);
+    background: var(--sl-color-bg-sidebar);
+    overflow: hidden;
+  }
+
+  .source-heading,
+  .source-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 1.1rem;
+  }
+
+  .source-heading {
+    border-bottom: 1px solid var(--sl-color-hairline);
+  }
+
+  .source-eyebrow {
+    margin: 0 0 0.25rem;
+    color: var(--sl-color-text-accent);
+    font: 700 0.7rem/1.2 ui-monospace, SFMono-Regular, Consolas, monospace;
+    letter-spacing: 0.08em;
+  }
+
+  .source-heading h3 {
+    margin: 0;
+    color: var(--sl-color-text);
+    font-size: 1.1rem;
+  }
+
+  .source-count,
+  .source-pagination span {
+    color: var(--sl-color-text-muted);
+    font: 600 0.78rem/1 ui-monospace, SFMono-Regular, Consolas, monospace;
+  }
+
+  .preview-disclosure {
+    border-bottom: 1px solid var(--sl-color-hairline);
+  }
+
+  .preview-disclosure summary {
+    cursor: pointer;
+    padding: 0.8rem 1.1rem;
+    color: var(--sl-color-text-accent);
+    font-weight: 600;
+  }
+
+  .preview-frame {
+    aspect-ratio: 16 / 9;
+    background: #f3f5f2;
+  }
+
+  .preview-frame iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+
+  .source-tabs {
+    display: flex;
+    gap: 0.35rem;
+    overflow-x: auto;
+    padding: 0.7rem 1.1rem 0;
+  }
+
+  .source-tabs button,
+  .source-pagination button {
+    border: 1px solid var(--sl-color-hairline);
+    background: transparent;
+    color: var(--sl-color-text-muted);
+    cursor: pointer;
+    font: 600 0.8rem/1.2 ui-monospace, SFMono-Regular, Consolas, monospace;
+    padding: 0.45rem 0.65rem;
+  }
+
+  .source-tabs button.active,
+  .source-tabs button:hover,
+  .source-pagination button:not(:disabled):hover {
+    border-color: var(--sl-color-text-accent);
+    color: var(--sl-color-text-accent);
+  }
+
+  .source-pagination button:disabled {
+    cursor: not-allowed;
+    opacity: 0.45;
+  }
+
+  .source-pages {
+    padding: 0.7rem 1.1rem 0;
+  }
+
+  .source-pages pre {
+    max-height: 34rem;
+    margin: 0;
+    overflow: auto;
+    border: 1px solid var(--sl-color-hairline);
+    background: var(--sl-color-bg);
+    color: var(--sl-color-text);
+    font-size: 0.74rem;
+    line-height: 1.55;
+    tab-size: 2;
+  }
+
+  .source-pages code {
+    font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+  }
+
+  @media (max-width: 640px) {
+    .source-heading,
+    .source-pagination {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    .source-pagination {
+      align-items: center;
+      flex-direction: row;
+    }
+
+    .source-pages pre {
+      max-height: 28rem;
+      font-size: 0.68rem;
+    }
+  }
+</style>
