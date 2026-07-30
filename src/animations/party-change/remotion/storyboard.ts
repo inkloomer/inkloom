@@ -13,11 +13,10 @@ export const DURATION_SECONDS = DURATION_FRAMES / FPS;
 export const toSourceFrame = (playbackFrame: number) => playbackFrame * PLAYBACK_RATE;
 
 export const SCENES = {
-  principle: slowScene(0, 180),
-  exception1: slowScene(180, 210),
-  exception2: slowScene(390, 210),
-  exception3: slowScene(600, 210),
-  recap: slowScene(810, 210),
+  concept: slowScene(0, 180),
+  death: slowScene(180, 240),
+  transfer: slowScene(420, 240),
+  recap: slowScene(660, 210),
 } as const;
 
 export const PALETTE = {
@@ -39,5 +38,4 @@ export const PALETTE = {
 export type Accent = 'red' | 'teal' | 'gold' | 'blue';
 
 export const accentColor = (accent: Accent) => PALETTE[accent];
-
 export const accentSoftColor = (accent: Accent) => PALETTE[`${accent}Soft`];
