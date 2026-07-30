@@ -11,6 +11,7 @@ const ANIMATIONS_ROOT = path.join(PROJECT_ROOT, 'src', 'animations');
 const DEFAULT_OUTPUT_ROOT = path.join(PROJECT_ROOT, '.artifacts', 'animation-pages');
 const DEFAULT_CAPTURE_RATIO = 0.82;
 const ANIMATION_ID_PATTERN = /^[a-z0-9][a-z0-9-]*$/;
+const animationDirectories = new Map();
 
 const usage = `
 Capture a complete still for every Remotion page.
@@ -110,20 +111,41 @@ const findBrowserExecutable = async () => {
   return null;
 };
 
-const discoverAnimationIds = async () => {
-  const entries = await readdir(ANIMATIONS_ROOT, {withFileTypes: true});
-  const ids = [];
+const discoverAnimationDirectories = async (directory, depth = 0) => {
+  const entries = await readdir(directory, {withFileTypes: true});
 
   for (const entry of entries) {
-    if (!entry.isDirectory() || !ANIMATION_ID_PATTERN.test(entry.name)) continue;
+    if (!entry.isDirectory()) continue;
 
-    const remotionDirectory = path.join(ANIMATIONS_ROOT, entry.name, 'remotion');
-    const hasEntry = await fileExists(path.join(remotionDirectory, 'index.ts'));
-    const hasStoryboard = await fileExists(path.join(remotionDirectory, 'storyboard.ts'));
-    if (hasEntry && hasStoryboard) ids.push(entry.name);
+    const candidateDirectory = path.join(directory, entry.name);
+    if (ANIMATION_ID_PATTERN.test(entry.name)) {
+      const remotionDirectory = path.join(candidateDirectory, 'remotion');
+      const hasEntry = await fileExists(path.join(remotionDirectory, 'index.ts'));
+      const hasStoryboard = await fileExists(path.join(remotionDirectory, 'storyboard.ts'));
+      if (hasEntry && hasStoryboard) {
+        const previousDirectory = animationDirectories.get(entry.name);
+        if (previousDirectory && previousDirectory !== candidateDirectory) {
+          throw new Error(`Duplicate animation ID "${entry.name}" found in ${previousDirectory} and ${candidateDirectory}.`);
+        }
+        animationDirectories.set(entry.name, candidateDirectory);
+        continue;
+      }
+    }
+
+    if (depth < 4) await discoverAnimationDirectories(candidateDirectory, depth + 1);
   }
+};
 
-  return ids.sort();
+const discoverAnimationIds = async () => {
+  animationDirectories.clear();
+  await discoverAnimationDirectories(ANIMATIONS_ROOT);
+  return [...animationDirectories.keys()].sort();
+};
+
+const getAnimationDirectory = (animationId) => {
+  const directory = animationDirectories.get(animationId);
+  if (!directory) throw new Error(`Animation not found or incomplete: ${animationId}`);
+  return directory;
 };
 
 const validateAnimationIds = (animationIds) => {
@@ -135,7 +157,7 @@ const validateAnimationIds = (animationIds) => {
 };
 
 const loadScenes = async (animationId) => {
-  const storyboardPath = path.join(ANIMATIONS_ROOT, animationId, 'remotion', 'storyboard.ts');
+  const storyboardPath = path.join(getAnimationDirectory(animationId), 'remotion', 'storyboard.ts');
   const storyboardUrl = `${pathToFileURL(storyboardPath).href}?capture=${Date.now()}`;
   const storyboard = await import(storyboardUrl);
   const scenes = Object.entries(storyboard.SCENES ?? {});
@@ -200,7 +222,7 @@ const captureAnimation = async ({animationId, browser, captureRatio, outputRoot}
   const scenes = await loadScenes(animationId);
   const runDirectory = await makeRunDirectory(outputRoot, animationId);
   const bundleDirectory = await mkdtemp(path.join(tmpdir(), `inkloom-${animationId}-`));
-  const entryPoint = path.join(ANIMATIONS_ROOT, animationId, 'remotion', 'index.ts');
+  const entryPoint = path.join(getAnimationDirectory(animationId), 'remotion', 'index.ts');
 
   console.log(`\n[${animationId}] Bundling composition...`);
 

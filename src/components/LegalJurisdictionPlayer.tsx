@@ -1,6 +1,6 @@
 import {RemotionDeck, type RemotionScene} from './remotion/RemotionDeck';
-import {LegalJurisdiction} from '@/animations/legal-jurisdiction/remotion/LegalJurisdiction';
-import {DURATION_FRAMES, FPS, SCENES} from '@/animations/legal-jurisdiction/remotion/storyboard';
+import {LegalJurisdiction} from '@/animations/civil-procedure/04/legal-jurisdiction/remotion/LegalJurisdiction';
+import {DURATION_FRAMES, FPS, SCENES} from '@/animations/civil-procedure/04/legal-jurisdiction/remotion/storyboard';
 
 const scenes: readonly RemotionScene[] = [
   {number: '01', title: '主管是什么？', ...SCENES.definition},

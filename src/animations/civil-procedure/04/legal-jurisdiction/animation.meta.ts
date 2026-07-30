@@ -1,0 +1,8 @@
+export default {
+  id: 'legal-jurisdiction',
+  title: '民事诉讼主管——法院与其他纠纷解决方式',
+  sourceReference: '客观/民诉/2026年ZH法考精讲卷民诉法-戴鹏mineru/content/04 专题四 主管与管辖.md',
+  route: 'objective/civil-procedure/04/legal-jurisdiction',
+  subject: 'civil-procedure',
+  chapter: '04',
+};
