@@ -11,8 +11,8 @@ export interface RemotionScene {
   readonly title: string;
   readonly start: number;
   readonly duration: number;
-  /** Frames omitted from the webpage preview so it freezes before an authored exit. */
-  readonly previewEndTrimFrames?: number;
+  /** Frames omitted from the webpage preview so it freezes before an authored exit. Use 0 when none exists. */
+  readonly previewEndTrimFrames: number;
 }
 
 type PreviewMode = 'single' | 'row' | 'matrix';
@@ -30,8 +30,7 @@ interface Props {
 
 const frameEnd = (scene: RemotionScene) => {
   const finalFrame = scene.start + scene.duration - 1;
-  const previewEndTrimFrames = scene.previewEndTrimFrames ?? 0;
-  return Math.max(scene.start + 1, finalFrame - previewEndTrimFrames);
+  return Math.max(scene.start + 1, finalFrame - scene.previewEndTrimFrames);
 };
 
 const interactivePlayerProps = {
@@ -144,6 +143,7 @@ export const RemotionDeck = ({
     title: 'Empty',
     start: 0,
     duration: 1,
+    previewEndTrimFrames: 0,
   };
   const selectedEnd = frameEnd(selectedScene);
   const playerFrameStyle = {aspectRatio: `${compositionWidth} / ${compositionHeight}`};
