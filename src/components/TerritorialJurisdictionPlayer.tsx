@@ -4,11 +4,11 @@ import {DURATION_FRAMES, FPS, SCENES} from '@/animations/civil-procedure/04/terr
 
 const scenes: readonly RemotionScene[] = [
   {number: '01', title: '地域管辖在找什么？', ...SCENES.orientation},
-  {number: '02', title: '原则：原告就被告', ...SCENES.general},
-  {number: '03', title: '纠纷类型改变连接点', ...SCENES.special},
-  {number: '04', title: '专属：法院不能随便选', ...SCENES.exclusive},
-  {number: '05', title: '协议：可以约定但不能越界', ...SCENES.agreement},
-  {number: '06', title: '把管辖题变成四步', ...SCENES.recap},
+  {number: '02', title: '一般：看当事人所在地', ...SCENES.general},
+  {number: '03', title: '特殊：看法律事实所在地', ...SCENES.special},
+  {number: '04', title: '专属：法定锁定法院', ...SCENES.exclusive},
+  {number: '05', title: '协议：书面约定与红线', ...SCENES.agreement},
+  {number: '06', title: '合同三步走：专属→协议→法定', ...SCENES.threestep},
 ];
 
 export const TerritorialJurisdictionPlayer = () => (

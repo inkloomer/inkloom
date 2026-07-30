@@ -1,6 +1,6 @@
 export const FPS = 60;
-export const PLAYBACK_RATE = 0.6;
-export const SOURCE_DURATION_SECONDS = 27;
+export const PLAYBACK_RATE = 1;
+export const SOURCE_DURATION_SECONDS = 30;
 
 const toPlaybackFrames = (sourceFrames: number) => Math.round(sourceFrames / PLAYBACK_RATE);
 const PREVIEW_EXIT_TRIM_FRAMES = toPlaybackFrames(14);
@@ -16,11 +16,11 @@ export const toSourceFrame = (playbackFrame: number) => playbackFrame * PLAYBACK
 
 export const SCENES = {
   orientation: slowScene(0, 180),
-  general: slowScene(180, 240),
-  special: slowScene(420, 330),
-  exclusive: slowScene(750, 270),
-  agreement: slowScene(1020, 300),
-  recap: slowScene(1320, 300),
+  general: slowScene(180, 270),
+  special: slowScene(450, 300),
+  exclusive: slowScene(750, 300),
+  agreement: slowScene(1050, 270),
+  threestep: slowScene(1320, 480),
 } as const;
 
 export const PALETTE = {
