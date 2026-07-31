@@ -23,6 +23,8 @@ const TARGET_FPS = 15;
 const AVIF_LOOP_COUNT = 1;
 const RENDER_CONCURRENCY = 2;
 const ENCODER_THREADS = 4;
+const DEFAULT_JOBS = 2;
+const MAX_JOBS = 4;
 const animationDirectories = new Map();
 
 const usage = `
@@ -31,6 +33,7 @@ Render every stable scene range as a standalone AV1 MP4, or compare AV1 encoding
 Usage:
   pnpm animation:publish-video [animation-id ...]
   pnpm animation:publish-video legal-jurisdiction --scene mediation-confirmation
+  pnpm animation:publish-avif [--jobs 1-4] [animation-id ...]
   pnpm animation:publish-avif legal-jurisdiction --scene mediation-confirmation --widths 2560
   pnpm animation:compare-av1 legal-jurisdiction --scene mediation-confirmation --widths 1920,2560 --crfs 35,25,16
 
@@ -52,6 +55,7 @@ const parseArguments = (rawArguments) => {
   let widths;
   let publishVideo = false;
   let qualityExplicit = false;
+  let jobs = DEFAULT_JOBS;
 
   const readValue = (index, option) => {
     const value = rawArguments[index + 1];
@@ -76,6 +80,13 @@ const parseArguments = (rawArguments) => {
     const parsed = Number(value);
     if (!Number.isInteger(parsed) || parsed < 320 || parsed > 7680) {
       throw new Error(`${option} must contain integer widths from 320 to 7680.`);
+    }
+    return parsed;
+  };
+  const parseJobs = (value, option) => {
+    const parsed = Number(value);
+    if (!Number.isInteger(parsed) || parsed < 1 || parsed > MAX_JOBS) {
+      throw new Error(`${option} must be an integer from 1 to ${MAX_JOBS}.`);
     }
     return parsed;
   };
@@ -135,6 +146,15 @@ const parseArguments = (rawArguments) => {
       publishVideo = true;
       continue;
     }
+    if (argument === '--jobs') {
+      jobs = parseJobs(readValue(index, argument), argument);
+      index += 1;
+      continue;
+    }
+    if (argument.startsWith('--jobs=')) {
+      jobs = parseJobs(argument.slice('--jobs='.length), '--jobs');
+      continue;
+    }
     if (argument.startsWith('--')) throw new Error(`Unknown option: ${argument}`);
     animationIds.push(argument);
   }
@@ -162,6 +182,7 @@ const parseArguments = (rawArguments) => {
     animationIds,
     crfs: resolvedCrfs,
     help: false,
+    jobs,
     qualities: resolvedCrfs ? undefined : resolvedQualities,
     publishVideo,
     sceneId,
@@ -642,18 +663,32 @@ const main = async () => {
   await mkdir(options.publishVideo ? PUBLIC_VIDEO_ROOT : options.crfs ? COMPARISON_ROOT : PUBLIC_AVIF_ROOT, {recursive: true});
   const browserExecutable = await findBrowserExecutable();
   if (browserExecutable) console.log(`Using browser: ${browserExecutable}`);
-  const manifests = [];
-  for (const animationId of animationIds) {
-    manifests.push(await renderAnimation({
-      animationId,
-      browserExecutable,
-      crfs: options.crfs,
-      publishVideo: options.publishVideo,
-      qualities: options.qualities,
-      sceneId: options.sceneId,
-      widths: options.widths,
-    }));
-  }
+  const manifests = new Array(animationIds.length);
+  let nextAnimationIndex = 0;
+  const workerCount = Math.min(options.jobs, animationIds.length);
+  console.log(`Running ${animationIds.length} animation(s) with ${workerCount} concurrent job(s).`);
+
+  const renderNext = async () => {
+    while (nextAnimationIndex < animationIds.length) {
+      const animationIndex = nextAnimationIndex;
+      nextAnimationIndex += 1;
+      manifests[animationIndex] = await renderAnimation({
+        animationId: animationIds[animationIndex],
+        browserExecutable,
+        crfs: options.crfs,
+        publishVideo: options.publishVideo,
+        qualities: options.qualities,
+        sceneId: options.sceneId,
+        widths: options.widths,
+      });
+    }
+  };
+
+  const workerResults = await Promise.allSettled(
+    Array.from({length: workerCount}, () => renderNext()),
+  );
+  const failedWorker = workerResults.find((result) => result.status === 'rejected');
+  if (failedWorker?.status === 'rejected') throw failedWorker.reason;
   const totalSize = manifests.reduce((sum, manifest) => sum + manifest.totalFileSize, 0);
   console.log(`\nPublished ${manifests.length} animations, ${manifests.reduce((sum, manifest) => sum + manifest.scenes.length, 0)} scenes, ${(totalSize / 1024 / 1024).toFixed(2)} MiB.`);
 };
