@@ -1,6 +1,6 @@
-import {RemotionDeck, type RemotionScene} from './remotion/RemotionDeck';
-import {PartyChange} from '@/animations/party-change/remotion/PartyChange';
-import {DURATION_FRAMES, FPS, SCENES} from '@/animations/party-change/remotion/storyboard';
+import {RemotionDeck, type RemotionScene} from '../../../remotion/RemotionDeck';
+import {PartyChange} from '@/animations/civil-procedure/05/party-change/remotion/PartyChange';
+import {DURATION_FRAMES, FPS, SCENES} from '@/animations/civil-procedure/05/party-change/remotion/storyboard';
 
 const scenes: readonly RemotionScene[] = [
   {id: 'change-types', number: '01', title: '当事人变更有哪些情形？', ...SCENES.concept},

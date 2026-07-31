@@ -1,6 +1,6 @@
-import {RemotionDeck, type RemotionScene} from './remotion/RemotionDeck';
-import {ProperParty} from '@/animations/proper-party/remotion/ProperParty';
-import {DURATION_FRAMES, FPS, SCENES} from '@/animations/proper-party/remotion/storyboard';
+import {RemotionDeck, type RemotionScene} from '../../../remotion/RemotionDeck';
+import {ProperParty} from '@/animations/civil-procedure/05/proper-party/remotion/ProperParty';
+import {DURATION_FRAMES, FPS, SCENES} from '@/animations/civil-procedure/05/proper-party/remotion/storyboard';
 
 const scenes: readonly RemotionScene[] = [
   {id: 'principle', number: '01', title: '谁是适格当事人？', ...SCENES.principle},

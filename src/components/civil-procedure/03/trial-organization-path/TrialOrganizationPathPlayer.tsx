@@ -1,6 +1,6 @@
 import {TrialOrganizationPath} from '@/animations/civil-procedure/03/trial-organization-path/remotion/TrialOrganizationPath';
 import {DURATION_FRAMES, FPS, SCENES} from '@/animations/civil-procedure/03/trial-organization-path/remotion/storyboard';
-import {RemotionDeck, type RemotionScene} from './remotion/RemotionDeck';
+import {RemotionDeck, type RemotionScene} from '../../../remotion/RemotionDeck';
 
 const scenes: readonly RemotionScene[] = [
   {id: 'path-gate', number: '01', title: '先锁审级与程序', ...SCENES.pathGate},

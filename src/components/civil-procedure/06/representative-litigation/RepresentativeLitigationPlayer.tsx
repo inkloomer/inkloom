@@ -1,4 +1,4 @@
-import {RemotionDeck, type RemotionScene} from './remotion/RemotionDeck';
+import {RemotionDeck, type RemotionScene} from '../../../remotion/RemotionDeck';
 import {RepresentativeLitigation} from '@/animations/civil-procedure/06/representative-litigation/remotion/RepresentativeLitigation';
 import {DURATION_FRAMES, FPS, SCENES} from '@/animations/civil-procedure/06/representative-litigation/remotion/storyboard';
 

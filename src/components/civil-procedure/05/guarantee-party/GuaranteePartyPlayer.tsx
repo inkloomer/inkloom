@@ -1,6 +1,6 @@
-import {RemotionDeck, type RemotionScene} from './remotion/RemotionDeck';
-import {GuaranteeParty} from '@/animations/guarantee-party/remotion/GuaranteeParty';
-import {DURATION_FRAMES, FPS, SCENES} from '@/animations/guarantee-party/remotion/storyboard';
+import {RemotionDeck, type RemotionScene} from '../../../remotion/RemotionDeck';
+import {GuaranteeParty} from '@/animations/civil-procedure/05/guarantee-party/remotion/GuaranteeParty';
+import {DURATION_FRAMES, FPS, SCENES} from '@/animations/civil-procedure/05/guarantee-party/remotion/storyboard';
 
 const scenes: readonly RemotionScene[] = [
   {id: 'general-guarantee', number: '01', title: '先诉抗辩权的保护', ...SCENES.general},

@@ -1,4 +1,4 @@
-import {RemotionDeck, type RemotionScene} from './remotion/RemotionDeck';
+import {RemotionDeck, type RemotionScene} from '../../../remotion/RemotionDeck';
 import {LawAttributes} from '@/animations/civil-procedure/01/law-attributes/remotion/LawAttributes';
 import {DURATION_FRAMES, FPS, SCENES} from '@/animations/civil-procedure/01/law-attributes/remotion/storyboard';
 

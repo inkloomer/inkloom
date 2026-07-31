@@ -1,6 +1,6 @@
 import {RecusalProcedurePath} from '@/animations/civil-procedure/03/recusal-procedure-path/remotion/RecusalProcedurePath';
 import {DURATION_FRAMES, FPS, SCENES} from '@/animations/civil-procedure/03/recusal-procedure-path/remotion/storyboard';
-import {RemotionDeck, type RemotionScene} from './remotion/RemotionDeck';
+import {RemotionDeck, type RemotionScene} from '../../../remotion/RemotionDeck';
 
 const scenes: readonly RemotionScene[] = [
   {id: 'scope', number: '01', title: '中立期待分叉', ...SCENES.scope},

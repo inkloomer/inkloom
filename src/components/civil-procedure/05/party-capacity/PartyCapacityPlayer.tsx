@@ -1,6 +1,6 @@
-import {RemotionDeck, type RemotionScene} from './remotion/RemotionDeck';
-import {PartyCapacity} from '@/animations/party-capacity/remotion/PartyCapacity';
-import {DURATION_FRAMES, FPS, SCENES} from '@/animations/party-capacity/remotion/storyboard';
+import {RemotionDeck, type RemotionScene} from '../../../remotion/RemotionDeck';
+import {PartyCapacity} from '@/animations/civil-procedure/05/party-capacity/remotion/PartyCapacity';
+import {DURATION_FRAMES, FPS, SCENES} from '@/animations/civil-procedure/05/party-capacity/remotion/storyboard';
 
 const scenes: readonly RemotionScene[] = [
   {id: 'rights-capacity', number: '01', title: '诉讼权利能力是什么？', ...SCENES.definition},

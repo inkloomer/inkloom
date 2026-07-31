@@ -1,4 +1,4 @@
-import {RemotionDeck, type RemotionScene} from './remotion/RemotionDeck';
+import {RemotionDeck, type RemotionScene} from '../../../remotion/RemotionDeck';
 import {CounterclaimVsDefense} from '@/animations/civil-procedure/02/counterclaim-vs-defense/remotion/CounterclaimVsDefense';
 import {DURATION_FRAMES, FPS, SCENES} from '@/animations/civil-procedure/02/counterclaim-vs-defense/remotion/storyboard';
 
