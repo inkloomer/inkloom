@@ -7,7 +7,7 @@ import {InkAnnotationDemo} from '../../animations/demo/demo-ink-annotation/remot
 import {IsometricMechanismDemo} from '../../animations/demo/demo-isometric-mechanism/remotion/IsometricMechanismDemo';
 import {KineticTypographyDemo} from '../../animations/demo/demo-kinetic-typography/remotion/KineticTypographyDemo';
 import {NewspaperEditorialDemo} from '../../animations/demo/demo-newspaper-editorial/remotion/NewspaperEditorialDemo';
-import {SplitScreenComparisonDemo} from '../../animations/demo/demo-split-screen-comparison/remotion/SplitScreenComparisonDemo';
+// import {SplitScreenComparisonDemo} from '../../animations/demo/demo-split-screen-comparison/remotion/SplitScreenComparisonDemo';
 import {TransitMapDemo} from '../../animations/demo/demo-transit-map/remotion/TransitMapDemo';
 
 export interface DemoDefinition {
@@ -28,7 +28,7 @@ export const STYLE_DEMOS = [
   {id: 'demo-transit-map', slug: 'transit-map', title: '线路图', direction: 'Transit Map', component: TransitMapDemo},
   {id: 'demo-kinetic-typography', slug: 'kinetic-typography', title: '动态排版', direction: 'Kinetic Typography', component: KineticTypographyDemo},
   {id: 'demo-isometric-mechanism', slug: 'isometric-mechanism', title: '等距机械', direction: 'Isometric Mechanism', component: IsometricMechanismDemo},
-  {id: 'demo-split-screen-comparison', slug: 'split-screen-comparison', title: '分屏对照', direction: 'Split-screen Comparison', component: SplitScreenComparisonDemo},
+  // {id: 'demo-split-screen-comparison', slug: 'split-screen-comparison', title: '分屏对照', direction: 'Split-screen Comparison', component: SplitScreenComparisonDemo},
 ] as const satisfies readonly DemoDefinition[];
 
 export const demoById = (id: string) => STYLE_DEMOS.find((demo) => demo.id === id);
