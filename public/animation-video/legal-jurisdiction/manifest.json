@@ -1,0 +1,29 @@
+{
+  "animationId": "legal-jurisdiction",
+  "compositionId": "LegalJurisdiction",
+  "crf": 35,
+  "format": "av1-mp4",
+  "generatedAt": "2026-07-31T08:52:03.816Z",
+  "scenes": [
+    {
+      "endFrame": 825,
+      "frameCount": 79,
+      "id": "mediation-confirmation",
+      "number": "04",
+      "startFrame": 510,
+      "title": "人民调解与司法确认",
+      "durationMs": 5267,
+      "file": "mediation-confirmation.mp4",
+      "fileSize": 217993,
+      "format": "mp4",
+      "crf": 35
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "targetFps": 15,
+  "totalFileSize": 217993
+}

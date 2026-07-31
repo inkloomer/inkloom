@@ -7,8 +7,8 @@
     "start": "astro dev",
     "build": "astro build",
     "animation:pages": "node scripts/capture-remotion-pages.mjs",
-    "animation:publish-avif": "node scripts/publish-remotion-avif.mjs",
-    "animation:compare-av1": "node scripts/publish-remotion-avif.mjs",
+    "animation:publish-video": "node scripts/publish-remotion-media.mjs --video",
+    "animation:compare-av1": "node scripts/publish-remotion-media.mjs",
     "preview": "astro preview",
     "astro": "astro"
   },
