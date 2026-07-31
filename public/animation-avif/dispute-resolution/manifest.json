@@ -1,72 +1,88 @@
 {
   "animationId": "dispute-resolution",
   "compositionId": "DisputeResolution",
+  "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-07-31T07:30:13.875Z",
+  "generatedAt": "2026-07-31T09:45:47.051Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
     {
-      "durationMs": 3800,
       "endFrame": 225,
-      "file": "spectrum.avif",
-      "fileSize": 62151,
       "frameCount": 57,
       "id": "spectrum",
       "number": "01",
       "startFrame": 0,
-      "title": "四条路径光谱"
+      "title": "四条路径光谱",
+      "durationMs": 3800,
+      "file": "spectrum.avif",
+      "fileSize": 254533,
+      "format": "avif",
+      "crf": 35,
+      "quality": 45
     },
     {
-      "durationMs": 5267,
       "endFrame": 555,
-      "file": "informal.avif",
-      "fileSize": 75879,
       "frameCount": 79,
       "id": "informal",
       "number": "02",
       "startFrame": 240,
-      "title": "和解 · 调解"
+      "title": "和解 · 调解",
+      "durationMs": 5267,
+      "file": "informal.avif",
+      "fileSize": 347122,
+      "format": "avif",
+      "crf": 35,
+      "quality": 45
     },
     {
-      "durationMs": 5267,
       "endFrame": 885,
-      "file": "formal.avif",
-      "fileSize": 87476,
       "frameCount": 79,
       "id": "formal",
       "number": "03",
       "startFrame": 570,
-      "title": "仲裁 · 诉讼"
+      "title": "仲裁 · 诉讼",
+      "durationMs": 5267,
+      "file": "formal.avif",
+      "fileSize": 399670,
+      "format": "avif",
+      "crf": 35,
+      "quality": 45
     },
     {
-      "durationMs": 5800,
       "endFrame": 1245,
-      "file": "enforceability.avif",
-      "fileSize": 86475,
       "frameCount": 87,
       "id": "enforceability",
       "number": "04",
       "startFrame": 900,
-      "title": "执行力与司法确认"
+      "title": "执行力与司法确认",
+      "durationMs": 5800,
+      "file": "enforceability.avif",
+      "fileSize": 352386,
+      "format": "avif",
+      "crf": 35,
+      "quality": 45
     },
     {
-      "durationMs": 6800,
       "endFrame": 1665,
-      "file": "recap.avif",
-      "fileSize": 77201,
       "frameCount": 102,
       "id": "recap",
       "number": "05",
       "startFrame": 1260,
-      "title": "四路径总览"
+      "title": "四路径总览",
+      "durationMs": 6800,
+      "file": "recap.avif",
+      "fileSize": 335004,
+      "format": "avif",
+      "crf": 35,
+      "quality": 45
     }
   ],
   "size": {
-    "height": 720,
-    "width": 1280
+    "height": 1440,
+    "width": 2560
   },
   "sourceFps": 60,
   "targetFps": 15,
-  "totalFileSize": 389182
+  "totalFileSize": 1688715
 }

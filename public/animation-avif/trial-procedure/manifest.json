@@ -1,72 +1,88 @@
 {
   "animationId": "trial-procedure",
   "compositionId": "TrialProcedure",
-  "format": "animated-webp",
-  "generatedAt": "2026-07-31T06:46:33.847Z",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-07-31T10:07:27.700Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
     {
-      "durationMs": 4266,
       "endFrame": 255,
-      "file": "criterion.webp",
-      "fileSize": 160186,
       "frameCount": 64,
       "id": "criterion",
       "number": "01",
       "startFrame": 0,
-      "title": "分类标准：是否解决纠纷"
+      "title": "分类标准：是否解决纠纷",
+      "durationMs": 4267,
+      "file": "criterion.avif",
+      "fileSize": 355712,
+      "format": "avif",
+      "crf": 35,
+      "quality": 45
     },
     {
-      "durationMs": 4799,
       "endFrame": 555,
-      "file": "litigation.webp",
-      "fileSize": 158668,
       "frameCount": 72,
       "id": "litigation",
       "number": "02",
       "startFrame": 270,
-      "title": "诉讼程序"
+      "title": "诉讼程序",
+      "durationMs": 4800,
+      "file": "litigation.avif",
+      "fileSize": 333847,
+      "format": "avif",
+      "crf": 35,
+      "quality": 45
     },
     {
-      "durationMs": 4799,
       "endFrame": 855,
-      "file": "non-litigation.webp",
-      "fileSize": 182250,
       "frameCount": 72,
       "id": "non-litigation",
       "number": "03",
       "startFrame": 570,
-      "title": "非讼程序"
+      "title": "非讼程序",
+      "durationMs": 4800,
+      "file": "non-litigation.avif",
+      "fileSize": 439886,
+      "format": "avif",
+      "crf": 35,
+      "quality": 45
     },
     {
-      "durationMs": 5266,
       "endFrame": 1185,
-      "file": "voter-exception.webp",
-      "fileSize": 168194,
       "frameCount": 79,
       "id": "voter-exception",
       "number": "04",
       "startFrame": 870,
-      "title": "选民资格例外"
+      "title": "选民资格例外",
+      "durationMs": 5267,
+      "file": "voter-exception.avif",
+      "fileSize": 350668,
+      "format": "avif",
+      "crf": 35,
+      "quality": 45
     },
     {
-      "durationMs": 7799,
       "endFrame": 1665,
-      "file": "comparison.webp",
-      "fileSize": 184002,
       "frameCount": 117,
       "id": "comparison",
       "number": "05",
       "startFrame": 1200,
-      "title": "三类定位对照"
+      "title": "三类定位对照",
+      "durationMs": 7800,
+      "file": "comparison.avif",
+      "fileSize": 394627,
+      "format": "avif",
+      "crf": 35,
+      "quality": 45
     }
   ],
   "size": {
-    "height": 720,
-    "width": 1280
+    "height": 1440,
+    "width": 2560
   },
   "sourceFps": 60,
   "targetFps": 15,
-  "totalFileSize": 853300
+  "totalFileSize": 1874740
 }

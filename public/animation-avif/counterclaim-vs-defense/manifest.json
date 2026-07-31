@@ -1,72 +1,88 @@
 {
   "animationId": "counterclaim-vs-defense",
   "compositionId": "CounterclaimVsDefense",
+  "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-07-31T07:29:15.014Z",
+  "generatedAt": "2026-07-31T09:47:09.097Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
     {
-      "durationMs": 5467,
       "endFrame": 326,
-      "file": "concept.avif",
-      "fileSize": 99293,
       "frameCount": 82,
       "id": "concept",
       "number": "01",
       "startFrame": 0,
-      "title": "反诉是独立的诉"
+      "title": "反诉是独立的诉",
+      "durationMs": 5467,
+      "file": "concept.avif",
+      "fileSize": 400842,
+      "format": "avif",
+      "crf": 35,
+      "quality": 45
     },
     {
-      "durationMs": 7133,
       "endFrame": 776,
-      "file": "technique.avif",
-      "fileSize": 84725,
       "frameCount": 107,
       "id": "technique",
       "number": "02",
       "startFrame": 350,
-      "title": "去掉原告主张测试法"
+      "title": "去掉原告主张测试法",
+      "durationMs": 7133,
+      "file": "technique.avif",
+      "fileSize": 342897,
+      "format": "avif",
+      "crf": 35,
+      "quality": 45
     },
     {
-      "durationMs": 10467,
       "endFrame": 1426,
-      "file": "cases.avif",
-      "fileSize": 90871,
       "frameCount": 157,
       "id": "cases",
       "number": "03",
       "startFrame": 800,
-      "title": "四组典型对照"
+      "title": "四组典型对照",
+      "durationMs": 10467,
+      "file": "cases.avif",
+      "fileSize": 393620,
+      "format": "avif",
+      "crf": 35,
+      "quality": 45
     },
     {
-      "durationMs": 7133,
       "endFrame": 1876,
-      "file": "independence.avif",
-      "fileSize": 80077,
       "frameCount": 107,
       "id": "independence",
       "number": "04",
       "startFrame": 1450,
-      "title": "本诉撤 · 反诉仍在"
+      "title": "本诉撤 · 反诉仍在",
+      "durationMs": 7133,
+      "file": "independence.avif",
+      "fileSize": 306221,
+      "format": "avif",
+      "crf": 35,
+      "quality": 45
     },
     {
-      "durationMs": 14667,
       "endFrame": 2776,
-      "file": "recap.avif",
-      "fileSize": 74755,
       "frameCount": 220,
       "id": "recap",
       "number": "05",
       "startFrame": 1900,
-      "title": "判断流 + 要件口诀"
+      "title": "判断流 + 要件口诀",
+      "durationMs": 14667,
+      "file": "recap.avif",
+      "fileSize": 308792,
+      "format": "avif",
+      "crf": 35,
+      "quality": 45
     }
   ],
   "size": {
-    "height": 720,
-    "width": 1280
+    "height": 1440,
+    "width": 2560
   },
   "sourceFps": 60,
   "targetFps": 15,
-  "totalFileSize": 429721
+  "totalFileSize": 1752372
 }

@@ -29,5 +29,6 @@ ref/
 *.webp
 !public/animation-webp/**/*.webp
 *.avif
+!public/animation-avif/**/*.avif
 notes/
 *.pdf

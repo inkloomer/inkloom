@@ -1,83 +1,102 @@
 {
   "animationId": "recusal-procedure-path",
   "compositionId": "RecusalProcedurePath",
+  "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-07-31T07:40:09.289Z",
+  "generatedAt": "2026-07-31T10:04:06.914Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
     {
-      "durationMs": 7133,
       "endFrame": 426,
-      "file": "scope.avif",
-      "fileSize": 89345,
       "frameCount": 107,
       "id": "scope",
       "number": "01",
       "startFrame": 0,
-      "title": "中立期待分叉"
+      "title": "中立期待分叉",
+      "durationMs": 7133,
+      "file": "scope.avif",
+      "fileSize": 355423,
+      "format": "avif",
+      "crf": 35,
+      "quality": 45
     },
     {
-      "durationMs": 6333,
       "endFrame": 826,
-      "file": "timing.avif",
-      "fileSize": 80002,
       "frameCount": 95,
       "id": "timing",
       "number": "02",
       "startFrame": 450,
-      "title": "申请时间窗口"
+      "title": "申请时间窗口",
+      "durationMs": 6333,
+      "file": "timing.avif",
+      "fileSize": 309595,
+      "format": "avif",
+      "crf": 35,
+      "quality": 45
     },
     {
-      "durationMs": 7133,
       "endFrame": 1276,
-      "file": "pending-effect.avif",
-      "fileSize": 73067,
       "frameCount": 107,
       "id": "pending-effect",
       "number": "03",
       "startFrame": 850,
-      "title": "审查期暂停"
+      "title": "审查期暂停",
+      "durationMs": 7133,
+      "file": "pending-effect.avif",
+      "fileSize": 282093,
+      "format": "avif",
+      "crf": 35,
+      "quality": 45
     },
     {
-      "durationMs": 8000,
       "endFrame": 1776,
-      "file": "decision.avif",
-      "fileSize": 82432,
       "frameCount": 120,
       "id": "decision",
       "number": "04",
       "startFrame": 1300,
-      "title": "决定主体映射"
+      "title": "决定主体映射",
+      "durationMs": 8000,
+      "file": "decision.avif",
+      "fileSize": 335102,
+      "format": "avif",
+      "crf": 35,
+      "quality": 45
     },
     {
-      "durationMs": 7133,
       "endFrame": 2226,
-      "file": "remedy.avif",
-      "fileSize": 94038,
       "frameCount": 107,
       "id": "remedy",
       "number": "05",
       "startFrame": 1800,
-      "title": "救济：复议一次"
+      "title": "救济：复议一次",
+      "durationMs": 7133,
+      "file": "remedy.avif",
+      "fileSize": 379545,
+      "format": "avif",
+      "crf": 35,
+      "quality": 45
     },
     {
-      "durationMs": 12133,
       "endFrame": 2976,
-      "file": "pause-vs-continue.avif",
-      "fileSize": 88069,
       "frameCount": 182,
       "id": "pause-vs-continue",
       "number": "06",
       "startFrame": 2250,
-      "title": "审查停≠复议不停"
+      "title": "审查停≠复议不停",
+      "durationMs": 12133,
+      "file": "pause-vs-continue.avif",
+      "fileSize": 345123,
+      "format": "avif",
+      "crf": 35,
+      "quality": 45
     }
   ],
   "size": {
-    "height": 720,
-    "width": 1280
+    "height": 1440,
+    "width": 2560
   },
   "sourceFps": 60,
   "targetFps": 15,
-  "totalFileSize": 506953
+  "totalFileSize": 2006881
 }

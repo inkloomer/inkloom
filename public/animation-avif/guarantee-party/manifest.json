@@ -1,50 +1,60 @@
 {
   "animationId": "guarantee-party",
   "compositionId": "GuaranteeParty",
+  "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-07-31T07:30:52.601Z",
+  "generatedAt": "2026-07-31T09:47:31.724Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
     {
-      "durationMs": 5467,
       "endFrame": 326,
-      "file": "general-guarantee.avif",
-      "fileSize": 71566,
       "frameCount": 82,
       "id": "general-guarantee",
       "number": "01",
       "startFrame": 0,
-      "title": "先诉抗辩权的保护"
+      "title": "先诉抗辩权的保护",
+      "durationMs": 5467,
+      "file": "general-guarantee.avif",
+      "fileSize": 296429,
+      "format": "avif",
+      "crf": 35,
+      "quality": 45
     },
     {
-      "durationMs": 5467,
       "endFrame": 676,
-      "file": "joint-liability-guarantee.avif",
-      "fileSize": 74333,
       "frameCount": 82,
       "id": "joint-liability-guarantee",
       "number": "02",
       "startFrame": 350,
-      "title": "债权人享有选择权"
+      "title": "债权人享有选择权",
+      "durationMs": 5467,
+      "file": "joint-liability-guarantee.avif",
+      "fileSize": 304982,
+      "format": "avif",
+      "crf": 35,
+      "quality": 45
     },
     {
-      "durationMs": 5467,
       "endFrame": 1026,
-      "file": "comparison.avif",
-      "fileSize": 77790,
       "frameCount": 82,
       "id": "comparison",
       "number": "03",
       "startFrame": 700,
-      "title": "一般保证 vs 连带保证速记"
+      "title": "一般保证 vs 连带保证速记",
+      "durationMs": 5467,
+      "file": "comparison.avif",
+      "fileSize": 340851,
+      "format": "avif",
+      "crf": 35,
+      "quality": 45
     }
   ],
   "size": {
-    "height": 720,
-    "width": 1280
+    "height": 1440,
+    "width": 2560
   },
   "sourceFps": 60,
   "targetFps": 15,
-  "totalFileSize": 223689
+  "totalFileSize": 942262
 }
