@@ -491,6 +491,13 @@ export const RemotionDeck = ({
     flashCopyFeedback('思源脚本已复制');
   };
 
+  const copySiyuanVideoScript = async () => {
+    const response = await fetch(`${BASE_URL}tools/siyuan-video-player.js`);
+    if (!response.ok) throw new Error(`SiYuan video script request failed with ${response.status}.`);
+    await navigator.clipboard.writeText(await response.text());
+    flashCopyFeedback('视频脚本已复制');
+  };
+
   const runCopyAction = (action: () => Promise<void>) => {
     void action().catch((error) => {
       console.error(error);
@@ -575,7 +582,13 @@ export const RemotionDeck = ({
                     <Code2 size={15} aria-hidden="true" />
                   </button>
                 </div>
-              ) : null}
+              ) : (
+                <div className="remotion-deck__copy-actions" role="group" aria-label="视频复制操作">
+                  <button type="button" title="复制思源视频控制脚本" aria-label="复制思源视频控制脚本" onClick={() => runCopyAction(copySiyuanVideoScript)}>
+                    <Code2 size={15} aria-hidden="true" />
+                  </button>
+                </div>
+              )}
               <span className="remotion-deck__copy-feedback" aria-live="polite">{copyFeedback}</span>
             </div>
           </header>

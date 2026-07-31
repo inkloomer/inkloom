@@ -12,7 +12,6 @@
       {name: 'APNG', extensions: ['apng'], mimeType: 'image/png'},
     ],
     showReplayButton: true,
-    showLoopButton: true,
     replayOnHover: false,
     replayWhenOpenedLarge: true,
   };
@@ -92,31 +91,43 @@
       }
       .${OVERLAY_CLASS}__controls {
         position: absolute;
-        right: 8px;
-        bottom: 8px;
+        right: 4px;
+        bottom: 4px;
         display: flex;
-        gap: 6px;
         z-index: 2;
         pointer-events: auto;
       }
+      .${OVERLAY_CLASS}__controls[hidden] {
+        display: none;
+      }
       .${OVERLAY_CLASS}__controls button {
         display: grid;
-        width: 36px;
-        height: 36px;
+        width: 30px;
+        height: 30px;
         place-items: center;
         margin: 0;
         padding: 0;
-        border: 1px solid rgba(255, 255, 255, 0.35);
+        border: 1px solid rgba(255, 255, 255, 0.16);
         border-radius: 50%;
-        background: rgba(18, 24, 22, 0.72);
-        color: white;
+        background: rgba(18, 24, 22, 0.3);
+        color: rgba(255, 255, 255, 0.78);
         cursor: pointer;
-        font: 700 20px/1 system-ui, sans-serif;
-        backdrop-filter: blur(6px);
+        font: 600 16px/1 system-ui, sans-serif;
+        opacity: 0.62;
+        backdrop-filter: blur(3px);
+        transition: background 120ms ease, opacity 120ms ease;
       }
-      .${OVERLAY_CLASS}__controls button[aria-pressed="true"] {
-        background: #16835f;
-        border-color: #8ce0c3;
+      .${OVERLAY_CLASS}__controls button:hover,
+      .${OVERLAY_CLASS}__controls button:focus-visible {
+        background: rgba(18, 24, 22, 0.56);
+        opacity: 0.92;
+      }
+      @media (max-width: 600px) {
+        .${OVERLAY_CLASS}__controls button {
+          width: 26px;
+          height: 26px;
+          font-size: 14px;
+        }
       }
     `;
     document.head.appendChild(style);
@@ -131,19 +142,14 @@
     return button;
   };
 
-  const createControls = () => {
+  const createReplayControl = ({label = '重新播放', text = '↻'} = {}) => {
     const controls = document.createElement('span');
     controls.className = `${OVERLAY_CLASS}__controls`;
     const replayButton = CONFIG.showReplayButton
-      ? createButton('重新播放', '重新播放', '↻')
+      ? createButton(label, label, text)
       : null;
-    const loopButton = CONFIG.showLoopButton
-      ? createButton('无限循环', '无限循环', '∞')
-      : null;
-
-    loopButton?.setAttribute('aria-pressed', 'false');
-    [replayButton, loopButton].filter(Boolean).forEach((button) => controls.appendChild(button));
-    return {controls, loopButton, replayButton};
+    if (replayButton) controls.appendChild(replayButton);
+    return {controls, replayButton};
   };
 
   const replayNativeImage = (img) => {
@@ -155,15 +161,6 @@
       img.src = src;
       img.srcset = srcset;
     });
-  };
-
-  const readManifestDuration = async (src) => {
-    const manifestUrl = new URL('manifest.json', src);
-    const response = await fetch(manifestUrl);
-    if (!response.ok) return 0;
-    const manifest = await response.json();
-    const fileName = new URL(src).pathname.split('/').pop();
-    return manifest.scenes?.find((scene) => scene.file === fileName)?.durationMs ?? 0;
   };
 
   const syncOverlay = (controller) => {
@@ -194,7 +191,7 @@
     controllersByImage.set(img, controller);
     activeControllers.add(controller);
     resizeObserver.observe(img);
-    img.addEventListener('load', controller.replayOnLoad = () => syncOverlay(controller));
+    img.addEventListener('load', controller.syncOnLoad = () => syncOverlay(controller));
     syncOverlay(controller);
     return controller;
   };
@@ -202,7 +199,7 @@
   function disposeController(controller) {
     if (!activeControllers.delete(controller)) return;
     resizeObserver.unobserve(controller.img);
-    controller.img.removeEventListener('load', controller.replayOnLoad);
+    controller.img.removeEventListener('load', controller.syncOnLoad);
     controller.disposePlayback?.();
     controller.overlay.remove();
   }
@@ -227,10 +224,9 @@
 
   const addImageControls = async (img, src, type) => {
     const overlay = createOverlay(src, type);
-    const {controls, loopButton, replayButton} = createControls();
+    const {controls, replayButton} = createReplayControl();
     overlay.appendChild(controls);
 
-    let timer = 0;
     const replay = () => replayNativeImage(img);
     const replayOnHover = () => replay();
     const controller = registerController({
@@ -238,7 +234,6 @@
       overlay,
       replay,
       disposePlayback: () => {
-        window.clearInterval(timer);
         img.removeEventListener('pointerenter', replayOnHover);
       },
     });
@@ -246,24 +241,6 @@
     replayButton?.addEventListener('click', (event) => {
       event.stopPropagation();
       replay();
-    });
-    loopButton?.addEventListener('click', async (event) => {
-      event.stopPropagation();
-      const enabled = loopButton.getAttribute('aria-pressed') !== 'true';
-      loopButton.setAttribute('aria-pressed', String(enabled));
-      window.clearInterval(timer);
-      if (!enabled) return;
-
-      const durationMs = await readManifestDuration(src).catch(() => 0);
-      if (loopButton.getAttribute('aria-pressed') !== 'true') return;
-      if (durationMs <= 0) {
-        loopButton.setAttribute('aria-pressed', 'false');
-        loopButton.disabled = true;
-        loopButton.title = '无法读取动图时长，循环不可用';
-        return;
-      }
-      replay();
-      timer = window.setInterval(replay, durationMs + 80);
     });
     if (CONFIG.replayOnHover) img.addEventListener('pointerenter', replayOnHover);
     syncOverlay(controller);
