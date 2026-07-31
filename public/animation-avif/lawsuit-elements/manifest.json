@@ -1,0 +1,72 @@
+{
+  "animationId": "lawsuit-elements",
+  "compositionId": "LawsuitElements",
+  "format": "animated-avif",
+  "generatedAt": "2026-07-31T07:34:31.351Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "durationMs": 5467,
+      "endFrame": 326,
+      "file": "concept.avif",
+      "fileSize": 99808,
+      "frameCount": 82,
+      "id": "concept",
+      "number": "01",
+      "startFrame": 0,
+      "title": "诉讼标的 ≠ 诉讼请求"
+    },
+    {
+      "durationMs": 7133,
+      "endFrame": 776,
+      "file": "distinction.avif",
+      "fileSize": 96448,
+      "frameCount": 107,
+      "id": "distinction",
+      "number": "02",
+      "startFrame": 350,
+      "title": "一个标的 · 多个请求"
+    },
+    {
+      "durationMs": 8800,
+      "endFrame": 1326,
+      "file": "classification.avif",
+      "fileSize": 109472,
+      "frameCount": 132,
+      "id": "classification",
+      "number": "03",
+      "startFrame": 800,
+      "title": "唯一依据：原告诉讼请求"
+    },
+    {
+      "durationMs": 10467,
+      "endFrame": 1976,
+      "file": "transformation.avif",
+      "fileSize": 93352,
+      "frameCount": 157,
+      "id": "transformation",
+      "number": "04",
+      "startFrame": 1350,
+      "title": "请求变 · 标的可不变"
+    },
+    {
+      "durationMs": 13000,
+      "endFrame": 2776,
+      "file": "recap.avif",
+      "fileSize": 86036,
+      "frameCount": 195,
+      "id": "recap",
+      "number": "05",
+      "startFrame": 2000,
+      "title": "标的 → 请求 → 分类"
+    }
+  ],
+  "size": {
+    "height": 720,
+    "width": 1280
+  },
+  "sourceFps": 60,
+  "targetFps": 15,
+  "totalFileSize": 485116
+}

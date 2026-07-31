@@ -229,14 +229,14 @@
   height: 100%;
 }
 
-.remotion-deck__webp-frame img {
+.remotion-deck__avif-frame img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
 
-.remotion-deck__webp-error {
+.remotion-deck__avif-error {
   display: grid;
   width: 100%;
   height: 100%;

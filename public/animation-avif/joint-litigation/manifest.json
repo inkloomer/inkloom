@@ -1,0 +1,83 @@
+{
+  "animationId": "joint-litigation",
+  "compositionId": "JointLitigation",
+  "format": "animated-avif",
+  "generatedAt": "2026-07-31T07:32:13.355Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "durationMs": 4667,
+      "endFrame": 276,
+      "file": "definition.avif",
+      "fileSize": 59082,
+      "frameCount": 70,
+      "id": "definition",
+      "number": "01",
+      "startFrame": 0,
+      "title": "什么是共同诉讼？"
+    },
+    {
+      "durationMs": 6333,
+      "endFrame": 676,
+      "file": "ordinary-joint-litigation.avif",
+      "fileSize": 75942,
+      "frameCount": 95,
+      "id": "ordinary-joint-litigation",
+      "number": "02",
+      "startFrame": 300,
+      "title": "普通共同诉讼"
+    },
+    {
+      "durationMs": 6333,
+      "endFrame": 1076,
+      "file": "necessary-joint-litigation.avif",
+      "fileSize": 64190,
+      "frameCount": 95,
+      "id": "necessary-joint-litigation",
+      "number": "03",
+      "startFrame": 700,
+      "title": "必要共同诉讼"
+    },
+    {
+      "durationMs": 8000,
+      "endFrame": 1576,
+      "file": "comparison.avif",
+      "fileSize": 51778,
+      "frameCount": 120,
+      "id": "comparison",
+      "number": "04",
+      "startFrame": 1100,
+      "title": "普通 vs 必要 对比"
+    },
+    {
+      "durationMs": 9667,
+      "endFrame": 2176,
+      "file": "common-cases.avif",
+      "fileSize": 66186,
+      "frameCount": 145,
+      "id": "common-cases",
+      "number": "05",
+      "startFrame": 1600,
+      "title": "常考必要共同诉讼人"
+    },
+    {
+      "durationMs": 8000,
+      "endFrame": 2676,
+      "file": "recap.avif",
+      "fileSize": 70524,
+      "frameCount": 120,
+      "id": "recap",
+      "number": "06",
+      "startFrame": 2200,
+      "title": "共同诉讼总览"
+    }
+  ],
+  "size": {
+    "height": 720,
+    "width": 1280
+  },
+  "sourceFps": 60,
+  "targetFps": 15,
+  "totalFileSize": 387702
+}
