@@ -8,7 +8,7 @@ const SIYUAN_BIN = process.env.SIYUAN_BIN || 'D:/scoop/shims/siyuan.exe';
 const SIYUAN_WORKSPACE = process.env.SIYUAN_WORKSPACE || 'D:/1STUDY/SIYUAN';
 const PUBLIC_AVIF_ROOT = path.join(PROJECT_ROOT, 'public', 'animation-avif');
 const BASE_URL = 'https://inkloomer.github.io/inkloom/animation-avif';
-const IMAGE_BLOCK_PATTERN = /^!\[InkLoom 动图(?:：|:)[^\]]+\]\((https:\/\/inkloomer\.github\.io\/inkloom\/animation-avif\/[^)]+)\)$/;
+const IMAGE_BLOCK_PATTERN = /^!\[InkLoom 动图(?:：|:)[^\]]+\]\((https:\/\/inkloomer\.github\.io\/inkloom\/animation-avif\/[^)\s]+)\)(?:\s*\{:[^}]*\})?\s*$/;
 
 const ROOTS = {
   'dispute-resolution': '20260704175116-40dmfvd',
@@ -61,7 +61,7 @@ const ANCHORS = {
     distinction: {anchor: '概念区分', type: 'callout'},
     classification: {anchor: '命题角度：诉讼标的 VS. 诉讼请求', type: 'h'},
     transformation: {anchor: '3. 形成之诉（变更之诉）', type: 'h'},
-    recap: {anchor: '五、核心概念对比总结', type: 'h'},
+    recap: {targetId: '20260705180806-dc570gb'},
   },
   'basic-principles-triangle': {
     relationships: {anchor: '第一节 基本原则', type: 'h'},
@@ -83,13 +83,13 @@ const ANCHORS = {
     jurors: {anchor: '审级要件', type: 'i'},
   },
   'legal-jurisdiction': {
-    definition: {anchor: '主管是指法院受理民事案件的权限范围', type: 't'},
-    'court-scope': {anchor: '平等主体之间因财产关系和人身关系发生的争议属于人民法院主管', type: 't'},
+    definition: {targetId: '20260707202548-whgqis6'},
+    'court-scope': {targetId: '20260707202548-c6ddhxc'},
     'dispute-resolution': {anchor: '第一节 主管', type: 'h'},
     'mediation-confirmation': {anchor: '一、法院主管与人民调解的关系', type: 'h'},
     'arbitration-exclusion': {anchor: '二、法院主管与仲裁机构（民商事仲裁）的关系', type: 'h'},
     'labor-arbitration': {anchor: '三、法院主管与劳动仲裁的关系', type: 'h'},
-    'relationship-map': {anchor: '第一节 主管', type: 'h'},
+    'relationship-map': {targetId: '20260707202548-l9hkhy7'},
   },
   'territorial-jurisdiction': {
     orientation: {anchor: '第四节 地域管辖', type: 'h', exact: true},
@@ -108,13 +108,13 @@ const ANCHORS = {
     'rights-capacity': {anchor: '一、诉讼权利能力', type: 'h'},
     'capacity-comparison': {anchor: '二、诉讼权利能力和诉讼行为能力', type: 'h'},
     'legal-representation': {anchor: '二、诉讼行为能力', type: 'h'},
-    recap: {anchor: '二、诉讼权利能力和诉讼行为能力', type: 'h'},
+    recap: {targetId: '20260729213047-f8vavpo'},
   },
   'party-change': {
-    'change-types': {anchor: '五、当事人变更', type: 'h'},
+    'change-types': {targetId: '20260729213047-4uhlmky'},
     succession: {anchor: '一 基于法律规定导致当事人变更的情形', type: 'h', exact: true},
     'substantive-transfer': {anchor: '二 基于当事人的意思导致当事人变更的情形', type: 'h', exact: true},
-    'party-constancy': {anchor: '动画讲解：当事人变更与恒定主义', type: 'callout'},
+    'party-constancy': {targetId: '20260729213047-6q63224'},
   },
   'proper-party': {
     principle: {anchor: '当事人适格是指针对具体的诉讼', type: 'i'},
@@ -144,6 +144,7 @@ const ANCHORS = {
 const args = new Set(process.argv.slice(2));
 const apply = args.has('--apply');
 const dryRun = !apply;
+const repairPlacements = args.has('--repair-placements');
 
 const normalize = (value) => String(value || '')
   .replace(/<[^>]*>/g, '')
@@ -228,6 +229,7 @@ const directImageBlocks = blocks.flatMap((row) => {
   return match ? [{row, url: match[1]}] : [];
 });
 const existingUrls = new Set(directImageBlocks.map(({url}) => url));
+const imageBlocksByUrl = new Map(directImageBlocks.map(({row, url}) => [url, row]));
 const duplicateUrls = [...new Set(directImageBlocks
   .map(({url}) => url)
   .filter((url, index, urls) => urls.indexOf(url) !== index))];
@@ -251,12 +253,33 @@ for (const {animationId, scene} of readManifests()) {
 
 if (tasks.length !== 77) throw new Error(`Expected 77 scenes, found ${tasks.length}.`);
 const uniqueTargets = new Set(tasks.map((task) => task.target.id));
+if (uniqueTargets.size !== tasks.length) {
+  const sharedTargets = [...uniqueTargets].flatMap((targetId) => {
+    const scenes = tasks.filter((task) => task.target.id === targetId).map((task) => `${task.animationId}/${task.sceneId}`);
+    return scenes.length > 1 ? [`${targetId}: ${scenes.join(', ')}`] : [];
+  });
+  throw new Error(`Every animated image needs its own source anchor:\n${sharedTargets.join('\n')}`);
+}
 console.log(`Resolved ${tasks.length} scenes to ${uniqueTargets.size} source blocks.`);
 for (const task of tasks) {
   console.log(`${task.exists ? 'EXISTS' : dryRun ? 'DRY-RUN' : 'INSERT'} ${task.animationId}/${task.sceneId} -> ${task.target.id} (${task.target.content})`);
 }
 
 const pending = tasks.filter((task) => !task.exists);
+if (repairPlacements) {
+  if (pending.length > 0) throw new Error(`Cannot repair placement while ${pending.length} image block(s) are missing.`);
+  for (const task of tasks) {
+    const image = imageBlocksByUrl.get(task.url);
+    if (!image) throw new Error(`Missing SiYuan image block: ${task.url}`);
+    const command = ['-w', SIYUAN_WORKSPACE];
+    if (dryRun) command.push('--dry-run');
+    command.push('block', 'move', '--id', image.id, '--parent', task.target.parent_id, '--previous', task.target.id);
+    run(command);
+  }
+  console.log(`${dryRun ? 'CLI dry-run validated' : 'Moved'} ${tasks.length} image blocks to unique source anchors.`);
+  process.exit(0);
+}
+
 if (!apply) {
   for (const task of pending) {
     const markdown = `![InkLoom 动图：${task.title}](${task.url})`;
