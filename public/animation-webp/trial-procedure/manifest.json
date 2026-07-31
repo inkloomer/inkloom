@@ -1,0 +1,72 @@
+{
+  "animationId": "trial-procedure",
+  "compositionId": "TrialProcedure",
+  "format": "animated-webp",
+  "generatedAt": "2026-07-31T06:46:33.847Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "durationMs": 4266,
+      "endFrame": 255,
+      "file": "criterion.webp",
+      "fileSize": 160186,
+      "frameCount": 64,
+      "id": "criterion",
+      "number": "01",
+      "startFrame": 0,
+      "title": "分类标准：是否解决纠纷"
+    },
+    {
+      "durationMs": 4799,
+      "endFrame": 555,
+      "file": "litigation.webp",
+      "fileSize": 158668,
+      "frameCount": 72,
+      "id": "litigation",
+      "number": "02",
+      "startFrame": 270,
+      "title": "诉讼程序"
+    },
+    {
+      "durationMs": 4799,
+      "endFrame": 855,
+      "file": "non-litigation.webp",
+      "fileSize": 182250,
+      "frameCount": 72,
+      "id": "non-litigation",
+      "number": "03",
+      "startFrame": 570,
+      "title": "非讼程序"
+    },
+    {
+      "durationMs": 5266,
+      "endFrame": 1185,
+      "file": "voter-exception.webp",
+      "fileSize": 168194,
+      "frameCount": 79,
+      "id": "voter-exception",
+      "number": "04",
+      "startFrame": 870,
+      "title": "选民资格例外"
+    },
+    {
+      "durationMs": 7799,
+      "endFrame": 1665,
+      "file": "comparison.webp",
+      "fileSize": 184002,
+      "frameCount": 117,
+      "id": "comparison",
+      "number": "05",
+      "startFrame": 1200,
+      "title": "三类定位对照"
+    }
+  ],
+  "size": {
+    "height": 720,
+    "width": 1280
+  },
+  "sourceFps": 60,
+  "targetFps": 15,
+  "totalFileSize": 853300
+}

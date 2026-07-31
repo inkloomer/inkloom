@@ -1,0 +1,83 @@
+{
+  "animationId": "trial-organization-path",
+  "compositionId": "TrialOrganizationPath",
+  "format": "animated-webp",
+  "generatedAt": "2026-07-31T06:45:53.025Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "durationMs": 6332,
+      "endFrame": 376,
+      "file": "path-gate.webp",
+      "fileSize": 220190,
+      "frameCount": 95,
+      "id": "path-gate",
+      "number": "01",
+      "startFrame": 0,
+      "title": "先锁审级与程序"
+    },
+    {
+      "durationMs": 7999,
+      "endFrame": 876,
+      "file": "first-instance.webp",
+      "fileSize": 244306,
+      "frameCount": 120,
+      "id": "first-instance",
+      "number": "02",
+      "startFrame": 400,
+      "title": "一审：简易与普通"
+    },
+    {
+      "durationMs": 7999,
+      "endFrame": 1376,
+      "file": "second-instance.webp",
+      "fileSize": 175510,
+      "frameCount": 120,
+      "id": "second-instance",
+      "number": "03",
+      "startFrame": 900,
+      "title": "二审四道门"
+    },
+    {
+      "durationMs": 7999,
+      "endFrame": 1876,
+      "file": "mid-court-ban.webp",
+      "fileSize": 220290,
+      "frameCount": 120,
+      "id": "mid-court-ban",
+      "number": "04",
+      "startFrame": 1400,
+      "title": "中院一审双禁独任"
+    },
+    {
+      "durationMs": 7999,
+      "endFrame": 2376,
+      "file": "misconceptions.webp",
+      "fileSize": 208360,
+      "frameCount": 120,
+      "id": "misconceptions",
+      "number": "05",
+      "startFrame": 1900,
+      "title": "组织≠程序类型"
+    },
+    {
+      "durationMs": 9666,
+      "endFrame": 2976,
+      "file": "jurors.webp",
+      "fileSize": 257366,
+      "frameCount": 145,
+      "id": "jurors",
+      "number": "06",
+      "startFrame": 2400,
+      "title": "陪审员双要件"
+    }
+  ],
+  "size": {
+    "height": 720,
+    "width": 1280
+  },
+  "sourceFps": 60,
+  "targetFps": 15,
+  "totalFileSize": 1326022
+}

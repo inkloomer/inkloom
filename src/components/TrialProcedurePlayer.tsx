@@ -12,6 +12,7 @@ const scenes: readonly RemotionScene[] = [
 
 export const TrialProcedurePlayer = () => (
   <RemotionDeck
+    animationId="trial-procedure"
     title="民事审判程序分类"
     component={TrialProcedure}
     scenes={scenes}

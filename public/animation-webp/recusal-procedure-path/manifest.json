@@ -1,0 +1,83 @@
+{
+  "animationId": "recusal-procedure-path",
+  "compositionId": "RecusalProcedurePath",
+  "format": "animated-webp",
+  "generatedAt": "2026-07-31T06:42:56.957Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "durationMs": 7132,
+      "endFrame": 426,
+      "file": "scope.webp",
+      "fileSize": 216028,
+      "frameCount": 107,
+      "id": "scope",
+      "number": "01",
+      "startFrame": 0,
+      "title": "中立期待分叉"
+    },
+    {
+      "durationMs": 6332,
+      "endFrame": 826,
+      "file": "timing.webp",
+      "fileSize": 205968,
+      "frameCount": 95,
+      "id": "timing",
+      "number": "02",
+      "startFrame": 450,
+      "title": "申请时间窗口"
+    },
+    {
+      "durationMs": 7132,
+      "endFrame": 1276,
+      "file": "pending-effect.webp",
+      "fileSize": 206112,
+      "frameCount": 107,
+      "id": "pending-effect",
+      "number": "03",
+      "startFrame": 850,
+      "title": "审查期暂停"
+    },
+    {
+      "durationMs": 7999,
+      "endFrame": 1776,
+      "file": "decision.webp",
+      "fileSize": 243752,
+      "frameCount": 120,
+      "id": "decision",
+      "number": "04",
+      "startFrame": 1300,
+      "title": "决定主体映射"
+    },
+    {
+      "durationMs": 7132,
+      "endFrame": 2226,
+      "file": "remedy.webp",
+      "fileSize": 224996,
+      "frameCount": 107,
+      "id": "remedy",
+      "number": "05",
+      "startFrame": 1800,
+      "title": "救济：复议一次"
+    },
+    {
+      "durationMs": 12132,
+      "endFrame": 2976,
+      "file": "pause-vs-continue.webp",
+      "fileSize": 233846,
+      "frameCount": 182,
+      "id": "pause-vs-continue",
+      "number": "06",
+      "startFrame": 2250,
+      "title": "审查停≠复议不停"
+    }
+  ],
+  "size": {
+    "height": 720,
+    "width": 1280
+  },
+  "sourceFps": 60,
+  "targetFps": 15,
+  "totalFileSize": 1330702
+}

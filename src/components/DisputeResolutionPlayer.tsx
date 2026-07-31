@@ -12,6 +12,7 @@ const scenes: readonly RemotionScene[] = [
 
 export const DisputeResolutionPlayer = () => (
   <RemotionDeck
+    animationId="dispute-resolution"
     title="多元纠纷解决机制"
     component={DisputeResolution}
     scenes={scenes}

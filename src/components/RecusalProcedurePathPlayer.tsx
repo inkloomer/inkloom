@@ -13,6 +13,7 @@ const scenes: readonly RemotionScene[] = [
 
 export const RecusalProcedurePathPlayer = () => (
   <RemotionDeck
+    animationId="recusal-procedure-path"
     title="回避制度判断路径"
     component={RecusalProcedurePath}
     scenes={scenes}

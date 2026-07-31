@@ -12,6 +12,7 @@ const scenes: readonly RemotionScene[] = [
 
 export const CounterclaimVsDefensePlayer = () => (
   <RemotionDeck
+    animationId="counterclaim-vs-defense"
     title="反诉与反驳的区分"
     component={CounterclaimVsDefense}
     scenes={scenes}

@@ -7,7 +7,7 @@
     "start": "astro dev",
     "build": "astro build",
     "animation:pages": "node scripts/capture-remotion-pages.mjs",
-    "animation:publish-stills": "node scripts/capture-remotion-pages.mjs --publish",
+    "animation:publish-webp": "node scripts/publish-remotion-webp.mjs",
     "preview": "astro preview",
     "astro": "astro"
   },

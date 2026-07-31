@@ -1,0 +1,83 @@
+{
+  "animationId": "representative-litigation",
+  "compositionId": "RepresentativeLitigation",
+  "format": "animated-webp",
+  "generatedAt": "2026-07-31T06:43:59.368Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "durationMs": 4666,
+      "endFrame": 276,
+      "file": "concept.webp",
+      "fileSize": 233586,
+      "frameCount": 70,
+      "id": "concept",
+      "number": "01",
+      "startFrame": 0,
+      "title": "什么是代表人诉讼？"
+    },
+    {
+      "durationMs": 6332,
+      "endFrame": 676,
+      "file": "representative-authority.webp",
+      "fileSize": 217336,
+      "frameCount": 95,
+      "id": "representative-authority",
+      "number": "02",
+      "startFrame": 300,
+      "title": "代表人的诉讼权限"
+    },
+    {
+      "durationMs": 7999,
+      "endFrame": 1176,
+      "file": "determined-members.webp",
+      "fileSize": 221440,
+      "frameCount": 120,
+      "id": "determined-members",
+      "number": "03",
+      "startFrame": 700,
+      "title": "人数确定的代表人诉讼"
+    },
+    {
+      "durationMs": 9666,
+      "endFrame": 1776,
+      "file": "undetermined-members.webp",
+      "fileSize": 260238,
+      "frameCount": 145,
+      "id": "undetermined-members",
+      "number": "04",
+      "startFrame": 1200,
+      "title": "人数不确定的代表人诉讼"
+    },
+    {
+      "durationMs": 9666,
+      "endFrame": 2376,
+      "file": "securities-special.webp",
+      "fileSize": 235624,
+      "frameCount": 145,
+      "id": "securities-special",
+      "number": "05",
+      "startFrame": 1800,
+      "title": "证券特别代表人诉讼"
+    },
+    {
+      "durationMs": 7999,
+      "endFrame": 2876,
+      "file": "comparison.webp",
+      "fileSize": 245038,
+      "frameCount": 120,
+      "id": "comparison",
+      "number": "06",
+      "startFrame": 2400,
+      "title": "代表人诉讼对比"
+    }
+  ],
+  "size": {
+    "height": 720,
+    "width": 1280
+  },
+  "sourceFps": 60,
+  "targetFps": 15,
+  "totalFileSize": 1413262
+}

@@ -121,6 +121,87 @@
   padding: 0.55rem 0.7rem;
 }
 
+.remotion-deck__scene-heading {
+  justify-content: space-between;
+  min-height: 3rem;
+}
+
+.remotion-deck__scene-label,
+.remotion-deck__media-controls,
+.remotion-deck__media-tabs,
+.remotion-deck__copy-actions {
+  display: flex;
+  align-items: center;
+}
+
+.remotion-deck__scene-label {
+  gap: 0.65rem;
+  min-width: 0;
+}
+
+.remotion-deck__scene-label strong {
+  min-width: 0;
+}
+
+.remotion-deck__media-controls {
+  flex: 0 0 auto;
+  gap: 0.45rem;
+}
+
+.remotion-deck__media-tabs button,
+.remotion-deck__copy-actions button {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 1.9rem;
+  border: 1px solid var(--deck-line);
+  background: transparent;
+  color: var(--deck-muted);
+  cursor: pointer;
+  font: 700 0.72rem/1 ui-monospace, SFMono-Regular, Consolas, monospace;
+  margin: 0;
+}
+
+.remotion-deck__media-tabs button {
+  gap: 0.35rem;
+  padding: 0.35rem 0.5rem;
+}
+
+.remotion-deck__media-tabs button:first-child {
+  border-radius: 4px 0 0 4px;
+}
+
+.remotion-deck__media-tabs button:last-child {
+  margin-left: -1px;
+  border-radius: 0 4px 4px 0;
+}
+
+.remotion-deck__media-tabs button[data-active='true'],
+.remotion-deck__media-tabs button:hover,
+.remotion-deck__copy-actions button:hover {
+  z-index: 1;
+  border-color: var(--deck-accent);
+  color: var(--deck-accent);
+}
+
+.remotion-deck__copy-actions {
+  gap: 0.25rem;
+}
+
+.remotion-deck__copy-actions button {
+  width: 1.9rem;
+  padding: 0;
+  border-radius: 4px;
+}
+
+.remotion-deck__copy-feedback {
+  max-width: 8.5rem;
+  color: var(--deck-accent);
+  font: 700 0.68rem/1.15 ui-monospace, SFMono-Regular, Consolas, monospace;
+  white-space: nowrap;
+}
+
 .remotion-deck__scene-heading span,
 .remotion-deck__card-heading span {
   color: var(--deck-accent);
@@ -146,6 +227,22 @@
 .remotion-deck__player {
   width: 100%;
   height: 100%;
+}
+
+.remotion-deck__webp-frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.remotion-deck__webp-error {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  place-items: center;
+  color: var(--deck-muted);
+  font: 700 0.8rem/1.3 ui-monospace, SFMono-Regular, Consolas, monospace;
 }
 
 .remotion-deck__center-control {
@@ -248,6 +345,20 @@
   .remotion-deck__single,
   .remotion-deck__multi {
     padding: 0.55rem;
+  }
+
+  .remotion-deck__scene-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .remotion-deck__media-controls {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .remotion-deck__copy-feedback {
+    margin-left: auto;
   }
 
   .remotion-deck__multi[data-layout='row'],

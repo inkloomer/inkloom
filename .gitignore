@@ -27,6 +27,7 @@ ref/
 *.jpeg
 *.gif
 *.webp
+!public/animation-webp/**/*.webp
 *.avif
 notes/
 *.pdf

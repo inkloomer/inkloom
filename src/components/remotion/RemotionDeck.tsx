@@ -1,7 +1,23 @@
 import {useEffect, useRef, useState} from 'react';
 import type {ComponentType, KeyboardEvent, ReactNode} from 'react';
 import {Player, type PlayerRef} from '@remotion/player';
-import {ChevronLeft, ChevronRight, Columns2, Gauge, Grid3X3, MonitorPlay, Pause, Play, Repeat2, RotateCcw} from 'lucide-react';
+import {
+  ChevronLeft,
+  ChevronRight,
+  ClipboardCopy,
+  Code2,
+  Columns2,
+  Copy,
+  Gauge,
+  Grid3X3,
+  Image as ImageIcon,
+  MonitorPlay,
+  Pause,
+  Play,
+  Repeat2,
+  RotateCcw,
+  Video,
+} from 'lucide-react';
 import {
   DEFAULT_PLAYBACK_PREFERENCES,
   PLAYBACK_PREFERENCE_CHANGE_EVENT,
@@ -21,7 +37,7 @@ import {sceneIndexFromSearch, urlWithScene} from './scene-location';
 import './RemotionDeck.css';
 
 export interface RemotionScene {
-  readonly id?: string;
+  readonly id: string;
   readonly number: string;
   readonly title: string;
   readonly start: number;
@@ -33,6 +49,7 @@ export interface RemotionScene {
 type PreviewMode = 'single' | 'row' | 'matrix';
 
 interface Props {
+  readonly animationId: string;
   readonly component: ComponentType<Record<string, never>>;
   readonly scenes: readonly RemotionScene[];
   readonly durationInFrames: number;
@@ -42,6 +59,14 @@ interface Props {
   readonly title?: string;
   readonly sceneQueryParameter?: string;
 }
+
+type MediaMode = 'video' | 'webp';
+
+const MEDIA_MODE_STORAGE_KEY = 'inkloom-remotion-media-mode-v1';
+const PRODUCTION_ORIGIN = 'https://inkloomer.github.io';
+const BASE_URL = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
+const webpPath = (animationId: string, sceneId: string) =>
+  `${BASE_URL}animation-webp/${encodeURIComponent(animationId)}/${encodeURIComponent(sceneId)}.webp`;
 
 const frameEnd = (scene: RemotionScene) => {
   const finalFrame = scene.start + scene.duration - 1;
@@ -218,7 +243,79 @@ const PlayerFrame = ({
   );
 };
 
+const AnimatedWebpFrame = ({
+  alt,
+  compositionHeight,
+  compositionWidth,
+  durationMs,
+  loop,
+  src,
+}: {
+  readonly alt: string;
+  readonly compositionHeight: number;
+  readonly compositionWidth: number;
+  readonly durationMs: number;
+  readonly loop: boolean;
+  readonly src: string;
+}) => {
+  const [reloadToken, setReloadToken] = useState(0);
+  const [hovered, setHovered] = useState(false);
+  const [failed, setFailed] = useState(false);
+
+  useEffect(() => {
+    setFailed(false);
+    setReloadToken((token) => token + 1);
+  }, [src]);
+
+  useEffect(() => {
+    if (!loop || failed) return;
+    const timer = window.setInterval(
+      () => setReloadToken((token) => token + 1),
+      Math.max(250, durationMs + 80),
+    );
+    return () => window.clearInterval(timer);
+  }, [durationMs, failed, loop]);
+
+  return (
+    <div
+      className="remotion-deck__player-frame remotion-deck__webp-frame"
+      style={{aspectRatio: `${compositionWidth} / ${compositionHeight}`}}
+      onPointerEnter={() => setHovered(true)}
+      onPointerLeave={() => setHovered(false)}
+    >
+      {failed ? (
+        <div className="remotion-deck__webp-error" role="status">动图资源尚未发布。</div>
+      ) : (
+        <img
+          key={`${src}-${reloadToken}`}
+          src={src}
+          alt={alt}
+          width={compositionWidth}
+          height={compositionHeight}
+          decoding="async"
+          onError={() => setFailed(true)}
+        />
+      )}
+      <button
+        type="button"
+        className="remotion-deck__center-control"
+        data-visible={hovered ? 'true' : 'false'}
+        aria-label="重播当前动图"
+        title="重播当前动图"
+        onClick={(event) => {
+          event.stopPropagation();
+          setFailed(false);
+          setReloadToken((token) => token + 1);
+        }}
+      >
+        <RotateCcw size={28} strokeWidth={2.25} aria-hidden="true" />
+      </button>
+    </div>
+  );
+};
+
 export const RemotionDeck = ({
+  animationId,
   component,
   scenes,
   durationInFrames,
@@ -228,24 +325,31 @@ export const RemotionDeck = ({
   title = 'Remotion 动画',
   sceneQueryParameter = 'scene',
 }: Props) => {
-  const [currentScene, setCurrentScene] = useState(() =>
-    typeof window === 'undefined'
-      ? 0
-      : sceneIndexFromSearch(scenes, window.location.search, sceneQueryParameter),
-  );
+  const [currentScene, setCurrentScene] = useState(0);
+  const [mediaMode, setMediaMode] = useState<MediaMode>('video');
+  const [webpLoop, setWebpLoop] = useState(false);
+  const [copyFeedback, setCopyFeedback] = useState('');
   const [mode, setMode] = useState<PreviewMode>('single');
   const [autoPage, setAutoPage] = useState(false);
   const [reducedMotion, setReducedMotion] = useState(false);
   const [speedScope, setSpeedScope] = useState<PlaybackScope>('global');
   const [playbackPreferences, setPlaybackPreferences] = useState<PlaybackPreferences>(DEFAULT_PLAYBACK_PREFERENCES);
-  const playbackScopeKeys = typeof window === 'undefined'
-    ? {}
-    : playbackScopeKeysFromPathname(window.location.pathname);
+  const [playbackScopeKeys, setPlaybackScopeKeys] = useState<ReturnType<typeof playbackScopeKeysFromPathname>>({});
   const effectivePlaybackSpeed = resolvedPlaybackSpeed(playbackPreferences, playbackScopeKeys);
   const scopedPlaybackSpeed = configuredPlaybackSpeed(playbackPreferences, speedScope, playbackScopeKeys);
   const inheritedSpeed = speedScope === 'global'
     ? undefined
     : inheritedPlaybackSpeed(playbackPreferences, speedScope, playbackScopeKeys);
+
+  const persistMediaMode = (nextMode: MediaMode) => {
+    setMediaMode(nextMode);
+    window.localStorage.setItem(MEDIA_MODE_STORAGE_KEY, nextMode);
+  };
+
+  const flashCopyFeedback = (message: string) => {
+    setCopyFeedback(message);
+    window.setTimeout(() => setCopyFeedback(''), 1800);
+  };
 
   const persistPlaybackPreferences = (preferences: PlaybackPreferences) => {
     window.localStorage.setItem(PLAYBACK_PREFERENCE_STORAGE_KEY, JSON.stringify(preferences));
@@ -267,6 +371,7 @@ export const RemotionDeck = ({
     const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
     const update = () => setReducedMotion(mediaQuery.matches);
     update();
+    setPlaybackScopeKeys(playbackScopeKeysFromPathname(window.location.pathname));
     mediaQuery.addEventListener('change', update);
     return () => mediaQuery.removeEventListener('change', update);
   }, []);
@@ -286,6 +391,20 @@ export const RemotionDeck = ({
       window.removeEventListener(PLAYBACK_PREFERENCE_CHANGE_EVENT, syncPlaybackPreferences);
       window.removeEventListener('storage', syncFromAnotherTab);
     };
+  }, []);
+
+  useEffect(() => {
+    const syncMediaMode = () => {
+      const savedMode = window.localStorage.getItem(MEDIA_MODE_STORAGE_KEY);
+      if (savedMode === 'video' || savedMode === 'webp') setMediaMode(savedMode);
+    };
+    const syncFromAnotherTab = (event: StorageEvent) => {
+      if (event.key === MEDIA_MODE_STORAGE_KEY) syncMediaMode();
+    };
+
+    syncMediaMode();
+    window.addEventListener('storage', syncFromAnotherTab);
+    return () => window.removeEventListener('storage', syncFromAnotherTab);
   }, []);
 
   useEffect(() => {
@@ -317,6 +436,7 @@ export const RemotionDeck = ({
   };
 
   const selectedScene = scenes[currentScene] ?? scenes[0] ?? {
+    id: 'empty',
     number: '00',
     title: 'Empty',
     start: 0,
@@ -324,6 +444,59 @@ export const RemotionDeck = ({
     previewEndTrimFrames: 0,
   };
   const selectedEnd = frameEnd(selectedScene);
+  const selectedWebpPath = webpPath(animationId, selectedScene.id);
+  const selectedWebpUrl = new URL(selectedWebpPath, PRODUCTION_ORIGIN).href;
+  const selectedWebpDurationMs = ((selectedEnd - selectedScene.start + 1) / fps) * 1000;
+
+  const copySelectedMarkdown = async () => {
+    await navigator.clipboard.writeText(`![${selectedScene.title}](${selectedWebpUrl})`);
+    flashCopyFeedback('Markdown 已复制');
+  };
+
+  const copySelectedWebp = async () => {
+    const response = await fetch(selectedWebpPath);
+    if (!response.ok) throw new Error(`WebP request failed with ${response.status}.`);
+    const imageBlob = await response.blob();
+    const supportsWebp = typeof ClipboardItem !== 'undefined'
+      && typeof ClipboardItem.supports === 'function'
+      && ClipboardItem.supports('image/webp');
+
+    if (supportsWebp) {
+      await navigator.clipboard.write([new ClipboardItem({'image/webp': imageBlob})]);
+      flashCopyFeedback('动图已复制');
+      return;
+    }
+
+    if (typeof ClipboardItem === 'undefined' || typeof navigator.clipboard.write !== 'function') {
+      await navigator.clipboard.writeText(selectedWebpUrl);
+      flashCopyFeedback('图片链接已复制');
+      return;
+    }
+
+    const html = `<img src="${selectedWebpUrl}" alt="${selectedScene.title.replaceAll('"', '&quot;')}">`;
+    await navigator.clipboard.write([
+      new ClipboardItem({
+        'text/html': new Blob([html], {type: 'text/html'}),
+        'text/plain': new Blob([selectedWebpUrl], {type: 'text/plain'}),
+      }),
+    ]);
+    flashCopyFeedback('图片引用已复制');
+  };
+
+  const copySiyuanScript = async () => {
+    const response = await fetch(`${BASE_URL}tools/siyuan-webp-player.js`);
+    if (!response.ok) throw new Error(`SiYuan script request failed with ${response.status}.`);
+    await navigator.clipboard.writeText(await response.text());
+    flashCopyFeedback('思源脚本已复制');
+  };
+
+  const runCopyAction = (action: () => Promise<void>) => {
+    void action().catch((error) => {
+      console.error(error);
+      flashCopyFeedback('复制失败');
+    });
+  };
+
   useEffect(() => {
     const selectSceneFromLocation = () => {
       setCurrentScene(sceneIndexFromSearch(scenes, window.location.search, sceneQueryParameter));
@@ -360,11 +533,54 @@ export const RemotionDeck = ({
       {mode === 'single' ? (
         <div className="remotion-deck__single">
           <header className="remotion-deck__scene-heading">
-            <span>{selectedScene.number}</span>
-            <strong>{selectedScene.title}</strong>
+            <div className="remotion-deck__scene-label">
+              <span>{selectedScene.number}</span>
+              <strong>{selectedScene.title}</strong>
+            </div>
+            <div className="remotion-deck__media-controls">
+              <div className="remotion-deck__media-tabs" role="tablist" aria-label="媒体格式">
+                <button
+                  type="button"
+                  role="tab"
+                  aria-selected={mediaMode === 'video'}
+                  data-active={mediaMode === 'video' ? 'true' : 'false'}
+                  title="视频播放器"
+                  onClick={() => persistMediaMode('video')}
+                >
+                  <Video size={15} aria-hidden="true" />
+                  <span>视频</span>
+                </button>
+                <button
+                  type="button"
+                  role="tab"
+                  aria-selected={mediaMode === 'webp'}
+                  data-active={mediaMode === 'webp' ? 'true' : 'false'}
+                  title="WebP 动图"
+                  onClick={() => persistMediaMode('webp')}
+                >
+                  <ImageIcon size={15} aria-hidden="true" />
+                  <span>动图</span>
+                </button>
+              </div>
+              {mediaMode === 'webp' ? (
+                <div className="remotion-deck__copy-actions" role="group" aria-label="动图复制操作">
+                  <button type="button" title="复制 Markdown 图片语法" aria-label="复制 Markdown 图片语法" onClick={() => runCopyAction(copySelectedMarkdown)}>
+                    <Copy size={15} aria-hidden="true" />
+                  </button>
+                  <button type="button" title="复制动图" aria-label="复制动图" onClick={() => runCopyAction(copySelectedWebp)}>
+                    <ClipboardCopy size={15} aria-hidden="true" />
+                  </button>
+                  <button type="button" title="复制思源动图控制脚本" aria-label="复制思源动图控制脚本" onClick={() => runCopyAction(copySiyuanScript)}>
+                    <Code2 size={15} aria-hidden="true" />
+                  </button>
+                </div>
+              ) : null}
+              <span className="remotion-deck__copy-feedback" aria-live="polite">{copyFeedback}</span>
+            </div>
           </header>
-          <PlayerFrame
-            key={`${selectedScene.number}-${autoPage ? 'auto' : 'once'}-${reducedMotion ? 'reduced' : 'motion'}`}
+          {mediaMode === 'video' ? (
+            <PlayerFrame
+              key={`${selectedScene.number}-${autoPage ? 'auto' : 'once'}-${reducedMotion ? 'reduced' : 'motion'}`}
               component={component}
               durationInFrames={durationInFrames}
               fps={fps}
@@ -380,6 +596,16 @@ export const RemotionDeck = ({
                 ? () => selectScene(currentScene + 1, 'replace')
                 : undefined}
             />
+          ) : (
+            <AnimatedWebpFrame
+              alt={`${title}：${selectedScene.title}`}
+              compositionWidth={compositionWidth}
+              compositionHeight={compositionHeight}
+              durationMs={selectedWebpDurationMs}
+              loop={webpLoop}
+              src={selectedWebpPath}
+            />
+          )}
           <div className="remotion-deck__navigation">
             <button type="button" onClick={() => selectScene(currentScene - 1)} title="上一页">
               <ChevronLeft size={17} />
@@ -414,7 +640,8 @@ export const RemotionDeck = ({
                 <span>{scene.number}</span>
                 <strong>{scene.title}</strong>
               </header>
-              <PlayerFrame
+              {mediaMode === 'video' ? (
+                <PlayerFrame
                   component={component}
                   durationInFrames={durationInFrames}
                   fps={fps}
@@ -426,7 +653,17 @@ export const RemotionDeck = ({
                   autoPlay={!reducedMotion}
                   loop={false}
                   playbackRate={effectivePlaybackSpeed}
-              />
+                />
+              ) : (
+                <AnimatedWebpFrame
+                  alt={`${title}：${scene.title}`}
+                  compositionWidth={compositionWidth}
+                  compositionHeight={compositionHeight}
+                  durationMs={((frameEnd(scene) - scene.start + 1) / fps) * 1000}
+                  loop={webpLoop}
+                  src={webpPath(animationId, scene.id)}
+                />
+              )}
             </article>
           ))}
         </div>
@@ -438,40 +675,52 @@ export const RemotionDeck = ({
           <ModeButton active={mode === 'row'} label="并排" mode="row" onClick={setMode} icon={<Columns2 size={15} />} />
           <ModeButton active={mode === 'matrix'} label="矩阵" mode="matrix" onClick={setMode} icon={<Grid3X3 size={15} />} />
         </div>
-        <label className="remotion-deck__auto">
-          <input
-            type="checkbox"
-            checked={autoPage}
-            disabled={reducedMotion || mode !== 'single'}
-            onChange={(event) => setAutoPage(event.target.checked)}
-          />
-          <Repeat2 size={15} aria-hidden="true" />
-          自动翻页
-        </label>
-        <label className="remotion-deck__speed">
-          <Gauge size={15} aria-hidden="true" />
-          <span>速度</span>
-          <select value={speedScope} onChange={(event) => setSpeedScope(event.target.value as PlaybackScope)}>
-            <option value="global">全局</option>
-            {playbackScopeKeys.topic ? <option value="topic">本专题</option> : null}
-            {playbackScopeKeys.page ? <option value="page">本页</option> : null}
-          </select>
-          <select
-            value={scopedPlaybackSpeed === undefined ? 'inherit' : String(scopedPlaybackSpeed)}
-            onChange={(event) => updatePlaybackPreference(
-              event.target.value === 'inherit' ? undefined : Number(event.target.value) as PlaybackSpeed,
-            )}
-          >
-            {speedScope !== 'global' ? <option value="inherit">继承 {inheritedSpeed}×</option> : null}
-            {PLAYBACK_SPEEDS.map((speed) => <option key={speed} value={speed}>{speed}×</option>)}
-          </select>
-        </label>
+        {mediaMode === 'video' ? (
+          <>
+            <label className="remotion-deck__auto">
+              <input
+                type="checkbox"
+                checked={autoPage}
+                disabled={reducedMotion || mode !== 'single'}
+                onChange={(event) => setAutoPage(event.target.checked)}
+              />
+              <Repeat2 size={15} aria-hidden="true" />
+              自动翻页
+            </label>
+            <label className="remotion-deck__speed">
+              <Gauge size={15} aria-hidden="true" />
+              <span>速度</span>
+              <select value={speedScope} onChange={(event) => setSpeedScope(event.target.value as PlaybackScope)}>
+                <option value="global">全局</option>
+                {playbackScopeKeys.topic ? <option value="topic">本专题</option> : null}
+                {playbackScopeKeys.page ? <option value="page">本页</option> : null}
+              </select>
+              <select
+                value={scopedPlaybackSpeed === undefined ? 'inherit' : String(scopedPlaybackSpeed)}
+                onChange={(event) => updatePlaybackPreference(
+                  event.target.value === 'inherit' ? undefined : Number(event.target.value) as PlaybackSpeed,
+                )}
+              >
+                {speedScope !== 'global' ? <option value="inherit">继承 {inheritedSpeed}×</option> : null}
+                {PLAYBACK_SPEEDS.map((speed) => <option key={speed} value={speed}>{speed}×</option>)}
+              </select>
+            </label>
+          </>
+        ) : (
+          <label className="remotion-deck__auto">
+            <input type="checkbox" checked={webpLoop} onChange={(event) => setWebpLoop(event.target.checked)} />
+            <Repeat2 size={15} aria-hidden="true" />
+            无限循环
+          </label>
+        )}
         <span className="remotion-deck__status" aria-live="polite">
-          {mode === 'single'
-            ? autoPage
-              ? `播放完进入下一页 · ${effectivePlaybackSpeed}×`
-              : `播放结束停在稳定画面 · ${effectivePlaybackSpeed}×`
-            : `全部页面播放结束停在稳定画面 · ${effectivePlaybackSpeed}×`}
+          {mediaMode === 'webp'
+            ? webpLoop ? 'WebP q45 · 无限循环' : 'WebP q45 · 播放一次'
+            : mode === 'single'
+              ? autoPage
+                ? `播放完进入下一页 · ${effectivePlaybackSpeed}×`
+                : `播放结束停在稳定画面 · ${effectivePlaybackSpeed}×`
+              : `全部页面播放结束停在稳定画面 · ${effectivePlaybackSpeed}×`}
         </span>
       </div>
     </section>

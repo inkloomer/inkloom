@@ -12,6 +12,7 @@ const scenes: readonly RemotionScene[] = [
 
 export const LawsuitElementsPlayer = () => (
   <RemotionDeck
+    animationId="lawsuit-elements"
     title="诉讼标的、诉讼请求与诉的分类"
     component={LawsuitElements}
     scenes={scenes}
