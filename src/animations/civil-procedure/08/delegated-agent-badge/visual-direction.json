@@ -1,0 +1,10 @@
+{
+  "directionId": "modular-seal",
+  "family": "heraldic-badge",
+  "palette": "royal navy + module teal + slot amber + detach red + link silver",
+  "typography": "imperial serif titles + gothic script inscriptions",
+  "composition": "modular badge with detachable power segments, some attached and some removed",
+  "surface": "embossed metal badge with visible connection slots and detachment gaps",
+  "motion": "badge base appears, power modules slot in selectively, rejected modules fade away",
+  "transition": "module detachment with lock release sound"
+}

@@ -1,0 +1,10 @@
+{
+  "directionId": "puppet-master",
+  "family": "stage-drama",
+  "palette": "stage black + spotlight gold + curtain burgundy + string silver + puppet ivory",
+  "typography": "theatrical serif titles + script mono stage directions",
+  "composition": "theater stage with puppet master behind curtain controlling front-stage puppet",
+  "surface": "velvet curtain backdrop with wooden stage floor and control strings",
+  "motion": "curtain rises, puppet descends on strings, master hands pull strings causing puppet movement",
+  "transition": "curtain fall with spotlight fade"
+}

@@ -1,0 +1,16 @@
+{
+  "directionId": "guardian-custody",
+  "family": "custody-chart",
+  "palette": "warm ivory field + guardian teal + ward amber + verdict red + soft olive guide lines",
+  "typography": "warm humanist serif headings with monospaced case coordinates",
+  "composition": "custody chart with a shielded ward node, a guardian authority cord, and three difference checkpoints",
+  "surface": "warm paper with dotted guide lines and rounded custody enclosures",
+  "motion": "authority cord draws from law to guardian to ward, then difference markers stamp in and death lanes branch causally",
+  "transition": "continuous left-to-right handoff with a soft fade at chapter boundary",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/civil-procedure/08/statutory-agent/",
+    "title": "法定代理人"
+  }
+}

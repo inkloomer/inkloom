@@ -1,0 +1,10 @@
+{
+  "directionId": "agent-circuit-auth",
+  "family": "circuit-board",
+  "palette": "circuit black + auth amber + switch red + gate violet + trace orange",
+  "typography": "tech mono labels + circuit sans headings",
+  "composition": "PCB with authorization switches between party and agent, showing configurable power routing",
+  "surface": "matte circuit board with toggle switches and permission gates",
+  "motion": "authorization switches flip, selected paths light up, blocked gates stay dark",
+  "transition": "circuit fade with switch-off effect"
+}

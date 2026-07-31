@@ -1,0 +1,16 @@
+{
+  "directionId": "poa-contract",
+  "family": "power-of-attorney-contract",
+  "palette": "pale blue-grey sheet + cobalt ink + clause mint + special-power red + wax-seal vermilion",
+  "typography": "condensed contract grotesk headings with monospaced clause numbers",
+  "composition": "one 授权委托书 sheet split into clause panels with a wax-seal trap and an execution folder beyond reach",
+  "surface": "flat document sheet, hairline rules, one red wax seal",
+  "motion": "clause ink draws, seal stamps with impact, execution folder slides out of reach",
+  "transition": "document handoff with a hard seal-snap cut at chapter boundary",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/civil-procedure/08/delegated-agent/",
+    "title": "委托代理人"
+  }
+}

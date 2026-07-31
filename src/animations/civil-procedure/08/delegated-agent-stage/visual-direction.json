@@ -1,0 +1,10 @@
+{
+  "directionId": "hired-actor",
+  "family": "stage-drama",
+  "palette": "stage black + spotlight gold + costume emerald + script parchment + ticket red",
+  "typography": "theatrical serif titles + script mono stage directions",
+  "composition": "theater stage with client in wings handing script to actor center stage",
+  "surface": "velvet curtain backdrop with wooden stage floor and spotlight beam",
+  "motion": "actor walks on stage, receives script from wings, spotlight narrows on actor, script pages turn",
+  "transition": "spotlight fade with actor bow"
+}

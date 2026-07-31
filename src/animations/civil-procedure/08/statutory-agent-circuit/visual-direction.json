@@ -1,0 +1,10 @@
+{
+  "directionId": "agent-circuit",
+  "family": "circuit-board",
+  "palette": "circuit black + power cyan + law green + node gold + trace orange",
+  "typography": "tech mono labels + circuit sans headings",
+  "composition": "PCB-style power flow from law source through agent node to party terminal",
+  "surface": "matte circuit board with copper traces and solder points",
+  "motion": "power pulse travels along traces, nodes light up sequentially, branch paths illuminate",
+  "transition": "circuit fade with power-down effect"
+}

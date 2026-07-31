@@ -1,0 +1,16 @@
+{
+  "directionId": "legal-relation-map",
+  "family": "relational-cartography",
+  "palette": "graphite field + bone labels + coral alerts + mint relation lines + yellow gates",
+  "typography": "monospaced coordinates with compressed grotesk labels",
+  "composition": "legal relation field with party nodes, a fixed relation spine, and explicit position boundaries",
+  "surface": "dark plotting board with sparse ruling, position markers, and open teaching regions",
+  "motion": "party nodes settle onto fixed relation axes while connectors grow only to express legal relations",
+  "transition": "neutral fade while the fixed relation field preserves spatial continuity",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/civil-procedure/07/third-party-types/",
+    "title": "关系定位图"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "directionId": "procedural-screenprint",
+  "family": "screenprint-process",
+  "palette": "recycled paper + vermilion correction ink + cyan registration ink + yellow deadline ink + violet court mark",
+  "typography": "large print-shop grotesk with small registration coordinates",
+  "composition": "one legal document passing through layered printing plates and crop marks",
+  "surface": "paper sheets, halftone lines, ink overlaps, registration crosses",
+  "motion": "plate-by-plate overprint reveals conditions, deadline, court, and remedy",
+  "transition": "paper feed into the next plate with a hard registration snap",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/civil-procedure/07/third-party-revocation/",
+    "title": "套色印版"
+  }
+}
