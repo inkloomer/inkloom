@@ -29,6 +29,7 @@ Render every stable scene range as a standalone AV1 MP4, or compare AV1 encoding
 Usage:
   pnpm animation:publish-video [animation-id ...]
   pnpm animation:publish-video legal-jurisdiction --scene mediation-confirmation
+  pnpm animation:publish-avif legal-jurisdiction --scene mediation-confirmation --widths 2560
   pnpm animation:compare-av1 legal-jurisdiction --scene mediation-confirmation --widths 1920,2560 --crfs 35,25,16
 
 Output:
@@ -147,9 +148,6 @@ const parseArguments = (rawArguments) => {
   }
   if (sceneId && animationIds.length !== 1) {
     throw new Error('--scene requires exactly one animation ID.');
-  }
-  if (sceneId && comparisonCount === 1 && !publishVideo) {
-    throw new Error('--scene is reserved for multi-quality comparisons; use the full publish command for public assets.');
   }
   const resolvedWidths = [...new Set(widths ?? [publishVideo ? VIDEO_WIDTH : AVIF_WIDTH])];
   if (publishVideo && resolvedWidths.length !== 1) {

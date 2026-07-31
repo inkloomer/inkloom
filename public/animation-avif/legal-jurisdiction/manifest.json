@@ -1,94 +1,32 @@
 {
   "animationId": "legal-jurisdiction",
   "compositionId": "LegalJurisdiction",
+  "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-07-31T07:35:29.457Z",
+  "generatedAt": "2026-07-31T09:19:03.083Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
     {
-      "durationMs": 2600,
-      "endFrame": 153,
-      "file": "definition.avif",
-      "fileSize": 40938,
-      "frameCount": 39,
-      "id": "definition",
-      "number": "01",
-      "startFrame": 0,
-      "title": "主管是什么？"
-    },
-    {
-      "durationMs": 3467,
-      "endFrame": 375,
-      "file": "court-scope.avif",
-      "fileSize": 44078,
-      "frameCount": 52,
-      "id": "court-scope",
-      "number": "02",
-      "startFrame": 168,
-      "title": "哪些争议归法院？"
-    },
-    {
-      "durationMs": 1800,
-      "endFrame": 495,
-      "file": "dispute-resolution.avif",
-      "fileSize": 47036,
-      "frameCount": 27,
-      "id": "dispute-resolution",
-      "number": "03",
-      "startFrame": 390,
-      "title": "三种纠纷处理关系"
-    },
-    {
-      "durationMs": 5267,
       "endFrame": 825,
-      "file": "mediation-confirmation.avif",
-      "fileSize": 53135,
       "frameCount": 79,
       "id": "mediation-confirmation",
       "number": "04",
       "startFrame": 510,
-      "title": "人民调解与司法确认"
-    },
-    {
-      "durationMs": 3800,
-      "endFrame": 1065,
-      "file": "arbitration-exclusion.avif",
-      "fileSize": 47112,
-      "frameCount": 57,
-      "id": "arbitration-exclusion",
-      "number": "05",
-      "startFrame": 840,
-      "title": "仲裁：或裁或审"
-    },
-    {
-      "durationMs": 3800,
-      "endFrame": 1305,
-      "file": "labor-arbitration.avif",
-      "fileSize": 41427,
-      "frameCount": 57,
-      "id": "labor-arbitration",
-      "number": "06",
-      "startFrame": 1080,
-      "title": "劳动仲裁前置"
-    },
-    {
-      "durationMs": 3800,
-      "endFrame": 1545,
-      "file": "relationship-map.avif",
-      "fileSize": 50150,
-      "frameCount": 57,
-      "id": "relationship-map",
-      "number": "07",
-      "startFrame": 1320,
-      "title": "最终关系图"
+      "title": "人民调解与司法确认",
+      "durationMs": 5267,
+      "file": "mediation-confirmation.avif",
+      "fileSize": 218130,
+      "format": "avif",
+      "crf": 35,
+      "quality": 45
     }
   ],
   "size": {
-    "height": 720,
-    "width": 1280
+    "height": 1440,
+    "width": 2560
   },
   "sourceFps": 60,
   "targetFps": 15,
-  "totalFileSize": 323876
+  "totalFileSize": 218130
 }
