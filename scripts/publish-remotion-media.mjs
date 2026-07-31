@@ -26,6 +26,7 @@ const ENCODER_THREADS = 4;
 const DEFAULT_JOBS = 2;
 const MAX_JOBS = 4;
 const animationDirectories = new Map();
+let bundleQueue = Promise.resolve();
 
 const usage = `
 Render every stable scene range as a standalone AV1 MP4, or compare AV1 encodings.
@@ -191,6 +192,12 @@ const parseArguments = (rawArguments) => {
 };
 
 const qualityToCrf = (quality) => Math.round((AVIF_QUALITY_MAX - quality) * 63 / AVIF_QUALITY_MAX);
+
+const bundleSerially = (options) => {
+  const currentBundle = bundleQueue.then(() => bundle(options));
+  bundleQueue = currentBundle.catch(() => undefined);
+  return currentBundle;
+};
 
 const fileExists = async (filePath) => {
   try {
@@ -450,7 +457,7 @@ const renderAnimation = async ({animationId, browserExecutable, crfs, publishVid
 
   let browser;
   try {
-    const serveUrl = await bundle({
+    const serveUrl = await bundleSerially({
       entryPoint: path.join(animationDirectory, 'remotion', 'index.ts'),
       outDir: bundleDirectory,
       publicDir: path.join(PROJECT_ROOT, 'public'),
