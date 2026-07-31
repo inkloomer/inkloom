@@ -1,6 +1,6 @@
-# Shared legal animation primitives
+# Shared animation runtime
 
-InkLoom legal explainers use a **fixed 1920×1080** Remotion canvas and a shared visual system inspired by:
+InkLoom legal explainers use a **fixed 1920×1080** Remotion canvas. New animation nodes share runtime mechanics, not an art direction.
 
 | Skill / library | What we take | What we skip |
 |-----------------|--------------|--------------|
@@ -9,11 +9,18 @@ InkLoom legal explainers use a **fixed 1920×1080** Remotion canvas and a shared
 | **remotion-bits** | `Enter` / `StaggerEnter` (StaggeredMotion pattern) | Scene3D, Particles, MatrixRain, TypeWriter loops |
 | **@remotion/rough-notation** | `KeywordFocus` underline on one primary conclusion | Full-page hand-drawn noise |
 
+## Ownership boundary
+
+- Share frame conversion, scene timing, `Sequence` plumbing, render registration, and optional style-neutral motion primitives.
+- Keep backgrounds, fonts, palettes, cards, headings, scene transitions, and the complete art direction inside each animation node.
+- Treat one thin MDX carrier and its animation directory as one visual node. Pages inside that node should feel related; neighboring nodes should deliberately choose a different visual fingerprint.
+
 ## Files
 
-- `legal-visual.tsx` — `createLegalVisualSystem()` factory wired per animation storyboard palette
+- `remotion-runtime.tsx` — style-neutral playback timing, timeline sequence, optional reveal primitives, and an explicitly styled arrow
 - `scene-still.tsx` — wrap a bare scene for Studio single-page Composition
 - `register-scenes.tsx` — optional helper (Roots currently inline Folder registration)
+- `legal-visual.tsx` — legacy compatibility factory; do not use it for new animation nodes
 
 ## Package manager
 

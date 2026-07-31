@@ -1,4 +1,8 @@
 /**
+ * @deprecated Legacy compatibility for existing animation nodes.
+ * New nodes must own their background, typography, palette, surfaces, headings,
+ * and transitions locally. Use remotion-runtime.tsx only for style-neutral mechanics.
+ *
  * Shared legal-explainer visual primitives (remotion-markup + bits patterns).
  * - Enter / StaggerEnter: staggered card motion without per-scene phase math
  * - Inline interpolate on style (scale/translate, no transform strings)
