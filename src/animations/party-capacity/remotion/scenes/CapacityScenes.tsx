@@ -205,8 +205,8 @@ export const CaseScene = () => {
         <IconNode icon={ShieldAlert} label="张三" detail="被告" accent="red" />
       </div>
 
-      <FlowArrow left={450} top={480} width={340} progress={agentProgress} accent="gold" label="代理" />
-      <FlowArrow left={950} top={480} width={400} progress={defendantProgress} accent="red" />
+      <FlowArrow left={450} top={480} width={55} progress={agentProgress} accent="gold" label="代理" />
+      <FlowArrow left={950} top={480} width={435} progress={defendantProgress} accent="red" />
 
       <ImpactReveal delay={150} style={{position: 'absolute', left: 110, top: 720}}>
         <div

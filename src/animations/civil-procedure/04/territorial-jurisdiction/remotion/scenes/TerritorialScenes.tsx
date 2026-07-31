@@ -304,7 +304,7 @@ export const SpecialScene = () => {
         const top = 290 + index * 175;
         return (
           <div key={row.label}>
-            <FlowArrow left={500} top={top + 48} width={170} progress={rowProgress} accent={row.accent} />
+            <FlowArrow left={500} top={top + 48} width={195} progress={rowProgress} accent={row.accent} />
             <div
               style={{
                 position: 'absolute',
@@ -437,7 +437,7 @@ export const ExclusiveScene = () => {
         const top = 280 + index * 160;
         return (
           <div key={row.label}>
-            <FlowArrow left={460} top={top + 52} width={140} progress={rowProgress} accent="red" />
+            <FlowArrow left={460} top={top + 52} width={165} progress={rowProgress} accent="red" />
             <div
               style={{
                 position: 'absolute',
@@ -689,7 +689,7 @@ export const AgreementScene = () => {
         </div>
       </FadeSlide>
 
-      <FlowArrow left={500} top={420} width={110} progress={pathProgress} accent="teal" label="选择地点" />
+      <FlowArrow left={500} top={420} width={125} progress={pathProgress} accent="teal" label="选择地点" />
 
       {/* 中：实际联系地点 */}
       <div

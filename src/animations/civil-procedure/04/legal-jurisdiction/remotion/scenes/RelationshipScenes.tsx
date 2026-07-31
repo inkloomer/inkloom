@@ -393,7 +393,7 @@ export const RecapScene = () => {
             <div style={{position: 'absolute', left: 0, top: 16, opacity: lineProgress, translate: `${(1 - lineProgress) * -36}px 0px`}}>
               <RecapNode icon={row.icon} label={row.label} accent={row.accent} />
             </div>
-            <FlowArrow left={238} top={20} width={300} progress={lineProgress} accent={row.accent} />
+            <FlowArrow left={238} top={20} width={312} progress={lineProgress} accent={row.accent} />
             <div
               style={{
                 ...baseTextStyle,
@@ -413,7 +413,7 @@ export const RecapScene = () => {
             >
               {row.bridge}
             </div>
-            <FlowArrow left={830} top={20} width={268} progress={lineProgress} accent={row.accent} />
+            <FlowArrow left={830} top={20} width={275} progress={lineProgress} accent={row.accent} />
             <div style={{position: 'absolute', left: 1120, top: 16, opacity: lineProgress, translate: `${(1 - lineProgress) * 36}px 0px`}}>
               <RecapNode icon={OutcomeIcon} label={row.outcome} accent={row.accent} />
             </div>

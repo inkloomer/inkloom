@@ -235,7 +235,7 @@ export const RelationsScene = () => {
               <FlowArrow
                 left={520}
                 top={325 + index * 198}
-                width={775}
+                width={840}
                 progress={progress}
                 accent={row.accent}
                 label={index === 0 ? '效力变化' : index === 1 ? '路径排斥' : '先后顺序'}

@@ -88,7 +88,7 @@ export const DeathScene = () => {
         <IconNode icon={User} label="原当事人（死亡）" detail="诉讼权利义务转移" accent="blue" />
       </div>
 
-      <FlowArrow left={450} top={500} width={360} progress={progress} accent="red" label="继承" />
+      <FlowArrow left={450} top={500} width={395} progress={progress} accent="red" label="继承" />
 
       <div style={{position: 'absolute', left: 860, top: 460, opacity: progress, translate: `${(1 - progress) * 40}px 0px`}}>
         <IconNode icon={Users} label="继承人" detail="新的当事人" accent="red" />
@@ -158,9 +158,9 @@ export const TransferScene = () => {
         <IconNode icon={ArrowLeftRight} label="替代当事人" detail="由法院决定是否准许" accent="red" />
       </div>
 
-      <FlowArrow left={450} top={480} width={340} progress={progress2} accent="teal" />
-      <FlowArrow left={870} top={480} width={340} progress={progress2} accent="gold" />
-      <FlowArrow left={1290} top={480} width={340} progress={progress3} accent="red" />
+      <FlowArrow left={450} top={480} width={65} progress={progress2} accent="teal" />
+      <FlowArrow left={870} top={480} width={65} progress={progress2} accent="gold" />
+      <FlowArrow left={1290} top={480} width={65} progress={progress3} accent="red" />
 
       <ImpactReveal delay={110} style={{position: 'absolute', left: 110, top: 680}}>
         <div

@@ -108,7 +108,7 @@ export const Exception1Scene = () => {
         <IconNode icon={Building2} label="甲公司" detail="不是侵权关系主体" accent="blue" />
       </div>
 
-      <FlowArrow left={450} top={500} width={360} progress={progress} accent="teal" label="但有确认利益" />
+      <FlowArrow left={450} top={500} width={395} progress={progress} accent="teal" label="但有确认利益" />
 
       <div style={{position: 'absolute', left: 860, top: 460, opacity: progress, translate: `${(1 - progress) * 40}px 0px`}}>
         <IconNode icon={Eye} label="适格原告" detail="对诉讼标的有确认利益" accent="teal" />
@@ -223,7 +223,7 @@ export const Exception3Scene = () => {
         <IconNode icon={TreePine} label="环保组织" detail="不是侵权关系主体" accent="teal" />
       </div>
 
-      <FlowArrow left={420} top={500} width={400} progress={progress} accent="red" label="法律特殊规定" />
+      <FlowArrow left={420} top={500} width={425} progress={progress} accent="red" label="法律特殊规定" />
 
       <div style={{position: 'absolute', left: 860, top: 460, opacity: progress, translate: `${(1 - progress) * 40}px 0px`}}>
         <IconNode icon={Globe} label="适格原告" detail="公益诉讼的适格原告" accent="red" />
