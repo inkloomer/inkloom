@@ -11,6 +11,7 @@
     "animation:publish-video": "node scripts/publish-remotion-media.mjs --video",
     "animation:publish-avif": "node scripts/publish-remotion-media.mjs",
     "animation:compare-av1": "node scripts/publish-remotion-media.mjs",
+    "siyuan:embed-avif": "node scripts/embed-siyuan-avif.mjs",
     "preview": "astro preview",
     "astro": "astro"
   },
