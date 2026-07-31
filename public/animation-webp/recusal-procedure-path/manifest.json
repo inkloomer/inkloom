@@ -1,0 +1,96 @@
+{
+  "animationId": "recusal-procedure-path",
+  "compositionId": "RecusalProcedurePath",
+  "format": "animated-webp",
+  "generatedAt": "2026-07-31T13:49:34.858Z",
+  "loopCount": 1,
+  "quality": 0,
+  "referenceCrf": 42,
+  "scenes": [
+    {
+      "endFrame": 426,
+      "frameCount": 36,
+      "id": "scope",
+      "number": "01",
+      "startFrame": 0,
+      "title": "中立期待分叉",
+      "durationMs": 7200,
+      "file": "scope.webp",
+      "fileSize": 152412,
+      "format": "webp",
+      "quality": 0
+    },
+    {
+      "endFrame": 826,
+      "frameCount": 32,
+      "id": "timing",
+      "number": "02",
+      "startFrame": 450,
+      "title": "申请时间窗口",
+      "durationMs": 6400,
+      "file": "timing.webp",
+      "fileSize": 126986,
+      "format": "webp",
+      "quality": 0
+    },
+    {
+      "endFrame": 1276,
+      "frameCount": 36,
+      "id": "pending-effect",
+      "number": "03",
+      "startFrame": 850,
+      "title": "审查期暂停",
+      "durationMs": 7200,
+      "file": "pending-effect.webp",
+      "fileSize": 139026,
+      "format": "webp",
+      "quality": 0
+    },
+    {
+      "endFrame": 1776,
+      "frameCount": 40,
+      "id": "decision",
+      "number": "04",
+      "startFrame": 1300,
+      "title": "决定主体映射",
+      "durationMs": 8000,
+      "file": "decision.webp",
+      "fileSize": 176192,
+      "format": "webp",
+      "quality": 0
+    },
+    {
+      "endFrame": 2226,
+      "frameCount": 36,
+      "id": "remedy",
+      "number": "05",
+      "startFrame": 1800,
+      "title": "救济：复议一次",
+      "durationMs": 7200,
+      "file": "remedy.webp",
+      "fileSize": 163358,
+      "format": "webp",
+      "quality": 0
+    },
+    {
+      "endFrame": 2976,
+      "frameCount": 61,
+      "id": "pause-vs-continue",
+      "number": "06",
+      "startFrame": 2250,
+      "title": "审查停≠复议不停",
+      "durationMs": 12200,
+      "file": "pause-vs-continue.webp",
+      "fileSize": 289746,
+      "format": "webp",
+      "quality": 0
+    }
+  ],
+  "size": {
+    "height": 540,
+    "width": 960
+  },
+  "sourceFps": 60,
+  "targetFps": 5,
+  "totalFileSize": 1047720
+}

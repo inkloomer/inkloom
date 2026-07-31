@@ -1,0 +1,109 @@
+{
+  "animationId": "legal-jurisdiction",
+  "compositionId": "LegalJurisdiction",
+  "format": "animated-webp",
+  "generatedAt": "2026-07-31T14:37:35.993Z",
+  "loopCount": 1,
+  "quality": 60,
+  "referenceCrf": 42,
+  "scenes": [
+    {
+      "endFrame": 153,
+      "frameCount": 26,
+      "id": "definition",
+      "number": "01",
+      "startFrame": 0,
+      "title": "主管是什么？",
+      "durationMs": 2600,
+      "file": "definition.webp",
+      "fileSize": 512402,
+      "format": "webp",
+      "quality": 60
+    },
+    {
+      "endFrame": 375,
+      "frameCount": 35,
+      "id": "court-scope",
+      "number": "02",
+      "startFrame": 168,
+      "title": "哪些争议归法院？",
+      "durationMs": 3500,
+      "file": "court-scope.webp",
+      "fileSize": 780090,
+      "format": "webp",
+      "quality": 60
+    },
+    {
+      "endFrame": 495,
+      "frameCount": 18,
+      "id": "dispute-resolution",
+      "number": "03",
+      "startFrame": 390,
+      "title": "三种纠纷处理关系",
+      "durationMs": 1800,
+      "file": "dispute-resolution.webp",
+      "fileSize": 329192,
+      "format": "webp",
+      "quality": 60
+    },
+    {
+      "endFrame": 825,
+      "frameCount": 53,
+      "id": "mediation-confirmation",
+      "number": "04",
+      "startFrame": 510,
+      "title": "人民调解与司法确认",
+      "durationMs": 5300,
+      "file": "mediation-confirmation.webp",
+      "fileSize": 1342328,
+      "format": "webp",
+      "quality": 60
+    },
+    {
+      "endFrame": 1065,
+      "frameCount": 38,
+      "id": "arbitration-exclusion",
+      "number": "05",
+      "startFrame": 840,
+      "title": "仲裁：或裁或审",
+      "durationMs": 3800,
+      "file": "arbitration-exclusion.webp",
+      "fileSize": 951366,
+      "format": "webp",
+      "quality": 60
+    },
+    {
+      "endFrame": 1305,
+      "frameCount": 38,
+      "id": "labor-arbitration",
+      "number": "06",
+      "startFrame": 1080,
+      "title": "劳动仲裁前置",
+      "durationMs": 3800,
+      "file": "labor-arbitration.webp",
+      "fileSize": 810566,
+      "format": "webp",
+      "quality": 60
+    },
+    {
+      "endFrame": 1545,
+      "frameCount": 38,
+      "id": "relationship-map",
+      "number": "07",
+      "startFrame": 1320,
+      "title": "最终关系图",
+      "durationMs": 3800,
+      "file": "relationship-map.webp",
+      "fileSize": 925114,
+      "format": "webp",
+      "quality": 60
+    }
+  ],
+  "size": {
+    "height": 1080,
+    "width": 1920
+  },
+  "sourceFps": 60,
+  "targetFps": 10,
+  "totalFileSize": 5651058
+}

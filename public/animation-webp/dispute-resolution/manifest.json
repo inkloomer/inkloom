@@ -1,0 +1,83 @@
+{
+  "animationId": "dispute-resolution",
+  "compositionId": "DisputeResolution",
+  "format": "animated-webp",
+  "generatedAt": "2026-07-31T14:33:37.463Z",
+  "loopCount": 1,
+  "quality": 60,
+  "referenceCrf": 42,
+  "scenes": [
+    {
+      "endFrame": 225,
+      "frameCount": 38,
+      "id": "spectrum",
+      "number": "01",
+      "startFrame": 0,
+      "title": "四条路径光谱",
+      "durationMs": 3800,
+      "file": "spectrum.webp",
+      "fileSize": 959882,
+      "format": "webp",
+      "quality": 60
+    },
+    {
+      "endFrame": 555,
+      "frameCount": 53,
+      "id": "informal",
+      "number": "02",
+      "startFrame": 240,
+      "title": "和解 · 调解",
+      "durationMs": 5300,
+      "file": "informal.webp",
+      "fileSize": 1832036,
+      "format": "webp",
+      "quality": 60
+    },
+    {
+      "endFrame": 885,
+      "frameCount": 53,
+      "id": "formal",
+      "number": "03",
+      "startFrame": 570,
+      "title": "仲裁 · 诉讼",
+      "durationMs": 5300,
+      "file": "formal.webp",
+      "fileSize": 2095994,
+      "format": "webp",
+      "quality": 60
+    },
+    {
+      "endFrame": 1245,
+      "frameCount": 58,
+      "id": "enforceability",
+      "number": "04",
+      "startFrame": 900,
+      "title": "执行力与司法确认",
+      "durationMs": 5800,
+      "file": "enforceability.webp",
+      "fileSize": 2023176,
+      "format": "webp",
+      "quality": 60
+    },
+    {
+      "endFrame": 1665,
+      "frameCount": 68,
+      "id": "recap",
+      "number": "05",
+      "startFrame": 1260,
+      "title": "四路径总览",
+      "durationMs": 6800,
+      "file": "recap.webp",
+      "fileSize": 2542670,
+      "format": "webp",
+      "quality": 60
+    }
+  ],
+  "size": {
+    "height": 1080,
+    "width": 1920
+  },
+  "sourceFps": 60,
+  "targetFps": 10,
+  "totalFileSize": 9453758
+}

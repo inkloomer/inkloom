@@ -1,0 +1,57 @@
+{
+  "animationId": "law-attributes",
+  "compositionId": "LawAttributes",
+  "format": "animated-webp",
+  "generatedAt": "2026-07-31T14:35:44.368Z",
+  "loopCount": 1,
+  "quality": 60,
+  "referenceCrf": 42,
+  "scenes": [
+    {
+      "endFrame": 165,
+      "frameCount": 56,
+      "id": "overview",
+      "number": "01",
+      "startFrame": 0,
+      "title": "四重属性，四个角度",
+      "durationMs": 5600,
+      "file": "overview.webp",
+      "fileSize": 1113308,
+      "format": "webp",
+      "quality": 60
+    },
+    {
+      "endFrame": 585,
+      "frameCount": 136,
+      "id": "standard",
+      "number": "02",
+      "startFrame": 180,
+      "title": "四重属性的判断依据",
+      "durationMs": 13600,
+      "file": "standard.webp",
+      "fileSize": 3627088,
+      "format": "webp",
+      "quality": 60
+    },
+    {
+      "endFrame": 885,
+      "frameCount": 96,
+      "id": "recap",
+      "number": "03",
+      "startFrame": 600,
+      "title": "四重属性速记",
+      "durationMs": 9600,
+      "file": "recap.webp",
+      "fileSize": 2991938,
+      "format": "webp",
+      "quality": 60
+    }
+  ],
+  "size": {
+    "height": 1080,
+    "width": 1920
+  },
+  "sourceFps": 30,
+  "targetFps": 10,
+  "totalFileSize": 7732334
+}

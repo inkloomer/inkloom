@@ -32,3 +32,4 @@ ref/
 !public/animation-avif/**/*.avif
 notes/
 *.pdf
+*.webp

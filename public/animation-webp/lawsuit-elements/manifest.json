@@ -1,0 +1,83 @@
+{
+  "animationId": "lawsuit-elements",
+  "compositionId": "LawsuitElements",
+  "format": "animated-webp",
+  "generatedAt": "2026-07-31T14:36:57.137Z",
+  "loopCount": 1,
+  "quality": 60,
+  "referenceCrf": 42,
+  "scenes": [
+    {
+      "endFrame": 326,
+      "frameCount": 55,
+      "id": "concept",
+      "number": "01",
+      "startFrame": 0,
+      "title": "诉讼标的 ≠ 诉讼请求",
+      "durationMs": 5500,
+      "file": "concept.webp",
+      "fileSize": 2129632,
+      "format": "webp",
+      "quality": 60
+    },
+    {
+      "endFrame": 776,
+      "frameCount": 72,
+      "id": "distinction",
+      "number": "02",
+      "startFrame": 350,
+      "title": "一个标的 · 多个请求",
+      "durationMs": 7200,
+      "file": "distinction.webp",
+      "fileSize": 2382900,
+      "format": "webp",
+      "quality": 60
+    },
+    {
+      "endFrame": 1326,
+      "frameCount": 88,
+      "id": "classification",
+      "number": "03",
+      "startFrame": 800,
+      "title": "唯一依据：原告诉讼请求",
+      "durationMs": 8800,
+      "file": "classification.webp",
+      "fileSize": 3537722,
+      "format": "webp",
+      "quality": 60
+    },
+    {
+      "endFrame": 1976,
+      "frameCount": 105,
+      "id": "transformation",
+      "number": "04",
+      "startFrame": 1350,
+      "title": "请求变 · 标的可不变",
+      "durationMs": 10500,
+      "file": "transformation.webp",
+      "fileSize": 3895686,
+      "format": "webp",
+      "quality": 60
+    },
+    {
+      "endFrame": 2776,
+      "frameCount": 130,
+      "id": "recap",
+      "number": "05",
+      "startFrame": 2000,
+      "title": "标的 → 请求 → 分类",
+      "durationMs": 13000,
+      "file": "recap.webp",
+      "fileSize": 3993870,
+      "format": "webp",
+      "quality": 60
+    }
+  ],
+  "size": {
+    "height": 1080,
+    "width": 1920
+  },
+  "sourceFps": 60,
+  "targetFps": 10,
+  "totalFileSize": 15939810
+}

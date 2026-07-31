@@ -1,0 +1,96 @@
+{
+  "animationId": "territorial-jurisdiction",
+  "compositionId": "TerritorialJurisdiction",
+  "format": "animated-webp",
+  "generatedAt": "2026-07-31T13:50:27.957Z",
+  "loopCount": 1,
+  "quality": 0,
+  "referenceCrf": 42,
+  "scenes": [
+    {
+      "endFrame": 165,
+      "frameCount": 14,
+      "id": "orientation",
+      "number": "01",
+      "startFrame": 0,
+      "title": "地域管辖在找什么？",
+      "durationMs": 2800,
+      "file": "orientation.webp",
+      "fileSize": 47106,
+      "format": "webp",
+      "quality": 0
+    },
+    {
+      "endFrame": 435,
+      "frameCount": 22,
+      "id": "general-jurisdiction",
+      "number": "02",
+      "startFrame": 180,
+      "title": "一般：看当事人所在地",
+      "durationMs": 4400,
+      "file": "general-jurisdiction.webp",
+      "fileSize": 72822,
+      "format": "webp",
+      "quality": 0
+    },
+    {
+      "endFrame": 735,
+      "frameCount": 24,
+      "id": "special-jurisdiction",
+      "number": "03",
+      "startFrame": 450,
+      "title": "特殊：看法律事实所在地",
+      "durationMs": 4800,
+      "file": "special-jurisdiction.webp",
+      "fileSize": 87368,
+      "format": "webp",
+      "quality": 0
+    },
+    {
+      "endFrame": 1035,
+      "frameCount": 24,
+      "id": "exclusive-jurisdiction",
+      "number": "04",
+      "startFrame": 750,
+      "title": "专属：法定锁定法院",
+      "durationMs": 4800,
+      "file": "exclusive-jurisdiction.webp",
+      "fileSize": 82382,
+      "format": "webp",
+      "quality": 0
+    },
+    {
+      "endFrame": 1305,
+      "frameCount": 22,
+      "id": "agreement-jurisdiction",
+      "number": "05",
+      "startFrame": 1050,
+      "title": "协议：书面约定与红线",
+      "durationMs": 4400,
+      "file": "agreement-jurisdiction.webp",
+      "fileSize": 85696,
+      "format": "webp",
+      "quality": 0
+    },
+    {
+      "endFrame": 1785,
+      "frameCount": 39,
+      "id": "contract-three-step",
+      "number": "06",
+      "startFrame": 1320,
+      "title": "合同三步走：专属→协议→法定",
+      "durationMs": 7800,
+      "file": "contract-three-step.webp",
+      "fileSize": 123686,
+      "format": "webp",
+      "quality": 0
+    }
+  ],
+  "size": {
+    "height": 540,
+    "width": 960
+  },
+  "sourceFps": 60,
+  "targetFps": 5,
+  "totalFileSize": 499060
+}

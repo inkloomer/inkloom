@@ -1,0 +1,57 @@
+{
+  "animationId": "guarantee-party",
+  "compositionId": "GuaranteeParty",
+  "format": "animated-webp",
+  "generatedAt": "2026-07-31T14:34:02.215Z",
+  "loopCount": 1,
+  "quality": 60,
+  "referenceCrf": 42,
+  "scenes": [
+    {
+      "endFrame": 326,
+      "frameCount": 55,
+      "id": "general-guarantee",
+      "number": "01",
+      "startFrame": 0,
+      "title": "先诉抗辩权的保护",
+      "durationMs": 5500,
+      "file": "general-guarantee.webp",
+      "fileSize": 1510450,
+      "format": "webp",
+      "quality": 60
+    },
+    {
+      "endFrame": 676,
+      "frameCount": 55,
+      "id": "joint-liability-guarantee",
+      "number": "02",
+      "startFrame": 350,
+      "title": "债权人享有选择权",
+      "durationMs": 5500,
+      "file": "joint-liability-guarantee.webp",
+      "fileSize": 1585610,
+      "format": "webp",
+      "quality": 60
+    },
+    {
+      "endFrame": 1026,
+      "frameCount": 55,
+      "id": "comparison",
+      "number": "03",
+      "startFrame": 700,
+      "title": "一般保证 vs 连带保证速记",
+      "durationMs": 5500,
+      "file": "comparison.webp",
+      "fileSize": 1625674,
+      "format": "webp",
+      "quality": 60
+    }
+  ],
+  "size": {
+    "height": 1080,
+    "width": 1920
+  },
+  "sourceFps": 60,
+  "targetFps": 10,
+  "totalFileSize": 4721734
+}

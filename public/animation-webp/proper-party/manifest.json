@@ -1,0 +1,83 @@
+{
+  "animationId": "proper-party",
+  "compositionId": "ProperParty",
+  "format": "animated-webp",
+  "generatedAt": "2026-07-31T13:48:53.426Z",
+  "loopCount": 1,
+  "quality": 0,
+  "referenceCrf": 42,
+  "scenes": [
+    {
+      "endFrame": 276,
+      "frameCount": 24,
+      "id": "principle",
+      "number": "01",
+      "startFrame": 0,
+      "title": "谁是适格当事人？",
+      "durationMs": 4800,
+      "file": "principle.webp",
+      "fileSize": 91958,
+      "format": "webp",
+      "quality": 0
+    },
+    {
+      "endFrame": 626,
+      "frameCount": 28,
+      "id": "confirmation-interest",
+      "number": "02",
+      "startFrame": 300,
+      "title": "确认之诉的确认利益",
+      "durationMs": 5600,
+      "file": "confirmation-interest.webp",
+      "fileSize": 98644,
+      "format": "webp",
+      "quality": 0
+    },
+    {
+      "endFrame": 976,
+      "frameCount": 28,
+      "id": "management-right",
+      "number": "03",
+      "startFrame": 650,
+      "title": "对他人民事法律关系享有管理权",
+      "durationMs": 5600,
+      "file": "management-right.webp",
+      "fileSize": 128054,
+      "format": "webp",
+      "quality": 0
+    },
+    {
+      "endFrame": 1326,
+      "frameCount": 28,
+      "id": "public-interest",
+      "number": "04",
+      "startFrame": 1000,
+      "title": "公益诉讼的适格原告",
+      "durationMs": 5600,
+      "file": "public-interest.webp",
+      "fileSize": 111298,
+      "format": "webp",
+      "quality": 0
+    },
+    {
+      "endFrame": 1676,
+      "frameCount": 28,
+      "id": "capacity-comparison",
+      "number": "05",
+      "startFrame": 1350,
+      "title": "适格当事人 vs 诉讼权利能力",
+      "durationMs": 5600,
+      "file": "capacity-comparison.webp",
+      "fileSize": 93416,
+      "format": "webp",
+      "quality": 0
+    }
+  ],
+  "size": {
+    "height": 540,
+    "width": 960
+  },
+  "sourceFps": 60,
+  "targetFps": 5,
+  "totalFileSize": 523370
+}

@@ -1,0 +1,96 @@
+{
+  "animationId": "joint-litigation",
+  "compositionId": "JointLitigation",
+  "format": "animated-webp",
+  "generatedAt": "2026-07-31T14:35:05.674Z",
+  "loopCount": 1,
+  "quality": 60,
+  "referenceCrf": 42,
+  "scenes": [
+    {
+      "endFrame": 276,
+      "frameCount": 47,
+      "id": "definition",
+      "number": "01",
+      "startFrame": 0,
+      "title": "什么是共同诉讼？",
+      "durationMs": 4700,
+      "file": "definition.webp",
+      "fileSize": 1057570,
+      "format": "webp",
+      "quality": 60
+    },
+    {
+      "endFrame": 676,
+      "frameCount": 63,
+      "id": "ordinary-joint-litigation",
+      "number": "02",
+      "startFrame": 300,
+      "title": "普通共同诉讼",
+      "durationMs": 6300,
+      "file": "ordinary-joint-litigation.webp",
+      "fileSize": 1862822,
+      "format": "webp",
+      "quality": 60
+    },
+    {
+      "endFrame": 1076,
+      "frameCount": 63,
+      "id": "necessary-joint-litigation",
+      "number": "03",
+      "startFrame": 700,
+      "title": "必要共同诉讼",
+      "durationMs": 6300,
+      "file": "necessary-joint-litigation.webp",
+      "fileSize": 1662450,
+      "format": "webp",
+      "quality": 60
+    },
+    {
+      "endFrame": 1576,
+      "frameCount": 80,
+      "id": "comparison",
+      "number": "04",
+      "startFrame": 1100,
+      "title": "普通 vs 必要 对比",
+      "durationMs": 8000,
+      "file": "comparison.webp",
+      "fileSize": 1979152,
+      "format": "webp",
+      "quality": 60
+    },
+    {
+      "endFrame": 2176,
+      "frameCount": 97,
+      "id": "common-cases",
+      "number": "05",
+      "startFrame": 1600,
+      "title": "常考必要共同诉讼人",
+      "durationMs": 9700,
+      "file": "common-cases.webp",
+      "fileSize": 2726896,
+      "format": "webp",
+      "quality": 60
+    },
+    {
+      "endFrame": 2676,
+      "frameCount": 80,
+      "id": "recap",
+      "number": "06",
+      "startFrame": 2200,
+      "title": "共同诉讼总览",
+      "durationMs": 8000,
+      "file": "recap.webp",
+      "fileSize": 2377434,
+      "format": "webp",
+      "quality": 60
+    }
+  ],
+  "size": {
+    "height": 1080,
+    "width": 1920
+  },
+  "sourceFps": 60,
+  "targetFps": 10,
+  "totalFileSize": 11666324
+}

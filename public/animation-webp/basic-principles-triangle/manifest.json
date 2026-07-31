@@ -1,0 +1,30 @@
+{
+  "animationId": "basic-principles-triangle",
+  "compositionId": "BasicPrinciplesTriangle",
+  "format": "animated-webp",
+  "generatedAt": "2026-07-31T15:06:42.332Z",
+  "loopCount": 1,
+  "quality": 0,
+  "scenes": [
+    {
+      "endFrame": 419,
+      "frameCount": 70,
+      "id": "relationships",
+      "number": "01",
+      "startFrame": 0,
+      "title": "基本原则关系图",
+      "durationMs": 14000,
+      "file": "relationships.webp",
+      "fileSize": 391766,
+      "format": "webp",
+      "quality": 0
+    }
+  ],
+  "size": {
+    "height": 540,
+    "width": 960
+  },
+  "sourceFps": 30,
+  "targetFps": 5,
+  "totalFileSize": 391766
+}

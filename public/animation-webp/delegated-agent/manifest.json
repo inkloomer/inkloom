@@ -1,0 +1,70 @@
+{
+  "animationId": "delegated-agent",
+  "compositionId": "DelegatedAgent",
+  "format": "animated-webp",
+  "generatedAt": "2026-07-31T14:32:56.859Z",
+  "loopCount": 1,
+  "quality": 60,
+  "referenceCrf": 42,
+  "scenes": [
+    {
+      "endFrame": 276,
+      "frameCount": 47,
+      "id": "scope",
+      "number": "01",
+      "startFrame": 0,
+      "title": "授权范围",
+      "durationMs": 4700,
+      "file": "scope.webp",
+      "fileSize": 1937046,
+      "format": "webp",
+      "quality": 60
+    },
+    {
+      "endFrame": 776,
+      "frameCount": 80,
+      "id": "full-power-trap",
+      "number": "02",
+      "startFrame": 300,
+      "title": "全权代理陷阱",
+      "durationMs": 8000,
+      "file": "full-power-trap.webp",
+      "fileSize": 2318478,
+      "format": "webp",
+      "quality": 60
+    },
+    {
+      "endFrame": 1276,
+      "frameCount": 80,
+      "id": "execution-stage",
+      "number": "03",
+      "startFrame": 800,
+      "title": "代理阶段",
+      "durationMs": 8000,
+      "file": "execution-stage.webp",
+      "fileSize": 1884264,
+      "format": "webp",
+      "quality": 60
+    },
+    {
+      "endFrame": 1776,
+      "frameCount": 80,
+      "id": "divorce-duty",
+      "number": "04",
+      "startFrame": 1300,
+      "title": "出庭义务",
+      "durationMs": 8000,
+      "file": "divorce-duty.webp",
+      "fileSize": 2462972,
+      "format": "webp",
+      "quality": 60
+    }
+  ],
+  "size": {
+    "height": 1080,
+    "width": 1920
+  },
+  "sourceFps": 60,
+  "targetFps": 10,
+  "totalFileSize": 8602760
+}

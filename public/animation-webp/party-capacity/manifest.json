@@ -1,0 +1,70 @@
+{
+  "animationId": "party-capacity",
+  "compositionId": "PartyCapacity",
+  "format": "animated-webp",
+  "generatedAt": "2026-07-31T14:38:06.936Z",
+  "loopCount": 1,
+  "quality": 60,
+  "referenceCrf": 42,
+  "scenes": [
+    {
+      "endFrame": 226,
+      "frameCount": 38,
+      "id": "rights-capacity",
+      "number": "01",
+      "startFrame": 0,
+      "title": "诉讼权利能力是什么？",
+      "durationMs": 3800,
+      "file": "rights-capacity.webp",
+      "fileSize": 971424,
+      "format": "webp",
+      "quality": 60
+    },
+    {
+      "endFrame": 626,
+      "frameCount": 63,
+      "id": "capacity-comparison",
+      "number": "02",
+      "startFrame": 250,
+      "title": "权利能力 vs 行为能力",
+      "durationMs": 6300,
+      "file": "capacity-comparison.webp",
+      "fileSize": 2225632,
+      "format": "webp",
+      "quality": 60
+    },
+    {
+      "endFrame": 976,
+      "frameCount": 55,
+      "id": "legal-representation",
+      "number": "03",
+      "startFrame": 650,
+      "title": "无诉讼行为能力人如何诉讼？",
+      "durationMs": 5500,
+      "file": "legal-representation.webp",
+      "fileSize": 1354128,
+      "format": "webp",
+      "quality": 60
+    },
+    {
+      "endFrame": 1326,
+      "frameCount": 55,
+      "id": "recap",
+      "number": "04",
+      "startFrame": 1000,
+      "title": "核心结论速记",
+      "durationMs": 5500,
+      "file": "recap.webp",
+      "fileSize": 1662648,
+      "format": "webp",
+      "quality": 60
+    }
+  ],
+  "size": {
+    "height": 1080,
+    "width": 1920
+  },
+  "sourceFps": 60,
+  "targetFps": 10,
+  "totalFileSize": 6213832
+}

@@ -1,0 +1,70 @@
+{
+  "animationId": "party-change",
+  "compositionId": "PartyChange",
+  "format": "animated-webp",
+  "generatedAt": "2026-07-31T14:38:45.892Z",
+  "loopCount": 1,
+  "quality": 60,
+  "referenceCrf": 42,
+  "scenes": [
+    {
+      "endFrame": 276,
+      "frameCount": 47,
+      "id": "change-types",
+      "number": "01",
+      "startFrame": 0,
+      "title": "当事人变更有哪些情形？",
+      "durationMs": 4700,
+      "file": "change-types.webp",
+      "fileSize": 1471012,
+      "format": "webp",
+      "quality": 60
+    },
+    {
+      "endFrame": 676,
+      "frameCount": 63,
+      "id": "succession",
+      "number": "02",
+      "startFrame": 300,
+      "title": "自然人死亡与法人合并分立",
+      "durationMs": 6300,
+      "file": "succession.webp",
+      "fileSize": 2278810,
+      "format": "webp",
+      "quality": 60
+    },
+    {
+      "endFrame": 1076,
+      "frameCount": 63,
+      "id": "substantive-transfer",
+      "number": "03",
+      "startFrame": 700,
+      "title": "实体权利义务转移怎么办？",
+      "durationMs": 6300,
+      "file": "substantive-transfer.webp",
+      "fileSize": 2261746,
+      "format": "webp",
+      "quality": 60
+    },
+    {
+      "endFrame": 1426,
+      "frameCount": 55,
+      "id": "party-constancy",
+      "number": "04",
+      "startFrame": 1100,
+      "title": "当事人恒定主义速记",
+      "durationMs": 5500,
+      "file": "party-constancy.webp",
+      "fileSize": 1571082,
+      "format": "webp",
+      "quality": 60
+    }
+  ],
+  "size": {
+    "height": 1080,
+    "width": 1920
+  },
+  "sourceFps": 60,
+  "targetFps": 10,
+  "totalFileSize": 7582650
+}

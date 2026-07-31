@@ -1,0 +1,83 @@
+{
+  "animationId": "counterclaim-vs-defense",
+  "compositionId": "CounterclaimVsDefense",
+  "format": "animated-webp",
+  "generatedAt": "2026-07-31T14:32:14.400Z",
+  "loopCount": 1,
+  "quality": 60,
+  "referenceCrf": 42,
+  "scenes": [
+    {
+      "endFrame": 326,
+      "frameCount": 55,
+      "id": "concept",
+      "number": "01",
+      "startFrame": 0,
+      "title": "反诉是独立的诉",
+      "durationMs": 5500,
+      "file": "concept.webp",
+      "fileSize": 1888276,
+      "format": "webp",
+      "quality": 60
+    },
+    {
+      "endFrame": 776,
+      "frameCount": 72,
+      "id": "technique",
+      "number": "02",
+      "startFrame": 350,
+      "title": "去掉原告主张测试法",
+      "durationMs": 7200,
+      "file": "technique.webp",
+      "fileSize": 2383052,
+      "format": "webp",
+      "quality": 60
+    },
+    {
+      "endFrame": 1426,
+      "frameCount": 105,
+      "id": "cases",
+      "number": "03",
+      "startFrame": 800,
+      "title": "四组典型对照",
+      "durationMs": 10500,
+      "file": "cases.webp",
+      "fileSize": 3851546,
+      "format": "webp",
+      "quality": 60
+    },
+    {
+      "endFrame": 1876,
+      "frameCount": 72,
+      "id": "independence",
+      "number": "04",
+      "startFrame": 1450,
+      "title": "本诉撤 · 反诉仍在",
+      "durationMs": 7200,
+      "file": "independence.webp",
+      "fileSize": 2073482,
+      "format": "webp",
+      "quality": 60
+    },
+    {
+      "endFrame": 2776,
+      "frameCount": 147,
+      "id": "recap",
+      "number": "05",
+      "startFrame": 1900,
+      "title": "判断流 + 要件口诀",
+      "durationMs": 14700,
+      "file": "recap.webp",
+      "fileSize": 4446682,
+      "format": "webp",
+      "quality": 60
+    }
+  ],
+  "size": {
+    "height": 1080,
+    "width": 1920
+  },
+  "sourceFps": 60,
+  "targetFps": 10,
+  "totalFileSize": 14643038
+}
