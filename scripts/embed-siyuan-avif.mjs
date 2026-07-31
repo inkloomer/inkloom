@@ -6,9 +6,38 @@ import {fileURLToPath} from 'node:url';
 const PROJECT_ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const SIYUAN_BIN = process.env.SIYUAN_BIN || 'D:/scoop/shims/siyuan.exe';
 const SIYUAN_WORKSPACE = process.env.SIYUAN_WORKSPACE || 'D:/1STUDY/SIYUAN';
-const PUBLIC_AVIF_ROOT = path.join(PROJECT_ROOT, 'public', 'animation-avif');
-const BASE_URL = 'https://inkloomer.github.io/inkloom/animation-avif';
-const IMAGE_BLOCK_PATTERN = /^!\[InkLoom 动图(?:：|:)[^\]]+\]\((https:\/\/inkloomer\.github\.io\/inkloom\/animation-avif\/[^)\s]+)\)(?:\s*\{:[^}]*\})?\s*$/;
+const MEDIA_FORMATS = {
+  avif: {directory: 'animation-avif', extension: 'avif'},
+  webp: {directory: 'animation-webp', extension: 'webp'},
+};
+const parseOptions = (rawArguments) => {
+  let format = 'avif';
+  const flags = new Set();
+
+  for (let index = 0; index < rawArguments.length; index += 1) {
+    const argument = rawArguments[index];
+    if (argument === '--format') {
+      format = rawArguments[index + 1];
+      if (!format || format.startsWith('--')) throw new Error('--format requires a value.');
+      index += 1;
+      continue;
+    }
+    if (argument.startsWith('--format=')) {
+      format = argument.slice('--format='.length);
+      continue;
+    }
+    flags.add(argument);
+  }
+
+  if (!Object.hasOwn(MEDIA_FORMATS, format)) throw new Error(`--format must be one of: ${Object.keys(MEDIA_FORMATS).join(', ')}.`);
+  return {apply: flags.has('--apply'), format, repairPlacements: flags.has('--repair-placements')};
+};
+
+const options = parseOptions(process.argv.slice(2));
+const mediaProfile = MEDIA_FORMATS[options.format];
+const PUBLIC_MEDIA_ROOT = path.join(PROJECT_ROOT, 'public', mediaProfile.directory);
+const BASE_URL = `https://inkloomer.github.io/inkloom/${mediaProfile.directory}`;
+const IMAGE_BLOCK_PATTERN = new RegExp(String.raw`^!\[InkLoom 动图(?:：|:)[^\]]+\]\((https:\/\/inkloomer\.github\.io\/inkloom\/${mediaProfile.directory}\/[^)\s]+)\)(?:\s*\{:[^}]*\})?\s*$`);
 
 const ROOTS = {
   'dispute-resolution': '20260704175116-40dmfvd',
@@ -141,10 +170,9 @@ const ANCHORS = {
   },
 };
 
-const args = new Set(process.argv.slice(2));
-const apply = args.has('--apply');
+const apply = options.apply;
 const dryRun = !apply;
-const repairPlacements = args.has('--repair-placements');
+const repairPlacements = options.repairPlacements;
 
 const normalize = (value) => String(value || '')
   .replace(/<[^>]*>/g, '')
@@ -177,7 +205,7 @@ const readBlocks = () => {
 const readManifests = () => {
   const manifests = [];
   for (const animationId of Object.keys(ANCHORS)) {
-    const file = path.join(PUBLIC_AVIF_ROOT, animationId, 'manifest.json');
+    const file = path.join(PUBLIC_MEDIA_ROOT, animationId, 'manifest.json');
     const manifest = JSON.parse(fs.readFileSync(file, 'utf8'));
     for (const scene of manifest.scenes || []) manifests.push({animationId, scene});
   }
@@ -238,8 +266,8 @@ const tasks = [];
 for (const {animationId, scene} of readManifests()) {
   const target = findTarget(blocks, animationId, scene.id);
   const url = `${BASE_URL}/${animationId}/${scene.file}`;
-  if (!fs.existsSync(path.join(PUBLIC_AVIF_ROOT, animationId, scene.file))) {
-    throw new Error(`Missing AVIF asset: ${url}`);
+  if (!fs.existsSync(path.join(PUBLIC_MEDIA_ROOT, animationId, scene.file))) {
+    throw new Error(`Missing ${options.format.toUpperCase()} asset: ${url}`);
   }
   tasks.push({
     animationId,

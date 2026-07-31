@@ -8,23 +8,48 @@ import {getCompositions, openBrowser, renderFrames} from '@remotion/renderer';
 const PROJECT_ROOT = path.resolve(import.meta.dirname, '..');
 const ANIMATIONS_ROOT = path.join(PROJECT_ROOT, 'src', 'animations');
 const COMPONENTS_ROOT = path.join(PROJECT_ROOT, 'src', 'components');
-const PUBLIC_AVIF_ROOT = path.join(PROJECT_ROOT, 'public', 'animation-avif');
 const PUBLIC_VIDEO_ROOT = path.join(PROJECT_ROOT, 'public', 'animation-video');
 const COMPARISON_ROOT = path.join(PROJECT_ROOT, '.artifacts', 'avif-quality-comparisons');
 const ANIMATION_ID_PATTERN = /^[a-z0-9][a-z0-9-]*$/;
 const SCENE_ID_PATTERN = /^[a-z0-9][a-z0-9-]*$/;
-const DEFAULT_AVIF_QUALITY = 45;
-const AVIF_QUALITY_MIN = 0;
-const AVIF_QUALITY_MAX = 100;
-const AVIF_WIDTH = 2560;
 const VIDEO_WIDTH = 2560;
 const VIDEO_CRF = 35;
-const TARGET_FPS = 15;
-const AVIF_LOOP_COUNT = 1;
+const VIDEO_TARGET_FPS = 15;
 const RENDER_CONCURRENCY = 2;
 const ENCODER_THREADS = 4;
 const DEFAULT_JOBS = 2;
 const MAX_JOBS = 4;
+const MEDIA_FORMATS = {
+  avif: {
+    defaultQuality: 33,
+    defaultWidth: 1920,
+    directory: 'animation-avif',
+    extension: 'avif',
+    encoderArguments: ({crf}) => ['-c:v', 'libaom-av1', '-crf', String(crf), '-b:v', '0', '-cpu-used', '6', '-row-mt', '1', '-tiles', '2x2', '-threads', String(ENCODER_THREADS)],
+    inspection: 'ffprobe',
+    manifestFormat: 'animated-avif',
+    maxFileSize: undefined,
+    targetFps: 'source',
+    loopCount: 1,
+    outputArguments: (loopCount) => ['-still-picture', '0', '-loop', String(loopCount), '-f', 'avif'],
+    qualityToCrf: (quality) => Math.round((100 - quality) * 63 / 100),
+  },
+  webp: {
+    defaultQuality: 42,
+    defaultWidth: 1920,
+    directory: 'animation-webp',
+    extension: 'webp',
+    encoderArguments: ({quality}) => ['-c:v', 'libwebp', '-lossless', '0', '-quality', String(quality), '-preset', 'text'],
+    inspection: 'webpmux',
+    manifestFormat: 'animated-webp',
+    maxFileSize: undefined,
+    targetFps: 'source',
+    loopCount: 1,
+    outputArguments: (loopCount) => ['-loop', String(loopCount), '-f', 'webp'],
+    qualityToCrf: () => undefined,
+  },
+};
+const MEDIA_FORMAT_NAMES = Object.keys(MEDIA_FORMATS);
 const animationDirectories = new Map();
 let bundleQueue = Promise.resolve();
 
@@ -35,21 +60,26 @@ Usage:
   pnpm animation:publish-video [animation-id ...]
   pnpm animation:publish-video legal-jurisdiction --scene mediation-confirmation
   pnpm animation:publish-avif [--jobs 1-4] [animation-id ...]
-  pnpm animation:publish-avif legal-jurisdiction --scene mediation-confirmation --widths 2560
+  pnpm animation:publish-webp [--jobs 1-4] [animation-id ...]
+  pnpm animation:publish-avif legal-jurisdiction --scene mediation-confirmation --widths 1920
   pnpm animation:compare-av1 legal-jurisdiction --scene mediation-confirmation --widths 1920,2560 --crfs 35,25,16
 
 Output:
+  public/animation-avif/<animation-id>/<scene-id>.avif
+  public/animation-webp/<animation-id>/<scene-id>.webp
   public/animation-video/<animation-id>/<scene-id>.mp4
   .artifacts/avif-quality-comparisons/<animation-id>/<run-id>/<scene-id>.<width>x<height>.crf<value>.<avif|mp4>
 
 Encoding contract:
-  Published video: AV1 CRF ${VIDEO_CRF}, ${VIDEO_WIDTH}px wide, ${TARGET_FPS}fps target, MP4 faststart, no audio
-  Published AVIF: q${DEFAULT_AVIF_QUALITY} (AV1 CRF ${VIDEO_CRF}), ${AVIF_WIDTH}px wide, ${TARGET_FPS}fps target, loop count ${AVIF_LOOP_COUNT}
+  Published video: AV1 CRF ${VIDEO_CRF}, ${VIDEO_WIDTH}px wide, ${VIDEO_TARGET_FPS}fps target, MP4 faststart, no audio
+  Published AVIF: q${MEDIA_FORMATS.avif.defaultQuality} (AV1 CRF 42), ${MEDIA_FORMATS.avif.defaultWidth}px wide, source FPS, loop count ${MEDIA_FORMATS.avif.loopCount}
+  Published WebP: quality ${MEDIA_FORMATS.webp.defaultQuality}, ${MEDIA_FORMATS.webp.defaultWidth}px wide, source FPS, loop count ${MEDIA_FORMATS.webp.loopCount}
 `;
 
 const parseArguments = (rawArguments) => {
   const animationIds = [];
-  let quality = DEFAULT_AVIF_QUALITY;
+  let mediaFormat = 'avif';
+  let quality = MEDIA_FORMATS.avif.defaultQuality;
   let qualities;
   let crfs;
   let sceneId;
@@ -65,8 +95,8 @@ const parseArguments = (rawArguments) => {
   };
   const parseQuality = (value, option) => {
     const parsed = Number(value);
-    if (!Number.isInteger(parsed) || parsed < AVIF_QUALITY_MIN || parsed > AVIF_QUALITY_MAX) {
-      throw new Error(`${option} must be an integer from ${AVIF_QUALITY_MIN} to ${AVIF_QUALITY_MAX}.`);
+    if (!Number.isInteger(parsed) || parsed < 0 || parsed > 100) {
+      throw new Error(`${option} must be an integer from 0 to 100.`);
     }
     return parsed;
   };
@@ -96,6 +126,15 @@ const parseArguments = (rawArguments) => {
     const argument = rawArguments[index];
     if (argument === '--') continue;
     if (argument === '--help') return {help: true};
+    if (argument === '--format') {
+      mediaFormat = readValue(index, argument);
+      index += 1;
+      continue;
+    }
+    if (argument.startsWith('--format=')) {
+      mediaFormat = argument.slice('--format='.length);
+      continue;
+    }
     if (argument === '--quality') {
       quality = parseQuality(readValue(index, argument), argument);
       qualityExplicit = true;
@@ -160,8 +199,12 @@ const parseArguments = (rawArguments) => {
     animationIds.push(argument);
   }
 
+  if (!MEDIA_FORMAT_NAMES.includes(mediaFormat)) throw new Error(`--format must be one of: ${MEDIA_FORMAT_NAMES.join(', ')}.`);
+  const profile = MEDIA_FORMATS[mediaFormat];
+  if (!qualityExplicit) quality = profile.defaultQuality;
   if (sceneId && !SCENE_ID_PATTERN.test(sceneId)) throw new Error(`Invalid scene ID: ${sceneId}`);
-  if (publishVideo && (qualities || qualityExplicit)) throw new Error('--quality and --qualities are only available for AVIF comparisons.');
+  if (publishVideo && (qualities || qualityExplicit)) throw new Error('--quality and --qualities are only available for animated-image publication.');
+  if (mediaFormat !== 'avif' && crfs) throw new Error('--crfs is only available for AVIF comparisons.');
   const resolvedCrfs = crfs ? [...new Set(crfs)] : publishVideo ? [VIDEO_CRF] : undefined;
   const resolvedQualities = resolvedCrfs ? undefined : [...new Set(qualities ?? [quality])];
   if (resolvedCrfs && qualities) throw new Error('Use either --qualities or --crfs, not both.');
@@ -172,7 +215,7 @@ const parseArguments = (rawArguments) => {
   if (sceneId && animationIds.length !== 1) {
     throw new Error('--scene requires exactly one animation ID.');
   }
-  const resolvedWidths = [...new Set(widths ?? [publishVideo ? VIDEO_WIDTH : AVIF_WIDTH])];
+  const resolvedWidths = [...new Set(widths ?? [publishVideo ? VIDEO_WIDTH : profile.defaultWidth])];
   if (publishVideo && resolvedWidths.length !== 1) {
     throw new Error('Published scene video requires exactly one output width.');
   }
@@ -184,14 +227,13 @@ const parseArguments = (rawArguments) => {
     crfs: resolvedCrfs,
     help: false,
     jobs,
+    mediaFormat,
     qualities: resolvedCrfs ? undefined : resolvedQualities,
     publishVideo,
     sceneId,
     widths: resolvedWidths,
   };
 };
-
-const qualityToCrf = (quality) => Math.round((AVIF_QUALITY_MAX - quality) * 63 / AVIF_QUALITY_MAX);
 
 const bundleSerially = (options) => {
   const currentBundle = bundleQueue.then(() => bundle(options));
@@ -256,6 +298,7 @@ const discoverAnimationDirectories = async (directory, depth = 0) => {
     if (!entry.isDirectory()) continue;
 
     const candidateDirectory = path.join(directory, entry.name);
+    if (candidateDirectory.startsWith(`${path.join(ANIMATIONS_ROOT, 'demo')}${path.sep}`)) continue;
     if (ANIMATION_ID_PATTERN.test(entry.name)) {
       const remotionDirectory = path.join(candidateDirectory, 'remotion');
       const hasEntry = await fileExists(path.join(remotionDirectory, 'index.ts'));
@@ -404,6 +447,68 @@ const runCommandCapture = (command, args) => new Promise((resolve, reject) => {
   });
 });
 
+const inspectWebp = async (filePath) => {
+  const info = await runCommandCapture('webpmux', ['-info', filePath]);
+  const canvas = info.match(/Canvas size\s*:\s*(\d+)\s+x\s+(\d+)/);
+  const loopCount = info.match(/Loop Count\s*:\s*(\d+)/);
+  const frameCount = info.match(/Number of frames:\s*(\d+)/);
+  const durations = [...info.matchAll(/^\s*\d+:\s+\d+\s+\d+\s+\S+\s+\d+\s+\d+\s+(\d+)\s+/gm)]
+    .map((match) => Number(match[1]));
+
+  if (!canvas || !loopCount || !frameCount || durations.length !== Number(frameCount[1])) {
+    throw new Error(`Could not inspect WebP animation metadata for ${filePath}: ${info.slice(0, 800).replaceAll(/\s+/g, ' ').trim()}`);
+  }
+
+  return {
+    durationMs: durations.reduce((total, duration) => total + duration, 0),
+    frameCount: Number(frameCount[1]),
+    height: Number(canvas[2]),
+    loopCount: Number(loopCount[1]),
+    width: Number(canvas[1]),
+  };
+};
+
+const inspectOutput = async ({filePath, outputFormat, profile}) => {
+  if (profile.inspection === 'webpmux') {
+    const info = await inspectWebp(filePath);
+    return {
+      codec: 'webp',
+      durationMs: info.durationMs,
+      formatName: 'webp',
+      frameCount: info.frameCount,
+      height: info.height,
+      loopCount: info.loopCount,
+      majorBrand: undefined,
+      validFormat: true,
+      width: info.width,
+    };
+  }
+
+  const probe = JSON.parse(await runCommandCapture('ffprobe', [
+    '-hide_banner',
+    '-v', 'error',
+    '-count_frames',
+    '-show_streams',
+    '-show_format',
+    '-of', 'json',
+    filePath,
+  ]));
+  const stream = [...(probe.streams ?? [])].reverse().find((item) => item.codec_type === 'video');
+  return {
+    codec: stream?.codec_name,
+    durationMs: Math.round(Number(stream?.duration ?? probe.format?.duration) * 1000),
+    formatName: probe.format?.format_name,
+    frameCount: Number(stream?.nb_read_frames ?? stream?.nb_frames),
+    height: stream?.height,
+    loopCount: undefined,
+    majorBrand: probe.format?.tags?.major_brand,
+    validFormat: outputFormat === 'avif'
+      ? probe.format?.tags?.major_brand === 'avis'
+      : probe.format?.format_name?.includes('mp4'),
+    width: stream?.width,
+  };
+};
+
 const renameWithRetry = async (source, target) => {
   const retryableCodes = new Set(['EACCES', 'EBUSY', 'EPERM']);
 
@@ -432,23 +537,24 @@ const replaceDirectory = async (stagingDirectory, targetDirectory) => {
   }
 };
 
-const renderAnimation = async ({animationId, browserExecutable, crfs, publishVideo, qualities, sceneId, widths}) => {
+const renderAnimation = async ({animationId, browserExecutable, crfs, mediaFormat, publishVideo, qualities, sceneId, widths}) => {
+  const profile = MEDIA_FORMATS[mediaFormat];
   const storyboardScenes = await loadStoryboardScenes(animationId);
   const allScenes = await loadPlayerSceneMetadata(animationId, storyboardScenes);
   const scenes = sceneId ? allScenes.filter((scene) => scene.id === sceneId) : allScenes;
   if (scenes.length === 0) throw new Error(`${animationId}: scene "${sceneId}" was not found.`);
   const encodingVariants = crfs
     ? crfs.map((crf) => ({crf, quality: undefined}))
-    : qualities.map((quality) => ({crf: qualityToCrf(quality), quality}));
+    : qualities.map((quality) => ({crf: profile.qualityToCrf(quality), quality}));
   const comparison = !publishVideo && (encodingVariants.length > 1 || widths.length > 1);
-  const outputFormats = publishVideo ? ['mp4'] : crfs ? ['avif', 'mp4'] : ['avif'];
+  const outputFormats = publishVideo ? ['mp4'] : crfs ? ['avif', 'mp4'] : [mediaFormat];
   const animationDirectory = getAnimationDirectory(animationId);
-  const bundleDirectory = await mkdtemp(path.join(tmpdir(), `inkloom-avif-bundle-${animationId}-`));
-  const workDirectory = await mkdtemp(path.join(tmpdir(), `inkloom-avif-frames-${animationId}-`));
+  const bundleDirectory = await mkdtemp(path.join(tmpdir(), `inkloom-${mediaFormat}-bundle-${animationId}-`));
+  const workDirectory = await mkdtemp(path.join(tmpdir(), `inkloom-${mediaFormat}-frames-${animationId}-`));
   const comparisonRunId = new Date().toISOString().replaceAll(':', '-').replaceAll('.', '-');
   const targetDirectory = comparison
     ? path.join(COMPARISON_ROOT, animationId, comparisonRunId)
-    : path.join(publishVideo ? PUBLIC_VIDEO_ROOT : PUBLIC_AVIF_ROOT, animationId);
+    : path.join(PROJECT_ROOT, 'public', publishVideo ? 'animation-video' : profile.directory, animationId);
   const stagingDirectory = `${targetDirectory}.staging-${process.pid}`;
 
   await rm(stagingDirectory, {force: true, maxRetries: 12, recursive: true, retryDelay: 150});
@@ -474,7 +580,12 @@ const renderAnimation = async ({animationId, browserExecutable, crfs, publishVid
     const composition = selectDeckComposition(animationId, compositions);
     if (!composition) throw new Error(`${animationId}: no composition found.`);
 
-    const everyNthFrame = Math.max(1, Math.round(composition.fps / TARGET_FPS));
+    const targetFps = publishVideo
+      ? VIDEO_TARGET_FPS
+      : profile.targetFps === 'source' ? composition.fps : profile.targetFps;
+    const everyNthFrame = publishVideo
+      ? Math.max(1, Math.round(composition.fps / targetFps))
+      : 1;
     const outputFps = composition.fps / everyNthFrame;
     const publishedScenes = [];
 
@@ -525,57 +636,57 @@ const renderAnimation = async ({animationId, browserExecutable, crfs, publishVid
               ? `${scene.id}.${resolutionLabel}.${variantLabel}.${outputFormat}`
               : `${scene.id}.${outputFormat}`;
             const targetPath = path.join(stagingDirectory, targetFile);
-            const outputArguments = outputFormat === 'avif'
-              ? ['-still-picture', '0', '-loop', String(AVIF_LOOP_COUNT), '-f', 'avif']
-              : ['-tag:v', 'av01', '-movflags', '+faststart', '-f', 'mp4'];
+            const outputProfile = outputFormat === 'mp4' ? MEDIA_FORMATS.avif : MEDIA_FORMATS[outputFormat];
+            const outputArguments = outputFormat === 'mp4'
+              ? ['-tag:v', 'av01', '-movflags', '+faststart', '-f', 'mp4']
+              : outputProfile.outputArguments(outputProfile.loopCount);
+            const encoderArguments = outputProfile.encoderArguments(encodingVariant);
             await runCommand('ffmpeg', [
               '-hide_banner',
               '-loglevel', 'error',
               '-y',
               '-framerate', String(outputFps),
+              '-start_number', String(scene.start),
               '-i', rendered.assetsInfo.imageSequenceName,
               '-an',
-              '-c:v', 'libaom-av1',
-              '-crf', String(encodingVariant.crf),
-              '-b:v', '0',
-              '-cpu-used', '6',
-              '-row-mt', '1',
-              '-tiles', '2x2',
-              '-threads', String(ENCODER_THREADS),
+              ...encoderArguments,
               ...outputArguments,
               targetPath,
             ]);
 
-            const probe = JSON.parse(await runCommandCapture('ffprobe', [
-              '-hide_banner',
-              '-v', 'error',
-              '-count_frames',
-              '-show_streams',
-              '-show_format',
-              '-of', 'json',
-              targetPath,
-            ]));
-            const animationStream = [...(probe.streams ?? [])].reverse().find((stream) => stream.codec_type === 'video');
-            const encodedFrameCount = Number(animationStream?.nb_read_frames ?? animationStream?.nb_frames);
-            const encodedDurationMs = Math.round(Number(animationStream?.duration ?? probe.format?.duration) * 1000);
-            const validFormat = outputFormat === 'avif'
-              ? probe.format?.tags?.major_brand === 'avis'
-              : probe.format?.format_name?.includes('mp4');
+            const outputInfo = await inspectOutput({filePath: targetPath, outputFormat, profile: outputProfile});
+            const validCodec = outputFormat === 'webp' || outputInfo.codec === 'av1';
             if (
-              !validFormat
-              || animationStream?.codec_name !== 'av1'
-              || animationStream?.width !== outputWidth
-              || animationStream?.height !== outputHeight
-              || encodedFrameCount !== rendered.frameCount
-              || !Number.isFinite(encodedDurationMs)
-              || Math.abs(encodedDurationMs - expectedDurationMs) > 1
+              !outputInfo.validFormat
+              || !validCodec
+              || outputInfo.width !== outputWidth
+              || outputInfo.height !== outputHeight
+              || outputInfo.frameCount !== rendered.frameCount
+              || !Number.isFinite(outputInfo.durationMs)
+              || Math.abs(outputInfo.durationMs - expectedDurationMs) > 1
+              || (outputFormat !== 'mp4' && outputInfo.loopCount !== undefined && outputInfo.loopCount !== outputProfile.loopCount)
             ) {
-              throw new Error(`${animationId}: ${targetFile} failed ${outputFormat.toUpperCase()} validation.`);
+              throw new Error(`${animationId}: ${targetFile} failed ${outputFormat.toUpperCase()} validation (${JSON.stringify({
+                formatName: outputInfo.formatName,
+                majorBrand: outputInfo.majorBrand,
+                codec: outputInfo.codec,
+                width: outputInfo.width,
+                height: outputInfo.height,
+                frameCount: outputInfo.frameCount,
+                expectedFrameCount: rendered.frameCount,
+                durationMs: outputInfo.durationMs,
+                expectedDurationMs,
+                loopCount: outputInfo.loopCount,
+              })}).`);
             }
 
             const fileSize = (await stat(targetPath)).size;
-            outputs.push({durationMs: encodedDurationMs, file: targetFile, fileSize, format: outputFormat});
-            console.log(`[${animationId}] ${scene.id} ${resolutionLabel} CRF ${encodingVariant.crf} ${outputFormat.toUpperCase()}: ${(fileSize / 1024 / 1024).toFixed(2)} MiB`);
+            if (outputProfile.maxFileSize && fileSize > outputProfile.maxFileSize) {
+              throw new Error(`${animationId}: ${targetFile} exceeds the ${outputProfile.maxFileSize}-byte ${outputFormat.toUpperCase()} limit (${fileSize} bytes).`);
+            }
+            outputs.push({durationMs: outputInfo.durationMs, file: targetFile, fileSize, format: outputFormat});
+            const qualityLabel = encodingVariant.crf === undefined ? `quality ${encodingVariant.quality}` : `CRF ${encodingVariant.crf}`;
+            console.log(`[${animationId}] ${scene.id} ${resolutionLabel} ${qualityLabel} ${outputFormat.toUpperCase()}: ${(fileSize / 1024 / 1024).toFixed(2)} MiB`);
           }
           variants.push({...encodingVariant, outputs});
         }
@@ -610,9 +721,9 @@ const renderAnimation = async ({animationId, browserExecutable, crfs, publishVid
       comparison: comparison || undefined,
       compositionId: composition.id,
       crf: comparison ? undefined : encodingVariants[0].crf,
-      format: publishVideo ? 'av1-mp4' : 'animated-avif',
+      format: publishVideo ? 'av1-mp4' : profile.manifestFormat,
       generatedAt: new Date().toISOString(),
-      loopCount: publishVideo ? undefined : AVIF_LOOP_COUNT,
+      loopCount: publishVideo ? undefined : profile.loopCount,
       quality: comparison ? undefined : encodingVariants[0].quality,
       formats: comparison ? outputFormats : undefined,
       qualities: comparison && !crfs ? qualities : undefined,
@@ -667,7 +778,7 @@ const main = async () => {
   const missingIds = animationIds.filter((animationId) => !discoveredIds.includes(animationId));
   if (missingIds.length > 0) throw new Error(`Animation not found or incomplete: ${missingIds.join(', ')}`);
 
-  await mkdir(options.publishVideo ? PUBLIC_VIDEO_ROOT : options.crfs ? COMPARISON_ROOT : PUBLIC_AVIF_ROOT, {recursive: true});
+  await mkdir(options.publishVideo ? PUBLIC_VIDEO_ROOT : options.crfs ? COMPARISON_ROOT : path.join(PROJECT_ROOT, 'public', MEDIA_FORMATS[options.mediaFormat].directory), {recursive: true});
   const browserExecutable = await findBrowserExecutable();
   if (browserExecutable) console.log(`Using browser: ${browserExecutable}`);
   const manifests = new Array(animationIds.length);
@@ -683,6 +794,7 @@ const main = async () => {
         animationId: animationIds[animationIndex],
         browserExecutable,
         crfs: options.crfs,
+        mediaFormat: options.mediaFormat,
         publishVideo: options.publishVideo,
         qualities: options.qualities,
         sceneId: options.sceneId,

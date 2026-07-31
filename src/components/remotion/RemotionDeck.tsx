@@ -60,13 +60,39 @@ interface Props {
   readonly sceneQueryParameter?: string;
 }
 
-type MediaMode = 'video' | 'avif';
+const ANIMATED_MEDIA_FORMATS = {
+  avif: {
+    directory: 'animation-avif',
+    extension: 'avif',
+    enabledInPlayer: true,
+    label: 'AVIF 1080p · CRF42',
+    mimeType: 'image/avif',
+    tabLabel: 'AVIF',
+  },
+  webp: {
+    directory: 'animation-webp',
+    extension: 'webp',
+    enabledInPlayer: false,
+    label: 'WebP 1080p · quality42',
+    mimeType: 'image/webp',
+    tabLabel: 'WebP',
+  },
+} as const;
+
+type AnimatedMediaFormat = keyof typeof ANIMATED_MEDIA_FORMATS;
+type MediaMode = 'video' | AnimatedMediaFormat;
 
 const MEDIA_MODE_STORAGE_KEY = 'inkloom-remotion-media-mode-v1';
 const PRODUCTION_ORIGIN = 'https://inkloomer.github.io';
 const BASE_URL = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
-const avifPath = (animationId: string, sceneId: string) =>
-  `${BASE_URL}animation-avif/${encodeURIComponent(animationId)}/${encodeURIComponent(sceneId)}.avif`;
+const animatedMediaFormats = (Object.keys(ANIMATED_MEDIA_FORMATS) as AnimatedMediaFormat[])
+  .filter((format) => ANIMATED_MEDIA_FORMATS[format].enabledInPlayer);
+const isAnimatedMediaFormat = (value: string | null): value is AnimatedMediaFormat =>
+  value !== null && animatedMediaFormats.includes(value as AnimatedMediaFormat);
+const animatedMediaPath = (format: AnimatedMediaFormat, animationId: string, sceneId: string) => {
+  const profile = ANIMATED_MEDIA_FORMATS[format];
+  return `${BASE_URL}${profile.directory}/${encodeURIComponent(animationId)}/${encodeURIComponent(sceneId)}.${profile.extension}`;
+};
 
 const frameEnd = (scene: RemotionScene) => {
   const finalFrame = scene.start + scene.duration - 1;
@@ -243,19 +269,15 @@ const PlayerFrame = ({
   );
 };
 
-const AnimatedAvifFrame = ({
+const AnimatedImageFrame = ({
   alt,
   compositionHeight,
   compositionWidth,
-  durationMs,
-  loop,
   src,
 }: {
   readonly alt: string;
   readonly compositionHeight: number;
   readonly compositionWidth: number;
-  readonly durationMs: number;
-  readonly loop: boolean;
   readonly src: string;
 }) => {
   const [reloadToken, setReloadToken] = useState(0);
@@ -267,24 +289,15 @@ const AnimatedAvifFrame = ({
     setReloadToken((token) => token + 1);
   }, [src]);
 
-  useEffect(() => {
-    if (!loop || failed) return;
-    const timer = window.setInterval(
-      () => setReloadToken((token) => token + 1),
-      Math.max(250, durationMs + 80),
-    );
-    return () => window.clearInterval(timer);
-  }, [durationMs, failed, loop]);
-
   return (
     <div
-      className="remotion-deck__player-frame remotion-deck__avif-frame"
+      className="remotion-deck__player-frame remotion-deck__animated-image-frame"
       style={{aspectRatio: `${compositionWidth} / ${compositionHeight}`}}
       onPointerEnter={() => setHovered(true)}
       onPointerLeave={() => setHovered(false)}
     >
       {failed ? (
-        <div className="remotion-deck__avif-error" role="status">动图资源尚未发布。</div>
+        <div className="remotion-deck__animated-image-error" role="status">动图资源尚未发布。</div>
       ) : (
         <img
           key={`${src}-${reloadToken}`}
@@ -326,8 +339,7 @@ export const RemotionDeck = ({
   sceneQueryParameter = 'scene',
 }: Props) => {
   const [currentScene, setCurrentScene] = useState(0);
-  const [mediaMode, setMediaMode] = useState<MediaMode>('video');
-  const [avifLoop, setAvifLoop] = useState(false);
+  const [mediaMode, setMediaMode] = useState<MediaMode>('avif');
   const [copyFeedback, setCopyFeedback] = useState('');
   const [mode, setMode] = useState<PreviewMode>('single');
   const [autoPage, setAutoPage] = useState(false);
@@ -396,8 +408,7 @@ export const RemotionDeck = ({
   useEffect(() => {
     const syncMediaMode = () => {
       const savedMode = window.localStorage.getItem(MEDIA_MODE_STORAGE_KEY);
-      if (savedMode === 'video') setMediaMode(savedMode);
-      if (savedMode === 'avif' || savedMode === 'webp') setMediaMode('avif');
+      if (savedMode === 'video' || isAnimatedMediaFormat(savedMode)) setMediaMode(savedMode);
     };
     const syncFromAnotherTab = (event: StorageEvent) => {
       if (event.key === MEDIA_MODE_STORAGE_KEY) syncMediaMode();
@@ -445,40 +456,41 @@ export const RemotionDeck = ({
     previewEndTrimFrames: 0,
   };
   const selectedEnd = frameEnd(selectedScene);
-  const selectedAvifPath = avifPath(animationId, selectedScene.id);
-  const selectedAvifUrl = new URL(selectedAvifPath, PRODUCTION_ORIGIN).href;
-  const selectedAvifDurationMs = ((selectedEnd - selectedScene.start + 1) / fps) * 1000;
+  const selectedImageFormat: AnimatedMediaFormat = mediaMode === 'video' ? 'avif' : mediaMode;
+  const selectedImageProfile = ANIMATED_MEDIA_FORMATS[selectedImageFormat];
+  const selectedImagePath = animatedMediaPath(selectedImageFormat, animationId, selectedScene.id);
+  const selectedImageUrl = new URL(selectedImagePath, PRODUCTION_ORIGIN).href;
 
   const copySelectedMarkdown = async () => {
-    await navigator.clipboard.writeText(`![${selectedScene.title}](${selectedAvifUrl})`);
+    await navigator.clipboard.writeText(`![${selectedScene.title}](${selectedImageUrl})`);
     flashCopyFeedback('Markdown 已复制');
   };
 
-  const copySelectedAvif = async () => {
-    const response = await fetch(selectedAvifPath);
-    if (!response.ok) throw new Error(`AVIF request failed with ${response.status}.`);
+  const copySelectedImage = async () => {
+    const response = await fetch(selectedImagePath);
+    if (!response.ok) throw new Error(`${selectedImageFormat.toUpperCase()} request failed with ${response.status}.`);
     const imageBlob = await response.blob();
-    const supportsAvif = typeof ClipboardItem !== 'undefined'
+    const supportsImage = typeof ClipboardItem !== 'undefined'
       && typeof ClipboardItem.supports === 'function'
-      && ClipboardItem.supports('image/avif');
+      && ClipboardItem.supports(selectedImageProfile.mimeType);
 
-    if (supportsAvif) {
-      await navigator.clipboard.write([new ClipboardItem({'image/avif': imageBlob})]);
+    if (supportsImage) {
+      await navigator.clipboard.write([new ClipboardItem({[selectedImageProfile.mimeType]: imageBlob})]);
       flashCopyFeedback('动图已复制');
       return;
     }
 
     if (typeof ClipboardItem === 'undefined' || typeof navigator.clipboard.write !== 'function') {
-      await navigator.clipboard.writeText(selectedAvifUrl);
+      await navigator.clipboard.writeText(selectedImageUrl);
       flashCopyFeedback('图片链接已复制');
       return;
     }
 
-    const html = `<img src="${selectedAvifUrl}" alt="${selectedScene.title.replaceAll('"', '&quot;')}">`;
+    const html = `<img src="${selectedImageUrl}" alt="${selectedScene.title.replaceAll('"', '&quot;')}">`;
     await navigator.clipboard.write([
       new ClipboardItem({
         'text/html': new Blob([html], {type: 'text/html'}),
-        'text/plain': new Blob([selectedAvifUrl], {type: 'text/plain'}),
+        'text/plain': new Blob([selectedImageUrl], {type: 'text/plain'}),
       }),
     ]);
     flashCopyFeedback('图片引用已复制');
@@ -558,24 +570,30 @@ export const RemotionDeck = ({
                   <Video size={15} aria-hidden="true" />
                   <span>视频</span>
                 </button>
-                <button
-                  type="button"
-                  role="tab"
-                  aria-selected={mediaMode === 'avif'}
-                  data-active={mediaMode === 'avif' ? 'true' : 'false'}
-                  title="AVIF 动图"
-                  onClick={() => persistMediaMode('avif')}
-                >
-                  <ImageIcon size={15} aria-hidden="true" />
-                  <span>动图</span>
-                </button>
+                {animatedMediaFormats.map((format) => {
+                  const profile = ANIMATED_MEDIA_FORMATS[format];
+                  return (
+                    <button
+                      key={format}
+                      type="button"
+                      role="tab"
+                      aria-selected={mediaMode === format}
+                      data-active={mediaMode === format ? 'true' : 'false'}
+                      title={`${profile.tabLabel} 动图`}
+                      onClick={() => persistMediaMode(format)}
+                    >
+                      <ImageIcon size={15} aria-hidden="true" />
+                      <span>{profile.tabLabel}</span>
+                    </button>
+                  );
+                })}
               </div>
-              {mediaMode === 'avif' ? (
+              {mediaMode !== 'video' ? (
                 <div className="remotion-deck__copy-actions" role="group" aria-label="动图复制操作">
                   <button type="button" title="复制 Markdown 图片语法" aria-label="复制 Markdown 图片语法" onClick={() => runCopyAction(copySelectedMarkdown)}>
                     <Copy size={15} aria-hidden="true" />
                   </button>
-                    <button type="button" title="复制动图" aria-label="复制动图" onClick={() => runCopyAction(copySelectedAvif)}>
+                  <button type="button" title="复制动图" aria-label="复制动图" onClick={() => runCopyAction(copySelectedImage)}>
                     <ClipboardCopy size={15} aria-hidden="true" />
                   </button>
                   <button type="button" title="复制思源动图控制脚本" aria-label="复制思源动图控制脚本" onClick={() => runCopyAction(copySiyuanScript)}>
@@ -611,13 +629,11 @@ export const RemotionDeck = ({
                 : undefined}
             />
           ) : (
-            <AnimatedAvifFrame
+            <AnimatedImageFrame
               alt={`${title}：${selectedScene.title}`}
               compositionWidth={compositionWidth}
               compositionHeight={compositionHeight}
-              durationMs={selectedAvifDurationMs}
-              loop={avifLoop}
-              src={selectedAvifPath}
+              src={selectedImagePath}
             />
           )}
           <div className="remotion-deck__navigation">
@@ -669,13 +685,11 @@ export const RemotionDeck = ({
                   playbackRate={effectivePlaybackSpeed}
                 />
               ) : (
-                <AnimatedAvifFrame
+                <AnimatedImageFrame
                   alt={`${title}：${scene.title}`}
                   compositionWidth={compositionWidth}
                   compositionHeight={compositionHeight}
-                  durationMs={((frameEnd(scene) - scene.start + 1) / fps) * 1000}
-                  loop={avifLoop}
-                  src={avifPath(animationId, scene.id)}
+                  src={animatedMediaPath(mediaMode, animationId, scene.id)}
                 />
               )}
             </article>
@@ -721,15 +735,14 @@ export const RemotionDeck = ({
             </label>
           </>
         ) : (
-          <label className="remotion-deck__auto">
-            <input type="checkbox" checked={avifLoop} onChange={(event) => setAvifLoop(event.target.checked)} />
+          <span className="remotion-deck__auto" aria-label="动图播放一次">
             <Repeat2 size={15} aria-hidden="true" />
-            无限循环
-          </label>
+            播放一次
+          </span>
         )}
         <span className="remotion-deck__status" aria-live="polite">
-          {mediaMode === 'avif'
-            ? avifLoop ? 'AVIF q45 · 无限循环' : 'AVIF q45 · 播放一次'
+          {mediaMode !== 'video'
+            ? `${ANIMATED_MEDIA_FORMATS[mediaMode].label} · 播放一次`
             : mode === 'single'
               ? autoPage
                 ? `播放完进入下一页 · ${effectivePlaybackSpeed}×`
