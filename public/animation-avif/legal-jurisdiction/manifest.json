@@ -1,116 +1,116 @@
 {
   "animationId": "legal-jurisdiction",
   "compositionId": "LegalJurisdiction",
-  "crf": 35,
+  "crf": 42,
   "format": "animated-avif",
-  "generatedAt": "2026-07-31T09:59:09.082Z",
+  "generatedAt": "2026-07-31T16:26:05.376Z",
   "loopCount": 1,
-  "quality": 45,
+  "quality": 33,
   "scenes": [
     {
       "endFrame": 153,
-      "frameCount": 39,
+      "frameCount": 154,
       "id": "definition",
       "number": "01",
       "startFrame": 0,
       "title": "主管是什么？",
-      "durationMs": 2600,
+      "durationMs": 2567,
       "file": "definition.avif",
-      "fileSize": 169353,
+      "fileSize": 132701,
       "format": "avif",
-      "crf": 35,
-      "quality": 45
+      "crf": 42,
+      "quality": 33
     },
     {
       "endFrame": 375,
-      "frameCount": 52,
+      "frameCount": 208,
       "id": "court-scope",
       "number": "02",
       "startFrame": 168,
       "title": "哪些争议归法院？",
       "durationMs": 3467,
       "file": "court-scope.avif",
-      "fileSize": 176178,
+      "fileSize": 147277,
       "format": "avif",
-      "crf": 35,
-      "quality": 45
+      "crf": 42,
+      "quality": 33
     },
     {
       "endFrame": 495,
-      "frameCount": 27,
+      "frameCount": 106,
       "id": "dispute-resolution",
       "number": "03",
       "startFrame": 390,
       "title": "三种纠纷处理关系",
-      "durationMs": 1800,
+      "durationMs": 1767,
       "file": "dispute-resolution.avif",
-      "fileSize": 202883,
+      "fileSize": 150442,
       "format": "avif",
-      "crf": 35,
-      "quality": 45
+      "crf": 42,
+      "quality": 33
     },
     {
       "endFrame": 825,
-      "frameCount": 79,
+      "frameCount": 316,
       "id": "mediation-confirmation",
       "number": "04",
       "startFrame": 510,
       "title": "人民调解与司法确认",
       "durationMs": 5267,
       "file": "mediation-confirmation.avif",
-      "fileSize": 218677,
+      "fileSize": 180887,
       "format": "avif",
-      "crf": 35,
-      "quality": 45
+      "crf": 42,
+      "quality": 33
     },
     {
       "endFrame": 1065,
-      "frameCount": 57,
+      "frameCount": 226,
       "id": "arbitration-exclusion",
       "number": "05",
       "startFrame": 840,
       "title": "仲裁：或裁或审",
-      "durationMs": 3800,
+      "durationMs": 3767,
       "file": "arbitration-exclusion.avif",
-      "fileSize": 202080,
+      "fileSize": 136433,
       "format": "avif",
-      "crf": 35,
-      "quality": 45
+      "crf": 42,
+      "quality": 33
     },
     {
       "endFrame": 1305,
-      "frameCount": 57,
+      "frameCount": 226,
       "id": "labor-arbitration",
       "number": "06",
       "startFrame": 1080,
       "title": "劳动仲裁前置",
-      "durationMs": 3800,
+      "durationMs": 3767,
       "file": "labor-arbitration.avif",
-      "fileSize": 151499,
+      "fileSize": 93149,
       "format": "avif",
-      "crf": 35,
-      "quality": 45
+      "crf": 42,
+      "quality": 33
     },
     {
       "endFrame": 1545,
-      "frameCount": 57,
+      "frameCount": 226,
       "id": "relationship-map",
       "number": "07",
       "startFrame": 1320,
       "title": "最终关系图",
-      "durationMs": 3800,
+      "durationMs": 3767,
       "file": "relationship-map.avif",
-      "fileSize": 207686,
+      "fileSize": 148174,
       "format": "avif",
-      "crf": 35,
-      "quality": 45
+      "crf": 42,
+      "quality": 33
     }
   ],
   "size": {
-    "height": 1440,
-    "width": 2560
+    "height": 1080,
+    "width": 1920
   },
   "sourceFps": 60,
-  "targetFps": 15,
-  "totalFileSize": 1328356
+  "targetFps": 60,
+  "totalFileSize": 989063
 }

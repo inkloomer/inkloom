@@ -1,102 +1,102 @@
 {
   "animationId": "joint-litigation",
   "compositionId": "JointLitigation",
-  "crf": 35,
+  "crf": 42,
   "format": "animated-avif",
-  "generatedAt": "2026-07-31T09:56:58.631Z",
+  "generatedAt": "2026-07-31T16:14:30.760Z",
   "loopCount": 1,
-  "quality": 45,
+  "quality": 33,
   "scenes": [
     {
       "endFrame": 276,
-      "frameCount": 70,
+      "frameCount": 277,
       "id": "definition",
       "number": "01",
       "startFrame": 0,
       "title": "什么是共同诉讼？",
-      "durationMs": 4667,
+      "durationMs": 4617,
       "file": "definition.avif",
-      "fileSize": 224110,
+      "fileSize": 185401,
       "format": "avif",
-      "crf": 35,
-      "quality": 45
+      "crf": 42,
+      "quality": 33
     },
     {
       "endFrame": 676,
-      "frameCount": 95,
+      "frameCount": 377,
       "id": "ordinary-joint-litigation",
       "number": "02",
       "startFrame": 300,
       "title": "普通共同诉讼",
-      "durationMs": 6333,
+      "durationMs": 6283,
       "file": "ordinary-joint-litigation.avif",
-      "fileSize": 252133,
+      "fileSize": 203332,
       "format": "avif",
-      "crf": 35,
-      "quality": 45
+      "crf": 42,
+      "quality": 33
     },
     {
       "endFrame": 1076,
-      "frameCount": 95,
+      "frameCount": 377,
       "id": "necessary-joint-litigation",
       "number": "03",
       "startFrame": 700,
       "title": "必要共同诉讼",
-      "durationMs": 6333,
+      "durationMs": 6283,
       "file": "necessary-joint-litigation.avif",
-      "fileSize": 233010,
+      "fileSize": 170851,
       "format": "avif",
-      "crf": 35,
-      "quality": 45
+      "crf": 42,
+      "quality": 33
     },
     {
       "endFrame": 1576,
-      "frameCount": 120,
+      "frameCount": 477,
       "id": "comparison",
       "number": "04",
       "startFrame": 1100,
       "title": "普通 vs 必要 对比",
-      "durationMs": 8000,
+      "durationMs": 7950,
       "file": "comparison.avif",
-      "fileSize": 204951,
+      "fileSize": 148775,
       "format": "avif",
-      "crf": 35,
-      "quality": 45
+      "crf": 42,
+      "quality": 33
     },
     {
       "endFrame": 2176,
-      "frameCount": 145,
+      "frameCount": 577,
       "id": "common-cases",
       "number": "05",
       "startFrame": 1600,
       "title": "常考必要共同诉讼人",
-      "durationMs": 9667,
+      "durationMs": 9617,
       "file": "common-cases.avif",
-      "fileSize": 266857,
+      "fileSize": 198979,
       "format": "avif",
-      "crf": 35,
-      "quality": 45
+      "crf": 42,
+      "quality": 33
     },
     {
       "endFrame": 2676,
-      "frameCount": 120,
+      "frameCount": 477,
       "id": "recap",
       "number": "06",
       "startFrame": 2200,
       "title": "共同诉讼总览",
-      "durationMs": 8000,
+      "durationMs": 7950,
       "file": "recap.avif",
-      "fileSize": 317531,
+      "fileSize": 187630,
       "format": "avif",
-      "crf": 35,
-      "quality": 45
+      "crf": 42,
+      "quality": 33
     }
   ],
   "size": {
-    "height": 1440,
-    "width": 2560
+    "height": 1080,
+    "width": 1920
   },
   "sourceFps": 60,
-  "targetFps": 15,
-  "totalFileSize": 1498592
+  "targetFps": 60,
+  "totalFileSize": 1094968
 }

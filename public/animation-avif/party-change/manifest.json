@@ -1,74 +1,74 @@
 {
   "animationId": "party-change",
   "compositionId": "PartyChange",
-  "crf": 35,
+  "crf": 42,
   "format": "animated-avif",
-  "generatedAt": "2026-07-31T10:01:30.936Z",
+  "generatedAt": "2026-07-31T16:32:02.662Z",
   "loopCount": 1,
-  "quality": 45,
+  "quality": 33,
   "scenes": [
     {
       "endFrame": 276,
-      "frameCount": 70,
+      "frameCount": 277,
       "id": "change-types",
       "number": "01",
       "startFrame": 0,
       "title": "当事人变更有哪些情形？",
-      "durationMs": 4667,
+      "durationMs": 4617,
       "file": "change-types.avif",
-      "fileSize": 340562,
+      "fileSize": 248920,
       "format": "avif",
-      "crf": 35,
-      "quality": 45
+      "crf": 42,
+      "quality": 33
     },
     {
       "endFrame": 676,
-      "frameCount": 95,
+      "frameCount": 377,
       "id": "succession",
       "number": "02",
       "startFrame": 300,
       "title": "自然人死亡与法人合并分立",
-      "durationMs": 6333,
+      "durationMs": 6283,
       "file": "succession.avif",
-      "fileSize": 357559,
+      "fileSize": 266607,
       "format": "avif",
-      "crf": 35,
-      "quality": 45
+      "crf": 42,
+      "quality": 33
     },
     {
       "endFrame": 1076,
-      "frameCount": 95,
+      "frameCount": 377,
       "id": "substantive-transfer",
       "number": "03",
       "startFrame": 700,
       "title": "实体权利义务转移怎么办？",
-      "durationMs": 6333,
+      "durationMs": 6283,
       "file": "substantive-transfer.avif",
-      "fileSize": 431777,
+      "fileSize": 284608,
       "format": "avif",
-      "crf": 35,
-      "quality": 45
+      "crf": 42,
+      "quality": 33
     },
     {
       "endFrame": 1426,
-      "frameCount": 82,
+      "frameCount": 327,
       "id": "party-constancy",
       "number": "04",
       "startFrame": 1100,
       "title": "当事人恒定主义速记",
-      "durationMs": 5467,
+      "durationMs": 5450,
       "file": "party-constancy.avif",
-      "fileSize": 325345,
+      "fileSize": 234128,
       "format": "avif",
-      "crf": 35,
-      "quality": 45
+      "crf": 42,
+      "quality": 33
     }
   ],
   "size": {
-    "height": 1440,
-    "width": 2560
+    "height": 1080,
+    "width": 1920
   },
   "sourceFps": 60,
-  "targetFps": 15,
-  "totalFileSize": 1455243
+  "targetFps": 60,
+  "totalFileSize": 1034263
 }

@@ -1,60 +1,60 @@
 {
   "animationId": "law-attributes",
   "compositionId": "LawAttributes",
-  "crf": 35,
+  "crf": 42,
   "format": "animated-avif",
-  "generatedAt": "2026-07-31T09:56:25.823Z",
+  "generatedAt": "2026-07-31T16:16:26.570Z",
   "loopCount": 1,
-  "quality": 45,
+  "quality": 33,
   "scenes": [
     {
       "endFrame": 165,
-      "frameCount": 83,
+      "frameCount": 166,
       "id": "overview",
       "number": "01",
       "startFrame": 0,
       "title": "四重属性，四个角度",
       "durationMs": 5533,
       "file": "overview.avif",
-      "fileSize": 246402,
+      "fileSize": 150020,
       "format": "avif",
-      "crf": 35,
-      "quality": 45
+      "crf": 42,
+      "quality": 33
     },
     {
       "endFrame": 585,
-      "frameCount": 203,
+      "frameCount": 406,
       "id": "standard",
       "number": "02",
       "startFrame": 180,
       "title": "四重属性的判断依据",
       "durationMs": 13533,
       "file": "standard.avif",
-      "fileSize": 223323,
+      "fileSize": 146996,
       "format": "avif",
-      "crf": 35,
-      "quality": 45
+      "crf": 42,
+      "quality": 33
     },
     {
       "endFrame": 885,
-      "frameCount": 143,
+      "frameCount": 286,
       "id": "recap",
       "number": "03",
       "startFrame": 600,
       "title": "四重属性速记",
       "durationMs": 9533,
       "file": "recap.avif",
-      "fileSize": 323888,
+      "fileSize": 196555,
       "format": "avif",
-      "crf": 35,
-      "quality": 45
+      "crf": 42,
+      "quality": 33
     }
   ],
   "size": {
-    "height": 1440,
-    "width": 2560
+    "height": 1080,
+    "width": 1920
   },
   "sourceFps": 30,
-  "targetFps": 15,
-  "totalFileSize": 793613
+  "targetFps": 30,
+  "totalFileSize": 493571
 }

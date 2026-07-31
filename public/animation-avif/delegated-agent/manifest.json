@@ -1,0 +1,74 @@
+{
+  "animationId": "delegated-agent",
+  "compositionId": "DelegatedAgent",
+  "crf": 42,
+  "format": "animated-avif",
+  "generatedAt": "2026-07-31T16:03:07.005Z",
+  "loopCount": 1,
+  "quality": 33,
+  "scenes": [
+    {
+      "endFrame": 276,
+      "frameCount": 277,
+      "id": "scope",
+      "number": "01",
+      "startFrame": 0,
+      "title": "授权范围",
+      "durationMs": 4617,
+      "file": "scope.avif",
+      "fileSize": 203626,
+      "format": "avif",
+      "crf": 42,
+      "quality": 33
+    },
+    {
+      "endFrame": 776,
+      "frameCount": 477,
+      "id": "full-power-trap",
+      "number": "02",
+      "startFrame": 300,
+      "title": "全权代理陷阱",
+      "durationMs": 7950,
+      "file": "full-power-trap.avif",
+      "fileSize": 185188,
+      "format": "avif",
+      "crf": 42,
+      "quality": 33
+    },
+    {
+      "endFrame": 1276,
+      "frameCount": 477,
+      "id": "execution-stage",
+      "number": "03",
+      "startFrame": 800,
+      "title": "代理阶段",
+      "durationMs": 7950,
+      "file": "execution-stage.avif",
+      "fileSize": 141939,
+      "format": "avif",
+      "crf": 42,
+      "quality": 33
+    },
+    {
+      "endFrame": 1776,
+      "frameCount": 477,
+      "id": "divorce-duty",
+      "number": "04",
+      "startFrame": 1300,
+      "title": "出庭义务",
+      "durationMs": 7950,
+      "file": "divorce-duty.avif",
+      "fileSize": 143845,
+      "format": "avif",
+      "crf": 42,
+      "quality": 33
+    }
+  ],
+  "size": {
+    "height": 1080,
+    "width": 1920
+  },
+  "sourceFps": 60,
+  "targetFps": 60,
+  "totalFileSize": 674598
+}

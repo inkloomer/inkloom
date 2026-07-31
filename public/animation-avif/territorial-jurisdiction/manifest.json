@@ -1,102 +1,102 @@
 {
   "animationId": "territorial-jurisdiction",
   "compositionId": "TerritorialJurisdiction",
-  "crf": 35,
+  "crf": 42,
   "format": "animated-avif",
-  "generatedAt": "2026-07-31T10:05:53.468Z",
+  "generatedAt": "2026-07-31T16:57:34.457Z",
   "loopCount": 1,
-  "quality": 45,
+  "quality": 33,
   "scenes": [
     {
       "endFrame": 165,
-      "frameCount": 42,
+      "frameCount": 166,
       "id": "orientation",
       "number": "01",
       "startFrame": 0,
       "title": "地域管辖在找什么？",
-      "durationMs": 2800,
+      "durationMs": 2767,
       "file": "orientation.avif",
-      "fileSize": 243854,
+      "fileSize": 216187,
       "format": "avif",
-      "crf": 35,
-      "quality": 45
+      "crf": 42,
+      "quality": 33
     },
     {
       "endFrame": 435,
-      "frameCount": 64,
+      "frameCount": 256,
       "id": "general-jurisdiction",
       "number": "02",
       "startFrame": 180,
       "title": "一般：看当事人所在地",
       "durationMs": 4267,
       "file": "general-jurisdiction.avif",
-      "fileSize": 325663,
+      "fileSize": 238583,
       "format": "avif",
-      "crf": 35,
-      "quality": 45
+      "crf": 42,
+      "quality": 33
     },
     {
       "endFrame": 735,
-      "frameCount": 72,
+      "frameCount": 286,
       "id": "special-jurisdiction",
       "number": "03",
       "startFrame": 450,
       "title": "特殊：看法律事实所在地",
-      "durationMs": 4800,
+      "durationMs": 4767,
       "file": "special-jurisdiction.avif",
-      "fileSize": 317036,
+      "fileSize": 227044,
       "format": "avif",
-      "crf": 35,
-      "quality": 45
+      "crf": 42,
+      "quality": 33
     },
     {
       "endFrame": 1035,
-      "frameCount": 72,
+      "frameCount": 286,
       "id": "exclusive-jurisdiction",
       "number": "04",
       "startFrame": 750,
       "title": "专属：法定锁定法院",
-      "durationMs": 4800,
+      "durationMs": 4767,
       "file": "exclusive-jurisdiction.avif",
-      "fileSize": 392972,
+      "fileSize": 316731,
       "format": "avif",
-      "crf": 35,
-      "quality": 45
+      "crf": 42,
+      "quality": 33
     },
     {
       "endFrame": 1305,
-      "frameCount": 64,
+      "frameCount": 256,
       "id": "agreement-jurisdiction",
       "number": "05",
       "startFrame": 1050,
       "title": "协议：书面约定与红线",
       "durationMs": 4267,
       "file": "agreement-jurisdiction.avif",
-      "fileSize": 384303,
+      "fileSize": 293750,
       "format": "avif",
-      "crf": 35,
-      "quality": 45
+      "crf": 42,
+      "quality": 33
     },
     {
       "endFrame": 1785,
-      "frameCount": 117,
+      "frameCount": 466,
       "id": "contract-three-step",
       "number": "06",
       "startFrame": 1320,
       "title": "合同三步走：专属→协议→法定",
-      "durationMs": 7800,
+      "durationMs": 7767,
       "file": "contract-three-step.avif",
-      "fileSize": 341995,
+      "fileSize": 264849,
       "format": "avif",
-      "crf": 35,
-      "quality": 45
+      "crf": 42,
+      "quality": 33
     }
   ],
   "size": {
-    "height": 1440,
-    "width": 2560
+    "height": 1080,
+    "width": 1920
   },
   "sourceFps": 60,
-  "targetFps": 15,
-  "totalFileSize": 2005823
+  "targetFps": 60,
+  "totalFileSize": 1557144
 }

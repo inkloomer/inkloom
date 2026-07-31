@@ -1,74 +1,74 @@
 {
   "animationId": "party-capacity",
   "compositionId": "PartyCapacity",
-  "crf": 35,
+  "crf": 42,
   "format": "animated-avif",
-  "generatedAt": "2026-07-31T10:00:24.615Z",
+  "generatedAt": "2026-07-31T16:29:18.187Z",
   "loopCount": 1,
-  "quality": 45,
+  "quality": 33,
   "scenes": [
     {
       "endFrame": 226,
-      "frameCount": 57,
+      "frameCount": 227,
       "id": "rights-capacity",
       "number": "01",
       "startFrame": 0,
       "title": "诉讼权利能力是什么？",
-      "durationMs": 3800,
+      "durationMs": 3783,
       "file": "rights-capacity.avif",
-      "fileSize": 234574,
+      "fileSize": 169297,
       "format": "avif",
-      "crf": 35,
-      "quality": 45
+      "crf": 42,
+      "quality": 33
     },
     {
       "endFrame": 626,
-      "frameCount": 95,
+      "frameCount": 377,
       "id": "capacity-comparison",
       "number": "02",
       "startFrame": 250,
       "title": "权利能力 vs 行为能力",
-      "durationMs": 6333,
+      "durationMs": 6283,
       "file": "capacity-comparison.avif",
-      "fileSize": 367235,
+      "fileSize": 281603,
       "format": "avif",
-      "crf": 35,
-      "quality": 45
+      "crf": 42,
+      "quality": 33
     },
     {
       "endFrame": 976,
-      "frameCount": 82,
+      "frameCount": 327,
       "id": "legal-representation",
       "number": "03",
       "startFrame": 650,
       "title": "无诉讼行为能力人如何诉讼？",
-      "durationMs": 5467,
+      "durationMs": 5450,
       "file": "legal-representation.avif",
-      "fileSize": 303582,
+      "fileSize": 212043,
       "format": "avif",
-      "crf": 35,
-      "quality": 45
+      "crf": 42,
+      "quality": 33
     },
     {
       "endFrame": 1326,
-      "frameCount": 82,
+      "frameCount": 327,
       "id": "recap",
       "number": "04",
       "startFrame": 1000,
       "title": "核心结论速记",
-      "durationMs": 5467,
+      "durationMs": 5450,
       "file": "recap.avif",
-      "fileSize": 342157,
+      "fileSize": 267325,
       "format": "avif",
-      "crf": 35,
-      "quality": 45
+      "crf": 42,
+      "quality": 33
     }
   ],
   "size": {
-    "height": 1440,
-    "width": 2560
+    "height": 1080,
+    "width": 1920
   },
   "sourceFps": 60,
-  "targetFps": 15,
-  "totalFileSize": 1247548
+  "targetFps": 60,
+  "totalFileSize": 930268
 }

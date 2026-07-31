@@ -1,0 +1,74 @@
+{
+  "animationId": "third-party-revocation",
+  "compositionId": "ThirdPartyRevocation",
+  "crf": 42,
+  "format": "animated-avif",
+  "generatedAt": "2026-07-31T17:04:33.968Z",
+  "loopCount": 1,
+  "quality": 33,
+  "scenes": [
+    {
+      "endFrame": 289,
+      "frameCount": 290,
+      "id": "concept",
+      "number": "01",
+      "startFrame": 0,
+      "title": "概念",
+      "durationMs": 4833,
+      "file": "concept.avif",
+      "fileSize": 171781,
+      "format": "avif",
+      "crf": 42,
+      "quality": 33
+    },
+    {
+      "endFrame": 709,
+      "frameCount": 397,
+      "id": "conditions",
+      "number": "02",
+      "startFrame": 313,
+      "title": "条件",
+      "durationMs": 6617,
+      "file": "conditions.avif",
+      "fileSize": 330232,
+      "format": "avif",
+      "crf": 42,
+      "quality": 33
+    },
+    {
+      "endFrame": 1099,
+      "frameCount": 367,
+      "id": "procedure",
+      "number": "03",
+      "startFrame": 733,
+      "title": "程序",
+      "durationMs": 6117,
+      "file": "procedure.avif",
+      "fileSize": 166538,
+      "format": "avif",
+      "crf": 42,
+      "quality": 33
+    },
+    {
+      "endFrame": 1509,
+      "frameCount": 387,
+      "id": "classification",
+      "number": "04",
+      "startFrame": 1123,
+      "title": "结果",
+      "durationMs": 6450,
+      "file": "classification.avif",
+      "fileSize": 244479,
+      "format": "avif",
+      "crf": 42,
+      "quality": 33
+    }
+  ],
+  "size": {
+    "height": 1080,
+    "width": 1920
+  },
+  "sourceFps": 60,
+  "targetFps": 60,
+  "totalFileSize": 913030
+}

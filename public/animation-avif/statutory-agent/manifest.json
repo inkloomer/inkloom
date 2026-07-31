@@ -1,0 +1,60 @@
+{
+  "animationId": "statutory-agent",
+  "compositionId": "StatutoryAgent",
+  "crf": 42,
+  "format": "animated-avif",
+  "generatedAt": "2026-07-31T16:52:35.473Z",
+  "loopCount": 1,
+  "quality": 33,
+  "scenes": [
+    {
+      "endFrame": 276,
+      "frameCount": 277,
+      "id": "definition",
+      "number": "01",
+      "startFrame": 0,
+      "title": "概念",
+      "durationMs": 4617,
+      "file": "definition.avif",
+      "fileSize": 160362,
+      "format": "avif",
+      "crf": 42,
+      "quality": 33
+    },
+    {
+      "endFrame": 776,
+      "frameCount": 477,
+      "id": "differences",
+      "number": "02",
+      "startFrame": 300,
+      "title": "区别",
+      "durationMs": 7950,
+      "file": "differences.avif",
+      "fileSize": 155500,
+      "format": "avif",
+      "crf": 42,
+      "quality": 33
+    },
+    {
+      "endFrame": 1276,
+      "frameCount": 477,
+      "id": "death-event",
+      "number": "03",
+      "startFrame": 800,
+      "title": "死亡事件",
+      "durationMs": 7950,
+      "file": "death-event.avif",
+      "fileSize": 165930,
+      "format": "avif",
+      "crf": 42,
+      "quality": 33
+    }
+  ],
+  "size": {
+    "height": 1080,
+    "width": 1920
+  },
+  "sourceFps": 60,
+  "targetFps": 60,
+  "totalFileSize": 481792
+}

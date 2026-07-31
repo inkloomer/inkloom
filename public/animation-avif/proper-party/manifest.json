@@ -1,88 +1,88 @@
 {
   "animationId": "proper-party",
   "compositionId": "ProperParty",
-  "crf": 35,
+  "crf": 42,
   "format": "animated-avif",
-  "generatedAt": "2026-07-31T10:02:10.513Z",
+  "generatedAt": "2026-07-31T16:35:37.389Z",
   "loopCount": 1,
-  "quality": 45,
+  "quality": 33,
   "scenes": [
     {
       "endFrame": 276,
-      "frameCount": 70,
+      "frameCount": 277,
       "id": "principle",
       "number": "01",
       "startFrame": 0,
       "title": "谁是适格当事人？",
-      "durationMs": 4667,
+      "durationMs": 4617,
       "file": "principle.avif",
-      "fileSize": 244263,
+      "fileSize": 175553,
       "format": "avif",
-      "crf": 35,
-      "quality": 45
+      "crf": 42,
+      "quality": 33
     },
     {
       "endFrame": 626,
-      "frameCount": 82,
+      "frameCount": 327,
       "id": "confirmation-interest",
       "number": "02",
       "startFrame": 300,
       "title": "确认之诉的确认利益",
-      "durationMs": 5467,
+      "durationMs": 5450,
       "file": "confirmation-interest.avif",
-      "fileSize": 287462,
+      "fileSize": 217071,
       "format": "avif",
-      "crf": 35,
-      "quality": 45
+      "crf": 42,
+      "quality": 33
     },
     {
       "endFrame": 976,
-      "frameCount": 82,
+      "frameCount": 327,
       "id": "management-right",
       "number": "03",
       "startFrame": 650,
       "title": "对他人民事法律关系享有管理权",
-      "durationMs": 5467,
+      "durationMs": 5450,
       "file": "management-right.avif",
-      "fileSize": 305198,
+      "fileSize": 234710,
       "format": "avif",
-      "crf": 35,
-      "quality": 45
+      "crf": 42,
+      "quality": 33
     },
     {
       "endFrame": 1326,
-      "frameCount": 82,
+      "frameCount": 327,
       "id": "public-interest",
       "number": "04",
       "startFrame": 1000,
       "title": "公益诉讼的适格原告",
-      "durationMs": 5467,
+      "durationMs": 5450,
       "file": "public-interest.avif",
-      "fileSize": 331924,
+      "fileSize": 250555,
       "format": "avif",
-      "crf": 35,
-      "quality": 45
+      "crf": 42,
+      "quality": 33
     },
     {
       "endFrame": 1676,
-      "frameCount": 82,
+      "frameCount": 327,
       "id": "capacity-comparison",
       "number": "05",
       "startFrame": 1350,
       "title": "适格当事人 vs 诉讼权利能力",
-      "durationMs": 5467,
+      "durationMs": 5450,
       "file": "capacity-comparison.avif",
-      "fileSize": 237210,
+      "fileSize": 199130,
       "format": "avif",
-      "crf": 35,
-      "quality": 45
+      "crf": 42,
+      "quality": 33
     }
   ],
   "size": {
-    "height": 1440,
-    "width": 2560
+    "height": 1080,
+    "width": 1920
   },
   "sourceFps": 60,
-  "targetFps": 15,
-  "totalFileSize": 1406057
+  "targetFps": 60,
+  "totalFileSize": 1077019
 }

@@ -1,88 +1,88 @@
 {
   "animationId": "lawsuit-elements",
   "compositionId": "LawsuitElements",
-  "crf": 35,
+  "crf": 42,
   "format": "animated-avif",
-  "generatedAt": "2026-07-31T09:59:56.012Z",
+  "generatedAt": "2026-07-31T16:21:50.572Z",
   "loopCount": 1,
-  "quality": 45,
+  "quality": 33,
   "scenes": [
     {
       "endFrame": 326,
-      "frameCount": 82,
+      "frameCount": 327,
       "id": "concept",
       "number": "01",
       "startFrame": 0,
       "title": "诉讼标的 ≠ 诉讼请求",
-      "durationMs": 5467,
+      "durationMs": 5450,
       "file": "concept.avif",
-      "fileSize": 396957,
+      "fileSize": 280686,
       "format": "avif",
-      "crf": 35,
-      "quality": 45
+      "crf": 42,
+      "quality": 33
     },
     {
       "endFrame": 776,
-      "frameCount": 107,
+      "frameCount": 427,
       "id": "distinction",
       "number": "02",
       "startFrame": 350,
       "title": "一个标的 · 多个请求",
-      "durationMs": 7133,
+      "durationMs": 7117,
       "file": "distinction.avif",
-      "fileSize": 380139,
+      "fileSize": 281620,
       "format": "avif",
-      "crf": 35,
-      "quality": 45
+      "crf": 42,
+      "quality": 33
     },
     {
       "endFrame": 1326,
-      "frameCount": 132,
+      "frameCount": 527,
       "id": "classification",
       "number": "03",
       "startFrame": 800,
       "title": "唯一依据：原告诉讼请求",
-      "durationMs": 8800,
+      "durationMs": 8783,
       "file": "classification.avif",
-      "fileSize": 489122,
+      "fileSize": 355431,
       "format": "avif",
-      "crf": 35,
-      "quality": 45
+      "crf": 42,
+      "quality": 33
     },
     {
       "endFrame": 1976,
-      "frameCount": 157,
+      "frameCount": 627,
       "id": "transformation",
       "number": "04",
       "startFrame": 1350,
       "title": "请求变 · 标的可不变",
-      "durationMs": 10467,
+      "durationMs": 10450,
       "file": "transformation.avif",
-      "fileSize": 380288,
+      "fileSize": 306903,
       "format": "avif",
-      "crf": 35,
-      "quality": 45
+      "crf": 42,
+      "quality": 33
     },
     {
       "endFrame": 2776,
-      "frameCount": 195,
+      "frameCount": 777,
       "id": "recap",
       "number": "05",
       "startFrame": 2000,
       "title": "标的 → 请求 → 分类",
-      "durationMs": 13000,
+      "durationMs": 12950,
       "file": "recap.avif",
-      "fileSize": 376446,
+      "fileSize": 286594,
       "format": "avif",
-      "crf": 35,
-      "quality": 45
+      "crf": 42,
+      "quality": 33
     }
   ],
   "size": {
-    "height": 1440,
-    "width": 2560
+    "height": 1080,
+    "width": 1920
   },
   "sourceFps": 60,
-  "targetFps": 15,
-  "totalFileSize": 2022952
+  "targetFps": 60,
+  "totalFileSize": 1511234
 }

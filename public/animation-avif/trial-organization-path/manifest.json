@@ -1,102 +1,102 @@
 {
   "animationId": "trial-organization-path",
   "compositionId": "TrialOrganizationPath",
-  "crf": 35,
+  "crf": 42,
   "format": "animated-avif",
-  "generatedAt": "2026-07-31T10:07:08.524Z",
+  "generatedAt": "2026-07-31T17:13:59.418Z",
   "loopCount": 1,
-  "quality": 45,
+  "quality": 33,
   "scenes": [
     {
       "endFrame": 376,
-      "frameCount": 95,
+      "frameCount": 377,
       "id": "path-gate",
       "number": "01",
       "startFrame": 0,
       "title": "先锁审级与程序",
-      "durationMs": 6333,
+      "durationMs": 6283,
       "file": "path-gate.avif",
-      "fileSize": 275677,
+      "fileSize": 215674,
       "format": "avif",
-      "crf": 35,
-      "quality": 45
+      "crf": 42,
+      "quality": 33
     },
     {
       "endFrame": 876,
-      "frameCount": 120,
+      "frameCount": 477,
       "id": "first-instance",
       "number": "02",
       "startFrame": 400,
       "title": "一审：简易与普通",
-      "durationMs": 8000,
+      "durationMs": 7950,
       "file": "first-instance.avif",
-      "fileSize": 345807,
+      "fileSize": 257883,
       "format": "avif",
-      "crf": 35,
-      "quality": 45
+      "crf": 42,
+      "quality": 33
     },
     {
       "endFrame": 1376,
-      "frameCount": 120,
+      "frameCount": 477,
       "id": "second-instance",
       "number": "03",
       "startFrame": 900,
       "title": "二审四道门",
-      "durationMs": 8000,
+      "durationMs": 7950,
       "file": "second-instance.avif",
-      "fileSize": 232852,
+      "fileSize": 191657,
       "format": "avif",
-      "crf": 35,
-      "quality": 45
+      "crf": 42,
+      "quality": 33
     },
     {
       "endFrame": 1876,
-      "frameCount": 120,
+      "frameCount": 477,
       "id": "mid-court-ban",
       "number": "04",
       "startFrame": 1400,
       "title": "中院一审双禁独任",
-      "durationMs": 8000,
+      "durationMs": 7950,
       "file": "mid-court-ban.avif",
-      "fileSize": 354555,
+      "fileSize": 277278,
       "format": "avif",
-      "crf": 35,
-      "quality": 45
+      "crf": 42,
+      "quality": 33
     },
     {
       "endFrame": 2376,
-      "frameCount": 120,
+      "frameCount": 477,
       "id": "misconceptions",
       "number": "05",
       "startFrame": 1900,
       "title": "组织≠程序类型",
-      "durationMs": 8000,
+      "durationMs": 7950,
       "file": "misconceptions.avif",
-      "fileSize": 369678,
+      "fileSize": 247247,
       "format": "avif",
-      "crf": 35,
-      "quality": 45
+      "crf": 42,
+      "quality": 33
     },
     {
       "endFrame": 2976,
-      "frameCount": 145,
+      "frameCount": 577,
       "id": "jurors",
       "number": "06",
       "startFrame": 2400,
       "title": "陪审员双要件",
-      "durationMs": 9667,
+      "durationMs": 9617,
       "file": "jurors.avif",
-      "fileSize": 340071,
+      "fileSize": 266200,
       "format": "avif",
-      "crf": 35,
-      "quality": 45
+      "crf": 42,
+      "quality": 33
     }
   ],
   "size": {
-    "height": 1440,
-    "width": 2560
+    "height": 1080,
+    "width": 1920
   },
   "sourceFps": 60,
-  "targetFps": 15,
-  "totalFileSize": 1918640
+  "targetFps": 60,
+  "totalFileSize": 1455939
 }
