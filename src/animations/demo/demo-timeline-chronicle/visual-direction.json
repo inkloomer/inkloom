@@ -1,0 +1,10 @@
+{
+  "directionId": "timeline-chronicle",
+  "family": "chronicle",
+  "palette": "parchment cream + ink sepia + milestone bronze + progress teal",
+  "typography": "classical serif event labels + monospaced date stamps",
+  "composition": "horizontal timeline with milestone nodes and causal bridges",
+  "surface": "aged paper background with embossed date markers",
+  "motion": "progressive timeline reveal with milestone activation",
+  "transition": "temporal fade with horizontal scroll"
+}

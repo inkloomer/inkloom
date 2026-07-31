@@ -1,6 +1,5 @@
 import {Player} from '@remotion/player';
 import {ChevronLeft, ChevronRight, Grid3X3} from 'lucide-react';
-import {DEMO_DURATION_FRAMES, DEMO_FPS} from '../../animations/demo/shared/demo-runtime';
 import {demoById, STYLE_DEMOS} from './demo-registry';
 import './DemoStage.css';
 
@@ -18,8 +17,8 @@ export const DemoStage = ({demoId}: {readonly demoId: string}) => {
       <div className="demo-stage__player">
         <Player
           component={demo.component}
-          durationInFrames={DEMO_DURATION_FRAMES}
-          fps={DEMO_FPS}
+          durationInFrames={demo.durationInFrames}
+          fps={demo.fps}
           compositionWidth={1920}
           compositionHeight={1080}
           controls
@@ -29,7 +28,7 @@ export const DemoStage = ({demoId}: {readonly demoId: string}) => {
         />
       </div>
       <nav className="demo-stage__navigation" aria-label="Demo 风格导航">
-        <a href={`/inkloom/demo/${previous.slug}/`} title={`上一个：${previous.title}`}>
+        <a href={previous.href} title={`上一个：${previous.title}`}>
           <ChevronLeft size={19} aria-hidden="true" />
           <span>{previous.title}</span>
         </a>
@@ -37,7 +36,7 @@ export const DemoStage = ({demoId}: {readonly demoId: string}) => {
           <Grid3X3 size={19} aria-hidden="true" />
           <span>全部</span>
         </a>
-        <a href={`/inkloom/demo/${next.slug}/`} title={`下一个：${next.title}`}>
+        <a href={next.href} title={`下一个：${next.title}`}>
           <span>{next.title}</span>
           <ChevronRight size={19} aria-hidden="true" />
         </a>

@@ -1,0 +1,10 @@
+{
+  "directionId": "rights-matrix",
+  "family": "matrix-grid",
+  "palette": "matrix navy + cell teal + header gold + active crimson",
+  "typography": "sans grid headers + monospaced cell identifiers",
+  "composition": "two-axis grid with subjects on Y-axis and scenarios on X-axis",
+  "surface": "flat table grid with ruled cells and header bars",
+  "motion": "header emergence, cell-by-cell population, row highlight sweep",
+  "transition": "row slide with vertical current"
+}

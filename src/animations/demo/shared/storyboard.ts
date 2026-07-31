@@ -1,5 +1,5 @@
-export {
-  DEMO_DURATION_FRAMES as DURATION_FRAMES,
-  DEMO_FPS as FPS,
-  DEMO_SCENES as SCENES,
-} from './demo-runtime';
+export const FPS = 60;
+export const DURATION_FRAMES = 240;
+export const SCENES = {
+  showcase: {start: 0, duration: DURATION_FRAMES, previewEndTrimFrames: 0},
+} as const;

@@ -1,0 +1,10 @@
+{
+  "directionId": "decision-tree",
+  "family": "branching-logic",
+  "palette": "forest green + decision amber + path slate + outcome violet",
+  "typography": "sans condition labels + monospaced boolean operators",
+  "composition": "root node with binary branching paths leading to outcomes",
+  "surface": "flat logic diagram with angular connectors and decision gates",
+  "motion": "root emergence, sequential branch evaluation, path illumination",
+  "transition": "branch collapse with directional flow"
+}

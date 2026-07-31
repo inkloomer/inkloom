@@ -1,0 +1,10 @@
+{
+  "directionId": "statute-commentary",
+  "family": "legal-text",
+  "palette": "law book ivory + statute black + annotation burgundy + highlight gold",
+  "typography": "serif statute body + sans commentary labels + monospaced article numbers",
+  "composition": "centered statute column with layered marginal annotations",
+  "surface": "book page texture with ruled margins and folded corners",
+  "motion": "statute fade-in followed by progressive annotation expansion",
+  "transition": "page turn with depth shadow"
+}

@@ -1,7 +1,6 @@
 import {useEffect, useRef, useState} from 'react';
 import {Player} from '@remotion/player';
 import {ArrowUpRight} from 'lucide-react';
-import {DEMO_DURATION_FRAMES, DEMO_FPS} from '../../animations/demo/shared/demo-runtime';
 import {STYLE_DEMOS, type DemoDefinition} from './demo-registry';
 import './DemoGallery.css';
 
@@ -23,13 +22,13 @@ const DemoPreview = ({demo}: {readonly demo: DemoDefinition}) => {
 
   return (
     <article className="demo-gallery__item">
-      <a href={`/inkloom/demo/${demo.slug}/`} aria-label={`打开${demo.title}动画`}>
+      <a href={demo.href} aria-label={`打开${demo.title}动画`}>
         <div ref={frameRef} className="demo-gallery__frame">
           {isVisible ? (
             <Player
               component={demo.component}
-              durationInFrames={DEMO_DURATION_FRAMES}
-              fps={DEMO_FPS}
+              durationInFrames={demo.durationInFrames}
+              fps={demo.fps}
               compositionWidth={1920}
               compositionHeight={1080}
               autoPlay
