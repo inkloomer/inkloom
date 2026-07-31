@@ -16,11 +16,13 @@ const SCENE_ID_PATTERN = /^[a-z0-9][a-z0-9-]*$/;
 const DEFAULT_AVIF_QUALITY = 45;
 const AVIF_QUALITY_MIN = 0;
 const AVIF_QUALITY_MAX = 100;
-const AVIF_WIDTH = 1280;
+const AVIF_WIDTH = 2560;
 const VIDEO_WIDTH = 2560;
 const VIDEO_CRF = 35;
 const TARGET_FPS = 15;
 const AVIF_LOOP_COUNT = 1;
+const RENDER_CONCURRENCY = 2;
+const ENCODER_THREADS = 4;
 const animationDirectories = new Map();
 
 const usage = `
@@ -38,7 +40,7 @@ Output:
 
 Encoding contract:
   Published video: AV1 CRF ${VIDEO_CRF}, ${VIDEO_WIDTH}px wide, ${TARGET_FPS}fps target, MP4 faststart, no audio
-  Comparison AVIF: quality 0-100 maps to AV1 CRF 63-0; default q${DEFAULT_AVIF_QUALITY}, ${AVIF_WIDTH}px wide, loop count ${AVIF_LOOP_COUNT}
+  Published AVIF: q${DEFAULT_AVIF_QUALITY} (AV1 CRF ${VIDEO_CRF}), ${AVIF_WIDTH}px wide, ${TARGET_FPS}fps target, loop count ${AVIF_LOOP_COUNT}
 `;
 
 const parseArguments = (rawArguments) => {
@@ -388,20 +390,6 @@ const renameWithRetry = async (source, target) => {
   }
 };
 
-const withBrowser = async (browserExecutable, callback) => {
-  const browser = await openBrowser('chrome', {
-    browserExecutable,
-    chromiumOptions: {headless: true},
-    logLevel: 'error',
-  });
-
-  try {
-    return await callback(browser);
-  } finally {
-    await browser.close({silent: true});
-  }
-};
-
 const replaceDirectory = async (stagingDirectory, targetDirectory) => {
   const backupDirectory = `${targetDirectory}.backup-${process.pid}`;
   const hadTarget = await pathExists(targetDirectory);
@@ -439,6 +427,7 @@ const renderAnimation = async ({animationId, browserExecutable, crfs, publishVid
   await mkdir(stagingDirectory, {recursive: true});
   console.log(`\n[${animationId}] Bundling composition...`);
 
+  let browser;
   try {
     const serveUrl = await bundle({
       entryPoint: path.join(animationDirectory, 'remotion', 'index.ts'),
@@ -448,9 +437,12 @@ const renderAnimation = async ({animationId, browserExecutable, crfs, publishVid
       enableCaching: true,
       onProgress: () => undefined,
     });
-    const compositions = await withBrowser(browserExecutable, (browser) => (
-      getCompositions(serveUrl, {puppeteerInstance: browser})
-    ));
+    browser = await openBrowser('chrome', {
+      browserExecutable,
+      chromiumOptions: {headless: true},
+      logLevel: 'error',
+    });
+    const compositions = await getCompositions(serveUrl, {puppeteerInstance: browser});
     const composition = selectDeckComposition(animationId, compositions);
     if (!composition) throw new Error(`${animationId}: no composition found.`);
 
@@ -475,7 +467,7 @@ const renderAnimation = async ({animationId, browserExecutable, crfs, publishVid
         await mkdir(frameDirectory, {recursive: true});
         console.log(`[${animationId}] ${scene.number}/${String(scenes.length).padStart(2, '0')} ${scene.id}: rendering ${resolutionLabel}, frames ${scene.start}-${stableEndFrame}`);
 
-        const rendered = await withBrowser(browserExecutable, (browser) => renderFrames({
+        const rendered = await renderFrames({
           composition,
           serveUrl,
           outputDir: frameDirectory,
@@ -485,11 +477,11 @@ const renderAnimation = async ({animationId, browserExecutable, crfs, publishVid
           imageFormat: 'png',
           imageSequencePattern: 'frame-[frame].[ext]',
           scale,
-          concurrency: 1,
+          concurrency: RENDER_CONCURRENCY,
           muted: true,
           puppeteerInstance: browser,
           logLevel: 'error',
-        }));
+        });
 
         const expectedDurationMs = Math.round((rendered.frameCount / outputFps) * 1000);
         sceneFrameCount = rendered.frameCount;
@@ -519,7 +511,9 @@ const renderAnimation = async ({animationId, browserExecutable, crfs, publishVid
               '-crf', String(encodingVariant.crf),
               '-b:v', '0',
               '-cpu-used', '6',
-              '-threads', '1',
+              '-row-mt', '1',
+              '-tiles', '2x2',
+              '-threads', String(ENCODER_THREADS),
               ...outputArguments,
               targetPath,
             ]);
@@ -624,6 +618,7 @@ const renderAnimation = async ({animationId, browserExecutable, crfs, publishVid
     }
     throw error;
   } finally {
+    if (browser) await browser.close({silent: true});
     await rm(bundleDirectory, {force: true, maxRetries: 12, recursive: true, retryDelay: 150});
     await rm(workDirectory, {force: true, maxRetries: 12, recursive: true, retryDelay: 150});
   }
