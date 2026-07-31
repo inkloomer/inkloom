@@ -1,64 +1,11 @@
 ---
-title: 基本原则关系图｜民诉法图解
-description: 民事诉讼法基本原则三角形关系图——法院、原告、被告三方关系与平等原则、辩论原则、处分原则、诚信原则的内在联系
+title: 基本原则关系图·Remotion
+description: 用诉讼三角、请求边界和制度保障梳理民事诉讼基本原则
 slug: objective/civil-procedure/03/basic-principles-triangle
 ---
 
-import RelationDiagram from '@/components/diagrams/RelationDiagram.astro';
-import DiagramLayout from '@/components/diagrams/DiagramLayout.astro';
-import { Aside } from '@astrojs/starlight/components';
+import BasicPrinciplesTriangleAnimation from '@/components/civil-procedure/03/basic-principles-triangle/BasicPrinciplesTriangleAnimation.astro';
 
-民事诉讼法的基本原则构成了诉讼制度的基石。下图以**法院—原告—被告**三方关系为框架，展示各基本原则在诉讼结构中的位置与关联。
-
-<DiagramLayout>
-  <RelationDiagram
-    slot="diagram"
-    nodes={[
-      { id: 'court',      label: '法院', x: 260, y: 70 },
-      { id: 'plaintiff',  label: '原告', x: 100, y: 230 },
-      { id: 'defendant',  label: '被告', x: 420, y: 230 },
-      { id: 'disposition', label: '处分原则', x: 100, y: 380 },
-      { id: 'goodfaith',   label: '诚信原则', x: 420, y: 380 },
-    ]}
-    edges={[
-      { from: 'court', to: 'plaintiff' },
-      { from: 'court', to: 'defendant' },
-      { from: 'plaintiff', to: 'defendant', label: '平等原则', curve: 'up' },
-      { from: 'plaintiff', to: 'defendant', label: '辩论原则', curve: 'down' },
-      { from: 'plaintiff', to: 'disposition' },
-      { from: 'defendant', to: 'goodfaith' },
-      { from: 'disposition', to: 'goodfaith' },
-    ]}
-    arrows={[
-      { fromX: 440, fromY: 35, toX: 300, toY: 55, label: '检察监督' },
-    ]}
-    width={520}
-    height={440}
-  />
-
-  <div slot="notes" style="display: flex; flex-direction: column; gap: 0.75rem;">
-    <div style="padding: 0.75rem 1rem; border-radius: 0.5rem; background: var(--sl-color-bg-inline-code); border-left: 3px solid var(--sl-color-text-accent);">
-      <h4 style="margin: 0 0 0.4rem 0; font-size: 0.9rem; color: var(--sl-color-text);">1. 国际视野</h4>
-      <div style="display: flex; align-items: center; gap: 0.25rem; margin-left: 0.25rem;">
-        <div style="display: flex; flex-direction: column; gap: 0.25rem;">
-          <span style="color: var(--sl-color-text); font-size: 0.9rem;"><strong>同等原则</strong></span>
-          <span style="color: var(--sl-color-text); font-size: 0.9rem;"><strong>对等原则</strong></span>
-        </div>
-        <span style="font-size: 2.5rem; line-height: 1; color: var(--sl-color-text);">}</span>
-      </div>
-    </div>
-    <div style="padding: 0.75rem 1rem; border-radius: 0.5rem; background: var(--sl-color-bg-inline-code); border-left: 3px solid var(--sl-color-text-accent);">
-      <h4 style="margin: 0 0 0.4rem 0; font-size: 0.9rem; color: var(--sl-color-text);">2. 与时俱进</h4>
-      <p style="margin: 0; color: var(--sl-color-text); font-size: 0.9rem;">在线诉讼与线下诉讼<strong>效力相同</strong></p>
-    </div>
-    <div style="padding: 0.75rem 1rem; border-radius: 0.5rem; background: var(--sl-color-bg-inline-code); border-left: 3px solid var(--sl-color-text-accent);">
-      <h4 style="margin: 0 0 0.4rem 0; font-size: 0.9rem; color: var(--sl-color-text);">3. 底线原则</h4>
-      <ul style="margin: 0; padding-left: 1.2rem; color: var(--sl-color-text); font-size: 0.9rem;">
-        <li><strong>处分原则</strong></li>
-        <li><strong>诚信原则</strong></li>
-      </ul>
-    </div>
-  </div>
-</DiagramLayout>
+<BasicPrinciplesTriangleAnimation />
 
 
