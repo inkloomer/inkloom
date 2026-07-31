@@ -1,0 +1,10 @@
+{
+  "directionId": "newspaper-editorial",
+  "family": "editorial",
+  "palette": "newsprint white + ink black + cyan yellow red process accents",
+  "typography": "compressed display headline + serif body columns",
+  "composition": "asymmetric masthead and three editorial columns",
+  "surface": "flat newsprint with hard rules and color bars",
+  "motion": "headline crop followed by column assembly",
+  "transition": "editorial hard cut"
+}

@@ -1,0 +1,10 @@
+{
+  "directionId": "ink-annotation",
+  "family": "hand-annotation",
+  "palette": "notebook white + graphite + marker yellow + correction red + ink green",
+  "typography": "Chinese handwritten display with restrained note text",
+  "composition": "lined notebook field with circled focal rule",
+  "surface": "paper lines, marker swash, hand-drawn paths",
+  "motion": "pen trace, underline sweep, and one correction circle",
+  "transition": "page-turn conceptual cut"
+}

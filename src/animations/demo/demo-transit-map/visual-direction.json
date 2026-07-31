@@ -1,0 +1,10 @@
+{
+  "directionId": "transit-map",
+  "family": "transit-map",
+  "palette": "night field + route green + interchange yellow + result blue + alert coral",
+  "typography": "transport sans labels + monospaced line metadata",
+  "composition": "route lines, stations, and one elevated interchange",
+  "surface": "flat dark map with high-contrast linework",
+  "motion": "route traversal with station activation and transfer",
+  "transition": "line continuation handoff"
+}

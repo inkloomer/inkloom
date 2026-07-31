@@ -48,6 +48,12 @@ export default defineConfig({
 			pagefind: true,
 			sidebar: [
 				{
+					label: 'Demo',
+					items: [
+						{ autogenerate: { directory: 'demo' } }
+					],
+				},
+				{
 					label: '客观题',
 					items: [
 						{ autogenerate: { directory: 'objective' } }

@@ -1,0 +1,10 @@
+{
+  "directionId": "courtroom-blueprint",
+  "family": "blueprint",
+  "palette": "ink navy + blueprint cyan + warning coral",
+  "typography": "technical sans headings + monospaced coordinates",
+  "composition": "orthogonal checkpoints across a measured plan",
+  "surface": "flat drafting panels with exposed grid lines",
+  "motion": "route drawing followed by checkpoint activation",
+  "transition": "precision wipe with horizontal spatial current"
+}

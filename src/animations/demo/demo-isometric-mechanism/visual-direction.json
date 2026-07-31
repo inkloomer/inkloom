@@ -1,0 +1,10 @@
+{
+  "directionId": "isometric-mechanism",
+  "family": "mechanism",
+  "palette": "steel gray + safety orange + machine blue + signal green + latch yellow",
+  "typography": "industrial sans labels with monospaced chamber codes",
+  "composition": "three chambers connected by a causal transmission",
+  "surface": "machined panels, hard extruded shadows, exposed latch",
+  "motion": "input transfer, gear rotation, latch release, output delivery",
+  "transition": "mechanical gate release"
+}

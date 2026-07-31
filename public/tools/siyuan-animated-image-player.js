@@ -11,9 +11,9 @@
       {name: 'AVIF', extensions: ['avif'], mimeType: 'image/avif'},
       {name: 'APNG', extensions: ['apng'], mimeType: 'image/png'},
     ],
-    showReplayButton: true,
-    replayOnHover: false,
-    replayWhenOpenedLarge: true,
+    showReplayButton: true, // Show the small replay control.
+    replayOnHover: true, // Replay when the pointer enters the image.
+    replayWhenOpenedLarge: true, // Replay when SiYuan opens the large-image viewer.
   };
 
   const LEGACY_WRAPPER_CLASS = 'inkloom-animated-image-player';
@@ -23,6 +23,7 @@
   const LARGE_VIEW_ROOT_SELECTOR = '.viewer-container, .viewer-canvas, .b3-dialog, [role="dialog"]';
   const LARGE_VIEW_IMAGE_SELECTOR = '.viewer-container img, .viewer-canvas img, .b3-dialog img, [role="dialog"] img';
   const controllersByImage = new WeakMap();
+  const replayStatesByImage = new WeakMap();
   const activeControllers = new Set();
 
   const cleanupLegacyPlayers = () => {
@@ -152,15 +153,45 @@
     return {controls, replayButton};
   };
 
-  const replayNativeImage = (img) => {
-    const src = img.currentSrc || img.src;
-    const srcset = img.srcset;
-    img.srcset = '';
-    img.src = '';
-    requestAnimationFrame(() => {
-      img.src = src;
-      img.srcset = srcset;
-    });
+  const replayNativeImage = async (img) => {
+    let state = replayStatesByImage.get(img);
+    if (!state) {
+      state = {
+        generation: 0,
+        originalSrc: img.getAttribute('src'),
+        originalSrcset: img.getAttribute('srcset'),
+        source: img.currentSrc || img.src,
+      };
+      replayStatesByImage.set(img, state);
+    }
+
+    const generation = state.generation += 1;
+    try {
+      const response = await fetch(state.source, {cache: 'force-cache'});
+      if (!response.ok) throw new Error(`request failed with ${response.status}`);
+      const objectUrl = URL.createObjectURL(await response.blob());
+      if (generation !== state.generation || !img.isConnected) {
+        URL.revokeObjectURL(objectUrl);
+        return;
+      }
+
+      img.addEventListener('load', () => URL.revokeObjectURL(objectUrl), {once: true});
+      img.srcset = '';
+      img.src = objectUrl;
+    } catch (error) {
+      console.warn('[InkLoom Animated Image Player] Replay failed; keeping the current frame.', error);
+    }
+  };
+
+  const restoreReplaySource = (img) => {
+    const state = replayStatesByImage.get(img);
+    if (!state) return;
+    state.generation += 1;
+    if (state.originalSrc === null) img.removeAttribute('src');
+    else img.setAttribute('src', state.originalSrc);
+    if (state.originalSrcset === null) img.removeAttribute('srcset');
+    else img.setAttribute('srcset', state.originalSrcset);
+    replayStatesByImage.delete(img);
   };
 
   const syncOverlay = (controller) => {
@@ -201,6 +232,7 @@
     resizeObserver.unobserve(controller.img);
     controller.img.removeEventListener('load', controller.syncOnLoad);
     controller.disposePlayback?.();
+    restoreReplaySource(controller.img);
     controller.overlay.remove();
   }
 
@@ -262,17 +294,17 @@
     }
   };
 
-  let pendingLargeViewSrc = '';
+  let pendingLargeViewSources = [];
   let largeViewReplayAttempts = 0;
   const replayOpenedLargeImage = () => {
-    if (!pendingLargeViewSrc || largeViewReplayAttempts >= 20) return;
+    if (pendingLargeViewSources.length === 0 || largeViewReplayAttempts >= 20) return;
     largeViewReplayAttempts += 1;
     const candidates = document.querySelectorAll(LARGE_VIEW_IMAGE_SELECTOR);
-    const target = [...candidates].find((img) => normalizedUrl(img.currentSrc || img.src) === pendingLargeViewSrc);
+    const target = [...candidates].find((img) => pendingLargeViewSources.includes(normalizedUrl(img.currentSrc || img.src)));
 
     if (target) {
       replayNativeImage(target);
-      pendingLargeViewSrc = '';
+      pendingLargeViewSources = [];
       return;
     }
     window.setTimeout(replayOpenedLargeImage, 50);
@@ -284,7 +316,11 @@
     if (!CONFIG.replayWhenOpenedLarge || target.closest('button')) return;
     const controller = target instanceof HTMLImageElement ? controllersByImage.get(target) : null;
     if (!controller) return;
-    pendingLargeViewSrc = normalizedUrl(controller.img.currentSrc || controller.img.src);
+    const replayState = replayStatesByImage.get(controller.img);
+    pendingLargeViewSources = [
+      normalizedUrl(controller.img.currentSrc || controller.img.src),
+      replayState ? normalizedUrl(replayState.source) : '',
+    ].filter(Boolean);
     largeViewReplayAttempts = 0;
     window.setTimeout(replayOpenedLargeImage, 0);
   };
@@ -302,7 +338,7 @@
         if (!img.closest(LARGE_VIEW_ROOT_SELECTOR)) void enhanceImage(img);
       });
       scheduleOverlaySync();
-      if (pendingLargeViewSrc) replayOpenedLargeImage();
+      if (pendingLargeViewSources.length > 0) replayOpenedLargeImage();
     });
   };
 

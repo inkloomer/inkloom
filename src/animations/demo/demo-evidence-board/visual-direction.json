@@ -1,0 +1,10 @@
+{
+  "directionId": "evidence-board",
+  "family": "evidence-board",
+  "palette": "charcoal board + evidence yellow + paper white + pin red + muted green",
+  "typography": "workman sans labels with monospaced case metadata",
+  "composition": "pinned artifact cluster connected by evidence strings",
+  "surface": "matte board, paper notes, physical pins, hard shadows",
+  "motion": "evidence placement followed by string traversal",
+  "transition": "cluster separation cut"
+}

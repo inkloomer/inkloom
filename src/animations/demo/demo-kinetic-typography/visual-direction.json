@@ -1,0 +1,10 @@
+{
+  "directionId": "kinetic-typography",
+  "family": "kinetic-type",
+  "palette": "paper white + black + signal yellow + cobalt + result red",
+  "typography": "oversized heavy sans words with monospaced metadata",
+  "composition": "large moving terms balanced by one rule assembly block",
+  "surface": "flat typographic field without cards or decorative texture",
+  "motion": "opposed baseline entries followed by semantic regrouping",
+  "transition": "word mask cut"
+}

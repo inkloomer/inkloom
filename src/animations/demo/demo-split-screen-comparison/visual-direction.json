@@ -1,0 +1,10 @@
+{
+  "directionId": "split-screen-comparison",
+  "family": "split-comparison",
+  "palette": "neutral white + lane blue + lane red + black convergence + yellow signal",
+  "typography": "clean comparison sans with monospaced row labels",
+  "composition": "two synchronized lanes divided by a central axis",
+  "surface": "flat colored fields and aligned rule rows",
+  "motion": "mirrored lane entry, synchronized row reveal, final convergence",
+  "transition": "central axis split"
+}
