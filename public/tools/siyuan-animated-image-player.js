@@ -104,31 +104,64 @@
       }
       .${OVERLAY_CLASS}__controls button {
         display: grid;
+        position: relative;
         width: 30px;
         height: 30px;
         place-items: center;
         margin: 0;
         padding: 0;
-        border: 1px solid rgba(255, 255, 255, 0.16);
+        border: 0;
         border-radius: 50%;
-        background: rgba(18, 24, 22, 0.3);
+        background: transparent;
         color: rgba(255, 255, 255, 0.78);
         cursor: pointer;
         font: 600 16px/1 system-ui, sans-serif;
         opacity: 0.62;
+        outline: none;
+        isolation: isolate;
+        touch-action: manipulation;
+        -webkit-tap-highlight-color: transparent;
+        transition: color 120ms ease, opacity 120ms ease;
+      }
+      .${OVERLAY_CLASS}__controls button::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        border-radius: 50%;
+        background: rgba(18, 24, 22, 0.3);
         backdrop-filter: blur(3px);
-        transition: background 120ms ease, opacity 120ms ease;
+        transition: background 120ms ease;
       }
       .${OVERLAY_CLASS}__controls button:hover,
       .${OVERLAY_CLASS}__controls button:focus-visible {
-        background: rgba(18, 24, 22, 0.56);
         opacity: 0.92;
       }
-      @media (max-width: 600px) {
+      .${OVERLAY_CLASS}__controls button:hover::before,
+      .${OVERLAY_CLASS}__controls button:focus-visible::before {
+        background: rgba(18, 24, 22, 0.56);
+      }
+      .${OVERLAY_CLASS}__controls button:focus-visible::before {
+        box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.58);
+      }
+      @media (max-width: 600px), (pointer: coarse) {
+        .${OVERLAY_CLASS}__controls {
+          right: 0;
+          bottom: 0;
+        }
         .${OVERLAY_CLASS}__controls button {
+          width: 44px;
+          height: 44px;
+          font-size: 14px;
+        }
+        .${OVERLAY_CLASS}__controls button::before {
+          inset: auto;
+          left: 50%;
+          top: 50%;
           width: 26px;
           height: 26px;
-          font-size: 14px;
+          transform: translate(-50%, -50%);
         }
       }
     `;
@@ -279,7 +312,11 @@
       },
     });
 
+    replayButton?.addEventListener('pointerdown', (event) => {
+      event.stopPropagation();
+    });
     replayButton?.addEventListener('click', (event) => {
+      event.preventDefault();
       event.stopPropagation();
       replay();
     });
