@@ -24,6 +24,7 @@
   const LARGE_VIEW_IMAGE_SELECTOR = '.viewer-container img, .viewer-canvas img, .b3-dialog img, [role="dialog"] img';
   const controllersByImage = new WeakMap();
   const replayStatesByImage = new WeakMap();
+  const replayedImages = new Set();
   const activeControllers = new Set();
 
   const cleanupLegacyPlayers = () => {
@@ -158,6 +159,7 @@
     if (!state) {
       state = {
         generation: 0,
+        objectUrl: '',
         originalSrc: img.getAttribute('src'),
         originalSrcset: img.getAttribute('srcset'),
         source: img.currentSrc || img.src,
@@ -175,7 +177,12 @@
         return;
       }
 
-      img.addEventListener('load', () => URL.revokeObjectURL(objectUrl), {once: true});
+      const previousObjectUrl = state.objectUrl;
+      state.objectUrl = objectUrl;
+      replayedImages.add(img);
+      if (previousObjectUrl) {
+        img.addEventListener('load', () => URL.revokeObjectURL(previousObjectUrl), {once: true});
+      }
       img.srcset = '';
       img.src = objectUrl;
     } catch (error) {
@@ -191,7 +198,9 @@
     else img.setAttribute('src', state.originalSrc);
     if (state.originalSrcset === null) img.removeAttribute('srcset');
     else img.setAttribute('srcset', state.originalSrcset);
+    if (state.objectUrl) URL.revokeObjectURL(state.objectUrl);
     replayStatesByImage.delete(img);
+    replayedImages.delete(img);
   };
 
   const syncOverlay = (controller) => {
@@ -333,6 +342,9 @@
       scanQueued = false;
       [...activeControllers].forEach((controller) => {
         if (!controller.img.isConnected) disposeController(controller);
+      });
+      [...replayedImages].forEach((img) => {
+        if (!img.isConnected) restoreReplaySource(img);
       });
       document.querySelectorAll('img').forEach((img) => {
         if (!img.closest(LARGE_VIEW_ROOT_SELECTOR)) void enhanceImage(img);
