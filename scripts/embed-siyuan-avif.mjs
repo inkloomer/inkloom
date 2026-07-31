@@ -8,7 +8,7 @@ const SIYUAN_BIN = process.env.SIYUAN_BIN || 'D:/scoop/shims/siyuan.exe';
 const SIYUAN_WORKSPACE = process.env.SIYUAN_WORKSPACE || 'D:/1STUDY/SIYUAN';
 const PUBLIC_AVIF_ROOT = path.join(PROJECT_ROOT, 'public', 'animation-avif');
 const BASE_URL = 'https://inkloomer.github.io/inkloom/animation-avif';
-const MARKER = `${BASE_URL}/`;
+const IMAGE_BLOCK_PATTERN = /^!\[InkLoom 动图(?:：|:)[^\]]+\]\((https:\/\/inkloomer\.github\.io\/inkloom\/animation-avif\/[^)]+)\)$/;
 
 const ROOTS = {
   'dispute-resolution': '20260704175116-40dmfvd',
@@ -223,7 +223,15 @@ const extractId = (output) => {
 };
 
 const blocks = readBlocks();
-const existingUrls = new Set(blocks.flatMap((row) => String(row.markdown || '').match(new RegExp(`${MARKER}[^)\\s]+`, 'g')) || []));
+const directImageBlocks = blocks.flatMap((row) => {
+  const match = String(row.markdown || '').match(IMAGE_BLOCK_PATTERN);
+  return match ? [{row, url: match[1]}] : [];
+});
+const existingUrls = new Set(directImageBlocks.map(({url}) => url));
+const duplicateUrls = [...new Set(directImageBlocks
+  .map(({url}) => url)
+  .filter((url, index, urls) => urls.indexOf(url) !== index))];
+if (duplicateUrls.length > 0) throw new Error(`Duplicate SiYuan image blocks already exist:\n${duplicateUrls.join('\n')}`);
 const tasks = [];
 for (const {animationId, scene} of readManifests()) {
   const target = findTarget(blocks, animationId, scene.id);
