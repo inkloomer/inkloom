@@ -21,15 +21,15 @@ const DEFAULT_JOBS = 2;
 const MAX_JOBS = 4;
 const MEDIA_FORMATS = {
   avif: {
-    defaultQuality: 33,
-    defaultWidth: 1920,
+    defaultQuality: 45,
+    defaultWidth: 2560,
     directory: 'animation-avif',
     extension: 'avif',
     encoderArguments: ({crf}) => ['-c:v', 'libaom-av1', '-crf', String(crf), '-b:v', '0', '-cpu-used', '6', '-row-mt', '1', '-tiles', '2x2', '-threads', String(ENCODER_THREADS)],
     inspection: 'ffprobe',
     manifestFormat: 'animated-avif',
     maxFileSize: undefined,
-    targetFps: 'source',
+    targetFps: 15,
     loopCount: 1,
     outputArguments: (loopCount) => ['-still-picture', '0', '-loop', String(loopCount), '-f', 'avif'],
     qualityToCrf: (quality) => Math.round((100 - quality) * 63 / 100),
@@ -72,7 +72,7 @@ Output:
 
 Encoding contract:
   Published video: AV1 CRF ${VIDEO_CRF}, ${VIDEO_WIDTH}px wide, ${VIDEO_TARGET_FPS}fps target, MP4 faststart, no audio
-  Published AVIF: q${MEDIA_FORMATS.avif.defaultQuality} (AV1 CRF 42), ${MEDIA_FORMATS.avif.defaultWidth}px wide, source FPS, loop count ${MEDIA_FORMATS.avif.loopCount}
+  Published AVIF: q${MEDIA_FORMATS.avif.defaultQuality} (AV1 CRF 35), ${MEDIA_FORMATS.avif.defaultWidth}px wide, ${MEDIA_FORMATS.avif.targetFps}fps target, loop count ${MEDIA_FORMATS.avif.loopCount}
   Published WebP: quality ${MEDIA_FORMATS.webp.defaultQuality}, ${MEDIA_FORMATS.webp.defaultWidth}px wide, source FPS, loop count ${MEDIA_FORMATS.webp.loopCount}
 `;
 
@@ -583,9 +583,7 @@ const renderAnimation = async ({animationId, browserExecutable, crfs, mediaForma
     const targetFps = publishVideo
       ? VIDEO_TARGET_FPS
       : profile.targetFps === 'source' ? composition.fps : profile.targetFps;
-    const everyNthFrame = publishVideo
-      ? Math.max(1, Math.round(composition.fps / targetFps))
-      : 1;
+    const everyNthFrame = Math.max(1, Math.round(composition.fps / targetFps));
     const outputFps = composition.fps / everyNthFrame;
     const publishedScenes = [];
 
@@ -612,7 +610,7 @@ const renderAnimation = async ({animationId, browserExecutable, crfs, mediaForma
           outputDir: frameDirectory,
           inputProps: {},
           frameRange: [scene.start, stableEndFrame],
-          everyNthFrame,
+          everyNthFrame: 1,
           imageFormat: 'png',
           imageSequencePattern: 'frame-[frame].[ext]',
           scale,
@@ -622,8 +620,9 @@ const renderAnimation = async ({animationId, browserExecutable, crfs, mediaForma
           logLevel: 'error',
         });
 
-        const expectedDurationMs = Math.round((rendered.frameCount / outputFps) * 1000);
-        sceneFrameCount = rendered.frameCount;
+        const expectedFrameCount = Math.ceil(rendered.frameCount / everyNthFrame);
+        const expectedDurationMs = Math.round((rendered.frameCount / composition.fps) * 1000);
+        sceneFrameCount = expectedFrameCount;
         const variants = [];
 
         for (const encodingVariant of encodingVariants) {
@@ -645,10 +644,11 @@ const renderAnimation = async ({animationId, browserExecutable, crfs, mediaForma
               '-hide_banner',
               '-loglevel', 'error',
               '-y',
-              '-framerate', String(outputFps),
+              '-framerate', String(composition.fps),
               '-start_number', String(scene.start),
               '-i', rendered.assetsInfo.imageSequenceName,
               '-an',
+              ...(everyNthFrame > 1 ? ['-vf', `fps=${outputFps}`] : []),
               ...encoderArguments,
               ...outputArguments,
               targetPath,
@@ -661,7 +661,7 @@ const renderAnimation = async ({animationId, browserExecutable, crfs, mediaForma
               || !validCodec
               || outputInfo.width !== outputWidth
               || outputInfo.height !== outputHeight
-              || outputInfo.frameCount !== rendered.frameCount
+              || outputInfo.frameCount !== expectedFrameCount
               || !Number.isFinite(outputInfo.durationMs)
               || Math.abs(outputInfo.durationMs - expectedDurationMs) > 1
               || (outputFormat !== 'mp4' && outputInfo.loopCount !== undefined && outputInfo.loopCount !== outputProfile.loopCount)
@@ -673,7 +673,7 @@ const renderAnimation = async ({animationId, browserExecutable, crfs, mediaForma
                 width: outputInfo.width,
                 height: outputInfo.height,
                 frameCount: outputInfo.frameCount,
-                expectedFrameCount: rendered.frameCount,
+                expectedFrameCount,
                 durationMs: outputInfo.durationMs,
                 expectedDurationMs,
                 loopCount: outputInfo.loopCount,
