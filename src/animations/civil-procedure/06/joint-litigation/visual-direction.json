@@ -1,0 +1,16 @@
+{
+  "directionId": "case-bindery-workshop",
+  "family": "legal-bookbinding",
+  "palette": "uncoated paper + carbon ink + cobalt folio tabs + red binding thread + mustard registration marks + green consent cues",
+  "typography": "serif case headings with tab labels, marker highlights, thin rules, and restrained binding stamps",
+  "composition": "loose case folios become parallel lanes or one sewn volume according to the relationship between litigation subjects",
+  "surface": "paper slips, exposed binding spines, index ribbons, registration rules, and flat workshop sheets without card-grid staging",
+  "motion": "folios arrive independently, thread connects only legally shared material, and the final binding decision follows the subject-matter branch",
+  "transition": "workbench page replacement under a persistent red binding margin",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/civil-procedure/06/joint-litigation/",
+    "title": "案件装订工坊"
+  }
+}

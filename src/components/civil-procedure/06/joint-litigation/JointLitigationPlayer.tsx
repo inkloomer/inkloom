@@ -9,6 +9,7 @@ const scenes: readonly RemotionScene[] = [
   {id: 'comparison', number: '04', title: '普通 vs 必要 对比', ...SCENES.comparison},
   {id: 'common-cases', number: '05', title: '常考必要共同诉讼人', ...SCENES.examples},
   {id: 'recap', number: '06', title: '共同诉讼总览', ...SCENES.recap},
+  {id: 'co-litigant-recognition', number: '07', title: '共同诉讼人之间的关系', ...SCENES.relations},
 ];
 
 export const JointLitigationPlayer = () => (

@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 6,
+  "scenes": [
+    {"id": "definition", "export": "DefinitionScene", "layout": "many-parties-one-bench", "anchor": "role-pair", "textTreatments": ["soft-highlight", "label-block", "thin-underline"], "grammar": ["aggregation", "role-pair", "adjudication"], "focalChannels": ["icon", "connector", "enclosure", "spatial"], "tokens": ["Users", "Files", "Landmark"]},
+    {"id": "ordinary-joint-litigation", "export": "OrdinaryScene", "layout": "loose-folio-lanes", "anchor": "flow-path", "textTreatments": ["label-block", "thin-underline", "stamp"], "grammar": ["parallelism", "conditional-merge", "independence"], "focalChannels": ["icon", "connector", "contrast", "annotation"], "tokens": ["Files", "Scissors", "Handshake"]},
+    {"id": "necessary-joint-litigation", "export": "NecessaryScene", "layout": "single-bound-volume", "anchor": "concept-icon", "textTreatments": ["soft-highlight", "stamp", "label-block"], "grammar": ["shared-object", "mandatory-binding", "recognized-act"], "focalChannels": ["icon", "enclosure", "connector", "motion"], "tokens": ["BookOpenCheck", "GitMerge", "Check"]},
+    {"id": "comparison", "export": "ComparisonScene", "layout": "loose-versus-sewn-axis", "anchor": "comparison-axis", "textTreatments": ["thin-underline", "label-block", "soft-highlight"], "grammar": ["comparison", "divergence", "effect-scope"], "focalChannels": ["icon", "contrast", "spatial", "annotation"], "tokens": ["Files", "BookOpenCheck", "Scale"]},
+    {"id": "common-cases", "export": "ExamplesScene", "layout": "four-mechanism-index", "anchor": "document-fork", "textTreatments": ["label-block", "soft-highlight", "thin-underline"], "grammar": ["classification", "grouping", "shared-liability"], "focalChannels": ["icon", "enclosure", "contrast", "annotation"], "tokens": []},
+    {"id": "recap", "export": "RecapScene", "layout": "subject-matter-binding-decision", "anchor": "flow-path", "textTreatments": ["soft-highlight", "label-block", "stamp"], "grammar": ["decision", "branching", "legal-effect"], "focalChannels": ["icon", "connector", "enclosure", "motion"], "tokens": ["Gavel", "Split", "Combine"]},
+    {"id": "co-litigant-recognition", "export": "RelationsScene", "layout": "recognition-gate-effect-spread", "anchor": "flow-path", "textTreatments": ["label-block", "stamp", "thin-underline"], "grammar": ["act", "recognition-gate", "effect-scope"], "focalChannels": ["icon", "connector", "enclosure", "motion"], "tokens": ["FileSignature", "UserCheck", "UsersRound"]}
+  ]
+}

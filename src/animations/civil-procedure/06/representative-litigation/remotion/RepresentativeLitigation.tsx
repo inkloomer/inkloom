@@ -1,5 +1,7 @@
-import type {ReactNode} from 'react';
-import {AbsoluteFill, Easing, Sequence, interpolate, useCurrentFrame} from 'remotion';
+import {AbsoluteFill} from 'remotion';
+import {TimelineSequence} from '../../../../shared/remotion-runtime';
+import {DURATION_FRAMES, PALETTE, SCENES} from './storyboard';
+import {ConsoleCanvas} from './visual-system';
 import {
   AuthorityScene,
   ConceptScene,
@@ -8,90 +10,23 @@ import {
   SecuritiesScene,
   UndeterminedScene,
 } from './scenes/RepresentativeLitigationScenes';
-import {DURATION_FRAMES, PALETTE, SCENES, toSourceFrame} from './storyboard';
-import {ENTER_EASING, EXIT_EASING, FilmRail} from './visual-system';
 
-const SceneMotion = ({children, duration}: {readonly children: ReactNode; readonly duration: number}) => {
-  const frame = toSourceFrame(useCurrentFrame());
-  const sourceDuration = toSourceFrame(duration);
-
-  return (
-    <div
-      style={{
-        position: 'absolute',
-        inset: 0,
-        translate: `${interpolate(frame, [0, 18, sourceDuration - 14, sourceDuration], [-86, 0, 0, 86], {
-          extrapolateLeft: 'clamp',
-          extrapolateRight: 'clamp',
-          easing: [ENTER_EASING, Easing.linear, EXIT_EASING],
-        })}px 0px`,
-      }}
-    >
-      {children}
-    </div>
-  );
-};
-
-const BackgroundStructure = () => (
-  <>
-    {[320, 640, 960, 1280, 1600].map((left) => (
-      <div
-        key={left}
-        style={{
-          position: 'absolute',
-          left,
-          top: 0,
-          width: 1,
-          height: 1080,
-          backgroundColor: 'rgba(203, 210, 206, 0.26)',
-        }}
-      />
-    ))}
-    <div style={{position: 'absolute', left: 0, top: 206, width: 1920, height: 1, backgroundColor: 'rgba(203, 210, 206, 0.55)'}} />
-  </>
+export const RepresentativeLitigation = () => (
+  <AbsoluteFill style={{backgroundColor: PALETTE.panel}}>
+    <ConsoleCanvas>
+      <TimelineSequence name="01-concept" {...SCENES.concept}><ConceptScene /></TimelineSequence>
+      <TimelineSequence name="02-authority" {...SCENES.authority}><AuthorityScene /></TimelineSequence>
+      <TimelineSequence name="03-determined" {...SCENES.determined}><DeterminedScene /></TimelineSequence>
+      <TimelineSequence name="04-undetermined" {...SCENES.undetermined}><UndeterminedScene /></TimelineSequence>
+      <TimelineSequence name="05-securities" {...SCENES.securities}><SecuritiesScene /></TimelineSequence>
+      <TimelineSequence name="06-recap" {...SCENES.recap}><RecapScene /></TimelineSequence>
+      <div style={{position: 'absolute', left: 78, right: 78, bottom: 54, display: 'flex', alignItems: 'center', gap: 18}}>
+        <div style={{fontFamily: 'Consolas, monospace', fontSize: 16, fontWeight: 900, color: PALETTE.signal}}>REP SIGNAL / ONLINE</div>
+        <div style={{height: 3, flex: 1, background: PALETTE.ink}} />
+        <div style={{fontSize: 16, fontWeight: 900}}>代表人诉讼</div>
+      </div>
+    </ConsoleCanvas>
+  </AbsoluteFill>
 );
 
-const SceneSequence = ({
-  start,
-  duration,
-  name,
-  children,
-}: {
-  readonly start: number;
-  readonly duration: number;
-  readonly name: string;
-  readonly children: ReactNode;
-}) => (
-  <Sequence from={start} durationInFrames={duration} name={name} layout="none">
-    <SceneMotion duration={duration}>{children}</SceneMotion>
-  </Sequence>
-);
-
-export const RepresentativeLitigation = () => {
-  const frame = useCurrentFrame();
-
-  return (
-    <AbsoluteFill style={{backgroundColor: PALETTE.background, overflow: 'hidden'}}>
-      <BackgroundStructure />
-      <SceneSequence name="01-concept" {...SCENES.concept}>
-        <ConceptScene />
-      </SceneSequence>
-      <SceneSequence name="02-authority" {...SCENES.authority}>
-        <AuthorityScene />
-      </SceneSequence>
-      <SceneSequence name="03-determined" {...SCENES.determined}>
-        <DeterminedScene />
-      </SceneSequence>
-      <SceneSequence name="04-undetermined" {...SCENES.undetermined}>
-        <UndeterminedScene />
-      </SceneSequence>
-      <SceneSequence name="05-securities" {...SCENES.securities}>
-        <SecuritiesScene />
-      </SceneSequence>
-      <SceneSequence name="06-recap" {...SCENES.recap}>
-        <RecapScene />
-      </SceneSequence>
-      <FilmRail frame={frame} totalFrames={DURATION_FRAMES} />
-    </AbsoluteFill>
-  );
-};
+export const REPRESENTATIVE_LITIGATION_DURATION_FRAMES = DURATION_FRAMES;

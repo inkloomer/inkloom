@@ -1,0 +1,16 @@
+{
+  "directionId": "representative-signal-exchange",
+  "family": "civic-signal-console",
+  "palette": "ivory control panel + carbon circuitry + teal signals + amber representative channels + magenta consent gates + green effect paths",
+  "typography": "condensed console headings with monospaced callsigns, corner-locator highlights, dashed frequency underlines, and consent seals",
+  "composition": "crowd endpoints route through representative seats, authority gates, registration rails, opt-out switches, and judgment terminals",
+  "surface": "hard-edged switchboard modules, circular signal ports, tick rails, live cables, and flat instrument labels",
+  "motion": "signals travel only along legally valid authority and participation paths, stopping at consent or registration gates before effects appear",
+  "transition": "channel replacement on a persistent civic exchange panel",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/civil-procedure/06/representative-litigation/",
+    "title": "代表信号交换台"
+  }
+}

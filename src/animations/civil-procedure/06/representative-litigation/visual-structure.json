@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 6,
+  "scenes": [
+    {"id": "concept", "export": "ConceptScene", "layout": "crowd-to-representative-exchange", "anchor": "flow-path", "textTreatments": ["soft-highlight", "label-block", "thin-underline"], "grammar": ["selection", "delegation", "representation"], "focalChannels": ["icon", "connector", "enclosure", "motion"], "tokens": ["Users", "RadioTower", "Landmark"]},
+    {"id": "representative-authority", "export": "AuthorityScene", "layout": "authority-dual-channel-gate", "anchor": "boundary", "textTreatments": ["label-block", "stamp", "soft-highlight"], "grammar": ["permission", "gate", "effect"], "focalChannels": ["icon", "connector", "contrast", "annotation"], "tokens": ["RadioTower", "FileCheck2", "Handshake", "ShieldCheck"]},
+    {"id": "determined-members", "export": "DeterminedScene", "layout": "fixed-roster-no-representative-fork", "anchor": "document-fork", "textTreatments": ["soft-highlight", "label-block", "thin-underline"], "grammar": ["fixed-roster", "classification", "remedy-branch"], "focalChannels": ["icon", "connector", "enclosure", "spatial"], "tokens": ["ListChecks", "Split", "UserRound", "Route"]},
+    {"id": "undetermined-members", "export": "UndeterminedScene", "layout": "announcement-registration-effect-route", "anchor": "timeline-gate", "textTreatments": ["label-block", "thin-underline", "soft-highlight"], "grammar": ["timeline", "registration", "effect-scope"], "focalChannels": ["icon", "connector", "locator", "annotation"], "tokens": ["Megaphone", "Clock3", "TicketCheck", "Gavel"]},
+    {"id": "securities-special", "export": "SecuritiesScene", "layout": "entrust-opt-out-signal-chain", "anchor": "flow-target", "textTreatments": ["soft-highlight", "stamp", "label-block"], "grammar": ["entrustment", "opt-out", "judgment-scope"], "focalChannels": ["icon", "connector", "enclosure", "contrast"], "tokens": ["Users", "ShieldCheck", "UserMinus", "BadgeCheck"]},
+    {"id": "comparison", "export": "RecapScene", "layout": "opt-in-versus-opt-out-switchboard", "anchor": "comparison-axis", "textTreatments": ["label-block", "thin-underline", "soft-highlight"], "grammar": ["comparison", "participation-mode", "effect-scope"], "focalChannels": ["icon", "contrast", "connector", "spatial"], "tokens": ["UserPlus", "UserMinus", "Gavel"]}
+  ]
+}
