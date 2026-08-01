@@ -3,7 +3,7 @@
   "compositionId": "ThirdPartyTypes",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-08-01T10:09:39.082Z",
+  "generatedAt": "2026-08-01T10:27:27.672Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -76,6 +76,20 @@
       "format": "avif",
       "crf": 35,
       "quality": 45
+    },
+    {
+      "endFrame": 2376,
+      "frameCount": 214,
+      "id": "no-independent-claim-rules",
+      "number": "06",
+      "startFrame": 1950,
+      "title": "无独三参诉与权利",
+      "durationMs": 7133,
+      "file": "no-independent-claim-rules.avif",
+      "fileSize": 597224,
+      "format": "avif",
+      "crf": 35,
+      "quality": 45
     }
   ],
   "size": {
@@ -84,5 +98,5 @@
   },
   "sourceFps": 60,
   "targetFps": 30,
-  "totalFileSize": 1627272
+  "totalFileSize": 2224496
 }

@@ -1,0 +1,60 @@
+{
+  "animationId": "admission-court-record",
+  "compositionId": "AdmissionCourtRecord",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-01T10:14:53.041Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 134,
+      "frameCount": 135,
+      "id": "admission-occasions",
+      "number": "01",
+      "startFrame": 0,
+      "title": "自认的场合",
+      "durationMs": 4500,
+      "file": "admission-occasions.avif",
+      "fileSize": 427241,
+      "format": "avif",
+      "crf": 35,
+      "quality": 45
+    },
+    {
+      "endFrame": 284,
+      "frameCount": 150,
+      "id": "admission-effect",
+      "number": "02",
+      "startFrame": 135,
+      "title": "自认的效果",
+      "durationMs": 5000,
+      "file": "admission-effect.avif",
+      "fileSize": 384296,
+      "format": "avif",
+      "crf": 35,
+      "quality": 45
+    },
+    {
+      "endFrame": 449,
+      "frameCount": 165,
+      "id": "admission-veto",
+      "number": "03",
+      "startFrame": 285,
+      "title": "一票否决",
+      "durationMs": 5500,
+      "file": "admission-veto.avif",
+      "fileSize": 243938,
+      "format": "avif",
+      "crf": 35,
+      "quality": 45
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "targetFps": 30,
+  "totalFileSize": 1055475
+}

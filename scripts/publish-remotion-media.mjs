@@ -619,10 +619,15 @@ const assertAtomicSceneCompatibility = async ({
   outputWidth,
   profile,
   quality,
+  sceneId,
   targetDirectory,
 }) => {
   const expectedSceneIds = allScenes.map((scene) => scene.id);
   const publishedSceneIds = Array.isArray(manifest.scenes) ? manifest.scenes.map((scene) => scene.id) : [];
+  const expectedExistingSceneIds = expectedSceneIds.filter((id) => id !== sceneId);
+  const compatibleSceneIds = JSON.stringify(publishedSceneIds) === JSON.stringify(expectedSceneIds)
+    || (!publishedSceneIds.includes(sceneId)
+      && JSON.stringify(publishedSceneIds) === JSON.stringify(expectedExistingSceneIds));
   const mismatches = [];
   const sameValue = (label, actual, expected) => {
     if (actual !== expected) mismatches.push(`${label} is ${JSON.stringify(actual)}, expected ${JSON.stringify(expected)}`);
@@ -638,8 +643,8 @@ const assertAtomicSceneCompatibility = async ({
   sameValue('size.height', manifest.size?.height, outputHeight);
   sameValue('sourceFps', manifest.sourceFps, composition.fps);
   sameValue('targetFps', manifest.targetFps, outputFps);
-  if (JSON.stringify(publishedSceneIds) !== JSON.stringify(expectedSceneIds)) {
-    mismatches.push(`scene IDs are ${JSON.stringify(publishedSceneIds)}, expected ${JSON.stringify(expectedSceneIds)}`);
+  if (!compatibleSceneIds) {
+    mismatches.push(`scene IDs are ${JSON.stringify(publishedSceneIds)}, expected the full list ${JSON.stringify(expectedSceneIds)} or that list without the selected scene ${JSON.stringify(sceneId)}`);
   }
 
   for (const scene of allScenes) {
@@ -756,6 +761,7 @@ const renderAnimation = async ({animationId, browserExecutable, crfs, encoderThr
         outputWidth,
         profile: publishVideo ? MEDIA_FORMATS.avif : profile,
         quality: encodingVariants[0].quality,
+        sceneId,
         targetDirectory,
       });
     }
