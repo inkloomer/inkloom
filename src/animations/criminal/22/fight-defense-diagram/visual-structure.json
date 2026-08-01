@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "mutual-intent",
+      "export": "MutualIntentScene",
+      "layout": "opposed-intent-ring",
+      "anchor": "role-pair",
+      "grammar": ["opposition", "reciprocity", "classification"],
+      "textTreatments": ["label-block", "soft-highlight", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["Swords", "Users"]
+    },
+    {
+      "id": "one-sided-attack",
+      "export": "OneSidedAttackScene",
+      "layout": "attack-shield-verdict-fork",
+      "anchor": "flow-path",
+      "grammar": ["direction", "exclusion", "split-outcome"],
+      "textTreatments": ["thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "enclosure", "annotation"],
+      "tokens": ["Swords", "ShieldCheck"]
+    },
+    {
+      "id": "headcount-reversal",
+      "export": "HeadcountReversalScene",
+      "layout": "headcount-referee-axis",
+      "anchor": "comparison-axis",
+      "grammar": ["comparison", "invariance", "priority"],
+      "textTreatments": ["label-block", "thin-underline", "external-negation"],
+      "focalChannels": ["icon", "contrast", "annotation", "spatial"],
+      "tokens": ["Scale", "ShieldCheck"]
+    }
+  ]
+}

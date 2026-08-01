@@ -1,0 +1,67 @@
+{
+  "animationId": "fight-defense-diagram",
+  "compositionId": "FightDefenseDiagram",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-01T14:11:35.685Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 179,
+      "frameCount": 180,
+      "id": "mutual-intent",
+      "number": "01",
+      "startFrame": 0,
+      "title": "双方均有侵害意图",
+      "durationMs": 6000,
+      "file": "mutual-intent.avif",
+      "fileSize": 178062,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "b0211fe1ce133158b78eec66efec7663fba9f80fbf08e86b8201aaaa5aa4f5e7",
+      "crf": 35,
+      "quality": 45
+    },
+    {
+      "endFrame": 374,
+      "frameCount": 195,
+      "id": "one-sided-attack",
+      "number": "02",
+      "startFrame": 180,
+      "title": "单方侵害的定性分流",
+      "durationMs": 6500,
+      "file": "one-sided-attack.avif",
+      "fileSize": 194954,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "e0e1a5849865902f4143fc28d52fb0485d957a06134478d0e622eaf1998087e5",
+      "crf": 35,
+      "quality": 45
+    },
+    {
+      "endFrame": 554,
+      "frameCount": 180,
+      "id": "headcount-reversal",
+      "number": "03",
+      "startFrame": 375,
+      "title": "人数反转不改变防卫性质",
+      "durationMs": 6000,
+      "file": "headcount-reversal.avif",
+      "fileSize": 190005,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "035b0d52212452b059524e4bd3dc0b78a907378199bd2483cc2250b08b94b2fe",
+      "crf": 35,
+      "quality": 45
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "d6561aa4bf746b5fb44499737bc5ebc1fb176546eb598006aee0c7534481db53",
+  "targetFps": 30,
+  "totalFileSize": 563021
+}

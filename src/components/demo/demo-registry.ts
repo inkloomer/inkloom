@@ -23,6 +23,18 @@ import {AdmissionCourtRecord} from '../../animations/civil-procedure/09/admissio
 import {BurdenOfProofSteps} from '../../animations/civil-procedure/09/burden-of-proof-steps/remotion/BurdenOfProofSteps';
 import {DocumentaryEvidenceRules} from '../../animations/civil-procedure/10/documentary-evidence-rules/remotion/DocumentaryEvidenceRules';
 import {EvidenceClassification} from '../../animations/civil-procedure/10/evidence-classification/remotion/EvidenceClassification';
+import {OfficialIntermediary} from '../../animations/criminal/23/official-intermediary/remotion/OfficialIntermediary';
+import {InfluenceIntermediary} from '../../animations/criminal/23/influence-intermediary/remotion/InfluenceIntermediary';
+import {FightDefenseDiagram} from '../../animations/criminal/22/fight-defense-diagram/remotion/FightDefenseDiagram';
+import {HighAltitudeThrowingDiagram} from '../../animations/criminal/22/high-altitude-throwing-diagram/remotion/HighAltitudeThrowingDiagram';
+import {TheftMistakeAnalysis} from '../../animations/criminal/19/theft-mistake-analysis/remotion/TheftMistakeAnalysis';
+import {OccupationalEmbezzlementFlowchart} from '../../animations/criminal/19/occupational-embezzlement-flowchart/remotion/OccupationalEmbezzlementFlowchart';
+import {CardSellingFundsViewpoint} from '../../animations/criminal/19/card-selling-funds-viewpoint/remotion/CardSellingFundsViewpoint';
+import {PropertyInterestsKeypoints} from '../../animations/criminal/19/property-interests-keypoints/remotion/PropertyInterestsKeypoints';
+import {EvidencePreservation} from '../../animations/civil-procedure/11/evidence-preservation/remotion/EvidencePreservation';
+import {EvidenceReview} from '../../animations/civil-procedure/11/evidence-review/remotion/EvidenceReview';
+import {ProofFilingInvestigation} from '../../animations/civil-procedure/11/proof-filing-investigation/remotion/ProofFilingInvestigation';
+import {SurpriseJudgmentFocus} from '../../animations/civil-procedure/11/surprise-judgment-focus/remotion/SurpriseJudgmentFocus';
 import {DURATION_FRAMES as DELEGATED_DURATION_FRAMES, FPS as DELEGATED_FPS} from '../../animations/civil-procedure/08/delegated-agent/remotion/storyboard';
 import {DURATION_FRAMES as JOINT_DURATION_FRAMES, FPS as JOINT_FPS} from '../../animations/civil-procedure/06/joint-litigation/remotion/storyboard';
 import {DURATION_FRAMES as REPRESENTATIVE_DURATION_FRAMES, FPS as REPRESENTATIVE_FPS} from '../../animations/civil-procedure/06/representative-litigation/remotion/storyboard';
@@ -33,6 +45,18 @@ import {DURATION_FRAMES as BURDEN_DURATION_FRAMES, FPS as BURDEN_FPS} from '../.
 import {DURATION_FRAMES as TYPES_DURATION_FRAMES, FPS as TYPES_FPS} from '../../animations/civil-procedure/07/third-party-types/remotion/storyboard';
 import {DURATION_FRAMES as DOCUMENTARY_DURATION_FRAMES, FPS as DOCUMENTARY_FPS} from '../../animations/civil-procedure/10/documentary-evidence-rules/remotion/storyboard';
 import {DURATION_FRAMES as EVIDENCE_DURATION_FRAMES, FPS as EVIDENCE_FPS} from '../../animations/civil-procedure/10/evidence-classification/remotion/storyboard';
+import {DURATION_FRAMES as OFFICIAL_INTERMEDIARY_DURATION_FRAMES, FPS as OFFICIAL_INTERMEDIARY_FPS} from '../../animations/criminal/23/official-intermediary/remotion/storyboard';
+import {DURATION_FRAMES as INFLUENCE_INTERMEDIARY_DURATION_FRAMES, FPS as INFLUENCE_INTERMEDIARY_FPS} from '../../animations/criminal/23/influence-intermediary/remotion/storyboard';
+import {DURATION_FRAMES as PRESERVATION_DURATION_FRAMES, FPS as PRESERVATION_FPS} from '../../animations/civil-procedure/11/evidence-preservation/remotion/storyboard';
+import {DURATION_FRAMES as REVIEW_DURATION_FRAMES, FPS as REVIEW_FPS} from '../../animations/civil-procedure/11/evidence-review/remotion/storyboard';
+import {DURATION_FRAMES as FILING_DURATION_FRAMES, FPS as FILING_FPS} from '../../animations/civil-procedure/11/proof-filing-investigation/remotion/storyboard';
+import {DURATION_FRAMES as FOCUS_DURATION_FRAMES, FPS as FOCUS_FPS} from '../../animations/civil-procedure/11/surprise-judgment-focus/remotion/storyboard';
+import {DURATION_FRAMES as FIGHT_DURATION_FRAMES, FPS as FIGHT_FPS} from '../../animations/criminal/22/fight-defense-diagram/remotion/storyboard';
+import {DURATION_FRAMES as ALTITUDE_DURATION_FRAMES, FPS as ALTITUDE_FPS} from '../../animations/criminal/22/high-altitude-throwing-diagram/remotion/storyboard';
+import {DURATION_FRAMES as THEFT_DURATION_FRAMES, FPS as THEFT_FPS} from '../../animations/criminal/19/theft-mistake-analysis/remotion/storyboard';
+import {DURATION_FRAMES as OCCUPATIONAL_DURATION_FRAMES, FPS as OCCUPATIONAL_FPS} from '../../animations/criminal/19/occupational-embezzlement-flowchart/remotion/storyboard';
+import {DURATION_FRAMES as CARD_FUNDS_DURATION_FRAMES, FPS as CARD_FUNDS_FPS} from '../../animations/criminal/19/card-selling-funds-viewpoint/remotion/storyboard';
+import {DURATION_FRAMES as PROPERTY_INTERESTS_DURATION_FRAMES, FPS as PROPERTY_INTERESTS_FPS} from '../../animations/criminal/19/property-interests-keypoints/remotion/storyboard';
 
 export interface DemoDefinition {
   readonly id: string;
@@ -70,6 +94,18 @@ export const STYLE_DEMOS = [
   {id: 'civil-procedure-09-burden-of-proof-steps', slug: 'burden-of-proof-steps', title: '构成举证场', direction: 'Constructivist Proof Field', component: BurdenOfProofSteps, href: '/inkloom/objective/civil-procedure/09/burden-of-proof-steps/', durationInFrames: BURDEN_DURATION_FRAMES, fps: BURDEN_FPS},
   {id: 'civil-procedure-10-evidence-classification', slug: 'evidence-classification', title: '检材透视台', direction: 'Forensic Light Table', component: EvidenceClassification, href: '/inkloom/objective/civil-procedure/10/evidence-classification/', durationInFrames: EVIDENCE_DURATION_FRAMES, fps: EVIDENCE_FPS},
   {id: 'civil-procedure-10-documentary-evidence-rules', slug: 'documentary-evidence-rules', title: '文书验印所', direction: 'Civic Seal Registry', component: DocumentaryEvidenceRules, href: '/inkloom/objective/civil-procedure/10/documentary-evidence-rules/', durationInFrames: DOCUMENTARY_DURATION_FRAMES, fps: DOCUMENTARY_FPS},
+  {id: 'civil-procedure-11-evidence-preservation', slug: 'evidence-preservation', title: '证据保全舱', direction: 'Evidence Cold Storage', component: EvidencePreservation, href: '/inkloom/objective/civil-procedure/11/evidence-preservation/', durationInFrames: PRESERVATION_DURATION_FRAMES, fps: PRESERVATION_FPS},
+  {id: 'civil-procedure-11-proof-filing-investigation', slug: 'proof-filing-investigation', title: '举证调度台', direction: 'Proof Dispatch Delta', component: ProofFilingInvestigation, href: '/inkloom/objective/civil-procedure/11/proof-filing-investigation/', durationInFrames: FILING_DURATION_FRAMES, fps: FILING_FPS},
+  {id: 'civil-procedure-11-surprise-judgment-focus', slug: 'surprise-judgment-focus', title: '争点聚光场', direction: 'Argument Focus Theater', component: SurpriseJudgmentFocus, href: '/inkloom/objective/civil-procedure/11/surprise-judgment-focus/', durationInFrames: FOCUS_DURATION_FRAMES, fps: FOCUS_FPS},
+  {id: 'civil-procedure-11-evidence-review', slug: 'evidence-review', title: '心证衡量室', direction: 'Evidence Weighing Chamber', component: EvidenceReview, href: '/inkloom/objective/civil-procedure/11/evidence-review/', durationInFrames: REVIEW_DURATION_FRAMES, fps: REVIEW_FPS},
+  {id: 'criminal-22-fight-defense-diagram', slug: 'fight-defense-diagram', title: '意图对抗场', direction: 'Intent Combat Field', component: FightDefenseDiagram, href: '/inkloom/objective/criminal/22/fight-defense-diagram/', durationInFrames: FIGHT_DURATION_FRAMES, fps: FIGHT_FPS},
+  {id: 'criminal-22-high-altitude-throwing-diagram', slug: 'high-altitude-throwing-diagram', title: '垂直危险剖面', direction: 'Vertical Risk Section', component: HighAltitudeThrowingDiagram, href: '/inkloom/objective/criminal/22/high-altitude-throwing-diagram/', durationInFrames: ALTITUDE_DURATION_FRAMES, fps: ALTITUDE_FPS},
+  {id: 'criminal-19-theft-mistake-analysis', slug: 'theft-mistake-analysis', title: '双焦校准台', direction: 'Dual-Focus Calibration', component: TheftMistakeAnalysis, href: '/inkloom/objective/criminal/19/theft-mistake-analysis/', durationInFrames: THEFT_DURATION_FRAMES, fps: THEFT_FPS},
+  {id: 'criminal-19-occupational-embezzlement-flowchart', slug: 'occupational-embezzlement-flowchart', title: '要件质检线', direction: 'Industrial Elements Inspection', component: OccupationalEmbezzlementFlowchart, href: '/inkloom/objective/criminal/19/occupational-embezzlement-flowchart/', durationInFrames: OCCUPATIONAL_DURATION_FRAMES, fps: OCCUPATIONAL_FPS},
+  {id: 'criminal-19-card-selling-funds-viewpoint', slug: 'card-selling-funds-viewpoint', title: '账户信号台', direction: 'Account Signal Router', component: CardSellingFundsViewpoint, href: '/inkloom/objective/criminal/19/card-selling-funds-viewpoint/', durationInFrames: CARD_FUNDS_DURATION_FRAMES, fps: CARD_FUNDS_FPS},
+  {id: 'criminal-19-property-interests-keypoints', slug: 'property-interests-keypoints', title: '价值拓扑图册', direction: 'Value Topology Atlas', component: PropertyInterestsKeypoints, href: '/inkloom/objective/criminal/19/property-interests-keypoints/', durationInFrames: PROPERTY_INTERESTS_DURATION_FRAMES, fps: PROPERTY_INTERESTS_FPS},
+  {id: 'criminal-23-official-intermediary', slug: 'official-intermediary', title: '财政稽核分流台', direction: 'Fiscal Audit Ledger', component: OfficialIntermediary, href: '/inkloom/objective/criminal/23/joint-crime/', durationInFrames: OFFICIAL_INTERMEDIARY_DURATION_FRAMES, fps: OFFICIAL_INTERMEDIARY_FPS},
+  {id: 'criminal-23-influence-intermediary', slug: 'influence-intermediary', title: '关系引力图谱', direction: 'Private Influence Network', component: InfluenceIntermediary, href: '/inkloom/objective/criminal/23/joint-crime/', durationInFrames: INFLUENCE_INTERMEDIARY_DURATION_FRAMES, fps: INFLUENCE_INTERMEDIARY_FPS},
 ] as const satisfies readonly DemoDefinition[];
 
 export const demoById = (id: string) => STYLE_DEMOS.find((demo) => demo.id === id);

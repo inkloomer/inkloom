@@ -1,0 +1,16 @@
+{
+  "directionId": "vertical-risk-section",
+  "family": "architectural-risk-profile",
+  "palette": "paper sky + concrete graphite + cobalt depth + acid safety green + furnace coral",
+  "typography": "architectural neo-grotesk with elevation numerals, inspection underlines, and hazard labels",
+  "composition": "vertical building sections, falling trajectories, a three-metre datum, and a descending offence gate",
+  "surface": "open cutaway elevations, construction ticks, transparent air bands, and hard-edged hazard plates",
+  "motion": "objects travel only along their physical direction; the height datum scans once; risk factors converge into a gate",
+  "transition": "the same vertical datum remains while direction, intent, seriousness, and concurrence are inspected",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/criminal/22/high-altitude-throwing-diagram/",
+    "title": "垂直危险剖面"
+  }
+}

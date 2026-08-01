@@ -1,0 +1,16 @@
+{
+  "directionId": "intent-combat-field",
+  "family": "ringside-decision-arena",
+  "palette": "chalk white + arena black + electric lime + signal magenta + referee cyan",
+  "typography": "wide athletic grotesk with score-strip labels, thin intent underlines, and referee verdict stamps",
+  "composition": "opposed corners, a central intent line, headcount tokens, and verdict lanes around a regulation ring",
+  "surface": "matte canvas, taped boundaries, square score panels, and luminous referee marks without cards",
+  "motion": "intent signals lock before headcount enters; attack vectors meet or stop at a shield; verdicts snap into separate lanes",
+  "transition": "the same center line persists while corner populations and legal outcomes are reconfigured",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/criminal/22/fight-defense-diagram/",
+    "title": "意图对抗场"
+  }
+}

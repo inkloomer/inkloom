@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "vertical-direction",
+      "export": "VerticalDirectionScene",
+      "layout": "building-section-direction-test",
+      "anchor": "boundary",
+      "grammar": ["direction", "threshold", "exclusion"],
+      "textTreatments": ["label-block", "thin-underline", "external-negation"],
+      "focalChannels": ["icon", "connector", "locator", "contrast"],
+      "tokens": ["Building2", "Package", "ArrowDown", "ArrowUp"]
+    },
+    {
+      "id": "seriousness-gate",
+      "export": "SeriousnessGateScene",
+      "layout": "risk-factor-convergence",
+      "anchor": "timeline-gate",
+      "grammar": ["accumulation", "causal-gate", "sufficiency"],
+      "textTreatments": ["soft-highlight", "thin-underline", "stamp"],
+      "focalChannels": ["icon", "connector", "enclosure", "motion"],
+      "tokens": ["Package", "AlertTriangle", "ShieldCheck"]
+    },
+    {
+      "id": "intent-exclusion",
+      "export": "IntentExclusionScene",
+      "layout": "intent-inspection-rail",
+      "anchor": "typographic-sequence",
+      "grammar": ["sequence", "negation", "classification"],
+      "textTreatments": ["label-block", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "annotation", "spatial"],
+      "tokens": ["Target", "CircleX", "ShieldCheck"]
+    },
+    {
+      "id": "concurrence-choice",
+      "export": "ConcurrenceChoiceScene",
+      "layout": "descending-offence-branch",
+      "anchor": "document-fork",
+      "grammar": ["branching", "overlap", "priority"],
+      "textTreatments": ["soft-highlight", "label-block", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["Flame", "TestTube2", "Scale"]
+    }
+  ]
+}

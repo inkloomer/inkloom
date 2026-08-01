@@ -1,0 +1,83 @@
+{
+  "animationId": "high-altitude-throwing-diagram",
+  "compositionId": "HighAltitudeThrowingDiagram",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-01T14:14:11.118Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 179,
+      "frameCount": 180,
+      "id": "vertical-direction",
+      "number": "01",
+      "startFrame": 0,
+      "title": "高空与向下抛掷",
+      "durationMs": 6000,
+      "file": "vertical-direction.avif",
+      "fileSize": 173075,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "c5a6c9490015eeba1cdea08fbc7a31e5ff551bf59d2ad82c163c5a1a93dda07f",
+      "crf": 35,
+      "quality": 45
+    },
+    {
+      "endFrame": 374,
+      "frameCount": 195,
+      "id": "seriousness-gate",
+      "number": "02",
+      "startFrame": 180,
+      "title": "情节严重入罪门",
+      "durationMs": 6500,
+      "file": "seriousness-gate.avif",
+      "fileSize": 188918,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "583b27ed1cf03702128440273bbd2b28c8a2c8ebe89514b7769d24cca3269d9d",
+      "crf": 35,
+      "quality": 45
+    },
+    {
+      "endFrame": 554,
+      "frameCount": 180,
+      "id": "intent-exclusion",
+      "number": "03",
+      "startFrame": 375,
+      "title": "故意与过失排除",
+      "durationMs": 6000,
+      "file": "intent-exclusion.avif",
+      "fileSize": 165088,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "a948806126baba53defea42d55d34297dd2f64930c958c4020a0035820f1f07b",
+      "crf": 35,
+      "quality": 45
+    },
+    {
+      "endFrame": 764,
+      "frameCount": 210,
+      "id": "concurrence-choice",
+      "number": "04",
+      "startFrame": 555,
+      "title": "想象竞合择一重",
+      "durationMs": 7000,
+      "file": "concurrence-choice.avif",
+      "fileSize": 188785,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "0ca943dd3395d4d2968d7e213724cc259d1215ae60b3269505fa3734c4098a1a",
+      "crf": 35,
+      "quality": 45
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "a25224927906b5b907677658d2fc06a3a1cf70f19c5d3c7ec155409ece662dcc",
+  "targetFps": 30,
+  "totalFileSize": 715866
+}
