@@ -16,21 +16,28 @@ Usage:
   pnpm animation:typography:contacts
   pnpm animation:typography:contacts -- --input .artifacts/typography-audit/civil-01
   pnpm animation:typography:contacts -- --subject civil-procedure --chapter 10
+  pnpm animation:typography:contacts -- --published --subject civil-procedure --chapters 01+02+03+04+05+06+07+08 --aggregate 01-08
 `;
 
 const parseArguments = (arguments_) => {
-  const options = {chapter: undefined, inputRoot: DEFAULT_INPUT_ROOT, outputRoot: DEFAULT_OUTPUT_ROOT, subject: undefined};
+  const options = {aggregate: undefined, chapter: undefined, chapters: undefined, inputRoot: DEFAULT_INPUT_ROOT, outputRoot: DEFAULT_OUTPUT_ROOT, published: false, subject: undefined};
   for (let index = 0; index < arguments_.length; index += 1) {
     const argument = arguments_[index];
     if (argument === '--') continue;
     if (argument === '--help') return {help: true};
-    if (argument === '--input' || argument === '--output' || argument === '--subject' || argument === '--chapter') {
+    if (argument === '--published') {
+      options.published = true;
+      continue;
+    }
+    if (argument === '--input' || argument === '--output' || argument === '--subject' || argument === '--chapter' || argument === '--chapters' || argument === '--aggregate') {
       const value = arguments_[index + 1];
       if (!value) throw new Error(`${argument} requires a value.`);
       if (argument === '--input') options.inputRoot = path.resolve(PROJECT_ROOT, value);
       if (argument === '--output') options.outputRoot = path.resolve(PROJECT_ROOT, value);
       if (argument === '--subject') options.subject = value;
       if (argument === '--chapter') options.chapter = value;
+      if (argument === '--chapters') options.chapters = value.split(/[,+]/).map((chapter) => chapter.trim()).filter(Boolean);
+      if (argument === '--aggregate') options.aggregate = value;
       index += 1;
       continue;
     }
@@ -41,7 +48,7 @@ const parseArguments = (arguments_) => {
 
 const fileExists = async (filePath) => stat(filePath).then((entry) => entry.isFile(), () => false);
 
-const latestContactSheet = async (inputRoot, animationId) => {
+const latestCapture = async (inputRoot, animationId) => {
   const animationDirectory = path.join(inputRoot, animationId);
   let entries;
   try {
@@ -51,8 +58,13 @@ const latestContactSheet = async (inputRoot, animationId) => {
   }
   const runs = entries.filter((entry) => entry.isDirectory()).map((entry) => entry.name).sort().reverse();
   for (const run of runs) {
-    const candidate = path.join(animationDirectory, run, 'contact-sheet.png');
-    if (await fileExists(candidate)) return candidate;
+    const runDirectory = path.join(animationDirectory, run);
+    const contactSheetPath = path.join(runDirectory, 'contact-sheet.png');
+    if (!(await fileExists(contactSheetPath))) continue;
+    const pages = (await readdir(runDirectory))
+      .filter((entry) => /^page-\d+-.*\.png$/.test(entry))
+      .sort();
+    if (pages.length > 0) return {contactSheetPath, previewPath: path.join(runDirectory, pages[0])};
   }
   return undefined;
 };
@@ -77,8 +89,8 @@ const createChapterContactSheet = async ({animations, outputPath}) => {
   const tileHeight = 236;
   const columns = Math.min(3, animations.length);
   const rows = Math.ceil(animations.length / columns);
-  const composites = await Promise.all(animations.map(async ({contactSheetPath}, index) => ({
-    input: await sharp(contactSheetPath)
+  const composites = await Promise.all(animations.map(async ({previewPath}, index) => ({
+    input: await sharp(previewPath)
       .resize({width: tileWidth, height: tileHeight, fit: 'contain', background: '#0f1419'})
       .png()
       .toBuffer(),
@@ -103,22 +115,33 @@ const main = async () => {
     return;
   }
 
-  const animations = (await knownAnimations()).filter((animation) =>
+  let animations = (await knownAnimations()).filter((animation) =>
     (!options.subject || animation.subject === options.subject) &&
-    (!options.chapter || animation.chapter === options.chapter),
+    (!options.chapter || animation.chapter === options.chapter) &&
+    (!options.chapters || options.chapters.includes(animation.chapter)),
   );
+  if (options.published) {
+    const publicationState = await Promise.all(animations.map(async (animation) => ({
+      animation,
+      published: await fileExists(path.join(PROJECT_ROOT, 'public', 'animation-avif', animation.animationId, 'manifest.json')),
+    })));
+    animations = publicationState.filter((item) => item.published).map((item) => item.animation);
+  }
   if (animations.length === 0) throw new Error('No tracked animation metadata matches the requested scope.');
 
   const resolved = await Promise.all(animations.map(async (animation) => ({
     ...animation,
-    contactSheetPath: await latestContactSheet(options.inputRoot, animation.animationId),
+    capture: await latestCapture(options.inputRoot, animation.animationId),
   })));
-  const missing = resolved.filter((animation) => !animation.contactSheetPath).map((animation) => animation.animationId);
+  const missing = resolved.filter((animation) => !animation.capture).map((animation) => animation.animationId);
   if (missing.length > 0) throw new Error(`Missing current page-capture contact sheets: ${missing.join(', ')}`);
+  const captured = resolved.map(({capture, ...animation}) => ({...animation, ...capture}));
 
   const chapterGroups = new Map();
-  for (const animation of resolved) {
-    const key = `${animation.subject}/${animation.chapter}`;
+  for (const animation of captured) {
+    const key = options.aggregate
+      ? `${options.subject ?? 'all'}/${options.aggregate}`
+      : `${animation.subject}/${animation.chapter}`;
     chapterGroups.set(key, [...(chapterGroups.get(key) ?? []), animation]);
   }
 
@@ -126,7 +149,7 @@ const main = async () => {
   for (const [key, group] of chapterGroups) {
     const outputPath = path.join(options.outputRoot, key, 'contact-sheet.png');
     await createChapterContactSheet({animations: group, outputPath});
-    report.push({animations: group.map(({animationId, contactSheetPath}) => ({animationId, contactSheetPath})), outputPath, scope: key});
+    report.push({animations: group.map(({animationId, contactSheetPath, previewPath}) => ({animationId, contactSheetPath, previewPath})), outputPath, scope: key});
     console.log(`[typography] ${key}: ${group.length} animation contact sheets -> ${outputPath}`);
   }
   await mkdir(options.outputRoot, {recursive: true});
