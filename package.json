@@ -15,6 +15,7 @@
     "siyuan:embed-avif": "node scripts/embed-siyuan-avif.mjs --format avif",
     "siyuan:embed-scene": "node scripts/embed-siyuan-scene.mjs",
     "siyuan:embed-webp": "node scripts/embed-siyuan-avif.mjs --format webp",
+    "test:browser": "vitest run --browser",
     "preview": "astro preview",
     "astro": "astro"
   },
@@ -40,6 +41,9 @@
     "@remotion/bundler": "4.0.501",
     "@remotion/renderer": "4.0.501",
     "@types/react": "19.2.14",
-    "@types/react-dom": "19.2.3"
+    "@types/react-dom": "19.2.3",
+    "@vitest/browser-playwright": "4.1.10",
+    "playwright": "1.62.1",
+    "vitest": "4.1.10"
   }
 }

@@ -13,6 +13,11 @@
     ],
     showReplayButton: true, // Show the small replay control.
     replayOnHover: true, // Replay when the pointer enters the image.
+    hoverReplayDelayMs: 700, // Require an intentional hover before replaying.
+    focusReturnGuardMs: 1000, // Ignore synthetic hover events after returning to SiYuan.
+    fallbackReplayDurationMs: 20000, // Used when an InkLoom scene manifest is unavailable.
+    playbackEndGuardMs: 500, // Allow for image decode before releasing the replay lock.
+    replayBlobCacheSize: 4, // Bound decoded replay media retained during a SiYuan session.
     replayWhenOpenedLarge: true, // Replay when SiYuan opens the large-image viewer.
   };
 
@@ -24,8 +29,12 @@
   const LARGE_VIEW_IMAGE_SELECTOR = '.viewer-container img, .viewer-canvas img, .b3-dialog img, [role="dialog"] img';
   const controllersByImage = new WeakMap();
   const replayStatesByImage = new WeakMap();
+  const replayBlobPromisesBySource = new Map();
+  const replayDurationPromisesBySource = new Map();
   const replayedImages = new Set();
   const activeControllers = new Set();
+  let activeReplayImage = null;
+  let hoverReplayBlockedUntil = 0;
 
   const cleanupLegacyPlayers = () => {
     document.querySelectorAll(`.${LEGACY_WRAPPER_CLASS}`).forEach((wrapper) => {
@@ -98,6 +107,17 @@
         display: flex;
         z-index: 2;
         pointer-events: auto;
+      }
+      .${OVERLAY_CLASS}__still {
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+      }
+      .${OVERLAY_CLASS}__still[hidden] {
+        display: none;
       }
       .${OVERLAY_CLASS}__controls[hidden] {
         display: none;
@@ -187,7 +207,116 @@
     return {controls, replayButton};
   };
 
+  const replayDurationForSource = (source) => {
+    const key = normalizedUrl(source);
+    let durationPromise = replayDurationPromisesBySource.get(key);
+    if (durationPromise) return durationPromise;
+
+    durationPromise = (async () => {
+      try {
+        const sourceUrl = new URL(source, window.location.href);
+        if (!sourceUrl.pathname.includes('/animation-avif/')) return CONFIG.fallbackReplayDurationMs;
+        const file = sourceUrl.pathname.split('/').pop();
+        sourceUrl.pathname = `${sourceUrl.pathname.slice(0, sourceUrl.pathname.lastIndexOf('/') + 1)}manifest.json`;
+        sourceUrl.search = '';
+        sourceUrl.hash = '';
+        const response = await fetch(sourceUrl, {cache: 'force-cache'});
+        if (!response.ok) return CONFIG.fallbackReplayDurationMs;
+        const manifest = await response.json();
+        const durationMs = manifest.scenes?.find((scene) => scene.file === file)?.durationMs;
+        return Number.isFinite(durationMs) && durationMs > 0
+          ? durationMs
+          : CONFIG.fallbackReplayDurationMs;
+      } catch {
+        return CONFIG.fallbackReplayDurationMs;
+      }
+    })();
+    replayDurationPromisesBySource.set(key, durationPromise);
+    return durationPromise;
+  };
+
+  const replayBlobForSource = (source) => {
+    const key = normalizedUrl(source);
+    let blobPromise = replayBlobPromisesBySource.get(key);
+    if (blobPromise) {
+      replayBlobPromisesBySource.delete(key);
+      replayBlobPromisesBySource.set(key, blobPromise);
+      return blobPromise;
+    }
+
+    blobPromise = fetch(source, {cache: 'force-cache'})
+      .then((response) => {
+        if (!response.ok) throw new Error(`request failed with ${response.status}`);
+        return response.blob();
+      })
+      .catch((error) => {
+        replayBlobPromisesBySource.delete(key);
+        throw error;
+      });
+    while (replayBlobPromisesBySource.size >= CONFIG.replayBlobCacheSize) {
+      replayBlobPromisesBySource.delete(replayBlobPromisesBySource.keys().next().value);
+    }
+    replayBlobPromisesBySource.set(key, blobPromise);
+    return blobPromise;
+  };
+
+  const hideStillFrame = (img) => {
+    const stillFrame = controllersByImage.get(img)?.stillFrame;
+    if (stillFrame) stillFrame.hidden = true;
+  };
+
+  const freezeCurrentFrame = (img) => {
+    const controller = controllersByImage.get(img);
+    if (!controller || !img.complete || !img.naturalWidth || !img.naturalHeight) return;
+
+    const stillFrame = controller.stillFrame || document.createElement('canvas');
+    stillFrame.className = `${OVERLAY_CLASS}__still`;
+    stillFrame.setAttribute('aria-hidden', 'true');
+    const pixelRatio = Math.min(window.devicePixelRatio || 1, 1.5);
+    stillFrame.width = Math.min(img.naturalWidth, Math.max(1, Math.round(img.offsetWidth * pixelRatio)));
+    stillFrame.height = Math.min(img.naturalHeight, Math.max(1, Math.round(img.offsetHeight * pixelRatio)));
+    try {
+      const context = stillFrame.getContext('2d');
+      if (!context) return;
+      context.drawImage(img, 0, 0, stillFrame.width, stillFrame.height);
+    } catch (error) {
+      console.warn('[InkLoom Animated Image Player] Could not freeze the previous replay.', error);
+      return;
+    }
+    if (!controller.stillFrame) {
+      controller.stillFrame = stillFrame;
+      controller.overlay.prepend(stillFrame);
+    }
+    stillFrame.hidden = false;
+  };
+
+  const releaseReplayOwnership = (img, {freeze = true} = {}) => {
+    if (activeReplayImage !== img) return;
+    const state = replayStatesByImage.get(img);
+    if (state) {
+      state.generation += 1;
+      window.clearTimeout(state.releaseTimer);
+      state.releaseTimer = 0;
+    }
+    if (freeze) freezeCurrentFrame(img);
+    activeReplayImage = null;
+  };
+
+  const claimReplayOwnership = (img) => {
+    if (activeReplayImage && activeReplayImage !== img) {
+      releaseReplayOwnership(activeReplayImage);
+    }
+    const state = replayStatesByImage.get(img);
+    if (state?.releaseTimer) {
+      window.clearTimeout(state.releaseTimer);
+      state.releaseTimer = 0;
+    }
+    activeReplayImage = img;
+    hideStillFrame(img);
+  };
+
   const replayNativeImage = async (img) => {
+    claimReplayOwnership(img);
     let state = replayStatesByImage.get(img);
     if (!state) {
       state = {
@@ -195,16 +324,16 @@
         objectUrl: '',
         originalSrc: img.getAttribute('src'),
         originalSrcset: img.getAttribute('srcset'),
+        releaseTimer: 0,
         source: img.currentSrc || img.src,
       };
       replayStatesByImage.set(img, state);
     }
 
     const generation = state.generation += 1;
+    const replayDurationPromise = replayDurationForSource(state.source);
     try {
-      const response = await fetch(state.source, {cache: 'force-cache'});
-      if (!response.ok) throw new Error(`request failed with ${response.status}`);
-      const objectUrl = URL.createObjectURL(await response.blob());
+      const objectUrl = URL.createObjectURL(await replayBlobForSource(state.source));
       if (generation !== state.generation || !img.isConnected) {
         URL.revokeObjectURL(objectUrl);
         return;
@@ -218,7 +347,19 @@
       }
       img.srcset = '';
       img.src = objectUrl;
+      const replayStartedAt = Date.now();
+      void replayDurationPromise.then((replayDurationMs) => {
+        if (state.generation !== generation || activeReplayImage !== img) return;
+        const elapsedMs = Date.now() - replayStartedAt;
+        state.releaseTimer = window.setTimeout(() => {
+          state.releaseTimer = 0;
+          if (state.generation === generation && activeReplayImage === img) {
+            activeReplayImage = null;
+          }
+        }, Math.max(0, replayDurationMs + CONFIG.playbackEndGuardMs - elapsedMs));
+      });
     } catch (error) {
+      if (state.generation === generation) releaseReplayOwnership(img, {freeze: false});
       console.warn('[InkLoom Animated Image Player] Replay failed; keeping the current frame.', error);
     }
   };
@@ -227,11 +368,13 @@
     const state = replayStatesByImage.get(img);
     if (!state) return;
     state.generation += 1;
+    window.clearTimeout(state.releaseTimer);
     if (state.originalSrc === null) img.removeAttribute('src');
     else img.setAttribute('src', state.originalSrc);
     if (state.originalSrcset === null) img.removeAttribute('srcset');
     else img.setAttribute('srcset', state.originalSrcset);
     if (state.objectUrl) URL.revokeObjectURL(state.objectUrl);
+    if (activeReplayImage === img) activeReplayImage = null;
     replayStatesByImage.delete(img);
     replayedImages.delete(img);
   };
@@ -259,8 +402,8 @@
     });
   });
 
-  const registerController = ({img, overlay, replay, disposePlayback}) => {
-    const controller = {disposePlayback, img, overlay, replay};
+  const registerController = ({img, overlay, replay, cancelHoverReplay, disposePlayback}) => {
+    const controller = {cancelHoverReplay, disposePlayback, img, overlay, replay};
     controllersByImage.set(img, controller);
     activeControllers.add(controller);
     resizeObserver.observe(img);
@@ -274,6 +417,7 @@
     resizeObserver.unobserve(controller.img);
     controller.img.removeEventListener('load', controller.syncOnLoad);
     controller.disposePlayback?.();
+    releaseReplayOwnership(controller.img, {freeze: false});
     restoreReplaySource(controller.img);
     controller.overlay.remove();
   }
@@ -302,13 +446,36 @@
     overlay.appendChild(controls);
 
     const replay = () => replayNativeImage(img);
-    const replayOnHover = () => replay();
-    const controller = registerController({
+    let controller;
+    const cancelHoverReplay = () => {
+      if (!controller?.hoverReplayTimer) return;
+      window.clearTimeout(controller.hoverReplayTimer);
+      controller.hoverReplayTimer = 0;
+    };
+    const replayOnHover = (event) => {
+      cancelHoverReplay();
+      if (event.pointerType === 'touch'
+        || document.visibilityState !== 'visible'
+        || !document.hasFocus()
+        || Date.now() < hoverReplayBlockedUntil) return;
+      controller.hoverReplayTimer = window.setTimeout(() => {
+        controller.hoverReplayTimer = 0;
+        if (document.visibilityState === 'visible'
+          && document.hasFocus()
+          && Date.now() >= hoverReplayBlockedUntil
+          && activeReplayImage !== img
+          && img.matches(':hover')) replay();
+      }, CONFIG.hoverReplayDelayMs);
+    };
+    controller = registerController({
       img,
       overlay,
       replay,
+      cancelHoverReplay,
       disposePlayback: () => {
+        cancelHoverReplay();
         img.removeEventListener('pointerenter', replayOnHover);
+        img.removeEventListener('pointerleave', cancelHoverReplay);
       },
     });
 
@@ -320,7 +487,10 @@
       event.stopPropagation();
       replay();
     });
-    if (CONFIG.replayOnHover) img.addEventListener('pointerenter', replayOnHover);
+    if (CONFIG.replayOnHover) {
+      img.addEventListener('pointerenter', replayOnHover);
+      img.addEventListener('pointerleave', cancelHoverReplay);
+    }
     syncOverlay(controller);
   };
 
@@ -371,20 +541,31 @@
     window.setTimeout(replayOpenedLargeImage, 0);
   };
 
+  const pendingScanRoots = new Set();
   let scanQueued = false;
-  const scan = () => {
+  const scan = (roots = []) => {
+    roots.forEach((root) => pendingScanRoots.add(root));
     if (scanQueued) return;
     scanQueued = true;
     requestAnimationFrame(() => {
       scanQueued = false;
+      const rootsToScan = [...pendingScanRoots];
+      pendingScanRoots.clear();
       [...activeControllers].forEach((controller) => {
         if (!controller.img.isConnected) disposeController(controller);
       });
       [...replayedImages].forEach((img) => {
         if (!img.isConnected) restoreReplaySource(img);
       });
-      document.querySelectorAll('img').forEach((img) => {
-        if (!img.closest(LARGE_VIEW_ROOT_SELECTOR)) void enhanceImage(img);
+      rootsToScan.forEach((root) => {
+        const images = [];
+        if (root instanceof HTMLImageElement) images.push(root);
+        if (root instanceof Element || root instanceof Document || root instanceof DocumentFragment) {
+          images.push(...root.querySelectorAll('img'));
+        }
+        images.forEach((img) => {
+          if (!img.closest(LARGE_VIEW_ROOT_SELECTOR)) void enhanceImage(img);
+        });
       });
       scheduleOverlaySync();
       if (pendingLargeViewSources.length > 0) replayOpenedLargeImage();
@@ -393,19 +574,34 @@
 
   cleanupLegacyPlayers();
   installStyles();
-  scan();
+  scan([document]);
+  const blockHoverReplay = () => {
+    hoverReplayBlockedUntil = Date.now() + CONFIG.focusReturnGuardMs;
+    [...activeControllers].forEach((controller) => controller.cancelHoverReplay?.());
+  };
+  const handleVisibilityChange = () => blockHoverReplay();
   window.addEventListener('resize', scheduleOverlaySync);
-  document.addEventListener('scroll', scheduleOverlaySync, true);
+  window.addEventListener('blur', blockHoverReplay);
+  window.addEventListener('focus', blockHoverReplay);
+  document.addEventListener('visibilitychange', handleVisibilityChange);
   document.addEventListener('click', handleDocumentClick, true);
-  const observer = new MutationObserver(scan);
+  const observer = new MutationObserver((records) => {
+    const addedNodes = records.flatMap((record) => [...record.addedNodes]);
+    scan(addedNodes);
+  });
   observer.observe(document.body, {childList: true, subtree: true});
 
   const dispose = () => {
     observer.disconnect();
     window.removeEventListener('resize', scheduleOverlaySync);
-    document.removeEventListener('scroll', scheduleOverlaySync, true);
+    window.removeEventListener('blur', blockHoverReplay);
+    window.removeEventListener('focus', blockHoverReplay);
+    document.removeEventListener('visibilitychange', handleVisibilityChange);
     document.removeEventListener('click', handleDocumentClick, true);
     [...activeControllers].forEach(disposeController);
+    [...replayedImages].forEach(restoreReplaySource);
+    replayBlobPromisesBySource.clear();
+    replayDurationPromisesBySource.clear();
     document.getElementById(STYLE_ID)?.remove();
   };
 
