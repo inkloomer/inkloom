@@ -32,6 +32,7 @@ const normalize = (value) => value.trim().toLocaleLowerCase('en-US').replaceAll(
 const main = async () => {
   const baseline = JSON.parse(await readFile(BASELINE_PATH, 'utf8'));
   const legacyIds = new Set(baseline.legacyAnimationIds ?? []);
+  const allowedFamilyReuse = baseline.allowedFamilyReuse ?? {};
   const errors = [];
   const warnings = [];
   const fingerprints = new Map();
@@ -81,7 +82,13 @@ const main = async () => {
 
   for (const [family, nodes] of families) {
     if (nodes.length > 1) {
-      warnings.push(`style family "${family}" is reused by ${nodes.join(', ')}; confirm their fingerprints are visibly distinct`);
+      const allowedNodes = new Set(allowedFamilyReuse[family] ?? []);
+      const approved = nodes.every((node) => allowedNodes.has(node)) && allowedNodes.size === nodes.length;
+      if (approved) {
+        warnings.push(`approved style family "${family}" is reused by ${nodes.join(', ')}; fingerprints remain independently audited`);
+      } else {
+        errors.push(`style family "${family}" is reused by ${nodes.join(', ')} without an explicit baseline approval`);
+      }
     }
   }
 

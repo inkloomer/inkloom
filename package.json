@@ -7,7 +7,7 @@
     "start": "astro dev",
     "build": "astro build",
     "animation:pages": "node scripts/capture-remotion-pages.mjs",
-    "animation:styles": "node scripts/validate-animation-styles.mjs",
+    "animation:styles": "node scripts/validate-animation-styles.mjs && node scripts/validate-animation-structure.mjs",
     "animation:publish-video": "node scripts/publish-remotion-media.mjs --video",
     "animation:publish-avif": "node scripts/publish-remotion-media.mjs --format avif",
     "animation:publish-webp": "node scripts/publish-remotion-media.mjs --format webp",
