@@ -12,6 +12,7 @@ const ANIMATIONS_ROOT = path.join(PROJECT_ROOT, 'src', 'animations');
 const COMPONENTS_ROOT = path.join(PROJECT_ROOT, 'src', 'components');
 const PUBLIC_VIDEO_ROOT = path.join(PROJECT_ROOT, 'public', 'animation-video');
 const COMPARISON_ROOT = path.join(PROJECT_ROOT, '.artifacts', 'avif-quality-comparisons');
+const BUNDLE_CACHE_ROOT = path.join(PROJECT_ROOT, '.artifacts', 'remotion-bundles');
 const ANIMATION_ID_PATTERN = /^[a-z0-9][a-z0-9-]*$/;
 const SCENE_ID_PATTERN = /^[a-z0-9][a-z0-9-]*$/;
 const VIDEO_WIDTH = 2560;
@@ -421,6 +422,232 @@ const sha256File = async (filePath) => createHash('sha256')
   .update(await readFile(filePath))
   .digest('hex');
 
+const hashFiles = async ({files, seed}) => {
+  const fingerprint = createHash('sha256');
+  fingerprint.update(JSON.stringify(seed));
+  for (const filePath of [...new Set(files)].sort((left, right) => left.localeCompare(right))) {
+    fingerprint.update(`\0${path.relative(PROJECT_ROOT, filePath).replaceAll(path.sep, '/')}\0`);
+    fingerprint.update(await readFile(filePath));
+  }
+  return fingerprint.digest('hex');
+};
+
+const collectBundleSourceFiles = async (animationDirectory) => [
+  ...(await collectRenderDependencies(path.join(animationDirectory, 'remotion', 'index.ts'))),
+  path.join(PROJECT_ROOT, 'package.json'),
+  path.join(PROJECT_ROOT, 'pnpm-lock.yaml'),
+];
+
+const createBundleFingerprint = async (animationDirectory) => hashFiles({
+  files: await collectBundleSourceFiles(animationDirectory),
+  seed: {format: 'inkloom-remotion-bundle-v1'},
+});
+
+const scanDeclarationEnd = (source, start) => {
+  let quote;
+  let escaped = false;
+  let lineComment = false;
+  let blockComment = false;
+  const depth = {brace: 0, bracket: 0, parenthesis: 0};
+
+  for (let index = start; index < source.length; index += 1) {
+    const character = source[index];
+    const next = source[index + 1];
+    if (lineComment) {
+      if (character === '\n') lineComment = false;
+      continue;
+    }
+    if (blockComment) {
+      if (character === '*' && next === '/') {
+        blockComment = false;
+        index += 1;
+      }
+      continue;
+    }
+    if (quote) {
+      if (!escaped && character === quote) quote = undefined;
+      escaped = !escaped && character === '\\';
+      if (character !== '\\') escaped = false;
+      continue;
+    }
+    if (character === '/' && next === '/') {
+      lineComment = true;
+      index += 1;
+      continue;
+    }
+    if (character === '/' && next === '*') {
+      blockComment = true;
+      index += 1;
+      continue;
+    }
+    if (character === '"' || character === "'" || character === '`') {
+      quote = character;
+      continue;
+    }
+    if (character === '{') depth.brace += 1;
+    if (character === '}') depth.brace -= 1;
+    if (character === '[') depth.bracket += 1;
+    if (character === ']') depth.bracket -= 1;
+    if (character === '(') depth.parenthesis += 1;
+    if (character === ')') depth.parenthesis -= 1;
+    if (character === ';' && depth.brace === 0 && depth.bracket === 0 && depth.parenthesis === 0) return index + 1;
+  }
+  return source.length;
+};
+
+const extractExportedComponentDeclarations = (source) => {
+  const declarations = new Map();
+  for (const match of source.matchAll(/^export\s+const\s+([A-Za-z_$][\w$]*)\b/gm)) {
+    const start = match.index;
+    declarations.set(match[1], {end: scanDeclarationEnd(source, start), start});
+  }
+  return declarations;
+};
+
+const extractNamedLocalImports = async (sourceFile, source) => {
+  const imports = new Map();
+  for (const match of source.matchAll(/import\s*\{([^}]+)\}\s*from\s*['"]([^'"]+)['"]/g)) {
+    const sourcePath = await resolveLocalImport(sourceFile, match[2]);
+    if (!sourcePath) continue;
+    for (const entry of match[1].split(',')) {
+      const [imported, local = imported] = entry.trim().split(/\s+as\s+/);
+      if (imported && local) imports.set(local.trim(), {imported: imported.trim(), sourcePath});
+    }
+  }
+  return imports;
+};
+
+const sceneComponentPattern = (storyboardKey) => new RegExp(
+  `<TimelineSequence\\b[^>]*?\\.\\.\\.SCENES\\.${storyboardKey}[^>]*>\\s*<([A-Za-z_$][\\w$]*)\\b`,
+  's',
+);
+
+const findSceneComponentBindings = async ({allScenes, animationDirectory}) => {
+  const remotionDirectory = path.join(animationDirectory, 'remotion');
+  const candidates = await listFiles(remotionDirectory, (fileName) => fileName.endsWith('.tsx'));
+  for (const candidatePath of candidates) {
+    const source = await readFile(candidatePath, 'utf8');
+    if (!source.includes('TimelineSequence')) continue;
+    const bindings = new Map();
+    const imports = await extractNamedLocalImports(candidatePath, source);
+    for (const scene of allScenes) {
+      const componentName = source.match(sceneComponentPattern(scene.key))?.[1];
+      const imported = componentName ? imports.get(componentName) : undefined;
+      if (!componentName || !imported) {
+        bindings.clear();
+        break;
+      }
+      bindings.set(scene.id, {...imported, componentName, sequencePath: candidatePath});
+    }
+    if (bindings.size === allScenes.length) return bindings;
+  }
+  return null;
+};
+
+const createSceneModuleFingerprint = async ({componentName, sourcePath}) => {
+  const source = await readFile(sourcePath, 'utf8');
+  const declarations = extractExportedComponentDeclarations(source);
+  const component = declarations.get(componentName);
+  if (!component) return null;
+
+  const required = new Set([componentName]);
+  const pending = [componentName];
+  while (pending.length > 0) {
+    const name = pending.pop();
+    const declaration = declarations.get(name);
+    if (!declaration) continue;
+    const declarationSource = source.slice(declaration.start, declaration.end);
+    for (const candidate of declarations.keys()) {
+      if (candidate !== name && !required.has(candidate) && new RegExp(`\\b${candidate}\\b`).test(declarationSource)) {
+        required.add(candidate);
+        pending.push(candidate);
+      }
+    }
+  }
+
+  const included = [...required].map((name) => declarations.get(name)).sort((left, right) => left.start - right.start);
+  const excluded = [...declarations.values()]
+    .filter((declaration) => !included.includes(declaration))
+    .sort((left, right) => left.start - right.start);
+  const common = [];
+  let cursor = 0;
+  for (const declaration of excluded) {
+    common.push(source.slice(cursor, declaration.start));
+    cursor = declaration.end;
+  }
+  common.push(source.slice(cursor));
+  return {
+    common: common.join(''),
+    component: included.map((declaration) => source.slice(declaration.start, declaration.end)).join(''),
+  };
+};
+
+const createSceneFingerprints = async ({
+  allScenes,
+  animationDirectory,
+  encodingVariants,
+  mediaFormat,
+  outputFormats,
+  profile,
+  publishVideo,
+  runtimeFingerprint,
+  sourceFingerprint,
+  widths,
+}) => {
+  const bindings = await findSceneComponentBindings({allScenes, animationDirectory});
+  if (!bindings) return new Map(allScenes.map((scene) => [scene.id, sourceFingerprint]));
+  const sharedDirectory = path.join(ANIMATIONS_ROOT, 'shared');
+  const globalCandidates = [
+    ...(await listFiles(sharedDirectory, () => true)),
+    path.join(animationDirectory, 'remotion', 'Root.tsx'),
+    path.join(animationDirectory, 'remotion', 'storyboard.ts'),
+    path.join(PROJECT_ROOT, 'package.json'),
+    path.join(PROJECT_ROOT, 'pnpm-lock.yaml'),
+    path.join(import.meta.dirname, 'publish-remotion-media.mjs'),
+  ];
+  const globalFiles = [];
+  for (const filePath of globalCandidates) {
+    if (await fileExists(filePath)) globalFiles.push(filePath);
+  }
+  const fingerprints = new Map();
+
+  for (const scene of allScenes) {
+    const binding = bindings.get(scene.id);
+    const moduleFingerprint = await createSceneModuleFingerprint(binding);
+    if (!moduleFingerprint) {
+      fingerprints.set(scene.id, sourceFingerprint);
+      continue;
+    }
+    const dependencyFiles = [
+      ...(await collectRenderDependencies(binding.sourcePath)).filter((filePath) => filePath !== binding.sourcePath),
+      binding.sequencePath,
+    ];
+    const fingerprint = createHash('sha256');
+    fingerprint.update(JSON.stringify({
+      encodingVariants,
+      mediaFormat,
+      outputFormats,
+      profile: {
+        encoderArguments: profile.encoderArguments({...encodingVariants[0], encoderThreads: '<runtime>'}),
+        loopCount: publishVideo ? undefined : profile.loopCount,
+        targetFps: publishVideo ? VIDEO_TARGET_FPS : profile.targetFps,
+      },
+      publishVideo,
+      runtimeFingerprint,
+      scene,
+      widths,
+    }));
+    fingerprint.update(`\0component-common\0${moduleFingerprint.common}`);
+    fingerprint.update(`\0component-${binding.componentName}\0${moduleFingerprint.component}`);
+    for (const filePath of [...new Set([...globalFiles, ...dependencyFiles])].sort((left, right) => left.localeCompare(right))) {
+      fingerprint.update(`\0${path.relative(PROJECT_ROOT, filePath).replaceAll(path.sep, '/')}\0`);
+      fingerprint.update(await readFile(filePath));
+    }
+    fingerprints.set(scene.id, fingerprint.digest('hex'));
+  }
+  return fingerprints;
+};
+
 const createPublicationFingerprint = async ({
   allScenes,
   animationDirectory,
@@ -527,6 +754,39 @@ const readReusableManifest = async ({allScenes, expected, sourceFingerprint, tar
   const totalFileSize = validatedScenes.reduce((sum, scene) => sum + scene.fileSize, 0);
   if (manifest.totalFileSize !== totalFileSize) return null;
   return manifest;
+};
+
+const readReusableScene = async ({expected, manifest, scene, sceneFingerprint, targetDirectory}) => {
+  if (!manifest || manifest.animationId !== expected.animationId || manifest.format !== expected.format
+    || manifest.crf !== expected.crf || manifest.quality !== expected.quality
+    || manifest.loopCount !== expected.loopCount || manifest.size?.width !== expected.width
+    || manifest.targetFps !== expected.targetFps) return null;
+  const published = manifest.scenes?.find((candidate) => candidate.id === scene.id);
+  const expectedEndFrame = scene.start + scene.duration - 1 - scene.previewEndTrimFrames;
+  if (
+    !published
+    || published.number !== scene.number
+    || published.title !== scene.title
+    || published.startFrame !== scene.start
+    || published.endFrame !== expectedEndFrame
+    || published.crf !== expected.crf
+    || published.quality !== expected.quality
+    || published.format !== expected.outputFormat
+    || published.pixelFormat !== expected.pixelFormat
+    || published.sceneFingerprint !== sceneFingerprint
+    || published.file !== `${scene.id}.${expected.extension}`
+    || typeof published.sha256 !== 'string'
+    || !/^[a-f0-9]{64}$/i.test(published.sha256)
+  ) return null;
+  try {
+    const publishedPath = path.join(targetDirectory, published.file);
+    const fileSize = (await stat(publishedPath)).size;
+    return fileSize === published.fileSize && await sha256File(publishedPath) === published.sha256
+      ? published
+      : null;
+  } catch {
+    return null;
+  }
 };
 
 const loadStoryboardScenes = async (animationId) => {
@@ -690,6 +950,97 @@ const getRuntimeFingerprint = () => {
     };
   })();
   return runtimeFingerprintPromise;
+};
+
+const createRenderRuntime = () => ({bundlePromises: new Map(), browserPromise: undefined, temporaryBundles: new Set()});
+
+const getSharedBrowser = ({browserExecutable, runtime}) => {
+  runtime.browserPromise ??= openBrowser('chrome', {
+    browserExecutable,
+    chromiumOptions: {headless: true},
+    logLevel: 'error',
+  });
+  return runtime.browserPromise;
+};
+
+const getBundledServeUrl = async ({animationDirectory, animationId, bundleFingerprint, force, runtime}) => {
+  const cacheDirectory = path.join(BUNDLE_CACHE_ROOT, `${animationId}-${bundleFingerprint}`);
+  const cacheReady = path.join(cacheDirectory, '.inkloom-bundle-ready');
+  if (!force && await fileExists(cacheReady)) {
+    console.log(`[${animationId}] Reusing cached Remotion bundle.`);
+    return cacheDirectory;
+  }
+  const cacheKey = force ? `${cacheDirectory}-${Date.now()}` : cacheDirectory;
+  const existing = runtime.bundlePromises.get(cacheKey);
+  if (existing) return existing;
+
+  const bundlePromise = (async () => {
+    if (force) {
+      const temporaryDirectory = await mkdtemp(path.join(tmpdir(), `inkloom-bundle-${animationId}-`));
+      runtime.temporaryBundles.add(temporaryDirectory);
+      return bundleSerially({
+        entryPoint: path.join(animationDirectory, 'remotion', 'index.ts'),
+        outDir: temporaryDirectory,
+        publicDir: path.join(PROJECT_ROOT, 'public'),
+        rootDir: PROJECT_ROOT,
+        enableCaching: true,
+        onProgress: () => undefined,
+      });
+    }
+
+    await mkdir(BUNDLE_CACHE_ROOT, {recursive: true});
+    if (await fileExists(cacheReady)) return cacheDirectory;
+    if (await pathExists(cacheDirectory)) {
+      await rm(cacheDirectory, {force: true, maxRetries: 12, recursive: true, retryDelay: 150});
+    }
+    const stagingDirectory = `${cacheDirectory}.staging-${process.pid}-${Date.now()}`;
+    await rm(stagingDirectory, {force: true, maxRetries: 12, recursive: true, retryDelay: 150});
+    try {
+      await bundleSerially({
+        entryPoint: path.join(animationDirectory, 'remotion', 'index.ts'),
+        outDir: stagingDirectory,
+        publicDir: path.join(PROJECT_ROOT, 'public'),
+        rootDir: PROJECT_ROOT,
+        enableCaching: true,
+        onProgress: () => undefined,
+      });
+      if (await fileExists(cacheReady)) {
+        await rm(stagingDirectory, {force: true, maxRetries: 12, recursive: true, retryDelay: 150});
+        return cacheDirectory;
+      }
+      await cp(stagingDirectory, cacheDirectory, {force: true, recursive: true});
+      await writeFile(cacheReady, 'ready\n', 'utf8');
+      await rm(stagingDirectory, {force: true, maxRetries: 12, recursive: true, retryDelay: 150})
+        .catch((error) => console.warn(`[${animationId}] Could not remove temporary bundle cache: ${error.message}`));
+      return cacheDirectory;
+    } catch (error) {
+      await rm(stagingDirectory, {force: true, maxRetries: 12, recursive: true, retryDelay: 150});
+      throw error;
+    }
+  })();
+  runtime.bundlePromises.set(cacheKey, bundlePromise);
+  try {
+    return await bundlePromise;
+  } finally {
+    runtime.bundlePromises.delete(cacheKey);
+  }
+};
+
+const closeRenderRuntime = async (runtime) => {
+  if (runtime.browserPromise) {
+    try {
+      const browser = await runtime.browserPromise;
+      await browser.close({silent: true});
+    } catch {
+      // A failed lazy browser launch has no process to close.
+    }
+  }
+  await Promise.all([...runtime.temporaryBundles].map((directory) => rm(directory, {
+    force: true,
+    maxRetries: 12,
+    recursive: true,
+    retryDelay: 150,
+  })));
 };
 
 const inspectWebp = async (filePath) => {
@@ -911,7 +1262,165 @@ const assertAtomicSceneCompatibility = async ({
   }
 };
 
-const renderAnimation = async ({animationId, crfs, encoderThreads, force, mediaFormat, publishVideo, qualities, sceneId, widths}) => {
+const renderSceneFrames = async ({animationId, browser, composition, everyNthFrame, outputFps, scene, sceneCount, serveUrl, widths}) => {
+  const stableEndFrame = Math.min(
+    composition.durationInFrames - 1,
+    scene.start + scene.duration - 1 - scene.previewEndTrimFrames,
+  );
+  const resolutions = [];
+
+  for (const outputWidth of widths) {
+    const scale = outputWidth / composition.width;
+    const outputHeight = Math.round(composition.height * scale);
+    const resolutionLabel = `${outputWidth}x${outputHeight}`;
+    console.log(`[${animationId}] ${scene.number}/${String(sceneCount).padStart(2, '0')} ${scene.id}: rendering ${resolutionLabel} at ${outputFps}fps, source frames ${scene.start}-${stableEndFrame}`);
+    const renderStartedAt = performance.now();
+    const frameBuffers = new Map();
+    const rendered = await renderFrames({
+      composition,
+      serveUrl,
+      outputDir: null,
+      inputProps: {},
+      frameRange: [scene.start, stableEndFrame],
+      everyNthFrame,
+      imageFormat: 'png',
+      onFrameBuffer: (buffer, frame) => frameBuffers.set(frame, buffer),
+      scale,
+      concurrency: RENDER_CONCURRENCY,
+      muted: true,
+      puppeteerInstance: browser,
+      logLevel: 'error',
+    });
+    const expectedFrameCount = rendered.frameCount;
+    const sourceFrames = Array.from({length: expectedFrameCount}, (_, frameIndex) => scene.start + frameIndex * everyNthFrame);
+    const missingFrames = sourceFrames.filter((frame) => !frameBuffers.has(frame));
+    if (frameBuffers.size !== expectedFrameCount || missingFrames.length > 0) {
+      throw new Error(`${animationId}: ${scene.id} rendered ${frameBuffers.size}/${expectedFrameCount} target frames; missing ${missingFrames.join(', ') || 'unknown'}.`);
+    }
+    const orderedFrameBuffers = sourceFrames.map((frame) => frameBuffers.get(frame));
+    const bufferedBytes = orderedFrameBuffers.reduce((sum, buffer) => sum + buffer.length, 0);
+    console.log(`[${animationId}] ${scene.id}: rendered ${expectedFrameCount} target frames, ${(bufferedBytes / 1024 / 1024).toFixed(2)} MiB buffered in ${((performance.now() - renderStartedAt) / 1000).toFixed(2)}s`);
+    resolutions.push({
+      expectedDurationMs: Math.round((expectedFrameCount / outputFps) * 1000),
+      expectedFrameCount,
+      height: outputHeight,
+      orderedFrameBuffers,
+      resolutionLabel,
+      width: outputWidth,
+    });
+  }
+  return {scene, stableEndFrame, resolutions};
+};
+
+const encodeSceneFrames = async ({
+  animationId,
+  comparison,
+  encoderThreads,
+  encodingVariants,
+  mediaFormat,
+  outputFormats,
+  outputFps,
+  renderedScene,
+  sceneFingerprint,
+  stagingDirectory,
+}) => {
+  const resolutions = [];
+  for (const renderedResolution of renderedScene.resolutions) {
+    const variants = [];
+    for (const encodingVariant of encodingVariants) {
+      const outputs = [];
+      for (const outputFormat of outputFormats) {
+        const variantLabel = encodingVariant.quality === undefined
+          ? `crf${encodingVariant.crf}`
+          : `q${encodingVariant.quality}`;
+        const targetFile = comparison
+          ? `${renderedScene.scene.id}.${renderedResolution.resolutionLabel}.${variantLabel}.${outputFormat}`
+          : `${renderedScene.scene.id}.${outputFormat}`;
+        const targetPath = path.join(stagingDirectory, targetFile);
+        const outputProfile = outputFormat === 'mp4' ? MEDIA_FORMATS.avif : MEDIA_FORMATS[outputFormat];
+        const outputArguments = outputFormat === 'mp4'
+          ? ['-tag:v', 'av01', '-movflags', '+faststart', '-f', 'mp4']
+          : outputProfile.outputArguments(outputProfile.loopCount);
+        const encodeStartedAt = performance.now();
+        await runCommandWithInput('ffmpeg', [
+          '-hide_banner',
+          '-loglevel', 'error',
+          '-y',
+          '-f', 'image2pipe',
+          '-framerate', String(outputFps),
+          '-i', 'pipe:0',
+          '-an',
+          ...outputProfile.encoderArguments({...encodingVariant, encoderThreads}),
+          ...outputArguments,
+          targetPath,
+        ], renderedResolution.orderedFrameBuffers);
+        const outputInfo = await inspectOutput({filePath: targetPath, outputFormat, profile: outputProfile});
+        const validCodec = outputFormat === 'webp' || outputInfo.codec === 'av1';
+        if (
+          !outputInfo.validFormat
+          || !validCodec
+          || outputInfo.width !== renderedResolution.width
+          || outputInfo.height !== renderedResolution.height
+          || (outputFormat !== 'webp' && outputInfo.pixelFormat !== 'gbrp')
+          || outputInfo.frameCount !== renderedResolution.expectedFrameCount
+          || !Number.isFinite(outputInfo.durationMs)
+          || Math.abs(outputInfo.durationMs - renderedResolution.expectedDurationMs) > 1
+          || (outputFormat !== 'mp4' && outputInfo.loopCount !== undefined && outputInfo.loopCount !== outputProfile.loopCount)
+        ) {
+          throw new Error(`${animationId}: ${targetFile} failed ${outputFormat.toUpperCase()} validation (${JSON.stringify({
+            formatName: outputInfo.formatName,
+            majorBrand: outputInfo.majorBrand,
+            codec: outputInfo.codec,
+            width: outputInfo.width,
+            height: outputInfo.height,
+            pixelFormat: outputInfo.pixelFormat,
+            frameCount: outputInfo.frameCount,
+            expectedFrameCount: renderedResolution.expectedFrameCount,
+            durationMs: outputInfo.durationMs,
+            expectedDurationMs: renderedResolution.expectedDurationMs,
+            loopCount: outputInfo.loopCount,
+          })}).`);
+        }
+        const fileSize = (await stat(targetPath)).size;
+        if (outputProfile.maxFileSize && fileSize > outputProfile.maxFileSize) {
+          throw new Error(`${animationId}: ${targetFile} exceeds the ${outputProfile.maxFileSize}-byte ${outputFormat.toUpperCase()} limit (${fileSize} bytes).`);
+        }
+        outputs.push({
+          durationMs: outputInfo.durationMs,
+          file: targetFile,
+          fileSize,
+          format: outputFormat,
+          pixelFormat: outputInfo.pixelFormat,
+          sha256: await sha256File(targetPath),
+        });
+        const qualityLabel = encodingVariant.crf === undefined ? `quality ${encodingVariant.quality}` : `CRF ${encodingVariant.crf}`;
+        console.log(`[${animationId}] ${renderedScene.scene.id} ${renderedResolution.resolutionLabel} ${qualityLabel} ${outputFormat.toUpperCase()}: ${(fileSize / 1024 / 1024).toFixed(2)} MiB in ${((performance.now() - encodeStartedAt) / 1000).toFixed(2)}s`);
+      }
+      variants.push({...encodingVariant, outputs});
+    }
+    resolutions.push({height: renderedResolution.height, variants, width: renderedResolution.width});
+  }
+  const sceneMetadata = {
+    endFrame: renderedScene.stableEndFrame,
+    frameCount: renderedScene.resolutions[0].expectedFrameCount,
+    id: renderedScene.scene.id,
+    number: renderedScene.scene.number,
+    startFrame: renderedScene.scene.start,
+    title: renderedScene.scene.title,
+  };
+  const primaryOutput = resolutions[0].variants[0].outputs[0];
+  return comparison
+    ? {...sceneMetadata, resolutions}
+    : {
+        ...sceneMetadata,
+        ...primaryOutput,
+        crf: resolutions[0].variants[0].crf,
+        quality: resolutions[0].variants[0].quality,
+        sceneFingerprint,
+      };
+};
+
+const renderAnimation = async ({animationId, crfs, encoderThreads, force, mediaFormat, publishVideo, qualities, runtime, sceneId, widths}) => {
   const profile = MEDIA_FORMATS[mediaFormat];
   const storyboardScenes = await loadStoryboardScenes(animationId);
   const allScenes = await loadPlayerSceneMetadata(animationId, storyboardScenes);
@@ -945,60 +1454,96 @@ const renderAnimation = async ({animationId, crfs, encoderThreads, force, mediaF
         widths,
       })
     : undefined;
+  const bundleFingerprint = !comparison && !sceneId
+    ? await createBundleFingerprint(animationDirectory)
+    : undefined;
+  const expectedPublication = {
+    animationId,
+    crf: encodingVariants[0].crf,
+    extension: publishVideo ? 'mp4' : profile.extension,
+    format: publishVideo ? 'av1-mp4' : profile.manifestFormat,
+    loopCount: publishVideo ? undefined : profile.loopCount,
+    outputFormat: publishVideo ? 'mp4' : mediaFormat,
+    pixelFormat: publishVideo || mediaFormat === 'avif' ? 'gbrp' : undefined,
+    quality: encodingVariants[0].quality,
+    targetFps: publishVideo ? VIDEO_TARGET_FPS : profile.targetFps,
+    width: widths[0],
+  };
 
   await removeOrphanedStagingDirectories(targetDirectory);
   if (!force && sourceFingerprint) {
-    const reusableManifest = await readReusableManifest({
-      allScenes,
-      expected: {
-        animationId,
-        crf: encodingVariants[0].crf,
-        extension: publishVideo ? 'mp4' : profile.extension,
-        format: publishVideo ? 'av1-mp4' : profile.manifestFormat,
-        loopCount: publishVideo ? undefined : profile.loopCount,
-        outputFormat: publishVideo ? 'mp4' : mediaFormat,
-        pixelFormat: publishVideo || mediaFormat === 'avif' ? 'gbrp' : undefined,
-        quality: encodingVariants[0].quality,
-        targetFps: publishVideo ? VIDEO_TARGET_FPS : profile.targetFps,
-        width: widths[0],
-      },
-      sourceFingerprint,
-      targetDirectory,
-    });
+    const reusableManifest = await readReusableManifest({allScenes, expected: expectedPublication, sourceFingerprint, targetDirectory});
     if (reusableManifest) {
       console.log(`[${animationId}] Up to date: skipped bundle, browser rendering, and encoding.`);
       return {...reusableManifest, skipped: true};
     }
   }
 
-  await ensureFfmpeg();
-  const browserExecutable = runtimeFingerprint?.browserExecutable ?? await getBrowserExecutable();
-  if (browserExecutable) console.log(`[${animationId}] Using browser: ${browserExecutable}`);
-  const bundleDirectory = await mkdtemp(path.join(tmpdir(), `inkloom-${mediaFormat}-bundle-${animationId}-`));
   const existingManifest = atomicSceneReplacement
     ? await readExistingManifest(targetDirectory, animationId)
-    : undefined;
+    : await pathExists(path.join(targetDirectory, 'manifest.json'))
+      ? JSON.parse(await readFile(path.join(targetDirectory, 'manifest.json'), 'utf8'))
+      : undefined;
+  const sceneFingerprints = sourceFingerprint
+    ? await createSceneFingerprints({
+        allScenes,
+        animationDirectory,
+        encodingVariants,
+        mediaFormat,
+        outputFormats,
+        profile,
+        publishVideo,
+        runtimeFingerprint,
+        sourceFingerprint,
+        widths,
+      })
+    : new Map();
+  const reusableScenes = new Map();
+  if (!force && sourceFingerprint && existingManifest) {
+    const sceneExpected = {...expectedPublication, targetFps: expectedPublication.targetFps === 'source' ? existingManifest.sourceFps : expectedPublication.targetFps};
+    for (const scene of allScenes) {
+      const published = await readReusableScene({
+        expected: sceneExpected,
+        manifest: existingManifest,
+        scene,
+        sceneFingerprint: sceneFingerprints.get(scene.id),
+        targetDirectory,
+      });
+      if (published) reusableScenes.set(scene.id, published);
+    }
+  }
 
   await rm(stagingDirectory, {force: true, maxRetries: 12, recursive: true, retryDelay: 150});
-  if (atomicSceneReplacement) await cp(targetDirectory, stagingDirectory, {recursive: true});
+  if (atomicSceneReplacement || reusableScenes.size > 0) await cp(targetDirectory, stagingDirectory, {recursive: true});
   else await mkdir(stagingDirectory, {recursive: true});
-  console.log(`\n[${animationId}] Bundling composition...`);
 
-  let browser;
   try {
-    const serveUrl = await bundleSerially({
-      entryPoint: path.join(animationDirectory, 'remotion', 'index.ts'),
-      outDir: bundleDirectory,
-      publicDir: path.join(PROJECT_ROOT, 'public'),
-      rootDir: PROJECT_ROOT,
-      enableCaching: true,
-      onProgress: () => undefined,
+    if (sourceFingerprint && reusableScenes.size === allScenes.length) {
+      const manifest = {
+        ...existingManifest,
+        generatedAt: new Date().toISOString(),
+        scenes: allScenes.map((scene) => reusableScenes.get(scene.id)),
+        sourceFingerprint,
+        totalFileSize: [...reusableScenes.values()].reduce((sum, scene) => sum + scene.fileSize, 0),
+      };
+      await writeFile(path.join(stagingDirectory, 'manifest.json'), `${JSON.stringify(manifest, null, 2)}\n`, 'utf8');
+      await replaceDirectory(stagingDirectory, targetDirectory);
+      console.log(`[${animationId}] Scene cache hit: skipped bundle, browser rendering, and encoding.`);
+      return {...manifest, skipped: true};
+    }
+
+    await ensureFfmpeg();
+    const browserExecutable = runtimeFingerprint?.browserExecutable ?? await getBrowserExecutable();
+    if (browserExecutable && !runtime.browserPromise) console.log(`[runtime] Using browser: ${browserExecutable}`);
+    console.log(`\n[${animationId}] Bundling composition...`);
+    const serveUrl = await getBundledServeUrl({
+      animationDirectory,
+      animationId,
+      bundleFingerprint: bundleFingerprint ?? await createBundleFingerprint(animationDirectory),
+      force,
+      runtime,
     });
-    browser = await openBrowser('chrome', {
-      browserExecutable,
-      chromiumOptions: {headless: true},
-      logLevel: 'error',
-    });
+    const browser = await getSharedBrowser({browserExecutable, runtime});
     const compositions = await getCompositions(serveUrl, {puppeteerInstance: browser});
     const composition = selectDeckComposition(animationId, compositions);
     if (!composition) throw new Error(`${animationId}: no composition found.`);
@@ -1030,159 +1575,49 @@ const renderAnimation = async ({animationId, crfs, encoderThreads, force, mediaF
         targetDirectory,
       });
     }
-    const publishedScenes = [];
-
-    for (let index = 0; index < scenes.length; index += 1) {
-      const scene = scenes[index];
-      const stableEndFrame = Math.min(
-        composition.durationInFrames - 1,
-        scene.start + scene.duration - 1 - scene.previewEndTrimFrames,
-      );
-      const resolutions = [];
-      let sceneFrameCount = 0;
-
-      for (const outputWidth of widths) {
-        const scale = outputWidth / composition.width;
-        const outputHeight = Math.round(composition.height * scale);
-        const resolutionLabel = `${outputWidth}x${outputHeight}`;
-        console.log(`[${animationId}] ${scene.number}/${String(scenes.length).padStart(2, '0')} ${scene.id}: rendering ${resolutionLabel} at ${outputFps}fps, source frames ${scene.start}-${stableEndFrame}`);
-
-        const renderStartedAt = performance.now();
-        const frameBuffers = new Map();
-        const rendered = await renderFrames({
-          composition,
-          serveUrl,
-          outputDir: null,
-          inputProps: {},
-          frameRange: [scene.start, stableEndFrame],
-          everyNthFrame,
-          imageFormat: 'png',
-          onFrameBuffer: (buffer, frame) => frameBuffers.set(frame, buffer),
-          scale,
-          concurrency: RENDER_CONCURRENCY,
-          muted: true,
-          puppeteerInstance: browser,
-          logLevel: 'error',
+    const scenesToRender = scenes.filter((scene) => !reusableScenes.has(scene.id));
+    const publishedScenes = new Map(reusableScenes);
+    let renderPromise = scenesToRender.length > 0
+      ? renderSceneFrames({animationId, browser, composition, everyNthFrame, outputFps, scene: scenesToRender[0], sceneCount: scenes.length, serveUrl, widths})
+      : undefined;
+    let encodingPromise;
+    try {
+      for (let index = 0; index < scenesToRender.length; index += 1) {
+        const renderedScene = await renderPromise;
+        const nextRenderPromise = index + 1 < scenesToRender.length
+          ? renderSceneFrames({animationId, browser, composition, everyNthFrame, outputFps, scene: scenesToRender[index + 1], sceneCount: scenes.length, serveUrl, widths})
+          : undefined;
+        if (encodingPromise) {
+          const published = await encodingPromise;
+          publishedScenes.set(published.id, published);
+        }
+        encodingPromise = encodeSceneFrames({
+          animationId,
+          comparison,
+          encoderThreads,
+          encodingVariants,
+          mediaFormat,
+          outputFormats,
+          outputFps,
+          renderedScene,
+          sceneFingerprint: sceneFingerprints.get(renderedScene.scene.id),
+          stagingDirectory,
         });
-
-        const expectedFrameCount = rendered.frameCount;
-        const expectedDurationMs = Math.round((expectedFrameCount / outputFps) * 1000);
-        const sourceFrames = Array.from({length: expectedFrameCount}, (_, frameIndex) => scene.start + frameIndex * everyNthFrame);
-        const missingFrames = sourceFrames.filter((frame) => !frameBuffers.has(frame));
-        if (frameBuffers.size !== expectedFrameCount || missingFrames.length > 0) {
-          throw new Error(`${animationId}: ${scene.id} rendered ${frameBuffers.size}/${expectedFrameCount} target frames; missing ${missingFrames.join(', ') || 'unknown'}.`);
-        }
-        const orderedFrameBuffers = sourceFrames.map((frame) => frameBuffers.get(frame));
-        const bufferedBytes = orderedFrameBuffers.reduce((sum, buffer) => sum + buffer.length, 0);
-        const renderDurationMs = performance.now() - renderStartedAt;
-        console.log(`[${animationId}] ${scene.id}: rendered ${expectedFrameCount} target frames, ${(bufferedBytes / 1024 / 1024).toFixed(2)} MiB buffered in ${(renderDurationMs / 1000).toFixed(2)}s`);
-        sceneFrameCount = expectedFrameCount;
-        const variants = [];
-
-        for (const encodingVariant of encodingVariants) {
-          const outputs = [];
-          for (const outputFormat of outputFormats) {
-            const variantLabel = encodingVariant.quality === undefined
-              ? `crf${encodingVariant.crf}`
-              : `q${encodingVariant.quality}`;
-            const targetFile = comparison
-              ? `${scene.id}.${resolutionLabel}.${variantLabel}.${outputFormat}`
-              : `${scene.id}.${outputFormat}`;
-            const targetPath = path.join(stagingDirectory, targetFile);
-            const outputProfile = outputFormat === 'mp4' ? MEDIA_FORMATS.avif : MEDIA_FORMATS[outputFormat];
-            const outputArguments = outputFormat === 'mp4'
-              ? ['-tag:v', 'av01', '-movflags', '+faststart', '-f', 'mp4']
-              : outputProfile.outputArguments(outputProfile.loopCount);
-            const encoderArguments = outputProfile.encoderArguments({...encodingVariant, encoderThreads});
-            const encodeStartedAt = performance.now();
-            await runCommandWithInput('ffmpeg', [
-              '-hide_banner',
-              '-loglevel', 'error',
-              '-y',
-              '-f', 'image2pipe',
-              '-framerate', String(outputFps),
-              '-i', 'pipe:0',
-              '-an',
-              ...encoderArguments,
-              ...outputArguments,
-              targetPath,
-            ], orderedFrameBuffers);
-
-            const outputInfo = await inspectOutput({filePath: targetPath, outputFormat, profile: outputProfile});
-            const validCodec = outputFormat === 'webp' || outputInfo.codec === 'av1';
-            if (
-              !outputInfo.validFormat
-              || !validCodec
-              || outputInfo.width !== outputWidth
-              || outputInfo.height !== outputHeight
-              || (outputFormat !== 'webp' && outputInfo.pixelFormat !== 'gbrp')
-              || outputInfo.frameCount !== expectedFrameCount
-              || !Number.isFinite(outputInfo.durationMs)
-              || Math.abs(outputInfo.durationMs - expectedDurationMs) > 1
-              || (outputFormat !== 'mp4' && outputInfo.loopCount !== undefined && outputInfo.loopCount !== outputProfile.loopCount)
-            ) {
-              throw new Error(`${animationId}: ${targetFile} failed ${outputFormat.toUpperCase()} validation (${JSON.stringify({
-                formatName: outputInfo.formatName,
-                majorBrand: outputInfo.majorBrand,
-                codec: outputInfo.codec,
-                width: outputInfo.width,
-                height: outputInfo.height,
-                pixelFormat: outputInfo.pixelFormat,
-                frameCount: outputInfo.frameCount,
-                expectedFrameCount,
-                durationMs: outputInfo.durationMs,
-                expectedDurationMs,
-                loopCount: outputInfo.loopCount,
-              })}).`);
-            }
-
-            const fileSize = (await stat(targetPath)).size;
-            if (outputProfile.maxFileSize && fileSize > outputProfile.maxFileSize) {
-              throw new Error(`${animationId}: ${targetFile} exceeds the ${outputProfile.maxFileSize}-byte ${outputFormat.toUpperCase()} limit (${fileSize} bytes).`);
-            }
-            outputs.push({
-              durationMs: outputInfo.durationMs,
-              file: targetFile,
-              fileSize,
-              format: outputFormat,
-              pixelFormat: outputInfo.pixelFormat,
-              sha256: await sha256File(targetPath),
-            });
-            const qualityLabel = encodingVariant.crf === undefined ? `quality ${encodingVariant.quality}` : `CRF ${encodingVariant.crf}`;
-            const encodeDurationMs = performance.now() - encodeStartedAt;
-            console.log(`[${animationId}] ${scene.id} ${resolutionLabel} ${qualityLabel} ${outputFormat.toUpperCase()}: ${(fileSize / 1024 / 1024).toFixed(2)} MiB in ${(encodeDurationMs / 1000).toFixed(2)}s`);
-          }
-          variants.push({...encodingVariant, outputs});
-        }
-
-        resolutions.push({height: outputHeight, variants, width: outputWidth});
+        renderPromise = nextRenderPromise;
       }
-
-      const sceneMetadata = {
-        endFrame: stableEndFrame,
-        frameCount: sceneFrameCount,
-        id: scene.id,
-        number: scene.number,
-        startFrame: scene.start,
-        title: scene.title,
-      };
-      const primaryResolution = resolutions[0];
-      const primaryVariant = primaryResolution.variants[0];
-      const primaryOutput = primaryVariant.outputs[0];
-      publishedScenes.push(comparison
-        ? {...sceneMetadata, resolutions}
-        : {
-            ...sceneMetadata,
-            ...primaryOutput,
-            crf: primaryVariant.crf,
-            quality: primaryVariant.quality,
-          });
+      if (encodingPromise) {
+        const published = await encodingPromise;
+        publishedScenes.set(published.id, published);
+      }
+    } catch (error) {
+      await Promise.allSettled([renderPromise, encodingPromise].filter(Boolean));
+      throw error;
     }
 
     const mergedScenes = atomicSceneReplacement
-      ? allScenes.map((scene) => publishedScenes.find((published) => published.id === scene.id)
+      ? allScenes.map((scene) => publishedScenes.get(scene.id)
         ?? existingManifest.scenes.find((published) => published.id === scene.id))
-      : publishedScenes;
+      : allScenes.map((scene) => publishedScenes.get(scene.id));
     const manifest = {
       animationId,
       comparison: comparison || undefined,
@@ -1224,9 +1659,6 @@ const renderAnimation = async ({animationId, crfs, encoderThreads, force, mediaF
       console.warn(`[${animationId}] Could not remove staging directory: ${cleanupError.message}`);
     }
     throw error;
-  } finally {
-    if (browser) await browser.close({silent: true});
-    await rm(bundleDirectory, {force: true, maxRetries: 12, recursive: true, retryDelay: 150});
   }
 };
 
@@ -1249,6 +1681,7 @@ const main = async () => {
   let nextAnimationIndex = 0;
   const workerCount = Math.min(options.jobs, animationIds.length);
   const encoderThreads = workerCount === 1 ? SINGLE_WORKER_ENCODER_THREADS : ENCODER_THREADS;
+  const runtime = createRenderRuntime();
   console.log(`Running ${animationIds.length} animation(s) with ${workerCount} concurrent job(s), ${encoderThreads} encoder thread(s) per job.`);
 
   const renderNext = async () => {
@@ -1263,20 +1696,25 @@ const main = async () => {
         mediaFormat: options.mediaFormat,
         publishVideo: options.publishVideo,
         qualities: options.qualities,
+        runtime,
         sceneId: options.sceneId,
         widths: options.widths,
       });
     }
   };
 
-  const workerResults = await Promise.allSettled(
-    Array.from({length: workerCount}, () => renderNext()),
-  );
-  const failedWorker = workerResults.find((result) => result.status === 'rejected');
-  if (failedWorker?.status === 'rejected') throw failedWorker.reason;
-  const totalSize = manifests.reduce((sum, manifest) => sum + manifest.totalFileSize, 0);
-  const skippedCount = manifests.filter((manifest) => manifest.skipped).length;
-  console.log(`\nProcessed ${manifests.length} animations (${skippedCount} up to date), ${manifests.reduce((sum, manifest) => sum + manifest.scenes.length, 0)} scenes, ${(totalSize / 1024 / 1024).toFixed(2)} MiB.`);
+  try {
+    const workerResults = await Promise.allSettled(
+      Array.from({length: workerCount}, () => renderNext()),
+    );
+    const failedWorker = workerResults.find((result) => result.status === 'rejected');
+    if (failedWorker?.status === 'rejected') throw failedWorker.reason;
+    const totalSize = manifests.reduce((sum, manifest) => sum + manifest.totalFileSize, 0);
+    const skippedCount = manifests.filter((manifest) => manifest.skipped).length;
+    console.log(`\nProcessed ${manifests.length} animations (${skippedCount} up to date), ${manifests.reduce((sum, manifest) => sum + manifest.scenes.length, 0)} scenes, ${(totalSize / 1024 / 1024).toFixed(2)} MiB.`);
+  } finally {
+    await closeRenderRuntime(runtime);
+  }
 };
 
 main().catch((error) => {
