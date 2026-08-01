@@ -1,0 +1,30 @@
+@import "tailwindcss";
+@import "@astrojs/starlight-tailwind";
+@import "lxgw-wenkai-mono-gb-screen-webfont/fonts/style.css";
+
+@source "../";
+
+@font-face {
+  font-family: "LXGW WenKai Screen";
+  src: url("../../public/fonts/lxgw-wenkai-screen/lxgw-wenkai-screen-regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@theme inline {
+  --font-site-body: var(--inkloom-site-body);
+  --font-site-heading: var(--inkloom-site-heading);
+  --font-site-ui: var(--inkloom-site-ui);
+  --font-site-mono: var(--inkloom-site-mono);
+  --font-sans: var(--inkloom-site-body);
+  --font-mono: var(--inkloom-site-mono);
+}
+
+:root {
+  --inkloom-site-body: "LXGW WenKai Screen", serif;
+  --inkloom-site-heading: "LXGW WenKai Screen", serif;
+  --inkloom-site-ui: "LXGW WenKai Screen", serif;
+  --inkloom-site-mono: "LXGW WenKai Mono GB Screen", monospace;
+  font-synthesis: weight;
+}

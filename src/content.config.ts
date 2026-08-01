@@ -11,6 +11,7 @@ export const collections = {
 		schema: docsSchema({
 			extend: z.object({
 				iframeFit: z.boolean().default(false),
+				typography: z.enum(['wenkai']).default('wenkai'),
 			}),
 		}),
 	}),

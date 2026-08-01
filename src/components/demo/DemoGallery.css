@@ -49,7 +49,7 @@
 .demo-gallery__caption span {
   grid-column: 1;
   color: var(--sl-color-text-muted);
-  font: 600 0.68rem/1.2 ui-monospace, SFMono-Regular, Consolas, monospace;
+  font: 600 0.68rem/1.2 var(--font-site-mono);
   text-transform: uppercase;
 }
 

@@ -1,0 +1,71 @@
+---
+import Default from '@astrojs/starlight/components/ThemeSelect.astro';
+---
+
+<div class="inkloom-theme-controls font-site-ui">
+  <select id="inkloom-theme-select" class="inkloom-theme-select" aria-label="切换界面主题">
+    <option value="default">默认主题</option>
+    <option value="rapide">极速</option>
+    <option value="catppuccin">柔和</option>
+    <option value="ion">时尚</option>
+    <option value="black">极简</option>
+    <option value="flexoki">温暖</option>
+    <option value="nova">现代</option>
+    <option value="nextjs">Next.js</option>
+    <option value="galaxy">星系</option>
+    <option value="page">流畅</option>
+    <option value="gruvbox">复古</option>
+    <option value="six">现代</option>
+    <option value="vintage">经典</option>
+    <option value="rose-pine">松石</option>
+    <option value="nord">北极</option>
+    <option value="terminal">终端</option>
+    <option value="celestia">天青</option>
+    <option value="lucode">精制</option>
+  </select>
+  <Default {...Astro.props} />
+</div>
+
+<script>
+  const applyThemeStyle = () => {
+    const select = document.querySelector('#inkloom-theme-select') as HTMLSelectElement | null;
+    const selected = localStorage.getItem('inkloom-theme-style') || 'default';
+    document.documentElement.dataset.themeStyle = selected;
+    if (!select) return;
+    select.value = selected;
+    select.onchange = () => {
+      document.documentElement.dataset.themeStyle = select.value;
+      localStorage.setItem('inkloom-theme-style', select.value);
+    };
+  };
+
+  document.addEventListener('astro:page-load', applyThemeStyle);
+  applyThemeStyle();
+</script>
+
+<style>
+  .inkloom-theme-controls {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .inkloom-theme-select {
+    max-width: 8rem;
+    min-height: 2rem;
+    border: 1px solid var(--sl-color-hairline);
+    border-radius: 0.25rem;
+    background: var(--sl-color-bg-nav);
+    color: var(--sl-color-text);
+    cursor: pointer;
+    font: inherit;
+    font-size: 0.78rem;
+    padding: 0.2rem 0.45rem;
+  }
+
+  @media (max-width: 50rem) {
+    .inkloom-theme-select {
+      display: none;
+    }
+  }
+</style>

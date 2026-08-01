@@ -4,6 +4,7 @@ import react from '@astrojs/react';
 import starlight from '@astrojs/starlight';
 import starlightAutoSidebar from 'starlight-auto-sidebar';
 import starlightCatppuccin from '@catppuccin/starlight';
+import tailwindcss from '@tailwindcss/vite';
 import path from 'path';
 
 // https://astro.build/config
@@ -15,6 +16,7 @@ export default defineConfig({
 	base: '/inkloom',
 
 	vite: {
+		plugins: [tailwindcss()],
 		resolve: {
 			alias: {
 				'@': path.resolve('./src'),
@@ -34,11 +36,13 @@ export default defineConfig({
 				})
 			],
 			customCss: [
+				'./src/styles/site-tailwind.css',
 				'./src/styles/custom.css',
 			],
 			components: {
+				Head: './src/components/overrides/TypographyHead.astro',
 				PageTitle: './src/components/overrides/PageTitle.astro',
-				Header: './src/components/overrides/Header.astro',
+				ThemeSelect: './src/components/overrides/ThemeSelect.astro',
 			},
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/inkloomer/inkloom' }],
 			editLink: {

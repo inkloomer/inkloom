@@ -45,7 +45,7 @@
   background: transparent;
   color: var(--deck-muted);
   cursor: pointer;
-  font: 600 0.78rem/1.1 ui-monospace, SFMono-Regular, Consolas, monospace;
+  font: 600 0.78rem/1.1 var(--font-site-mono);
   margin: 0;
   padding: 0.35rem 0.55rem;
 }
@@ -100,7 +100,7 @@
 
 .remotion-deck__status {
   color: var(--deck-muted);
-  font: 600 0.72rem/1.2 ui-monospace, SFMono-Regular, Consolas, monospace;
+  font: 600 0.72rem/1.2 var(--font-site-mono);
   white-space: nowrap;
 }
 
@@ -159,7 +159,7 @@
   background: transparent;
   color: var(--deck-muted);
   cursor: pointer;
-  font: 700 0.72rem/1 ui-monospace, SFMono-Regular, Consolas, monospace;
+  font: 700 0.72rem/1 var(--font-site-mono);
   margin: 0;
 }
 
@@ -198,14 +198,14 @@
 .remotion-deck__copy-feedback {
   max-width: 8.5rem;
   color: var(--deck-accent);
-  font: 700 0.68rem/1.15 ui-monospace, SFMono-Regular, Consolas, monospace;
+  font: 700 0.68rem/1.15 var(--font-site-mono);
   white-space: nowrap;
 }
 
 .remotion-deck__scene-heading span,
 .remotion-deck__card-heading span {
   color: var(--deck-accent);
-  font: 800 0.75rem/1 ui-monospace, SFMono-Regular, Consolas, monospace;
+  font: 800 0.75rem/1 var(--font-site-mono);
 }
 
 .remotion-deck__scene-heading strong,
@@ -242,7 +242,7 @@
   height: 100%;
   place-items: center;
   color: var(--deck-muted);
-  font: 700 0.8rem/1.3 ui-monospace, SFMono-Regular, Consolas, monospace;
+  font: 700 0.8rem/1.3 var(--font-site-mono);
 }
 
 .remotion-deck__center-control {

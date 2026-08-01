@@ -1,0 +1,9 @@
+---
+import Default from '@astrojs/starlight/components/Head.astro';
+import {siteTypographyCss, type SiteTypographyPresetId} from '@/typography/site-presets';
+
+const preset = Astro.locals.starlightRoute.entry.data.typography as SiteTypographyPresetId | undefined;
+---
+
+<Default {...Astro.props} />
+<style is:global set:html={siteTypographyCss(preset)} />
