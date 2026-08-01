@@ -1,4 +1,5 @@
 import {spawn} from 'node:child_process';
+import {createHash} from 'node:crypto';
 import {cp, mkdtemp, mkdir, readFile, readdir, rename, rm, stat, writeFile} from 'node:fs/promises';
 import {homedir, tmpdir} from 'node:os';
 import path from 'node:path';
@@ -27,7 +28,7 @@ const MEDIA_FORMATS = {
     defaultWidth: 2560,
     directory: 'animation-avif',
     extension: 'avif',
-    encoderArguments: ({crf, encoderThreads = ENCODER_THREADS}) => ['-c:v', 'libaom-av1', '-crf', String(crf), '-b:v', '0', '-cpu-used', '6', '-row-mt', '1', '-tiles', '2x2', '-threads', String(encoderThreads)],
+    encoderArguments: ({crf, encoderThreads = ENCODER_THREADS}) => ['-c:v', 'libaom-av1', '-crf', String(crf), '-b:v', '0', '-pix_fmt', 'gbrp', '-cpu-used', '6', '-row-mt', '1', '-tiles', '2x2', '-threads', String(encoderThreads)],
     inspection: 'ffprobe',
     manifestFormat: 'animated-avif',
     maxFileSize: undefined,
@@ -54,6 +55,9 @@ const MEDIA_FORMATS = {
 const MEDIA_FORMAT_NAMES = Object.keys(MEDIA_FORMATS);
 const animationDirectories = new Map();
 let bundleQueue = Promise.resolve();
+let browserExecutablePromise;
+let ffmpegCheckPromise;
+let runtimeFingerprintPromise;
 
 const usage = `
 Render every stable scene range as a standalone AV1 MP4, or compare AV1 encodings.
@@ -62,6 +66,7 @@ Usage:
   pnpm animation:publish-video [animation-id ...]
   pnpm animation:publish-video legal-jurisdiction --scene mediation-confirmation
   pnpm animation:publish-avif [--jobs 1-4] [animation-id ...]
+  pnpm animation:publish-avif --force [animation-id ...]
   pnpm animation:publish-webp [--jobs 1-4] [animation-id ...]
   pnpm animation:publish-avif legal-jurisdiction --scene mediation-confirmation --widths 1920
   pnpm animation:compare-av1 legal-jurisdiction --scene mediation-confirmation --widths 1920,2560 --crfs 35,25,16
@@ -87,6 +92,7 @@ const parseArguments = (rawArguments) => {
   let sceneId;
   let widths;
   let publishVideo = false;
+  let force = false;
   let qualityExplicit = false;
   let jobs = DEFAULT_JOBS;
 
@@ -188,6 +194,10 @@ const parseArguments = (rawArguments) => {
       publishVideo = true;
       continue;
     }
+    if (argument === '--force') {
+      force = true;
+      continue;
+    }
     if (argument === '--jobs') {
       jobs = parseJobs(readValue(index, argument), argument);
       index += 1;
@@ -227,6 +237,7 @@ const parseArguments = (rawArguments) => {
   return {
     animationIds,
     crfs: resolvedCrfs,
+    force,
     help: false,
     jobs,
     mediaFormat,
@@ -293,6 +304,11 @@ const findBrowserExecutable = async () => {
   return null;
 };
 
+const getBrowserExecutable = () => {
+  browserExecutablePromise ??= findBrowserExecutable();
+  return browserExecutablePromise;
+};
+
 const discoverAnimationDirectories = async (directory, depth = 0) => {
   const entries = await readdir(directory, {withFileTypes: true});
 
@@ -345,6 +361,172 @@ const listFiles = async (directory, predicate) => {
   }
 
   return files;
+};
+
+const resolveLocalImport = async (sourceFile, specifier) => {
+  const unresolvedPath = specifier.startsWith('@/')
+    ? path.join(PROJECT_ROOT, 'src', specifier.slice(2))
+    : specifier.startsWith('.')
+      ? path.resolve(path.dirname(sourceFile), specifier)
+      : null;
+  if (!unresolvedPath) return null;
+  const candidates = [
+    unresolvedPath,
+    ...['.ts', '.tsx', '.js', '.jsx', '.json', '.css'].map((extension) => `${unresolvedPath}${extension}`),
+    ...['index.ts', 'index.tsx', 'index.js', 'index.jsx'].map((fileName) => path.join(unresolvedPath, fileName)),
+  ];
+  for (const candidate of candidates) {
+    if (await fileExists(candidate)) return candidate;
+  }
+  return null;
+};
+
+const collectRenderDependencies = async (entryPoint) => {
+  const dependencies = new Set();
+  const queue = [entryPoint];
+  const textExtensions = new Set(['.css', '.js', '.jsx', '.ts', '.tsx']);
+
+  while (queue.length > 0) {
+    const filePath = path.resolve(queue.pop());
+    if (dependencies.has(filePath)) continue;
+    dependencies.add(filePath);
+    if (!textExtensions.has(path.extname(filePath).toLowerCase())) continue;
+    const source = await readFile(filePath, 'utf8');
+    const specifiers = [
+      ...source.matchAll(/(?:import|export)\s+(?:[^;]*?\sfrom\s*)?['"]([^'"]+)['"]/g),
+      ...source.matchAll(/import\(\s*['"]([^'"]+)['"]\s*\)/g),
+    ].map((match) => match[1]);
+    for (const specifier of specifiers) {
+      const dependency = await resolveLocalImport(filePath, specifier);
+      if (dependency) queue.push(dependency);
+    }
+    for (const match of source.matchAll(/staticFile\(\s*['"]([^'"]+)['"]\s*\)/g)) {
+      const publicPath = path.join(PROJECT_ROOT, 'public', match[1].replace(/^[/\\]+/, ''));
+      if (await fileExists(publicPath)) queue.push(publicPath);
+    }
+    if (path.extname(filePath).toLowerCase() === '.css') {
+      for (const match of source.matchAll(/url\(\s*['"]?([^'"\)]+)['"]?\s*\)/g)) {
+        const asset = match[1].trim();
+        if (/^(?:data:|https?:|#)/i.test(asset)) continue;
+        const assetPath = path.resolve(path.dirname(filePath), asset);
+        if (await fileExists(assetPath)) queue.push(assetPath);
+      }
+    }
+  }
+
+  return [...dependencies];
+};
+
+const sha256File = async (filePath) => createHash('sha256')
+  .update(await readFile(filePath))
+  .digest('hex');
+
+const createPublicationFingerprint = async ({
+  allScenes,
+  animationDirectory,
+  encodingVariants,
+  mediaFormat,
+  outputFormats,
+  profile,
+  publishVideo,
+  runtimeFingerprint,
+  widths,
+}) => {
+  const sharedDirectory = path.join(ANIMATIONS_ROOT, 'shared');
+  const sourceFiles = [...new Set([
+    ...(await listFiles(animationDirectory, () => true)),
+    ...(await listFiles(sharedDirectory, () => true)),
+    ...(await collectRenderDependencies(path.join(animationDirectory, 'remotion', 'index.ts'))),
+    path.join(PROJECT_ROOT, 'package.json'),
+    path.join(PROJECT_ROOT, 'pnpm-lock.yaml'),
+    path.join(import.meta.dirname, 'publish-remotion-media.mjs'),
+  ])].sort((left, right) => left.localeCompare(right));
+  const fingerprint = createHash('sha256');
+  fingerprint.update(JSON.stringify({
+    allScenes,
+    encodingVariants,
+    mediaFormat,
+    outputFormats,
+    profile: {
+      encoderArguments: profile.encoderArguments({...encodingVariants[0], encoderThreads: '<runtime>'}),
+      loopCount: publishVideo ? undefined : profile.loopCount,
+      manifestFormat: publishVideo ? 'av1-mp4' : profile.manifestFormat,
+      outputArguments: publishVideo
+        ? ['-tag:v', 'av01', '-movflags', '+faststart', '-f', 'mp4']
+        : profile.outputArguments(profile.loopCount),
+      targetFps: publishVideo ? VIDEO_TARGET_FPS : profile.targetFps,
+    },
+    publishVideo,
+    runtimeFingerprint,
+    widths,
+  }));
+
+  for (const filePath of sourceFiles) {
+    fingerprint.update(`\0${path.relative(PROJECT_ROOT, filePath).replaceAll(path.sep, '/')}\0`);
+    fingerprint.update(await readFile(filePath));
+  }
+
+  return fingerprint.digest('hex');
+};
+
+const readReusableManifest = async ({allScenes, expected, sourceFingerprint, targetDirectory}) => {
+  let manifest;
+  try {
+    manifest = JSON.parse(await readFile(path.join(targetDirectory, 'manifest.json'), 'utf8'));
+  } catch {
+    return null;
+  }
+
+  const expectedTargetFps = expected.targetFps === 'source'
+    ? manifest.sourceFps
+    : manifest.sourceFps / Math.max(1, Math.round(manifest.sourceFps / expected.targetFps));
+  if (
+    manifest.sourceFingerprint !== sourceFingerprint
+    || manifest.animationId !== expected.animationId
+    || manifest.format !== expected.format
+    || manifest.crf !== expected.crf
+    || manifest.quality !== expected.quality
+    || manifest.loopCount !== expected.loopCount
+    || manifest.size?.width !== expected.width
+    || !Number.isFinite(expectedTargetFps)
+    || manifest.targetFps !== expectedTargetFps
+    || !Array.isArray(manifest.scenes)
+  ) return null;
+  if (JSON.stringify(manifest.scenes.map((scene) => scene.id)) !== JSON.stringify(allScenes.map((scene) => scene.id))) return null;
+
+  const validatedScenes = await Promise.all(allScenes.map(async (scene) => {
+    const published = manifest.scenes.find((candidate) => candidate.id === scene.id);
+    const expectedEndFrame = scene.start + scene.duration - 1 - scene.previewEndTrimFrames;
+    if (
+      !published
+      || published.number !== scene.number
+      || published.title !== scene.title
+      || published.startFrame !== scene.start
+      || published.endFrame !== expectedEndFrame
+      || published.crf !== expected.crf
+      || published.quality !== expected.quality
+      || published.format !== expected.outputFormat
+      || published.pixelFormat !== expected.pixelFormat
+      || published.file !== `${scene.id}.${expected.extension}`
+      || typeof published.file !== 'string'
+      || path.basename(published.file) !== published.file
+      || typeof published.sha256 !== 'string'
+      || !/^[a-f0-9]{64}$/i.test(published.sha256)
+    ) return null;
+    const publishedPath = path.join(targetDirectory, published.file);
+    try {
+      const fileSize = (await stat(publishedPath)).size;
+      if (fileSize !== published.fileSize || await sha256File(publishedPath) !== published.sha256) return null;
+      return published;
+    } catch {
+      return null;
+    }
+  }));
+
+  if (validatedScenes.some((scene) => scene === null)) return null;
+  const totalFileSize = validatedScenes.reduce((sum, scene) => sum + scene.fileSize, 0);
+  if (manifest.totalFileSize !== totalFileSize) return null;
+  return manifest;
 };
 
 const loadStoryboardScenes = async (animationId) => {
@@ -419,18 +601,6 @@ const selectDeckComposition = (animationId, compositions) => {
     ?? [...compositions].sort((a, b) => b.durationInFrames - a.durationInFrames)[0];
 };
 
-const runCommand = (command, args) => new Promise((resolve, reject) => {
-  const child = spawn(command, args, {stdio: 'inherit', windowsHide: true});
-  child.once('error', reject);
-  child.once('exit', (code, signal) => {
-    if (code === 0) {
-      resolve();
-      return;
-    }
-    reject(new Error(`${command} exited with ${signal ? `signal ${signal}` : `code ${code}`}.`));
-  });
-});
-
 const runCommandWithInput = (command, args, buffers) => new Promise((resolve, reject) => {
   const child = spawn(command, args, {stdio: ['pipe', 'inherit', 'inherit'], windowsHide: true});
   const input = Readable.from(buffers);
@@ -475,6 +645,53 @@ const runCommandCapture = (command, args) => new Promise((resolve, reject) => {
   });
 });
 
+const ensureFfmpeg = () => {
+  ffmpegCheckPromise ??= runCommandCapture('ffmpeg', ['-hide_banner', '-version']).then((output) => output.trim());
+  return ffmpegCheckPromise;
+};
+
+const createFontEnvironmentFingerprint = async () => {
+  const candidates = process.platform === 'win32'
+    ? [
+        path.join(process.env.WINDIR ?? 'C:\\Windows', 'Fonts'),
+        process.env.LOCALAPPDATA ? path.join(process.env.LOCALAPPDATA, 'Microsoft', 'Windows', 'Fonts') : null,
+      ]
+    : process.platform === 'darwin'
+      ? ['/System/Library/Fonts', '/Library/Fonts', path.join(homedir(), 'Library', 'Fonts')]
+      : ['/usr/share/fonts', '/usr/local/share/fonts', path.join(homedir(), '.local', 'share', 'fonts')];
+  const fontFiles = [];
+  for (const directory of candidates.filter(Boolean)) {
+    if (await pathExists(directory)) fontFiles.push(...(await listFiles(directory, () => true)));
+  }
+  const fingerprint = createHash('sha256');
+  for (const filePath of fontFiles.sort((left, right) => left.localeCompare(right))) {
+    const info = await stat(filePath);
+    fingerprint.update(`${filePath}\0${info.size}\0${info.mtimeMs}\0`);
+  }
+  return fingerprint.digest('hex');
+};
+
+const getRuntimeFingerprint = () => {
+  runtimeFingerprintPromise ??= (async () => {
+    const [browserExecutable, ffmpegVersion, fontEnvironment] = await Promise.all([
+      getBrowserExecutable(),
+      ensureFfmpeg(),
+      createFontEnvironmentFingerprint(),
+    ]);
+    const browserInfo = browserExecutable ? await stat(browserExecutable) : undefined;
+    return {
+      browserExecutable,
+      browserMtimeMs: browserInfo?.mtimeMs,
+      browserSize: browserInfo?.size,
+      ffmpegVersion,
+      fontEnvironment,
+      node: process.versions.node,
+      platform: `${process.platform}-${process.arch}`,
+    };
+  })();
+  return runtimeFingerprintPromise;
+};
+
 const inspectWebp = async (filePath) => {
   const info = await runCommandCapture('webpmux', ['-info', filePath]);
   const canvas = info.match(/Canvas size\s*:\s*(\d+)\s+x\s+(\d+)/);
@@ -507,6 +724,7 @@ const inspectOutput = async ({filePath, outputFormat, profile}) => {
       height: info.height,
       loopCount: info.loopCount,
       majorBrand: undefined,
+      pixelFormat: undefined,
       validFormat: true,
       width: info.width,
     };
@@ -530,6 +748,7 @@ const inspectOutput = async ({filePath, outputFormat, profile}) => {
     height: stream?.height,
     loopCount: undefined,
     majorBrand: probe.format?.tags?.major_brand,
+    pixelFormat: stream?.pix_fmt,
     validFormat: outputFormat === 'avif'
       ? probe.format?.tags?.major_brand === 'avis'
       : probe.format?.format_name?.includes('mp4'),
@@ -648,6 +867,7 @@ const assertAtomicSceneCompatibility = async ({
   }
 
   for (const scene of allScenes) {
+    if (scene.id === sceneId) continue;
     const published = manifest.scenes?.find((candidate) => candidate.id === scene.id);
     if (!published) continue;
     const stableEndFrame = Math.min(
@@ -675,6 +895,7 @@ const assertAtomicSceneCompatibility = async ({
       !outputInfo.validFormat
       || outputInfo.width !== outputWidth
       || outputInfo.height !== outputHeight
+      || (outputFormat !== 'webp' && outputInfo.pixelFormat !== 'gbrp')
       || outputInfo.frameCount !== expectedFrameCount
       || !Number.isFinite(outputInfo.durationMs)
       || Math.abs(outputInfo.durationMs - expectedDurationMs) > 1
@@ -690,7 +911,7 @@ const assertAtomicSceneCompatibility = async ({
   }
 };
 
-const renderAnimation = async ({animationId, browserExecutable, crfs, encoderThreads, mediaFormat, publishVideo, qualities, sceneId, widths}) => {
+const renderAnimation = async ({animationId, crfs, encoderThreads, force, mediaFormat, publishVideo, qualities, sceneId, widths}) => {
   const profile = MEDIA_FORMATS[mediaFormat];
   const storyboardScenes = await loadStoryboardScenes(animationId);
   const allScenes = await loadPlayerSceneMetadata(animationId, storyboardScenes);
@@ -702,18 +923,62 @@ const renderAnimation = async ({animationId, browserExecutable, crfs, encoderThr
   const comparison = !publishVideo && (encodingVariants.length > 1 || widths.length > 1);
   const outputFormats = publishVideo ? ['mp4'] : crfs ? ['avif', 'mp4'] : [mediaFormat];
   const animationDirectory = getAnimationDirectory(animationId);
-  const bundleDirectory = await mkdtemp(path.join(tmpdir(), `inkloom-${mediaFormat}-bundle-${animationId}-`));
   const comparisonRunId = new Date().toISOString().replaceAll(':', '-').replaceAll('.', '-');
   const targetDirectory = comparison
     ? path.join(COMPARISON_ROOT, animationId, comparisonRunId)
     : path.join(PROJECT_ROOT, 'public', publishVideo ? 'animation-video' : profile.directory, animationId);
   const stagingDirectory = `${targetDirectory}.staging-${process.pid}`;
   const atomicSceneReplacement = Boolean(sceneId && !comparison);
+  const runtimeFingerprint = !comparison && !sceneId
+    ? await getRuntimeFingerprint()
+    : undefined;
+  const sourceFingerprint = !comparison && !sceneId
+    ? await createPublicationFingerprint({
+        allScenes,
+        animationDirectory,
+        encodingVariants,
+        mediaFormat,
+        outputFormats,
+        profile,
+        publishVideo,
+        runtimeFingerprint,
+        widths,
+      })
+    : undefined;
+
+  await removeOrphanedStagingDirectories(targetDirectory);
+  if (!force && sourceFingerprint) {
+    const reusableManifest = await readReusableManifest({
+      allScenes,
+      expected: {
+        animationId,
+        crf: encodingVariants[0].crf,
+        extension: publishVideo ? 'mp4' : profile.extension,
+        format: publishVideo ? 'av1-mp4' : profile.manifestFormat,
+        loopCount: publishVideo ? undefined : profile.loopCount,
+        outputFormat: publishVideo ? 'mp4' : mediaFormat,
+        pixelFormat: publishVideo || mediaFormat === 'avif' ? 'gbrp' : undefined,
+        quality: encodingVariants[0].quality,
+        targetFps: publishVideo ? VIDEO_TARGET_FPS : profile.targetFps,
+        width: widths[0],
+      },
+      sourceFingerprint,
+      targetDirectory,
+    });
+    if (reusableManifest) {
+      console.log(`[${animationId}] Up to date: skipped bundle, browser rendering, and encoding.`);
+      return {...reusableManifest, skipped: true};
+    }
+  }
+
+  await ensureFfmpeg();
+  const browserExecutable = runtimeFingerprint?.browserExecutable ?? await getBrowserExecutable();
+  if (browserExecutable) console.log(`[${animationId}] Using browser: ${browserExecutable}`);
+  const bundleDirectory = await mkdtemp(path.join(tmpdir(), `inkloom-${mediaFormat}-bundle-${animationId}-`));
   const existingManifest = atomicSceneReplacement
     ? await readExistingManifest(targetDirectory, animationId)
     : undefined;
 
-  await removeOrphanedStagingDirectories(targetDirectory);
   await rm(stagingDirectory, {force: true, maxRetries: 12, recursive: true, retryDelay: 150});
   if (atomicSceneReplacement) await cp(targetDirectory, stagingDirectory, {recursive: true});
   else await mkdir(stagingDirectory, {recursive: true});
@@ -850,6 +1115,7 @@ const renderAnimation = async ({animationId, browserExecutable, crfs, encoderThr
               || !validCodec
               || outputInfo.width !== outputWidth
               || outputInfo.height !== outputHeight
+              || (outputFormat !== 'webp' && outputInfo.pixelFormat !== 'gbrp')
               || outputInfo.frameCount !== expectedFrameCount
               || !Number.isFinite(outputInfo.durationMs)
               || Math.abs(outputInfo.durationMs - expectedDurationMs) > 1
@@ -861,6 +1127,7 @@ const renderAnimation = async ({animationId, browserExecutable, crfs, encoderThr
                 codec: outputInfo.codec,
                 width: outputInfo.width,
                 height: outputInfo.height,
+                pixelFormat: outputInfo.pixelFormat,
                 frameCount: outputInfo.frameCount,
                 expectedFrameCount,
                 durationMs: outputInfo.durationMs,
@@ -873,7 +1140,14 @@ const renderAnimation = async ({animationId, browserExecutable, crfs, encoderThr
             if (outputProfile.maxFileSize && fileSize > outputProfile.maxFileSize) {
               throw new Error(`${animationId}: ${targetFile} exceeds the ${outputProfile.maxFileSize}-byte ${outputFormat.toUpperCase()} limit (${fileSize} bytes).`);
             }
-            outputs.push({durationMs: outputInfo.durationMs, file: targetFile, fileSize, format: outputFormat});
+            outputs.push({
+              durationMs: outputInfo.durationMs,
+              file: targetFile,
+              fileSize,
+              format: outputFormat,
+              pixelFormat: outputInfo.pixelFormat,
+              sha256: await sha256File(targetPath),
+            });
             const qualityLabel = encodingVariant.crf === undefined ? `quality ${encodingVariant.quality}` : `CRF ${encodingVariant.crf}`;
             const encodeDurationMs = performance.now() - encodeStartedAt;
             console.log(`[${animationId}] ${scene.id} ${resolutionLabel} ${qualityLabel} ${outputFormat.toUpperCase()}: ${(fileSize / 1024 / 1024).toFixed(2)} MiB in ${(encodeDurationMs / 1000).toFixed(2)}s`);
@@ -931,6 +1205,7 @@ const renderAnimation = async ({animationId, browserExecutable, crfs, encoderThr
         width,
       })) : undefined,
       sourceFps: composition.fps,
+      sourceFingerprint,
       targetFps: outputFps,
       totalFileSize: mergedScenes.reduce((sum, scene) => sum + (comparison
         ? scene.resolutions.reduce((resolutionTotal, resolution) => resolutionTotal
@@ -962,7 +1237,6 @@ const main = async () => {
     return;
   }
 
-  await runCommand('ffmpeg', ['-hide_banner', '-version']);
   const discoveredIds = await discoverAnimationIds();
   const animationIds = options.animationIds.length === 0 ? discoveredIds : [...new Set(options.animationIds)];
   const invalidIds = animationIds.filter((animationId) => !ANIMATION_ID_PATTERN.test(animationId));
@@ -971,8 +1245,6 @@ const main = async () => {
   if (missingIds.length > 0) throw new Error(`Animation not found or incomplete: ${missingIds.join(', ')}`);
 
   await mkdir(options.publishVideo ? PUBLIC_VIDEO_ROOT : options.crfs ? COMPARISON_ROOT : path.join(PROJECT_ROOT, 'public', MEDIA_FORMATS[options.mediaFormat].directory), {recursive: true});
-  const browserExecutable = await findBrowserExecutable();
-  if (browserExecutable) console.log(`Using browser: ${browserExecutable}`);
   const manifests = new Array(animationIds.length);
   let nextAnimationIndex = 0;
   const workerCount = Math.min(options.jobs, animationIds.length);
@@ -985,9 +1257,9 @@ const main = async () => {
       nextAnimationIndex += 1;
       manifests[animationIndex] = await renderAnimation({
         animationId: animationIds[animationIndex],
-        browserExecutable,
         crfs: options.crfs,
         encoderThreads,
+        force: options.force,
         mediaFormat: options.mediaFormat,
         publishVideo: options.publishVideo,
         qualities: options.qualities,
@@ -1003,7 +1275,8 @@ const main = async () => {
   const failedWorker = workerResults.find((result) => result.status === 'rejected');
   if (failedWorker?.status === 'rejected') throw failedWorker.reason;
   const totalSize = manifests.reduce((sum, manifest) => sum + manifest.totalFileSize, 0);
-  console.log(`\nPublished ${manifests.length} animations, ${manifests.reduce((sum, manifest) => sum + manifest.scenes.length, 0)} scenes, ${(totalSize / 1024 / 1024).toFixed(2)} MiB.`);
+  const skippedCount = manifests.filter((manifest) => manifest.skipped).length;
+  console.log(`\nProcessed ${manifests.length} animations (${skippedCount} up to date), ${manifests.reduce((sum, manifest) => sum + manifest.scenes.length, 0)} scenes, ${(totalSize / 1024 / 1024).toFixed(2)} MiB.`);
 };
 
 main().catch((error) => {

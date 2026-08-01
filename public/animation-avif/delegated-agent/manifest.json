@@ -3,7 +3,7 @@
   "compositionId": "DelegatedAgent",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-08-01T10:16:07.289Z",
+  "generatedAt": "2026-08-01T11:24:54.059Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -16,8 +16,10 @@
       "title": "授权分流",
       "durationMs": 4000,
       "file": "authorization-fork.avif",
-      "fileSize": 313913,
+      "fileSize": 312316,
       "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "df4fe4dc714787d818cba0f6b4177d03b36cb34ec11de8c3fc026d1abb5101c0",
       "crf": 35,
       "quality": 45
     },
@@ -32,6 +34,8 @@
       "file": "special-authorization.avif",
       "fileSize": 275818,
       "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "dcad8116cded1209ab13217ad2b0fba23700586bb2113670f58044eb0eb858cf",
       "crf": 35,
       "quality": 45
     },
@@ -44,8 +48,10 @@
       "title": "调解边界",
       "durationMs": 4000,
       "file": "mediation-boundary.avif",
-      "fileSize": 279888,
+      "fileSize": 279889,
       "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "a47c4f56672eae77ddee06810ed8ed5cf38492c81ed294a986477e4cf83b731b",
       "crf": 35,
       "quality": 45
     },
@@ -60,6 +66,8 @@
       "file": "stage-boundary.avif",
       "fileSize": 243909,
       "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "3f051f3bb0bebd5ac83273109987abc9fc7baf679900ca5f1c0c09a04309d514",
       "crf": 35,
       "quality": 45
     }
@@ -69,6 +77,7 @@
     "width": 2560
   },
   "sourceFps": 30,
+  "sourceFingerprint": "5fafeabd094b343f6f7ea08415f1e5517366d8edc9687b48711a06eff4a601f4",
   "targetFps": 30,
-  "totalFileSize": 1113528
+  "totalFileSize": 1111932
 }
