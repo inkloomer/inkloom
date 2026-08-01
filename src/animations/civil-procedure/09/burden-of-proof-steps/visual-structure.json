@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 4,
+  "scenes": [
+    {"id": "burden-risk", "export": "BurdenRiskScene", "layout": "constructivist-risk-wedge", "anchor": "boundary", "textTreatments": ["label-block", "soft-highlight", "stamp"], "grammar": ["state-boundary", "consequence", "preassignment"], "focalChannels": ["icon", "enclosure", "connector", "spatial"], "tokens": ["Check", "ShieldX", "CircleHelp", "Gavel"]},
+    {"id": "affirmative-burden", "export": "AffirmativeBurdenScene", "layout": "claimant-opposition-axis", "anchor": "comparison-axis", "textTreatments": ["label-block", "thin-underline", "soft-highlight"], "grammar": ["opposition", "attribution", "examples"], "focalChannels": ["icon", "connector", "contrast", "annotation"], "tokens": ["UserRound"]},
+    {"id": "two-inversions", "export": "TwoInversionsScene", "layout": "dual-inversion-flaps", "anchor": "role-pair", "textTreatments": ["label-block", "external-negation", "thin-underline", "stamp"], "grammar": ["presumption", "transfer", "contrast"], "focalChannels": ["icon", "motion", "connector", "annotation"], "tokens": ["Factory", "Building2", "ArrowDownRight"]},
+    {"id": "three-steps", "export": "ThreeStepsScene", "layout": "constructivist-proof-stair", "anchor": "flow-path", "textTreatments": ["label-block", "soft-highlight", "thin-underline", "stamp"], "grammar": ["sequence", "ascent", "checkpoint"], "focalChannels": ["icon", "connector", "spatial", "annotation"], "tokens": []}
+  ]
+}

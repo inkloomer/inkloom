@@ -1,6 +1,6 @@
 import type {ReactNode} from 'react';
 import {AbsoluteFill, Easing, interpolate, useCurrentFrame} from 'remotion';
-import {ComparisonScene, DefinitionScene, DistinctionScene, NoIndependentClaimScene, RightsScene} from './scenes/TypeScenes';
+import {ComparisonScene, DefinitionScene, DistinctionScene, NoIndependentClaimRulesScene, NoIndependentClaimScene, RightsScene} from './scenes/TypeScenes';
 import {DURATION_FRAMES, PALETTE, SCENES, toSourceFrame} from './storyboard';
 import {RelationBackdrop} from './visual-system';
 import {TimelineSequence} from '../../../../shared/remotion-runtime';
@@ -62,6 +62,9 @@ export const ThirdPartyTypes = () => {
       </SceneSequence>
       <SceneSequence name="05-no-independent-claim" {...SCENES.noIndependentClaim}>
         <NoIndependentClaimScene />
+      </SceneSequence>
+      <SceneSequence name="06-no-independent-claim-rules" {...SCENES.noIndependentClaimRules}>
+        <NoIndependentClaimRulesScene />
       </SceneSequence>
       <div style={{position: 'absolute', left: 94, right: 94, bottom: 64, height: 2, backgroundColor: PALETTE.grid}}>
         <div style={{width: `${interpolate(frame, [0, DURATION_FRAMES - 1], [0, 100], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'})}%`, height: '100%', backgroundColor: PALETTE.mint}} />

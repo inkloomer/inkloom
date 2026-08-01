@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {"id": "admission-occasions", "export": "AdmissionOccasionsScene", "layout": "court-signal-radial-input", "anchor": "flow-path", "textTreatments": ["label-block", "thin-underline", "external-negation"], "grammar": ["convergence", "boundary", "rejection"], "focalChannels": ["icon", "connector", "enclosure", "annotation"], "tokens": ["Gavel", "Search", "FileSignature", "MicOff", "MessageSquareText"]},
+    {"id": "admission-effect", "export": "AdmissionEffectScene", "layout": "fact-request-signal-fork", "anchor": "comparison-axis", "textTreatments": ["label-block", "soft-highlight", "thin-underline", "stamp"], "grammar": ["shared-input", "divergence", "outcome"], "focalChannels": ["icon", "connector", "contrast", "annotation"], "tokens": ["MessageSquareText", "Stamp", "Gavel"]},
+    {"id": "admission-veto", "export": "AdmissionVetoScene", "layout": "joint-litigation-response-network", "anchor": "role-pair", "textTreatments": ["label-block", "thin-underline", "external-negation", "stamp"], "grammar": ["local-effect", "group-response", "veto"], "focalChannels": ["icon", "connector", "enclosure", "annotation"], "tokens": ["Users", "X", "Check"]}
+  ]
+}

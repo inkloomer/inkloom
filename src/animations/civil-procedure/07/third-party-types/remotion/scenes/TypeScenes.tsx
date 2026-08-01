@@ -144,3 +144,67 @@ export const NoIndependentClaimScene = () => {
     </ImpactReveal>
   </div>;
 };
+
+export const NoIndependentClaimRulesScene = () => {
+  const frame = toSourceFrame(useCurrentFrame());
+  const identity = interpolate(frame, [18, 72], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: ENTER_EASING});
+  const entry = interpolate(frame, [68, 126], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: ENTER_EASING});
+  const rights = interpolate(frame, [122, 190], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: ENTER_EASING});
+
+  const blocked = ['管辖权异议', '放弃 / 变更诉讼请求', '撤诉'];
+
+  return <div style={{position: 'absolute', inset: 0}}>
+    <RelationHeading index="06" eyebrow="participation map" title="身份定入口，责任开权限" accent="mint" />
+
+    <div style={{position: 'absolute', left: 96, top: 270, width: 440, height: 490, boxSizing: 'border-box', padding: '38px 34px', border: `1px solid ${PALETTE.mint}`, backgroundColor: PALETTE.panel, opacity: identity}}>
+      <div style={{color: PALETTE.mint, fontFamily: 'Consolas, monospace', fontSize: 20, fontWeight: 800}}>IDENTITY</div>
+      <div style={{display: 'flex', alignItems: 'center', gap: 18, marginTop: 24}}>
+        <UsersRound size={52} color={PALETTE.mint} />
+        <div style={{...baseTextStyle, fontSize: 42, fontWeight: 900}}>无独三</div>
+      </div>
+      <div style={{marginTop: 34, padding: '24px 22px', borderLeft: `5px solid ${PALETTE.yellow}`, backgroundColor: PALETTE.yellowSoft}}>
+        <div style={{color: PALETTE.yellow, fontSize: 24, fontWeight: 900}}>判断核心</div>
+        <div style={{...baseTextStyle, marginTop: 10, fontSize: 29, lineHeight: 1.42, fontWeight: 800}}>与案件处理结果有<br />法律上的利害关系</div>
+      </div>
+      <div style={{marginTop: 30, color: PALETTE.muted, fontSize: 23, lineHeight: 1.45}}>没有独立请求权<br />依附本诉参加诉讼</div>
+    </div>
+
+    <RelationArrow left={548} top={496} width={116} progress={entry} accent="mint" />
+
+    <div style={{position: 'absolute', left: 678, top: 270, width: 410, height: 490, boxSizing: 'border-box', padding: '38px 30px', border: `1px solid ${PALETTE.grid}`, backgroundColor: PALETTE.panel, opacity: entry}}>
+      <div style={{color: PALETTE.yellow, fontFamily: 'Consolas, monospace', fontSize: 20, fontWeight: 800}}>ENTRY</div>
+      <div style={{...baseTextStyle, marginTop: 18, fontSize: 34, fontWeight: 900}}>两条参诉入口</div>
+      <div style={{display: 'flex', alignItems: 'center', gap: 18, marginTop: 48, padding: '25px 22px', border: `1px solid ${PALETTE.mint}`, backgroundColor: PALETTE.mintSoft}}>
+        <UserPlus size={42} color={PALETTE.mint} />
+        <div style={{...baseTextStyle, fontSize: 28, fontWeight: 900}}>申请参加</div>
+      </div>
+      <div style={{display: 'flex', alignItems: 'center', gap: 18, marginTop: 22, padding: '25px 22px', border: `1px solid ${PALETTE.yellow}`, backgroundColor: PALETTE.yellowSoft}}>
+        <Landmark size={42} color={PALETTE.yellow} />
+        <div style={{...baseTextStyle, fontSize: 28, fontWeight: 900}}>法院依职权追加</div>
+      </div>
+    </div>
+
+    <RelationArrow left={1100} top={496} width={116} progress={rights} accent="yellow" />
+
+    <div style={{position: 'absolute', left: 1230, top: 226, width: 594, height: 620, opacity: rights}}>
+      <div style={{color: PALETTE.muted, fontFamily: 'Consolas, monospace', fontSize: 20, fontWeight: 800}}>RIGHTS FORK</div>
+      <div style={{marginTop: 18, padding: '24px 26px', border: `2px solid ${PALETTE.mint}`, backgroundColor: PALETTE.mintSoft}}>
+        <div style={{display: 'flex', alignItems: 'center', gap: 14}}><ShieldCheck size={40} color={PALETTE.mint} /><div style={{...baseTextStyle, fontSize: 31, fontWeight: 900}}>责任落身，条件开启</div></div>
+        <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14, marginTop: 22}}>
+          <div style={{padding: '18px 16px', backgroundColor: PALETTE.panel}}><div style={{color: PALETTE.mint, fontSize: 24, fontWeight: 900}}>承担责任</div><div style={{...baseTextStyle, marginTop: 6, fontSize: 28, fontWeight: 900}}>可以上诉</div></div>
+          <div style={{padding: '18px 16px', backgroundColor: PALETTE.panel}}><div style={{color: PALETTE.mint, fontSize: 24, fontWeight: 900}}>承担义务</div><div style={{...baseTextStyle, marginTop: 6, fontSize: 28, fontWeight: 900}}>签收调解书</div></div>
+        </div>
+      </div>
+      <div style={{marginTop: 24, padding: '24px 26px', border: `2px solid ${PALETTE.coral}`, backgroundColor: PALETTE.coralSoft}}>
+        <div style={{display: 'flex', alignItems: 'center', gap: 14}}><Ban size={40} color={PALETTE.coral} /><div style={{...baseTextStyle, fontSize: 31, fontWeight: 900}}>处分本诉，绝对禁止</div></div>
+        <div style={{display: 'flex', gap: 10, marginTop: 20}}>
+          {blocked.map((label) => <div key={label} style={{flex: 1, minHeight: 76, display: 'grid', placeItems: 'center', padding: '10px', boxSizing: 'border-box', borderLeft: `4px solid ${PALETTE.coral}`, backgroundColor: PALETTE.panel, color: PALETTE.bone, fontSize: 20, lineHeight: 1.3, fontWeight: 800, textAlign: 'center'}}>{label}</div>)}
+        </div>
+      </div>
+    </div>
+
+    <ImpactReveal delay={202} style={{position: 'absolute', left: 96, top: 884}}>
+      <div style={{...baseTextStyle, fontSize: 29, fontWeight: 900}}>记忆链：法律上利害关系 → 申请或追加 → 责任决定特殊权利</div>
+    </ImpactReveal>
+  </div>;
+};
