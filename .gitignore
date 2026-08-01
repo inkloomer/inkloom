@@ -30,6 +30,8 @@ ref/
 !public/animation-webp/**/*.webp
 *.avif
 !public/animation-avif/**/*.avif
+public/animation-*/*.staging-*/
+public/animation-*/*.backup-*/
 notes/
 *.pdf
 *.webp

@@ -9,7 +9,6 @@ const scenes: readonly RemotionScene[] = [
   {id: 'death-consequences', number: '04', title: '死亡后果', ...SCENES.deathConsequences},
 ];
 
-export const StatutoryAgentPlayer = () => <RemotionDeck animationId="statutory-agent" component={StatutoryAgent} scenes={scenes} durationInFrames={DURATION_FRAMES} fps={FPS} title="法定代理人的身份与诉讼后果" />;
+export const StatutoryAgentPlayer = () => <RemotionDeck animationId="statutory-agent" animatedMediaFps={30} component={StatutoryAgent} scenes={scenes} durationInFrames={DURATION_FRAMES} fps={FPS} title="法定代理人的身份与诉讼后果" />;
 
 export default StatutoryAgentPlayer;
-

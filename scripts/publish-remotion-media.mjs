@@ -18,6 +18,7 @@ const VIDEO_CRF = 35;
 const VIDEO_TARGET_FPS = 15;
 const RENDER_CONCURRENCY = 2;
 const ENCODER_THREADS = 4;
+const SINGLE_WORKER_ENCODER_THREADS = 8;
 const DEFAULT_JOBS = 2;
 const MAX_JOBS = 4;
 const MEDIA_FORMATS = {
@@ -26,11 +27,11 @@ const MEDIA_FORMATS = {
     defaultWidth: 2560,
     directory: 'animation-avif',
     extension: 'avif',
-    encoderArguments: ({crf}) => ['-c:v', 'libaom-av1', '-crf', String(crf), '-b:v', '0', '-cpu-used', '6', '-row-mt', '1', '-tiles', '2x2', '-threads', String(ENCODER_THREADS)],
+    encoderArguments: ({crf, encoderThreads = ENCODER_THREADS}) => ['-c:v', 'libaom-av1', '-crf', String(crf), '-b:v', '0', '-cpu-used', '6', '-row-mt', '1', '-tiles', '2x2', '-threads', String(encoderThreads)],
     inspection: 'ffprobe',
     manifestFormat: 'animated-avif',
     maxFileSize: undefined,
-    targetFps: 15,
+    targetFps: 30,
     loopCount: 1,
     outputArguments: (loopCount) => ['-still-picture', '0', '-loop', String(loopCount), '-f', 'avif'],
     qualityToCrf: (quality) => Math.round((100 - quality) * 63 / 100),
@@ -564,6 +565,32 @@ const replaceDirectory = async (stagingDirectory, targetDirectory) => {
   }
 };
 
+const processIsRunning = (pid) => {
+  try {
+    process.kill(pid, 0);
+    return true;
+  } catch (error) {
+    return error?.code === 'EPERM';
+  }
+};
+
+const removeOrphanedStagingDirectories = async (targetDirectory) => {
+  const parentDirectory = path.dirname(targetDirectory);
+  const stagingPrefix = `${path.basename(targetDirectory)}.staging-`;
+  const entries = await readdir(parentDirectory, {withFileTypes: true}).catch((error) => {
+    if (error?.code === 'ENOENT') return [];
+    throw error;
+  });
+
+  for (const entry of entries) {
+    if (!entry.isDirectory() || !entry.name.startsWith(stagingPrefix)) continue;
+    const pidText = entry.name.slice(stagingPrefix.length);
+    if (!/^\d+$/.test(pidText) || processIsRunning(Number(pidText))) continue;
+    await rm(path.join(parentDirectory, entry.name), {force: true, maxRetries: 12, recursive: true, retryDelay: 150});
+    console.log(`[cleanup] Removed orphaned staging directory: ${entry.name}`);
+  }
+};
+
 const readExistingManifest = async (targetDirectory, animationId) => {
   const manifestPath = path.join(targetDirectory, 'manifest.json');
   if (!(await pathExists(manifestPath))) {
@@ -658,7 +685,7 @@ const assertAtomicSceneCompatibility = async ({
   }
 };
 
-const renderAnimation = async ({animationId, browserExecutable, crfs, mediaFormat, publishVideo, qualities, sceneId, widths}) => {
+const renderAnimation = async ({animationId, browserExecutable, crfs, encoderThreads, mediaFormat, publishVideo, qualities, sceneId, widths}) => {
   const profile = MEDIA_FORMATS[mediaFormat];
   const storyboardScenes = await loadStoryboardScenes(animationId);
   const allScenes = await loadPlayerSceneMetadata(animationId, storyboardScenes);
@@ -681,6 +708,7 @@ const renderAnimation = async ({animationId, browserExecutable, crfs, mediaForma
     ? await readExistingManifest(targetDirectory, animationId)
     : undefined;
 
+  await removeOrphanedStagingDirectories(targetDirectory);
   await rm(stagingDirectory, {force: true, maxRetries: 12, recursive: true, retryDelay: 150});
   if (atomicSceneReplacement) await cp(targetDirectory, stagingDirectory, {recursive: true});
   else await mkdir(stagingDirectory, {recursive: true});
@@ -794,7 +822,7 @@ const renderAnimation = async ({animationId, browserExecutable, crfs, mediaForma
             const outputArguments = outputFormat === 'mp4'
               ? ['-tag:v', 'av01', '-movflags', '+faststart', '-f', 'mp4']
               : outputProfile.outputArguments(outputProfile.loopCount);
-            const encoderArguments = outputProfile.encoderArguments(encodingVariant);
+            const encoderArguments = outputProfile.encoderArguments({...encodingVariant, encoderThreads});
             const encodeStartedAt = performance.now();
             await runCommandWithInput('ffmpeg', [
               '-hide_banner',
@@ -942,7 +970,8 @@ const main = async () => {
   const manifests = new Array(animationIds.length);
   let nextAnimationIndex = 0;
   const workerCount = Math.min(options.jobs, animationIds.length);
-  console.log(`Running ${animationIds.length} animation(s) with ${workerCount} concurrent job(s).`);
+  const encoderThreads = workerCount === 1 ? SINGLE_WORKER_ENCODER_THREADS : ENCODER_THREADS;
+  console.log(`Running ${animationIds.length} animation(s) with ${workerCount} concurrent job(s), ${encoderThreads} encoder thread(s) per job.`);
 
   const renderNext = async () => {
     while (nextAnimationIndex < animationIds.length) {
@@ -952,6 +981,7 @@ const main = async () => {
         animationId: animationIds[animationIndex],
         browserExecutable,
         crfs: options.crfs,
+        encoderThreads,
         mediaFormat: options.mediaFormat,
         publishVideo: options.publishVideo,
         qualities: options.qualities,

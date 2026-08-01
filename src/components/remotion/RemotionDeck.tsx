@@ -50,6 +50,7 @@ type PreviewMode = 'single' | 'row' | 'matrix';
 
 interface Props {
   readonly animationId: string;
+  readonly animatedMediaFps?: number;
   readonly component: ComponentType<Record<string, never>>;
   readonly scenes: readonly RemotionScene[];
   readonly durationInFrames: number;
@@ -329,6 +330,7 @@ const AnimatedImageFrame = ({
 
 export const RemotionDeck = ({
   animationId,
+  animatedMediaFps,
   component,
   scenes,
   durationInFrames,
@@ -742,7 +744,7 @@ export const RemotionDeck = ({
         )}
         <span className="remotion-deck__status" aria-live="polite">
           {mediaMode !== 'video'
-            ? `${ANIMATED_MEDIA_FORMATS[mediaMode].label} · 播放一次`
+            ? `${ANIMATED_MEDIA_FORMATS[mediaMode].label}${animatedMediaFps ? ` · ${animatedMediaFps}fps` : ''} · 播放一次`
             : mode === 'single'
               ? autoPage
                 ? `播放完进入下一页 · ${effectivePlaybackSpeed}×`

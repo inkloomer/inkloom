@@ -9,7 +9,6 @@ const scenes: readonly RemotionScene[] = [
   {id: 'stage-boundary', number: '04', title: '阶段边界', ...SCENES.stageBoundary},
 ];
 
-export const DelegatedAgentPlayer = () => <RemotionDeck animationId="delegated-agent" component={DelegatedAgent} scenes={scenes} durationInFrames={DURATION_FRAMES} fps={FPS} title="委托代理的授权边界" />;
+export const DelegatedAgentPlayer = () => <RemotionDeck animationId="delegated-agent" animatedMediaFps={30} component={DelegatedAgent} scenes={scenes} durationInFrames={DURATION_FRAMES} fps={FPS} title="委托代理的授权边界" />;
 
 export default DelegatedAgentPlayer;
-
