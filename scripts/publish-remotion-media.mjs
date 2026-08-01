@@ -7,6 +7,7 @@ import {Readable} from 'node:stream';
 import {pathToFileURL} from 'node:url';
 import {bundle} from '@remotion/bundler';
 import {getCompositions, openBrowser, renderFrames} from '@remotion/renderer';
+import {withInkLoomTailwind} from './remotion-webpack.mjs';
 const PROJECT_ROOT = path.resolve(import.meta.dirname, '..');
 const ANIMATIONS_ROOT = path.join(PROJECT_ROOT, 'src', 'animations');
 const COMPONENTS_ROOT = path.join(PROJECT_ROOT, 'src', 'components');
@@ -984,6 +985,7 @@ const getBundledServeUrl = async ({animationDirectory, animationId, bundleFinger
         publicDir: path.join(PROJECT_ROOT, 'public'),
         rootDir: PROJECT_ROOT,
         enableCaching: true,
+        webpackOverride: withInkLoomTailwind,
         onProgress: () => undefined,
       });
     }
@@ -1002,6 +1004,7 @@ const getBundledServeUrl = async ({animationDirectory, animationId, bundleFinger
         publicDir: path.join(PROJECT_ROOT, 'public'),
         rootDir: PROJECT_ROOT,
         enableCaching: true,
+        webpackOverride: withInkLoomTailwind,
         onProgress: () => undefined,
       });
       if (await fileExists(cacheReady)) {

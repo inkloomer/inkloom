@@ -5,6 +5,7 @@ import {pathToFileURL} from 'node:url';
 import {bundle} from '@remotion/bundler';
 import {getCompositions, openBrowser, renderStill} from '@remotion/renderer';
 import sharp from 'sharp';
+import {withInkLoomTailwind} from './remotion-webpack.mjs';
 
 const PROJECT_ROOT = path.resolve(import.meta.dirname, '..');
 const ANIMATIONS_ROOT = path.join(PROJECT_ROOT, 'src', 'animations');
@@ -257,6 +258,7 @@ const captureAnimation = async ({
       publicDir: path.join(PROJECT_ROOT, 'public'),
       rootDir: PROJECT_ROOT,
       enableCaching: true,
+      webpackOverride: withInkLoomTailwind,
       onProgress: () => undefined,
     });
     const compositions = await getCompositions(serveUrl, {puppeteerInstance: browser});

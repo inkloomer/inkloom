@@ -1,0 +1,27 @@
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
+@import "lxgw-wenkai-mono-gb-screen-webfont/fonts/style.css";
+
+@source "../";
+@source "../../components/";
+@source "../../typography/";
+
+@theme inline {
+  --font-animation-title: var(--inkloom-animation-title);
+  --font-animation-body: var(--inkloom-animation-body);
+  --font-animation-label: var(--inkloom-animation-label);
+  --font-animation-meta: var(--inkloom-animation-meta);
+  --font-animation-footer: var(--inkloom-animation-footer);
+  --font-animation-mono: var(--inkloom-animation-mono);
+}
+
+.inkloom-animation-typography {
+  --inkloom-animation-title: "LXGW WenKai Screen", serif;
+  --inkloom-animation-body: "LXGW WenKai Screen", serif;
+  --inkloom-animation-label: "LXGW WenKai Screen", serif;
+  --inkloom-animation-meta: "LXGW WenKai Screen", serif;
+  --inkloom-animation-footer: "LXGW WenKai Screen", serif;
+  --inkloom-animation-mono: "LXGW WenKai Mono GB Screen", monospace;
+  --inkloom-animation-font-synthesis: weight;
+  font-synthesis: var(--inkloom-animation-font-synthesis);
+}
