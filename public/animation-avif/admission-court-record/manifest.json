@@ -3,7 +3,7 @@
   "compositionId": "AdmissionCourtRecord",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-08-01T10:14:53.041Z",
+  "generatedAt": "2026-08-01T13:36:38.196Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -18,6 +18,8 @@
       "file": "admission-occasions.avif",
       "fileSize": 427241,
       "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "c2bd26180a2ab2c219a793dcbd2ceb47f7c20684ad3418782fc8089382b5eef1",
       "crf": 35,
       "quality": 45
     },
@@ -30,8 +32,10 @@
       "title": "自认的效果",
       "durationMs": 5000,
       "file": "admission-effect.avif",
-      "fileSize": 384296,
+      "fileSize": 385838,
       "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "98d3720fb7fce3461862614dacad7048912ca2470a81ea0079ff421ca5418a76",
       "crf": 35,
       "quality": 45
     },
@@ -44,8 +48,42 @@
       "title": "一票否决",
       "durationMs": 5500,
       "file": "admission-veto.avif",
-      "fileSize": 243938,
+      "fileSize": 243038,
       "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "c566c3c705068e4a9490e2358ee21f6cbf95dc75a73c78626b5d4486da623ff5",
+      "crf": 35,
+      "quality": 45
+    },
+    {
+      "endFrame": 644,
+      "frameCount": 195,
+      "id": "conditional-admission",
+      "number": "04",
+      "startFrame": 450,
+      "title": "附条件自认",
+      "durationMs": 6500,
+      "file": "conditional-admission.avif",
+      "fileSize": 406637,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "8df58be4c4fc1324830441c66615cdbe1d06ef3ca809809a3cd3258ad4a50092",
+      "crf": 35,
+      "quality": 45
+    },
+    {
+      "endFrame": 839,
+      "frameCount": 195,
+      "id": "withdrawal-compromise",
+      "number": "05",
+      "startFrame": 645,
+      "title": "撤销与调解妥协",
+      "durationMs": 6500,
+      "file": "withdrawal-compromise.avif",
+      "fileSize": 518887,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "01b64fd4d512140f2b1811e133ae6f57bbf3a86ae72f3cf42127602a7b4037e2",
       "crf": 35,
       "quality": 45
     }
@@ -55,6 +93,7 @@
     "width": 2560
   },
   "sourceFps": 30,
+  "sourceFingerprint": "a51e3874d538ff27dea005775601b64ecafb87050d9cc85f3688dcd904b29e09",
   "targetFps": 30,
-  "totalFileSize": 1055475
+  "totalFileSize": 1981641
 }

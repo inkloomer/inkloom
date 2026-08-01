@@ -123,3 +123,66 @@ export const AdmissionVetoScene = () => {
     </SignalCanvas>
   );
 };
+
+export const ConditionalAdmissionScene = () => {
+  const frame = useCurrentFrame();
+  const fork = interpolate(frame, [28, 56], [0, 1], CLAMP);
+  return (
+    <SignalCanvas code="04" title="附条件自认，先看是不是同一法律关系">
+      <div data-layout="conditional-admission-relation-fork" data-visual-anchor="flow-path" data-text-treatments="label-block,thin-underline,soft-highlight,external-negation" data-visual-grammar="conditional-input,relation-test,split-outcome" data-focal-rule="conditional-admission-legal-relation" data-focal-channels="icon,connector,contrast,annotation" style={{position: 'absolute', left: 184, right: 72, top: 190, bottom: 72}}>
+        <SignalIn delay={2} style={{position: 'absolute', left: 532, top: 0, width: 600, height: 118, borderRadius: 59, backgroundColor: SIGNAL.graphite, color: SIGNAL.white, display: 'grid', placeItems: 'center', fontSize: 34, fontWeight: 950}}>
+          承认事实 <span style={{color: SIGNAL.yellow}}>+</span> 附加条件
+        </SignalIn>
+        <svg viewBox="0 0 1664 790" style={{position: 'absolute', inset: 0, width: '100%', height: '100%'}}>
+          <path d="M832 118 L832 206 L402 290" fill="none" stroke={SIGNAL.teal} strokeWidth="9" pathLength="1" strokeDasharray="1" strokeDashoffset={1 - fork} strokeLinecap="round" />
+          <path d="M832 118 L832 206 L1262 290" fill="none" stroke={SIGNAL.magenta} strokeWidth="9" pathLength="1" strokeDasharray="1" strokeDashoffset={1 - fork} strokeLinecap="round" />
+        </svg>
+        <SignalIn delay={30} style={{position: 'absolute', left: 28, top: 266, width: 690, height: 360, borderRadius: '122px 26px 26px 26px', backgroundColor: SIGNAL.white, border: `5px solid ${SIGNAL.teal}`, padding: '32px 40px'}}>
+          <SignalText kind="label" color={SIGNAL.teal}>同一法律关系</SignalText>
+          <div style={{marginTop: 28, display: 'flex', alignItems: 'center', gap: 18, fontSize: 31, fontWeight: 950}}><MessageSquareText size={48} color={SIGNAL.teal} />借款成立，但主张已经还款</div>
+          <div style={{marginTop: 32, fontSize: 34, fontWeight: 950}}><SignalText kind="wave" color={SIGNAL.teal} delay={48}>统一认定</SignalText></div>
+          <div style={{marginTop: 22, fontSize: 25, lineHeight: 1.45, fontWeight: 850}}><SignalText kind="negation" color={SIGNAL.magenta} delay={58}>不得只截取“借款成立”</SignalText></div>
+        </SignalIn>
+        <SignalIn delay={42} style={{position: 'absolute', right: 28, top: 266, width: 690, height: 360, borderRadius: '26px 122px 26px 26px', backgroundColor: SIGNAL.white, border: `5px solid ${SIGNAL.magenta}`, padding: '32px 40px', textAlign: 'right'}}>
+          <SignalText kind="label" color={SIGNAL.magenta}>不同法律关系</SignalText>
+          <div style={{marginTop: 28, display: 'flex', alignItems: 'center', justifyContent: 'flex-end', gap: 18, fontSize: 31, fontWeight: 950}}>承认借款 <span style={{color: SIGNAL.muted}}>+</span> 另主张其他事实<FileSignature size={48} color={SIGNAL.magenta} /></div>
+          <div style={{marginTop: 32, fontSize: 34, fontWeight: 950}}><SignalText kind="wave" color={SIGNAL.magenta} delay={62}>分别认定</SignalText></div>
+          <div style={{marginTop: 22, fontSize: 25, lineHeight: 1.45, fontWeight: 850}}>承认部分构成自认；条件部分成为新的事实主张</div>
+        </SignalIn>
+        <SignalIn delay={82} style={{position: 'absolute', left: 420, right: 420, bottom: 2, textAlign: 'center', fontSize: 28, fontWeight: 950}}><SignalText kind="highlight" color={SIGNAL.yellow} delay={90}>部分自认：承认部分才发生自认效力</SignalText></SignalIn>
+      </div>
+    </SignalCanvas>
+  );
+};
+
+export const WithdrawalCompromiseScene = () => {
+  const frame = useCurrentFrame();
+  const gate = interpolate(frame, [54, 78], [0, 1], CLAMP);
+  return (
+    <SignalCanvas code="05" title="撤销与调解妥协，不能混为一谈">
+      <div data-layout="withdrawal-compromise-boundary" data-visual-anchor="boundary" data-text-treatments="label-block,stamp,thin-underline,external-negation" data-visual-grammar="time-limit,permission-gate,protected-compromise" data-focal-rule="admission-withdrawal-and-compromise" data-focal-channels="icon,connector,enclosure,annotation" style={{position: 'absolute', left: 184, right: 72, top: 190, bottom: 72}}>
+        <SignalIn delay={2} style={{position: 'absolute', left: 0, top: 16, width: 760, height: 610, borderRadius: 48, backgroundColor: 'rgba(251,255,253,.9)', border: `5px solid ${SIGNAL.teal}`, padding: '30px 36px'}}>
+          <div style={{display: 'flex', alignItems: 'center', gap: 18, fontSize: 34, fontWeight: 950}}><Gavel size={52} color={SIGNAL.teal} /><SignalText kind="label" color={SIGNAL.teal}>撤销自认</SignalText></div>
+          <div style={{marginTop: 30, fontSize: 28, fontWeight: 900}}>时点：<SignalText kind="wave" color={SIGNAL.teal} delay={18}>法庭辩论终结前</SignalText></div>
+          <div style={{position: 'absolute', left: 64, top: 204, width: 500, height: 8, backgroundColor: SIGNAL.line}}><div style={{position: 'absolute', left: 0, top: -18, width: 42, height: 42, borderRadius: '50%', backgroundColor: SIGNAL.teal}} /><div style={{position: 'absolute', right: -8, top: -18, width: 42, height: 42, borderRadius: '50%', backgroundColor: SIGNAL.magenta, scale: `${gate}`, transformOrigin: 'center'}} /></div>
+          <div style={{position: 'absolute', left: 64, top: 236, fontSize: 22, fontWeight: 850}}>作出自认</div><div style={{position: 'absolute', left: 510, top: 236, fontSize: 22, fontWeight: 850}}>辩论终结</div>
+          <div style={{marginTop: 110, fontSize: 27, fontWeight: 950}}>满足任一项，法院应当准许：</div>
+          <div style={{marginTop: 24, display: 'flex', gap: 20}}>
+            <div style={{width: 318, minHeight: 130, borderRadius: 28, backgroundColor: SIGNAL.white, border: `4px solid ${SIGNAL.teal}`, padding: '22px 24px', fontSize: 26, lineHeight: 1.35, fontWeight: 900}}><Check size={38} color={SIGNAL.teal} /> 对方当事人同意</div>
+            <div style={{width: 318, minHeight: 130, borderRadius: 28, backgroundColor: SIGNAL.white, border: `4px solid ${SIGNAL.magenta}`, padding: '22px 24px', fontSize: 26, lineHeight: 1.35, fontWeight: 900}}><Check size={38} color={SIGNAL.magenta} /> 受胁迫或重大误解</div>
+          </div>
+          <div style={{marginTop: 24, fontSize: 24, fontWeight: 850}}>准许撤销，应作出口头或书面裁定</div>
+        </SignalIn>
+        <SignalIn delay={22} style={{position: 'absolute', right: 0, top: 16, width: 760, height: 610, borderRadius: 48, backgroundColor: SIGNAL.graphite, color: SIGNAL.white, padding: '30px 36px'}}>
+          <div style={{display: 'flex', alignItems: 'center', justifyContent: 'flex-end', gap: 18, fontSize: 34, fontWeight: 950}}><SignalText kind="label" color={SIGNAL.yellow}>调解 / 和解妥协</SignalText><Users size={52} color={SIGNAL.yellow} /></div>
+          <div style={{marginTop: 46, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 20, fontSize: 34, fontWeight: 950}}><MessageSquareText size={52} color={SIGNAL.yellow} />为达成协议而认可事实</div>
+          <div style={{marginTop: 56, height: 8, backgroundColor: SIGNAL.yellow}} />
+          <div style={{marginTop: 42, fontSize: 32, lineHeight: 1.45, textAlign: 'center', fontWeight: 950}}><SignalText kind="negation" color={SIGNAL.magenta} delay={52}>不得在后续诉讼中作为不利根据</SignalText></div>
+          <div style={{marginTop: 46, textAlign: 'center', fontSize: 24, lineHeight: 1.45, color: SIGNAL.line, fontWeight: 850}}>例外：法律另有规定，或者当事人均同意</div>
+          <div style={{marginTop: 50, textAlign: 'center', fontSize: 27, fontWeight: 950}}><SignalText kind="stamp" color={SIGNAL.yellow} delay={72}>不是可供对方直接援引的自认</SignalText></div>
+        </SignalIn>
+        <SignalIn delay={90} style={{position: 'absolute', left: 520, right: 520, bottom: 0, textAlign: 'center', fontSize: 27, fontWeight: 950}}><SignalText kind="highlight" color={SIGNAL.yellow} delay={98}>一边是撤销门槛，一边是妥协保护</SignalText></SignalIn>
+      </div>
+    </SignalCanvas>
+  );
+};

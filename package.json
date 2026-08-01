@@ -24,6 +24,7 @@
     "@astrojs/starlight": "^0.41.1",
     "@catppuccin/starlight": "^2.0.1",
     "@remotion/effects": "4.0.501",
+    "@remotion/fonts": "4.0.501",
     "@remotion/player": "4.0.501",
     "@remotion/rough-notation": "4.0.501",
     "@remotion/transitions": "4.0.501",

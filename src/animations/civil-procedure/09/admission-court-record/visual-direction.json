@@ -3,9 +3,9 @@
   "family": "procedural-signal-map",
   "palette": "mint mist + graphite + signal teal + magenta + cobalt + listening yellow",
   "typography": "humanist sans with speech labels, translucent highlights, waveform underlines, external veto marks, and double-rule result stamps",
-  "composition": "radial procedural inputs, a fact-request signal fork, and a joint-party response network",
+  "composition": "radial procedural inputs, fact-request and conditional-relation forks, a joint-party response network, and a time-bound compromise boundary",
   "surface": "open waveform field, circular speaker nodes, pill-shaped signal paths, and translucent network zones without paper or dossier simulation",
-  "motion": "court-authorized statements travel into the record; fact and request signals diverge; party responses converge on a veto gate",
+  "motion": "court-authorized statements travel into the record; fact and request signals diverge; party responses converge on a veto gate; withdrawal timing closes while compromise protection blocks later use",
   "transition": "signal trace clears horizontally while the channel marker persists",
   "catalog": {
     "status": "featured",

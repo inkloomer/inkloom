@@ -1,9 +1,11 @@
 {
   "version": 1,
-  "minimumDistinctLayouts": 3,
+  "minimumDistinctLayouts": 5,
   "scenes": [
     {"id": "admission-occasions", "export": "AdmissionOccasionsScene", "layout": "court-signal-radial-input", "anchor": "flow-path", "textTreatments": ["label-block", "thin-underline", "external-negation"], "grammar": ["convergence", "boundary", "rejection"], "focalChannels": ["icon", "connector", "enclosure", "annotation"], "tokens": ["Gavel", "Search", "FileSignature", "MicOff", "MessageSquareText"]},
     {"id": "admission-effect", "export": "AdmissionEffectScene", "layout": "fact-request-signal-fork", "anchor": "comparison-axis", "textTreatments": ["label-block", "soft-highlight", "thin-underline", "stamp"], "grammar": ["shared-input", "divergence", "outcome"], "focalChannels": ["icon", "connector", "contrast", "annotation"], "tokens": ["MessageSquareText", "Stamp", "Gavel"]},
-    {"id": "admission-veto", "export": "AdmissionVetoScene", "layout": "joint-litigation-response-network", "anchor": "role-pair", "textTreatments": ["label-block", "thin-underline", "external-negation", "stamp"], "grammar": ["local-effect", "group-response", "veto"], "focalChannels": ["icon", "connector", "enclosure", "annotation"], "tokens": ["Users", "X", "Check"]}
+    {"id": "admission-veto", "export": "AdmissionVetoScene", "layout": "joint-litigation-response-network", "anchor": "role-pair", "textTreatments": ["label-block", "thin-underline", "external-negation", "stamp"], "grammar": ["local-effect", "group-response", "veto"], "focalChannels": ["icon", "connector", "enclosure", "annotation"], "tokens": ["Users", "X", "Check"]},
+    {"id": "conditional-admission", "export": "ConditionalAdmissionScene", "layout": "conditional-admission-relation-fork", "anchor": "flow-path", "textTreatments": ["label-block", "thin-underline", "soft-highlight", "external-negation"], "grammar": ["conditional-input", "relation-test", "split-outcome"], "focalChannels": ["icon", "connector", "contrast", "annotation"], "tokens": ["MessageSquareText", "FileSignature"]},
+    {"id": "withdrawal-compromise", "export": "WithdrawalCompromiseScene", "layout": "withdrawal-compromise-boundary", "anchor": "boundary", "textTreatments": ["label-block", "stamp", "thin-underline", "external-negation"], "grammar": ["time-limit", "permission-gate", "protected-compromise"], "focalChannels": ["icon", "connector", "enclosure", "annotation"], "tokens": ["Gavel", "Users", "Check"]}
   ]
 }

@@ -20,6 +20,9 @@ importers:
       '@remotion/effects':
         specifier: 4.0.501
         version: 4.0.501(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      '@remotion/fonts':
+        specifier: 4.0.501
+        version: 4.0.501(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       '@remotion/player':
         specifier: 4.0.501
         version: 4.0.501(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
@@ -880,6 +883,9 @@ packages:
 
   '@remotion/effects@4.0.501':
     resolution: {integrity: sha512-MnTEvSgFvoGg0cztyUBQpjUxz8fosa8SdMVJhCsnJRxAkCNLs1HZYrujPcGgs4iY0hMwGbBeI/Uk+FhkqnsaTw==}
+
+  '@remotion/fonts@4.0.501':
+    resolution: {integrity: sha512-65Z/1r1ChdcKXZO8mnqeCPMKdXvPrt0qZ5bz6+Mn24pqK0FbOPxpQLA+k4EWD1w67Kb3nkPgneH2e2T132m1aA==}
 
   '@remotion/licensing@4.0.501':
     resolution: {integrity: sha512-GnY5j52hWDNCVCaBkhqleLpZ642wcU0h0rUcZTC02qUIMIuJpvzBC/1g9o35ZKqWN2td9ehXzUDiZ2Up4xoo9Q==}
@@ -2860,6 +2866,10 @@ packages:
     resolution: {integrity: sha512-ILTWeOriIluwEvPjv67v7Blgrcx+LZOkAUVtKI3putuhlZm84FnqDORNXPPm+HY3NdZOMhyDwZ1E+eZB/Df5dA==}
     engines: {node: '>=16.0.0'}
 
+  remark-smartypants@3.0.3:
+    resolution: {integrity: sha512-gCaK+ndZ0hYezlqFegHFCVh2CQemsi0Npdh1qVM9bxlUFknjkbP6VmojWhddOCrbK0PbbacmYLWfTULRiT1eWA==}
+    engines: {node: '>=16.0.0'}
+
   remark-stringify@11.0.0:
     resolution: {integrity: sha512-1OSmLd3awB/t8qdoEOMazZkNsfVTeY4fTsgzcQFdXNq8ToTN4ZGwrMnlda4K6smTFKD+GRV6O48i6Z4iKgPPpw==}
 
@@ -3593,7 +3603,7 @@ snapshots:
       remark-gfm: 4.0.1(supports-color@8.0.0)
       remark-parse: 11.0.0(supports-color@8.0.0)
       remark-rehype: 11.1.2
-      remark-smartypants: 3.0.2
+      remark-smartypants: 3.0.3
       unified: 11.0.5
       unist-util-remove-position: 5.0.0
       unist-util-visit: 5.1.0
@@ -4333,6 +4343,13 @@ snapshots:
   '@remotion/drag-and-drop@4.0.501': {}
 
   '@remotion/effects@4.0.501(react-dom@19.2.4(react@19.2.4))(react@19.2.4)':
+    dependencies:
+      remotion: 4.0.501(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+    transitivePeerDependencies:
+      - react
+      - react-dom
+
+  '@remotion/fonts@4.0.501(react-dom@19.2.4(react@19.2.4))(react@19.2.4)':
     dependencies:
       remotion: 4.0.501(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
     transitivePeerDependencies:
@@ -6860,6 +6877,13 @@ snapshots:
       vfile: 6.0.3
 
   remark-smartypants@3.0.2:
+    dependencies:
+      retext: 9.0.0
+      retext-smartypants: 6.2.0
+      unified: 11.0.5
+      unist-util-visit: 5.1.0
+
+  remark-smartypants@3.0.3:
     dependencies:
       retext: 9.0.0
       retext-smartypants: 6.2.0

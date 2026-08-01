@@ -133,3 +133,107 @@ export const ThreeStepsScene = () => {
     </ConstructivistCanvas>
   );
 };
+
+export const ExemptFactsBoundaryScene = () => {
+  const lanes = [
+    {label: '唯一封闭', title: '自然规律和定理、定律', action: '不允许反驳、推翻', detail: '不进入举证对抗', color: INK.black, icon: CircleHelp},
+    {label: '可以反驳', title: '众所周知 / 法律、经验推定', action: '相反证据动摇确信', detail: '反驳即可', color: INK.cobalt, icon: ArrowDownRight},
+    {label: '可以推翻', title: '仲裁、裁判、公证确认事实', action: '证明相反事实成立', detail: '推翻门槛更高', color: INK.red, icon: Gavel},
+  ] as const;
+  return (
+    <ConstructivistCanvas code="05" title="先排除免证事实，再谈谁举证">
+      <div data-layout="exempt-facts-proof-boundary" data-visual-anchor="boundary" data-text-treatments="label-block,external-negation,thin-underline,stamp" data-visual-grammar="category-gates,challenge-threshold,proof-exclusion" data-focal-rule="exempt-facts-challenge-levels" data-focal-channels="icon,enclosure,contrast,annotation" style={{position: 'absolute', left: 68, right: 68, top: 226, bottom: 72}}>
+        {lanes.map((lane, index) => {
+          const Icon = lane.icon;
+          return <CutIn key={lane.label} delay={6 + index * 22} direction={index === 1 ? 'up' : index === 2 ? 'right' : 'left'} style={{position: 'absolute', left: index * 598, top: 26, width: 560, height: 520, backgroundColor: index === 0 ? INK.black : INK.white, color: index === 0 ? INK.white : INK.black, border: `7px solid ${lane.color}`, clipPath: index === 0 ? 'polygon(0 0,100% 0,93% 100%,0 100%)' : index === 2 ? 'polygon(7% 0,100% 0,100% 100%,0 100%)' : undefined, padding: '32px 36px'}}>
+            <div style={{display: 'flex', alignItems: 'center', gap: 18}}><Icon size={58} strokeWidth={3} color={index === 0 ? INK.yellow : lane.color} /><Treatment kind="label" color={index === 0 ? INK.yellow : lane.color}>{lane.label}</Treatment></div>
+            <div style={{marginTop: 36, fontSize: 34, lineHeight: 1.32, fontWeight: 950}}>{lane.title}</div>
+            <div style={{marginTop: 54, fontSize: 30, lineHeight: 1.35, fontWeight: 950}}>{index === 0 ? <Treatment kind="negation" color={INK.red} delay={38 + index * 18}>{lane.action}</Treatment> : <Treatment kind="underline" color={lane.color} delay={38 + index * 18}>{lane.action}</Treatment>}</div>
+            <div style={{position: 'absolute', left: 36, right: 36, bottom: 34, paddingTop: 22, borderTop: `4px solid ${index === 0 ? INK.yellow : lane.color}`, fontSize: 25, lineHeight: 1.35, fontWeight: 850, color: index === 0 ? INK.white : INK.gray}}>{lane.detail}</div>
+          </CutIn>;
+        })}
+        <CutIn delay={82} direction="up" style={{position: 'absolute', left: 318, right: 318, bottom: 0, height: 122, backgroundColor: INK.yellow, border: `7px solid ${INK.black}`, display: 'grid', placeItems: 'center', fontSize: 32, fontWeight: 950}}>
+          免证事实 <span style={{margin: '0 18px'}}>≠</span> 没有边界的既定事实
+        </CutIn>
+      </div>
+    </ConstructivistCanvas>
+  );
+};
+
+export const SpecialBurdenRulesScene = () => {
+  return (
+    <ConstructivistCanvas code="06" title="特别规则：先推定，再看谁反证">
+      <div data-layout="special-burden-dual-lanes" data-visual-anchor="comparison-axis" data-text-treatments="label-block,soft-highlight,thin-underline,stamp" data-visual-grammar="presumption,role-allocation,consequence" data-focal-rule="special-burden-presumptions" data-focal-channels="icon,connector,contrast,annotation" style={{position: 'absolute', left: 68, right: 68, top: 226, bottom: 72}}>
+        <CutIn delay={4} style={{position: 'absolute', left: 0, top: 18, width: 826, height: 570, backgroundColor: INK.cobalt, color: INK.white, clipPath: 'polygon(0 0,100% 0,94% 100%,0 100%)', padding: '34px 42px'}}>
+          <Treatment kind="label" color={INK.yellow}>代理纠纷</Treatment>
+          <div style={{marginTop: 26, display: 'flex', alignItems: 'center', gap: 18, fontSize: 36, fontWeight: 950}}><UserRound size={56} strokeWidth={3} />表见代理的善意推定</div>
+          <div style={{marginTop: 54, paddingLeft: 26, borderLeft: `8px solid ${INK.yellow}`, fontSize: 29, lineHeight: 1.5, fontWeight: 850}}>相对人先证明：<Treatment kind="underline" color={INK.yellow} delay={24}>代理权外观</Treatment></div>
+          <div style={{marginTop: 34, paddingLeft: 26, borderLeft: `8px solid ${INK.white}`, fontSize: 29, lineHeight: 1.5, fontWeight: 850}}>被代理人若主张相对人知情或有过失，<Treatment kind="underline" color={INK.yellow} delay={42}>由其证明</Treatment></div>
+          <div style={{position: 'absolute', left: 42, right: 82, bottom: 42, fontSize: 30, fontWeight: 950}}><Treatment kind="stamp" color={INK.yellow} delay={62}>善意先被推定</Treatment></div>
+        </CutIn>
+        <CutIn delay={16} direction="right" style={{position: 'absolute', right: 0, top: 18, width: 826, height: 570, backgroundColor: INK.white, color: INK.black, border: `7px solid ${INK.red}`, clipPath: 'polygon(6% 0,100% 0,100% 100%,0 100%)', padding: '34px 42px 34px 76px'}}>
+          <Treatment kind="label" color={INK.red}>违约金调整</Treatment>
+          <div style={{marginTop: 26, display: 'flex', alignItems: 'center', gap: 18, fontSize: 36, fontWeight: 950}}><Gavel size={56} strokeWidth={3} />约定金额先被推定合理</div>
+          <div style={{marginTop: 54, paddingLeft: 26, borderLeft: `8px solid ${INK.red}`, fontSize: 29, lineHeight: 1.5, fontWeight: 850}}>违约方证明：<Treatment kind="underline" color={INK.red} delay={36}>过分高于损失</Treatment></div>
+          <div style={{marginTop: 34, paddingLeft: 26, borderLeft: `8px solid ${INK.cobalt}`, fontSize: 29, lineHeight: 1.5, fontWeight: 850}}>非违约方仅提供证据，<Treatment kind="highlight" color={INK.yellow} delay={54}>不承担真伪不明风险</Treatment></div>
+          <div style={{position: 'absolute', left: 76, right: 42, bottom: 42, fontSize: 30, fontWeight: 950}}><Treatment kind="stamp" color={INK.red} delay={74}>结果责任在违约方</Treatment></div>
+        </CutIn>
+        <ArrowLine left={832} top={300} width={116} color={INK.yellow} delay={74} />
+        <CutIn delay={88} direction="up" style={{position: 'absolute', left: 584, top: 640, width: 616, height: 104, backgroundColor: INK.black, color: INK.white, display: 'grid', placeItems: 'center', fontSize: 30, fontWeight: 950}}>
+          先找到法律推定，再确定反证负担
+        </CutIn>
+      </div>
+    </ConstructivistCanvas>
+  );
+};
+
+export const ProofStandardLadderScene = () => {
+  const standards = [
+    {level: '51%+', title: '较大可能性', detail: '程序性事实', color: INK.green, left: 0, top: 390},
+    {level: '75%+', title: '高度可能性', detail: '一般实体性事实', color: INK.cobalt, left: 632, top: 210},
+    {level: '95%-99%', title: '排除合理怀疑', detail: '欺诈 · 胁迫 · 恶意串通\n口头遗嘱 · 赠与', color: INK.red, left: 1264, top: 30},
+  ];
+  return (
+    <ConstructivistCanvas code="07" title="证明标准有三档，不承担者不必登顶">
+      <div data-layout="proof-standard-diagonal-ladder" data-visual-anchor="flow-path" data-text-treatments="label-block,soft-highlight,thin-underline,stamp" data-visual-grammar="threshold-ascent,scope-match,burden-limit" data-focal-rule="proof-standard-follows-burden" data-focal-channels="icon,connector,spatial,annotation" style={{position: 'absolute', left: 68, right: 68, top: 226, bottom: 72}}>
+        {standards.map((standard, index) => <CutIn key={standard.level} delay={8 + index * 26} direction="up" style={{position: 'absolute', left: standard.left, top: standard.top, width: 520, height: 260, backgroundColor: standard.color, color: INK.white, clipPath: 'polygon(0 0,92% 0,100% 22%,100% 100%,0 100%)', padding: '28px 34px'}}>
+          <div style={{fontSize: 52, lineHeight: 1, fontWeight: 950, color: INK.yellow}}>{standard.level}</div>
+          <div style={{marginTop: 20, fontSize: 35, fontWeight: 950}}>{standard.title}</div>
+          <div style={{marginTop: 18, whiteSpace: 'pre-line', fontSize: 25, lineHeight: 1.42, fontWeight: 850}}>{standard.detail}</div>
+        </CutIn>)}
+        <ArrowLine left={520} top={512} width={110} color={INK.yellow} delay={34} />
+        <ArrowLine left={1152} top={332} width={110} color={INK.yellow} delay={60} />
+        <CutIn delay={88} direction="right" style={{position: 'absolute', right: 0, bottom: 0, width: 940, height: 116, backgroundColor: INK.white, border: `7px solid ${INK.black}`, display: 'grid', placeItems: 'center', fontSize: 29, fontWeight: 950}}>
+          负担者要到相应标准；对方只需让事实回到<Treatment kind="underline" color={INK.red} delay={96}>真伪不明</Treatment>
+        </CutIn>
+      </div>
+    </ConstructivistCanvas>
+  );
+};
+
+export const ProofChainScene = () => {
+  const steps = [
+    {number: '1', title: '证明对象', detail: '是不是待证事实？\n先排除无关与免证事实', color: INK.black, left: 0, icon: CircleHelp},
+    {number: '2', title: '证明责任', detail: '由谁承担风险？\n积极事实、倒置、特别规则', color: INK.cobalt, left: 640, icon: UserRound},
+    {number: '3', title: '证明标准', detail: '要证明到何种程度？\n程序、一般实体、特殊事实', color: INK.red, left: 1280, icon: Check},
+  ];
+  return (
+    <ConstructivistCanvas code="08" title="做题总链：对象 → 责任 → 标准">
+      <div data-layout="proof-chain-three-checkpoints" data-visual-anchor="flow-path" data-text-treatments="label-block,soft-highlight,thin-underline,stamp" data-visual-grammar="ordered-filter,attribution,threshold" data-focal-rule="proof-object-burden-standard-chain" data-focal-channels="icon,connector,spatial,annotation" style={{position: 'absolute', left: 68, right: 68, top: 226, bottom: 72}}>
+        {steps.map((step, index) => {
+          const Icon = step.icon;
+          return <CutIn key={step.number} delay={8 + index * 24} direction={index === 1 ? 'up' : index === 2 ? 'right' : 'left'} style={{position: 'absolute', left: step.left, top: 136, width: 500, height: 360, backgroundColor: step.color, color: INK.white, padding: '30px 34px', clipPath: 'polygon(0 0,92% 0,100% 18%,100% 100%,0 100%)'}}>
+            <div style={{display: 'flex', alignItems: 'center', gap: 16}}><span style={{fontSize: 66, fontWeight: 950, color: INK.yellow}}>{step.number}</span><Icon size={52} strokeWidth={3} /></div>
+            <div style={{marginTop: 28, fontSize: 38, fontWeight: 950}}>{step.title}</div>
+            <div style={{marginTop: 30, whiteSpace: 'pre-line', fontSize: 26, lineHeight: 1.5, fontWeight: 850}}>{step.detail}</div>
+          </CutIn>;
+        })}
+        <ArrowLine left={502} top={310} width={136} color={INK.yellow} delay={32} />
+        <ArrowLine left={1142} top={310} width={136} color={INK.yellow} delay={56} />
+        <CutIn delay={84} direction="up" style={{position: 'absolute', left: 308, right: 308, bottom: 0, height: 118, backgroundColor: INK.yellow, border: `7px solid ${INK.black}`, display: 'grid', placeItems: 'center', fontSize: 31, fontWeight: 950}}>
+          不承担证明责任的一方：只需让事实保持真伪不明
+        </CutIn>
+      </div>
+    </ConstructivistCanvas>
+  );
+};
