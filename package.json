@@ -13,6 +13,7 @@
     "animation:publish-webp": "node scripts/publish-remotion-media.mjs --format webp",
     "animation:compare-av1": "node scripts/publish-remotion-media.mjs",
     "siyuan:embed-avif": "node scripts/embed-siyuan-avif.mjs --format avif",
+    "siyuan:embed-scene": "node scripts/embed-siyuan-scene.mjs",
     "siyuan:embed-webp": "node scripts/embed-siyuan-avif.mjs --format webp",
     "preview": "astro preview",
     "astro": "astro"
