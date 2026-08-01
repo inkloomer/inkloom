@@ -1,0 +1,16 @@
+{
+  "directionId": "argument-focus-theater",
+  "family": "judicial-focus-stage",
+  "palette": "stage black + chalk white + focus yellow + party blue + judicial red",
+  "typography": "high-contrast theatrical sans with side captions, illuminated issue labels, and external prohibition bars",
+  "composition": "party claim and judicial recognition occupy opposite wings; a central issue spotlight replaces two prohibited shortcuts; the final scene binds request changes to the disposition boundary",
+  "surface": "matte stage planes, hard spotlight polygons, thin floor marks, and unframed role silhouettes",
+  "motion": "opposed legal characterizations enter from the wings; prohibited shortcuts stop outside the focal area; the issue spotlight opens evidence, examination, and debate lanes; disposition limits close around the final request",
+  "transition": "the same disputed contract token stays center stage while the permissible procedural treatment changes",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/civil-procedure/11/surprise-judgment-focus/",
+    "title": "争点聚光场"
+  }
+}

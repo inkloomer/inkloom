@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 4,
+  "scenes": [
+    {"id":"cross-examination-gate","export":"CrossExaminationGateScene","layout":"hearing-admission-gate","anchor":"timeline-gate","grammar":["qualification","exception","privacy-boundary"],"textTreatments":["label-block","thin-underline","stamp"],"focalChannels":["icon","enclosure","connector","contrast"],"tokens":["MessagesSquare","DoorOpen","EyeOff","BadgeCheck"]},
+    {"id":"illegal-evidence-sieve","export":"IllegalEvidenceSieveScene","layout":"three-slot-legality-sieve","anchor":"boundary","grammar":["exclusion","threshold","safe-route"],"textTreatments":["soft-highlight","external-negation","stamp"],"focalChannels":["icon","contrast","spatial","annotation"],"tokens":["ShieldX","Scale","HeartHandshake","Video"]},
+    {"id":"capacity-and-weight","export":"CapacityAndWeightScene","layout":"dual-instrument-measurement","anchor":"comparison-axis","grammar":["sequence","qualification","measurement"],"textTreatments":["label-block","thin-underline","soft-highlight"],"focalChannels":["icon","connector","enclosure","motion"],"tokens":["KeyRound","Gauge","BrainCircuit"]},
+    {"id":"corroboration-ring","export":"CorroborationRingScene","layout":"five-input-corroboration-ring","anchor":"flow-target","grammar":["grouping","support","result"],"textTreatments":["label-block","soft-highlight","stamp"],"focalChannels":["icon","connector","spatial","contrast"],"tokens":["UserRound","Baby","Handshake","Video","Files","Link"]}
+  ]
+}

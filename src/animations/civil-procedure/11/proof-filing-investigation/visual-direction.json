@@ -1,0 +1,16 @@
+{
+  "directionId": "proof-dispatch-delta",
+  "family": "filing-dispatch-system",
+  "palette": "signal white + dispatch black + emerald route + ultramarine court + magenta sanction + yellow deadline",
+  "typography": "compact transport sans with oversized day counters, route labels, thin deadline underlines, and outcome stamps",
+  "composition": "filing tracks converge on deadline markers, extensions bridge all parties, late evidence enters a fault-sensitive switchyard, and investigation splits by institutional authority",
+  "surface": "flat wayfinding bands, square dispatch stations, exposed route lines, and no card grid",
+  "motion": "tracks draw left to right; one extension bridge expands across parties; evidence tokens branch only after fault and basic-fact checkpoints; court collection routes separate before their hearing outcomes",
+  "transition": "a fixed bottom evidence rail carries the same document token through timing, delay, and investigation decisions",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/civil-procedure/11/proof-filing-investigation/",
+    "title": "举证调度台"
+  }
+}

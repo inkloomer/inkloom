@@ -1,0 +1,67 @@
+{
+  "animationId": "surprise-judgment-focus",
+  "compositionId": "SurpriseJudgmentFocus",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-01T14:18:34.081Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 179,
+      "frameCount": 180,
+      "id": "recognition-mismatch",
+      "number": "01",
+      "startFrame": 0,
+      "title": "法院认定与当事人主张不一致",
+      "durationMs": 6000,
+      "file": "recognition-mismatch.avif",
+      "fileSize": 382386,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "2e75ef38ce1e9b6115be992e284fe46e024c5a952817d4f4948f7f581af054bc",
+      "crf": 35,
+      "quality": 45
+    },
+    {
+      "endFrame": 389,
+      "frameCount": 210,
+      "id": "issue-hearing-path",
+      "number": "02",
+      "startFrame": 180,
+      "title": "把不一致列为争议焦点",
+      "durationMs": 7000,
+      "file": "issue-hearing-path.avif",
+      "fileSize": 217523,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "c0eff6bc4b2611dca4746668d2b0ae290d075621255f273ce84ad569b8591975",
+      "crf": 35,
+      "quality": 45
+    },
+    {
+      "endFrame": 599,
+      "frameCount": 210,
+      "id": "disposition-boundary",
+      "number": "03",
+      "startFrame": 390,
+      "title": "变更诉请与处分边界",
+      "durationMs": 7000,
+      "file": "disposition-boundary.avif",
+      "fileSize": 383158,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "a5e07434376e92522ef4c2b94729eb287396c2e122e50b7db43f479801653998",
+      "crf": 35,
+      "quality": 45
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "bdf260143c2f4c18db178dc4cc2815a5a4b86e51c0efdbd5a5da2282eff15c8b",
+  "targetFps": 30,
+  "totalFileSize": 983067
+}

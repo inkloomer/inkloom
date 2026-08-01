@@ -4,6 +4,6 @@
   "scenes": [
     {"id":"preservation-trigger","export":"PreservationTriggerScene","layout":"specimen-risk-chamber","anchor":"boundary","grammar":["threat","containment","transformation"],"textTreatments":["label-block","soft-highlight","stamp"],"focalChannels":["icon","enclosure","connector","motion"],"tokens":["FileWarning","Snowflake","ShieldCheck"]},
     {"id":"during-litigation","export":"DuringLitigationScene","layout":"dual-entry-litigation-vault","anchor":"flow-path","grammar":["convergence","deadline","conditional-result"],"textTreatments":["label-block","thin-underline","stamp"],"focalChannels":["icon","connector","spatial","annotation"],"tokens":["UserRound","Landmark","Clock3","ShieldAlert"]},
-    {"id":"before-litigation","export":"BeforeLitigationScene","layout":"emergency-timed-locks","anchor":"timeline","grammar":["sequence","jurisdiction-fan","release"],"textTreatments":["soft-highlight","thin-underline","external-negation","stamp"],"focalChannels":["icon","connector","contrast","annotation"],"tokens":["Siren","MapPin","Timer","UnlockKeyhole","BadgeCheck"]}
+    {"id":"before-litigation","export":"BeforeLitigationScene","layout":"emergency-timed-locks","anchor":"timeline-gate","grammar":["sequence","jurisdiction-fan","release"],"textTreatments":["soft-highlight","thin-underline","external-negation","stamp"],"focalChannels":["icon","connector","contrast","annotation"],"tokens":["Siren","MapPin","Timer","UnlockKeyhole","BadgeCheck"]}
   ]
 }

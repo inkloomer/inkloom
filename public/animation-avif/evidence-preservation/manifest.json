@@ -1,0 +1,67 @@
+{
+  "animationId": "evidence-preservation",
+  "compositionId": "EvidencePreservation",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-01T14:13:49.375Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 164,
+      "frameCount": 165,
+      "id": "preservation-trigger",
+      "number": "01",
+      "startFrame": 0,
+      "title": "证据保全的共同前提",
+      "durationMs": 5500,
+      "file": "preservation-trigger.avif",
+      "fileSize": 181498,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "68c3e2e295a498f562f1b4c89d21a222f70465545768fd61599f4b526e975b6e",
+      "crf": 35,
+      "quality": 45
+    },
+    {
+      "endFrame": 359,
+      "frameCount": 195,
+      "id": "during-litigation",
+      "number": "02",
+      "startFrame": 165,
+      "title": "诉讼中证据保全",
+      "durationMs": 6500,
+      "file": "during-litigation.avif",
+      "fileSize": 276899,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "470b63f5db0163872a362798578a9e1c66b39f4dcc8a9b5975fc664ca1cef0db",
+      "crf": 35,
+      "quality": 45
+    },
+    {
+      "endFrame": 584,
+      "frameCount": 225,
+      "id": "before-litigation",
+      "number": "03",
+      "startFrame": 360,
+      "title": "诉前证据保全",
+      "durationMs": 7500,
+      "file": "before-litigation.avif",
+      "fileSize": 255049,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "db50f15ae40e921dd29047dd63544adf5ceb4704e17208ef315492862e338d56",
+      "crf": 35,
+      "quality": 45
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "573f4115eadb8cc93133f17343f13f46dd168a6a5930aa908ec766809a8ac144",
+  "targetFps": 30,
+  "totalFileSize": 713446
+}

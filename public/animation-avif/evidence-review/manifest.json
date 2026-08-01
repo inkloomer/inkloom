@@ -1,0 +1,83 @@
+{
+  "animationId": "evidence-review",
+  "compositionId": "EvidenceReview",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-01T14:20:48.652Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 194,
+      "frameCount": 195,
+      "id": "cross-examination-gate",
+      "number": "01",
+      "startFrame": 0,
+      "title": "证据先通过质证门",
+      "durationMs": 6500,
+      "file": "cross-examination-gate.avif",
+      "fileSize": 323055,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "640de187e9b7b005c8d697d5f3037e8e37dc6a52a34066b1850b8535402c4a74",
+      "crf": 35,
+      "quality": 45
+    },
+    {
+      "endFrame": 389,
+      "frameCount": 195,
+      "id": "illegal-evidence-sieve",
+      "number": "02",
+      "startFrame": 195,
+      "title": "非法证据排除规则",
+      "durationMs": 6500,
+      "file": "illegal-evidence-sieve.avif",
+      "fileSize": 364349,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "dad4072b577cc607a42ac029c8e3a76206b78ed5cf39ae063f535384a17aac7e",
+      "crf": 35,
+      "quality": 45
+    },
+    {
+      "endFrame": 599,
+      "frameCount": 210,
+      "id": "capacity-and-weight",
+      "number": "03",
+      "startFrame": 390,
+      "title": "证据能力与证明力",
+      "durationMs": 7000,
+      "file": "capacity-and-weight.avif",
+      "fileSize": 493185,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "d19f112d557e41bb7c305d341ea649d6cdf42d8c202e5ea620eeec45c3cfed13",
+      "crf": 35,
+      "quality": 45
+    },
+    {
+      "endFrame": 824,
+      "frameCount": 225,
+      "id": "corroboration-ring",
+      "number": "04",
+      "startFrame": 600,
+      "title": "五类证据需要补强",
+      "durationMs": 7500,
+      "file": "corroboration-ring.avif",
+      "fileSize": 324654,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "55249d6a0120cea33cee70be6b8440ffe0ad3b82817a059bf22d1be78b072153",
+      "crf": 35,
+      "quality": 45
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "9336d606deb9a27a49c2e6a37f4bbdb592ab169be51eb5d7e7f855e56b85506b",
+  "targetFps": 30,
+  "totalFileSize": 1505243
+}

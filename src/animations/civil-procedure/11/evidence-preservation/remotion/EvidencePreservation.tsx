@@ -24,13 +24,13 @@ const ICE = {
 const {Enter, StaggerEnter, MaskedReveal} = createMotionPrimitives(toSourceFrame);
 
 const Canvas = ({code, title, cue, children}: {code: string; title: string; cue: string; children: ReactNode}) => (
-  <AbsoluteFill style={{backgroundColor: ICE.paper, color: ICE.ink, fontFamily: 'Inter, Microsoft YaHei, sans-serif', overflow: 'hidden'}}>
+  <div style={{position: 'absolute', inset: 0, backgroundColor: ICE.paper, color: ICE.ink, fontFamily: 'Inter, Microsoft YaHei, sans-serif', overflow: 'hidden'}}>
     <div style={{position: 'absolute', inset: 0, backgroundImage: `linear-gradient(${ICE.line}45 1px, transparent 1px), linear-gradient(90deg, ${ICE.line}45 1px, transparent 1px)`, backgroundSize: '44px 44px'}} />
     <div style={{position: 'absolute', left: 64, top: 50, width: 110, height: 84, border: `3px solid ${ICE.ink}`, display: 'grid', placeItems: 'center', fontSize: 28, fontWeight: 900}}>{code}</div>
     <div style={{position: 'absolute', left: 206, top: 48, fontSize: 52, fontWeight: 900, letterSpacing: 0}}>{title}</div>
     <div style={{position: 'absolute', right: 66, top: 64, padding: '12px 20px', backgroundColor: ICE.ink, color: ICE.white, fontSize: 22, fontWeight: 800}}>{cue}</div>
     <div style={{position: 'absolute', left: 66, right: 66, top: 170, bottom: 66}}>{children}</div>
-  </AbsoluteFill>
+  </div>
 );
 
 const Label = ({children, tone = 'aqua'}: {children: ReactNode; tone?: 'aqua' | 'amber' | 'coral' | 'ink'}) => (
@@ -97,7 +97,7 @@ export const DuringLitigationScene = () => (
 
 export const BeforeLitigationScene = () => (
   <Canvas code="03" title="诉前证据保全" cue="规则更严">
-    <div data-layout="emergency-timed-locks" data-visual-anchor="timeline" data-text-treatments="soft-highlight,thin-underline,external-negation,stamp" data-visual-grammar="sequence,jurisdiction-fan,release" data-focal-rule="pre-action-preservation-is-application-only-and-time-locked" data-focal-channels="icon,connector,contrast,annotation" style={{position: 'absolute', inset: 0}}>
+    <div data-layout="emergency-timed-locks" data-visual-anchor="timeline-gate" data-text-treatments="soft-highlight,thin-underline,external-negation,stamp" data-visual-grammar="sequence,jurisdiction-fan,release" data-focal-rule="pre-action-preservation-is-application-only-and-time-locked" data-focal-channels="icon,connector,contrast,annotation" style={{position: 'absolute', inset: 0}}>
       <StaggerEnter baseDelay={4} step={24} gap={0} style={{position: 'absolute', left: 44, right: 44, top: 44, height: 220, alignItems: 'stretch'}}>
         <div style={{flex: 1, backgroundColor: ICE.coral, color: ICE.white, padding: 26}}><Siren size={54} /><div style={{fontSize: 29, fontWeight: 900, marginTop: 18}}>情况紧急</div><div style={{fontSize: 22, marginTop: 10}}>证据有灭失风险</div></div>
         <div style={{width: 70, display: 'grid', placeItems: 'center', fontSize: 42, color: ICE.coral}}>→</div>

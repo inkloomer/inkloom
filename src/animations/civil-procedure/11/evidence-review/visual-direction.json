@@ -1,0 +1,16 @@
+{
+  "directionId": "evidence-weighing-chamber",
+  "family": "judicial-measurement-room",
+  "palette": "mineral grey + carbon black + judgment cobalt + calibration yellow + exclusion red",
+  "typography": "measured grotesk with large instrument readings, narrow qualification labels, underlined conditions, and verdict stamps",
+  "composition": "evidence passes a hearing gate, a legality sieve, twin qualification and weight instruments, and a five-input corroboration ring",
+  "surface": "flat mineral planes, exposed measurement arcs, square specimen mounts, and thin calibration ticks",
+  "motion": "the evidence token advances only after each legal check; prohibited acquisition routes drop away; qualification locks before weight is measured; five weak inputs connect to an external corroborating source",
+  "transition": "one cobalt evidence token remains the carrier through every review instrument",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/civil-procedure/11/evidence-review/",
+    "title": "心证衡量室"
+  }
+}

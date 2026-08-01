@@ -1,0 +1,83 @@
+{
+  "animationId": "proof-filing-investigation",
+  "compositionId": "ProofFilingInvestigation",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-01T14:16:48.724Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 179,
+      "frameCount": 180,
+      "id": "deadline-routes",
+      "number": "01",
+      "startFrame": 0,
+      "title": "不同程序的举证期限",
+      "durationMs": 6000,
+      "file": "deadline-routes.avif",
+      "fileSize": 262222,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "3469fa09c7ee7197b82be90d34e69d1ac4fac0441e1e9068f1292d6ea2538e8a",
+      "crf": 35,
+      "quality": 45
+    },
+    {
+      "endFrame": 344,
+      "frameCount": 165,
+      "id": "extension-bridge",
+      "number": "02",
+      "startFrame": 180,
+      "title": "举证期限的延长",
+      "durationMs": 5500,
+      "file": "extension-bridge.avif",
+      "fileSize": 288145,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "6a349bcf714f18faccecf0c4efd7545f30986a1ddff2f7a5a35a2db99b28cbcf",
+      "crf": 35,
+      "quality": 45
+    },
+    {
+      "endFrame": 584,
+      "frameCount": 240,
+      "id": "late-evidence-switch",
+      "number": "03",
+      "startFrame": 345,
+      "title": "逾期证据的四路后果",
+      "durationMs": 8000,
+      "file": "late-evidence-switch.avif",
+      "fileSize": 460910,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "875dfbf8b0d1fd832c3fb55b9b7deaaedb6e88ed6c888b48a38b2ba983b40d01",
+      "crf": 35,
+      "quality": 45
+    },
+    {
+      "endFrame": 809,
+      "frameCount": 225,
+      "id": "court-collection-boundary",
+      "number": "04",
+      "startFrame": 585,
+      "title": "法院调查取证的边界",
+      "durationMs": 7500,
+      "file": "court-collection-boundary.avif",
+      "fileSize": 459406,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "049e1e87427e655b4c7ae0a9707d8aa25604b06597d4900b8c6a669090e13944",
+      "crf": 35,
+      "quality": 45
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "b564f2e115c99dec183b8c720b2f8114359200a56eb26e4a3f2a1dc8cff19d00",
+  "targetFps": 30,
+  "totalFileSize": 1470683
+}

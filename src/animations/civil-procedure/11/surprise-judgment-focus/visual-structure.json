@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {"id":"recognition-mismatch","export":"RecognitionMismatchScene","layout":"opposed-stage-wings","anchor":"role-pair","grammar":["opposition","mismatch","prohibition"],"textTreatments":["label-block","soft-highlight","external-negation"],"focalChannels":["icon","contrast","spatial","annotation"],"tokens":["UserRound","Landmark","FileText"]},
+    {"id":"issue-hearing-path","export":"IssueHearingPathScene","layout":"central-focus-three-lane-hearing","anchor":"flow-path","grammar":["focus","sequence","exception"],"textTreatments":["soft-highlight","thin-underline","stamp"],"focalChannels":["icon","connector","enclosure","motion"],"tokens":["ScanSearch","MessagesSquare","Scale","BadgeCheck"]},
+    {"id":"disposition-boundary","export":"DispositionBoundaryScene","layout":"request-boundary-stage","anchor":"boundary","grammar":["choice","authorization","constraint"],"textTreatments":["label-block","external-negation","stamp"],"focalChannels":["icon","enclosure","contrast","annotation"],"tokens":["FilePenLine","CheckCheck","CalendarPlus","Fence"]}
+  ]
+}

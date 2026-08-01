@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 4,
+  "scenes": [
+    {"id":"deadline-routes","export":"DeadlineRoutesScene","layout":"four-route-deadline-scale","anchor":"comparison-axis","grammar":["comparison","threshold","direction"],"textTreatments":["label-block","soft-highlight","thin-underline"],"focalChannels":["icon","spatial","contrast","annotation"],"tokens":["CalendarClock","TrainFront"]},
+    {"id":"extension-bridge","export":"ExtensionBridgeScene","layout":"all-party-extension-bridge","anchor":"timeline-gate","grammar":["condition","sequence","shared-effect"],"textTreatments":["label-block","thin-underline","stamp"],"focalChannels":["icon","connector","enclosure","motion"],"tokens":["FilePenLine","UsersRound","CalendarPlus"]},
+    {"id":"late-evidence-switch","export":"LateEvidenceSwitchScene","layout":"fault-sensitive-switchyard","anchor":"document-fork","grammar":["decision","exception","sanction"],"textTreatments":["soft-highlight","external-negation","stamp"],"focalChannels":["icon","connector","contrast","spatial"],"tokens":["FileWarning","GitBranch","CircleCheckBig","CircleX","Gavel"]},
+    {"id":"court-collection-boundary","export":"CourtCollectionBoundaryScene","layout":"authority-collection-boundary","anchor":"boundary","grammar":["scope","comparison","hearing-effect"],"textTreatments":["label-block","thin-underline","stamp"],"focalChannels":["icon","enclosure","connector","annotation"],"tokens":["Landmark","HandHelping","MessageSquareText","ShieldCheck"]}
+  ]
+}
