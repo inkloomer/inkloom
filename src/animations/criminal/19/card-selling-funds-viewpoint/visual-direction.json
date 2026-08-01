@@ -1,0 +1,16 @@
+{
+  "directionId": "account-signal-router",
+  "family": "financial-signal-console",
+  "palette": "deep graphite + phosphor mint + electric coral + banknote cyan + warm terminal white",
+  "typography": "monospaced account labels paired with large rounded humanist verdicts, signal underlines, status chips, and terminal seals",
+  "composition": "one transaction signal enters a routing console, splits into possession-model channels, and resolves in vertically separated account terminals",
+  "surface": "dark etched circuits, luminous account rails, square terminal windows, waveform ticks, and no document or card metaphors",
+  "motion": "the same lock-transfer-withdrawal packet travels through competing ownership channels; verdict terminals light only after the controlling model is selected",
+  "transition": "a horizontal signal sweep clears the console while preserving account endpoints and actor colors",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/criminal/19/card-selling-funds-viewpoint/",
+    "title": "账户信号台"
+  }
+}

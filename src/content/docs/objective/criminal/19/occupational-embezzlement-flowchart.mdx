@@ -1,30 +1,9 @@
 ---
-title: 职务侵占罪 · 逻辑判断流程图
-description: 职务侵占罪逻辑判断流程图解
+title: 职务侵占罪判断流程·Remotion
 slug: objective/criminal/19/occupational-embezzlement-flowchart
+iframeFit: true
 ---
 
-import { Steps, Aside } from '@astrojs/starlight/components';
+import OccupationalEmbezzlementFlowchartAnimation from '@/components/criminal/19/occupational-embezzlement-flowchart/OccupationalEmbezzlementFlowchartAnimation.astro';
 
-职务侵占罪的认定需依次满足三个特殊构成要件（B₁＋B₂＋B₃），任一不满足即退回基础罪名（侵占／盗窃／诈骗）。下方按判断顺序展示完整流程。
-
-<Steps>
-
-1. **⚖️ 基础行为 (A)** — 行为人实施了侵占、盗窃或诈骗等基础行为，是职务侵占罪认定的起点。
-2. **🔍 行为主体是非国家工作人员？(B₁)**
-   - ❌ 否 → 不构成职务侵占罪，**可能构成贪污罪**
-   - ✅ 是 → 继续判断
-3. **📦 行为对象是本单位财物？(B₂)**
-   - ❌ 否 → **退回基础罪名**（侵占／盗窃／诈骗）
-   - ✅ 是 → 继续判断
-4. **🔑 利用职务便利？(B₃)**
-   - ❌ 否 → **退回基础罪名**（侵占／盗窃／诈骗）
-   - ✅ 是 → **职务侵占罪成立** = A ＋ B₁ ＋ B₂ ＋ B₃
-
-</Steps>
-
-<Aside type="note" title="公式记忆">
-**职务侵占罪** = 基础行为 (A) ＋ 非国家工作人员 (B₁) ＋ 本单位财物 (B₂) ＋ 利用职务便利 (B₃)
-
-三个特殊要件层层递进、缺一不可：主体不符→贪污罪；对象不符或未利用职务便利→退回侵占／盗窃／诈骗基础罪名。逻辑判断流程 · 依据刑法第二百七十一条。
-</Aside>
+<OccupationalEmbezzlementFlowchartAnimation />

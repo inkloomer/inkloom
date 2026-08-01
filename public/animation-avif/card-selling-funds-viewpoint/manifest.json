@@ -1,0 +1,67 @@
+{
+  "animationId": "card-selling-funds-viewpoint",
+  "compositionId": "CardSellingFundsViewpoint",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-01T14:18:57.865Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 179,
+      "frameCount": 180,
+      "id": "possession-models",
+      "number": "01",
+      "startFrame": 0,
+      "title": "事实占有与法律占有",
+      "durationMs": 6000,
+      "file": "possession-models.avif",
+      "fileSize": 226642,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "2cbd02c1ac8380043a3355e4fe251a869e15d2f0b92e009397b7960f15441024",
+      "crf": 35,
+      "quality": 45
+    },
+    {
+      "endFrame": 389,
+      "frameCount": 210,
+      "id": "lawful-funds",
+      "number": "02",
+      "startFrame": 180,
+      "title": "合法资金处理",
+      "durationMs": 7000,
+      "file": "lawful-funds.avif",
+      "fileSize": 211499,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "1ad1550b60c7816505f52ee8fb5f68a0ba84e059fb022a4375c23bbc642d3c07",
+      "crf": 35,
+      "quality": 45
+    },
+    {
+      "endFrame": 614,
+      "frameCount": 225,
+      "id": "illicit-funds",
+      "number": "03",
+      "startFrame": 390,
+      "title": "赃款处理三种观点",
+      "durationMs": 7500,
+      "file": "illicit-funds.avif",
+      "fileSize": 221880,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "82516d165c07ecde5e8835349a2a409aef5a2145d2327c13b65be6cad172e83f",
+      "crf": 35,
+      "quality": 45
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "f44f21e4e8f5b01fa4b6fe4831892cb97f2ceadf943de737800ffed615fc86c9",
+  "targetFps": 30,
+  "totalFileSize": 660021
+}

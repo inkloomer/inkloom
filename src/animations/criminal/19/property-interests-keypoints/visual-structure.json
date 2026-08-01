@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 5,
+  "scenes": [
+    {"id":"claim-exchange","export":"ClaimExchangeScene","layout":"loss-gain-topology-channel","anchor":"role-pair","grammar":["loss-gain","condition","equivalence"],"textTreatments":["label-block","soft-highlight","thin-underline"],"focalChannels":["icon","connector","spatial","contrast"],"tokens":["ReceiptText","ArrowLeftRight","Clock3"]},
+    {"id":"debt-regimes","export":"DebtRegimesScene","layout":"three-territory-debt-map","anchor":"boundary","grammar":["classification","protection-boundary","generation"],"textTreatments":["label-block","external-negation","stamp"],"focalChannels":["icon","enclosure","annotation","contrast"],"tokens":["ShieldCheck","ShieldOff","FilePlus2"]},
+    {"id":"deposit-transformation","export":"DepositTransformationScene","layout":"cash-to-claim-fold","anchor":"flow-path","grammar":["transformation","ownership","control"],"textTreatments":["soft-highlight","thin-underline","stamp"],"focalChannels":["icon","motion","connector","spatial"],"tokens":["Banknote","Landmark","FileKey2"]},
+    {"id":"utility-classification","export":"UtilityClassificationScene","layout":"utility-action-fork","anchor":"document-fork","grammar":["object-classification","disposition","loss-measure"],"textTreatments":["label-block","thin-underline","external-negation"],"focalChannels":["icon","connector","annotation","contrast"],"tokens":["Zap","Gauge","Wifi"]},
+    {"id":"illegal-possession-boundary","export":"IllegalPossessionBoundaryScene","layout":"possession-request-boundary","anchor":"comparison-axis","grammar":["possession","request-right","third-party"],"textTreatments":["soft-highlight","external-negation","stamp"],"focalChannels":["icon","enclosure","contrast","spatial"],"tokens":["Bike","HandCoins","ShieldQuestion"]}
+  ]
+}

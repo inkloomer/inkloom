@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {"id":"formula-assembly","export":"FormulaAssemblyScene","layout":"parts-on-conveyor","anchor":"typographic-sequence","grammar":["assembly","sequence","completion"],"textTreatments":["label-block","soft-highlight","stamp"],"focalChannels":["icon","motion","spatial","contrast"],"tokens":["Boxes","Cog","BadgeCheck"]},
+    {"id":"subject-gate","export":"SubjectGateScene","layout":"identity-inspection-gate","anchor":"boundary","grammar":["classification","gate","diversion"],"textTreatments":["thin-underline","external-negation","label-block"],"focalChannels":["icon","connector","annotation","contrast"],"tokens":["HardHat","Landmark","CornerDownRight"]},
+    {"id":"property-duty-gates","export":"PropertyDutyGatesScene","layout":"double-gate-routing-line","anchor":"flow-path","grammar":["sequence","fallback","convergence"],"textTreatments":["label-block","thin-underline","stamp"],"focalChannels":["icon","connector","motion","spatial"],"tokens":["Warehouse","KeyRound","ShieldCheck"]}
+  ]
+}

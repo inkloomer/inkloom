@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {"id":"possession-models","export":"PossessionModelsScene","layout":"dual-channel-possession-router","anchor":"comparison-axis","grammar":["attribution","comparison","routing"],"textTreatments":["label-block","soft-highlight","thin-underline"],"focalChannels":["icon","connector","contrast","spatial"],"tokens":["CreditCard","RadioTower","UserRound"]},
+    {"id":"lawful-funds","export":"LawfulFundsScene","layout":"three-packet-terminal-chain","anchor":"flow-path","grammar":["sequence","absorption","secondary-victim"],"textTreatments":["label-block","thin-underline","stamp"],"focalChannels":["icon","motion","connector","annotation"],"tokens":["LockKeyhole","ArrowRightLeft","Banknote"]},
+    {"id":"illicit-funds","export":"IllicitFundsScene","layout":"three-theory-verdict-fan","anchor":"boundary","grammar":["comparison","classification","exception"],"textTreatments":["soft-highlight","external-negation","stamp"],"focalChannels":["icon","contrast","annotation","spatial"],"tokens":["ShieldOff","GitFork","Landmark"]}
+  ]
+}

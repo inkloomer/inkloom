@@ -1,0 +1,16 @@
+{
+  "directionId": "industrial-elements-inspection",
+  "family": "industrial-inspection-line",
+  "palette": "concrete gray + machine black + safety yellow + enamel blue + pass green",
+  "typography": "compressed industrial sans with punched labels, narrow condition underlines, warning plates, and inspection seals",
+  "composition": "a full-width conveyor carries the base offense through three sequential inspection gates and visible rejection chutes",
+  "surface": "ribbed metal, exposed bolts, stencil numerals, hazard stripes, and rectangular machinery without cards",
+  "motion": "the offense token advances only after each gate locks; failed conditions divert into clearly labeled fallback channels",
+  "transition": "the conveyor remains continuous while the camera shifts from assembly formula to gate inspection and final routing",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/criminal/19/occupational-embezzlement-flowchart/",
+    "title": "要件质检线"
+  }
+}

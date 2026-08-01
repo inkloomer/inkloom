@@ -1,0 +1,16 @@
+{
+  "directionId": "dual-focus-calibration",
+  "family": "optical-calibration-bench",
+  "palette": "chalk white + optical black + ultraviolet violet + acid lime + verdict magenta",
+  "typography": "wide technical sans with calibration numerals, thin condition underlines, translucent focus bands, and square verdict seals",
+  "composition": "paired subjective and objective lenses align onto a central legal focal plane, followed by exposure scales and target apertures",
+  "surface": "matte optical bench, concentric lens rings, measurement ticks, transparent focal planes, and no cards or paper panels",
+  "motion": "lenses focus independently before alignment; exposure bands stop at the known tier; attempt paths resolve from target risk to actual result",
+  "transition": "a narrow scanning slit changes instruments while the optical axis remains fixed",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/criminal/19/theft-mistake-analysis/",
+    "title": "双焦校准台"
+  }
+}

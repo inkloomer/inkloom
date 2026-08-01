@@ -1,0 +1,83 @@
+{
+  "animationId": "theft-mistake-analysis",
+  "compositionId": "TheftMistakeAnalysis",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-01T14:14:05.641Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 179,
+      "frameCount": 180,
+      "id": "awareness-alignment",
+      "number": "01",
+      "startFrame": 0,
+      "title": "定罪的主客观对准",
+      "durationMs": 6000,
+      "file": "awareness-alignment.avif",
+      "fileSize": 252562,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "9c72d7653e84fab16e22e1e7fd66c03ab36a50f6de96ebc5ed1bf3458c490fa1",
+      "crf": 35,
+      "quality": 45
+    },
+    {
+      "endFrame": 359,
+      "frameCount": 180,
+      "id": "penalty-tier",
+      "number": "02",
+      "startFrame": 180,
+      "title": "法定刑升格认识",
+      "durationMs": 6000,
+      "file": "penalty-tier.avif",
+      "fileSize": 209540,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "36920e169e3605b370fbaa12f0048a82115e7c636b34533bd3d1d3d36590851d",
+      "crf": 35,
+      "quality": 45
+    },
+    {
+      "endFrame": 539,
+      "frameCount": 180,
+      "id": "attempt-risk",
+      "number": "03",
+      "startFrame": 360,
+      "title": "数额未达与犯罪未遂",
+      "durationMs": 6000,
+      "file": "attempt-risk.avif",
+      "fileSize": 202716,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "88667b35291636b13a52c161b60f2108bf40e925ae629a21376b3b23cab81b19",
+      "crf": 35,
+      "quality": 45
+    },
+    {
+      "endFrame": 749,
+      "frameCount": 210,
+      "id": "aggravated-attempt",
+      "number": "04",
+      "startFrame": 540,
+      "title": "数额巨大未遂与既遂竞合",
+      "durationMs": 7000,
+      "file": "aggravated-attempt.avif",
+      "fileSize": 215779,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "ec06d6fd3e50a4564ba21f3d19234ca2a420ef96844c1a835e40074b7b359069",
+      "crf": 35,
+      "quality": 45
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "0710c51c2dc27a7ef28de736ec62054102c93317de28795ac17aead079b68c95",
+  "targetFps": 30,
+  "totalFileSize": 880597
+}

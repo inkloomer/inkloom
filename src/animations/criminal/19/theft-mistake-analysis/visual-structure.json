@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {"id":"awareness-alignment","export":"AwarenessAlignmentScene","layout":"dual-lens-focal-plane","anchor":"comparison-axis","grammar":["comparison","alignment","threshold"],"textTreatments":["label-block","soft-highlight","stamp"],"focalChannels":["icon","connector","contrast","spatial"],"tokens":["Eye","Grape","Focus"]},
+    {"id":"penalty-tier","export":"PenaltyTierScene","layout":"exposure-tier-scale","anchor":"boundary","grammar":["threshold","containment","exclusion"],"textTreatments":["thin-underline","external-negation","stamp"],"focalChannels":["icon","locator","annotation","contrast"],"tokens":["Flower2","Gauge","Ban"]},
+    {"id":"attempt-risk","export":"AttemptRiskScene","layout":"risk-aperture-target","anchor":"flow-target","grammar":["possibility","attempt","result"],"textTreatments":["label-block","soft-highlight","thin-underline"],"focalChannels":["icon","connector","motion","spatial"],"tokens":["ShoppingBag","Target","ShieldAlert"]},
+    {"id":"aggravated-attempt","export":"AggravatedAttemptScene","layout":"split-target-convergence","anchor":"flow-path","grammar":["mistaken-target","concurrence","selection"],"textTreatments":["label-block","external-negation","stamp"],"focalChannels":["icon","connector","annotation","contrast"],"tokens":["Gem","Route","Scale"]}
+  ]
+}
