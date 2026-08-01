@@ -21,7 +21,7 @@ Options:
   --animation-id <id>       Stable InkLoom animation ID
   --scene-id <id>           Stable semantic scene ID
   --workspace <path>        SiYuan workspace (default: SIYUAN_WORKSPACE or D:/1STUDY/SIYUAN)
-  --apply                   Write after validation; omitted means CLI dry-run only
+  --apply                   Internally dry-run, verify production, write, and verify final order
   --skip-remote-check       Allow --apply without verifying the production URL
   --help                    Show this help
 `;
@@ -220,24 +220,24 @@ const main = async () => {
     throw new Error(`The scene URL exists in non-generated block ${idOf(existing)}; refusing to move or duplicate it.`);
   }
 
+  const mutationArguments = existing
+    ? ['block', 'move', '--id', idOf(existing), '--parent', parentId, '--previous', options.targetId]
+    : ['block', 'insert', '--parent', parentId, '--previous', options.targetId, '--data', imageMarkdown];
+  const mutationDescription = existing
+    ? `move ${idOf(existing)} immediately after ${options.targetId}`
+    : `insert immediately after ${options.targetId}`;
+
   if (!options.apply) {
-    if (existing) {
-      runSiyuan(options, ['block', 'move', '--id', idOf(existing), '--parent', parentId, '--previous', options.targetId], {dryRun: true});
-      console.log(`DRY-RUN move ${idOf(existing)} immediately after ${options.targetId}.`);
-    } else {
-      runSiyuan(options, ['block', 'insert', '--parent', parentId, '--previous', options.targetId, '--data', imageMarkdown], {dryRun: true});
-      console.log(`DRY-RUN insert immediately after ${options.targetId}.`);
-    }
-    console.log('Re-run with --apply after the production asset is deployed and verified.');
+    runSiyuan(options, mutationArguments, {dryRun: true});
+    console.log(`DRY-RUN ${mutationDescription}.`);
+    console.log('Diagnostic completed without writes. The agent must use --apply to finish the end-to-end task.');
     return;
   }
 
+  runSiyuan(options, mutationArguments, {dryRun: true});
+  console.log(`DRY-RUN ${mutationDescription}.`);
   if (!options.skipRemoteCheck) await verifyRemoteAsset(asset.url);
-  if (existing) {
-    runSiyuan(options, ['block', 'move', '--id', idOf(existing), '--parent', parentId, '--previous', options.targetId, '-f', 'json']);
-  } else {
-    runSiyuan(options, ['block', 'insert', '--parent', parentId, '--previous', options.targetId, '--data', imageMarkdown, '-f', 'json']);
-  }
+  runSiyuan(options, [...mutationArguments, '-f', 'json']);
   const insertedId = verifyFinalState(options, target, asset);
   console.log(`APPLIED ${insertedId} is immediately after ${options.targetId}; URL is unique in the document.`);
 };
