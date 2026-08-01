@@ -620,8 +620,8 @@ const renderAnimation = async ({animationId, browserExecutable, crfs, mediaForma
           logLevel: 'error',
         });
 
-        const expectedFrameCount = Math.ceil(rendered.frameCount / everyNthFrame);
-        const expectedDurationMs = Math.round((rendered.frameCount / composition.fps) * 1000);
+        const expectedFrameCount = Math.round(rendered.frameCount / everyNthFrame);
+        const expectedDurationMs = Math.round((expectedFrameCount / outputFps) * 1000);
         sceneFrameCount = expectedFrameCount;
         const variants = [];
 
