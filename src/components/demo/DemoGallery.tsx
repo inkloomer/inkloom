@@ -20,32 +20,36 @@ const DemoPreview = ({demo}: {readonly demo: DemoDefinition}) => {
     return () => observer.disconnect();
   }, []);
 
+  const preview = (
+    <>
+      <div ref={frameRef} className="demo-gallery__frame">
+        {isVisible ? (
+          <Player
+            component={demo.component}
+            durationInFrames={demo.durationInFrames}
+            fps={demo.fps}
+            compositionWidth={1920}
+            compositionHeight={1080}
+            autoPlay
+            loop
+            controls={false}
+            clickToPlay={false}
+            acknowledgeRemotionLicense
+            style={{width: '100%', height: '100%', pointerEvents: 'none'}}
+          />
+        ) : null}
+      </div>
+      <div className="demo-gallery__caption">
+        <span>{demo.direction}</span>
+        <strong>{demo.title}</strong>
+        {demo.href ? <ArrowUpRight aria-hidden="true" size={20} strokeWidth={1.8} /> : null}
+      </div>
+    </>
+  );
+
   return (
     <article className="demo-gallery__item">
-      <a href={demo.href} aria-label={`打开${demo.title}动画`}>
-        <div ref={frameRef} className="demo-gallery__frame">
-          {isVisible ? (
-            <Player
-              component={demo.component}
-              durationInFrames={demo.durationInFrames}
-              fps={demo.fps}
-              compositionWidth={1920}
-              compositionHeight={1080}
-              autoPlay
-              loop
-              controls={false}
-              clickToPlay={false}
-              acknowledgeRemotionLicense
-              style={{width: '100%', height: '100%', pointerEvents: 'none'}}
-            />
-          ) : null}
-        </div>
-        <div className="demo-gallery__caption">
-          <span>{demo.direction}</span>
-          <strong>{demo.title}</strong>
-          <ArrowUpRight aria-hidden="true" size={20} strokeWidth={1.8} />
-        </div>
-      </a>
+      {demo.href ? <a href={demo.href} aria-label={`打开${demo.title}动画`}>{preview}</a> : preview}
     </article>
   );
 };

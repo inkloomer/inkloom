@@ -1,4 +1,18 @@
 import type {ComponentType} from 'react';
+import {ArchivalDossierDemo} from '../../animations/demo/demo-archival-dossier/remotion/ArchivalDossierDemo';
+import {ConstructivistGeometryDemo} from '../../animations/demo/demo-constructivist-geometry/remotion/ConstructivistGeometryDemo';
+import {CourtroomBlueprintDemo} from '../../animations/demo/demo-courtroom-blueprint/remotion/CourtroomBlueprintDemo';
+import {DecisionTreeDemo} from '../../animations/demo/demo-decision-tree/remotion/DecisionTreeDemo';
+import {EvidenceBoardDemo} from '../../animations/demo/demo-evidence-board/remotion/EvidenceBoardDemo';
+import {InkAnnotationDemo} from '../../animations/demo/demo-ink-annotation/remotion/InkAnnotationDemo';
+import {IsometricMechanismDemo} from '../../animations/demo/demo-isometric-mechanism/remotion/IsometricMechanismDemo';
+import {KineticTypographyDemo} from '../../animations/demo/demo-kinetic-typography/remotion/KineticTypographyDemo';
+import {NewspaperEditorialDemo} from '../../animations/demo/demo-newspaper-editorial/remotion/NewspaperEditorialDemo';
+import {RightsMatrixDemo} from '../../animations/demo/demo-rights-matrix/remotion/RightsMatrixDemo';
+import {SplitScreenComparisonDemo} from '../../animations/demo/demo-split-screen-comparison/remotion/SplitScreenComparisonDemo';
+import {StatuteCommentaryDemo} from '../../animations/demo/demo-statute-commentary/remotion/StatuteCommentaryDemo';
+import {TimelineChronicleDemo} from '../../animations/demo/demo-timeline-chronicle/remotion/TimelineChronicleDemo';
+import {TransitMapDemo} from '../../animations/demo/demo-transit-map/remotion/TransitMapDemo';
 import {ThirdPartyRevocation} from '../../animations/civil-procedure/07/third-party-revocation/remotion/ThirdPartyRevocation';
 import {ThirdPartyTypes} from '../../animations/civil-procedure/07/third-party-types/remotion/ThirdPartyTypes';
 import {JointLitigation} from '../../animations/civil-procedure/06/joint-litigation/remotion/JointLitigation';
@@ -22,12 +36,26 @@ export interface DemoDefinition {
   readonly title: string;
   readonly direction: string;
   readonly component: ComponentType<Record<string, never>>;
-  readonly href: string;
+  readonly href?: string;
   readonly durationInFrames: number;
   readonly fps: number;
 }
 
 export const STYLE_DEMOS = [
+  {id: 'demo-courtroom-blueprint', slug: 'courtroom-blueprint', title: '法庭蓝图', direction: 'Courtroom Blueprint', component: CourtroomBlueprintDemo, durationInFrames: 240, fps: 60},
+  {id: 'demo-archival-dossier', slug: 'archival-dossier', title: '档案卷宗', direction: 'Archival Dossier', component: ArchivalDossierDemo, durationInFrames: 240, fps: 60},
+  {id: 'demo-newspaper-editorial', slug: 'newspaper-editorial', title: '报刊编辑', direction: 'Newspaper Editorial', component: NewspaperEditorialDemo, durationInFrames: 240, fps: 60},
+  {id: 'demo-constructivist-geometry', slug: 'constructivist-geometry', title: '构成主义几何', direction: 'Constructivist Geometry', component: ConstructivistGeometryDemo, durationInFrames: 240, fps: 60},
+  {id: 'demo-ink-annotation', slug: 'ink-annotation', title: '墨迹批注', direction: 'Ink Annotation', component: InkAnnotationDemo, durationInFrames: 240, fps: 60},
+  {id: 'demo-evidence-board', slug: 'evidence-board', title: '证据板', direction: 'Evidence Board', component: EvidenceBoardDemo, durationInFrames: 240, fps: 60},
+  {id: 'demo-isometric-mechanism', slug: 'isometric-mechanism', title: '等距机械', direction: 'Isometric Mechanism', component: IsometricMechanismDemo, durationInFrames: 240, fps: 60},
+  {id: 'demo-timeline-chronicle', slug: 'timeline-chronicle', title: '时间轴编年体', direction: 'Timeline Chronicle', component: TimelineChronicleDemo, durationInFrames: 240, fps: 60},
+  {id: 'demo-statute-commentary', slug: 'statute-commentary', title: '法条注释', direction: 'Statute Commentary', component: StatuteCommentaryDemo, durationInFrames: 240, fps: 60},
+  {id: 'demo-decision-tree', slug: 'decision-tree', title: '决策树', direction: 'Decision Tree', component: DecisionTreeDemo, durationInFrames: 240, fps: 60},
+  {id: 'demo-rights-matrix', slug: 'rights-matrix', title: '权利矩阵', direction: 'Rights Matrix', component: RightsMatrixDemo, durationInFrames: 240, fps: 60},
+  {id: 'demo-kinetic-typography', slug: 'kinetic-typography', title: '动态字体', direction: 'Kinetic Typography', component: KineticTypographyDemo, durationInFrames: 240, fps: 60},
+  {id: 'demo-split-screen-comparison', slug: 'split-screen-comparison', title: '分屏比较', direction: 'Split-Screen Comparison', component: SplitScreenComparisonDemo, durationInFrames: 240, fps: 60},
+  {id: 'demo-transit-map', slug: 'transit-map', title: '推理线路图', direction: 'Transit Map', component: TransitMapDemo, durationInFrames: 240, fps: 60},
   {id: 'civil-procedure-06-joint-litigation', slug: 'joint-litigation', title: '共同诉讼', direction: 'Case Bindery Workshop', component: JointLitigation, href: '/inkloom/objective/civil-procedure/06/joint-litigation/', durationInFrames: JOINT_DURATION_FRAMES, fps: JOINT_FPS},
   {id: 'civil-procedure-06-representative-litigation', slug: 'representative-litigation', title: '代表人诉讼', direction: 'Representative Signal Exchange', component: RepresentativeLitigation, href: '/inkloom/objective/civil-procedure/06/representative-litigation/', durationInFrames: REPRESENTATIVE_DURATION_FRAMES, fps: REPRESENTATIVE_FPS},
   {id: 'civil-procedure-07-third-party-types', slug: 'third-party-types', title: '关系定位图', direction: 'Legal Relation Map', component: ThirdPartyTypes, href: '/inkloom/objective/civil-procedure/07/third-party-types/', durationInFrames: TYPES_DURATION_FRAMES, fps: TYPES_FPS},

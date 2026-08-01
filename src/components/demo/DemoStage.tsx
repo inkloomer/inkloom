@@ -28,7 +28,7 @@ export const DemoStage = ({demoId}: {readonly demoId: string}) => {
         />
       </div>
       <nav className="demo-stage__navigation" aria-label="Demo 风格导航">
-        <a href={previous.href} title={`上一个：${previous.title}`}>
+        <a href={previous.href ?? '/inkloom/demo/'} title={`上一个：${previous.title}`}>
           <ChevronLeft size={19} aria-hidden="true" />
           <span>{previous.title}</span>
         </a>
@@ -36,7 +36,7 @@ export const DemoStage = ({demoId}: {readonly demoId: string}) => {
           <Grid3X3 size={19} aria-hidden="true" />
           <span>全部</span>
         </a>
-        <a href={next.href} title={`下一个：${next.title}`}>
+        <a href={next.href ?? '/inkloom/demo/'} title={`下一个：${next.title}`}>
           <span>{next.title}</span>
           <ChevronRight size={19} aria-hidden="true" />
         </a>
