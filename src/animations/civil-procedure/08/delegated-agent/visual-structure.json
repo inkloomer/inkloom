@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 4,
+  "scenes": [
+    {"id": "authorization-fork", "export": "AuthorizationForkScene", "layout": "authorization-letter-fork", "anchor": "document-fork", "textTreatments": ["thin-underline", "soft-highlight", "label-block"], "grammar": ["source", "fork", "classification"], "focalChannels": ["icon", "connector", "enclosure", "annotation"], "tokens": ["FileSignature", "UserRoundCog", "Scale"]},
+    {"id": "special-authorization", "export": "SpecialAuthorizationScene", "layout": "explicit-five-action-path", "anchor": "typographic-sequence", "textTreatments": ["stamp", "external-negation", "soft-highlight", "thin-underline"], "grammar": ["rejection", "sequence", "qualification"], "focalChannels": ["icon", "annotation", "enclosure", "contrast"], "tokens": ["Stamp", "PenLine", "Handshake"]},
+    {"id": "mediation-boundary", "export": "MediationBoundaryScene", "layout": "mediation-boundary-lane", "anchor": "boundary", "textTreatments": ["thin-underline", "external-negation", "label-block"], "grammar": ["flow", "boundary", "blocked-transition"], "focalChannels": ["icon", "connector", "enclosure", "annotation"], "tokens": ["Handshake", "FileSignature", "KeyRound"]},
+    {"id": "stage-boundary", "export": "StageBoundaryScene", "layout": "trial-to-execution-gate", "anchor": "timeline-gate", "textTreatments": ["soft-highlight", "thin-underline", "label-block"], "grammar": ["timeline", "gate", "condition"], "focalChannels": ["icon", "connector", "enclosure", "annotation"], "tokens": ["Check", "KeyRound"]}
+  ]
+}

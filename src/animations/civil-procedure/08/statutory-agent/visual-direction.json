@@ -1,16 +1,16 @@
 {
-  "directionId": "guardian-custody",
-  "family": "custody-chart",
-  "palette": "warm ivory field + guardian teal + ward amber + verdict red + soft olive guide lines",
-  "typography": "warm humanist serif headings with monospaced case coordinates",
-  "composition": "custody chart with a shielded ward node, a guardian authority cord, and three difference checkpoints",
-  "surface": "warm paper with dotted guide lines and rounded custody enclosures",
-  "motion": "authority cord draws from law to guardian to ward, then difference markers stamp in and death lanes branch causally",
-  "transition": "continuous left-to-right handoff with a soft fade at chapter boundary",
+  "directionId": "guardian-identity-ledger",
+  "family": "guardian-civic-ledger",
+  "palette": "warm registry paper + civic ink + authority coral + party teal + consequence yellow",
+  "typography": "large question-led civic sans with soft keyword blocks, thin underlines, and external negation marks that never cover glyphs",
+  "composition": "direct role-to-role diagrams answering who grants, who acts, who receives judgment, and whose death changes the case",
+  "surface": "measured identity ledger with silhouettes, verdict routes, split consequence lanes, and restrained square evidence blocks",
+  "motion": "legal effects travel along explicit connectors while annotations mark the exact role or conclusion being tested",
+  "transition": "clean ledger-page replacement with persistent identity coordinates",
   "catalog": {
     "status": "featured",
     "source": "original-node",
     "route": "/inkloom/objective/civil-procedure/08/statutory-agent/",
-    "title": "法定代理人"
+    "title": "监护身份簿"
   }
 }

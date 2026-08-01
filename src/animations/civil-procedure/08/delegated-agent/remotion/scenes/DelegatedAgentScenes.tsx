@@ -1,160 +1,101 @@
-import type {ReactNode} from 'react';
-import {Ban, Briefcase, FileText, Files, HeartHandshake, ListChecks, Stamp, UserRound, UserX} from 'lucide-react';
+import {Ban, Check, FileCheck2, FileSignature, Gavel, Handshake, KeyRound, PenLine, Scale, ShieldCheck, Stamp, UserRound, UserRoundCog, X} from 'lucide-react';
 import {interpolate, useCurrentFrame} from 'remotion';
-import {PALETTE, toSourceFrame} from '../storyboard';
-import {
-  baseTextStyle,
-  ClauseChip,
-  ClausePanel,
-  ContractArrow,
-  ContractHeading,
-  DocBadge,
-  ENTER_EASING,
-  GateBar,
-  ImpactReveal,
-  InkReveal,
-  Keyword,
-  SealStamp,
-  SoftReveal,
-  VerdictBar,
-} from '../visual-system';
+import {CLAMP} from '../../../../../shared/remotion-runtime';
+import {AuditNote, COLORS, Canvas, Mark, Reveal} from '../visual-system';
 
-const BanItem = ({children, delay}: {readonly children: ReactNode; readonly delay: number}) => {
-  const frame = toSourceFrame(useCurrentFrame());
-  const p = interpolate(frame, [delay, delay + 24], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: ENTER_EASING});
+export const AuthorizationForkScene = () => {
+  const frame = useCurrentFrame();
+  const path = interpolate(frame, [16, 58], [0, 1], CLAMP);
   return (
-    <div style={{display: 'inline-flex', alignItems: 'center', gap: 8, padding: '9px 16px', borderRadius: 10, backgroundColor: PALETTE.redSoft, border: `2px solid ${PALETTE.red}`, color: PALETTE.red, fontSize: 21, fontWeight: 800, opacity: p, translate: `0px ${(1 - p) * 20}px`}}>
-      <Ban size={17} strokeWidth={2.4} />
-      <span>{children}</span>
-    </div>
+    <Canvas code="01" title="先看授权内容，再判断能做什么">
+      <div data-layout="authorization-letter-fork" data-visual-anchor="document-fork" data-text-treatments="thin-underline,soft-highlight,label-block" data-visual-grammar="source,fork,classification" data-focal-channels="icon,connector,enclosure,annotation" style={{position: 'absolute', left: 164, right: 52, top: 218, bottom: 42}}>
+        <Reveal delay={2} style={{position: 'absolute', left: 60, top: 152, width: 380, height: 430, border: `6px solid ${COLORS.yellow}`, backgroundColor: COLORS.steel}}>
+          <FileSignature size={132} color={COLORS.yellow} style={{position: 'absolute', left: 122, top: 76}} />
+          <div style={{position: 'absolute', left: 0, right: 0, top: 245, textAlign: 'center', fontSize: 39, fontWeight: 900}}>委托授权书</div>
+          <div style={{position: 'absolute', left: 0, right: 0, bottom: 54, textAlign: 'center', fontSize: 27, fontWeight: 800}}><Mark kind="underline" color={COLORS.yellow} delay={18}>授权内容</Mark>决定权限</div>
+        </Reveal>
+        <div style={{position: 'absolute', left: 440, top: 360, width: 330, height: 10, backgroundColor: COLORS.ivory, scale: `${path} 1`, transformOrigin: 'left center'}} />
+        <div style={{position: 'absolute', left: 750, top: 190, width: 10, height: 350, backgroundColor: COLORS.ivory}} />
+        <div data-focal-rule="authorization-fork" data-focal-channels="icon,connector,enclosure,annotation" style={{position: 'absolute', left: 760, right: 70, top: 74, bottom: 70}}>
+          <Reveal delay={36} from="right" style={{position: 'absolute', left: 0, top: 0, width: 780, height: 220, borderLeft: `24px solid ${COLORS.cyan}`, backgroundColor: COLORS.steel, padding: '34px 44px'}}>
+            <div style={{display: 'flex', alignItems: 'center', gap: 22, fontSize: 42, fontWeight: 900}}><UserRoundCog size={68} color={COLORS.cyan} /><Mark kind="highlight" color="rgba(78,200,192,.17)" delay={44}>一般授权</Mark></div>
+            <div style={{marginTop: 24, fontSize: 29, fontWeight: 800}}>行使程序性权利</div>
+          </Reveal>
+          <Reveal delay={52} from="right" style={{position: 'absolute', left: 0, bottom: 0, width: 780, height: 220, borderLeft: `24px solid ${COLORS.pink}`, backgroundColor: COLORS.steel, padding: '34px 44px'}}>
+            <div style={{display: 'flex', alignItems: 'center', gap: 22, fontSize: 42, fontWeight: 900}}><Scale size={68} color={COLORS.pink} /><Mark kind="underline" color={COLORS.pink} delay={60}>特别授权</Mark></div>
+            <div style={{marginTop: 24, fontSize: 29, fontWeight: 800}}>处分实体权利，必须逐项明确</div>
+          </Reveal>
+        </div>
+      </div>
+      <AuditNote accent={COLORS.yellow}>委托代理权不是身份自带，而是授权书逐项给出的。</AuditNote>
+    </Canvas>
   );
 };
 
-const Sheet = ({left, top, width, height, children}: {readonly left: number; readonly top: number; readonly width: number; readonly height: number; readonly children: ReactNode}) => (
-  <div style={{position: 'absolute', left, top, width, height, backgroundColor: PALETTE.paper, border: `1px solid ${PALETTE.line}`, boxShadow: '0 10px 26px rgba(38, 55, 74, 0.12)'}}>{children}</div>
+export const SpecialAuthorizationScene = () => (
+  <Canvas code="02" title="“全权代理”四个字，打不开特别授权">
+    <div data-layout="explicit-five-action-path" data-visual-anchor="typographic-sequence" data-text-treatments="stamp,external-negation,soft-highlight,thin-underline" data-visual-grammar="rejection,sequence,qualification" data-focal-channels="icon,annotation,enclosure,contrast" style={{position: 'absolute', left: 164, right: 52, top: 216, bottom: 42}}>
+      <Reveal delay={2} style={{position: 'absolute', left: 50, top: 82, width: 430, height: 540, border: `7px solid ${COLORS.rust}`, backgroundColor: COLORS.steel}}>
+        <Stamp size={92} color={COLORS.rust} style={{position: 'absolute', left: 46, top: 46}} />
+        <div style={{position: 'absolute', left: 42, right: 42, top: 180, fontSize: 48, lineHeight: 1.25, fontWeight: 900}}><Mark kind="negation" color={COLORS.rust} delay={18}>全权代理</Mark></div>
+        <div style={{position: 'absolute', left: 42, right: 42, top: 300, height: 5, backgroundColor: COLORS.rust}} />
+        <div style={{position: 'absolute', left: 42, right: 42, bottom: 74, fontSize: 37, lineHeight: 1.4, fontWeight: 900}}>未写明具体事项<br />↓<br /><Mark kind="highlight" color="rgba(242,206,85,.72)" delay={30}>视为一般授权</Mark></div>
+      </Reveal>
+      <div data-focal-rule="five-explicit-actions" data-focal-channels="icon,annotation,enclosure,contrast" style={{position: 'absolute', left: 570, right: 40, top: 54, bottom: 70}}>
+        <div style={{fontSize: 32, fontWeight: 900, color: COLORS.pink}}>特别授权必须逐项明确：</div>
+        <div style={{marginTop: 42, display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
+          <Reveal delay={20} style={{fontSize: 42, fontWeight: 900}}><Check size={56} color={COLORS.cyan} /><Mark kind="highlight" color="rgba(240,106,145,.18)" delay={26}>承认</Mark></Reveal>
+          <div style={{fontSize: 42, color: COLORS.muted}}>→</div>
+          <Reveal delay={30} style={{fontSize: 42, fontWeight: 900}}><Ban size={56} color={COLORS.rust} /><Mark kind="negation" color={COLORS.rust} delay={36}>放弃</Mark></Reveal>
+          <div style={{fontSize: 42, color: COLORS.muted}}>→</div>
+          <Reveal delay={40} style={{fontSize: 42, fontWeight: 900}}><PenLine size={56} color={COLORS.yellow} /><Mark kind="underline" color={COLORS.yellow} delay={46}>变更诉请</Mark></Reveal>
+        </div>
+        <div style={{marginTop: 72, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 130}}>
+          <Reveal delay={52} style={{fontSize: 44, fontWeight: 900}}><Handshake size={60} color={COLORS.cyan} /><Mark kind="highlight" color="rgba(78,200,192,.46)" delay={58}>和解</Mark></Reveal>
+          <Reveal delay={64} style={{fontSize: 44, fontWeight: 900}}><Gavel size={60} color={COLORS.pink} /><Mark kind="underline" color={COLORS.pink} delay={70}>反诉 / 上诉</Mark></Reveal>
+        </div>
+      </div>
+    </div>
+    <AuditNote accent={COLORS.rust}>“全权代理”≠“五项特别授权”。</AuditNote>
+  </Canvas>
 );
 
-export const ScopeScene = () => {
-  const frame = toSourceFrame(useCurrentFrame());
-  const divider = interpolate(frame, [40, 80], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: ENTER_EASING});
-  const specialItems: Array<[string, number]> = [
-    ['承认请求', 34], ['放弃请求', 50], ['变更请求', 66], ['和解', 82], ['反诉', 98], ['上诉', 114],
-  ];
-  const banItems: Array<[string, number]> = [
-    ['承认请求', 34], ['放弃请求', 50], ['变更请求', 66], ['和解', 82], ['反诉', 98], ['上诉', 114],
-  ];
+export const MediationBoundaryScene = () => {
+  const frame = useCurrentFrame();
+  const path = interpolate(frame, [18, 66], [0, 1], CLAMP);
   return (
-    <div style={{position: 'absolute', inset: 0}}>
-      <ContractHeading index="01" eyebrow="clause · 授权范围" title="写在授权书上的，才算数" accent="red" />
-      <SoftReveal delay={10} style={{position: 'absolute', left: 106, top: 226}}>
-        <div style={{...baseTextStyle, fontSize: 24, color: PALETTE.muted}}>委托代理人的权限范围，取决于被代理人的<Keyword accent="red">授权</Keyword>。</div>
-      </SoftReveal>
-      <Sheet left={240} top={316} width={1440} height={78}>
-        <div style={{display: 'flex', alignItems: 'center', gap: 14, height: '100%', padding: '0 26px'}}>
-          <Stamp size={28} strokeWidth={1.9} color={PALETTE.ink} />
-          <div style={{...baseTextStyle, fontSize: 26, fontWeight: 800}}>授权委托书 — 代理权限范围</div>
-          <div style={{marginLeft: 'auto', color: PALETTE.muted, fontFamily: 'Consolas, monospace', fontSize: 16}}>CLAUSE SPLIT</div>
+    <Canvas code="03" title="代为调解，到执行程序就必须停下">
+      <div data-layout="mediation-boundary-lane" data-visual-anchor="boundary" data-text-treatments="thin-underline,external-negation,label-block" data-visual-grammar="flow,boundary,blocked-transition" data-focal-channels="icon,connector,enclosure,annotation" style={{position: 'absolute', left: 164, right: 52, top: 218, bottom: 42}}>
+        <Reveal delay={2} style={{position: 'absolute', left: 52, top: 210, width: 330, height: 300, display: 'grid', placeItems: 'center', border: `6px solid ${COLORS.pink}`, backgroundColor: COLORS.steel}}><Handshake size={104} color={COLORS.pink} /><div style={{fontSize: 40, fontWeight: 900}}><Mark kind="underline" color={COLORS.pink} delay={12}>代为调解</Mark></div></Reveal>
+        <div style={{position: 'absolute', left: 382, top: 356, width: 800, height: 10, backgroundColor: COLORS.cyan, scale: `${path} 1`, transformOrigin: 'left center'}} />
+        <div data-focal-rule="mediation-scope" data-focal-channels="icon,connector,enclosure,annotation" style={{position: 'absolute', left: 500, top: 110, width: 650, height: 500, border: `7px dashed ${COLORS.cyan}`, backgroundColor: COLORS.steel}}>
+          <div style={{position: 'absolute', left: 34, top: 28, fontSize: 26, fontWeight: 900, color: COLORS.cyan}}>授权边界内</div>
+          {[['参加调解', <UserRound size={48} key="join" />], ['签署调解协议', <FileSignature size={48} key="sign" />], ['签收调解书', <FileCheck2 size={48} key="receive" />]].map(([label, icon], index) => <Reveal key={label as string} delay={30 + index * 10} style={{position: 'absolute', left: 58, top: 105 + index * 112, display: 'flex', alignItems: 'center', gap: 20, fontSize: 32, fontWeight: 900}}><span style={{width: 66, height: 66, display: 'grid', placeItems: 'center', backgroundColor: COLORS.cyan, color: COLORS.black}}>{icon}</span>{label}<Check size={38} color={COLORS.cyan} /></Reveal>)}
         </div>
-      </Sheet>
-      <div style={{position: 'absolute', left: 962, top: 394, width: 3, height: 420, backgroundColor: PALETTE.line, scale: `${divider} 1`, transformOrigin: 'top center'}} />
-      <ClausePanel icon={ListChecks} header="一般授权" headerAccent="mint" style={{left: 280, top: 394, width: 682, height: 420}}>
-        <div style={{...baseTextStyle, fontSize: 24, fontWeight: 800, color: PALETTE.mint}}>只能行使程序性诉讼权利</div>
-        <div style={{marginTop: 12, color: PALETTE.muted, fontSize: 20}}>不得代为处分实体权利：</div>
-        <div style={{display: 'flex', flexWrap: 'wrap', gap: 12, marginTop: 16}}>
-          {banItems.map(([text, delay]) => <BanItem key={text} delay={delay}>{text}</BanItem>)}
-        </div>
-      </ClausePanel>
-      <ClausePanel icon={Stamp} header="特别授权" headerAccent="red" style={{left: 998, top: 394, width: 682, height: 420}}>
-        <div style={{...baseTextStyle, fontSize: 24, fontWeight: 800, color: PALETTE.red}}>可代为处分实体权利</div>
-        <div style={{marginTop: 12, color: PALETTE.muted, fontSize: 20}}>须逐项明确写入授权书：</div>
-        <div style={{display: 'flex', flexWrap: 'wrap', gap: 12, marginTop: 16}}>
-          {specialItems.map(([text, delay]) => <ClauseChip key={text} accent="red" delay={delay}>{text}</ClauseChip>)}
-        </div>
-      </ClausePanel>
-      <VerdictBar delay={132} style={{left: 340, right: 340, top: 884}}>程序性权利人人有 · 实体处分须特别授权</VerdictBar>
-    </div>
+        <div style={{position: 'absolute', left: 1215, top: 70, bottom: 66, width: 18, backgroundColor: COLORS.rust}} />
+        <div style={{position: 'absolute', left: 1176, top: 315, width: 96, height: 96, display: 'grid', placeItems: 'center', backgroundColor: COLORS.rust, color: COLORS.black, fontSize: 62, fontWeight: 900}}>≠</div>
+        <Reveal delay={66} from="right" style={{position: 'absolute', right: 40, top: 190, width: 390, height: 340, display: 'grid', placeItems: 'center', border: `6px solid ${COLORS.rust}`, backgroundColor: COLORS.black}}><KeyRound size={92} color={COLORS.rust} /><div style={{fontSize: 38, fontWeight: 900}}><Mark kind="negation" color={COLORS.rust} delay={72}>申请执行</Mark></div><div style={{fontSize: 25, color: COLORS.muted, fontWeight: 800}}>执行程序事项</div></Reveal>
+      </div>
+      <AuditNote accent={COLORS.pink}>调解授权不能外推出执行代理权。</AuditNote>
+    </Canvas>
   );
 };
 
-export const FullPowerTrapScene = () => {
-  const frame = toSourceFrame(useCurrentFrame());
-  const clause = interpolate(frame, [20, 62], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: ENTER_EASING});
+export const StageBoundaryScene = () => {
+  const frame = useCurrentFrame();
+  const track = interpolate(frame, [10, 66], [0, 1], CLAMP);
+  const key = interpolate(frame, [60, 92], [100, 0], CLAMP);
   return (
-    <div style={{position: 'absolute', inset: 0}}>
-      <ContractHeading index="02" eyebrow="trap · 全权二字" title="写了'全权'，反而只是一般" accent="seal" />
-      <Sheet left={260} top={320} width={1100} height={420}>
-        <div style={{position: 'absolute', left: 0, top: 0, width: '100%', height: 56, display: 'flex', alignItems: 'center', padding: '0 26px', backgroundColor: PALETTE.ink, color: PALETTE.paper, fontSize: 22, fontWeight: 800}}>授权委托书 · 授权范围栏</div>
-        <div style={{position: 'absolute', left: 46, top: 108, color: PALETTE.muted, fontFamily: 'Consolas, monospace', fontSize: 18, letterSpacing: 1}}>授权范围：</div>
-        <InkReveal delay={26} duration={30} style={{position: 'absolute', left: 230, top: 78}}>
-          <div style={{...baseTextStyle, fontSize: 52, fontWeight: 900, color: PALETTE.ink}}>全权代理</div>
-        </InkReveal>
-        <div style={{position: 'absolute', left: 46, top: 200, width: 640, height: 2, backgroundColor: PALETTE.line, scale: `${clause} 1`, transformOrigin: 'left center'}} />
-        <div style={{position: 'absolute', left: 46, top: 250, color: PALETTE.muted, fontSize: 19, opacity: clause}}>—— 但没有写明任何一项具体授权内容</div>
-        <SealStamp delay={86} left={490} top={130} size={212} rotateTo={-10}>
-          视为<br />一般授权
-        </SealStamp>
-      </Sheet>
-      <SoftReveal delay={140} style={{position: 'absolute', left: 1380, top: 340, width: 420}}>
-        <div style={{padding: '24px 26px', backgroundColor: PALETTE.mintSoft, border: `2px solid ${PALETTE.mint}`}}>
-          <div style={{...baseTextStyle, fontSize: 22, fontWeight: 800, color: PALETTE.mint}}>特别授权的每一项</div>
-          <div style={{marginTop: 10, color: PALETTE.ink, fontSize: 20, lineHeight: 1.5}}>都必须由当事人在授权委托书中<Keyword accent="mint">明确、具体</Keyword>地写明。</div>
-        </div>
-      </SoftReveal>
-      <ImpactReveal delay={120} style={{position: 'absolute', left: 1380, top: 560}}>
-        <div style={{...baseTextStyle, fontSize: 21, color: PALETTE.muted}}>只写"全权代理"，不算特别授权。</div>
-      </ImpactReveal>
-      <VerdictBar delay={168} style={{left: 340, right: 340, top: 884}}>"全权代理"无具体内容 → 视为一般授权</VerdictBar>
-    </div>
-  );
-};
-
-export const ExecutionStageScene = () => {
-  const frame = toSourceFrame(useCurrentFrame());
-  const move = interpolate(frame, [30, 84], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: ENTER_EASING});
-  const gate = interpolate(frame, [110, 156], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: ENTER_EASING});
-  const note = interpolate(frame, [160, 200], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: ENTER_EASING});
-  return (
-    <div style={{position: 'absolute', inset: 0}}>
-      <ContractHeading index="03" eyebrow="stage · 代理阶段" title="授权到哪，代理到哪" accent="mint" />
-      <DocBadge icon={Files} label="一审 · 二审" note="代理权限止步于此" accent="mint" style={{left: 220, top: 420, width: 500, translate: `${(1 - move) * -40}px 0px`}} />
-      <ContractArrow left={740} top={470} width={150} progress={move} accent="mint" label="未另行授权" />
-      <GateBar left={930} top={340} height={280} progress={gate} label="执行程序·无代理权" />
-      <DocBadge icon={Briefcase} label="执行程序" note="需要另行明确授权" accent="red" style={{left: 1070, top: 420, width: 500, opacity: gate}} />
-      <div style={{position: 'absolute', left: 220, top: 680, width: 1400, ...baseTextStyle, color: PALETTE.muted, fontSize: 21, opacity: note}}>
-        当事人未明确授予执行程序中的代理权限 → 代理权限仅限于<Keyword accent="mint">一审、二审</Keyword>，在执行程序中<Keyword accent="red">没有代理权</Keyword>。
+    <Canvas code="04" title="执行程序需要一项新的明确授权">
+      <div data-layout="trial-to-execution-gate" data-visual-anchor="timeline-gate" data-text-treatments="soft-highlight,thin-underline,label-block" data-visual-grammar="timeline,gate,condition" data-focal-channels="icon,connector,enclosure,annotation" style={{position: 'absolute', left: 164, right: 52, top: 218, bottom: 42}}>
+        <div style={{position: 'absolute', left: 80, right: 80, top: 350, height: 12, backgroundColor: COLORS.muted}} />
+        <div style={{position: 'absolute', left: 80, top: 350, width: 1030, height: 12, backgroundColor: COLORS.cyan, scale: `${track} 1`, transformOrigin: 'left center'}} />
+        {[{left: 110, title: '一审'}, {left: 520, title: '二审'}].map((item, index) => <Reveal key={item.title} delay={18 + index * 16} style={{position: 'absolute', left: item.left, top: 240, width: 280, height: 230, display: 'grid', placeItems: 'center', border: `6px solid ${COLORS.cyan}`, backgroundColor: COLORS.black}}><Check size={70} color={COLORS.cyan} /><div style={{fontSize: 40, fontWeight: 900}}>{item.title}</div><div style={{fontSize: 24, color: COLORS.cyan, fontWeight: 800}}>原授权范围</div></Reveal>)}
+        <div data-focal-rule="execution-gate" data-focal-channels="icon,connector,enclosure,annotation" style={{position: 'absolute', left: 1010, top: 110, width: 210, height: 520, borderLeft: `22px solid ${COLORS.rust}`, borderRight: `22px solid ${COLORS.rust}`}}>{[0, 1, 2, 3, 4].map((bar) => <div key={bar} style={{position: 'absolute', left: 0, right: 0, top: 46 + bar * 91, height: 15, backgroundColor: COLORS.rust}} />)}</div>
+        <Reveal delay={50} from="right" style={{position: 'absolute', right: 76, top: 170, width: 430}}><div style={{fontSize: 48, fontWeight: 900}}><Mark kind="highlight" color="rgba(216,90,64,.18)" delay={58}>执行程序</Mark></div><div style={{marginTop: 28, fontSize: 29, lineHeight: 1.45, fontWeight: 800}}>未明确授权<br />代理权到此停止</div></Reveal>
+        <div style={{position: 'absolute', left: 1030, top: 650, display: 'flex', alignItems: 'center', gap: 22, translate: `0px ${key}px`, color: COLORS.yellow}}><KeyRound size={82} /><div style={{fontSize: 33, fontWeight: 900}}><Mark kind="underline" color={COLORS.yellow} delay={72}>明确授予执行代理权</Mark></div></div>
       </div>
-      <VerdictBar delay={196} style={{left: 340, right: 340, top: 884}}>执行程序，须另行明确授权</VerdictBar>
-    </div>
-  );
-};
-
-export const DivorceDutyScene = () => {
-  const frame = toSourceFrame(useCurrentFrame());
-  const link = interpolate(frame, [24, 62], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: ENTER_EASING});
-  return (
-    <div style={{position: 'absolute', inset: 0}}>
-      <ContractHeading index="04" eyebrow="duty · 出庭义务" title="离婚案件 · 本人仍应出庭" accent="red" />
-      <SoftReveal delay={10} style={{position: 'absolute', left: 106, top: 226}}>
-        <div style={{...baseTextStyle, fontSize: 24, color: PALETTE.muted}}>有代理人，本人原则上仍应出庭。</div>
-      </SoftReveal>
-      <DocBadge icon={HeartHandshake} label="离婚案件" note="有诉讼代理人" accent="seal" style={{left: 300, top: 390, width: 470}} />
-      <ContractArrow left={790} top={440} width={118} progress={link} accent="red" label="本人" />
-      <DocBadge icon={UserRound} label="本人" note="原则上仍应出庭" accent="red" style={{left: 920, top: 390, width: 480}} />
-      <div style={{position: 'absolute', left: 340, top: 640, width: 560, height: 170, backgroundColor: PALETTE.mintSoft, border: `2px solid ${PALETTE.mint}`}}>
-        <div style={{position: 'absolute', left: 24, top: 22, display: 'flex', alignItems: 'center', gap: 12}}>
-          <UserX size={32} strokeWidth={1.9} color={PALETTE.mint} />
-          <div style={{...baseTextStyle, fontSize: 23, fontWeight: 800, color: PALETTE.mint}}>例外一：本人不能表达意思</div>
-        </div>
-        <div style={{position: 'absolute', left: 24, top: 96, color: PALETTE.ink, fontSize: 22}}>→ 可以不出庭</div>
-      </div>
-      <div style={{position: 'absolute', left: 980, top: 640, width: 600, height: 170, backgroundColor: PALETTE.mintSoft, border: `2px solid ${PALETTE.mint}`}}>
-        <div style={{position: 'absolute', left: 24, top: 22, display: 'flex', alignItems: 'center', gap: 12}}>
-          <FileText size={32} strokeWidth={1.9} color={PALETTE.mint} />
-          <div style={{...baseTextStyle, fontSize: 23, fontWeight: 800, color: PALETTE.mint}}>例外二：特殊情况无法出庭</div>
-        </div>
-        <div style={{position: 'absolute', left: 24, top: 96, color: PALETTE.ink, fontSize: 22}}>→ 必须提交<Keyword accent="mint">书面意见</Keyword></div>
-      </div>
-      <VerdictBar delay={196} style={{left: 360, right: 360, top: 884}}>有代理人 ≠ 本人可不出庭（离婚案件）</VerdictBar>
-    </div>
+      <AuditNote accent={COLORS.cyan}>“代为调解”≠“申请执行调解书”。</AuditNote>
+    </Canvas>
   );
 };

@@ -65,7 +65,7 @@ const ANIMATED_MEDIA_FORMATS = {
     directory: 'animation-avif',
     extension: 'avif',
     enabledInPlayer: true,
-    label: 'AVIF 1080p · CRF42',
+    label: 'AVIF 动图',
     mimeType: 'image/avif',
     tabLabel: 'AVIF',
   },

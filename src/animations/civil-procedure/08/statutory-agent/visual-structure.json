@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 4,
+  "scenes": [
+    {"id": "source-of-authority", "export": "SourceOfAuthorityScene", "layout": "direct-authority-flow", "anchor": "flow-path", "textTreatments": ["thin-underline", "soft-highlight", "label-block"], "grammar": ["flow", "source", "target"], "focalChannels": ["icon", "connector", "enclosure", "annotation"], "tokens": ["BookOpenCheck", "ShieldCheck", "UserRoundCog"]},
+    {"id": "party-identity", "export": "PartyIdentityScene", "layout": "action-effect-handoff", "anchor": "role-pair", "textTreatments": ["label-block", "soft-highlight"], "grammar": ["causal", "handoff", "identity"], "focalChannels": ["icon", "connector", "annotation", "motion"], "tokens": ["UserRound", "UserRoundCog", "FileCheck2"]},
+    {"id": "judgment-target", "export": "JudgmentTargetScene", "layout": "verdict-target-route", "anchor": "flow-target", "textTreatments": ["soft-highlight", "external-negation", "label-block"], "grammar": ["routing", "targeting", "exclusion"], "focalChannels": ["icon", "connector", "locator", "annotation"], "tokens": ["Gavel", "FileCheck2", "ShieldCheck"]},
+    {"id": "death-consequences", "export": "DeathConsequencesScene", "layout": "death-consequence-split", "anchor": "comparison-axis", "textTreatments": ["label-block", "thin-underline"], "grammar": ["comparison", "branching", "continuation"], "focalChannels": ["icon", "connector", "contrast", "annotation"], "tokens": ["UserRound", "PauseCircle", "RefreshCw"]}
+  ]
+}
