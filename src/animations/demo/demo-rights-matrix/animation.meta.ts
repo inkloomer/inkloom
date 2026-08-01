@@ -1,3 +1,5 @@
+import {defineAnimationTypography} from '../../../typography/animation-presets';
+
 export const meta = {
   id: 'demo-rights-matrix',
   title: '权利矩阵',
@@ -5,3 +7,5 @@ export const meta = {
   visualDirection: 'rights-matrix',
   tags: ['demo', 'matrix', 'rights'],
 };
+
+export const typography = defineAnimationTypography({});

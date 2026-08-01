@@ -1,3 +1,5 @@
+import {defineAnimationTypography} from '../../../typography/animation-presets';
+
 export const meta = {
   id: 'demo-statute-commentary',
   title: '法条注释',
@@ -5,3 +7,5 @@ export const meta = {
   visualDirection: 'statute-commentary',
   tags: ['demo', 'statute', 'annotation'],
 };
+
+export const typography = defineAnimationTypography({});

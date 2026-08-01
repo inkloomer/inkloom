@@ -1,3 +1,5 @@
+import {defineAnimationTypography} from '../../../typography/animation-presets';
+
 export const meta = {
   id: 'demo-decision-tree',
   title: '决策树',
@@ -5,3 +7,5 @@ export const meta = {
   visualDirection: 'decision-tree',
   tags: ['demo', 'decision', 'logic'],
 };
+
+export const typography = defineAnimationTypography({});

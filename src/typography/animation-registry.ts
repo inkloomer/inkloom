@@ -47,6 +47,20 @@ import {typography as typography44} from '../animations/criminal/22/fight-defens
 import {typography as typography45} from '../animations/criminal/22/high-altitude-throwing-diagram/animation.meta';
 import {typography as typography46} from '../animations/criminal/23/influence-intermediary/animation.meta';
 import {typography as typography47} from '../animations/criminal/23/official-intermediary/animation.meta';
+import {typography as typography48} from '../animations/demo/demo-archival-dossier/animation.meta';
+import {typography as typography49} from '../animations/demo/demo-constructivist-geometry/animation.meta';
+import {typography as typography50} from '../animations/demo/demo-courtroom-blueprint/animation.meta';
+import {typography as typography51} from '../animations/demo/demo-decision-tree/animation.meta';
+import {typography as typography52} from '../animations/demo/demo-evidence-board/animation.meta';
+import {typography as typography53} from '../animations/demo/demo-ink-annotation/animation.meta';
+import {typography as typography54} from '../animations/demo/demo-isometric-mechanism/animation.meta';
+import {typography as typography55} from '../animations/demo/demo-kinetic-typography/animation.meta';
+import {typography as typography56} from '../animations/demo/demo-newspaper-editorial/animation.meta';
+import {typography as typography57} from '../animations/demo/demo-rights-matrix/animation.meta';
+import {typography as typography58} from '../animations/demo/demo-split-screen-comparison/animation.meta';
+import {typography as typography59} from '../animations/demo/demo-statute-commentary/animation.meta';
+import {typography as typography60} from '../animations/demo/demo-timeline-chronicle/animation.meta';
+import {typography as typography61} from '../animations/demo/demo-transit-map/animation.meta';
 
 const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypographyConfiguration>> = {
   'dispute-resolution': {metadata: typography0, scope: {animationId: 'dispute-resolution', subject: 'civil-procedure', topic: '01'}},
@@ -97,6 +111,20 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'high-altitude-throwing-diagram': {metadata: typography45, scope: {animationId: 'high-altitude-throwing-diagram', subject: 'criminal', topic: '22'}},
   'influence-intermediary': {metadata: typography46, scope: {animationId: 'influence-intermediary', subject: 'criminal', topic: '23'}},
   'official-intermediary': {metadata: typography47, scope: {animationId: 'official-intermediary', subject: 'criminal', topic: '23'}},
+  'demo-archival-dossier': {metadata: typography48, scope: {animationId: 'demo-archival-dossier', subject: 'demo', topic: 'styles'}},
+  'demo-constructivist-geometry': {metadata: typography49, scope: {animationId: 'demo-constructivist-geometry', subject: 'demo', topic: 'styles'}},
+  'demo-courtroom-blueprint': {metadata: typography50, scope: {animationId: 'demo-courtroom-blueprint', subject: 'demo', topic: 'styles'}},
+  'demo-decision-tree': {metadata: typography51, scope: {animationId: 'demo-decision-tree', subject: 'demo', topic: 'styles'}},
+  'demo-evidence-board': {metadata: typography52, scope: {animationId: 'demo-evidence-board', subject: 'demo', topic: 'styles'}},
+  'demo-ink-annotation': {metadata: typography53, scope: {animationId: 'demo-ink-annotation', subject: 'demo', topic: 'styles'}},
+  'demo-isometric-mechanism': {metadata: typography54, scope: {animationId: 'demo-isometric-mechanism', subject: 'demo', topic: 'styles'}},
+  'demo-kinetic-typography': {metadata: typography55, scope: {animationId: 'demo-kinetic-typography', subject: 'demo', topic: 'styles'}},
+  'demo-newspaper-editorial': {metadata: typography56, scope: {animationId: 'demo-newspaper-editorial', subject: 'demo', topic: 'styles'}},
+  'demo-rights-matrix': {metadata: typography57, scope: {animationId: 'demo-rights-matrix', subject: 'demo', topic: 'styles'}},
+  'demo-split-screen-comparison': {metadata: typography58, scope: {animationId: 'demo-split-screen-comparison', subject: 'demo', topic: 'styles'}},
+  'demo-statute-commentary': {metadata: typography59, scope: {animationId: 'demo-statute-commentary', subject: 'demo', topic: 'styles'}},
+  'demo-timeline-chronicle': {metadata: typography60, scope: {animationId: 'demo-timeline-chronicle', subject: 'demo', topic: 'styles'}},
+  'demo-transit-map': {metadata: typography61, scope: {animationId: 'demo-transit-map', subject: 'demo', topic: 'styles'}},
 };
 
 export const getAnimationTypographyConfiguration = (animationId: string) =>

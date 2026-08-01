@@ -1,3 +1,5 @@
+import {defineAnimationTypography} from '../../../typography/animation-presets';
+
 export const meta = {
   id: 'demo-timeline-chronicle',
   title: '时间轴编年体',
@@ -5,3 +7,5 @@ export const meta = {
   visualDirection: 'timeline-chronicle',
   tags: ['demo', 'timeline', 'procedural'],
 };
+
+export const typography = defineAnimationTypography({});
