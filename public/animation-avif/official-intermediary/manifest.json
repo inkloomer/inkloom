@@ -1,0 +1,83 @@
+{
+  "animationId": "official-intermediary",
+  "compositionId": "OfficialIntermediary",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-01T14:16:37.463Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 179,
+      "frameCount": 180,
+      "id": "identity-gate",
+      "number": "01",
+      "startFrame": 0,
+      "title": "国家工作人员身份闸门",
+      "durationMs": 6000,
+      "file": "identity-gate.avif",
+      "fileSize": 235561,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "e352517243055840686b6d6559cc4b86152756f86c5d226127314c4f5eda0183",
+      "crf": 35,
+      "quality": 45
+    },
+    {
+      "endFrame": 389,
+      "frameCount": 210,
+      "id": "split-funds",
+      "number": "02",
+      "startFrame": 180,
+      "title": "100 万资金分流",
+      "durationMs": 7000,
+      "file": "split-funds.avif",
+      "fileSize": 174566,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "ace92d71bf9bd2ac794019f2da0e435aab5d8ae27f0212fc5b76163ade08dd09",
+      "crf": 35,
+      "quality": 45
+    },
+    {
+      "endFrame": 599,
+      "frameCount": 210,
+      "id": "disclosed-intent",
+      "number": "03",
+      "startFrame": 390,
+      "title": "明知与合意",
+      "durationMs": 7000,
+      "file": "disclosed-intent.avif",
+      "fileSize": 249015,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "594f3cb91a50ac960928dad706a1a07929d6d1534c97e14dca260ee63a295bbf",
+      "crf": 35,
+      "quality": 45
+    },
+    {
+      "endFrame": 809,
+      "frameCount": 210,
+      "id": "concealed-intent",
+      "number": "04",
+      "startFrame": 600,
+      "title": "隐瞒与独立既遂",
+      "durationMs": 7000,
+      "file": "concealed-intent.avif",
+      "fileSize": 256955,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "44b73db1ffcfb5bae96404fbcdb21b26bdd0324b87da640329369b8c938d7539",
+      "crf": 35,
+      "quality": 45
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "46fcc238ed21f2da3e06872be52aa47ecf10813cdd4882a2f35993a74db5d875",
+  "targetFps": 30,
+  "totalFileSize": 916097
+}

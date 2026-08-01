@@ -1,0 +1,83 @@
+{
+  "animationId": "influence-intermediary",
+  "compositionId": "InfluenceIntermediary",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-01T14:19:13.903Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 179,
+      "frameCount": 180,
+      "id": "private-influence-network",
+      "number": "01",
+      "startFrame": 0,
+      "title": "私人影响力来源",
+      "durationMs": 6000,
+      "file": "private-influence-network.avif",
+      "fileSize": 210070,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "33ba756d382d908d02fb2ac0e4daa419e4ee0bd3551e3f7958999028ad4586df",
+      "crf": 35,
+      "quality": 45
+    },
+    {
+      "endFrame": 389,
+      "frameCount": 210,
+      "id": "influence-funds-split",
+      "number": "02",
+      "startFrame": 180,
+      "title": "关系网络中的资金分流",
+      "durationMs": 7000,
+      "file": "influence-funds-split.avif",
+      "fileSize": 184529,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "ae7a5abe54adac806213b5a8c5c6ce7a6b3e24d0b455c041490269df9b69911c",
+      "crf": 35,
+      "quality": 45
+    },
+    {
+      "endFrame": 599,
+      "frameCount": 210,
+      "id": "influence-disclosed-intent",
+      "number": "03",
+      "startFrame": 390,
+      "title": "告知代收与共犯",
+      "durationMs": 7000,
+      "file": "influence-disclosed-intent.avif",
+      "fileSize": 255385,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "3eab73c168c6de569709627086f975707c2c08f1a5ed83d76350e090af0cd413",
+      "crf": 35,
+      "quality": 45
+    },
+    {
+      "endFrame": 779,
+      "frameCount": 180,
+      "id": "designated-funds-trap",
+      "number": "04",
+      "startFrame": 600,
+      "title": "指定款项的故意边界",
+      "durationMs": 6000,
+      "file": "designated-funds-trap.avif",
+      "fileSize": 257681,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "013fa9374edc4b41f79a24a71c3314fd0f2769030d38fdcb8880141ebfc74d40",
+      "crf": 35,
+      "quality": 45
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "4a68feed3ddddae1c9d7afb27502788217242d5fb34259b4a26fd51b3957a1b6",
+  "targetFps": 30,
+  "totalFileSize": 907665
+}

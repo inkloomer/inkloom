@@ -1,0 +1,1 @@
+export const FPS=30; const scene=(start:number,duration:number)=>({start,duration,previewEndTrimFrames:0}); export const SCENES={identity:scene(0,180),split:scene(180,210),intent:scene(390,210),conceal:scene(600,210)} as const; export const DURATION_FRAMES=810;
