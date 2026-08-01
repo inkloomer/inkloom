@@ -1,0 +1,16 @@
+{
+  "directionId": "evidence-cold-storage",
+  "family": "preservation-vault",
+  "palette": "frost white + deep graphite + preservation aqua + deadline amber + release coral",
+  "typography": "wide technical sans with insulated labels, thin timing rules, and square order stamps",
+  "composition": "a threatened evidence specimen enters two preservation chambers, then the stricter pre-action chamber advances through timed locks",
+  "surface": "flat insulated vault panels, translucent specimen windows, hard-edged seals, and fine frost-grid lines",
+  "motion": "risk closes around the specimen; litigation routes converge on one court chamber; emergency preservation advances through 48-hour and 30-day locks",
+  "transition": "the evidence specimen persists while the surrounding chamber changes from shared premise to litigation and pre-action procedure",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/civil-procedure/11/evidence-preservation/",
+    "title": "证据保全舱"
+  }
+}
