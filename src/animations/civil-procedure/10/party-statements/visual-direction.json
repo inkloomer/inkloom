@@ -1,0 +1,4 @@
+{
+  "directionId":"ink-annotation","derivedFrom":"demo-ink-annotation","variation":"a ruled court-note page with a corroboration equation, four-condition chain, and representation boundary",
+  "family":"court-note-logic","palette":"clean note white + graphite + procedural blue + veto red + finding yellow","typography":"large handwritten-note hierarchy rendered in stable sans with thin rules and external veto marks","composition":"corroboration equation, four-condition recognition stop, and agent-presence boundary","surface":"flat ruled hearing paper with square evidence blocks and no hand-drawn circles over text","motion":"evidence pieces combine; four conditions accumulate; representation blocks three unsupported procedural consequences","transition":"the ruled note page persists while the legal annotation changes","catalog":{"status":"variant","sourceDirectionId":"ink-annotation"}
+}

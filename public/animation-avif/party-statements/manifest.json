@@ -1,0 +1,67 @@
+{
+  "animationId": "party-statements",
+  "compositionId": "PartyStatements",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-01T13:15:25.126Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 149,
+      "frameCount": 150,
+      "id": "corroboration",
+      "number": "01",
+      "startFrame": 0,
+      "title": "不得单独定案",
+      "durationMs": 5000,
+      "file": "corroboration.avif",
+      "fileSize": 140560,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "6fdb20b9a5ce3d0fdb5ba6e555c67ec1ca911ff86d47451aba404b9524adb9b1",
+      "crf": 35,
+      "quality": 45
+    },
+    {
+      "endFrame": 329,
+      "frameCount": 180,
+      "id": "refusal-conditions",
+      "number": "02",
+      "startFrame": 150,
+      "title": "拒绝陈述的不利后果",
+      "durationMs": 6000,
+      "file": "refusal-conditions.avif",
+      "fileSize": 179150,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "4f57eaf1ec98f8dd49733c8bb8ad8ed33a62b359b3d0bac7e3c9c1150853993d",
+      "crf": 35,
+      "quality": 45
+    },
+    {
+      "endFrame": 479,
+      "frameCount": 150,
+      "id": "procedural-boundary",
+      "number": "03",
+      "startFrame": 330,
+      "title": "拒绝到庭的程序边界",
+      "durationMs": 5000,
+      "file": "procedural-boundary.avif",
+      "fileSize": 155151,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "1514ad3d9c257f183cbf42727aa1b65faac53997826e851351a9c24f7386d80e",
+      "crf": 35,
+      "quality": 45
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "cab34e917a233a6354c4a31c4b4b6e36099786705b1fb49bc719122edb6e87a0",
+  "targetFps": 30,
+  "totalFileSize": 474861
+}

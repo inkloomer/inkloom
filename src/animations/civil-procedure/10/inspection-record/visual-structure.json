@@ -1,0 +1,7 @@
+{
+  "version":1,"minimumDistinctLayouts":3,"scenes":[
+    {"id":"initiation","export":"InitiationScene","layout":"dual-route-inspection-order","anchor":"flow-path","grammar":["application","authority","convergence","authorization"],"textTreatments":["label-block","thin-underline","stamp"],"focalChannels":["icon","connector","spatial","contrast"],"tokens":["Users","Landmark","ClipboardPenLine"]},
+    {"id":"scope","export":"ScopeScene","layout":"object-and-site-survey-map","anchor":"comparison-axis","grammar":["object-scope","site-scope","observation","recording"],"textTreatments":["label-block","soft-highlight","thin-underline"],"focalChannels":["icon","enclosure","spatial","connector"],"tokens":["Boxes","MapPinned","Crosshair"]},
+    {"id":"expert-participation","export":"ExpertParticipationScene","layout":"inspection-to-appraisal-escalation","anchor":"timeline-gate","grammar":["inspection","participation","necessity","escalation"],"textTreatments":["label-block","stamp","soft-highlight"],"focalChannels":["icon","connector","contrast","enclosure"],"tokens":["ScanLine","Microscope","FileInput"]}
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "animationId": "witness-testimony",
+  "compositionId": "WitnessTestimony",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-01T13:10:05.914Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 179,
+      "frameCount": 180,
+      "id": "qualification",
+      "number": "01",
+      "startFrame": 0,
+      "title": "证人资格",
+      "durationMs": 6000,
+      "file": "qualification.avif",
+      "fileSize": 243346,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "c14db0ca96b3220686f37c362f2d4e5a985caf06c13580ac1ad84e363601ab79",
+      "crf": 35,
+      "quality": 45
+    },
+    {
+      "endFrame": 389,
+      "frameCount": 210,
+      "id": "appearance",
+      "number": "02",
+      "startFrame": 180,
+      "title": "出庭原则与例外",
+      "durationMs": 7000,
+      "file": "appearance.avif",
+      "fileSize": 313277,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "17247f0967fe81093bc2a534aa08437b25273e5bb1ca32affd93f4fce3ad4ec0",
+      "crf": 35,
+      "quality": 45
+    },
+    {
+      "endFrame": 569,
+      "frameCount": 180,
+      "id": "testimony-conduct",
+      "number": "03",
+      "startFrame": 390,
+      "title": "作证方式与费用",
+      "durationMs": 6000,
+      "file": "testimony-conduct.avif",
+      "fileSize": 319948,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "cdf1fac108b499cd8b795d384fb6f4df54a8e4179749329f6324c08bd1feacb7",
+      "crf": 35,
+      "quality": 45
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "308a53165cccbd6c71bf6c84662bae7d78ac03f59b514a2a7a7f5ed3c47a45fc",
+  "targetFps": 30,
+  "totalFileSize": 876571
+}

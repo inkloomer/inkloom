@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "direct-indirect",
+      "export": "DirectIndirectScene",
+      "layout": "forensic-dual-aperture",
+      "anchor": "comparison-axis",
+      "grammar": ["comparison", "coverage", "connector"],
+      "textTreatments": ["label-block", "soft-highlight", "thin-underline"],
+      "focalChannels": ["icon", "contrast", "connector", "spatial"],
+      "tokens": ["ScanSearch", "Puzzle", "FileCheck2", "FileQuestion"]
+    },
+    {
+      "id": "burden-evidence",
+      "export": "BurdenEvidenceScene",
+      "layout": "burden-routing-console",
+      "anchor": "flow-path",
+      "grammar": ["sequence", "attribution", "fork"],
+      "textTreatments": ["label-block", "thin-underline", "stamp"],
+      "focalChannels": ["icon", "connector", "spatial", "annotation"],
+      "tokens": ["CircleDot", "ShieldCheck", "ScanSearch", "UserRoundCheck", "UserRoundMinus"]
+    },
+    {
+      "id": "single-case-trap",
+      "export": "SingleCaseTrapScene",
+      "layout": "one-way-inference-gate",
+      "anchor": "typographic-sequence",
+      "grammar": ["implication", "exclusion", "alternative-cause"],
+      "textTreatments": ["soft-highlight", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "annotation", "contrast"],
+      "tokens": ["Puzzle", "FileQuestion", "ShieldCheck", "X"]
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "animationId": "inspection-record",
+  "compositionId": "InspectionRecord",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-01T13:30:17.918Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 169,
+      "frameCount": 170,
+      "id": "initiation",
+      "number": "01",
+      "startFrame": 0,
+      "title": "申请与依职权启动",
+      "durationMs": 5667,
+      "file": "initiation.avif",
+      "fileSize": 185356,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "7500e9948320d6c4d27ad635c881002705104bfdc7c0bf54756aacde5f5f4a4b",
+      "crf": 35,
+      "quality": 45
+    },
+    {
+      "endFrame": 339,
+      "frameCount": 170,
+      "id": "scope",
+      "number": "02",
+      "startFrame": 170,
+      "title": "物证与现场",
+      "durationMs": 5667,
+      "file": "scope.avif",
+      "fileSize": 236840,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "0ea6b4a6906dffb726b1d09b284f28a785c831859aa25d23b384955aa09fd692",
+      "crf": 35,
+      "quality": 45
+    },
+    {
+      "endFrame": 519,
+      "frameCount": 180,
+      "id": "expert-participation",
+      "number": "03",
+      "startFrame": 340,
+      "title": "鉴定人参与与现场鉴定",
+      "durationMs": 6000,
+      "file": "expert-participation.avif",
+      "fileSize": 214830,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "646f69f3c9213e3b799256db90e812942dbc7edf39e2478fa9df2ecda4930952",
+      "crf": 35,
+      "quality": 45
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "4247dfd5ac357f851d42c09855ddab8047867ff45c869a6ceb083aa7439b7a26",
+  "targetFps": 30,
+  "totalFileSize": 637026
+}

@@ -1,0 +1,67 @@
+{
+  "animationId": "professional-evidence-roles",
+  "compositionId": "ProfessionalEvidenceRoles",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-01T13:13:34.671Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 179,
+      "frameCount": 180,
+      "id": "role-targets",
+      "number": "01",
+      "startFrame": 0,
+      "title": "三类人员分别帮助谁",
+      "durationMs": 6000,
+      "file": "role-targets.avif",
+      "fileSize": 327747,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "fe0cd6dd8d4d155bc4fd8eecfcfdb55d79e672a23cd0de5f190fc568183363e4",
+      "crf": 35,
+      "quality": 45
+    },
+    {
+      "endFrame": 359,
+      "frameCount": 180,
+      "id": "initiation-recusal",
+      "number": "02",
+      "startFrame": 180,
+      "title": "启动与回避",
+      "durationMs": 6000,
+      "file": "initiation-recusal.avif",
+      "fileSize": 368102,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "3a22a9b24270306862a85bbac27dd7bcfe92d3a49a7c0b6f6e848d3beb51bcbe",
+      "crf": 35,
+      "quality": 45
+    },
+    {
+      "endFrame": 539,
+      "frameCount": 180,
+      "id": "private-opinion",
+      "number": "03",
+      "startFrame": 360,
+      "title": "自行委托鉴定意见书",
+      "durationMs": 6000,
+      "file": "private-opinion.avif",
+      "fileSize": 328796,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "3d5bdbae82767fd15947d3b498c4d5b3ed0f8a053761176a2cad66be746a6561",
+      "crf": 35,
+      "quality": 45
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "e6cbb12b3f77f67cd06411b5798d6e0848378c4476f09e17bdaebcdc69035a89",
+  "targetFps": 30,
+  "totalFileSize": 1024645
+}

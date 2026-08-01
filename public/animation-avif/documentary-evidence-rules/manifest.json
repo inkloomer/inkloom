@@ -1,0 +1,67 @@
+{
+  "animationId": "documentary-evidence-rules",
+  "compositionId": "DocumentaryEvidenceRules",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-01T12:15:47.336Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 194,
+      "frameCount": 195,
+      "id": "authenticity-rule",
+      "number": "01",
+      "startFrame": 0,
+      "title": "文书真实性规则",
+      "durationMs": 6500,
+      "file": "authenticity-rule.avif",
+      "fileSize": 459541,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "21c92e8e617d2e7ea62518bc4e349f7749196c2ae8c20ce9b74a3e1ab04bcd29",
+      "crf": 35,
+      "quality": 45
+    },
+    {
+      "endFrame": 404,
+      "frameCount": 210,
+      "id": "document-order",
+      "number": "02",
+      "startFrame": 195,
+      "title": "文书提出命令规则",
+      "durationMs": 7000,
+      "file": "document-order.avif",
+      "fileSize": 387205,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "86746bcb21546d737c64b5a786b7f0d4e6f7b87f8fb5c9d1092cd7951149a342",
+      "crf": 35,
+      "quality": 45
+    },
+    {
+      "endFrame": 554,
+      "frameCount": 150,
+      "id": "best-evidence",
+      "number": "03",
+      "startFrame": 405,
+      "title": "最佳证据规则",
+      "durationMs": 5000,
+      "file": "best-evidence.avif",
+      "fileSize": 325623,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "b4bd6d4080a07f0b919c41b8ca9ace74f9d2dc59629ce6d135ffb632824e07c8",
+      "crf": 35,
+      "quality": 45
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "12ab3f077ff9aec958c78235d36f1ed7821988ab314f56b0295c59c397bd4f6a",
+  "targetFps": 30,
+  "totalFileSize": 1172369
+}

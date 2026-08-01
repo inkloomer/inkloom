@@ -1,0 +1,67 @@
+{
+  "animationId": "evidence-classification",
+  "compositionId": "EvidenceClassification",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-01T12:14:05.442Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 164,
+      "frameCount": 165,
+      "id": "direct-indirect",
+      "number": "01",
+      "startFrame": 0,
+      "title": "直接证据 vs 间接证据",
+      "durationMs": 5500,
+      "file": "direct-indirect.avif",
+      "fileSize": 242046,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "4d60de94f87188d97fa4c03722e4a749150934f98f38a15e29b637107b9b9fec",
+      "crf": 35,
+      "quality": 45
+    },
+    {
+      "endFrame": 359,
+      "frameCount": 195,
+      "id": "burden-evidence",
+      "number": "02",
+      "startFrame": 165,
+      "title": "本证 vs 反证三步判断",
+      "durationMs": 6500,
+      "file": "burden-evidence.avif",
+      "fileSize": 275095,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "4fec69b8a85a6587e52a401130b9db79c7a82e6e73d9ed6919c1e3b59c947907",
+      "crf": 35,
+      "quality": 45
+    },
+    {
+      "endFrame": 524,
+      "frameCount": 165,
+      "id": "single-case-trap",
+      "number": "03",
+      "startFrame": 360,
+      "title": "不能单独定案的逆命题误区",
+      "durationMs": 5500,
+      "file": "single-case-trap.avif",
+      "fileSize": 218668,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "01ac57c7a1251caa91110006028e9a65d2eb30f3ff23d76e3ce674fa4f57d85b",
+      "crf": 35,
+      "quality": 45
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "02e74586566df1a3fbd3afb5c1b43af388e568614a3145cc3d73de9cafa0bdaf",
+  "targetFps": 30,
+  "totalFileSize": 735809
+}

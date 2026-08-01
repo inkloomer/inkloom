@@ -1,0 +1,7 @@
+{
+  "version":1,"minimumDistinctLayouts":3,"scenes":[
+    {"id":"corroboration","export":"CorroborationScene","layout":"statement-corroboration-equation","anchor":"comparison-axis","grammar":["combination","corroboration","result"],"textTreatments":["soft-highlight","thin-underline","stamp"],"focalChannels":["icon","connector","enclosure","contrast"],"tokens":["MessageSquareText","FileCheck2","Gavel"]},
+    {"id":"refusal-conditions","export":"RefusalConditionsScene","layout":"four-condition-recognition-stop","anchor":"flow-path","grammar":["sequence","conjunction","consequence","exclusion"],"textTreatments":["label-block","soft-highlight","external-negation"],"focalChannels":["icon","connector","spatial","annotation"],"tokens":["X"]},
+    {"id":"procedural-boundary","export":"ProceduralBoundaryScene","layout":"agent-presence-procedure-boundary","anchor":"boundary","grammar":["representation","boundary","prohibition"],"textTreatments":["stamp","external-negation","thin-underline"],"focalChannels":["icon","enclosure","annotation","contrast"],"tokens":["UserRoundCheck","Ban","X"]}
+  ]
+}

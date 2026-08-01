@@ -1,0 +1,7 @@
+{
+  "version":1,"minimumDistinctLayouts":3,"scenes":[
+    {"id":"initiation","export":"InitiationScene","layout":"dual-input-appraisal-chamber","anchor":"flow-path","grammar":["default","exception","authorization","consequence"],"textTreatments":["label-block","thin-underline","stamp"],"focalChannels":["icon","connector","enclosure","contrast"],"tokens":["Users","Settings2","Landmark"]},
+    {"id":"preparation","export":"PreparationScene","layout":"appraiser-selection-and-material-lock","anchor":"document-fork","grammar":["selection","escalation","verification","exclusion"],"textTreatments":["soft-highlight","label-block","external-negation"],"focalChannels":["icon","connector","enclosure","annotation"],"tokens":["Users","Landmark","SlidersHorizontal","FileCheck2","FileX2"]},
+    {"id":"appearance-consequences","export":"AppearanceConsequencesScene","layout":"appearance-cost-and-sanction-mechanism","anchor":"boundary","grammar":["cost-allocation","exception","sanction"],"textTreatments":["label-block","stamp","external-negation"],"focalChannels":["icon","contrast","enclosure","spatial"],"tokens":["BadgeDollarSign","Ban"]}
+  ]
+}

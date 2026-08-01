@@ -1,0 +1,67 @@
+{
+  "animationId": "appraisal-opinion",
+  "compositionId": "AppraisalOpinion",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-01T13:11:45.863Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 189,
+      "frameCount": 190,
+      "id": "initiation",
+      "number": "01",
+      "startFrame": 0,
+      "title": "鉴定的启动",
+      "durationMs": 6333,
+      "file": "initiation.avif",
+      "fileSize": 405712,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "722e69cab5b23f1d58444a45564924a080daaf416fd0d1c216aec602c09374f6",
+      "crf": 35,
+      "quality": 45
+    },
+    {
+      "endFrame": 379,
+      "frameCount": 190,
+      "id": "preparation",
+      "number": "02",
+      "startFrame": 190,
+      "title": "鉴定人和材料",
+      "durationMs": 6333,
+      "file": "preparation.avif",
+      "fileSize": 361119,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "42533d57c012e32d7bf077799c5589ff5cf1a114e28c1bc1b1a9e34389c211cf",
+      "crf": 35,
+      "quality": 45
+    },
+    {
+      "endFrame": 569,
+      "frameCount": 190,
+      "id": "appearance-consequences",
+      "number": "03",
+      "startFrame": 380,
+      "title": "出庭费用与拒不出庭后果",
+      "durationMs": 6333,
+      "file": "appearance-consequences.avif",
+      "fileSize": 398971,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "34d746ead90c5927a00f7113fdb728cd34b3d5e1fb8d24d66eec865965f8d2bd",
+      "crf": 35,
+      "quality": 45
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "07898d16be9e6cc9d81ef307a5d2831e6ad0fc50dd8a36457afc1f86c1c6d1df",
+  "targetFps": 30,
+  "totalFileSize": 1165802
+}

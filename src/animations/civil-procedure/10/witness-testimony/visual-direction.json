@@ -1,0 +1,4 @@
+{
+  "directionId":"courtroom-blueprint","derivedFrom":"demo-courtroom-blueprint","variation":"a witness hearing plan with qualification gates, appearance mainline, and conduct-cost rails",
+  "family":"witness-hearing-plan","palette":"plan paper + hearing navy + testimony cyan + exception orange","typography":"technical humanist sans with numbered plan labels and operative result bands","composition":"two qualification gates, a main appearance rail with exception spurs, and parallel conduct-cost tracks","surface":"flat blueprint bays and measured hearing stations without coordinate decoration","motion":"qualification gates activate together; the appearance route reaches a consequence stop; cost responsibility transfers to the losing party","transition":"the dark witness margin persists while each hearing plan replaces the prior sheet","catalog":{"status":"variant","sourceDirectionId":"courtroom-blueprint"}
+}

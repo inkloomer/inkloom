@@ -1,0 +1,13 @@
+{
+  "directionId": "rights-matrix",
+  "derivedFrom": "demo-rights-matrix",
+  "variation": "four evidence carriers are sorted through a proof-method prism and an analog-digital storage boundary rather than a table",
+  "family": "material-spectrum-analyzer",
+  "palette": "laboratory aqua + carbon ink + process cyan + signal magenta + specimen yellow",
+  "typography": "technical sans headings with specimen labels, thin boundary rules, and high-contrast result bands",
+  "composition": "material-content prism, analog-digital medium gate, and three-channel rule convergence",
+  "surface": "flat instrument bays and square specimen trays with no matrix grid or paper dossier",
+  "motion": "categories resolve by proof method, cross a storage boundary, then converge on a shared rule target",
+  "transition": "a fixed cyan calibration rail persists while the sorting instrument changes",
+  "catalog": {"status": "variant", "sourceDirectionId": "rights-matrix"}
+}

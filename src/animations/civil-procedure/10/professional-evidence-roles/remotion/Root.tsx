@@ -1,0 +1,1 @@
+import {Composition} from 'remotion'; import {ProfessionalEvidenceRoles} from './ProfessionalEvidenceRoles'; import {DURATION_FRAMES, FPS} from './storyboard'; export const RemotionRoot = () => <Composition id="ProfessionalEvidenceRoles" component={ProfessionalEvidenceRoles} durationInFrames={DURATION_FRAMES} fps={FPS} width={1920} height={1080} />;

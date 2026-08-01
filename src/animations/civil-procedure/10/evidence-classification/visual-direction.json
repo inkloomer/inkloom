@@ -1,0 +1,16 @@
+{
+  "directionId": "forensic-light-table",
+  "family": "optical-evidence-lab",
+  "palette": "cool white + laboratory charcoal + optical cyan + specimen amber + error coral",
+  "typography": "clinical humanist sans with compact specimen labels, translucent highlights, thin condition underlines, and calibration stamps",
+  "composition": "paired apertures, measured routing consoles, and one-way inference gates on a sparse evidence grid",
+  "surface": "flat glass-white specimen fields, charcoal inspection plates, fine measurement lines, and square-edged evidence windows",
+  "motion": "fact cells resolve from fragments; responsibility routes advance checkpoint by checkpoint; invalid reverse inference is stopped at an external gate",
+  "transition": "the laboratory grid persists while each teaching instrument replaces the previous one",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/civil-procedure/10/evidence-classification/",
+    "title": "检材透视台"
+  }
+}

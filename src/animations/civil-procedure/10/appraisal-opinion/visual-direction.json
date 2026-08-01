@@ -1,0 +1,4 @@
+{
+  "directionId":"isometric-mechanism","derivedFrom":"demo-isometric-mechanism","variation":"a flat appraisal calibration bench with two inputs, selection valves, a material lock, and a sanction chamber",
+  "family":"appraisal-calibration-bench","palette":"cool steel + carbon mechanism + calibration orange + approval green + warning yellow","typography":"industrial sans labels with large operative outputs and compact calibration notes","composition":"dual-input chamber, selection and material locks, and separated cost-sanction mechanisms","surface":"square machine plates and visible rails without 3D gears or decorative rotation","motion":"inputs feed the appraisal chamber; selection escalates to court designation; refusal trips three ordered sanctions","transition":"the black calibration header remains while the mechanism bay changes","catalog":{"status":"variant","sourceDirectionId":"isometric-mechanism"}
+}

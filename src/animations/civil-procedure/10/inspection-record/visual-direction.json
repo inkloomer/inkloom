@@ -1,0 +1,4 @@
+{
+  "directionId":"site-inspection-blueprint","derivedFrom":"original-node","variation":"a gridded field-survey plan with converging initiation routes, object-versus-site scope, and an appraisal escalation line",
+  "family":"field-survey-drafting","palette":"survey paper + engineering teal + safety lime + finding yellow + escalation red","typography":"large technical-plan hierarchy with square labels and measured rules","composition":"dual-route order, object/site survey split, and inspection-to-appraisal escalation","surface":"flat survey grid with measurement marks and no card stacks","motion":"routes converge; survey targets resolve; the expert stage escalates only when necessary","transition":"the drafting grid persists while the surveyed legal relation changes","catalog":{"status":"original"}
+}

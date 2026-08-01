@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "authenticity-rule",
+      "export": "AuthenticityRuleScene",
+      "layout": "registry-two-channel-assay",
+      "anchor": "role-pair",
+      "grammar": ["comparison", "authorization", "presumption"],
+      "textTreatments": ["label-block", "soft-highlight", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "annotation"],
+      "tokens": ["Landmark", "FileText", "Signature", "BadgeCheck"]
+    },
+    {
+      "id": "document-order",
+      "export": "DocumentOrderScene",
+      "layout": "court-order-consequence-rail",
+      "anchor": "timeline-gate",
+      "grammar": ["sequence", "control", "consequence", "branch"],
+      "textTreatments": ["label-block", "thin-underline", "stamp"],
+      "focalChannels": ["icon", "connector", "spatial", "contrast"],
+      "tokens": ["UserRound", "Gavel", "FolderLock", "FileMinus", "FileX"]
+    },
+    {
+      "id": "best-evidence",
+      "export": "BestEvidenceScene",
+      "layout": "original-document-fallback-fan",
+      "anchor": "document-fork",
+      "grammar": ["priority", "boundary", "substitution"],
+      "textTreatments": ["soft-highlight", "label-block", "stamp"],
+      "focalChannels": ["icon", "enclosure", "connector", "annotation"],
+      "tokens": ["ShieldCheck", "FileText", "Copy", "Files", "Scissors"]
+    }
+  ]
+}

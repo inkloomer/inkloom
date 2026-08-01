@@ -1,0 +1,51 @@
+import type {CSSProperties, ReactNode} from 'react';
+import {BadgeCheck, Ban, FileBadge2, FileSearch, Gavel, Landmark, Microscope, Network, ShieldCheck, UserRoundSearch, Users, X} from 'lucide-react';
+import {interpolate, useCurrentFrame} from 'remotion';
+import {CLAMP} from '../../../../../shared/remotion-runtime';
+
+const B={bg:'#202b2c',board:'#2e3c3c',paper:'#f5f1e7',ink:'#172222',yellow:'#f1ce55',mint:'#68c5aa',coral:'#ec6c5c',blue:'#65a9d9',white:'#ffffff'};
+const Pin=({children,delay,style}:{children:ReactNode;delay:number;style?:CSSProperties})=>{const f=useCurrentFrame();const p=interpolate(f,[delay,delay+14],[0,1],CLAMP);return <div style={{opacity:p,scale:p,...style}}>{children}</div>};
+const Board=({code,title,children}:{code:string;title:string;children:ReactNode})=><div style={{position:'absolute',inset:0,overflow:'hidden',backgroundColor:B.bg,color:B.white,fontFamily:'"Segoe UI", "Microsoft YaHei", sans-serif'}}><div style={{position:'absolute',left:58,right:58,top:42,bottom:42,backgroundColor:B.board,border:`2px solid #536363`}}/><div style={{position:'absolute',left:90,top:68,fontSize:18,fontWeight:850,color:B.yellow}}>PROFESSIONAL RELAY / {code}</div><h1 style={{position:'absolute',left:90,top:106,margin:0,fontSize:54,fontWeight:900}}>{title}</h1><div style={{position:'absolute',left:90,right:90,top:178,height:3,backgroundColor:B.yellow}}/>{children}<div style={{position:'absolute',left:90,bottom:58,fontSize:17,color:'#a9bbbb'}}>专题十 · 专业证据角色</div></div>;
+
+export const RoleTargetsScene=()=> <Board code="01" title="先看服务对象：三类专业人员各接到谁">
+  <div data-layout="professional-role-target-network" data-visual-anchor="flow-target" data-text-treatments="label-block,soft-highlight,stamp" data-visual-grammar="role-assignment,service-target,output" data-focal-rule="each-professional-role-is-defined-by-whom-they-assist-and-what-they-produce" data-focal-channels="icon,connector,spatial,enclosure" style={{position:'absolute',left:90,right:90,top:214,bottom:86}}>
+    {[[Microscope,'鉴定人','出具鉴定意见',B.mint,80],[UserRoundSearch,'有专门知识的人','辅助当事人质证或陈述',B.coral,650],[Network,'司法技术人员','辅助审判人员调查',B.blue,1220]].map(([Icon,title,note,color,left],i)=><Pin key={title as string} delay={4+i*16} style={{position:'absolute',left:left as number,top:40,width:430,height:270,backgroundColor:B.paper,color:B.ink,padding:'34px 38px',borderTop:`10px solid ${color as string}`}}><Icon size={70} color={color as string}/><div style={{marginTop:22,fontSize:36,fontWeight:900}}>{title as string}</div><div style={{marginTop:16,fontSize:24,lineHeight:1.4}}>{note as string}</div></Pin>)}
+    <div style={{position:'absolute',left:290,top:310,width:6,height:150,backgroundColor:B.mint}}/><div style={{position:'absolute',left:860,top:310,width:6,height:150,backgroundColor:B.coral}}/><div style={{position:'absolute',left:1430,top:310,width:6,height:150,backgroundColor:B.blue}}/>
+    {[[FileBadge2,'法院证据输出',B.mint,80],[Users,'当事人',B.coral,650],[Gavel,'审判人员',B.blue,1220]].map(([Icon,title,color,left],i)=><Pin key={title as string} delay={60+i*10} style={{position:'absolute',left:left as number,bottom:20,width:430,height:220,display:'grid',placeItems:'center',backgroundColor:color as string,textAlign:'center'}}><Icon size={64}/><div style={{fontSize:32,fontWeight:900,marginTop:-42}}>{title as string}</div></Pin>)}
+  </div>
+</Board>;
+
+export const InitiationRecusalScene=()=> <Board code="02" title="启动与回避：三条线路不要串错">
+  <div data-layout="three-role-initiation-routes" data-visual-anchor="timeline-gate" data-text-treatments="label-block,thin-underline,external-negation" data-visual-grammar="route,authorization,exclusion,cost-allocation" data-focal-rule="expert-assistants-are-party-initiated-and-not-subject-to-recusal" data-focal-channels="icon,connector,contrast,annotation" style={{position:'absolute',left:90,right:90,top:214,bottom:86}}>
+    <Pin delay={4} style={{position:'absolute',left:20,top:18,width:490,height:150,backgroundColor:B.mint,color:B.ink,padding:'26px 30px'}}><Landmark size={48}/><div style={{marginTop:12,fontSize:25,fontWeight:900}}>当事人申请 / 法院依职权</div></Pin>
+    <div style={{position:'absolute',left:260,top:168,width:8,height:112,backgroundColor:B.mint}}/><div style={{position:'absolute',left:247,top:266,borderLeft:'17px solid transparent',borderRight:'17px solid transparent',borderTop:`24px solid ${B.mint}`}}/>
+    <Pin delay={22} style={{position:'absolute',left:68,top:290,width:400,height:142,display:'flex',alignItems:'center',gap:24,backgroundColor:B.paper,color:B.ink,padding:'24px 30px',border:`5px solid ${B.mint}`}}><Microscope size={64} color={B.mint}/><div style={{fontSize:34,fontWeight:900}}>鉴定人</div></Pin>
+    <div style={{position:'absolute',left:264,top:432,width:6,height:72,backgroundColor:B.mint}}/>
+    <Pin delay={38} style={{position:'absolute',left:28,bottom:12,width:232,height:126,backgroundColor:B.mint,padding:'20px 22px'}}><ShieldCheck size={38}/><div style={{marginTop:8,fontSize:24,fontWeight:850}}>适用回避</div></Pin>
+    <Pin delay={44} style={{position:'absolute',left:276,bottom:12,width:232,height:126,backgroundColor:B.paper,color:B.ink,padding:'20px 22px'}}><BadgeCheck size={38} color={B.mint}/><div style={{marginTop:8,fontSize:21,fontWeight:850}}>败诉方负担</div></Pin>
+
+    <Pin delay={12} style={{position:'absolute',left:650,top:18,width:430,height:142,backgroundColor:B.coral,padding:'24px 30px'}}><Users size={46}/><div style={{marginTop:10,fontSize:27,fontWeight:900}}>仅由当事人申请</div></Pin>
+    <div style={{position:'absolute',left:858,top:160,width:8,height:76,backgroundColor:B.coral}}/><div style={{position:'absolute',left:858,top:230,width:150,height:8,backgroundColor:B.coral}}/><div style={{position:'absolute',left:994,top:217,borderTop:'17px solid transparent',borderBottom:'17px solid transparent',borderLeft:`24px solid ${B.coral}`}}/>
+    <Pin delay={30} style={{position:'absolute',left:760,top:268,width:460,height:180,display:'flex',alignItems:'center',gap:24,backgroundColor:B.paper,color:B.ink,padding:'28px 32px',border:`5px solid ${B.coral}`}}><UserRoundSearch size={68} color={B.coral}/><div><div style={{fontSize:31,fontWeight:900}}>有专门知识的人</div><div style={{marginTop:12,fontSize:22}}>辅助当事人</div></div></Pin>
+    <div style={{position:'absolute',left:986,top:448,width:7,height:62,backgroundColor:B.coral}}/>
+    <Pin delay={50} style={{position:'absolute',left:662,bottom:12,width:260,height:126,backgroundColor:B.coral,padding:'20px 22px'}}><Ban size={38}/><div style={{marginTop:8,fontSize:23,fontWeight:900}}>不适用回避</div></Pin>
+    <Pin delay={56} style={{position:'absolute',left:938,bottom:12,width:260,height:126,backgroundColor:B.paper,color:B.ink,padding:'20px 22px'}}><BadgeCheck size={38} color={B.coral}/><div style={{marginTop:8,fontSize:23,fontWeight:850}}>申请方承担</div></Pin>
+
+    <Pin delay={20} style={{position:'absolute',right:18,top:18,width:430,height:142,backgroundColor:B.blue,padding:'24px 30px'}}><Gavel size={46}/><div style={{marginTop:10,fontSize:27,fontWeight:900}}>法院依职权指派</div></Pin>
+    <div style={{position:'absolute',right:228,top:160,width:8,height:74,backgroundColor:B.blue}}/><div style={{position:'absolute',right:228,top:228,width:160,height:8,backgroundColor:B.blue}}/><div style={{position:'absolute',right:374,top:215,borderTop:'17px solid transparent',borderBottom:'17px solid transparent',borderRight:`24px solid ${B.blue}`}}/>
+    <Pin delay={38} style={{position:'absolute',right:72,top:284,width:400,height:148,display:'flex',alignItems:'center',gap:24,backgroundColor:B.paper,color:B.ink,padding:'24px 30px',border:`5px solid ${B.blue}`}}><Network size={64} color={B.blue}/><div style={{fontSize:32,fontWeight:900}}>司法技术人员</div></Pin>
+    <div style={{position:'absolute',right:268,top:432,width:6,height:72,backgroundColor:B.blue}}/>
+    <Pin delay={58} style={{position:'absolute',right:276,bottom:12,width:232,height:126,backgroundColor:B.blue,padding:'20px 22px'}}><ShieldCheck size={38}/><div style={{marginTop:8,fontSize:24,fontWeight:850}}>适用回避</div></Pin>
+    <Pin delay={64} style={{position:'absolute',right:28,bottom:12,width:232,height:126,backgroundColor:B.paper,color:B.ink,padding:'20px 22px'}}><Landmark size={38} color={B.blue}/><div style={{marginTop:8,fontSize:22,fontWeight:850}}>辅助法院</div></Pin>
+  </div>
+</Board>;
+
+export const PrivateOpinionScene=()=> <Board code="03" title="自行委托的《鉴定意见书》到底是什么">
+  <div data-layout="private-opinion-reclassification-chain" data-visual-anchor="document-fork" data-text-treatments="stamp,external-negation,soft-highlight" data-visual-grammar="reclassification,rule-transfer,rebuttal,authorization" data-focal-rule="privately-commissioned-opinions-are-not-appraisal-opinions-but-may-trigger-court-appraisal" data-focal-channels="icon,connector,annotation,contrast" style={{position:'absolute',left:90,right:90,top:214,bottom:86}}>
+    <Pin delay={4} style={{position:'absolute',left:30,top:150,width:450,height:370,backgroundColor:B.paper,color:B.ink,padding:'38px 42px'}}><FileSearch size={76} color={B.yellow}/><div style={{marginTop:28,fontSize:35,fontWeight:900}}>自行委托<br/>《鉴定意见书》</div></Pin>
+    <div style={{position:'absolute',left:480,top:330,width:230,height:6,backgroundColor:B.coral}}/><Pin delay={30} style={{position:'absolute',left:700,top:60,width:430,height:250,backgroundColor:B.coral,padding:'32px 36px'}}><X size={64}/><div style={{marginTop:24,fontSize:36,fontWeight:900}}>不是鉴定意见</div></Pin>
+    <Pin delay={46} style={{position:'absolute',left:700,bottom:50,width:430,height:250,backgroundColor:B.yellow,color:B.ink,padding:'32px 36px'}}><FileBadge2 size={64}/><div style={{marginTop:24,fontSize:30,fontWeight:900}}>可作为证据使用<br/>准用私文书证规则</div></Pin>
+    <div style={{position:'absolute',left:1130,top:330,width:190,height:6,backgroundColor:B.mint}}/>
+    <Pin delay={70} style={{position:'absolute',right:20,top:100,width:430,height:470,backgroundColor:B.paper,color:B.ink,padding:'36px 40px',border:`5px solid ${B.mint}`}}><BadgeCheck size={70} color={B.mint}/><div style={{marginTop:24,fontSize:31,fontWeight:900}}>对方有证据或理由足以反驳</div><div style={{marginTop:28,fontSize:25,lineHeight:1.5}}>并申请鉴定</div><div style={{position:'absolute',left:40,right:40,bottom:42,padding:'18px',backgroundColor:B.mint,color:B.white,fontSize:29,fontWeight:900,textAlign:'center'}}>法院应予准许</div></Pin>
+  </div>
+</Board>;

@@ -1,0 +1,7 @@
+{
+  "version":1,"minimumDistinctLayouts":3,"scenes":[
+    {"id":"role-targets","export":"RoleTargetsScene","layout":"professional-role-target-network","anchor":"flow-target","grammar":["role-assignment","service-target","output"],"textTreatments":["label-block","soft-highlight","stamp"],"focalChannels":["icon","connector","spatial","enclosure"],"tokens":[]},
+    {"id":"initiation-recusal","export":"InitiationRecusalScene","layout":"three-role-initiation-routes","anchor":"timeline-gate","grammar":["route","authorization","exclusion","cost-allocation"],"textTreatments":["label-block","thin-underline","external-negation"],"focalChannels":["icon","connector","contrast","annotation"],"tokens":["Ban","ShieldCheck"]},
+    {"id":"private-opinion","export":"PrivateOpinionScene","layout":"private-opinion-reclassification-chain","anchor":"document-fork","grammar":["reclassification","rule-transfer","rebuttal","authorization"],"textTreatments":["stamp","external-negation","soft-highlight"],"focalChannels":["icon","connector","annotation","contrast"],"tokens":["FileSearch","X","FileBadge2","BadgeCheck"]}
+  ]
+}

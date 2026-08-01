@@ -1,0 +1,8 @@
+{
+  "version": 1, "minimumDistinctLayouts": 3,
+  "scenes": [
+    {"id":"proof-method","export":"ProofMethodScene","layout":"material-versus-content-prism","anchor":"comparison-axis","grammar":["comparison","classification","coverage"],"textTreatments":["label-block","soft-highlight","stamp"],"focalChannels":["icon","contrast","enclosure","spatial"],"tokens":["Box","ScanLine"]},
+    {"id":"medium-boundary","export":"EvidenceMediumScene","layout":"analog-digital-medium-gate","anchor":"boundary","grammar":["boundary","classification","transfer"],"textTreatments":["label-block","thin-underline","external-negation"],"focalChannels":["icon","connector","contrast","annotation"],"tokens":["Speaker","Image","Radio","Usb","HardDrive"]},
+    {"id":"rule-carryover","export":"RuleCarryoverScene","layout":"content-carriers-rule-convergence","anchor":"flow-target","grammar":["convergence","equivalence","rule-transfer"],"textTreatments":["soft-highlight","thin-underline","stamp"],"focalChannels":["icon","connector","enclosure","motion"],"tokens":["Shapes"]}
+  ]
+}
