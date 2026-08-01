@@ -582,12 +582,15 @@ const assertAtomicSceneCompatibility = async ({
   animationId,
   composition,
   crf,
+  everyNthFrame,
   format,
   loopCount,
   manifest,
+  outputFormat,
   outputFps,
   outputHeight,
   outputWidth,
+  profile,
   quality,
   targetDirectory,
 }) => {
@@ -625,9 +628,29 @@ const assertAtomicSceneCompatibility = async ({
     if (published.startFrame !== scene.start || published.endFrame !== stableEndFrame) {
       mismatches.push(`${scene.id} frame range is ${published.startFrame}-${published.endFrame}, expected ${scene.start}-${stableEndFrame}`);
     }
-    if (typeof published.file !== 'string' || !(await pathExists(path.join(targetDirectory, published.file)))) {
+    const publishedPath = typeof published.file === 'string'
+      ? path.join(targetDirectory, published.file)
+      : undefined;
+    if (!publishedPath || !(await pathExists(publishedPath))) {
       mismatches.push(`${scene.id} published file is missing`);
+      continue;
     }
+
+    const expectedFrameCount = Math.round((stableEndFrame - scene.start + 1) / everyNthFrame);
+    const expectedDurationMs = Math.round((expectedFrameCount / outputFps) * 1000);
+    const outputInfo = await inspectOutput({filePath: publishedPath, outputFormat, profile});
+    if (
+      !outputInfo.validFormat
+      || outputInfo.width !== outputWidth
+      || outputInfo.height !== outputHeight
+      || outputInfo.frameCount !== expectedFrameCount
+      || !Number.isFinite(outputInfo.durationMs)
+      || Math.abs(outputInfo.durationMs - expectedDurationMs) > 1
+    ) {
+      mismatches.push(`${scene.id} published file has incompatible media metadata`);
+      continue;
+    }
+    published.fileSize = (await stat(publishedPath)).size;
   }
 
   if (mismatches.length > 0) {
@@ -695,12 +718,15 @@ const renderAnimation = async ({animationId, browserExecutable, crfs, mediaForma
         animationId,
         composition,
         crf: encodingVariants[0].crf,
+        everyNthFrame,
         format: publishVideo ? 'av1-mp4' : profile.manifestFormat,
         loopCount: publishVideo ? undefined : profile.loopCount,
         manifest: existingManifest,
+        outputFormat: publishVideo ? 'mp4' : mediaFormat,
         outputFps,
         outputHeight,
         outputWidth,
+        profile: publishVideo ? MEDIA_FORMATS.avif : profile,
         quality: encodingVariants[0].quality,
         targetDirectory,
       });

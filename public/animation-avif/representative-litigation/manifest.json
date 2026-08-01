@@ -3,7 +3,7 @@
   "compositionId": "RepresentativeLitigation",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-08-01T08:43:54.305Z",
+  "generatedAt": "2026-08-01T08:49:27.170Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -30,7 +30,7 @@
       "title": "代表人的诉讼权限",
       "durationMs": 6267,
       "file": "representative-authority.avif",
-      "fileSize": 267544,
+      "fileSize": 268660,
       "format": "avif",
       "crf": 35,
       "quality": 45
@@ -79,14 +79,14 @@
     },
     {
       "endFrame": 2876,
-      "frameCount": 119,
+      "frameCount": 120,
       "id": "comparison",
       "number": "06",
       "startFrame": 2400,
       "title": "代表人诉讼对比",
-      "durationMs": 7933,
+      "durationMs": 8000,
       "file": "comparison.avif",
-      "fileSize": 266095,
+      "fileSize": 264441,
       "format": "avif",
       "crf": 35,
       "quality": 45
@@ -98,5 +98,5 @@
   },
   "sourceFps": 60,
   "targetFps": 15,
-  "totalFileSize": 1277698
+  "totalFileSize": 1277160
 }
