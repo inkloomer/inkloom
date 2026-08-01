@@ -1,3 +1,5 @@
+import {defineAnimationTypography} from '../../../../typography/animation-presets';
+
 export default {
   id: 'documentary-evidence-rules',
   title: '书证的三大证据规则',
@@ -6,3 +8,5 @@ export default {
   subject: 'civil-procedure',
   chapter: '10',
 };
+
+export const typography = defineAnimationTypography({});

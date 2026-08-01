@@ -89,17 +89,17 @@ export const Seal = ({children, color = REGISTRY.seal, delay = 0}: {children: Re
 export const RegistryCanvas = ({code, title, folio, children}: {code: string; title: string; folio: string; children: ReactNode}) => {
   const frame = useCurrentFrame();
   return (
-    <div style={{position: 'absolute', inset: 0, overflow: 'hidden', backgroundColor: REGISTRY.field, color: REGISTRY.ink, fontFamily: '"Noto Serif SC", "Microsoft YaHei", serif'}}>
+    <div style={{position: 'absolute', inset: 0, overflow: 'hidden', backgroundColor: REGISTRY.field, color: REGISTRY.ink, fontFamily: 'var(--inkloom-animation-body)'}}>
       <div style={{position: 'absolute', left: 0, right: 0, top: 0, height: 26, backgroundColor: REGISTRY.forest}} />
       <div style={{position: 'absolute', left: 54, top: 62, bottom: 54, width: 10, backgroundColor: REGISTRY.brass}} />
-      <div style={{position: 'absolute', left: 94, top: 50, fontFamily: '"Segoe UI", sans-serif', fontSize: 18, fontWeight: 800, color: REGISTRY.forest}}>DOCUMENT REGISTRY · FOLIO {folio}</div>
+      <div style={{position: 'absolute', left: 94, top: 50, fontFamily: 'var(--inkloom-animation-body)', fontSize: 18, fontWeight: 800, color: REGISTRY.forest}}>DOCUMENT REGISTRY · FOLIO {folio}</div>
       <div style={{position: 'absolute', left: 94, right: 80, top: 86, display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end'}}>
-        <h1 style={{margin: 0, maxWidth: 1360, fontSize: 54, lineHeight: 1.1, fontWeight: 850, letterSpacing: 0}}>{title}</h1>
-        <div style={{fontFamily: '"Segoe UI", sans-serif', fontSize: 22, fontWeight: 750, color: REGISTRY.sage}}>RULE {code} / 03</div>
+        <h1 style={{fontFamily: 'var(--inkloom-animation-title)', margin: 0, maxWidth: 1360, fontSize: 54, lineHeight: 1.1, fontWeight: 850, letterSpacing: 0}}>{title}</h1>
+        <div style={{fontFamily: 'var(--inkloom-animation-body)', fontSize: 22, fontWeight: 750, color: REGISTRY.sage}}>RULE {code} / 03</div>
       </div>
       <div style={{position: 'absolute', left: 94, right: 80, top: 166, height: 3, backgroundColor: REGISTRY.forest, scale: `${interpolate(frame, [0, 18], [0, 1], CLAMP)} 1`, transformOrigin: 'left center'}} />
       {children}
-      <div style={{position: 'absolute', left: 94, right: 80, bottom: 30, display: 'flex', justifyContent: 'space-between', fontFamily: '"Segoe UI", sans-serif', fontSize: 17, fontWeight: 750, color: REGISTRY.sage}}>
+      <div style={{position: 'absolute', left: 94, right: 80, bottom: 30, display: 'flex', justifyContent: 'space-between', fontFamily: 'var(--inkloom-animation-footer)', fontSize: 17, fontWeight: 750, color: REGISTRY.sage}}>
         <span>民事诉讼法 · 专题十</span><span>ORIGINAL · AUTHENTICITY · PRODUCTION</span>
       </div>
     </div>

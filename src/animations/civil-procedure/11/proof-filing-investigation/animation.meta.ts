@@ -1,3 +1,5 @@
+import {defineAnimationTypography} from '../../../../typography/animation-presets';
+
 export default {
   id: 'proof-filing-investigation',
   title: '举证期限与法院调查取证',
@@ -6,3 +8,5 @@ export default {
   subject: 'civil-procedure',
   chapter: '11',
 };
+
+export const typography = defineAnimationTypography({});

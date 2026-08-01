@@ -12,7 +12,7 @@ export const DelegatedAgentBadge = () => {
   ];
 
   return (
-    <AbsoluteFill style={{backgroundColor: '#0f1419', overflow: 'hidden', color: '#f4f1e8', fontFamily: 'Garamond, Georgia, serif'}}>
+    <AbsoluteFill style={{backgroundColor: '#0f1419', overflow: 'hidden', color: '#f4f1e8', fontFamily: 'var(--inkloom-animation-body)'}}>
       <div style={{position: 'absolute', inset: 0, backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(16,185,129,0.08) 0%, transparent 60%)', pointerEvents: 'none'}} />
 
       <div
@@ -37,7 +37,7 @@ export const DelegatedAgentBadge = () => {
           right: 130,
           top: 85,
           fontSize: 26,
-          fontFamily: 'Courier New, monospace',
+          fontFamily: 'var(--inkloom-animation-meta)',
           color: '#8b7355',
           letterSpacing: 2,
         }}
@@ -71,7 +71,7 @@ export const DelegatedAgentBadge = () => {
         <div style={{position: 'absolute', left: '50%', top: 360, transform: 'translateX(-50%)', fontSize: 44, fontWeight: 900, color: '#3b82f6', textAlign: 'center', whiteSpace: 'nowrap'}}>
           委托代理人
         </div>
-        <div style={{position: 'absolute', left: '50%', top: 415, transform: 'translateX(-50%)', fontSize: 22, fontFamily: 'Courier New, monospace', color: '#8b7355', letterSpacing: 2}}>
+        <div style={{position: 'absolute', left: '50%', top: 415, transform: 'translateX(-50%)', fontSize: 22, fontFamily: 'var(--inkloom-animation-mono)', color: '#8b7355', letterSpacing: 2}}>
           DELEGATED AGENT
         </div>
       </div>
@@ -165,7 +165,7 @@ export const DelegatedAgentBadge = () => {
           right: 110,
           bottom: 165,
           fontSize: 22,
-          fontFamily: 'Courier New, monospace',
+          fontFamily: 'var(--inkloom-animation-meta)',
           color: '#4a3f2e',
           letterSpacing: 1,
         }}

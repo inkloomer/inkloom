@@ -1,3 +1,5 @@
+import {defineAnimationTypography} from '../../../../typography/animation-presets';
+
 export default {
   id: 'burden-of-proof-steps',
   title: '证明责任分配的判断',
@@ -6,3 +8,5 @@ export default {
   subject: 'civil-procedure',
   chapter: '09',
 };
+
+export const typography = defineAnimationTypography({});

@@ -14,7 +14,7 @@ export const RightsMatrixDemo = () => {
   ];
 
   return (
-    <AbsoluteFill style={{backgroundColor: '#0a1929', overflow: 'hidden', color: '#e3f2fd', fontFamily: 'Arial, Microsoft YaHei, sans-serif'}}>
+    <AbsoluteFill style={{backgroundColor: '#0a1929', overflow: 'hidden', color: '#e3f2fd', fontFamily: 'var(--inkloom-animation-body)'}}>
       <div style={{position: 'absolute', inset: 0, backgroundImage: 'linear-gradient(180deg, rgba(13,27,42,0.8) 0%, rgba(10,25,41,1) 100%)', pointerEvents: 'none'}} />
 
       <Interactive.Div name="Matrix title" style={{position: 'absolute', left: 110, top: 70, display: 'flex', alignItems: 'center', gap: 24, fontSize: 74, fontWeight: 900, opacity: interpolate(frame, [0, 28], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'})}}>

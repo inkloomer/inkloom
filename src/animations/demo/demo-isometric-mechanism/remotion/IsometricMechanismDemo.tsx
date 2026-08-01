@@ -4,10 +4,10 @@ import {AbsoluteFill, Easing, Interactive, interpolate, useCurrentFrame} from 'r
 export const IsometricMechanismDemo = () => {
   const frame = useCurrentFrame();
   return (
-    <AbsoluteFill style={{backgroundColor: '#e9eef0', overflow: 'hidden', color: '#172126', fontFamily: 'Bahnschrift, Microsoft YaHei, sans-serif'}}>
+    <AbsoluteFill style={{backgroundColor: '#e9eef0', overflow: 'hidden', color: '#172126', fontFamily: 'var(--inkloom-animation-body)'}}>
       <div style={{position: 'absolute', left: 92, right: 92, top: 76, display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
         <div style={{fontSize: 72, fontWeight: 900}}>法律效果机械室</div>
-        <div style={{fontFamily: 'Consolas, monospace', fontSize: 20, color: '#596970'}}>MECHANISM / 09</div>
+        <div style={{fontFamily: 'var(--inkloom-animation-meta)', fontSize: 20, color: '#596970'}}>MECHANISM / 09</div>
       </div>
       <div style={{position: 'absolute', left: 105, top: 260, width: 1710, height: 650, border: '3px solid #63737a', backgroundColor: '#cad4d8'}} />
       {[
@@ -27,7 +27,7 @@ export const IsometricMechanismDemo = () => {
         >
           <Icon size={84} strokeWidth={1.7} color={color} style={{rotate: index === 1 ? interpolate(frame, [72, 156], ['0deg', '180deg'], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'}) : '0deg'}} />
           <div style={{marginTop: 48, fontSize: 42, fontWeight: 900}}>{label}</div>
-          <div style={{marginTop: 14, fontFamily: 'Consolas, monospace', fontSize: 18, color: '#65757b'}}>CHAMBER 0{index + 1}</div>
+          <div style={{marginTop: 14, fontFamily: 'var(--inkloom-animation-mono)', fontSize: 18, color: '#65757b'}}>CHAMBER 0{index + 1}</div>
         </Interactive.Div>
       ))}
       {[620, 1195].map((left, index) => (

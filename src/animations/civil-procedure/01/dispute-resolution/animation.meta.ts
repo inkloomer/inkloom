@@ -1,3 +1,5 @@
+import {defineAnimationTypography} from '../../../../typography/animation-presets';
+
 export default {
   id: 'dispute-resolution',
   title: '多元纠纷解决机制——和解、调解、仲裁、诉讼',
@@ -6,3 +8,5 @@ export default {
   subject: 'civil-procedure',
   chapter: '01',
 };
+
+export const typography = defineAnimationTypography({});

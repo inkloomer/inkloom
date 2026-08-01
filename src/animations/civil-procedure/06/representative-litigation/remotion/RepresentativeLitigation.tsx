@@ -21,7 +21,7 @@ export const RepresentativeLitigation = () => (
       <TimelineSequence name="05-securities" {...SCENES.securities}><SecuritiesScene /></TimelineSequence>
       <TimelineSequence name="06-recap" {...SCENES.recap}><RecapScene /></TimelineSequence>
       <div style={{position: 'absolute', left: 78, right: 78, bottom: 54, display: 'flex', alignItems: 'center', gap: 18}}>
-        <div style={{fontFamily: 'Consolas, monospace', fontSize: 16, fontWeight: 900, color: PALETTE.signal}}>REP SIGNAL / ONLINE</div>
+        <div style={{fontFamily: 'var(--inkloom-animation-meta)', fontSize: 16, fontWeight: 900, color: PALETTE.signal}}>REP SIGNAL / ONLINE</div>
         <div style={{height: 3, flex: 1, background: PALETTE.ink}} />
         <div style={{fontSize: 16, fontWeight: 900}}>代表人诉讼</div>
       </div>

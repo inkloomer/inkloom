@@ -231,7 +231,7 @@ export const ArbitrationScene = () => {
             color: PALETTE.paper,
             backgroundColor: PALETTE.red,
             borderRadius: 6,
-            fontFamily: '"Microsoft YaHei", sans-serif',
+            fontFamily: 'var(--inkloom-animation-label)',
             fontSize: 22,
             fontWeight: 850,
           }}

@@ -5,8 +5,8 @@ import {interpolate, useCurrentFrame} from 'remotion';
 import {CLAMP, createMotionPrimitives} from '../../../../shared/remotion-runtime';
 import {PALETTE, toSourceFrame} from './storyboard';
 
-export const DISPLAY_FONT = '"Songti SC", "Noto Serif SC", SimSun, serif';
-export const BODY_FONT = '"Microsoft YaHei", "PingFang SC", sans-serif';
+export const DISPLAY_FONT = 'var(--inkloom-animation-body)';
+export const BODY_FONT = 'var(--inkloom-animation-body)';
 export const {Enter, MaskedReveal, StaggerEnter} = createMotionPrimitives(toSourceFrame);
 
 export const BinderyCanvas = ({children}: {readonly children: ReactNode}) => (
@@ -16,7 +16,7 @@ export const BinderyCanvas = ({children}: {readonly children: ReactNode}) => (
       inset: 0,
       overflow: 'hidden',
       color: PALETTE.ink,
-      fontFamily: BODY_FONT,
+      fontFamily: 'var(--inkloom-animation-body)',
       backgroundColor: PALETTE.canvas,
       backgroundImage:
         'linear-gradient(rgba(23,24,19,.045) 1px, transparent 1px), linear-gradient(90deg, rgba(23,24,19,.035) 1px, transparent 1px)',
@@ -43,7 +43,7 @@ export const SceneHeader = ({
     <div style={{width: 84, fontSize: 20, fontWeight: 800, color: PALETTE.thread, letterSpacing: 0}}>{index}</div>
     <div>
       <div style={{fontSize: 18, fontWeight: 800, color: PALETTE.muted, letterSpacing: 0}}>{kicker}</div>
-      <div style={{fontFamily: DISPLAY_FONT, fontSize: 54, lineHeight: 1.12, fontWeight: 800, marginTop: 8}}>{title}</div>
+      <div style={{fontFamily: 'var(--inkloom-animation-title)', fontSize: 54, lineHeight: 1.12, fontWeight: 800, marginTop: 8}}>{title}</div>
     </div>
   </header>
 );

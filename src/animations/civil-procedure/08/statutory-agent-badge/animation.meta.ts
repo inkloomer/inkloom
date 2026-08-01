@@ -1,3 +1,5 @@
+import {defineAnimationTypography} from '../../../../typography/animation-presets';
+
 export const meta = {
   id: 'civil-procedure-08-statutory-agent-badge',
   title: '法定代理人（权力徽章）',
@@ -5,3 +7,5 @@ export const meta = {
   visualDirection: 'sovereign-seal',
   tags: ['civil-procedure', 'agent', 'statutory', 'badge'],
 };
+
+export const typography = defineAnimationTypography({});

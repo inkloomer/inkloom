@@ -1,3 +1,5 @@
+import {getAnimationTypographyConfiguration} from '../../../../../typography/animation-registry';
+import {withAnimationTypography} from '../../../../../typography/animation-provider';
 import {Composition} from 'remotion';
 import {ProperParty} from './ProperParty';
 import {DURATION_FRAMES, FPS} from './storyboard';
@@ -5,7 +7,7 @@ import {DURATION_FRAMES, FPS} from './storyboard';
 export const RemotionRoot = () => (
   <Composition
     id="ProperParty"
-    component={ProperParty}
+    component={withAnimationTypography(ProperParty, getAnimationTypographyConfiguration('proper-party'))}
     durationInFrames={DURATION_FRAMES}
     fps={FPS}
     width={1920}

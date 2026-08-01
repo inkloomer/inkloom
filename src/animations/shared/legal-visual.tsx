@@ -24,7 +24,7 @@ import {
   useVideoConfig,
 } from 'remotion';
 
-export const FONT_FAMILY = '"Microsoft YaHei", "PingFang SC", sans-serif';
+export const FONT_FAMILY = 'var(--inkloom-animation-body)';
 export const ENTER_EASING = Easing.bezier(0.16, 1, 0.3, 1);
 export const EXIT_EASING = Easing.bezier(0.7, 0, 0.84, 0);
 
@@ -67,7 +67,7 @@ export function createLegalVisualSystem<Accent extends string>(deps: LegalVisual
 
   const baseTextStyle: CSSProperties = {
     color: PALETTE.ink,
-    fontFamily: FONT_FAMILY,
+    fontFamily: 'var(--inkloom-animation-body)',
     letterSpacing: 0,
   };
 

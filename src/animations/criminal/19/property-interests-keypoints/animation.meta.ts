@@ -1,3 +1,5 @@
+import {defineAnimationTypography} from '../../../../typography/animation-presets';
+
 export default {
   id: 'property-interests-keypoints',
   title: '财产性利益关键知识点',
@@ -6,3 +8,5 @@ export default {
   subject: 'criminal',
   chapter: '19',
 };
+
+export const typography = defineAnimationTypography({});

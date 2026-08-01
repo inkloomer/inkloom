@@ -1,3 +1,5 @@
+import {defineAnimationTypography} from '../../../../typography/animation-presets';
+
 export default {
   id: 'party-capacity',
   title: '诉讼权利能力与诉讼行为能力',
@@ -6,3 +8,5 @@ export default {
   subject: 'civil-procedure',
   chapter: '05',
 };
+
+export const typography = defineAnimationTypography({});

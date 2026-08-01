@@ -29,7 +29,7 @@ const ROOM = {
 const {Enter, StaggerEnter, MaskedReveal} = createMotionPrimitives(toSourceFrame);
 
 const Canvas = ({code, title, reading, children}: {code: string; title: string; reading: string; children: ReactNode}) => (
-  <div style={{position: 'absolute', inset: 0, backgroundColor: ROOM.mineral, color: ROOM.black, fontFamily: 'Arial, Microsoft YaHei, sans-serif', overflow: 'hidden'}}>
+  <div style={{position: 'absolute', inset: 0, backgroundColor: ROOM.mineral, color: ROOM.black, fontFamily: 'var(--inkloom-animation-body)', overflow: 'hidden'}}>
     <div style={{position: 'absolute', left: 0, top: 0, bottom: 0, width: 46, backgroundColor: ROOM.black}} />
     <div style={{position: 'absolute', left: 80, top: 52, fontSize: 20, fontWeight: 900, color: ROOM.cobalt}}>MEASURE {code}</div>
     <div style={{position: 'absolute', left: 80, top: 88, fontSize: 54, fontWeight: 950}}>{title}</div>

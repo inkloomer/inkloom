@@ -77,7 +77,7 @@ export const DefinitionScene = () => (
           <div style={{width: 110, height: 110, display: 'grid', placeItems: 'center', color: PALETTE.paper, background: PALETTE.thread}}><Files size={60} strokeWidth={2} /></div>
           <div>
             <LabelBlock>共同诉讼</LabelBlock>
-            <div style={{fontFamily: '"Songti SC", SimSun, serif', fontSize: 48, lineHeight: 1.25, fontWeight: 900, marginTop: 18}}>多个当事人<br />同在一个诉讼程序</div>
+            <div style={{fontFamily: 'var(--inkloom-animation-title)', fontSize: 48, lineHeight: 1.25, fontWeight: 900, marginTop: 18}}>多个当事人<br />同在一个诉讼程序</div>
           </div>
         </div>
         <div style={{position: 'absolute', left: 62, right: 62, bottom: 44, display: 'flex', alignItems: 'center', gap: 18, fontSize: 25, color: PALETTE.muted}}>

@@ -34,13 +34,13 @@ export const SignalCanvas = ({code, title, children}: {code: string; title: stri
   const frame = useCurrentFrame();
   const trace = interpolate(frame, [0, 28], [0, 1], CLAMP);
   return (
-    <div style={{position: 'absolute', inset: 0, overflow: 'hidden', backgroundColor: SIGNAL.mist, color: SIGNAL.graphite, fontFamily: '"Microsoft YaHei", Arial, sans-serif'}}>
+    <div style={{position: 'absolute', inset: 0, overflow: 'hidden', backgroundColor: SIGNAL.mist, color: SIGNAL.graphite, fontFamily: 'var(--inkloom-animation-body)'}}>
       <svg viewBox="0 0 1920 1080" style={{position: 'absolute', inset: 0, width: '100%', height: '100%', opacity: 0.35}}>
         {Array.from({length: 9}).map((_, index) => <path key={index} d={`M0 ${270 + index * 72} C260 ${220 + index * 78}, 520 ${330 + index * 56}, 780 ${270 + index * 72} S1300 ${220 + index * 78}, 1920 ${270 + index * 72}`} fill="none" stroke={SIGNAL.line} strokeWidth="2" />)}
       </svg>
       <div style={{position: 'absolute', left: 62, top: 54, width: 94, height: 94, borderRadius: '50%', border: `5px solid ${SIGNAL.graphite}`, display: 'grid', placeItems: 'center', backgroundColor: SIGNAL.white, fontSize: 40, fontWeight: 950}}>{code}</div>
       <div style={{position: 'absolute', left: 184, top: 48, fontSize: 18, fontWeight: 900, color: SIGNAL.magenta}}>COURT SIGNAL / ADMISSION</div>
-      <h1 style={{position: 'absolute', left: 184, right: 80, top: 82, margin: 0, fontSize: 50, lineHeight: 1.18, fontWeight: 950, letterSpacing: 0}}>{title}</h1>
+      <h1 style={{fontFamily: 'var(--inkloom-animation-title)', position: 'absolute', left: 184, right: 80, top: 82, margin: 0, fontSize: 50, lineHeight: 1.18, fontWeight: 950, letterSpacing: 0}}>{title}</h1>
       <div style={{position: 'absolute', left: 184, top: 154, width: 1540, height: 4, backgroundColor: SIGNAL.graphite, scale: `${trace} 1`, transformOrigin: 'left center'}} />
       <div style={{position: 'absolute', left: 1730, top: 143, display: 'flex', gap: 8}}>{[0, 1, 2].map((item) => <span key={item} style={{width: 12, height: 12, borderRadius: '50%', backgroundColor: [SIGNAL.teal, SIGNAL.yellow, SIGNAL.magenta][item]}} />)}</div>
       {children}

@@ -4,7 +4,7 @@ import {AbsoluteFill, Easing, Interactive, interpolate, useCurrentFrame} from 'r
 export const ConstructivistGeometryDemo = () => {
   const frame = useCurrentFrame();
   return (
-    <AbsoluteFill style={{backgroundColor: '#f1eee5', overflow: 'hidden', color: '#0a0a0a', fontFamily: 'Arial Black, Microsoft YaHei, sans-serif'}}>
+    <AbsoluteFill style={{backgroundColor: '#f1eee5', overflow: 'hidden', color: '#0a0a0a', fontFamily: 'var(--inkloom-animation-body)'}}>
       <div style={{position: 'absolute', left: -120, top: 560, width: 900, height: 250, backgroundColor: '#e3322a', rotate: '-18deg'}} />
       <div style={{position: 'absolute', right: -80, top: 70, width: 760, height: 210, backgroundColor: '#2148c0', rotate: '12deg'}} />
       <Interactive.Div
@@ -34,10 +34,10 @@ export const ConstructivistGeometryDemo = () => {
         >
           <Icon size={70} strokeWidth={2.4} />
           <div style={{marginTop: 48, fontSize: 70, fontWeight: 900}}>{label}</div>
-          <div style={{fontFamily: 'Consolas, monospace', fontSize: 19, marginTop: 12}}>0{index + 1} / STRUCTURE</div>
+          <div style={{fontFamily: 'var(--inkloom-animation-mono)', fontSize: 19, marginTop: 12}}>0{index + 1} / STRUCTURE</div>
         </Interactive.Div>
       ))}
-      <div style={{position: 'absolute', right: 92, bottom: 58, fontFamily: 'Consolas, monospace', fontSize: 22, fontWeight: 800}}>FORM FOLLOWS REASON</div>
+      <div style={{position: 'absolute', right: 92, bottom: 58, fontFamily: 'var(--inkloom-animation-mono)', fontSize: 22, fontWeight: 800}}>FORM FOLLOWS REASON</div>
     </AbsoluteFill>
   );
 };

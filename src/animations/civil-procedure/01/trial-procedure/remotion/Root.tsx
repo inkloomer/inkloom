@@ -1,3 +1,5 @@
+import {getAnimationTypographyConfiguration} from '../../../../../typography/animation-registry';
+import {withAnimationTypography} from '../../../../../typography/animation-provider';
 import {Composition, Folder} from 'remotion';
 import {TrialProcedure} from './TrialProcedure';
 import {
@@ -28,6 +30,6 @@ export const RemotionRoot = () => (
       <Composition id="TrialProcedure-voterException" component={stills.voterException} durationInFrames={SCENES.voterException.duration} fps={FPS} width={1920} height={1080} />
       <Composition id="TrialProcedure-comparison" component={stills.comparison} durationInFrames={SCENES.comparison.duration} fps={FPS} width={1920} height={1080} />
     </Folder>
-    <Composition id="TrialProcedure" component={TrialProcedure} durationInFrames={DURATION_FRAMES} fps={FPS} width={1920} height={1080} />
+    <Composition id="TrialProcedure" component={withAnimationTypography(TrialProcedure, getAnimationTypographyConfiguration('trial-procedure'))} durationInFrames={DURATION_FRAMES} fps={FPS} width={1920} height={1080} />
   </>
 );

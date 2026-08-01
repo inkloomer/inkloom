@@ -40,14 +40,14 @@ export const StatutoryAgentCircuit = () => {
   ];
 
   return (
-    <AbsoluteFill style={{backgroundColor: '#0a0e15', overflow: 'hidden', color: '#e0e7f1', fontFamily: 'Consolas, Monaco, monospace'}}>
+    <AbsoluteFill style={{backgroundColor: '#0a0e15', overflow: 'hidden', color: '#e0e7f1', fontFamily: 'var(--inkloom-animation-meta)'}}>
       <div style={{position: 'absolute', inset: 0, backgroundImage: 'repeating-linear-gradient(0deg, rgba(16,185,129,0.03) 0px, transparent 1px, transparent 20px, rgba(16,185,129,0.03) 21px), repeating-linear-gradient(90deg, rgba(16,185,129,0.03) 0px, transparent 1px, transparent 20px, rgba(16,185,129,0.03) 21px)', pointerEvents: 'none'}} />
 
-      <div style={{position: 'absolute', left: 100, top: 80, fontSize: 68, fontWeight: 900, fontFamily: 'Arial, sans-serif', color: '#00d9ff', textTransform: 'uppercase', letterSpacing: 4, opacity: interpolate(frame, [0, 25], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'})}}>
+      <div style={{position: 'absolute', left: 100, top: 80, fontSize: 68, fontWeight: 900, fontFamily: 'var(--inkloom-animation-title)', color: '#00d9ff', textTransform: 'uppercase', letterSpacing: 4, opacity: interpolate(frame, [0, 25], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'})}}>
         法定代理 <span style={{color: '#10b981'}}>/ DIRECT LINK</span>
       </div>
 
-      <div style={{position: 'absolute', right: 120, top: 95, fontFamily: 'Consolas, monospace', fontSize: 22, color: '#6b7280', letterSpacing: 1}}>
+      <div style={{position: 'absolute', right: 120, top: 95, fontFamily: 'var(--inkloom-animation-meta)', fontSize: 22, color: '#6b7280', letterSpacing: 1}}>
         CIRCUIT-08A
       </div>
 
@@ -81,10 +81,10 @@ export const StatutoryAgentCircuit = () => {
 
             <div style={{position: 'relative', width: '100%', height: '100%', borderRadius: '50%', backgroundColor: '#1a1f2e', border: `4px solid ${color}`, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 8, boxShadow: `0 0 30px ${color}40`}}>
               <Icon size={52} strokeWidth={2} color={color} />
-              <div style={{fontSize: 32, fontWeight: 900, fontFamily: 'Arial, sans-serif', color: '#ffffff', textAlign: 'center', lineHeight: 1.2}}>{label}</div>
+              <div style={{fontSize: 32, fontWeight: 900, fontFamily: 'var(--inkloom-animation-body)', color: '#ffffff', textAlign: 'center', lineHeight: 1.2}}>{label}</div>
             </div>
 
-            <div style={{position: 'absolute', left: '50%', top: 220, transform: 'translateX(-50%)', fontSize: 18, fontFamily: 'Consolas, monospace', color: '#6b7280', whiteSpace: 'nowrap', letterSpacing: 1}}>
+            <div style={{position: 'absolute', left: '50%', top: 220, transform: 'translateX(-50%)', fontSize: 18, fontFamily: 'var(--inkloom-animation-meta)', color: '#6b7280', whiteSpace: 'nowrap', letterSpacing: 1}}>
               {sublabel}
             </div>
           </div>
@@ -102,7 +102,7 @@ export const StatutoryAgentCircuit = () => {
           border: '2px solid #10b981',
           borderRadius: 8,
           fontSize: 34,
-          fontFamily: 'Arial, sans-serif',
+          fontFamily: 'var(--inkloom-animation-body)',
           color: '#e0e7f1',
           textAlign: 'center',
           opacity: interpolate(frame, [130, 165], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'}),
@@ -112,7 +112,7 @@ export const StatutoryAgentCircuit = () => {
         法律直接赋权，无需授权环节
       </div>
 
-      <div style={{position: 'absolute', right: 100, bottom: 100, fontSize: 20, fontFamily: 'Consolas, monospace', color: '#374151', letterSpacing: 1}}>
+      <div style={{position: 'absolute', right: 100, bottom: 100, fontSize: 20, fontFamily: 'var(--inkloom-animation-meta)', color: '#374151', letterSpacing: 1}}>
         PWR-DIRECT / NO AUTH REQUIRED
       </div>
     </AbsoluteFill>

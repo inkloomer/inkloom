@@ -1,5 +1,7 @@
 import type {ComponentType, FC} from 'react';
 import {Composition, Folder} from 'remotion';
+import {withAnimationTypography} from '../../typography/animation-provider';
+import type {AnimationTypographyConfiguration} from '../../typography/animation-presets';
 
 export type SceneTiming = {
   readonly start: number;
@@ -24,6 +26,7 @@ export const registerDeckAndScenes = ({
   fps,
   folderId,
   scenes,
+  typography,
   width = 1920,
   height = 1080,
 }: {
@@ -33,6 +36,7 @@ export const registerDeckAndScenes = ({
   readonly fps: number;
   readonly folderId: string;
   readonly scenes: readonly SceneRegistration[];
+  readonly typography?: AnimationTypographyConfiguration;
   readonly width?: number;
   readonly height?: number;
 }): FC => {
@@ -43,7 +47,7 @@ export const registerDeckAndScenes = ({
           <Composition
             key={scene.id}
             id={`${deckId}-${scene.id}`}
-            component={scene.component}
+            component={withAnimationTypography(scene.component as ComponentType<Record<string, never>>, typography)}
             durationInFrames={scene.durationInFrames}
             fps={fps}
             width={width}
@@ -53,7 +57,7 @@ export const registerDeckAndScenes = ({
       </Folder>
       <Composition
         id={deckId}
-        component={deckComponent}
+        component={withAnimationTypography(deckComponent as ComponentType<Record<string, never>>, typography)}
         durationInFrames={deckDurationInFrames}
         fps={fps}
         width={width}

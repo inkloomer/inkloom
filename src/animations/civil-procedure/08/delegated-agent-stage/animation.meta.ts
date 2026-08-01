@@ -1,3 +1,5 @@
+import {defineAnimationTypography} from '../../../../typography/animation-presets';
+
 export const meta = {
   id: 'civil-procedure-08-delegated-agent-stage',
   title: '委托代理人（戏剧舞台）',
@@ -5,3 +7,5 @@ export const meta = {
   visualDirection: 'hired-actor',
   tags: ['civil-procedure', 'agent', 'delegated', 'stage'],
 };
+
+export const typography = defineAnimationTypography({});

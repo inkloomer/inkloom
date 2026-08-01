@@ -4,9 +4,9 @@ import {AbsoluteFill, Easing, Interactive, interpolate, useCurrentFrame} from 'r
 export const ArchivalDossierDemo = () => {
   const frame = useCurrentFrame();
   return (
-    <AbsoluteFill style={{backgroundColor: '#d7d3ca', overflow: 'hidden', color: '#211f1b', fontFamily: 'Georgia, SimSun, serif'}}>
+    <AbsoluteFill style={{backgroundColor: '#d7d3ca', overflow: 'hidden', color: '#211f1b', fontFamily: 'var(--inkloom-animation-body)'}}>
       <div style={{position: 'absolute', left: 88, top: 70, width: 1744, height: 940, backgroundColor: '#ebe9e2', border: '1px solid #aaa59a'}} />
-      <div style={{position: 'absolute', left: 104, top: 88, fontFamily: 'Consolas, monospace', fontSize: 19, color: '#6b665d'}}>ARCHIVE / CASE 024</div>
+      <div style={{position: 'absolute', left: 104, top: 88, fontFamily: 'var(--inkloom-animation-meta)', fontSize: 19, color: '#6b665d'}}>ARCHIVE / CASE 024</div>
       <Interactive.Div name="Dossier title" style={{position: 'absolute', left: 104, top: 132, fontSize: 74, fontWeight: 800, opacity: interpolate(frame, [0, 28], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'})}}>
         事实审查卷宗
       </Interactive.Div>
@@ -36,7 +36,7 @@ export const ArchivalDossierDemo = () => {
           }}
         >
           <Icon size={56} strokeWidth={1.5} color="#8f2f2a" />
-          <div style={{marginTop: 30, fontFamily: 'Consolas, monospace', fontSize: 20, color: '#716b61'}}>{label}</div>
+          <div style={{marginTop: 30, fontFamily: 'var(--inkloom-animation-mono)', fontSize: 20, color: '#716b61'}}>{label}</div>
           <div style={{marginTop: 40, fontSize: 44, fontWeight: 800}}>{index === 0 ? '争议事实' : '构成要件'}</div>
           {[0, 1, 2, 3].map((line) => <div key={line} style={{marginTop: 26, width: `${92 - line * 9}%`, height: 3, backgroundColor: '#bdb8ae'}} />)}
         </Interactive.Div>
@@ -45,7 +45,7 @@ export const ArchivalDossierDemo = () => {
         name="Approved stamp"
         style={{
           position: 'absolute', right: 155, bottom: 118, display: 'grid', width: 300, height: 150, placeItems: 'center',
-          border: '10px double #a72e2a', color: '#a72e2a', fontFamily: 'Microsoft YaHei, sans-serif', fontSize: 42, fontWeight: 900,
+          border: '10px double #a72e2a', color: '#a72e2a', fontFamily: 'var(--inkloom-animation-body)', fontSize: 42, fontWeight: 900,
           rotate: '-8deg', opacity: interpolate(frame, [136, 146], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'}),
           scale: interpolate(frame, [136, 154], [1.5, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: Easing.bezier(0.16, 1, 0.3, 1), output: 'perceptual-scale'}),
         }}

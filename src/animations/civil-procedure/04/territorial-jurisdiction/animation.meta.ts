@@ -1,3 +1,5 @@
+import {defineAnimationTypography} from '../../../../typography/animation-presets';
+
 export default {
   id: 'territorial-jurisdiction',
   title: '地域管辖——连接点、四类路径与合同三步走',
@@ -6,3 +8,5 @@ export default {
   subject: 'civil-procedure',
   chapter: '04',
 };
+
+export const typography = defineAnimationTypography({});

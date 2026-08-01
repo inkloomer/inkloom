@@ -1,3 +1,5 @@
+import {defineAnimationTypography} from '../../../../typography/animation-presets';
+
 export default {
   id: 'evidence-classification',
   title: '证据的理论分类',
@@ -6,3 +8,5 @@ export default {
   subject: 'civil-procedure',
   chapter: '10',
 };
+
+export const typography = defineAnimationTypography({});

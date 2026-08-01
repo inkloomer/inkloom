@@ -10,7 +10,7 @@ export const StatutoryAgentStage = () => {
   ];
 
   return (
-    <AbsoluteFill style={{backgroundColor: '#1a1412', overflow: 'hidden', color: '#f5f1e8', fontFamily: 'Garamond, Georgia, serif'}}>
+    <AbsoluteFill style={{backgroundColor: '#1a1412', overflow: 'hidden', color: '#f5f1e8', fontFamily: 'var(--inkloom-animation-body)'}}>
       <div style={{position: 'absolute', left: 0, right: 0, top: 0, height: 200, background: 'linear-gradient(180deg, #3d1e1e 0%, #1a1412 100%)', borderBottom: '4px solid #8b4513'}} />
 
       <div style={{position: 'absolute', left: 0, right: 0, bottom: 0, height: 140, backgroundColor: '#2d1810', borderTop: '6px solid #654321', boxShadow: '0 -4px 20px rgba(0,0,0,0.6)'}} />
@@ -37,7 +37,7 @@ export const StatutoryAgentStage = () => {
           right: 130,
           top: 85,
           fontSize: 26,
-          fontFamily: 'Courier New, monospace',
+          fontFamily: 'var(--inkloom-animation-mono)',
           color: '#8b7355',
           letterSpacing: 2,
         }}
@@ -76,7 +76,7 @@ export const StatutoryAgentStage = () => {
       >
         <Crown size={64} strokeWidth={2} color="#d4af37" style={{margin: '0 auto 16px'}} />
         <div style={{fontSize: 42, fontWeight: 700, color: '#d4af37', marginBottom: 8}}>法定代理人</div>
-        <div style={{fontSize: 22, color: '#a0826d', fontFamily: 'Courier New, monospace', letterSpacing: 1}}>PUPPET MASTER</div>
+        <div style={{fontSize: 22, color: '#a0826d', fontFamily: 'var(--inkloom-animation-meta)', letterSpacing: 1}}>PUPPET MASTER</div>
       </div>
 
       <svg viewBox="0 0 1920 1080" style={{position: 'absolute', inset: 0}}>
@@ -127,7 +127,7 @@ export const StatutoryAgentStage = () => {
       >
         <User size={80} strokeWidth={1.8} color="#e8d4b8" />
         <div style={{fontSize: 48, fontWeight: 700, color: '#e8d4b8'}}>当事人</div>
-        <div style={{fontSize: 24, color: '#a0826d', fontFamily: 'Courier New, monospace', letterSpacing: 1}}>THE PUPPET</div>
+        <div style={{fontSize: 24, color: '#a0826d', fontFamily: 'var(--inkloom-animation-meta)', letterSpacing: 1}}>THE PUPPET</div>
         <div style={{marginTop: 8, fontSize: 26, color: '#8b7355', textAlign: 'center', lineHeight: 1.4}}>
           被代理出庭<br/>无独立行为
         </div>
@@ -160,7 +160,7 @@ export const StatutoryAgentStage = () => {
           right: 110,
           bottom: 165,
           fontSize: 22,
-          fontFamily: 'Courier New, monospace',
+          fontFamily: 'var(--inkloom-animation-meta)',
           color: '#654321',
           letterSpacing: 1,
         }}

@@ -1,3 +1,5 @@
+import {getAnimationTypographyConfiguration} from '../../../../../typography/animation-registry';
+import {withAnimationTypography} from '../../../../../typography/animation-provider';
 import {Composition, Folder} from 'remotion';
 import {DisputeResolution} from './DisputeResolution';
 import {
@@ -28,6 +30,6 @@ export const RemotionRoot = () => (
       <Composition id="DisputeResolution-enforceability" component={stills.enforceability} durationInFrames={SCENES.enforceability.duration} fps={FPS} width={1920} height={1080} />
       <Composition id="DisputeResolution-recap" component={stills.recap} durationInFrames={SCENES.recap.duration} fps={FPS} width={1920} height={1080} />
     </Folder>
-    <Composition id="DisputeResolution" component={DisputeResolution} durationInFrames={DURATION_FRAMES} fps={FPS} width={1920} height={1080} />
+    <Composition id="DisputeResolution" component={withAnimationTypography(DisputeResolution, getAnimationTypographyConfiguration('dispute-resolution'))} durationInFrames={DURATION_FRAMES} fps={FPS} width={1920} height={1080} />
   </>
 );

@@ -1,3 +1,5 @@
+import {defineAnimationTypography} from '../../../../typography/animation-presets';
+
 export default {
   id: 'occupational-embezzlement-flowchart',
   title: '职务侵占罪判断流程',
@@ -6,3 +8,5 @@ export default {
   subject: 'criminal',
   chapter: '19',
 };
+
+export const typography = defineAnimationTypography({});

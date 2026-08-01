@@ -1,3 +1,5 @@
+import {defineAnimationTypography} from '../../../../typography/animation-presets';
+
 export default {
   id: 'theft-mistake-analysis',
   title: '盗窃数额认识错误',
@@ -6,3 +8,5 @@ export default {
   subject: 'criminal',
   chapter: '19',
 };
+
+export const typography = defineAnimationTypography({});

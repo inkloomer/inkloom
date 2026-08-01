@@ -4,9 +4,9 @@ import {AbsoluteFill, Easing, Interactive, interpolate, useCurrentFrame} from 'r
 export const KineticTypographyDemo = () => {
   const frame = useCurrentFrame();
   return (
-    <AbsoluteFill style={{backgroundColor: '#f7f7f4', overflow: 'hidden', color: '#101010', fontFamily: 'Arial Black, Microsoft YaHei, sans-serif'}}>
+    <AbsoluteFill style={{backgroundColor: '#f7f7f4', overflow: 'hidden', color: '#101010', fontFamily: 'var(--inkloom-animation-body)'}}>
       <div style={{position: 'absolute', left: 0, top: 0, width: 36, height: 1080, backgroundColor: '#ffd428'}} />
-      <Interactive.Div name="Kinetic eyebrow" style={{position: 'absolute', left: 98, top: 74, fontFamily: 'Consolas, monospace', fontSize: 22, color: '#2456d6'}}>TYPE / REASON / 08</Interactive.Div>
+      <Interactive.Div name="Kinetic eyebrow" style={{position: 'absolute', left: 98, top: 74, fontFamily: 'var(--inkloom-animation-meta)', fontSize: 22, color: '#2456d6'}}>TYPE / REASON / 08</Interactive.Div>
       {[
         {text: '事实', top: 170, size: 172, color: '#101010', from: '-620px 0px', delay: 0},
         {text: '不是', top: 355, size: 118, color: '#2456d6', from: '620px 0px', delay: 36},
@@ -40,7 +40,7 @@ export const KineticTypographyDemo = () => {
         <ArrowRight size={70} color="#ffd428" style={{margin: '20px 0'}} />
         <div style={{fontSize: 74, lineHeight: 1.2}}>结论</div>
       </Interactive.Div>
-      <div style={{position: 'absolute', left: 100, bottom: 68, fontFamily: 'Consolas, monospace', fontSize: 20}}>WORDS MOVE / MEANING STAYS</div>
+      <div style={{position: 'absolute', left: 100, bottom: 68, fontFamily: 'var(--inkloom-animation-meta)', fontSize: 20}}>WORDS MOVE / MEANING STAYS</div>
     </AbsoluteFill>
   );
 };

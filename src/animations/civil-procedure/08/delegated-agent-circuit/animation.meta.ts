@@ -1,3 +1,5 @@
+import {defineAnimationTypography} from '../../../../typography/animation-presets';
+
 export const meta = {
   id: 'civil-procedure-08-delegated-agent-circuit',
   title: '委托代理人（电路板）',
@@ -5,3 +7,5 @@ export const meta = {
   visualDirection: 'agent-circuit-auth',
   tags: ['civil-procedure', 'agent', 'delegated', 'circuit'],
 };
+
+export const typography = defineAnimationTypography({});

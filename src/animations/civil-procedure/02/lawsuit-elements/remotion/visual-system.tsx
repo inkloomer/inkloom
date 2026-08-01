@@ -3,13 +3,13 @@ import {ArrowRight, type LucideIcon} from 'lucide-react';
 import {Easing, interpolate, spring, useCurrentFrame, useVideoConfig} from 'remotion';
 import {accentColor, accentSoftColor, PALETTE, toSourceFrame, type Accent} from './storyboard';
 
-export const FONT_FAMILY = '"Microsoft YaHei", "PingFang SC", sans-serif';
+export const FONT_FAMILY = 'var(--inkloom-animation-body)';
 export const ENTER_EASING = Easing.bezier(0.16, 1, 0.3, 1);
 export const EXIT_EASING = Easing.bezier(0.7, 0, 0.84, 0);
 
 export const baseTextStyle: CSSProperties = {
   color: PALETTE.ink,
-  fontFamily: FONT_FAMILY,
+  fontFamily: 'var(--inkloom-animation-body)',
   letterSpacing: 0,
 };
 

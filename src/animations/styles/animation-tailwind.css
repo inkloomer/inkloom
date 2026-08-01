@@ -22,6 +22,17 @@
   --inkloom-animation-meta: "LXGW WenKai Screen", serif;
   --inkloom-animation-footer: "LXGW WenKai Screen", serif;
   --inkloom-animation-mono: "LXGW WenKai Mono GB Screen", monospace;
-  --inkloom-animation-font-synthesis: weight;
-  font-synthesis: var(--inkloom-animation-font-synthesis);
+  --inkloom-animation-title-font-synthesis: weight;
+  --inkloom-animation-body-font-synthesis: weight;
+  --inkloom-animation-label-font-synthesis: weight;
+  --inkloom-animation-meta-font-synthesis: weight;
+  --inkloom-animation-footer-font-synthesis: weight;
+  --inkloom-animation-mono-font-synthesis: weight;
 }
+
+.font-animation-title { font-synthesis: var(--inkloom-animation-title-font-synthesis); }
+.font-animation-body { font-synthesis: var(--inkloom-animation-body-font-synthesis); }
+.font-animation-label { font-synthesis: var(--inkloom-animation-label-font-synthesis); }
+.font-animation-meta { font-synthesis: var(--inkloom-animation-meta-font-synthesis); }
+.font-animation-footer { font-synthesis: var(--inkloom-animation-footer-font-synthesis); }
+.font-animation-mono { font-synthesis: var(--inkloom-animation-mono-font-synthesis); }

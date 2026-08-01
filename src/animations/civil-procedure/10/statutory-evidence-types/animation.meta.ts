@@ -1,3 +1,5 @@
+import {defineAnimationTypography} from '../../../../typography/animation-presets';
+
 export default {
   id: 'statutory-evidence-types',
   title: '四类法定证据的区分',
@@ -6,3 +8,5 @@ export default {
   subject: 'civil-procedure',
   chapter: '10',
 };
+
+export const typography = defineAnimationTypography({});

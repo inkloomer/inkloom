@@ -5,7 +5,7 @@ export const InkAnnotationDemo = () => {
   const frame = useCurrentFrame();
   const trace = interpolate(frame, [48, 138], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: Easing.bezier(0.16, 1, 0.3, 1)});
   return (
-    <AbsoluteFill style={{backgroundColor: '#fbfaf6', overflow: 'hidden', color: '#252525', fontFamily: 'KaiTi, STKaiti, serif'}}>
+    <AbsoluteFill style={{backgroundColor: '#fbfaf6', overflow: 'hidden', color: '#252525', fontFamily: 'var(--inkloom-animation-body)'}}>
       {[185, 285, 385, 485, 585, 685, 785, 885].map((top) => <div key={top} style={{position: 'absolute', left: 70, right: 70, top, height: 1, backgroundColor: '#cfd8df'}} />)}
       <div style={{position: 'absolute', left: 150, top: 0, width: 2, height: 1080, backgroundColor: '#e7a8a2'}} />
       <Interactive.Div name="Annotation title" style={{position: 'absolute', left: 210, top: 70, fontSize: 82, fontWeight: 900, opacity: interpolate(frame, [0, 30], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'})}}>

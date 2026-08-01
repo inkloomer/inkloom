@@ -1,3 +1,5 @@
+import {defineAnimationTypography} from '../../../../typography/animation-presets';
+
 export default {
   id: 'admission-court-record',
   title: '自认的成立与效力边界',
@@ -6,3 +8,5 @@ export default {
   subject: 'civil-procedure',
   chapter: '09',
 };
+
+export const typography = defineAnimationTypography({});

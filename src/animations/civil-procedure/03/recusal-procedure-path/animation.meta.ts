@@ -1,3 +1,5 @@
+import {defineAnimationTypography} from '../../../../typography/animation-presets';
+
 export default {
   id: 'recusal-procedure-path',
   title: '回避制度判断路径——对象、事由与程序效力',
@@ -6,3 +8,5 @@ export default {
   subject: 'civil-procedure',
   chapter: '03',
 };
+
+export const typography = defineAnimationTypography({});

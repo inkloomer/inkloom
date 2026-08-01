@@ -8,7 +8,7 @@ const ease = Easing.bezier(0.16, 1, 0.3, 1);
 const reveal = (frame: number, delay: number, duration = 22) => interpolate(frame, [delay, delay + duration], [0, 1], {...clamp, easing: ease});
 
 const Arena = ({children, scene, kicker, title}: {readonly children: ReactNode; readonly scene: string; readonly kicker: string; readonly title: string}) => (
-  <AbsoluteFill style={{background: `linear-gradient(90deg, transparent 49.8%, ${C.line} 49.9%, ${C.line} 50.1%, transparent 50.2%), ${C.bg}`, color: C.ink, fontFamily: 'Arial, "Microsoft YaHei", sans-serif'}}>
+  <AbsoluteFill style={{background: `linear-gradient(90deg, transparent 49.8%, ${C.line} 49.9%, ${C.line} 50.1%, transparent 50.2%), ${C.bg}`, color: C.ink, fontFamily: 'var(--inkloom-animation-body)'}}>
     <div style={{position: 'absolute', inset: 42, border: `2px solid ${C.line}`}} />
     <div style={{position: 'absolute', left: 86, top: 58, fontSize: 18, color: C.cyan, fontWeight: 800}}>{scene} / INTENT REVIEW</div>
     <div style={{position: 'absolute', left: 86, top: 102, fontSize: 25, color: C.muted}}>{kicker}</div>

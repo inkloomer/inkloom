@@ -9,11 +9,11 @@ const p = (f:number,d:number,n=16)=>interpolate(f,[d,d+n],[0,1],CLAMP);
 const Enter=({children,delay=0,style}:{children:ReactNode;delay?:number;style?:CSSProperties})=>{const f=useCurrentFrame();const q=p(f,delay);return <div style={{opacity:q,translate:`${(1-q)*34}px 0px`,...style}}>{children}</div>};
 const Plate=({children,tone='yellow'}:{children:ReactNode;tone?:'yellow'|'blue'|'green'|'rust'})=><span style={{display:'inline-block',backgroundColor:C[tone],color:tone==='yellow'?C.black:C.white,padding:'7px 14px',fontSize:22,fontWeight:950}}>{children}</span>;
 const Line=({left,top,width,delay,color=C.yellow,vertical=false}:{left:number;top:number;width:number;delay:number;color?:string;vertical?:boolean})=>{const f=useCurrentFrame();return <div style={{position:'absolute',left,top,width:vertical?8:width,height:vertical?width:8,backgroundColor:color,scale:vertical?`1 ${p(f,delay)}`:`${p(f,delay)} 1`,transformOrigin:vertical?'top':'left'}}/>};
-const Canvas=({code,title,children}:{code:string;title:string;children:ReactNode})=><AbsoluteFill style={{overflow:'hidden',backgroundColor:C.concrete,color:C.black,fontFamily:'"Arial Narrow", "Microsoft YaHei", sans-serif'}}>
+const Canvas=({code,title,children}:{code:string;title:string;children:ReactNode})=><AbsoluteFill style={{overflow:'hidden',backgroundColor:C.concrete,color:C.black,fontFamily: 'var(--inkloom-animation-body)'}}>
   <div style={{position:'absolute',inset:0,backgroundImage:`repeating-linear-gradient(0deg, transparent 0 47px, rgba(23,24,23,.08) 48px 49px)`}}/>
   <div style={{position:'absolute',left:0,top:0,bottom:0,width:32,backgroundColor:C.yellow,backgroundImage:`repeating-linear-gradient(135deg, ${C.black} 0 18px, transparent 18px 36px)`}}/>
   <div style={{position:'absolute',left:72,top:42,fontSize:18,fontWeight:950}}>ELEMENT INSPECTION / {code}</div>
-  <h1 style={{position:'absolute',left:72,top:70,margin:0,fontSize:58,lineHeight:1.05,fontWeight:950}}>{title}</h1>
+  <h1 style={{fontFamily: 'var(--inkloom-animation-title)', position:'absolute',left:72,top:70,margin:0,fontSize:58,lineHeight:1.05,fontWeight:950}}>{title}</h1>
   <div style={{position:'absolute',left:72,right:72,top:158,height:8,backgroundColor:C.black}}/>{children}
   <div style={{position:'absolute',left:72,right:72,bottom:28,display:'flex',justifyContent:'space-between',fontSize:17,fontWeight:900}}><span>刑法 · 专题十九</span><span>NO GATE, NO SPECIAL OFFENSE</span></div>
 </AbsoluteFill>;

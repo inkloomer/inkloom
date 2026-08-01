@@ -1,3 +1,5 @@
+import {defineAnimationTypography} from '../../../../typography/animation-presets';
+
 export default {
   id: 'trial-organization-path',
   title: '审判组织选择路径——独任制与合议制',
@@ -6,3 +8,5 @@ export default {
   subject: 'civil-procedure',
   chapter: '03',
 };
+
+export const typography = defineAnimationTypography({});

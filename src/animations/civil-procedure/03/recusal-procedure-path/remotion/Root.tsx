@@ -1,3 +1,5 @@
+import {getAnimationTypographyConfiguration} from '../../../../../typography/animation-registry';
+import {withAnimationTypography} from '../../../../../typography/animation-provider';
 import {Composition, Folder} from 'remotion';
 import {RecusalProcedurePath} from './RecusalProcedurePath';
 import {
@@ -31,6 +33,6 @@ export const RemotionRoot = () => (
       <Composition id="RecusalProcedurePath-remedy" component={stills.remedy} durationInFrames={SCENES.remedy.duration} fps={FPS} width={1920} height={1080} />
       <Composition id="RecusalProcedurePath-pauseVsContinue" component={stills.pauseVsContinue} durationInFrames={SCENES.pauseVsContinue.duration} fps={FPS} width={1920} height={1080} />
     </Folder>
-    <Composition id="RecusalProcedurePath" component={RecusalProcedurePath} durationInFrames={DURATION_FRAMES} fps={FPS} width={1920} height={1080} />
+    <Composition id="RecusalProcedurePath" component={withAnimationTypography(RecusalProcedurePath, getAnimationTypographyConfiguration('recusal-procedure-path'))} durationInFrames={DURATION_FRAMES} fps={FPS} width={1920} height={1080} />
   </>
 );

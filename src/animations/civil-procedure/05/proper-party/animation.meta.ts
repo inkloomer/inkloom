@@ -1,3 +1,5 @@
+import {defineAnimationTypography} from '../../../../typography/animation-presets';
+
 export default {
   id: 'proper-party',
   title: '当事人适格——原则与例外',
@@ -6,3 +8,5 @@ export default {
   subject: 'civil-procedure',
   chapter: '05',
 };
+
+export const typography = defineAnimationTypography({});

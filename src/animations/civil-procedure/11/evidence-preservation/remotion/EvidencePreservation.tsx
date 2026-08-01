@@ -24,7 +24,7 @@ const ICE = {
 const {Enter, StaggerEnter, MaskedReveal} = createMotionPrimitives(toSourceFrame);
 
 const Canvas = ({code, title, cue, children}: {code: string; title: string; cue: string; children: ReactNode}) => (
-  <div style={{position: 'absolute', inset: 0, backgroundColor: ICE.paper, color: ICE.ink, fontFamily: 'Inter, Microsoft YaHei, sans-serif', overflow: 'hidden'}}>
+  <div style={{position: 'absolute', inset: 0, backgroundColor: ICE.paper, color: ICE.ink, fontFamily: 'var(--inkloom-animation-body)', overflow: 'hidden'}}>
     <div style={{position: 'absolute', inset: 0, backgroundImage: `linear-gradient(${ICE.line}45 1px, transparent 1px), linear-gradient(90deg, ${ICE.line}45 1px, transparent 1px)`, backgroundSize: '44px 44px'}} />
     <div style={{position: 'absolute', left: 64, top: 50, width: 110, height: 84, border: `3px solid ${ICE.ink}`, display: 'grid', placeItems: 'center', fontSize: 28, fontWeight: 900}}>{code}</div>
     <div style={{position: 'absolute', left: 206, top: 48, fontSize: 52, fontWeight: 900, letterSpacing: 0}}>{title}</div>

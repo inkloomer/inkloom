@@ -12,11 +12,11 @@ export const TransitMapDemo = () => {
     {x: 1660, y: 650, name: '结论站', color: '#5ab0f2', delay: 164},
   ];
   return (
-    <AbsoluteFill style={{backgroundColor: '#111318', overflow: 'hidden', color: '#f4f7fa', fontFamily: 'Arial, Microsoft YaHei, sans-serif'}}>
+    <AbsoluteFill style={{backgroundColor: '#111318', overflow: 'hidden', color: '#f4f7fa', fontFamily: 'var(--inkloom-animation-body)'}}>
       <Interactive.Div name="Transit title" style={{position: 'absolute', left: 94, top: 76, fontSize: 74, fontWeight: 900, letterSpacing: 0, opacity: interpolate(frame, [0, 28], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'})}}>
         法律推理线路图
       </Interactive.Div>
-      <div style={{position: 'absolute', right: 96, top: 90, display: 'flex', alignItems: 'center', gap: 16, color: '#8d98a5', fontFamily: 'Consolas, monospace', fontSize: 20}}><Route size={34} /> LINE R-03</div>
+      <div style={{position: 'absolute', right: 96, top: 90, display: 'flex', alignItems: 'center', gap: 16, color: '#8d98a5', fontFamily: 'var(--inkloom-animation-meta)', fontSize: 20}}><Route size={34} /> LINE R-03</div>
       <svg viewBox="0 0 1920 1080" style={{position: 'absolute', inset: 0}}>
         <path d="M 235 650 H 650 L 880 420 H 1320 L 1550 650 H 1660" fill="none" stroke="#303740" strokeWidth="34" strokeLinecap="round" strokeLinejoin="round" />
         <path d="M 235 650 H 650 L 880 420 H 1320 L 1550 650 H 1660" fill="none" stroke="#27c499" strokeWidth="16" strokeLinecap="round" strokeLinejoin="round" pathLength={1} strokeDasharray={1} strokeDashoffset={1 - progress} />
@@ -29,7 +29,7 @@ export const TransitMapDemo = () => {
           <div style={{position: 'absolute', left: index < 3 ? -18 : 'auto', right: index >= 3 ? -28 : 'auto', top: index % 2 === 0 ? 92 : -72, width: 180, fontSize: 25, fontWeight: 800, color}}>{name}</div>
         </Interactive.Div>
       ))}
-      <div style={{position: 'absolute', left: 94, bottom: 70, display: 'flex', gap: 48, color: '#8d98a5', fontFamily: 'Consolas, monospace', fontSize: 19}}><span>● ENTRY</span><span>● TRANSFER</span><span>● EFFECT</span></div>
+      <div style={{position: 'absolute', left: 94, bottom: 70, display: 'flex', gap: 48, color: '#8d98a5', fontFamily: 'var(--inkloom-animation-meta)', fontSize: 19}}><span>● ENTRY</span><span>● TRANSFER</span><span>● EFFECT</span></div>
       <MapPin size={42} color="#ef5b64" style={{position: 'absolute', left: 1299, top: 321, opacity: interpolate(frame, [130, 148], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'})}} />
     </AbsoluteFill>
   );

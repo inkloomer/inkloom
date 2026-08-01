@@ -9,12 +9,12 @@ export const EvidenceBoardDemo = () => {
     {left: 1260, top: 345, rotate: '-1deg', color: '#b8d9d0', title: '规范', note: '产生何种效果', icon: Scale},
   ];
   return (
-    <AbsoluteFill style={{backgroundColor: '#262726', overflow: 'hidden', color: '#f4f0e8', fontFamily: 'Arial, Microsoft YaHei, sans-serif'}}>
+    <AbsoluteFill style={{backgroundColor: '#262726', overflow: 'hidden', color: '#f4f0e8', fontFamily: 'var(--inkloom-animation-body)'}}>
       <div style={{position: 'absolute', inset: 44, border: '16px solid #111211', backgroundColor: '#3a3a36'}} />
       <Interactive.Div name="Evidence title" style={{position: 'absolute', left: 92, top: 72, fontSize: 70, fontWeight: 900, letterSpacing: 0, opacity: interpolate(frame, [0, 28], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'})}}>
         证据关系板
       </Interactive.Div>
-      <div style={{position: 'absolute', right: 96, top: 95, display: 'flex', alignItems: 'center', gap: 14, fontFamily: 'Consolas, monospace', fontSize: 19, color: '#d9c86c'}}><FileText size={30} /> CASE TRACE / 03</div>
+      <div style={{position: 'absolute', right: 96, top: 95, display: 'flex', alignItems: 'center', gap: 14, fontFamily: 'var(--inkloom-animation-meta)', fontSize: 19, color: '#d9c86c'}}><FileText size={30} /> CASE TRACE / 03</div>
       <svg viewBox="0 0 1920 1080" style={{position: 'absolute', inset: 0}}>
         <path d="M 470 490 C 650 430, 760 420, 920 410" fill="none" stroke="#d8564f" strokeWidth="8" pathLength={1} strokeDasharray={1} strokeDashoffset={1 - interpolate(frame, [65, 112], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'})} />
         <path d="M 1030 455 C 1180 480, 1320 530, 1450 555" fill="none" stroke="#d8564f" strokeWidth="8" pathLength={1} strokeDasharray={1} strokeDashoffset={1 - interpolate(frame, [102, 150], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'})} />

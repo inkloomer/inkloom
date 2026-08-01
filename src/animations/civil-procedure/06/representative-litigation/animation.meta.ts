@@ -1,3 +1,5 @@
+import {defineAnimationTypography} from '../../../../typography/animation-presets';
+
 export default {
   id: 'representative-litigation',
   title: '代表人诉讼——分类、权限与证券特别代表人诉讼',
@@ -6,3 +8,5 @@ export default {
   subject: 'civil-procedure',
   chapter: '06',
 };
+
+export const typography = defineAnimationTypography({});

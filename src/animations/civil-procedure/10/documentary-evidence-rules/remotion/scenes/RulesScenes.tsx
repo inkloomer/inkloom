@@ -31,7 +31,7 @@ export const AuthenticityRuleScene = () => {
             <span style={{fontSize: 24, fontWeight: 750}}>具备形式真实性</span><Seal delay={72}>推定为真实</Seal>
           </div>
         </Reveal>
-        <Reveal delay={92} from="none" style={{position: 'absolute', left: 422, top: 674, width: 900, minHeight: 94, backgroundColor: REGISTRY.white, border: `3px solid ${REGISTRY.seal}`, display: 'grid', placeItems: 'center', textAlign: 'center', padding: '14px 26px', zIndex: 4, fontFamily: '"Segoe UI", "Microsoft YaHei", sans-serif', fontSize: 25, fontWeight: 800}}>
+        <Reveal delay={92} from="none" style={{position: 'absolute', left: 422, top: 674, width: 900, minHeight: 94, backgroundColor: REGISTRY.white, border: `3px solid ${REGISTRY.seal}`, display: 'grid', placeItems: 'center', textAlign: 'center', padding: '14px 26px', zIndex: 4, fontFamily: 'var(--inkloom-animation-label)', fontSize: 25, fontWeight: 800}}>
           形式真实性争议用“证明”<br />内容真实性争议用“推定”
         </Reveal>
       </div>
@@ -92,7 +92,7 @@ export const BestEvidenceScene = () => {
       <div data-layout="original-document-fallback-fan" data-visual-anchor="document-fork" data-text-treatments="soft-highlight,label-block,stamp" data-visual-grammar="priority,boundary,substitution" data-focal-rule="originals-are-required-unless-submission-is-difficult" data-focal-channels="icon,enclosure,connector,annotation" style={{position: 'absolute', left: 94, right: 80, top: 198, bottom: 72}}>
         <Reveal delay={4} style={{position: 'absolute', left: 0, top: 32, width: 480, height: 560, backgroundColor: REGISTRY.forest, color: REGISTRY.white, padding: '38px 42px'}}>
           <ShieldCheck size={62} color={REGISTRY.brass} strokeWidth={2.2} />
-          <div style={{marginTop: 24, fontSize: 24, color: '#d6e4de', fontFamily: '"Segoe UI", sans-serif'}}>PRIMARY ROUTE</div>
+          <div style={{marginTop: 24, fontSize: 24, color: '#d6e4de', fontFamily: 'var(--inkloom-animation-body)'}}>PRIMARY ROUTE</div>
           <div style={{marginTop: 12, fontSize: 46, lineHeight: 1.25, fontWeight: 850}}>书证应当<br />提交<Highlight delay={24}>原件</Highlight></div>
           <div style={{position: 'absolute', left: 42, right: 42, bottom: 46}}><Seal color={REGISTRY.brass} delay={42}>原则路径</Seal></div>
         </Reveal>
@@ -106,7 +106,7 @@ export const BestEvidenceScene = () => {
         <RuleLine left={1060} top={312} width={161} color={REGISTRY.seal} delay={64} />
         <ArrowHead left={1221} top={304} color={REGISTRY.seal} delay={78} />
         <Reveal delay={74} from="right" style={{position: 'absolute', right: 0, top: 32, width: 510, height: 560, backgroundColor: REGISTRY.paper, border: `3px solid ${REGISTRY.seal}`, padding: '34px 38px'}}>
-          <div style={{fontSize: 25, fontFamily: '"Segoe UI", sans-serif', fontWeight: 800, color: REGISTRY.seal}}>FALLBACK SET</div>
+          <div style={{fontSize: 25, fontFamily: 'var(--inkloom-animation-body)', fontWeight: 800, color: REGISTRY.seal}}>FALLBACK SET</div>
           <div style={{marginTop: 12, fontSize: 34, fontWeight: 850}}>可以提交替代文本</div>
           <div style={{marginTop: 34, display: 'grid', gap: 20}}>
             <div style={{display: 'flex', alignItems: 'center', gap: 22, padding: '18px 20px', backgroundColor: '#e4ece7'}}><Copy size={44} color={REGISTRY.navy} /><span style={{fontSize: 30, fontWeight: 820}}>复制品</span></div>
@@ -114,7 +114,7 @@ export const BestEvidenceScene = () => {
             <div style={{display: 'flex', alignItems: 'center', gap: 22, padding: '18px 20px', backgroundColor: '#e4ece7'}}><Scissors size={44} color={REGISTRY.navy} /><span style={{fontSize: 30, fontWeight: 820}}>节录本</span></div>
           </div>
         </Reveal>
-        <Reveal delay={110} from="none" style={{position: 'absolute', left: 582, bottom: 0, width: 568, minHeight: 92, backgroundColor: REGISTRY.navy, color: REGISTRY.white, display: 'grid', placeItems: 'center', fontFamily: '"Segoe UI", "Microsoft YaHei", sans-serif', fontSize: 27, fontWeight: 820}}>
+        <Reveal delay={110} from="none" style={{position: 'absolute', left: 582, bottom: 0, width: 568, minHeight: 92, backgroundColor: REGISTRY.navy, color: REGISTRY.white, display: 'grid', placeItems: 'center', fontFamily: 'var(--inkloom-animation-footer)', fontSize: 27, fontWeight: 820}}>
           原件优先，不是绝对禁止替代
         </Reveal>
       </div>

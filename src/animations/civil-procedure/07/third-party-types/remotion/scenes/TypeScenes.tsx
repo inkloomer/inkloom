@@ -18,7 +18,7 @@ export const DefinitionScene = () => {
     </MaskedReveal>
     <div style={{position: 'absolute', left: 780, top: 305, width: 1010, height: 270}}>
       <div style={{position: 'absolute', left: 80, top: 104, width: 850, height: 5, backgroundColor: PALETTE.mint, scale: `${line} 1`, transformOrigin: 'left center'}} />
-      <div style={{position: 'absolute', left: 42, top: 28, color: PALETTE.muted, fontFamily: 'Consolas, monospace', fontSize: 22}}>原被告之间的法律关系 / SUBJECT AXIS</div>
+      <div style={{position: 'absolute', left: 42, top: 28, color: PALETTE.muted, fontFamily: 'var(--inkloom-animation-meta)', fontSize: 22}}>原被告之间的法律关系 / SUBJECT AXIS</div>
       <div style={{position: 'absolute', left: 0, top: 154, color: PALETTE.bone, fontSize: 30, fontWeight: 800}}>原告</div>
       <div style={{position: 'absolute', right: 0, top: 154, color: PALETTE.bone, fontSize: 30, fontWeight: 800}}>被告</div>
       <Pin left={70} top={96} color={PALETTE.coral} label="P" />
@@ -38,7 +38,7 @@ export const ComparisonScene = () => {
   const dependent = interpolate(frame, [76, 133], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: ENTER_EASING});
   return <div style={{position: 'absolute', inset: 0}}>
     <RelationHeading index="02" eyebrow="boundary test" title="请求权决定站位" accent="coral" placement="top-right" />
-    <div style={{position: 'absolute', left: 110, top: 255, color: PALETTE.muted, fontFamily: 'Consolas, monospace', fontSize: 22}}>同一条原被告关系轴 / 两种进入方式</div>
+    <div style={{position: 'absolute', left: 110, top: 255, color: PALETTE.muted, fontFamily: 'var(--inkloom-animation-meta)', fontSize: 22}}>同一条原被告关系轴 / 两种进入方式</div>
     <div style={{position: 'absolute', left: 100, top: 345, width: 760, height: 390, boxSizing: 'border-box', border: `1px solid ${PALETTE.coral}`, backgroundColor: PALETTE.panel, opacity: independent}}>
       <div style={{position: 'absolute', left: 60, top: 136, width: 640, height: 4, backgroundColor: PALETTE.coral}} />
       <Pin left={40} top={121} color={PALETTE.coral} label="P" /><Pin left={690} top={121} color={PALETTE.coral} label="D" />
@@ -51,7 +51,7 @@ export const ComparisonScene = () => {
       <PartyNode icon={UsersRound} label="无独三" note="不提出独立权利主张" accent="mint" style={{left: 150, top: 46}} active />
       <RelationArrow left={200} top={258} width={360} progress={dependent} accent="mint" label="申请 / 追加" />
     </div>
-    <div style={{position: 'absolute', left: 932, top: 400, color: PALETTE.yellow, fontFamily: 'Consolas, monospace', fontSize: 18, writingMode: 'vertical-rl', letterSpacing: 3}}>CLAIM DIVIDE</div>
+    <div style={{position: 'absolute', left: 932, top: 400, color: PALETTE.yellow, fontFamily: 'var(--inkloom-animation-meta)', fontSize: 18, writingMode: 'vertical-rl', letterSpacing: 3}}>CLAIM DIVIDE</div>
     <ImpactReveal delay={150} style={{position: 'absolute', left: 590, top: 795}}><div style={{...baseTextStyle, fontSize: 30, fontWeight: 800}}>独立请求权，是类型区分的第一道界线</div></ImpactReveal>
   </div>;
 };
@@ -75,7 +75,7 @@ export const RightsScene = () => {
         <div style={{margin: '28px 28px 0', padding: '18px 20px', border: `1px solid ${PALETTE.mint}`, backgroundColor: PALETTE.panel}}><div style={{color: PALETTE.mint, fontSize: 29, fontWeight: 900}}>上诉权</div><div style={{marginTop: 7, color: PALETTE.muted, fontSize: 22}}>判决承担责任</div></div>
         <div style={{margin: '18px 28px 0', padding: '18px 20px', border: `1px solid ${PALETTE.mint}`, backgroundColor: PALETTE.panel}}><div style={{color: PALETTE.mint, fontSize: 29, fontWeight: 900}}>签收调解书</div><div style={{marginTop: 7, color: PALETTE.muted, fontSize: 22}}>被确定承担义务</div></div>
       </div>
-      <div style={{position: 'absolute', left: 792, top: 370, color: PALETTE.yellow, fontFamily: 'Consolas, monospace', fontSize: 22, fontWeight: 700, textAlign: 'center'}}>责任落身<br />闸门转动</div>
+      <div style={{position: 'absolute', left: 792, top: 370, color: PALETTE.yellow, fontFamily: 'var(--inkloom-animation-meta)', fontSize: 22, fontWeight: 700, textAlign: 'center'}}>责任落身<br />闸门转动</div>
     </div>
     <ImpactReveal delay={175} style={{position: 'absolute', left: 230, top: 850}}><div style={{...baseTextStyle, fontSize: 27, fontWeight: 800}}>陷阱：无独三可以承认对方诉讼请求</div></ImpactReveal>
   </div>;
@@ -122,7 +122,7 @@ export const NoIndependentClaimScene = () => {
     <RelationArrow left={1110} top={425} width={190} progress={relation} accent="mint" label="法律上利害关系" />
     <PartyNode icon={UsersRound} label="无独三" note="没有独立请求权" accent="mint" style={{left: 1310, top: 350}} active />
 
-    <div style={{position: 'absolute', left: 150, top: 742, color: PALETTE.yellow, fontFamily: 'Consolas, monospace', fontSize: 22, fontWeight: 800}}>参诉方式 / ENTRY</div>
+    <div style={{position: 'absolute', left: 150, top: 742, color: PALETTE.yellow, fontFamily: 'var(--inkloom-animation-meta)', fontSize: 22, fontWeight: 800}}>参诉方式 / ENTRY</div>
 
     <div style={{position: 'absolute', left: 430, top: 676, width: 380, height: 102, boxSizing: 'border-box', padding: '24px 28px', display: 'flex', alignItems: 'center', gap: 18, border: `1px solid ${PALETTE.mint}`, backgroundColor: PALETTE.mintSoft, opacity: routes}}>
       <UserPlus size={40} color={PALETTE.mint} />
@@ -138,7 +138,7 @@ export const NoIndependentClaimScene = () => {
 
     <ImpactReveal delay={148} style={{position: 'absolute', left: 1280, top: 706}}>
       <div style={{width: 420, height: 206, boxSizing: 'border-box', padding: '38px 32px', border: `2px solid ${PALETTE.mint}`, backgroundColor: PALETTE.panel, textAlign: 'center'}}>
-        <div style={{color: PALETTE.mint, fontFamily: 'Consolas, monospace', fontSize: 20}}>JOIN THE CASE</div>
+        <div style={{color: PALETTE.mint, fontFamily: 'var(--inkloom-animation-meta)', fontSize: 20}}>JOIN THE CASE</div>
         <div style={{...baseTextStyle, marginTop: 16, fontSize: 38, fontWeight: 900}}>参加诉讼</div>
       </div>
     </ImpactReveal>
@@ -157,7 +157,7 @@ export const NoIndependentClaimRulesScene = () => {
     <RelationHeading index="06" eyebrow="participation map" title="身份定入口，责任开权限" accent="mint" />
 
     <div style={{position: 'absolute', left: 96, top: 270, width: 440, height: 490, boxSizing: 'border-box', padding: '38px 34px', border: `1px solid ${PALETTE.mint}`, backgroundColor: PALETTE.panel, opacity: identity}}>
-      <div style={{color: PALETTE.mint, fontFamily: 'Consolas, monospace', fontSize: 20, fontWeight: 800}}>IDENTITY</div>
+      <div style={{color: PALETTE.mint, fontFamily: 'var(--inkloom-animation-meta)', fontSize: 20, fontWeight: 800}}>IDENTITY</div>
       <div style={{display: 'flex', alignItems: 'center', gap: 18, marginTop: 24}}>
         <UsersRound size={52} color={PALETTE.mint} />
         <div style={{...baseTextStyle, fontSize: 42, fontWeight: 900}}>无独三</div>
@@ -172,7 +172,7 @@ export const NoIndependentClaimRulesScene = () => {
     <RelationArrow left={548} top={496} width={116} progress={entry} accent="mint" />
 
     <div style={{position: 'absolute', left: 678, top: 270, width: 410, height: 490, boxSizing: 'border-box', padding: '38px 30px', border: `1px solid ${PALETTE.grid}`, backgroundColor: PALETTE.panel, opacity: entry}}>
-      <div style={{color: PALETTE.yellow, fontFamily: 'Consolas, monospace', fontSize: 20, fontWeight: 800}}>ENTRY</div>
+      <div style={{color: PALETTE.yellow, fontFamily: 'var(--inkloom-animation-meta)', fontSize: 20, fontWeight: 800}}>ENTRY</div>
       <div style={{...baseTextStyle, marginTop: 18, fontSize: 34, fontWeight: 900}}>两条参诉入口</div>
       <div style={{display: 'flex', alignItems: 'center', gap: 18, marginTop: 48, padding: '25px 22px', border: `1px solid ${PALETTE.mint}`, backgroundColor: PALETTE.mintSoft}}>
         <UserPlus size={42} color={PALETTE.mint} />
@@ -187,7 +187,7 @@ export const NoIndependentClaimRulesScene = () => {
     <RelationArrow left={1100} top={496} width={116} progress={rights} accent="yellow" />
 
     <div style={{position: 'absolute', left: 1230, top: 226, width: 594, height: 620, opacity: rights}}>
-      <div style={{color: PALETTE.muted, fontFamily: 'Consolas, monospace', fontSize: 20, fontWeight: 800}}>RIGHTS FORK</div>
+      <div style={{color: PALETTE.muted, fontFamily: 'var(--inkloom-animation-meta)', fontSize: 20, fontWeight: 800}}>RIGHTS FORK</div>
       <div style={{marginTop: 18, padding: '24px 26px', border: `2px solid ${PALETTE.mint}`, backgroundColor: PALETTE.mintSoft}}>
         <div style={{display: 'flex', alignItems: 'center', gap: 14}}><ShieldCheck size={40} color={PALETTE.mint} /><div style={{...baseTextStyle, fontSize: 31, fontWeight: 900}}>责任落身，条件开启</div></div>
         <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14, marginTop: 22}}>

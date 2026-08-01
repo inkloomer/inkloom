@@ -24,7 +24,7 @@ const AuthSwitch = ({
       <div style={{position: 'relative', width: 80, height: 40, backgroundColor: isOn ? '#10b981' : '#374151', borderRadius: 20, margin: '0 auto', border: '2px solid ' + (isOn ? '#10b981' : '#6b7280')}}>
         <div style={{position: 'absolute', left: 4, top: 4, width: 28, height: 28, borderRadius: '50%', backgroundColor: '#ffffff', transform: `translateX(${toggleX}px)`}} />
       </div>
-      <div style={{marginTop: 10, fontSize: 18, fontFamily: 'Consolas, monospace', color: isOn ? '#10b981' : '#ef4444', textAlign: 'center', fontWeight: 800}}>
+      <div style={{marginTop: 10, fontSize: 18, fontFamily: 'var(--inkloom-animation-meta)', color: isOn ? '#10b981' : '#ef4444', textAlign: 'center', fontWeight: 800}}>
         {isOn ? 'ON' : 'OFF'}
       </div>
     </div>
@@ -42,14 +42,14 @@ export const DelegatedAgentCircuit = () => {
   ];
 
   return (
-    <AbsoluteFill style={{backgroundColor: '#0a0e15', overflow: 'hidden', color: '#e0e7f1', fontFamily: 'Consolas, Monaco, monospace'}}>
+    <AbsoluteFill style={{backgroundColor: '#0a0e15', overflow: 'hidden', color: '#e0e7f1', fontFamily: 'var(--inkloom-animation-meta)'}}>
       <div style={{position: 'absolute', inset: 0, backgroundImage: 'repeating-linear-gradient(0deg, rgba(251,191,36,0.03) 0px, transparent 1px, transparent 20px, rgba(251,191,36,0.03) 21px), repeating-linear-gradient(90deg, rgba(251,191,36,0.03) 0px, transparent 1px, transparent 20px, rgba(251,191,36,0.03) 21px)', pointerEvents: 'none'}} />
 
-      <div style={{position: 'absolute', left: 100, top: 80, fontSize: 68, fontWeight: 900, fontFamily: 'Arial, sans-serif', color: '#fbbf24', textTransform: 'uppercase', letterSpacing: 4, opacity: interpolate(frame, [0, 25], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'})}}>
+      <div style={{position: 'absolute', left: 100, top: 80, fontSize: 68, fontWeight: 900, fontFamily: 'var(--inkloom-animation-title)', color: '#fbbf24', textTransform: 'uppercase', letterSpacing: 4, opacity: interpolate(frame, [0, 25], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'})}}>
         委托代理 <span style={{color: '#ef4444'}}>/ AUTH SWITCH</span>
       </div>
 
-      <div style={{position: 'absolute', right: 120, top: 95, fontFamily: 'Consolas, monospace', fontSize: 22, color: '#6b7280', letterSpacing: 1}}>
+      <div style={{position: 'absolute', right: 120, top: 95, fontFamily: 'var(--inkloom-animation-meta)', fontSize: 22, color: '#6b7280', letterSpacing: 1}}>
         CIRCUIT-08B
       </div>
 
@@ -74,9 +74,9 @@ export const DelegatedAgentCircuit = () => {
         }}
       >
         <User size={56} strokeWidth={2} color="#3b82f6" />
-        <div style={{fontSize: 32, fontWeight: 900, fontFamily: 'Arial, sans-serif', color: '#ffffff'}}>当事人</div>
+        <div style={{fontSize: 32, fontWeight: 900, fontFamily: 'var(--inkloom-animation-body)', color: '#ffffff'}}>当事人</div>
       </div>
-      <div style={{position: 'absolute', left: 280, top: 480, fontSize: 18, fontFamily: 'Consolas, monospace', color: '#6b7280', letterSpacing: 1}}>PRINCIPAL</div>
+      <div style={{position: 'absolute', left: 280, top: 480, fontSize: 18, fontFamily: 'var(--inkloom-animation-meta)', color: '#6b7280', letterSpacing: 1}}>PRINCIPAL</div>
 
       <svg viewBox="0 0 1920 1080" style={{position: 'absolute', inset: 0}}>
         <line x1={420} y1={370} x2={720} y2={370} stroke="#6b7280" strokeWidth="6" strokeDasharray="10,5" />
@@ -96,7 +96,7 @@ export const DelegatedAgentCircuit = () => {
           opacity: interpolate(frame, [30, 55], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'}),
         }}
       >
-        <div style={{fontSize: 36, fontWeight: 900, fontFamily: 'Arial, sans-serif', color: '#fbbf24', marginBottom: 20, textAlign: 'center'}}>授权开关</div>
+        <div style={{fontSize: 36, fontWeight: 900, fontFamily: 'var(--inkloom-animation-body)', color: '#fbbf24', marginBottom: 20, textAlign: 'center'}}>授权开关</div>
         <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 20}}>
           {powers.map(({label, isOn, delay}, index) => (
             <AuthSwitch key={label} x={120 + (index % 2) * 240} y={100 + Math.floor(index / 2) * 100} label={label} isOn={isOn} delay={delay} />
@@ -129,9 +129,9 @@ export const DelegatedAgentCircuit = () => {
         }}
       >
         <Shield size={56} strokeWidth={2} color="#8b5cf6" />
-        <div style={{fontSize: 28, fontWeight: 900, fontFamily: 'Arial, sans-serif', color: '#ffffff', textAlign: 'center', lineHeight: 1.2}}>委托<br/>代理人</div>
+        <div style={{fontSize: 28, fontWeight: 900, fontFamily: 'var(--inkloom-animation-body)', color: '#ffffff', textAlign: 'center', lineHeight: 1.2}}>委托<br/>代理人</div>
       </div>
-      <div style={{position: 'absolute', left: 1500, top: 480, fontSize: 18, fontFamily: 'Consolas, monospace', color: '#6b7280', letterSpacing: 1}}>DELEGATED AGENT</div>
+      <div style={{position: 'absolute', left: 1500, top: 480, fontSize: 18, fontFamily: 'var(--inkloom-animation-meta)', color: '#6b7280', letterSpacing: 1}}>DELEGATED AGENT</div>
 
       <div
         style={{
@@ -144,7 +144,7 @@ export const DelegatedAgentCircuit = () => {
           border: '2px solid #ef4444',
           borderRadius: 8,
           fontSize: 34,
-          fontFamily: 'Arial, sans-serif',
+          fontFamily: 'var(--inkloom-animation-body)',
           color: '#e0e7f1',
           textAlign: 'center',
           opacity: interpolate(frame, [150, 180], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'}),
@@ -154,7 +154,7 @@ export const DelegatedAgentCircuit = () => {
         权限取决于授权书的开关配置
       </div>
 
-      <div style={{position: 'absolute', right: 100, bottom: 100, fontSize: 20, fontFamily: 'Consolas, monospace', color: '#374151', letterSpacing: 1}}>
+      <div style={{position: 'absolute', right: 100, bottom: 100, fontSize: 20, fontFamily: 'var(--inkloom-animation-meta)', color: '#374151', letterSpacing: 1}}>
         AUTH-CONFIG / SWITCH REQUIRED
       </div>
     </AbsoluteFill>

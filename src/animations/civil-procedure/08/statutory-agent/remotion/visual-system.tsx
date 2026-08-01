@@ -15,10 +15,10 @@ export const COLORS = {
 } as const;
 
 export const Canvas = ({children, scene, title}: {children: ReactNode; scene: string; title: string}) => (
-  <div style={{position: 'absolute', inset: 0, overflow: 'hidden', color: COLORS.ink, backgroundColor: COLORS.paper, backgroundImage: 'linear-gradient(rgba(23,37,43,.055) 1px, transparent 1px), linear-gradient(90deg, rgba(23,37,43,.055) 1px, transparent 1px)', backgroundSize: '48px 48px', fontFamily: 'Arial, "Microsoft YaHei", sans-serif'}}>
+  <div style={{position: 'absolute', inset: 0, overflow: 'hidden', color: COLORS.ink, backgroundColor: COLORS.paper, backgroundImage: 'linear-gradient(rgba(23,37,43,.055) 1px, transparent 1px), linear-gradient(90deg, rgba(23,37,43,.055) 1px, transparent 1px)', backgroundSize: '48px 48px', fontFamily: 'var(--inkloom-animation-body)'}}>
     <div style={{position: 'absolute', left: 72, top: 48, fontSize: 20, fontWeight: 900, color: COLORS.navy}}>LEGAL IDENTITY / {scene}</div>
     <div style={{position: 'absolute', left: 72, right: 72, top: 96, height: 3, backgroundColor: COLORS.ink}} />
-    <h1 style={{position: 'absolute', left: 72, top: 122, margin: 0, fontSize: 58, lineHeight: 1.1, letterSpacing: 0}}>{title}</h1>
+    <h1 style={{fontFamily: 'var(--inkloom-animation-title)', position: 'absolute', left: 72, top: 122, margin: 0, fontSize: 58, lineHeight: 1.1, letterSpacing: 0}}>{title}</h1>
     {children}
   </div>
 );

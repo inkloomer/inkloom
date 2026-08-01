@@ -12,7 +12,7 @@ export const DelegatedAgentStage = () => {
   ];
 
   return (
-    <AbsoluteFill style={{backgroundColor: '#1a1412', overflow: 'hidden', color: '#f5f1e8', fontFamily: 'Garamond, Georgia, serif'}}>
+    <AbsoluteFill style={{backgroundColor: '#1a1412', overflow: 'hidden', color: '#f5f1e8', fontFamily: 'var(--inkloom-animation-body)'}}>
       <div style={{position: 'absolute', left: 0, right: 0, top: 0, height: 200, background: 'linear-gradient(180deg, #3d1e1e 0%, #1a1412 100%)', borderBottom: '4px solid #8b4513'}} />
 
       <div style={{position: 'absolute', left: 0, right: 0, bottom: 0, height: 140, backgroundColor: '#2d1810', borderTop: '6px solid #654321', boxShadow: '0 -4px 20px rgba(0,0,0,0.6)'}} />
@@ -39,7 +39,7 @@ export const DelegatedAgentStage = () => {
           right: 130,
           top: 85,
           fontSize: 26,
-          fontFamily: 'Courier New, monospace',
+          fontFamily: 'var(--inkloom-animation-mono)',
           color: '#8b7355',
           letterSpacing: 2,
         }}
@@ -64,7 +64,7 @@ export const DelegatedAgentStage = () => {
       >
         <UserRound size={60} strokeWidth={2} color="#3b82f6" style={{margin: '0 auto 14px'}} />
         <div style={{fontSize: 40, fontWeight: 700, color: '#3b82f6', marginBottom: 8}}>当事人</div>
-        <div style={{fontSize: 20, color: '#a0826d', fontFamily: 'Courier New, monospace'}}>CLIENT</div>
+        <div style={{fontSize: 20, color: '#a0826d', fontFamily: 'var(--inkloom-animation-meta)'}}>CLIENT</div>
         <div style={{marginTop: 12, fontSize: 24, color: '#8b7355'}}>台侧观众</div>
       </div>
 
@@ -112,7 +112,7 @@ export const DelegatedAgentStage = () => {
       >
         <Sparkles size={56} strokeWidth={2} color="#10b981" style={{margin: '0 auto 16px'}} />
         <div style={{fontSize: 42, fontWeight: 700, color: '#10b981', marginBottom: 8}}>委托代理人</div>
-        <div style={{fontSize: 20, color: '#86a992', fontFamily: 'Courier New, monospace', marginBottom: 20}}>HIRED ACTOR</div>
+        <div style={{fontSize: 20, color: '#86a992', fontFamily: 'var(--inkloom-animation-meta)', marginBottom: 20}}>HIRED ACTOR</div>
 
         <div style={{fontSize: 24, fontWeight: 600, color: '#d4af37', marginBottom: 14}}>剧本权限:</div>
         <div style={{display: 'flex', flexDirection: 'column', gap: 10}}>
@@ -179,7 +179,7 @@ export const DelegatedAgentStage = () => {
           right: 110,
           bottom: 165,
           fontSize: 22,
-          fontFamily: 'Courier New, monospace',
+          fontFamily: 'var(--inkloom-animation-meta)',
           color: '#654321',
           letterSpacing: 1,
         }}

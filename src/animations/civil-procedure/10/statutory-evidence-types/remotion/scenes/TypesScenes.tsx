@@ -12,10 +12,10 @@ const Reveal = ({children, delay, style}: {children: ReactNode; delay: number; s
 };
 
 const Spectrum = ({code, title, children}: {code: string; title: string; children: ReactNode}) => (
-  <div style={{position: 'absolute', inset: 0, overflow: 'hidden', backgroundColor: C.bg, color: C.ink, fontFamily: '"Segoe UI", "Microsoft YaHei", sans-serif'}}>
+  <div style={{position: 'absolute', inset: 0, overflow: 'hidden', backgroundColor: C.bg, color: C.ink, fontFamily: 'var(--inkloom-animation-body)'}}>
     <div style={{position: 'absolute', left: 0, top: 0, bottom: 0, width: 42, backgroundColor: C.cyan}} />
     <div style={{position: 'absolute', left: 76, top: 48, fontSize: 18, fontWeight: 850, color: C.magenta}}>MATERIAL SPECTRUM / {code}</div>
-    <h1 style={{position: 'absolute', left: 76, top: 82, margin: 0, fontSize: 56, lineHeight: 1.1, fontWeight: 850}}>{title}</h1>
+    <h1 style={{fontFamily: 'var(--inkloom-animation-title)', position: 'absolute', left: 76, top: 82, margin: 0, fontSize: 56, lineHeight: 1.1, fontWeight: 850}}>{title}</h1>
     <div style={{position: 'absolute', left: 76, right: 64, top: 166, height: 3, backgroundColor: C.ink}} />
     {children}
     <div style={{position: 'absolute', left: 76, bottom: 30, fontSize: 17, fontWeight: 750, color: C.mute}}>专题十 · 证据的法定分类</div>

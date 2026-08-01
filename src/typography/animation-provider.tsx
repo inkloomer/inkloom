@@ -2,11 +2,11 @@ import type {CSSProperties, ComponentType, ReactNode} from 'react';
 import {createContext, useContext, useEffect, useMemo, useState} from 'react';
 import {loadFont} from '@remotion/fonts';
 import {cancelRender, continueRender, delayRender, staticFile} from 'remotion';
-import {resolveAnimationTypography, type AnimationTypographyMetadata} from './animation-presets';
+import {resolveAnimationTypography, type AnimationTypographyConfiguration} from './animation-presets';
 
 import '../animations/styles/animation-tailwind.css';
 
-type AnimationTypographyContextValue = {readonly metadata?: AnimationTypographyMetadata};
+type AnimationTypographyContextValue = {readonly configuration?: AnimationTypographyConfiguration};
 
 const AnimationTypographyContext = createContext<AnimationTypographyContextValue>({});
 const localWenkaiPath = 'fonts/lxgw-wenkai-screen/lxgw-wenkai-screen-regular.woff2';
@@ -28,10 +28,20 @@ const ensureAnimationFonts = () => {
   return fontsReady;
 };
 
-const styleFor = (metadata?: AnimationTypographyMetadata, sceneId?: string) =>
-  resolveAnimationTypography({metadata, sceneId}).style as CSSProperties;
+const styleFor = (configuration?: AnimationTypographyConfiguration, sceneId?: string) =>
+  resolveAnimationTypography({
+    metadata: configuration?.metadata,
+    sceneId,
+    scope: configuration?.scope,
+  }).style as CSSProperties;
 
-export const AnimationTypographyProvider = ({children, metadata}: {readonly children: ReactNode; readonly metadata?: AnimationTypographyMetadata}) => {
+export const AnimationTypographyProvider = ({
+  children,
+  configuration,
+}: {
+  readonly children: ReactNode;
+  readonly configuration?: AnimationTypographyConfiguration;
+}) => {
   const [handle] = useState(() => delayRender('Loading InkLoom animation typography'));
 
   useEffect(() => {
@@ -47,10 +57,10 @@ export const AnimationTypographyProvider = ({children, metadata}: {readonly chil
     };
   }, [handle]);
 
-  const value = useMemo(() => ({metadata}), [metadata]);
+  const value = useMemo(() => ({configuration}), [configuration]);
   return (
     <AnimationTypographyContext.Provider value={value}>
-      <div className="inkloom-animation-typography font-animation-body" style={styleFor(metadata)}>
+      <div className="inkloom-animation-typography font-animation-body" style={styleFor(configuration)}>
         {children}
       </div>
     </AnimationTypographyContext.Provider>
@@ -58,13 +68,13 @@ export const AnimationTypographyProvider = ({children, metadata}: {readonly chil
 };
 
 export const AnimationSceneTypographyScope = ({children, sceneId}: {readonly children: ReactNode; readonly sceneId: string}) => {
-  const {metadata} = useContext(AnimationTypographyContext);
-  return <div className="font-animation-body" style={styleFor(metadata, sceneId)}>{children}</div>;
+  const {configuration} = useContext(AnimationTypographyContext);
+  return <div className="font-animation-body" style={styleFor(configuration, sceneId)}>{children}</div>;
 };
 
-export const withAnimationTypography = (Component: ComponentType<Record<string, never>>, metadata?: AnimationTypographyMetadata) => {
+export const withAnimationTypography = (Component: ComponentType<Record<string, never>>, configuration?: AnimationTypographyConfiguration) => {
   const TypographyWrapped = () => (
-    <AnimationTypographyProvider metadata={metadata}>
+    <AnimationTypographyProvider configuration={configuration}>
       <Component />
     </AnimationTypographyProvider>
   );

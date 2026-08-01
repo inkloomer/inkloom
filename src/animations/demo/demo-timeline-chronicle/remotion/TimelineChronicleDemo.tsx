@@ -13,7 +13,7 @@ export const TimelineChronicleDemo = () => {
   ];
 
   return (
-    <AbsoluteFill style={{backgroundColor: '#f5f1e8', overflow: 'hidden', color: '#3d3526', fontFamily: 'Georgia, STSong, serif'}}>
+    <AbsoluteFill style={{backgroundColor: '#f5f1e8', overflow: 'hidden', color: '#3d3526', fontFamily: 'var(--inkloom-animation-body)'}}>
       <div style={{position: 'absolute', inset: 0, backgroundImage: 'radial-gradient(circle at 20% 30%, rgba(139,117,90,0.03) 0%, transparent 50%)', pointerEvents: 'none'}} />
 
       <Interactive.Div name="Chronicle title" style={{position: 'absolute', left: 120, top: 80, fontSize: 76, fontWeight: 700, letterSpacing: 2, opacity: interpolate(frame, [0, 30], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'})}}>
@@ -56,7 +56,7 @@ export const TimelineChronicleDemo = () => {
                 <Icon size={64} strokeWidth={2} color="#f5f1e8" />
               </div>
               <div style={{fontSize: 48, fontWeight: 700, color: '#3d3526'}}>{label}</div>
-              <div style={{fontSize: 28, fontFamily: 'Consolas, monospace', color: '#8b755a', letterSpacing: 1}}>{date}</div>
+              <div style={{fontSize: 28, fontFamily: 'var(--inkloom-animation-meta)', color: '#8b755a', letterSpacing: 1}}>{date}</div>
             </div>
           </Interactive.Div>
         );

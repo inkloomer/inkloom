@@ -1,3 +1,5 @@
+import {defineAnimationTypography} from '../../../../typography/animation-presets';
+
 export default {
   id: 'high-altitude-throwing-diagram',
   title: '高空抛物罪',
@@ -6,3 +8,5 @@ export default {
   subject: 'criminal',
   chapter: '22',
 };
+
+export const typography = defineAnimationTypography({});

@@ -1,3 +1,5 @@
+import {defineAnimationTypography} from '../../../../typography/animation-presets';
+
 export default {
   id: 'basic-principles-triangle',
   title: '民诉基本原则关系图',
@@ -6,3 +8,5 @@ export default {
   subject: 'civil-procedure',
   chapter: '03',
 };
+
+export const typography = defineAnimationTypography({});

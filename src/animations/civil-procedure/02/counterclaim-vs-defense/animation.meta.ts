@@ -1,3 +1,5 @@
+import {defineAnimationTypography} from '../../../../typography/animation-presets';
+
 export default {
   id: 'counterclaim-vs-defense',
   title: '反诉与反驳的区分',
@@ -6,3 +8,5 @@ export default {
   subject: 'civil-procedure',
   chapter: '02',
 };
+
+export const typography = defineAnimationTypography({});

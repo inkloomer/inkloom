@@ -24,7 +24,7 @@ const STAGE = {
 const {Enter, StaggerEnter, MaskedReveal} = createMotionPrimitives(toSourceFrame);
 
 const Canvas = ({code, title, children}: {code: string; title: string; children: ReactNode}) => (
-  <div style={{position: 'absolute', inset: 0, backgroundColor: STAGE.black, color: STAGE.white, fontFamily: 'Inter, Microsoft YaHei, sans-serif', overflow: 'hidden'}}>
+  <div style={{position: 'absolute', inset: 0, backgroundColor: STAGE.black, color: STAGE.white, fontFamily: 'var(--inkloom-animation-body)', overflow: 'hidden'}}>
     <div style={{position: 'absolute', left: 0, right: 0, bottom: 0, height: 190, backgroundColor: STAGE.charcoal}} />
     <div style={{position: 'absolute', left: 74, top: 58, fontSize: 18, fontWeight: 900, color: STAGE.yellow}}>FOCUS {code}</div>
     <div style={{position: 'absolute', left: 74, top: 92, fontSize: 54, fontWeight: 950}}>{title}</div>

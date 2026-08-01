@@ -1,3 +1,5 @@
+import {defineAnimationTypography} from '../../../../typography/animation-presets';
+
 export default {
   id: 'evidence-preservation',
   title: '诉前与诉讼中证据保全',
@@ -6,3 +8,5 @@ export default {
   subject: 'civil-procedure',
   chapter: '11',
 };
+
+export const typography = defineAnimationTypography({});

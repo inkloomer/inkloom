@@ -39,7 +39,7 @@ const Lens = ({left, color, label, delay}: {left: number; color: string; label: 
 };
 
 const Canvas = ({code, title, children}: {code: string; title: string; children: ReactNode}) => (
-  <AbsoluteFill style={{overflow: 'hidden', backgroundColor: C.paper, color: C.ink, fontFamily: '"Segoe UI", "Microsoft YaHei", sans-serif'}}>
+  <AbsoluteFill style={{overflow: 'hidden', backgroundColor: C.paper, color: C.ink, fontFamily: 'var(--inkloom-animation-body)'}}>
     {Array.from({length: 18}, (_, i) => <div key={i} style={{position: 'absolute', left: 60 + i * 106, top: 0, bottom: 0, width: 1, backgroundColor: C.fog}} />)}
     <div style={{position: 'absolute', left: 58, top: 42, fontSize: 18, fontWeight: 900}}>OPTICAL CRIMINAL LAW / {code}</div>
     <div style={{position: 'absolute', left: 58, top: 78, fontSize: 58, fontWeight: 900}}>{title}</div>

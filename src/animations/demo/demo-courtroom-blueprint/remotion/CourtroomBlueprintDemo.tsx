@@ -10,7 +10,7 @@ export const CourtroomBlueprintDemo = () => {
   ];
 
   return (
-    <AbsoluteFill style={{backgroundColor: '#071923', overflow: 'hidden', color: '#d9f7ff', fontFamily: 'Bahnschrift, Microsoft YaHei, sans-serif'}}>
+    <AbsoluteFill style={{backgroundColor: '#071923', overflow: 'hidden', color: '#d9f7ff', fontFamily: 'var(--inkloom-animation-body)'}}>
       {[160, 320, 480, 640, 800, 960, 1120, 1280, 1440, 1600, 1760].map((left) => (
         <div key={left} style={{position: 'absolute', left, top: 0, width: 1, height: 1080, backgroundColor: 'rgba(76, 201, 240, 0.13)'}} />
       ))}
@@ -46,13 +46,13 @@ export const CourtroomBlueprintDemo = () => {
         >
           <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
             <Icon size={58} strokeWidth={1.7} color={index === 1 ? '#ff5d73' : '#4cc9f0'} />
-            <span style={{fontFamily: 'Consolas, monospace', fontSize: 22, color: '#7da7b5'}}>0{index + 1}</span>
+            <span style={{fontFamily: 'var(--inkloom-animation-mono)', fontSize: 22, color: '#7da7b5'}}>0{index + 1}</span>
           </div>
           <div style={{marginTop: 28, fontSize: 44, fontWeight: 900}}>{label}</div>
           <div style={{marginTop: 10, fontSize: 24, color: '#9bc6d3'}}>{detail}</div>
         </Interactive.Div>
       ))}
-      <div style={{position: 'absolute', left: 110, bottom: 78, display: 'flex', gap: 28, color: '#7da7b5', fontFamily: 'Consolas, monospace', fontSize: 18}}>
+      <div style={{position: 'absolute', left: 110, bottom: 78, display: 'flex', gap: 28, color: '#7da7b5', fontFamily: 'var(--inkloom-animation-meta)', fontSize: 18}}>
         <span>X 1920</span><span>Y 1080</span><span style={{color: '#ff5d73'}}>CHECKPOINT ACTIVE</span>
       </div>
     </AbsoluteFill>

@@ -1,3 +1,5 @@
+import {defineAnimationTypography} from '../../../../typography/animation-presets';
+
 export default {
   id: 'card-selling-funds-viewpoint',
   title: '卖卡后资金处理观点',
@@ -6,3 +8,5 @@ export default {
   subject: 'criminal',
   chapter: '19',
 };
+
+export const typography = defineAnimationTypography({});

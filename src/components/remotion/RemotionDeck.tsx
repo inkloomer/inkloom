@@ -1,4 +1,4 @@
-import {useEffect, useRef, useState} from 'react';
+import {useEffect, useMemo, useRef, useState} from 'react';
 import type {ComponentType, KeyboardEvent, ReactNode} from 'react';
 import {Player, type PlayerRef} from '@remotion/player';
 import {
@@ -34,6 +34,9 @@ import {
   withPlaybackPreference,
 } from './playback-preferences';
 import {sceneIndexFromSearch, urlWithScene} from './scene-location';
+import {withAnimationTypography} from '@/typography/animation-provider';
+import type {AnimationTypographyMetadata} from '@/typography/animation-presets';
+import {getAnimationTypographyConfiguration} from '@/typography/animation-registry';
 import './RemotionDeck.css';
 
 export interface RemotionScene {
@@ -59,6 +62,7 @@ interface Props {
   readonly compositionHeight?: number;
   readonly title?: string;
   readonly sceneQueryParameter?: string;
+  readonly typography?: AnimationTypographyMetadata;
 }
 
 const ANIMATED_MEDIA_FORMATS = {
@@ -339,6 +343,7 @@ export const RemotionDeck = ({
   compositionHeight = 1080,
   title = 'Remotion 动画',
   sceneQueryParameter = 'scene',
+  typography,
 }: Props) => {
   const [currentScene, setCurrentScene] = useState(0);
   const [mediaMode, setMediaMode] = useState<MediaMode>('avif');
@@ -354,6 +359,16 @@ export const RemotionDeck = ({
   const inheritedSpeed = speedScope === 'global'
     ? undefined
     : inheritedPlaybackSpeed(playbackPreferences, speedScope, playbackScopeKeys);
+  const typographyComponent = useMemo(
+    () => {
+      const configuration = getAnimationTypographyConfiguration(animationId);
+      return withAnimationTypography(
+        component,
+        typography ? {...configuration, metadata: typography} : configuration,
+      );
+    },
+    [animationId, component, typography],
+  );
 
   const persistMediaMode = (nextMode: MediaMode) => {
     setMediaMode(nextMode);
@@ -615,7 +630,7 @@ export const RemotionDeck = ({
           {mediaMode === 'video' ? (
             <PlayerFrame
               key={`${selectedScene.number}-${autoPage ? 'auto' : 'once'}-${reducedMotion ? 'reduced' : 'motion'}`}
-              component={component}
+              component={typographyComponent}
               durationInFrames={durationInFrames}
               fps={fps}
               compositionWidth={compositionWidth}
@@ -674,7 +689,7 @@ export const RemotionDeck = ({
               </header>
               {mediaMode === 'video' ? (
                 <PlayerFrame
-                  component={component}
+                component={typographyComponent}
                   durationInFrames={durationInFrames}
                   fps={fps}
                   compositionWidth={compositionWidth}

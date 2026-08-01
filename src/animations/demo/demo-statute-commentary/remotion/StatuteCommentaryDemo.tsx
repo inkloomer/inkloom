@@ -11,7 +11,7 @@ export const StatuteCommentaryDemo = () => {
   ];
 
   return (
-    <AbsoluteFill style={{backgroundColor: '#faf8f3', overflow: 'hidden', color: '#2b2621', fontFamily: 'Georgia, STSong, serif'}}>
+    <AbsoluteFill style={{backgroundColor: '#faf8f3', overflow: 'hidden', color: '#2b2621', fontFamily: 'var(--inkloom-animation-body)'}}>
       <div style={{position: 'absolute', left: 40, top: 0, width: 140, height: 1080, backgroundColor: '#f0ebe0', borderRight: '2px solid #d4c5a9'}} />
       <div style={{position: 'absolute', right: 40, top: 0, width: 140, height: 1080, backgroundColor: '#f0ebe0', borderLeft: '2px solid #d4c5a9'}} />
 

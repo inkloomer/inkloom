@@ -2,6 +2,7 @@ import type {CSSProperties, ReactElement, ReactNode} from 'react';
 import {Children, cloneElement, isValidElement, useLayoutEffect, useRef} from 'react';
 import {ArrowRight} from 'lucide-react';
 import {Easing, Sequence, interpolate, spring, useCurrentFrame, useVideoConfig} from 'remotion';
+import {AnimationSceneTypographyScope} from '../../typography/animation-provider';
 
 export const CLAMP = {
   extrapolateLeft: 'clamp' as const,
@@ -119,7 +120,9 @@ export const TimelineSequence = ({
   readonly start: number;
 }) => (
   <Sequence from={start} durationInFrames={duration} name={name} layout="none">
-    <LayoutAudit name={name}>{children}</LayoutAudit>
+    <AnimationSceneTypographyScope sceneId={name.replace(/^\d+-/, '')}>
+      <LayoutAudit name={name}>{children}</LayoutAudit>
+    </AnimationSceneTypographyScope>
   </Sequence>
 );
 

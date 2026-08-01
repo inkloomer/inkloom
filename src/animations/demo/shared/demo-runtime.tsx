@@ -1,5 +1,6 @@
 import type {ComponentType, FC} from 'react';
 import {Composition, registerRoot} from 'remotion';
+import {withAnimationTypography} from '../../../typography/animation-provider';
 
 export const DEMO_FPS = 60;
 export const DEMO_DURATION_FRAMES = 240;
@@ -11,7 +12,7 @@ export const registerStyleDemo = (id: string, component: ComponentType<Record<st
   const Root: FC = () => (
     <Composition
       id={id}
-      component={component}
+      component={withAnimationTypography(component)}
       durationInFrames={240}
       fps={60}
       width={1920}

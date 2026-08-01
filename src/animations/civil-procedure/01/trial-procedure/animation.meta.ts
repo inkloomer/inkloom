@@ -1,3 +1,5 @@
+import {defineAnimationTypography} from '../../../../typography/animation-presets';
+
 export default {
   id: 'trial-procedure',
   title: '民事审判程序分类——诉讼程序与非讼程序',
@@ -6,3 +8,5 @@ export default {
   subject: 'civil-procedure',
   chapter: '01',
 };
+
+export const typography = defineAnimationTypography({});

@@ -1,3 +1,5 @@
+import {defineAnimationTypography} from '../../../../typography/animation-presets';
+
 export default {
   id: 'statutory-agent',
   title: '法定代理人的身份与诉讼后果',
@@ -7,3 +9,4 @@ export default {
   chapter: '08',
 };
 
+export const typography = defineAnimationTypography({});

@@ -1,3 +1,5 @@
+import {defineAnimationTypography} from '../../../../typography/animation-presets';
+
 export default {
   id: 'guarantee-party',
   title: '保证合同中的当事人确定',
@@ -6,3 +8,5 @@ export default {
   subject: 'civil-procedure',
   chapter: '05',
 };
+
+export const typography = defineAnimationTypography({});

@@ -18,7 +18,7 @@ export const DecisionTreeDemo = () => {
   ];
 
   return (
-    <AbsoluteFill style={{backgroundColor: '#0f172a', overflow: 'hidden', color: '#f1f5f9', fontFamily: 'Arial, Microsoft YaHei, sans-serif'}}>
+    <AbsoluteFill style={{backgroundColor: '#0f172a', overflow: 'hidden', color: '#f1f5f9', fontFamily: 'var(--inkloom-animation-body)'}}>
       <div style={{position: 'absolute', inset: 0, backgroundImage: 'radial-gradient(circle at 50% 20%, rgba(59,130,246,0.05) 0%, transparent 60%)', pointerEvents: 'none'}} />
 
       <Interactive.Div name="Tree title" style={{position: 'absolute', left: 120, top: 80, fontSize: 72, fontWeight: 900, opacity: interpolate(frame, [0, 28], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'})}}>

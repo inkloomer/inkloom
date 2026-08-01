@@ -1,3 +1,5 @@
+import {defineAnimationTypography} from '../../../../typography/animation-presets';
+
 export default {
   id: 'fight-defense-diagram',
   title: '斗殴、伤害与防卫',
@@ -6,3 +8,5 @@ export default {
   subject: 'criminal',
   chapter: '22',
 };
+
+export const typography = defineAnimationTypography({});

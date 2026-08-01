@@ -1,3 +1,5 @@
+import {defineAnimationTypography} from '../../../../typography/animation-presets';
+
 export default {
   id: 'surprise-judgment-focus',
   title: '法律关系认定与防止突袭裁判',
@@ -6,3 +8,5 @@ export default {
   subject: 'civil-procedure',
   chapter: '11',
 };
+
+export const typography = defineAnimationTypography({});

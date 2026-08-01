@@ -17,7 +17,7 @@ export const StatutoryAgentBadge = () => {
   ];
 
   return (
-    <AbsoluteFill style={{backgroundColor: '#0f1419', overflow: 'hidden', color: '#f4f1e8', fontFamily: 'Garamond, Georgia, serif'}}>
+    <AbsoluteFill style={{backgroundColor: '#0f1419', overflow: 'hidden', color: '#f4f1e8', fontFamily: 'var(--inkloom-animation-body)'}}>
       <div style={{position: 'absolute', inset: 0, backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(212,175,55,0.08) 0%, transparent 60%)', pointerEvents: 'none'}} />
 
       <div
@@ -42,7 +42,7 @@ export const StatutoryAgentBadge = () => {
           right: 130,
           top: 85,
           fontSize: 26,
-          fontFamily: 'Courier New, monospace',
+          fontFamily: 'var(--inkloom-animation-meta)',
           color: '#8b7355',
           letterSpacing: 2,
         }}
@@ -85,7 +85,7 @@ export const StatutoryAgentBadge = () => {
         <div style={{position: 'absolute', left: '50%', top: 360, transform: 'translateX(-50%)', fontSize: 48, fontWeight: 900, color: '#d4af37', textAlign: 'center', whiteSpace: 'nowrap'}}>
           法定代理人
         </div>
-        <div style={{position: 'absolute', left: '50%', top: 420, transform: 'translateX(-50%)', fontSize: 24, fontFamily: 'Courier New, monospace', color: '#8b7355', letterSpacing: 2}}>
+        <div style={{position: 'absolute', left: '50%', top: 420, transform: 'translateX(-50%)', fontSize: 24, fontFamily: 'var(--inkloom-animation-meta)', color: '#8b7355', letterSpacing: 2}}>
           STATUTORY AGENT
         </div>
       </div>
@@ -164,7 +164,7 @@ export const StatutoryAgentBadge = () => {
           right: 110,
           bottom: 165,
           fontSize: 22,
-          fontFamily: 'Courier New, monospace',
+          fontFamily: 'var(--inkloom-animation-meta)',
           color: '#4a3f2e',
           letterSpacing: 1,
         }}

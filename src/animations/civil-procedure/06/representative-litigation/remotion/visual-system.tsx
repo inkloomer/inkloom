@@ -5,9 +5,9 @@ import {interpolate, useCurrentFrame} from 'remotion';
 import {CLAMP, createMotionPrimitives} from '../../../../shared/remotion-runtime';
 import {PALETTE, toSourceFrame} from './storyboard';
 
-export const DISPLAY_FONT = '"Arial Narrow", "Microsoft YaHei", sans-serif';
-export const BODY_FONT = '"Microsoft YaHei", "PingFang SC", sans-serif';
-export const MONO_FONT = 'Consolas, "Microsoft YaHei", monospace';
+export const DISPLAY_FONT = 'var(--inkloom-animation-body)';
+export const BODY_FONT = 'var(--inkloom-animation-body)';
+export const MONO_FONT = 'var(--inkloom-animation-mono)';
 export const {Enter, MaskedReveal, StaggerEnter} = createMotionPrimitives(toSourceFrame);
 
 export const ConsoleCanvas = ({children}: {readonly children: ReactNode}) => (
@@ -17,7 +17,7 @@ export const ConsoleCanvas = ({children}: {readonly children: ReactNode}) => (
       inset: 0,
       overflow: 'hidden',
       color: PALETTE.ink,
-      fontFamily: BODY_FONT,
+      fontFamily: 'var(--inkloom-animation-body)',
       backgroundColor: PALETTE.panel,
       backgroundImage: 'radial-gradient(rgba(20,25,20,.12) 1px, transparent 1px)',
       backgroundSize: '30px 30px',
@@ -40,10 +40,10 @@ export const ConsoleHeader = ({
 }) => (
   <header style={{position: 'absolute', left: 82, right: 82, top: 62, display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
     <div style={{display: 'flex', alignItems: 'baseline', gap: 24}}>
-      <span style={{fontFamily: MONO_FONT, fontSize: 22, fontWeight: 900, color: PALETTE.signal}}>CH {index}</span>
-      <div style={{fontFamily: DISPLAY_FONT, fontSize: 50, lineHeight: 1.08, fontWeight: 900}}>{title}</div>
+      <span style={{fontFamily: 'var(--inkloom-animation-mono)', fontSize: 22, fontWeight: 900, color: PALETTE.signal}}>CH {index}</span>
+      <div style={{fontFamily: 'var(--inkloom-animation-title)', fontSize: 50, lineHeight: 1.08, fontWeight: 900}}>{title}</div>
     </div>
-    <div style={{fontFamily: MONO_FONT, fontSize: 18, fontWeight: 800, padding: '9px 12px', border: `2px solid ${PALETTE.ink}`, background: PALETTE.surface}}>{topic}</div>
+    <div style={{fontFamily: 'var(--inkloom-animation-meta)', fontSize: 18, fontWeight: 800, padding: '9px 12px', border: `2px solid ${PALETTE.ink}`, background: PALETTE.surface}}>{topic}</div>
   </header>
 );
 
@@ -59,7 +59,7 @@ export const FrequencyUnderline = ({children, color = PALETTE.magenta}: {readonl
 );
 
 export const Callsign = ({children, color = PALETTE.ink}: {readonly children: ReactNode; readonly color?: string}) => (
-  <span style={{display: 'inline-block', padding: '7px 11px', background: color, color: PALETTE.surface, fontFamily: MONO_FONT, fontSize: 21, fontWeight: 900}}>{children}</span>
+  <span style={{display: 'inline-block', padding: '7px 11px', background: color, color: PALETTE.surface, fontFamily: 'var(--inkloom-animation-meta)', fontSize: 21, fontWeight: 900}}>{children}</span>
 );
 
 export const ConsentSeal = ({children, color = PALETTE.magenta}: {readonly children: ReactNode; readonly color?: string}) => (
@@ -124,7 +124,7 @@ export const SignalCable = ({
   const progress = interpolate(frame, [delay, delay + 54], [0, 1], CLAMP);
   return (
     <div style={{position: 'absolute', left, top, width, height: 72}}>
-      {label ? <div style={{position: 'absolute', top: -30, left: 0, fontFamily: MONO_FONT, fontSize: 19, fontWeight: 900, color, opacity: progress}}>{label}</div> : null}
+      {label ? <div style={{position: 'absolute', top: -30, left: 0, fontFamily: 'var(--inkloom-animation-meta)', fontSize: 19, fontWeight: 900, color, opacity: progress}}>{label}</div> : null}
       <div style={{position: 'absolute', top: 30, left: 0, width, height: 5, background: color, scale: `${progress} 1`, transformOrigin: 'left center'}} />
       <div style={{position: 'absolute', top: 22, left: Math.max(0, width * progress - 9), width: 18, height: 18, borderRadius: '50%', background: PALETTE.surface, border: `4px solid ${color}`}} />
       <ChevronRight size={38} strokeWidth={2.5} style={{position: 'absolute', right: -12, top: 12, color, opacity: progress}} />

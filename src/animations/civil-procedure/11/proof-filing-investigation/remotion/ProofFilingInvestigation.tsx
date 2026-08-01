@@ -26,7 +26,7 @@ const SIGNAL = {
 const {Enter, StaggerEnter, MaskedReveal} = createMotionPrimitives(toSourceFrame);
 
 const Canvas = ({code, title, cue, children}: {code: string; title: string; cue: string; children: ReactNode}) => (
-  <div style={{position: 'absolute', inset: 0, backgroundColor: SIGNAL.paper, color: SIGNAL.ink, fontFamily: 'Arial, Microsoft YaHei, sans-serif', overflow: 'hidden'}}>
+  <div style={{position: 'absolute', inset: 0, backgroundColor: SIGNAL.paper, color: SIGNAL.ink, fontFamily: 'var(--inkloom-animation-body)', overflow: 'hidden'}}>
     <div style={{position: 'absolute', left: 0, right: 0, top: 0, height: 28, background: `linear-gradient(90deg, ${SIGNAL.green} 0 28%, ${SIGNAL.blue} 28% 61%, ${SIGNAL.magenta} 61% 82%, ${SIGNAL.yellow} 82%)`}} />
     <div style={{position: 'absolute', left: 64, top: 58, fontSize: 20, fontWeight: 900, color: SIGNAL.steel}}>DISPATCH / {code}</div>
     <div style={{position: 'absolute', left: 64, top: 92, fontSize: 54, fontWeight: 950}}>{title}</div>

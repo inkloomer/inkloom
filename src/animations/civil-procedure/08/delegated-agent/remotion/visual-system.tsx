@@ -14,13 +14,13 @@ export const COLORS = {
 } as const;
 
 export const Canvas = ({children, code, title}: {children: ReactNode; code: string; title: string}) => (
-  <div style={{position: 'absolute', inset: 0, overflow: 'hidden', backgroundColor: COLORS.black, color: COLORS.ivory, fontFamily: 'Arial, "Microsoft YaHei", sans-serif'}}>
+  <div style={{position: 'absolute', inset: 0, overflow: 'hidden', backgroundColor: COLORS.black, color: COLORS.ivory, fontFamily: 'var(--inkloom-animation-body)'}}>
     <div style={{position: 'absolute', left: 22, top: 22, bottom: 22, width: 110, backgroundColor: COLORS.yellow, color: COLORS.black}}>
       <div style={{position: 'absolute', left: 22, top: 32, fontSize: 22, fontWeight: 900, writingMode: 'vertical-rl'}}>AUTHORIZATION</div>
       <div style={{position: 'absolute', left: 22, bottom: 32, fontSize: 36, fontWeight: 900}}>{code}</div>
     </div>
     <div style={{position: 'absolute', left: 164, right: 42, top: 44, height: 3, backgroundColor: COLORS.ivory}} />
-    <h1 style={{position: 'absolute', left: 164, top: 82, margin: 0, fontSize: 60, lineHeight: 1.1, letterSpacing: 0}}>{title}</h1>
+    <h1 style={{fontFamily: 'var(--inkloom-animation-title)', position: 'absolute', left: 164, top: 82, margin: 0, fontSize: 60, lineHeight: 1.1, letterSpacing: 0}}>{title}</h1>
     <div style={{position: 'absolute', right: 54, top: 120, color: COLORS.cyan, fontSize: 22, fontWeight: 900}}>PERMISSION INSPECTION</div>
     {children}
   </div>

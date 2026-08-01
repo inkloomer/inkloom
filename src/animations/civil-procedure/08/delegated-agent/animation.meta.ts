@@ -1,3 +1,5 @@
+import {defineAnimationTypography} from '../../../../typography/animation-presets';
+
 export default {
   id: 'delegated-agent',
   title: '委托代理的授权边界',
@@ -7,3 +9,4 @@ export default {
   chapter: '08',
 };
 
+export const typography = defineAnimationTypography({});

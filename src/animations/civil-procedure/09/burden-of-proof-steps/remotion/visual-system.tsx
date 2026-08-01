@@ -34,13 +34,13 @@ export const ConstructivistCanvas = ({code, title, children}: {code: string; tit
   const frame = useCurrentFrame();
   const slash = interpolate(frame, [0, 20], [0, 1], CLAMP);
   return (
-    <div style={{position: 'absolute', inset: 0, overflow: 'hidden', backgroundColor: INK.paper, color: INK.black, fontFamily: 'Arial, "Microsoft YaHei", sans-serif'}}>
+    <div style={{position: 'absolute', inset: 0, overflow: 'hidden', backgroundColor: INK.paper, color: INK.black, fontFamily: 'var(--inkloom-animation-body)'}}>
       <div style={{position: 'absolute', left: -100, top: -80, width: 620, height: 150, backgroundColor: INK.red, rotate: '-8deg', scale: `${slash} 1`, transformOrigin: 'left center'}} />
       <div style={{position: 'absolute', right: -180, top: 0, width: 620, height: 96, backgroundColor: INK.cobalt, clipPath: 'polygon(20% 0,100% 0,100% 100%,0 100%)'}} />
       <div style={{position: 'absolute', left: 68, top: 56, fontSize: 19, fontWeight: 900, letterSpacing: 0, color: INK.white}}>PROOF / ALLOCATION</div>
       <div style={{position: 'absolute', left: 68, top: 118, right: 190, display: 'flex', alignItems: 'baseline', gap: 28}}>
         <span style={{fontSize: 76, lineHeight: 1, fontWeight: 950}}>{code}</span>
-        <h1 style={{margin: 0, fontSize: 52, lineHeight: 1.15, fontWeight: 950, letterSpacing: 0}}>{title}</h1>
+        <h1 style={{fontFamily: 'var(--inkloom-animation-title)', margin: 0, fontSize: 52, lineHeight: 1.15, fontWeight: 950, letterSpacing: 0}}>{title}</h1>
       </div>
       <div style={{position: 'absolute', left: 68, right: 68, top: 194, height: 7, backgroundColor: INK.black}} />
       {children}

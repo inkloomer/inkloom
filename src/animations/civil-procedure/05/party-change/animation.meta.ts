@@ -1,3 +1,5 @@
+import {defineAnimationTypography} from '../../../../typography/animation-presets';
+
 export default {
   id: 'party-change',
   title: '当事人变更与当事人恒定主义',
@@ -6,3 +8,5 @@ export default {
   subject: 'civil-procedure',
   chapter: '05',
 };
+
+export const typography = defineAnimationTypography({});

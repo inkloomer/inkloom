@@ -8,7 +8,7 @@ const ease = Easing.bezier(0.16, 1, 0.3, 1);
 const reveal = (frame: number, delay: number, duration = 24) => interpolate(frame, [delay, delay + duration], [0, 1], {...clamp, easing: ease});
 
 const Section = ({children, scene, kicker, title}: {readonly children: ReactNode; readonly scene: string; readonly kicker: string; readonly title: string}) => (
-  <AbsoluteFill style={{backgroundColor: C.paper, color: C.ink, fontFamily: 'Arial, "Microsoft YaHei", sans-serif'}}>
+  <AbsoluteFill style={{backgroundColor: C.paper, color: C.ink, fontFamily: 'var(--inkloom-animation-body)'}}>
     <div style={{position: 'absolute', left: 70, right: 70, top: 48, height: 3, backgroundColor: C.cobalt}} />
     <div style={{position: 'absolute', left: 86, top: 72, fontSize: 18, color: C.cobalt, fontWeight: 800}}>{scene} / VERTICAL INSPECTION</div>
     <div style={{position: 'absolute', left: 86, top: 112, fontSize: 24, color: C.muted}}>{kicker}</div>

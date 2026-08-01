@@ -172,7 +172,7 @@ export const Stamp = ({children, color = LAB.coral, delay = 0}: {children: React
 export const LabCanvas = ({code, title, cue, children}: {code: string; title: string; cue: string; children: ReactNode}) => {
   const frame = useCurrentFrame();
   return (
-    <div style={{position: 'absolute', inset: 0, overflow: 'hidden', backgroundColor: LAB.white, color: LAB.ink, fontFamily: '"Segoe UI", "Microsoft YaHei", sans-serif'}}>
+    <div style={{position: 'absolute', inset: 0, overflow: 'hidden', backgroundColor: LAB.white, color: LAB.ink, fontFamily: 'var(--inkloom-animation-body)'}}>
       {Array.from({length: 11}, (_, index) => (
         <div key={`v-${index}`} style={{position: 'absolute', left: 96 + index * 174, top: 0, bottom: 0, width: 1, backgroundColor: LAB.mist, opacity: 0.55}} />
       ))}
@@ -182,7 +182,7 @@ export const LabCanvas = ({code, title, cue, children}: {code: string; title: st
       <div style={{position: 'absolute', left: 0, top: 0, bottom: 0, width: 28, backgroundColor: LAB.ink}} />
       <div style={{position: 'absolute', left: 66, top: 48, fontSize: 18, fontWeight: 850, color: LAB.cyan}}>EVIDENCE LAB / {code}</div>
       <div style={{position: 'absolute', left: 66, top: 82, right: 66, display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between'}}>
-        <h1 style={{margin: 0, maxWidth: 1320, fontSize: 54, lineHeight: 1.08, fontWeight: 780, letterSpacing: 0}}>{title}</h1>
+        <h1 style={{fontFamily: 'var(--inkloom-animation-title)', margin: 0, maxWidth: 1320, fontSize: 54, lineHeight: 1.08, fontWeight: 780, letterSpacing: 0}}>{title}</h1>
         <div style={{fontSize: 22, fontWeight: 700, color: LAB.steel, paddingBottom: 5}}>{cue}</div>
       </div>
       <div style={{position: 'absolute', left: 66, right: 66, top: 164, height: 4, backgroundColor: LAB.ink, scale: `${interpolate(frame, [0, 18], [0, 1], CLAMP)} 1`, transformOrigin: 'left center'}} />

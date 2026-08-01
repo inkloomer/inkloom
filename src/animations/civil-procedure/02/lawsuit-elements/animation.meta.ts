@@ -1,3 +1,5 @@
+import {defineAnimationTypography} from '../../../../typography/animation-presets';
+
 export default {
   id: 'lawsuit-elements',
   title: '诉讼标的、诉讼请求与诉的分类',
@@ -6,3 +8,5 @@ export default {
   subject: 'civil-procedure',
   chapter: '02',
 };
+
+export const typography = defineAnimationTypography({});

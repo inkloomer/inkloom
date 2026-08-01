@@ -1,3 +1,5 @@
+import {defineAnimationTypography} from '../../../../typography/animation-presets';
+
 export default {
   id: 'third-party-types',
   title: '第三人类型与诉讼权利',
@@ -6,3 +8,5 @@ export default {
   subject: 'civil-procedure',
   chapter: '07',
 };
+
+export const typography = defineAnimationTypography({});

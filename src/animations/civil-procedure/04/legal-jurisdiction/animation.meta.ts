@@ -1,3 +1,5 @@
+import {defineAnimationTypography} from '../../../../typography/animation-presets';
+
 export default {
   id: 'legal-jurisdiction',
   title: '民事诉讼主管——法院与其他纠纷解决方式',
@@ -6,3 +8,5 @@ export default {
   subject: 'civil-procedure',
   chapter: '04',
 };
+
+export const typography = defineAnimationTypography({});
