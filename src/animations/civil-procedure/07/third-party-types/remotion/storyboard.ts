@@ -12,10 +12,11 @@ export const SCENES = {
   comparison: scene(192, 234),
   rights: scene(426, 270),
   distinction: scene(696, 234),
+  noIndependentClaim: scene(930, 240),
 } as const;
 
-export const SOURCE_DURATION_SECONDS = 930 / FPS;
-export const DURATION_FRAMES = SCENES.distinction.start + SCENES.distinction.duration;
+export const SOURCE_DURATION_SECONDS = 1170 / FPS;
+export const DURATION_FRAMES = SCENES.noIndependentClaim.start + SCENES.noIndependentClaim.duration;
 export const DURATION_SECONDS = DURATION_FRAMES / FPS;
 
 export const PALETTE = {

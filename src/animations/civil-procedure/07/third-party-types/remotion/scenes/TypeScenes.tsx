@@ -1,4 +1,4 @@
-import {Ban, FileText, Link2, ShieldCheck, UserRound, UsersRound} from 'lucide-react';
+import {Ban, FileText, Landmark, Link2, ShieldCheck, UserPlus, UserRound, UsersRound} from 'lucide-react';
 import {Easing, interpolate, useCurrentFrame} from 'remotion';
 import {PALETTE, toSourceFrame} from '../storyboard';
 import {baseTextStyle, ENTER_EASING, ImpactReveal, Keyword, MaskedReveal, PartyNode, Pin, RelationAnchor, RelationArrow, RelationHeading} from '../visual-system';
@@ -98,5 +98,49 @@ export const DistinctionScene = () => {
       <div style={{width: 800, minHeight: 168, boxSizing: 'border-box', padding: '32px 34px', borderLeft: `6px solid ${PALETTE.coral}`, backgroundColor: PALETTE.coralSoft}}><div style={{...baseTextStyle, fontSize: 36, fontWeight: 900}}>轴外但受影响 → 第三人</div><div style={{marginTop: 12, color: PALETTE.muted, fontSize: 24}}>有权利主张是有独三，否则是无独三</div></div>
     </div>
     <ImpactReveal delay={178} style={{position: 'absolute', left: 120, top: 825}}><div style={{...baseTextStyle, fontSize: 30, fontWeight: 800}}>看关系，不看“人数”：位置决定身份</div></ImpactReveal>
+  </div>;
+};
+
+export const NoIndependentClaimScene = () => {
+  const frame = toSourceFrame(useCurrentFrame());
+  const relation = interpolate(frame, [18, 84], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: ENTER_EASING});
+  const routes = interpolate(frame, [92, 150], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: ENTER_EASING});
+
+  return <div style={{position: 'absolute', inset: 0}}>
+    <RelationHeading index="05" eyebrow="dependent interest" title="不争标的，但受结果影响" accent="mint" />
+
+    <div style={{position: 'absolute', left: 110, top: 315, width: 990, height: 300, border: `1px solid ${PALETTE.grid}`, backgroundColor: PALETTE.panel}}>
+      <div style={{position: 'absolute', left: 70, top: 194, width: 850, height: 5, backgroundColor: PALETTE.coral, scale: `${relation} 1`, transformOrigin: 'left center'}} />
+      <Pin left={50} top={179} color={PALETTE.coral} label="原告" />
+      <Pin left={900} top={179} color={PALETTE.coral} label="被告" />
+      <div style={{position: 'absolute', left: 314, top: 54, width: 360, minHeight: 112, boxSizing: 'border-box', padding: '22px 26px', border: `1px solid ${PALETTE.yellow}`, backgroundColor: PALETTE.yellowSoft, opacity: relation}}>
+        <div style={{display: 'flex', alignItems: 'center', gap: 16}}><FileText size={38} color={PALETTE.yellow} /><div style={{...baseTextStyle, fontSize: 32, fontWeight: 900}}>本案处理结果</div></div>
+        <div style={{marginTop: 12, color: PALETTE.muted, fontSize: 22}}>原告与被告争议的诉讼标的</div>
+      </div>
+    </div>
+
+    <RelationArrow left={1110} top={425} width={190} progress={relation} accent="mint" label="法律上利害关系" />
+    <PartyNode icon={UsersRound} label="无独三" note="没有独立请求权" accent="mint" style={{left: 1310, top: 350}} active />
+
+    <div style={{position: 'absolute', left: 150, top: 742, color: PALETTE.yellow, fontFamily: 'Consolas, monospace', fontSize: 22, fontWeight: 800}}>参诉方式 / ENTRY</div>
+
+    <div style={{position: 'absolute', left: 430, top: 676, width: 380, height: 102, boxSizing: 'border-box', padding: '24px 28px', display: 'flex', alignItems: 'center', gap: 18, border: `1px solid ${PALETTE.mint}`, backgroundColor: PALETTE.mintSoft, opacity: routes}}>
+      <UserPlus size={40} color={PALETTE.mint} />
+      <div style={{...baseTextStyle, fontSize: 30, fontWeight: 900}}>申请参加</div>
+    </div>
+    <div style={{position: 'absolute', left: 430, top: 810, width: 380, height: 102, boxSizing: 'border-box', padding: '24px 28px', display: 'flex', alignItems: 'center', gap: 18, border: `1px solid ${PALETTE.yellow}`, backgroundColor: PALETTE.yellowSoft, opacity: routes}}>
+      <Landmark size={40} color={PALETTE.yellow} />
+      <div style={{...baseTextStyle, fontSize: 30, fontWeight: 900}}>法院依职权追加</div>
+    </div>
+
+    <RelationArrow left={820} top={697} width={440} progress={routes} accent="mint" />
+    <RelationArrow left={820} top={831} width={440} progress={routes} accent="yellow" />
+
+    <ImpactReveal delay={148} style={{position: 'absolute', left: 1280, top: 706}}>
+      <div style={{width: 420, height: 206, boxSizing: 'border-box', padding: '38px 32px', border: `2px solid ${PALETTE.mint}`, backgroundColor: PALETTE.panel, textAlign: 'center'}}>
+        <div style={{color: PALETTE.mint, fontFamily: 'Consolas, monospace', fontSize: 20}}>JOIN THE CASE</div>
+        <div style={{...baseTextStyle, marginTop: 16, fontSize: 38, fontWeight: 900}}>参加诉讼</div>
+      </div>
+    </ImpactReveal>
   </div>;
 };

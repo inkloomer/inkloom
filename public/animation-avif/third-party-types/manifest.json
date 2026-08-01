@@ -1,74 +1,88 @@
 {
   "animationId": "third-party-types",
   "compositionId": "ThirdPartyTypes",
-  "crf": 42,
+  "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-07-31T17:08:08.753Z",
+  "generatedAt": "2026-08-01T10:09:39.082Z",
   "loopCount": 1,
-  "quality": 33,
+  "quality": 45,
   "scenes": [
     {
       "endFrame": 296,
-      "frameCount": 297,
+      "frameCount": 149,
       "id": "definition",
       "number": "01",
       "startFrame": 0,
       "title": "概念",
-      "durationMs": 4950,
+      "durationMs": 4967,
       "file": "definition.avif",
-      "fileSize": 135329,
+      "fileSize": 293676,
       "format": "avif",
-      "crf": 42,
-      "quality": 33
+      "crf": 35,
+      "quality": 45
     },
     {
       "endFrame": 686,
-      "frameCount": 367,
+      "frameCount": 184,
       "id": "comparison",
       "number": "02",
       "startFrame": 320,
       "title": "对比",
-      "durationMs": 6117,
+      "durationMs": 6133,
       "file": "comparison.avif",
-      "fileSize": 152283,
+      "fileSize": 313217,
       "format": "avif",
-      "crf": 42,
-      "quality": 33
+      "crf": 35,
+      "quality": 45
     },
     {
       "endFrame": 1136,
-      "frameCount": 427,
+      "frameCount": 214,
       "id": "rights",
       "number": "03",
       "startFrame": 710,
       "title": "权利",
-      "durationMs": 7117,
+      "durationMs": 7133,
       "file": "rights.avif",
-      "fileSize": 186935,
+      "fileSize": 405871,
       "format": "avif",
-      "crf": 42,
-      "quality": 33
+      "crf": 35,
+      "quality": 45
     },
     {
       "endFrame": 1526,
-      "frameCount": 367,
+      "frameCount": 184,
       "id": "distinction",
       "number": "04",
       "startFrame": 1160,
       "title": "区分",
-      "durationMs": 6117,
+      "durationMs": 6133,
       "file": "distinction.avif",
-      "fileSize": 167266,
+      "fileSize": 306586,
       "format": "avif",
-      "crf": 42,
-      "quality": 33
+      "crf": 35,
+      "quality": 45
+    },
+    {
+      "endFrame": 1926,
+      "frameCount": 189,
+      "id": "no-independent-claim",
+      "number": "05",
+      "startFrame": 1550,
+      "title": "无独立请求权第三人",
+      "durationMs": 6300,
+      "file": "no-independent-claim.avif",
+      "fileSize": 307922,
+      "format": "avif",
+      "crf": 35,
+      "quality": 45
     }
   ],
   "size": {
-    "height": 1080,
-    "width": 1920
+    "height": 1440,
+    "width": 2560
   },
   "sourceFps": 60,
-  "targetFps": 60,
-  "totalFileSize": 641813
+  "targetFps": 30,
+  "totalFileSize": 1627272
 }

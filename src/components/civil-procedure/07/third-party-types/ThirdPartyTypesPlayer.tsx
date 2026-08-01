@@ -7,6 +7,7 @@ const scenes: readonly RemotionScene[] = [
   {id: 'comparison', number: '02', title: '对比', ...SCENES.comparison},
   {id: 'rights', number: '03', title: '权利', ...SCENES.rights},
   {id: 'distinction', number: '04', title: '区分', ...SCENES.distinction},
+  {id: 'no-independent-claim', number: '05', title: '无独立请求权第三人', ...SCENES.noIndependentClaim},
 ];
 
 export const ThirdPartyTypesPlayer = () => (
