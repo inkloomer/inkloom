@@ -1,7 +1,8 @@
 import {spawn} from 'node:child_process';
-import {mkdtemp, mkdir, readFile, readdir, rename, rm, stat, writeFile} from 'node:fs/promises';
+import {cp, mkdtemp, mkdir, readFile, readdir, rename, rm, stat, writeFile} from 'node:fs/promises';
 import {homedir, tmpdir} from 'node:os';
 import path from 'node:path';
+import {Readable} from 'node:stream';
 import {pathToFileURL} from 'node:url';
 import {bundle} from '@remotion/bundler';
 import {getCompositions, openBrowser, renderFrames} from '@remotion/renderer';
@@ -429,6 +430,32 @@ const runCommand = (command, args) => new Promise((resolve, reject) => {
   });
 });
 
+const runCommandWithInput = (command, args, buffers) => new Promise((resolve, reject) => {
+  const child = spawn(command, args, {stdio: ['pipe', 'inherit', 'inherit'], windowsHide: true});
+  const input = Readable.from(buffers);
+  let settled = false;
+
+  const fail = (error) => {
+    if (settled) return;
+    settled = true;
+    reject(error);
+  };
+
+  child.once('error', fail);
+  child.stdin.once('error', fail);
+  input.once('error', fail);
+  child.once('exit', (code, signal) => {
+    if (settled) return;
+    settled = true;
+    if (code === 0) {
+      resolve();
+      return;
+    }
+    reject(new Error(`${command} exited with ${signal ? `signal ${signal}` : `code ${code}`}.`));
+  });
+  input.pipe(child.stdin);
+});
+
 const runCommandCapture = (command, args) => new Promise((resolve, reject) => {
   const child = spawn(command, args, {stdio: ['ignore', 'pipe', 'pipe'], windowsHide: true});
   let stdout = '';
@@ -537,6 +564,77 @@ const replaceDirectory = async (stagingDirectory, targetDirectory) => {
   }
 };
 
+const readExistingManifest = async (targetDirectory, animationId) => {
+  const manifestPath = path.join(targetDirectory, 'manifest.json');
+  if (!(await pathExists(manifestPath))) {
+    throw new Error(`${animationId}: --scene atomic replacement requires an existing published manifest. Run a full publish first.`);
+  }
+
+  try {
+    return JSON.parse(await readFile(manifestPath, 'utf8'));
+  } catch (error) {
+    throw new Error(`${animationId}: cannot read the existing published manifest for --scene replacement (${error.message}).`);
+  }
+};
+
+const assertAtomicSceneCompatibility = async ({
+  allScenes,
+  animationId,
+  composition,
+  crf,
+  format,
+  loopCount,
+  manifest,
+  outputFps,
+  outputHeight,
+  outputWidth,
+  quality,
+  targetDirectory,
+}) => {
+  const expectedSceneIds = allScenes.map((scene) => scene.id);
+  const publishedSceneIds = Array.isArray(manifest.scenes) ? manifest.scenes.map((scene) => scene.id) : [];
+  const mismatches = [];
+  const sameValue = (label, actual, expected) => {
+    if (actual !== expected) mismatches.push(`${label} is ${JSON.stringify(actual)}, expected ${JSON.stringify(expected)}`);
+  };
+
+  sameValue('animationId', manifest.animationId, animationId);
+  sameValue('compositionId', manifest.compositionId, composition.id);
+  sameValue('format', manifest.format, format);
+  sameValue('quality', manifest.quality, quality);
+  sameValue('crf', manifest.crf, crf);
+  sameValue('loopCount', manifest.loopCount, loopCount);
+  sameValue('size.width', manifest.size?.width, outputWidth);
+  sameValue('size.height', manifest.size?.height, outputHeight);
+  sameValue('sourceFps', manifest.sourceFps, composition.fps);
+  sameValue('targetFps', manifest.targetFps, outputFps);
+  if (JSON.stringify(publishedSceneIds) !== JSON.stringify(expectedSceneIds)) {
+    mismatches.push(`scene IDs are ${JSON.stringify(publishedSceneIds)}, expected ${JSON.stringify(expectedSceneIds)}`);
+  }
+
+  for (const scene of allScenes) {
+    const published = manifest.scenes?.find((candidate) => candidate.id === scene.id);
+    if (!published) continue;
+    const stableEndFrame = Math.min(
+      composition.durationInFrames - 1,
+      scene.start + scene.duration - 1 - scene.previewEndTrimFrames,
+    );
+    if (published.number !== scene.number || published.title !== scene.title) {
+      mismatches.push(`${scene.id} metadata no longer matches the player descriptor`);
+    }
+    if (published.startFrame !== scene.start || published.endFrame !== stableEndFrame) {
+      mismatches.push(`${scene.id} frame range is ${published.startFrame}-${published.endFrame}, expected ${scene.start}-${stableEndFrame}`);
+    }
+    if (typeof published.file !== 'string' || !(await pathExists(path.join(targetDirectory, published.file)))) {
+      mismatches.push(`${scene.id} published file is missing`);
+    }
+  }
+
+  if (mismatches.length > 0) {
+    throw new Error(`${animationId}: --scene atomic replacement is incompatible with the existing publication:\n- ${mismatches.join('\n- ')}\nRun a full publish first.`);
+  }
+};
+
 const renderAnimation = async ({animationId, browserExecutable, crfs, mediaFormat, publishVideo, qualities, sceneId, widths}) => {
   const profile = MEDIA_FORMATS[mediaFormat];
   const storyboardScenes = await loadStoryboardScenes(animationId);
@@ -550,15 +648,19 @@ const renderAnimation = async ({animationId, browserExecutable, crfs, mediaForma
   const outputFormats = publishVideo ? ['mp4'] : crfs ? ['avif', 'mp4'] : [mediaFormat];
   const animationDirectory = getAnimationDirectory(animationId);
   const bundleDirectory = await mkdtemp(path.join(tmpdir(), `inkloom-${mediaFormat}-bundle-${animationId}-`));
-  const workDirectory = await mkdtemp(path.join(tmpdir(), `inkloom-${mediaFormat}-frames-${animationId}-`));
   const comparisonRunId = new Date().toISOString().replaceAll(':', '-').replaceAll('.', '-');
   const targetDirectory = comparison
     ? path.join(COMPARISON_ROOT, animationId, comparisonRunId)
     : path.join(PROJECT_ROOT, 'public', publishVideo ? 'animation-video' : profile.directory, animationId);
   const stagingDirectory = `${targetDirectory}.staging-${process.pid}`;
+  const atomicSceneReplacement = Boolean(sceneId && !comparison);
+  const existingManifest = atomicSceneReplacement
+    ? await readExistingManifest(targetDirectory, animationId)
+    : undefined;
 
   await rm(stagingDirectory, {force: true, maxRetries: 12, recursive: true, retryDelay: 150});
-  await mkdir(stagingDirectory, {recursive: true});
+  if (atomicSceneReplacement) await cp(targetDirectory, stagingDirectory, {recursive: true});
+  else await mkdir(stagingDirectory, {recursive: true});
   console.log(`\n[${animationId}] Bundling composition...`);
 
   let browser;
@@ -585,6 +687,24 @@ const renderAnimation = async ({animationId, browserExecutable, crfs, mediaForma
       : profile.targetFps === 'source' ? composition.fps : profile.targetFps;
     const everyNthFrame = Math.max(1, Math.round(composition.fps / targetFps));
     const outputFps = composition.fps / everyNthFrame;
+    const outputWidth = widths[0];
+    const outputHeight = Math.round(composition.height * outputWidth / composition.width);
+    if (atomicSceneReplacement) {
+      await assertAtomicSceneCompatibility({
+        allScenes,
+        animationId,
+        composition,
+        crf: encodingVariants[0].crf,
+        format: publishVideo ? 'av1-mp4' : profile.manifestFormat,
+        loopCount: publishVideo ? undefined : profile.loopCount,
+        manifest: existingManifest,
+        outputFps,
+        outputHeight,
+        outputWidth,
+        quality: encodingVariants[0].quality,
+        targetDirectory,
+      });
+    }
     const publishedScenes = [];
 
     for (let index = 0; index < scenes.length; index += 1) {
@@ -600,19 +720,19 @@ const renderAnimation = async ({animationId, browserExecutable, crfs, mediaForma
         const scale = outputWidth / composition.width;
         const outputHeight = Math.round(composition.height * scale);
         const resolutionLabel = `${outputWidth}x${outputHeight}`;
-        const frameDirectory = path.join(workDirectory, `${String(index + 1).padStart(2, '0')}-${scene.id}-${resolutionLabel}`);
-        await mkdir(frameDirectory, {recursive: true});
-        console.log(`[${animationId}] ${scene.number}/${String(scenes.length).padStart(2, '0')} ${scene.id}: rendering ${resolutionLabel}, frames ${scene.start}-${stableEndFrame}`);
+        console.log(`[${animationId}] ${scene.number}/${String(scenes.length).padStart(2, '0')} ${scene.id}: rendering ${resolutionLabel} at ${outputFps}fps, source frames ${scene.start}-${stableEndFrame}`);
 
+        const renderStartedAt = performance.now();
+        const frameBuffers = new Map();
         const rendered = await renderFrames({
           composition,
           serveUrl,
-          outputDir: frameDirectory,
+          outputDir: null,
           inputProps: {},
           frameRange: [scene.start, stableEndFrame],
-          everyNthFrame: 1,
+          everyNthFrame,
           imageFormat: 'png',
-          imageSequencePattern: 'frame-[frame].[ext]',
+          onFrameBuffer: (buffer, frame) => frameBuffers.set(frame, buffer),
           scale,
           concurrency: RENDER_CONCURRENCY,
           muted: true,
@@ -620,8 +740,17 @@ const renderAnimation = async ({animationId, browserExecutable, crfs, mediaForma
           logLevel: 'error',
         });
 
-        const expectedFrameCount = Math.round(rendered.frameCount / everyNthFrame);
+        const expectedFrameCount = rendered.frameCount;
         const expectedDurationMs = Math.round((expectedFrameCount / outputFps) * 1000);
+        const sourceFrames = Array.from({length: expectedFrameCount}, (_, frameIndex) => scene.start + frameIndex * everyNthFrame);
+        const missingFrames = sourceFrames.filter((frame) => !frameBuffers.has(frame));
+        if (frameBuffers.size !== expectedFrameCount || missingFrames.length > 0) {
+          throw new Error(`${animationId}: ${scene.id} rendered ${frameBuffers.size}/${expectedFrameCount} target frames; missing ${missingFrames.join(', ') || 'unknown'}.`);
+        }
+        const orderedFrameBuffers = sourceFrames.map((frame) => frameBuffers.get(frame));
+        const bufferedBytes = orderedFrameBuffers.reduce((sum, buffer) => sum + buffer.length, 0);
+        const renderDurationMs = performance.now() - renderStartedAt;
+        console.log(`[${animationId}] ${scene.id}: rendered ${expectedFrameCount} target frames, ${(bufferedBytes / 1024 / 1024).toFixed(2)} MiB buffered in ${(renderDurationMs / 1000).toFixed(2)}s`);
         sceneFrameCount = expectedFrameCount;
         const variants = [];
 
@@ -640,19 +769,19 @@ const renderAnimation = async ({animationId, browserExecutable, crfs, mediaForma
               ? ['-tag:v', 'av01', '-movflags', '+faststart', '-f', 'mp4']
               : outputProfile.outputArguments(outputProfile.loopCount);
             const encoderArguments = outputProfile.encoderArguments(encodingVariant);
-            await runCommand('ffmpeg', [
+            const encodeStartedAt = performance.now();
+            await runCommandWithInput('ffmpeg', [
               '-hide_banner',
               '-loglevel', 'error',
               '-y',
-              '-framerate', String(composition.fps),
-              '-start_number', String(scene.start),
-              '-i', rendered.assetsInfo.imageSequenceName,
+              '-f', 'image2pipe',
+              '-framerate', String(outputFps),
+              '-i', 'pipe:0',
               '-an',
-              ...(everyNthFrame > 1 ? ['-vf', `fps=${outputFps}`] : []),
               ...encoderArguments,
               ...outputArguments,
               targetPath,
-            ]);
+            ], orderedFrameBuffers);
 
             const outputInfo = await inspectOutput({filePath: targetPath, outputFormat, profile: outputProfile});
             const validCodec = outputFormat === 'webp' || outputInfo.codec === 'av1';
@@ -686,13 +815,13 @@ const renderAnimation = async ({animationId, browserExecutable, crfs, mediaForma
             }
             outputs.push({durationMs: outputInfo.durationMs, file: targetFile, fileSize, format: outputFormat});
             const qualityLabel = encodingVariant.crf === undefined ? `quality ${encodingVariant.quality}` : `CRF ${encodingVariant.crf}`;
-            console.log(`[${animationId}] ${scene.id} ${resolutionLabel} ${qualityLabel} ${outputFormat.toUpperCase()}: ${(fileSize / 1024 / 1024).toFixed(2)} MiB`);
+            const encodeDurationMs = performance.now() - encodeStartedAt;
+            console.log(`[${animationId}] ${scene.id} ${resolutionLabel} ${qualityLabel} ${outputFormat.toUpperCase()}: ${(fileSize / 1024 / 1024).toFixed(2)} MiB in ${(encodeDurationMs / 1000).toFixed(2)}s`);
           }
           variants.push({...encodingVariant, outputs});
         }
 
         resolutions.push({height: outputHeight, variants, width: outputWidth});
-        await rm(frameDirectory, {force: true, recursive: true});
       }
 
       const sceneMetadata = {
@@ -716,6 +845,10 @@ const renderAnimation = async ({animationId, browserExecutable, crfs, mediaForma
           });
     }
 
+    const mergedScenes = atomicSceneReplacement
+      ? allScenes.map((scene) => publishedScenes.find((published) => published.id === scene.id)
+        ?? existingManifest.scenes.find((published) => published.id === scene.id))
+      : publishedScenes;
     const manifest = {
       animationId,
       comparison: comparison || undefined,
@@ -728,7 +861,7 @@ const renderAnimation = async ({animationId, browserExecutable, crfs, mediaForma
       formats: comparison ? outputFormats : undefined,
       qualities: comparison && !crfs ? qualities : undefined,
       crfs: comparison && crfs ? crfs : undefined,
-      scenes: publishedScenes,
+      scenes: mergedScenes,
       size: comparison ? undefined : {
         height: Math.round(composition.height * widths[0] / composition.width),
         width: widths[0],
@@ -739,7 +872,7 @@ const renderAnimation = async ({animationId, browserExecutable, crfs, mediaForma
       })) : undefined,
       sourceFps: composition.fps,
       targetFps: outputFps,
-      totalFileSize: publishedScenes.reduce((sum, scene) => sum + (comparison
+      totalFileSize: mergedScenes.reduce((sum, scene) => sum + (comparison
         ? scene.resolutions.reduce((resolutionTotal, resolution) => resolutionTotal
           + resolution.variants.reduce((variantTotal, variant) => variantTotal
             + variant.outputs.reduce((outputTotal, output) => outputTotal + output.fileSize, 0), 0), 0)
@@ -759,7 +892,6 @@ const renderAnimation = async ({animationId, browserExecutable, crfs, mediaForma
   } finally {
     if (browser) await browser.close({silent: true});
     await rm(bundleDirectory, {force: true, maxRetries: 12, recursive: true, retryDelay: 150});
-    await rm(workDirectory, {force: true, maxRetries: 12, recursive: true, retryDelay: 150});
   }
 };
 

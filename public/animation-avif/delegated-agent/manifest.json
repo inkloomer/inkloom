@@ -3,7 +3,7 @@
   "compositionId": "DelegatedAgent",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-08-01T07:47:24.159Z",
+  "generatedAt": "2026-08-01T08:47:09.662Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -16,7 +16,7 @@
       "title": "授权分流",
       "durationMs": 4000,
       "file": "authorization-fork.avif",
-      "fileSize": 274607,
+      "fileSize": 274657,
       "format": "avif",
       "crf": 35,
       "quality": 45
@@ -70,5 +70,5 @@
   },
   "sourceFps": 30,
   "targetFps": 15,
-  "totalFileSize": 982271
+  "totalFileSize": 982321
 }

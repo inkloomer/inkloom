@@ -1,102 +1,102 @@
 {
   "animationId": "representative-litigation",
   "compositionId": "RepresentativeLitigation",
-  "crf": 42,
+  "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-07-31T16:48:42.993Z",
+  "generatedAt": "2026-08-01T08:43:54.305Z",
   "loopCount": 1,
-  "quality": 33,
+  "quality": 45,
   "scenes": [
     {
       "endFrame": 276,
-      "frameCount": 277,
+      "frameCount": 69,
       "id": "concept",
       "number": "01",
       "startFrame": 0,
       "title": "什么是代表人诉讼？",
-      "durationMs": 4617,
+      "durationMs": 4600,
       "file": "concept.avif",
-      "fileSize": 202646,
+      "fileSize": 145610,
       "format": "avif",
-      "crf": 42,
-      "quality": 33
+      "crf": 35,
+      "quality": 45
     },
     {
       "endFrame": 676,
-      "frameCount": 377,
+      "frameCount": 94,
       "id": "representative-authority",
       "number": "02",
       "startFrame": 300,
       "title": "代表人的诉讼权限",
-      "durationMs": 6283,
+      "durationMs": 6267,
       "file": "representative-authority.avif",
-      "fileSize": 298524,
+      "fileSize": 267544,
       "format": "avif",
-      "crf": 42,
-      "quality": 33
+      "crf": 35,
+      "quality": 45
     },
     {
       "endFrame": 1176,
-      "frameCount": 477,
+      "frameCount": 119,
       "id": "determined-members",
       "number": "03",
       "startFrame": 700,
       "title": "人数确定的代表人诉讼",
-      "durationMs": 7950,
+      "durationMs": 7933,
       "file": "determined-members.avif",
-      "fileSize": 251839,
+      "fileSize": 171171,
       "format": "avif",
-      "crf": 42,
-      "quality": 33
+      "crf": 35,
+      "quality": 45
     },
     {
       "endFrame": 1776,
-      "frameCount": 577,
+      "frameCount": 144,
       "id": "undetermined-members",
       "number": "04",
       "startFrame": 1200,
       "title": "人数不确定的代表人诉讼",
-      "durationMs": 9617,
+      "durationMs": 9600,
       "file": "undetermined-members.avif",
-      "fileSize": 311405,
+      "fileSize": 226372,
       "format": "avif",
-      "crf": 42,
-      "quality": 33
+      "crf": 35,
+      "quality": 45
     },
     {
       "endFrame": 2376,
-      "frameCount": 577,
+      "frameCount": 144,
       "id": "securities-special",
       "number": "05",
       "startFrame": 1800,
       "title": "证券特别代表人诉讼",
-      "durationMs": 9617,
+      "durationMs": 9600,
       "file": "securities-special.avif",
-      "fileSize": 274140,
+      "fileSize": 200906,
       "format": "avif",
-      "crf": 42,
-      "quality": 33
+      "crf": 35,
+      "quality": 45
     },
     {
       "endFrame": 2876,
-      "frameCount": 477,
+      "frameCount": 119,
       "id": "comparison",
       "number": "06",
       "startFrame": 2400,
       "title": "代表人诉讼对比",
-      "durationMs": 7950,
+      "durationMs": 7933,
       "file": "comparison.avif",
-      "fileSize": 263558,
+      "fileSize": 266095,
       "format": "avif",
-      "crf": 42,
-      "quality": 33
+      "crf": 35,
+      "quality": 45
     }
   ],
   "size": {
-    "height": 1080,
-    "width": 1920
+    "height": 1440,
+    "width": 2560
   },
   "sourceFps": 60,
-  "targetFps": 60,
-  "totalFileSize": 1602112
+  "targetFps": 15,
+  "totalFileSize": 1277698
 }
