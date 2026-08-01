@@ -300,6 +300,7 @@ const captureAnimation = async ({
           serveUrl,
           output: outputPath,
           frame,
+          inputProps: {__inkloomLayoutAudit: true},
           imageFormat: 'png',
           overwrite: true,
           puppeteerInstance: browser,

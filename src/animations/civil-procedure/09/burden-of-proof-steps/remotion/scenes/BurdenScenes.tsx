@@ -67,8 +67,8 @@ export const AffirmativeBurdenScene = () => {
             <div style={{position: 'absolute', left: 660, right: 660, top: item.top + 92, textAlign: 'center', fontSize: 24, lineHeight: 1.2, fontWeight: 900}}>{item.note}</div>
           </div>
         ))}
-        <CutIn delay={88} direction="up" style={{position: 'absolute', left: 300, right: 300, bottom: 0, height: 106, backgroundColor: INK.yellow, border: `6px solid ${INK.black}`, display: 'grid', placeItems: 'center', fontSize: 35, fontWeight: 950}}>
-          谁主张<Treatment kind="underline" color={INK.red} delay={98}>积极事实</Treatment>，谁承担证明责任
+        <CutIn delay={88} direction="up" style={{position: 'absolute', left: 300, right: 300, bottom: 0, height: 106, backgroundColor: INK.yellow, border: `6px solid ${INK.black}`, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 12, whiteSpace: 'nowrap', fontSize: 35, lineHeight: 1.2, fontWeight: 950}}>
+          <span>谁主张</span><Treatment kind="underline" color={INK.red} delay={98}>积极事实</Treatment><span>，谁承担证明责任</span>
         </CutIn>
       </div>
     </ConstructivistCanvas>
@@ -92,12 +92,12 @@ export const TwoInversionsScene = () => {
           <div style={{display: 'flex', alignItems: 'center', justifyContent: 'flex-end', gap: 22}}><div><Treatment kind="label" color={INK.black}>教育 / 医疗 / 动物园等</Treatment><div style={{marginTop: 18, fontSize: 37, fontWeight: 950}}>过错倒置</div></div><Building2 size={72} strokeWidth={2.8} /></div>
           <div style={{marginTop: 42, fontSize: 29, lineHeight: 1.6, fontWeight: 850}}>原告证明：行为 + 结果 + 因果</div>
         </CutIn>
-        <div style={{position: 'absolute', left: 112, top: 320, width: 650, height: 200, backgroundColor: INK.white, color: INK.black, border: `7px solid ${INK.black}`, padding: '30px 34px', rotate: `${-7 + flipA * 7}deg`}}>
+        <div style={{position: 'absolute', left: 112, top: 306, width: 650, height: 230, backgroundColor: INK.white, color: INK.black, border: `7px solid ${INK.black}`, padding: '30px 34px', rotate: `${-7 + flipA * 7}deg`}}>
           <div style={{fontSize: 25, fontWeight: 900, color: INK.cobalt}}>被告接手证明</div>
           <div style={{marginTop: 24, fontSize: 38, fontWeight: 950}}><Treatment kind="negation" color={INK.red} delay={52}>不存在因果关系</Treatment></div>
           <div style={{marginTop: 20, fontSize: 25, fontWeight: 850}}>另证法定免责事由</div>
         </div>
-        <div style={{position: 'absolute', right: 112, top: 320, width: 650, height: 200, backgroundColor: INK.white, color: INK.black, border: `7px solid ${INK.black}`, padding: '30px 34px', rotate: `${7 - flipB * 7}deg`, textAlign: 'right'}}>
+        <div style={{position: 'absolute', right: 112, top: 306, width: 650, height: 230, backgroundColor: INK.white, color: INK.black, border: `7px solid ${INK.black}`, padding: '30px 34px', rotate: `${7 - flipB * 7}deg`, textAlign: 'right'}}>
           <div style={{fontSize: 25, fontWeight: 900, color: INK.red}}>被告接手证明</div>
           <div style={{marginTop: 24, fontSize: 38, fontWeight: 950}}><Treatment kind="negation" color={INK.red} delay={78}>自己没有过错</Treatment></div>
           <div style={{marginTop: 20, fontSize: 25, fontWeight: 850}}>另证法定免责事由</div>
@@ -152,8 +152,8 @@ export const ExemptFactsBoundaryScene = () => {
             <div style={{position: 'absolute', left: 36, right: 36, bottom: 34, paddingTop: 22, borderTop: `4px solid ${index === 0 ? INK.yellow : lane.color}`, fontSize: 25, lineHeight: 1.35, fontWeight: 850, color: index === 0 ? INK.white : INK.gray}}>{lane.detail}</div>
           </CutIn>;
         })}
-        <CutIn delay={82} direction="up" style={{position: 'absolute', left: 318, right: 318, bottom: 0, height: 122, backgroundColor: INK.yellow, border: `7px solid ${INK.black}`, display: 'grid', placeItems: 'center', fontSize: 32, fontWeight: 950}}>
-          免证事实 <span style={{margin: '0 18px'}}>≠</span> 没有边界的既定事实
+        <CutIn delay={82} direction="up" style={{position: 'absolute', left: 318, right: 318, bottom: 0, height: 122, backgroundColor: INK.yellow, border: `7px solid ${INK.black}`, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 18, whiteSpace: 'nowrap', fontSize: 32, lineHeight: 1.2, fontWeight: 950}}>
+          <span>免证事实</span><span>≠</span><span>没有边界的既定事实</span>
         </CutIn>
       </div>
     </ConstructivistCanvas>

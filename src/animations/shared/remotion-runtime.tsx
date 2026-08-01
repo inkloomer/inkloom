@@ -1,5 +1,5 @@
 import type {CSSProperties, ReactElement, ReactNode} from 'react';
-import {Children, cloneElement, isValidElement} from 'react';
+import {Children, cloneElement, isValidElement, useLayoutEffect, useRef} from 'react';
 import {ArrowRight} from 'lucide-react';
 import {Easing, Sequence, interpolate, spring, useCurrentFrame, useVideoConfig} from 'remotion';
 
@@ -12,6 +12,70 @@ export type SceneTiming = {
   readonly start: number;
   readonly duration: number;
   readonly previewEndTrimFrames: number;
+};
+
+type LayoutAuditInputProps = {
+  readonly __inkloomLayoutAudit?: boolean;
+};
+
+const formatRect = (rect: DOMRect) =>
+  `[${Math.round(rect.left)},${Math.round(rect.top)} ${Math.round(rect.width)}x${Math.round(rect.height)}]`;
+
+const LayoutAudit = ({children, name}: {readonly children: ReactNode; readonly name: string}) => {
+  const rootRef = useRef<HTMLDivElement>(null);
+  const {height, props, width} = useVideoConfig();
+  const enabled = (props as LayoutAuditInputProps).__inkloomLayoutAudit === true;
+
+  useLayoutEffect(() => {
+    const root = rootRef.current;
+    if (!enabled || !root) return;
+
+    const tolerance = 2;
+    const canvas = root.getBoundingClientRect();
+    const failures: string[] = [];
+    const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
+      acceptNode: (node) => (node.textContent?.trim() ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT),
+    });
+
+    for (let node = walker.nextNode(); node; node = walker.nextNode()) {
+      const parent = node.parentElement;
+      if (!parent) continue;
+      const style = window.getComputedStyle(parent);
+      if (style.display === 'none' || style.visibility === 'hidden' || Number(style.opacity) === 0) continue;
+
+      let boundary: HTMLElement | null = parent;
+      while (boundary && boundary !== root) {
+        const boundaryStyle = window.getComputedStyle(boundary);
+        const hasBorder = [boundaryStyle.borderTopWidth, boundaryStyle.borderRightWidth, boundaryStyle.borderBottomWidth, boundaryStyle.borderLeftWidth]
+          .some((width) => Number.parseFloat(width) > 0);
+        if (hasBorder || boundary.dataset.auditBoundary === 'true') break;
+        boundary = boundary.parentElement;
+      }
+
+      const limit = boundary && boundary !== root ? boundary.getBoundingClientRect() : canvas;
+      const range = document.createRange();
+      range.selectNodeContents(node);
+      for (const rect of range.getClientRects()) {
+        if (rect.width === 0 || rect.height === 0) continue;
+        const outside =
+          rect.left < limit.left - tolerance ||
+          rect.top < limit.top - tolerance ||
+          rect.right > limit.right + tolerance ||
+          rect.bottom > limit.bottom + tolerance;
+        if (outside) {
+          const text = node.textContent?.trim().replace(/\s+/g, ' ').slice(0, 80) ?? '';
+          failures.push(`"${text}" ${formatRect(rect)} exceeds ${formatRect(limit)}`);
+        }
+      }
+    }
+
+    if (failures.length > 0) {
+      throw new Error(`[layout-audit] ${name}: ${failures.join(' | ')}`);
+    }
+  }, [enabled, name]);
+
+  if (!enabled) return <>{children}</>;
+  return <div ref={rootRef} style={{position: 'absolute', left: 0, top: 0, width, height}}>{children}</div>;
 };
 
 export const createPlaybackTimeline = ({
@@ -55,7 +119,7 @@ export const TimelineSequence = ({
   readonly start: number;
 }) => (
   <Sequence from={start} durationInFrames={duration} name={name} layout="none">
-    {children}
+    <LayoutAudit name={name}>{children}</LayoutAudit>
   </Sequence>
 );
 
