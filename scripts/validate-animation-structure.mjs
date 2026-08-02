@@ -7,6 +7,7 @@ const BASELINE_PATH = path.join(import.meta.dirname, 'animation-style-baseline.j
 const ALLOWED_CHANNELS = new Set(['annotation', 'connector', 'contrast', 'enclosure', 'icon', 'locator', 'motion', 'spatial']);
 const ALLOWED_ANCHORS = new Set(['boundary', 'comparison-axis', 'concept-icon', 'document-fork', 'flow-path', 'flow-target', 'role-pair', 'timeline-gate', 'typographic-sequence']);
 const ALLOWED_TEXT_TREATMENTS = new Set(['external-negation', 'label-block', 'soft-highlight', 'stamp', 'thin-underline']);
+const MINIMUM_PLAYER_CONTROL_SAFE_BOTTOM = 160;
 
 const isFile = async (filePath) => {
   try {
@@ -52,6 +53,7 @@ const quote = (value) => `"${value}"`;
 const main = async () => {
   const baseline = JSON.parse(await readFile(BASELINE_PATH, 'utf8'));
   const legacyIds = new Set(baseline.legacyStructureAuditIds ?? []);
+  const legacyPlayerControlSafeAreaIds = new Set(baseline.legacyPlayerControlSafeAreaIds ?? []);
   const errors = [];
   let auditedScenes = 0;
   let skippedNodes = 0;
@@ -85,6 +87,22 @@ const main = async () => {
 
     const sceneFiles = await collectFiles(path.join(animation.directory, 'remotion'), (file) => file.endsWith('.tsx'));
     const source = (await Promise.all(sceneFiles.map((file) => readFile(file, 'utf8')))).join('\n');
+
+    if (!legacyPlayerControlSafeAreaIds.has(animation.id)) {
+      if (!Number.isFinite(contract.playerControlSafeBottom) || contract.playerControlSafeBottom < MINIMUM_PLAYER_CONTROL_SAFE_BOTTOM) {
+        errors.push(`${animation.id}: playerControlSafeBottom must be at least ${MINIMUM_PLAYER_CONTROL_SAFE_BOTTOM} authoring pixels`);
+      }
+      if (!source.includes(`const PLAYER_CONTROL_SAFE_BOTTOM = ${contract.playerControlSafeBottom};`)) {
+        errors.push(`${animation.id}: Remotion source must define PLAYER_CONTROL_SAFE_BOTTOM from visual-structure.json`);
+      }
+      if (!source.includes('data-player-control-safe-bottom={PLAYER_CONTROL_SAFE_BOTTOM}')) {
+        errors.push(`${animation.id}: root canvas must expose the player control safe-area marker`);
+      }
+      if (!source.includes('bottom: PLAYER_CONTROL_SAFE_BOTTOM')) {
+        errors.push(`${animation.id}: teaching-content container must reserve the player control safe area`);
+      }
+    }
+
     const ids = new Set();
     const layouts = new Set();
     const grammarVocabulary = new Set();
