@@ -3,7 +3,7 @@
   "compositionId": "DelegatedAgent",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-08-01T15:44:45.941Z",
+  "generatedAt": "2026-08-01T19:59:02.706Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -16,13 +16,13 @@
       "title": "授权分流",
       "durationMs": 4000,
       "file": "authorization-fork.avif",
-      "fileSize": 312354,
+      "fileSize": 285689,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "55b4d269f202e160e8a6b6e10f793dc1a7606c64d2592b796a18f7f44621b78d",
+      "sha256": "86b00b33c1e28ac073590c3dd00438845688eb4f665a504f02829667e6587cfe",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "2cf0e4b82e9d0630397300d98004fa75ec324b988a66eb60076ee1259f1c5230"
+      "sceneFingerprint": "3c6e0119458522265e51b8d33b12a2eab6f2283dc7de186f03e92c0e5280a950"
     },
     {
       "endFrame": 239,
@@ -33,13 +33,13 @@
       "title": "特别授权",
       "durationMs": 4000,
       "file": "special-authorization.avif",
-      "fileSize": 275818,
+      "fileSize": 274300,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "dcad8116cded1209ab13217ad2b0fba23700586bb2113670f58044eb0eb858cf",
+      "sha256": "a44ff2db818eecb5f15b1f28e8e7acd7984da5cf278ff0e0e06caa5c8a59df91",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "1c24cf5d0f365472b9cf66e2103857f4803bf820b62da485372e050bbae039ad"
+      "sceneFingerprint": "cea1bb749c4da5a7da11e58d3f2842d7b55fa5be50abea59df22e53872cfda23"
     },
     {
       "endFrame": 359,
@@ -50,13 +50,13 @@
       "title": "调解边界",
       "durationMs": 4000,
       "file": "mediation-boundary.avif",
-      "fileSize": 281045,
+      "fileSize": 260886,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "3558b00a4b30a07df606d5e385d7262ab2f9acb86f9ede9c4de84ecc2f369571",
+      "sha256": "1655fff73b1f5eb19d49df35777d68d07ccef17d131a87641277903cdab1fcf8",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "18e695b650d9e37cad34eca916a40d2ba32f00943f0a387aba0741f2558a10c7"
+      "sceneFingerprint": "84822780125dd3db1aede82a10e24ca5fee37df86f599a40c2add948c17b8aec"
     },
     {
       "endFrame": 479,
@@ -67,13 +67,13 @@
       "title": "阶段边界",
       "durationMs": 4000,
       "file": "stage-boundary.avif",
-      "fileSize": 244501,
+      "fileSize": 232610,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "f01e9682fdeebc5d5575a4cf9aa9652611c75058d7f41ad5967eb22bd8ce0c89",
+      "sha256": "025c8f9a883da46f38d26920212e25ebc694c2285ea6e221acccace47cefef79",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "7d0d82aadf206c378eeb6766a945cfac5ed4ca66497f5d75be66a5d762a8288f"
+      "sceneFingerprint": "ced04ff5f4a9c91eb44558adf8032b03c4c546fe761f0f81211fde03a018b569"
     }
   ],
   "size": {
@@ -81,7 +81,7 @@
     "width": 2560
   },
   "sourceFps": 30,
-  "sourceFingerprint": "4bb60512bae748a3c7e02da9761638a48df8b01e2850c0b77e21d769c3c27dbf",
+  "sourceFingerprint": "164219faf84035ea2dbd80e6377ab869dfd6235cf93134490c64163bea1d91e4",
   "targetFps": 30,
-  "totalFileSize": 1113718
+  "totalFileSize": 1053485
 }

@@ -1,60 +1,70 @@
 {
   "animationId": "guarantee-party",
   "compositionId": "GuaranteeParty",
-  "crf": 42,
+  "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-07-31T16:08:42.905Z",
+  "generatedAt": "2026-08-01T19:40:11.030Z",
   "loopCount": 1,
-  "quality": 33,
+  "quality": 45,
   "scenes": [
     {
       "endFrame": 326,
-      "frameCount": 327,
+      "frameCount": 164,
       "id": "general-guarantee",
       "number": "01",
       "startFrame": 0,
       "title": "先诉抗辩权的保护",
-      "durationMs": 5450,
+      "durationMs": 5467,
       "file": "general-guarantee.avif",
-      "fileSize": 233526,
+      "fileSize": 306913,
       "format": "avif",
-      "crf": 42,
-      "quality": 33
+      "pixelFormat": "gbrp",
+      "sha256": "699e70ba8ddcb4d6a02a1a5e51747fddb25381a40cbba23c49cda6c403295672",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "77ac62c0a81cf3ecbc7156e184557de8b09d02f9278f80260fbcac6b0bddbb4c"
     },
     {
       "endFrame": 676,
-      "frameCount": 327,
+      "frameCount": 164,
       "id": "joint-liability-guarantee",
       "number": "02",
       "startFrame": 350,
       "title": "债权人享有选择权",
-      "durationMs": 5450,
+      "durationMs": 5467,
       "file": "joint-liability-guarantee.avif",
-      "fileSize": 231455,
+      "fileSize": 319606,
       "format": "avif",
-      "crf": 42,
-      "quality": 33
+      "pixelFormat": "gbrp",
+      "sha256": "7564c34d142ceda11919a6af4f8491da7f227830225d3e216009668689211c27",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "77ac62c0a81cf3ecbc7156e184557de8b09d02f9278f80260fbcac6b0bddbb4c"
     },
     {
       "endFrame": 1026,
-      "frameCount": 327,
+      "frameCount": 164,
       "id": "comparison",
       "number": "03",
       "startFrame": 700,
       "title": "一般保证 vs 连带保证速记",
-      "durationMs": 5450,
+      "durationMs": 5467,
       "file": "comparison.avif",
-      "fileSize": 264699,
+      "fileSize": 368887,
       "format": "avif",
-      "crf": 42,
-      "quality": 33
+      "pixelFormat": "gbrp",
+      "sha256": "2585b32ff74c68d3034e05292cc8f1c654535ffd1d7bb20065fa86949508952f",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "77ac62c0a81cf3ecbc7156e184557de8b09d02f9278f80260fbcac6b0bddbb4c"
     }
   ],
   "size": {
-    "height": 1080,
-    "width": 1920
+    "height": 1440,
+    "width": 2560
   },
   "sourceFps": 60,
-  "targetFps": 60,
-  "totalFileSize": 729680
+  "sourceFingerprint": "77ac62c0a81cf3ecbc7156e184557de8b09d02f9278f80260fbcac6b0bddbb4c",
+  "targetFps": 30,
+  "totalFileSize": 995406
 }

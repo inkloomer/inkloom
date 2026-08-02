@@ -3,7 +3,7 @@
   "compositionId": "InspectionRecord",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-08-01T13:30:17.918Z",
+  "generatedAt": "2026-08-02T03:35:35.610Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -16,12 +16,13 @@
       "title": "申请与依职权启动",
       "durationMs": 5667,
       "file": "initiation.avif",
-      "fileSize": 185356,
+      "fileSize": 204826,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "7500e9948320d6c4d27ad635c881002705104bfdc7c0bf54756aacde5f5f4a4b",
+      "sha256": "3ad286a53ef2d7165a7bcf0782b0c77328d7eb1bf47a7db914eb29221d8ce6b4",
       "crf": 35,
-      "quality": 45
+      "quality": 45,
+      "sceneFingerprint": "9f5e39feea4e9dddf69a5e4c81a8dd813597c1158bd244a62e6bf6bfaa1f6e00"
     },
     {
       "endFrame": 339,
@@ -32,12 +33,13 @@
       "title": "物证与现场",
       "durationMs": 5667,
       "file": "scope.avif",
-      "fileSize": 236840,
+      "fileSize": 249816,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "0ea6b4a6906dffb726b1d09b284f28a785c831859aa25d23b384955aa09fd692",
+      "sha256": "487c407c30913ef9aa64e315159bf6de36b62057cc52484cc4ca170933cd29a2",
       "crf": 35,
-      "quality": 45
+      "quality": 45,
+      "sceneFingerprint": "7f2d3b49a3f6a816c67e799810f524eac932677a972f33069f0cba4f4e57765d"
     },
     {
       "endFrame": 519,
@@ -48,12 +50,13 @@
       "title": "鉴定人参与与现场鉴定",
       "durationMs": 6000,
       "file": "expert-participation.avif",
-      "fileSize": 214830,
+      "fileSize": 227691,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "646f69f3c9213e3b799256db90e812942dbc7edf39e2478fa9df2ecda4930952",
+      "sha256": "da664008dc5f47b665fcad143f99ff998d03c01625167d679744c25eb6ad0e30",
       "crf": 35,
-      "quality": 45
+      "quality": 45,
+      "sceneFingerprint": "e75f6a78847ed2318e2398ff70c60f59aa3eda5214416fcd5ae798679221c82d"
     }
   ],
   "size": {
@@ -61,7 +64,7 @@
     "width": 2560
   },
   "sourceFps": 30,
-  "sourceFingerprint": "4247dfd5ac357f851d42c09855ddab8047867ff45c869a6ceb083aa7439b7a26",
+  "sourceFingerprint": "c21b2ff80319f3eb55bccf26a727503ca1bb1e170576d180612e125d44095c29",
   "targetFps": 30,
-  "totalFileSize": 637026
+  "totalFileSize": 682333
 }

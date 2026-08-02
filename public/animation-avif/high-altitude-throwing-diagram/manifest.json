@@ -3,7 +3,7 @@
   "compositionId": "HighAltitudeThrowingDiagram",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-08-01T14:14:11.118Z",
+  "generatedAt": "2026-08-02T05:18:26.473Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -16,12 +16,13 @@
       "title": "高空与向下抛掷",
       "durationMs": 6000,
       "file": "vertical-direction.avif",
-      "fileSize": 173075,
+      "fileSize": 168757,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "c5a6c9490015eeba1cdea08fbc7a31e5ff551bf59d2ad82c163c5a1a93dda07f",
+      "sha256": "1ef070e3c1c99051d21cca83a7857138407de82a37aefc191fc383ced36861bf",
       "crf": 35,
-      "quality": 45
+      "quality": 45,
+      "sceneFingerprint": "cc6774abd59aac1cdd0e535a7dd61d9d115b9a2c9fcccbf4e29b3f4c80100153"
     },
     {
       "endFrame": 374,
@@ -32,12 +33,13 @@
       "title": "情节严重入罪门",
       "durationMs": 6500,
       "file": "seriousness-gate.avif",
-      "fileSize": 188918,
+      "fileSize": 190766,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "583b27ed1cf03702128440273bbd2b28c8a2c8ebe89514b7769d24cca3269d9d",
+      "sha256": "ab93557b0cf435735f9c66fd69078a2cf66d939a28fa6c1598b72c0fa1bba4b8",
       "crf": 35,
-      "quality": 45
+      "quality": 45,
+      "sceneFingerprint": "e9cbd8d076f3b97fa23950776abd7151c7651b91dfa86846c1f108369f10024d"
     },
     {
       "endFrame": 554,
@@ -48,12 +50,13 @@
       "title": "故意与过失排除",
       "durationMs": 6000,
       "file": "intent-exclusion.avif",
-      "fileSize": 165088,
+      "fileSize": 170519,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "a948806126baba53defea42d55d34297dd2f64930c958c4020a0035820f1f07b",
+      "sha256": "169c3d22063d94632f476a9eee9a9f6b71980ed2a735dda05282afc48cdd1fd9",
       "crf": 35,
-      "quality": 45
+      "quality": 45,
+      "sceneFingerprint": "f5bfd3e46b90712b737bbf8b12da48103b7c5d24d4f9e4e82493af1ec8aa4f94"
     },
     {
       "endFrame": 764,
@@ -64,12 +67,13 @@
       "title": "想象竞合择一重",
       "durationMs": 7000,
       "file": "concurrence-choice.avif",
-      "fileSize": 188785,
+      "fileSize": 186035,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "0ca943dd3395d4d2968d7e213724cc259d1215ae60b3269505fa3734c4098a1a",
+      "sha256": "50b29776e277f55847bdb3b26b1381a39923550bccd9d1e82257b4335608c7d5",
       "crf": 35,
-      "quality": 45
+      "quality": 45,
+      "sceneFingerprint": "38d641760c5e619427d00675f350b7a0ddffd3e4839f3c0665fdc4754c28ca7c"
     }
   ],
   "size": {
@@ -77,7 +81,7 @@
     "width": 2560
   },
   "sourceFps": 30,
-  "sourceFingerprint": "a25224927906b5b907677658d2fc06a3a1cf70f19c5d3c7ec155409ece662dcc",
+  "sourceFingerprint": "311c8787ef4e0e465113e56fbf9f6f89f1320f573218985b26cf9d12402be163",
   "targetFps": 30,
-  "totalFileSize": 715866
+  "totalFileSize": 716077
 }

@@ -1,0 +1,70 @@
+{
+  "animationId": "preservation-stage-map",
+  "compositionId": "PreservationStageMap",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-02T06:05:30.356Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 179,
+      "frameCount": 180,
+      "id": "stage-position",
+      "number": "01",
+      "startFrame": 0,
+      "title": "三阶段程序位置",
+      "durationMs": 6000,
+      "file": "stage-position.avif",
+      "fileSize": 252426,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "3150afbbe99949a9b5a3c0c247432f345df9ed65b60db27a61ed690b00b3cc53",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "8f0e80e24d8fc1859919d060b676e5bf999c14499f93491054e276931f2ea9e2"
+    },
+    {
+      "endFrame": 359,
+      "frameCount": 180,
+      "id": "security-slope",
+      "number": "02",
+      "startFrame": 180,
+      "title": "担保强度递减",
+      "durationMs": 6000,
+      "file": "security-slope.avif",
+      "fileSize": 273290,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "8723904a198496917a6714b81d5b74058c274263a452095908a6624ce80d7436",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "8f0e80e24d8fc1859919d060b676e5bf999c14499f93491054e276931f2ea9e2"
+    },
+    {
+      "endFrame": 539,
+      "frameCount": 180,
+      "id": "deadline-dials",
+      "number": "03",
+      "startFrame": 360,
+      "title": "关键期限与解除",
+      "durationMs": 6000,
+      "file": "deadline-dials.avif",
+      "fileSize": 423807,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "2d9686bdff2143bcb6a3b95718fc7b985283d5700b17f18d64a3ff8a7b2d21a7",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "8f0e80e24d8fc1859919d060b676e5bf999c14499f93491054e276931f2ea9e2"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "8f0e80e24d8fc1859919d060b676e5bf999c14499f93491054e276931f2ea9e2",
+  "targetFps": 30,
+  "totalFileSize": 949523
+}

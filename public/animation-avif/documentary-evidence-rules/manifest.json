@@ -3,7 +3,7 @@
   "compositionId": "DocumentaryEvidenceRules",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-08-01T12:15:47.336Z",
+  "generatedAt": "2026-08-02T03:33:16.503Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -16,12 +16,13 @@
       "title": "文书真实性规则",
       "durationMs": 6500,
       "file": "authenticity-rule.avif",
-      "fileSize": 459541,
+      "fileSize": 439284,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "21c92e8e617d2e7ea62518bc4e349f7749196c2ae8c20ce9b74a3e1ab04bcd29",
+      "sha256": "81293afca84bb94ae36f0650783bd5fe205979e8ea13c81c0bc19b809f98e505",
       "crf": 35,
-      "quality": 45
+      "quality": 45,
+      "sceneFingerprint": "08cb40c1938ce89d5c07d17ce5e11bb8bcefeb7118d5fdcd08ac23d07476349d"
     },
     {
       "endFrame": 404,
@@ -32,12 +33,13 @@
       "title": "文书提出命令规则",
       "durationMs": 7000,
       "file": "document-order.avif",
-      "fileSize": 387205,
+      "fileSize": 338380,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "86746bcb21546d737c64b5a786b7f0d4e6f7b87f8fb5c9d1092cd7951149a342",
+      "sha256": "c7f92fb2bc5baabb7bcdf9063ad3f97415096f7b840ca909b97406edb01b8e43",
       "crf": 35,
-      "quality": 45
+      "quality": 45,
+      "sceneFingerprint": "a44b41fcefbc78544a125c3543d687da5263cea00e3bcd0f7477e90ec198a035"
     },
     {
       "endFrame": 554,
@@ -48,12 +50,13 @@
       "title": "最佳证据规则",
       "durationMs": 5000,
       "file": "best-evidence.avif",
-      "fileSize": 325623,
+      "fileSize": 321499,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "b4bd6d4080a07f0b919c41b8ca9ace74f9d2dc59629ce6d135ffb632824e07c8",
+      "sha256": "5fc246d64ff7201c4fd8e405c28e9cc649dbab14dc62c50f9c24e63ea2912e5b",
       "crf": 35,
-      "quality": 45
+      "quality": 45,
+      "sceneFingerprint": "b1077f272c8e612c97fe3b394a3122fbe074362a22b0f11d5395f7126122ac2c"
     }
   ],
   "size": {
@@ -61,7 +64,7 @@
     "width": 2560
   },
   "sourceFps": 30,
-  "sourceFingerprint": "12ab3f077ff9aec958c78235d36f1ed7821988ab314f56b0295c59c397bd4f6a",
+  "sourceFingerprint": "8eacf0b9973858c81a5551406961eda913960389267a4500603ae43e9e0a923c",
   "targetFps": 30,
-  "totalFileSize": 1172369
+  "totalFileSize": 1099163
 }

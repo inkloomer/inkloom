@@ -3,7 +3,7 @@
   "compositionId": "StatutoryEvidenceTypes",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-08-01T13:08:20.809Z",
+  "generatedAt": "2026-08-02T03:38:19.538Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -16,12 +16,13 @@
       "title": "先看证明方式",
       "durationMs": 5333,
       "file": "proof-method.avif",
-      "fileSize": 332984,
+      "fileSize": 326128,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "a06df51efb00c6d6b99152276896f223dfdaf2c28d8fb20ffd7eaa25f94ccd3c",
+      "sha256": "34fa066b2f7d498aaeff3f30d614601cc968b2437aa0637e58d39c08d1924118",
       "crf": 35,
-      "quality": 45
+      "quality": 45,
+      "sceneFingerprint": "0f66073ee8241f36aa4f480d475a0786ab908b7478c55845a3f3dc0065d4b5b4"
     },
     {
       "endFrame": 319,
@@ -32,12 +33,13 @@
       "title": "声音图像的介质边界",
       "durationMs": 5333,
       "file": "medium-boundary.avif",
-      "fileSize": 279833,
+      "fileSize": 278953,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "ba76ad55c5e428d895b488619e1df06cb058edc9201c9a6c8d2ae9a486530705",
+      "sha256": "6b57386aeb66ae43a3e057b2e07ba29cf5f8d9a161d5e3054a754562fee73f61",
       "crf": 35,
-      "quality": 45
+      "quality": 45,
+      "sceneFingerprint": "2981f7415308108489b78d9b842cdad1fe4c7deaa69907edc55469ff5dcfa75c"
     },
     {
       "endFrame": 479,
@@ -48,12 +50,13 @@
       "title": "书证规则的适用范围",
       "durationMs": 5333,
       "file": "rule-carryover.avif",
-      "fileSize": 220136,
+      "fileSize": 222847,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "fa020783209b4cde077fd39b04336c60090af0e823274809fb34453cf20bc956",
+      "sha256": "3a311a3e879944a5b46c8d483528f736dbe656c9dadf8addf320de5be6ea397f",
       "crf": 35,
-      "quality": 45
+      "quality": 45,
+      "sceneFingerprint": "9d5917f1e3e94486a01978ae733ab466d6b4a43947c8a2b926cd87a03c3c1e46"
     }
   ],
   "size": {
@@ -61,7 +64,7 @@
     "width": 2560
   },
   "sourceFps": 30,
-  "sourceFingerprint": "27e20aceb77ba885941a52d2daabbf0b0d2362686dcc5c88f533f63ac1558227",
+  "sourceFingerprint": "5129f999c306626bef5ae29300e20b933bb67bb3385c3091565ee45724001962",
   "targetFps": 30,
-  "totalFileSize": 832953
+  "totalFileSize": 827928
 }

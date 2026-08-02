@@ -3,7 +3,7 @@
   "compositionId": "OfficialIntermediary",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-08-01T14:16:37.463Z",
+  "generatedAt": "2026-08-02T05:23:31.732Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -16,12 +16,13 @@
       "title": "国家工作人员身份闸门",
       "durationMs": 6000,
       "file": "identity-gate.avif",
-      "fileSize": 235561,
+      "fileSize": 233410,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "e352517243055840686b6d6559cc4b86152756f86c5d226127314c4f5eda0183",
+      "sha256": "f80ca745be69a7d20f42ef3b600b4bca60212d8c31cc2baf8ddcb55b7a303bc7",
       "crf": 35,
-      "quality": 45
+      "quality": 45,
+      "sceneFingerprint": "0e37457ef9a2dc977dd89fcf1635f2897a5f5e29799ffc694ff5a7311cd42313"
     },
     {
       "endFrame": 389,
@@ -32,12 +33,13 @@
       "title": "100 万资金分流",
       "durationMs": 7000,
       "file": "split-funds.avif",
-      "fileSize": 174566,
+      "fileSize": 198777,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "ace92d71bf9bd2ac794019f2da0e435aab5d8ae27f0212fc5b76163ade08dd09",
+      "sha256": "c3c0f6cf9bf1f2f794d84db0b02804b9ebe9e4b981494474096a21e96965244e",
       "crf": 35,
-      "quality": 45
+      "quality": 45,
+      "sceneFingerprint": "567d85c5b662e463aa715179a6df853ffbb730f7066ae7b8c1e581dd4ea1b3d4"
     },
     {
       "endFrame": 599,
@@ -48,12 +50,13 @@
       "title": "明知与合意",
       "durationMs": 7000,
       "file": "disclosed-intent.avif",
-      "fileSize": 249015,
+      "fileSize": 272759,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "594f3cb91a50ac960928dad706a1a07929d6d1534c97e14dca260ee63a295bbf",
+      "sha256": "e5d57dd727006ee166e9f64293738523380a84fa63b2723ea9f7a2687522b0f5",
       "crf": 35,
-      "quality": 45
+      "quality": 45,
+      "sceneFingerprint": "0a5eb24b217daa9959ea81fa19d02dee7b5e042d5d26e2ee6be027b82cda75c4"
     },
     {
       "endFrame": 809,
@@ -64,12 +67,13 @@
       "title": "隐瞒与独立既遂",
       "durationMs": 7000,
       "file": "concealed-intent.avif",
-      "fileSize": 256955,
+      "fileSize": 286689,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "44b73db1ffcfb5bae96404fbcdb21b26bdd0324b87da640329369b8c938d7539",
+      "sha256": "3a2c5f66e00e09e815a759ed36aeab49b5d4bf6ff493f0b6ce5ac61053329dce",
       "crf": 35,
-      "quality": 45
+      "quality": 45,
+      "sceneFingerprint": "b88d34a04e5b558e9c982c978b4cc71df2eb075210fa85587fd4966c5c390b3d"
     }
   ],
   "size": {
@@ -77,7 +81,7 @@
     "width": 2560
   },
   "sourceFps": 30,
-  "sourceFingerprint": "46fcc238ed21f2da3e06872be52aa47ecf10813cdd4882a2f35993a74db5d875",
+  "sourceFingerprint": "0e7c392e49ecd05ed047a084ca3ab0168e9d56774a4950bcb5148b8470213d57",
   "targetFps": 30,
-  "totalFileSize": 916097
+  "totalFileSize": 991635
 }

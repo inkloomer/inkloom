@@ -1,0 +1,70 @@
+{
+  "animationId": "pre-suit-preservation-transfer",
+  "compositionId": "PreSuitPreservationTransfer",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-02T06:00:21.690Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 179,
+      "frameCount": 180,
+      "id": "jurisdiction-triangle",
+      "number": "01",
+      "startFrame": 0,
+      "title": "诉前保全管辖连接点",
+      "durationMs": 6000,
+      "file": "jurisdiction-triangle.avif",
+      "fileSize": 254879,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "c9c1b92f9d347648e101090604718c3bd61c6efefccee6241f84277f2d493f56",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "29e5cb8af47d78c0d86542eb38b40d0aaefc46670e8515788fe76c14041b38ae"
+    },
+    {
+      "endFrame": 359,
+      "frameCount": 180,
+      "id": "procedure-handoff",
+      "number": "02",
+      "startFrame": 180,
+      "title": "保全手续移送",
+      "durationMs": 6000,
+      "file": "procedure-handoff.avif",
+      "fileSize": 287929,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "3d1377b2d388d48e5b4ea5e1c4401d40268b74fab5767bb601368f1a3cee2efb",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "29e5cb8af47d78c0d86542eb38b40d0aaefc46670e8515788fe76c14041b38ae"
+    },
+    {
+      "endFrame": 539,
+      "frameCount": 180,
+      "id": "jurisdiction-hold",
+      "number": "03",
+      "startFrame": 360,
+      "title": "管辖未定时暂停移送",
+      "durationMs": 6000,
+      "file": "jurisdiction-hold.avif",
+      "fileSize": 303389,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "b646dbc190b5171015f2f4f661c6adbdca71f150cc997334d2cbdc1dceffc143",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "29e5cb8af47d78c0d86542eb38b40d0aaefc46670e8515788fe76c14041b38ae"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "29e5cb8af47d78c0d86542eb38b40d0aaefc46670e8515788fe76c14041b38ae",
+  "targetFps": 30,
+  "totalFileSize": 846197
+}

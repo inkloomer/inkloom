@@ -3,7 +3,7 @@
   "compositionId": "ThirdPartyTypes",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-08-01T10:27:27.672Z",
+  "generatedAt": "2026-08-01T19:57:45.567Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -16,10 +16,13 @@
       "title": "概念",
       "durationMs": 4967,
       "file": "definition.avif",
-      "fileSize": 293676,
+      "fileSize": 307971,
       "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "3e9cef8c498d3452507c1c616b65974873a8e410c709cdeb34df3ac4dcf09b43",
       "crf": 35,
-      "quality": 45
+      "quality": 45,
+      "sceneFingerprint": "5e2b44b43a6d811a0f64864f856794f5f79e9fa68add808fda153627a47d1486"
     },
     {
       "endFrame": 686,
@@ -30,10 +33,13 @@
       "title": "对比",
       "durationMs": 6133,
       "file": "comparison.avif",
-      "fileSize": 313217,
+      "fileSize": 309288,
       "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "b16af2d7e6b69b4eceac1b689d8811b3eec79b1189f7a9ba90471df15c41aa2b",
       "crf": 35,
-      "quality": 45
+      "quality": 45,
+      "sceneFingerprint": "5e2b44b43a6d811a0f64864f856794f5f79e9fa68add808fda153627a47d1486"
     },
     {
       "endFrame": 1136,
@@ -44,10 +50,13 @@
       "title": "权利",
       "durationMs": 7133,
       "file": "rights.avif",
-      "fileSize": 405871,
+      "fileSize": 392446,
       "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "f339d7274b98e7587b1be2c3791c244b9a49d373b80024b83002c0239348da44",
       "crf": 35,
-      "quality": 45
+      "quality": 45,
+      "sceneFingerprint": "5e2b44b43a6d811a0f64864f856794f5f79e9fa68add808fda153627a47d1486"
     },
     {
       "endFrame": 1526,
@@ -58,10 +67,13 @@
       "title": "区分",
       "durationMs": 6133,
       "file": "distinction.avif",
-      "fileSize": 306586,
+      "fileSize": 312187,
       "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "86e7a26aa5953fa0905ca68503495c339f1466b3fac1072abc365c6020d0fa74",
       "crf": 35,
-      "quality": 45
+      "quality": 45,
+      "sceneFingerprint": "5e2b44b43a6d811a0f64864f856794f5f79e9fa68add808fda153627a47d1486"
     },
     {
       "endFrame": 1926,
@@ -72,10 +84,13 @@
       "title": "无独立请求权第三人",
       "durationMs": 6300,
       "file": "no-independent-claim.avif",
-      "fileSize": 307922,
+      "fileSize": 323259,
       "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "c5183b4878c9889aff0c565787ff6319594738cc19145254a596f4daa6bf860f",
       "crf": 35,
-      "quality": 45
+      "quality": 45,
+      "sceneFingerprint": "5e2b44b43a6d811a0f64864f856794f5f79e9fa68add808fda153627a47d1486"
     },
     {
       "endFrame": 2376,
@@ -86,10 +101,13 @@
       "title": "无独三参诉与权利",
       "durationMs": 7133,
       "file": "no-independent-claim-rules.avif",
-      "fileSize": 597224,
+      "fileSize": 609047,
       "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "30c011c1effae2b220df93213d092fa5ff0b08f2f2eda66862a43305199e80c9",
       "crf": 35,
-      "quality": 45
+      "quality": 45,
+      "sceneFingerprint": "5e2b44b43a6d811a0f64864f856794f5f79e9fa68add808fda153627a47d1486"
     }
   ],
   "size": {
@@ -97,6 +115,7 @@
     "width": 2560
   },
   "sourceFps": 60,
+  "sourceFingerprint": "5e2b44b43a6d811a0f64864f856794f5f79e9fa68add808fda153627a47d1486",
   "targetFps": 30,
-  "totalFileSize": 2224496
+  "totalFileSize": 2254198
 }

@@ -3,7 +3,7 @@
   "compositionId": "OccupationalEmbezzlementFlowchart",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-08-01T14:16:49.547Z",
+  "generatedAt": "2026-08-02T04:58:47.959Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -16,12 +16,13 @@
       "title": "A + B1 + B2 + B3",
       "durationMs": 5500,
       "file": "formula-assembly.avif",
-      "fileSize": 178750,
+      "fileSize": 204335,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "09a220a89e59c9fa83515867d2fae5e10b0bf3f55f938ec526dcd66d079ae728",
+      "sha256": "6523e1391ad362c4b698ec6728f8b5f75ebd8d62b928cb574257e207010a990a",
       "crf": 35,
-      "quality": 45
+      "quality": 45,
+      "sceneFingerprint": "d59c4cf69afcacf85bb9d0879cc4c543db37f70c357c8776ecac0723107d6432"
     },
     {
       "endFrame": 344,
@@ -32,12 +33,13 @@
       "title": "特殊主体检验",
       "durationMs": 6000,
       "file": "subject-gate.avif",
-      "fileSize": 127740,
+      "fileSize": 145982,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "27959a24f8a3ebd532e3a506f475d3ca22fb5f59a8daa243dc1640e979b03ae3",
+      "sha256": "1ae15b2f06050d5406b3e69fc2c4fd5327e5f8acf0d9ac714f5d1899734f8026",
       "crf": 35,
-      "quality": 45
+      "quality": 45,
+      "sceneFingerprint": "d59c4cf69afcacf85bb9d0879cc4c543db37f70c357c8776ecac0723107d6432"
     },
     {
       "endFrame": 554,
@@ -48,12 +50,13 @@
       "title": "单位财物与职务便利",
       "durationMs": 7000,
       "file": "property-duty-gates.avif",
-      "fileSize": 214597,
+      "fileSize": 231245,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "b3464d4cc4d2b7d65716ddaab64c486e4ebba095b73bd912728214957084c6b2",
+      "sha256": "30dfa1ee1322c56eb6b1e29c1e5b7ed5c173e55dd4f89ec7985c6da8aee15833",
       "crf": 35,
-      "quality": 45
+      "quality": 45,
+      "sceneFingerprint": "d59c4cf69afcacf85bb9d0879cc4c543db37f70c357c8776ecac0723107d6432"
     }
   ],
   "size": {
@@ -61,7 +64,7 @@
     "width": 2560
   },
   "sourceFps": 30,
-  "sourceFingerprint": "6fd6466864dac5b1f5bf9a258b17fb9b1e3aee4daf39deabf836544b24e02d7c",
+  "sourceFingerprint": "d59c4cf69afcacf85bb9d0879cc4c543db37f70c357c8776ecac0723107d6432",
   "targetFps": 30,
-  "totalFileSize": 521087
+  "totalFileSize": 581562
 }

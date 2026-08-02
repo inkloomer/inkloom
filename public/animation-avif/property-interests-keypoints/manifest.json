@@ -3,7 +3,7 @@
   "compositionId": "PropertyInterestsKeypoints",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-08-01T14:21:32.571Z",
+  "generatedAt": "2026-08-02T04:59:41.603Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -16,12 +16,13 @@
       "title": "财产性利益的损失与获益",
       "durationMs": 6000,
       "file": "claim-exchange.avif",
-      "fileSize": 325118,
+      "fileSize": 322262,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "91187933b5f5add4ba3763f1b5847878fa8f6c35bd4520a5d68dbe2628bcb600",
+      "sha256": "ccd0e256fb28bee24a804a8a8af2c3684cf7ad31765afbbf318c2cd5f96ec0c9",
       "crf": 35,
-      "quality": 45
+      "quality": 45,
+      "sceneFingerprint": "c6e450c7017186468cc90785ecee89df8961ed380da7ecdb3afe4c95c7643eb1"
     },
     {
       "endFrame": 389,
@@ -32,12 +33,13 @@
       "title": "三类债权保护边界",
       "durationMs": 7000,
       "file": "debt-regimes.avif",
-      "fileSize": 422446,
+      "fileSize": 417306,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "b98aebbcd9093b64fb59ea7f816615b613897fbf657d0c66e11413a2862fb4fe",
+      "sha256": "b4095e9c21fbac0bb96e11afc86a8b03a5be4457ba69958026002d221c2b89dc",
       "crf": 35,
-      "quality": 45
+      "quality": 45,
+      "sceneFingerprint": "c6e450c7017186468cc90785ecee89df8961ed380da7ecdb3afe4c95c7643eb1"
     },
     {
       "endFrame": 569,
@@ -48,12 +50,13 @@
       "title": "现金转化为存款债权",
       "durationMs": 6000,
       "file": "deposit-transformation.avif",
-      "fileSize": 277394,
+      "fileSize": 269092,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "8a211bcf2ffd3ebe77b18d6900a601464cebe3d1744dcfd79cf42ad6d0a1a2f5",
+      "sha256": "1dd9158d32b3dda78d12ab8d4f92abe0b39537308f501fa69998c98c8ac7dea2",
       "crf": 35,
-      "quality": 45
+      "quality": 45,
+      "sceneFingerprint": "c6e450c7017186468cc90785ecee89df8961ed380da7ecdb3afe4c95c7643eb1"
     },
     {
       "endFrame": 764,
@@ -64,12 +67,13 @@
       "title": "电力与网络行为定性",
       "durationMs": 6500,
       "file": "utility-classification.avif",
-      "fileSize": 348972,
+      "fileSize": 340947,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "bb66a8151029c8f2f986d0f665282500dab9e765dfe6fecc64f676aa374a1c53",
+      "sha256": "bf09427a0ee65baac510822938e8bbac6cbdce1d7d5e19aef17a47f9674849a3",
       "crf": 35,
-      "quality": 45
+      "quality": 45,
+      "sceneFingerprint": "c6e450c7017186468cc90785ecee89df8961ed380da7ecdb3afe4c95c7643eb1"
     },
     {
       "endFrame": 974,
@@ -80,12 +84,13 @@
       "title": "非法占有与非法请求权",
       "durationMs": 7000,
       "file": "illegal-possession-boundary.avif",
-      "fileSize": 365639,
+      "fileSize": 368080,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "e7b5d5734bccd3053201e9fde84dc5b6749fe37f9ae2306622044ed92cc39a36",
+      "sha256": "4c5fafa7134a60ea8d2b0649087138ef5946c2f7a0e332bf209b7b81f05ec6da",
       "crf": 35,
-      "quality": 45
+      "quality": 45,
+      "sceneFingerprint": "c6e450c7017186468cc90785ecee89df8961ed380da7ecdb3afe4c95c7643eb1"
     }
   ],
   "size": {
@@ -93,7 +98,7 @@
     "width": 2560
   },
   "sourceFps": 30,
-  "sourceFingerprint": "557576856d8a6472d927ca53bf715c828be67b3a475c328a8c3332371cc8f8b2",
+  "sourceFingerprint": "c6e450c7017186468cc90785ecee89df8961ed380da7ecdb3afe4c95c7643eb1",
   "targetFps": 30,
-  "totalFileSize": 1739569
+  "totalFileSize": 1717687
 }

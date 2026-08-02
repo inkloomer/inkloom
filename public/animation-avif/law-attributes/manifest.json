@@ -1,11 +1,11 @@
 {
   "animationId": "law-attributes",
   "compositionId": "LawAttributes",
-  "crf": 42,
+  "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-07-31T16:16:26.570Z",
+  "generatedAt": "2026-08-01T19:19:57.155Z",
   "loopCount": 1,
-  "quality": 33,
+  "quality": 45,
   "scenes": [
     {
       "endFrame": 165,
@@ -16,10 +16,13 @@
       "title": "四重属性，四个角度",
       "durationMs": 5533,
       "file": "overview.avif",
-      "fileSize": 150020,
+      "fileSize": 283597,
       "format": "avif",
-      "crf": 42,
-      "quality": 33
+      "pixelFormat": "gbrp",
+      "sha256": "fb378a57193a52b7169a2568c7ee650cfaf64b126524434927b545cf6b37a567",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "3f4cd59f827cd1ffce1047f21f41b6cd603a9908862af6f678d46b111d68d949"
     },
     {
       "endFrame": 585,
@@ -30,10 +33,13 @@
       "title": "四重属性的判断依据",
       "durationMs": 13533,
       "file": "standard.avif",
-      "fileSize": 146996,
+      "fileSize": 252034,
       "format": "avif",
-      "crf": 42,
-      "quality": 33
+      "pixelFormat": "gbrp",
+      "sha256": "f00202c6256751b8af6995e0c208056922f6252a3949a544b437396412d34486",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "3f4cd59f827cd1ffce1047f21f41b6cd603a9908862af6f678d46b111d68d949"
     },
     {
       "endFrame": 885,
@@ -44,17 +50,21 @@
       "title": "四重属性速记",
       "durationMs": 9533,
       "file": "recap.avif",
-      "fileSize": 196555,
+      "fileSize": 350658,
       "format": "avif",
-      "crf": 42,
-      "quality": 33
+      "pixelFormat": "gbrp",
+      "sha256": "4a0e4ef1ac859bb9e95172b51fb430c31b5b0098b300b9a8fe1981d9dd79a0da",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "3f4cd59f827cd1ffce1047f21f41b6cd603a9908862af6f678d46b111d68d949"
     }
   ],
   "size": {
-    "height": 1080,
-    "width": 1920
+    "height": 1440,
+    "width": 2560
   },
   "sourceFps": 30,
+  "sourceFingerprint": "3f4cd59f827cd1ffce1047f21f41b6cd603a9908862af6f678d46b111d68d949",
   "targetFps": 30,
-  "totalFileSize": 493571
+  "totalFileSize": 886289
 }

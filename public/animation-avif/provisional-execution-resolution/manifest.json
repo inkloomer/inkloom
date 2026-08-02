@@ -1,0 +1,70 @@
+{
+  "animationId": "provisional-execution-resolution",
+  "compositionId": "ProvisionalExecutionResolution",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-02T06:09:22.629Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 179,
+      "frameCount": 180,
+      "id": "civil-and-labor-routes",
+      "number": "01",
+      "startFrame": 0,
+      "title": "民诉与劳动仲裁路径",
+      "durationMs": 6000,
+      "file": "civil-and-labor-routes.avif",
+      "fileSize": 222661,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "07c34380c35987077ec67ca77624b44037b067c6dd483ed4191cc513d662c4b8",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "0a547e7e6ee4bb98af283767cfcd1ace480a6256e8798fca3ff86f0dd561b07a"
+    },
+    {
+      "endFrame": 359,
+      "frameCount": 180,
+      "id": "winning-resolution",
+      "number": "02",
+      "startFrame": 180,
+      "title": "胜诉后的确认",
+      "durationMs": 6000,
+      "file": "winning-resolution.avif",
+      "fileSize": 213817,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "c47fddcd9c70cf33be194a780a51a5fb1d54fe600cb4f00a0320df1327b7f7d4",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "0a547e7e6ee4bb98af283767cfcd1ace480a6256e8798fca3ff86f0dd561b07a"
+    },
+    {
+      "endFrame": 554,
+      "frameCount": 195,
+      "id": "losing-reversal",
+      "number": "03",
+      "startFrame": 360,
+      "title": "败诉后的执行回转",
+      "durationMs": 6500,
+      "file": "losing-reversal.avif",
+      "fileSize": 213560,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "c08d5a7b2e97fbd1aa7d99e2c69223b41a3ff2199bfa301c5d03dc78915963eb",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "0a547e7e6ee4bb98af283767cfcd1ace480a6256e8798fca3ff86f0dd561b07a"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "0a547e7e6ee4bb98af283767cfcd1ace480a6256e8798fca3ff86f0dd561b07a",
+  "targetFps": 30,
+  "totalFileSize": 650038
+}

@@ -3,7 +3,7 @@
   "compositionId": "ProofFilingInvestigation",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-08-01T14:16:48.724Z",
+  "generatedAt": "2026-08-02T03:44:26.010Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -16,12 +16,13 @@
       "title": "不同程序的举证期限",
       "durationMs": 6000,
       "file": "deadline-routes.avif",
-      "fileSize": 262222,
+      "fileSize": 262312,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "3469fa09c7ee7197b82be90d34e69d1ac4fac0441e1e9068f1292d6ea2538e8a",
+      "sha256": "f0eeb72a60d1047cadda2b526f5d55eabdc39b83333fed80fd1caa97f8026d58",
       "crf": 35,
-      "quality": 45
+      "quality": 45,
+      "sceneFingerprint": "39b080f490adb419f4c68269ef7eb88a69d6a1181a2e0458e7f73c1633abc285"
     },
     {
       "endFrame": 344,
@@ -32,12 +33,13 @@
       "title": "举证期限的延长",
       "durationMs": 5500,
       "file": "extension-bridge.avif",
-      "fileSize": 288145,
+      "fileSize": 285565,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "6a349bcf714f18faccecf0c4efd7545f30986a1ddff2f7a5a35a2db99b28cbcf",
+      "sha256": "6014af1bfc5b360b7162b32c907f4677e3af2a71d073f4c3af198ebb0b1cfe17",
       "crf": 35,
-      "quality": 45
+      "quality": 45,
+      "sceneFingerprint": "39b080f490adb419f4c68269ef7eb88a69d6a1181a2e0458e7f73c1633abc285"
     },
     {
       "endFrame": 584,
@@ -48,12 +50,13 @@
       "title": "逾期证据的四路后果",
       "durationMs": 8000,
       "file": "late-evidence-switch.avif",
-      "fileSize": 460910,
+      "fileSize": 438486,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "875dfbf8b0d1fd832c3fb55b9b7deaaedb6e88ed6c888b48a38b2ba983b40d01",
+      "sha256": "9aab8f1e87625a0313ba0f83af8094f3f624c51da08629b735b80e25e9777201",
       "crf": 35,
-      "quality": 45
+      "quality": 45,
+      "sceneFingerprint": "39b080f490adb419f4c68269ef7eb88a69d6a1181a2e0458e7f73c1633abc285"
     },
     {
       "endFrame": 809,
@@ -64,12 +67,13 @@
       "title": "法院调查取证的边界",
       "durationMs": 7500,
       "file": "court-collection-boundary.avif",
-      "fileSize": 459406,
+      "fileSize": 438938,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "049e1e87427e655b4c7ae0a9707d8aa25604b06597d4900b8c6a669090e13944",
+      "sha256": "d5ccd7ecd19f55fbb5f6fa9fa7906870976d411298e1f6724ada8a3657f0ff4e",
       "crf": 35,
-      "quality": 45
+      "quality": 45,
+      "sceneFingerprint": "39b080f490adb419f4c68269ef7eb88a69d6a1181a2e0458e7f73c1633abc285"
     }
   ],
   "size": {
@@ -77,7 +81,7 @@
     "width": 2560
   },
   "sourceFps": 30,
-  "sourceFingerprint": "b564f2e115c99dec183b8c720b2f8114359200a56eb26e4a3f2a1dc8cff19d00",
+  "sourceFingerprint": "39b080f490adb419f4c68269ef7eb88a69d6a1181a2e0458e7f73c1633abc285",
   "targetFps": 30,
-  "totalFileSize": 1470683
+  "totalFileSize": 1425301
 }

@@ -3,7 +3,7 @@
   "compositionId": "EvidenceReview",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-08-01T14:20:48.652Z",
+  "generatedAt": "2026-08-02T03:43:03.941Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -16,12 +16,13 @@
       "title": "证据先通过质证门",
       "durationMs": 6500,
       "file": "cross-examination-gate.avif",
-      "fileSize": 323055,
+      "fileSize": 309116,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "640de187e9b7b005c8d697d5f3037e8e37dc6a52a34066b1850b8535402c4a74",
+      "sha256": "183267dec8573f5910642e20e118a60d6330e9a4ae0fa9d78d3210f32b3cb45a",
       "crf": 35,
-      "quality": 45
+      "quality": 45,
+      "sceneFingerprint": "ec1e05a1592bcd07d471eaab38183cc17bbf36086ad8970289aae55fd82260f3"
     },
     {
       "endFrame": 389,
@@ -32,12 +33,13 @@
       "title": "非法证据排除规则",
       "durationMs": 6500,
       "file": "illegal-evidence-sieve.avif",
-      "fileSize": 364349,
+      "fileSize": 366664,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "dad4072b577cc607a42ac029c8e3a76206b78ed5cf39ae063f535384a17aac7e",
+      "sha256": "a2aceb345639c3e2fd1d5d0eb059a85b8bbfc688b2084b134faf7b816776c514",
       "crf": 35,
-      "quality": 45
+      "quality": 45,
+      "sceneFingerprint": "ec1e05a1592bcd07d471eaab38183cc17bbf36086ad8970289aae55fd82260f3"
     },
     {
       "endFrame": 599,
@@ -48,12 +50,13 @@
       "title": "证据能力与证明力",
       "durationMs": 7000,
       "file": "capacity-and-weight.avif",
-      "fileSize": 493185,
+      "fileSize": 452402,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "d19f112d557e41bb7c305d341ea649d6cdf42d8c202e5ea620eeec45c3cfed13",
+      "sha256": "8256ea19dd7e6109b8bafe53b14bed7b371137acf0be17783ef60b79a48b0aad",
       "crf": 35,
-      "quality": 45
+      "quality": 45,
+      "sceneFingerprint": "ec1e05a1592bcd07d471eaab38183cc17bbf36086ad8970289aae55fd82260f3"
     },
     {
       "endFrame": 824,
@@ -64,12 +67,13 @@
       "title": "五类证据需要补强",
       "durationMs": 7500,
       "file": "corroboration-ring.avif",
-      "fileSize": 324654,
+      "fileSize": 320166,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "55249d6a0120cea33cee70be6b8440ffe0ad3b82817a059bf22d1be78b072153",
+      "sha256": "d87f007dfc4a2a518dc1182c0f86901b05203f43118a3be9b3c28a447ff8a5b3",
       "crf": 35,
-      "quality": 45
+      "quality": 45,
+      "sceneFingerprint": "ec1e05a1592bcd07d471eaab38183cc17bbf36086ad8970289aae55fd82260f3"
     }
   ],
   "size": {
@@ -77,7 +81,7 @@
     "width": 2560
   },
   "sourceFps": 30,
-  "sourceFingerprint": "9336d606deb9a27a49c2e6a37f4bbdb592ab169be51eb5d7e7f855e56b85506b",
+  "sourceFingerprint": "ec1e05a1592bcd07d471eaab38183cc17bbf36086ad8970289aae55fd82260f3",
   "targetFps": 30,
-  "totalFileSize": 1505243
+  "totalFileSize": 1448348
 }

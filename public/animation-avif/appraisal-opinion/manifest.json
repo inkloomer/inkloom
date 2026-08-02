@@ -3,7 +3,7 @@
   "compositionId": "AppraisalOpinion",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-08-01T13:11:45.863Z",
+  "generatedAt": "2026-08-02T03:31:32.878Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -16,12 +16,13 @@
       "title": "鉴定的启动",
       "durationMs": 6333,
       "file": "initiation.avif",
-      "fileSize": 405712,
+      "fileSize": 379264,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "722e69cab5b23f1d58444a45564924a080daaf416fd0d1c216aec602c09374f6",
+      "sha256": "ab1c5439143428a899dd31146a35884f8ee38aa889f1516e5ab6775a90b781d4",
       "crf": 35,
-      "quality": 45
+      "quality": 45,
+      "sceneFingerprint": "76c685c01a2f1ddaba8ee0e680dbfe2a2d2d5912df887c406d101d5d05679513"
     },
     {
       "endFrame": 379,
@@ -32,12 +33,13 @@
       "title": "鉴定人和材料",
       "durationMs": 6333,
       "file": "preparation.avif",
-      "fileSize": 361119,
+      "fileSize": 347348,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "42533d57c012e32d7bf077799c5589ff5cf1a114e28c1bc1b1a9e34389c211cf",
+      "sha256": "a26e189b8e3dc3bc5e3a9c7ca4680946ed17f75bdee4b2e2c2d9faaa6781c1e4",
       "crf": 35,
-      "quality": 45
+      "quality": 45,
+      "sceneFingerprint": "a2e7184a861dae997c03f44c9d7c7635b45f60b7c2d49638c21805824a131239"
     },
     {
       "endFrame": 569,
@@ -48,12 +50,13 @@
       "title": "出庭费用与拒不出庭后果",
       "durationMs": 6333,
       "file": "appearance-consequences.avif",
-      "fileSize": 398971,
+      "fileSize": 376173,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "34d746ead90c5927a00f7113fdb728cd34b3d5e1fb8d24d66eec865965f8d2bd",
+      "sha256": "c8f07883fc7a94dad72ecfacdc784a75dae31119f7453f0cbf1d91ebfce7f41f",
       "crf": 35,
-      "quality": 45
+      "quality": 45,
+      "sceneFingerprint": "cb6787d95e2b9e9d3c1e15edf99db8a8748be74de69c582634a25daee9b8d50b"
     }
   ],
   "size": {
@@ -61,7 +64,7 @@
     "width": 2560
   },
   "sourceFps": 30,
-  "sourceFingerprint": "07898d16be9e6cc9d81ef307a5d2831e6ad0fc50dd8a36457afc1f86c1c6d1df",
+  "sourceFingerprint": "a5fbf6d33fa7baa7a163e0406986cdf3af29fd98b2538762a2b2345bef16180d",
   "targetFps": 30,
-  "totalFileSize": 1165802
+  "totalFileSize": 1102785
 }

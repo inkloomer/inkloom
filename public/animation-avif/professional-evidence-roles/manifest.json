@@ -3,7 +3,7 @@
   "compositionId": "ProfessionalEvidenceRoles",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-08-01T13:13:34.671Z",
+  "generatedAt": "2026-08-02T03:37:39.875Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -16,12 +16,13 @@
       "title": "三类人员分别帮助谁",
       "durationMs": 6000,
       "file": "role-targets.avif",
-      "fileSize": 327747,
+      "fileSize": 313109,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "fe0cd6dd8d4d155bc4fd8eecfcfdb55d79e672a23cd0de5f190fc568183363e4",
+      "sha256": "29240127de27d659b28af9ee6ef4afff0040e8f51bf024b14b2bc4c0da0ca605",
       "crf": 35,
-      "quality": 45
+      "quality": 45,
+      "sceneFingerprint": "be4f887c59b426612512281ebf1b886611f84505990348fe808a2e26b917954b"
     },
     {
       "endFrame": 359,
@@ -32,12 +33,13 @@
       "title": "启动与回避",
       "durationMs": 6000,
       "file": "initiation-recusal.avif",
-      "fileSize": 368102,
+      "fileSize": 355655,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "3a22a9b24270306862a85bbac27dd7bcfe92d3a49a7c0b6f6e848d3beb51bcbe",
+      "sha256": "71dfee498e3c5f009796df8d1630b71de70ce6994d5c0ba8a385cbaee6b8c038",
       "crf": 35,
-      "quality": 45
+      "quality": 45,
+      "sceneFingerprint": "9e1c74b986877de3ffde5e900a2c6836a89c75e6a64dbae7ce3b0e8d60ed8772"
     },
     {
       "endFrame": 539,
@@ -48,12 +50,13 @@
       "title": "自行委托鉴定意见书",
       "durationMs": 6000,
       "file": "private-opinion.avif",
-      "fileSize": 328796,
+      "fileSize": 329917,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "3d5bdbae82767fd15947d3b498c4d5b3ed0f8a053761176a2cad66be746a6561",
+      "sha256": "55540259638fbead2c35e66bc3e496631bc56c6df0dc0a27926c03b97333c50e",
       "crf": 35,
-      "quality": 45
+      "quality": 45,
+      "sceneFingerprint": "167d3696fb099a64cfcad4fcd23bafd540471a81bf6514dc6e09b2f74ac6bdb7"
     }
   ],
   "size": {
@@ -61,7 +64,7 @@
     "width": 2560
   },
   "sourceFps": 30,
-  "sourceFingerprint": "e6cbb12b3f77f67cd06411b5798d6e0848378c4476f09e17bdaebcdc69035a89",
+  "sourceFingerprint": "d9eef2c6d4bdcdfa202951eaa21bd5c04d5d51b6a900e8788738a7c0fc959ef3",
   "targetFps": 30,
-  "totalFileSize": 1024645
+  "totalFileSize": 998681
 }

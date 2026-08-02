@@ -1,74 +1,87 @@
 {
   "animationId": "third-party-revocation",
   "compositionId": "ThirdPartyRevocation",
-  "crf": 42,
+  "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-07-31T17:04:33.968Z",
+  "generatedAt": "2026-08-01T19:54:49.530Z",
   "loopCount": 1,
-  "quality": 33,
+  "quality": 45,
   "scenes": [
     {
       "endFrame": 289,
-      "frameCount": 290,
+      "frameCount": 145,
       "id": "concept",
       "number": "01",
       "startFrame": 0,
       "title": "概念",
       "durationMs": 4833,
       "file": "concept.avif",
-      "fileSize": 171781,
+      "fileSize": 292257,
       "format": "avif",
-      "crf": 42,
-      "quality": 33
+      "pixelFormat": "gbrp",
+      "sha256": "e5ef5b605166ae7d727a32a66eaa5552cb387866d718c9041327b6fc951540e0",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "0ee864fd544997549fc1b7b521cd332b5a31988a2029b8546f921ef76b1b819c"
     },
     {
       "endFrame": 709,
-      "frameCount": 397,
+      "frameCount": 199,
       "id": "conditions",
       "number": "02",
       "startFrame": 313,
       "title": "条件",
-      "durationMs": 6617,
+      "durationMs": 6633,
       "file": "conditions.avif",
-      "fileSize": 330232,
+      "fileSize": 480829,
       "format": "avif",
-      "crf": 42,
-      "quality": 33
+      "pixelFormat": "gbrp",
+      "sha256": "1758eb194d76aeab94348b12e9d977b0afaa5484d562d13c9b7258e0801f0134",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "0ee864fd544997549fc1b7b521cd332b5a31988a2029b8546f921ef76b1b819c"
     },
     {
       "endFrame": 1099,
-      "frameCount": 367,
+      "frameCount": 184,
       "id": "procedure",
       "number": "03",
       "startFrame": 733,
       "title": "程序",
-      "durationMs": 6117,
+      "durationMs": 6133,
       "file": "procedure.avif",
-      "fileSize": 166538,
+      "fileSize": 290001,
       "format": "avif",
-      "crf": 42,
-      "quality": 33
+      "pixelFormat": "gbrp",
+      "sha256": "0eb692cecdda984766b97f52e4c05c9cd4c177ca31cb7554676bfcca15172342",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "0ee864fd544997549fc1b7b521cd332b5a31988a2029b8546f921ef76b1b819c"
     },
     {
       "endFrame": 1509,
-      "frameCount": 387,
+      "frameCount": 194,
       "id": "classification",
       "number": "04",
       "startFrame": 1123,
       "title": "结果",
-      "durationMs": 6450,
+      "durationMs": 6467,
       "file": "classification.avif",
-      "fileSize": 244479,
+      "fileSize": 389444,
       "format": "avif",
-      "crf": 42,
-      "quality": 33
+      "pixelFormat": "gbrp",
+      "sha256": "d8dc4d4cecda3da08710127a3b9ea29ed488615849fb10a189d5497cc6959c27",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "0ee864fd544997549fc1b7b521cd332b5a31988a2029b8546f921ef76b1b819c"
     }
   ],
   "size": {
-    "height": 1080,
-    "width": 1920
+    "height": 1440,
+    "width": 2560
   },
   "sourceFps": 60,
-  "targetFps": 60,
-  "totalFileSize": 913030
+  "sourceFingerprint": "0ee864fd544997549fc1b7b521cd332b5a31988a2029b8546f921ef76b1b819c",
+  "targetFps": 30,
+  "totalFileSize": 1452531
 }

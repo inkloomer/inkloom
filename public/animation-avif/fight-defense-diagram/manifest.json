@@ -3,7 +3,7 @@
   "compositionId": "FightDefenseDiagram",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-08-01T14:11:35.685Z",
+  "generatedAt": "2026-08-02T05:16:17.209Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -13,15 +13,16 @@
       "id": "mutual-intent",
       "number": "01",
       "startFrame": 0,
-      "title": "双方均有侵害意图",
+      "title": "相互侵害意图锁定",
       "durationMs": 6000,
       "file": "mutual-intent.avif",
-      "fileSize": 178062,
+      "fileSize": 177291,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "b0211fe1ce133158b78eec66efec7663fba9f80fbf08e86b8201aaaa5aa4f5e7",
+      "sha256": "f98c5638a9c24e29b89f021c28474bb9677368512f7faafa0da039613179ed0f",
       "crf": 35,
-      "quality": 45
+      "quality": 45,
+      "sceneFingerprint": "2c0f1a7e8796008cf31e4d93a5bcb46d8455e5b328de80f62c888eaf60974ddd"
     },
     {
       "endFrame": 374,
@@ -29,15 +30,16 @@
       "id": "one-sided-attack",
       "number": "02",
       "startFrame": 180,
-      "title": "单方侵害的定性分流",
+      "title": "单方攻击，结论分流",
       "durationMs": 6500,
       "file": "one-sided-attack.avif",
-      "fileSize": 194954,
+      "fileSize": 181507,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "e0e1a5849865902f4143fc28d52fb0485d957a06134478d0e622eaf1998087e5",
+      "sha256": "d24222e9a7994e1f1bcc539246a33ba465285756e337a1f5c420e04e356b7fe5",
       "crf": 35,
-      "quality": 45
+      "quality": 45,
+      "sceneFingerprint": "40e52f8f414df5c110b70a4cb5891fe3ded3721a136cab17fe07f660eb946634"
     },
     {
       "endFrame": 554,
@@ -45,15 +47,16 @@
       "id": "headcount-reversal",
       "number": "03",
       "startFrame": 375,
-      "title": "人数反转不改变防卫性质",
+      "title": "人数反转，性质不反转",
       "durationMs": 6000,
       "file": "headcount-reversal.avif",
-      "fileSize": 190005,
+      "fileSize": 191901,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "035b0d52212452b059524e4bd3dc0b78a907378199bd2483cc2250b08b94b2fe",
+      "sha256": "c9085c0c99ba99b180fe8131a813bf1eb7fa08f534739fe09cf660d42c94b354",
       "crf": 35,
-      "quality": 45
+      "quality": 45,
+      "sceneFingerprint": "6a040c8f5d5c83ed84bad2e04a5b639b615551831d5d3352a97754167e56f14e"
     }
   ],
   "size": {
@@ -61,7 +64,7 @@
     "width": 2560
   },
   "sourceFps": 30,
-  "sourceFingerprint": "d6561aa4bf746b5fb44499737bc5ebc1fb176546eb598006aee0c7534481db53",
+  "sourceFingerprint": "17b40d1549c740a1ed696963bc884438cfa7898a67ff21dac1bd8f43fc0d90cf",
   "targetFps": 30,
-  "totalFileSize": 563021
+  "totalFileSize": 550699
 }

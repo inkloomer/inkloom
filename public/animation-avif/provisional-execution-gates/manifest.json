@@ -1,0 +1,70 @@
+{
+  "animationId": "provisional-execution-gates",
+  "compositionId": "ProvisionalExecutionGates",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-02T06:07:22.210Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 194,
+      "frameCount": 195,
+      "id": "eligible-claims",
+      "number": "01",
+      "startFrame": 0,
+      "title": "适用请求类型",
+      "durationMs": 6500,
+      "file": "eligible-claims.avif",
+      "fileSize": 330389,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "aabc1e72a8b24d5451a4deb5169ae61589ea8c940be46e25ddea1676f2adca19",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "5fb0093c87983d2faee4fa289d683c28820fd430a38ce1968d79757278273590"
+    },
+    {
+      "endFrame": 404,
+      "frameCount": 210,
+      "id": "four-gates",
+      "number": "02",
+      "startFrame": 195,
+      "title": "四项准入条件",
+      "durationMs": 7000,
+      "file": "four-gates.avif",
+      "fileSize": 323387,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "8d6ff45ad4d6619edcf65dec2551091e21f64f76d75570146788f97cfb279d9b",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "5fb0093c87983d2faee4fa289d683c28820fd430a38ce1968d79757278273590"
+    },
+    {
+      "endFrame": 584,
+      "frameCount": 180,
+      "id": "scope-and-security",
+      "number": "03",
+      "startFrame": 405,
+      "title": "范围与担保",
+      "durationMs": 6000,
+      "file": "scope-and-security.avif",
+      "fileSize": 327260,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "bd67c7ccf72bcde3da9da860092e2b4f276e04a49b0e5fc5acd1783adb5cb473",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "5fb0093c87983d2faee4fa289d683c28820fd430a38ce1968d79757278273590"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "5fb0093c87983d2faee4fa289d683c28820fd430a38ce1968d79757278273590",
+  "targetFps": 30,
+  "totalFileSize": 981036
+}

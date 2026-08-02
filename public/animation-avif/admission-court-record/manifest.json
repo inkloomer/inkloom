@@ -3,7 +3,7 @@
   "compositionId": "AdmissionCourtRecord",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-08-01T13:36:38.196Z",
+  "generatedAt": "2026-08-02T03:29:15.438Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -16,12 +16,13 @@
       "title": "自认的场合",
       "durationMs": 4500,
       "file": "admission-occasions.avif",
-      "fileSize": 427241,
+      "fileSize": 420815,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "c2bd26180a2ab2c219a793dcbd2ceb47f7c20684ad3418782fc8089382b5eef1",
+      "sha256": "f9aa3f0ff41c8dd7cc7e5807e7b9ad3e0ffcddeb38fb300e72cdb27035f916df",
       "crf": 35,
-      "quality": 45
+      "quality": 45,
+      "sceneFingerprint": "2c95d178f8b5e5f7f6471346f6c8eb698102ddfdc499e11a90cc139708a2fb24"
     },
     {
       "endFrame": 284,
@@ -32,12 +33,13 @@
       "title": "自认的效果",
       "durationMs": 5000,
       "file": "admission-effect.avif",
-      "fileSize": 385838,
+      "fileSize": 381532,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "98d3720fb7fce3461862614dacad7048912ca2470a81ea0079ff421ca5418a76",
+      "sha256": "55fc1236748a5b17eaa17e356c1be430fa0c9cdf0ff732774a193bf9d91ea0d9",
       "crf": 35,
-      "quality": 45
+      "quality": 45,
+      "sceneFingerprint": "73beb0322ab08abaa2f575c8f5309729216ed01b24acbbeaaed46dbb62345701"
     },
     {
       "endFrame": 449,
@@ -48,12 +50,13 @@
       "title": "一票否决",
       "durationMs": 5500,
       "file": "admission-veto.avif",
-      "fileSize": 243038,
+      "fileSize": 255802,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "c566c3c705068e4a9490e2358ee21f6cbf95dc75a73c78626b5d4486da623ff5",
+      "sha256": "c1c2385a276e26b8b6540629ae9e02bb06f6713c0afcfbf07df9bf8e7250fdfa",
       "crf": 35,
-      "quality": 45
+      "quality": 45,
+      "sceneFingerprint": "67d79a8cab39e7673b422bcb3212eecaf76161dfedc318015729267029e251dc"
     },
     {
       "endFrame": 644,
@@ -64,12 +67,13 @@
       "title": "附条件自认",
       "durationMs": 6500,
       "file": "conditional-admission.avif",
-      "fileSize": 406637,
+      "fileSize": 399007,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "8df58be4c4fc1324830441c66615cdbe1d06ef3ca809809a3cd3258ad4a50092",
+      "sha256": "1d45117c2dc4cbcc8d0e97a1e9f4598c5e307abe9d7e5c38630b8f56ce07cf36",
       "crf": 35,
-      "quality": 45
+      "quality": 45,
+      "sceneFingerprint": "253abd0a5adcf63a21b6f263eb2661585eefd46fe41906c9889c11465d7b93e1"
     },
     {
       "endFrame": 839,
@@ -80,12 +84,13 @@
       "title": "撤销与调解妥协",
       "durationMs": 6500,
       "file": "withdrawal-compromise.avif",
-      "fileSize": 518887,
+      "fileSize": 512013,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "01b64fd4d512140f2b1811e133ae6f57bbf3a86ae72f3cf42127602a7b4037e2",
+      "sha256": "aec47441c4628caa8fff242444069f3d3e82eb75301fadf5da35ea5bfc8a250b",
       "crf": 35,
-      "quality": 45
+      "quality": 45,
+      "sceneFingerprint": "341955a74ae4f91989e56d2ac8c4f25ec4c15ee22ead13c5afd9585d7a79567a"
     }
   ],
   "size": {
@@ -93,7 +98,7 @@
     "width": 2560
   },
   "sourceFps": 30,
-  "sourceFingerprint": "a51e3874d538ff27dea005775601b64ecafb87050d9cc85f3688dcd904b29e09",
+  "sourceFingerprint": "d1b2645cf9486d3395c68489dc85f518a34c0ff5fc3c39767f9840697576d736",
   "targetFps": 30,
-  "totalFileSize": 1981641
+  "totalFileSize": 1969169
 }

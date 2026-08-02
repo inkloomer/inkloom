@@ -1,11 +1,11 @@
 {
   "animationId": "basic-principles-triangle",
   "compositionId": "BasicPrinciplesTriangle",
-  "crf": 42,
+  "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-07-31T15:43:18.249Z",
+  "generatedAt": "2026-08-01T19:28:17.410Z",
   "loopCount": 1,
-  "quality": 33,
+  "quality": 45,
   "scenes": [
     {
       "endFrame": 419,
@@ -16,17 +16,21 @@
       "title": "基本原则关系图",
       "durationMs": 14000,
       "file": "relationships.avif",
-      "fileSize": 343185,
+      "fileSize": 603231,
       "format": "avif",
-      "crf": 42,
-      "quality": 33
+      "pixelFormat": "gbrp",
+      "sha256": "46886afbe5da8da007f60b8531649508bbac4aa1183f7a15831ba76f2f89e383",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "539370f17694279e76ebd41d00e44f1d8522ea5e6bda9cb954e70fd2cbcd9ce2"
     }
   ],
   "size": {
-    "height": 1080,
-    "width": 1920
+    "height": 1440,
+    "width": 2560
   },
   "sourceFps": 30,
+  "sourceFingerprint": "539370f17694279e76ebd41d00e44f1d8522ea5e6bda9cb954e70fd2cbcd9ce2",
   "targetFps": 30,
-  "totalFileSize": 343185
+  "totalFileSize": 603231
 }

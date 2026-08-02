@@ -3,7 +3,7 @@
   "compositionId": "CardSellingFundsViewpoint",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-08-01T14:18:57.865Z",
+  "generatedAt": "2026-08-02T04:54:13.063Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -16,12 +16,13 @@
       "title": "事实占有与法律占有",
       "durationMs": 6000,
       "file": "possession-models.avif",
-      "fileSize": 226642,
+      "fileSize": 249954,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "2cbd02c1ac8380043a3355e4fe251a869e15d2f0b92e009397b7960f15441024",
+      "sha256": "bf590b91e9f882b907947d648310ce06c6087abc72ca189aed69be445ec472a7",
       "crf": 35,
-      "quality": 45
+      "quality": 45,
+      "sceneFingerprint": "b69ecb11ef8443d24d0f21c1759db21094ea94461aa06e4f753c30f26a8eeb3a"
     },
     {
       "endFrame": 389,
@@ -32,12 +33,13 @@
       "title": "合法资金处理",
       "durationMs": 7000,
       "file": "lawful-funds.avif",
-      "fileSize": 211499,
+      "fileSize": 237939,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "1ad1550b60c7816505f52ee8fb5f68a0ba84e059fb022a4375c23bbc642d3c07",
+      "sha256": "4433440742c2e870039d07077e7bf26a3a2504c0d789e11176457c210b8ee16d",
       "crf": 35,
-      "quality": 45
+      "quality": 45,
+      "sceneFingerprint": "b69ecb11ef8443d24d0f21c1759db21094ea94461aa06e4f753c30f26a8eeb3a"
     },
     {
       "endFrame": 614,
@@ -48,12 +50,13 @@
       "title": "赃款处理三种观点",
       "durationMs": 7500,
       "file": "illicit-funds.avif",
-      "fileSize": 221880,
+      "fileSize": 242023,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "82516d165c07ecde5e8835349a2a409aef5a2145d2327c13b65be6cad172e83f",
+      "sha256": "fbf9b15dfe49811921c9e44f5038cc3226907bb567c06eb065e7d10798eeac07",
       "crf": 35,
-      "quality": 45
+      "quality": 45,
+      "sceneFingerprint": "b69ecb11ef8443d24d0f21c1759db21094ea94461aa06e4f753c30f26a8eeb3a"
     }
   ],
   "size": {
@@ -61,7 +64,7 @@
     "width": 2560
   },
   "sourceFps": 30,
-  "sourceFingerprint": "f44f21e4e8f5b01fa4b6fe4831892cb97f2ceadf943de737800ffed615fc86c9",
+  "sourceFingerprint": "b69ecb11ef8443d24d0f21c1759db21094ea94461aa06e4f753c30f26a8eeb3a",
   "targetFps": 30,
-  "totalFileSize": 660021
+  "totalFileSize": 729916
 }

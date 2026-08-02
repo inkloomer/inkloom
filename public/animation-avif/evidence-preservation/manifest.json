@@ -3,7 +3,7 @@
   "compositionId": "EvidencePreservation",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-08-01T14:13:49.375Z",
+  "generatedAt": "2026-08-02T03:41:11.880Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -16,12 +16,13 @@
       "title": "证据保全的共同前提",
       "durationMs": 5500,
       "file": "preservation-trigger.avif",
-      "fileSize": 181498,
+      "fileSize": 186779,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "68c3e2e295a498f562f1b4c89d21a222f70465545768fd61599f4b526e975b6e",
+      "sha256": "f1d4b5ef5576a0d1556a4dda4cbf15c1faebb319143799b6d0b15aef2c9ac608",
       "crf": 35,
-      "quality": 45
+      "quality": 45,
+      "sceneFingerprint": "024e8996a2abf8addcfdbac67dac38f74cdaec249be1ac43726351678b9e7458"
     },
     {
       "endFrame": 359,
@@ -32,12 +33,13 @@
       "title": "诉讼中证据保全",
       "durationMs": 6500,
       "file": "during-litigation.avif",
-      "fileSize": 276899,
+      "fileSize": 282997,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "470b63f5db0163872a362798578a9e1c66b39f4dcc8a9b5975fc664ca1cef0db",
+      "sha256": "216b7ba76c5413e592055e5d210879564ec038fc28448ea9c4b7caeea7813fc4",
       "crf": 35,
-      "quality": 45
+      "quality": 45,
+      "sceneFingerprint": "024e8996a2abf8addcfdbac67dac38f74cdaec249be1ac43726351678b9e7458"
     },
     {
       "endFrame": 584,
@@ -48,12 +50,13 @@
       "title": "诉前证据保全",
       "durationMs": 7500,
       "file": "before-litigation.avif",
-      "fileSize": 255049,
+      "fileSize": 267954,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "db50f15ae40e921dd29047dd63544adf5ceb4704e17208ef315492862e338d56",
+      "sha256": "f33edcd2e5f20b25e49c3acfdc9c7e0cbe1994aea1c0fbe1a4fc65274ef4966d",
       "crf": 35,
-      "quality": 45
+      "quality": 45,
+      "sceneFingerprint": "024e8996a2abf8addcfdbac67dac38f74cdaec249be1ac43726351678b9e7458"
     }
   ],
   "size": {
@@ -61,7 +64,7 @@
     "width": 2560
   },
   "sourceFps": 30,
-  "sourceFingerprint": "573f4115eadb8cc93133f17343f13f46dd168a6a5930aa908ec766809a8ac144",
+  "sourceFingerprint": "024e8996a2abf8addcfdbac67dac38f74cdaec249be1ac43726351678b9e7458",
   "targetFps": 30,
-  "totalFileSize": 713446
+  "totalFileSize": 737730
 }

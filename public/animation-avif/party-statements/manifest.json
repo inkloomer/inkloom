@@ -3,7 +3,7 @@
   "compositionId": "PartyStatements",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-08-01T13:15:25.126Z",
+  "generatedAt": "2026-08-02T03:36:23.999Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -16,12 +16,13 @@
       "title": "不得单独定案",
       "durationMs": 5000,
       "file": "corroboration.avif",
-      "fileSize": 140560,
+      "fileSize": 234391,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "6fdb20b9a5ce3d0fdb5ba6e555c67ec1ca911ff86d47451aba404b9524adb9b1",
+      "sha256": "83eb02e9349f45ce0ad3d709b07a9a52147865f3e900030eba4d1af731acd99b",
       "crf": 35,
-      "quality": 45
+      "quality": 45,
+      "sceneFingerprint": "0e4665962068f2e79c03fcc80419b9dddc22bf775ddd66c7aca2adf915767caf"
     },
     {
       "endFrame": 329,
@@ -32,12 +33,13 @@
       "title": "拒绝陈述的不利后果",
       "durationMs": 6000,
       "file": "refusal-conditions.avif",
-      "fileSize": 179150,
+      "fileSize": 184477,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "4f57eaf1ec98f8dd49733c8bb8ad8ed33a62b359b3d0bac7e3c9c1150853993d",
+      "sha256": "142bb087e20d58889311b84587b197a873facd0051f74c6e75747d95fdcce5ce",
       "crf": 35,
-      "quality": 45
+      "quality": 45,
+      "sceneFingerprint": "b6acefff30be07c4b0edd1bc16e6b646be9095610a4fb471ab7047f46ace5c58"
     },
     {
       "endFrame": 479,
@@ -48,12 +50,13 @@
       "title": "拒绝到庭的程序边界",
       "durationMs": 5000,
       "file": "procedural-boundary.avif",
-      "fileSize": 155151,
+      "fileSize": 171146,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "1514ad3d9c257f183cbf42727aa1b65faac53997826e851351a9c24f7386d80e",
+      "sha256": "8a74c416608602b48ca1614b549081273e21a9263f5596b54ffe7986ded9ca13",
       "crf": 35,
-      "quality": 45
+      "quality": 45,
+      "sceneFingerprint": "131b4c0e2e89c19ab4cd734c001042a42becb42f811bd5989903986229073ced"
     }
   ],
   "size": {
@@ -61,7 +64,7 @@
     "width": 2560
   },
   "sourceFps": 30,
-  "sourceFingerprint": "cab34e917a233a6354c4a31c4b4b6e36099786705b1fb49bc719122edb6e87a0",
+  "sourceFingerprint": "2640c46472e31b7fe807abad7491a3b43e266c5c78faf4ce290ae0acc3043573",
   "targetFps": 30,
-  "totalFileSize": 474861
+  "totalFileSize": 590014
 }

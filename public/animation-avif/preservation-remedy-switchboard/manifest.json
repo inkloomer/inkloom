@@ -1,0 +1,70 @@
+{
+  "animationId": "preservation-remedy-switchboard",
+  "compositionId": "PreservationRemedySwitchboard",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-02T06:03:50.339Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 179,
+      "frameCount": 180,
+      "id": "reconsideration",
+      "number": "01",
+      "startFrame": 0,
+      "title": "复议不停止执行",
+      "durationMs": 6000,
+      "file": "reconsideration.avif",
+      "fileSize": 215893,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "d9b3bc233116b64758e6e7c3e986244080f53a1819318ef9c803731852c3072c",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "ab1e8c4f37556a4265c4f7bf63881be13d6f02261e617d678a969c996c01633f"
+    },
+    {
+      "endFrame": 389,
+      "frameCount": 210,
+      "id": "mandatory-release",
+      "number": "02",
+      "startFrame": 180,
+      "title": "应当解除的情形",
+      "durationMs": 7000,
+      "file": "mandatory-release.avif",
+      "fileSize": 267631,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "9046fe7b2e2a9eea4dd0020aab40d7034085b72cf128bd69c837bb1be12fcc27",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "ab1e8c4f37556a4265c4f7bf63881be13d6f02261e617d678a969c996c01633f"
+    },
+    {
+      "endFrame": 569,
+      "frameCount": 180,
+      "id": "security-substitution",
+      "number": "03",
+      "startFrame": 390,
+      "title": "等值担保变更标的",
+      "durationMs": 6000,
+      "file": "security-substitution.avif",
+      "fileSize": 201096,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "19fe36881041587d154207c1789e9bc14364389e5905a082d99b20f123a378e8",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "ab1e8c4f37556a4265c4f7bf63881be13d6f02261e617d678a969c996c01633f"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "ab1e8c4f37556a4265c4f7bf63881be13d6f02261e617d678a969c996c01633f",
+  "targetFps": 30,
+  "totalFileSize": 684620
+}

@@ -3,7 +3,7 @@
   "compositionId": "WitnessTestimony",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-08-01T13:10:05.914Z",
+  "generatedAt": "2026-08-02T03:39:58.921Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -16,12 +16,13 @@
       "title": "证人资格",
       "durationMs": 6000,
       "file": "qualification.avif",
-      "fileSize": 243346,
+      "fileSize": 239104,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "c14db0ca96b3220686f37c362f2d4e5a985caf06c13580ac1ad84e363601ab79",
+      "sha256": "20803a6f9ac761568c9f59a4a7f461411032fde9dbd9ef2d58f5f90f2605f7ed",
       "crf": 35,
-      "quality": 45
+      "quality": 45,
+      "sceneFingerprint": "776ad2f0dc7788c6040291c2d11616c4168cf955c94ff480a075d05e54913711"
     },
     {
       "endFrame": 389,
@@ -32,12 +33,13 @@
       "title": "出庭原则与例外",
       "durationMs": 7000,
       "file": "appearance.avif",
-      "fileSize": 313277,
+      "fileSize": 300084,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "17247f0967fe81093bc2a534aa08437b25273e5bb1ca32affd93f4fce3ad4ec0",
+      "sha256": "eb5b7a35cc0b0af0d1652ce9b913a31e651f6c45149c81ca21c6f0072b087b36",
       "crf": 35,
-      "quality": 45
+      "quality": 45,
+      "sceneFingerprint": "55b1154712dec534764ab513029e5803e14ae85167bd5d01d304daeb632850ec"
     },
     {
       "endFrame": 569,
@@ -48,12 +50,13 @@
       "title": "作证方式与费用",
       "durationMs": 6000,
       "file": "testimony-conduct.avif",
-      "fileSize": 319948,
+      "fileSize": 293332,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "cdf1fac108b499cd8b795d384fb6f4df54a8e4179749329f6324c08bd1feacb7",
+      "sha256": "43a1b7121220e240ebb1547a563801db9572e38e40982e0465474dd9473d1c0d",
       "crf": 35,
-      "quality": 45
+      "quality": 45,
+      "sceneFingerprint": "d8901f3ef2d6341038638bf83b6a95817c7ba2d48799e2963599c41722553ba1"
     }
   ],
   "size": {
@@ -61,7 +64,7 @@
     "width": 2560
   },
   "sourceFps": 30,
-  "sourceFingerprint": "308a53165cccbd6c71bf6c84662bae7d78ac03f59b514a2a7a7f5ed3c47a45fc",
+  "sourceFingerprint": "8e5247e6b4d194c61bf75fadc4b07ab3afebc7410d65ba22e3a36b66309063c7",
   "targetFps": 30,
-  "totalFileSize": 876571
+  "totalFileSize": 832520
 }

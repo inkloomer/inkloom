@@ -1,0 +1,70 @@
+{
+  "animationId": "preservation-asset-measures",
+  "compositionId": "PreservationAssetMeasures",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-02T06:02:14.540Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 179,
+      "frameCount": 180,
+      "id": "ordinary-property",
+      "number": "01",
+      "startFrame": 0,
+      "title": "一般财产保全",
+      "durationMs": 6000,
+      "file": "ordinary-property.avif",
+      "fileSize": 213108,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "b92a902e150475bb1d46f313345706236ff4c200dad84417d3d5014cba1650fd",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "a445fd5a33b36007956c652033ac75641077e0db0038567541c140abee21ddd6"
+    },
+    {
+      "endFrame": 359,
+      "frameCount": 180,
+      "id": "perishable-value",
+      "number": "02",
+      "startFrame": 180,
+      "title": "鲜活易腐物变价",
+      "durationMs": 6000,
+      "file": "perishable-value.avif",
+      "fileSize": 183465,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "e02e3071edb64b13b3eb11b8969ae42c6aa8d0ab6ae4646527519ca45182cef4",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "a445fd5a33b36007956c652033ac75641077e0db0038567541c140abee21ddd6"
+    },
+    {
+      "endFrame": 539,
+      "frameCount": 180,
+      "id": "secured-property",
+      "number": "03",
+      "startFrame": 360,
+      "title": "担保财产与优先权",
+      "durationMs": 6000,
+      "file": "secured-property.avif",
+      "fileSize": 310319,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "8c746eb5e2afddd50d59e0a5a92dd33a689d044753949d7507562ed7891da61d",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "a445fd5a33b36007956c652033ac75641077e0db0038567541c140abee21ddd6"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "a445fd5a33b36007956c652033ac75641077e0db0038567541c140abee21ddd6",
+  "targetFps": 30,
+  "totalFileSize": 706892
+}

@@ -3,7 +3,7 @@
   "compositionId": "StatutoryAgent",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-08-01T09:54:19.331Z",
+  "generatedAt": "2026-08-01T20:00:25.524Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -16,10 +16,13 @@
       "title": "权源",
       "durationMs": 4000,
       "file": "source-of-authority.avif",
-      "fileSize": 181778,
+      "fileSize": 201708,
       "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "3db2878a791dbdb7bc42b27fccebfbe398f25fdb18bc018df2487c93237ddac9",
       "crf": 35,
-      "quality": 45
+      "quality": 45,
+      "sceneFingerprint": "205c22b4d7a742a0847808d9d7ddc7900d6b016d369b82d15a03c431d268f3eb"
     },
     {
       "endFrame": 239,
@@ -30,10 +33,13 @@
       "title": "身份",
       "durationMs": 4000,
       "file": "party-identity.avif",
-      "fileSize": 150195,
+      "fileSize": 174596,
       "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "c8b7085e95c21d99cf11caf2fbdd18e4fce5d2b6bf65e387136c458e2dc8539e",
       "crf": 35,
-      "quality": 45
+      "quality": 45,
+      "sceneFingerprint": "a762a638c1205db154b60604e4559cc12a24604da2f8014670e58236f3122976"
     },
     {
       "endFrame": 359,
@@ -44,10 +50,13 @@
       "title": "裁判对象",
       "durationMs": 4000,
       "file": "judgment-target.avif",
-      "fileSize": 141986,
+      "fileSize": 154197,
       "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "c1db29d035619cf0b31d52fd691eb0ea94f3cc0b2b4c2d25be7bffe6cae8c26b",
       "crf": 35,
-      "quality": 45
+      "quality": 45,
+      "sceneFingerprint": "26684cbf158ac2124ba1ab2444643c973fe56d9f8b340bc36bc60b03f82fb989"
     },
     {
       "endFrame": 479,
@@ -58,10 +67,13 @@
       "title": "死亡后果",
       "durationMs": 4000,
       "file": "death-consequences.avif",
-      "fileSize": 185111,
+      "fileSize": 191029,
       "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "d8e311e469ea6e57d15dc2b27a724ffb2f4e7c04ab7523b0960d5d7a66be346d",
       "crf": 35,
-      "quality": 45
+      "quality": 45,
+      "sceneFingerprint": "6a631e51bd057d57e58bafd11ab6c08ebf82a7bf4b8bf458379f0b0dd7d2430b"
     }
   ],
   "size": {
@@ -69,6 +81,7 @@
     "width": 2560
   },
   "sourceFps": 30,
+  "sourceFingerprint": "5e35647fa6e99fd465fab33e4639e940de75a3834d751857939a39c969e8b0e0",
   "targetFps": 30,
-  "totalFileSize": 659070
+  "totalFileSize": 721530
 }

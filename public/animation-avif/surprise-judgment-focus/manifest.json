@@ -3,7 +3,7 @@
   "compositionId": "SurpriseJudgmentFocus",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-08-01T14:18:34.081Z",
+  "generatedAt": "2026-08-02T03:45:05.699Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -16,12 +16,13 @@
       "title": "法院认定与当事人主张不一致",
       "durationMs": 6000,
       "file": "recognition-mismatch.avif",
-      "fileSize": 382386,
+      "fileSize": 352615,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "2e75ef38ce1e9b6115be992e284fe46e024c5a952817d4f4948f7f581af054bc",
+      "sha256": "46218fa1a2e30bfa80c389568c39fa62fdf1b28020ddddef39b59fd283a6a7b7",
       "crf": 35,
-      "quality": 45
+      "quality": 45,
+      "sceneFingerprint": "ce1fab61f1293ed4273bdd2b29761d26deb9380614210c0ba1ab9b6dc6400505"
     },
     {
       "endFrame": 389,
@@ -32,12 +33,13 @@
       "title": "把不一致列为争议焦点",
       "durationMs": 7000,
       "file": "issue-hearing-path.avif",
-      "fileSize": 217523,
+      "fileSize": 219729,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "c0eff6bc4b2611dca4746668d2b0ae290d075621255f273ce84ad569b8591975",
+      "sha256": "4173434fff47c481e14d66c96f25ad5e3766c5e9a0f4f25dc4a8553a35b21fc0",
       "crf": 35,
-      "quality": 45
+      "quality": 45,
+      "sceneFingerprint": "ce1fab61f1293ed4273bdd2b29761d26deb9380614210c0ba1ab9b6dc6400505"
     },
     {
       "endFrame": 599,
@@ -48,12 +50,13 @@
       "title": "变更诉请与处分边界",
       "durationMs": 7000,
       "file": "disposition-boundary.avif",
-      "fileSize": 383158,
+      "fileSize": 375582,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "a5e07434376e92522ef4c2b94729eb287396c2e122e50b7db43f479801653998",
+      "sha256": "8357b6144d13ebcce44af7a1b3d0f2476fcf9b434e39122cb796e783274ffa65",
       "crf": 35,
-      "quality": 45
+      "quality": 45,
+      "sceneFingerprint": "ce1fab61f1293ed4273bdd2b29761d26deb9380614210c0ba1ab9b6dc6400505"
     }
   ],
   "size": {
@@ -61,7 +64,7 @@
     "width": 2560
   },
   "sourceFps": 30,
-  "sourceFingerprint": "bdf260143c2f4c18db178dc4cc2815a5a4b86e51c0efdbd5a5da2282eff15c8b",
+  "sourceFingerprint": "ce1fab61f1293ed4273bdd2b29761d26deb9380614210c0ba1ab9b6dc6400505",
   "targetFps": 30,
-  "totalFileSize": 983067
+  "totalFileSize": 947926
 }

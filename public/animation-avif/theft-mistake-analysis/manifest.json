@@ -3,7 +3,7 @@
   "compositionId": "TheftMistakeAnalysis",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-08-01T14:14:05.641Z",
+  "generatedAt": "2026-08-02T05:12:41.613Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -16,12 +16,13 @@
       "title": "定罪的主客观对准",
       "durationMs": 6000,
       "file": "awareness-alignment.avif",
-      "fileSize": 252562,
+      "fileSize": 315137,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "9c72d7653e84fab16e22e1e7fd66c03ab36a50f6de96ebc5ed1bf3458c490fa1",
+      "sha256": "fa19948969df28ddb19062411ee98fbd48e09ab4d103dd9b3839cc4d11f0578e",
       "crf": 35,
-      "quality": 45
+      "quality": 45,
+      "sceneFingerprint": "03b8dbfb33814a472621ec470c63ecfa95d15b682be5a5d23a166a872483ad9e"
     },
     {
       "endFrame": 359,
@@ -32,12 +33,13 @@
       "title": "法定刑升格认识",
       "durationMs": 6000,
       "file": "penalty-tier.avif",
-      "fileSize": 209540,
+      "fileSize": 291303,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "36920e169e3605b370fbaa12f0048a82115e7c636b34533bd3d1d3d36590851d",
+      "sha256": "f047d3dede42e8edad4937f3163a64aededace59d483132ade7403af6eb56722",
       "crf": 35,
-      "quality": 45
+      "quality": 45,
+      "sceneFingerprint": "03b8dbfb33814a472621ec470c63ecfa95d15b682be5a5d23a166a872483ad9e"
     },
     {
       "endFrame": 539,
@@ -48,12 +50,13 @@
       "title": "数额未达与犯罪未遂",
       "durationMs": 6000,
       "file": "attempt-risk.avif",
-      "fileSize": 202716,
+      "fileSize": 267068,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "88667b35291636b13a52c161b60f2108bf40e925ae629a21376b3b23cab81b19",
+      "sha256": "f88d7719eacbda650fa0c2e2c94768fb2189c997fc014b7c30fe2fe81cdfffa2",
       "crf": 35,
-      "quality": 45
+      "quality": 45,
+      "sceneFingerprint": "03b8dbfb33814a472621ec470c63ecfa95d15b682be5a5d23a166a872483ad9e"
     },
     {
       "endFrame": 749,
@@ -64,12 +67,13 @@
       "title": "数额巨大未遂与既遂竞合",
       "durationMs": 7000,
       "file": "aggravated-attempt.avif",
-      "fileSize": 215779,
+      "fileSize": 298790,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "ec06d6fd3e50a4564ba21f3d19234ca2a420ef96844c1a835e40074b7b359069",
+      "sha256": "1506fafe9a75efd682106c715f7a37aa88d937ee33f6415111cf0dd5a4e6921d",
       "crf": 35,
-      "quality": 45
+      "quality": 45,
+      "sceneFingerprint": "03b8dbfb33814a472621ec470c63ecfa95d15b682be5a5d23a166a872483ad9e"
     }
   ],
   "size": {
@@ -77,7 +81,7 @@
     "width": 2560
   },
   "sourceFps": 30,
-  "sourceFingerprint": "0710c51c2dc27a7ef28de736ec62054102c93317de28795ac17aead079b68c95",
+  "sourceFingerprint": "03b8dbfb33814a472621ec470c63ecfa95d15b682be5a5d23a166a872483ad9e",
   "targetFps": 30,
-  "totalFileSize": 880597
+  "totalFileSize": 1172298
 }
