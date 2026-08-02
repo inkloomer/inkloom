@@ -23,8 +23,10 @@ const VIDEO_TARGET_FPS = 15;
 // frame. Rendering pages serially keeps that mandatory font gate reliable.
 const RENDER_CONCURRENCY = 1;
 const FONT_READY_TIMEOUT_MS = 120_000;
-const ENCODER_THREADS = 4;
-const SINGLE_WORKER_ENCODER_THREADS = 8;
+// libaom keeps a substantial lookahead buffer per thread at 2560px. Two
+// threads leave enough memory for the renderer and the full CJK font.
+const ENCODER_THREADS = 2;
+const SINGLE_WORKER_ENCODER_THREADS = 2;
 const DEFAULT_JOBS = 2;
 const MAX_JOBS = 4;
 const MEDIA_FORMATS = {
@@ -33,7 +35,11 @@ const MEDIA_FORMATS = {
     defaultWidth: 2560,
     directory: 'animation-avif',
     extension: 'avif',
-    encoderArguments: ({crf, encoderThreads = ENCODER_THREADS}) => ['-c:v', 'libaom-av1', '-crf', String(crf), '-b:v', '0', '-pix_fmt', 'gbrp', '-cpu-used', '6', '-row-mt', '1', '-tiles', '2x2', '-threads', String(encoderThreads)],
+    encoderArguments: ({crf, encoderThreads = ENCODER_THREADS}) => [
+      '-c:v', 'libaom-av1', '-crf', String(crf), '-b:v', '0', '-pix_fmt', 'gbrp',
+      '-cpu-used', '6', '-row-mt', '1', '-tiles', '2x2', '-lag-in-frames', '0',
+      '-auto-alt-ref', '0', '-threads', String(encoderThreads),
+    ],
     inspection: 'ffprobe',
     manifestFormat: 'animated-avif',
     maxFileSize: undefined,
@@ -1584,21 +1590,19 @@ const renderAnimation = async ({animationId, crfs, encoderThreads, force, mediaF
     }
     const scenesToRender = scenes.filter((scene) => !reusableScenes.has(scene.id));
     const publishedScenes = new Map(reusableScenes);
-    let renderPromise = scenesToRender.length > 0
-      ? renderSceneFrames({animationId, browser, composition, everyNthFrame, outputFps, scene: scenesToRender[0], sceneCount: scenes.length, serveUrl, widths})
-      : undefined;
-    let encodingPromise;
-    try {
-      for (let index = 0; index < scenesToRender.length; index += 1) {
-        const renderedScene = await renderPromise;
-        const nextRenderPromise = index + 1 < scenesToRender.length
-          ? renderSceneFrames({animationId, browser, composition, everyNthFrame, outputFps, scene: scenesToRender[index + 1], sceneCount: scenes.length, serveUrl, widths})
-          : undefined;
-        if (encodingPromise) {
-          const published = await encodingPromise;
-          publishedScenes.set(published.id, published);
-        }
-        encodingPromise = encodeSceneFrames({
+    for (const scene of scenesToRender) {
+      const renderedScene = await renderSceneFrames({
+        animationId,
+        browser,
+        composition,
+        everyNthFrame,
+        outputFps,
+        scene,
+        sceneCount: scenes.length,
+        serveUrl,
+        widths,
+      });
+      const published = await encodeSceneFrames({
           animationId,
           comparison,
           encoderThreads,
@@ -1609,16 +1613,8 @@ const renderAnimation = async ({animationId, crfs, encoderThreads, force, mediaF
           renderedScene,
           sceneFingerprint: sceneFingerprints.get(renderedScene.scene.id),
           stagingDirectory,
-        });
-        renderPromise = nextRenderPromise;
-      }
-      if (encodingPromise) {
-        const published = await encodingPromise;
-        publishedScenes.set(published.id, published);
-      }
-    } catch (error) {
-      await Promise.allSettled([renderPromise, encodingPromise].filter(Boolean));
-      throw error;
+      });
+      publishedScenes.set(published.id, published);
     }
 
     const mergedScenes = atomicSceneReplacement
