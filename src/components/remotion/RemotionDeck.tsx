@@ -1,4 +1,4 @@
-import {useEffect, useMemo, useRef, useState} from 'react';
+import {useEffect, useLayoutEffect, useMemo, useRef, useState} from 'react';
 import type {ComponentType, KeyboardEvent, ReactNode} from 'react';
 import {Player, type PlayerRef} from '@remotion/player';
 import {
@@ -279,11 +279,13 @@ const AnimatedImageFrame = ({
   alt,
   compositionHeight,
   compositionWidth,
+  onUnavailable,
   src,
 }: {
   readonly alt: string;
   readonly compositionHeight: number;
   readonly compositionWidth: number;
+  readonly onUnavailable?: () => void;
   readonly src: string;
 }) => {
   const [reloadToken, setReloadToken] = useState(0);
@@ -312,7 +314,10 @@ const AnimatedImageFrame = ({
           width={compositionWidth}
           height={compositionHeight}
           decoding="async"
-          onError={() => setFailed(true)}
+          onError={() => {
+            setFailed(true);
+            onUnavailable?.();
+          }}
         />
       )}
       <button
@@ -431,7 +436,7 @@ export const RemotionDeck = ({
     };
   }, []);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const syncMediaMode = () => {
       const savedMode = window.localStorage.getItem(MEDIA_MODE_STORAGE_KEY);
       if (savedMode === 'video' || isAnimatedMediaFormat(savedMode)) setMediaMode(savedMode);
@@ -659,6 +664,7 @@ export const RemotionDeck = ({
               alt={`${title}：${selectedScene.title}`}
               compositionWidth={compositionWidth}
               compositionHeight={compositionHeight}
+              onUnavailable={() => setMediaMode('video')}
               src={selectedImagePath}
             />
           )}
@@ -715,6 +721,7 @@ export const RemotionDeck = ({
                   alt={`${title}：${scene.title}`}
                   compositionWidth={compositionWidth}
                   compositionHeight={compositionHeight}
+                  onUnavailable={() => setMediaMode('video')}
                   src={animatedMediaPath(mediaMode, animationId, scene.id)}
                 />
               )}
