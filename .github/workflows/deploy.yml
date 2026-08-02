@@ -27,18 +27,18 @@ jobs:
         uses: actions/checkout@v7
 
       - name: Setup Node
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v7
         with:
           node-version: 22 # 🎯 锁定使用 Node 22
 
       - name: Enable Corepack & Install pnpm
         run: |
           corepack enable
-          corepack prepare pnpm@11.5.2 --activate
+          corepack prepare pnpm@11.18.0 --activate
         # 🎯 通过 Node.js 22 自带的 Corepack 直接启用 pnpm，彻底避免第三方 setup-pnpm 插件的版本识别 Bug
 
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --frozen-lockfile
 
       - name: Build site
         run: pnpm build

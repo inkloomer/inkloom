@@ -6,3 +6,4 @@ allowBuilds:
 minimumReleaseAgeExclude:
   - '@remotion/player@4.0.501'
   - remotion@4.0.501
+  - '@astrojs/starlight@0.41.6'
