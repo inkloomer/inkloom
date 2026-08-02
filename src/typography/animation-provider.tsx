@@ -20,7 +20,7 @@ const publicFontUrl = () => {
 
 const ensureAnimationFonts = () => {
   fontsReady ??= (async () => {
-    await loadFont({family: 'LXGW WenKai Screen', url: publicFontUrl(), weight: '400', style: 'normal', display: 'block'});
+    await loadFont({family: 'LXGW WenKai Screen', url: publicFontUrl(), format: 'woff2', weight: '400', style: 'normal', display: 'block'});
     if (typeof document !== 'undefined') {
       await document.fonts.load('400 16px "LXGW WenKai Mono GB Screen"', 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789');
       await document.fonts.ready;

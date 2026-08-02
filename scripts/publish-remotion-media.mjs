@@ -19,7 +19,10 @@ const SCENE_ID_PATTERN = /^[a-z0-9][a-z0-9-]*$/;
 const VIDEO_WIDTH = 2560;
 const VIDEO_CRF = 35;
 const VIDEO_TARGET_FPS = 15;
-const RENDER_CONCURRENCY = 2;
+// Each isolated render page must load the full CJK WOFF2 before it can emit a
+// frame. Rendering pages serially keeps that mandatory font gate reliable.
+const RENDER_CONCURRENCY = 1;
+const FONT_READY_TIMEOUT_MS = 120_000;
 const ENCODER_THREADS = 4;
 const SINGLE_WORKER_ENCODER_THREADS = 8;
 const DEFAULT_JOBS = 2;
@@ -1290,6 +1293,7 @@ const renderSceneFrames = async ({animationId, browser, composition, everyNthFra
       onFrameBuffer: (buffer, frame) => frameBuffers.set(frame, buffer),
       scale,
       concurrency: RENDER_CONCURRENCY,
+      timeoutInMilliseconds: FONT_READY_TIMEOUT_MS,
       muted: true,
       puppeteerInstance: browser,
       logLevel: 'error',
