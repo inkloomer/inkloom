@@ -22,6 +22,19 @@ type LayoutAuditInputProps = {
 const formatRect = (rect: DOMRect) =>
   `[${Math.round(rect.left)},${Math.round(rect.top)} ${Math.round(rect.width)}x${Math.round(rect.height)}]`;
 
+const WENKAI_SCREEN = 'LXGW WenKai Screen';
+const WENKAI_MONO = 'LXGW WenKai Mono GB Screen';
+
+const isLoadedWenkaiFont = (family: string, text: string) => {
+  const expectedFamily = family.includes(WENKAI_MONO)
+    ? WENKAI_MONO
+    : family.includes(WENKAI_SCREEN)
+      ? WENKAI_SCREEN
+      : undefined;
+  if (!expectedFamily) return false;
+  return document.fonts.check(`400 16px "${expectedFamily}"`, text);
+};
+
 const LayoutAudit = ({children, name}: {readonly children: ReactNode; readonly name: string}) => {
   const rootRef = useRef<HTMLDivElement>(null);
   const {height, props, width} = useVideoConfig();
@@ -44,6 +57,12 @@ const LayoutAudit = ({children, name}: {readonly children: ReactNode; readonly n
       const style = window.getComputedStyle(parent);
       if (style.display === 'none' || style.visibility === 'hidden' || Number(style.opacity) === 0) continue;
 
+      const text = node.textContent?.trim().replace(/\s+/g, ' ') ?? '';
+      if (!isLoadedWenkaiFont(style.fontFamily, text)) {
+        failures.push(`"${text.slice(0, 80)}" does not use a loaded WenKai font (${style.fontFamily})`);
+        continue;
+      }
+
       let boundary: HTMLElement | null = parent;
       while (boundary && boundary !== root) {
         const boundaryStyle = window.getComputedStyle(boundary);
@@ -64,8 +83,7 @@ const LayoutAudit = ({children, name}: {readonly children: ReactNode; readonly n
           rect.right > limit.right + tolerance ||
           rect.bottom > limit.bottom + tolerance;
         if (outside) {
-          const text = node.textContent?.trim().replace(/\s+/g, ' ').slice(0, 80) ?? '';
-          failures.push(`"${text}" ${formatRect(rect)} exceeds ${formatRect(limit)}`);
+          failures.push(`"${text.slice(0, 80)}" ${formatRect(rect)} exceeds ${formatRect(limit)}`);
         }
       }
     }
