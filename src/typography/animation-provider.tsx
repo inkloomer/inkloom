@@ -11,6 +11,7 @@ type AnimationTypographyContextValue = {readonly configuration?: AnimationTypogr
 const AnimationTypographyContext = createContext<AnimationTypographyContextValue>({});
 const localWenkaiPath = 'fonts/lxgw-wenkai-screen/lxgw-wenkai-screen-regular.woff2';
 let fontsReady: Promise<void> | undefined;
+let animationFontsLoaded = false;
 
 const publicFontUrl = () => {
   if (typeof window !== 'undefined' && window.location.pathname.startsWith('/inkloom/')) return `/inkloom/${localWenkaiPath}`;
@@ -24,9 +25,14 @@ const ensureAnimationFonts = () => {
       await document.fonts.load('400 16px "LXGW WenKai Mono GB Screen"', 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789');
       await document.fonts.ready;
     }
+    animationFontsLoaded = true;
   })();
   return fontsReady;
 };
+
+// Start fetching as soon as a Player composition module is evaluated. Waiting
+// until an effect runs leaves a frame where the browser may paint a fallback.
+const initialFontLoad = typeof document === 'undefined' ? undefined : ensureAnimationFonts();
 
 const styleFor = (configuration?: AnimationTypographyConfiguration, sceneId?: string) =>
   resolveAnimationTypography({
@@ -43,12 +49,15 @@ export const AnimationTypographyProvider = ({
   readonly configuration?: AnimationTypographyConfiguration;
 }) => {
   const [handle] = useState(() => delayRender('Loading InkLoom animation typography'));
+  const [fontReady, setFontReady] = useState(() => animationFontsLoaded);
 
   useEffect(() => {
     let active = true;
-    void ensureAnimationFonts()
+    void (initialFontLoad ?? ensureAnimationFonts())
       .then(() => {
-        if (active) continueRender(handle);
+        if (!active) return;
+        setFontReady(true);
+        continueRender(handle);
       }, (error: unknown) => {
         if (active) cancelRender(error);
       });
@@ -60,7 +69,12 @@ export const AnimationTypographyProvider = ({
   const value = useMemo(() => ({configuration}), [configuration]);
   return (
     <AnimationTypographyContext.Provider value={value}>
-      <div className="inkloom-animation-typography font-animation-body" style={styleFor(configuration)}>
+      <div
+        aria-busy={!fontReady}
+        className="inkloom-animation-typography font-animation-body"
+        data-inkloom-animation-fonts={fontReady ? 'ready' : 'loading'}
+        style={{...styleFor(configuration), visibility: fontReady ? 'visible' : 'hidden'}}
+      >
         {children}
       </div>
     </AnimationTypographyContext.Provider>

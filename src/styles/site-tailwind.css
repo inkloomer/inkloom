@@ -9,7 +9,7 @@
   src: url("../../public/fonts/lxgw-wenkai-screen/lxgw-wenkai-screen-regular.woff2") format("woff2");
   font-style: normal;
   font-weight: 400;
-  font-display: swap;
+  font-display: block;
 }
 
 @theme inline {

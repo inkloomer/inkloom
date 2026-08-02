@@ -16,11 +16,12 @@ Usage:
   pnpm animation:typography:contacts
   pnpm animation:typography:contacts -- --input .artifacts/typography-audit/civil-01
   pnpm animation:typography:contacts -- --subject civil-procedure --chapter 10
+  pnpm animation:typography:contacts -- --input .artifacts/typography-audit/civil-12 --animations preservation-stage-map,provisional-execution-gates --subject civil-procedure --chapter 12
   pnpm animation:typography:contacts -- --published --subject civil-procedure --chapters 01+02+03+04+05+06+07+08 --aggregate 01-08
 `;
 
 const parseArguments = (arguments_) => {
-  const options = {aggregate: undefined, chapter: undefined, chapters: undefined, inputRoot: DEFAULT_INPUT_ROOT, outputRoot: DEFAULT_OUTPUT_ROOT, published: false, subject: undefined};
+  const options = {aggregate: undefined, animationIds: undefined, chapter: undefined, chapters: undefined, inputRoot: DEFAULT_INPUT_ROOT, outputRoot: DEFAULT_OUTPUT_ROOT, published: false, subject: undefined};
   for (let index = 0; index < arguments_.length; index += 1) {
     const argument = arguments_[index];
     if (argument === '--') continue;
@@ -29,7 +30,7 @@ const parseArguments = (arguments_) => {
       options.published = true;
       continue;
     }
-    if (argument === '--input' || argument === '--output' || argument === '--subject' || argument === '--chapter' || argument === '--chapters' || argument === '--aggregate') {
+    if (argument === '--input' || argument === '--output' || argument === '--subject' || argument === '--chapter' || argument === '--chapters' || argument === '--aggregate' || argument === '--animations') {
       const value = arguments_[index + 1];
       if (!value) throw new Error(`${argument} requires a value.`);
       if (argument === '--input') options.inputRoot = path.resolve(PROJECT_ROOT, value);
@@ -38,6 +39,7 @@ const parseArguments = (arguments_) => {
       if (argument === '--chapter') options.chapter = value;
       if (argument === '--chapters') options.chapters = value.split(/[,+]/).map((chapter) => chapter.trim()).filter(Boolean);
       if (argument === '--aggregate') options.aggregate = value;
+      if (argument === '--animations') options.animationIds = value.split(',').map((animationId) => animationId.trim()).filter(Boolean);
       index += 1;
       continue;
     }
@@ -115,7 +117,14 @@ const main = async () => {
     return;
   }
 
-  let animations = (await knownAnimations()).filter((animation) =>
+  let animations = options.animationIds
+    ? options.animationIds.map((animationId) => ({
+      animationId,
+      chapter: options.chapter ?? 'ad-hoc',
+      subject: options.subject ?? 'ad-hoc',
+    }))
+    : await knownAnimations();
+  animations = animations.filter((animation) =>
     (!options.subject || animation.subject === options.subject) &&
     (!options.chapter || animation.chapter === options.chapter) &&
     (!options.chapters || options.chapters.includes(animation.chapter)),

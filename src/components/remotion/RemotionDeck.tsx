@@ -35,7 +35,7 @@ import {
 } from './playback-preferences';
 import {sceneIndexFromSearch, urlWithScene} from './scene-location';
 import {withAnimationTypography} from '@/typography/animation-provider';
-import type {AnimationTypographyMetadata} from '@/typography/animation-presets';
+import type {AnimationTypographyMetadata, AnimationTypographyScope} from '@/typography/animation-presets';
 import {getAnimationTypographyConfiguration} from '@/typography/animation-registry';
 import './RemotionDeck.css';
 
@@ -63,6 +63,7 @@ interface Props {
   readonly title?: string;
   readonly sceneQueryParameter?: string;
   readonly typography?: AnimationTypographyMetadata;
+  readonly typographyScope?: AnimationTypographyScope;
 }
 
 const ANIMATED_MEDIA_FORMATS = {
@@ -344,6 +345,7 @@ export const RemotionDeck = ({
   title = 'Remotion 动画',
   sceneQueryParameter = 'scene',
   typography,
+  typographyScope,
 }: Props) => {
   const [currentScene, setCurrentScene] = useState(0);
   const [mediaMode, setMediaMode] = useState<MediaMode>('avif');
@@ -361,13 +363,20 @@ export const RemotionDeck = ({
     : inheritedPlaybackSpeed(playbackPreferences, speedScope, playbackScopeKeys);
   const typographyComponent = useMemo(
     () => {
-      const configuration = getAnimationTypographyConfiguration(animationId);
+      const registeredConfiguration = getAnimationTypographyConfiguration(animationId);
+      const configuration = typography
+        ? {
+          ...registeredConfiguration,
+          metadata: typography,
+          scope: typographyScope ?? registeredConfiguration?.scope ?? {animationId},
+        }
+        : registeredConfiguration;
       return withAnimationTypography(
         component,
-        typography ? {...configuration, metadata: typography} : configuration,
+        configuration,
       );
     },
-    [animationId, component, typography],
+    [animationId, component, typography, typographyScope],
   );
 
   const persistMediaMode = (nextMode: MediaMode) => {
