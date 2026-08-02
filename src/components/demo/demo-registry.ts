@@ -35,6 +35,12 @@ import {EvidencePreservation} from '../../animations/civil-procedure/11/evidence
 import {EvidenceReview} from '../../animations/civil-procedure/11/evidence-review/remotion/EvidenceReview';
 import {ProofFilingInvestigation} from '../../animations/civil-procedure/11/proof-filing-investigation/remotion/ProofFilingInvestigation';
 import {SurpriseJudgmentFocus} from '../../animations/civil-procedure/11/surprise-judgment-focus/remotion/SurpriseJudgmentFocus';
+import {PreSuitPreservationTransfer} from '../../animations/civil-procedure/12/pre-suit-preservation-transfer/remotion/PreSuitPreservationTransfer';
+import {PreservationAssetMeasures} from '../../animations/civil-procedure/12/preservation-asset-measures/remotion/PreservationAssetMeasures';
+import {PreservationRemedySwitchboard} from '../../animations/civil-procedure/12/preservation-remedy-switchboard/remotion/PreservationRemedySwitchboard';
+import {PreservationStageMap} from '../../animations/civil-procedure/12/preservation-stage-map/remotion/PreservationStageMap';
+import {ProvisionalExecutionGates} from '../../animations/civil-procedure/12/provisional-execution-gates/remotion/ProvisionalExecutionGates';
+import {ProvisionalExecutionResolution} from '../../animations/civil-procedure/12/provisional-execution-resolution/remotion/ProvisionalExecutionResolution';
 import {DURATION_FRAMES as DELEGATED_DURATION_FRAMES, FPS as DELEGATED_FPS} from '../../animations/civil-procedure/08/delegated-agent/remotion/storyboard';
 import {DURATION_FRAMES as JOINT_DURATION_FRAMES, FPS as JOINT_FPS} from '../../animations/civil-procedure/06/joint-litigation/remotion/storyboard';
 import {DURATION_FRAMES as REPRESENTATIVE_DURATION_FRAMES, FPS as REPRESENTATIVE_FPS} from '../../animations/civil-procedure/06/representative-litigation/remotion/storyboard';
@@ -51,6 +57,12 @@ import {DURATION_FRAMES as PRESERVATION_DURATION_FRAMES, FPS as PRESERVATION_FPS
 import {DURATION_FRAMES as REVIEW_DURATION_FRAMES, FPS as REVIEW_FPS} from '../../animations/civil-procedure/11/evidence-review/remotion/storyboard';
 import {DURATION_FRAMES as FILING_DURATION_FRAMES, FPS as FILING_FPS} from '../../animations/civil-procedure/11/proof-filing-investigation/remotion/storyboard';
 import {DURATION_FRAMES as FOCUS_DURATION_FRAMES, FPS as FOCUS_FPS} from '../../animations/civil-procedure/11/surprise-judgment-focus/remotion/storyboard';
+import {DURATION_FRAMES as TRANSFER_DURATION_FRAMES, FPS as TRANSFER_FPS} from '../../animations/civil-procedure/12/pre-suit-preservation-transfer/remotion/storyboard';
+import {DURATION_FRAMES as ASSET_MEASURES_DURATION_FRAMES, FPS as ASSET_MEASURES_FPS} from '../../animations/civil-procedure/12/preservation-asset-measures/remotion/storyboard';
+import {DURATION_FRAMES as REMEDY_DURATION_FRAMES, FPS as REMEDY_FPS} from '../../animations/civil-procedure/12/preservation-remedy-switchboard/remotion/storyboard';
+import {DURATION_FRAMES as STAGE_MAP_DURATION_FRAMES, FPS as STAGE_MAP_FPS} from '../../animations/civil-procedure/12/preservation-stage-map/remotion/storyboard';
+import {DURATION_FRAMES as EXECUTION_GATES_DURATION_FRAMES, FPS as EXECUTION_GATES_FPS} from '../../animations/civil-procedure/12/provisional-execution-gates/remotion/storyboard';
+import {DURATION_FRAMES as EXECUTION_RESOLUTION_DURATION_FRAMES, FPS as EXECUTION_RESOLUTION_FPS} from '../../animations/civil-procedure/12/provisional-execution-resolution/remotion/storyboard';
 import {DURATION_FRAMES as FIGHT_DURATION_FRAMES, FPS as FIGHT_FPS} from '../../animations/criminal/22/fight-defense-diagram/remotion/storyboard';
 import {DURATION_FRAMES as ALTITUDE_DURATION_FRAMES, FPS as ALTITUDE_FPS} from '../../animations/criminal/22/high-altitude-throwing-diagram/remotion/storyboard';
 import {DURATION_FRAMES as THEFT_DURATION_FRAMES, FPS as THEFT_FPS} from '../../animations/criminal/19/theft-mistake-analysis/remotion/storyboard';
@@ -98,6 +110,12 @@ export const STYLE_DEMOS = [
   {id: 'civil-procedure-11-proof-filing-investigation', slug: 'proof-filing-investigation', title: '举证调度台', direction: 'Proof Dispatch Delta', component: ProofFilingInvestigation, href: '/inkloom/objective/civil-procedure/11/proof-filing-investigation/', durationInFrames: FILING_DURATION_FRAMES, fps: FILING_FPS},
   {id: 'civil-procedure-11-surprise-judgment-focus', slug: 'surprise-judgment-focus', title: '争点聚光场', direction: 'Argument Focus Theater', component: SurpriseJudgmentFocus, href: '/inkloom/objective/civil-procedure/11/surprise-judgment-focus/', durationInFrames: FOCUS_DURATION_FRAMES, fps: FOCUS_FPS},
   {id: 'civil-procedure-11-evidence-review', slug: 'evidence-review', title: '心证衡量室', direction: 'Evidence Weighing Chamber', component: EvidenceReview, href: '/inkloom/objective/civil-procedure/11/evidence-review/', durationInFrames: REVIEW_DURATION_FRAMES, fps: REVIEW_FPS},
+  {id: 'civil-procedure-12-preservation-stage-map', slug: 'preservation-stage-map', title: '程序潮汐盘', direction: 'Procedural Tide Dial', component: PreservationStageMap, href: '/inkloom/objective/civil-procedure/12/preservation-stage-map/', durationInFrames: STAGE_MAP_DURATION_FRAMES, fps: STAGE_MAP_FPS},
+  {id: 'civil-procedure-12-pre-suit-preservation-transfer', slug: 'pre-suit-preservation-transfer', title: '法院转运台', direction: 'Court Routing Table', component: PreSuitPreservationTransfer, href: '/inkloom/objective/civil-procedure/12/pre-suit-preservation-transfer/', durationInFrames: TRANSFER_DURATION_FRAMES, fps: TRANSFER_FPS},
+  {id: 'civil-procedure-12-preservation-asset-measures', slug: 'preservation-asset-measures', title: '财产保鲜仓', direction: 'Asset Conservation Depot', component: PreservationAssetMeasures, href: '/inkloom/objective/civil-procedure/12/preservation-asset-measures/', durationInFrames: ASSET_MEASURES_DURATION_FRAMES, fps: ASSET_MEASURES_FPS},
+  {id: 'civil-procedure-12-preservation-remedy-switchboard', slug: 'preservation-remedy-switchboard', title: '救济拨盘', direction: 'Remedy Switchboard', component: PreservationRemedySwitchboard, href: '/inkloom/objective/civil-procedure/12/preservation-remedy-switchboard/', durationInFrames: REMEDY_DURATION_FRAMES, fps: REMEDY_FPS},
+  {id: 'civil-procedure-12-provisional-execution-gates', slug: 'provisional-execution-gates', title: '紧急救助分诊', direction: 'Emergency Relief Triage', component: ProvisionalExecutionGates, href: '/inkloom/objective/civil-procedure/12/provisional-execution-gates/', durationInFrames: EXECUTION_GATES_DURATION_FRAMES, fps: EXECUTION_GATES_FPS},
+  {id: 'civil-procedure-12-provisional-execution-resolution', slug: 'provisional-execution-resolution', title: '裁判清算簿', direction: 'Judgment Settlement Ledger', component: ProvisionalExecutionResolution, href: '/inkloom/objective/civil-procedure/12/provisional-execution-resolution/', durationInFrames: EXECUTION_RESOLUTION_DURATION_FRAMES, fps: EXECUTION_RESOLUTION_FPS},
   {id: 'criminal-22-fight-defense-diagram', slug: 'fight-defense-diagram', title: '意图对抗场', direction: 'Intent Combat Field', component: FightDefenseDiagram, href: '/inkloom/objective/criminal/22/fight-defense-diagram/', durationInFrames: FIGHT_DURATION_FRAMES, fps: FIGHT_FPS},
   {id: 'criminal-22-high-altitude-throwing-diagram', slug: 'high-altitude-throwing-diagram', title: '垂直危险剖面', direction: 'Vertical Risk Section', component: HighAltitudeThrowingDiagram, href: '/inkloom/objective/criminal/22/high-altitude-throwing-diagram/', durationInFrames: ALTITUDE_DURATION_FRAMES, fps: ALTITUDE_FPS},
   {id: 'criminal-19-theft-mistake-analysis', slug: 'theft-mistake-analysis', title: '双焦校准台', direction: 'Dual-Focus Calibration', component: TheftMistakeAnalysis, href: '/inkloom/objective/criminal/19/theft-mistake-analysis/', durationInFrames: THEFT_DURATION_FRAMES, fps: THEFT_FPS},

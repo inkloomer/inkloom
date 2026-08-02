@@ -1,0 +1,16 @@
+{
+  "directionId": "asset-conservation-depot",
+  "family": "legal-conservation-depot",
+  "palette": "deep warehouse green + inventory cream + cold-chain aqua + lien copper + alert magenta",
+  "typography": "industrial inventory labels with oversized operative verbs and compact custody notes",
+  "composition": "a three-action loading bay, a perishable-goods conversion channel, and a secured-rights custody shell",
+  "surface": "warehouse floor markings, flat storage silhouettes, preservation seals, and no table-like shelving",
+  "motion": "ordinary assets enter one of three restraint actions, perishables convert into preserved value, and security rights remain outside the restraint shell",
+  "transition": "the inventory seal persists while the asset changes from ordinary object to perishable value to secured property",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/civil-procedure/12/preservation-asset-measures/",
+    "title": "财产保鲜仓"
+  }
+}

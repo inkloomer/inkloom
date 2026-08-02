@@ -1,0 +1,16 @@
+{
+  "directionId": "emergency-relief-triage",
+  "family": "judicial-triage-station",
+  "palette": "clinical white + emergency red + verification teal + capability violet + caution amber",
+  "typography": "clear triage headings, numbered eligibility bands, and high-contrast urgent-need labels",
+  "composition": "three urgency intake streams, a four-gate admission corridor, and a bounded request-and-security chamber",
+  "surface": "flat clinical zones, directional floor bands, status crosses, and no dashboard card matrix",
+  "motion": "eligible claims enter triage, four conditions open in order, and request scope narrows before a discretionary security stop",
+  "transition": "the urgent claimant token persists from intake through eligibility and bounded relief",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/civil-procedure/12/provisional-execution-gates/",
+    "title": "紧急救助分诊"
+  }
+}

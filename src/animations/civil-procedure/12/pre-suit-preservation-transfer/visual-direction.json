@@ -1,0 +1,16 @@
+{
+  "directionId": "court-routing-table",
+  "family": "judicial-logistics-table",
+  "palette": "routing paper + parcel blue + court red + transit yellow + hold gray",
+  "typography": "bold destination labels, route codes, and compact handoff annotations",
+  "composition": "a triangular jurisdiction field, a horizontal case-and-preservation conveyor, and a suspended routing bay",
+  "surface": "flat dispatch paper, square court stamps, route tape, and no dossier collage",
+  "motion": "jurisdiction anchors activate, preservation papers travel to the receiving court, and an unresolved case stops at a visible hold line",
+  "transition": "the same blue preservation packet persists through selection, handoff, and routing hold",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/civil-procedure/12/pre-suit-preservation-transfer/",
+    "title": "法院转运台"
+  }
+}

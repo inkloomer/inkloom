@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {"id":"civil-and-labor-routes","export":"CivilAndLaborRoutesScene","layout":"dual-source-execution-ledger","anchor":"document-fork","grammar":["source-distinction","handoff","execution"],"textTreatments":["label-block","thin-underline"],"focalChannels":["icon","connector","contrast"],"tokens":["Landmark","Briefcase"]},
+    {"id":"winning-resolution","export":"WinningResolutionScene","layout":"realized-rights-closing-entry","anchor":"flow-target","grammar":["confirmation","realization","closure"],"textTreatments":["stamp","soft-highlight"],"focalChannels":["icon","enclosure","spatial"],"tokens":["BadgeCheck","BookCheck"]},
+    {"id":"losing-reversal","export":"LosingReversalScene","layout":"return-and-reversal-balance-path","anchor":"timeline-gate","grammar":["error","return","compulsion"],"textTreatments":["external-negation","label-block"],"focalChannels":["icon","connector","motion"],"tokens":["Undo2","Gavel"]}
+  ]
+}

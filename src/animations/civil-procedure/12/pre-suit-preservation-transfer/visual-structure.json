@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {"id":"jurisdiction-triangle","export":"JurisdictionTriangleScene","layout":"triangular-jurisdiction-field","anchor":"role-pair","grammar":["alternative","connection","selection"],"textTreatments":["label-block","soft-highlight"],"focalChannels":["icon","connector","spatial"],"tokens":["MapPin","Landmark"]},
+    {"id":"procedure-handoff","export":"ProcedureHandoffScene","layout":"dual-court-handoff-conveyor","anchor":"flow-path","grammar":["handoff","continuity","attribution"],"textTreatments":["thin-underline","stamp"],"focalChannels":["icon","connector","motion"],"tokens":["FolderInput","ArrowRightLeft"]},
+    {"id":"jurisdiction-hold","export":"JurisdictionHoldScene","layout":"suspended-routing-hold-bay","anchor":"boundary","grammar":["uncertainty","prohibition","resolution"],"textTreatments":["external-negation","label-block"],"focalChannels":["contrast","enclosure","locator"],"tokens":["Pause","Route"]}
+  ]
+}

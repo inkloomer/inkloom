@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {"id":"reconsideration","export":"ReconsiderationScene","layout":"parallel-reconsideration-execution-circuit","anchor":"comparison-axis","grammar":["remedy","parallelism","non-suspension"],"textTreatments":["label-block","external-negation"],"focalChannels":["icon","connector","contrast"],"tokens":["RefreshCcw","Zap"]},
+    {"id":"mandatory-release","export":"MandatoryReleaseScene","layout":"five-input-release-relay","anchor":"flow-target","grammar":["trigger-set","convergence","mandatory-result"],"textTreatments":["soft-highlight","stamp"],"focalChannels":["icon","connector","enclosure"],"tokens":["Unplug","ShieldOff"]},
+    {"id":"security-substitution","export":"SecuritySubstitutionScene","layout":"equal-value-asset-toggle","anchor":"role-pair","grammar":["equivalence","substitution","discretion"],"textTreatments":["thin-underline","label-block"],"focalChannels":["icon","motion","spatial"],"tokens":["Replace","Scale"]}
+  ]
+}

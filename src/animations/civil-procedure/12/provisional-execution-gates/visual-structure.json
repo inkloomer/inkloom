@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {"id":"eligible-claims","export":"EligibleClaimsScene","layout":"three-stream-urgency-intake","anchor":"flow-path","grammar":["classification","urgency","convergence"],"textTreatments":["label-block","soft-highlight"],"focalChannels":["icon","connector","contrast"],"tokens":["HeartHandshake","BriefcaseBusiness"]},
+    {"id":"four-gates","export":"FourGatesScene","layout":"four-gate-admission-corridor","anchor":"timeline-gate","grammar":["conjunction","sequence","admission"],"textTreatments":["stamp","thin-underline"],"focalChannels":["icon","enclosure","motion"],"tokens":["BadgeCheck","DoorOpen"]},
+    {"id":"scope-and-security","export":"ScopeAndSecurityScene","layout":"bounded-request-security-chamber","anchor":"boundary","grammar":["scope-limit","discretion","rejection"],"textTreatments":["external-negation","label-block"],"focalChannels":["icon","spatial","annotation"],"tokens":["ScanLine","ShieldQuestion"]}
+  ]
+}

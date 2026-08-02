@@ -1,0 +1,16 @@
+{
+  "directionId": "remedy-switchboard",
+  "family": "procedural-control-switchboard",
+  "palette": "carbon black + porcelain white + signal red + relay blue + status lime",
+  "typography": "condensed control labels with large operative states and engraved remedy captions",
+  "composition": "a non-blocking reconsideration circuit, a five-input release relay, and a two-asset substitution toggle",
+  "surface": "flat analog panel, metal rails, square signal lamps, and no rounded interface cards",
+  "motion": "reconsideration runs beside execution, statutory triggers trip a release relay, and equal-value security switches the preserved target",
+  "transition": "the red execution bus stays energized while each remedy circuit is rewired",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/civil-procedure/12/preservation-remedy-switchboard/",
+    "title": "救济拨盘"
+  }
+}

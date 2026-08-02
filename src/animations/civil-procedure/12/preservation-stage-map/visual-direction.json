@@ -1,0 +1,16 @@
+{
+  "directionId": "procedural-tide-dial",
+  "family": "procedural-tide-instrument",
+  "palette": "midnight indigo + tidal cyan + deadline amber + release coral",
+  "typography": "wide numeric stage labels with compact procedural captions and luminous deadline marks",
+  "composition": "a continuous procedural horizon, three expanding stage sectors, and concentric deadline dials",
+  "surface": "dark instrument glass, fine radial ticks, flat stage bands, and no card grid",
+  "motion": "a single case token advances across stages while authority, security, and deadlines lock onto the active sector",
+  "transition": "the horizon and case token persist while the instrument changes from stage map to security slope to deadline dial",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/civil-procedure/12/preservation-stage-map/",
+    "title": "程序潮汐盘"
+  }
+}

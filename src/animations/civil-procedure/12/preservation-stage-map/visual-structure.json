@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {"id":"stage-position","export":"StagePositionScene","layout":"three-sector-procedural-horizon","anchor":"timeline-gate","grammar":["sequence","stage-boundary","eligibility"],"textTreatments":["label-block","soft-highlight"],"focalChannels":["icon","connector","spatial"],"tokens":["FileClock","Gavel"]},
+    {"id":"security-slope","export":"SecuritySlopeScene","layout":"descending-security-slope","anchor":"comparison-axis","grammar":["comparison","progression","discretion"],"textTreatments":["thin-underline","stamp"],"focalChannels":["contrast","connector","enclosure"],"tokens":["ShieldCheck","Scale"]},
+    {"id":"deadline-dials","export":"DeadlineDialsScene","layout":"nested-deadline-dials","anchor":"boundary","grammar":["deadline","consequence","release"],"textTreatments":["label-block","external-negation"],"focalChannels":["icon","locator","motion"],"tokens":["TimerReset","Unlock"]}
+  ]
+}

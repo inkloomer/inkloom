@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {"id":"ordinary-property","export":"OrdinaryPropertyScene","layout":"three-action-loading-bay","anchor":"flow-path","grammar":["classification","restraint","custody"],"textTreatments":["label-block","stamp"],"focalChannels":["icon","connector","enclosure"],"tokens":["PackageCheck","Snowflake"]},
+    {"id":"perishable-value","export":"PerishableValueScene","layout":"perishable-value-conversion-channel","anchor":"timeline-gate","grammar":["urgency","conversion","preservation"],"textTreatments":["thin-underline","soft-highlight"],"focalChannels":["icon","motion","contrast"],"tokens":["Apple","Coins"]},
+    {"id":"secured-property","export":"SecuredPropertyScene","layout":"secured-rights-custody-shell","anchor":"boundary","grammar":["restraint","priority","continuity"],"textTreatments":["external-negation","label-block"],"focalChannels":["icon","enclosure","spatial"],"tokens":["LockKeyhole","BadgeDollarSign"]}
+  ]
+}

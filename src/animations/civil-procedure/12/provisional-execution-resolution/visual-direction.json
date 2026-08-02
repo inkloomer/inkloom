@@ -1,0 +1,16 @@
+{
+  "directionId": "judgment-settlement-ledger",
+  "family": "procedural-settlement-ledger",
+  "palette": "ledger white + carbon ink + realization green + reversal crimson + arbitration blue",
+  "typography": "large debit-credit outcomes, narrow procedural folios, and double-rule judgment totals",
+  "composition": "two execution-source columns, a realized-rights closing entry, and a reversal balance path",
+  "surface": "flat accounting paper, double rules, square folio markers, and no document collage",
+  "motion": "civil and labor routes post to court execution, a winning entry closes as realized, and a losing entry reverses through return and compulsory execution",
+  "transition": "one provisional-payment entry persists while its source and final accounting status change",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/civil-procedure/12/provisional-execution-resolution/",
+    "title": "裁判清算簿"
+  }
+}
