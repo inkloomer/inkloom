@@ -3,7 +3,7 @@
   "compositionId": "WitnessTestimony",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-08-02T03:39:58.921Z",
+  "generatedAt": "2026-08-03T12:44:18.681Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -16,13 +16,13 @@
       "title": "证人资格",
       "durationMs": 6000,
       "file": "qualification.avif",
-      "fileSize": 239104,
+      "fileSize": 637090,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "20803a6f9ac761568c9f59a4a7f461411032fde9dbd9ef2d58f5f90f2605f7ed",
+      "sha256": "ee754c5e55c4988f614ecc0c39f09f06c90c0ac4feae51188da338f80ae0a92f",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "776ad2f0dc7788c6040291c2d11616c4168cf955c94ff480a075d05e54913711"
+      "sceneFingerprint": "57290de6b54ac7b558bac6831f6aa318ba2888965800ca142c14bfa1a233875f"
     },
     {
       "endFrame": 389,
@@ -33,13 +33,13 @@
       "title": "出庭原则与例外",
       "durationMs": 7000,
       "file": "appearance.avif",
-      "fileSize": 300084,
+      "fileSize": 415915,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "eb5b7a35cc0b0af0d1652ce9b913a31e651f6c45149c81ca21c6f0072b087b36",
+      "sha256": "7c407c7a2d9033405a815968c631c1e396d9542dfb365ca621085982b0ac31dd",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "55b1154712dec534764ab513029e5803e14ae85167bd5d01d304daeb632850ec"
+      "sceneFingerprint": "c83257b79e1c63fbf7b10f778c774aae3f3d0ff290ba0071dad2c2d5ddf98c55"
     },
     {
       "endFrame": 569,
@@ -50,13 +50,13 @@
       "title": "作证方式与费用",
       "durationMs": 6000,
       "file": "testimony-conduct.avif",
-      "fileSize": 293332,
+      "fileSize": 365501,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "43a1b7121220e240ebb1547a563801db9572e38e40982e0465474dd9473d1c0d",
+      "sha256": "93e9442779c198c5d93f8b96131c71db93dbfa10e558525d6c38ff55788b3d1c",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "d8901f3ef2d6341038638bf83b6a95817c7ba2d48799e2963599c41722553ba1"
+      "sceneFingerprint": "776f284f1733c8e64e91c5429d3967c3a937a956e319069f875f14854b2e5627"
     }
   ],
   "size": {
@@ -64,7 +64,7 @@
     "width": 2560
   },
   "sourceFps": 30,
-  "sourceFingerprint": "8e5247e6b4d194c61bf75fadc4b07ab3afebc7410d65ba22e3a36b66309063c7",
+  "sourceFingerprint": "ac8ebc3cdc3b1cf372e9822b49cb492ed09b958c224055b81908fd87e154242f",
   "targetFps": 30,
-  "totalFileSize": 832520
+  "totalFileSize": 1418506
 }
