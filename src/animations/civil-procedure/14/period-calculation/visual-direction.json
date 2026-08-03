@@ -1,0 +1,16 @@
+{
+  "directionId": "deadline-signal-board",
+  "family": "calendar-signal-instrument",
+  "palette": "night graphite + station mint + deadline amber + court vermilion",
+  "typography": "large WenKai rule headings, compact mono date codes, and stamped deadline outcomes",
+  "composition": "a calibrated time rail, a deadline gate, and a relief request handoff board",
+  "surface": "matte clock field, square date plates, thin tick marks, and no card grid",
+  "motion": "a single filing token advances from receipt to the counting line, crosses only a final-day holiday gate, and is handed from a removed obstacle to the court",
+  "transition": "the same amber filing token persists as the carrier from classification through calculation and relief",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/civil-procedure/14/period-calculation/",
+    "title": "期限信号台"
+  }
+}

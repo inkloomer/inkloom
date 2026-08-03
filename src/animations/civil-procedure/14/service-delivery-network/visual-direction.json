@@ -1,0 +1,16 @@
+{
+  "directionId": "service-dossier-flow",
+  "family": "judicial-delivery-dossier",
+  "palette": "linen white + carbon ink + postal cobalt + confirmation teal + refusal vermilion",
+  "typography": "editorial WenKai headings, route-code labels, and formal delivery stamps",
+  "composition": "a folded service dossier, document forks, route ribbons, and a last-resort notice boundary",
+  "surface": "flat paper field, clipped file tabs, square receipt slips, and no chronological rail",
+  "motion": "one court document is passed to a recipient, splits only when delivery conditions change, and stops at explicit exclusion boundaries",
+  "transition": "the same cobalt service document carries the viewer from direct delivery through alternate routes to public notice",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/civil-procedure/14/service-delivery-network/",
+    "title": "送达卷宗流"
+  }
+}

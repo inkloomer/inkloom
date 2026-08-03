@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {"id":"period-types","export":"PeriodTypesScene","layout":"dual-source-time-axis","anchor":"comparison-axis","grammar":["classification","authority","changeability"],"textTreatments":["label-block","soft-highlight"],"focalChannels":["icon","connector","spatial"],"tokens":["BookOpen","Landmark"]},
+    {"id":"counting-line","export":"CountingLineScene","layout":"receipt-to-deadline-rail","anchor":"timeline-gate","grammar":["sequence","exclusion","deadline"],"textTreatments":["thin-underline","stamp"],"focalChannels":["icon","locator","motion"],"tokens":[]},
+    {"id":"holiday-and-mail","export":"HolidayAndMailScene","layout":"terminal-holiday-gate","anchor":"boundary","grammar":["condition","exception","release"],"textTreatments":["external-negation","soft-highlight"],"focalChannels":["icon","enclosure","contrast"],"tokens":["Plane","PartyPopper"]},
+    {"id":"extension-request","export":"ExtensionRequestScene","layout":"obstacle-relief-handoff","anchor":"flow-path","grammar":["cause","application","decision"],"textTreatments":["label-block","stamp"],"focalChannels":["icon","connector","motion"],"tokens":["CircleAlert","Landmark"]}
+  ]
+}

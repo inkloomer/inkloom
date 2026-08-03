@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 4,
+  "scenes": [
+    {"id":"direct-recipients","export":"DirectRecipientsScene","layout":"recipient-and-place-pairing","anchor":"role-pair","grammar":["recipient","location","authorization"],"textTreatments":["label-block","soft-highlight"],"focalChannels":["icon","connector","spatial"],"tokens":["Contact","House","Landmark"]},
+    {"id":"refusal-service","export":"RefusalServiceScene","layout":"refusal-to-service-document-fork","anchor":"document-fork","grammar":["condition","proof","legal-effect"],"textTreatments":["external-negation","stamp"],"focalChannels":["icon","connector","motion"],"tokens":["Signature","Camera","FileCheck2"]},
+    {"id":"confirmed-routes","export":"ConfirmedRoutesScene","layout":"conditioned-service-route-ribbons","anchor":"flow-path","grammar":["condition","routing","confirmation"],"textTreatments":["thin-underline","label-block"],"focalChannels":["icon","connector","spatial"],"tokens":[]},
+    {"id":"public-notice-boundary","export":"PublicNoticeBoundaryScene","layout":"last-resort-notice-boundary","anchor":"boundary","grammar":["threshold","exception","deadline"],"textTreatments":["external-negation","soft-highlight"],"focalChannels":["icon","enclosure","contrast"],"tokens":["Megaphone","CalendarDays"]}
+  ]
+}
