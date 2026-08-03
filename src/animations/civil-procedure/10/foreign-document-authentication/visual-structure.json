@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "playerControlSafeBottom": 160,
+  "scenes": [
+    {"id":"public-document-route","export":"PublicDocumentRouteScene","layout":"jurisdiction-border-lane","anchor":"flow-path","grammar":["origin","checkpoint","arrival"],"textTreatments":["label-block","thin-underline","stamp"],"focalChannels":["icon","connector","spatial","contrast"],"tokens":["MapPinned","Stamp","Landmark"],"finalKnowledge":["local-notary-proof","court-intake","treaty-alternative"],"statefulObjects":["foreign-public-document"]},
+    {"id":"identity-document-route","export":"IdentityDocumentRouteScene","layout":"identity-escalation-fork","anchor":"boundary","grammar":["classification","escalation","authorization"],"textTreatments":["label-block","soft-highlight","stamp"],"focalChannels":["icon","enclosure","connector","annotation"],"tokens":["UserRound","Stamp","ShieldCheck"],"finalKnowledge":["identity-relation","notary-proof","consular-authentication","identity-treaty-alternative"],"statefulObjects":["identity-evidence"]},
+    {"id":"translation-and-trap","export":"TranslationAndTrapScene","layout":"court-intake-dual-gate","anchor":"role-pair","grammar":["translation","classification","rejection"],"textTreatments":["label-block","thin-underline","external-negation"],"focalChannels":["icon","contrast","enclosure","motion"],"tokens":["Languages","Gavel","FileText","FileX2"],"finalKnowledge":["chinese-translation","court-intake","japanese-judgment-foreign-public","japanese-judgment-documentary","not-exempt-fact","unauthenticated-rejection"],"statefulObjects":["japanese-judgment"]}
+  ]
+}

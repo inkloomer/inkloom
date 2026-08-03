@@ -1,0 +1,70 @@
+{
+  "animationId": "foreign-document-authentication",
+  "compositionId": "ForeignDocumentAuthentication",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-03T12:50:23.454Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 209,
+      "frameCount": 210,
+      "id": "public-document-route",
+      "number": "01",
+      "startFrame": 0,
+      "title": "域外公文书证的证明路线",
+      "durationMs": 7000,
+      "file": "public-document-route.avif",
+      "fileSize": 270266,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "3838218f8db174f477440b7f2da417cf1da443f7f488b91bebb17f7c5e11e35d",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "00c9391fdd5db5b31fa8d04fd6edc55ee6e265953a5b43ddd3e3a00ed3c15dbb"
+    },
+    {
+      "endFrame": 449,
+      "frameCount": 240,
+      "id": "identity-document-route",
+      "number": "02",
+      "startFrame": 210,
+      "title": "身份关系证据的认证升级",
+      "durationMs": 8000,
+      "file": "identity-document-route.avif",
+      "fileSize": 330980,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "c8a7f74aad7a25d9a3da69756089a4e8fa4d74ef1336d08303bc53b5d187a3c6",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "00c9391fdd5db5b31fa8d04fd6edc55ee6e265953a5b43ddd3e3a00ed3c15dbb"
+    },
+    {
+      "endFrame": 659,
+      "frameCount": 210,
+      "id": "translation-and-trap",
+      "number": "03",
+      "startFrame": 450,
+      "title": "中文译本与未经认证的反例",
+      "durationMs": 7000,
+      "file": "translation-and-trap.avif",
+      "fileSize": 371716,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "97ef00b5b4b168147dc45afcdc56f5aa0397193d12bc0618b73fe7d3db578a95",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "00c9391fdd5db5b31fa8d04fd6edc55ee6e265953a5b43ddd3e3a00ed3c15dbb"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "00c9391fdd5db5b31fa8d04fd6edc55ee6e265953a5b43ddd3e3a00ed3c15dbb",
+  "targetFps": 30,
+  "totalFileSize": 972962
+}

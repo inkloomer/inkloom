@@ -1,0 +1,11 @@
+{
+  "directionId": "border-crossing-proof-route",
+  "family": "legal-transit-map",
+  "palette": "warm paper + cobalt route + vermilion stop + teal translation",
+  "typography": "humanist legal headings with compact route labels and underlined operative conditions",
+  "composition": "three connected border-crossing lanes with a court intake gate",
+  "surface": "flat paper map, route bands, passport-like evidence cards, no rounded dashboard panels",
+  "motion": "document tokens cross jurisdiction checkpoints and split only when identity evidence adds a consular gate",
+  "transition": "the court intake gate persists while the route changes from general to identity to language",
+  "catalog": {"status": "variant", "sourceDirectionId": "transit-map"}
+}
