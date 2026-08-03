@@ -152,26 +152,29 @@ const FactToken = ({
   </div>
 );
 
-const ProcessChamber = ({active}: {active: number}) => (
+const ProcessChamber = ({active, children}: {active: number; children: ReactNode}) => (
   <div
     style={{
       position: 'absolute',
-      left: 748,
-      top: 192,
-      width: 300,
-      height: 300,
+      left: 728,
+      top: 148,
+      width: 340,
+      height: 398,
       backgroundColor: P.ink,
       color: P.white,
-      display: 'grid',
-      placeItems: 'center',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
       textAlign: 'center',
+      padding: '24px 24px 22px',
       boxShadow: `0 0 0 ${12 + active * 8}px rgba(240, 191, 63, ${0.12 + active * 0.2})`,
     }}
   >
-    <div>
-      <Microscope size={92} color={P.yellow} />
-      <div style={{marginTop: 22, fontSize: 38, fontWeight: 950}}>鉴定程序</div>
-      <div style={{marginTop: 12, color: P.mist, fontSize: 22, fontWeight: 750}}>专业判断工位</div>
+    <Microscope size={66} color={P.yellow} />
+    <div style={{marginTop: 10, fontSize: 34, fontWeight: 950}}>鉴定程序</div>
+    <div style={{marginTop: 6, color: P.mist, fontSize: 22, fontWeight: 750}}>进入后保留为程序内事实</div>
+    <div style={{width: '100%', marginTop: 18, display: 'flex', flexDirection: 'column', gap: 10}}>
+      {children}
     </div>
   </div>
 );
@@ -195,17 +198,18 @@ export const InitiationScene = () => {
         style={{position: 'absolute', inset: 0}}
       >
         <Enter delay={2} style={{position: 'absolute', left: 18, top: 18, width: 630, height: 118}}>
-          <Label color={P.green}>原则入口</Label>
-          <div style={{marginTop: 14, fontSize: 32, fontWeight: 950}}>负举证责任的当事人</div>
-          <div style={{marginTop: 6, fontSize: 24, color: P.steel}}>必须在法院指定期间内申请</div>
+          <div data-final-knowledge="party-application-principle">
+            <Label color={P.green}>原则入口</Label>
+            <div style={{marginTop: 14, fontSize: 32, fontWeight: 950}}>负举证责任的当事人</div>
+            <div style={{marginTop: 6, fontSize: 24, color: P.steel}}>必须在法院指定期间内申请</div>
+          </div>
         </Enter>
 
         <Enter delay={10} style={{position: 'absolute', left: 32, top: 198}}>
           <UsersRound size={78} color={P.green} />
         </Enter>
-        <FactToken
-          label="待鉴定事实"
-          color={P.green}
+        <div
+          data-stateful-source="party-fact"
           style={{
             position: 'absolute',
             left: 130,
@@ -214,7 +218,9 @@ export const InitiationScene = () => {
             scale: 1 - partyTravel * 0.12,
             opacity: interpolate(partyTravel, [0.9, 1], [1, 0], CLAMP),
           }}
-        />
+        >
+          <FactToken label="待鉴定事实" color={P.green} />
+        </div>
         <div
           style={{
             position: 'absolute',
@@ -233,80 +239,82 @@ export const InitiationScene = () => {
           </Label>
         </Enter>
 
-        <ProcessChamber active={chamberActive} />
-        <ImpactReveal delay={76} style={{position: 'absolute', left: 812, top: 508}}>
-          <Label color={P.green}>申请到位 → 进入鉴定</Label>
-        </ImpactReveal>
+        <ProcessChamber active={chamberActive}>
+          <div
+            data-final-knowledge="party-fact-in-appraisal"
+            data-stateful-terminal="party-fact"
+            style={{
+              minHeight: 66,
+              padding: '10px 14px',
+              backgroundColor: P.green,
+              display: 'flex',
+              alignItems: 'center',
+              gap: 12,
+              opacity: interpolate(partyTravel, [0.82, 1], [0, 1], CLAMP),
+              fontSize: 22,
+              fontWeight: 900,
+              textAlign: 'left',
+            }}
+          >
+            <FileCheck2 size={38} /> 申请事实 · 程序内子块
+          </div>
+          <div
+            data-final-knowledge="court-fact-in-appraisal"
+            data-stateful-terminal="court-fact"
+            style={{
+              minHeight: 66,
+              padding: '10px 14px',
+              backgroundColor: P.orange,
+              display: 'flex',
+              alignItems: 'center',
+              gap: 12,
+              opacity: interpolate(courtTravel, [0.82, 1], [0, 1], CLAMP),
+              fontSize: 22,
+              fontWeight: 900,
+              textAlign: 'left',
+            }}
+          >
+            <FileCheck2 size={38} /> 职权事实 · 程序内子块
+          </div>
+        </ProcessChamber>
 
         <Enter delay={82} style={{position: 'absolute', left: 30, bottom: 44, width: 650, height: 180}}>
-          <div style={{position: 'absolute', left: 0, top: 0, color: P.red, opacity: consequenceProgress}}>
-            <Ban size={58} />
-          </div>
-          <div
-            style={{
-              position: 'absolute',
-              left: 82,
-              top: 0,
-              width: 250,
-              height: 76,
-              border: `3px solid ${P.red}`,
-              backgroundColor: P.white,
-              display: 'grid',
-              placeItems: 'center',
-              fontSize: 24,
-              fontWeight: 900,
-            }}
-          >
-            未在期间内申请
-          </div>
-          <div
-            style={{
-              position: 'absolute',
-              left: 352,
-              top: 0,
-              width: 250,
-              height: 76,
-              backgroundColor: P.red,
-              color: P.white,
-              display: 'grid',
-              placeItems: 'center',
-              fontSize: 25,
-              fontWeight: 950,
-              opacity: consequenceProgress,
-              translate: interpolate(consequenceProgress, [0, 1], ['-34px 0px', '0px 0px'], CLAMP),
-            }}
-          >
-            事实不明
-          </div>
-          <div style={{position: 'absolute', left: 82, top: 104, fontSize: 29, fontWeight: 950, color: P.red}}>
-            后果由举证责任人承担
-            <div style={{marginTop: 5, height: 4, width: 360 * consequenceProgress, backgroundColor: P.red}} />
+          <div data-final-knowledge="non-application-consequence" style={{position: 'absolute', inset: 0}}>
+            <div style={{position: 'absolute', left: 0, top: 0, color: P.red, opacity: consequenceProgress}}>
+              <Ban size={58} />
+            </div>
+            <div style={{position: 'absolute', left: 82, top: 0, width: 250, height: 76, border: `3px solid ${P.red}`, backgroundColor: P.white, display: 'grid', placeItems: 'center', fontSize: 24, fontWeight: 900}}>
+              未在期间内申请
+            </div>
+            <div style={{position: 'absolute', left: 352, top: 0, width: 250, height: 76, backgroundColor: P.red, color: P.white, display: 'grid', placeItems: 'center', fontSize: 25, fontWeight: 950, opacity: consequenceProgress, translate: interpolate(consequenceProgress, [0, 1], ['-34px 0px', '0px 0px'], CLAMP)}}>
+              事实不明
+            </div>
+            <div style={{position: 'absolute', left: 82, top: 104, fontSize: 29, fontWeight: 950, color: P.red}}>
+              后果由举证责任人承担
+              <div style={{marginTop: 5, height: 4, width: 360 * consequenceProgress, backgroundColor: P.red}} />
+            </div>
           </div>
         </Enter>
 
         <Enter delay={88} from="right" style={{position: 'absolute', right: 18, top: 18, width: 618, height: 120, textAlign: 'right'}}>
-          <Label color={P.orange}>例外入口</Label>
-          <div style={{marginTop: 14, fontSize: 32, fontWeight: 950}}>法院依职权决定</div>
-          <div style={{marginTop: 6, fontSize: 24, color: P.steel}}>仅限本来就应依职权调查的事实</div>
+          <div data-final-knowledge="court-ex-officio-decision">
+            <Label color={P.orange}>例外入口</Label>
+            <div style={{marginTop: 14, fontSize: 32, fontWeight: 950}}>法院依职权决定</div>
+            <div style={{marginTop: 6, fontSize: 24, color: P.steel}}>仅限本来就应依职权调查的事实</div>
+          </div>
         </Enter>
-        <StaggerEnter
-          baseDelay={94}
-          step={12}
-          direction="column"
-          gap={12}
-          from="right"
-          style={{position: 'absolute', right: 22, top: 178, width: 360}}
-        >
-          <div style={{padding: '13px 18px', backgroundColor: P.orange, color: P.white, fontSize: 24, fontWeight: 900}}>国家 / 社会 / 第三人利益</div>
-          <div style={{padding: '13px 18px', border: `3px solid ${P.orange}`, backgroundColor: P.white, fontSize: 24, fontWeight: 900}}>身份关系</div>
-          <div style={{padding: '13px 18px', border: `3px solid ${P.orange}`, backgroundColor: P.white, fontSize: 24, fontWeight: 900}}>程序性事实</div>
-        </StaggerEnter>
+        <div data-final-knowledge="court-ex-officio-scope" style={{position: 'absolute', right: 22, top: 178, width: 360, height: 190}}>
+          <StaggerEnter baseDelay={94} step={12} direction="column" gap={12} from="right" style={{position: 'absolute', inset: 0}}>
+            <div style={{padding: '13px 18px', backgroundColor: P.orange, color: P.white, fontSize: 24, fontWeight: 900}}>国家 / 社会 / 第三人利益</div>
+            <div style={{padding: '13px 18px', border: `3px solid ${P.orange}`, backgroundColor: P.white, fontSize: 24, fontWeight: 900}}>身份关系</div>
+            <div style={{padding: '13px 18px', border: `3px solid ${P.orange}`, backgroundColor: P.white, fontSize: 24, fontWeight: 900}}>程序性事实</div>
+          </StaggerEnter>
+        </div>
         <Enter delay={92} style={{position: 'absolute', right: 430, top: 218}}>
           <Landmark size={78} color={P.orange} />
         </Enter>
-        <FactToken
-          label="职权调查事实"
-          color={P.orange}
+        <div
+          data-stateful-source="court-fact"
           style={{
             position: 'absolute',
             right: 132,
@@ -315,7 +323,9 @@ export const InitiationScene = () => {
             scale: 1 - courtTravel * 0.12,
             opacity: interpolate(courtTravel, [0.9, 1], [1, 0], CLAMP),
           }}
-        />
+        >
+          <FactToken label="职权调查事实" color={P.orange} />
+        </div>
         <div
           style={{
             position: 'absolute',
@@ -328,9 +338,6 @@ export const InitiationScene = () => {
             transformOrigin: 'right center',
           }}
         />
-        <ImpactReveal delay={164} style={{position: 'absolute', left: 1056, top: 508}}>
-          <Label color={P.orange}>范围命中 → 法院决定</Label>
-        </ImpactReveal>
       </div>
     </SceneShell>
   );
@@ -358,7 +365,7 @@ const SelectionRoute = ({
   const secondTravel = interpolate(frame, [delay + 48, delay + 78], [0, 1], CLAMP);
 
   return (
-    <div style={{position: 'absolute', left: 24, top, width: 810, height: 180}}>
+    <div style={{position: 'absolute', left: 0, top, width: 810, height: 180}}>
       <Enter delay={delay} style={{position: 'absolute', left: 0, top: 26, width: 220, height: 126, backgroundColor: P.white, border: `4px solid ${color}`, padding: '18px 20px'}}>
         <div style={{display: 'flex', alignItems: 'center', gap: 14}}>{icon}<span style={{fontSize: 28, fontWeight: 950}}>{source}</span></div>
       </Enter>
@@ -410,26 +417,14 @@ export const PreparationScene = () => {
         <Enter delay={2} style={{position: 'absolute', left: 24, top: 2}}>
           <Label color={P.blue}>第一站：确定鉴定人</Label>
         </Enter>
-        <SelectionRoute
-          top={62}
-          color={P.green}
-          icon={<UsersRound size={45} color={P.green} />}
-          source="当事人申请"
-          first="先协商"
-          condition="协商不成"
-          delay={8}
-        />
-        <SelectionRoute
-          top={270}
-          color={P.orange}
-          icon={<Landmark size={45} color={P.orange} />}
-          source="法院职权"
-          first="询问意见"
-          condition="听取后"
-          delay={30}
-        />
+        <div data-final-knowledge="party-appraiser-route" style={{position: 'absolute', left: 24, top: 62, width: 720, height: 180}}>
+          <SelectionRoute top={0} color={P.green} icon={<UsersRound size={45} color={P.green} />} source="当事人申请" first="先协商" condition="协商不成" delay={8} />
+        </div>
+        <div data-final-knowledge="court-appraiser-route" style={{position: 'absolute', left: 24, top: 270, width: 720, height: 180}}>
+          <SelectionRoute top={0} color={P.orange} icon={<Landmark size={45} color={P.orange} />} source="法院职权" first="询问意见" condition="听取后" delay={30} />
+        </div>
         <ImpactReveal delay={84} style={{position: 'absolute', left: 748, top: 206}}>
-          <div style={{width: 160, height: 210, backgroundColor: P.ink, color: P.white, display: 'grid', placeItems: 'center', textAlign: 'center', translate: `0 ${-36 + badgeDrop * 36}px`}}>
+          <div data-final-knowledge="court-designates-appraiser" style={{width: 160, height: 210, backgroundColor: P.ink, color: P.white, display: 'grid', placeItems: 'center', textAlign: 'center', translate: `0 ${-36 + badgeDrop * 36}px`}}>
             <div>
               <BadgeCheck size={62} color={P.yellow} />
               <div style={{fontSize: 29, fontWeight: 950, marginTop: 12}}>法院指定</div>
@@ -449,21 +444,15 @@ export const PreparationScene = () => {
           <Label color={P.orange}>第二站：材料质证闸门</Label>
         </Enter>
         <Enter delay={92} from="right" style={{position: 'absolute', left: 998, top: 110, fontSize: 24, color: P.steel, fontWeight: 800}}>
-          材料是否能成为鉴定根据，只看有没有经过质证
+          <div data-final-knowledge="cross-examination-rule">材料是否能成为鉴定根据，只看有没有经过质证</div>
         </Enter>
 
-        <MaterialDocument
-          label="已经质证"
-          color={P.green}
-          icon={<FileCheck2 size={50} color={P.green} />}
-          style={{position: 'absolute', left: 982, top: 202, translate: `${testedTravel * 446}px 0px`, scale: 1 - testedTravel * 0.08}}
-        />
-        <MaterialDocument
-          label="未经质证"
-          color={P.red}
-          icon={<FileX2 size={50} color={P.red} />}
-          style={{position: 'absolute', left: 982, top: 388, translate: `${rejectedTravel * 230}px ${rejectedTravel * 190}px`, scale: 1 - rejectedTravel * 0.08}}
-        />
+        <div data-stateful-source="examined-material" style={{position: 'absolute', left: 982, top: 202, translate: `${testedTravel * 480}px 0px`, scale: 1 - testedTravel * 0.08, opacity: interpolate(testedTravel, [0, 0.84, 1], [1, 1, 0], CLAMP)}}>
+          <MaterialDocument label="已经质证" color={P.green} icon={<FileCheck2 size={50} color={P.green} />} />
+        </div>
+        <div data-stateful-source="unexamined-material" style={{position: 'absolute', left: 982, top: 388, translate: `${rejectedTravel * 480}px ${rejectedTravel * 70}px`, scale: 1 - rejectedTravel * 0.08, opacity: interpolate(rejectedTravel, [0, 0.84, 1], [1, 1, 0], CLAMP)}}>
+          <MaterialDocument label="未经质证" color={P.red} icon={<FileX2 size={50} color={P.red} />} />
+        </div>
 
         <div style={{position: 'absolute', left: 1268, top: 178, width: 122, height: 344, border: `5px solid ${P.ink}`, backgroundColor: P.white}}>
           <div style={{position: 'absolute', left: -5, right: -5, top: 120, height: 92, backgroundColor: P.ink, translate: `0 ${gateOpen * -102}px`}} />
@@ -471,14 +460,18 @@ export const PreparationScene = () => {
           <div style={{position: 'absolute', left: -18, bottom: -48, width: 150, textAlign: 'center', fontSize: 25, fontWeight: 950}}>质证门</div>
         </div>
 
-        <ImpactReveal delay={160} style={{position: 'absolute', right: 18, top: 188}}>
-          <div style={{width: 264, height: 148, backgroundColor: P.green, color: P.white, display: 'grid', placeItems: 'center', textAlign: 'center'}}>
-            <div><FileCheck2 size={52} /><div style={{fontSize: 30, fontWeight: 950, marginTop: 8}}>可作为鉴定根据</div></div>
+        <ImpactReveal delay={160} style={{position: 'absolute', right: 18, top: 178}}>
+          <div data-final-knowledge="examined-material-admitted" data-stateful-terminal="examined-material" style={{width: 276, height: 190, backgroundColor: P.green, color: P.white, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center'}}>
+            <div style={{display: 'flex', alignItems: 'center', gap: 12, fontSize: 24, fontWeight: 900}}><FileCheck2 size={46} /> 已质证材料</div>
+            <div style={{fontSize: 29, fontWeight: 950, marginTop: 18}}>可作为鉴定根据</div>
           </div>
         </ImpactReveal>
-        <ImpactReveal delay={188} style={{position: 'absolute', left: 1218, bottom: 28}}>
-          <div style={{width: 470, height: 118, backgroundColor: P.red, color: P.white, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 20, fontSize: 30, fontWeight: 950}}>
-            <Ban size={52} /> 不得作为鉴定根据
+        <ImpactReveal delay={188} style={{position: 'absolute', right: 18, top: 416}}>
+          <div data-final-knowledge="unexamined-material-excluded" data-stateful-terminal="unexamined-material" style={{width: 276, height: 218, backgroundColor: P.white, border: `5px solid ${P.red}`, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'space-between', textAlign: 'center', padding: '24px 18px 0'}}>
+            <div style={{display: 'flex', alignItems: 'center', gap: 12, color: P.red, fontSize: 24, fontWeight: 900}}><FileX2 size={46} /> 未经质证材料</div>
+            <div style={{width: 'calc(100% + 36px)', minHeight: 82, backgroundColor: P.red, color: P.white, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 12, fontSize: 25, fontWeight: 950}}>
+              <Ban size={42} /> 不得作为鉴定根据
+            </div>
           </div>
         </ImpactReveal>
       </div>
@@ -486,31 +479,11 @@ export const PreparationScene = () => {
   );
 };
 
-const Consequence = ({
-  top,
-  color,
-  icon,
-  title,
-  delay,
-}: {
-  top: number;
-  color: string;
-  icon: ReactNode;
-  title: string;
-  delay: number;
-}) => (
-  <Enter delay={delay} from="right" style={{position: 'absolute', right: 18, top, width: 590, height: 128, backgroundColor: color, color: P.white, display: 'flex', alignItems: 'center', gap: 24, padding: '20px 28px'}}>
-    {icon}
-    <div style={{fontSize: 29, fontWeight: 950}}>{title}</div>
-  </Enter>
-);
-
 export const AppearanceConsequencesScene = () => {
   const frame = toSourceFrame(useCurrentFrame());
   const summonsTravel = interpolate(frame, [18, 58], [0, 1], CLAMP);
   const refusalStamp = interpolate(frame, [78, 94], [0, 1], CLAMP);
   const opinionExit = interpolate(frame, [102, 144], [0, 1], CLAMP);
-  const refundTravel = interpolate(frame, [146, 184], [0, 1], CLAMP);
 
   return (
     <SceneShell code="03" title="出庭不是形式：一次拒不到庭会切断证据链" object="鉴定意见">
@@ -527,12 +500,16 @@ export const AppearanceConsequencesScene = () => {
           <Label color={P.green}>正常出庭：费用分流</Label>
         </Enter>
         <Enter delay={8} style={{position: 'absolute', left: 32, top: 92, width: 720, height: 120, backgroundColor: P.white, border: `4px solid ${P.green}`, padding: '22px 28px', display: 'flex', alignItems: 'center', gap: 24}}>
-          <BadgeDollarSign size={62} color={P.green} />
-          <div><div style={{fontSize: 31, fontWeight: 950}}>原则：败诉方负担出庭费用</div><div style={{fontSize: 23, marginTop: 8, color: P.steel}}>费用跟随诉讼结果</div></div>
+          <div data-final-knowledge="losing-party-fee-rule" style={{display: 'flex', alignItems: 'center', gap: 24}}>
+            <BadgeDollarSign size={62} color={P.green} />
+            <div><div style={{fontSize: 31, fontWeight: 950}}>原则：败诉方负担出庭费用</div><div style={{fontSize: 23, marginTop: 8, color: P.steel}}>费用跟随诉讼结果</div></div>
+          </div>
         </Enter>
         <Enter delay={28} style={{position: 'absolute', left: 32, top: 248, width: 720, height: 160, backgroundColor: P.ink, color: P.white, padding: '26px 30px', display: 'flex', alignItems: 'center', gap: 24}}>
-          <FileClock size={64} color={P.yellow} />
-          <div><div style={{fontSize: 30, fontWeight: 950}}>意见不明确 / 有瑕疵</div><div style={{fontSize: 28, marginTop: 12, color: P.yellow, fontWeight: 950}}>鉴定人自行负担</div></div>
+          <div data-final-knowledge="defective-opinion-fee-exception" style={{display: 'flex', alignItems: 'center', gap: 24}}>
+            <FileClock size={64} color={P.yellow} />
+            <div><div style={{fontSize: 30, fontWeight: 950}}>意见不明确 / 有瑕疵</div><div style={{fontSize: 28, marginTop: 12, color: P.yellow, fontWeight: 950}}>鉴定人自行负担</div></div>
+          </div>
         </Enter>
         <div style={{position: 'absolute', left: 86, top: 450, width: 612, height: 92, borderBottom: `8px solid ${P.steel}`}}>
           <ScaleBeam progress={summonsTravel} />
@@ -547,6 +524,7 @@ export const AppearanceConsequencesScene = () => {
         </div>
         <div style={{position: 'absolute', left: 1114, top: 182, width: 178, height: 7, backgroundColor: P.blue, scale: `${summonsTravel} 1`, transformOrigin: 'left center'}} />
         <div
+          data-final-knowledge="refusal-after-notice"
           style={{
             position: 'absolute',
             left: 1278,
@@ -565,6 +543,7 @@ export const AppearanceConsequencesScene = () => {
         </div>
 
         <div
+          data-stateful-source="appraisal-opinion"
           style={{
             position: 'absolute',
             left: 902,
@@ -574,7 +553,7 @@ export const AppearanceConsequencesScene = () => {
             backgroundColor: P.white,
             border: `4px solid ${P.blue}`,
             padding: '22px 24px',
-            opacity: 1 - opinionExit * 0.72,
+            opacity: 1 - opinionExit,
             translate: `${opinionExit * 148}px ${opinionExit * 44}px`,
             rotate: `${opinionExit * -7}deg`,
           }}
@@ -582,20 +561,25 @@ export const AppearanceConsequencesScene = () => {
           <FileCheck2 size={54} color={P.blue} />
           <div style={{fontSize: 29, fontWeight: 950, marginTop: 12}}>鉴定意见</div>
         </div>
-        <ImpactReveal delay={104} style={{position: 'absolute', left: 872, top: 524}}>
-          <div style={{width: 370, height: 92, backgroundColor: P.red, color: P.white, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 18, fontSize: 28, fontWeight: 950}}>
-            <FileX2 size={48} /> 不得作为定案根据
-          </div>
-        </ImpactReveal>
 
-        <Consequence top={328} color={P.red} icon={<FileX2 size={52} />} title="鉴定意见退出定案链" delay={106} />
-        <Consequence top={474} color={P.blue} icon={<RotateCcw size={52} />} title="退还已经收取的鉴定费用" delay={142} />
-        <Consequence top={620} color={P.orange} icon={<ShieldAlert size={52} />} title="建议有关部门依法处罚" delay={178} />
-        <CircleDollarSign
-          size={46}
-          color={P.yellow}
-          style={{position: 'absolute', left: 1510, top: 522, translate: `${refundTravel * -318}px 0px`, opacity: refundTravel}}
-        />
+        <Enter delay={106} from="right" style={{position: 'absolute', right: 18, top: 328, width: 590, height: 128}}>
+          <div data-final-knowledge="opinion-not-basis" data-stateful-terminal="appraisal-opinion" style={{position: 'absolute', inset: 0, backgroundColor: P.red, color: P.white, display: 'flex', alignItems: 'center', gap: 24, padding: '20px 28px'}}>
+            <FileX2 size={52} />
+            <div style={{fontSize: 29, fontWeight: 950}}>鉴定意见不得作为定案根据</div>
+          </div>
+        </Enter>
+        <Enter delay={142} from="right" style={{position: 'absolute', right: 18, top: 474, width: 590, height: 128}}>
+          <div data-final-knowledge="refund-appraisal-fee" style={{position: 'absolute', inset: 0, backgroundColor: P.blue, color: P.white, display: 'flex', alignItems: 'center', gap: 24, padding: '20px 28px'}}>
+            <RotateCcw size={52} />
+            <div style={{fontSize: 29, fontWeight: 950}}>退还已经收取的鉴定费用</div>
+          </div>
+        </Enter>
+        <Enter delay={178} from="right" style={{position: 'absolute', right: 18, top: 620, width: 590, height: 128}}>
+          <div data-final-knowledge="recommend-punishment" style={{position: 'absolute', inset: 0, backgroundColor: P.orange, color: P.white, display: 'flex', alignItems: 'center', gap: 24, padding: '20px 28px'}}>
+            <ShieldAlert size={52} />
+            <div style={{fontSize: 29, fontWeight: 950}}>建议有关部门依法处罚</div>
+          </div>
+        </Enter>
       </div>
     </SceneShell>
   );

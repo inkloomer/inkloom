@@ -53,6 +53,7 @@ const quote = (value) => `"${value}"`;
 const main = async () => {
   const baseline = JSON.parse(await readFile(BASELINE_PATH, 'utf8'));
   const legacyIds = new Set(baseline.legacyStructureAuditIds ?? []);
+  const legacyFinalStateAuditIds = new Set(baseline.legacyFinalStateAuditIds ?? []);
   const legacyPlayerControlSafeAreaIds = new Set(baseline.legacyPlayerControlSafeAreaIds ?? []);
   const errors = [];
   let auditedScenes = 0;
@@ -156,6 +157,34 @@ const main = async () => {
       if (!section.includes(`data-focal-channels=${quote(channelMarker)}`)) errors.push(`${prefix}: TSX is missing its declared scene focal-channel marker`);
       if (!section.includes('data-focal-rule=')) errors.push(`${prefix}: TSX must identify a focal rule, not merely styled text`);
       if (!section.includes('data-focal-channels=')) errors.push(`${prefix}: focal rule must declare co-located semantic channels`);
+
+      if (!legacyFinalStateAuditIds.has(animation.id)) {
+        const finalKnowledge = Array.isArray(scene.finalKnowledge) ? scene.finalKnowledge : [];
+        const statefulObjects = Array.isArray(scene.statefulObjects) ? scene.statefulObjects : undefined;
+        if (finalKnowledge.length < 1) errors.push(`${prefix}: declare at least one finalKnowledge id for stable-final-frame audit`);
+        if (!statefulObjects) errors.push(`${prefix}: statefulObjects must be an array, empty only when no knowledge object moves`);
+        for (const knowledgeId of finalKnowledge) {
+          if (typeof knowledgeId !== 'string' || !/^[a-z0-9][a-z0-9-]*$/.test(knowledgeId)) {
+            errors.push(`${prefix}: finalKnowledge ids must be descriptive kebab-case`);
+            continue;
+          }
+          if (!section.includes(`data-final-knowledge=${quote(knowledgeId)}`)) {
+            errors.push(`${prefix}: TSX is missing final knowledge marker ${quote(knowledgeId)}`);
+          }
+        }
+        for (const objectId of statefulObjects ?? []) {
+          if (typeof objectId !== 'string' || !/^[a-z0-9][a-z0-9-]*$/.test(objectId)) {
+            errors.push(`${prefix}: statefulObjects ids must be descriptive kebab-case`);
+            continue;
+          }
+          if (!section.includes(`data-stateful-source=${quote(objectId)}`)) {
+            errors.push(`${prefix}: stateful object ${quote(objectId)} is missing its source marker`);
+          }
+          if (!section.includes(`data-stateful-terminal=${quote(objectId)}`)) {
+            errors.push(`${prefix}: stateful object ${quote(objectId)} must remain as a terminal child or result block`);
+          }
+        }
+      }
       if (section.includes('kind="circle"') || section.includes('kind="cross"')) errors.push(`${prefix}: text-overlay circles and strike-through marks are prohibited; use soft highlight, thin underline, or an external negation icon`);
       for (const token of tokens) {
         if (!section.includes(`<${token}`)) errors.push(`${prefix}: declared semantic token ${quote(token)} is not rendered in the scene`);

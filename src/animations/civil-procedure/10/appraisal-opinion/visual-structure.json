@@ -10,7 +10,16 @@
       "grammar": ["default", "exception", "authorization", "consequence"],
       "textTreatments": ["label-block", "thin-underline", "stamp", "external-negation"],
       "focalChannels": ["icon", "motion", "enclosure", "contrast"],
-      "tokens": ["UsersRound", "Landmark", "Ban"]
+      "tokens": ["UsersRound", "Landmark", "Ban"],
+      "finalKnowledge": [
+        "party-application-principle",
+        "court-ex-officio-decision",
+        "court-ex-officio-scope",
+        "non-application-consequence",
+        "party-fact-in-appraisal",
+        "court-fact-in-appraisal"
+      ],
+      "statefulObjects": ["party-fact", "court-fact"]
     },
     {
       "id": "preparation",
@@ -20,7 +29,16 @@
       "grammar": ["selection", "escalation", "verification", "exclusion"],
       "textTreatments": ["soft-highlight", "label-block", "stamp", "external-negation"],
       "focalChannels": ["icon", "motion", "enclosure", "annotation"],
-      "tokens": ["UsersRound", "Landmark", "BadgeCheck", "MessagesSquare", "FileCheck2", "FileX2"]
+      "tokens": ["UsersRound", "Landmark", "BadgeCheck", "MessagesSquare", "FileCheck2", "FileX2"],
+      "finalKnowledge": [
+        "party-appraiser-route",
+        "court-appraiser-route",
+        "court-designates-appraiser",
+        "cross-examination-rule",
+        "examined-material-admitted",
+        "unexamined-material-excluded"
+      ],
+      "statefulObjects": ["examined-material", "unexamined-material"]
     },
     {
       "id": "appearance-consequences",
@@ -30,7 +48,16 @@
       "grammar": ["summons", "cost-allocation", "exception", "sanction-cascade"],
       "textTreatments": ["label-block", "stamp", "external-negation", "soft-highlight"],
       "focalChannels": ["icon", "motion", "enclosure", "spatial"],
-      "tokens": ["BadgeDollarSign", "Gavel", "UserRoundCheck", "FileX2", "RotateCcw", "ShieldAlert"]
+      "tokens": ["BadgeDollarSign", "Gavel", "UserRoundCheck", "FileX2", "RotateCcw", "ShieldAlert"],
+      "finalKnowledge": [
+        "losing-party-fee-rule",
+        "defective-opinion-fee-exception",
+        "refusal-after-notice",
+        "opinion-not-basis",
+        "refund-appraisal-fee",
+        "recommend-punishment"
+      ],
+      "statefulObjects": ["appraisal-opinion"]
     }
   ]
 }

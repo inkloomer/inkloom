@@ -16,11 +16,13 @@ export type SceneTiming = {
 };
 
 type LayoutAuditInputProps = {
+  readonly __inkloomFinalFrameAudit?: boolean;
   readonly __inkloomLayoutAudit?: boolean;
 };
 
 const formatRect = (rect: DOMRect) =>
   `[${Math.round(rect.left)},${Math.round(rect.top)} ${Math.round(rect.width)}x${Math.round(rect.height)}]`;
+const quote = (value: string) => `"${value}"`;
 
 const WENKAI_SCREEN = 'LXGW WenKai Screen';
 const WENKAI_MONO = 'LXGW WenKai Mono GB Screen';
@@ -39,6 +41,7 @@ const LayoutAudit = ({children, name}: {readonly children: ReactNode; readonly n
   const rootRef = useRef<HTMLDivElement>(null);
   const {height, props, width} = useVideoConfig();
   const enabled = (props as LayoutAuditInputProps).__inkloomLayoutAudit === true;
+  const finalFrameAuditEnabled = (props as LayoutAuditInputProps).__inkloomFinalFrameAudit === true;
 
   useLayoutEffect(() => {
     const root = rootRef.current;
@@ -88,10 +91,80 @@ const LayoutAudit = ({children, name}: {readonly children: ReactNode; readonly n
       }
     }
 
+    if (finalFrameAuditEnabled) {
+      const finalKnowledge = [...root.querySelectorAll<HTMLElement>('[data-final-knowledge]')];
+      if (finalKnowledge.length === 0) {
+        failures.push('final frame declares no data-final-knowledge elements');
+      }
+
+      const sourceIds = new Set(
+        [...root.querySelectorAll<HTMLElement>('[data-stateful-source]')]
+          .map((element) => element.dataset.statefulSource)
+          .filter((value): value is string => Boolean(value)),
+      );
+      const terminals = [...root.querySelectorAll<HTMLElement>('[data-stateful-terminal]')];
+      const terminalIds = new Set(
+        terminals
+          .map((element) => element.dataset.statefulTerminal)
+          .filter((value): value is string => Boolean(value)),
+      );
+
+      for (const sourceId of sourceIds) {
+        if (!terminalIds.has(sourceId)) failures.push(`stateful object ${quote(sourceId)} has no terminal representation`);
+      }
+
+      const auditedElements = [...new Set([...finalKnowledge, ...terminals])];
+      for (const element of auditedElements) {
+        const identifier = element.dataset.finalKnowledge ?? element.dataset.statefulTerminal ?? 'unknown';
+        const rect = element.getBoundingClientRect();
+        let cumulativeOpacity = 1;
+        let current: HTMLElement | null = element;
+        let hidden = rect.width <= tolerance || rect.height <= tolerance;
+
+        while (current && current !== root) {
+          const style = window.getComputedStyle(current);
+          cumulativeOpacity *= Number(style.opacity || 1);
+          if (style.display === 'none' || style.visibility === 'hidden') hidden = true;
+          current = current.parentElement;
+        }
+
+        if (hidden || cumulativeOpacity < 0.98) {
+          failures.push(`final knowledge ${quote(identifier)} is not fully visible`);
+        }
+        if (
+          rect.left < canvas.left - tolerance ||
+          rect.top < canvas.top - tolerance ||
+          rect.right > canvas.right + tolerance ||
+          rect.bottom > canvas.bottom + tolerance
+        ) {
+          failures.push(`final knowledge ${quote(identifier)} ${formatRect(rect)} exceeds canvas ${formatRect(canvas)}`);
+        }
+      }
+
+      for (let leftIndex = 0; leftIndex < finalKnowledge.length; leftIndex += 1) {
+        const left = finalKnowledge[leftIndex];
+        const leftRect = left.getBoundingClientRect();
+        for (let rightIndex = leftIndex + 1; rightIndex < finalKnowledge.length; rightIndex += 1) {
+          const right = finalKnowledge[rightIndex];
+          if (left.contains(right) || right.contains(left)) continue;
+          const rightRect = right.getBoundingClientRect();
+          const overlapWidth = Math.max(0, Math.min(leftRect.right, rightRect.right) - Math.max(leftRect.left, rightRect.left));
+          const overlapHeight = Math.max(0, Math.min(leftRect.bottom, rightRect.bottom) - Math.max(leftRect.top, rightRect.top));
+          const overlapArea = overlapWidth * overlapHeight;
+          const smallerArea = Math.min(leftRect.width * leftRect.height, rightRect.width * rightRect.height);
+          if (overlapWidth > tolerance && overlapHeight > tolerance && overlapArea > smallerArea * 0.02) {
+            const leftId = left.dataset.finalKnowledge ?? 'unknown';
+            const rightId = right.dataset.finalKnowledge ?? 'unknown';
+            failures.push(`final knowledge ${quote(leftId)} overlaps ${quote(rightId)}`);
+          }
+        }
+      }
+    }
+
     if (failures.length > 0) {
       throw new Error(`[layout-audit] ${name}: ${failures.join(' | ')}`);
     }
-  }, [enabled, name]);
+  }, [enabled, finalFrameAuditEnabled, name]);
 
   if (!enabled) return <>{children}</>;
   return <div ref={rootRef} style={{position: 'absolute', left: 0, top: 0, width, height}}>{children}</div>;

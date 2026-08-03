@@ -3,7 +3,7 @@
   "compositionId": "AppraisalOpinion",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-08-03T10:24:07.372Z",
+  "generatedAt": "2026-08-03T11:17:21.741Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -16,13 +16,13 @@
       "title": "鉴定的启动",
       "durationMs": 7000,
       "file": "initiation.avif",
-      "fileSize": 637429,
+      "fileSize": 619073,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "b27b7c9fa8cc0e40f37b8fc436a115327a4a2e6ff81add86d042c1cc2d331a0f",
+      "sha256": "32d9cca0232c530c43a27f422004a77b456e5975fdacd2a6961e9604a3ba05c9",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "74c81908b1cf48ae89a61878a7b2d15f9a5227af4215d7a3b1b98e36c3a269be"
+      "sceneFingerprint": "05b77dc867ac56969d1df0554b0d9f8ef979434f1b5d067020b90daa0b9b4e21"
     },
     {
       "endFrame": 434,
@@ -33,13 +33,13 @@
       "title": "鉴定人和材料",
       "durationMs": 7500,
       "file": "preparation.avif",
-      "fileSize": 615109,
+      "fileSize": 650155,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "560227c5340915e0549c66263ca993bdf2202060b82cba339eee4700686f63c1",
+      "sha256": "161d89ab4bef5c1af17bf33424c0bc31549f5e70a5233001fde3a60f2bef6e78",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "d9e6281b1cf6556f3b63a3df2addc81798f01ee10467fe2824f9014d1360d149"
+      "sceneFingerprint": "e947d13b7f3f039fc60fb05e6298b4543fb76d225c4e61ae93e8ccde916d3711"
     },
     {
       "endFrame": 689,
@@ -50,13 +50,13 @@
       "title": "出庭费用与拒不出庭后果",
       "durationMs": 8500,
       "file": "appearance-consequences.avif",
-      "fileSize": 630473,
+      "fileSize": 544305,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "8feb4d36cc8fdf1897df61ba6236ab5bd988dba87517eb6cc7234b04976fc9dd",
+      "sha256": "946a20d8a9657d2d780b1975279266e0e8aedb98d2d3444eac2d2b2e7c9cdb3b",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "633f59941fdde563a721580c5eb25b824262babb5b7e5d654c122af736be1054"
+      "sceneFingerprint": "2211677e99676c5c512a3ffe5fa591063622cc0f8873c4a5043b170447b67dda"
     }
   ],
   "size": {
@@ -64,7 +64,7 @@
     "width": 2560
   },
   "sourceFps": 30,
-  "sourceFingerprint": "ef815d53c00752f47816e4ee47ad53519f76bea707442af7935376c35394f5fb",
+  "sourceFingerprint": "14b9662f4f030494b10d3050cd84a6e68577c590e004726de17e07155a493599",
   "targetFps": 30,
-  "totalFileSize": 1883011
+  "totalFileSize": 1813533
 }

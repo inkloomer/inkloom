@@ -1,4 +1,4 @@
-import {mkdtemp, mkdir, readdir, rm, stat, writeFile} from 'node:fs/promises';
+import {mkdtemp, mkdir, readFile, readdir, rm, stat, writeFile} from 'node:fs/promises';
 import {homedir, tmpdir} from 'node:os';
 import path from 'node:path';
 import {pathToFileURL} from 'node:url';
@@ -10,8 +10,8 @@ import {withInkLoomTailwind} from './remotion-webpack.mjs';
 const PROJECT_ROOT = path.resolve(import.meta.dirname, '..');
 const ANIMATIONS_ROOT = path.join(PROJECT_ROOT, 'src', 'animations');
 const DEFAULT_OUTPUT_ROOT = path.join(PROJECT_ROOT, '.artifacts', 'animation-pages');
-const DEFAULT_CAPTURE_RATIO = 0.82;
-const DEFAULT_MOTION_RATIOS = [0.68, 0.76, 0.84];
+const DEFAULT_CAPTURE_RATIO = 1;
+const DEFAULT_MOTION_RATIOS = [0.68, 0.76, 0.84, 1];
 const ANIMATION_ID_PATTERN = /^[a-z0-9][a-z0-9-]*$/;
 const animationDirectories = new Map();
 
@@ -28,8 +28,8 @@ Usage:
 
 Options:
   --all              Capture every discovered animation (the default)
-  --at <0..1>        Position within each scene (default: ${DEFAULT_CAPTURE_RATIO})
-  --motion           Capture ${DEFAULT_MOTION_RATIOS.join(', ')} checkpoints per scene for sustained-motion QA
+  --at <0..1>        Position within each scene (default: stable final frame)
+  --motion           Capture ${DEFAULT_MOTION_RATIOS.slice(0, -1).join(', ')} plus the stable final frame per scene
   --output <path>    Output root (default: .artifacts/animation-pages)
   --help             Show this help
 `;
@@ -171,16 +171,21 @@ const validateAnimationIds = (animationIds) => {
 };
 
 const loadScenes = async (animationId) => {
-  const storyboardPath = path.join(getAnimationDirectory(animationId), 'remotion', 'storyboard.ts');
+  const animationDirectory = getAnimationDirectory(animationId);
+  const storyboardPath = path.join(animationDirectory, 'remotion', 'storyboard.ts');
   const storyboardUrl = `${pathToFileURL(storyboardPath).href}?capture=${Date.now()}`;
   const storyboard = await import(storyboardUrl);
   const scenes = Object.entries(storyboard.SCENES ?? {});
+  const contractPath = path.join(animationDirectory, 'visual-structure.json');
+  const contract = await fileExists(contractPath)
+    ? JSON.parse(await readFile(contractPath, 'utf8'))
+    : {scenes: []};
 
   if (scenes.length === 0) {
     throw new Error(`${animationId}: storyboard.ts must export a non-empty SCENES object.`);
   }
 
-  return scenes.map(([key, scene]) => {
+  return scenes.map(([key, scene], index) => {
     if (!Number.isFinite(scene?.start) || !Number.isFinite(scene?.duration) || scene.duration < 1) {
       throw new Error(`${animationId}: scene "${key}" has an invalid start or duration.`);
     }
@@ -189,7 +194,13 @@ const loadScenes = async (animationId) => {
       throw new Error(`${animationId}: scene "${key}" must declare previewEndTrimFrames from 0 to duration - 1.`);
     }
 
-    return {duration: scene.duration, key, previewEndTrimFrames: scene.previewEndTrimFrames, start: scene.start};
+    return {
+      duration: scene.duration,
+      finalFrameAudit: Array.isArray(contract.scenes?.[index]?.finalKnowledge),
+      key,
+      previewEndTrimFrames: scene.previewEndTrimFrames,
+      start: scene.start,
+    };
   });
 };
 
@@ -288,21 +299,29 @@ const captureAnimation = async ({
       const pageNumber = String(index + 1).padStart(2, '0');
 
       for (const ratio of captureRatios) {
+        const isFinal = ratio === 1;
         const frame = Math.min(
           composition.durationInFrames - 1,
-          scene.start + Math.floor((scene.duration - 1) * ratio),
+          isFinal
+            ? scene.start + scene.duration - 1 - scene.previewEndTrimFrames
+            : scene.start + Math.floor((scene.duration - 1) * ratio),
         );
-        const ratioSuffix = motionCheck ? `-at-${String(Math.round(ratio * 100)).padStart(2, '0')}` : '';
+        const ratioSuffix = motionCheck
+          ? isFinal ? '-final' : `-at-${String(Math.round(ratio * 100)).padStart(2, '0')}`
+          : '';
         const fileName = `page-${pageNumber}-${scene.key}${ratioSuffix}.png`;
         const outputPath = path.join(runDirectory, fileName);
 
-        console.log(`[${animationId}] ${pageNumber}/${String(scenes.length).padStart(2, '0')} ${scene.key} @ ${ratio.toFixed(2)} frame ${frame}`);
+        console.log(`[${animationId}] ${pageNumber}/${String(scenes.length).padStart(2, '0')} ${scene.key} @ ${isFinal ? 'final' : ratio.toFixed(2)} frame ${frame}`);
         await renderStill({
           composition,
           serveUrl,
           output: outputPath,
           frame,
-          inputProps: {__inkloomLayoutAudit: true},
+          inputProps: {
+            __inkloomFinalFrameAudit: isFinal && scene.finalFrameAudit,
+            __inkloomLayoutAudit: true,
+          },
           imageFormat: 'png',
           overwrite: true,
           puppeteerInstance: browser,
@@ -313,6 +332,7 @@ const captureAnimation = async ({
           ...scene,
           file: fileName,
           frame,
+          capture: isFinal ? 'final' : 'checkpoint',
           ...(motionCheck ? {ratio} : {}),
         });
       }
