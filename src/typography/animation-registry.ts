@@ -27,6 +27,7 @@ import {typography as typography24} from '../animations/civil-procedure/08/statu
 import {typography as typography25} from '../animations/civil-procedure/08/statutory-agent/animation.meta';
 import {typography as typography26} from '../animations/civil-procedure/09/admission-court-record/animation.meta';
 import {typography as typography27} from '../animations/civil-procedure/09/burden-of-proof-steps/animation.meta';
+import {typography as typography62} from '../animations/civil-procedure/09/burden-of-proof-caveats/animation.meta';
 import {typography as typography28} from '../animations/civil-procedure/10/appraisal-opinion/animation.meta';
 import {typography as typography29} from '../animations/civil-procedure/10/documentary-evidence-rules/animation.meta';
 import {typography as typography30} from '../animations/civil-procedure/10/evidence-classification/animation.meta';
@@ -39,6 +40,12 @@ import {typography as typography36} from '../animations/civil-procedure/11/evide
 import {typography as typography37} from '../animations/civil-procedure/11/evidence-review/animation.meta';
 import {typography as typography38} from '../animations/civil-procedure/11/proof-filing-investigation/animation.meta';
 import {typography as typography39} from '../animations/civil-procedure/11/surprise-judgment-focus/animation.meta';
+import {typography as typography63} from '../animations/civil-procedure/12/pre-suit-preservation-transfer/animation.meta';
+import {typography as typography64} from '../animations/civil-procedure/12/preservation-asset-measures/animation.meta';
+import {typography as typography65} from '../animations/civil-procedure/12/preservation-remedy-switchboard/animation.meta';
+import {typography as typography66} from '../animations/civil-procedure/12/preservation-stage-map/animation.meta';
+import {typography as typography67} from '../animations/civil-procedure/12/provisional-execution-gates/animation.meta';
+import {typography as typography68} from '../animations/civil-procedure/12/provisional-execution-resolution/animation.meta';
 import {typography as typography40} from '../animations/criminal/19/card-selling-funds-viewpoint/animation.meta';
 import {typography as typography41} from '../animations/criminal/19/occupational-embezzlement-flowchart/animation.meta';
 import {typography as typography42} from '../animations/criminal/19/property-interests-keypoints/animation.meta';
@@ -91,6 +98,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'statutory-agent': {metadata: typography25, scope: {animationId: 'statutory-agent', subject: 'civil-procedure', topic: '08'}},
   'admission-court-record': {metadata: typography26, scope: {animationId: 'admission-court-record', subject: 'civil-procedure', topic: '09'}},
   'burden-of-proof-steps': {metadata: typography27, scope: {animationId: 'burden-of-proof-steps', subject: 'civil-procedure', topic: '09'}},
+  'burden-of-proof-caveats': {metadata: typography62, scope: {animationId: 'burden-of-proof-caveats', subject: 'civil-procedure', topic: '09'}},
   'appraisal-opinion': {metadata: typography28, scope: {animationId: 'appraisal-opinion', subject: 'civil-procedure', topic: '10'}},
   'documentary-evidence-rules': {metadata: typography29, scope: {animationId: 'documentary-evidence-rules', subject: 'civil-procedure', topic: '10'}},
   'evidence-classification': {metadata: typography30, scope: {animationId: 'evidence-classification', subject: 'civil-procedure', topic: '10'}},
@@ -103,6 +111,12 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'evidence-review': {metadata: typography37, scope: {animationId: 'evidence-review', subject: 'civil-procedure', topic: '11'}},
   'proof-filing-investigation': {metadata: typography38, scope: {animationId: 'proof-filing-investigation', subject: 'civil-procedure', topic: '11'}},
   'surprise-judgment-focus': {metadata: typography39, scope: {animationId: 'surprise-judgment-focus', subject: 'civil-procedure', topic: '11'}},
+  'pre-suit-preservation-transfer': {metadata: typography63, scope: {animationId: 'pre-suit-preservation-transfer', subject: 'civil-procedure', topic: '12'}},
+  'preservation-asset-measures': {metadata: typography64, scope: {animationId: 'preservation-asset-measures', subject: 'civil-procedure', topic: '12'}},
+  'preservation-remedy-switchboard': {metadata: typography65, scope: {animationId: 'preservation-remedy-switchboard', subject: 'civil-procedure', topic: '12'}},
+  'preservation-stage-map': {metadata: typography66, scope: {animationId: 'preservation-stage-map', subject: 'civil-procedure', topic: '12'}},
+  'provisional-execution-gates': {metadata: typography67, scope: {animationId: 'provisional-execution-gates', subject: 'civil-procedure', topic: '12'}},
+  'provisional-execution-resolution': {metadata: typography68, scope: {animationId: 'provisional-execution-resolution', subject: 'civil-procedure', topic: '12'}},
   'card-selling-funds-viewpoint': {metadata: typography40, scope: {animationId: 'card-selling-funds-viewpoint', subject: 'criminal', topic: '19'}},
   'occupational-embezzlement-flowchart': {metadata: typography41, scope: {animationId: 'occupational-embezzlement-flowchart', subject: 'criminal', topic: '19'}},
   'property-interests-keypoints': {metadata: typography42, scope: {animationId: 'property-interests-keypoints', subject: 'criminal', topic: '19'}},

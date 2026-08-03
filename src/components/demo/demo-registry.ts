@@ -21,6 +21,7 @@ import {DelegatedAgent} from '../../animations/civil-procedure/08/delegated-agen
 import {StatutoryAgent} from '../../animations/civil-procedure/08/statutory-agent/remotion/StatutoryAgent';
 import {AdmissionCourtRecord} from '../../animations/civil-procedure/09/admission-court-record/remotion/AdmissionCourtRecord';
 import {BurdenOfProofSteps} from '../../animations/civil-procedure/09/burden-of-proof-steps/remotion/BurdenOfProofSteps';
+import {BurdenOfProofCaveats} from '../../animations/civil-procedure/09/burden-of-proof-caveats/remotion/BurdenOfProofCaveats';
 import {DocumentaryEvidenceRules} from '../../animations/civil-procedure/10/documentary-evidence-rules/remotion/DocumentaryEvidenceRules';
 import {EvidenceClassification} from '../../animations/civil-procedure/10/evidence-classification/remotion/EvidenceClassification';
 import {OfficialIntermediary} from '../../animations/criminal/23/official-intermediary/remotion/OfficialIntermediary';
@@ -48,6 +49,7 @@ import {DURATION_FRAMES as REVOCATION_DURATION_FRAMES, FPS as REVOCATION_FPS} fr
 import {DURATION_FRAMES as STATUTORY_DURATION_FRAMES, FPS as STATUTORY_FPS} from '../../animations/civil-procedure/08/statutory-agent/remotion/storyboard';
 import {DURATION_FRAMES as ADMISSION_DURATION_FRAMES, FPS as ADMISSION_FPS} from '../../animations/civil-procedure/09/admission-court-record/remotion/storyboard';
 import {DURATION_FRAMES as BURDEN_DURATION_FRAMES, FPS as BURDEN_FPS} from '../../animations/civil-procedure/09/burden-of-proof-steps/remotion/storyboard';
+import {DURATION_FRAMES as CAVEATS_DURATION_FRAMES, FPS as CAVEATS_FPS} from '../../animations/civil-procedure/09/burden-of-proof-caveats/remotion/storyboard';
 import {DURATION_FRAMES as TYPES_DURATION_FRAMES, FPS as TYPES_FPS} from '../../animations/civil-procedure/07/third-party-types/remotion/storyboard';
 import {DURATION_FRAMES as DOCUMENTARY_DURATION_FRAMES, FPS as DOCUMENTARY_FPS} from '../../animations/civil-procedure/10/documentary-evidence-rules/remotion/storyboard';
 import {DURATION_FRAMES as EVIDENCE_DURATION_FRAMES, FPS as EVIDENCE_FPS} from '../../animations/civil-procedure/10/evidence-classification/remotion/storyboard';
@@ -104,6 +106,7 @@ export const STYLE_DEMOS = [
   {id: 'civil-procedure-08-delegated-agent', slug: 'delegated-agent', title: '委托代理人', direction: 'Power-of-Attorney Contract', component: DelegatedAgent, href: '/inkloom/objective/civil-procedure/08/delegated-agent/', durationInFrames: DELEGATED_DURATION_FRAMES, fps: DELEGATED_FPS},
   {id: 'civil-procedure-09-admission-court-record', slug: 'admission-court-record', title: '法庭声纹图', direction: 'Court Signal Waveform', component: AdmissionCourtRecord, href: '/inkloom/objective/civil-procedure/09/admission-court-record/', durationInFrames: ADMISSION_DURATION_FRAMES, fps: ADMISSION_FPS},
   {id: 'civil-procedure-09-burden-of-proof-steps', slug: 'burden-of-proof-steps', title: '构成举证场', direction: 'Constructivist Proof Field', component: BurdenOfProofSteps, href: '/inkloom/objective/civil-procedure/09/burden-of-proof-steps/', durationInFrames: BURDEN_DURATION_FRAMES, fps: BURDEN_FPS},
+  {id: 'civil-procedure-09-burden-of-proof-caveats', slug: 'burden-of-proof-caveats', title: '勘误批改板', direction: 'Errata Correction Board', component: BurdenOfProofCaveats, href: '/inkloom/objective/civil-procedure/09/burden-of-proof-caveats/', durationInFrames: CAVEATS_DURATION_FRAMES, fps: CAVEATS_FPS},
   {id: 'civil-procedure-10-evidence-classification', slug: 'evidence-classification', title: '检材透视台', direction: 'Forensic Light Table', component: EvidenceClassification, href: '/inkloom/objective/civil-procedure/10/evidence-classification/', durationInFrames: EVIDENCE_DURATION_FRAMES, fps: EVIDENCE_FPS},
   {id: 'civil-procedure-10-documentary-evidence-rules', slug: 'documentary-evidence-rules', title: '文书验印所', direction: 'Civic Seal Registry', component: DocumentaryEvidenceRules, href: '/inkloom/objective/civil-procedure/10/documentary-evidence-rules/', durationInFrames: DOCUMENTARY_DURATION_FRAMES, fps: DOCUMENTARY_FPS},
   {id: 'civil-procedure-11-evidence-preservation', slug: 'evidence-preservation', title: '证据保全舱', direction: 'Evidence Cold Storage', component: EvidencePreservation, href: '/inkloom/objective/civil-procedure/11/evidence-preservation/', durationInFrames: PRESERVATION_DURATION_FRAMES, fps: PRESERVATION_FPS},

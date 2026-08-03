@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "playerControlSafeBottom": 170,
+  "scenes": [
+    {"id": "caveats-board", "export": "CaveatsBoardScene", "layout": "caveat-correction-board", "anchor": "typographic-sequence", "textTreatments": ["label-block", "thin-underline", "external-negation", "stamp"], "grammar": ["rejection", "correction", "sequence"], "focalChannels": ["icon", "connector", "contrast", "annotation"], "tokens": ["X", "Check", "ArrowRight"]},
+    {"id": "fiction-verdict", "export": "FictionVerdictScene", "layout": "fiction-verdict-hinge", "anchor": "role-pair", "textTreatments": ["label-block", "soft-highlight", "thin-underline", "stamp"], "grammar": ["comparison", "presumption", "consequence"], "focalChannels": ["icon", "connector", "contrast", "annotation"], "tokens": ["UserRound", "Gavel", "CircleHelp", "Check"]},
+    {"id": "court-outsider-gate", "export": "CourtOutsiderGateScene", "layout": "court-outsider-gate", "anchor": "boundary", "textTreatments": ["label-block", "thin-underline", "external-negation", "stamp"], "grammar": ["exclusion", "authority-limit", "contrast"], "focalChannels": ["icon", "enclosure", "connector", "annotation"], "tokens": ["UserRound", "Gavel", "ShieldX", "X"]}
+  ]
+}

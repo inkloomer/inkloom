@@ -1,0 +1,16 @@
+{
+  "directionId": "errata-correction-board",
+  "family": "correction-annotation",
+  "palette": "manila kraft paper + ink graphite + correction vermilion + acceptance green",
+  "typography": "heavy correction-slip hierarchy with numbered tag chips, draft-vs-final plates, external X and check marks, thin underline on corrected terms, and red seal stamps",
+  "composition": "six stacked misconception-to-rule correction pairs along a left tag rail, sweeping correction arrows, a hinged objective-fact versus verdict-fiction comparison, and a boundary gate that keeps the court outside the burden field",
+  "surface": "flat manila paper field, dashed rejected plates, solid accepted plates, no rounded cards, no ruled lines",
+  "motion": "rejected plate slides in, X stamp slams, correction arrow sweeps, accepted plate lands, check confirms, underline marks the corrected term",
+  "transition": "red seal and numbered tag rail persist while the board hands off to the hinged fiction example and the court-boundary gate",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/civil-procedure/09/burden-of-proof-caveats/",
+    "title": "勘误批改板"
+  }
+}
