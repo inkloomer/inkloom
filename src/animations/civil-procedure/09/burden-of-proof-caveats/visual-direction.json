@@ -1,16 +1,16 @@
 {
-  "directionId": "errata-correction-board",
-  "family": "correction-annotation",
-  "palette": "manila kraft paper + ink graphite + correction vermilion + acceptance green",
-  "typography": "heavy correction-slip hierarchy with numbered tag chips, draft-vs-final plates, external X and check marks, thin underline on corrected terms, and red seal stamps",
-  "composition": "six stacked misconception-to-rule correction pairs along a left tag rail, sweeping correction arrows, a hinged objective-fact versus verdict-fiction comparison, and a boundary gate that keeps the court outside the burden field",
-  "surface": "flat manila paper field, dashed rejected plates, solid accepted plates, no rounded cards, no ruled lines",
-  "motion": "rejected plate slides in, X stamp slams, correction arrow sweeps, accepted plate lands, check confirms, underline marks the corrected term",
-  "transition": "red seal and numbered tag rail persist while the board hands off to the hinged fiction example and the court-boundary gate",
+  "directionId": "proof-boundary-ledger",
+  "family": "legal-ledger",
+  "palette": "warm docket paper + deep navy + signal amber + cyan evidence + coral consequence",
+  "typography": "heavy docket headings with compact role labels, underlined decisive conditions, amber risk markers, and stamped operative conclusions",
+  "composition": "trigger gate, party lanes, fixed responsibility rail, counterproof route, and fact-versus-verdict split across a measured docket canvas",
+  "surface": "flat docket paper, hard rectangular evidence plates, exposed boundary rails, no rounded cards or decorative grid",
+  "motion": "facts enter along one proof axis, responsibility locks to a single lane, counterproof travels without changing the fixed outcome rail, and the final comparison opens on a caused split",
+  "transition": "the amber proof rail persists between scenes; each new boundary is revealed as the legal question changes",
   "catalog": {
     "status": "featured",
     "source": "original-node",
     "route": "/inkloom/objective/civil-procedure/09/burden-of-proof-caveats/",
-    "title": "勘误批改板"
+    "title": "证明边界簿"
   }
 }

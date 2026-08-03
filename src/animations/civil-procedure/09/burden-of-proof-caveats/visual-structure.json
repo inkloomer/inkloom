@@ -1,10 +1,11 @@
 {
   "version": 1,
-  "minimumDistinctLayouts": 3,
+  "minimumDistinctLayouts": 4,
   "playerControlSafeBottom": 170,
   "scenes": [
-    {"id": "caveats-board", "export": "CaveatsBoardScene", "layout": "caveat-correction-board", "anchor": "typographic-sequence", "textTreatments": ["label-block", "thin-underline", "external-negation", "stamp"], "grammar": ["rejection", "correction", "sequence"], "focalChannels": ["icon", "connector", "contrast", "annotation"], "tokens": ["X", "Check", "ArrowRight"]},
-    {"id": "fiction-verdict", "export": "FictionVerdictScene", "layout": "fiction-verdict-hinge", "anchor": "role-pair", "textTreatments": ["label-block", "soft-highlight", "thin-underline", "stamp"], "grammar": ["comparison", "presumption", "consequence"], "focalChannels": ["icon", "connector", "contrast", "annotation"], "tokens": ["UserRound", "Gavel", "CircleHelp", "Check"]},
-    {"id": "court-outsider-gate", "export": "CourtOutsiderGateScene", "layout": "court-outsider-gate", "anchor": "boundary", "textTreatments": ["label-block", "thin-underline", "external-negation", "stamp"], "grammar": ["exclusion", "authority-limit", "contrast"], "focalChannels": ["icon", "enclosure", "connector", "annotation"], "tokens": ["UserRound", "Gavel", "ShieldX", "X"]}
+    {"id": "caveats-board", "export": "CaveatsBoardScene", "layout": "proof-trigger-gate", "anchor": "boundary", "textTreatments": ["label-block", "soft-highlight", "thin-underline", "stamp"], "grammar": ["comparison", "boundary", "consequence"], "focalChannels": ["icon", "connector", "contrast", "annotation"], "tokens": ["CircleHelp", "FileCheck2", "Scale", "AlertTriangle"]},
+    {"id": "court-outsider-gate", "export": "CourtOutsiderGateScene", "layout": "party-single-burden-boundary", "anchor": "boundary", "textTreatments": ["label-block", "thin-underline", "external-negation", "stamp"], "grammar": ["exclusion", "role-allocation", "consequence"], "focalChannels": ["icon", "enclosure", "connector", "contrast"], "tokens": ["UsersRound", "Landmark", "X"]},
+    {"id": "fixed-counterproof", "export": "FixedCounterproofScene", "layout": "fixed-burden-counterproof-route", "anchor": "flow-path", "textTreatments": ["label-block", "soft-highlight", "thin-underline", "stamp"], "grammar": ["preassignment", "contrast", "counterproof"], "focalChannels": ["icon", "connector", "contrast", "spatial"], "tokens": ["LockKeyhole", "ShieldCheck", "FileCheck2"]},
+    {"id": "fiction-verdict", "export": "FictionVerdictScene", "layout": "fact-verdict-divergence", "anchor": "role-pair", "textTreatments": ["label-block", "soft-highlight", "thin-underline", "stamp"], "grammar": ["causal-chain", "comparison", "consequence"], "focalChannels": ["icon", "connector", "contrast", "annotation"], "tokens": ["UserRound", "Gavel", "CircleHelp", "Check", "X"]}
   ]
 }

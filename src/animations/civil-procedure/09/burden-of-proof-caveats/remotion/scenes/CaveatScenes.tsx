@@ -1,164 +1,109 @@
-import {ArrowRight, Check, CircleHelp, Gavel, ShieldX, UserRound, X} from 'lucide-react';
+import {AlertTriangle, Check, CircleHelp, FileCheck2, Gavel, Landmark, LockKeyhole, Scale, ShieldCheck, UserRound, UsersRound, X} from 'lucide-react';
 import {interpolate, useCurrentFrame} from 'remotion';
 import {CLAMP} from '../../../../../shared/remotion-runtime';
-import {CutIn, DRAFT, ErrataCanvas, GREEN, Highlight, INK, PAPER, PLATE, RED, Slam, Sweep, Tag, TINT, WRONG} from '../visual-system';
-
-const CAVEATS = [
-  {number: '01', wrong: '事实清楚也适用证明责任', right: '只有真伪不明，风险才落下', key: '真伪不明'},
-  {number: '02', wrong: '法院依职权取证＝承担证明责任', right: '主体只有当事人，法院不承担', key: '当事人'},
-  {number: '03', wrong: '双方当事人都要承担', right: '单一事实只由一方承担', key: '一方'},
-  {number: '04', wrong: '证明责任在原被告间转移', right: '由法律预先确定，不转移', key: '不转移'},
-  {number: '05', wrong: '不承担证明责任就不能举证', right: '可以积极举证，此时是反证', key: '反证'},
-  {number: '06', wrong: '裁判结论就是客观事实', right: '只是拟制，可能与事实不符', key: '拟制'},
-] as const;
+import {AMBER, ArrowRail, CYAN, DocketCanvas, IconNode, INK, Label, Marker, MIST, MUTED, NAVY, PAPER, Reveal, CORAL, Stamp, Underline, WHITE} from '../visual-system';
 
 export const CaveatsBoardScene = () => {
-  return (
-    <ErrataCanvas code="01" eyebrow="BURDEN OF PROOF · SIX CAVEATS" title="理解证明责任的六个注意点">
-      <div data-layout="caveat-correction-board" data-visual-anchor="typographic-sequence" data-text-treatments="label-block,thin-underline,external-negation,stamp" data-visual-grammar="rejection,correction,sequence" data-focal-rule="caveat-correction-pairs" data-focal-channels="icon,connector,contrast,annotation" style={{position: 'absolute', inset: 0}}>
-        {CAVEATS.map((item, index) => {
-          const delay = 30 + index * 34;
-          const top = index * 108;
-          return (
-            <div key={item.number} style={{position: 'absolute', left: 0, right: 0, top, height: 96}}>
-              <Slam delay={delay + 6} style={{position: 'absolute', left: 0, top: 16, width: 64, height: 64, backgroundColor: RED, color: PAPER, rotate: '-2deg', display: 'grid', placeItems: 'center', fontSize: 28, fontWeight: 950}}>{item.number}</Slam>
-              <CutIn delay={delay} style={{position: 'absolute', left: 82, top: 0, width: 640, height: 96, backgroundColor: PLATE, border: `4px dashed ${DRAFT}`, rotate: '-0.4deg', padding: '0 20px 0 24px', display: 'flex', alignItems: 'center', gap: 18}}>
-                <Slam delay={delay + 14}><span style={{display: 'grid', placeItems: 'center', width: 52, height: 52, border: `5px solid ${RED}`, borderRadius: '50%', color: RED}}><X size={34} strokeWidth={4} /></span></Slam>
-                <span style={{fontSize: 29, fontWeight: 850, color: WRONG, whiteSpace: 'nowrap'}}>{item.wrong}</span>
-                <span style={{position: 'absolute', right: 18, top: '50%', translate: '0 -50%'}}><Tag color={DRAFT} tone="ink">误区</Tag></span>
-              </CutIn>
-              <div style={{position: 'absolute', left: 738, top: 22, width: 70, height: 52, display: 'grid', placeItems: 'center'}}>
-                <ArrowRightSweep delay={delay + 18} />
-              </div>
-              <CutIn delay={delay + 22} direction="right" style={{position: 'absolute', left: 822, right: 0, top: 0, height: 96, backgroundColor: TINT, border: `5px solid ${GREEN}`, padding: '0 20px 0 24px', display: 'flex', alignItems: 'center', gap: 20}}>
-                <Slam delay={delay + 28}><span style={{display: 'grid', placeItems: 'center', width: 52, height: 52, border: `5px solid ${GREEN}`, borderRadius: '50%', color: GREEN}}><Check size={34} strokeWidth={4} /></span></Slam>
-                <span style={{fontSize: 31, fontWeight: 950, color: INK, whiteSpace: 'nowrap'}}>
-                  {item.right.split(item.key).map((part, partIndex, parts) => (
-                    <span key={partIndex}>{part}{partIndex < parts.length - 1 ? <Sweep color={GREEN} delay={delay + 34}>{item.key}</Sweep> : null}</span>
-                  ))}
-                </span>
-                <span style={{position: 'absolute', right: 18, top: '50%', translate: '0 -50%'}}><Tag color={GREEN}>正解</Tag></span>
-              </CutIn>
-            </div>
-          );
-        })}
-      </div>
-    </ErrataCanvas>
-  );
-};
-
-const ArrowRightSweep = ({delay}: {delay: number}) => {
   const frame = useCurrentFrame();
-  const progress = interpolate(frame, [delay, delay + 10], [0, 1], CLAMP);
-  return <ArrowRight size={58} strokeWidth={3.5} color={RED} style={{scale: `${progress} 1`, transformOrigin: 'left center'}} />;
-};
-
-export const FictionVerdictScene = () => {
-  const frame = useCurrentFrame();
-  const hinge = interpolate(frame, [92, 106], [0, 1], CLAMP);
+  const gate = interpolate(frame, [60, 78], [0, 1], CLAMP);
   return (
-    <ErrataCanvas code="02" eyebrow="BURDEN OF PROOF · FICTION" title="李四案：裁判结论与客观事实">
-      <div data-layout="fiction-verdict-hinge" data-visual-anchor="role-pair" data-text-treatments="label-block,soft-highlight,thin-underline,stamp" data-visual-grammar="comparison,presumption,consequence" data-focal-rule="fiction-verdict-divergence" data-focal-channels="icon,connector,contrast,annotation" style={{position: 'absolute', inset: 0}}>
-        <CutIn delay={10} style={{position: 'absolute', left: 0, top: 0, width: 520, height: 84, backgroundColor: PLATE, border: `5px solid ${INK}`, padding: '0 22px', display: 'flex', alignItems: 'center', gap: 16}}>
-          <UserRound size={46} strokeWidth={3} color={RED} />
-          <div>
-            <div style={{fontSize: 26, fontWeight: 950, color: INK}}>张三起诉李四</div>
-            <div style={{marginTop: 4, fontSize: 22, fontWeight: 850, color: WRONG}}>索赔医疗费 1 万</div>
-          </div>
-        </CutIn>
-        <div style={{position: 'absolute', left: 536, top: 16, width: 64, height: 52, display: 'grid', placeItems: 'center'}}>
-          <ArrowRightSweep delay={18} />
+    <DocketCanvas code="01" kicker="BURDEN OF PROOF / TRIGGER" title="先过触发门：真伪不明，风险才落下">
+      <div data-layout="proof-trigger-gate" data-visual-anchor="boundary" data-text-treatments="label-block,soft-highlight,thin-underline,stamp" data-visual-grammar="comparison,boundary,consequence" data-focal-rule="ambiguity-triggers-burden" data-focal-channels="icon,connector,contrast,annotation" style={{position: 'absolute', inset: 0}}>
+        <Reveal delay={8} style={{position: 'absolute', left: 0, top: 28, width: 486, height: 334, backgroundColor: WHITE, border: `6px solid ${CYAN}`, padding: '26px 30px'}}>
+          <Label color={CYAN}>事实清楚</Label>
+          <div style={{marginTop: 26, display: 'flex', alignItems: 'center', gap: 16}}><FileCheck2 size={58} strokeWidth={3} color={CYAN} /><div style={{fontSize: 36, lineHeight: 1.15, fontWeight: 950}}>证据已经指向<br /><Marker color={MIST}>存在或不存在</Marker></div></div>
+          <div style={{marginTop: 30, fontSize: 25, fontWeight: 900, color: CYAN}}>法院直接以证据认定事实</div>
+        </Reveal>
+        <Reveal delay={18} direction="right" style={{position: 'absolute', left: 1048, top: 28, width: 546, height: 334, backgroundColor: WHITE, border: `6px solid ${CORAL}`, padding: '26px 30px'}}>
+          <Label color={CORAL}>真伪不明</Label>
+          <div style={{marginTop: 26, display: 'flex', alignItems: 'center', gap: 16}}><CircleHelp size={58} strokeWidth={3} color={CORAL} /><div style={{fontSize: 36, lineHeight: 1.15, fontWeight: 950}}>证据不足，事实<br /><Marker color="#f2d6cb">无法判断</Marker></div></div>
+          <div style={{marginTop: 30, fontSize: 25, fontWeight: 900, color: CORAL}}>证明责任启动：谁承受不利后果？</div>
+        </Reveal>
+        <div style={{position: 'absolute', left: 488, top: 114, width: 560, height: 164, borderTop: `6px solid ${INK}`, borderBottom: `6px solid ${INK}`, display: 'grid', placeItems: 'center'}}>
+          <Reveal delay={38} style={{textAlign: 'center'}}><Scale size={58} strokeWidth={3} color={AMBER} /><div style={{marginTop: 8, fontSize: 30, fontWeight: 950}}>证明责任不是查明事实</div><div style={{marginTop: 5, fontSize: 23, fontWeight: 850, color: MUTED}}>而是给真伪不明预先分配风险</div></Reveal>
+          <div style={{position: 'absolute', left: 0, top: 0, width: 6, height: '100%', backgroundColor: INK, scale: `1 ${gate}`, transformOrigin: 'center top'}} />
         </div>
-        <CutIn delay={26} style={{position: 'absolute', left: 616, top: 0, width: 520, height: 84, backgroundColor: PLATE, border: `5px solid ${INK}`, padding: '0 22px', display: 'flex', alignItems: 'center', gap: 16}}>
-          <CircleHelp size={46} strokeWidth={3} color={RED} />
-          <div>
-            <div style={{fontSize: 26, fontWeight: 950, color: INK}}>张三举证不足</div>
-            <div style={{marginTop: 4, fontSize: 22, fontWeight: 850, color: WRONG}}><Highlight color={TINT} delay={50}>侵权事实真伪不明</Highlight></div>
-          </div>
-        </CutIn>
-        <div style={{position: 'absolute', left: 1152, top: 16, width: 64, height: 52, display: 'grid', placeItems: 'center'}}>
-          <ArrowRightSweep delay={34} />
-        </div>
-        <CutIn delay={42} style={{position: 'absolute', left: 1232, right: 0, top: 0, height: 84, backgroundColor: PLATE, border: `5px solid ${INK}`, padding: '0 22px', display: 'flex', alignItems: 'center', gap: 16}}>
-          <Gavel size={46} strokeWidth={3} color={RED} />
-          <div>
-            <div style={{fontSize: 26, fontWeight: 950, color: INK}}>法院适用证明责任</div>
-            <div style={{marginTop: 4, fontSize: 22, fontWeight: 850, color: WRONG}}>推定主张不成立</div>
-          </div>
-        </CutIn>
-        <CutIn delay={64} style={{position: 'absolute', left: 0, top: 120, width: 830, height: 310, backgroundColor: TINT, border: `6px solid ${GREEN}`, padding: '28px 34px'}}>
-          <div style={{display: 'flex', alignItems: 'center', gap: 18}}><Tag color={GREEN}>客观事实</Tag><span style={{display: 'grid', placeItems: 'center', width: 58, height: 58, border: `5px solid ${GREEN}`, borderRadius: '50%', color: GREEN}}><Check size={38} strokeWidth={4} /></span></div>
-          <div style={{marginTop: 30, fontSize: 42, fontWeight: 950, color: INK}}>李四确实殴打了张三</div>
-          <div style={{marginTop: 22, fontSize: 24, fontWeight: 850, color: WRONG}}>事实为真，却无法被证明</div>
-        </CutIn>
-        <div style={{position: 'absolute', left: 830, top: 140, width: 100, textAlign: 'center', opacity: hinge, scale: `${hinge} 1`, transformOrigin: 'center'}}>
-          <div style={{fontSize: 92, fontWeight: 950, color: RED, lineHeight: 1}}>≠</div>
-          <Tag color={RED} tone="paper">证明责任是拟制</Tag>
-        </div>
-        <CutIn delay={78} direction="right" style={{position: 'absolute', left: 930, right: 0, top: 120, height: 310, backgroundColor: PLATE, border: `6px solid ${RED}`, padding: '28px 34px'}}>
-          <div style={{display: 'flex', alignItems: 'center', gap: 18}}><Tag color={RED}>裁判结论</Tag><span style={{display: 'grid', placeItems: 'center', width: 58, height: 58, border: `5px solid ${RED}`, borderRadius: '50%', color: RED}}><X size={38} strokeWidth={4} /></span></div>
-          <div style={{marginTop: 30, fontSize: 42, fontWeight: 950, color: INK}}>推定侵权事实不成立</div>
-          <div style={{marginTop: 22, fontSize: 24, fontWeight: 850, color: WRONG}}>判决驳回张三的诉讼请求</div>
-        </CutIn>
-        <CutIn delay={108} direction="up" style={{position: 'absolute', left: 0, right: 0, top: 470, height: 160, backgroundColor: PLATE, border: `6px solid ${INK}`, display: 'flex', alignItems: 'center', gap: 26, padding: '0 34px'}}>
-          <Slam delay={118}><span style={{display: 'inline-block', border: `5px solid ${RED}`, padding: '10px 18px 11px', color: RED, fontWeight: 950, rotate: '-2deg', fontSize: 26}}>拟制结论</span></Slam>
-          <span style={{fontSize: 34, fontWeight: 950, color: INK}}>证明责任的结论只是<Sweep color={GREEN} delay={132}>拟制</Sweep>，可能与客观事实不相符合</span>
-        </CutIn>
+        <ArrowRail color={AMBER} delay={58} left={742} top={292} width={112} />
+        <Reveal delay={86} direction="up" style={{position: 'absolute', left: 328, right: 328, top: 430, height: 116, backgroundColor: NAVY, color: PAPER, border: `6px solid ${INK}`, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 18, fontSize: 31, fontWeight: 950}}>
+          <AlertTriangle size={44} color={AMBER} strokeWidth={3} />
+          <span>只有真伪不明，证明责任才变成不利风险</span>
+        </Reveal>
       </div>
-    </ErrataCanvas>
+    </DocketCanvas>
   );
 };
 
 export const CourtOutsiderGateScene = () => {
   const frame = useCurrentFrame();
-  const boundary = interpolate(frame, [54, 66], [0, 1], CLAMP);
+  const barrier = interpolate(frame, [64, 78], [0, 1], CLAMP);
   return (
-    <ErrataCanvas code="03" eyebrow="BURDEN OF PROOF · SUBJECTS" title="法院为什么不是证明责任主体">
-      <div data-layout="court-outsider-gate" data-visual-anchor="boundary" data-text-treatments="label-block,thin-underline,external-negation,stamp" data-visual-grammar="exclusion,authority-limit,contrast" data-focal-rule="court-burden-exclusion" data-focal-channels="icon,enclosure,connector,annotation" style={{position: 'absolute', inset: 0}}>
-        <CutIn delay={8} style={{position: 'absolute', left: 0, top: 0, width: 920, height: 560, backgroundColor: PLATE, border: `7px solid ${INK}`, padding: '20px 24px'}}>
-          <Tag color={INK} tone="paper">证明责任场</Tag>
-          <CutIn delay={18} style={{position: 'absolute', left: 60, top: 150, width: 350, height: 182, backgroundColor: INK, color: PAPER, padding: '24px 26px'}}>
-            <UserRound size={52} strokeWidth={3} color={PAPER} />
-            <div style={{marginTop: 16, fontSize: 30, fontWeight: 950}}>原告 · 主张者</div>
-            <div style={{marginTop: 10, fontSize: 23, fontWeight: 850, color: '#cfc9ba'}}>承受真伪不明的风险</div>
-          </CutIn>
-          <CutIn delay={30} style={{position: 'absolute', left: 510, top: 150, width: 350, height: 182, backgroundColor: PLATE, border: `5px solid ${INK}`, padding: '24px 26px'}}>
-            <UserRound size={52} strokeWidth={3} color={INK} />
-            <div style={{marginTop: 16, fontSize: 30, fontWeight: 950}}>被告 · 反驳者</div>
-            <div style={{marginTop: 10, fontSize: 23, fontWeight: 850, color: WRONG}}>也可能承担不利后果</div>
-          </CutIn>
-          <CutIn delay={44} style={{position: 'absolute', left: 60, right: 60, top: 470, textAlign: 'center', fontSize: 25, fontWeight: 900, color: INK}}>
-            真伪不明时，由负有责任的一方承受不利后果
-          </CutIn>
-        </CutIn>
-        <div style={{position: 'absolute', left: 948, top: 0, width: 6, height: 560, backgroundColor: RED, scale: `1 ${boundary}`, transformOrigin: 'center top'}} />
-        <Slam delay={70} style={{position: 'absolute', left: 906, top: 236, zIndex: 2}}>
-          <span style={{display: 'grid', placeItems: 'center', width: 84, height: 84, border: `6px solid ${RED}`, borderRadius: '50%', backgroundColor: PAPER, color: RED}}>
-            <X size={54} strokeWidth={4.5} />
-          </span>
-        </Slam>
-        <CutIn delay={60} direction="right" style={{position: 'absolute', left: 1010, right: 0, top: 0, width: 774, height: 560, backgroundColor: PLATE, border: `7px solid ${RED}`, padding: '26px 30px'}}>
-          <div style={{display: 'flex', alignItems: 'center', gap: 18}}><Gavel size={56} strokeWidth={3} color={RED} /><span style={{fontSize: 36, fontWeight: 950}}>法院</span><Tag color={RED}>依职权调查收集证据</Tag></div>
-          <div style={{marginTop: 34, paddingLeft: 6}}>
-            {['涉及国家、社会、第三人利益的事实', '身份关系', '程序性事实'].map((item, index) => (
-              <CutIn key={item} delay={74 + index * 8} style={{display: 'flex', alignItems: 'center', gap: 16, marginTop: index ? 16 : 0, fontSize: 26, fontWeight: 850, color: INK}}>
-                <span style={{width: 14, height: 14, backgroundColor: RED, display: 'inline-block', rotate: '45deg'}} />
-                {item}
-              </CutIn>
-            ))}
+    <DocketCanvas code="02" kicker="BURDEN OF PROOF / SUBJECTS" title="能取证的法院，不是证明责任主体">
+      <div data-layout="party-single-burden-boundary" data-visual-anchor="boundary" data-text-treatments="label-block,thin-underline,external-negation,stamp" data-visual-grammar="exclusion,role-allocation,consequence" data-focal-rule="court-investigation-is-not-burden" data-focal-channels="icon,enclosure,connector,contrast" style={{position: 'absolute', inset: 0}}>
+        <Reveal delay={8} style={{position: 'absolute', left: 0, top: 38, width: 1010, height: 460, backgroundColor: WHITE, border: `6px solid ${NAVY}`, padding: '24px 30px'}}>
+          <Label color={NAVY}>证明责任场</Label>
+          <div style={{marginTop: 24, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 24}}>
+            <IconNode delay={28} color={CYAN} icon={UserRound} label="原告" detail="主张事实存在" style={{position: 'relative', width: 330, height: 132}} />
+            <div style={{width: 250, textAlign: 'center'}}><ArrowRail color={AMBER} delay={46} left={38} top={0} width={174} /><div style={{marginTop: 62, fontSize: 29, lineHeight: 1.25, fontWeight: 950}}>同一待证事实<br /><Underline color={AMBER} delay={78}>一方承担风险</Underline></div></div>
+            <IconNode delay={38} color={CORAL} icon={UserRound} label="被告" detail="主张事实不存在" style={{position: 'relative', width: 330, height: 132}} />
           </div>
-          <CutIn delay={98} style={{position: 'absolute', left: 30, right: 30, bottom: 34, display: 'flex', alignItems: 'center', gap: 18, paddingTop: 22, borderTop: `4px solid ${RED}`}}>
-            <ShieldX size={50} strokeWidth={3} color={RED} />
-            <div style={{fontSize: 27, lineHeight: 1.35, fontWeight: 900}}>
-              与证明责任无关 · 法院不可能承担<Sweep color={GREEN} delay={112}>败诉风险</Sweep>
-            </div>
-          </CutIn>
-        </CutIn>
-        <CutIn delay={108} direction="up" style={{position: 'absolute', left: 0, right: 0, top: 590, height: 94, backgroundColor: PLATE, border: `6px solid ${INK}`, display: 'flex', alignItems: 'center', gap: 26, padding: '0 34px'}}>
-          <Slam delay={118}><span style={{display: 'inline-block', border: `5px solid ${GREEN}`, padding: '8px 16px 9px', color: GREEN, fontWeight: 950, rotate: '-2deg', fontSize: 26}}>职权取证 ≠ 证明责任</span></Slam>
-          <span style={{fontSize: 32, fontWeight: 950, color: INK}}>法院是裁判者，不承担败诉风险</span>
-        </CutIn>
+          <Reveal delay={90} direction="up" style={{position: 'absolute', left: 30, right: 30, bottom: 26, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 18, fontSize: 27, fontWeight: 900}}><UsersRound size={44} color={AMBER} /><span>单一事实不能让双方同时背结果责任</span></Reveal>
+        </Reveal>
+        <div style={{position: 'absolute', left: 1058, top: 38, width: 6, height: 460, backgroundColor: CORAL, scale: `1 ${barrier}`, transformOrigin: 'center top'}} />
+        <Reveal delay={60} direction="right" style={{position: 'absolute', left: 1098, top: 38, width: 496, height: 460, backgroundColor: PAPER, border: `6px solid ${CORAL}`, padding: '24px 28px'}}>
+          <div style={{display: 'flex', alignItems: 'center', gap: 16}}><Landmark size={58} strokeWidth={3} color={CORAL} /><span style={{fontSize: 36, fontWeight: 950}}>法院</span><Label color={CORAL}>依职权调查</Label></div>
+          <div style={{marginTop: 34, fontSize: 25, lineHeight: 1.55, fontWeight: 850, color: INK}}>可以调查涉及国家、社会、第三人利益、身份关系、程序性事项的证据。</div>
+          <div style={{position: 'absolute', left: 28, right: 28, bottom: 30, borderTop: `4px solid ${CORAL}`, paddingTop: 20, display: 'flex', alignItems: 'center', gap: 14}}><X size={42} color={CORAL} strokeWidth={3.5} /><div style={{fontSize: 27, lineHeight: 1.25, fontWeight: 950}}>但法院不承担败诉风险</div></div>
+        </Reveal>
+        <Stamp delay={122} color={CORAL} style={{position: 'absolute', left: 490, top: 554, width: 370, textAlign: 'center', fontSize: 25}}>取证权 ≠ 证明责任</Stamp>
       </div>
-    </ErrataCanvas>
+    </DocketCanvas>
+  );
+};
+
+export const FixedCounterproofScene = () => {
+  return (
+    <DocketCanvas code="03" kicker="BURDEN OF PROOF / ROUTING" title="结果责任固定，举证权利仍可反向进入">
+      <div data-layout="fixed-burden-counterproof-route" data-visual-anchor="flow-path" data-text-treatments="label-block,soft-highlight,thin-underline,stamp" data-visual-grammar="preassignment,contrast,counterproof" data-focal-rule="fixed-result-burden-counterproof" data-focal-channels="icon,connector,contrast,spatial" style={{position: 'absolute', inset: 0}}>
+        <Reveal delay={8} style={{position: 'absolute', left: 0, top: 26, width: 420, height: 456, backgroundColor: NAVY, color: PAPER, border: `6px solid ${INK}`, padding: '26px 28px'}}>
+          <LockKeyhole size={64} color={AMBER} strokeWidth={3} />
+          <div style={{marginTop: 26, fontSize: 37, lineHeight: 1.17, fontWeight: 950}}>法律 / 司法解释</div>
+          <div style={{marginTop: 22, fontSize: 27, lineHeight: 1.4, fontWeight: 850, color: '#d7e3e2'}}>先把真伪不明时的<br /><Marker color="#536978">结果责任</Marker>固定下来</div>
+          <Stamp delay={68} color={AMBER} style={{position: 'absolute', left: 28, bottom: 34, fontSize: 24}}>不在诉讼中转移</Stamp>
+        </Reveal>
+        <ArrowRail color={AMBER} delay={46} left={430} top={200} width={160} />
+        <Reveal delay={52} style={{position: 'absolute', left: 600, top: 70, width: 410, height: 356, backgroundColor: WHITE, border: `6px solid ${CORAL}`, padding: '26px 28px'}}>
+          <Label color={CORAL}>负担者 A</Label>
+          <div style={{marginTop: 24, display: 'flex', alignItems: 'center', gap: 14}}><ShieldCheck size={54} color={CORAL} strokeWidth={3} /><span style={{fontSize: 33, fontWeight: 950}}>承担结果风险</span></div>
+          <div style={{marginTop: 26, fontSize: 27, lineHeight: 1.42, fontWeight: 850}}>证据不足、真伪不明<br /><Underline color={CORAL} delay={104}>不利后果仍由 A 承受</Underline></div>
+        </Reveal>
+        <Reveal delay={70} direction="right" style={{position: 'absolute', left: 1060, top: 70, width: 534, height: 356, backgroundColor: MIST, border: `6px solid ${CYAN}`, padding: '26px 28px'}}>
+          <Label color={CYAN}>非负担者 B</Label>
+          <div style={{marginTop: 24, display: 'flex', alignItems: 'center', gap: 14}}><FileCheck2 size={54} color={CYAN} strokeWidth={3} /><span style={{fontSize: 33, fontWeight: 950}}>可以积极举证</span></div>
+          <div style={{marginTop: 26, fontSize: 27, lineHeight: 1.42, fontWeight: 850}}>B 提出的证据叫<strong style={{color: CYAN}}>反证</strong><br /><Underline color={CYAN} delay={118}>动摇心证，不接管结果责任</Underline></div>
+        </Reveal>
+        <ArrowRail color={CYAN} delay={120} left={1016} top={232} width={38} />
+        <Reveal delay={132} direction="up" style={{position: 'absolute', left: 300, right: 300, top: 514, height: 104, borderTop: `5px solid ${INK}`, borderBottom: `5px solid ${INK}`, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 18, fontSize: 29, fontWeight: 950}}><LockKeyhole size={40} color={CORAL} />不转移的是结果责任；可以流动的是举证权利</Reveal>
+      </div>
+    </DocketCanvas>
+  );
+};
+
+export const FictionVerdictScene = () => {
+  const frame = useCurrentFrame();
+  const split = interpolate(frame, [92, 108], [0, 1], CLAMP);
+  return (
+    <DocketCanvas code="04" kicker="BURDEN OF PROOF / FICTION" title="李四案：裁判拟制不等于客观事实">
+      <div data-layout="fact-verdict-divergence" data-visual-anchor="role-pair" data-text-treatments="label-block,soft-highlight,thin-underline,stamp" data-visual-grammar="causal-chain,comparison,consequence" data-focal-rule="fiction-can-diverge-from-fact" data-focal-channels="icon,connector,contrast,annotation" style={{position: 'absolute', inset: 0}}>
+        <Reveal delay={8} style={{position: 'absolute', left: 0, top: 24, width: 470, height: 118, backgroundColor: WHITE, border: `5px solid ${CYAN}`, padding: '18px 22px', display: 'flex', alignItems: 'center', gap: 16}}><UserRound size={52} color={CYAN} strokeWidth={3} /><div><div style={{fontSize: 29, fontWeight: 950}}>张三起诉李四</div><div style={{marginTop: 4, fontSize: 22, fontWeight: 850, color: MUTED}}>主张：李四殴打自己</div></div></Reveal>
+        <ArrowRail color={AMBER} delay={28} left={486} top={62} width={110} />
+        <Reveal delay={34} style={{position: 'absolute', left: 620, top: 24, width: 510, height: 118, backgroundColor: PAPER, border: `5px solid ${AMBER}`, padding: '18px 22px', display: 'flex', alignItems: 'center', gap: 16}}><CircleHelp size={52} color={AMBER} strokeWidth={3} /><div><div style={{fontSize: 29, fontWeight: 950}}>证据不足</div><div style={{marginTop: 4, fontSize: 22, fontWeight: 850, color: MUTED}}>李四是否殴打，真伪不明</div></div></Reveal>
+        <ArrowRail color={CORAL} delay={46} left={1146} top={62} width={110} />
+        <Reveal delay={52} direction="right" style={{position: 'absolute', left: 1280, top: 24, width: 314, height: 118, backgroundColor: NAVY, color: PAPER, border: `5px solid ${INK}`, padding: '18px 22px', display: 'flex', alignItems: 'center', gap: 14}}><Gavel size={50} color={AMBER} strokeWidth={3} /><div><div style={{fontSize: 28, fontWeight: 950}}>法院适用责任</div><div style={{marginTop: 4, fontSize: 21, fontWeight: 850, color: '#d7e3e2'}}>推定主张不成立</div></div></Reveal>
+        <Reveal delay={70} style={{position: 'absolute', left: 0, top: 212, width: 744, height: 278, backgroundColor: MIST, border: `6px solid ${CYAN}`, padding: '26px 30px'}}><Label color={CYAN}>客观事实</Label><div style={{marginTop: 28, display: 'flex', alignItems: 'center', gap: 16}}><Check size={56} color={CYAN} strokeWidth={3.5} /><span style={{fontSize: 39, fontWeight: 950}}>李四确实殴打了张三</span></div><div style={{marginTop: 24, fontSize: 26, fontWeight: 850, color: MUTED}}>事实可能为真，只是没有被充分证明</div></Reveal>
+        <div style={{position: 'absolute', left: 744, top: 246, width: 156, height: 176, display: 'grid', placeItems: 'center', opacity: split, scale: `${0.72 + 0.28 * split}`}}><div style={{fontSize: 92, lineHeight: 1, fontWeight: 950, color: CORAL}}>≠</div><Label color={CORAL}>拟制边界</Label></div>
+        <Reveal delay={86} direction="right" style={{position: 'absolute', left: 900, top: 212, width: 694, height: 278, backgroundColor: WHITE, border: `6px solid ${CORAL}`, padding: '26px 30px'}}><Label color={CORAL}>裁判拟制</Label><div style={{marginTop: 28, display: 'flex', alignItems: 'center', gap: 16}}><X size={56} color={CORAL} strokeWidth={3.5} /><span style={{fontSize: 39, fontWeight: 950}}>侵权事实不成立</span></div><div style={{marginTop: 24, fontSize: 26, fontWeight: 850, color: MUTED}}>依法把不利后果交给证明责任负担者</div></Reveal>
+        <Stamp delay={126} color={AMBER} style={{position: 'absolute', left: 254, right: 254, top: 532, textAlign: 'center', fontSize: 25}}>证明责任是风险分配，不是事实改写</Stamp>
+      </div>
+    </DocketCanvas>
   );
 };
