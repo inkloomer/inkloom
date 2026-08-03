@@ -1,5 +1,11 @@
 /* D:\1STUDY\3-Resource\法考\InkLoom\src\styles\custom.css */
 
+/* Text selection follows the active theme accent instead of the browser default blue */
+::selection {
+  background-color: var(--sl-color-accent);
+  color: var(--sl-color-bg);
+}
+
 /* Flowing line dash animation */
 @keyframes flow-dash {
   to {

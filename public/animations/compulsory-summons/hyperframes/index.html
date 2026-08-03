@@ -1,0 +1,785 @@
+<!-- HyperFrames composition published for responsive iframe playback. -->
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light" />
+    <title>拘传适用判断 | HyperFrames</title>
+    <link rel="icon" href="data:," />
+    <script crossorigin="anonymous" src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+  </head>
+  <body>
+    <main id="hf-viewport" aria-label="拘传适用判断动画">
+      <div id="hf-stage">
+    <div
+      id="flowchart"
+      data-composition-id="flowchart"
+      data-start="0"
+      data-duration="8"
+      data-fps="30"
+      data-width="1920"
+      data-height="1080"
+    >
+      <div
+        id="flowchart-scene"
+        class="clip"
+        data-start="0"
+        data-duration="8"
+        data-track-index="1"
+      >
+        <div class="scene-fill">
+          <div class="paper-mark" aria-hidden="true">CIVIL PROCEDURE · 13</div>
+
+          <header class="heading">
+            <div class="eyebrow">拘传适用判断</div>
+            <h1 id="headline">三项条件，缺一不可</h1>
+            <div id="headline-rule" class="headline-rule"></div>
+          </header>
+
+          <div class="logic-caption">
+            任一条件不满足，审查即退出；全部满足后，才进入拘传程序。
+          </div>
+
+          <div class="gate-system">
+            <svg
+              class="rail-layer"
+              width="1560"
+              height="430"
+              viewBox="0 0 1560 430"
+              aria-hidden="true"
+            >
+              <path id="rail-start" class="rail rail-active" d="M 50 45 L 260 45" />
+              <path id="rail-1" class="rail rail-active" d="M 410 45 L 680 45" />
+              <path id="rail-2" class="rail rail-active" d="M 830 45 L 1100 45" />
+              <path id="rail-3" class="rail rail-final" d="M 1250 45 L 1510 45" />
+
+              <path id="exit-1" class="exit-rail" d="M 335 252 L 335 338" />
+              <path id="exit-2" class="exit-rail" d="M 755 252 L 755 338" />
+              <path id="exit-3" class="exit-rail" d="M 1175 252 L 1175 338" />
+            </svg>
+
+            <div id="gate-1" class="gate" data-gate="1">
+              <div class="gate-number">01</div>
+              <div class="gate-kicker">对象</div>
+              <div class="gate-title">必须到庭的法定当事人</div>
+              <div class="gate-status"><span>✓</span> 通过</div>
+            </div>
+
+            <div id="gate-2" class="gate" data-gate="2">
+              <div class="gate-number">02</div>
+              <div class="gate-kicker">传唤</div>
+              <div class="gate-title">经两次传票传唤</div>
+              <div class="gate-status"><span>✓</span> 通过</div>
+            </div>
+
+            <div id="gate-3" class="gate" data-gate="3">
+              <div class="gate-number">03</div>
+              <div class="gate-kicker">理由</div>
+              <div class="gate-title">无正当理由拒不到庭</div>
+              <div class="gate-status"><span>✓</span> 通过</div>
+            </div>
+
+            <div id="exit-label-1" class="exit-label">
+              <span>否</span>
+              <strong>对象不符</strong>
+              <em>不适用拘传</em>
+            </div>
+
+            <div id="exit-label-2" class="exit-label">
+              <span>否</span>
+              <strong>未达两次</strong>
+              <em>不适用拘传</em>
+            </div>
+
+            <div id="exit-label-3" class="exit-label">
+              <span>否</span>
+              <strong>有正当理由</strong>
+              <em>不适用拘传</em>
+            </div>
+
+            <div id="review-cursor" class="review-cursor">
+              <div class="cursor-dot"></div>
+              <div class="cursor-label">审查</div>
+            </div>
+          </div>
+
+          <section id="result-panel" class="result-panel">
+            <div class="result-prefix">
+              <span>三项全部满足</span>
+              <strong>程序解锁</strong>
+            </div>
+            <div class="result-chain">
+              <div id="result-1" class="result-step">
+                <small>STEP 01</small>
+                <b>院长批准</b>
+              </div>
+              <div class="result-arrow">→</div>
+              <div id="result-2" class="result-step">
+                <small>STEP 02</small>
+                <b>签发拘传票</b>
+              </div>
+              <div class="result-arrow">→</div>
+              <div id="result-3" class="result-step result-step-final">
+                <small>RESULT</small>
+                <b>拘传</b>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <style>
+        :root {
+          --paper: #f7f8f5;
+          --ink: #171a1c;
+          --muted: #535a58;
+          --line: #cbd0ca;
+          --pass: #1f6b52;
+          --pass-soft: #e2efe9;
+          --fail: #b83a32;
+          --fail-soft: #f6e8e5;
+          --unlock: #9b670c;
+          --unlock-soft: #f7ecd3;
+        }
+
+        * {
+          box-sizing: border-box;
+        }
+
+        html,
+        body {
+          width: 100%;
+          height: 100%;
+          margin: 0;
+          overflow: hidden;
+          background: var(--paper);
+        }
+
+        #hf-viewport {
+          position: fixed;
+          inset: 0;
+          overflow: hidden;
+          background: var(--paper);
+        }
+
+        #hf-stage {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 1920px;
+          height: 1080px;
+          transform-origin: top left;
+          will-change: transform;
+        }
+
+        #flowchart {
+          position: relative;
+          width: 1920px;
+          height: 1080px;
+          overflow: hidden;
+          font-family: "Noto Sans SC", sans-serif;
+          color: var(--ink);
+        }
+
+        #flowchart-scene,
+        .scene-fill {
+          position: absolute;
+          inset: 0;
+          width: 1920px;
+          height: 1080px;
+        }
+
+        .scene-fill {
+          padding: 78px 120px 72px;
+          background: var(--paper);
+        }
+
+        .scene-fill::before {
+          content: "";
+          position: absolute;
+          inset: 34px;
+          border: 1px solid #dfe3dd;
+        }
+
+        .paper-mark {
+          position: absolute;
+          top: 57px;
+          right: 74px;
+          color: #6f7370;
+          font-size: 15px;
+          font-weight: 700;
+          letter-spacing: 0;
+        }
+
+        .heading {
+          position: relative;
+          width: 100%;
+          text-align: left;
+        }
+
+        .eyebrow {
+          margin-bottom: 10px;
+          color: var(--pass);
+          font-size: 22px;
+          font-weight: 800;
+        }
+
+        h1 {
+          margin: 0;
+          font-size: 58px;
+          font-weight: 900;
+          line-height: 1.16;
+          letter-spacing: 0;
+        }
+
+        .headline-rule {
+          width: 460px;
+          height: 6px;
+          margin-top: 17px;
+          background: var(--unlock);
+          transform-origin: left center;
+        }
+
+        .logic-caption {
+          position: absolute;
+          top: 208px;
+          left: 120px;
+          color: var(--muted);
+          font-size: 21px;
+          font-weight: 500;
+        }
+
+        .gate-system {
+          position: absolute;
+          top: 270px;
+          left: 180px;
+          width: 1560px;
+          height: 430px;
+        }
+
+        .rail-layer {
+          position: absolute;
+          inset: 0;
+          overflow: visible;
+        }
+
+        .rail,
+        .exit-rail {
+          fill: none;
+          stroke-linecap: round;
+          stroke-linejoin: round;
+        }
+
+        .rail {
+          stroke: var(--pass);
+          stroke-width: 8;
+        }
+
+        .rail-final {
+          stroke: var(--unlock);
+        }
+
+        .exit-rail {
+          stroke: var(--fail);
+          stroke-width: 4;
+          stroke-dasharray: 7 9;
+        }
+
+        .gate {
+          position: absolute;
+          top: 66px;
+          width: 300px;
+          height: 212px;
+          padding: 26px 24px 20px;
+          border: 2px solid var(--line);
+          border-radius: 6px;
+          background: var(--paper);
+          box-shadow: 0 10px 24px rgba(23, 26, 28, 0.08);
+          text-align: left;
+        }
+
+        #gate-1 {
+          left: 185px;
+        }
+
+        #gate-2 {
+          left: 605px;
+        }
+
+        #gate-3 {
+          left: 1025px;
+        }
+
+        .gate-number {
+          position: absolute;
+          top: 19px;
+          right: 20px;
+          color: #666b68;
+          font-size: 17px;
+          font-weight: 800;
+        }
+
+        .gate-kicker {
+          margin-bottom: 12px;
+          color: var(--muted);
+          font-size: 18px;
+          font-weight: 700;
+        }
+
+        .gate-title {
+          width: 225px;
+          min-height: 70px;
+          font-size: 25px;
+          font-weight: 850;
+          line-height: 1.42;
+        }
+
+        .gate-status {
+          display: inline-flex;
+          align-items: center;
+          gap: 7px;
+          margin-top: 12px;
+          padding: 5px 11px;
+          border-radius: 3px;
+          background: var(--pass-soft);
+          color: var(--pass);
+          font-size: 16px;
+          font-weight: 800;
+        }
+
+        .gate-status span {
+          display: grid;
+          place-items: center;
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          background: var(--pass);
+          color: var(--paper);
+          font-size: 13px;
+        }
+
+        .exit-label {
+          position: absolute;
+          top: 338px;
+          width: 248px;
+          min-height: 72px;
+          padding: 11px 13px 10px 50px;
+          border-left: 4px solid var(--fail);
+          background: var(--fail-soft);
+          color: var(--fail);
+        }
+
+        #exit-label-1 {
+          left: 211px;
+        }
+
+        #exit-label-2 {
+          left: 631px;
+        }
+
+        #exit-label-3 {
+          left: 1051px;
+        }
+
+        .exit-label span {
+          position: absolute;
+          top: 16px;
+          left: 13px;
+          display: grid;
+          place-items: center;
+          width: 27px;
+          height: 27px;
+          border: 2px solid var(--fail);
+          border-radius: 50%;
+          font-size: 14px;
+          font-weight: 900;
+        }
+
+        .exit-label strong,
+        .exit-label em {
+          display: block;
+          font-style: normal;
+        }
+
+        .exit-label strong {
+          font-size: 17px;
+        }
+
+        .exit-label em {
+          margin-top: 2px;
+          color: #7f4a45;
+          font-size: 14px;
+        }
+
+        .review-cursor {
+          position: absolute;
+          top: 24px;
+          left: 42px;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          z-index: 20;
+        }
+
+        .cursor-dot {
+          width: 42px;
+          height: 42px;
+          border: 8px solid var(--paper);
+          border-radius: 50%;
+          background: var(--ink);
+          box-shadow: 0 0 0 3px var(--ink);
+        }
+
+        .cursor-label {
+          padding: 5px 10px;
+          border-radius: 3px;
+          background: var(--ink);
+          color: var(--paper);
+          font-size: 15px;
+          font-weight: 800;
+        }
+
+        .result-panel {
+          position: absolute;
+          left: 120px;
+          right: 120px;
+          bottom: 66px;
+          display: grid;
+          grid-template-columns: 290px minmax(0, 1fr);
+          align-items: center;
+          min-height: 190px;
+          padding: 28px 34px;
+          border: 2px solid var(--unlock);
+          border-radius: 6px;
+          background: var(--unlock-soft);
+        }
+
+        .result-prefix {
+          padding-right: 30px;
+          border-right: 1px solid #d6b66f;
+        }
+
+        .result-prefix span,
+        .result-prefix strong {
+          display: block;
+        }
+
+        .result-prefix span {
+          color: #79550c;
+          font-size: 18px;
+          font-weight: 750;
+        }
+
+        .result-prefix strong {
+          margin-top: 5px;
+          font-size: 34px;
+          font-weight: 900;
+        }
+
+        .result-chain {
+          display: grid;
+          grid-template-columns: 1fr 46px 1.1fr 46px 0.8fr;
+          align-items: center;
+          gap: 12px;
+          padding-left: 34px;
+        }
+
+        .result-step {
+          min-height: 104px;
+          padding: 18px 20px;
+          border: 1px solid #d6b66f;
+          background: var(--paper);
+        }
+
+        .result-step small,
+        .result-step b {
+          display: block;
+        }
+
+        .result-step small {
+          margin-bottom: 7px;
+          color: #735c34;
+          font-size: 13px;
+          font-weight: 800;
+        }
+
+        .result-step b {
+          font-size: 24px;
+          font-weight: 900;
+        }
+
+        .result-step-final {
+          border-color: var(--unlock);
+          background: var(--unlock);
+          color: #261b05;
+        }
+
+        .result-step-final small {
+          color: var(--paper);
+        }
+
+        .result-arrow {
+          color: var(--unlock);
+          font-size: 34px;
+          font-weight: 900;
+          text-align: center;
+        }
+
+        #hf-playback-toggle {
+          position: fixed;
+          right: 12px;
+          bottom: 12px;
+          z-index: 100;
+          display: grid;
+          place-items: center;
+          width: 38px;
+          height: 38px;
+          padding: 0;
+          border: 1px solid rgba(23, 26, 28, 0.22);
+          border-radius: 4px;
+          background: rgba(247, 248, 245, 0.9);
+          color: var(--ink);
+          cursor: pointer;
+          font: 800 16px/1 sans-serif;
+          box-shadow: 0 5px 16px rgba(23, 26, 28, 0.12);
+        }
+
+        #hf-playback-toggle:focus-visible {
+          outline: 3px solid var(--unlock);
+          outline-offset: 2px;
+        }
+      </style>
+
+      <script>
+        (function () {
+          const S = '[data-composition-id="flowchart"]';
+          const tl = gsap.timeline({ paused: true });
+
+          const preparePath = (selector) => {
+            const path = document.querySelector(S + " " + selector);
+            const length = path.getTotalLength();
+            path.style.strokeDasharray = String(length);
+            path.style.strokeDashoffset = String(length);
+          };
+
+          ["#rail-start", "#rail-1", "#rail-2", "#rail-3", "#exit-1", "#exit-2", "#exit-3"].forEach(
+            preparePath,
+          );
+
+          tl.fromTo(
+            S + " .heading",
+            { autoAlpha: 0, y: -24 },
+            { autoAlpha: 1, y: 0, duration: 0.38, ease: "power3.out" },
+            0,
+          );
+          tl.fromTo(
+            S + " #headline-rule",
+            { scaleX: 0 },
+            { scaleX: 1, duration: 0.42, ease: "power3.out" },
+            0.18,
+          );
+          tl.fromTo(
+            S + " .logic-caption",
+            { autoAlpha: 0, y: 12 },
+            { autoAlpha: 1, y: 0, duration: 0.28, ease: "power2.out" },
+            0.38,
+          );
+          tl.to(S + " #rail-start", { strokeDashoffset: 0, duration: 0.28, ease: "none" }, 0.44);
+          tl.fromTo(
+            S + " .gate",
+            { autoAlpha: 0, y: 18 },
+            { autoAlpha: 1, y: 0, duration: 0.34, stagger: 0.08, ease: "power3.out" },
+            0.48,
+          );
+          tl.fromTo(
+            S + " #review-cursor",
+            { autoAlpha: 0, x: 0 },
+            { autoAlpha: 1, x: 188, duration: 0.34, ease: "power3.out" },
+            0.62,
+          );
+
+          const revealGate = ({ gate, exit, label, rail, cursorX, at }) => {
+            tl.to(
+              S + " #review-cursor",
+              { x: cursorX, duration: 0.42, ease: "power2.inOut" },
+              at,
+            );
+            tl.to(
+              S + " " + gate,
+              {
+                borderColor: "#1F6B52",
+                backgroundColor: "#E2EFE9",
+                duration: 0.22,
+                ease: "power1.out",
+              },
+              at + 0.36,
+            );
+            tl.fromTo(
+              S + " " + gate + " .gate-status",
+              { autoAlpha: 0, scale: 0.86 },
+              { autoAlpha: 1, scale: 1, duration: 0.2, ease: "back.out(1.5)" },
+              at + 0.4,
+            );
+            tl.to(S + " " + exit, { strokeDashoffset: 0, duration: 0.2, ease: "none" }, at + 0.46);
+            tl.fromTo(
+              S + " " + label,
+              { autoAlpha: 0, y: -8 },
+              { autoAlpha: 1, y: 0, duration: 0.22, ease: "power2.out" },
+              at + 0.53,
+            );
+            if (rail) {
+              tl.to(S + " " + rail, { strokeDashoffset: 0, duration: 0.32, ease: "none" }, at + 0.68);
+            }
+          };
+
+          revealGate({
+            gate: "#gate-1",
+            exit: "#exit-1",
+            label: "#exit-label-1",
+            rail: "#rail-1",
+            cursorX: 272,
+            at: 0.82,
+          });
+          revealGate({
+            gate: "#gate-2",
+            exit: "#exit-2",
+            label: "#exit-label-2",
+            rail: "#rail-2",
+            cursorX: 692,
+            at: 2.42,
+          });
+          revealGate({
+            gate: "#gate-3",
+            exit: "#exit-3",
+            label: "#exit-label-3",
+            rail: "#rail-3",
+            cursorX: 1112,
+            at: 4.02,
+          });
+
+          tl.to(S + " #review-cursor", { x: 1390, duration: 0.38, ease: "power2.inOut" }, 5.24);
+          tl.to(S + " #review-cursor", { scale: 0.94, duration: 0.12, ease: "power1.in" }, 5.62);
+          tl.to(S + " #review-cursor", { scale: 1, duration: 0.14, ease: "power2.out" }, 5.74);
+
+          tl.fromTo(
+            S + " #result-panel",
+            { autoAlpha: 0, y: 28 },
+            { autoAlpha: 1, y: 0, duration: 0.34, ease: "power3.out" },
+            5.96,
+          );
+          tl.fromTo(
+            S + " .result-prefix",
+            { autoAlpha: 0, x: -18 },
+            { autoAlpha: 1, x: 0, duration: 0.26, ease: "power2.out" },
+            6.08,
+          );
+          tl.fromTo(
+            S + " #result-1",
+            { autoAlpha: 0, y: 16 },
+            { autoAlpha: 1, y: 0, duration: 0.24, ease: "power2.out" },
+            6.28,
+          );
+          tl.fromTo(
+            S + " .result-arrow:nth-of-type(2)",
+            { autoAlpha: 0, x: -10 },
+            { autoAlpha: 1, x: 0, duration: 0.18, ease: "power2.out" },
+            6.48,
+          );
+          tl.fromTo(
+            S + " #result-2",
+            { autoAlpha: 0, y: 16 },
+            { autoAlpha: 1, y: 0, duration: 0.24, ease: "power2.out" },
+            6.58,
+          );
+          tl.fromTo(
+            S + " .result-arrow:nth-of-type(4)",
+            { autoAlpha: 0, x: -10 },
+            { autoAlpha: 1, x: 0, duration: 0.18, ease: "power2.out" },
+            6.78,
+          );
+          tl.fromTo(
+            S + " #result-3",
+            { autoAlpha: 0, scale: 0.9 },
+            { autoAlpha: 1, scale: 1, duration: 0.28, ease: "back.out(1.45)" },
+            6.9,
+          );
+          tl.to({}, { duration: 0.82 }, 7.18);
+
+          window.__timelines = window.__timelines || {};
+          window.__timelines.flowchart = tl;
+          tl.seek(0);
+        })();
+      </script>
+    </div>
+      </div>
+    </main>
+
+    <button id="hf-playback-toggle" type="button" aria-label="暂停动画" title="暂停动画">Ⅱ</button>
+    <script>
+      (() => {
+        const WIDTH = 1920;
+        const HEIGHT = 1080;
+        const viewport = document.querySelector("#hf-viewport");
+        const stage = document.querySelector("#hf-stage");
+        const toggle = document.querySelector("#hf-playback-toggle");
+        const timeline = window.__timelines.flowchart;
+        const params = new URLSearchParams(window.location.search);
+        const shouldAutoplay = params.get("autoplay") !== "0";
+        const shouldLoop = params.get("loop") !== "0";
+        let restartCall;
+
+        const fitStage = () => {
+          const scale = Math.min(viewport.clientWidth / WIDTH, viewport.clientHeight / HEIGHT);
+          const x = (viewport.clientWidth - WIDTH * scale) / 2;
+          const y = (viewport.clientHeight - HEIGHT * scale) / 2;
+          stage.style.transform = `translate3d(${x}px, ${y}px, 0) scale(${scale})`;
+        };
+
+        const setPlayingState = (playing) => {
+          toggle.textContent = playing ? "Ⅱ" : "▶";
+          toggle.setAttribute("aria-label", playing ? "暂停动画" : "播放动画");
+          toggle.title = playing ? "暂停动画" : "播放动画";
+        };
+
+        timeline.eventCallback("onComplete", () => {
+          setPlayingState(false);
+          if (shouldLoop) {
+            restartCall = gsap.delayedCall(0.7, () => {
+              timeline.restart();
+              setPlayingState(true);
+            });
+          }
+        });
+
+        toggle.addEventListener("click", () => {
+          restartCall?.kill();
+          if (timeline.progress() === 1) {
+            timeline.restart();
+            setPlayingState(true);
+            return;
+          }
+          if (timeline.paused()) {
+            timeline.play();
+            setPlayingState(true);
+          } else {
+            timeline.pause();
+            setPlayingState(false);
+          }
+        });
+
+        window.addEventListener("resize", fitStage, { passive: true });
+        new ResizeObserver(fitStage).observe(viewport);
+        fitStage();
+
+        if (shouldAutoplay) {
+          timeline.play(0);
+          setPlayingState(true);
+        } else {
+          timeline.seek(timeline.duration()).pause();
+          setPlayingState(false);
+        }
+      })();
+    </script>
+  </body>
+</html>
