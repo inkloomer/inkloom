@@ -1,6 +1,6 @@
 import {AbsoluteFill} from 'remotion';
 import {TimelineSequence} from '../../../../shared/remotion-runtime';
-import {AppearanceConsequencesScene, InitiationScene, PreparationScene} from './scenes/AppraisalScenes';
+import {AppearanceConsequencesScene, AppearanceConditionsScene, AppearanceProcedureScene, InitiationScene, PreparationScene} from './scenes/AppraisalScenes';
 import {SCENES} from './storyboard';
 
 export const AppraisalOpinion = () => (
@@ -13,6 +13,12 @@ export const AppraisalOpinion = () => (
     </TimelineSequence>
     <TimelineSequence name="03-appearance-consequences" {...SCENES.appearanceConsequences}>
       <AppearanceConsequencesScene />
+    </TimelineSequence>
+    <TimelineSequence name="04-appearance-conditions" {...SCENES.appearanceConditions}>
+      <AppearanceConditionsScene />
+    </TimelineSequence>
+    <TimelineSequence name="05-appearance-procedure" {...SCENES.appearanceProcedure}>
+      <AppearanceProcedureScene />
     </TimelineSequence>
   </AbsoluteFill>
 );

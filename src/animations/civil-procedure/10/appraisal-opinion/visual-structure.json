@@ -58,6 +58,30 @@
         "recommend-punishment"
       ],
       "statefulObjects": ["appraisal-opinion"]
+    },
+    {
+      "id": "appearance-conditions",
+      "export": "AppearanceConditionsScene",
+      "layout": "dual-trigger-convergence",
+      "anchor": "role-pair",
+      "grammar": ["alternative-triggers", "convergence", "mandatory-result"],
+      "textTreatments": ["label-block", "thin-underline", "stamp", "soft-highlight"],
+      "focalChannels": ["icon", "connector", "enclosure", "motion"],
+      "tokens": ["MessagesSquare", "Gavel", "UserRoundCheck"],
+      "finalKnowledge": ["party-objection-trigger", "court-necessity-trigger", "mandatory-appearance-result"],
+      "statefulObjects": []
+    },
+    {
+      "id": "appearance-procedure",
+      "export": "AppearanceProcedureScene",
+      "layout": "four-stage-procedure-rail",
+      "anchor": "timeline",
+      "grammar": ["ordered-stages", "reply-gate", "prepayment", "waiver"],
+      "textTreatments": ["label-block", "thin-underline", "stamp", "external-negation"],
+      "focalChannels": ["icon", "connector", "spatial", "enclosure"],
+      "tokens": ["FileCheck2", "Send", "MessagesSquare", "UserRoundCheck", "CircleDollarSign", "CheckCircle2"],
+      "finalKnowledge": ["procedure-order-rail", "procedure-stage-1", "procedure-stage-2", "procedure-stage-3", "procedure-stage-4", "persistent-objection-payment-rule", "prepayment-refusal-waiver"],
+      "statefulObjects": []
     }
   ]
 }

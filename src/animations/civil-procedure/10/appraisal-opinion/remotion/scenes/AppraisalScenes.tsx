@@ -15,6 +15,7 @@ import {
   Microscope,
   RotateCcw,
   ShieldAlert,
+  Send,
   Stamp,
   UserRoundCheck,
   UsersRound,
@@ -579,6 +580,109 @@ export const AppearanceConsequencesScene = () => {
             <ShieldAlert size={52} />
             <div style={{fontSize: 29, fontWeight: 950}}>建议有关部门依法处罚</div>
           </div>
+        </Enter>
+      </div>
+    </SceneShell>
+  );
+};
+
+export const AppearanceConditionsScene = () => {
+  const frame = toSourceFrame(useCurrentFrame());
+  const objectionProgress = interpolate(frame, [18, 52], [0, 1], CLAMP);
+  const necessityProgress = interpolate(frame, [62, 96], [0, 1], CLAMP);
+  const decisionProgress = interpolate(frame, [112, 148], [0, 1], CLAMP);
+
+  return (
+    <SceneShell code="04" title="两种触发情形，结论都是应当出庭" object="出庭情形">
+      <div
+        data-layout="dual-trigger-convergence"
+        data-visual-anchor="role-pair"
+        data-text-treatments="label-block,thin-underline,stamp,soft-highlight"
+        data-visual-grammar="alternative-triggers,convergence,mandatory-result"
+        data-focal-rule="party-objection-or-court-necessity-each-triggers-mandatory-appraiser-appearance"
+        data-focal-channels="icon,connector,enclosure,motion"
+        style={{position: 'absolute', inset: 0}}
+      >
+        <Enter delay={2} style={{position: 'absolute', left: 22, top: 10}}>
+          <Label color={P.blue}>触发点 A</Label>
+        </Enter>
+        <Enter delay={8} style={{position: 'absolute', left: 22, top: 82, width: 560, height: 190, backgroundColor: P.white, border: `5px solid ${P.blue}`, padding: '26px 30px'}}>
+          <div data-final-knowledge="party-objection-trigger" style={{display: 'flex', alignItems: 'center', gap: 22}}>
+            <MessagesSquare size={64} color={P.blue} />
+            <div><div style={{fontSize: 30, fontWeight: 950}}>当事人对鉴定意见有异议</div><div style={{fontSize: 24, color: P.blue, fontWeight: 900, marginTop: 12}}>提出质疑 → 请求出庭</div></div>
+          </div>
+        </Enter>
+        <div style={{position: 'absolute', left: 582, top: 172, width: 300, height: 8, backgroundColor: P.blue, scale: `${objectionProgress} 1`, transformOrigin: 'left center'}} />
+        <div style={{position: 'absolute', left: 822, top: 180, width: 60, height: 8, backgroundColor: P.blue, rotate: '28deg', opacity: objectionProgress}} />
+
+        <Enter delay={30} style={{position: 'absolute', left: 22, top: 402}}>
+          <Label color={P.orange}>触发点 B</Label>
+        </Enter>
+        <Enter delay={38} style={{position: 'absolute', left: 22, top: 474, width: 560, height: 190, backgroundColor: P.white, border: `5px solid ${P.orange}`, padding: '26px 30px'}}>
+          <div data-final-knowledge="court-necessity-trigger" style={{display: 'flex', alignItems: 'center', gap: 22}}>
+            <Gavel size={64} color={P.orange} />
+            <div><div style={{fontSize: 30, fontWeight: 950}}>法院认为鉴定人有必要出庭</div><div style={{fontSize: 24, color: P.orange, fontWeight: 900, marginTop: 12}}>法院判断 → 通知出庭</div></div>
+          </div>
+        </Enter>
+        <div style={{position: 'absolute', left: 582, top: 564, width: 300, height: 8, backgroundColor: P.orange, scale: `${necessityProgress} 1`, transformOrigin: 'left center'}} />
+        <div style={{position: 'absolute', left: 822, top: 556, width: 60, height: 8, backgroundColor: P.orange, rotate: '-28deg', opacity: necessityProgress}} />
+
+        <ImpactReveal delay={112} style={{position: 'absolute', left: 888, top: 194}}>
+          <div data-final-knowledge="mandatory-appearance-result" style={{width: 620, height: 350, backgroundColor: P.ink, color: P.white, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', border: `8px solid ${P.yellow}`, boxShadow: `18px 18px 0 ${P.orange}`, opacity: decisionProgress}}>
+            <UserRoundCheck size={82} color={P.yellow} />
+            <div style={{fontSize: 42, fontWeight: 950, marginTop: 18}}>鉴定人应当出庭作证</div>
+            <div style={{fontSize: 25, color: P.mist, marginTop: 12}}>任一触发点成立，结论相同</div>
+          </div>
+        </ImpactReveal>
+      </div>
+    </SceneShell>
+  );
+};
+
+export const AppearanceProcedureScene = () => {
+  const frame = toSourceFrame(useCurrentFrame());
+  const steps = [
+    {title: '法院收到鉴定书', body: '及时送交副本', icon: <FileCheck2 size={42} color={P.blue} />, color: P.blue},
+    {title: '当事人提出异议', body: '指定期间内书面提出', icon: <Send size={42} color={P.green} />, color: P.green},
+    {title: '法院要求答复', body: '解释、说明或补充', icon: <MessagesSquare size={42} color={P.orange} />, color: P.orange},
+    {title: '仍有异议', body: '预交费用并通知出庭', icon: <UserRoundCheck size={42} color={P.red} />, color: P.red},
+  ];
+  return (
+    <SceneShell code="05" title="异议沿四站推进，最后才进入出庭" object="出庭程序">
+      <div
+        data-layout="four-stage-procedure-rail"
+        data-visual-anchor="timeline"
+        data-text-treatments="label-block,thin-underline,stamp,external-negation"
+        data-visual-grammar="ordered-stages,reply-gate,prepayment,waiver"
+        data-focal-rule="written-objection-moves-through-copy-reply-and-persistent-dispute-before-appearance"
+        data-focal-channels="icon,connector,spatial,enclosure"
+        style={{position: 'absolute', inset: 0}}
+      >
+        <div data-final-knowledge="procedure-order-rail" style={{position: 'absolute', left: 12, right: 12, top: 118, height: 10, backgroundColor: P.steel}} />
+        {steps.map((step, index) => {
+          const progress = interpolate(frame, [18 + index * 38, 52 + index * 38], [0, 1], CLAMP);
+          return (
+            <div key={step.title} data-final-knowledge={`procedure-stage-${index + 1}`} style={{position: 'absolute', left: 12 + index * 444, top: 12, width: 400, height: 360, opacity: progress, translate: `0px ${interpolate(progress, [0, 1], ['24px', '0px'], CLAMP)}`}}>
+              <div style={{position: 'absolute', left: 170, top: 82, width: 62, height: 62, borderRadius: 999, backgroundColor: step.color, border: `6px solid ${P.paper}`, boxShadow: `0 0 0 4px ${step.color}`, display: 'grid', placeItems: 'center'}}>
+                <span style={{color: P.white, fontSize: 26, fontWeight: 950}}>{index + 1}</span>
+              </div>
+              <div style={{position: 'absolute', inset: '174px 0 0', backgroundColor: P.white, border: `5px solid ${step.color}`, padding: '24px 22px', textAlign: 'center'}}>
+                {step.icon}
+                <div style={{fontSize: 28, fontWeight: 950, marginTop: 10}}>{step.title}</div>
+                <div style={{fontSize: 24, color: step.color, fontWeight: 900, marginTop: 12}}>{step.body}</div>
+              </div>
+            </div>
+          );
+        })}
+        <Enter delay={184} style={{position: 'absolute', left: 44, top: 506, width: 1680, height: 142, backgroundColor: P.ink, color: P.white, padding: '24px 30px', display: 'flex', alignItems: 'center', gap: 24}}>
+          <div data-final-knowledge="persistent-objection-payment-rule" style={{display: 'flex', alignItems: 'center', gap: 22}}>
+            <CircleDollarSign size={58} color={P.yellow} />
+            <div style={{fontSize: 28, fontWeight: 950}}>书面答复后仍有异议：有异议的当事人预交鉴定人出庭费用，法院通知鉴定人出庭</div>
+          </div>
+        </Enter>
+        <Enter delay={224} style={{position: 'absolute', left: 44, top: 680, width: 1680, height: 92, backgroundColor: P.red, color: P.white, padding: '18px 30px', display: 'flex', alignItems: 'center', gap: 18}}>
+          <Ban size={46} />
+          <div data-final-knowledge="prepayment-refusal-waiver" style={{fontSize: 27, fontWeight: 950}}>拒绝预交出庭费用 = 视为放弃异议</div>
         </Enter>
       </div>
     </SceneShell>

@@ -60,6 +60,18 @@ describe('SiYuan animated image player', () => {
     await vi.waitFor(() => expect(img.getAttribute('src')).toMatch(/^blob:/), {timeout: 2000});
   });
 
+  test('freezes every controlled image after initial setup', async () => {
+    await setupPlayer(3);
+
+    await vi.waitFor(() => {
+      const overlays = [...document.querySelectorAll('.inkloom-animated-image-overlay')];
+      expect(overlays).toHaveLength(3);
+      expect(overlays.every((overlay) => overlay.querySelector('canvas:not([hidden])'))).toBe(true);
+    });
+    expect([...document.images].every((img) => !img.src.startsWith('blob:'))).toBe(true);
+    expect([...document.images].every((img) => img.style.visibility === '')).toBe(true);
+  });
+
   test('does not restart the same image from hover while it is replaying', async () => {
     const [img] = await setupPlayer();
     await userEvent.click(replayButtons()[0]);
@@ -109,11 +121,7 @@ describe('SiYuan animated image player', () => {
     window.dispatchEvent(new Event('focus'));
     await wait(800);
     expect(img.getAttribute('src')).toBe(originalSrc);
-
-    await userEvent.unhover(img);
-    await userEvent.hover(img);
-    await wait(800);
-    expect(img.getAttribute('src')).toBe(originalSrc);
+    await vi.waitFor(() => expect(img.getAttribute('src')).toMatch(/^blob:/), {timeout: 1000});
   });
 
   test('scans only newly added DOM branches after initial setup', async () => {

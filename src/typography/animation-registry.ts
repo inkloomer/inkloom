@@ -30,6 +30,7 @@ import {typography as typography27} from '../animations/civil-procedure/09/burde
 import {typography as typography62} from '../animations/civil-procedure/09/burden-of-proof-caveats/animation.meta';
 import {typography as typography28} from '../animations/civil-procedure/10/appraisal-opinion/animation.meta';
 import {typography as typography29} from '../animations/civil-procedure/10/documentary-evidence-rules/animation.meta';
+import {typography as typography73} from '../animations/civil-procedure/10/foreign-document-authentication/animation.meta';
 import {typography as typography30} from '../animations/civil-procedure/10/evidence-classification/animation.meta';
 import {typography as typography31} from '../animations/civil-procedure/10/inspection-record/animation.meta';
 import {typography as typography32} from '../animations/civil-procedure/10/party-statements/animation.meta';
@@ -49,6 +50,7 @@ import {typography as typography68} from '../animations/civil-procedure/12/provi
 import {typography as typography71} from '../animations/civil-procedure/12/behavior-preservation/animation.meta';
 import {typography as typography69} from '../animations/civil-procedure/14/period-calculation/animation.meta';
 import {typography as typography70} from '../animations/civil-procedure/14/service-delivery-network/animation.meta';
+import {typography as typography72} from '../animations/civil-procedure/15/mediation-settlement-path/animation.meta';
 import {typography as typography40} from '../animations/criminal/19/card-selling-funds-viewpoint/animation.meta';
 import {typography as typography41} from '../animations/criminal/19/occupational-embezzlement-flowchart/animation.meta';
 import {typography as typography42} from '../animations/criminal/19/property-interests-keypoints/animation.meta';
@@ -104,6 +106,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'burden-of-proof-caveats': {metadata: typography62, scope: {animationId: 'burden-of-proof-caveats', subject: 'civil-procedure', topic: '09'}},
   'appraisal-opinion': {metadata: typography28, scope: {animationId: 'appraisal-opinion', subject: 'civil-procedure', topic: '10'}},
   'documentary-evidence-rules': {metadata: typography29, scope: {animationId: 'documentary-evidence-rules', subject: 'civil-procedure', topic: '10'}},
+  'foreign-document-authentication': {metadata: typography73, scope: {animationId: 'foreign-document-authentication', subject: 'civil-procedure', topic: '10'}},
   'evidence-classification': {metadata: typography30, scope: {animationId: 'evidence-classification', subject: 'civil-procedure', topic: '10'}},
   'inspection-record': {metadata: typography31, scope: {animationId: 'inspection-record', subject: 'civil-procedure', topic: '10'}},
   'party-statements': {metadata: typography32, scope: {animationId: 'party-statements', subject: 'civil-procedure', topic: '10'}},
@@ -123,6 +126,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'behavior-preservation': {metadata: typography71, scope: {animationId: 'behavior-preservation', subject: 'civil-procedure', topic: '12'}},
   'period-calculation': {metadata: typography69, scope: {animationId: 'period-calculation', subject: 'civil-procedure', topic: '14'}},
   'service-delivery-network': {metadata: typography70, scope: {animationId: 'service-delivery-network', subject: 'civil-procedure', topic: '14'}},
+  'mediation-settlement-path': {metadata: typography72, scope: {animationId: 'mediation-settlement-path', subject: 'civil-procedure', topic: '15'}},
   'card-selling-funds-viewpoint': {metadata: typography40, scope: {animationId: 'card-selling-funds-viewpoint', subject: 'criminal', topic: '19'}},
   'occupational-embezzlement-flowchart': {metadata: typography41, scope: {animationId: 'occupational-embezzlement-flowchart', subject: 'criminal', topic: '19'}},
   'property-interests-keypoints': {metadata: typography42, scope: {animationId: 'property-interests-keypoints', subject: 'criminal', topic: '19'}},

@@ -14,7 +14,7 @@
     showReplayButton: true, // Show the small replay control.
     replayOnHover: true, // Replay when the pointer enters the image.
     hoverReplayDelayMs: 700, // Require an intentional hover before replaying.
-    focusReturnGuardMs: 1000, // Ignore synthetic hover events after returning to SiYuan.
+    focusReturnGuardMs: 1000, // Defer hover replay briefly after returning to SiYuan.
     fallbackReplayDurationMs: 20000, // Used when an InkLoom scene manifest is unavailable.
     playbackEndGuardMs: 500, // Allow for image decode before releasing the replay lock.
     replayBlobCacheSize: 4, // Bound decoded replay media retained during a SiYuan session.
@@ -267,7 +267,12 @@
 
   const freezeCurrentFrame = (img) => {
     const controller = controllersByImage.get(img);
-    if (!controller || !img.complete || !img.naturalWidth || !img.naturalHeight) return;
+    if (!controller
+      || !img.complete
+      || !img.naturalWidth
+      || !img.naturalHeight
+      || !img.offsetWidth
+      || !img.offsetHeight) return false;
 
     const stillFrame = controller.stillFrame || document.createElement('canvas');
     stillFrame.className = `${OVERLAY_CLASS}__still`;
@@ -277,17 +282,18 @@
     stillFrame.height = Math.min(img.naturalHeight, Math.max(1, Math.round(img.offsetHeight * pixelRatio)));
     try {
       const context = stillFrame.getContext('2d');
-      if (!context) return;
+      if (!context) return false;
       context.drawImage(img, 0, 0, stillFrame.width, stillFrame.height);
     } catch (error) {
       console.warn('[InkLoom Animated Image Player] Could not freeze the previous replay.', error);
-      return;
+      return false;
     }
     if (!controller.stillFrame) {
       controller.stillFrame = stillFrame;
       controller.overlay.prepend(stillFrame);
     }
     stillFrame.hidden = false;
+    return true;
   };
 
   const releaseReplayOwnership = (img, {freeze = true} = {}) => {
@@ -393,6 +399,7 @@
     overlay.style.top = `${img.offsetTop}px`;
     overlay.style.width = `${img.offsetWidth}px`;
     overlay.style.height = `${img.offsetHeight}px`;
+    if (!overlay.hidden) controller.freezeInitialFrame?.();
   };
 
   const resizeObserver = new ResizeObserver((entries) => {
@@ -402,8 +409,8 @@
     });
   });
 
-  const registerController = ({img, overlay, replay, cancelHoverReplay, disposePlayback}) => {
-    const controller = {cancelHoverReplay, disposePlayback, img, overlay, replay};
+  const registerController = ({img, overlay, replay, cancelHoverReplay, resumeHoverReplay, disposePlayback}) => {
+    const controller = {cancelHoverReplay, disposePlayback, img, overlay, replay, resumeHoverReplay};
     controllersByImage.set(img, controller);
     activeControllers.add(controller);
     resizeObserver.observe(img);
@@ -416,6 +423,7 @@
     if (!activeControllers.delete(controller)) return;
     resizeObserver.unobserve(controller.img);
     controller.img.removeEventListener('load', controller.syncOnLoad);
+    controller.disposeInitialFreeze?.();
     controller.disposePlayback?.();
     releaseReplayOwnership(controller.img, {freeze: false});
     restoreReplaySource(controller.img);
@@ -447,37 +455,100 @@
 
     const replay = () => replayNativeImage(img);
     let controller;
+    let pointerInside = false;
     const cancelHoverReplay = () => {
       if (!controller?.hoverReplayTimer) return;
       window.clearTimeout(controller.hoverReplayTimer);
       controller.hoverReplayTimer = 0;
     };
-    const replayOnHover = (event) => {
+    const scheduleHoverReplay = (pointerType = '') => {
       cancelHoverReplay();
-      if (event.pointerType === 'touch'
+      if (pointerType === 'touch'
         || document.visibilityState !== 'visible'
-        || !document.hasFocus()
-        || Date.now() < hoverReplayBlockedUntil) return;
-      controller.hoverReplayTimer = window.setTimeout(() => {
+        || !document.hasFocus()) return;
+      const guardDelayMs = Math.max(0, hoverReplayBlockedUntil - Date.now());
+      const attemptHoverReplay = () => {
+        const remainingGuardMs = hoverReplayBlockedUntil - Date.now();
+        if (remainingGuardMs > 0) {
+          controller.hoverReplayTimer = window.setTimeout(attemptHoverReplay, remainingGuardMs);
+          return;
+        }
         controller.hoverReplayTimer = 0;
         if (document.visibilityState === 'visible'
           && document.hasFocus()
-          && Date.now() >= hoverReplayBlockedUntil
           && activeReplayImage !== img
-          && img.matches(':hover')) replay();
-      }, CONFIG.hoverReplayDelayMs);
+          && pointerInside) replay();
+      };
+      controller.hoverReplayTimer = window.setTimeout(
+        attemptHoverReplay,
+        Math.max(CONFIG.hoverReplayDelayMs, guardDelayMs),
+      );
+    };
+    const replayOnHover = (event) => {
+      pointerInside = true;
+      scheduleHoverReplay(event.pointerType);
+    };
+    const stopHoverReplay = () => {
+      pointerInside = false;
+      cancelHoverReplay();
     };
     controller = registerController({
       img,
       overlay,
       replay,
       cancelHoverReplay,
+      resumeHoverReplay: () => {
+        if (pointerInside) scheduleHoverReplay();
+      },
       disposePlayback: () => {
         cancelHoverReplay();
         img.removeEventListener('pointerenter', replayOnHover);
-        img.removeEventListener('pointerleave', cancelHoverReplay);
+        img.removeEventListener('pointerleave', stopHoverReplay);
       },
     });
+
+    const initialVisibility = img.style.visibility;
+    let initialFreezePending = true;
+    img.style.visibility = 'hidden';
+    const restoreInitialVisibility = () => {
+      img.style.visibility = initialVisibility;
+    };
+    const cleanupInitialFreezeListeners = () => {
+      img.removeEventListener('load', freezeInitialFrameAfterLayout);
+      img.removeEventListener('error', revealBrokenImage);
+    };
+    const freezeInitialFrame = () => {
+      if (!initialFreezePending) return;
+      if (!freezeCurrentFrame(img)) {
+        if (img.complete && (!img.naturalWidth || !img.naturalHeight)) {
+          initialFreezePending = false;
+          cleanupInitialFreezeListeners();
+          restoreInitialVisibility();
+        }
+        return;
+      }
+      initialFreezePending = false;
+      cleanupInitialFreezeListeners();
+      restoreInitialVisibility();
+    };
+    const freezeInitialFrameAfterLayout = () => requestAnimationFrame(freezeInitialFrame);
+    const revealBrokenImage = () => {
+      if (!initialFreezePending) return;
+      initialFreezePending = false;
+      cleanupInitialFreezeListeners();
+      restoreInitialVisibility();
+    };
+    controller.freezeInitialFrame = freezeInitialFrame;
+    controller.disposeInitialFreeze = () => {
+      cleanupInitialFreezeListeners();
+      if (initialFreezePending) {
+        initialFreezePending = false;
+        restoreInitialVisibility();
+      }
+    };
+    if (img.complete) freezeInitialFrameAfterLayout();
+    else img.addEventListener('load', freezeInitialFrameAfterLayout, {once: true});
+    img.addEventListener('error', revealBrokenImage, {once: true});
 
     replayButton?.addEventListener('pointerdown', (event) => {
       event.stopPropagation();
@@ -489,7 +560,7 @@
     });
     if (CONFIG.replayOnHover) {
       img.addEventListener('pointerenter', replayOnHover);
-      img.addEventListener('pointerleave', cancelHoverReplay);
+      img.addEventListener('pointerleave', stopHoverReplay);
     }
     syncOverlay(controller);
   };
@@ -579,10 +650,20 @@
     hoverReplayBlockedUntil = Date.now() + CONFIG.focusReturnGuardMs;
     [...activeControllers].forEach((controller) => controller.cancelHoverReplay?.());
   };
-  const handleVisibilityChange = () => blockHoverReplay();
+  const resumeHoveredImages = () => {
+    [...activeControllers].forEach((controller) => controller.resumeHoverReplay?.());
+  };
+  const handleFocus = () => {
+    blockHoverReplay();
+    resumeHoveredImages();
+  };
+  const handleVisibilityChange = () => {
+    blockHoverReplay();
+    if (document.visibilityState === 'visible') resumeHoveredImages();
+  };
   window.addEventListener('resize', scheduleOverlaySync);
   window.addEventListener('blur', blockHoverReplay);
-  window.addEventListener('focus', blockHoverReplay);
+  window.addEventListener('focus', handleFocus);
   document.addEventListener('visibilitychange', handleVisibilityChange);
   document.addEventListener('click', handleDocumentClick, true);
   const observer = new MutationObserver((records) => {
@@ -595,7 +676,7 @@
     observer.disconnect();
     window.removeEventListener('resize', scheduleOverlaySync);
     window.removeEventListener('blur', blockHoverReplay);
-    window.removeEventListener('focus', blockHoverReplay);
+    window.removeEventListener('focus', handleFocus);
     document.removeEventListener('visibilitychange', handleVisibilityChange);
     document.removeEventListener('click', handleDocumentClick, true);
     [...activeControllers].forEach(disposeController);
