@@ -1,0 +1,14 @@
+{
+  "directionId": "procedural-casefile-theatre",
+  "family": "archival-courtroom-diagram",
+  "palette": "warm case paper + carbon ink + court vermilion + approval gold + judgment teal",
+  "typography": "large humanist legal questions, compact operative labels, underlined conditions, and document stamps",
+  "composition": "seven distinct case-control stages: courthouse gate, confluence barrier, paired courtrooms, obstacle fork with approval timeline, document switchyard, radial effect map, and death boundary",
+  "surface": "layered legal paper, court-color blocks, physical docket slips, document presses, and no drafting grid or generic card dashboard",
+  "motion": "case files, summonses, approval marks, and judgment tokens move in legal reasoning order and remain as visible terminal legal states",
+  "transition": "a stable paper field and court-vermilion numbering preserve node identity while each learning question changes to its own spatial instrument",
+  "catalog": {
+    "status": "variant",
+    "sourceDirectionId": "archival-dossier"
+  }
+}

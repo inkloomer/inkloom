@@ -1,0 +1,91 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 7,
+  "scenes": [
+    {
+      "id": "filing-gate",
+      "export": "FilingGateScene",
+      "layout": "courthouse-portico-with-four-intake-gates-and-three-stage-exits",
+      "anchor": "boundary",
+      "grammar": ["four-gates", "stage-exits", "court-intake"],
+      "textTreatments": ["label-block", "thin-underline", "stamp"],
+      "focalChannels": ["icon", "enclosure", "motion"],
+      "tokens": ["Docket", "CourtSeal", "Landmark", "CalendarClock"],
+      "finalKnowledge": ["plaintiff-direct-interest", "defendant-identifiable", "claim-specific", "court-scope-jurisdiction", "file-within-seven-days", "pre-acceptance-non-acceptance", "post-acceptance-dismiss-action", "merits-dismiss-claim"],
+      "statefulObjects": ["filing-docket"]
+    },
+    {
+      "id": "repeat-suit-test",
+      "export": "RepeatSuitTestScene",
+      "layout": "three-ribbons-converge-on-repeat-suit-barrier-with-exception-arc",
+      "anchor": "flow-path",
+      "grammar": ["three-input-confluence", "conflict-barrier", "exception-bypass"],
+      "textTreatments": ["soft-highlight", "external-negation", "label-block"],
+      "focalChannels": ["connector", "enclosure", "contrast"],
+      "tokens": ["Docket", "UserRound", "Link2", "Ban"],
+      "finalKnowledge": ["same-parties", "same-subject-matter", "same-claim-or-substantive-denial", "all-three-required", "conflicting-judgment-risk", "non-merits-refiling", "support-new-circumstances", "six-month-restrictions"],
+      "statefulObjects": ["later-suit-docket"]
+    },
+    {
+      "id": "withdrawal-absence",
+      "export": "WithdrawalAbsenceScene",
+      "layout": "paired-courtroom-stages-for-withdrawal-and-default-judgment",
+      "anchor": "role-pair",
+      "grammar": ["two-courtroom-stages", "actor-condition", "result"],
+      "textTreatments": ["label-block", "stamp", "external-negation"],
+      "focalChannels": ["icon", "connector", "contrast"],
+      "tokens": ["UserRound", "UsersRound", "Docket", "Gavel"],
+      "finalKnowledge": ["plaintiff-of-the-claim", "court-rules-on-withdrawal", "deemed-withdrawal-behavior", "default-judgment-targets", "summons-no-justification-or-unauthorized-exit", "withdrawal-denied-plaintiff-default"],
+      "statefulObjects": []
+    },
+    {
+      "id": "procedural-obstacles",
+      "export": "ProceduralObstaclesScene",
+      "layout": "obstacle-river-fork-above-first-instance-time-limit-approval-axis",
+      "anchor": "document-fork",
+      "grammar": ["obstacle-strength-fork", "terminal-state", "approval-timeline"],
+      "textTreatments": ["label-block", "thin-underline", "stamp"],
+      "focalChannels": ["connector", "spatial", "icon"],
+      "tokens": ["Clock3", "Hourglass", "Ban", "CalendarClock", "Landmark"],
+      "finalKnowledge": ["postpone-hearing-litigation-continues", "postponement-decision", "suspension-future-uncertain", "suspension-order", "termination-no-need-to-continue", "termination-order", "death-successor-boundary", "first-instance-time-limit-six-months", "president-approved-six-month-extension", "higher-court-approved-further-extension"],
+      "statefulObjects": []
+    },
+    {
+      "id": "judgment-documents",
+      "export": "JudgmentDocumentsScene",
+      "layout": "three-document-presses-feed-a-two-route-correction-switchyard",
+      "anchor": "flow-path",
+      "grammar": ["document-functions", "error-fork", "appeal-dock"],
+      "textTreatments": ["label-block", "thin-underline", "stamp"],
+      "focalChannels": ["icon", "connector", "spatial"],
+      "tokens": ["FileCheck2", "FileText", "Gavel", "BookOpenCheck"],
+      "finalKnowledge": ["judgment-substantive-claim", "order-procedure-and-partial-merits", "decision-procedure", "clerical-error-corrected-by-order", "substantive-error-appeal-or-supervision", "appealable-non-acceptance", "appealable-dismiss-action", "appealable-jurisdiction-objection"],
+      "statefulObjects": []
+    },
+    {
+      "id": "judgment-effects",
+      "export": "JudgmentEffectsScene",
+      "layout": "effective-judgment-radiates-into-three-condition-chambers-and-scope-orbit",
+      "anchor": "comparison-axis",
+      "grammar": ["central-judgment", "condition-chambers", "scope-orbit"],
+      "textTreatments": ["soft-highlight", "label-block", "external-negation"],
+      "focalChannels": ["enclosure", "connector", "contrast"],
+      "tokens": ["FileCheck2", "ShieldCheck", "Scale", "Ban", "Clock3"],
+      "finalKnowledge": ["enforcement-three-conditions", "formation-two-conditions", "res-judicata-binds-parties-and-court", "operative-part-not-reasons", "subjective-relative-and-exceptions", "effective-judgment-time-boundary"],
+      "statefulObjects": []
+    },
+    {
+      "id": "marriage-validity-boundary",
+      "export": "MarriageValidityBoundaryScene",
+      "layout": "one-death-boundary-splits-validity-confirmation-from-divorce-termination",
+      "anchor": "comparison-axis",
+      "grammar": ["validity-continuation", "disposition-lock", "divorce-termination"],
+      "textTreatments": ["external-negation", "stamp", "thin-underline", "label-block"],
+      "focalChannels": ["enclosure", "contrast", "motion"],
+      "tokens": ["ShieldCheck", "Ban", "Gavel", "UserRound"],
+      "finalKnowledge": ["no-withdrawal-on-validity", "no-mediation-or-settlement-on-validity", "judgment-required", "death-still-accept-and-continue", "divorce-pre-death-nonacceptance-or-dismissal", "divorce-during-suit-termination", "divorce-waits-for-validity-judgment"],
+      "statefulObjects": []
+    }
+  ]
+}
