@@ -3,60 +3,60 @@
   "compositionId": "AppraisalOpinion",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-08-02T03:31:32.878Z",
+  "generatedAt": "2026-08-03T10:24:07.372Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
     {
-      "endFrame": 189,
-      "frameCount": 190,
+      "endFrame": 209,
+      "frameCount": 210,
       "id": "initiation",
       "number": "01",
       "startFrame": 0,
       "title": "鉴定的启动",
-      "durationMs": 6333,
+      "durationMs": 7000,
       "file": "initiation.avif",
-      "fileSize": 379264,
+      "fileSize": 637429,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "ab1c5439143428a899dd31146a35884f8ee38aa889f1516e5ab6775a90b781d4",
+      "sha256": "b27b7c9fa8cc0e40f37b8fc436a115327a4a2e6ff81add86d042c1cc2d331a0f",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "76c685c01a2f1ddaba8ee0e680dbfe2a2d2d5912df887c406d101d5d05679513"
+      "sceneFingerprint": "74c81908b1cf48ae89a61878a7b2d15f9a5227af4215d7a3b1b98e36c3a269be"
     },
     {
-      "endFrame": 379,
-      "frameCount": 190,
+      "endFrame": 434,
+      "frameCount": 225,
       "id": "preparation",
       "number": "02",
-      "startFrame": 190,
+      "startFrame": 210,
       "title": "鉴定人和材料",
-      "durationMs": 6333,
+      "durationMs": 7500,
       "file": "preparation.avif",
-      "fileSize": 347348,
+      "fileSize": 615109,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "a26e189b8e3dc3bc5e3a9c7ca4680946ed17f75bdee4b2e2c2d9faaa6781c1e4",
+      "sha256": "560227c5340915e0549c66263ca993bdf2202060b82cba339eee4700686f63c1",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "a2e7184a861dae997c03f44c9d7c7635b45f60b7c2d49638c21805824a131239"
+      "sceneFingerprint": "d9e6281b1cf6556f3b63a3df2addc81798f01ee10467fe2824f9014d1360d149"
     },
     {
-      "endFrame": 569,
-      "frameCount": 190,
+      "endFrame": 689,
+      "frameCount": 255,
       "id": "appearance-consequences",
       "number": "03",
-      "startFrame": 380,
+      "startFrame": 435,
       "title": "出庭费用与拒不出庭后果",
-      "durationMs": 6333,
+      "durationMs": 8500,
       "file": "appearance-consequences.avif",
-      "fileSize": 376173,
+      "fileSize": 630473,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "c8f07883fc7a94dad72ecfacdc784a75dae31119f7453f0cbf1d91ebfce7f41f",
+      "sha256": "8feb4d36cc8fdf1897df61ba6236ab5bd988dba87517eb6cc7234b04976fc9dd",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "cb6787d95e2b9e9d3c1e15edf99db8a8748be74de69c582634a25daee9b8d50b"
+      "sceneFingerprint": "633f59941fdde563a721580c5eb25b824262babb5b7e5d654c122af736be1054"
     }
   ],
   "size": {
@@ -64,7 +64,7 @@
     "width": 2560
   },
   "sourceFps": 30,
-  "sourceFingerprint": "a5fbf6d33fa7baa7a163e0406986cdf3af29fd98b2538762a2b2345bef16180d",
+  "sourceFingerprint": "ef815d53c00752f47816e4ee47ad53519f76bea707442af7935376c35394f5fb",
   "targetFps": 30,
-  "totalFileSize": 1102785
+  "totalFileSize": 1883011
 }

@@ -1,4 +1,16 @@
 {
-  "directionId":"isometric-mechanism","derivedFrom":"demo-isometric-mechanism","variation":"a flat appraisal calibration bench with two inputs, selection valves, a material lock, and a sanction chamber",
-  "family":"appraisal-calibration-bench","palette":"cool steel + carbon mechanism + calibration orange + approval green + warning yellow","typography":"industrial sans labels with large operative outputs and compact calibration notes","composition":"dual-input chamber, selection and material locks, and separated cost-sanction mechanisms","surface":"square machine plates and visible rails without 3D gears or decorative rotation","motion":"inputs feed the appraisal chamber; selection escalates to court designation; refusal trips three ordered sanctions","transition":"the black calibration header remains while the mechanism bay changes","catalog":{"status":"variant","sourceDirectionId":"isometric-mechanism"}
+  "directionId": "isometric-mechanism",
+  "derivedFrom": "demo-isometric-mechanism",
+  "variation": "a flat evidence workbench where fact, material, and opinion tokens physically pass through initiation, cross-examination, appearance, and sanction stations",
+  "family": "appraisal-evidence-workbench",
+  "palette": "paper gray + carbon black + appraisal orange + approval green + procedural blue + sanction red",
+  "typography": "industrial sans labels with one large claim, direct role labels, thin retrieval underlines, and operative stamps",
+  "composition": "converging role entrances, a selection dock, a cross-examination shutter, and a summons-triggered consequence cascade",
+  "surface": "square workbench plates, exposed gates, moving document tokens, and no decorative machine parts",
+  "motion": "the same legal object changes station: facts enter appraisal, materials pass or fall away at cross-examination, and refusal physically ejects the opinion before refund and penalty handoffs",
+  "transition": "the fixed workbench header persists while the tracked object advances from fact to material to opinion",
+  "catalog": {
+    "status": "variant",
+    "sourceDirectionId": "isometric-mechanism"
+  }
 }
