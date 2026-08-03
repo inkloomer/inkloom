@@ -3,7 +3,7 @@
   "compositionId": "AppraisalOpinion",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-08-03T11:17:21.741Z",
+  "generatedAt": "2026-08-03T15:23:31.327Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -22,7 +22,7 @@
       "sha256": "32d9cca0232c530c43a27f422004a77b456e5975fdacd2a6961e9604a3ba05c9",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "05b77dc867ac56969d1df0554b0d9f8ef979434f1b5d067020b90daa0b9b4e21"
+      "sceneFingerprint": "1fcb785c44d3c3632483fa0946a229927b09ed6ffc708fcecc8a43b3fac54662"
     },
     {
       "endFrame": 434,
@@ -33,13 +33,13 @@
       "title": "鉴定人和材料",
       "durationMs": 7500,
       "file": "preparation.avif",
-      "fileSize": 650155,
+      "fileSize": 650166,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "161d89ab4bef5c1af17bf33424c0bc31549f5e70a5233001fde3a60f2bef6e78",
+      "sha256": "1932ac19fdd373df8d9e891885390c24df5c361af1df0d65168b90f0e037ae7f",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "e947d13b7f3f039fc60fb05e6298b4543fb76d225c4e61ae93e8ccde916d3711"
+      "sceneFingerprint": "ad9bdecbf5bf426daf10cfba3d63619fee86ff86f8f9045d2efcc4ac1f2c0232"
     },
     {
       "endFrame": 689,
@@ -50,13 +50,47 @@
       "title": "出庭费用与拒不出庭后果",
       "durationMs": 8500,
       "file": "appearance-consequences.avif",
-      "fileSize": 544305,
+      "fileSize": 544301,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "946a20d8a9657d2d780b1975279266e0e8aedb98d2d3444eac2d2b2e7c9cdb3b",
+      "sha256": "82b445bd7077f397bcf47ce5818f5a1e3935938cc80b2bc189730b41026a26a4",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "2211677e99676c5c512a3ffe5fa591063622cc0f8873c4a5043b170447b67dda"
+      "sceneFingerprint": "24448b031f52f1b5839fcf87b70490cd33d8cbf1376b797b4e6e22ee16a5f2f5"
+    },
+    {
+      "endFrame": 884,
+      "frameCount": 195,
+      "id": "appearance-conditions",
+      "number": "04",
+      "startFrame": 690,
+      "title": "鉴定人应当出庭的情形",
+      "durationMs": 6500,
+      "file": "appearance-conditions.avif",
+      "fileSize": 409179,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "48318b6d8635fa1525cd5c32e96bfe51fa65e2fb02bf5d67f189dff7728c66a4",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "926d01ba50cadee44d4183d62b82af7bcdd4a618215a36d9df2a9956333db73a"
+    },
+    {
+      "endFrame": 1169,
+      "frameCount": 285,
+      "id": "appearance-procedure",
+      "number": "05",
+      "startFrame": 885,
+      "title": "鉴定人出庭程序",
+      "durationMs": 9500,
+      "file": "appearance-procedure.avif",
+      "fileSize": 633310,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "5c6b967921413f55fa2109e7c0dcaee03cf8d90539ee5edbb33e4bae617c8a22",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "13b7df2cf445e94181754df75f18f6e737378cc656490712db1ffcae426997f3"
     }
   ],
   "size": {
@@ -64,7 +98,7 @@
     "width": 2560
   },
   "sourceFps": 30,
-  "sourceFingerprint": "14b9662f4f030494b10d3050cd84a6e68577c590e004726de17e07155a493599",
+  "sourceFingerprint": "d4af36bc423af811a33e39a10fd4c6bcf0399e842e909b963adc28cc2a6ec0cf",
   "targetFps": 30,
-  "totalFileSize": 1813533
+  "totalFileSize": 2856029
 }
