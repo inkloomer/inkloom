@@ -1,10 +1,12 @@
 {
   "version": 1,
   "playerControlSafeBottom": 160,
-  "minimumDistinctLayouts": 3,
+  "minimumDistinctLayouts": 5,
   "scenes": [
     {"id":"stage-position","export":"StagePositionScene","layout":"three-sector-procedural-horizon","anchor":"timeline-gate","grammar":["sequence","stage-boundary","eligibility"],"textTreatments":["label-block","soft-highlight"],"focalChannels":["icon","connector","spatial"],"tokens":["FileClock","Gavel"]},
     {"id":"security-slope","export":"SecuritySlopeScene","layout":"descending-security-slope","anchor":"comparison-axis","grammar":["comparison","progression","discretion"],"textTreatments":["thin-underline","stamp"],"focalChannels":["contrast","connector","enclosure"],"tokens":["ShieldCheck","Scale"]},
-    {"id":"deadline-dials","export":"DeadlineDialsScene","layout":"nested-deadline-dials","anchor":"boundary","grammar":["deadline","consequence","release"],"textTreatments":["label-block","external-negation"],"focalChannels":["icon","locator","motion"],"tokens":["TimerReset","Unlock"]}
+    {"id":"deadline-dials","export":"DeadlineDialsScene","layout":"nested-deadline-dials","anchor":"boundary","grammar":["deadline","consequence","release"],"textTreatments":["label-block","external-negation"],"focalChannels":["icon","locator","motion"],"tokens":["TimerReset","Unlock"]},
+    {"id":"authority-split","export":"AuthoritySplitScene","layout":"stage-authority-fork-and-appeal-lane","anchor":"document-fork","grammar":["stage-comparison","authority-fork","appellate-exception"],"textTreatments":["label-block","soft-highlight","external-negation"],"focalChannels":["icon","contrast","connector","annotation"],"tokens":["ShieldAlert","Gavel","Landmark","FileCheck2"]},
+    {"id":"ruling-deadlines","export":"RulingDeadlinesScene","layout":"ruling-deadline-branching-track","anchor":"timeline-gate","grammar":["sequence","conditional-deadline","urgent-override"],"textTreatments":["label-block","thin-underline","stamp"],"focalChannels":["icon","connector","enclosure","contrast"],"tokens":["FileCheck2","TimerReset","ShieldCheck","BadgeCheck","ShieldAlert"]}
   ]
 }

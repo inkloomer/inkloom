@@ -1,5 +1,5 @@
 import type {CSSProperties, ReactNode} from 'react';
-import {FileClock, Gavel, Scale, ShieldCheck, TimerReset, Unlock} from 'lucide-react';
+import {BadgeCheck, FileCheck2, FileClock, Gavel, Landmark, Scale, ShieldAlert, ShieldCheck, TimerReset, Unlock} from 'lucide-react';
 import {AbsoluteFill, interpolate, useCurrentFrame} from 'remotion';
 import {CLAMP, TimelineSequence} from '../../../../shared/remotion-runtime';
 import {SCENES} from './storyboard';
@@ -95,8 +95,66 @@ export const DeadlineDialsScene = () => {
   </Shell>;
 };
 
+export const AuthoritySplitScene = () => {
+  const frame = useCurrentFrame();
+  const appellateRail = interpolate(frame, [84, 142], [0, 1], CLAMP);
+  const stages = [
+    {label: '诉前保全', detail: '情况紧急\n难以弥补损害', rule: '只能依申请', color: C.cyan},
+    {label: '诉讼中保全', detail: '判决可能难以执行\n或造成其他损害', rule: '申请 / 依职权', color: C.amber},
+    {label: '执行前保全', detail: '生效后\n履行期限届满前', rule: '向执行法院申请', color: C.coral},
+  ];
+  return <Shell code="04" title="保全由谁启动，谁有权采取？">
+    <div data-layout="stage-authority-fork-and-appeal-lane" data-visual-anchor="document-fork" data-text-treatments="label-block,soft-highlight,external-negation" data-visual-grammar="stage-comparison,authority-fork,appellate-exception" data-focal-rule="litigation-preservation-may-start-by-application-or-court-authority" data-focal-channels="icon,contrast,connector,annotation" style={{position: 'absolute', left: 80, right: 80, top: 0, bottom: 0}}>
+      {stages.map(({label, detail, rule, color}, index) => <Reveal key={label} delay={8 + index * 24} style={{position: 'absolute', left: 34 + index * 565, top: 24, width: 500, height: 405, border: `4px solid ${color}`, backgroundColor: index === 1 ? C.panel : 'transparent', padding: '30px 34px'}}>
+        <div style={{display: 'flex', alignItems: 'center', gap: 16}}>{index === 0 ? <ShieldAlert size={56} color={color}/> : index === 1 ? <Gavel size={56} color={color}/> : <Landmark size={56} color={color}/>}<div style={{fontSize: 38, fontWeight: 950}}>{label}</div></div>
+        <div style={{marginTop: 26, minHeight: 76, color: C.muted, fontSize: 25, fontWeight: 760, lineHeight: 1.38, whiteSpace: 'pre-line'}}>{detail}</div>
+        <div style={{position: 'absolute', left: 34, right: 34, bottom: 34, padding: '18px 20px', backgroundColor: color, color: C.bg, fontSize: 30, fontWeight: 900, textAlign: 'center'}}>{rule}</div>
+        {index === 1 ? <div style={{position: 'absolute', left: 74, right: 74, top: 210, display: 'flex', justifyContent: 'space-between', color: C.amber, fontSize: 24, fontWeight: 900}}><span>当事人申请</span><span>法院依职权</span></div> : null}
+      </Reveal>)}
+      <Reveal delay={68} style={{position: 'absolute', left: 34, right: 34, bottom: 0, height: 180, borderTop: `3px solid ${C.cyan}`, backgroundColor: '#111a36', padding: '26px 34px'}}>
+        <div style={{display: 'flex', alignItems: 'center', gap: 16, color: C.cyan, fontSize: 25, fontWeight: 850}}><FileCheck2 size={38}/><span>上诉阶段的例外</span></div>
+        <div style={{position: 'absolute', left: 310, top: 92, width: 420, height: 6, backgroundColor: C.cyan, scale: `${appellateRail} 1`, transformOrigin: 'left center'}} />
+        <div style={{position: 'absolute', left: 34, top: 74, width: 250, fontSize: 29, fontWeight: 900}}>一审法院</div>
+        <div style={{position: 'absolute', left: 770, top: 66, width: 430, padding: '13px 18px', border: `3px solid ${C.amber}`, fontSize: 25, textAlign: 'center', fontWeight: 850}}>二审尚未收到报送案件</div>
+        <div style={{position: 'absolute', right: 34, top: 70, width: 430, color: C.coral, fontSize: 29, fontWeight: 950, textAlign: 'right'}}>仍由一审采取保全</div>
+      </Reveal>
+    </div>
+  </Shell>;
+};
+
+export const RulingDeadlinesScene = () => {
+  const frame = useCurrentFrame();
+  const mainRail = interpolate(frame, [26, 104], [0, 1], CLAMP);
+  const urgentRail = interpolate(frame, [82, 142], [0, 1], CLAMP);
+  return <Shell code="05" title="诉中保全：裁定期限怎么走？">
+    <div data-layout="ruling-deadline-branching-track" data-visual-anchor="timeline-gate" data-text-treatments="label-block,thin-underline,stamp" data-visual-grammar="sequence,conditional-deadline,urgent-override" data-focal-rule="security-changes-the-five-day-start-while-emergency-uses-forty-eight-hours" data-focal-channels="icon,connector,enclosure,contrast" style={{position: 'absolute', left: 80, right: 80, top: 0, bottom: 0}}>
+      <Reveal delay={4} style={{position: 'absolute', left: 32, top: 215, width: 325, height: 240, backgroundColor: C.panel, padding: '30px 32px'}}>
+        <FileCheck2 size={58} color={C.cyan}/><div style={{marginTop: 24, fontSize: 34, fontWeight: 950}}>接受申请</div><div style={{marginTop: 14, fontSize: 24, color: C.muted}}>诉讼中财产保全</div>
+      </Reveal>
+      <div style={{position: 'absolute', left: 357, top: 330, width: 180, height: 8, backgroundColor: C.cyan, scale: `${mainRail} 1`, transformOrigin: 'left center'}} />
+      <Reveal delay={28} style={{position: 'absolute', left: 550, top: 92, width: 430, height: 230, border: `5px solid ${C.amber}`, padding: '30px 34px'}}>
+        <TimerReset size={56} color={C.amber}/><div style={{marginTop: 18, fontSize: 35, fontWeight: 950}}>一般情形</div><div style={{marginTop: 18, fontSize: 31, color: C.amber, fontWeight: 900}}>5日内作出裁定</div>
+      </Reveal>
+      <Reveal delay={48} style={{position: 'absolute', left: 550, top: 402, width: 430, height: 230, border: `5px solid ${C.violet}`, padding: '30px 34px'}}>
+        <ShieldCheck size={56} color={C.violet}/><div style={{marginTop: 18, fontSize: 35, fontWeight: 950}}>需要担保</div><div style={{marginTop: 18, fontSize: 29, lineHeight: 1.35, color: C.violet, fontWeight: 900}}>提供担保后<br/>5日内作出裁定</div>
+      </Reveal>
+      <div style={{position: 'absolute', left: 980, top: 210, width: 160, height: 6, backgroundColor: C.amber, rotate: '30deg', transformOrigin: 'left center', scale: `${mainRail} 1`}} />
+      <div style={{position: 'absolute', left: 980, top: 518, width: 160, height: 6, backgroundColor: C.violet, rotate: '-30deg', transformOrigin: 'left center', scale: `${mainRail} 1`}} />
+      <Reveal delay={74} from="right" style={{position: 'absolute', right: 32, top: 196, width: 420, height: 280, backgroundColor: C.coral, color: C.bg, padding: '34px 38px'}}>
+        <BadgeCheck size={62}/><div style={{marginTop: 24, fontSize: 39, fontWeight: 950}}>裁定保全</div><div style={{marginTop: 20, fontSize: 31, fontWeight: 900}}>应当立即执行</div>
+      </Reveal>
+      <div style={{position: 'absolute', left: 165, bottom: 10, width: 1310, height: 6, backgroundColor: C.coral, scale: `${urgentRail} 1`, transformOrigin: 'left center'}} />
+      <Reveal delay={100} style={{position: 'absolute', left: 350, bottom: 42, width: 940, height: 104, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 22, border: `4px solid ${C.coral}`, backgroundColor: C.bg, color: C.coral}}>
+        <ShieldAlert size={54}/><span style={{fontSize: 34, fontWeight: 950}}>情况紧急：48小时内作出裁定</span>
+      </Reveal>
+    </div>
+  </Shell>;
+};
+
 export const PreservationStageMap = () => <AbsoluteFill>
   <TimelineSequence name="01-stage-position" {...SCENES.stagePosition}><StagePositionScene /></TimelineSequence>
   <TimelineSequence name="02-security-slope" {...SCENES.securitySlope}><SecuritySlopeScene /></TimelineSequence>
   <TimelineSequence name="03-deadline-dials" {...SCENES.deadlineDials}><DeadlineDialsScene /></TimelineSequence>
+  <TimelineSequence name="04-authority-split" {...SCENES.authoritySplit}><AuthoritySplitScene /></TimelineSequence>
+  <TimelineSequence name="05-ruling-deadlines" {...SCENES.rulingDeadlines}><RulingDeadlinesScene /></TimelineSequence>
 </AbsoluteFill>;

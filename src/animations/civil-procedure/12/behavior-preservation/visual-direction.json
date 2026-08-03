@@ -1,0 +1,16 @@
+{
+  "directionId": "injunction-command-board",
+  "family": "injunction-command-board",
+  "palette": "charcoal command field + signal violet + protective green + injunction red + paper white",
+  "typography": "directive-scale Chinese headings with compact order labels and formal review stamps",
+  "composition": "a paired preservation axis, a two-branch protective-order fork, and a parallel same-court review rail",
+  "surface": "flat command strips, squared court orders, external prohibition marks, and no card grid",
+  "motion": "the court order travels from threat to a required or prohibited act while review proceeds beside continuing enforcement",
+  "transition": "one court order token persists from the conduct distinction through protective orders to the review rail",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/civil-procedure/12/behavior-preservation/",
+    "title": "禁令指令台"
+  }
+}

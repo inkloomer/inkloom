@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "content-distinction",
+      "export": "ContentDistinctionScene",
+      "layout": "paired-preservation-command-axis",
+      "anchor": "comparison-axis",
+      "grammar": ["comparison", "authority", "effect"],
+      "textTreatments": ["label-block", "soft-highlight", "thin-underline"],
+      "focalChannels": ["icon", "contrast", "connector", "enclosure"],
+      "tokens": ["Gavel", "ShieldCheck", "Hand", "Ban"]
+    },
+    {
+      "id": "protective-orders",
+      "export": "ProtectiveOrdersScene",
+      "layout": "two-order-protection-branches",
+      "anchor": "document-fork",
+      "grammar": ["threat", "order", "prevention"],
+      "textTreatments": ["label-block", "soft-highlight", "thin-underline"],
+      "focalChannels": ["icon", "connector", "enclosure", "contrast"],
+      "tokens": ["ShieldAlert", "UserRound", "CircleSlash2", "Gavel"]
+    },
+    {
+      "id": "same-court-review",
+      "export": "SameCourtReviewScene",
+      "layout": "same-court-review-parallel-rail",
+      "anchor": "boundary",
+      "grammar": ["remedy", "parallelism", "limit"],
+      "textTreatments": ["label-block", "stamp", "external-negation"],
+      "focalChannels": ["icon", "connector", "contrast", "annotation"],
+      "tokens": ["Gavel", "RefreshCcw", "ShieldCheck", "CircleSlash2"]
+    }
+  ]
+}

@@ -3,7 +3,7 @@
   "compositionId": "PreservationStageMap",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-08-02T06:05:30.356Z",
+  "generatedAt": "2026-08-03T10:30:33.877Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -22,7 +22,7 @@
       "sha256": "3150afbbe99949a9b5a3c0c247432f345df9ed65b60db27a61ed690b00b3cc53",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "8f0e80e24d8fc1859919d060b676e5bf999c14499f93491054e276931f2ea9e2"
+      "sceneFingerprint": "a2318bbc9b0882896747b2ee377d0f85401234c0561377c54161d1410153c741"
     },
     {
       "endFrame": 359,
@@ -39,7 +39,7 @@
       "sha256": "8723904a198496917a6714b81d5b74058c274263a452095908a6624ce80d7436",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "8f0e80e24d8fc1859919d060b676e5bf999c14499f93491054e276931f2ea9e2"
+      "sceneFingerprint": "a2318bbc9b0882896747b2ee377d0f85401234c0561377c54161d1410153c741"
     },
     {
       "endFrame": 539,
@@ -56,7 +56,41 @@
       "sha256": "2d9686bdff2143bcb6a3b95718fc7b985283d5700b17f18d64a3ff8a7b2d21a7",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "8f0e80e24d8fc1859919d060b676e5bf999c14499f93491054e276931f2ea9e2"
+      "sceneFingerprint": "a2318bbc9b0882896747b2ee377d0f85401234c0561377c54161d1410153c741"
+    },
+    {
+      "endFrame": 734,
+      "frameCount": 195,
+      "id": "authority-split",
+      "number": "04",
+      "startFrame": 540,
+      "title": "启动主体与二审例外",
+      "durationMs": 6500,
+      "file": "authority-split.avif",
+      "fileSize": 465556,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "6ab98c4797060804a831a9773194fd60a94924f688a2dbf03c6f2dab810d8217",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "a2318bbc9b0882896747b2ee377d0f85401234c0561377c54161d1410153c741"
+    },
+    {
+      "endFrame": 959,
+      "frameCount": 225,
+      "id": "ruling-deadlines",
+      "number": "05",
+      "startFrame": 735,
+      "title": "诉中裁定期限",
+      "durationMs": 7500,
+      "file": "ruling-deadlines.avif",
+      "fileSize": 374105,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "40fa44c25ff3fb0745a2a960a88f52f478fb55824b749fba7fb11fcb8f3a5140",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "a2318bbc9b0882896747b2ee377d0f85401234c0561377c54161d1410153c741"
     }
   ],
   "size": {
@@ -64,7 +98,7 @@
     "width": 2560
   },
   "sourceFps": 30,
-  "sourceFingerprint": "8f0e80e24d8fc1859919d060b676e5bf999c14499f93491054e276931f2ea9e2",
+  "sourceFingerprint": "a2318bbc9b0882896747b2ee377d0f85401234c0561377c54161d1410153c741",
   "targetFps": 30,
-  "totalFileSize": 949523
+  "totalFileSize": 1789184
 }

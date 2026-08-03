@@ -3,7 +3,7 @@
   "compositionId": "ProvisionalExecutionGates",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-08-02T06:07:22.210Z",
+  "generatedAt": "2026-08-03T10:31:35.168Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -22,7 +22,7 @@
       "sha256": "aabc1e72a8b24d5451a4deb5169ae61589ea8c940be46e25ddea1676f2adca19",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "5fb0093c87983d2faee4fa289d683c28820fd430a38ce1968d79757278273590"
+      "sceneFingerprint": "3ee00f1c5bd7a2187cf24139590961a14592b51f26674c514215a41654f887e8"
     },
     {
       "endFrame": 404,
@@ -39,7 +39,7 @@
       "sha256": "8d6ff45ad4d6619edcf65dec2551091e21f64f76d75570146788f97cfb279d9b",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "5fb0093c87983d2faee4fa289d683c28820fd430a38ce1968d79757278273590"
+      "sceneFingerprint": "3ee00f1c5bd7a2187cf24139590961a14592b51f26674c514215a41654f887e8"
     },
     {
       "endFrame": 584,
@@ -56,7 +56,41 @@
       "sha256": "bd67c7ccf72bcde3da9da860092e2b4f276e04a49b0e5fc5acd1783adb5cb473",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "5fb0093c87983d2faee4fa289d683c28820fd430a38ce1968d79757278273590"
+      "sceneFingerprint": "3ee00f1c5bd7a2187cf24139590961a14592b51f26674c514215a41654f887e8"
+    },
+    {
+      "endFrame": 764,
+      "frameCount": 180,
+      "id": "timing-window",
+      "number": "04",
+      "startFrame": 585,
+      "title": "受理后至终局前",
+      "durationMs": 6000,
+      "file": "timing-window.avif",
+      "fileSize": 323613,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "96817159e081abd849496c251504ae5a7a5b934415cb7504f89551428223a0ee",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "3ee00f1c5bd7a2187cf24139590961a14592b51f26674c514215a41654f887e8"
+    },
+    {
+      "endFrame": 944,
+      "frameCount": 180,
+      "id": "review-remedy",
+      "number": "05",
+      "startFrame": 765,
+      "title": "同级复议与继续执行",
+      "durationMs": 6000,
+      "file": "review-remedy.avif",
+      "fileSize": 369923,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "d0f477afe985db2d7dd8627fe09d3f4eb60fa6bd3f464190844bebe6500501f8",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "3ee00f1c5bd7a2187cf24139590961a14592b51f26674c514215a41654f887e8"
     }
   ],
   "size": {
@@ -64,7 +98,7 @@
     "width": 2560
   },
   "sourceFps": 30,
-  "sourceFingerprint": "5fb0093c87983d2faee4fa289d683c28820fd430a38ce1968d79757278273590",
+  "sourceFingerprint": "3ee00f1c5bd7a2187cf24139590961a14592b51f26674c514215a41654f887e8",
   "targetFps": 30,
-  "totalFileSize": 981036
+  "totalFileSize": 1674572
 }

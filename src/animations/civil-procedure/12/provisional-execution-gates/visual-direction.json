@@ -3,9 +3,9 @@
   "family": "judicial-triage-station",
   "palette": "clinical white + emergency red + verification teal + capability violet + caution amber",
   "typography": "clear triage headings, numbered eligibility bands, and high-contrast urgent-need labels",
-  "composition": "three urgency intake streams, a four-gate admission corridor, and a bounded request-and-security chamber",
+  "composition": "three urgency intake streams, a four-gate admission corridor, a bounded request-and-security chamber, a pre-judgment window, and a same-court review circuit",
   "surface": "flat clinical zones, directional floor bands, status crosses, and no dashboard card matrix",
-  "motion": "eligible claims enter triage, four conditions open in order, and request scope narrows before a discretionary security stop",
+  "motion": "eligible claims enter triage, four conditions open in order, request scope narrows before a discretionary security stop, and review proceeds beside ongoing execution",
   "transition": "the urgent claimant token persists from intake through eligibility and bounded relief",
   "catalog": {
     "status": "featured",

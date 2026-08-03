@@ -1,0 +1,70 @@
+{
+  "animationId": "behavior-preservation",
+  "compositionId": "BehaviorPreservation",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-03T10:28:18.184Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 179,
+      "frameCount": 180,
+      "id": "content-distinction",
+      "number": "01",
+      "startFrame": 0,
+      "title": "财产与行为保全的对象",
+      "durationMs": 6000,
+      "file": "content-distinction.avif",
+      "fileSize": 455633,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "fd14a4aad034c3aa434a2aa1b70dc647eac65e57b3dfbe1f01f7960a1672751d",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "7bc74655001cc117547ed83794f96cd0fe5bb2cbad4a6f1ab69d20ae1ad6f208"
+    },
+    {
+      "endFrame": 374,
+      "frameCount": 195,
+      "id": "protective-orders",
+      "number": "02",
+      "startFrame": 180,
+      "title": "人身安全令与人格权禁令",
+      "durationMs": 6500,
+      "file": "protective-orders.avif",
+      "fileSize": 389990,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "4feb4442aa9ad6cbfd2cf0c3d034b71505194aee3a44b9352787add7a9f16eba",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "7bc74655001cc117547ed83794f96cd0fe5bb2cbad4a6f1ab69d20ae1ad6f208"
+    },
+    {
+      "endFrame": 554,
+      "frameCount": 180,
+      "id": "same-court-review",
+      "number": "03",
+      "startFrame": 375,
+      "title": "同级复议与继续执行",
+      "durationMs": 6000,
+      "file": "same-court-review.avif",
+      "fileSize": 365002,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "773f493907d3e939715f4dfaedeffe69c8c99bad517bb83d5d23bc7ffa3a0afc",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "7bc74655001cc117547ed83794f96cd0fe5bb2cbad4a6f1ab69d20ae1ad6f208"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "7bc74655001cc117547ed83794f96cd0fe5bb2cbad4a6f1ab69d20ae1ad6f208",
+  "targetFps": 30,
+  "totalFileSize": 1210625
+}

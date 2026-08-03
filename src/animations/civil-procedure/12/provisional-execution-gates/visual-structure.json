@@ -1,10 +1,12 @@
 {
   "version": 1,
   "playerControlSafeBottom": 160,
-  "minimumDistinctLayouts": 3,
+  "minimumDistinctLayouts": 5,
   "scenes": [
     {"id":"eligible-claims","export":"EligibleClaimsScene","layout":"three-stream-urgency-intake","anchor":"flow-path","grammar":["classification","urgency","convergence"],"textTreatments":["label-block","soft-highlight"],"focalChannels":["icon","connector","contrast"],"tokens":["HeartHandshake","BriefcaseBusiness"]},
     {"id":"four-gates","export":"FourGatesScene","layout":"four-gate-admission-corridor","anchor":"timeline-gate","grammar":["conjunction","sequence","admission"],"textTreatments":["stamp","thin-underline"],"focalChannels":["icon","enclosure","motion"],"tokens":["BadgeCheck","DoorOpen"]},
-    {"id":"scope-and-security","export":"ScopeAndSecurityScene","layout":"bounded-request-security-chamber","anchor":"boundary","grammar":["scope-limit","discretion","rejection"],"textTreatments":["external-negation","label-block"],"focalChannels":["icon","spatial","annotation"],"tokens":["ScanLine","ShieldQuestion"]}
+    {"id":"scope-and-security","export":"ScopeAndSecurityScene","layout":"bounded-request-security-chamber","anchor":"boundary","grammar":["scope-limit","discretion","rejection"],"textTreatments":["external-negation","label-block"],"focalChannels":["icon","spatial","annotation"],"tokens":["ScanLine","ShieldQuestion"]},
+    {"id":"timing-window","export":"TimingWindowScene","layout":"pre-judgment-relief-window","anchor":"timeline-gate","grammar":["sequence","window","cutoff"],"textTreatments":["label-block","soft-highlight","external-negation"],"focalChannels":["icon","connector","enclosure","contrast"],"tokens":["FileClock","BadgeCheck","Gavel","CircleSlash2"]},
+    {"id":"review-remedy","export":"ReviewRemedyScene","layout":"provisional-review-parallel-circuit","anchor":"comparison-axis","grammar":["remedy","parallelism","non-suspension"],"textTreatments":["label-block","stamp","external-negation"],"focalChannels":["icon","connector","contrast","annotation"],"tokens":["Gavel","RefreshCcw","ShieldCheck","CircleSlash2"]}
   ]
 }

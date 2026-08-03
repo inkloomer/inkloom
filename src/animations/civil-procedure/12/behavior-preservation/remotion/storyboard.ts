@@ -1,12 +1,13 @@
 export const FPS = 30;
+
 const scene = (start: number, duration: number) => ({start, duration, previewEndTrimFrames: 0});
+
 export const SCENES = {
-  stagePosition: scene(0, 180),
-  securitySlope: scene(180, 180),
-  deadlineDials: scene(360, 180),
-  authoritySplit: scene(540, 195),
-  rulingDeadlines: scene(735, 225),
+  contentDistinction: scene(0, 180),
+  protectiveOrders: scene(180, 195),
+  sameCourtReview: scene(375, 180),
 } as const;
-export const DURATION_FRAMES = 960;
+
+export const DURATION_FRAMES = 555;
 export const DURATION_SECONDS = DURATION_FRAMES / FPS;
 export const toSourceFrame = (frame: number) => frame;

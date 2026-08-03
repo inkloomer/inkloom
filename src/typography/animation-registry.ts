@@ -46,6 +46,7 @@ import {typography as typography65} from '../animations/civil-procedure/12/prese
 import {typography as typography66} from '../animations/civil-procedure/12/preservation-stage-map/animation.meta';
 import {typography as typography67} from '../animations/civil-procedure/12/provisional-execution-gates/animation.meta';
 import {typography as typography68} from '../animations/civil-procedure/12/provisional-execution-resolution/animation.meta';
+import {typography as typography71} from '../animations/civil-procedure/12/behavior-preservation/animation.meta';
 import {typography as typography40} from '../animations/criminal/19/card-selling-funds-viewpoint/animation.meta';
 import {typography as typography41} from '../animations/criminal/19/occupational-embezzlement-flowchart/animation.meta';
 import {typography as typography42} from '../animations/criminal/19/property-interests-keypoints/animation.meta';
@@ -119,6 +120,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'provisional-execution-resolution': {metadata: typography68, scope: {animationId: 'provisional-execution-resolution', subject: 'civil-procedure', topic: '12'}},
   'card-selling-funds-viewpoint': {metadata: typography40, scope: {animationId: 'card-selling-funds-viewpoint', subject: 'criminal', topic: '19'}},
   'occupational-embezzlement-flowchart': {metadata: typography41, scope: {animationId: 'occupational-embezzlement-flowchart', subject: 'criminal', topic: '19'}},
+  'behavior-preservation': {metadata: typography71, scope: {animationId: 'behavior-preservation', subject: 'civil-procedure', topic: '12'}},
   'property-interests-keypoints': {metadata: typography42, scope: {animationId: 'property-interests-keypoints', subject: 'criminal', topic: '19'}},
   'theft-mistake-analysis': {metadata: typography43, scope: {animationId: 'theft-mistake-analysis', subject: 'criminal', topic: '19'}},
   'fight-defense-diagram': {metadata: typography44, scope: {animationId: 'fight-defense-diagram', subject: 'criminal', topic: '22'}},

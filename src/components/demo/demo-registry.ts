@@ -42,6 +42,7 @@ import {PreservationRemedySwitchboard} from '../../animations/civil-procedure/12
 import {PreservationStageMap} from '../../animations/civil-procedure/12/preservation-stage-map/remotion/PreservationStageMap';
 import {ProvisionalExecutionGates} from '../../animations/civil-procedure/12/provisional-execution-gates/remotion/ProvisionalExecutionGates';
 import {ProvisionalExecutionResolution} from '../../animations/civil-procedure/12/provisional-execution-resolution/remotion/ProvisionalExecutionResolution';
+import {BehaviorPreservation} from '../../animations/civil-procedure/12/behavior-preservation/remotion/BehaviorPreservation';
 import {DURATION_FRAMES as DELEGATED_DURATION_FRAMES, FPS as DELEGATED_FPS} from '../../animations/civil-procedure/08/delegated-agent/remotion/storyboard';
 import {DURATION_FRAMES as JOINT_DURATION_FRAMES, FPS as JOINT_FPS} from '../../animations/civil-procedure/06/joint-litigation/remotion/storyboard';
 import {DURATION_FRAMES as REPRESENTATIVE_DURATION_FRAMES, FPS as REPRESENTATIVE_FPS} from '../../animations/civil-procedure/06/representative-litigation/remotion/storyboard';
@@ -67,6 +68,7 @@ import {DURATION_FRAMES as EXECUTION_GATES_DURATION_FRAMES, FPS as EXECUTION_GAT
 import {DURATION_FRAMES as EXECUTION_RESOLUTION_DURATION_FRAMES, FPS as EXECUTION_RESOLUTION_FPS} from '../../animations/civil-procedure/12/provisional-execution-resolution/remotion/storyboard';
 import {DURATION_FRAMES as FIGHT_DURATION_FRAMES, FPS as FIGHT_FPS} from '../../animations/criminal/22/fight-defense-diagram/remotion/storyboard';
 import {DURATION_FRAMES as ALTITUDE_DURATION_FRAMES, FPS as ALTITUDE_FPS} from '../../animations/criminal/22/high-altitude-throwing-diagram/remotion/storyboard';
+import {DURATION_FRAMES as BEHAVIOR_PRESERVATION_DURATION_FRAMES, FPS as BEHAVIOR_PRESERVATION_FPS} from '../../animations/civil-procedure/12/behavior-preservation/remotion/storyboard';
 import {DURATION_FRAMES as THEFT_DURATION_FRAMES, FPS as THEFT_FPS} from '../../animations/criminal/19/theft-mistake-analysis/remotion/storyboard';
 import {DURATION_FRAMES as OCCUPATIONAL_DURATION_FRAMES, FPS as OCCUPATIONAL_FPS} from '../../animations/criminal/19/occupational-embezzlement-flowchart/remotion/storyboard';
 import {DURATION_FRAMES as CARD_FUNDS_DURATION_FRAMES, FPS as CARD_FUNDS_FPS} from '../../animations/criminal/19/card-selling-funds-viewpoint/remotion/storyboard';
@@ -123,6 +125,7 @@ export const STYLE_DEMOS = [
   {id: 'criminal-22-high-altitude-throwing-diagram', slug: 'high-altitude-throwing-diagram', title: '垂直危险剖面', direction: 'Vertical Risk Section', component: HighAltitudeThrowingDiagram, href: '/inkloom/objective/criminal/22/high-altitude-throwing-diagram/', durationInFrames: ALTITUDE_DURATION_FRAMES, fps: ALTITUDE_FPS},
   {id: 'criminal-19-theft-mistake-analysis', slug: 'theft-mistake-analysis', title: '双焦校准台', direction: 'Dual-Focus Calibration', component: TheftMistakeAnalysis, href: '/inkloom/objective/criminal/19/theft-mistake-analysis/', durationInFrames: THEFT_DURATION_FRAMES, fps: THEFT_FPS},
   {id: 'criminal-19-occupational-embezzlement-flowchart', slug: 'occupational-embezzlement-flowchart', title: '要件质检线', direction: 'Industrial Elements Inspection', component: OccupationalEmbezzlementFlowchart, href: '/inkloom/objective/criminal/19/occupational-embezzlement-flowchart/', durationInFrames: OCCUPATIONAL_DURATION_FRAMES, fps: OCCUPATIONAL_FPS},
+  {id: 'civil-procedure-12-behavior-preservation', slug: 'behavior-preservation', title: '禁令指令台', direction: 'Injunction Command Board', component: BehaviorPreservation, href: '/inkloom/objective/civil-procedure/12/behavior-preservation/', durationInFrames: BEHAVIOR_PRESERVATION_DURATION_FRAMES, fps: BEHAVIOR_PRESERVATION_FPS},
   {id: 'criminal-19-card-selling-funds-viewpoint', slug: 'card-selling-funds-viewpoint', title: '账户信号台', direction: 'Account Signal Router', component: CardSellingFundsViewpoint, href: '/inkloom/objective/criminal/19/card-selling-funds-viewpoint/', durationInFrames: CARD_FUNDS_DURATION_FRAMES, fps: CARD_FUNDS_FPS},
   {id: 'criminal-19-property-interests-keypoints', slug: 'property-interests-keypoints', title: '价值拓扑图册', direction: 'Value Topology Atlas', component: PropertyInterestsKeypoints, href: '/inkloom/objective/criminal/19/property-interests-keypoints/', durationInFrames: PROPERTY_INTERESTS_DURATION_FRAMES, fps: PROPERTY_INTERESTS_FPS},
   {id: 'criminal-23-official-intermediary', slug: 'official-intermediary', title: '财政稽核分流台', direction: 'Fiscal Audit Ledger', component: OfficialIntermediary, href: '/inkloom/objective/criminal/23/joint-crime/', durationInFrames: OFFICIAL_INTERMEDIARY_DURATION_FRAMES, fps: OFFICIAL_INTERMEDIARY_FPS},

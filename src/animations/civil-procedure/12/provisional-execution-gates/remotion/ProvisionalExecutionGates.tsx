@@ -1,5 +1,5 @@
 import type {CSSProperties, ReactNode} from 'react';
-import {BadgeCheck, BriefcaseBusiness, DoorOpen, HeartHandshake, ScanLine, ShieldQuestion} from 'lucide-react';
+import {BadgeCheck, BriefcaseBusiness, CircleSlash2, DoorOpen, FileClock, Gavel, HeartHandshake, RefreshCcw, ScanLine, ShieldCheck, ShieldQuestion} from 'lucide-react';
 import {AbsoluteFill, interpolate, useCurrentFrame} from 'remotion';
 import {CLAMP, TimelineSequence} from '../../../../shared/remotion-runtime';
 import {SCENES} from './storyboard';
@@ -48,8 +48,55 @@ export const ScopeAndSecurityScene = () => <Shell code="03" title="范围有双�
   </div>
 </Shell>;
 
+export const TimingWindowScene = () => {
+  const frame = useCurrentFrame();
+  const rail = interpolate(frame, [24, 102], [0, 1], CLAMP);
+  return <Shell code="04" title="先予执行在哪个时间窗口？">
+    <div data-layout="pre-judgment-relief-window" data-visual-anchor="timeline-gate" data-text-treatments="label-block,soft-highlight,external-negation" data-visual-grammar="sequence,window,cutoff" data-focal-rule="provisional-execution-runs-after-acceptance-and-before-final-judgment" data-focal-channels="icon,connector,enclosure,contrast" style={{position: 'absolute', left: 90, right: 90, top: 0, bottom: 0}}>
+      <div style={{position: 'absolute', left: 105, right: 105, top: 350, height: 10, backgroundColor: C.pale}} />
+      <div style={{position: 'absolute', left: 105, top: 350, width: 1500, height: 10, backgroundColor: C.teal, scale: `${rail} 1`, transformOrigin: 'left center'}} />
+      <Reveal delay={6} style={{position: 'absolute', left: 36, top: 175, width: 390, height: 290, border: `5px solid ${C.teal}`, padding: '34px 36px'}}>
+        <FileClock size={66} color={C.teal}/><div style={{marginTop: 26, fontSize: 38, fontWeight: 950}}>案件受理</div><div style={{marginTop: 18, fontSize: 27, color: C.teal, fontWeight: 850}}>窗口从这里开启</div>
+      </Reveal>
+      <Reveal delay={42} style={{position: 'absolute', left: 628, top: 92, width: 500, height: 460, backgroundColor: C.ink, color: C.white, padding: '42px 44px'}}>
+        <BadgeCheck size={78} color={C.red}/><div style={{marginTop: 28, fontSize: 46, fontWeight: 950}}>先予执行</div><div style={{marginTop: 24, padding: '16px 18px', border: `4px solid ${C.red}`, fontSize: 30, lineHeight: 1.35, fontWeight: 900}}>为生产、生活急需<br/>预先履行义务</div><div style={{marginTop: 28, fontSize: 25, color: '#dbe6e2'}}>只在案件尚未终局时解决紧急需要</div>
+      </Reveal>
+      <Reveal delay={72} from="right" style={{position: 'absolute', right: 36, top: 175, width: 390, height: 290, border: `5px solid ${C.violet}`, padding: '34px 36px'}}>
+        <Gavel size={66} color={C.violet}/><div style={{marginTop: 26, fontSize: 38, fontWeight: 950}}>终局判决</div><div style={{marginTop: 18, fontSize: 27, color: C.violet, fontWeight: 850}}>窗口在此截止</div>
+      </Reveal>
+      <Reveal delay={104} style={{position: 'absolute', left: 1260, bottom: 40, width: 450, height: 104, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 16, border: `3px solid ${C.red}`, color: C.red, fontSize: 28, fontWeight: 900}}><CircleSlash2 size={44}/>不是终局判决之后</Reveal>
+    </div>
+  </Shell>;
+};
+
+export const ReviewRemedyScene = () => {
+  const frame = useCurrentFrame();
+  const rail = interpolate(frame, [38, 118], [0, 1], CLAMP);
+  return <Shell code="05" title="不服先予执行：同级复议一次">
+    <div data-layout="provisional-review-parallel-circuit" data-visual-anchor="comparison-axis" data-text-treatments="label-block,stamp,external-negation" data-visual-grammar="remedy,parallelism,non-suspension" data-focal-rule="one-same-level-review-does-not-stop-provisional-execution" data-focal-channels="icon,connector,contrast,annotation" style={{position: 'absolute', left: 90, right: 90, top: 0, bottom: 0}}>
+      <Reveal delay={4} style={{position: 'absolute', left: 40, top: 160, width: 400, height: 330, backgroundColor: C.ink, color: C.white, padding: '36px'}}>
+        <Gavel size={70} color={C.red}/><div style={{marginTop: 28, fontSize: 37, fontWeight: 950}}>先予执行裁定</div><div style={{marginTop: 18, fontSize: 25}}>义务人预先履行</div>
+      </Reveal>
+      <div style={{position: 'absolute', left: 440, top: 325, width: 300, height: 8, backgroundColor: C.teal, scale: `${rail} 1`, transformOrigin: 'left center'}} />
+      <Reveal delay={28} style={{position: 'absolute', left: 760, top: 105, width: 470, height: 430, border: `6px solid ${C.teal}`, padding: '38px'}}>
+        <RefreshCcw size={76} color={C.teal}/><div style={{marginTop: 28, fontSize: 40, fontWeight: 950}}>作出裁定的法院</div><div style={{marginTop: 26, padding: '15px 18px', backgroundColor: C.teal, color: C.white, fontSize: 31, fontWeight: 900}}>同级复议 · 仅一次</div><div style={{marginTop: 30, fontSize: 25, color: C.ink, lineHeight: 1.42}}>复议针对裁定本身，不改变先予执行的紧急性质。</div>
+      </Reveal>
+      <div style={{position: 'absolute', left: 1230, top: 225, width: 235, height: 6, backgroundColor: C.red, scale: `${rail} 1`, transformOrigin: 'left center'}} />
+      <div style={{position: 'absolute', left: 1230, top: 430, width: 235, height: 6, backgroundColor: C.violet, scale: `${rail} 1`, transformOrigin: 'left center'}} />
+      <Reveal delay={68} from="right" style={{position: 'absolute', right: 40, top: 92, width: 340, height: 220, backgroundColor: C.red, color: C.white, padding: '28px 30px'}}>
+        <ShieldCheck size={56}/><div style={{marginTop: 20, fontSize: 31, fontWeight: 950}}>原裁定继续执行</div><div style={{marginTop: 16, fontSize: 23}}>复议不停止执行</div>
+      </Reveal>
+      <Reveal delay={92} from="right" style={{position: 'absolute', right: 40, bottom: 92, width: 340, height: 220, border: `4px solid ${C.violet}`, padding: '28px 30px'}}>
+        <CircleSlash2 size={56} color={C.violet}/><div style={{marginTop: 20, fontSize: 31, fontWeight: 950}}>不是上诉程序</div><div style={{marginTop: 16, fontSize: 23, color: C.ink}}>不能向上级法院另行上诉</div>
+      </Reveal>
+    </div>
+  </Shell>;
+};
+
 export const ProvisionalExecutionGates = () => <AbsoluteFill>
   <TimelineSequence name="01-eligible-claims" {...SCENES.eligibleClaims}><EligibleClaimsScene /></TimelineSequence>
   <TimelineSequence name="02-four-gates" {...SCENES.fourGates}><FourGatesScene /></TimelineSequence>
   <TimelineSequence name="03-scope-and-security" {...SCENES.scopeAndSecurity}><ScopeAndSecurityScene /></TimelineSequence>
+  <TimelineSequence name="04-timing-window" {...SCENES.timingWindow}><TimingWindowScene /></TimelineSequence>
+  <TimelineSequence name="05-review-remedy" {...SCENES.reviewRemedy}><ReviewRemedyScene /></TimelineSequence>
 </AbsoluteFill>;
