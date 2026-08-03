@@ -146,3 +146,99 @@ export const SingleCaseTrapScene = () => {
     </LabCanvas>
   );
 };
+
+export const ProofThresholdScene = () => {
+  return (
+    <LabCanvas code="04" title="本证要过门槛，反证只需动摇心证" cue="证明责任决定证明标准">
+      <div data-layout="proof-standard-dual-lanes" data-visual-anchor="comparison-axis" data-text-treatments="label-block,soft-highlight,thin-underline,stamp" data-visual-grammar="comparison,threshold,consequence" data-focal-rule="proof-burden-sets-threshold" data-focal-channels="icon,contrast,connector,annotation" style={{position: 'absolute', left: 66, right: 66, top: 198, bottom: 72}}>
+        <Reveal delay={4} style={{position: 'absolute', left: 0, top: 0, width: 850, height: 532, backgroundColor: LAB.ink, color: LAB.white, padding: '34px 40px'}}>
+          <div style={{display: 'flex', alignItems: 'center', gap: 16}}><UserRoundCheck size={52} color={LAB.amber} strokeWidth={2.6} /><Label tone="amber">承担证明责任</Label></div>
+          <div style={{marginTop: 28, fontSize: 30, lineHeight: 1.25, fontWeight: 850}}>提交的证据叫 <Highlight color={LAB.amber}>本证</Highlight></div>
+          <div style={{position: 'absolute', left: 38, top: 158, width: 238, height: 210, border: `3px solid ${LAB.cyan}`, display: 'grid', placeItems: 'center', textAlign: 'center'}}>
+            <FileCheck2 size={62} color={LAB.cyan} strokeWidth={2.5} />
+            <div style={{fontSize: 28, fontWeight: 900}}>证明待证事实</div>
+            <div style={{fontSize: 22, color: LAB.mist, marginTop: 6}}>由责任承担者提出</div>
+          </div>
+          <Trace left={280} top={258} width={60} color={LAB.amber} delay={34} />
+          <ArrowHead left={332} top={250} color={LAB.amber} delay={48} />
+          <div style={{position: 'absolute', left: 370, top: 136, width: 430, height: 274, border: `4px solid ${LAB.amber}`, backgroundColor: 'rgba(255,255,255,0.08)', padding: '28px 30px'}}>
+            <div style={{display: 'flex', alignItems: 'center', gap: 14}}><ShieldCheck size={54} color={LAB.amber} strokeWidth={2.6} /><Label tone="amber">证明标准门槛</Label></div>
+            <div style={{marginTop: 28, fontSize: 30, fontWeight: 900}}><Underline color={LAB.amber} delay={70}>达到标准</Underline> 才能采信</div>
+            <div style={{position: 'absolute', left: 30, right: 30, bottom: 46, height: 16, backgroundColor: LAB.steel}}><div style={{width: '88%', height: '100%', backgroundColor: LAB.amber, transformOrigin: 'left center', scale: '0.9 1'}} /></div>
+            <div style={{position: 'absolute', left: 30, right: 30, bottom: 14, fontSize: 22, color: LAB.mist}}>未达门槛 → 承担不利后果</div>
+          </div>
+          <div style={{position: 'absolute', left: 38, right: 38, bottom: 28, paddingTop: 20, borderTop: `3px solid ${LAB.coral}`, fontSize: 27, fontWeight: 850, color: LAB.white}}><X size={30} color={LAB.coral} strokeWidth={3} style={{verticalAlign: 'middle', marginRight: 10}} />证明不足，风险落回责任承担者</div>
+        </Reveal>
+
+        <Reveal delay={18} from="right" style={{position: 'absolute', right: 0, top: 0, width: 850, height: 532, backgroundColor: LAB.glass, color: LAB.ink, border: `3px solid ${LAB.coral}`, padding: '34px 40px'}}>
+          <div style={{display: 'flex', alignItems: 'center', gap: 16}}><UserRoundMinus size={52} color={LAB.coral} strokeWidth={2.6} /><Label tone="coral">不承担证明责任</Label></div>
+          <div style={{marginTop: 28, fontSize: 30, lineHeight: 1.25, fontWeight: 850}}>提交的证据叫 <Highlight color={LAB.mist}>反证</Highlight></div>
+          <div style={{position: 'absolute', left: 38, top: 158, width: 238, height: 210, border: `3px solid ${LAB.cyan}`, display: 'grid', placeItems: 'center', textAlign: 'center'}}>
+            <FileQuestion size={62} color={LAB.cyan} strokeWidth={2.5} />
+            <div style={{fontSize: 28, fontWeight: 900}}>动摇对方心证</div>
+            <div style={{fontSize: 22, color: LAB.steel, marginTop: 6}}>提出是权利，不是义务</div>
+          </div>
+          <Trace left={280} top={258} width={60} color={LAB.cyan} delay={48} />
+          <ArrowHead left={332} top={250} color={LAB.cyan} delay={62} />
+          <div style={{position: 'absolute', left: 370, top: 136, width: 430, height: 274, border: `4px solid ${LAB.cyan}`, backgroundColor: LAB.white, padding: '28px 30px'}}>
+            <div style={{display: 'flex', alignItems: 'center', gap: 14}}><CircleDot size={54} color={LAB.cyan} strokeWidth={2.6} /><Label tone="cyan">反证作用</Label></div>
+            <div style={{marginTop: 28, fontSize: 30, fontWeight: 900}}><Underline color={LAB.cyan} delay={84}>无需达到证明标准</Underline></div>
+            <div style={{marginTop: 26, fontSize: 25, lineHeight: 1.45, fontWeight: 800, color: LAB.steel}}>只要让事实回到真伪不明，就能影响判断。</div>
+          </div>
+          <div style={{position: 'absolute', left: 38, right: 38, bottom: 28, paddingTop: 20, borderTop: `3px solid ${LAB.cyan}`, fontSize: 27, fontWeight: 850}}><ShieldCheck size={30} color={LAB.cyan} strokeWidth={3} style={{verticalAlign: 'middle', marginRight: 10}} />结果责任不会转移</div>
+        </Reveal>
+
+        <Reveal delay={112} from="up" style={{position: 'absolute', left: 280, top: 572, width: 1228, height: 92, backgroundColor: LAB.amber, color: LAB.ink, border: `4px solid ${LAB.ink}`, display: 'grid', placeItems: 'center', fontSize: 31, fontWeight: 900}}>
+          <Stamp color={LAB.ink} delay={122}>本证要达标；反证只需动摇心证</Stamp>
+        </Reveal>
+      </div>
+    </LabCanvas>
+  );
+};
+
+export const OutOfScopeEvidenceScene = () => {
+  return (
+    <LabCanvas code="05" title="先找证明对象：无关事实不进本案证据场" cue="关联性是第一道门">
+      <div data-layout="proof-object-scope-gate" data-visual-anchor="boundary" data-text-treatments="label-block,soft-highlight,external-negation,stamp" data-visual-grammar="scope-gate,fork,exclusion" data-focal-rule="irrelevant-fact-is-not-evidence" data-focal-channels="icon,connector,enclosure,contrast" style={{position: 'absolute', left: 66, right: 66, top: 198, bottom: 72}}>
+        <Reveal delay={4} style={{position: 'absolute', left: 0, top: 58, width: 390, height: 520, backgroundColor: LAB.ink, color: LAB.white, padding: '36px 34px'}}>
+          <FileQuestion size={64} color={LAB.amber} strokeWidth={2.6} />
+          <div style={{marginTop: 28}}><Label tone="amber">材料出现</Label></div>
+          <div style={{marginTop: 26, fontSize: 38, lineHeight: 1.2, fontWeight: 900}}>它要证明什么？</div>
+          <div style={{marginTop: 28, fontSize: 26, lineHeight: 1.5, color: LAB.mist, fontWeight: 780}}>先定位待证事实，才能继续判断本证或反证。</div>
+          <div style={{position: 'absolute', left: 34, right: 34, bottom: 34, borderTop: `3px solid ${LAB.amber}`, paddingTop: 20, fontSize: 25, fontWeight: 850}}>第一步：确定证明对象</div>
+        </Reveal>
+        <Trace left={392} top={306} width={68} color={LAB.cyan} delay={28} />
+        <ArrowHead left={454} top={298} color={LAB.cyan} delay={42} />
+
+        <Reveal delay={20} from="right" style={{position: 'absolute', left: 470, top: 0, width: 560, height: 560, backgroundColor: LAB.white, color: LAB.ink, border: `4px solid ${LAB.cyan}`, padding: '34px 38px'}}>
+          <div style={{display: 'flex', alignItems: 'center', gap: 14}}><ScanSearch size={54} color={LAB.cyan} strokeWidth={2.5} /><Label tone="cyan">本案证明对象</Label></div>
+          <div style={{marginTop: 30, fontSize: 33, fontWeight: 900}}>属于本案待证事实</div>
+          <div style={{position: 'absolute', left: 38, right: 38, top: 190, height: 180, border: `3px solid ${LAB.ink}`, display: 'grid', placeItems: 'center', textAlign: 'center'}}>
+            <ShieldCheck size={58} color={LAB.cyan} strokeWidth={2.5} />
+            <div style={{fontSize: 31, fontWeight: 900}}>与诉讼请求或抗辩相关</div>
+            <div style={{fontSize: 23, color: LAB.steel, marginTop: 8}}>进入证明责任判断</div>
+          </div>
+          <div style={{position: 'absolute', left: 38, right: 38, bottom: 34, paddingTop: 20, borderTop: `3px solid ${LAB.cyan}`, fontSize: 25, lineHeight: 1.35, fontWeight: 820}}>关联成立 → 再问由谁承担责任、由谁提出证据</div>
+        </Reveal>
+        <Trace left={1034} top={220} width={74} color={LAB.coral} delay={72} />
+        <ArrowHead left={1102} top={212} color={LAB.coral} delay={86} />
+
+        <Reveal delay={42} from="right" style={{position: 'absolute', right: 0, top: 0, width: 668, height: 260, backgroundColor: LAB.white, color: LAB.ink, border: `4px solid ${LAB.coral}`, padding: '30px 34px'}}>
+          <div style={{display: 'flex', alignItems: 'center', gap: 14}}><X size={56} color={LAB.coral} strokeWidth={3} /><Label tone="coral">无关事实</Label></div>
+          <div style={{marginTop: 24, fontSize: 32, fontWeight: 900}}><Highlight color="#f5d7d3">与案件没有关联性</Highlight></div>
+          <div style={{marginTop: 24, fontSize: 25, color: LAB.steel, fontWeight: 800}}>不属于本案证明对象，不进入责任分配。</div>
+        </Reveal>
+        <Reveal delay={76} from="up" style={{position: 'absolute', right: 0, top: 300, width: 668, height: 260, backgroundColor: LAB.ink, color: LAB.white, padding: '32px 34px'}}>
+          <div style={{fontSize: 25, color: LAB.amber, fontWeight: 850}}>分类被拒绝</div>
+          <div style={{marginTop: 22, fontSize: 34, lineHeight: 1.25, fontWeight: 900}}>既不是本证，也不是反证</div>
+          <div style={{marginTop: 24, fontSize: 25, lineHeight: 1.4, color: LAB.mist, fontWeight: 800}}>因为它根本不是本案的证据。</div>
+          <div style={{position: 'absolute', left: 34, bottom: 26}}><Stamp color={LAB.coral} delay={104}>先排除无关事实</Stamp></div>
+        </Reveal>
+
+        <Reveal delay={126} from="up" style={{position: 'absolute', left: 236, top: 602, width: 1320, height: 88, backgroundColor: LAB.amber, color: LAB.ink, border: `4px solid ${LAB.ink}`, display: 'grid', placeItems: 'center', fontSize: 30, fontWeight: 900}}>
+          不是先问谁提出，而是先问：它是不是本案的证明对象？
+        </Reveal>
+      </div>
+    </LabCanvas>
+  );
+};

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "minimumDistinctLayouts": 3,
+  "minimumDistinctLayouts": 5,
   "scenes": [
     {
       "id": "direct-indirect",
@@ -31,6 +31,26 @@
       "textTreatments": ["soft-highlight", "external-negation", "stamp"],
       "focalChannels": ["icon", "connector", "annotation", "contrast"],
       "tokens": ["Puzzle", "FileQuestion", "ShieldCheck", "X"]
+    },
+    {
+      "id": "proof-threshold",
+      "export": "ProofThresholdScene",
+      "layout": "proof-standard-dual-lanes",
+      "anchor": "comparison-axis",
+      "grammar": ["comparison", "threshold", "consequence"],
+      "textTreatments": ["label-block", "soft-highlight", "thin-underline", "stamp"],
+      "focalChannels": ["icon", "contrast", "connector", "annotation"],
+      "tokens": ["UserRoundCheck", "UserRoundMinus", "FileCheck2", "FileQuestion", "ShieldCheck"]
+    },
+    {
+      "id": "out-of-scope-evidence",
+      "export": "OutOfScopeEvidenceScene",
+      "layout": "proof-object-scope-gate",
+      "anchor": "boundary",
+      "grammar": ["scope-gate", "fork", "exclusion"],
+      "textTreatments": ["label-block", "soft-highlight", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "enclosure", "contrast"],
+      "tokens": ["FileQuestion", "ScanSearch", "ShieldCheck", "X"]
     }
   ]
 }

@@ -3,7 +3,7 @@
   "compositionId": "EvidenceClassification",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-08-02T03:34:22.025Z",
+  "generatedAt": "2026-08-03T09:48:46.955Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -16,13 +16,13 @@
       "title": "直接证据 vs 间接证据",
       "durationMs": 5500,
       "file": "direct-indirect.avif",
-      "fileSize": 269901,
+      "fileSize": 363771,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "224fbd391b4e8a0a0d0f18bc72f6b1cbd192cb331a0f1d4179b01b59ee44885f",
+      "sha256": "f791233e363ed8c34ba377b60caedf1f600329035337c8b94e5019262a7e5a55",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "7ce55062951faf7bfb9d3e6af5102a18fa21ecdd499ecdc40568cd3734438e55"
+      "sceneFingerprint": "12e9ba6bddc343659602f3cad13b4102e73a009571805cec165da0788f7cff3a"
     },
     {
       "endFrame": 359,
@@ -33,13 +33,13 @@
       "title": "本证 vs 反证三步判断",
       "durationMs": 6500,
       "file": "burden-evidence.avif",
-      "fileSize": 313320,
+      "fileSize": 435124,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "306e6a6b1061014c9b049dd29bfe6a503f915a296f67d96cba9acf4e8eb5d277",
+      "sha256": "a3811cd6627db84d3150527581093a6bf9f119639c6bfb58cc0e72d55215bf58",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "46f2e541baa5eb88a04aea7fefe9f12bd63a8e3c2c10c7be9ca211bf0859b89f"
+      "sceneFingerprint": "e31b29315bf4e1a8af5b041c0d11cdb1907d4bab8083a2bf1e0bff5ca93d1fd3"
     },
     {
       "endFrame": 524,
@@ -50,13 +50,47 @@
       "title": "不能单独定案的逆命题误区",
       "durationMs": 5500,
       "file": "single-case-trap.avif",
-      "fileSize": 244049,
+      "fileSize": 327086,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "a926f0bbb0721b1f0e94550640043bd9efcb04c32c7c9d457a659e5a0b6ddf7e",
+      "sha256": "9b406e6180c290e50944cd10ad97ab284d02f1cd0c26407e9022b40ae60496be",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "aceee7e83180c80d76dea4c5c8c9c267a29f25cadb3b34b3f6f8fb9f08d93279"
+      "sceneFingerprint": "bc263f1efb253103dbbdd368349eccbad5a00835c104c1550c951a55d48e7192"
+    },
+    {
+      "endFrame": 749,
+      "frameCount": 225,
+      "id": "proof-threshold",
+      "number": "04",
+      "startFrame": 525,
+      "title": "本证要达标，反证无需登顶",
+      "durationMs": 7500,
+      "file": "proof-threshold.avif",
+      "fileSize": 496285,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "b8a0f9a7e2b96b3990d7de05eb5b16c8eb61bafeb39af9f4ca7fd17492186e26",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "ed5fa34ec4dff8181cfdb288b9b533b104e11e98f0ceeecac8cdae93e873dfb1"
+    },
+    {
+      "endFrame": 974,
+      "frameCount": 225,
+      "id": "out-of-scope-evidence",
+      "number": "05",
+      "startFrame": 750,
+      "title": "无关事实不是本案证据",
+      "durationMs": 7500,
+      "file": "out-of-scope-evidence.avif",
+      "fileSize": 565059,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "de75630f8c1c55f7c84048446a744c8be1f1a87321874f6d5574a1e6ed429425",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "369e94d4c2ea107fd0dfc0c0a7eb9f582451c2e918f722b2a8865111c88806bf"
     }
   ],
   "size": {
@@ -64,7 +98,7 @@
     "width": 2560
   },
   "sourceFps": 30,
-  "sourceFingerprint": "699c5fed8e6321e435c7358747b5461d2610e82fc05147f8bb456d428c1fe9c1",
+  "sourceFingerprint": "cde389a36accb5ca7605a23a947e6dd5ccbe21dda9e93515470979a6afc996bf",
   "targetFps": 30,
-  "totalFileSize": 827270
+  "totalFileSize": 2187325
 }
