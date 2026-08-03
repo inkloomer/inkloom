@@ -3,7 +3,7 @@
   "compositionId": "ServiceDeliveryNetwork",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-08-03T10:25:57.019Z",
+  "generatedAt": "2026-08-03T11:46:35.442Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -16,13 +16,13 @@
       "title": "直接送达的对象与地点",
       "durationMs": 6000,
       "file": "direct-recipients.avif",
-      "fileSize": 341310,
+      "fileSize": 366167,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "2f8d754ca31194ee28dded1854b13e823518d3d7b20a3d7eb84e7f37b16482f5",
+      "sha256": "77d343fe968620a8898c91ee7dc194279c244e38d562991bbb45644ca2af210b",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "1c4c092f9c76198468b5fe9705b232a7f4623a525ef6d86f052fc61039b81dea"
+      "sceneFingerprint": "6a186be8b7a8a75d13f9aed85e29c5f10dba9c11fe229d9cbbeb8b5838fa77ae"
     },
     {
       "endFrame": 359,
@@ -33,13 +33,13 @@
       "title": "拒签后的留置送达",
       "durationMs": 6000,
       "file": "refusal-service.avif",
-      "fileSize": 270183,
+      "fileSize": 238889,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "45ae5ef245a4f8f1ca03e2d417c47355b8c051e8635b19a6fc41650bee6dc69c",
+      "sha256": "e0b477282d9ef1facf179ecfdbdfcab3c3daf45f359b452c8bb891f31458255f",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "1c4c092f9c76198468b5fe9705b232a7f4623a525ef6d86f052fc61039b81dea"
+      "sceneFingerprint": "6a186be8b7a8a75d13f9aed85e29c5f10dba9c11fe229d9cbbeb8b5838fa77ae"
     },
     {
       "endFrame": 569,
@@ -50,13 +50,13 @@
       "title": "替代送达的路径与日期",
       "durationMs": 7000,
       "file": "confirmed-routes.avif",
-      "fileSize": 338716,
+      "fileSize": 288307,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "82779f0a462a1131b29f2dc3f42051ebfdbde230a638db1c877cce67c273020b",
+      "sha256": "ce4c61a91190d493c740f74206215b2a26c113a6ed7cf9f020b6dd1253e1eb80",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "1c4c092f9c76198468b5fe9705b232a7f4623a525ef6d86f052fc61039b81dea"
+      "sceneFingerprint": "6a186be8b7a8a75d13f9aed85e29c5f10dba9c11fe229d9cbbeb8b5838fa77ae"
     },
     {
       "endFrame": 749,
@@ -67,13 +67,13 @@
       "title": "公告送达的严格门槛",
       "durationMs": 6000,
       "file": "public-notice-boundary.avif",
-      "fileSize": 389403,
+      "fileSize": 310813,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "f4d7c9595616e2b635cefcf9ccddd69d39ad184a7bf0ff54295533648e952b5f",
+      "sha256": "42255f0569fd76ab67fe3b84a611e288aee6ad2193fe81a6ed7d2d3be6ce518f",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "1c4c092f9c76198468b5fe9705b232a7f4623a525ef6d86f052fc61039b81dea"
+      "sceneFingerprint": "6a186be8b7a8a75d13f9aed85e29c5f10dba9c11fe229d9cbbeb8b5838fa77ae"
     }
   ],
   "size": {
@@ -81,7 +81,7 @@
     "width": 2560
   },
   "sourceFps": 30,
-  "sourceFingerprint": "1c4c092f9c76198468b5fe9705b232a7f4623a525ef6d86f052fc61039b81dea",
+  "sourceFingerprint": "6a186be8b7a8a75d13f9aed85e29c5f10dba9c11fe229d9cbbeb8b5838fa77ae",
   "targetFps": 30,
-  "totalFileSize": 1339612
+  "totalFileSize": 1204176
 }

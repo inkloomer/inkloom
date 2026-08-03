@@ -1,86 +1,115 @@
 import type {CSSProperties, ReactNode} from 'react';
-import {CalendarDays, Camera, Contact, FileCheck2, House, Landmark, Mail, Megaphone, Send, Signature, Smartphone} from 'lucide-react';
+import {Ban, Building2, CalendarDays, Camera, Check, Contact, FileCheck2, FileText, House, Landmark, Mail, Megaphone, Send, Signature, Smartphone, UserRoundCheck, UsersRound, Video} from 'lucide-react';
 import {AbsoluteFill, Easing, interpolate, useCurrentFrame} from 'remotion';
 import {CLAMP, TimelineSequence} from '../../../../shared/remotion-runtime';
 import {SCENES} from './storyboard';
 
-const C = {paper: '#eee9df', white: '#fffdf8', ink: '#20242a', blue: '#2d639e', teal: '#278f88', red: '#c84943', tan: '#c6b69b', gray: '#697078'};
+const C = {paper: '#f4f0e8', white: '#fffefa', ink: '#181c22', blue: '#1665a7', cyan: '#1aa6ad', green: '#34755a', red: '#d14a3e', yellow: '#e6b83d', violet: '#7352a3', gray: '#636a72', paleBlue: '#dbeaf4', paleCyan: '#d8eeee', paleRed: '#f5dedb', paleYellow: '#f7edc9'};
 const PLAYER_CONTROL_SAFE_BOTTOM = 160;
 
 const Reveal = ({children, delay, from = 'up', style}: {children: ReactNode; delay: number; from?: 'left' | 'right' | 'up'; style?: CSSProperties}) => {
   const frame = useCurrentFrame();
-  const origin = {left: '34px 0px', right: '-34px 0px', up: '0px 30px'}[from];
-  return <div style={{...style, opacity: interpolate(frame, [delay, delay + 18], [0, 1], {...CLAMP, easing: Easing.bezier(0.16, 1, 0.3, 1)}), translate: interpolate(frame, [delay, delay + 18], [origin, '0px 0px'], CLAMP)}}>{children}</div>;
+  const origin = {left: '40px 0px', right: '-40px 0px', up: '0px 28px'}[from];
+  return <div style={{...style, opacity: interpolate(frame, [delay, delay + 20], [0, 1], {...CLAMP, easing: Easing.bezier(0.16, 1, 0.3, 1)}), translate: interpolate(frame, [delay, delay + 20], [origin, '0px 0px'], CLAMP)}}>{children}</div>;
 };
 
-const Shell = ({code, title, children}: {code: string; title: string; children: ReactNode}) => (
+const Shell = ({children, code, title}: {children: ReactNode; code: string; title: string}) => (
   <AbsoluteFill data-player-control-safe-bottom={PLAYER_CONTROL_SAFE_BOTTOM} style={{overflow: 'hidden', backgroundColor: C.paper, color: C.ink, fontFamily: 'var(--inkloom-animation-body)'}}>
-    <div style={{position: 'absolute', left: 36, top: 36, right: 36, bottom: 36, border: `2px solid ${C.tan}`, backgroundColor: 'rgba(255,253,248,0.42)'}} />
-    <div style={{position: 'absolute', left: 80, top: 50, fontFamily: 'var(--inkloom-animation-mono)', fontSize: 18, color: C.blue, fontWeight: 800}}>SERVICE DOSSIER / {code}</div>
-    <Reveal delay={0} style={{position: 'absolute', left: 80, top: 84, fontSize: 58, fontWeight: 900, letterSpacing: 0}}>{title}</Reveal>
-    <div style={{position: 'absolute', left: 80, right: 80, top: 174, borderTop: `3px solid ${C.ink}`}} />
-    <div style={{position: 'absolute', left: 0, right: 0, top: 194, bottom: PLAYER_CONTROL_SAFE_BOTTOM}}>{children}</div>
+    <div style={{position: 'absolute', inset: 0, backgroundImage: 'linear-gradient(rgba(24,28,34,.045) 1px, transparent 1px), linear-gradient(90deg, rgba(24,28,34,.045) 1px, transparent 1px)', backgroundSize: '72px 72px'}}/>
+    <div style={{position: 'absolute', left: 0, top: 0, width: 30, height: '100%', backgroundColor: C.blue}}/>
+    <div style={{position: 'absolute', left: 78, top: 48, fontFamily: 'var(--inkloom-animation-mono)', fontSize: 18, color: C.blue, fontWeight: 850}}>SERVICE ROUTING / {code}</div>
+    <Reveal delay={0} style={{position: 'absolute', left: 78, top: 79, fontSize: 58, fontWeight: 950}}>{title}</Reveal>
+    <div style={{position: 'absolute', left: 78, right: 78, top: 168, height: 5, backgroundColor: C.ink}}/>
+    <div style={{position: 'absolute', left: 0, right: 0, top: 184, bottom: PLAYER_CONTROL_SAFE_BOTTOM}}>{children}</div>
   </AbsoluteFill>
 );
 
-const ServiceDocument = ({style}: {style?: CSSProperties}) => <div style={{width: 150, height: 98, padding: '14px 18px', backgroundColor: C.blue, color: C.white, boxSizing: 'border-box', boxShadow: `8px 8px 0 ${C.tan}`, ...style}}><Send size={28}/><div style={{marginTop: 6, fontSize: 19, fontWeight: 900}}>诉讼文书</div></div>;
+const Document = ({label = '诉讼文书', style}: {label?: string; style?: CSSProperties}) => <div style={{width: 174, height: 120, padding: '16px 18px', boxSizing: 'border-box', backgroundColor: C.blue, color: C.white, boxShadow: `10px 10px 0 ${C.yellow}`, ...style}}><Send size={34}/><div style={{marginTop: 8, fontSize: 22, fontWeight: 950}}>{label}</div></div>;
+const Arrow = ({color, left, progress, top, width}: {color: string; left: number; progress: number; top: number; width: number}) => <div style={{position: 'absolute', left, top, width, height: 9, backgroundColor: color, scale: `${progress} 1`, transformOrigin: 'left center'}}><div style={{position: 'absolute', right: -2, top: -10, borderTop: '15px solid transparent', borderBottom: '15px solid transparent', borderLeft: `22px solid ${color}`}}/></div>;
+const Result = ({children, color, icon}: {children: ReactNode; color: string; icon: ReactNode}) => <div style={{display: 'flex', alignItems: 'center', gap: 18, padding: '20px 24px', borderLeft: `12px solid ${color}`, backgroundColor: C.white, fontSize: 27, fontWeight: 900}}>{icon}{children}</div>;
 
 export const DirectRecipientsScene = () => {
   const frame = useCurrentFrame();
-  const flow = interpolate(frame, [26, 116], [0, 1], CLAMP);
-  return <Shell code="01" title="直接送达：交给谁，在哪里交？">
-    <div data-layout="recipient-and-place-pairing" data-visual-anchor="role-pair" data-text-treatments="label-block,soft-highlight" data-visual-grammar="recipient,location,authorization" data-focal-rule="direct-service-matches-an-authorized-recipient-with-an-allowed-location" data-focal-channels="icon,connector,spatial" style={{position: 'absolute', left: 98, right: 98, top: 0, bottom: 0}}>
-      <svg width="1724" height="700" style={{position: 'absolute', inset: 0}}><path d="M 420 350 H 820" stroke={C.blue} strokeWidth="8" pathLength={1} strokeDasharray={1} strokeDashoffset={1 - flow}/><path d="M 900 350 H 1305" stroke={C.teal} strokeWidth="8" pathLength={1} strokeDasharray={1} strokeDashoffset={1 - flow}/></svg>
-      <Reveal delay={8} from="left" style={{position: 'absolute', left: 28, top: 160}}><ServiceDocument /></Reveal>
-      <Reveal delay={38} style={{position: 'absolute', left: 510, top: 80, width: 470, height: 520, padding: '34px', border: `4px solid ${C.blue}`, backgroundColor: C.white}}><Contact size={66} color={C.blue}/><div style={{marginTop: 20, fontSize: 35, fontWeight: 900}}>受领主体</div><div style={{marginTop: 20, fontSize: 25, lineHeight: 1.65}}>本人 / 同住成年家属<br/>法定代表人、主要负责人<br/>诉讼代理人 / 指定代收人</div><div style={{marginTop: 24, paddingBottom: 7, borderBottom: `3px solid ${C.blue}`, fontSize: 22}}>离婚案：不得交给另一方当事人签收</div></Reveal>
-      <Reveal delay={76} from="right" style={{position: 'absolute', right: 28, top: 80, width: 470, height: 520, padding: '34px', border: `4px solid ${C.teal}`}}><House size={66} color={C.teal}/><div style={{marginTop: 20, fontSize: 35, fontWeight: 900}}>交付地点</div><div style={{marginTop: 25, fontSize: 27, lineHeight: 1.7}}>住处送达<br/><span style={{color: C.teal, fontWeight: 900}}>到法院领取</span><br/>住处以外送达</div><div style={{marginTop: 22, display: 'flex', alignItems: 'center', gap: 12, fontSize: 22, color: C.gray}}><Landmark size={28}/>到院拒签：注明后视为送达</div></Reveal>
+  const toDesk = interpolate(frame, [20, 62], [0, 1], CLAMP);
+  const toReceipt = interpolate(frame, [76, 124], [0, 1], CLAMP);
+  return <Shell code="01" title="直接送达：收件人和交付地点必须同时匹配">
+    <div data-layout="recipient-address-matching-desk" data-visual-anchor="role-pair" data-visual-grammar="recipient,location,authorization" data-text-treatments="label-block,soft-highlight,external-negation" data-focal-rule="direct-service-needs-an-authorized-recipient-and-an-allowed-place" data-focal-channels="icon,connector,spatial" style={{position: 'absolute', inset: 0}}>
+      <Reveal delay={6} from="left" style={{position: 'absolute', left: 102, top: 255}}><div data-stateful-source="service-document"><Document/></div></Reveal>
+      <Arrow color={C.blue} left={302} top={316} width={220} progress={toDesk}/>
+      <div style={{position: 'absolute', left: 546, top: 74, width: 730, height: 500, border: `7px solid ${C.ink}`, backgroundColor: C.white}}>
+        <div style={{height: 70, backgroundColor: C.ink, color: C.white, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 18, fontSize: 29, fontWeight: 950}}><Signature size={40}/>直接送达匹配台</div>
+        <Reveal delay={36} style={{position: 'absolute', left: 34, top: 100, width: 300}}><div style={{display: 'flex', alignItems: 'center', gap: 16, fontSize: 31, fontWeight: 950}}><Contact size={52} color={C.blue}/>谁能签收</div><div style={{marginTop: 20, fontSize: 25, lineHeight: 1.65}}>本人<br/>同住成年家属<br/>法定代表人 / 负责人<br/>代理人 / 指定代收人</div></Reveal>
+        <div style={{position: 'absolute', left: 360, top: 96, bottom: 32, width: 4, backgroundColor: C.yellow}}/>
+        <Reveal delay={58} style={{position: 'absolute', left: 402, top: 100, width: 280}}><div style={{display: 'flex', alignItems: 'center', gap: 16, fontSize: 31, fontWeight: 950}}><House size={52} color={C.cyan}/>在哪里交</div><div style={{marginTop: 20, fontSize: 26, lineHeight: 1.75}}>住处<br/>法院领取<br/>住处以外</div></Reveal>
+        <Reveal delay={88} style={{position: 'absolute', left: 34, right: 34, bottom: 24}}><div style={{padding: '14px 18px', backgroundColor: C.paleRed, borderLeft: `10px solid ${C.red}`, fontSize: 23, fontWeight: 850}}>离婚诉讼：不得交给兼为另一方当事人的同住成年家属</div></Reveal>
+      </div>
+      <Arrow color={C.green} left={1308} top={316} width={170} progress={toReceipt}/>
+      <Reveal delay={104} from="right" style={{position: 'absolute', left: 1500, top: 178}}><div data-stateful-terminal="service-document" style={{width: 305, height: 270, padding: 28, backgroundColor: C.paleCyan, border: `6px solid ${C.green}`, textAlign: 'center'}}><UserRoundCheck size={72} color={C.green}/><div style={{fontSize: 34, fontWeight: 950, marginTop: 18}}>合法受领</div><div style={{fontSize: 24, marginTop: 16}}>对象 + 地点都匹配</div></div></Reveal>
+      <div data-final-knowledge="authorized-recipient" style={{position: 'absolute', left: 570, top: 596, width: 510}}><Result color={C.blue} icon={<UsersRound size={42} color={C.blue}/>}>法定受领主体</Result></div>
+      <div data-final-knowledge="authorized-place" style={{position: 'absolute', left: 1110, top: 596, width: 510}}><Result color={C.cyan} icon={<Landmark size={42} color={C.cyan}/>}>住处 / 法院 / 住处以外</Result></div>
     </div>
   </Shell>;
 };
 
 export const RefusalServiceScene = () => {
   const frame = useCurrentFrame();
-  const fork = interpolate(frame, [42, 124], [0, 1], CLAMP);
-  return <Shell code="02" title="拒绝签收，才会进入留置送达">
-    <div data-layout="refusal-to-service-document-fork" data-visual-anchor="document-fork" data-text-treatments="external-negation,stamp" data-visual-grammar="condition,proof,legal-effect" data-focal-rule="refusal-to-sign-opens-the-leave-service-path-which-requires-proof-and-creates-service-effect" data-focal-channels="icon,connector,motion" style={{position: 'absolute', left: 96, right: 96, top: 0, bottom: 0}}>
-      <svg width="1728" height="690" style={{position: 'absolute', inset: 0}}><path d="M 390 350 H 670 L 920 185 M 670 350 L 920 515" fill="none" stroke={C.red} strokeWidth="8" pathLength={1} strokeDasharray={1} strokeDashoffset={1 - fork}/><path d="M 1180 185 H 1450 M 1180 515 H 1450" stroke={C.teal} strokeWidth="8" pathLength={1} strokeDasharray={1} strokeDashoffset={1 - fork}/></svg>
-      <Reveal delay={8} style={{position: 'absolute', left: 60, top: 220, width: 340, height: 250, padding: '30px', backgroundColor: C.white, border: `4px solid ${C.red}`}}><Signature size={64} color={C.red}/><div style={{marginTop: 24, fontSize: 33, fontWeight: 900}}>拒绝签收</div><div style={{marginTop: 15, fontSize: 22, color: C.gray}}>当事人不在家，不等于拒收</div></Reveal>
-      <Reveal delay={50} style={{position: 'absolute', left: 940, top: 72, width: 340, height: 220, padding: '28px', borderLeft: `12px solid ${C.blue}`}}><Landmark size={52} color={C.blue}/><div style={{marginTop: 16, fontSize: 28, fontWeight: 900}}>见证并签名</div><div style={{marginTop: 10, fontSize: 22, color: C.gray}}>基层组织或单位代表在场</div></Reveal>
-      <Reveal delay={76} style={{position: 'absolute', left: 940, top: 410, width: 340, height: 220, padding: '28px', borderLeft: `12px solid ${C.blue}`}}><Camera size={52} color={C.blue}/><div style={{marginTop: 16, fontSize: 28, fontWeight: 900}}>拍照、摄像记录</div><div style={{marginTop: 10, fontSize: 22, color: C.gray}}>记录送达过程</div></Reveal>
-      <Reveal delay={112} from="right" style={{position: 'absolute', right: 44, top: 225, width: 300, height: 240, padding: '28px', backgroundColor: C.teal, color: C.white}}><FileCheck2 size={58}/><div style={{marginTop: 22, fontSize: 34, fontWeight: 900}}>视为送达</div><div style={{marginTop: 20, fontSize: 22}}>调解书不能留置<br/>支付令可以留置</div></Reveal>
+  const entry = interpolate(frame, [24, 68], [0, 1], CLAMP);
+  const proof = interpolate(frame, [76, 126], [0, 1], CLAMP);
+  return <Shell code="02" title="只有明确拒签，留置送达通道才会打开">
+    <div data-layout="refusal-proof-release-gate" data-visual-anchor="boundary" data-visual-grammar="condition,proof,legal-effect" data-text-treatments="external-negation,stamp,label-block" data-focal-rule="refusal-opens-the-gate-but-proof-completes-service" data-focal-channels="icon,connector,motion" style={{position: 'absolute', inset: 0}}>
+      <Reveal delay={6} from="left" style={{position: 'absolute', left: 96, top: 246}}><div data-stateful-source="refused-document"><Document/></div></Reveal>
+      <Arrow color={C.red} left={296} top={307} width={228} progress={entry}/>
+      <div style={{position: 'absolute', left: 548, top: 92, width: 310, height: 470, backgroundColor: C.paleRed, border: `7px solid ${C.red}`, display: 'grid', placeItems: 'center', textAlign: 'center'}}><Signature size={82} color={C.red}/><div style={{fontSize: 38, fontWeight: 950}}>明确拒签</div><div style={{fontSize: 24, padding: '0 34px'}}>仅仅不在家<br/>不等于拒绝签收</div><Ban size={52} color={C.red}/></div>
+      <Arrow color={C.blue} left={884} top={307} width={220} progress={proof}/>
+      <div style={{position: 'absolute', left: 1130, top: 70, width: 430, height: 510, border: `7px solid ${C.ink}`, backgroundColor: C.white}}><div style={{height: 72, display: 'grid', placeItems: 'center', backgroundColor: C.ink, color: C.white, fontSize: 29, fontWeight: 950}}>留置证明闸门</div><Reveal delay={74} style={{margin: '42px 30px 0'}}><Result color={C.blue} icon={<UsersRound size={44} color={C.blue}/>}>见证并签名</Result></Reveal><Reveal delay={96} style={{margin: '28px 30px 0'}}><Result color={C.cyan} icon={<Camera size={44} color={C.cyan}/>}>拍照 / 录像记录</Result></Reveal><div style={{position: 'absolute', left: 34, right: 34, bottom: 28, height: 8, backgroundColor: C.blue, scale: `${proof} 1`, transformOrigin: 'left'}}/></div>
+      <Reveal delay={118} from="right" style={{position: 'absolute', left: 1622, top: 210}}><div data-stateful-terminal="refused-document" data-final-knowledge="leave-service-effective" style={{width: 220, height: 260, padding: 24, backgroundColor: C.green, color: C.white, textAlign: 'center'}}><FileCheck2 size={62}/><div style={{fontSize: 31, fontWeight: 950, marginTop: 20}}>视为送达</div><Check size={48} style={{marginTop: 18}}/></div></Reveal>
+      <div data-final-knowledge="mediation-order-excluded" style={{position: 'absolute', left: 630, top: 598, width: 520}}><Result color={C.red} icon={<Ban size={42} color={C.red}/>}>调解书不能留置</Result></div>
+      <div data-final-knowledge="payment-order-allowed" style={{position: 'absolute', left: 1180, top: 598, width: 470}}><Result color={C.green} icon={<FileText size={42} color={C.green}/>}>支付令可以留置</Result></div>
     </div>
   </Shell>;
 };
 
-export const ConfirmedRoutesScene = () => {
+const RouteLane = ({color, delay, detail, icon: Icon, title, top}: {color: string; delay: number; detail: string; icon: typeof Mail; title: string; top: number}) => {
   const frame = useCurrentFrame();
-  const travel = interpolate(frame, [24, 142], [0, 1], CLAMP);
-  const routes = [
-    {top: 46, icon: Smartphone, title: '电子送达', detail: '同意 + 能确认收悉', date: '到达特定系统之日', color: C.teal},
-    {top: 210, icon: Mail, title: '邮寄送达', detail: '直接送达有困难', date: '挂号信回执收件日', color: C.blue},
-    {top: 374, icon: Landmark, title: '委托 / 转交', detail: '其他法院；军队、监狱、教育机构', date: '只能交给法定机关', color: C.red},
-  ];
-  return <Shell code="03" title="送达困难后，日期和路径各有凭据">
-    <div data-layout="conditioned-service-route-ribbons" data-visual-anchor="flow-path" data-text-treatments="thin-underline,label-block" data-visual-grammar="condition,routing,confirmation" data-focal-rule="each-alternate-service-route-has-its-own-prerequisite-and-date-or-authority-proof" data-focal-channels="icon,connector,spatial" style={{position: 'absolute', left: 94, right: 94, top: 0, bottom: 0}}>
-      <div style={{position: 'absolute', left: 80, top: 82, bottom: 82, width: 10, backgroundColor: C.tan}} /><div style={{position: 'absolute', left: 80, top: 82, width: 10, height: 470, backgroundColor: C.blue, scale: `1 ${travel}`, transformOrigin: 'center top'}} />
-      <Reveal delay={6} style={{position: 'absolute', left: 20, top: 14}}><ServiceDocument /></Reveal>
-      {routes.map(({top, icon: Icon, title, detail, date, color}, index) => <Reveal key={title} delay={24 + index * 32} from="right" style={{position: 'absolute', left: 210, right: 54, top, height: 132, display: 'flex', alignItems: 'center', gap: 30, padding: '22px 30px', backgroundColor: index === 0 ? C.white : 'transparent', borderBottom: `3px solid ${color}`}}><Icon size={54} color={color}/><div style={{width: 250, fontSize: 32, fontWeight: 900}}>{title}</div><div style={{width: 390, fontSize: 24, color: C.gray}}>{detail}</div><div style={{padding: '10px 16px', border: `2px solid ${color}`, color, fontSize: 23, fontWeight: 800}}>{date}</div></Reveal>)}
-      <div style={{position: 'absolute', left: 212, bottom: 18, fontSize: 23, color: C.gray}}>电子送达的判决书、裁定书、调解书均可送达；需要纸质文书的，法院应提供。</div>
-    </div>
-  </Shell>;
+  const travel = interpolate(frame, [delay, delay + 58], [0, 1], CLAMP);
+  return <div style={{position: 'absolute', left: 330, right: 96, top, height: 145}}><div style={{position: 'absolute', inset: 0, backgroundColor: C.white, clipPath: 'polygon(0 0, 94% 0, 100% 50%, 94% 100%, 0 100%)', borderLeft: `12px solid ${color}`}}/><Reveal delay={delay - 10} style={{position: 'absolute', left: 34, top: 28, display: 'flex', alignItems: 'center', gap: 18}}><Icon size={52} color={color}/><div><div style={{fontSize: 31, fontWeight: 950}}>{title}</div><div style={{fontSize: 23, color: C.gray, marginTop: 8}}>{detail}</div></div></Reveal><div style={{position: 'absolute', left: 520, top: 68, width: 300, height: 7, backgroundColor: color, scale: `${travel} 1`, transformOrigin: 'left'}}/></div>;
 };
 
-export const PublicNoticeBoundaryScene = () => <Shell code="04" title="公告送达是最后手段，不是送达失败就能用">
-  <div data-layout="last-resort-notice-boundary" data-visual-anchor="boundary" data-text-treatments="external-negation,soft-highlight" data-visual-grammar="threshold,exception,deadline" data-focal-rule="public-notice-requires-unknown-whereabouts-or-exhausted-methods-and-has-strict-30-or-60-day-effects" data-focal-channels="icon,enclosure,contrast" style={{position: 'absolute', left: 94, right: 94, top: 0, bottom: 0}}>
-    <Reveal delay={8} style={{position: 'absolute', left: 80, top: 62, width: 640, height: 470, padding: '38px', backgroundColor: C.white, border: `5px solid ${C.red}`}}><Megaphone size={70} color={C.red}/><div style={{marginTop: 24, fontSize: 42, fontWeight: 900}}>先过两道门</div><div style={{marginTop: 30, display: 'grid', gap: 18, fontSize: 29}}><div style={{padding: '13px 18px', borderLeft: `8px solid ${C.red}`}}>受送达人下落不明</div><div style={{padding: '13px 18px', borderLeft: `8px solid ${C.red}`}}>穷尽其他方式仍无法送达</div></div><div style={{marginTop: 34, fontSize: 23, color: C.gray}}>仅有“出差”或一时无人签收，不等于可以公告</div></Reveal>
-    <Reveal delay={48} from="right" style={{position: 'absolute', right: 80, top: 62, width: 640, height: 220, padding: '34px', borderTop: `12px solid ${C.teal}`}}><CalendarDays size={54} color={C.teal}/><div style={{position: 'absolute', left: 130, top: 38, fontSize: 44, fontWeight: 900}}>30 日 / 60 日</div><div style={{position: 'absolute', left: 130, top: 105, fontSize: 25, color: C.gray}}>国内公告 30 日；境内无住所 60 日视为送达</div></Reveal>
-    <Reveal delay={84} from="right" style={{position: 'absolute', right: 80, top: 348, width: 640, height: 184, padding: '32px', backgroundColor: C.ink, color: C.white}}><div style={{fontSize: 27, color: '#f4c15c', fontWeight: 900}}>禁止进入公告路径</div><div style={{marginTop: 22, fontSize: 31}}>支付令 &nbsp; / &nbsp; 简易程序</div><div style={{marginTop: 14, fontSize: 22, color: '#d5d7d6'}}>两者均不能公告送达</div></Reveal>
+export const ConfirmedRoutesScene = () => <Shell code="03" title="直接送达困难：每条替代路径都有自己的凭据">
+  <div data-layout="alternate-service-routing-ribbons" data-visual-anchor="flow-path" data-visual-grammar="condition,routing,confirmation" data-text-treatments="thin-underline,label-block,stamp" data-focal-rule="each-alternate-route-ends-in-its-own-date-or-authority-proof" data-focal-channels="icon,connector,spatial" style={{position: 'absolute', inset: 0}}>
+    <Reveal delay={4} style={{position: 'absolute', left: 88, top: 252}}><div data-stateful-source="alternate-document"><Document label="送达困难"/></div></Reveal>
+    <div style={{position: 'absolute', left: 270, top: 82, bottom: 80, width: 10, backgroundColor: C.ink}}/>
+    <RouteLane top={30} delay={28} icon={Smartphone} title="电子送达" detail="经同意 + 能确认收悉" color={C.cyan}/>
+    <RouteLane top={214} delay={58} icon={Mail} title="邮寄送达" detail="直接送达有困难" color={C.blue}/>
+    <RouteLane top={398} delay={88} icon={Building2} title="委托 / 转交" detail="其他法院；军队、监狱、教育机构" color={C.violet}/>
+    <div data-stateful-terminal="alternate-document" style={{position: 'absolute', left: 1465, top: 578, width: 330, padding: '18px 22px', backgroundColor: C.paleYellow, borderBottom: `6px solid ${C.yellow}`, fontSize: 23, fontWeight: 850}}>三条路径，各自形成送达凭据</div>
+    <Reveal delay={66} from="right" style={{position: 'absolute', left: 1390, top: 68}}><div data-final-knowledge="electronic-proof" style={{width: 360, padding: '14px 18px', backgroundColor: C.cyan, color: C.white, fontSize: 24, fontWeight: 900}}>到达特定系统之日</div></Reveal>
+    <Reveal delay={96} from="right" style={{position: 'absolute', left: 1390, top: 252}}><div data-final-knowledge="mail-proof" style={{width: 360, padding: '14px 18px', backgroundColor: C.blue, color: C.white, fontSize: 24, fontWeight: 900}}>挂号信回执收件日</div></Reveal>
+    <Reveal delay={126} from="right" style={{position: 'absolute', left: 1390, top: 436}}><div data-final-knowledge="transfer-proof" style={{width: 360, padding: '14px 18px', backgroundColor: C.violet, color: C.white, fontSize: 24, fontWeight: 900}}>交给法定机关</div></Reveal>
   </div>
 </Shell>;
 
+export const PublicNoticeBoundaryScene = () => {
+  const frame = useCurrentFrame();
+  const gateOne = interpolate(frame, [28, 68], [0, 1], CLAMP);
+  const gateTwo = interpolate(frame, [70, 112], [0, 1], CLAMP);
+  return <Shell code="04" title="公告送达：必须先穿过最后手段的两道门">
+    <div data-layout="public-notice-double-threshold" data-visual-anchor="boundary" data-visual-grammar="threshold,exception,deadline" data-text-treatments="external-negation,soft-highlight,stamp" data-focal-rule="public-notice-needs-unknown-whereabouts-or-exhausted-routes-before-time-runs" data-focal-channels="icon,enclosure,contrast" style={{position: 'absolute', inset: 0}}>
+      <Reveal delay={4} from="left" style={{position: 'absolute', left: 90, top: 246}}><div data-stateful-source="notice-document"><Document/></div></Reveal>
+      <Arrow color={C.red} left={286} top={307} width={168} progress={gateOne}/>
+      <div style={{position: 'absolute', left: 480, top: 94, width: 340, height: 455, border: `8px solid ${C.red}`, backgroundColor: C.paleRed, textAlign: 'center', padding: 30}}><Contact size={72} color={C.red}/><div style={{fontSize: 35, fontWeight: 950, marginTop: 22}}>第一道门</div><div style={{fontSize: 27, marginTop: 28, lineHeight: 1.55}}>受送达人<br/><b>下落不明</b></div><div style={{position: 'absolute', left: 34, right: 34, bottom: 32, height: 10, backgroundColor: C.red, scale: `${gateOne} 1`, transformOrigin: 'left'}}/></div>
+      <Arrow color={C.red} left={846} top={307} width={158} progress={gateTwo}/>
+      <div style={{position: 'absolute', left: 1030, top: 94, width: 340, height: 455, border: `8px solid ${C.ink}`, backgroundColor: C.white, textAlign: 'center', padding: 30}}><Send size={72} color={C.blue}/><div style={{fontSize: 35, fontWeight: 950, marginTop: 22}}>第二道门</div><div style={{fontSize: 27, marginTop: 28, lineHeight: 1.55}}>穷尽其他方式<br/><b>仍无法送达</b></div><div style={{position: 'absolute', left: 34, right: 34, bottom: 32, height: 10, backgroundColor: C.blue, scale: `${gateTwo} 1`, transformOrigin: 'left'}}/></div>
+      <Reveal delay={106} from="right" style={{position: 'absolute', left: 1430, top: 88}}><div data-stateful-terminal="notice-document" data-final-knowledge="notice-deadline" style={{width: 380, height: 240, padding: 30, backgroundColor: C.paleCyan, border: `7px solid ${C.cyan}`}}><Megaphone size={62} color={C.cyan}/><div style={{fontSize: 35, fontWeight: 950, marginTop: 16}}>公告送达</div><div style={{fontSize: 28, marginTop: 18}}><CalendarDays size={34} style={{verticalAlign: 'middle'}}/> 国内 30 日 / 境外 60 日</div></div></Reveal>
+      <Reveal delay={128} from="right" style={{position: 'absolute', left: 1430, top: 380}}><div data-final-knowledge="notice-prohibitions" style={{width: 380, height: 170, padding: 28, backgroundColor: C.ink, color: C.white}}><div style={{display: 'flex', alignItems: 'center', gap: 16, color: C.yellow, fontSize: 26, fontWeight: 950}}><Ban size={42}/>禁止公告</div><div style={{fontSize: 29, marginTop: 22}}>支付令 / 简易程序</div></div></Reveal>
+      <div data-final-knowledge="notice-thresholds" style={{position: 'absolute', left: 574, top: 590, width: 700}}><Result color={C.red} icon={<Video size={42} color={C.red}/>}>不是“送达不顺”就能公告，必须满足法定门槛</Result></div>
+    </div>
+  </Shell>;
+};
+
 export const ServiceDeliveryNetwork = () => <AbsoluteFill>
-  <TimelineSequence name="01-direct-recipients" {...SCENES.directRecipients}><DirectRecipientsScene /></TimelineSequence>
-  <TimelineSequence name="02-refusal-service" {...SCENES.refusalService}><RefusalServiceScene /></TimelineSequence>
-  <TimelineSequence name="03-confirmed-routes" {...SCENES.confirmedRoutes}><ConfirmedRoutesScene /></TimelineSequence>
-  <TimelineSequence name="04-public-notice-boundary" {...SCENES.publicNoticeBoundary}><PublicNoticeBoundaryScene /></TimelineSequence>
+  <TimelineSequence name="01-direct-recipients" {...SCENES.directRecipients}><DirectRecipientsScene/></TimelineSequence>
+  <TimelineSequence name="02-refusal-service" {...SCENES.refusalService}><RefusalServiceScene/></TimelineSequence>
+  <TimelineSequence name="03-confirmed-routes" {...SCENES.confirmedRoutes}><ConfirmedRoutesScene/></TimelineSequence>
+  <TimelineSequence name="04-public-notice-boundary" {...SCENES.publicNoticeBoundary}><PublicNoticeBoundaryScene/></TimelineSequence>
 </AbsoluteFill>;
