@@ -105,8 +105,10 @@
         right: 4px;
         bottom: 4px;
         display: flex;
-        z-index: 2;
+        z-index: 3;
+        visibility: visible;
         pointer-events: auto;
+        isolation: isolate;
       }
       .${OVERLAY_CLASS}__still {
         position: absolute;
@@ -125,6 +127,7 @@
       .${OVERLAY_CLASS}__controls button {
         display: grid;
         position: relative;
+        z-index: 1;
         width: 30px;
         height: 30px;
         place-items: center;
@@ -136,7 +139,7 @@
         color: rgba(255, 255, 255, 0.78);
         cursor: pointer;
         font: 600 16px/1 system-ui, sans-serif;
-        opacity: 0.62;
+        opacity: 0.78;
         outline: none;
         isolation: isolate;
         touch-action: manipulation;

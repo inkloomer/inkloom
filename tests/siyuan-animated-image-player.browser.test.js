@@ -72,6 +72,23 @@ describe('SiYuan animated image player', () => {
     expect([...document.images].every((img) => img.style.visibility === '')).toBe(true);
   });
 
+  test('keeps the replay button visible and clickable above the initial still frame', async () => {
+    await setupPlayer();
+    const [button] = replayButtons();
+
+    await vi.waitFor(() => {
+      const buttonRect = button.getBoundingClientRect();
+      expect(buttonRect.width).toBeGreaterThan(0);
+      expect(buttonRect.height).toBeGreaterThan(0);
+      expect(getComputedStyle(button).visibility).toBe('visible');
+      const hitTarget = document.elementFromPoint(
+        buttonRect.left + buttonRect.width / 2,
+        buttonRect.top + buttonRect.height / 2,
+      );
+      expect(hitTarget?.closest('button')).toBe(button);
+    });
+  });
+
   test('does not restart the same image from hover while it is replaying', async () => {
     const [img] = await setupPlayer();
     await userEvent.click(replayButtons()[0]);
