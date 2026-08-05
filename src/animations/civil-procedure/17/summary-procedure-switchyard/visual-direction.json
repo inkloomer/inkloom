@@ -1,0 +1,11 @@
+{
+  "directionId": "enamel-procedure-switchyard",
+  "family": "procedural-signal-switchboard",
+  "palette": "porcelain white + rail black + signal green + caution amber + jurisdiction blue",
+  "typography": "broad rule headings, compact enamel labels, underlined thresholds, and mechanical status stamps",
+  "composition": "court-entry signal gates, a reversible procedure turnout, a wage threshold gauge, and small-claim exit rails",
+  "surface": "flat enamel plates, exposed rails, square signal lamps, and no table or dashboard card grid",
+  "motion": "one case token advances only after each legal switch is set and remains parked at its terminal procedure",
+  "transition": "the horizontal case rail persists while each scene replaces the controlling switch assembly",
+  "catalog": {"status": "featured", "source": "original-node", "route": "/inkloom/objective/civil-procedure/17/summary-procedure-switchyard/", "title": "珐琅程序转辙场"}
+}

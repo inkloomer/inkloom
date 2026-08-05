@@ -52,6 +52,10 @@ import {typography as typography69} from '../animations/civil-procedure/14/perio
 import {typography as typography70} from '../animations/civil-procedure/14/service-delivery-network/animation.meta';
 import {typography as typography72} from '../animations/civil-procedure/15/mediation-settlement-path/animation.meta';
 import {typography as typography74} from '../animations/civil-procedure/16/ordinary-procedure-control-map/animation.meta';
+import {typography as typography75} from '../animations/civil-procedure/17/summary-procedure-switchyard/animation.meta';
+import {typography as typography76} from '../animations/civil-procedure/18/public-interest-litigation-network/animation.meta';
+import {typography as typography77} from '../animations/civil-procedure/19/third-party-revocation-remedy-map/animation.meta';
+import {typography as typography78} from '../animations/civil-procedure/20/appeal-review-decision-map/animation.meta';
 import {typography as typography40} from '../animations/criminal/19/card-selling-funds-viewpoint/animation.meta';
 import {typography as typography41} from '../animations/criminal/19/occupational-embezzlement-flowchart/animation.meta';
 import {typography as typography42} from '../animations/criminal/19/property-interests-keypoints/animation.meta';
@@ -129,6 +133,10 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'service-delivery-network': {metadata: typography70, scope: {animationId: 'service-delivery-network', subject: 'civil-procedure', topic: '14'}},
   'mediation-settlement-path': {metadata: typography72, scope: {animationId: 'mediation-settlement-path', subject: 'civil-procedure', topic: '15'}},
   'ordinary-procedure-control-map': {metadata: typography74, scope: {animationId: 'ordinary-procedure-control-map', subject: 'civil-procedure', topic: '16'}},
+  'summary-procedure-switchyard': {metadata: typography75, scope: {animationId: 'summary-procedure-switchyard', subject: 'civil-procedure', topic: '17'}},
+  'public-interest-litigation-network': {metadata: typography76, scope: {animationId: 'public-interest-litigation-network', subject: 'civil-procedure', topic: '18'}},
+  'third-party-revocation-remedy-map': {metadata: typography77, scope: {animationId: 'third-party-revocation-remedy-map', subject: 'civil-procedure', topic: '19'}},
+  'appeal-review-decision-map': {metadata: typography78, scope: {animationId: 'appeal-review-decision-map', subject: 'civil-procedure', topic: '20'}},
   'card-selling-funds-viewpoint': {metadata: typography40, scope: {animationId: 'card-selling-funds-viewpoint', subject: 'criminal', topic: '19'}},
   'occupational-embezzlement-flowchart': {metadata: typography41, scope: {animationId: 'occupational-embezzlement-flowchart', subject: 'criminal', topic: '19'}},
   'property-interests-keypoints': {metadata: typography42, scope: {animationId: 'property-interests-keypoints', subject: 'criminal', topic: '19'}},

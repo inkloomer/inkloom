@@ -1,0 +1,11 @@
+{
+  "directionId":"appellate-prism-editorial",
+  "family":"appellate-editorial-prism",
+  "palette":"newsprint gray + carbon + review saffron + disposition teal + remand crimson",
+  "typography":"editorial headline crops, margin issue labels, narrow appellate bands, and dispositive end marks",
+  "composition":"a first-instance record passes through an appellate prism that narrows issues, routes new matters, and fans into dispositions",
+  "surface":"open newsprint columns, hard crop marks, translucent review bands, and no rounded cards or table grid",
+  "motion":"only appealed issues enter the review band; remanded records return once and withdrawal paths visibly alter the first judgment",
+  "transition":"the same first-instance judgment strip is cropped, refracted, returned, or made effective across scenes",
+  "catalog":{"status":"featured","source":"original-node","route":"/inkloom/objective/civil-procedure/20/appeal-review-decision-map/","title":"上诉棱镜编排"}
+}
