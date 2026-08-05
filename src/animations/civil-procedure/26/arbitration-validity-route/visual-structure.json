@@ -1,0 +1,174 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 4,
+  "scenes": [
+    {
+      "id": "arbitrable-scope",
+      "export": "ArbitrableScopeScene",
+      "layout": "arbitrable-scope-direct-boundary-diagram",
+      "anchor": "boundary",
+      "grammar": [
+        "property-disputes",
+        "status-exclusions",
+        "labor-exclusion",
+        "statutory-arbitration"
+      ],
+      "textTreatments": [
+        "label-block",
+        "external-negation",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "enclosure",
+        "icon",
+        "contrast"
+      ],
+      "tokens": [
+        "Scale"
+      ],
+      "finalKnowledge": [
+        "property-disputes",
+        "status-disputes-excluded",
+        "labor-disputes-excluded",
+        "special-statutes"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "agreement-validity",
+      "export": "AgreementValidityScene",
+      "layout": "agreement-validity-direct-flow-target-diagram",
+      "anchor": "flow-target",
+      "grammar": [
+        "written-form",
+        "intent",
+        "arbitrable-matter",
+        "unique-institution",
+        "separability"
+      ],
+      "textTreatments": [
+        "label-block",
+        "thin-underline",
+        "stamp"
+      ],
+      "focalChannels": [
+        "connector",
+        "icon",
+        "enclosure"
+      ],
+      "tokens": [
+        "FileSignature"
+      ],
+      "finalKnowledge": [
+        "written-arbitration-form",
+        "clear-arbitration-intent",
+        "arbitrable-subject",
+        "unique-institution",
+        "agreement-separability"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "choice-and-multiple-institutions",
+      "export": "ChoiceAndMultipleInstitutionsScene",
+      "layout": "choice-and-multiple-institutions-direct-comparison-axis-diagram",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "arbitration-or-litigation",
+        "multiple-institutions",
+        "selection-agreement",
+        "no-selection",
+        "partial-validity"
+      ],
+      "textTreatments": [
+        "external-negation",
+        "label-block",
+        "stamp"
+      ],
+      "focalChannels": [
+        "contrast",
+        "spatial",
+        "icon"
+      ],
+      "tokens": [
+        "GitCompare"
+      ],
+      "finalKnowledge": [
+        "arbitrate-or-litigate-invalid",
+        "multiple-institutions-choice",
+        "no-institution-choice",
+        "independent-valid-part"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "timing-and-authority",
+      "export": "TimingAndAuthorityScene",
+      "layout": "timing-and-authority-direct-timeline-gate-diagram",
+      "anchor": "timeline-gate",
+      "grammar": [
+        "court-filing",
+        "first-hearing-deadline",
+        "waiver",
+        "arbitration-authority",
+        "court-priority"
+      ],
+      "textTreatments": [
+        "thin-underline",
+        "label-block",
+        "stamp"
+      ],
+      "focalChannels": [
+        "motion",
+        "locator",
+        "contrast"
+      ],
+      "tokens": [
+        "Clock3"
+      ],
+      "finalKnowledge": [
+        "court-dismissal-on-agreement",
+        "before-first-hearing",
+        "late-objection-waiver",
+        "validity-authorities",
+        "court-priority-rule"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "relativity-and-review",
+      "export": "RelativityAndReviewScene",
+      "layout": "relativity-and-review-direct-document-fork-diagram",
+      "anchor": "document-fork",
+      "grammar": [
+        "party-relativity",
+        "statutory-extension",
+        "third-party-boundary",
+        "set-aside",
+        "non-enforcement"
+      ],
+      "textTreatments": [
+        "label-block",
+        "external-negation",
+        "stamp"
+      ],
+      "focalChannels": [
+        "connector",
+        "icon",
+        "contrast"
+      ],
+      "tokens": [
+        "ShieldAlert"
+      ],
+      "finalKnowledge": [
+        "agreement-relativity",
+        "statutory-extension",
+        "third-party-boundary",
+        "award-set-aside",
+        "award-non-enforcement"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

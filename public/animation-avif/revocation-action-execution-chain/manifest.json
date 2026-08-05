@@ -1,0 +1,70 @@
+{
+  "animationId": "revocation-action-execution-chain",
+  "compositionId": "RevocationActionExecutionChain",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-05T18:56:13.350Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 329,
+      "frameCount": 330,
+      "id": "parties-jurisdiction-preservation",
+      "number": "01",
+      "startFrame": 0,
+      "title": "共同被告、管辖与保全入口",
+      "durationMs": 11000,
+      "file": "parties-jurisdiction-preservation.avif",
+      "fileSize": 340205,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "f274542dd09d244ef0c7e4796a6419ebf584e592fc7debe01fc16f4f17004e46",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "24b24eaa92044209e4623566bd891ef47f298ab612860246dcf82f3b41120d94"
+    },
+    {
+      "endFrame": 659,
+      "frameCount": 330,
+      "id": "asset-return-rule",
+      "number": "02",
+      "startFrame": 330,
+      "title": "撤销后财产入库，不直接清偿债权人",
+      "durationMs": 11000,
+      "file": "asset-return-rule.avif",
+      "fileSize": 313093,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "c69e192c57f1de56ec78d46529087f5f4657ac52be7751fffcaf896246162b51",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "24b24eaa92044209e4623566bd891ef47f298ab612860246dcf82f3b41120d94"
+    },
+    {
+      "endFrame": 989,
+      "frameCount": 330,
+      "id": "two-judgment-execution",
+      "number": "03",
+      "startFrame": 660,
+      "title": "两份生效文书组成执行钥匙",
+      "durationMs": 11000,
+      "file": "two-judgment-execution.avif",
+      "fileSize": 374408,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "6dc890a395ad575bb610ff7daac3d8bb4b531a9b42369063ce56b6981592d292",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "24b24eaa92044209e4623566bd891ef47f298ab612860246dcf82f3b41120d94"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "24b24eaa92044209e4623566bd891ef47f298ab612860246dcf82f3b41120d94",
+  "targetFps": 30,
+  "totalFileSize": 1027706
+}

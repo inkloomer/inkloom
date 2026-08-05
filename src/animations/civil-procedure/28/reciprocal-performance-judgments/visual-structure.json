@@ -1,0 +1,109 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "defense-without-counterclaim",
+      "export": "DefenseWithoutCounterclaimScene",
+      "layout": "defense-without-counterclaim-direct-role-pair-diagram",
+      "anchor": "role-pair",
+      "grammar": [
+        "plaintiff-performance-condition",
+        "defendant-performance-order",
+        "application-for-enforcement",
+        "enforcement-action",
+        "no-res-judicata"
+      ],
+      "textTreatments": [
+        "label-block",
+        "thin-underline",
+        "external-negation"
+      ],
+      "focalChannels": [
+        "contrast",
+        "icon",
+        "spatial"
+      ],
+      "tokens": [
+        "ArrowLeftRight"
+      ],
+      "finalKnowledge": [
+        "plaintiff-performance-condition",
+        "defendant-ordered-performance",
+        "application-not-conditioned",
+        "enforcement-action-conditioned",
+        "plaintiff-duty-no-preclusion"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "counterclaim-changes-judgment",
+      "export": "CounterclaimChangesJudgmentScene",
+      "layout": "counterclaim-changes-judgment-direct-comparison-axis-diagram",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "counterclaim",
+        "simultaneous-judgment",
+        "both-enforce",
+        "both-perform",
+        "mutual-preclusion"
+      ],
+      "textTreatments": [
+        "soft-highlight",
+        "label-block",
+        "stamp"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "icon"
+      ],
+      "tokens": [
+        "Scale"
+      ],
+      "finalKnowledge": [
+        "defendant-counterclaim",
+        "simultaneous-performance-order",
+        "either-side-enforcement",
+        "own-performance-before-action",
+        "both-duties-precluded"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "prior-performance-defense",
+      "export": "PriorPerformanceDefenseScene",
+      "layout": "prior-performance-defense-direct-flow-path-diagram",
+      "anchor": "flow-path",
+      "grammar": [
+        "prior-duty-unperformed",
+        "dismiss-claim",
+        "later-performance",
+        "new-fact",
+        "new-action"
+      ],
+      "textTreatments": [
+        "label-block",
+        "external-negation",
+        "stamp"
+      ],
+      "focalChannels": [
+        "connector",
+        "motion",
+        "contrast"
+      ],
+      "tokens": [
+        "RotateCcw"
+      ],
+      "finalKnowledge": [
+        "prior-duty-unperformed",
+        "claim-dismissed",
+        "later-prior-performance",
+        "later-performance-new-fact",
+        "new-action-allowed"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

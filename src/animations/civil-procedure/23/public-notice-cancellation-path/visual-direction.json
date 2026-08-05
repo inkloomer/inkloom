@@ -1,0 +1,16 @@
+{
+  "directionId": "newspaper-editorial",
+  "derivedFrom": "demo-newspaper-editorial",
+  "variation": "a process-color notice press built around a sixty-day circular clock, claim filing window, and judgment-to-payment handoff",
+  "family": "public-notice-clock-press",
+  "palette": "#fff8e8 + #152330 + #cf3151 + #007f89 + #e4a620",
+  "typography": "WenKai screen with oversized issue headings, compact operative labels, and monospaced procedural numbering",
+  "composition": "asymmetric notice columns, circular time marks, and payment slips",
+  "surface": "asymmetric notice columns, circular time marks, and payment slips",
+  "motion": "the lost instrument triggers stop-payment, the notice clock completes, and claims interrupt the print run before judgment",
+  "transition": "the instrument silhouette remains the carrier through notice, cancellation, payment request, and late relief",
+  "catalog": {
+    "status": "variant",
+    "sourceDirectionId": "newspaper-editorial"
+  }
+}

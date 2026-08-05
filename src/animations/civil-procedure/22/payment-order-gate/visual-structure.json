@@ -1,0 +1,109 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "payment-order-entry",
+      "export": "PaymentOrderEntryScene",
+      "layout": "payment-order-entry-direct-flow-target-diagram",
+      "anchor": "flow-target",
+      "grammar": [
+        "due-certain-payment",
+        "no-other-debt",
+        "no-counter-performance",
+        "no-preservation",
+        "serviceable"
+      ],
+      "textTreatments": [
+        "label-block",
+        "thin-underline",
+        "external-negation"
+      ],
+      "focalChannels": [
+        "icon",
+        "connector",
+        "enclosure"
+      ],
+      "tokens": [
+        "Banknote"
+      ],
+      "finalKnowledge": [
+        "due-certain-claim",
+        "no-other-dispute",
+        "no-counter-performance",
+        "no-pre-suit-preservation",
+        "serviceable-to-debtor"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "jurisdiction-and-objection",
+      "export": "JurisdictionAndObjectionScene",
+      "layout": "jurisdiction-and-objection-direct-timeline-gate-diagram",
+      "anchor": "timeline-gate",
+      "grammar": [
+        "debtor-domicile-basic-court",
+        "order-effective",
+        "fifteen-day-window",
+        "written-objection",
+        "invalid-objection"
+      ],
+      "textTreatments": [
+        "thin-underline",
+        "label-block",
+        "external-negation"
+      ],
+      "focalChannels": [
+        "locator",
+        "motion",
+        "contrast"
+      ],
+      "tokens": [
+        "Clock3"
+      ],
+      "finalKnowledge": [
+        "basic-court-only",
+        "order-effective-on-issue",
+        "fifteen-day-response",
+        "valid-written-objection",
+        "invalid-payment-difficulty"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "order-effects-and-lawsuits",
+      "export": "OrderEffectsAndLawsuitsScene",
+      "layout": "order-effects-and-lawsuits-direct-document-fork-diagram",
+      "anchor": "document-fork",
+      "grammar": [
+        "valid-objection-termination",
+        "automatic-litigation",
+        "creditor-opt-out",
+        "debtor-lawsuit-location",
+        "guarantor-boundary"
+      ],
+      "textTreatments": [
+        "stamp",
+        "label-block",
+        "external-negation"
+      ],
+      "focalChannels": [
+        "connector",
+        "icon",
+        "contrast"
+      ],
+      "tokens": [
+        "GitBranch"
+      ],
+      "finalKnowledge": [
+        "objection-terminates-order",
+        "creditor-seven-day-opt-out",
+        "debtor-suit-as-objection",
+        "creditor-lawsuit-effect",
+        "guarantor-not-bound"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

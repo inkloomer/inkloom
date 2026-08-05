@@ -1,0 +1,16 @@
+{
+  "directionId": "evidence-board",
+  "derivedFrom": "demo-evidence-board",
+  "variation": "a disciplined arbitration circuit with scope sockets, agreement-validity relays, timing switches, and court-supervision outputs",
+  "family": "arbitration-circuit-board",
+  "palette": "#202a2c + #f3efe2 + #e3a72f + #18a08b + #d95043",
+  "typography": "WenKai screen with oversized issue headings, compact operative labels, and monospaced procedural numbering",
+  "composition": "dark circuit traces, bright agreement slips, and isolated court-supervision ports",
+  "surface": "dark circuit traces, bright agreement slips, and isolated court-supervision ports",
+  "motion": "scope and agreement validity energize the arbitration route; untimely objections close the diversion switch",
+  "transition": "the arbitration agreement line remains the carrier while contract status, parties, institutions, and judicial review change",
+  "catalog": {
+    "status": "variant",
+    "sourceDirectionId": "evidence-board"
+  }
+}

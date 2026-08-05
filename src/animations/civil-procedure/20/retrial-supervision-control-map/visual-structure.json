@@ -1,0 +1,204 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 4,
+  "scenes": [
+    {
+      "id": "retrial-scope-and-triggers",
+      "export": "RetrialScopeAndTriggersScene",
+      "layout": "retrial-scope-and-triggers-direct-boundary-diagram",
+      "anchor": "boundary",
+      "grammar": [
+        "eligible-objects",
+        "excluded-matters",
+        "court-trigger",
+        "procuratorate-trigger",
+        "party-application"
+      ],
+      "textTreatments": [
+        "label-block",
+        "external-negation",
+        "stamp"
+      ],
+      "focalChannels": [
+        "icon",
+        "enclosure",
+        "contrast"
+      ],
+      "tokens": [
+        "Gavel"
+      ],
+      "finalKnowledge": [
+        "effective-instruments",
+        "excluded-proceedings",
+        "marriage-boundary",
+        "court-and-procuratorate",
+        "party-application"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "thirteen-statutory-grounds",
+      "export": "ThirteenStatutoryGroundsScene",
+      "layout": "thirteen-statutory-grounds-direct-comparison-axis-diagram",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "evidence-facts",
+        "law-error",
+        "procedure-error",
+        "judicial-misconduct"
+      ],
+      "textTreatments": [
+        "soft-highlight",
+        "label-block",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "icon",
+        "spatial",
+        "contrast"
+      ],
+      "tokens": [
+        "ListChecks"
+      ],
+      "finalKnowledge": [
+        "grounds-one-five",
+        "ground-six",
+        "grounds-seven-twelve",
+        "ground-thirteen",
+        "protest-effect"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "six-month-application-clock",
+      "export": "SixMonthApplicationClockScene",
+      "layout": "six-month-application-clock-direct-timeline-gate-diagram",
+      "anchor": "timeline-gate",
+      "grammar": [
+        "default-clock",
+        "knowledge-clock",
+        "four-exceptions",
+        "filing-forum"
+      ],
+      "textTreatments": [
+        "thin-underline",
+        "soft-highlight",
+        "label-block"
+      ],
+      "focalChannels": [
+        "icon",
+        "locator",
+        "motion"
+      ],
+      "tokens": [
+        "Clock3"
+      ],
+      "finalKnowledge": [
+        "six-month-default",
+        "four-late-discovery",
+        "application-forum",
+        "application-does-not-stay"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "execution-state-switch",
+      "export": "ExecutionStateSwitchScene",
+      "layout": "execution-state-switch-direct-flow-path-diagram",
+      "anchor": "flow-path",
+      "grammar": [
+        "application-stage",
+        "retrial-order",
+        "suspension-exceptions",
+        "new-judgment"
+      ],
+      "textTreatments": [
+        "label-block",
+        "stamp",
+        "external-negation"
+      ],
+      "focalChannels": [
+        "connector",
+        "motion",
+        "contrast"
+      ],
+      "tokens": [
+        "PauseCircle"
+      ],
+      "finalKnowledge": [
+        "application-stage-execution",
+        "retrial-order-suspension",
+        "support-payment-exception",
+        "new-judgment-change"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "three-month-review-gate",
+      "export": "ThreeMonthReviewGateScene",
+      "layout": "three-month-review-gate-direct-document-fork-diagram",
+      "anchor": "document-fork",
+      "grammar": [
+        "collegiate-deadline",
+        "allowed-review-methods",
+        "forbidden-merits-methods",
+        "result-fork"
+      ],
+      "textTreatments": [
+        "stamp",
+        "label-block",
+        "external-negation"
+      ],
+      "focalChannels": [
+        "icon",
+        "enclosure",
+        "connector"
+      ],
+      "tokens": [
+        "FileSearch"
+      ],
+      "finalKnowledge": [
+        "review-deadline",
+        "allowed-review",
+        "forbidden-review",
+        "review-results"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "retrial-hearing-and-exits",
+      "export": "RetrialHearingAndExitsScene",
+      "layout": "retrial-hearing-and-exits-direct-flow-target-diagram",
+      "anchor": "flow-target",
+      "grammar": [
+        "applicable-instance",
+        "review-scope",
+        "new-adjudication",
+        "withdrawal-effect",
+        "mediation-settlement"
+      ],
+      "textTreatments": [
+        "label-block",
+        "thin-underline",
+        "stamp"
+      ],
+      "focalChannels": [
+        "connector",
+        "icon",
+        "spatial"
+      ],
+      "tokens": [
+        "GitMerge"
+      ],
+      "finalKnowledge": [
+        "instance-procedure",
+        "limited-review-scope",
+        "new-adjudication",
+        "withdrawal-effect",
+        "mediation-settlement-effect"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

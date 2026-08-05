@@ -1,0 +1,180 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 4,
+  "scenes": [
+    {
+      "id": "enforcement-launch-clock",
+      "export": "EnforcementLaunchClockScene",
+      "layout": "enforcement-launch-clock-direct-timeline-gate-diagram",
+      "anchor": "timeline-gate",
+      "grammar": [
+        "enforceable-title",
+        "clear-obligation",
+        "two-year-period",
+        "starting-points",
+        "suspension-interruption"
+      ],
+      "textTreatments": [
+        "thin-underline",
+        "label-block",
+        "stamp"
+      ],
+      "focalChannels": [
+        "motion",
+        "locator",
+        "icon"
+      ],
+      "tokens": [
+        "PlayCircle"
+      ],
+      "finalKnowledge": [
+        "enforceable-title",
+        "clear-parties-performance",
+        "two-year-limitation",
+        "limitation-starts",
+        "limitation-rules"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "statutory-jurisdiction",
+      "export": "StatutoryJurisdictionScene",
+      "layout": "statutory-jurisdiction-direct-boundary-diagram",
+      "anchor": "boundary",
+      "grammar": [
+        "litigation-title-forum",
+        "arbitration-notary-forum",
+        "no-agreement",
+        "ten-day-objection",
+        "review-remedy"
+      ],
+      "textTreatments": [
+        "external-negation",
+        "label-block",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "enclosure",
+        "locator",
+        "contrast"
+      ],
+      "tokens": [
+        "MapPin"
+      ],
+      "finalKnowledge": [
+        "litigation-title-jurisdiction",
+        "arbitration-notary-jurisdiction",
+        "no-consensual-jurisdiction",
+        "ten-day-jurisdiction-objection",
+        "jurisdiction-review"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "security-and-settlement",
+      "export": "SecurityAndSettlementScene",
+      "layout": "security-and-settlement-direct-comparison-axis-diagram",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "security-deferral",
+        "security-property",
+        "no-automatic-addition",
+        "settlement-completion",
+        "breach-election"
+      ],
+      "textTreatments": [
+        "label-block",
+        "soft-highlight",
+        "external-negation"
+      ],
+      "focalChannels": [
+        "contrast",
+        "icon",
+        "spatial"
+      ],
+      "tokens": [
+        "Handshake"
+      ],
+      "finalKnowledge": [
+        "enforcement-security",
+        "security-property-direct",
+        "no-guarantor-addition",
+        "settlement-completed",
+        "settlement-breach-election"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "objections-and-actions",
+      "export": "ObjectionsAndActionsScene",
+      "layout": "objections-and-actions-direct-document-fork-diagram",
+      "anchor": "document-fork",
+      "grammar": [
+        "conduct-legality",
+        "outsider-title",
+        "conduct-review",
+        "action-plaintiff-direction",
+        "third-party-status"
+      ],
+      "textTreatments": [
+        "label-block",
+        "stamp",
+        "external-negation"
+      ],
+      "focalChannels": [
+        "connector",
+        "icon",
+        "contrast"
+      ],
+      "tokens": [
+        "Scale"
+      ],
+      "finalKnowledge": [
+        "conduct-objection",
+        "outsider-objection",
+        "conduct-review-remedy",
+        "objection-action-direction",
+        "debtor-third-party"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "special-enforcement-measures",
+      "export": "SpecialEnforcementMeasuresScene",
+      "layout": "special-enforcement-measures-direct-flow-target-diagram",
+      "anchor": "flow-target",
+      "grammar": [
+        "party-change",
+        "distribution",
+        "mature-claim",
+        "co-owned-property",
+        "specific-property",
+        "personal-remedies",
+        "delay-liability"
+      ],
+      "textTreatments": [
+        "label-block",
+        "thin-underline",
+        "stamp"
+      ],
+      "focalChannels": [
+        "icon",
+        "spatial",
+        "connector"
+      ],
+      "tokens": [
+        "Wrench"
+      ],
+      "finalKnowledge": [
+        "party-change-addition",
+        "participation-distribution",
+        "mature-claim-execution",
+        "coowned-specific-property",
+        "retained-title-property",
+        "personal-and-delay-relief"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

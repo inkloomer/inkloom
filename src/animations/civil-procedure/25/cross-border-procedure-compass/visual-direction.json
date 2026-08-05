@@ -1,0 +1,16 @@
+{
+  "directionId": "transit-map",
+  "derivedFrom": "demo-transit-map",
+  "variation": "a pale border atlas with red-blue forum routes, sovereignty checkpoints, service corridors, and recognition terminals",
+  "family": "cross-border-procedure-atlas",
+  "palette": "#f2f5f1 + #17314b + #c63e35 + #147d75 + #dba329",
+  "typography": "WenKai screen with oversized issue headings, compact operative labels, and monospaced procedural numbering",
+  "composition": "border contours, passport-like checkpoints, and open route ribbons",
+  "surface": "border contours, passport-like checkpoints, and open route ribbons",
+  "motion": "the route first establishes Chinese jurisdiction, then tests foreign exclusivity and public-interest checkpoints before service and recognition",
+  "transition": "a red-blue cross-border route remains continuous across jurisdiction, parallel proceedings, evidence transit, and judgment recognition",
+  "catalog": {
+    "status": "variant",
+    "sourceDirectionId": "transit-map"
+  }
+}

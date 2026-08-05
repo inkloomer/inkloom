@@ -1,0 +1,16 @@
+{
+  "directionId": "kinetic-typography",
+  "derivedFrom": "demo-kinetic-typography",
+  "variation": "a restrained issue-lens editorial with pleaded labels sliding aside for the actual formation question and a protected evidence window",
+  "family": "contract-issue-editorial-lens",
+  "palette": "#f7f6f1 + #172b36 + #d94b3d + #0b8077 + #e1a326",
+  "typography": "WenKai screen with oversized issue headings, compact operative labels, and monospaced procedural numbering",
+  "composition": "oversized issue labels, open argument brackets, and one evidence-time ruler",
+  "surface": "oversized issue labels, open argument brackets, and one evidence-time ruler",
+  "motion": "the pleaded legal label yields to the factual formation issue, then the evidence window opens before adjudication",
+  "transition": "the same contract sheet remains centered while its legal characterization is reframed",
+  "catalog": {
+    "status": "variant",
+    "sourceDirectionId": "kinetic-typography"
+  }
+}

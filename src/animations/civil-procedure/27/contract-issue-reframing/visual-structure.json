@@ -1,0 +1,105 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "pleaded-contract-positions",
+      "export": "PleadedContractPositionsScene",
+      "layout": "pleaded-contract-positions-direct-typographic-sequence-diagram",
+      "anchor": "typographic-sequence",
+      "grammar": [
+        "invalidity",
+        "rescission",
+        "termination",
+        "formation-distinction"
+      ],
+      "textTreatments": [
+        "label-block",
+        "soft-highlight",
+        "external-negation"
+      ],
+      "focalChannels": [
+        "spatial",
+        "contrast",
+        "icon"
+      ],
+      "tokens": [
+        "FileQuestion"
+      ],
+      "finalKnowledge": [
+        "invalidity-claim",
+        "rescission-claim",
+        "termination-claim",
+        "formation-distinction"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "formation-focus-reset",
+      "export": "FormationFocusResetScene",
+      "layout": "formation-focus-reset-direct-flow-target-diagram",
+      "anchor": "flow-target",
+      "grammar": [
+        "facts-indicate-no-formation",
+        "focus-reset",
+        "party-debate",
+        "court-reasoning"
+      ],
+      "textTreatments": [
+        "label-block",
+        "thin-underline",
+        "stamp"
+      ],
+      "focalChannels": [
+        "connector",
+        "enclosure",
+        "icon"
+      ],
+      "tokens": [
+        "Focus"
+      ],
+      "finalKnowledge": [
+        "facts-no-formation",
+        "formation-as-focus",
+        "debate-opportunity",
+        "reason-and-result"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "claim-change-and-evidence-window",
+      "export": "ClaimChangeAndEvidenceWindowScene",
+      "layout": "claim-change-and-evidence-window-direct-timeline-gate-diagram",
+      "anchor": "timeline-gate",
+      "grammar": [
+        "hearing-development",
+        "claim-change",
+        "debate-sufficiency",
+        "new-evidence-period",
+        "adjudication"
+      ],
+      "textTreatments": [
+        "thin-underline",
+        "label-block",
+        "stamp"
+      ],
+      "focalChannels": [
+        "motion",
+        "locator",
+        "contrast"
+      ],
+      "tokens": [
+        "CalendarClock"
+      ],
+      "finalKnowledge": [
+        "hearing-development",
+        "claim-modification",
+        "debate-sufficiency",
+        "new-evidence-window",
+        "no-surprise-judgment"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

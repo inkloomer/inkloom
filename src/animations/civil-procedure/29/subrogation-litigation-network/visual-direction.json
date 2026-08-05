@@ -1,0 +1,16 @@
+{
+  "directionId": "evidence-board",
+  "derivedFrom": "demo-evidence-board",
+  "variation": "a light creditor relation board with three actor anchors, agreement-relative dashed lines, conflict-avoidance merges, and direct-payment termination marks",
+  "family": "subrogation-relation-board",
+  "palette": "#edf1ed + #263134 + #c9473d + #147a72 + #d5a12b",
+  "typography": "WenKai screen with oversized issue headings, compact operative labels, and monospaced procedural numbering",
+  "composition": "three-role anchors, exposed relation strings, and direct-payment landing zones",
+  "surface": "three-role anchors, exposed relation strings, and direct-payment landing zones",
+  "motion": "the creditor claim bypasses private agreements, related suits merge or wait, and successful payment terminates both corresponding relations",
+  "transition": "creditor, debtor, and relative party stay fixed while jurisdiction, arbitration, and payment effects are layered between them",
+  "catalog": {
+    "status": "variant",
+    "sourceDirectionId": "evidence-board"
+  }
+}

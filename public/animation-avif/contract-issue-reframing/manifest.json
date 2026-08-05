@@ -1,0 +1,70 @@
+{
+  "animationId": "contract-issue-reframing",
+  "compositionId": "ContractIssueReframing",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-05T18:47:33.102Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 269,
+      "frameCount": 270,
+      "id": "pleaded-contract-positions",
+      "number": "01",
+      "startFrame": 0,
+      "title": "当事人提出的效力主张不是终点",
+      "durationMs": 9000,
+      "file": "pleaded-contract-positions.avif",
+      "fileSize": 345867,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "a7f04d8f236f5eb032de58a383d55505360f5b165f497c8fe76283e1e4e241b2",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "35dd42ab797bf782a23b001c98bc47612a58b81cd97fb72238c20344f9adb0ba"
+    },
+    {
+      "endFrame": 569,
+      "frameCount": 300,
+      "id": "formation-focus-reset",
+      "number": "02",
+      "startFrame": 270,
+      "title": "法院应把“是否成立”重定为焦点",
+      "durationMs": 10000,
+      "file": "formation-focus-reset.avif",
+      "fileSize": 354007,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "3289842fc1092b3c2368b00a589c52fa152a2ced58fff1a6136043e1d0efff1c",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "35dd42ab797bf782a23b001c98bc47612a58b81cd97fb72238c20344f9adb0ba"
+    },
+    {
+      "endFrame": 869,
+      "frameCount": 300,
+      "id": "claim-change-and-evidence-window",
+      "number": "03",
+      "startFrame": 570,
+      "title": "诉请变更与重新指定举证期限",
+      "durationMs": 10000,
+      "file": "claim-change-and-evidence-window.avif",
+      "fileSize": 405951,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "0b525ba59b73a9fb00995f3b9888737047f2e57e78eba8280fa068b7ac882b6c",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "35dd42ab797bf782a23b001c98bc47612a58b81cd97fb72238c20344f9adb0ba"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "35dd42ab797bf782a23b001c98bc47612a58b81cd97fb72238c20344f9adb0ba",
+  "targetFps": 30,
+  "totalFileSize": 1105825
+}

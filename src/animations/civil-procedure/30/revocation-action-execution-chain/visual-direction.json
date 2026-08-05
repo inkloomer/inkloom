@@ -1,0 +1,16 @@
+{
+  "directionId": "isometric-mechanism",
+  "derivedFrom": "demo-isometric-mechanism",
+  "variation": "a bright asset-return depot with co-defendant loading bays, preservation clamps, an inventory return lane, and a two-document execution key",
+  "family": "revocation-asset-return-depot",
+  "palette": "#f1f2ed + #24323a + #c24c35 + #1a7b72 + #dfa526",
+  "typography": "WenKai screen with oversized issue headings, compact operative labels, and monospaced procedural numbering",
+  "composition": "open warehouse bays, inventory arrows, and paired judgment keys",
+  "surface": "open warehouse bays, inventory arrows, and paired judgment keys",
+  "motion": "the challenged disposition reverses into the debtor estate, then two effective instruments unlock enforcement of that returned right",
+  "transition": "the asset token remains visible from disposition through return-to-estate and final enforcement",
+  "catalog": {
+    "status": "variant",
+    "sourceDirectionId": "isometric-mechanism"
+  }
+}

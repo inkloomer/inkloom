@@ -1,0 +1,137 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 4,
+  "scenes": [
+    {
+      "id": "non-contentious-boundary",
+      "export": "NonContentiousBoundaryScene",
+      "layout": "non-contentious-boundary-direct-boundary-diagram",
+      "anchor": "boundary",
+      "grammar": [
+        "noncontentious-nature",
+        "procedure-exclusions",
+        "finality",
+        "objection-correction"
+      ],
+      "textTreatments": [
+        "external-negation",
+        "label-block",
+        "stamp"
+      ],
+      "focalChannels": [
+        "enclosure",
+        "icon",
+        "contrast"
+      ],
+      "tokens": [
+        "Landmark"
+      ],
+      "finalKnowledge": [
+        "noncontentious-matters",
+        "noncontentious-attributes",
+        "no-retrial-revocation",
+        "interest-objection"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "custodian-and-estate-manager",
+      "export": "CustodianAndEstateManagerScene",
+      "layout": "custodian-and-estate-manager-direct-role-pair-diagram",
+      "anchor": "role-pair",
+      "grammar": [
+        "custodian-applicant",
+        "interested-party-defendant",
+        "estate-jurisdiction",
+        "replacement-removal"
+      ],
+      "textTreatments": [
+        "label-block",
+        "soft-highlight",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "icon",
+        "connector",
+        "contrast"
+      ],
+      "tokens": [
+        "UsersRound"
+      ],
+      "finalKnowledge": [
+        "custodian-self-change",
+        "other-interested-change",
+        "estate-manager-forum",
+        "estate-manager-remedy"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "mediation-confirmation",
+      "export": "MediationConfirmationScene",
+      "layout": "mediation-confirmation-direct-timeline-gate-diagram",
+      "anchor": "timeline-gate",
+      "grammar": [
+        "joint-application",
+        "thirty-day-window",
+        "excluded-matters",
+        "confirmation-effect",
+        "objection-periods"
+      ],
+      "textTreatments": [
+        "thin-underline",
+        "external-negation",
+        "stamp"
+      ],
+      "focalChannels": [
+        "motion",
+        "locator",
+        "contrast"
+      ],
+      "tokens": [
+        "Handshake"
+      ],
+      "finalKnowledge": [
+        "joint-thirty-day-application",
+        "excluded-confirmation",
+        "confirmed-enforceable",
+        "party-objection-fifteen",
+        "interested-objection-six-months"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "security-interest-realization",
+      "export": "SecurityInterestRealizationScene",
+      "layout": "security-interest-realization-direct-flow-path-diagram",
+      "anchor": "flow-path",
+      "grammar": [
+        "local-basic-court",
+        "review-bench",
+        "allow-enforcement",
+        "dispute-exit"
+      ],
+      "textTreatments": [
+        "label-block",
+        "stamp",
+        "external-negation"
+      ],
+      "focalChannels": [
+        "connector",
+        "icon",
+        "enclosure"
+      ],
+      "tokens": [
+        "ShieldCheck"
+      ],
+      "finalKnowledge": [
+        "security-forum",
+        "security-bench",
+        "allow-security-realization",
+        "reject-security-realization"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

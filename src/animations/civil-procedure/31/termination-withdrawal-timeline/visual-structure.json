@@ -1,0 +1,105 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "first-action-withdrawal",
+      "export": "FirstActionWithdrawalScene",
+      "layout": "first-action-withdrawal-direct-timeline-gate-diagram",
+      "anchor": "timeline-gate",
+      "grammar": [
+        "no-prior-notice",
+        "first-action",
+        "withdrawal",
+        "no-termination-effect"
+      ],
+      "textTreatments": [
+        "label-block",
+        "external-negation",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "motion",
+        "locator",
+        "contrast"
+      ],
+      "tokens": [
+        "Undo2"
+      ],
+      "finalKnowledge": [
+        "no-prior-termination-notice",
+        "first-termination-action",
+        "first-action-withdrawn",
+        "withdrawal-no-termination"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "second-action-service",
+      "export": "SecondActionServiceScene",
+      "layout": "second-action-service-direct-flow-path-diagram",
+      "anchor": "flow-path",
+      "grammar": [
+        "second-action",
+        "court-support",
+        "complaint-copy-service",
+        "termination-time"
+      ],
+      "textTreatments": [
+        "label-block",
+        "stamp",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "connector",
+        "icon",
+        "enclosure"
+      ],
+      "tokens": [
+        "MailCheck"
+      ],
+      "finalKnowledge": [
+        "second-termination-action",
+        "second-action-supported",
+        "second-complaint-served",
+        "termination-on-second-service"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "notice-arrival-exception",
+      "export": "NoticeArrivalExceptionScene",
+      "layout": "notice-arrival-exception-direct-document-fork-diagram",
+      "anchor": "document-fork",
+      "grammar": [
+        "post-withdrawal-notice",
+        "notice-arrival",
+        "effective-notice",
+        "exception-time",
+        "second-service-displaced"
+      ],
+      "textTreatments": [
+        "thin-underline",
+        "label-block",
+        "stamp"
+      ],
+      "focalChannels": [
+        "connector",
+        "contrast",
+        "icon"
+      ],
+      "tokens": [
+        "BellRing"
+      ],
+      "finalKnowledge": [
+        "post-withdrawal-notice",
+        "notice-reaches-party",
+        "effective-notice-check",
+        "termination-on-notice-arrival",
+        "second-service-not-used"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 4,
+  "scenes": [
+    {
+      "id": "jurisdiction-agreement-boundary",
+      "export": "JurisdictionAgreementBoundaryScene",
+      "layout": "jurisdiction-agreement-boundary-direct-boundary-diagram",
+      "anchor": "boundary",
+      "grammar": [
+        "written-choice",
+        "foreign-exclusive-choice",
+        "china-exclusive-jurisdiction",
+        "sovereignty-security",
+        "public-interest"
+      ],
+      "textTreatments": [
+        "label-block",
+        "external-negation",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "enclosure",
+        "locator",
+        "contrast"
+      ],
+      "tokens": [
+        "Globe2"
+      ],
+      "finalKnowledge": [
+        "written-choice-china",
+        "foreign-exclusive-choice",
+        "china-exclusive-limit",
+        "sovereignty-security-limit",
+        "public-interest-limit"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "parallel-litigation-router",
+      "export": "ParallelLitigationRouterScene",
+      "layout": "parallel-litigation-router-direct-flow-path-diagram",
+      "anchor": "flow-path",
+      "grammar": [
+        "filing-order",
+        "exclusive-jurisdiction",
+        "choice-of-court",
+        "public-interest",
+        "foreign-judgment"
+      ],
+      "textTreatments": [
+        "label-block",
+        "soft-highlight",
+        "stamp"
+      ],
+      "focalChannels": [
+        "connector",
+        "icon",
+        "contrast"
+      ],
+      "tokens": [
+        "GitFork"
+      ],
+      "finalKnowledge": [
+        "filing-sequence",
+        "exclusive-jurisdiction-check",
+        "jurisdiction-agreement-check",
+        "public-interest-check",
+        "foreign-judgment-check"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "service-and-evidence-corridors",
+      "export": "ServiceAndEvidenceCorridorsScene",
+      "layout": "service-and-evidence-corridors-direct-role-pair-diagram",
+      "anchor": "role-pair",
+      "grammar": [
+        "domicile",
+        "nationality",
+        "service-route",
+        "evidence-route",
+        "judicial-assistance"
+      ],
+      "textTreatments": [
+        "label-block",
+        "thin-underline",
+        "external-negation"
+      ],
+      "focalChannels": [
+        "icon",
+        "spatial",
+        "contrast"
+      ],
+      "tokens": [
+        "Send"
+      ],
+      "finalKnowledge": [
+        "domicile-first",
+        "nationality-separate",
+        "service-corridors",
+        "evidence-corridors",
+        "assistance-boundary"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "foreign-judgment-recognition",
+      "export": "ForeignJudgmentRecognitionScene",
+      "layout": "foreign-judgment-recognition-direct-flow-target-diagram",
+      "anchor": "flow-target",
+      "grammar": [
+        "application-or-request",
+        "treaty-reciprocity",
+        "refusal-boundaries",
+        "recognition-enforcement",
+        "reconsideration"
+      ],
+      "textTreatments": [
+        "stamp",
+        "label-block",
+        "external-negation"
+      ],
+      "focalChannels": [
+        "connector",
+        "icon",
+        "enclosure"
+      ],
+      "tokens": [
+        "FileCheck2"
+      ],
+      "finalKnowledge": [
+        "recognition-entry",
+        "treaty-reciprocity",
+        "recognition-refusal",
+        "recognition-enforcement-order",
+        "recognition-reconsideration"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

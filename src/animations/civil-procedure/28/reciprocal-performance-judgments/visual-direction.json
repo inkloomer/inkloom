@@ -1,0 +1,16 @@
+{
+  "directionId": "rights-matrix",
+  "derivedFrom": "demo-rights-matrix",
+  "variation": "a non-tabular reciprocal balance with opposing performance lanes, a counterclaim hinge, and res-judicata locks on the operative part",
+  "family": "reciprocal-performance-balance",
+  "palette": "#eef4ef + #17302d + #9f3150 + #167d74 + #dda928",
+  "typography": "WenKai screen with oversized issue headings, compact operative labels, and monospaced procedural numbering",
+  "composition": "paired obligation lanes, a central counterclaim hinge, and judgment-operative locks",
+  "surface": "paired obligation lanes, a central counterclaim hinge, and judgment-operative locks",
+  "motion": "the counterclaim hinge determines whether the claimant obligation enters the operative part; execution activates only after own performance",
+  "transition": "the two opposing obligations remain spatially fixed while judgment form and preclusion change",
+  "catalog": {
+    "status": "variant",
+    "sourceDirectionId": "rights-matrix"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "directionId": "timeline-chronicle",
+  "derivedFrom": "demo-timeline-chronicle",
+  "variation": "a receipt-white legal timeline with two complaint-service marks, a withdrawal gap, and a green notice-arrival exception splice",
+  "family": "termination-service-receipt-line",
+  "palette": "#f8f7f2 + #1f2c32 + #c53f36 + #187864 + #d5a12c",
+  "typography": "WenKai screen with oversized issue headings, compact operative labels, and monospaced procedural numbering",
+  "composition": "receipt edges, dated service marks, and one exception splice line",
+  "surface": "receipt edges, dated service marks, and one exception splice line",
+  "motion": "the first complaint route ends at withdrawal; the second service mark becomes operative unless an intervening notice has already arrived",
+  "transition": "one contract line persists through first filing, withdrawal, notice, and second service",
+  "catalog": {
+    "status": "variant",
+    "sourceDirectionId": "timeline-chronicle"
+  }
+}

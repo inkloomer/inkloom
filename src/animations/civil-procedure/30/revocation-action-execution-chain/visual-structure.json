@@ -1,0 +1,111 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "parties-jurisdiction-preservation",
+      "export": "PartiesJurisdictionPreservationScene",
+      "layout": "parties-jurisdiction-preservation-direct-boundary-diagram",
+      "anchor": "boundary",
+      "grammar": [
+        "creditor-plaintiff",
+        "co-defendants",
+        "consolidation",
+        "defendant-domicile",
+        "exclusive-forum",
+        "preservation"
+      ],
+      "textTreatments": [
+        "label-block",
+        "thin-underline",
+        "stamp"
+      ],
+      "focalChannels": [
+        "enclosure",
+        "icon",
+        "contrast"
+      ],
+      "tokens": [
+        "Warehouse"
+      ],
+      "finalKnowledge": [
+        "creditor-revocation-plaintiff",
+        "debtor-relative-codefendants",
+        "multiple-creditors-consolidate",
+        "defendant-domicile-forum",
+        "exclusive-forum-boundary",
+        "relative-property-preservation"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "asset-return-rule",
+      "export": "AssetReturnRuleScene",
+      "layout": "asset-return-rule-direct-flow-path-diagram",
+      "anchor": "flow-path",
+      "grammar": [
+        "disposition-revoked",
+        "retroactive-invalidity",
+        "return-or-compensation",
+        "debtor-estate",
+        "no-direct-payment"
+      ],
+      "textTreatments": [
+        "label-block",
+        "soft-highlight",
+        "external-negation"
+      ],
+      "focalChannels": [
+        "connector",
+        "motion",
+        "contrast"
+      ],
+      "tokens": [
+        "PackageOpen"
+      ],
+      "finalKnowledge": [
+        "disposition-revoked",
+        "retroactive-no-effect",
+        "return-or-compensate",
+        "debtor-estate-entry",
+        "no-direct-creditor-payment"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "two-judgment-execution",
+      "export": "TwoJudgmentExecutionScene",
+      "layout": "two-judgment-execution-direct-flow-target-diagram",
+      "anchor": "flow-target",
+      "grammar": [
+        "revocation-judgment",
+        "debt-judgment",
+        "two-effective-instruments",
+        "enforce-debtor-right",
+        "creditor-realization"
+      ],
+      "textTreatments": [
+        "stamp",
+        "label-block",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "connector",
+        "enclosure",
+        "icon"
+      ],
+      "tokens": [
+        "KeyRound"
+      ],
+      "finalKnowledge": [
+        "revocation-effective-judgment",
+        "debt-effective-judgment",
+        "two-document-key",
+        "enforce-returned-right",
+        "creditor-realizes-claim"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

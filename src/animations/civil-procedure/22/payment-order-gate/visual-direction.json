@@ -1,0 +1,16 @@
+{
+  "directionId": "constructivist-geometry",
+  "derivedFrom": "demo-constructivist-geometry",
+  "variation": "a high-contrast telegram gate with debt-condition wedges, a fifteen-day objection slot, and separated debtor/guarantor effect lanes",
+  "family": "payment-order-telegram-gate",
+  "palette": "#f7f1df + #171717 + #d83a2e + #087f8c + #efb629",
+  "typography": "WenKai screen with oversized issue headings, compact operative labels, and monospaced procedural numbering",
+  "composition": "hard wedges, telegram strips, and square judicial seals",
+  "surface": "hard wedges, telegram strips, and square judicial seals",
+  "motion": "the claim passes conjunctive entry gates, then the written objection physically diverts it into litigation",
+  "transition": "one payment-order document persists from application through effectiveness and termination",
+  "catalog": {
+    "status": "variant",
+    "sourceDirectionId": "constructivist-geometry"
+  }
+}

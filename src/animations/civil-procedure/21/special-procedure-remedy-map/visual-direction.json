@@ -1,0 +1,16 @@
+{
+  "directionId": "courtroom-blueprint",
+  "derivedFrom": "demo-courtroom-blueprint",
+  "variation": "an ivory civic plan with non-contentious boundaries, applicant gates, and objection escape routes",
+  "family": "special-procedure-civic-plan",
+  "palette": "#eef3f0 + #17324d + #0d7c66 + #d04b3e + #e2a72e",
+  "typography": "WenKai screen with oversized issue headings, compact operative labels, and monospaced procedural numbering",
+  "composition": "open civic-plan fields with jurisdiction pins and unboxed remedy corridors",
+  "surface": "open civic-plan fields with jurisdiction pins and unboxed remedy corridors",
+  "motion": "applications route into non-contentious chambers before disputes are diverted to ordinary proceedings",
+  "transition": "the non-contentious boundary remains visible while the responsible applicant and remedy change",
+  "catalog": {
+    "status": "variant",
+    "sourceDirectionId": "courtroom-blueprint"
+  }
+}

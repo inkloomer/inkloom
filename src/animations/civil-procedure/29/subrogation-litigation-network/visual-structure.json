@@ -1,0 +1,145 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 4,
+  "scenes": [
+    {
+      "id": "three-party-roles",
+      "export": "ThreePartyRolesScene",
+      "layout": "three-party-roles-direct-role-pair-diagram",
+      "anchor": "role-pair",
+      "grammar": [
+        "creditor-plaintiff",
+        "relative-party-defendant",
+        "debtor-third-party",
+        "multiple-creditors",
+        "proportional-shares"
+      ],
+      "textTreatments": [
+        "label-block",
+        "soft-highlight",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "icon",
+        "connector",
+        "spatial"
+      ],
+      "tokens": [
+        "UsersRound"
+      ],
+      "finalKnowledge": [
+        "creditor-as-plaintiff",
+        "relative-as-defendant",
+        "debtor-as-third-party",
+        "multiple-creditors-merge",
+        "proportional-performance"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "jurisdiction-and-arbitration",
+      "export": "JurisdictionAndArbitrationScene",
+      "layout": "jurisdiction-and-arbitration-direct-boundary-diagram",
+      "anchor": "boundary",
+      "grammar": [
+        "relative-domicile",
+        "exclusive-jurisdiction",
+        "no-prorogation-effect",
+        "arbitration-relativity",
+        "prehearing-arbitration-stay"
+      ],
+      "textTreatments": [
+        "external-negation",
+        "label-block",
+        "stamp"
+      ],
+      "focalChannels": [
+        "enclosure",
+        "contrast",
+        "icon"
+      ],
+      "tokens": [
+        "MapPinned"
+      ],
+      "finalKnowledge": [
+        "relative-domicile-forum",
+        "exclusive-jurisdiction-exception",
+        "private-jurisdiction-no-effect",
+        "arbitration-relativity",
+        "prehearing-arbitration-stay"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "related-actions-routing",
+      "export": "RelatedActionsRoutingScene",
+      "layout": "related-actions-routing-direct-flow-path-diagram",
+      "anchor": "flow-path",
+      "grammar": [
+        "creditor-v-debtor",
+        "same-court-merge",
+        "different-court-stay",
+        "debtor-v-relative",
+        "excess-only"
+      ],
+      "textTreatments": [
+        "label-block",
+        "thin-underline",
+        "stamp"
+      ],
+      "focalChannels": [
+        "connector",
+        "motion",
+        "contrast"
+      ],
+      "tokens": [
+        "GitMerge"
+      ],
+      "finalKnowledge": [
+        "creditor-debtor-action",
+        "same-court-consolidation",
+        "different-court-suspension",
+        "debtor-relative-action",
+        "debtor-excess-action"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "direct-payment-and-dismissal",
+      "export": "DirectPaymentAndDismissalScene",
+      "layout": "direct-payment-and-dismissal-direct-flow-target-diagram",
+      "anchor": "flow-target",
+      "grammar": [
+        "subrogation-established",
+        "direct-payment",
+        "relations-terminate",
+        "conditions-fail",
+        "dismiss-merits",
+        "new-facts"
+      ],
+      "textTreatments": [
+        "label-block",
+        "stamp",
+        "external-negation"
+      ],
+      "focalChannels": [
+        "connector",
+        "icon",
+        "enclosure"
+      ],
+      "tokens": [
+        "BadgeCheck"
+      ],
+      "finalKnowledge": [
+        "subrogation-established",
+        "direct-payment-rule",
+        "corresponding-relations-end",
+        "conditions-not-met",
+        "dismiss-claim-not-action",
+        "new-fact-refiling"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

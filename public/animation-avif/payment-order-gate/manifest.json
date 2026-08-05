@@ -1,0 +1,70 @@
+{
+  "animationId": "payment-order-gate",
+  "compositionId": "PaymentOrderGate",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-05T18:30:41.990Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 329,
+      "frameCount": 330,
+      "id": "payment-order-entry",
+      "number": "01",
+      "startFrame": 0,
+      "title": "支付令必须同时通过的申请要件",
+      "durationMs": 11000,
+      "file": "payment-order-entry.avif",
+      "fileSize": 388349,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "e53a59341b89b07a4d4a2ffcff9ba37883e063f9ff185398fd031a83325ae554",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "823e918b064654d3cf3a2f85ad11ade507818541e3e17808aae5f65f9ed595cb"
+    },
+    {
+      "endFrame": 629,
+      "frameCount": 300,
+      "id": "jurisdiction-and-objection",
+      "number": "02",
+      "startFrame": 330,
+      "title": "基层专属入口与 15 日书面异议",
+      "durationMs": 10000,
+      "file": "jurisdiction-and-objection.avif",
+      "fileSize": 351331,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "98c9cf4eca354414c43ec9e0c0ebc036e56fbfdbdcccbc22a282c4fdc0ab7d2e",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "823e918b064654d3cf3a2f85ad11ade507818541e3e17808aae5f65f9ed595cb"
+    },
+    {
+      "endFrame": 959,
+      "frameCount": 330,
+      "id": "order-effects-and-lawsuits",
+      "number": "03",
+      "startFrame": 630,
+      "title": "异议、起诉与担保人的效力分流",
+      "durationMs": 11000,
+      "file": "order-effects-and-lawsuits.avif",
+      "fileSize": 455832,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "c31aec34bb2dca705c34a5ce010fdad0fac7f3c5d0bee112ce3fc444be229ce7",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "823e918b064654d3cf3a2f85ad11ade507818541e3e17808aae5f65f9ed595cb"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "823e918b064654d3cf3a2f85ad11ade507818541e3e17808aae5f65f9ed595cb",
+  "targetFps": 30,
+  "totalFileSize": 1195512
+}

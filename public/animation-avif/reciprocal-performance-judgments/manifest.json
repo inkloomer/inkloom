@@ -1,0 +1,70 @@
+{
+  "animationId": "reciprocal-performance-judgments",
+  "compositionId": "ReciprocalPerformanceJudgments",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-05T18:50:12.462Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 329,
+      "frameCount": 330,
+      "id": "defense-without-counterclaim",
+      "number": "01",
+      "startFrame": 0,
+      "title": "同时履行抗辩成立但未反诉",
+      "durationMs": 11000,
+      "file": "defense-without-counterclaim.avif",
+      "fileSize": 358124,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "0bd526f7a78b0fe5c35eb494d19b2d773e4973d25b4ee05939212ab5c31895cc",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "0255fc03a29743c1c8bf9b3fe4f579939df2939abb00cd1acb63d212915a09ec"
+    },
+    {
+      "endFrame": 659,
+      "frameCount": 330,
+      "id": "counterclaim-changes-judgment",
+      "number": "02",
+      "startFrame": 330,
+      "title": "反诉把双方义务都写入判决主文",
+      "durationMs": 11000,
+      "file": "counterclaim-changes-judgment.avif",
+      "fileSize": 346741,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "edeee7bc052b50b9a52538c1467bcbc2b583ddb8b4486834010647506c5adafe",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "0255fc03a29743c1c8bf9b3fe4f579939df2939abb00cd1acb63d212915a09ec"
+    },
+    {
+      "endFrame": 959,
+      "frameCount": 300,
+      "id": "prior-performance-defense",
+      "number": "03",
+      "startFrame": 660,
+      "title": "先履行抗辩成立后的驳回与再诉",
+      "durationMs": 10000,
+      "file": "prior-performance-defense.avif",
+      "fileSize": 335040,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "0e3ad5a9cfca686fff9956a5a11ca73b08a72148543dc50b82f12a69ca91e61a",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "0255fc03a29743c1c8bf9b3fe4f579939df2939abb00cd1acb63d212915a09ec"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "0255fc03a29743c1c8bf9b3fe4f579939df2939abb00cd1acb63d212915a09ec",
+  "targetFps": 30,
+  "totalFileSize": 1039905
+}

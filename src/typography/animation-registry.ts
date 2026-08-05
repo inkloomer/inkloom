@@ -56,6 +56,18 @@ import {typography as typography75} from '../animations/civil-procedure/17/summa
 import {typography as typography76} from '../animations/civil-procedure/18/public-interest-litigation-network/animation.meta';
 import {typography as typography77} from '../animations/civil-procedure/19/third-party-revocation-remedy-map/animation.meta';
 import {typography as typography78} from '../animations/civil-procedure/20/appeal-review-decision-map/animation.meta';
+import {typography as typography80} from '../animations/civil-procedure/20/retrial-supervision-control-map/animation.meta';
+import {typography as typography81} from '../animations/civil-procedure/21/special-procedure-remedy-map/animation.meta';
+import {typography as typography82} from '../animations/civil-procedure/22/payment-order-gate/animation.meta';
+import {typography as typography83} from '../animations/civil-procedure/23/public-notice-cancellation-path/animation.meta';
+import {typography as typography84} from '../animations/civil-procedure/24/enforcement-control-network/animation.meta';
+import {typography as typography85} from '../animations/civil-procedure/25/cross-border-procedure-compass/animation.meta';
+import {typography as typography86} from '../animations/civil-procedure/26/arbitration-validity-route/animation.meta';
+import {typography as typography87} from '../animations/civil-procedure/27/contract-issue-reframing/animation.meta';
+import {typography as typography88} from '../animations/civil-procedure/28/reciprocal-performance-judgments/animation.meta';
+import {typography as typography89} from '../animations/civil-procedure/29/subrogation-litigation-network/animation.meta';
+import {typography as typography90} from '../animations/civil-procedure/30/revocation-action-execution-chain/animation.meta';
+import {typography as typography91} from '../animations/civil-procedure/31/termination-withdrawal-timeline/animation.meta';
 import {typography as typography40} from '../animations/criminal/19/card-selling-funds-viewpoint/animation.meta';
 import {typography as typography41} from '../animations/criminal/19/occupational-embezzlement-flowchart/animation.meta';
 import {typography as typography42} from '../animations/criminal/19/property-interests-keypoints/animation.meta';
@@ -137,6 +149,18 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'public-interest-litigation-network': {metadata: typography76, scope: {animationId: 'public-interest-litigation-network', subject: 'civil-procedure', topic: '18'}},
   'third-party-revocation-remedy-map': {metadata: typography77, scope: {animationId: 'third-party-revocation-remedy-map', subject: 'civil-procedure', topic: '19'}},
   'appeal-review-decision-map': {metadata: typography78, scope: {animationId: 'appeal-review-decision-map', subject: 'civil-procedure', topic: '20'}},
+  'retrial-supervision-control-map': {metadata: typography80, scope: {animationId: 'retrial-supervision-control-map', subject: 'civil-procedure', topic: '20'}},
+  'special-procedure-remedy-map': {metadata: typography81, scope: {animationId: 'special-procedure-remedy-map', subject: 'civil-procedure', topic: '21'}},
+  'payment-order-gate': {metadata: typography82, scope: {animationId: 'payment-order-gate', subject: 'civil-procedure', topic: '22'}},
+  'public-notice-cancellation-path': {metadata: typography83, scope: {animationId: 'public-notice-cancellation-path', subject: 'civil-procedure', topic: '23'}},
+  'enforcement-control-network': {metadata: typography84, scope: {animationId: 'enforcement-control-network', subject: 'civil-procedure', topic: '24'}},
+  'cross-border-procedure-compass': {metadata: typography85, scope: {animationId: 'cross-border-procedure-compass', subject: 'civil-procedure', topic: '25'}},
+  'arbitration-validity-route': {metadata: typography86, scope: {animationId: 'arbitration-validity-route', subject: 'civil-procedure', topic: '26'}},
+  'contract-issue-reframing': {metadata: typography87, scope: {animationId: 'contract-issue-reframing', subject: 'civil-procedure', topic: '27'}},
+  'reciprocal-performance-judgments': {metadata: typography88, scope: {animationId: 'reciprocal-performance-judgments', subject: 'civil-procedure', topic: '28'}},
+  'subrogation-litigation-network': {metadata: typography89, scope: {animationId: 'subrogation-litigation-network', subject: 'civil-procedure', topic: '29'}},
+  'revocation-action-execution-chain': {metadata: typography90, scope: {animationId: 'revocation-action-execution-chain', subject: 'civil-procedure', topic: '30'}},
+  'termination-withdrawal-timeline': {metadata: typography91, scope: {animationId: 'termination-withdrawal-timeline', subject: 'civil-procedure', topic: '31'}},
   'card-selling-funds-viewpoint': {metadata: typography40, scope: {animationId: 'card-selling-funds-viewpoint', subject: 'criminal', topic: '19'}},
   'occupational-embezzlement-flowchart': {metadata: typography41, scope: {animationId: 'occupational-embezzlement-flowchart', subject: 'criminal', topic: '19'}},
   'property-interests-keypoints': {metadata: typography42, scope: {animationId: 'property-interests-keypoints', subject: 'criminal', topic: '19'}},

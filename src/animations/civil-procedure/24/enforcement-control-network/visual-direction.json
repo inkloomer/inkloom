@@ -1,0 +1,16 @@
+{
+  "directionId": "isometric-mechanism",
+  "derivedFrom": "demo-isometric-mechanism",
+  "variation": "a graphite enforcement mechanism with statutory jurisdiction sockets, objection switches, settlement clutches, and special-measure output bays",
+  "family": "enforcement-command-mechanism",
+  "palette": "#e8edf0 + #172129 + #0a7a73 + #c54135 + #d89b21",
+  "typography": "WenKai screen with oversized issue headings, compact operative labels, and monospaced procedural numbering",
+  "composition": "mechanical rails, square sockets, and visible state switches without decorative rotation",
+  "surface": "mechanical rails, square sockets, and visible state switches without decorative rotation",
+  "motion": "each legal input engages only its authorized enforcement output; objections reroute to review or trial without implying merits identity",
+  "transition": "a central enforcement rail persists through launch, jurisdiction, agreements, objections, and special measures",
+  "catalog": {
+    "status": "variant",
+    "sourceDirectionId": "isometric-mechanism"
+  }
+}

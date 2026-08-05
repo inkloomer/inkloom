@@ -1,0 +1,70 @@
+{
+  "animationId": "termination-withdrawal-timeline",
+  "compositionId": "TerminationWithdrawalTimeline",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-05T18:58:08.082Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 269,
+      "frameCount": 270,
+      "id": "first-action-withdrawal",
+      "number": "01",
+      "startFrame": 0,
+      "title": "首次起诉后撤诉：解除效力不保留",
+      "durationMs": 9000,
+      "file": "first-action-withdrawal.avif",
+      "fileSize": 355585,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "c5f21673334407e76320db36eb769dcd094a45671fb7fc8e2e2febb6688bd305",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "cbbad2e2b3e64b57e926e307b1c9cea5ba23af8d6fbcd9d2ee2f17f3713371b6"
+    },
+    {
+      "endFrame": 539,
+      "frameCount": 270,
+      "id": "second-action-service",
+      "number": "02",
+      "startFrame": 270,
+      "title": "再次起诉被支持：以第二次送达定解除时间",
+      "durationMs": 9000,
+      "file": "second-action-service.avif",
+      "fileSize": 391446,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "83e778ffd5373a4e38c2d06dc8f129af937d533b13f08f194a49537df62ddb2d",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "cbbad2e2b3e64b57e926e307b1c9cea5ba23af8d6fbcd9d2ee2f17f3713371b6"
+    },
+    {
+      "endFrame": 809,
+      "frameCount": 270,
+      "id": "notice-arrival-exception",
+      "number": "03",
+      "startFrame": 540,
+      "title": "撤诉后另行通知到达：改写解除时点",
+      "durationMs": 9000,
+      "file": "notice-arrival-exception.avif",
+      "fileSize": 516689,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "65532f1531e1c4f0d70be8b0fdb15c252975d9d5ba0b984f5fbd4b1d3742bce5",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "cbbad2e2b3e64b57e926e307b1c9cea5ba23af8d6fbcd9d2ee2f17f3713371b6"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "cbbad2e2b3e64b57e926e307b1c9cea5ba23af8d6fbcd9d2ee2f17f3713371b6",
+  "targetFps": 30,
+  "totalFileSize": 1263720
+}

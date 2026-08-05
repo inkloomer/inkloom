@@ -1,0 +1,16 @@
+{
+  "directionId": "archival-dossier",
+  "derivedFrom": "demo-archival-dossier",
+  "variation": "a layered retrial docket with grouped statutory grounds, execution-state rails, and formal exit seals",
+  "family": "retrial-docket-control-room",
+  "palette": "#f4efe5 + #18242b + #b43b35 + #176b73 + #d89b2b",
+  "typography": "WenKai screen with oversized issue headings, compact operative labels, and monospaced procedural numbering",
+  "composition": "docket bands and clipped record tabs",
+  "surface": "docket bands and clipped record tabs",
+  "motion": "docket groups enter in statutory order and the execution rail changes only at the retrial order",
+  "transition": "a persistent case-number rail links scope, review, hearing, and exit states",
+  "catalog": {
+    "status": "variant",
+    "sourceDirectionId": "archival-dossier"
+  }
+}

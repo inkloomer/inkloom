@@ -24,12 +24,14 @@ Usage:
   pnpm animation:pages proper-party party-change
   pnpm animation:pages --at 0.75               Change the scene capture position
   pnpm animation:pages legal-jurisdiction --motion
+  pnpm animation:pages legal-jurisdiction --force
   pnpm animation:pages --output D:\\captures   Choose an output root
 
 Options:
   --all              Capture every discovered animation (the default)
   --at <0..1>        Position within each scene (default: stable final frame)
   --motion           Capture ${DEFAULT_MOTION_RATIOS.slice(0, -1).join(', ')} plus the stable final frame per scene
+  --force            Disable Remotion bundler caching for a source-fresh capture
   --output <path>    Output root (default: .artifacts/animation-pages)
   --help             Show this help
 `;
@@ -40,6 +42,7 @@ const parseArguments = (rawArguments) => {
   let captureRatioProvided = false;
   let outputRoot = DEFAULT_OUTPUT_ROOT;
   let motionCheck = false;
+  let force = false;
   let captureAll = rawArguments.length === 0;
 
   for (let index = 0; index < rawArguments.length; index += 1) {
@@ -59,6 +62,10 @@ const parseArguments = (rawArguments) => {
     }
     if (argument === '--motion') {
       motionCheck = true;
+      continue;
+    }
+    if (argument === '--force') {
+      force = true;
       continue;
     }
     if (argument === '--output') {
@@ -81,7 +88,7 @@ const parseArguments = (rawArguments) => {
   }
   if (!captureAll && animationIds.length === 0) captureAll = true;
 
-  return {animationIds, captureAll, captureRatio, help: false, motionCheck, outputRoot};
+  return {animationIds, captureAll, captureRatio, force, help: false, motionCheck, outputRoot};
 };
 
 const fileExists = async (filePath) => {
@@ -251,6 +258,7 @@ const captureAnimation = async ({
   animationId,
   browser,
   captureRatio,
+  force,
   motionCheck,
   outputRoot,
 }) => {
@@ -260,7 +268,7 @@ const captureAnimation = async ({
   const bundleDirectory = await mkdtemp(path.join(tmpdir(), `inkloom-${animationId}-`));
   const entryPoint = path.join(getAnimationDirectory(animationId), 'remotion', 'index.ts');
 
-  console.log(`\n[${animationId}] Bundling composition...`);
+  console.log(`\n[${animationId}] Bundling composition${force ? ' with cache disabled' : ''}...`);
 
   try {
     const serveUrl = await bundle({
@@ -268,7 +276,7 @@ const captureAnimation = async ({
       outDir: bundleDirectory,
       publicDir: path.join(PROJECT_ROOT, 'public'),
       rootDir: PROJECT_ROOT,
-      enableCaching: true,
+      enableCaching: !force,
       webpackOverride: withInkLoomTailwind,
       onProgress: () => undefined,
     });
