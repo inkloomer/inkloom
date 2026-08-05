@@ -16,6 +16,18 @@
       "statefulObjects": ["filing-docket"]
     },
     {
+      "id": "three-documents",
+      "export": "ThreeDocumentsScene",
+      "layout": "substance-split-document-desk-with-refiling-exits",
+      "anchor": "comparison-axis",
+      "grammar": ["document-functions", "substance-divider", "refiling-exit"],
+      "textTreatments": ["label-block", "stamp", "external-negation", "thin-underline"],
+      "focalChannels": ["icon", "connector", "contrast", "enclosure"],
+      "tokens": ["FileText", "FileCheck2", "Scale", "RotateCcw", "Ban"],
+      "finalKnowledge": ["ruling-nonacceptance", "ruling-dismiss-action", "no-substantive-trial", "judgment-reject-claim", "procedural-reroute", "merits-preclusion", "appealable-rulings"],
+      "statefulObjects": ["procedural-docket", "merits-docket"]
+    },
+    {
       "id": "repeat-suit-test",
       "export": "RepeatSuitTestScene",
       "layout": "three-ribbons-converge-on-repeat-suit-barrier-with-exception-arc",

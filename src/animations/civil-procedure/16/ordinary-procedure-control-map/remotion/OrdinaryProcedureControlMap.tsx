@@ -15,6 +15,7 @@ import {
   Hourglass,
   Landmark,
   Link2,
+  RotateCcw,
   Scale,
   ShieldCheck,
   Stamp,
@@ -147,11 +148,63 @@ export const FilingGateScene = () => {
   );
 };
 
+export const ThreeDocumentsScene = () => {
+  /* Static audit inventory: data-final-knowledge="ruling-nonacceptance" data-final-knowledge="ruling-dismiss-action" data-final-knowledge="no-substantive-trial" data-final-knowledge="judgment-reject-claim" data-final-knowledge="procedural-reroute" data-final-knowledge="merits-preclusion" data-final-knowledge="appealable-rulings" data-stateful-source="procedural-docket" data-stateful-terminal="procedural-docket" data-stateful-source="merits-docket" data-stateful-terminal="merits-docket" <FileText <FileCheck2 <Scale <RotateCcw <Ban */
+  const frame = useCurrentFrame();
+  const proceduralDrop = interpolate(frame, [140, 172], [0, 26], clamp);
+  const meritsDrop = interpolate(frame, [150, 182], [0, 26], clamp);
+  return (
+    <SceneFrame sceneId="three-documents" number="02" question="被挡回后，为何有的能再诉、有的却就此定案？" anchor="comparison-axis" grammar="document-functions,substance-divider,refiling-exit" treatments="label-block,stamp,external-negation,thin-underline" titleAt="center">
+      <div data-layout="substance-split-document-desk-with-refiling-exits" data-visual-anchor="comparison-axis" data-visual-grammar="document-functions,substance-divider,refiling-exit" data-text-treatments="label-block,stamp,external-negation,thin-underline" data-focal-rule="procedural-exits-allow-refiling-while-substantive-judgment-precludes" data-focal-channels="icon,connector,contrast,enclosure" />
+      <div style={{position: 'absolute', left: 690, top: 122, width: 540, display: 'flex', justifyContent: 'center', ...enter(frame, 4, 0, 18)}}><CourtSeal icon={Gavel} label="法院处理结果" sublabel="依受理与审理情况签发不同文书" color={P.navy} /></div>
+      <div style={{position: 'absolute', left: 948, top: 258, width: 10, height: 398, background: P.ink, opacity: .82}} />
+      <div style={{position: 'absolute', left: 800, top: 420, width: 306, height: 74, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 12, background: P.ink, color: P.white, clipPath: 'polygon(4% 0,96% 0,100% 50%,96% 100%,4% 100%,0 50%)', ...enter(frame, 96, 0, 16)}}><Scale size={34} color={P.gold} /><Text size={26} color={P.white} weight={900}>程序 vs 实体</Text></div>
+      <Arrow x1={905} y1={92} x2={488} y2={132} color={P.red} start={18} />
+      <Arrow x1={1015} y1={92} x2={1415} y2={132} color={P.gold} start={30} />
+      <div style={{position: 'absolute', left: 96, top: 236, ...enter(frame, 8, -26, 0)}}><Label color={P.red}>裁定 · 程序性出口</Label></div>
+      <div data-stateful-source="procedural-docket" style={{position: 'absolute', left: 700, top: 236, translate: `0px ${proceduralDrop}px`, ...enter(frame, 14, 0, 16)}}><Docket label="程序案卷" color={P.navy} /></div>
+      {[
+        ['ruling-nonacceptance', '受理前发现', '裁定不予受理', '起诉在程序上不符合条件'],
+        ['ruling-dismiss-action', '受理后发现', '裁定驳回起诉', '起诉在程序上不符合条件'],
+      ].map(([id, stage, result, note], i) => (
+        <div key={id} data-final-knowledge={id} style={{position: 'absolute', left: 96, top: 348 + i * 128, width: 784, padding: '15px 20px', background: P.paleRed, borderLeft: `8px solid ${P.red}`, ...enter(frame, 34 + i * 20, 0, 20)}}>
+          <div style={{display: 'flex', alignItems: 'center', gap: 14}}><FileText size={36} color={P.red} /><div><Text size={22} color={P.muted}>{stage}</Text><Text size={29} color={P.red} weight={850}>{result}</Text></div></div>
+          <Text size={22} color={P.muted} style={{marginTop: 8}}>{note}</Text>
+        </div>
+      ))}
+      <div data-final-knowledge="no-substantive-trial" style={{position: 'absolute', left: 96, top: 608, width: 784, height: 78, display: 'flex', alignItems: 'center', gap: 18, padding: '0 20px', background: P.paper2, borderBottom: `3px solid ${P.red}`, ...enter(frame, 84, 0, 18)}}>
+        <Stamp size={36} color={P.red} /><Text size={24} weight={850}>均未进入<span style={{borderBottom: `3px solid ${P.red}`}}>实体审理</span></Text><div data-final-knowledge="appealable-rulings" style={{marginLeft: 'auto', padding: '8px 13px', background: P.red, color: P.white, opacity: progress(frame, 104, 16), fontSize: 21, fontWeight: 800}}>不予受理、驳回起诉可上诉</div>
+      </div>
+      <Arrow x1={488} y1={576} x2={488} y2={586} color={P.teal} start={130} />
+      <div style={{position: 'absolute', left: 1040, top: 236, ...enter(frame, 12, 26, 0)}}><Label color={P.gold}>判决 · 实体性出口</Label></div>
+      <div data-stateful-source="merits-docket" style={{position: 'absolute', left: 1644, top: 236, translate: `0px ${meritsDrop}px`, ...enter(frame, 20, 0, 16)}}><Docket label="实体案卷" color={P.navy} /></div>
+      <div data-final-knowledge="judgment-reject-claim" style={{position: 'absolute', left: 1040, top: 348, width: 784, padding: '18px 22px', background: P.paleGold, borderLeft: `8px solid ${P.gold}`, ...enter(frame, 66, 0, 20)}}>
+        <div style={{display: 'flex', alignItems: 'center', gap: 16}}><FileCheck2 size={42} color={P.gold} /><div><Text size={24} color={P.muted}>受理后经实体审理</Text><Text size={31} color={P.gold} weight={900}>判决驳回诉讼请求</Text></div></div>
+        <Text size={22} color={P.muted} style={{marginTop: 10}}>诉讼请求在实体上不能支持 → 原告实体败诉</Text>
+      </div>
+      <div style={{position: 'absolute', left: 1040, top: 518, width: 784, height: 78, display: 'flex', alignItems: 'center', gap: 18, padding: '0 20px', background: P.paper2, borderBottom: `3px solid ${P.gold}`, ...enter(frame, 96, 0, 18)}}>
+        <Stamp size={36} color={P.gold} /><Text size={24} weight={850}>已经过<span style={{borderBottom: `3px solid ${P.gold}`}}>实体审理</span></Text><Text size={23} color={P.muted}>判决生效后同一事项不得再诉</Text>
+      </div>
+      <Arrow x1={1415} y1={486} x2={1415} y2={586} color={P.red} start={142} />
+      <div data-final-knowledge="procedural-reroute" style={{position: 'absolute', left: 96, top: 700, width: 784, height: 190, padding: '22px 26px', background: P.paleBlue, borderTop: `9px solid ${P.teal}`, ...enter(frame, 118, 0, 22)}}>
+        <div style={{display: 'flex', alignItems: 'center', gap: 16}}><RotateCcw size={44} color={P.teal} /><Text size={32} color={P.teal} weight={900}>可再次起诉</Text></div>
+        <Text size={23} style={{marginTop: 12}}>未经实体审理 · 符合条件应当受理</Text>
+        <div data-stateful-terminal="procedural-docket" style={{position: 'absolute', left: 26, bottom: 22, padding: '10px 16px', background: P.teal, color: P.white, opacity: progress(frame, 166, 18), textAlign: 'center', fontSize: 22, fontWeight: 800}}>再诉案卷 · 重新立案</div>
+      </div>
+      <div data-final-knowledge="merits-preclusion" style={{position: 'absolute', left: 1040, top: 700, width: 784, height: 190, padding: '22px 26px', background: P.paleRed, borderTop: `9px solid ${P.red}`, ...enter(frame, 126, 0, 22)}}>
+        <div style={{display: 'flex', alignItems: 'center', gap: 16}}><Ban size={44} color={P.red} /><Text size={32} color={P.red} weight={900}>不可再诉 · 一事不再理</Text></div>
+        <Text size={23} style={{marginTop: 12}}>已经过实体处理 · 同一事项不得再诉</Text>
+        <div data-stateful-terminal="merits-docket" style={{position: 'absolute', left: 26, bottom: 22, padding: '10px 16px', background: P.red, color: P.white, opacity: progress(frame, 174, 18), textAlign: 'center', fontSize: 22, fontWeight: 800}}>已判案卷 · 既判力封闭</div>
+      </div>
+    </SceneFrame>
+  );
+};
+
 export const RepeatSuitTestScene = () => {
   /* Static audit inventory: data-final-knowledge="same-parties" data-final-knowledge="same-subject-matter" data-final-knowledge="same-claim-or-substantive-denial" data-final-knowledge="non-merits-refiling" data-final-knowledge="support-new-circumstances" data-final-knowledge="six-month-restrictions" data-stateful-source="later-suit-docket" <UserRound <Link2 */
   const frame = useCurrentFrame();
   return (
-    <SceneFrame sceneId="repeat-suit-test" number="02" question="什么情况下，后诉才真正撞上“一事不再理”？" anchor="flow-path" grammar="three-input-confluence,conflict-barrier,exception-bypass" treatments="soft-highlight,external-negation,label-block" titleAt="center">
+    <SceneFrame sceneId="repeat-suit-test" number="03" question="什么情况下，后诉才真正撞上“一事不再理”？" anchor="flow-path" grammar="three-input-confluence,conflict-barrier,exception-bypass" treatments="soft-highlight,external-negation,label-block" titleAt="center">
       <div data-layout="three-ribbons-converge-on-repeat-suit-barrier-with-exception-arc" data-visual-anchor="flow-path" data-visual-grammar="three-input-confluence,conflict-barrier,exception-bypass" data-text-treatments="soft-highlight,external-negation,label-block" data-focal-rule="all-three-identities-must-converge" data-focal-channels="connector,enclosure,contrast" />
       <Docket label="后诉案卷" source="later-suit-docket" style={{position: 'absolute', left: 82, top: 320, ...enter(frame, 4, -20, 0)}} />
       {[
@@ -187,7 +240,7 @@ export const WithdrawalAbsenceScene = () => {
   /* Static audit tokens: <UserRound <UsersRound <Gavel */
   const frame = useCurrentFrame();
   return (
-    <SceneFrame sceneId="withdrawal-absence" number="03" question="同样是不到庭，为什么有时按撤诉、有时缺席判决？" anchor="role-pair" grammar="two-courtroom-stages,actor-condition,result" treatments="label-block,stamp,external-negation">
+    <SceneFrame sceneId="withdrawal-absence" number="04" question="同样是不到庭，为什么有时按撤诉、有时缺席判决？" anchor="role-pair" grammar="two-courtroom-stages,actor-condition,result" treatments="label-block,stamp,external-negation">
       <div data-layout="paired-courtroom-stages-for-withdrawal-and-default-judgment" data-visual-anchor="role-pair" data-visual-grammar="two-courtroom-stages,actor-condition,result" data-text-treatments="label-block,stamp,external-negation" data-focal-rule="identify-the-claim-owner-before-applying-absence-consequence" data-focal-channels="icon,connector,contrast" />
       <div style={{position: 'absolute', left: 80, top: 80, width: 820, height: 655, background: P.paleGold, border: `3px solid ${P.gold}`, padding: 28, ...enter(frame, 6, -30, 0)}}>
         <Label color={P.gold}>A · 撤诉舞台</Label>
@@ -219,7 +272,7 @@ export const ProceduralObstaclesScene = () => {
   /* Static audit inventory: data-final-knowledge="postpone-hearing-litigation-continues" data-final-knowledge="postponement-decision" data-final-knowledge="suspension-future-uncertain" data-final-knowledge="suspension-order" data-final-knowledge="termination-no-need-to-continue" data-final-knowledge="termination-order" <Clock3 <Hourglass <Ban */
   const frame = useCurrentFrame();
   return (
-    <SceneFrame sceneId="procedural-obstacles" number="04" question="障碍出现后，程序是推迟、等待，还是彻底结束？审限如何延长？" anchor="document-fork" grammar="obstacle-strength-fork,terminal-state,approval-timeline" treatments="label-block,thin-underline,stamp">
+    <SceneFrame sceneId="procedural-obstacles" number="05" question="障碍出现后，程序是推迟、等待，还是彻底结束？审限如何延长？" anchor="document-fork" grammar="obstacle-strength-fork,terminal-state,approval-timeline" treatments="label-block,thin-underline,stamp">
       <div data-layout="obstacle-river-fork-above-first-instance-time-limit-approval-axis" data-visual-anchor="document-fork" data-visual-grammar="obstacle-strength-fork,terminal-state,approval-timeline" data-text-treatments="label-block,thin-underline,stamp" data-focal-rule="obstacle-state-selects-route-while-time-extension-needs-escalating-approval" data-focal-channels="connector,spatial,icon" />
       <div style={{position: 'absolute', left: 90, top: 95, width: 235, ...enter(frame, 4, -20, 0)}}><CourtSeal icon={FileText} label="进行中的诉讼" sublabel="遇到程序障碍" color={P.navy} /></div>
       <Arrow x1={330} y1={220} x2={520} y2={220} color={P.navy} start={22} />
@@ -253,7 +306,7 @@ export const JudgmentDocumentsScene = () => {
   /* Static audit inventory: data-final-knowledge="judgment-substantive-claim" data-final-knowledge="order-procedure-and-partial-merits" data-final-knowledge="decision-procedure" data-final-knowledge="appealable-non-acceptance" data-final-knowledge="appealable-dismiss-action" data-final-knowledge="appealable-jurisdiction-objection" <FileCheck2 <FileText <Gavel */
   const frame = useCurrentFrame();
   return (
-    <SceneFrame sceneId="judgment-documents" number="05" question="判决、裁定、决定各管什么？判决错了从哪条路纠正？" anchor="flow-path" grammar="document-functions,error-fork,appeal-dock" treatments="label-block,thin-underline,stamp" titleAt="center">
+    <SceneFrame sceneId="judgment-documents" number="06" question="判决、裁定、决定各管什么？判决错了从哪条路纠正？" anchor="flow-path" grammar="document-functions,error-fork,appeal-dock" treatments="label-block,thin-underline,stamp" titleAt="center">
       <div data-layout="three-document-presses-feed-a-two-route-correction-switchyard" data-visual-anchor="flow-path" data-visual-grammar="document-functions,error-fork,appeal-dock" data-text-treatments="label-block,thin-underline,stamp" data-focal-rule="document-function-first-then-correction-route" data-focal-channels="icon,connector,spatial" />
       {[
         ['judgment-substantive-claim', FileCheck2, '判决', '实体请求', '诉讼请求能否支持', P.teal, 130],
@@ -286,7 +339,7 @@ export const JudgmentDocumentsScene = () => {
 export const JudgmentEffectsScene = () => {
   const frame = useCurrentFrame();
   return (
-    <SceneFrame sceneId="judgment-effects" number="06" question="一份生效判决，何时有执行力、形成力或既判力？" anchor="comparison-axis" grammar="central-judgment,condition-chambers,scope-orbit" treatments="soft-highlight,label-block,external-negation">
+    <SceneFrame sceneId="judgment-effects" number="07" question="一份生效判决，何时有执行力、形成力或既判力？" anchor="comparison-axis" grammar="central-judgment,condition-chambers,scope-orbit" treatments="soft-highlight,label-block,external-negation">
       <div data-layout="effective-judgment-radiates-into-three-condition-chambers-and-scope-orbit" data-visual-anchor="comparison-axis" data-visual-grammar="central-judgment,condition-chambers,scope-orbit" data-text-treatments="soft-highlight,label-block,external-negation" data-focal-rule="each-effect-has-its-own-entry-condition-and-scope" data-focal-channels="enclosure,connector,contrast" />
       <div style={{position: 'absolute', left: 790, top: 255, width: 340, height: 265, display: 'grid', placeItems: 'center', background: P.ink, clipPath: 'polygon(50% 0,100% 22%,92% 82%,50% 100%,8% 82%,0 22%)', ...enter(frame, 5, 0, 15)}}><div style={{textAlign: 'center'}}><FileCheck2 size={64} color={P.gold} /><Text size={34} color={P.white} weight={900}>生效判决</Text></div></div>
       <Arrow x1={835} y1={386} x2={555} y2={245} color={P.teal} start={28} />
@@ -305,7 +358,7 @@ export const JudgmentEffectsScene = () => {
 export const MarriageValidityBoundaryScene = () => {
   const frame = useCurrentFrame();
   return (
-    <SceneFrame sceneId="marriage-validity-boundary" number="07" question="一方死亡后，婚姻无效确认为何继续，离婚诉讼为何终结？" anchor="comparison-axis" grammar="validity-continuation,disposition-lock,divorce-termination" treatments="external-negation,stamp,thin-underline,label-block" titleAt="center">
+    <SceneFrame sceneId="marriage-validity-boundary" number="08" question="一方死亡后，婚姻无效确认为何继续，离婚诉讼为何终结？" anchor="comparison-axis" grammar="validity-continuation,disposition-lock,divorce-termination" treatments="external-negation,stamp,thin-underline,label-block" titleAt="center">
       <div data-layout="one-death-boundary-splits-validity-confirmation-from-divorce-termination" data-visual-anchor="comparison-axis" data-visual-grammar="validity-continuation,disposition-lock,divorce-termination" data-text-treatments="external-negation,stamp,thin-underline,label-block" data-focal-rule="validity-status-remains-judiciable-but-divorce-object-disappears" data-focal-channels="enclosure,contrast,motion" />
       <div style={{position: 'absolute', left: 890, top: 72, width: 140, height: 670, background: P.ink, clipPath: 'polygon(44% 0,58% 0,68% 16%,55% 31%,66% 48%,48% 66%,58% 84%,45% 100%,35% 100%,42% 82%,31% 65%,46% 47%,35% 30%,48% 15%)'}} />
       <div style={{position: 'absolute', left: 48, top: 75, width: 790, height: 670, padding: '30px 34px', background: P.paleBlue, borderTop: `10px solid ${P.teal}`, ...enter(frame, 8, -30, 0)}}>
@@ -332,6 +385,7 @@ export const MarriageValidityBoundaryScene = () => {
 export const OrdinaryProcedureControlMap = () => (
   <AbsoluteFill style={{backgroundColor: P.paper}}>
     <Sequence from={SCENES.filingGate.start} durationInFrames={SCENES.filingGate.duration}><FilingGateScene /></Sequence>
+    <Sequence from={SCENES.threeDocuments.start} durationInFrames={SCENES.threeDocuments.duration}><ThreeDocumentsScene /></Sequence>
     <Sequence from={SCENES.repeatSuitTest.start} durationInFrames={SCENES.repeatSuitTest.duration}><RepeatSuitTestScene /></Sequence>
     <Sequence from={SCENES.withdrawalAbsence.start} durationInFrames={SCENES.withdrawalAbsence.duration}><WithdrawalAbsenceScene /></Sequence>
     <Sequence from={SCENES.proceduralObstacles.start} durationInFrames={SCENES.proceduralObstacles.duration}><ProceduralObstaclesScene /></Sequence>
