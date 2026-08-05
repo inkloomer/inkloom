@@ -56,7 +56,7 @@ const enter = (frame: number, start: number, dx = 0, dy = 20): Style => ({
 });
 
 const Text = ({children, size = 24, color = P.ink, weight = 550, style}: {children: ReactNode; size?: number; color?: string; weight?: number; style?: Style}) => (
-  <div style={{fontFamily: 'var(--animation-body, sans-serif)', fontSize: size, lineHeight: 1.32, color, fontWeight: weight, ...style}}>{children}</div>
+  <div style={{fontFamily: 'var(--inkloom-animation-body)', fontSize: size, lineHeight: 1.32, color, fontWeight: weight, ...style}}>{children}</div>
 );
 
 const Label = ({children, color = P.navy}: {children: ReactNode; color?: string}) => (
@@ -74,7 +74,7 @@ const SceneFrame = ({sceneId, number, question, anchor, grammar, treatments, chi
     <PaperTexture />
     <div style={{position: 'absolute', top: 34, left: titleAt === 'center' ? 220 : 76, right: titleAt === 'center' ? 220 : 76, display: 'flex', alignItems: 'center', justifyContent: titleAt === 'center' ? 'center' : 'space-between', zIndex: 20}}>
       <div style={{display: 'flex', alignItems: 'center', gap: 18, textAlign: titleAt}}>
-        <div style={{width: 52, height: 52, display: 'grid', placeItems: 'center', background: P.red, color: P.white, fontFamily: 'var(--animation-mono, monospace)', fontSize: 22, fontWeight: 800}}>{number}</div>
+        <div style={{width: 52, height: 52, display: 'grid', placeItems: 'center', background: P.red, color: P.white, fontFamily: 'var(--inkloom-animation-mono)', fontSize: 22, fontWeight: 800}}>{number}</div>
         <Text size={titleAt === 'center' ? 39 : 42} weight={800}>{question}</Text>
       </div>
       {titleAt === 'left' && <Text size={17} color={P.muted} weight={700} style={{letterSpacing: '.12em'}}>一审普通程序 · CASE CONTROL</Text>}
@@ -112,7 +112,8 @@ const Docket = ({label, color = P.gold, style, source, terminal}: {label: string
 export const FilingGateScene = () => {
   /* Static audit inventory: data-final-knowledge="plaintiff-direct-interest" data-final-knowledge="defendant-identifiable" data-final-knowledge="claim-specific" data-final-knowledge="court-scope-jurisdiction" data-final-knowledge="pre-acceptance-non-acceptance" data-final-knowledge="post-acceptance-dismiss-action" data-final-knowledge="merits-dismiss-claim" data-stateful-source="filing-docket" <Landmark <CalendarClock */
   const frame = useCurrentFrame();
-  const docketX = interpolate(frame, [5, 42, 110], [95, 310, 795], clamp);
+  const docketX = interpolate(frame, [5, 35, 65, 95, 120], [95, 345, 720, 1095, 895], clamp);
+  const docketY = interpolate(frame, [5, 95, 120], [355, 355, 680], clamp);
   return (
     <SceneFrame sceneId="filing-gate" number="01" question="起诉先过哪四道门？失败发生在哪一阶段？" anchor="boundary" grammar="four-gates,stage-exits,court-intake" treatments="label-block,thin-underline,stamp">
       <div data-layout="courthouse-portico-with-four-intake-gates-and-three-stage-exits" data-visual-anchor="boundary" data-visual-grammar="four-gates,stage-exits,court-intake" data-text-treatments="label-block,thin-underline,stamp" data-focal-rule="four-filing-conditions-before-three-stage-specific-exits" data-focal-channels="icon,enclosure,motion" />
@@ -129,7 +130,7 @@ export const FilingGateScene = () => {
           </div>
         ))}
       </div>
-      <Docket label="起诉状" source="filing-docket" style={{position: 'absolute', left: docketX, top: 355, zIndex: 10}} />
+      <Docket label="起诉状" source="filing-docket" style={{position: 'absolute', left: docketX, top: docketY, zIndex: 10, opacity: interpolate(frame, [112, 130], [1, 0], clamp)}} />
       <div data-final-knowledge="file-within-seven-days" style={{position: 'absolute', left: 790, top: 555, width: 365, ...enter(frame, 112, 0, 18)}}><CourtSeal icon={CalendarClock} label="四门全过" sublabel="7日内立案并通知当事人" color={P.teal} /></div>
       <div data-stateful-terminal="filing-docket" style={{position: 'absolute', left: 894, top: 680, width: 150, padding: '10px 14px', background: P.teal, color: P.white, opacity: progress(frame, 125, 18), textAlign: 'center', fontSize: 22, fontWeight: 800}}>已立案案卷</div>
       <Arrow x1={960} y1={535} x2={960} y2={556} color={P.teal} start={106} />
@@ -170,14 +171,14 @@ export const RepeatSuitTestScene = () => {
       </div>
       <div data-final-knowledge="conflicting-judgment-risk" style={{position: 'absolute', left: 1280, top: 590, width: 485, display: 'flex', alignItems: 'center', gap: 15, ...enter(frame, 130, 0, 14)}}><CircleAlert size={44} color={P.red} /><Text size={24} color={P.red} weight={800}>目的：避免重复审理与冲突判决</Text></div>
       <svg width="1920" height="818" style={{position: 'absolute', inset: 0, pointerEvents: 'none'}}><path d="M 270 690 C 620 780, 1120 780, 1520 675" fill="none" stroke={P.teal} strokeWidth="6" strokeDasharray="16 12" strokeDashoffset={interpolate(frame, [135, 170], [900, 0], clamp)} /></svg>
-      <div style={{position: 'absolute', left: 350, top: 675, display: 'flex', gap: 24}}>
+      <div style={{position: 'absolute', left: 330, right: 70, top: 665, display: 'grid', gridTemplateColumns: '340px 365px 485px 1fr', gap: 18, alignItems: 'stretch'}}>
         {[
           ['non-merits-refiling', '未实体处理', '不予受理／驳回起诉／撤诉后，符合条件可再诉'],
           ['support-new-circumstances', '新情况、新理由', '赡养费、扶养费、抚养费按新案受理'],
-          ['six-month-restrictions', '身份关系 6个月', '不准离婚等＋撤诉离婚：原告无新情况新理由不得再诉'],
-        ].map(([id, title, detail], i) => <div key={id} data-final-knowledge={id} style={{width: i === 2 ? 540 : 400, minHeight: 118, padding: '14px 17px', background: P.paleBlue, borderTop: `5px solid ${i === 2 ? P.gold : P.teal}`, ...enter(frame, 150 + i * 12, 0, 15)}}><Text size={24} color={i === 2 ? P.gold : P.teal} weight={850}>{title}</Text><Text size={22} style={{marginTop: 5}}>{detail}</Text></div>)}
+          ['six-month-restrictions', '离婚／收养 6个月', '无新情况、新理由时，原告再诉受限'],
+        ].map(([id, title, detail], i) => <div key={id} data-final-knowledge={id} style={{minHeight: 130, padding: '14px 17px', background: P.paleBlue, borderTop: `5px solid ${i === 2 ? P.gold : P.teal}`, ...enter(frame, 150 + i * 12, 0, 15)}}><Text size={24} color={i === 2 ? P.gold : P.teal} weight={850}>{title}</Text><Text size={22} style={{marginTop: 5}}>{detail}</Text></div>)}
+        <div data-stateful-terminal="later-suit-docket" style={{minHeight: 130, padding: '14px 16px', display: 'grid', alignContent: 'center', justifyItems: 'center', gap: 9, background: P.teal, color: P.white, opacity: progress(frame, 170, 16), textAlign: 'center'}}><FileCheck2 size={36} /><Text size={22} color={P.white} weight={850}>例外旁路<br />重新受理</Text></div>
       </div>
-      <div data-stateful-terminal="later-suit-docket" style={{position: 'absolute', right: 82, top: 728, padding: '8px 12px', background: P.teal, color: P.white, fontSize: 22, fontWeight: 800, opacity: progress(frame, 170, 16)}}>例外旁路：重新受理</div>
     </SceneFrame>
   );
 };
@@ -292,11 +293,11 @@ export const JudgmentEffectsScene = () => {
       <Arrow x1={960} y1={520} x2={960} y2={650} color={P.plum} start={42} />
       <Arrow x1={1085} y1={386} x2={1365} y2={245} color={P.red} start={56} />
       <div data-final-knowledge="enforcement-three-conditions" style={{position: 'absolute', left: 80, top: 80, width: 590, height: 260, background: P.paleBlue, borderTop: `9px solid ${P.teal}`, padding: '22px 25px', ...enter(frame, 64, -22, 0)}}><div style={{display: 'flex', alignItems: 'center', gap: 16}}><ShieldCheck size={48} color={P.teal} /><Text size={34} color={P.teal} weight={900}>执行力</Text></div><Text size={25} weight={800} style={{marginTop: 18}}>给付之诉 ＋ 原告胜诉 ＋ 明确给付内容</Text><Text size={22} color={P.muted} style={{marginTop: 10}}>三项同时满足，才可作为强制执行根据</Text></div>
-      <div data-final-knowledge="res-judicata-binds-parties-and-court" style={{position: 'absolute', right: 80, top: 80, width: 590, height: 260, background: P.paleRed, borderTop: `9px solid ${P.red}`, padding: '22px 25px', ...enter(frame, 80, 22, 0)}}><div style={{display: 'flex', alignItems: 'center', gap: 16}}><Ban size={48} color={P.red} /><Text size={34} color={P.red} weight={900}>既判力</Text></div><Text size={25} weight={800} style={{marginTop: 18}}>当事人不得再诉，法院不得作冲突判断</Text><Text size={22} color={P.muted} style={{marginTop: 10}}>主体原则相对；法定承受者、决议诉讼等有扩张例外</Text></div>
+      <div data-final-knowledge="res-judicata-binds-parties" style={{position: 'absolute', right: 80, top: 80, width: 590, height: 260, background: P.paleRed, borderTop: `9px solid ${P.red}`, padding: '22px 25px', ...enter(frame, 80, 22, 0)}}><div style={{display: 'flex', alignItems: 'center', gap: 16}}><Ban size={48} color={P.red} /><Text size={34} color={P.red} weight={900}>既判力</Text></div><Text size={27} weight={850} style={{marginTop: 24}}>原则上约束判决当事人</Text><Text size={22} color={P.muted} style={{marginTop: 12}}>已经生效的判断，不得由同一当事人重复争执</Text></div>
       <div data-final-knowledge="formation-two-conditions" style={{position: 'absolute', left: 625, top: 610, width: 670, height: 190, background: P.palePlum, borderLeft: `9px solid ${P.plum}`, padding: '22px 28px', ...enter(frame, 96, 0, 22)}}><div style={{display: 'flex', alignItems: 'center', gap: 16}}><Scale size={46} color={P.plum} /><Text size={34} color={P.plum} weight={900}>形成力</Text></div><Text size={25} weight={800} style={{marginTop: 13}}>形成之诉 ＋ 原告胜诉 → 直接变更或消灭法律关系</Text></div>
-      <div data-final-knowledge="operative-part-not-reasons" style={{position: 'absolute', left: 90, top: 390, width: 590, padding: '18px 22px', background: P.paper2, borderLeft: `7px solid ${P.red}`, ...enter(frame, 112, 0, 18)}}><Text size={25} weight={850}>客观范围：判决主文有，判决理由没有</Text><Text size={22} color={P.muted}>部分请求判决，原则上产生全部既判力</Text></div>
-      <div data-final-knowledge="subjective-relative-and-exceptions" style={{position: 'absolute', right: 90, top: 390, width: 590, padding: '18px 22px', background: P.paper2, borderLeft: `7px solid ${P.red}`, ...enter(frame, 124, 0, 18)}}><Text size={25} weight={850}>主观范围：原则上只约束当事人</Text><Text size={22} color={P.muted}>权利义务承受者、决议诉讼其他股东等可扩张</Text></div>
-      <div data-final-knowledge="effective-judgment-time-boundary" style={{position: 'absolute', left: 735, top: 535, width: 450, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 14}}><Clock3 size={35} color={P.gold} /><Text size={24} color={P.gold} weight={900}>标准时：判决生效时；之后新事实不受拘束</Text></div>
+      <div data-final-knowledge="operative-part-not-reasons" style={{position: 'absolute', left: 90, top: 390, width: 590, padding: '22px', background: P.paper2, borderLeft: `7px solid ${P.red}`, ...enter(frame, 112, 0, 18)}}><Text size={25} weight={850}>客观范围：以判决主文为主</Text><Text size={23} color={P.muted} style={{marginTop: 8}}>判决理由不产生既判力</Text></div>
+      <div data-final-knowledge="subjective-parties-range" style={{position: 'absolute', right: 90, top: 390, width: 590, padding: '22px', background: P.paper2, borderLeft: `7px solid ${P.red}`, ...enter(frame, 124, 0, 18)}}><Text size={25} weight={850}>主观范围：原则上约束当事人</Text><Text size={23} color={P.muted} style={{marginTop: 8}}>先识别判决当事人，再判断拘束范围</Text></div>
+      <div data-final-knowledge="effective-judgment-time-boundary" style={{position: 'absolute', left: 735, top: 535, width: 450, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 14}}><Clock3 size={35} color={P.gold} /><Text size={24} color={P.gold} weight={900}>时间标准：判决生效时</Text></div>
     </SceneFrame>
   );
 };
@@ -312,7 +313,7 @@ export const MarriageValidityBoundaryScene = () => {
         <Text size={23} color={P.muted} style={{marginTop: 9}}>判断婚姻自始是否有效，不由当事人处分</Text>
         <div data-final-knowledge="no-withdrawal-on-validity" style={{position: 'absolute', left: 34, top: 145, display: 'flex', gap: 14, alignItems: 'center'}}><Ban size={38} color={P.red} /><Label color={P.red}>不得撤诉</Label></div>
         <div data-final-knowledge="no-mediation-or-settlement-on-validity" style={{position: 'absolute', left: 275, top: 145, display: 'flex', gap: 14, alignItems: 'center'}}><Ban size={38} color={P.red} /><Label color={P.red}>不得调解／和解</Label></div>
-        <div data-final-knowledge="judgment-required" style={{position: 'absolute', left: 34, top: 235, width: 710, padding: '20px 22px', background: P.white, borderLeft: `8px solid ${P.teal}`}}><div style={{display: 'flex', alignItems: 'center', gap: 15}}><Gavel size={42} color={P.teal} /><Text size={29} color={P.teal} weight={900}>婚姻效力只能判决</Text></div><Text size={22} style={{marginTop: 8}}>财产分割、子女抚养可以另行调解</Text></div>
+        <div data-final-knowledge="judgment-required" style={{position: 'absolute', left: 34, top: 235, width: 710, padding: '24px 22px', background: P.white, borderLeft: `8px solid ${P.teal}`}}><div style={{display: 'flex', alignItems: 'center', gap: 15}}><Gavel size={42} color={P.teal} /><Text size={29} color={P.teal} weight={900}>婚姻效力只能以判决确认</Text></div></div>
         <div style={{position: 'absolute', left: 34, top: 375, width: 710, display: 'flex', gap: 18}}><CourtSeal icon={UsersRound} label="起诉主体随无效事由而变" sublabel="重婚涉财产：合法婚姻当事人可作有独三" color={P.navy} /></div>
         <div data-final-knowledge="death-still-accept-and-continue" style={{position: 'absolute', left: 34, bottom: 30, width: 710, display: 'flex', alignItems: 'center', gap: 18, padding: '18px 20px', background: P.teal, ...enter(frame, 88, 0, 20)}}><ArrowRight size={45} color={P.white} /><Text size={26} color={P.white} weight={900}>一方或双方死亡后仍可受理；诉讼中死亡仍继续确认效力</Text></div>
       </div>
@@ -321,7 +322,7 @@ export const MarriageValidityBoundaryScene = () => {
         <Text size={23} color={P.muted} style={{marginTop: 9}}>以尚存婚姻关系为诉讼标的</Text>
         <div data-final-knowledge="divorce-pre-death-nonacceptance-or-dismissal" style={{position: 'absolute', left: 34, top: 160, width: 710, padding: '20px 22px', background: P.white, borderLeft: `8px solid ${P.red}`}}><Text size={25} weight={850}>起诉前对方已死亡</Text><Text size={22} style={{marginTop: 8}}>受理前发现 → 不予受理；受理后发现 → 驳回起诉</Text></div>
         <div data-final-knowledge="divorce-during-suit-termination" style={{position: 'absolute', left: 34, top: 305, width: 710, display: 'flex', alignItems: 'center', gap: 18, padding: '20px 22px', background: P.red, ...enter(frame, 102, 0, 20)}}><Ban size={46} color={P.white} /><div><Text size={29} color={P.white} weight={900}>诉讼中一方死亡 → 诉讼终结</Text><Text size={22} color={P.white}>婚姻关系自然解除，诉讼标的消灭</Text></div></div>
-        <div data-final-knowledge="divorce-waits-for-validity-judgment" style={{position: 'absolute', left: 34, bottom: 30, width: 710, padding: '18px 20px', background: P.paleGold, borderLeft: `8px solid ${P.gold}`}}><Text size={24} color={P.gold} weight={900}>无效之诉与离婚之诉并存</Text><Text size={22} style={{marginTop: 6}}>离婚先等待无效判决；确认无效后驳回离婚请求，财产、子女事项继续审理</Text></div>
+        <div data-final-knowledge="validity-divorce-death-contrast" style={{position: 'absolute', left: 34, bottom: 30, width: 710, padding: '18px 20px', background: P.paleGold, borderLeft: `8px solid ${P.gold}`}}><Text size={24} color={P.gold} weight={900}>同是死亡，程序结果不同</Text><Text size={22} style={{marginTop: 6}}>婚姻无效确认继续；离婚诉讼按死亡发生阶段退出程序</Text></div>
       </div>
       <div style={{position: 'absolute', left: 850, top: 12, width: 220, textAlign: 'center'}}><Text size={24} color={P.red} weight={900}>死亡边界</Text><ArrowDown size={40} color={P.red} /></div>
     </SceneFrame>

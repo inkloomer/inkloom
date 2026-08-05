@@ -72,7 +72,7 @@
       "textTreatments": ["soft-highlight", "label-block", "external-negation"],
       "focalChannels": ["enclosure", "connector", "contrast"],
       "tokens": ["FileCheck2", "ShieldCheck", "Scale", "Ban", "Clock3"],
-      "finalKnowledge": ["enforcement-three-conditions", "formation-two-conditions", "res-judicata-binds-parties-and-court", "operative-part-not-reasons", "subjective-relative-and-exceptions", "effective-judgment-time-boundary"],
+      "finalKnowledge": ["enforcement-three-conditions", "formation-two-conditions", "res-judicata-binds-parties", "operative-part-not-reasons", "subjective-parties-range", "effective-judgment-time-boundary"],
       "statefulObjects": []
     },
     {
@@ -84,7 +84,7 @@
       "textTreatments": ["external-negation", "stamp", "thin-underline", "label-block"],
       "focalChannels": ["enclosure", "contrast", "motion"],
       "tokens": ["ShieldCheck", "Ban", "Gavel", "UserRound"],
-      "finalKnowledge": ["no-withdrawal-on-validity", "no-mediation-or-settlement-on-validity", "judgment-required", "death-still-accept-and-continue", "divorce-pre-death-nonacceptance-or-dismissal", "divorce-during-suit-termination", "divorce-waits-for-validity-judgment"],
+      "finalKnowledge": ["no-withdrawal-on-validity", "no-mediation-or-settlement-on-validity", "judgment-required", "death-still-accept-and-continue", "divorce-pre-death-nonacceptance-or-dismissal", "divorce-during-suit-termination", "validity-divorce-death-contrast"],
       "statefulObjects": []
     }
   ]
