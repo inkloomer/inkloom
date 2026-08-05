@@ -3,7 +3,7 @@
   "compositionId": "OrdinaryProcedureControlMap",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-08-03T14:13:08.184Z",
+  "generatedAt": "2026-08-05T10:04:36.108Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -16,13 +16,13 @@
       "title": "起诉门槛与三条程序出口",
       "durationMs": 8500,
       "file": "filing-gate.avif",
-      "fileSize": 370677,
+      "fileSize": 372265,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "29361c9f6968407645e636a36e26344adf4d759e85e9dacb557c8c7efbe1e8f2",
+      "sha256": "0b61cdb62fa4e6efd2abc6a39e001d5827224a84c4c5bb0a108b56d4238aef3c",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "eb3f630d620b0797dbd60419425813544655e44a6034ec2a355004fada712e9e"
+      "sceneFingerprint": "cfcced37bdbd93cd915fd1aab9392ca886e37225146f8ca42f909f248a897ef4"
     },
     {
       "endFrame": 524,
@@ -33,13 +33,13 @@
       "title": "重复起诉的合流检验",
       "durationMs": 9000,
       "file": "repeat-suit-test.avif",
-      "fileSize": 452770,
+      "fileSize": 435841,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "8de79561154af890ec9588d0685d4c002af444f3546d48ea20c72ac9cd1ce8e4",
+      "sha256": "1bc116829a212428ae75d7bf20ac7e1d921b20cbeb971ba7108b1db2b1bf2f48",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "eb3f630d620b0797dbd60419425813544655e44a6034ec2a355004fada712e9e"
+      "sceneFingerprint": "cfcced37bdbd93cd915fd1aab9392ca886e37225146f8ca42f909f248a897ef4"
     },
     {
       "endFrame": 779,
@@ -50,13 +50,13 @@
       "title": "撤诉与缺席判决的角色边界",
       "durationMs": 8500,
       "file": "withdrawal-absence.avif",
-      "fileSize": 470750,
+      "fileSize": 463545,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "548b56f542d38e7511670e4efbbc63b56215315ba8347328eca302c2be08f774",
+      "sha256": "53d0c4aee0e6b2c16bd5e6260a444387001295a7f0775f964fd659bf3e03a36d",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "eb3f630d620b0797dbd60419425813544655e44a6034ec2a355004fada712e9e"
+      "sceneFingerprint": "cfcced37bdbd93cd915fd1aab9392ca886e37225146f8ca42f909f248a897ef4"
     },
     {
       "endFrame": 1094,
@@ -67,13 +67,13 @@
       "title": "三类诉讼障碍的边界",
       "durationMs": 10500,
       "file": "procedural-obstacles.avif",
-      "fileSize": 401404,
+      "fileSize": 412431,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "ea68fe52d0062b383caedb7bf6b95edfcdf73782839d54ae80d3ab836d0fbd8b",
+      "sha256": "f097a840969b0dd4156a6c26d82454354f446f770baae86e5ea4dcd536f9c9d3",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "eb3f630d620b0797dbd60419425813544655e44a6034ec2a355004fada712e9e"
+      "sceneFingerprint": "cfcced37bdbd93cd915fd1aab9392ca886e37225146f8ca42f909f248a897ef4"
     },
     {
       "endFrame": 1364,
@@ -84,13 +84,13 @@
       "title": "裁判文书与纠错出口",
       "durationMs": 9000,
       "file": "judgment-documents.avif",
-      "fileSize": 363306,
+      "fileSize": 364383,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "61721331b688b29e5051f9e28ebedd6953d5aeb8b343d08f6d9f6effd3c56bfb",
+      "sha256": "12be7e221435ba62d13196875cdcd89cdc86ae4cd770b9649fdf50b45f1ae83f",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "eb3f630d620b0797dbd60419425813544655e44a6034ec2a355004fada712e9e"
+      "sceneFingerprint": "cfcced37bdbd93cd915fd1aab9392ca886e37225146f8ca42f909f248a897ef4"
     },
     {
       "endFrame": 1649,
@@ -101,13 +101,13 @@
       "title": "判决效力的条件与范围",
       "durationMs": 9500,
       "file": "judgment-effects.avif",
-      "fileSize": 432041,
+      "fileSize": 380932,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "91bf48f968d569393ec67b6bf9f95b3dd8851dd4a5a1dfcadc8474adfb709afd",
+      "sha256": "a0acdcc62be8c350f174bd68c8208f7da2eeff757f9ebcd8bee792cf8a4699c3",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "eb3f630d620b0797dbd60419425813544655e44a6034ec2a355004fada712e9e"
+      "sceneFingerprint": "cfcced37bdbd93cd915fd1aab9392ca886e37225146f8ca42f909f248a897ef4"
     },
     {
       "endFrame": 1919,
@@ -118,13 +118,13 @@
       "title": "婚姻效力诉讼的特殊边界",
       "durationMs": 9000,
       "file": "marriage-validity-boundary.avif",
-      "fileSize": 564548,
+      "fileSize": 497188,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "d428c71821a52a961c59472aaffe557741a207aa21aa1fd53c166f50791e46aa",
+      "sha256": "1581da545e313ae30a20f8d5f4a164f3e49e8f7a589d2ab6284b6bec97b2b9fe",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "eb3f630d620b0797dbd60419425813544655e44a6034ec2a355004fada712e9e"
+      "sceneFingerprint": "cfcced37bdbd93cd915fd1aab9392ca886e37225146f8ca42f909f248a897ef4"
     }
   ],
   "size": {
@@ -132,7 +132,7 @@
     "width": 2560
   },
   "sourceFps": 30,
-  "sourceFingerprint": "eb3f630d620b0797dbd60419425813544655e44a6034ec2a355004fada712e9e",
+  "sourceFingerprint": "cfcced37bdbd93cd915fd1aab9392ca886e37225146f8ca42f909f248a897ef4",
   "targetFps": 30,
-  "totalFileSize": 3055496
+  "totalFileSize": 2926585
 }
