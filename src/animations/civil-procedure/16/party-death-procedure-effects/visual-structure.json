@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "pre-suit-death",
+      "export": "PreSuitDeathScene",
+      "layout": "defendant-clarity-gate-with-two-stage-exit-rails",
+      "anchor": "boundary",
+      "grammar": ["death-gate", "defendant-clarity-test", "two-stage-exit"],
+      "textTreatments": ["label-block", "stamp", "thin-underline"],
+      "focalChannels": ["icon", "enclosure", "connector"],
+      "tokens": ["UserRound", "Skull", "Ban", "FileX", "ArrowRight"],
+      "finalKnowledge": [
+        "defendant-dies-before-suit",
+        "no-defendant-no-filing-condition",
+        "pre-acceptance-non-acceptance",
+        "post-acceptance-dismiss-action",
+        "nonacceptance-and-dismissal-are-procedural-rulings"
+      ],
+      "statefulObjects": ["defendant-token"]
+    },
+    {
+      "id": "during-suit-general",
+      "export": "DuringSuitGeneralScene",
+      "layout": "general-case-suspension-with-successor-fork",
+      "anchor": "flow-path",
+      "grammar": ["death-event", "suspension-rail", "successor-fork", "party-replacement"],
+      "textTreatments": ["soft-highlight", "label-block", "stamp"],
+      "focalChannels": ["connector", "enclosure", "icon"],
+      "tokens": ["UserRound", "Skull", "Hourglass", "UserPlus", "Ban"],
+      "finalKnowledge": [
+        "general-case-triggers-suspension",
+        "suspension-waits-for-successor",
+        "successor-continues-and-party-is-changed",
+        "no-successor-or-waiver-triggers-termination"
+      ],
+      "statefulObjects": ["general-case-token"]
+    },
+    {
+      "id": "during-suit-identity",
+      "export": "DuringSuitIdentityScene",
+      "layout": "identity-relationship-direct-termination-courtroom",
+      "anchor": "comparison-axis",
+      "grammar": ["identity-relationship-skip", "subject-disappearance", "direct-termination"],
+      "textTreatments": ["external-negation", "stamp", "label-block"],
+      "focalChannels": ["enclosure", "icon", "contrast"],
+      "tokens": ["Heart", "Skull", "Gavel", "Ban", "UsersRound"],
+      "finalKnowledge": [
+        "identity-relationship-skips-succession",
+        "subject-disappearance-kills-the-claim",
+        "direct-court-termination-on-identity-death"
+      ],
+      "statefulObjects": ["identity-case-token"]
+    }
+  ]
+}

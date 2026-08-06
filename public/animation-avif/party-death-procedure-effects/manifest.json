@@ -1,0 +1,70 @@
+{
+  "animationId": "party-death-procedure-effects",
+  "compositionId": "PartyDeathProcedureEffects",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-05T14:52:35.244Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 272,
+      "frameCount": 273,
+      "id": "pre-suit-death",
+      "number": "01",
+      "startFrame": 0,
+      "title": "起诉前被告死亡：无明确被告 → 程序性裁定",
+      "durationMs": 9100,
+      "file": "pre-suit-death.avif",
+      "fileSize": 420195,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "f127dc8d8803119f0c064f223f1dff3bb961692b6928602ed35dd9e439e0ed4b",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "ce8edf245c7914478afb54837aecbeafd7ac1fabb39868c7ab0031b8efd2632c"
+    },
+    {
+      "endFrame": 617,
+      "frameCount": 333,
+      "id": "during-suit-general",
+      "number": "02",
+      "startFrame": 285,
+      "title": "诉讼中一方死亡：一般案件中止、等继承人表态",
+      "durationMs": 11100,
+      "file": "during-suit-general.avif",
+      "fileSize": 408797,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "b1de452652bb1954ae6da296f91ef43d351eddc875001c3f33586f05f00e2735",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "ce8edf245c7914478afb54837aecbeafd7ac1fabb39868c7ab0031b8efd2632c"
+    },
+    {
+      "endFrame": 932,
+      "frameCount": 303,
+      "id": "during-suit-identity",
+      "number": "03",
+      "startFrame": 630,
+      "title": "身份关系案件：标的随人走 · 直接裁定终结",
+      "durationMs": 10100,
+      "file": "during-suit-identity.avif",
+      "fileSize": 443392,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "7152208635308ae80e2aa02ed9169467de903fa9aba551120d8675f4b0789f9f",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "ce8edf245c7914478afb54837aecbeafd7ac1fabb39868c7ab0031b8efd2632c"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "ce8edf245c7914478afb54837aecbeafd7ac1fabb39868c7ab0031b8efd2632c",
+  "targetFps": 30,
+  "totalFileSize": 1272384
+}

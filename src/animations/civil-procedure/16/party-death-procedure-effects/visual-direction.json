@@ -1,0 +1,16 @@
+{
+  "directionId": "night-toll-death-fork",
+  "family": "transit-procedure-fork",
+  "palette": "deep midnight navy + porcelain cream + warning amber + terminal vermilion + successor teal + identity plum",
+  "typography": "broad legal questions, compact gate and branch labels, underlined rule conditions, and stamped verdicts",
+  "composition": "two distinct death-fork stages: a pre-suit defendant-clarity gate and a during-suit case-type fork that splits into a general successor branch and an identity-relationship terminal branch",
+  "surface": "flat enamel signal plates, single-line procedural rails, branch arrowheads, and a high-contrast gate stamp; no docket cards, no drafting grid, no courtroom-archive texture",
+  "motion": "the named party token advances along the rail only after the death event is set and is parked at its terminal procedure as a visible stateful object",
+  "transition": "a stable midnight rail, porcelain gate plate, and vermilion scene number persist while each scene replaces the branch assembly",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/civil-procedure/16/party-death-procedure-effects/",
+    "title": "夜间程序闸门图"
+  }
+}
