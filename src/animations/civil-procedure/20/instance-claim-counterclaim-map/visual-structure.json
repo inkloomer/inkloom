@@ -1,0 +1,168 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 4,
+  "scenes": [
+    {
+      "id": "overview",
+      "export": "ThreeInstanceOverviewScene",
+      "layout": "three-instance-bands-parallel-shelf-diagram",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "instance-bands",
+        "principle-per-band",
+        "claim-doc-sweep",
+        "shared-ground"
+      ],
+      "textTreatments": [
+        "label-block",
+        "stamp",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "icon",
+        "contrast",
+        "motion"
+      ],
+      "tokens": [
+        "Scale",
+        "ChevronsUp",
+        "RotateCcw",
+        "FileText"
+      ],
+      "finalKnowledge": [
+        "first-instance-convenience",
+        "second-instance-finality",
+        "retrial-limited-scope",
+        "claim-doc-travel"
+      ],
+      "statefulObjects": [
+        "claim-doc"
+      ]
+    },
+    {
+      "id": "first-instance",
+      "export": "FirstInstanceRequestWindowScene",
+      "layout": "first-instance-request-window-merge-lane-diagram",
+      "anchor": "timeline-gate",
+      "grammar": [
+        "acceptance-window",
+        "debate-end-gate",
+        "three-request-slots",
+        "merged-hearing-lane"
+      ],
+      "textTreatments": [
+        "thin-underline",
+        "label-block",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "icon",
+        "locator",
+        "connector"
+      ],
+      "tokens": [
+        "FileText",
+        "DoorClosed",
+        "PenLine",
+        "Swords",
+        "Users",
+        "User",
+        "UserRound",
+        "Merge"
+      ],
+      "finalKnowledge": [
+        "change-before-debate-end",
+        "three-request-window",
+        "merge-if-possible"
+      ],
+      "statefulObjects": [
+        "merged-claims"
+      ]
+    },
+    {
+      "id": "second-instance",
+      "export": "SecondInstanceMediationForkScene",
+      "layout": "second-instance-mediation-fork-remand-track-diagram",
+      "anchor": "document-fork",
+      "grammar": [
+        "mediation-fork",
+        "separate-suit-exit",
+        "consent-joint-path",
+        "remand-first-instance-track"
+      ],
+      "textTreatments": [
+        "label-block",
+        "external-negation",
+        "stamp"
+      ],
+      "focalChannels": [
+        "icon",
+        "connector",
+        "motion"
+      ],
+      "tokens": [
+        "FileText",
+        "Handshake",
+        "ArrowRightFromLine",
+        "Gavel",
+        "Undo2",
+        "Scale",
+        "User",
+        "UserRound",
+        "X"
+      ],
+      "finalKnowledge": [
+        "mediation-first",
+        "mediation-fail-separate-suit",
+        "consent-joint-adjudication",
+        "remand-rehearsed-first-instance",
+        "remand-merge-ok"
+      ],
+      "statefulObjects": [
+        "claim-doc"
+      ]
+    },
+    {
+      "id": "retrial",
+      "export": "RetrialScopeBoundaryExceptionsScene",
+      "layout": "retrial-scope-boundary-exception-rack-diagram",
+      "anchor": "boundary",
+      "grammar": [
+        "original-scope-boundary",
+        "reject-beyond-scope",
+        "remand-exception-rack",
+        "four-permission-grounds"
+      ],
+      "textTreatments": [
+        "stamp",
+        "external-negation",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "icon",
+        "enclosure",
+        "contrast"
+      ],
+      "tokens": [
+        "FileText",
+        "FileX",
+        "BellOff",
+        "UserPlus",
+        "PackageX",
+        "DoorClosed",
+        "RotateCcw",
+        "X"
+      ],
+      "finalKnowledge": [
+        "scope-limited",
+        "reject-beyond-scope",
+        "remand-still-retrial",
+        "four-grounds-permitted"
+      ],
+      "statefulObjects": [
+        "claim-doc"
+      ]
+    }
+  ]
+}

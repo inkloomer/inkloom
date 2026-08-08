@@ -118,6 +118,7 @@
   "allowedFamilyReuse": {
     "heraldic-badge": ["delegated-agent-badge", "statutory-agent-badge"],
     "circuit-board": ["delegated-agent-circuit", "statutory-agent-circuit"],
-    "stage-drama": ["delegated-agent-stage", "statutory-agent-stage"]
+    "stage-drama": ["delegated-agent-stage", "statutory-agent-stage"],
+    "retrial-docket-control-room": ["instance-claim-counterclaim-map", "retrial-supervision-control-map"]
   }
 }

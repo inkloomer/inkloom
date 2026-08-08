@@ -1,0 +1,16 @@
+{
+  "directionId": "archival-dossier",
+  "derivedFrom": "retrial-supervision-control-map",
+  "variation": "three instance dossier strips (一审/二审/再审) juxtaposed side by side as shelf bands with punched bind spines and a shared claim-document travel rail, per-instance principle stamps, and gate/merge forks that replace the vertical knowledge grid",
+  "family": "retrial-docket-control-room",
+  "palette": "#f4efe5 + #18242b + #b43b35 + #176b73 + #d89b2b",
+  "typography": "WenKai screen oversized issue headings, compact operative labels, and monospaced procedural numbering",
+  "composition": "side-by-side dossier shelf bands with punched bind spines, a claim-document travel rail, and per-instance gate stamps",
+  "surface": "ledger paper with punched bind spines, clipped dossier tabs, hard 4px ink borders, and no rounded corners",
+  "motion": "gate stamps impact-reveal in instance order while the claim document travels the rail into each shelf; merge and remand forks then seal the outcomes",
+  "transition": "the claim document and its travel rail persist across scene handoffs while each scene re-crops its own dossier header",
+  "catalog": {
+    "status": "variant",
+    "sourceDirectionId": "archival-dossier"
+  }
+}

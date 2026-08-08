@@ -58,6 +58,7 @@ import {typography as typography76} from '../animations/civil-procedure/18/publi
 import {typography as typography77} from '../animations/civil-procedure/19/third-party-revocation-remedy-map/animation.meta';
 import {typography as typography78} from '../animations/civil-procedure/20/appeal-review-decision-map/animation.meta';
 import {typography as typography80} from '../animations/civil-procedure/20/retrial-supervision-control-map/animation.meta';
+import {typography as typography92} from '../animations/civil-procedure/20/instance-claim-counterclaim-map/animation.meta';
 import {typography as typography81} from '../animations/civil-procedure/21/special-procedure-remedy-map/animation.meta';
 import {typography as typography82} from '../animations/civil-procedure/22/payment-order-gate/animation.meta';
 import {typography as typography83} from '../animations/civil-procedure/23/public-notice-cancellation-path/animation.meta';
@@ -152,6 +153,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'third-party-revocation-remedy-map': {metadata: typography77, scope: {animationId: 'third-party-revocation-remedy-map', subject: 'civil-procedure', topic: '19'}},
   'appeal-review-decision-map': {metadata: typography78, scope: {animationId: 'appeal-review-decision-map', subject: 'civil-procedure', topic: '20'}},
   'retrial-supervision-control-map': {metadata: typography80, scope: {animationId: 'retrial-supervision-control-map', subject: 'civil-procedure', topic: '20'}},
+  'instance-claim-counterclaim-map': {metadata: typography92, scope: {animationId: 'instance-claim-counterclaim-map', subject: 'civil-procedure', topic: '20'}},
   'special-procedure-remedy-map': {metadata: typography81, scope: {animationId: 'special-procedure-remedy-map', subject: 'civil-procedure', topic: '21'}},
   'payment-order-gate': {metadata: typography82, scope: {animationId: 'payment-order-gate', subject: 'civil-procedure', topic: '22'}},
   'public-notice-cancellation-path': {metadata: typography83, scope: {animationId: 'public-notice-cancellation-path', subject: 'civil-procedure', topic: '23'}},
