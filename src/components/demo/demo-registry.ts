@@ -49,6 +49,8 @@ import {SummaryProcedureSwitchyard} from '../../animations/civil-procedure/17/su
 import {PublicInterestLitigationNetwork} from '../../animations/civil-procedure/18/public-interest-litigation-network/remotion/PublicInterestLitigationNetwork';
 import {ThirdPartyRevocationRemedyMap} from '../../animations/civil-procedure/19/third-party-revocation-remedy-map/remotion/ThirdPartyRevocationRemedyMap';
 import {AppealReviewDecisionMap} from '../../animations/civil-procedure/20/appeal-review-decision-map/remotion/AppealReviewDecisionMap';
+import {PenaltyAdjustmentProcedure} from '../../animations/civil-procedure/32/penalty-adjustment-procedure/remotion/PenaltyAdjustmentProcedure';
+import {ContractGeneralProvisionsAtlas} from '../../animations/civil-law/contracts/contract-general-provisions-atlas/remotion/ContractGeneralProvisionsAtlas';
 import {DURATION_FRAMES as DELEGATED_DURATION_FRAMES, FPS as DELEGATED_FPS} from '../../animations/civil-procedure/08/delegated-agent/remotion/storyboard';
 import {DURATION_FRAMES as JOINT_DURATION_FRAMES, FPS as JOINT_FPS} from '../../animations/civil-procedure/06/joint-litigation/remotion/storyboard';
 import {DURATION_FRAMES as REPRESENTATIVE_DURATION_FRAMES, FPS as REPRESENTATIVE_FPS} from '../../animations/civil-procedure/06/representative-litigation/remotion/storyboard';
@@ -79,6 +81,8 @@ import {DURATION_FRAMES as SUMMARY_PROCEDURE_DURATION_FRAMES, FPS as SUMMARY_PRO
 import {DURATION_FRAMES as PUBLIC_INTEREST_DURATION_FRAMES, FPS as PUBLIC_INTEREST_FPS} from '../../animations/civil-procedure/18/public-interest-litigation-network/remotion/storyboard';
 import {DURATION_FRAMES as THIRD_PARTY_REMEDY_DURATION_FRAMES, FPS as THIRD_PARTY_REMEDY_FPS} from '../../animations/civil-procedure/19/third-party-revocation-remedy-map/remotion/storyboard';
 import {DURATION_FRAMES as APPEAL_REVIEW_DURATION_FRAMES, FPS as APPEAL_REVIEW_FPS} from '../../animations/civil-procedure/20/appeal-review-decision-map/remotion/storyboard';
+import {DURATION_FRAMES as PENALTY_ADJUSTMENT_DURATION_FRAMES, FPS as PENALTY_ADJUSTMENT_FPS} from '../../animations/civil-procedure/32/penalty-adjustment-procedure/remotion/storyboard';
+import {DURATION_FRAMES as CONTRACT_GENERAL_DURATION_FRAMES, FPS as CONTRACT_GENERAL_FPS} from '../../animations/civil-law/contracts/contract-general-provisions-atlas/remotion/storyboard';
 import {DURATION_FRAMES as FIGHT_DURATION_FRAMES, FPS as FIGHT_FPS} from '../../animations/criminal/22/fight-defense-diagram/remotion/storyboard';
 import {DURATION_FRAMES as ALTITUDE_DURATION_FRAMES, FPS as ALTITUDE_FPS} from '../../animations/criminal/22/high-altitude-throwing-diagram/remotion/storyboard';
 import {DURATION_FRAMES as THEFT_DURATION_FRAMES, FPS as THEFT_FPS} from '../../animations/criminal/19/theft-mistake-analysis/remotion/storyboard';
@@ -148,6 +152,8 @@ export const STYLE_DEMOS = [
   {id: 'civil-procedure-18-public-interest-litigation-network', slug: 'public-interest-litigation-network', title: '公共公告网络', direction: 'Civic Notice Network', component: PublicInterestLitigationNetwork, href: '/inkloom/objective/civil-procedure/18/public-interest-litigation-network/', durationInFrames: PUBLIC_INTEREST_DURATION_FRAMES, fps: PUBLIC_INTEREST_FPS},
   {id: 'civil-procedure-19-third-party-revocation-remedy-map', slug: 'third-party-revocation-remedy-map', title: '裁判叠层剖面', direction: 'Judgment Palimpsest Cutaway', component: ThirdPartyRevocationRemedyMap, href: '/inkloom/objective/civil-procedure/19/third-party-revocation-remedy-map/', durationInFrames: THIRD_PARTY_REMEDY_DURATION_FRAMES, fps: THIRD_PARTY_REMEDY_FPS},
   {id: 'civil-procedure-20-appeal-review-decision-map', slug: 'appeal-review-decision-map', title: '上诉棱镜编排', direction: 'Appellate Editorial Prism', component: AppealReviewDecisionMap, href: '/inkloom/objective/civil-procedure/20/appeal-review-decision-map/', durationInFrames: APPEAL_REVIEW_DURATION_FRAMES, fps: APPEAL_REVIEW_FPS},
+  {id: 'civil-law-contract-general-provisions-atlas', slug: 'contract-general-provisions-atlas', title: '条文折页', direction: 'Statute Folio', component: ContractGeneralProvisionsAtlas, href: '/inkloom/objective/civil-law/contracts/contract-general-provisions-atlas/', durationInFrames: CONTRACT_GENERAL_DURATION_FRAMES, fps: CONTRACT_GENERAL_FPS},
+  {id: 'civil-procedure-32-penalty-adjustment-procedure', slug: 'penalty-adjustment-procedure', title: '裁判控制台', direction: 'Judicial Control Desk', component: PenaltyAdjustmentProcedure, href: '/inkloom/objective/civil-procedure/32/penalty-adjustment-procedure/', durationInFrames: PENALTY_ADJUSTMENT_DURATION_FRAMES, fps: PENALTY_ADJUSTMENT_FPS},
 ] as const satisfies readonly DemoDefinition[];
 
 export const demoById = (id: string) => STYLE_DEMOS.find((demo) => demo.id === id);

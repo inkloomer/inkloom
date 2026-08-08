@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 4,
+  "scenes": [
+    {
+      "id": "scope-and-chapter-spine",
+      "export": "ScopeAndChapterSpineScene",
+      "layout": "scope-and-chapter-spine-codex-panorama",
+      "anchor": "boundary",
+      "grammar": ["contract-scope", "contract-definition", "party-relativity", "unnamed-contract", "eight-chapter-spine"],
+      "textTreatments": ["label-block", "soft-highlight", "thin-underline"],
+      "focalChannels": ["enclosure", "icon", "spatial"],
+      "tokens": ["BookOpen", "Brackets"],
+      "finalKnowledge": ["contract-generated-relations", "agreement-definition", "relative-binding-force", "unnamed-contract-application", "eight-general-provisions-chapters"],
+      "statefulObjects": ["contract-codex-spine"]
+    },
+    {
+      "id": "formation-and-effect",
+      "export": "FormationAndEffectScene",
+      "layout": "formation-and-effect-folded-route",
+      "anchor": "flow-path",
+      "grammar": ["offer", "acceptance", "formation", "format-terms", "effect-gates", "dispute-clause-survival"],
+      "textTreatments": ["thin-underline", "label-block", "stamp"],
+      "focalChannels": ["connector", "icon", "motion"],
+      "tokens": ["Send", "BadgeCheck", "FileSignature"],
+      "finalKnowledge": ["offer-and-acceptance", "contract-formation", "form-and-standard-terms", "effectiveness-gate", "ratification-and-authority", "dispute-clause-independence"],
+      "statefulObjects": ["contract-document"]
+    },
+    {
+      "id": "performance-and-preservation",
+      "export": "PerformanceAndPreservationScene",
+      "layout": "performance-and-preservation-obligation-current",
+      "anchor": "flow-target",
+      "grammar": ["full-performance", "gap-filling", "performance-defenses", "third-party-performance", "subrogation", "revocation"],
+      "textTreatments": ["label-block", "soft-highlight", "external-negation"],
+      "focalChannels": ["connector", "icon", "contrast"],
+      "tokens": ["Handshake", "Shield", "Route"],
+      "finalKnowledge": ["full-and-good-faith-performance", "unclear-term-gap-filling", "performance-defense-system", "third-party-performance-system", "creditor-subrogation", "creditor-revocation"],
+      "statefulObjects": ["obligation-current"]
+    },
+    {
+      "id": "change-termination-and-breach",
+      "export": "ChangeTerminationAndBreachScene",
+      "layout": "change-termination-and-breach-lifecycle-fan",
+      "anchor": "document-fork",
+      "grammar": ["contract-change", "claim-transfer", "debt-transfer", "termination-causes", "settlement-cleanup", "breach-remedies"],
+      "textTreatments": ["label-block", "stamp", "external-negation"],
+      "focalChannels": ["connector", "enclosure", "contrast"],
+      "tokens": ["RefreshCw", "Scissors", "Wrench"],
+      "finalKnowledge": ["contract-change", "claim-and-debt-transfer", "termination-causes", "termination-cleanup", "breach-remedy-system", "penalty-deposit-risk"],
+      "statefulObjects": ["contract-document", "obligation-current"]
+    }
+  ]
+}

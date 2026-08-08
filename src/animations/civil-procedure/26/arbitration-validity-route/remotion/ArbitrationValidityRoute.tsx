@@ -1,5 +1,5 @@
 import type {CSSProperties,ReactNode} from 'react';
-import {Clock3, FileSignature, GitCompare, Scale, ShieldAlert} from 'lucide-react';
+import {Clock3, FileSignature, GitCompare, Gavel, Landmark, Network, Scale, ShieldAlert, Workflow} from 'lucide-react';
 import {AbsoluteFill,interpolate,useCurrentFrame} from 'remotion';
 import {CLAMP,TimelineSequence,createMotionPrimitives} from '../../../../shared/remotion-runtime';
 import {SCENES,toSourceFrame} from './storyboard';
@@ -85,9 +85,54 @@ export const RelativityAndReviewScene=()=> <Shell code="26.5" title="仲裁协�
       </Diagram>
     </div></Shell>;
 
+export const ArbitrationProcedureScene=()=> <Shell code="26.6" title="仲裁程序：从保全到裁决的闭环"><div data-layout="arbitration-procedure-direct-flow-path-diagram" data-visual-anchor="flow-path" data-visual-grammar="pre-arbitration-preservation,in-arbitration-preservation,tribunal-formation,recusal,hearing-confidentiality,settlement-mediation-award" data-text-treatments="label-block,thin-underline,stamp" data-focal-rule="arbitration-procedure-rule" data-focal-channels="connector,icon,motion" style={{position:'absolute',inset:0}}>
+      <Diagram anchor="flow-path" count={6}>
+        <Knowledge data-final-knowledge="pre-arbitration-preservation" index={0} icon={<Workflow size={34}/>} label="仲裁前保全" detail="直接向有管辖权的法院申请诉前保全或证据保全"/>
+        <Knowledge data-final-knowledge="in-arbitration-preservation" index={1} icon={<Workflow size={34}/>} label="仲裁中保全" detail="向仲裁机构申请，由仲裁机构将申请提交法院处理"/>
+        <Knowledge data-final-knowledge="tribunal-formation" index={2} icon={<Workflow size={34}/>} label="仲裁庭组成" detail="独任或合议先由当事人约定；未按期选定时由主任依规则指定"/>
+        <Knowledge data-final-knowledge="arbitrator-recusal" index={3} icon={<Workflow size={34}/>} label="仲裁员回避" detail="按原程序重新选定或指定；程序是否重新进行由仲裁庭决定"/>
+        <Knowledge data-final-knowledge="hearing-and-confidentiality" index={4} icon={<Workflow size={34}/>} label="审理方式" detail="开庭为原则，协议可书面审理；不公开为原则，法定秘密不得公开"/>
+        <Knowledge data-final-knowledge="settlement-mediation-award" index={5} icon={<Workflow size={34}/>} label="结案通道" detail="和解、调解可转化为裁决书；撤回后仍按原仲裁协议重新申请"/>
+      </Diagram>
+    </div></Shell>;
+
+export const AwardSetAsideScene=()=> <Shell code="26.7" title="撤销仲裁裁决：三个月、中院、法定事由"><div data-layout="award-set-aside-direct-boundary-diagram" data-visual-anchor="boundary" data-visual-grammar="three-month-limit,seat-intermediate-court,statutory-review-grounds,re-arbitration-window,no-further-remedy" data-text-treatments="thin-underline,label-block,stamp" data-focal-rule="award-set-aside-rule" data-focal-channels="enclosure,icon,contrast" style={{position:'absolute',inset:0}}>
+      <Diagram anchor="boundary" count={5}>
+        <Knowledge data-final-knowledge="three-month-set-aside-limit" index={0} icon={<Gavel size={34}/>} label="申请期限" detail="自收到裁决书之日起 3 个月内"/>
+        <Knowledge data-final-knowledge="seat-intermediate-court" index={1} icon={<Gavel size={34}/>} label="审查法院" detail="仲裁机构所在地中级人民法院"/>
+        <Knowledge data-final-knowledge="statutory-set-aside-grounds" index={2} icon={<Gavel size={34}/>} label="法定事由" detail="协议、权限、程序错误；伪造或隐瞒证据；仲裁员徇私枉法"/>
+        <Knowledge data-final-knowledge="limited-rearbitration" index={3} icon={<Gavel size={34}/>} label="重新仲裁" detail="仅伪造证据或隐瞒重要证据时可通知重新仲裁"/>
+        <Knowledge data-final-knowledge="set-aside-consequence" index={4} icon={<Gavel size={34}/>} label="后续路径" detail="裁决被撤销后可起诉，或重新达成仲裁协议后申请仲裁"/>
+      </Diagram>
+    </div></Shell>;
+
+export const EnforcementReviewScene=()=> <Shell code="26.8" title="执行与不予执行：执行阶段的司法阀门"><div data-layout="enforcement-review-direct-flow-target-diagram" data-visual-anchor="flow-target" data-visual-grammar="enforcement-court,non-enforcement-application,shared-review-grounds,barred-repeat-ground,post-nonenforcement-route" data-text-treatments="label-block,external-negation,stamp" data-focal-rule="enforcement-review-rule" data-focal-channels="connector,icon,enclosure" style={{position:'absolute',inset:0}}>
+      <Diagram anchor="flow-target" count={5}>
+        <Knowledge data-final-knowledge="award-enforcement-court" index={0} icon={<Landmark size={34}/>} label="执行管辖" detail="被执行人住所地或财产所在地中院"/>
+        <Knowledge data-final-knowledge="non-enforcement-in-execution" index={1} icon={<Landmark size={34}/>} label="申请时点" detail="被申请人在裁决执行程序中申请不予执行"/>
+        <Knowledge data-final-knowledge="shared-review-grounds" index={2} icon={<Landmark size={34}/>} label="审查事由" detail="与撤销裁决的程序性事由基本同构"/>
+        <Knowledge data-final-knowledge="barred-repeat-ground" index={3} icon={<Landmark size={34}/>} label="不予支持" detail="调解书、依和解作出的裁决，或撤销申请被驳后重复同一理由"/>
+        <Knowledge data-final-knowledge="post-nonenforcement-route" index={4} icon={<Landmark size={34}/>} label="不予执行后" detail="可起诉，或重新达成仲裁协议后申请仲裁"/>
+      </Diagram>
+    </div></Shell>;
+
+export const ArbitrationReportingScene=()=> <Shell code="26.9" title="仲裁司法审查报核：否定性裁定逐级上报"><div data-layout="arbitration-reporting-direct-timeline-gate-diagram" data-visual-anchor="timeline-gate" data-visual-grammar="negative-rulings,intermediate-court-plan,high-court-review,foreign-public-interest-exception,supreme-court-review" data-text-treatments="label-block,thin-underline,stamp" data-focal-rule="arbitration-reporting-rule" data-focal-channels="motion,locator,connector" style={{position:'absolute',inset:0}}>
+      <Diagram anchor="timeline-gate" count={5}>
+        <Knowledge data-final-knowledge="reportable-negative-rulings" index={0} icon={<Network size={34}/>} label="需报核裁定" detail="拟确认仲裁协议无效、撤销裁决或不予执行"/>
+        <Knowledge data-final-knowledge="intermediate-court-proposal" index={1} icon={<Network size={34}/>} label="中院拟作否定裁定" detail="不得直接作出，先启动内部报核程序"/>
+        <Knowledge data-final-knowledge="high-court-review" index={2} icon={<Network size={34}/>} label="一般路径" detail="报高院审核，按高院审核意见作出裁定"/>
+        <Knowledge data-final-knowledge="foreign-public-interest-exception" index={3} icon={<Network size={34}/>} label="特殊情形" detail="涉外涉港澳台，或拟以违背社会公共利益否定裁决"/>
+        <Knowledge data-final-knowledge="supreme-court-review" index={4} icon={<Network size={34}/>} label="最高法报核" detail="特殊情形中高院拟同意的，继续报最高法审核"/>
+      </Diagram>
+    </div></Shell>;
+
 export const ArbitrationValidityRoute=()=> <AbsoluteFill>    <TimelineSequence name="01-arbitrable-scope" start={SCENES.arbitrableScope.start} duration={SCENES.arbitrableScope.duration}><ArbitrableScopeScene/></TimelineSequence>
     <TimelineSequence name="02-agreement-validity" start={SCENES.agreementValidity.start} duration={SCENES.agreementValidity.duration}><AgreementValidityScene/></TimelineSequence>
     <TimelineSequence name="03-choice-and-multiple-institutions" start={SCENES.choiceAndMultipleInstitutions.start} duration={SCENES.choiceAndMultipleInstitutions.duration}><ChoiceAndMultipleInstitutionsScene/></TimelineSequence>
     <TimelineSequence name="04-timing-and-authority" start={SCENES.timingAndAuthority.start} duration={SCENES.timingAndAuthority.duration}><TimingAndAuthorityScene/></TimelineSequence>
     <TimelineSequence name="05-relativity-and-review" start={SCENES.relativityAndReview.start} duration={SCENES.relativityAndReview.duration}><RelativityAndReviewScene/></TimelineSequence>
+    <TimelineSequence name="06-arbitration-procedure" start={SCENES.arbitrationProcedure.start} duration={SCENES.arbitrationProcedure.duration}><ArbitrationProcedureScene/></TimelineSequence>
+    <TimelineSequence name="07-award-set-aside" start={SCENES.awardSetAside.start} duration={SCENES.awardSetAside.duration}><AwardSetAsideScene/></TimelineSequence>
+    <TimelineSequence name="08-enforcement-review" start={SCENES.enforcementReview.start} duration={SCENES.enforcementReview.duration}><EnforcementReviewScene/></TimelineSequence>
+    <TimelineSequence name="09-arbitration-reporting" start={SCENES.arbitrationReporting.start} duration={SCENES.arbitrationReporting.duration}><ArbitrationReportingScene/></TimelineSequence>
   </AbsoluteFill>;

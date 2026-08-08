@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 4,
+  "scenes": [
+    {
+      "id": "request-arms-adjustment",
+      "export": "RequestArmsAdjustmentScene",
+      "layout": "request-arms-adjustment-control-switch",
+      "anchor": "boundary",
+      "grammar": ["party-request", "counterclaim", "defense", "no-ex-officio-adjustment", "article-585-basis"],
+      "textTreatments": ["label-block", "thin-underline", "external-negation"],
+      "focalChannels": ["enclosure", "icon", "contrast"],
+      "tokens": ["SlidersHorizontal", "Scale"],
+      "finalKnowledge": ["party-request-required", "counterclaim-channel", "defense-channel", "no-ex-officio-adjustment", "article-585-adjustment-basis"],
+      "statefulObjects": ["penalty-signal"]
+    },
+    {
+      "id": "proof-and-invalid-waiver",
+      "export": "ProofAndInvalidWaiverScene",
+      "layout": "proof-and-invalid-waiver-burden-rail",
+      "anchor": "comparison-axis",
+      "grammar": ["breaching-party-burden", "nonbreaching-party-evidence", "uncertain-loss-risk", "advance-waiver-invalid"],
+      "textTreatments": ["label-block", "soft-highlight", "stamp"],
+      "focalChannels": ["motion", "locator", "contrast"],
+      "tokens": ["Gauge", "Ban"],
+      "finalKnowledge": ["breaching-party-proves-excess", "nonbreaching-party-provides-evidence", "uncertainty-risk-on-breaching-party", "advance-adjustment-waiver-ineffective"],
+      "statefulObjects": ["proof-weight"]
+    },
+    {
+      "id": "first-instance-clarification",
+      "export": "FirstInstanceClarificationScene",
+      "layout": "first-instance-clarification-guarded-fork",
+      "anchor": "document-fork",
+      "grammar": ["primary-defense", "court-rejects-defense", "clarification-duty", "adjustment-request", "full-debate"],
+      "textTreatments": ["thin-underline", "label-block", "stamp"],
+      "focalChannels": ["connector", "icon", "enclosure"],
+      "tokens": ["MessageSquareWarning", "Landmark"],
+      "finalKnowledge": ["primary-nonliability-defense", "possible-defense-rejection", "court-clarification-duty", "party-elects-adjustment", "proof-debate-before-adjustment"],
+      "statefulObjects": ["penalty-signal"]
+    },
+    {
+      "id": "appellate-completion",
+      "export": "AppellateCompletionScene",
+      "layout": "appellate-completion-two-stage-route",
+      "anchor": "timeline-gate",
+      "grammar": ["first-instance-no-penalty", "no-prior-clarification", "appeal-finds-penalty", "appeal-clarifies", "direct-reduction-after-debate", "absent-defendant-exception"],
+      "textTreatments": ["label-block", "stamp", "soft-highlight"],
+      "focalChannels": ["connector", "motion", "contrast"],
+      "tokens": ["ArrowUpRight", "Gavel"],
+      "finalKnowledge": ["first-instance-rejected-penalty", "first-instance-no-clarification", "appeal-finds-penalty-due", "appeal-direct-clarification", "appeal-may-directly-reduce", "objectively-absent-defendant-may-request-on-appeal"],
+      "statefulObjects": ["penalty-signal", "adjusted-award"]
+    }
+  ]
+}

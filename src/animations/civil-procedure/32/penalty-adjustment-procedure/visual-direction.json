@@ -1,0 +1,16 @@
+{
+  "directionId": "judicial-control-desk",
+  "family": "procedural-mixing-console",
+  "palette": "fog white + graphite + vermilion + signal green + amber + restrained violet",
+  "typography": "WenKai console headings, large operative switches, and compact evidentiary readouts",
+  "composition": "a judicial control desk where party requests arm the adjustment channel and proof, clarification, and appellate controls route the result",
+  "surface": "flat instrument panels, square signal lamps, calibrated rails, and stamped decision outputs",
+  "motion": "requests arm the channel, proof moves the burden rail, clarification opens a guarded fallback, and appellate review completes the unresolved adjustment",
+  "transition": "one penalty signal remains on the desk while control responsibility moves from parties to first instance and then appeal",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/civil-procedure/32/penalty-adjustment-procedure/",
+    "title": "裁判控制台"
+  }
+}

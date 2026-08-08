@@ -169,6 +169,54 @@
         "award-non-enforcement"
       ],
       "statefulObjects": []
+    },
+    {
+      "id": "arbitration-procedure",
+      "export": "ArbitrationProcedureScene",
+      "layout": "arbitration-procedure-direct-flow-path-diagram",
+      "anchor": "flow-path",
+      "grammar": ["pre-arbitration-preservation", "in-arbitration-preservation", "tribunal-formation", "recusal", "hearing-confidentiality", "settlement-mediation-award"],
+      "textTreatments": ["label-block", "thin-underline", "stamp"],
+      "focalChannels": ["connector", "icon", "motion"],
+      "tokens": ["Workflow"],
+      "finalKnowledge": ["pre-arbitration-preservation", "in-arbitration-preservation", "tribunal-formation", "arbitrator-recusal", "hearing-and-confidentiality", "settlement-mediation-award"],
+      "statefulObjects": []
+    },
+    {
+      "id": "award-set-aside",
+      "export": "AwardSetAsideScene",
+      "layout": "award-set-aside-direct-boundary-diagram",
+      "anchor": "boundary",
+      "grammar": ["three-month-limit", "seat-intermediate-court", "statutory-review-grounds", "re-arbitration-window", "no-further-remedy"],
+      "textTreatments": ["thin-underline", "label-block", "stamp"],
+      "focalChannels": ["enclosure", "icon", "contrast"],
+      "tokens": ["Gavel"],
+      "finalKnowledge": ["three-month-set-aside-limit", "seat-intermediate-court", "statutory-set-aside-grounds", "limited-rearbitration", "set-aside-consequence"],
+      "statefulObjects": []
+    },
+    {
+      "id": "enforcement-review",
+      "export": "EnforcementReviewScene",
+      "layout": "enforcement-review-direct-flow-target-diagram",
+      "anchor": "flow-target",
+      "grammar": ["enforcement-court", "non-enforcement-application", "shared-review-grounds", "barred-repeat-ground", "post-nonenforcement-route"],
+      "textTreatments": ["label-block", "external-negation", "stamp"],
+      "focalChannels": ["connector", "icon", "enclosure"],
+      "tokens": ["Landmark"],
+      "finalKnowledge": ["award-enforcement-court", "non-enforcement-in-execution", "shared-review-grounds", "barred-repeat-ground", "post-nonenforcement-route"],
+      "statefulObjects": []
+    },
+    {
+      "id": "arbitration-reporting",
+      "export": "ArbitrationReportingScene",
+      "layout": "arbitration-reporting-direct-timeline-gate-diagram",
+      "anchor": "timeline-gate",
+      "grammar": ["negative-rulings", "intermediate-court-plan", "high-court-review", "foreign-public-interest-exception", "supreme-court-review"],
+      "textTreatments": ["label-block", "thin-underline", "stamp"],
+      "focalChannels": ["motion", "locator", "connector"],
+      "tokens": ["Network"],
+      "finalKnowledge": ["reportable-negative-rulings", "intermediate-court-proposal", "high-court-review", "foreign-public-interest-exception", "supreme-court-review"],
+      "statefulObjects": []
     }
   ]
 }
