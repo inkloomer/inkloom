@@ -49,7 +49,43 @@
       "focalChannels": ["connector", "enclosure", "contrast"],
       "tokens": ["RefreshCw", "Scissors", "Wrench"],
       "finalKnowledge": ["contract-change", "claim-and-debt-transfer", "termination-causes", "termination-cleanup", "breach-remedy-system", "penalty-deposit-risk"],
-      "statefulObjects": ["contract-document", "obligation-current"]
+      "statefulObjects": ["contract-document"]
+    },
+    {
+      "id": "three-subdivision-map",
+      "export": "ThreeSubdivisionMapScene",
+      "layout": "three-subdivision-map-codex-triptych",
+      "anchor": "boundary",
+      "grammar": ["three-subdivisions", "twenty-nine-chapters", "article-range", "general-to-specific", "quasi-contract"],
+      "textTreatments": ["label-block", "soft-highlight", "stamp"],
+      "focalChannels": ["enclosure", "icon", "spatial"],
+      "tokens": ["BookOpen", "FileSignature", "Brackets"],
+      "finalKnowledge": ["general-provisions-subdivision", "typical-contracts-subdivision", "quasi-contracts-subdivision"],
+      "statefulObjects": ["contract-book-spine"]
+    },
+    {
+      "id": "typical-contract-families",
+      "export": "TypicalContractFamiliesScene",
+      "layout": "typical-contract-families-four-wing-library",
+      "anchor": "document-fork",
+      "grammar": ["nineteen-contracts", "four-families", "exchange-finance", "work-product", "transport-custody", "service-cooperation"],
+      "textTreatments": ["label-block", "thin-underline", "stamp"],
+      "focalChannels": ["connector", "icon", "enclosure"],
+      "tokens": ["Handshake", "Wrench", "Send", "Route"],
+      "finalKnowledge": ["exchange-finance-contracts", "work-product-contracts", "transport-custody-contracts", "service-cooperation-contracts"],
+      "statefulObjects": ["typical-contract-index"]
+    },
+    {
+      "id": "quasi-contract-restitution",
+      "export": "QuasiContractRestitutionScene",
+      "layout": "quasi-contract-restitution-counterflow",
+      "anchor": "role-pair",
+      "grammar": ["no-agreement", "management-benefit", "reimbursement-compensation", "unjust-enrichment", "restitution-exceptions", "third-party-return"],
+      "textTreatments": ["soft-highlight", "label-block", "external-negation"],
+      "focalChannels": ["connector", "icon", "contrast"],
+      "tokens": ["Wrench", "RefreshCw"],
+      "finalKnowledge": ["negotiorum-gestio-system", "management-reimbursement-and-duties", "beneficiary-ratification-links-to-mandate", "unjust-enrichment-system", "unjust-enrichment-return-scope", "unjust-enrichment-exceptions-and-third-party"],
+      "statefulObjects": ["unjust-imbalance"]
     }
   ]
 }

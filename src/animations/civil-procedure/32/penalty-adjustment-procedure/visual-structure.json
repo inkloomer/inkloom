@@ -49,7 +49,7 @@
       "focalChannels": ["connector", "motion", "contrast"],
       "tokens": ["ArrowUpRight", "Gavel"],
       "finalKnowledge": ["first-instance-rejected-penalty", "first-instance-no-clarification", "appeal-finds-penalty-due", "appeal-direct-clarification", "appeal-may-directly-reduce", "objectively-absent-defendant-may-request-on-appeal"],
-      "statefulObjects": ["penalty-signal", "adjusted-award"]
+      "statefulObjects": ["adjusted-award"]
     }
   ]
 }

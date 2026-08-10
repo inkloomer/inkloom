@@ -1,16 +1,16 @@
 import {Player} from '@remotion/player';
 import {ChevronLeft, ChevronRight, Grid3X3} from 'lucide-react';
-import {demoById, STYLE_DEMOS} from './demo-registry';
+import {demoById, SORTED_STYLE_DEMOS} from './demo-registry';
 import './DemoStage.css';
 
 export const DemoStage = ({demoId}: {readonly demoId: string}) => {
-  const demoIndex = STYLE_DEMOS.findIndex((candidate) => candidate.id === demoId);
+  const demoIndex = SORTED_STYLE_DEMOS.findIndex((candidate) => candidate.id === demoId);
   const demo = demoById(demoId);
 
   if (!demo || demoIndex < 0) return <p role="alert">Demo 不存在。</p>;
 
-  const previous = STYLE_DEMOS[(demoIndex - 1 + STYLE_DEMOS.length) % STYLE_DEMOS.length];
-  const next = STYLE_DEMOS[(demoIndex + 1) % STYLE_DEMOS.length];
+  const previous = SORTED_STYLE_DEMOS[(demoIndex - 1 + SORTED_STYLE_DEMOS.length) % SORTED_STYLE_DEMOS.length];
+  const next = SORTED_STYLE_DEMOS[(demoIndex + 1) % SORTED_STYLE_DEMOS.length];
 
   return (
     <section className="demo-stage" data-animation-viewport>

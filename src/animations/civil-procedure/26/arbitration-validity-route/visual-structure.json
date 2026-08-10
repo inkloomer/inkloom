@@ -217,6 +217,18 @@
       "tokens": ["Network"],
       "finalKnowledge": ["reportable-negative-rulings", "intermediate-court-proposal", "high-court-review", "foreign-public-interest-exception", "supreme-court-review"],
       "statefulObjects": []
+    },
+    {
+      "id": "arbitration-basic-principles",
+      "export": "ArbitrationBasicPrinciplesScene",
+      "layout": "arbitration-basic-principles-radial-switchboard",
+      "anchor": "concept-icon",
+      "grammar": ["voluntary", "fact-law-fairness", "independence", "good-faith", "online-equivalence", "opt-out-comparison"],
+      "textTreatments": ["label-block", "external-negation", "soft-highlight"],
+      "focalChannels": ["connector", "icon", "enclosure"],
+      "tokens": ["Handshake", "Scale", "ShieldCheck", "Ban", "Wifi"],
+      "finalKnowledge": ["voluntary-arbitration", "fact-law-fairness", "independent-arbitration", "good-faith-arbitration", "online-arbitration-equivalent-unless-opted-out", "online-litigation-requires-express-consent"],
+      "statefulObjects": ["arbitration-principle-seal"]
     }
   ]
 }

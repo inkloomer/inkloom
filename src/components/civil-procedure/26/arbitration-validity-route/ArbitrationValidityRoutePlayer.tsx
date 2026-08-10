@@ -12,5 +12,6 @@ const scenes:readonly RemotionScene[]=[
   {id:'award-set-aside',number:'07',title:'撤销仲裁裁决的审查路径',...SCENES.awardSetAside},
   {id:'enforcement-review',number:'08',title:'执行与不予执行',...SCENES.enforcementReview},
   {id:'arbitration-reporting',number:'09',title:'仲裁司法审查报核程序',...SCENES.arbitrationReporting},
+  {id:'arbitration-basic-principles',number:'10',title:'仲裁基本原则与在线效力',...SCENES.arbitrationBasicPrinciples},
 ];
 export default ()=> <RemotionDeck animationId="arbitration-validity-route" component={ArbitrationValidityRoute} scenes={scenes} durationInFrames={DURATION_FRAMES} fps={FPS} title="仲裁协议效力与司法审查路径" typography={typography} typographyScope={{animationId:'arbitration-validity-route',subject:'civil-procedure',topic:'26'}}/>;

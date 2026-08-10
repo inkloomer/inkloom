@@ -3,14 +3,14 @@
   "family": "folded-codex-panorama",
   "palette": "parchment white + registry green + cinnabar red + cobalt blue + brass yellow",
   "typography": "WenKai display headings with chapter numerals, compact statutory labels, and article-range folios",
-  "composition": "an unfolded statutory codex whose chapter leaves become routes, gates, safeguards, and remedies",
+  "composition": "an unfolded statutory codex whose three subdivisions open into the general lifecycle, nineteen named contracts, and two restitutionary quasi-contracts",
   "surface": "flat paper leaves, hard folds, exposed binding lines, and small brass index tabs",
   "motion": "folios open in legal order; obligations travel across folds and remain visible in their terminal chapter",
   "transition": "the codex spine persists while each paired chapter opens into the next lifecycle spread",
   "catalog": {
     "status": "featured",
     "source": "original-node",
-    "route": "/inkloom/objective/civil-law/contracts/contract-general-provisions-atlas/",
+    "route": "/inkloom/objective/civil-law/contracts/contract-book-atlas/",
     "title": "条文折页"
   }
 }

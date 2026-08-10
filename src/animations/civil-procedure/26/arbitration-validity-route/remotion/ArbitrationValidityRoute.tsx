@@ -1,5 +1,5 @@
 import type {CSSProperties,ReactNode} from 'react';
-import {Clock3, FileSignature, GitCompare, Gavel, Landmark, Network, Scale, ShieldAlert, Workflow} from 'lucide-react';
+import {Ban, Clock3, FileSignature, GitCompare, Gavel, Handshake, Landmark, Network, Scale, ShieldAlert, ShieldCheck, Wifi, Workflow} from 'lucide-react';
 import {AbsoluteFill,interpolate,useCurrentFrame} from 'remotion';
 import {CLAMP,TimelineSequence,createMotionPrimitives} from '../../../../shared/remotion-runtime';
 import {SCENES,toSourceFrame} from './storyboard';
@@ -126,6 +126,18 @@ export const ArbitrationReportingScene=()=> <Shell code="26.9" title="仲裁司�
       </Diagram>
     </div></Shell>;
 
+const PrinciplePanel=({index,left,right,top,color,icon,label,detail,...data}:{index:number;left?:number;right?:number;top:number;color:string;icon:ReactNode;label:string;detail:string;'data-final-knowledge':string})=><Enter delay={22+index*18} from={index%2?'right':'left'}><div {...data} data-audit-boundary="true" style={{position:'absolute',left,right,top,width:590,height:204,padding:'22px 25px',display:'grid',gridTemplateColumns:'58px minmax(0,1fr)',gridTemplateRows:'auto 1fr',columnGap:16,backgroundColor:C.paper,color:C.bg,border:`4px solid ${color}`,boxShadow:`10px 10px 0 ${color}28`}}><div style={{gridRow:'1 / 3',width:54,height:54,display:'grid',placeItems:'center',backgroundColor:color,color:C.paper}}>{icon}</div><div style={{fontSize:31,fontWeight:900,borderBottom:`4px solid ${color}`,paddingBottom:8}}>{label}</div><div style={{fontSize:23,lineHeight:1.42,fontWeight:700,paddingTop:10}}>{detail}</div></div></Enter>;
+
+export const ArbitrationBasicPrinciplesScene=()=>{const frame=toSourceFrame(useCurrentFrame());const p=interpolate(frame,[16,116],[0,1],CLAMP);return <Shell code="26.10" title="仲裁基本原则：当事人意思自治，但不穿透诚信底线"><div data-layout="arbitration-basic-principles-radial-switchboard" data-visual-anchor="concept-icon" data-visual-grammar="voluntary,fact-law-fairness,independence,good-faith,online-equivalence,opt-out-comparison" data-text-treatments="label-block,external-negation,soft-highlight" data-focal-rule="arbitration-principles-and-online-equivalence" data-focal-channels="connector,icon,enclosure" style={{position:'absolute',inset:0}}>
+  <div style={{position:'absolute',left:'50%',top:260,width:680,height:8,translate:'-50% 0',backgroundColor:C.red,scale:`${p} 1`,transformOrigin:'center'}}/><div style={{position:'absolute',left:'50%',top:58,bottom:192,width:8,translate:'-50% 0',backgroundColor:C.teal,scale:`1 ${p}`,transformOrigin:'center'}}/>
+  <div data-stateful-source="arbitration-principle-seal" data-stateful-terminal="arbitration-principle-seal" style={{position:'absolute',left:'50%',top:260,translate:'-50% -50%',width:270,height:146,display:'grid',placeItems:'center',textAlign:'center',backgroundColor:C.paper,color:C.bg,border:`8px solid ${C.red}`,boxShadow:`0 0 0 8px ${C.teal}44`,fontSize:35,fontWeight:900,zIndex:4}}>仲裁自治<br/><span style={{fontSize:23,color:C.gold}}>诚信校准</span></div>
+  <PrinciplePanel index={0} left={34} top={26} color={C.red} icon={<Handshake size={42}/>} label="自愿原则" detail="是否仲裁、仲裁事项与机构，以当事人有效合意为起点。" data-final-knowledge="voluntary-arbitration"/>
+  <PrinciplePanel index={1} right={34} top={26} color={C.teal} icon={<Scale size={42}/>} label="事实·法律·公平" detail="根据事实，符合法律规定，并保持公平合理。" data-final-knowledge="fact-law-fairness"/>
+  <PrinciplePanel index={2} left={34} top={274} color={C.teal} icon={<ShieldCheck size={42}/>} label="独立仲裁" detail="仲裁依法独立进行，不受行政机关、社会团体和个人干涉。" data-final-knowledge="independent-arbitration"/>
+  <PrinciplePanel index={3} right={34} top={274} color={C.gold} icon={<Ban size={42}/>} label="诚信底线" detail="单方捏造基本事实，或恶意串通侵害国家、公共或他人权益，应驳回仲裁请求。" data-final-knowledge="good-faith-arbitration"/>
+  <Enter delay={98} from="up" style={{position:'absolute',left:160,right:160,bottom:18,height:148}}><div data-final-knowledge="online-arbitration-equivalent-unless-opted-out" data-audit-boundary="true" style={{height:'100%',display:'grid',gridTemplateColumns:'100px 1fr 1fr',alignItems:'center',gap:22,padding:'18px 26px',backgroundColor:C.teal,color:C.paper,border:`5px solid ${C.paper}`}}><Wifi size={60}/><div style={{fontSize:28,lineHeight:1.3,fontWeight:900}}>在线仲裁：与线下同等效力<br/><span style={{fontSize:22,fontWeight:700}}>当事人未明确表示不同意，即可在线进行</span></div><div data-final-knowledge="online-litigation-requires-express-consent" style={{padding:'13px 17px',backgroundColor:C.bg,borderLeft:`7px solid ${C.red}`,fontSize:23,lineHeight:1.38,fontWeight:850}}>辨析：在线诉讼需要当事人明示同意</div></div></Enter>
+</div></Shell>};
+
 export const ArbitrationValidityRoute=()=> <AbsoluteFill>    <TimelineSequence name="01-arbitrable-scope" start={SCENES.arbitrableScope.start} duration={SCENES.arbitrableScope.duration}><ArbitrableScopeScene/></TimelineSequence>
     <TimelineSequence name="02-agreement-validity" start={SCENES.agreementValidity.start} duration={SCENES.agreementValidity.duration}><AgreementValidityScene/></TimelineSequence>
     <TimelineSequence name="03-choice-and-multiple-institutions" start={SCENES.choiceAndMultipleInstitutions.start} duration={SCENES.choiceAndMultipleInstitutions.duration}><ChoiceAndMultipleInstitutionsScene/></TimelineSequence>
@@ -135,4 +147,5 @@ export const ArbitrationValidityRoute=()=> <AbsoluteFill>    <TimelineSequence n
     <TimelineSequence name="07-award-set-aside" start={SCENES.awardSetAside.start} duration={SCENES.awardSetAside.duration}><AwardSetAsideScene/></TimelineSequence>
     <TimelineSequence name="08-enforcement-review" start={SCENES.enforcementReview.start} duration={SCENES.enforcementReview.duration}><EnforcementReviewScene/></TimelineSequence>
     <TimelineSequence name="09-arbitration-reporting" start={SCENES.arbitrationReporting.start} duration={SCENES.arbitrationReporting.duration}><ArbitrationReportingScene/></TimelineSequence>
+    <TimelineSequence name="10-arbitration-basic-principles" start={SCENES.arbitrationBasicPrinciples.start} duration={SCENES.arbitrationBasicPrinciples.duration}><ArbitrationBasicPrinciplesScene/></TimelineSequence>
   </AbsoluteFill>;

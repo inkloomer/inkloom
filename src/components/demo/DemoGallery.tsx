@@ -1,10 +1,10 @@
 import {useEffect, useRef, useState} from 'react';
 import {Player} from '@remotion/player';
 import {ArrowUpRight} from 'lucide-react';
-import {STYLE_DEMOS, type DemoDefinition} from './demo-registry';
+import {SORTED_STYLE_DEMOS, type DemoDefinition} from './demo-registry';
 import './DemoGallery.css';
 
-const DemoPreview = ({demo}: {readonly demo: DemoDefinition}) => {
+const DemoPreview = ({demo, number}: {readonly demo: DemoDefinition; readonly number: string}) => {
   const frameRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -40,7 +40,8 @@ const DemoPreview = ({demo}: {readonly demo: DemoDefinition}) => {
         ) : null}
       </div>
       <div className="demo-gallery__caption">
-        <span>{demo.direction}</span>
+        <span className="demo-gallery__number" aria-hidden="true">{number}</span>
+        <span className="demo-gallery__direction">{demo.direction}</span>
         <strong>{demo.title}</strong>
         {demo.href ? <ArrowUpRight aria-hidden="true" size={20} strokeWidth={1.8} /> : null}
       </div>
@@ -56,6 +57,6 @@ const DemoPreview = ({demo}: {readonly demo: DemoDefinition}) => {
 
 export const DemoGallery = () => (
   <div className="demo-gallery" data-demo-gallery>
-    {STYLE_DEMOS.map((demo) => <DemoPreview key={demo.id} demo={demo} />)}
+    {SORTED_STYLE_DEMOS.map((demo, index) => <DemoPreview key={demo.id} demo={demo} number={String(index + 1).padStart(2, '0')} />)}
   </div>
 );

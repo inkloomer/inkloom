@@ -53,8 +53,12 @@ const Folio = ({index, article, title, detail, icon, tone = 'green', ...data}: {
   );
 };
 
-const Binding = ({progress}: {progress: number}) => (
-  <div data-stateful-source="contract-codex-spine" data-stateful-terminal="contract-codex-spine" style={{position: 'absolute', left: '50%', top: 18, bottom: 18, width: 12, translate: '-50% 0', background: C.ink, scale: `1 ${progress}`, transformOrigin: 'center top'}}>
+const SubdivisionPanel=({index,number,range,title,chapters,detail,tone,icon,...data}:{index:number;number:string;range:string;title:string;chapters:string;detail:string;tone:string;icon:ReactNode;'data-final-knowledge':string})=><Enter delay={22+index*24} from={index===0?'left':index===2?'right':'up'} style={{height:'100%'}}><div {...data} data-audit-boundary="true" style={{height:'100%',padding:'28px 30px',display:'grid',gridTemplateRows:'auto auto auto 1fr',backgroundColor:C.paper,color:C.ink,border:`5px solid ${tone}`,boxShadow:`12px 14px 0 ${tone}24`,clipPath:index===0?'polygon(0 0,96% 0,100% 7%,100% 100%,0 100%)':index===2?'polygon(4% 0,100% 0,100% 100%,0 100%,0 7%)':'none'}}><div style={{display:'flex',justifyContent:'space-between',alignItems:'center',color:tone,fontSize:23,fontWeight:900}}><span>{number}</span><span>{range}</span></div><div style={{display:'flex',alignItems:'center',gap:18,marginTop:28}}><div style={{width:76,height:76,display:'grid',placeItems:'center',backgroundColor:tone,color:C.paper}}>{icon}</div><div><div style={{fontSize:42,fontWeight:900}}>{title}</div><div style={{fontSize:24,fontWeight:900,color:tone,marginTop:6}}>{chapters}</div></div></div><div style={{height:6,backgroundColor:C.brass,margin:'26px 0 22px'}}/><div style={{fontSize:25,lineHeight:1.48,fontWeight:700}}>{detail}</div></div></Enter>;
+
+const ContractFamilyPanel=({index,title,count,items,tone,icon,...data}:{index:number;title:string;count:string;items:string;tone:string;icon:ReactNode;'data-final-knowledge':string})=><Enter delay={24+index*20} from={index%2?'right':'left'} style={{height:'100%'}}><div {...data} data-audit-boundary="true" style={{height:'100%',padding:'24px 27px',backgroundColor:C.paper,color:C.ink,border:`4px solid ${tone}`,boxShadow:`9px 11px 0 ${tone}24`}}><div style={{display:'flex',alignItems:'center',gap:17}}><div style={{width:64,height:64,display:'grid',placeItems:'center',backgroundColor:tone,color:C.paper}}>{icon}</div><div><div style={{fontSize:33,fontWeight:900}}>{title}</div><div style={{fontSize:22,fontWeight:900,color:tone,marginTop:5}}>{count}</div></div></div><div style={{marginTop:20,paddingTop:15,borderTop:`4px solid ${C.brass}`,fontSize:24,lineHeight:1.52,fontWeight:750,whiteSpace:'pre-line'}}>{items}</div></div></Enter>;
+
+const Binding = ({progress, ...data}: {progress: number; 'data-stateful-source': string; 'data-stateful-terminal': string}) => (
+  <div {...data} style={{position: 'absolute', left: '50%', top: 18, bottom: 18, width: 12, translate: '-50% 0', background: C.ink, scale: `1 ${progress}`, transformOrigin: 'center top'}}>
     {[0, 1, 2, 3, 4, 5].map((index) => <div key={index} style={{position: 'absolute', left: -10, top: 48 + index * 100, width: 32, height: 8, background: index % 2 ? C.red : C.brass}} />)}
   </div>
 );
@@ -64,7 +68,7 @@ export const ScopeAndChapterSpineScene = () => {
   const chapters = ['订立', '效力', '履行', '保全', '变更转让', '终止', '违约责任'];
   return <Shell code="C.463" title="合同编通则：一部完整的合同生命周期" subtitle="第 463—594 条 · 从合同边界到违约救济">
     <div data-layout="scope-and-chapter-spine-codex-panorama" data-visual-anchor="boundary" data-visual-grammar="contract-scope,contract-definition,party-relativity,unnamed-contract,eight-chapter-spine" data-text-treatments="label-block,soft-highlight,thin-underline" data-focal-rule="contract-general-provisions-scope" data-focal-channels="enclosure,icon,spatial" style={{position: 'absolute', inset: 0}}>
-      <Binding progress={progress} />
+      <Binding progress={progress} data-stateful-source="contract-codex-spine" data-stateful-terminal="contract-codex-spine" />
       <div style={{position: 'absolute', inset: '18px 52% 18px 18px', display: 'grid', gridTemplateRows: 'repeat(4,minmax(0,1fr))', gap: 14}}>
         <Folio index={0} data-final-knowledge="contract-generated-relations" article="463" title="调整范围" detail="调整因合同产生的民事关系" icon={<Brackets size={28}/>} />
         <Folio index={1} data-final-knowledge="agreement-definition" article="464" title="合同定义" detail="民事主体设立、变更、终止民事法律关系的协议" icon={<BookOpen size={28}/>} tone="blue" />
@@ -124,19 +128,66 @@ export const ChangeTerminationAndBreachScene = () => (
         <Folio index={0} data-final-knowledge="contract-change" article="543—544" title="合同变更" detail="协商一致可变更；变更内容约定不明的，推定未变更" icon={<RefreshCw size={27}/>} />
         <Folio index={1} data-final-knowledge="claim-and-debt-transfer" article="545—556" title="债权债务转让" detail="区分债权转让通知、债务转移同意与合同权利义务一并转让" icon={<Route size={27}/>} tone="blue" />
         <Folio index={2} data-final-knowledge="termination-causes" article="557—565" title="终止事由" detail="履行、抵销、提存、免除、混同、协议解除与法定解除" icon={<Scissors size={27}/>} tone="red" />
-        <Folio index={3} data-final-knowledge="termination-cleanup" article="566—576" title="终止清理" detail="解除后恢复原状、采取补救、赔偿损失，结算和清理条款继续有效" icon={<Wrench size={27}/>} tone="brass" />
+        <Folio index={3} data-final-knowledge="termination-cleanup" article="566—576" title="终止清理与法定消灭" detail="解除后恢复原状、补救与赔偿；结算清理条款存续；抵销、提存、免除、混同各有法定规则" icon={<Wrench size={27}/>} tone="brass" />
         <Folio index={4} data-final-knowledge="breach-remedy-system" article="577—588" title="基本违约救济" detail="继续履行、补救、赔偿损失；可预见规则、减损义务与双方违约" icon={<Wrench size={27}/>} tone="green" />
-        <Folio index={5} data-final-knowledge="penalty-deposit-risk" article="585—594" title="金钱化担保与风险" detail="违约金可依请求调整，定金与违约金竞合时择一，风险分配不得违反诚信" icon={<Shield size={27}/>} tone="red" />
+        <Folio index={5} data-final-knowledge="penalty-deposit-risk" article="585—594" title="违约金、定金与特别责任" detail="违约金依请求调整，定金与违约金竞合时择一；迟延履行、第三人原因违约与国际合同时效按法定路径处理" icon={<Shield size={27}/>} tone="red" />
       </div>
     </div>
   </Shell>
 );
 
-export const ContractGeneralProvisionsAtlas = () => (
+export const ThreeSubdivisionMapScene = () => {
+  const progress = interpolate(toSourceFrame(useCurrentFrame()), [12, 102], [0, 1], CLAMP);
+  return <Shell code="C.BOOK" title="整部合同编：三分编、二十九章、一条债法主轴" subtitle="第 463—988 条 · 合同生命周期＋具名交易＋法定返还">
+    <div data-layout="three-subdivision-map-codex-triptych" data-visual-anchor="boundary" data-visual-grammar="three-subdivisions,twenty-nine-chapters,article-range,general-to-specific,quasi-contract" data-text-treatments="label-block,soft-highlight,stamp" data-focal-rule="contract-book-three-subdivisions" data-focal-channels="enclosure,icon,spatial" style={{position: 'absolute', inset: 0}}>
+      <div data-stateful-source="contract-book-spine" data-stateful-terminal="contract-book-spine" style={{position:'absolute',left:70,right:70,top:'50%',height:12,translate:'0 -50%',backgroundColor:C.ink}}><div style={{width:`${progress*100}%`,height:'100%',background:`linear-gradient(90deg,${C.green},${C.blue},${C.red})`}}/></div>
+      <div style={{position:'absolute',inset:'30px 24px',display:'grid',gridTemplateColumns:'repeat(3,minmax(0,1fr))',gap:30}}>
+        <SubdivisionPanel index={0} number="第一分编" range="463—594" title="通则" chapters="8 章" detail="一般规定 → 订立 → 效力 → 履行 → 保全 → 变更转让 → 终止 → 违约责任" tone={C.green} icon={<BookOpen size={52}/>} data-final-knowledge="general-provisions-subdivision"/>
+        <SubdivisionPanel index={1} number="第二分编" range="595—978" title="典型合同" chapters="19 章" detail="从买卖到合伙，为常见交易、融资、成果交付、服务协作设置具名规则" tone={C.blue} icon={<FileSignature size={52}/>} data-final-knowledge="typical-contracts-subdivision"/>
+        <SubdivisionPanel index={2} number="第三分编" range="979—988" title="准合同" chapters="2 章" detail="无因管理与不当得利：没有合意，仍因法定事实发生偿还、返还或补偿之债" tone={C.red} icon={<Brackets size={52}/>} data-final-knowledge="quasi-contracts-subdivision"/>
+      </div>
+    </div>
+  </Shell>;
+};
+
+export const TypicalContractFamiliesScene = () => {
+  const progress = interpolate(toSourceFrame(useCurrentFrame()), [18, 126], [0, 1], CLAMP);
+  return <Shell code="C.595" title="十九类典型合同：不是清单，而是四组交易任务" subtitle="第 595—978 条 · 从转移所有权到共同经营">
+    <div data-layout="typical-contract-families-four-wing-library" data-visual-anchor="document-fork" data-visual-grammar="nineteen-contracts,four-families,exchange-finance,work-product,transport-custody,service-cooperation" data-text-treatments="label-block,thin-underline,stamp" data-focal-rule="typical-contract-family-map" data-focal-channels="connector,icon,enclosure" style={{position:'absolute',inset:0}}>
+      <div style={{position:'absolute',left:'50%',top:42,bottom:42,width:8,translate:'-50% 0',backgroundColor:C.pale}}><div style={{height:`${progress*100}%`,backgroundColor:C.brass}}/></div><div style={{position:'absolute',left:58,right:58,top:'50%',height:8,translate:'0 -50%',backgroundColor:C.pale}}><div style={{width:`${progress*100}%`,backgroundColor:C.brass,height:'100%'}}/></div>
+      <div data-stateful-source="typical-contract-index" data-stateful-terminal="typical-contract-index" style={{position:'absolute',left:'50%',top:'50%',translate:'-50% -50%',width:240,height:138,display:'grid',placeItems:'center',textAlign:'center',backgroundColor:C.ink,color:C.paper,border:`7px solid ${C.brass}`,fontSize:34,fontWeight:900,zIndex:4}}>典型合同<br/><span style={{fontSize:23,color:C.brass}}>19 类</span></div>
+      <div style={{position:'absolute',inset:'26px 30px',display:'grid',gridTemplateColumns:'repeat(2,minmax(0,1fr))',gridTemplateRows:'repeat(2,minmax(0,1fr))',gap:'166px 300px'}}>
+        <ContractFamilyPanel index={0} title="交易与融资" count="8 类" items={'买卖 · 供电水气热 · 赠与 · 借款\n保证 · 租赁 · 融资租赁 · 保理'} tone={C.green} icon={<Handshake size={44}/>} data-final-knowledge="exchange-finance-contracts"/>
+        <ContractFamilyPanel index={1} title="成果形成" count="3 类" items="承揽 · 建设工程 · 技术合同" tone={C.red} icon={<Wrench size={44}/>} data-final-knowledge="work-product-contracts"/>
+        <ContractFamilyPanel index={2} title="运输与保管" count="3 类" items="运输 · 保管 · 仓储" tone={C.blue} icon={<Send size={44}/>} data-final-knowledge="transport-custody-contracts"/>
+        <ContractFamilyPanel index={3} title="服务与协作" count="5 类" items="委托 · 物业服务 · 行纪 · 中介 · 合伙" tone={C.brass} icon={<Route size={44}/>} data-final-knowledge="service-cooperation-contracts"/>
+      </div>
+    </div>
+  </Shell>;
+};
+
+export const QuasiContractRestitutionScene = () => {
+  const progress = interpolate(toSourceFrame(useCurrentFrame()), [16, 112], [0, 1], CLAMP);
+  return <Shell code="C.979" title="准合同：没有约定，法律仍把失衡拉回来" subtitle="第 979—988 条 · 无因管理＋不当得利">
+    <div data-layout="quasi-contract-restitution-counterflow" data-visual-anchor="role-pair" data-visual-grammar="no-agreement,management-benefit,reimbursement-compensation,unjust-enrichment,restitution-exceptions,third-party-return" data-text-treatments="soft-highlight,label-block,external-negation" data-focal-rule="quasi-contract-restores-unjust-imbalance" data-focal-channels="connector,icon,contrast" style={{position:'absolute',inset:0}}>
+      <div style={{position:'absolute',left:678,top:'50%',width:96,height:12,translate:'0 -50%',backgroundColor:C.pale}}><div style={{width:`${progress*100}%`,height:'100%',background:`linear-gradient(90deg,${C.green},${C.brass})`}}/></div>
+      <div style={{position:'absolute',right:678,top:'50%',width:96,height:12,translate:'0 -50%',backgroundColor:C.pale}}><div style={{width:`${progress*100}%`,height:'100%',marginLeft:'auto',background:`linear-gradient(90deg,${C.brass},${C.red})`}}/></div>
+      <div data-stateful-source="unjust-imbalance" style={{position:'absolute',left:'50%',top:'50%',translate:'-50% -50%',width:220,height:120,display:'grid',placeItems:'center',textAlign:'center',backgroundColor:C.red,color:C.paper,border:`6px solid ${C.ink}`,fontSize:29,fontWeight:900,zIndex:3,opacity:1-progress*.45}}>无合意的<br/>利益失衡</div>
+      <div data-stateful-terminal="unjust-imbalance" style={{position:'absolute',left:'50%',top:'50%',translate:'-50% -50%',width:220,height:120,display:'grid',placeItems:'center',textAlign:'center',backgroundColor:C.green,color:C.paper,border:`6px solid ${C.ink}`,fontSize:29,fontWeight:900,zIndex:4,scale:progress}}>偿还·返还<br/>恢复平衡</div>
+      <Enter delay={22} from="left"><div data-final-knowledge="negotiorum-gestio-system" data-audit-boundary="true" style={{position:'absolute',left:28,top:30,bottom:30,width:650,padding:'28px 32px',backgroundColor:C.paper,color:C.ink,border:`5px solid ${C.green}`,boxShadow:`12px 12px 0 ${C.green}22`}}><div style={{display:'flex',alignItems:'center',gap:18}}><Wrench size={56} color={C.green}/><div><div style={{fontSize:38,fontWeight:900}}>无因管理</div><div style={{fontSize:22,color:C.green,fontWeight:900,marginTop:5}}>979—984</div></div></div><div style={{height:6,backgroundColor:C.brass,margin:'24px 0 18px'}}/><div style={{fontSize:25,lineHeight:1.48,fontWeight:750}}>无法定或约定义务，为避免他人利益受损而管理事务。</div><div data-final-knowledge="management-reimbursement-and-duties" style={{marginTop:22,padding:'17px 19px',backgroundColor:`${C.green}12`,borderLeft:`8px solid ${C.green}`,fontSize:23,lineHeight:1.46,fontWeight:800}}>管理人可请求必要费用与适当补偿；同时负有有利管理、通知、报告和转交义务。</div><div data-final-knowledge="beneficiary-ratification-links-to-mandate" style={{marginTop:18,fontSize:22,lineHeight:1.4,fontWeight:800,color:C.red}}>受益人事后追认 → 原则上从管理开始适用委托合同规则</div></div></Enter>
+      <Enter delay={48} from="right"><div data-final-knowledge="unjust-enrichment-system" data-audit-boundary="true" style={{position:'absolute',right:28,top:30,bottom:30,width:650,padding:'28px 32px',backgroundColor:C.paper,color:C.ink,border:`5px solid ${C.red}`,boxShadow:`12px 12px 0 ${C.red}22`}}><div style={{display:'flex',alignItems:'center',gap:18}}><RefreshCw size={56} color={C.red}/><div><div style={{fontSize:38,fontWeight:900}}>不当得利</div><div style={{fontSize:22,color:C.red,fontWeight:900,marginTop:5}}>985—988</div></div></div><div style={{height:6,backgroundColor:C.brass,margin:'24px 0 18px'}}/><div style={{fontSize:25,lineHeight:1.48,fontWeight:750}}>没有法律根据取得不当利益，受损失人原则上可请求返还。</div><div data-final-knowledge="unjust-enrichment-return-scope" style={{marginTop:22,padding:'17px 19px',backgroundColor:`${C.red}10`,borderLeft:`8px solid ${C.red}`,fontSize:23,lineHeight:1.46,fontWeight:800}}>善意且利益已不存在，可不返还；恶意得利人应返还并赔偿损失。</div><div data-final-knowledge="unjust-enrichment-exceptions-and-third-party" style={{marginTop:18,fontSize:22,lineHeight:1.4,fontWeight:800,color:C.blue}}>道德义务给付、未到期清偿、明知无义务给付为例外；无偿转让时可追向第三人。</div></div></Enter>
+    </div>
+  </Shell>;
+};
+
+export const ContractBookAtlas = () => (
   <AbsoluteFill>
     <TimelineSequence name="01-scope-and-chapter-spine" start={SCENES.scopeAndChapterSpine.start} duration={SCENES.scopeAndChapterSpine.duration}><ScopeAndChapterSpineScene /></TimelineSequence>
     <TimelineSequence name="02-formation-and-effect" start={SCENES.formationAndEffect.start} duration={SCENES.formationAndEffect.duration}><FormationAndEffectScene /></TimelineSequence>
     <TimelineSequence name="03-performance-and-preservation" start={SCENES.performanceAndPreservation.start} duration={SCENES.performanceAndPreservation.duration}><PerformanceAndPreservationScene /></TimelineSequence>
     <TimelineSequence name="04-change-termination-and-breach" start={SCENES.changeTerminationAndBreach.start} duration={SCENES.changeTerminationAndBreach.duration}><ChangeTerminationAndBreachScene /></TimelineSequence>
+    <TimelineSequence name="05-three-subdivision-map" start={SCENES.threeSubdivisionMap.start} duration={SCENES.threeSubdivisionMap.duration}><ThreeSubdivisionMapScene /></TimelineSequence>
+    <TimelineSequence name="06-typical-contract-families" start={SCENES.typicalContractFamilies.start} duration={SCENES.typicalContractFamilies.duration}><TypicalContractFamiliesScene /></TimelineSequence>
+    <TimelineSequence name="07-quasi-contract-restitution" start={SCENES.quasiContractRestitution.start} duration={SCENES.quasiContractRestitution.duration}><QuasiContractRestitutionScene /></TimelineSequence>
   </AbsoluteFill>
 );

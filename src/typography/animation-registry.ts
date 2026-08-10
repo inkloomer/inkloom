@@ -71,7 +71,7 @@ import {typography as typography89} from '../animations/civil-procedure/29/subro
 import {typography as typography90} from '../animations/civil-procedure/30/revocation-action-execution-chain/animation.meta';
 import {typography as typography91} from '../animations/civil-procedure/31/termination-withdrawal-timeline/animation.meta';
 import {typography as typography93} from '../animations/civil-procedure/32/penalty-adjustment-procedure/animation.meta';
-import {typography as typography94} from '../animations/civil-law/contracts/contract-general-provisions-atlas/animation.meta';
+import {typography as typography94} from '../animations/civil-law/contracts/contract-book-atlas/animation.meta';
 import {typography as typography40} from '../animations/criminal/19/card-selling-funds-viewpoint/animation.meta';
 import {typography as typography41} from '../animations/criminal/19/occupational-embezzlement-flowchart/animation.meta';
 import {typography as typography42} from '../animations/criminal/19/property-interests-keypoints/animation.meta';
@@ -168,7 +168,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'revocation-action-execution-chain': {metadata: typography90, scope: {animationId: 'revocation-action-execution-chain', subject: 'civil-procedure', topic: '30'}},
   'termination-withdrawal-timeline': {metadata: typography91, scope: {animationId: 'termination-withdrawal-timeline', subject: 'civil-procedure', topic: '31'}},
   'penalty-adjustment-procedure': {metadata: typography93, scope: {animationId: 'penalty-adjustment-procedure', subject: 'civil-procedure', topic: '32'}},
-  'contract-general-provisions-atlas': {metadata: typography94, scope: {animationId: 'contract-general-provisions-atlas', subject: 'civil-law', topic: 'contracts'}},
+  'contract-book-atlas': {metadata: typography94, scope: {animationId: 'contract-book-atlas', subject: 'civil-law', topic: 'contracts'}},
   'card-selling-funds-viewpoint': {metadata: typography40, scope: {animationId: 'card-selling-funds-viewpoint', subject: 'criminal', topic: '19'}},
   'occupational-embezzlement-flowchart': {metadata: typography41, scope: {animationId: 'occupational-embezzlement-flowchart', subject: 'criminal', topic: '19'}},
   'property-interests-keypoints': {metadata: typography42, scope: {animationId: 'property-interests-keypoints', subject: 'criminal', topic: '19'}},

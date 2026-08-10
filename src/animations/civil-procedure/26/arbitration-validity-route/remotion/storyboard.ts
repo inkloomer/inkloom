@@ -10,7 +10,8 @@ export const SCENES={
   awardSetAside:scene(2100,360),
   enforcementReview:scene(2460,360),
   arbitrationReporting:scene(2820,360),
+  arbitrationBasicPrinciples:scene(3180,420),
 } as const;
-export const DURATION_FRAMES=3180;
+export const DURATION_FRAMES=3600;
 export const DURATION_SECONDS=DURATION_FRAMES/FPS;
 export const toSourceFrame=(frame:number)=>frame;

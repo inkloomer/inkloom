@@ -5,7 +5,8 @@ export const SCENES={
   parallelLitigationRouter:scene(330,330),
   serviceAndEvidenceCorridors:scene(660,300),
   foreignJudgmentRecognition:scene(960,330),
+  foreignLitigationBasicPrinciples:scene(1290,360),
 } as const;
-export const DURATION_FRAMES=1290;
+export const DURATION_FRAMES=1650;
 export const DURATION_SECONDS=DURATION_FRAMES/FPS;
 export const toSourceFrame=(frame:number)=>frame;

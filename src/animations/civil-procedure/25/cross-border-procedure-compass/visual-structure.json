@@ -138,6 +138,47 @@
         "recognition-reconsideration"
       ],
       "statefulObjects": []
+    },
+    {
+      "id": "foreign-litigation-basic-principles",
+      "export": "ForeignLitigationBasicPrinciplesScene",
+      "layout": "foreign-litigation-basic-principles-three-rail-console",
+      "anchor": "flow-target",
+      "grammar": [
+        "chinese-procedure",
+        "chinese-language",
+        "requested-translation",
+        "chinese-counsel",
+        "foreign-lawyer-boundary"
+      ],
+      "textTreatments": [
+        "label-block",
+        "thin-underline",
+        "external-negation"
+      ],
+      "focalChannels": [
+        "connector",
+        "icon",
+        "enclosure"
+      ],
+      "tokens": [
+        "BookOpenCheck",
+        "Languages",
+        "UserRoundCheck",
+        "Ban",
+        "BadgeCheck"
+      ],
+      "finalKnowledge": [
+        "chinese-civil-procedure-only",
+        "chinese-language-and-requested-translation",
+        "translation-on-request-self-funded",
+        "chinese-lawyer-only",
+        "foreign-lawyer-cannot-act-as-lawyer",
+        "foreign-lawyer-may-act-as-nonlawyer-agent"
+      ],
+      "statefulObjects": [
+        "chinese-court-hub"
+      ]
     }
   ]
 }

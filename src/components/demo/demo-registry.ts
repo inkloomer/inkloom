@@ -50,7 +50,7 @@ import {PublicInterestLitigationNetwork} from '../../animations/civil-procedure/
 import {ThirdPartyRevocationRemedyMap} from '../../animations/civil-procedure/19/third-party-revocation-remedy-map/remotion/ThirdPartyRevocationRemedyMap';
 import {AppealReviewDecisionMap} from '../../animations/civil-procedure/20/appeal-review-decision-map/remotion/AppealReviewDecisionMap';
 import {PenaltyAdjustmentProcedure} from '../../animations/civil-procedure/32/penalty-adjustment-procedure/remotion/PenaltyAdjustmentProcedure';
-import {ContractGeneralProvisionsAtlas} from '../../animations/civil-law/contracts/contract-general-provisions-atlas/remotion/ContractGeneralProvisionsAtlas';
+import {ContractBookAtlas} from '../../animations/civil-law/contracts/contract-book-atlas/remotion/ContractBookAtlas';
 import {DURATION_FRAMES as DELEGATED_DURATION_FRAMES, FPS as DELEGATED_FPS} from '../../animations/civil-procedure/08/delegated-agent/remotion/storyboard';
 import {DURATION_FRAMES as JOINT_DURATION_FRAMES, FPS as JOINT_FPS} from '../../animations/civil-procedure/06/joint-litigation/remotion/storyboard';
 import {DURATION_FRAMES as REPRESENTATIVE_DURATION_FRAMES, FPS as REPRESENTATIVE_FPS} from '../../animations/civil-procedure/06/representative-litigation/remotion/storyboard';
@@ -82,7 +82,7 @@ import {DURATION_FRAMES as PUBLIC_INTEREST_DURATION_FRAMES, FPS as PUBLIC_INTERE
 import {DURATION_FRAMES as THIRD_PARTY_REMEDY_DURATION_FRAMES, FPS as THIRD_PARTY_REMEDY_FPS} from '../../animations/civil-procedure/19/third-party-revocation-remedy-map/remotion/storyboard';
 import {DURATION_FRAMES as APPEAL_REVIEW_DURATION_FRAMES, FPS as APPEAL_REVIEW_FPS} from '../../animations/civil-procedure/20/appeal-review-decision-map/remotion/storyboard';
 import {DURATION_FRAMES as PENALTY_ADJUSTMENT_DURATION_FRAMES, FPS as PENALTY_ADJUSTMENT_FPS} from '../../animations/civil-procedure/32/penalty-adjustment-procedure/remotion/storyboard';
-import {DURATION_FRAMES as CONTRACT_GENERAL_DURATION_FRAMES, FPS as CONTRACT_GENERAL_FPS} from '../../animations/civil-law/contracts/contract-general-provisions-atlas/remotion/storyboard';
+import {DURATION_FRAMES as CONTRACT_BOOK_DURATION_FRAMES, FPS as CONTRACT_BOOK_FPS} from '../../animations/civil-law/contracts/contract-book-atlas/remotion/storyboard';
 import {DURATION_FRAMES as FIGHT_DURATION_FRAMES, FPS as FIGHT_FPS} from '../../animations/criminal/22/fight-defense-diagram/remotion/storyboard';
 import {DURATION_FRAMES as ALTITUDE_DURATION_FRAMES, FPS as ALTITUDE_FPS} from '../../animations/criminal/22/high-altitude-throwing-diagram/remotion/storyboard';
 import {DURATION_FRAMES as THEFT_DURATION_FRAMES, FPS as THEFT_FPS} from '../../animations/criminal/19/theft-mistake-analysis/remotion/storyboard';
@@ -152,8 +152,65 @@ export const STYLE_DEMOS = [
   {id: 'civil-procedure-18-public-interest-litigation-network', slug: 'public-interest-litigation-network', title: '公共公告网络', direction: 'Civic Notice Network', component: PublicInterestLitigationNetwork, href: '/inkloom/objective/civil-procedure/18/public-interest-litigation-network/', durationInFrames: PUBLIC_INTEREST_DURATION_FRAMES, fps: PUBLIC_INTEREST_FPS},
   {id: 'civil-procedure-19-third-party-revocation-remedy-map', slug: 'third-party-revocation-remedy-map', title: '裁判叠层剖面', direction: 'Judgment Palimpsest Cutaway', component: ThirdPartyRevocationRemedyMap, href: '/inkloom/objective/civil-procedure/19/third-party-revocation-remedy-map/', durationInFrames: THIRD_PARTY_REMEDY_DURATION_FRAMES, fps: THIRD_PARTY_REMEDY_FPS},
   {id: 'civil-procedure-20-appeal-review-decision-map', slug: 'appeal-review-decision-map', title: '上诉棱镜编排', direction: 'Appellate Editorial Prism', component: AppealReviewDecisionMap, href: '/inkloom/objective/civil-procedure/20/appeal-review-decision-map/', durationInFrames: APPEAL_REVIEW_DURATION_FRAMES, fps: APPEAL_REVIEW_FPS},
-  {id: 'civil-law-contract-general-provisions-atlas', slug: 'contract-general-provisions-atlas', title: '条文折页', direction: 'Statute Folio', component: ContractGeneralProvisionsAtlas, href: '/inkloom/objective/civil-law/contracts/contract-general-provisions-atlas/', durationInFrames: CONTRACT_GENERAL_DURATION_FRAMES, fps: CONTRACT_GENERAL_FPS},
+  {id: 'civil-law-contract-book-atlas', slug: 'contract-book-atlas', title: '条文折页', direction: 'Statute Folio', component: ContractBookAtlas, href: '/inkloom/objective/civil-law/contracts/contract-book-atlas/', durationInFrames: CONTRACT_BOOK_DURATION_FRAMES, fps: CONTRACT_BOOK_FPS},
   {id: 'civil-procedure-32-penalty-adjustment-procedure', slug: 'penalty-adjustment-procedure', title: '裁判控制台', direction: 'Judicial Control Desk', component: PenaltyAdjustmentProcedure, href: '/inkloom/objective/civil-procedure/32/penalty-adjustment-procedure/', durationInFrames: PENALTY_ADJUSTMENT_DURATION_FRAMES, fps: PENALTY_ADJUSTMENT_FPS},
 ] as const satisfies readonly DemoDefinition[];
+
+const DEMO_ADDED_AT: Record<(typeof STYLE_DEMOS)[number]['id'], string> = {
+  'demo-courtroom-blueprint': '2026-08-01T21:16:23+08:00',
+  'demo-archival-dossier': '2026-08-01T21:16:23+08:00',
+  'demo-newspaper-editorial': '2026-08-01T21:16:23+08:00',
+  'demo-constructivist-geometry': '2026-08-01T21:16:23+08:00',
+  'demo-ink-annotation': '2026-08-01T21:16:23+08:00',
+  'demo-evidence-board': '2026-08-01T21:16:23+08:00',
+  'demo-isometric-mechanism': '2026-08-01T21:16:23+08:00',
+  'demo-timeline-chronicle': '2026-08-01T21:16:23+08:00',
+  'demo-statute-commentary': '2026-08-01T21:16:23+08:00',
+  'demo-decision-tree': '2026-08-01T21:16:23+08:00',
+  'demo-rights-matrix': '2026-08-01T21:16:23+08:00',
+  'demo-kinetic-typography': '2026-08-01T21:16:23+08:00',
+  'demo-split-screen-comparison': '2026-08-01T21:16:23+08:00',
+  'demo-transit-map': '2026-08-01T21:16:23+08:00',
+  'civil-procedure-06-joint-litigation': '2026-08-01T16:28:59+08:00',
+  'civil-procedure-06-representative-litigation': '2026-08-01T16:28:59+08:00',
+  'civil-procedure-07-third-party-types': '2026-08-01T01:33:30+08:00',
+  'civil-procedure-07-third-party-revocation': '2026-08-01T01:33:30+08:00',
+  'civil-procedure-08-statutory-agent': '2026-08-01T15:50:28+08:00',
+  'civil-procedure-08-delegated-agent': '2026-08-01T01:33:30+08:00',
+  'civil-procedure-09-admission-court-record': '2026-08-01T18:28:17+08:00',
+  'civil-procedure-09-burden-of-proof-steps': '2026-08-01T18:28:17+08:00',
+  'civil-procedure-09-burden-of-proof-caveats': '2026-08-03T16:35:43+08:00',
+  'civil-procedure-10-evidence-classification': '2026-08-01T21:35:59+08:00',
+  'civil-procedure-10-documentary-evidence-rules': '2026-08-01T21:35:59+08:00',
+  'civil-procedure-11-evidence-preservation': '2026-08-01T22:16:39+08:00',
+  'civil-procedure-11-proof-filing-investigation': '2026-08-01T22:16:39+08:00',
+  'civil-procedure-11-surprise-judgment-focus': '2026-08-01T22:16:39+08:00',
+  'civil-procedure-11-evidence-review': '2026-08-01T22:16:39+08:00',
+  'civil-procedure-12-preservation-stage-map': '2026-08-02T14:19:56+08:00',
+  'civil-procedure-12-pre-suit-preservation-transfer': '2026-08-02T14:19:56+08:00',
+  'civil-procedure-12-preservation-asset-measures': '2026-08-02T14:19:56+08:00',
+  'civil-procedure-12-preservation-remedy-switchboard': '2026-08-02T14:19:56+08:00',
+  'civil-procedure-12-provisional-execution-gates': '2026-08-02T14:19:56+08:00',
+  'civil-procedure-12-provisional-execution-resolution': '2026-08-02T14:19:56+08:00',
+  'civil-procedure-12-behavior-preservation': '2026-08-03T19:18:55+08:00',
+  'civil-procedure-14-period-calculation': '2026-08-03T19:18:55+08:00',
+  'civil-procedure-14-service-delivery-network': '2026-08-03T19:18:55+08:00',
+  'criminal-22-fight-defense-diagram': '2026-08-01T22:16:39+08:00',
+  'criminal-22-high-altitude-throwing-diagram': '2026-08-01T22:16:39+08:00',
+  'criminal-19-theft-mistake-analysis': '2026-08-01T22:16:39+08:00',
+  'criminal-19-occupational-embezzlement-flowchart': '2026-08-01T22:16:39+08:00',
+  'criminal-19-card-selling-funds-viewpoint': '2026-08-01T22:16:39+08:00',
+  'criminal-19-property-interests-keypoints': '2026-08-01T22:16:39+08:00',
+  'criminal-23-official-intermediary': '2026-08-01T22:16:39+08:00',
+  'criminal-23-influence-intermediary': '2026-08-01T22:16:39+08:00',
+  'civil-procedure-17-summary-procedure-switchyard': '2026-08-05T21:15:25+08:00',
+  'civil-procedure-18-public-interest-litigation-network': '2026-08-05T21:15:25+08:00',
+  'civil-procedure-19-third-party-revocation-remedy-map': '2026-08-05T21:15:25+08:00',
+  'civil-procedure-20-appeal-review-decision-map': '2026-08-05T21:15:25+08:00',
+  'civil-law-contract-book-atlas': '2026-08-08T18:17:31+08:00',
+  'civil-procedure-32-penalty-adjustment-procedure': '2026-08-08T18:17:31+08:00',
+};
+
+export const SORTED_STYLE_DEMOS = [...STYLE_DEMOS].sort((a, b) => DEMO_ADDED_AT[b.id].localeCompare(DEMO_ADDED_AT[a.id]));
 
 export const demoById = (id: string) => STYLE_DEMOS.find((demo) => demo.id === id);

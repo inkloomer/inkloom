@@ -36,10 +36,10 @@ const Shell = ({code, title, children}: {code: string; title: string; children: 
   </AbsoluteFill>
 );
 
-const Module = ({index, label, detail, icon, knowledge, tone = 'green'}: {index: number; label: string; detail: string; icon: ReactNode; knowledge: string; tone?: 'red' | 'green' | 'amber' | 'violet'}) => {
+const Module = ({index, label, detail, icon, tone = 'green', ...data}: {index: number; label: string; detail: string; icon: ReactNode; tone?: 'red' | 'green' | 'amber' | 'violet'; 'data-final-knowledge': string}) => {
   const color = C[tone];
   return <Enter delay={20 + index * 17} from={index % 2 ? 'right' : 'left'} style={{height: '100%'}}>
-    <div data-audit-boundary="true" data-final-knowledge={knowledge} style={{height: '100%', minHeight: 132, background: C.panel, border: `3px solid ${C.ink}`, boxShadow: `0 12px 0 ${color}24`, display: 'grid', gridTemplateColumns: '62px minmax(0,1fr)', gridTemplateRows: 'auto 1fr', gap: '10px 16px', padding: '22px 24px'}}>
+    <div {...data} data-audit-boundary="true" style={{height: '100%', minHeight: 132, background: C.panel, border: `3px solid ${C.ink}`, boxShadow: `0 12px 0 ${color}24`, display: 'grid', gridTemplateColumns: '62px minmax(0,1fr)', gridTemplateRows: 'auto 1fr', gap: '10px 16px', padding: '22px 24px'}}>
       <div style={{gridRow: '1 / 3', width: 58, height: 58, display: 'grid', placeItems: 'center', color: C.panel, background: color, border: `4px solid ${C.ink}`}}>{icon}</div>
       <div style={{fontSize: 31, fontWeight: 900, lineHeight: 1.18, paddingBottom: 8, borderBottom: `4px solid ${color}`}}>{label}</div>
       <div style={{fontSize: 23, fontWeight: 650, lineHeight: 1.5}}>{detail}</div>
@@ -47,8 +47,8 @@ const Module = ({index, label, detail, icon, knowledge, tone = 'green'}: {index:
   </Enter>;
 };
 
-const Signal = ({active, label, knowledge}: {active: number; label: string; knowledge?: string}) => (
-  <div data-stateful-source="penalty-signal" data-stateful-terminal="penalty-signal" data-final-knowledge={knowledge} style={{position: 'absolute', left: '50%', top: '50%', translate: '-50% -50%', width: 250, height: 158, display: 'grid', placeItems: 'center', background: C.ink, color: C.panel, border: `7px solid ${C.amber}`, zIndex: 3}}>
+const Signal = ({active, label, ...data}: {active: number; label: string; 'data-final-knowledge'?: string; 'data-stateful-source': string; 'data-stateful-terminal': string}) => (
+  <div {...data} style={{position: 'absolute', left: '50%', top: '50%', translate: '-50% -50%', width: 250, height: 158, display: 'grid', placeItems: 'center', background: C.ink, color: C.panel, border: `7px solid ${C.amber}`, zIndex: 3}}>
     <div style={{fontSize: 24, fontWeight: 800, color: C.amber}}>{label}</div>
     <div style={{display: 'flex', alignItems: 'end', gap: 6}}><span style={{fontSize: 67, lineHeight: 1, fontWeight: 900}}>{Math.round(active * 100)}</span><span style={{fontSize: 25, fontWeight: 900, paddingBottom: 8}}>%</span></div>
   </div>
@@ -58,7 +58,7 @@ export const RequestArmsAdjustmentScene = () => {
   const active = interpolate(toSourceFrame(useCurrentFrame()), [22, 104], [0, 1], CLAMP);
   return <Shell code="32.1" title="违约金调整必须先由当事人“打开开关”">
     <div data-layout="request-arms-adjustment-control-switch" data-visual-anchor="boundary" data-visual-grammar="party-request,counterclaim,defense,no-ex-officio-adjustment,article-585-basis" data-text-treatments="label-block,thin-underline,external-negation" data-focal-rule="party-request-arms-adjustment" data-focal-channels="enclosure,icon,contrast" style={{position: 'absolute', inset: 0}}>
-      <Signal active={active} label="调整通道" data-final-knowledge="party-request-required" />
+      <Signal active={active} label="调整通道" data-final-knowledge="party-request-required" data-stateful-source="penalty-signal" data-stateful-terminal="penalty-signal" />
       <div style={{position: 'absolute', inset: '28px 24px', display: 'grid', gridTemplateColumns: 'repeat(2,minmax(0,1fr))', gridTemplateRows: 'repeat(2,minmax(0,1fr))', gap: '188px 330px'}}>
         <Module index={0} data-final-knowledge="article-585-adjustment-basis" label="实体法基础" detail="约定违约金过分高于损失时，法院或仲裁机构依请求适当减少" icon={<Scale size={34}/>} tone="amber" />
         <Module index={1} data-final-knowledge="counterclaim-channel" label="反诉通道" detail="当事人可以反诉方式请求调整，形成独立请求" icon={<SlidersHorizontal size={34}/>} tone="green" />
@@ -90,7 +90,7 @@ export const FirstInstanceClarificationScene = () => {
     <div data-layout="first-instance-clarification-guarded-fork" data-visual-anchor="document-fork" data-visual-grammar="primary-defense,court-rejects-defense,clarification-duty,adjustment-request,full-debate" data-text-treatments="thin-underline,label-block,stamp" data-focal-rule="court-clarification-duty" data-focal-channels="connector,icon,enclosure" style={{position: 'absolute', inset: 0}}>
       <div style={{position: 'absolute', left: '50%', top: 64, bottom: 74, width: 10, translate: '-50% 0', background: C.track}}><div style={{height: `${progress * 100}%`, background: C.amber}} /></div>
       <div style={{position: 'absolute', left: 54, right: 54, top: '50%', height: 10, background: C.track}}><div style={{width: `${progress * 100}%`, height: '100%', background: C.green}} /></div>
-      <Signal active={progress} label="释明后请求" data-final-knowledge="party-elects-adjustment" />
+      <Signal active={progress} label="释明后请求" data-final-knowledge="party-elects-adjustment" data-stateful-source="penalty-signal" data-stateful-terminal="penalty-signal" />
       <div style={{position: 'absolute', inset: '28px 24px', display: 'grid', gridTemplateColumns: 'repeat(2,minmax(0,1fr))', gridTemplateRows: 'repeat(2,minmax(0,1fr))', gap: '190px 344px'}}>
         <Module index={0} data-final-knowledge="primary-nonliability-defense" label="原始抗辩" detail="合同不成立、无效、被撤销、不发生效力、不构成违约或对方无损失" icon={<MessageSquareWarning size={34}/>} tone="violet" />
         <Module index={1} data-final-knowledge="possible-defense-rejection" label="法院可能不采纳" detail="若法院拟不支持不承担违约责任的抗辩，违约金调整成为备位问题" icon={<Landmark size={34}/>} tone="red" />
