@@ -819,14 +819,14 @@ const loadStoryboardScenes = async (animationId) => {
 
 const extractPlayerSceneMetadata = (source, componentPath) => {
   const descriptors = [];
-  const sceneObjectPattern = /\{([^{}]*?)\.\.\.SCENES\.([A-Za-z0-9_]+)([^{}]*?)\}/g;
+  const sceneObjectPattern = /\{([^{}]*?)\.\.\.SCENES(?:\.([A-Za-z0-9_]+)|\[\s*['"]([A-Za-z0-9-]+)['"]\s*\])([^{}]*?)\}/g;
 
   for (const match of source.matchAll(sceneObjectPattern)) {
-    const objectSource = `${match[1]}${match[3]}`;
+    const objectSource = `${match[1]}${match[4]}`;
     const id = objectSource.match(/\bid:\s*['"]([^'"]+)['"]/u)?.[1];
     const number = objectSource.match(/\bnumber:\s*['"]([^'"]+)['"]/u)?.[1];
     const title = objectSource.match(/\btitle:\s*['"]([^'"]+)['"]/u)?.[1];
-    const storyboardKey = match[2];
+    const storyboardKey = match[2] ?? match[3];
 
     if (!id || !number || !title || !SCENE_ID_PATTERN.test(id)) {
       throw new Error(`${componentPath}: every scene must declare kebab-case id, number, and title before its SCENES spread.`);
