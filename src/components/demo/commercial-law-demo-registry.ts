@@ -21,8 +21,6 @@ import {CompanyIncorporation} from '../../animations/commercial-law/02/company-i
 import {DURATION_FRAMES as DURATION_31, FPS as FPS_31} from '../../animations/commercial-law/02/company-incorporation/remotion/storyboard';
 import {Promoter} from '../../animations/commercial-law/02/promoter/remotion/Promoter';
 import {DURATION_FRAMES as DURATION_32, FPS as FPS_32} from '../../animations/commercial-law/02/promoter/remotion/storyboard';
-import {NominalShareholder} from '../../animations/commercial-law/03/nominal-shareholder/remotion/NominalShareholder';
-import {DURATION_FRAMES as DURATION_33, FPS as FPS_33} from '../../animations/commercial-law/03/nominal-shareholder/remotion/storyboard';
 
 export const COMMERCIAL_LAW_STYLE_DEMOS = [
   {id: 'commercial-law-01-company-personality', slug: 'company-personality', title: '公司人格壳层', direction: 'personality-shell', component: CompanyPersonality, href: '/inkloom/objective/commercial-law/01/company-personality/', durationInFrames: DURATION_01, fps: FPS_01},
@@ -36,7 +34,6 @@ export const COMMERCIAL_LAW_STYLE_DEMOS = [
   {id: 'commercial-law-12-bankruptcy-liquidation', slug: 'bankruptcy-liquidation', title: '清偿瀑布', direction: 'distribution-cascade', component: BankruptcyLiquidation, href: '/inkloom/objective/commercial-law/12/bankruptcy-liquidation/', durationInFrames: DURATION_30, fps: FPS_30},
   {id: 'commercial-law-02-company-incorporation', slug: 'company-incorporation', title: '设立装配线', direction: 'incorporation-assembly-line', component: CompanyIncorporation, href: '/inkloom/objective/commercial-law/02/company-incorporation/', durationInFrames: DURATION_31, fps: FPS_31},
   {id: 'commercial-law-02-promoter', slug: 'promoter', title: '发起人责任链', direction: 'promoter-liability-chain', component: Promoter, href: '/inkloom/objective/commercial-law/02/promoter/', durationInFrames: DURATION_32, fps: FPS_32},
-  {id: 'commercial-law-03-nominal-shareholder', slug: 'nominal-shareholder', title: '显隐双面镜', direction: 'nominee-double-mirror', component: NominalShareholder, href: '/inkloom/objective/commercial-law/03/nominal-shareholder/', durationInFrames: DURATION_33, fps: FPS_33},
 ] as const satisfies readonly DemoDefinition[];
 
 export const COMMERCIAL_LAW_DEMO_ADDED_AT = Object.fromEntries(COMMERCIAL_LAW_STYLE_DEMOS.map((demo) => [demo.id, '2026-08-13T13:30:00+08:00'])) as Record<(typeof COMMERCIAL_LAW_STYLE_DEMOS)[number]['id'], string>;

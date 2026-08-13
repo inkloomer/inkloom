@@ -153,73 +153,27 @@ export const LicenseEntryGatesScene = () => {
         data-focal-rule="license-definition-features"
         data-focal-channels="connector,contrast,spatial"
         style={{
-          position: "absolute",
-          inset: 0,
+          display: "grid",
+          gridTemplateColumns: "repeat(4,1fr)",
+          gap: 24,
         }}
       >
-        <div
-          style={{
-            position: "absolute",
-            left: 90,
-            right: 90,
-            top: 340,
-            height: 18,
-            background: C.night,
-          }}
-        />
-        <div
-          style={{
-            position: "absolute",
-            left: 18,
-            top: 303,
-            width: 128,
-            padding: 14,
-            background: C.blue,
-            color: C.white,
-            fontSize: 23,
-            fontWeight: 900,
-            textAlign: "center",
-          }}
-        >
-          申请进入
-        </div>
-        <div
-          style={{
-            position: "absolute",
-            right: 18,
-            top: 303,
-            width: 150,
-            padding: 14,
-            background: C.green,
-            color: C.white,
-            fontSize: 23,
-            fontWeight: 900,
-            textAlign: "center",
-          }}
-        >
-          准予活动
-        </div>
         {gates.map((g, i) => (
           <div
             key={g[0]}
             data-final-knowledge={`gate-${i}`}
             style={{
-              position: "absolute",
-              left: 180 + i * 395,
-              top: i % 2 === 0 ? 40 : 385,
-              width: 330,
-              minHeight: 255,
-              padding: 24,
+              height: 520,
+              padding: 26,
               background: C.white,
-              border: `5px solid ${[C.blue, C.cyan, C.green, C.amber][i]}`,
-              boxShadow: `14px 14px 0 ${[C.blue, C.cyan, C.green, C.amber][i]}22`,
+              borderTop: `16px solid ${[C.blue, C.cyan, C.green, C.amber][i]}`,
               ...enter(f, 8 + i * 16),
             }}
           >
             <div style={{ fontSize: 19, color: C.gray }}>
               TURNSTILE 0{i + 1}
             </div>
-            <h2 style={{ fontSize: 37, margin: "14px 0" }}>{g[0]}</h2>
+            <h2 style={{ fontSize: 37 }}>{g[0]}</h2>
             <Badge c={[C.blue, C.cyan, C.green, C.amber][i]}>{g[1]}</Badge>
             <p style={{ fontSize: 24, lineHeight: 1.55 }}>{g[2]}</p>
           </div>
@@ -234,7 +188,7 @@ export const FiveLicensePlatformsScene = () => {
     [
       [
         "一般许可",
-        "国家/公共安全、宏观调控、生态与人身健康、生命财产安全",
+        "安全、宏观调控、生态与生命财产",
         "形式1人；实质2人以上",
         C.blue,
       ],
@@ -494,94 +448,26 @@ export const ImplementationControlTowerScene = () => {
         data-focal-rule="implementation-subjects"
         data-focal-channels="spatial,connector,contrast"
         style={{
-          position: "absolute",
-          inset: 0,
+          display: "grid",
+          gridTemplateColumns: "repeat(3,1fr)",
+          gap: 32,
         }}
       >
-        <div
-          style={{
-            position: "absolute",
-            left: 300,
-            right: 300,
-            top: 315,
-            height: 16,
-            background: C.night,
-          }}
-        />
-        <div
-          data-final-knowledge="implement-organ"
-          style={{
-            position: "absolute",
-            left: 620,
-            top: 35,
-            width: 500,
-            padding: 28,
-            background: C.night,
-            color: C.white,
-            textAlign: "center",
-            ...enter(f, 8),
-          }}
-        >
+        <div data-final-knowledge="implement-organ">
           <Note
             title="行政机关"
             text="有许可权的行政机关，在法定职权范围内自行实施。"
             c={C.blue}
           />
         </div>
-        <div
-          style={{
-            position: "absolute",
-            left: 550,
-            top: 278,
-            fontSize: 58,
-            color: C.green,
-          }}
-        >
-          ↙
-        </div>
-        <div
-          style={{
-            position: "absolute",
-            right: 550,
-            top: 278,
-            fontSize: 58,
-            color: C.red,
-          }}
-        >
-          ↘
-        </div>
-        <div
-          data-final-knowledge="authorized-organization"
-          style={{
-            position: "absolute",
-            left: 120,
-            bottom: 45,
-            width: 650,
-            padding: 26,
-            border: `6px solid ${C.green}`,
-            background: C.white,
-            ...enter(f, 28),
-          }}
-        >
+        <div data-final-knowledge="authorized-organization">
           <Note
             title="被授权组织"
             text="依据法律、法规；对象为公共事务管理组织；授权后取得行政主体资格。"
             c={C.green}
           />
         </div>
-        <div
-          data-final-knowledge="delegated-organ"
-          style={{
-            position: "absolute",
-            right: 120,
-            bottom: 45,
-            width: 650,
-            padding: 26,
-            border: `6px solid ${C.red}`,
-            background: C.white,
-            ...enter(f, 48),
-          }}
-        >
+        <div data-final-knowledge="delegated-organ">
           <Note
             title="被委托机关"
             text="许可权主体只能委托其他行政机关；受托者无主体资格；委托对象和内容须公告。"
@@ -671,7 +557,7 @@ export const ApplicationProcessingLineScene = () => {
       ["审查", "形式审查1人以上；实质审查2人以上"],
       [
         "决定",
-        "能当场则当场；一般20日+负责人批准延10日；联合/统一/集中45日+本级政府负责人批准延15日；听证、招拍、检验检疫、鉴定、专家评审时间另算；准予公开、不予不公开；无地域限制的法律/行政法规许可全国有效",
+        "能当场则当场；否则20日，可经负责人延10日；准予决定公开，不予不公开；无地域限制的法律/行政法规许可全国有效",
       ],
       ["交付", "决定后10日内颁发、送达、贴标签或盖印；并非所有许可都发许可证"],
     ];
@@ -685,33 +571,19 @@ export const ApplicationProcessingLineScene = () => {
         data-focal-rule="general-license-procedure"
         data-focal-channels="connector,motion,annotation"
         style={{
-          position: "absolute",
-          inset: 0,
+          display: "grid",
+          gridTemplateColumns: "repeat(5,1fr)",
+          gap: 18,
         }}
       >
-        <div
-          style={{
-            position: "absolute",
-            left: 80,
-            right: 80,
-            top: 358,
-            height: 20,
-            background: C.night,
-          }}
-        />
         {steps.map((x, i) => (
           <div
             key={x[0]}
             data-final-knowledge={`process-${i}`}
             style={{
-              position: "absolute",
-              left: 15 + i * 350,
-              top: i % 2 === 0 ? 25 : 400,
-              width: 325,
-              minHeight: 285,
               padding: 20,
               background: C.white,
-              border: `5px solid ${[C.blue, C.cyan, C.amber, C.green, C.red][i]}`,
+              borderBottom: `14px solid ${[C.blue, C.cyan, C.amber, C.green, C.red][i]}`,
               ...enter(f, 8 + i * 14),
             }}
           >
@@ -842,87 +714,33 @@ export const SupervisionMaintenanceDockScene = () => {
         data-focal-rule="supervision-responses"
         data-focal-channels="connector,contrast,enclosure"
         style={{
-          position: "absolute",
-          inset: 0,
+          display: "grid",
+          gridTemplateColumns: "repeat(3,1fr)",
+          gap: 30,
         }}
       >
-        <div
-          style={{
-            position: "absolute",
-            left: 40,
-            right: 40,
-            top: 365,
-            height: 22,
-            background: C.night,
-          }}
+        <Note
+          title="资源利用义务"
+          text="未依法履行开发利用义务：责令限期改正。"
+          c={C.blue}
         />
-        <div
-          data-final-knowledge="resource-correction"
-          style={{
-            position: "absolute",
-            left: 50,
-            top: 60,
-            width: 480,
-            height: 250,
-            padding: 28,
-            background: C.white,
-            borderBottom: `18px solid ${C.blue}`,
-            ...enter(f, 8),
-          }}
-        >
-          <Badge c={C.blue}>限期改正</Badge>
-          <h2 style={{ fontSize: 34 }}>资源利用义务</h2>
-          <p style={{ fontSize: 24 }}>
-            未依法履行开发利用义务，进入限期维修坞。
-          </p>
-        </div>
-        <div
-          data-final-knowledge="service-correction"
-          style={{
-            position: "absolute",
-            left: 630,
-            top: 410,
-            width: 500,
-            height: 245,
-            padding: 28,
-            background: C.white,
-            borderBottom: `18px solid ${C.amber}`,
-            ...enter(f, 28),
-          }}
-        >
-          <Badge c={C.amber}>限期改正</Badge>
-          <h2 style={{ fontSize: 34 }}>特许服务义务</h2>
-          <p style={{ fontSize: 24 }}>
-            未履行低廉收费、普遍服务、持续服务义务。
-          </p>
-        </div>
-        <div
-          data-final-knowledge="safety-correction"
-          style={{
-            position: "absolute",
-            right: 50,
-            top: 60,
-            width: 500,
-            height: 250,
-            padding: 28,
-            background: C.white,
-            borderBottom: `18px solid ${C.red}`,
-            ...enter(f, 48),
-          }}
-        >
-          <Badge c={C.red}>停建停用 + 立即改正</Badge>
-          <h2 style={{ fontSize: 34 }}>重要安全隐患</h2>
-          <p style={{ fontSize: 24 }}>
-            不是限期改正；责令改正性质为行政强制措施。
-          </p>
-        </div>
+        <Note
+          title="市场准入特许义务"
+          text="未履行低廉收费、普遍服务、持续服务：责令限期改正。"
+          c={C.amber}
+        />
+        <Note
+          title="重要安全隐患"
+          text="责令停建、停用，并立即改正，不是限期改正。责令改正属于行政强制措施。"
+          c={C.red}
+        />
         <div
           data-final-knowledge="license-revocation-penalty"
           style={{
             position: "absolute",
-            left: 90,
-            width: 440,
-            bottom: 35,
+            left: 420,
+            right: 420,
+            bottom: 10,
             padding: 20,
             background: C.night,
             color: C.white,
@@ -944,7 +762,7 @@ export const FourExitTracksScene = () => {
         "撤销",
         "许可获得过程违法",
         "自己、法院、上级、被越权机关均可撤销",
-        "机关违法致合法权益受损应赔偿；欺骗取得则不赔+处罚，安全类3年禁申；审查中未遂则不受理/不许可+警告+安全类1年禁申",
+        "欺骗取得：不赔+处罚；安全类3年禁申；审查中未遂则不受理/不许可+警告+安全类1年禁申",
         C.red,
       ],
       [
@@ -990,7 +808,6 @@ export const FourExitTracksScene = () => {
             data-final-knowledge={`exit-${i}`}
             style={{
               padding: 20,
-              minHeight: 520,
               background: C.white,
               borderTop: `15px solid ${x[4]}`,
               ...enter(f, 8 + i * 14),
@@ -1065,91 +882,27 @@ export const FeeTreasuryPipelineScene = () => {
         data-focal-rule="license-fee-rules"
         data-focal-channels="connector,contrast,motion"
         style={{
-          position: "absolute",
-          inset: 0,
+          display: "grid",
+          gridTemplateColumns: "repeat(4,1fr)",
+          gap: 22,
         }}
       >
-        <div
-          style={{
-            position: "absolute",
-            left: 100,
-            right: 140,
-            top: 335,
-            height: 30,
-            background: C.blue,
-            borderRadius: 20,
-          }}
+        <Note title="格式文本" text="绝对免费，没有例外。" c={C.red} />
+        <Note
+          title="实施与监督"
+          text="原则不收费；只有法律、行政法规可以规定例外。地方性法规、规章均无权。"
+          c={C.blue}
         />
-        <div
-          data-final-knowledge="free-form"
-          style={{
-            position: "absolute",
-            left: 40,
-            top: 45,
-            width: 380,
-            padding: 26,
-            background: C.white,
-            border: `6px solid ${C.red}`,
-            ...enter(f, 8),
-          }}
-        >
-          <h2 style={{ fontSize: 34, color: C.red }}>格式文本阀门</h2>
-          <p style={{ fontSize: 24 }}>绝对免费，没有例外。</p>
-        </div>
-        <div
-          data-final-knowledge="fee-exception"
-          style={{
-            position: "absolute",
-            left: 500,
-            bottom: 45,
-            width: 470,
-            padding: 26,
-            background: C.white,
-            border: `6px solid ${C.blue}`,
-            ...enter(f, 25),
-          }}
-        >
-          <h2 style={{ fontSize: 34, color: C.blue }}>收费例外阀门</h2>
-          <p style={{ fontSize: 24 }}>
-            实施、监督原则免费；仅法律、行政法规可规定例外，地方性法规与规章无权。
-          </p>
-        </div>
-        <div
-          data-final-knowledge="no-tying"
-          style={{
-            position: "absolute",
-            left: 1050,
-            top: 45,
-            width: 430,
-            padding: 26,
-            background: C.white,
-            border: `6px solid ${C.amber}`,
-            ...enter(f, 42),
-          }}
-        >
-          <h2 style={{ fontSize: 34, color: C.amber }}>搭售截断器</h2>
-          <p style={{ fontSize: 24 }}>不得强迫购买指定商品或接受有偿服务。</p>
-        </div>
-        <div
-          data-final-knowledge="treasury-only"
-          style={{
-            position: "absolute",
-            right: 25,
-            bottom: 45,
-            width: 340,
-            height: 230,
-            padding: 28,
-            background: C.green,
-            color: C.white,
-            display: "grid",
-            alignContent: "center",
-            ...enter(f, 60),
-          }}
-        >
-          <div style={{ fontSize: 20 }}>ONE WAY</div>
-          <h2 style={{ fontSize: 38, margin: "8px 0" }}>全部入国库</h2>
-          <p style={{ fontSize: 23 }}>财政不得返还或变相返还实施机关。</p>
-        </div>
+        <Note
+          title="禁止搭售"
+          text="不得要求购买指定商品、接受有偿服务。"
+          c={C.amber}
+        />
+        <Note
+          title="单向入库"
+          text="收费全部上缴国库；财政不得返还或变相返还给实施机关。"
+          c={C.green}
+        />
       </div>
     </Shell>
   );

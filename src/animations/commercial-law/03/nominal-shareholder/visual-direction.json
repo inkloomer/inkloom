@@ -1,16 +1,16 @@
 {
-  "directionId": "nominee-double-mirror",
-  "family": "nominee-double-mirror",
-  "palette": "深靛夜 #171B2E + 银灰白 #E8ECF3 + 镜银 #9AA6B8 + 显名青 #4FC3C9 + 隐名紫 #7A6BC4 + 警示朱 #E0503A",
-  "typography": "WenKai 镜面大字 + 双面短标签 + 描边条件",
-  "composition": "显隐双面镜: 显名/隐名双面镜轴, 善意/知情双扇分叉, 合意/无合意边界",
-  "surface": "深色镜面硬边、双面面板、描边否定标, 无圆角",
-  "motion": "镜面翻转揭示显隐两面, 分叉沿镜轴展开, 边界线切开合意/无合意",
-  "transition": "镜轴与双面色角色贯穿三场景",
+  "directionId": "evidence-board",
+  "derivedFrom": "demo-evidence-board",
+  "variation": "代持关系钉板: 隐名显名与公司债权人四角色牵线, 无权处分沿善意取得分叉, 代持与冒名以合意为界",
+  "family": "nominee-pinboard",
+  "palette": "#EFE9DE + #26262E + #15725F + #B23A30 + #C9992F",
+  "typography": "WenKai 角色名牌 + 牵线短标签 + 要件细线",
+  "composition": "代持四角色钉板 + 善意取得要件分叉 + 合意边界两案",
+  "surface": "图钉与牵线、纸卡角色牌、方章, 无圆角",
+  "motion": "角色牌依次钉上, 牵线逐条拉直, 处分路径沿要件分叉, 边界线劈开代持与冒名",
+  "transition": "角色牌颜色与牵线角色贯穿场景",
   "catalog": {
-    "status": "featured",
-    "source": "original-node",
-    "route": "/inkloom/objective/commercial-law/03/nominal-shareholder/",
-    "title": "显隐双面镜"
+    "status": "variant",
+    "sourceDirectionId": "evidence-board"
   }
 }
