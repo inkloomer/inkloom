@@ -8,6 +8,8 @@ import {AbstractActPrintworks} from '../../animations/administrative-law/04/abst
 import {DURATION_FRAMES as DURATION_FRAMES_04, FPS as FPS_04} from '../../animations/administrative-law/04/abstract-act-printworks/remotion/storyboard';
 import {ConcreteActLaboratory} from '../../animations/administrative-law/05/concrete-act-laboratory/remotion/ConcreteActLaboratory';
 import {DURATION_FRAMES as DURATION_FRAMES_05, FPS as FPS_05} from '../../animations/administrative-law/05/concrete-act-laboratory/remotion/storyboard';
+import {LicenseTransitHub} from '../../animations/administrative-law/06/license-transit-hub/remotion/LicenseTransitHub';
+import {DURATION_FRAMES as DURATION_FRAMES_06, FPS as FPS_06} from '../../animations/administrative-law/06/license-transit-hub/remotion/storyboard';
 import type {DemoDefinition} from './demo-registry';
 
 export const ADMINISTRATIVE_LAW_STYLE_DEMOS = [
@@ -61,6 +63,16 @@ export const ADMINISTRATIVE_LAW_STYLE_DEMOS = [
     durationInFrames: DURATION_FRAMES_05,
     fps: FPS_05,
   },
+  {
+    id: 'administrative-law-06-license-transit-hub',
+    slug: 'license-transit-hub',
+    title: '城市通行枢纽',
+    direction: 'License Transit Hub',
+    component: LicenseTransitHub,
+    href: '/inkloom/objective/administrative-law/06/license-transit-hub/',
+    durationInFrames: DURATION_FRAMES_06,
+    fps: FPS_06,
+  },
 ] as const satisfies readonly DemoDefinition[];
 
 export const ADMINISTRATIVE_LAW_DEMO_ADDED_AT = {
@@ -69,4 +81,5 @@ export const ADMINISTRATIVE_LAW_DEMO_ADDED_AT = {
   'administrative-law-03-civil-servant-career-file': '2026-08-13T14:00:00+08:00',
   'administrative-law-04-abstract-act-printworks': '2026-08-13T15:00:00+08:00',
   'administrative-law-05-concrete-act-laboratory': '2026-08-13T16:00:00+08:00',
+  'administrative-law-06-license-transit-hub': '2026-08-13T17:00:00+08:00',
 } as const;

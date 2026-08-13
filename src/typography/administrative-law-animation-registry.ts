@@ -3,6 +3,7 @@ import {typography as typography2} from '../animations/administrative-law/02/adm
 import {typography as typography3} from '../animations/administrative-law/03/civil-servant-career-file/animation.meta';
 import {typography as typography4} from '../animations/administrative-law/04/abstract-act-printworks/animation.meta';
 import {typography as typography5} from '../animations/administrative-law/05/concrete-act-laboratory/animation.meta';
+import {typography as typography6} from '../animations/administrative-law/06/license-transit-hub/animation.meta';
 
 export const ADMINISTRATIVE_LAW_TYPOGRAPHY_CONFIGURATIONS = {
   'administrative-principles-compass': {
@@ -24,5 +25,9 @@ export const ADMINISTRATIVE_LAW_TYPOGRAPHY_CONFIGURATIONS = {
   'concrete-act-laboratory': {
     metadata: typography5,
     scope: {animationId: 'concrete-act-laboratory', subject: 'administrative-law', topic: '05'},
+  },
+  'license-transit-hub': {
+    metadata: typography6,
+    scope: {animationId: 'license-transit-hub', subject: 'administrative-law', topic: '06'},
   },
 } as const;
