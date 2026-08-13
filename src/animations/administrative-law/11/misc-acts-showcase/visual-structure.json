@@ -1,0 +1,163 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 4,
+  "scenes": [
+    {
+      "id": "six-act-showcase",
+      "export": "SixActShowcaseScene",
+      "layout": "six-specimen-showcase-wall",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "six-act-specimens-stand-on-their-own-pedestals",
+        "each-act-carries-its-distinct-legal-marker"
+      ],
+      "textTreatments": [
+        "label-block",
+        "thin-underline",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "spatial"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "levy-ownership",
+        "requisition-use",
+        "adjudication",
+        "confirmation",
+        "grant",
+        "award",
+        "six-act-summary"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "levy-vs-requisition",
+      "export": "LevyVsRequisitionScene",
+      "layout": "twin-vitrine-levy-requisition",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "levy-and-requisition-face-each-other-across-the-vitrine",
+        "use-and-ownership-split-the-specimens"
+      ],
+      "textTreatments": [
+        "label-block",
+        "thin-underline",
+        "stamp"
+      ],
+      "focalChannels": [
+        "contrast",
+        "connector",
+        "enclosure"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "levy-specimen",
+        "levy-kind-1",
+        "levy-kind-2",
+        "levy-kind-3",
+        "levy-kind-4",
+        "requisition-specimen",
+        "levy-requisition-difference"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "adjudication-vs-confirmation",
+      "export": "AdjudicationVsConfirmationScene",
+      "layout": "twin-vitrine-adjudication-confirmation",
+      "anchor": "role-pair",
+      "grammar": [
+        "adjudication-stands-between-three-parties",
+        "confirmation-stands-over-two-parties"
+      ],
+      "textTreatments": [
+        "label-block",
+        "thin-underline",
+        "external-negation"
+      ],
+      "focalChannels": [
+        "contrast",
+        "connector",
+        "spatial"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "adjudication-specimen",
+        "adjudication-role-1",
+        "adjudication-role-2",
+        "confirmation-specimen",
+        "confirmation-role-1",
+        "confirmation-role-2",
+        "license-vs-confirmation"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "grant-vs-award",
+      "export": "GrantVsAwardScene",
+      "layout": "twin-vitrine-grant-award",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "grant-secures-survival-award-honors-contribution",
+        "specimens-cover-welfare-and-recognition"
+      ],
+      "textTreatments": [
+        "label-block",
+        "soft-highlight",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "locator"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "grant-specimen",
+        "grant-kind-1",
+        "grant-kind-2",
+        "grant-kind-3",
+        "grant-kind-4",
+        "award-specimen",
+        "award-kind-1",
+        "award-kind-2"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "mnemonic-recap",
+      "export": "MnemonicRecapScene",
+      "layout": "mnemonic-plaque-wall",
+      "anchor": "typographic-sequence",
+      "grammar": [
+        "six-mnemonics-engrave-onto-plaques-in-reading-order",
+        "exam-favorites-are-stamped-last"
+      ],
+      "textTreatments": [
+        "stamp",
+        "label-block",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "icon"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "memo-levy",
+        "memo-requisition",
+        "memo-adjudication",
+        "memo-confirmation",
+        "memo-grant",
+        "memo-award",
+        "mnemonic-exam-tip"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

@@ -9,6 +9,7 @@ import {typography as administrativeTypography07} from '../animations/administra
 import {typography as administrativeTypography08} from '../animations/administrative-law/08/compulsion-safety-interlock/animation.meta';
 import {typography as administrativeTypography09} from '../animations/administrative-law/09/transparency-optics-lab/animation.meta';
 import {typography as administrativeTypography10} from '../animations/administrative-law/10/disclosure-case-desk/animation.meta';
+import {typography as administrativeTypography11} from '../animations/administrative-law/11/misc-acts-showcase/animation.meta';
 import {typography as typography0} from '../animations/civil-procedure/01/dispute-resolution/animation.meta';
 import {typography as typography1} from '../animations/civil-procedure/01/law-attributes/animation.meta';
 import {typography as typography2} from '../animations/civil-procedure/01/trial-procedure/animation.meta';
@@ -116,6 +117,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'compulsion-safety-interlock': {metadata: administrativeTypography08, scope: {animationId: 'compulsion-safety-interlock', subject: 'administrative-law', topic: '08'}},
   'transparency-optics-lab': {metadata: administrativeTypography09, scope: {animationId: 'transparency-optics-lab', subject: 'administrative-law', topic: '09'}},
   'disclosure-case-desk': {metadata: administrativeTypography10, scope: {animationId: 'disclosure-case-desk', subject: 'administrative-law', topic: '10'}},
+  'misc-acts-showcase': {metadata: administrativeTypography11, scope: {animationId: 'misc-acts-showcase', subject: 'administrative-law', topic: '11'}},
   'dispute-resolution': {metadata: typography0, scope: {animationId: 'dispute-resolution', subject: 'civil-procedure', topic: '01'}},
   'law-attributes': {metadata: typography1, scope: {animationId: 'law-attributes', subject: 'civil-procedure', topic: '01'}},
   'trial-procedure': {metadata: typography2, scope: {animationId: 'trial-procedure', subject: 'civil-procedure', topic: '01'}},

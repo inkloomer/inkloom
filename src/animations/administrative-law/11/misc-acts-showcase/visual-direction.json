@@ -1,0 +1,16 @@
+{
+  "directionId": "civic-act-showcase-gallery",
+  "family": "civic-showcase-gallery",
+  "palette": "porcelain white, ink navy, jade green, seal red, brass gold, glass slate",
+  "typography": "WenKai exhibit labels with specimen numerals, vitrine captions, brass underline rules and engraved verdict plates",
+  "composition": "glass showcases, specimen pedestals, twin vitrine pairings, exhibit tags and engraved plates",
+  "surface": "museum vitrines and velvet pedestals without desks, optical benches or transit rails",
+  "motion": "specimens rise onto pedestals, paired vitrines open for contrast, labels engrave onto plates",
+  "transition": "vitrine glass pans, pedestal rotations and plate engravings",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/administrative-law/11/misc-acts-showcase/",
+    "title": "政务行为展柜"
+  }
+}

@@ -48,6 +48,11 @@ import {
   DURATION_FRAMES as DURATION_FRAMES_10,
   FPS as FPS_10,
 } from "../../animations/administrative-law/10/disclosure-case-desk/remotion/storyboard";
+import { MiscActsShowcase } from "../../animations/administrative-law/11/misc-acts-showcase/remotion/MiscActsShowcase";
+import {
+  DURATION_FRAMES as DURATION_FRAMES_11,
+  FPS as FPS_11,
+} from "../../animations/administrative-law/11/misc-acts-showcase/remotion/storyboard";
 import type { DemoDefinition } from "./demo-registry";
 
 export const ADMINISTRATIVE_LAW_STYLE_DEMOS = [
@@ -151,6 +156,16 @@ export const ADMINISTRATIVE_LAW_STYLE_DEMOS = [
     durationInFrames: DURATION_FRAMES_10,
     fps: FPS_10,
   },
+  {
+    id: "administrative-law-11-misc-acts-showcase",
+    slug: "misc-acts-showcase",
+    title: "政务行为展柜",
+    direction: "Civic Act Showcase Gallery",
+    component: MiscActsShowcase,
+    href: "/inkloom/objective/administrative-law/11/misc-acts-showcase/",
+    durationInFrames: DURATION_FRAMES_11,
+    fps: FPS_11,
+  },
 ] as const satisfies readonly DemoDefinition[];
 
 export const ADMINISTRATIVE_LAW_DEMO_ADDED_AT = {
@@ -168,4 +183,5 @@ export const ADMINISTRATIVE_LAW_DEMO_ADDED_AT = {
     "2026-08-13T22:30:00+08:00",
   "administrative-law-09-transparency-optics-lab": "2026-08-13T23:30:00+08:00",
   "administrative-law-10-disclosure-case-desk": "2026-08-14T00:30:00+08:00",
+  "administrative-law-11-misc-acts-showcase": "2026-08-14T09:30:00+08:00",
 } as const;
