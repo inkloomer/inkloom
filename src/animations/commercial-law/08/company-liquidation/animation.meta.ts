@@ -1,4 +1,4 @@
 import {defineAnimationTypography} from '../../../../typography/animation-presets';
 
 export default {id:'company-liquidation',title:'公司的清算',sourceReference:'客观/02-背诵卷/商经知/2026-刘安琪-推背速记/20-整理/商法/08 考点8：公司的终止.md',route:'objective/commercial-law/08/company-liquidation',subject:'commercial-law',chapter:'08'};
-export const typography=defineAnimationTypography({});
+export const typography = defineAnimationTypography({});
