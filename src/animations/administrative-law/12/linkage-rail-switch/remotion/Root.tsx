@@ -1,15 +1,15 @@
 import { Composition } from "remotion";
 import { getAnimationTypographyConfiguration } from "../../../../../typography/animation-registry";
 import { withAnimationTypography } from "../../../../../typography/animation-provider";
-import { MiscActsShowcase } from "./MiscActsShowcase";
+import { LinkageRailSwitch } from "./LinkageRailSwitch";
 import { DURATION_FRAMES, FPS } from "./storyboard";
 
 export const RemotionRoot = () => (
   <Composition
-    id="MiscActsShowcase"
+    id="LinkageRailSwitch"
     component={withAnimationTypography(
-      MiscActsShowcase,
-      getAnimationTypographyConfiguration('misc-acts-showcase'),
+      LinkageRailSwitch,
+      getAnimationTypographyConfiguration('linkage-rail-switch'),
     )}
     durationInFrames={DURATION_FRAMES}
     fps={FPS}

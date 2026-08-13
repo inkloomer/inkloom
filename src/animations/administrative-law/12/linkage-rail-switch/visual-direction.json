@@ -1,0 +1,16 @@
+{
+  "directionId": "linkage-rail-switchyard",
+  "family": "procedural-rail-switchyard",
+  "palette": "deep control-rail navy, signal green, warning red, final gold, track steel gray, platform white",
+  "typography": "WenKai platform signs with track numerals, route captions, thin signal underlines and final-stop stamps",
+  "composition": "rail switchyards, diverging tracks, signal gantries, platform boards and terminal stops",
+  "surface": "steel rails and dark signal towers without desks, vitrines or optical benches",
+  "motion": "trains travel the chosen track, switch points throw between routes, signal lamps light per mode",
+  "transition": "track pans, switch throws and signal sweeps",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/administrative-law/12/linkage-rail-switch/",
+    "title": "程序转辙信号站"
+  }
+}

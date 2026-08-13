@@ -9,6 +9,7 @@ import {typography as typography8} from '../animations/administrative-law/08/com
 import {typography as typography9} from '../animations/administrative-law/09/transparency-optics-lab/animation.meta';
 import {typography as typography10} from '../animations/administrative-law/10/disclosure-case-desk/animation.meta';
 import {typography as typography11} from '../animations/administrative-law/11/misc-acts-showcase/animation.meta';
+import {typography as typography12} from '../animations/administrative-law/12/linkage-rail-switch/animation.meta';
 
 export const ADMINISTRATIVE_LAW_TYPOGRAPHY_CONFIGURATIONS = {
   'administrative-principles-compass': {
@@ -54,5 +55,9 @@ export const ADMINISTRATIVE_LAW_TYPOGRAPHY_CONFIGURATIONS = {
   'misc-acts-showcase': {
     metadata: typography11,
     scope: {animationId: 'misc-acts-showcase', subject: 'administrative-law', topic: '11'},
+  },
+  'linkage-rail-switch': {
+    metadata: typography12,
+    scope: {animationId: 'linkage-rail-switch', subject: 'administrative-law', topic: '12'},
   },
 } as const;

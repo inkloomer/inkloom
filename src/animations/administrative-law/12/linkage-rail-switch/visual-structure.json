@@ -1,0 +1,161 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 4,
+  "scenes": [
+    {
+      "id": "three-mode-overview",
+      "export": "ThreeModeOverviewScene",
+      "layout": "three-rail-lines-overview",
+      "anchor": "flow-path",
+      "grammar": [
+        "three-linkage-modes-run-as-three-parallel-tracks",
+        "free-choice-is-green-mandatory-red-final-gold"
+      ],
+      "textTreatments": [
+        "label-block",
+        "thin-underline",
+        "stamp"
+      ],
+      "focalChannels": [
+        "contrast",
+        "connector",
+        "spatial"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "mode-free-choice",
+        "mode-mandatory",
+        "mode-final",
+        "overview-exception"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "free-choice-track",
+      "export": "FreeChoiceTrackScene",
+      "layout": "dual-track-free-choice",
+      "anchor": "flow-path",
+      "grammar": [
+        "a-train-runs-along-two-parallel-tracks",
+        "choice-locks-after-first-pick"
+      ],
+      "textTreatments": [
+        "label-block",
+        "thin-underline",
+        "external-negation"
+      ],
+      "focalChannels": [
+        "contrast",
+        "connector",
+        "motion"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "free-choice-core",
+        "choice-station-1",
+        "choice-station-2",
+        "no-parallel-rule",
+        "ministry-level-rule"
+      ],
+      "statefulObjects": [
+        "choice-train"
+      ]
+    },
+    {
+      "id": "mandatory-first-track",
+      "export": "MandatoryFirstTrackScene",
+      "layout": "mandatory-first-gate",
+      "anchor": "boundary",
+      "grammar": [
+        "six-dispute-categories-pass-through-the-review-gate",
+        "three-exceptions-bypass-it"
+      ],
+      "textTreatments": [
+        "label-block",
+        "stamp",
+        "external-negation"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "locator"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "gate-confirm-right",
+        "gate-tax",
+        "gate-merger",
+        "gate-onspot",
+        "gate-disclosure",
+        "gate-inaction",
+        "mandatory-exceptions"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "final-review-track",
+      "export": "FinalReviewTrackScene",
+      "layout": "final-stop-terminal",
+      "anchor": "flow-target",
+      "grammar": [
+        "four-immigration-measures-arrive-at-the-final-review-terminal",
+        "the-review-decision-is-the-end-of-the-line"
+      ],
+      "textTreatments": [
+        "stamp",
+        "label-block",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "icon"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "final-review-rule",
+        "final-measure-1",
+        "final-measure-2",
+        "final-measure-3",
+        "final-measure-4",
+        "final-terminal",
+        "final-summary"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "switchyard-traps",
+      "export": "SwitchyardTrapsScene",
+      "layout": "eight-judgment-switches",
+      "anchor": "typographic-sequence",
+      "grammar": [
+        "eight-exam-statements-are-routed-to-green-or-red-switches",
+        "review-gate-exceptions-are-green"
+      ],
+      "textTreatments": [
+        "stamp",
+        "label-block",
+        "external-negation"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "icon"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "trap-01",
+        "trap-02",
+        "trap-03",
+        "trap-04",
+        "trap-05",
+        "trap-06",
+        "trap-07",
+        "trap-08",
+        "trap-summary"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

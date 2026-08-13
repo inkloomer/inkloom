@@ -53,6 +53,11 @@ import {
   DURATION_FRAMES as DURATION_FRAMES_11,
   FPS as FPS_11,
 } from "../../animations/administrative-law/11/misc-acts-showcase/remotion/storyboard";
+import { LinkageRailSwitch } from "../../animations/administrative-law/12/linkage-rail-switch/remotion/LinkageRailSwitch";
+import {
+  DURATION_FRAMES as DURATION_FRAMES_12,
+  FPS as FPS_12,
+} from "../../animations/administrative-law/12/linkage-rail-switch/remotion/storyboard";
 import type { DemoDefinition } from "./demo-registry";
 
 export const ADMINISTRATIVE_LAW_STYLE_DEMOS = [
@@ -166,6 +171,16 @@ export const ADMINISTRATIVE_LAW_STYLE_DEMOS = [
     durationInFrames: DURATION_FRAMES_11,
     fps: FPS_11,
   },
+  {
+    id: "administrative-law-12-linkage-rail-switch",
+    slug: "linkage-rail-switch",
+    title: "程序转辙信号站",
+    direction: "Procedural Rail Switchyard",
+    component: LinkageRailSwitch,
+    href: "/inkloom/objective/administrative-law/12/linkage-rail-switch/",
+    durationInFrames: DURATION_FRAMES_12,
+    fps: FPS_12,
+  },
 ] as const satisfies readonly DemoDefinition[];
 
 export const ADMINISTRATIVE_LAW_DEMO_ADDED_AT = {
@@ -184,4 +199,5 @@ export const ADMINISTRATIVE_LAW_DEMO_ADDED_AT = {
   "administrative-law-09-transparency-optics-lab": "2026-08-13T23:30:00+08:00",
   "administrative-law-10-disclosure-case-desk": "2026-08-14T00:30:00+08:00",
   "administrative-law-11-misc-acts-showcase": "2026-08-14T09:30:00+08:00",
+  "administrative-law-12-linkage-rail-switch": "2026-08-14T10:30:00+08:00",
 } as const;
