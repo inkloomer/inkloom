@@ -63,6 +63,11 @@ import {
   DURATION_FRAMES as DURATION_FRAMES_13,
   FPS as FPS_13,
 } from "../../animations/administrative-law/13/litigant-hierarchy-beacon/remotion/storyboard";
+import { AcceptanceSecurityGate } from "../../animations/administrative-law/14/acceptance-security-gate/remotion/AcceptanceSecurityGate";
+import {
+  DURATION_FRAMES as DURATION_FRAMES_14,
+  FPS as FPS_14,
+} from "../../animations/administrative-law/14/acceptance-security-gate/remotion/storyboard";
 import type { DemoDefinition } from "./demo-registry";
 
 export const ADMINISTRATIVE_LAW_STYLE_DEMOS = [
@@ -196,6 +201,16 @@ export const ADMINISTRATIVE_LAW_STYLE_DEMOS = [
     durationInFrames: DURATION_FRAMES_13,
     fps: FPS_13,
   },
+  {
+    id: "administrative-law-14-acceptance-security-gate",
+    slug: "acceptance-security-gate",
+    title: "受案范围安检门",
+    direction: "Acceptance Security Gate",
+    component: AcceptanceSecurityGate,
+    href: "/inkloom/objective/administrative-law/14/acceptance-security-gate/",
+    durationInFrames: DURATION_FRAMES_14,
+    fps: FPS_14,
+  },
 ] as const satisfies readonly DemoDefinition[];
 
 export const ADMINISTRATIVE_LAW_DEMO_ADDED_AT = {
@@ -216,4 +231,5 @@ export const ADMINISTRATIVE_LAW_DEMO_ADDED_AT = {
   "administrative-law-11-misc-acts-showcase": "2026-08-14T09:30:00+08:00",
   "administrative-law-12-linkage-rail-switch": "2026-08-14T10:30:00+08:00",
   "administrative-law-13-litigant-hierarchy-beacon": "2026-08-14T12:00:00+08:00",
+  "administrative-law-14-acceptance-security-gate": "2026-08-14T13:30:00+08:00",
 } as const;

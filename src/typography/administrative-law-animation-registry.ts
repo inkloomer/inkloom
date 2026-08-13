@@ -11,6 +11,7 @@ import {typography as typography10} from '../animations/administrative-law/10/di
 import {typography as typography11} from '../animations/administrative-law/11/misc-acts-showcase/animation.meta';
 import {typography as typography12} from '../animations/administrative-law/12/linkage-rail-switch/animation.meta';
 import {typography as typography13} from '../animations/administrative-law/13/litigant-hierarchy-beacon/animation.meta';
+import {typography as typography14} from '../animations/administrative-law/14/acceptance-security-gate/animation.meta';
 
 export const ADMINISTRATIVE_LAW_TYPOGRAPHY_CONFIGURATIONS = {
   'administrative-principles-compass': {
@@ -64,5 +65,9 @@ export const ADMINISTRATIVE_LAW_TYPOGRAPHY_CONFIGURATIONS = {
   'litigant-hierarchy-beacon': {
     metadata: typography13,
     scope: {animationId: 'litigant-hierarchy-beacon', subject: 'administrative-law', topic: '13'},
+  },
+  'acceptance-security-gate': {
+    metadata: typography14,
+    scope: {animationId: 'acceptance-security-gate', subject: 'administrative-law', topic: '14'},
   },
 } as const;

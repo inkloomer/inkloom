@@ -1,0 +1,246 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 6,
+  "scenes": [
+    {
+      "id": "positive-list-lane",
+      "export": "PositiveListLaneScene",
+      "layout": "eleven-item-admission-lane",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "eleven-admissible-act-types-line-the-green-lane",
+        "each-type-enters-the-court-one-by-one"
+      ],
+      "textTreatments": [
+        "label-block",
+        "thin-underline",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "spatial"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "positive-01",
+        "positive-02",
+        "positive-03",
+        "positive-04",
+        "positive-05",
+        "positive-06",
+        "positive-07",
+        "positive-08",
+        "positive-09",
+        "positive-10",
+        "positive-11"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "exclusion-barriers",
+      "export": "ExclusionBarriersScene",
+      "layout": "five-exclusion-barriers",
+      "anchor": "boundary",
+      "grammar": [
+        "five-exclusion-reasons-bar-their-case-types",
+        "abstract-acts-need-no-direct-suit"
+      ],
+      "textTreatments": [
+        "label-block",
+        "stamp",
+        "external-negation"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "icon"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "exclude-1",
+        "exclude-2",
+        "exclude-3",
+        "exclude-4",
+        "exclude-5",
+        "exclusion-mnemonic"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "agreement-counter",
+      "export": "AgreementCounterScene",
+      "layout": "agreement-counter",
+      "anchor": "role-pair",
+      "grammar": [
+        "agreement-types-enter-the-counter",
+        "only-the-people-side-may-sue"
+      ],
+      "textTreatments": [
+        "label-block",
+        "thin-underline",
+        "stamp"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "spatial"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "agreement-concept",
+        "agreement-kind-1",
+        "agreement-kind-2",
+        "agreement-kind-3",
+        "agreement-kind-4",
+        "agreement-kind-5",
+        "agreement-direction",
+        "agreement-summary"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "incidental-review-entry",
+      "export": "IncidentalReviewEntryScene",
+      "layout": "incidental-review-entry-console",
+      "anchor": "flow-path",
+      "grammar": [
+        "incidental-request-rides-alongside-the-main-suit",
+        "object-time-and-venue-are-checked-at-entry"
+      ],
+      "textTreatments": [
+        "label-block",
+        "thin-underline",
+        "external-negation"
+      ],
+      "focalChannels": [
+        "contrast",
+        "connector",
+        "enclosure"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "incidental-way",
+        "incidental-object",
+        "incidental-time"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "review-process-console",
+      "export": "ReviewProcessConsoleScene",
+      "layout": "review-process-console",
+      "anchor": "flow-path",
+      "grammar": [
+        "review-process-starts-when-illegality-is-suspected",
+        "the-maker-hears-and-the-court-checks-three-items"
+      ],
+      "textTreatments": [
+        "label-block",
+        "soft-highlight",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "locator"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "review-procedure",
+        "review-content"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "court-handling-console",
+      "export": "CourtHandlingConsoleScene",
+      "layout": "court-handling-console",
+      "anchor": "flow-path",
+      "grammar": [
+        "legal-files-serve-as-basis",
+        "illegal-files-get-not-applied-suggestion-and-copy"
+      ],
+      "textTreatments": [
+        "label-block",
+        "stamp",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "spatial"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "court-legal-file",
+        "court-illegal-file",
+        "court-no-revoke",
+        "court-joint-file"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "suggestion-filing-console",
+      "export": "SuggestionFilingConsoleScene",
+      "layout": "suggestion-filing-console",
+      "anchor": "flow-path",
+      "grammar": [
+        "the-suggestion-desk-replies-in-sixty-days",
+        "filing-climbs-to-the-higher-court"
+      ],
+      "textTreatments": [
+        "label-block",
+        "stamp",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "locator"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "suggestion-execution",
+        "suggestion-filing"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "gate-traps",
+      "export": "GateTrapsScene",
+      "layout": "ten-judgment-gates",
+      "anchor": "typographic-sequence",
+      "grammar": [
+        "ten-exam-statements-pass-through-green-or-red-gates",
+        "incidental-review-five-questions-guide-the-answers"
+      ],
+      "textTreatments": [
+        "stamp",
+        "label-block",
+        "external-negation"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "icon"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "trap-01",
+        "trap-02",
+        "trap-03",
+        "trap-04",
+        "trap-05",
+        "trap-06",
+        "trap-07",
+        "trap-08",
+        "trap-09",
+        "trap-10",
+        "trap-summary"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

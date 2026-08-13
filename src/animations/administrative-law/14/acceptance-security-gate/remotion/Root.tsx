@@ -1,15 +1,15 @@
 import { Composition } from "remotion";
 import { getAnimationTypographyConfiguration } from "../../../../../typography/animation-registry";
 import { withAnimationTypography } from "../../../../../typography/animation-provider";
-import { LitigantHierarchyBeacon } from "./LitigantHierarchyBeacon";
+import { AcceptanceSecurityGate } from "./AcceptanceSecurityGate";
 import { DURATION_FRAMES, FPS } from "./storyboard";
 
 export const RemotionRoot = () => (
   <Composition
-    id="LitigantHierarchyBeacon"
+    id="AcceptanceSecurityGate"
     component={withAnimationTypography(
-      LitigantHierarchyBeacon,
-      getAnimationTypographyConfiguration('litigant-hierarchy-beacon'),
+      AcceptanceSecurityGate,
+      getAnimationTypographyConfiguration('acceptance-security-gate'),
     )}
     durationInFrames={DURATION_FRAMES}
     fps={FPS}
