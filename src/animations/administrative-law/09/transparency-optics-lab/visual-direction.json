@@ -1,0 +1,16 @@
+{
+  "directionId": "transparency-optics-lab",
+  "family": "civic-transparency-optics",
+  "palette": "midnight indigo, projector white, spectral cyan, ultraviolet violet, disclosure lime, secrecy magenta",
+  "typography": "WenKai optical labels with projected numerals, aperture captions, translucent underlines and specimen stamps",
+  "composition": "prisms, spectral bands, shutters, exposure windows, privacy filters, document projectors, hearing waveforms and response splitters",
+  "surface": "dark optical benches and luminous transparent panes without industrial safety rails, transit stations or courtroom cards",
+  "motion": "rules enter as light beams that split, filter, dim, expose or redirect only when the matching statutory condition opens",
+  "transition": "iris wipes, spectral refraction and projector handoffs",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/administrative-law/09/transparency-optics-lab/",
+    "title": "透明度光学实验室"
+  }
+}
