@@ -4,6 +4,7 @@ import {typography as typography3} from '../animations/administrative-law/03/civ
 import {typography as typography4} from '../animations/administrative-law/04/abstract-act-printworks/animation.meta';
 import {typography as typography5} from '../animations/administrative-law/05/concrete-act-laboratory/animation.meta';
 import {typography as typography6} from '../animations/administrative-law/06/license-transit-hub/animation.meta';
+import {typography as typography7} from '../animations/administrative-law/07/penalty-verdict-arena/animation.meta';
 
 export const ADMINISTRATIVE_LAW_TYPOGRAPHY_CONFIGURATIONS = {
   'administrative-principles-compass': {
@@ -29,5 +30,9 @@ export const ADMINISTRATIVE_LAW_TYPOGRAPHY_CONFIGURATIONS = {
   'license-transit-hub': {
     metadata: typography6,
     scope: {animationId: 'license-transit-hub', subject: 'administrative-law', topic: '06'},
+  },
+  'penalty-verdict-arena': {
+    metadata: typography7,
+    scope: {animationId: 'penalty-verdict-arena', subject: 'administrative-law', topic: '07'},
   },
 } as const;

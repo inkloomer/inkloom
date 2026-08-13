@@ -10,6 +10,8 @@ import {ConcreteActLaboratory} from '../../animations/administrative-law/05/conc
 import {DURATION_FRAMES as DURATION_FRAMES_05, FPS as FPS_05} from '../../animations/administrative-law/05/concrete-act-laboratory/remotion/storyboard';
 import {LicenseTransitHub} from '../../animations/administrative-law/06/license-transit-hub/remotion/LicenseTransitHub';
 import {DURATION_FRAMES as DURATION_FRAMES_06, FPS as FPS_06} from '../../animations/administrative-law/06/license-transit-hub/remotion/storyboard';
+import {PenaltyVerdictArena} from '../../animations/administrative-law/07/penalty-verdict-arena/remotion/PenaltyVerdictArena';
+import {DURATION_FRAMES as DURATION_FRAMES_07, FPS as FPS_07} from '../../animations/administrative-law/07/penalty-verdict-arena/remotion/storyboard';
 import type {DemoDefinition} from './demo-registry';
 
 export const ADMINISTRATIVE_LAW_STYLE_DEMOS = [
@@ -73,6 +75,16 @@ export const ADMINISTRATIVE_LAW_STYLE_DEMOS = [
     durationInFrames: DURATION_FRAMES_06,
     fps: FPS_06,
   },
+  {
+    id: 'administrative-law-07-penalty-verdict-arena',
+    slug: 'penalty-verdict-arena',
+    title: '裁决竞技工坊',
+    direction: 'Penalty Verdict Arena',
+    component: PenaltyVerdictArena,
+    href: '/inkloom/objective/administrative-law/07/penalty-verdict-arena/',
+    durationInFrames: DURATION_FRAMES_07,
+    fps: FPS_07,
+  },
 ] as const satisfies readonly DemoDefinition[];
 
 export const ADMINISTRATIVE_LAW_DEMO_ADDED_AT = {
@@ -82,4 +94,5 @@ export const ADMINISTRATIVE_LAW_DEMO_ADDED_AT = {
   'administrative-law-04-abstract-act-printworks': '2026-08-13T15:00:00+08:00',
   'administrative-law-05-concrete-act-laboratory': '2026-08-13T16:00:00+08:00',
   'administrative-law-06-license-transit-hub': '2026-08-13T17:00:00+08:00',
+  'administrative-law-07-penalty-verdict-arena': '2026-08-13T21:00:00+08:00',
 } as const;

@@ -1,0 +1,16 @@
+{
+  "directionId": "penalty-verdict-arena",
+  "family": "civic-verdict-forge",
+  "palette": "charcoal black, tribunal ivory, oxidized copper, verdict crimson, evidence blue, acquittal mint",
+  "typography": "WenKai arena headlines with condensed score labels, engraved thresholds and stamped holdings",
+  "composition": "a circular adjudication floor changes into sanction machines, casting ladders, evidence walls, hearing tiers, investigation sets and execution airlocks",
+  "surface": "etched metal plates, chalk court markings, perforated evidence screens and illuminated verdict rails without rounded dashboard cards",
+  "motion": "facts enter the arena, pass authority and procedure gates, split at exceptions, and remain visibly fixed as final verdict tokens",
+  "transition": "overhead shutters, referee-line sweeps and hard spotlight cuts",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/administrative-law/07/penalty-verdict-arena/",
+    "title": "裁决竞技工坊"
+  }
+}
