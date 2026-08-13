@@ -1,0 +1,16 @@
+{
+  "directionId": "distribution-cascade",
+  "family": "distribution-cascade",
+  "palette": "#F1EFE6 + #22262E + #B23A30 + #2E6D4F + #C08A2D",
+  "typography": "WenKai 瀑布级名 + 债权短标签 + 顺位数字",
+  "composition": "宣告破产闸口 + 别除权双档 + 清偿顺序五级瀑布",
+  "surface": "瀑布阶梯与闸口框, 方形顺位章, 无圆角",
+  "motion": "宣告闸口落下, 担保债权从瀑布旁路优先, 清偿逐级跌落",
+  "transition": "瀑布阶梯与顺位章颜色角色贯穿场景",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/commercial-law/12/bankruptcy-liquidation/",
+    "title": "清偿瀑布"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "directionId": "critical-period-calendar",
+  "family": "critical-period-calendar",
+  "palette": "#F3EFE4 + #23242B + #B23A30 + #2E6D4F + #C9A23C",
+  "typography": "WenKai 日历大字 + 行为短标签 + 期限刻度",
+  "composition": "临界期日历: 1年线6个月线四阶段时间轴, 欺诈行为五类排档, 个别清偿例外五类",
+  "surface": "日历刻度与硬边档条, 方形期限章, 无圆角",
+  "motion": "时间轴从1年前走到受理日, 欺诈行为依次盖章, 个别清偿例外逐个豁免",
+  "transition": "日历轴与期限章颜色角色贯穿场景",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/commercial-law/11/bankruptcy-revocation-right/",
+    "title": "临界期日历"
+  }
+}

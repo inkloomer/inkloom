@@ -1,0 +1,95 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "company-incorporation-scene-01",
+      "export": "CompanyIncorporation01Scene",
+      "layout": "assembly-dual-line-1",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "dual-line-contrast",
+        "thirty-five-floor"
+      ],
+      "textTreatments": [
+        "label-block",
+        "thin-underline",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "spatial",
+        "icon"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "company-incorporation-knowledge-1",
+        "company-incorporation-scene-01-mode-0",
+        "company-incorporation-scene-01-mode-1"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "company-incorporation-scene-02",
+      "export": "CompanyIncorporation02Scene",
+      "layout": "raising-conveyor-2",
+      "anchor": "flow-path",
+      "grammar": [
+        "conveyor-stations",
+        "dual-protocol-fork"
+      ],
+      "textTreatments": [
+        "soft-highlight",
+        "stamp",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "connector",
+        "motion",
+        "enclosure"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "company-incorporation-knowledge-2",
+        "company-incorporation-scene-02-step-0",
+        "company-incorporation-scene-02-step-1",
+        "company-incorporation-scene-02-step-2",
+        "company-incorporation-scene-02-step-3",
+        "company-incorporation-scene-02-congress"
+      ],
+      "statefulObjects": [
+        "company-incorporation-raising-progress"
+      ]
+    },
+    {
+      "id": "company-incorporation-scene-03",
+      "export": "CompanyIncorporation03Scene",
+      "layout": "spec-sheet-boundary-3",
+      "anchor": "boundary",
+      "grammar": [
+        "charter-boundary",
+        "spec-sheet"
+      ],
+      "textTreatments": [
+        "label-block",
+        "external-negation",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "enclosure",
+        "annotation",
+        "spatial"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "company-incorporation-knowledge-3",
+        "company-incorporation-scene-03-charter-in",
+        "company-incorporation-scene-03-charter-out",
+        "company-incorporation-scene-03-capital",
+        "company-incorporation-scene-03-persons"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "share-issuance-transfer-scene-01",
+      "export": "ShareIssuanceTransfer01Scene",
+      "layout": "capital-system-duel-1",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "statutory-vs-authorized",
+        "par-vs-nopar"
+      ],
+      "textTreatments": [
+        "label-block",
+        "thin-underline",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "spatial",
+        "icon"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "share-issuance-transfer-knowledge-1",
+        "share-issuance-transfer-scene-01-capital",
+        "share-issuance-transfer-scene-01-par"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "share-issuance-transfer-scene-02",
+      "export": "ShareIssuanceTransfer02Scene",
+      "layout": "restriction-clock-2",
+      "anchor": "timeline-gate",
+      "grammar": [
+        "one-year-lockup",
+        "quarter-annual-cap"
+      ],
+      "textTreatments": [
+        "label-block",
+        "stamp",
+        "external-negation"
+      ],
+      "focalChannels": [
+        "connector",
+        "motion",
+        "locator"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "share-issuance-transfer-knowledge-2",
+        "share-issuance-transfer-scene-02-gate-0",
+        "share-issuance-transfer-scene-02-gate-1",
+        "share-issuance-transfer-scene-02-gate-2",
+        "share-issuance-transfer-scene-02-pledge"
+      ],
+      "statefulObjects": [
+        "share-issuance-transfer-restriction"
+      ]
+    },
+    {
+      "id": "share-issuance-transfer-scene-03",
+      "export": "ShareIssuanceTransfer03Scene",
+      "layout": "buyback-gates-3",
+      "anchor": "boundary",
+      "grammar": [
+        "buyback-exceptions",
+        "financial-aid-ban"
+      ],
+      "textTreatments": [
+        "soft-highlight",
+        "stamp",
+        "external-negation"
+      ],
+      "focalChannels": [
+        "enclosure",
+        "contrast",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "share-issuance-transfer-knowledge-3",
+        "share-issuance-transfer-scene-03-buyback",
+        "share-issuance-transfer-scene-03-aid"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

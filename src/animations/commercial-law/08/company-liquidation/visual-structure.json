@@ -1,0 +1,93 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "company-liquidation-scene-01",
+      "export": "CompanyLiquidation01Scene",
+      "layout": "liquidation-types-1",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "self-liquidation",
+        "court-appointed"
+      ],
+      "textTreatments": [
+        "label-block",
+        "thin-underline",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "spatial",
+        "icon"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "company-liquidation-knowledge-1",
+        "company-liquidation-scene-01-self",
+        "company-liquidation-scene-01-court"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "company-liquidation-scene-02",
+      "export": "CompanyLiquidation02Scene",
+      "layout": "deregistration-gates-2",
+      "anchor": "timeline-gate",
+      "grammar": [
+        "simple-deregistration",
+        "forced-deregistration"
+      ],
+      "textTreatments": [
+        "label-block",
+        "stamp",
+        "external-negation"
+      ],
+      "focalChannels": [
+        "connector",
+        "motion",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "company-liquidation-knowledge-2",
+        "company-liquidation-scene-02-simple",
+        "company-liquidation-scene-02-forced"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "company-liquidation-scene-03",
+      "export": "CompanyLiquidation03Scene",
+      "layout": "distribution-order-3",
+      "anchor": "flow-path",
+      "grammar": [
+        "distribution-cascade",
+        "contribution-acceleration"
+      ],
+      "textTreatments": [
+        "soft-highlight",
+        "stamp",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "connector",
+        "motion",
+        "enclosure"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "company-liquidation-knowledge-3",
+        "company-liquidation-scene-03-step-0",
+        "company-liquidation-scene-03-step-1",
+        "company-liquidation-scene-03-step-2",
+        "company-liquidation-scene-03-step-3",
+        "company-liquidation-scene-03-acceleration"
+      ],
+      "statefulObjects": [
+        "company-liquidation-distribution"
+      ]
+    }
+  ]
+}

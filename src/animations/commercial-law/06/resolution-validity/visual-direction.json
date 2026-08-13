@@ -1,0 +1,16 @@
+{
+  "directionId": "decision-tree",
+  "derivedFrom": "demo-decision-tree",
+  "variation": "决议效力决策树: 瑕疵类型三分叉, 轻微与重大瑕疵成对对照, 撤销之诉期限刻度",
+  "family": "resolution-decision-tree",
+  "palette": "#F2EFE6 + #22262E + #B23A30 + #2F6B4F + #C9A23C",
+  "typography": "WenKai 分叉结论大字 + 瑕疵短标签 + 期限刻度",
+  "composition": "瑕疵三分叉 + 轻微重大瑕疵对照 + 60日与1年期限刻度",
+  "surface": "分支细线与矩形结论牌, 方形刻度章, 无圆角",
+  "motion": "瑕疵沿三分叉跌落, 轻微与重大瑕疵成对点亮, 期限刻度依次走完",
+  "transition": "分叉结构与结论牌颜色角色贯穿场景",
+  "catalog": {
+    "status": "variant",
+    "sourceDirectionId": "decision-tree"
+  }
+}

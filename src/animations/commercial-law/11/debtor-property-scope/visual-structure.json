@@ -1,0 +1,89 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "debtor-property-scope-scene-01",
+      "export": "DebtorPropertyScope01Scene",
+      "layout": "title-test-1",
+      "anchor": "boundary",
+      "grammar": [
+        "title-ownership-test",
+        "registry-possession-ignored"
+      ],
+      "textTreatments": [
+        "label-block",
+        "thin-underline",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "enclosure",
+        "spatial",
+        "icon"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "debtor-property-scope-knowledge-1",
+        "debtor-property-scope-scene-01-test"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "debtor-property-scope-scene-02",
+      "export": "DebtorPropertyScope02Scene",
+      "layout": "in-scope-2",
+      "anchor": "typographic-sequence",
+      "grammar": [
+        "secured-assets-included",
+        "co-owned-assets-included"
+      ],
+      "textTreatments": [
+        "stamp",
+        "soft-highlight",
+        "label-block"
+      ],
+      "focalChannels": [
+        "enclosure",
+        "motion",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "debtor-property-scope-knowledge-2",
+        "debtor-property-scope-scene-02-item-0",
+        "debtor-property-scope-scene-02-item-1",
+        "debtor-property-scope-scene-02-item-2"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "debtor-property-scope-scene-03",
+      "export": "DebtorPropertyScope03Scene",
+      "layout": "out-scope-3",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "bailment-borrow-lease",
+        "title-retention"
+      ],
+      "textTreatments": [
+        "external-negation",
+        "label-block",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "spatial",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "debtor-property-scope-knowledge-3",
+        "debtor-property-scope-scene-03-item-0",
+        "debtor-property-scope-scene-03-item-1",
+        "debtor-property-scope-scene-03-item-2"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

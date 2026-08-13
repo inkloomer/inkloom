@@ -1,0 +1,16 @@
+{
+  "directionId": "decision-tree",
+  "derivedFrom": "resolution-validity",
+  "variation": "解散原因决策树: 一般行政司法三支, 司法解散受理边界闸, 诉讼主体三角与调解判决",
+  "family": "dissolution-gates",
+  "palette": "#F1EFE6 + #22262E + #B23A30 + #2E6D4F + #C08A2D",
+  "typography": "WenKai 分支结论大字 + 要件短标签 + 期限数字",
+  "composition": "解散三支分叉 + 受理边界闸口 + 诉讼主体与救济档",
+  "surface": "分支细线与闸门框, 方形结论牌, 无圆角",
+  "motion": "解散原因沿三分叉跌落, 受理边界逐个封闸, 调解方式依次点亮",
+  "transition": "分叉结构与结论牌颜色角色贯穿场景",
+  "catalog": {
+    "status": "variant",
+    "sourceDirectionId": "decision-tree"
+  }
+}

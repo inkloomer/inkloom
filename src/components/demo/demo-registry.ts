@@ -156,6 +156,7 @@ export const STYLE_DEMOS = [
   {id: 'civil-procedure-20-appeal-review-decision-map', slug: 'appeal-review-decision-map', title: '上诉棱镜编排', direction: 'Appellate Editorial Prism', component: AppealReviewDecisionMap, href: '/inkloom/objective/civil-procedure/20/appeal-review-decision-map/', durationInFrames: APPEAL_REVIEW_DURATION_FRAMES, fps: APPEAL_REVIEW_FPS},
   {id: 'civil-law-contract-book-atlas', slug: 'contract-book-atlas', title: '条文折页', direction: 'Statute Folio', component: ContractBookAtlas, href: '/inkloom/objective/civil-law/contracts/contract-book-atlas/', durationInFrames: CONTRACT_BOOK_DURATION_FRAMES, fps: CONTRACT_BOOK_FPS},
   {id: 'civil-procedure-32-penalty-adjustment-procedure', slug: 'penalty-adjustment-procedure', title: '裁判控制台', direction: 'Judicial Control Desk', component: PenaltyAdjustmentProcedure, href: '/inkloom/objective/civil-procedure/32/penalty-adjustment-procedure/', durationInFrames: PENALTY_ADJUSTMENT_DURATION_FRAMES, fps: PENALTY_ADJUSTMENT_FPS},
+  ...COMMERCIAL_LAW_STYLE_DEMOS,
 ] as const satisfies readonly DemoDefinition[];
 
 const DEMO_ADDED_AT: Record<(typeof STYLE_DEMOS)[number]['id'], string> = {
@@ -212,8 +213,11 @@ const DEMO_ADDED_AT: Record<(typeof STYLE_DEMOS)[number]['id'], string> = {
   'civil-procedure-20-appeal-review-decision-map': '2026-08-05T21:15:25+08:00',
   'civil-law-contract-book-atlas': '2026-08-08T18:17:31+08:00',
   'civil-procedure-32-penalty-adjustment-procedure': '2026-08-08T18:17:31+08:00',
+  ...COMMERCIAL_LAW_DEMO_ADDED_AT,
 };
 
 export const SORTED_STYLE_DEMOS = [...STYLE_DEMOS].sort((a, b) => DEMO_ADDED_AT[b.id].localeCompare(DEMO_ADDED_AT[a.id]));
 
 export const demoById = (id: string) => STYLE_DEMOS.find((demo) => demo.id === id);
+
+import {COMMERCIAL_LAW_DEMO_ADDED_AT, COMMERCIAL_LAW_STYLE_DEMOS} from './commercial-law-demo-registry';

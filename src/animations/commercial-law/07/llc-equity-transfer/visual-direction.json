@@ -1,0 +1,16 @@
+{
+  "directionId": "transfer-mart",
+  "family": "transfer-mart",
+  "palette": "#F4EFE3 + #25242B + #B23A30 + #2E6D4F + #C08A2D",
+  "typography": "WenKai 摊档牌匾 + 条件短标签 + 期限数字",
+  "composition": "股权流转市集: 对内对外双档口, 优先购买权侵害的五条分支, 特殊转让三卡与回购档",
+  "surface": "市集档口分隔线与方形牌匾, 无圆角",
+  "motion": "双档口先后开张, 侵害分支沿档口分叉, 特殊卡依次上架, 回购档按期限开合",
+  "transition": "档口框架与牌匾颜色角色贯穿场景",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/commercial-law/07/llc-equity-transfer/",
+    "title": "股权流转市集"
+  }
+}

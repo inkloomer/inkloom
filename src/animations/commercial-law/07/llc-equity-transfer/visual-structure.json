@@ -1,0 +1,93 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "llc-equity-transfer-scene-01",
+      "export": "LlcEquityTransfer01Scene",
+      "layout": "transfer-inner-outer-1",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "inner-free-stall",
+        "outer-notice-stall"
+      ],
+      "textTreatments": [
+        "label-block",
+        "thin-underline",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "spatial",
+        "icon"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "llc-equity-transfer-knowledge-1",
+        "llc-equity-transfer-scene-01-inner",
+        "llc-equity-transfer-scene-01-outer",
+        "llc-equity-transfer-scene-01-charter"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "llc-equity-transfer-scene-02",
+      "export": "LlcEquityTransfer02Scene",
+      "layout": "preemption-branches-2",
+      "anchor": "flow-path",
+      "grammar": [
+        "equal-terms-test",
+        "buyer-renounce-branch"
+      ],
+      "textTreatments": [
+        "soft-highlight",
+        "stamp",
+        "external-negation"
+      ],
+      "focalChannels": [
+        "connector",
+        "contrast",
+        "motion"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "llc-equity-transfer-knowledge-2",
+        "llc-equity-transfer-scene-02-fork",
+        "llc-equity-transfer-scene-02-proportion",
+        "llc-equity-transfer-scene-02-regret",
+        "llc-equity-transfer-scene-02-renounce"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "llc-equity-transfer-scene-03",
+      "export": "LlcEquityTransfer03Scene",
+      "layout": "transfer-specials-3",
+      "anchor": "role-pair",
+      "grammar": [
+        "special-transfer-cards",
+        "dissent-repurchase-gate"
+      ],
+      "textTreatments": [
+        "label-block",
+        "stamp",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "contrast",
+        "annotation",
+        "locator"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "llc-equity-transfer-knowledge-3",
+        "llc-equity-transfer-scene-03-special-0",
+        "llc-equity-transfer-scene-03-special-1",
+        "llc-equity-transfer-scene-03-special-2",
+        "llc-equity-transfer-scene-03-repurchase"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

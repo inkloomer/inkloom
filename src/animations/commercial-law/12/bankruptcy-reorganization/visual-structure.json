@@ -1,0 +1,93 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "bankruptcy-reorganization-scene-01",
+      "export": "BankruptcyReorganization01Scene",
+      "layout": "reorganization-rail-1",
+      "anchor": "flow-path",
+      "grammar": [
+        "six-station-rail",
+        "failure-branch"
+      ],
+      "textTreatments": [
+        "label-block",
+        "thin-underline",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "connector",
+        "motion",
+        "enclosure"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "bankruptcy-reorganization-knowledge-1",
+        "bankruptcy-reorganization-scene-01-station-0",
+        "bankruptcy-reorganization-scene-01-station-1",
+        "bankruptcy-reorganization-scene-01-station-2",
+        "bankruptcy-reorganization-scene-01-failure"
+      ],
+      "statefulObjects": [
+        "bankruptcy-reorganization-train"
+      ]
+    },
+    {
+      "id": "bankruptcy-reorganization-scene-02",
+      "export": "BankruptcyReorganization02Scene",
+      "layout": "voting-groups-2",
+      "anchor": "boundary",
+      "grammar": [
+        "five-voting-groups",
+        "dual-threshold"
+      ],
+      "textTreatments": [
+        "stamp",
+        "soft-highlight",
+        "label-block"
+      ],
+      "focalChannels": [
+        "enclosure",
+        "contrast",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "bankruptcy-reorganization-knowledge-2",
+        "bankruptcy-reorganization-scene-02-groups",
+        "bankruptcy-reorganization-scene-02-threshold"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "bankruptcy-reorganization-scene-03",
+      "export": "BankruptcyReorganization03Scene",
+      "layout": "protection-lanes-3",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "secured-right-pause",
+        "dividend-ban"
+      ],
+      "textTreatments": [
+        "external-negation",
+        "label-block",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "spatial",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "bankruptcy-reorganization-knowledge-3",
+        "bankruptcy-reorganization-scene-03-pause",
+        "bankruptcy-reorganization-scene-03-ban",
+        "bankruptcy-reorganization-scene-03-loan"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

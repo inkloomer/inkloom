@@ -1,0 +1,16 @@
+{
+  "directionId": "transit-map",
+  "derivedFrom": "shareholder-representative-action",
+  "variation": "资本变更轨道: 增资减资双轨对照, 合并分立双轨与债权人救济岔道, 减资五步流水线",
+  "family": "restructure-railway",
+  "palette": "#EFF2EC + #232B26 + #2E6D4F + #C2542B + #C08A2D",
+  "typography": "WenKai 轨道站牌 + 救济短标签 + 期限数字",
+  "composition": "增资减资双轨 + 合并分立双轨与救济岔道 + 减资五步流水线",
+  "surface": "轨道细线与方形站牌, 无圆角",
+  "motion": "双轨依次进站, 救济岔道分向点亮, 减资流水线逐站推进",
+  "transition": "轨道与站牌颜色角色贯穿场景",
+  "catalog": {
+    "status": "variant",
+    "sourceDirectionId": "transit-map"
+  }
+}

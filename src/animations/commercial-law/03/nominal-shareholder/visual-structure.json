@@ -1,0 +1,91 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "nominal-shareholder-scene-01",
+      "export": "NominalShareholder01Scene",
+      "layout": "nominee-board-1",
+      "anchor": "role-pair",
+      "grammar": [
+        "nominee-agreement",
+        "hidden-vs-visible"
+      ],
+      "textTreatments": [
+        "label-block",
+        "thin-underline",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "connector",
+        "icon"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "nominal-shareholder-knowledge-1",
+        "nominal-shareholder-scene-01-hidden",
+        "nominal-shareholder-scene-01-visible",
+        "nominal-shareholder-scene-01-creditor"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "nominal-shareholder-scene-02",
+      "export": "NominalShareholder02Scene",
+      "layout": "good-faith-fork-2",
+      "anchor": "flow-path",
+      "grammar": [
+        "disposal-fork",
+        "bona-fide-test"
+      ],
+      "textTreatments": [
+        "soft-highlight",
+        "stamp",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "connector",
+        "contrast",
+        "motion"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "nominal-shareholder-knowledge-2",
+        "nominal-shareholder-scene-02-fork",
+        "nominal-shareholder-scene-02-goodfaith",
+        "nominal-shareholder-scene-02-badfaith",
+        "nominal-shareholder-scene-02-note"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "nominal-shareholder-scene-03",
+      "export": "NominalShareholder03Scene",
+      "layout": "consent-boundary-3",
+      "anchor": "boundary",
+      "grammar": [
+        "agreement-boundary",
+        "impersonation-relief"
+      ],
+      "textTreatments": [
+        "label-block",
+        "external-negation",
+        "stamp"
+      ],
+      "focalChannels": [
+        "enclosure",
+        "contrast",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "nominal-shareholder-knowledge-3",
+        "nominal-shareholder-scene-03-holding",
+        "nominal-shareholder-scene-03-impersonation"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

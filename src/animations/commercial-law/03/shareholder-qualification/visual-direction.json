@@ -1,0 +1,16 @@
+{
+  "directionId": "archival-dossier",
+  "derivedFrom": "promoter",
+  "variation": "股东名册与工商登记的双栏档案: 内查外信对照, 三金四金身份冲突两案并置, 名册记载时点闸门",
+  "family": "roster-ledger",
+  "palette": "#F4EFE3 + #232735 + #2B6E8F + #A8442E + #C8A03A",
+  "typography": "WenKai 名册栏题 + 对内对外短标签 + 时点细线",
+  "composition": "名册与登记双栏档案 + 身份冲突内外两案 + 记载时点闸门",
+  "surface": "纸纹底、硬边栏条、方形登记章, 无圆角",
+  "motion": "名册栏先翻开登记栏随后对照, 内外两案分别点亮, 受让人跨过记载时点闸门",
+  "transition": "名册栏与登记章颜色角色贯穿场景",
+  "catalog": {
+    "status": "variant",
+    "sourceDirectionId": "archival-dossier"
+  }
+}

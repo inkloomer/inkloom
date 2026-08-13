@@ -1,0 +1,102 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "company-personality-scene-01",
+      "export": "CompanyPersonality01Scene",
+      "layout": "shell-pillars-1",
+      "anchor": "boundary",
+      "grammar": [
+        "personality-shell",
+        "independence-pillars"
+      ],
+      "textTreatments": [
+        "label-block",
+        "thin-underline",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "enclosure",
+        "icon",
+        "locator"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "company-personality-knowledge-1",
+        "company-personality-scene-01-pillar-name",
+        "company-personality-scene-01-pillar-assets",
+        "company-personality-scene-01-pillar-duty",
+        "company-personality-scene-01-strip-company",
+        "company-personality-scene-01-strip-shareholder"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "company-personality-scene-02",
+      "export": "CompanyPersonality02Scene",
+      "layout": "abuse-fork-2",
+      "anchor": "flow-path",
+      "grammar": [
+        "abuse-fork",
+        "joint-liability-converge"
+      ],
+      "textTreatments": [
+        "soft-highlight",
+        "stamp",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "connector",
+        "contrast",
+        "motion"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "company-personality-knowledge-2",
+        "company-personality-scene-02-branch-0",
+        "company-personality-scene-02-branch-1",
+        "company-personality-scene-02-branch-2",
+        "company-personality-scene-02-branch-3",
+        "company-personality-scene-02-conclusion",
+        "company-personality-scene-02-no-abuse"
+      ],
+      "statefulObjects": [
+        "company-personality-abuse-claim"
+      ]
+    },
+    {
+      "id": "company-personality-scene-03",
+      "export": "CompanyPersonality03Scene",
+      "layout": "exception-paths-3",
+      "anchor": "document-fork",
+      "grammar": [
+        "exception-stack",
+        "suit-path-fork"
+      ],
+      "textTreatments": [
+        "external-negation",
+        "stamp",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "annotation",
+        "contrast",
+        "spatial"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "company-personality-knowledge-3",
+        "company-personality-scene-03-rule-0",
+        "company-personality-scene-03-rule-1",
+        "company-personality-scene-03-rule-2",
+        "company-personality-scene-03-path-0",
+        "company-personality-scene-03-path-1",
+        "company-personality-scene-03-path-2",
+        "company-personality-scene-03-path-3"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "directionId": "transit-map",
+  "derivedFrom": "company-restructuring",
+  "variation": "取回权驿站: 取回总规则三闸, 违法转让与毁损灭失的损失分轨, 在途货物主张分叉",
+  "family": "reclaim-waystation",
+  "palette": "#EFF2EC + #232B26 + #2E6D4F + #C2542B + #C08A2D",
+  "typography": "WenKai 驿站标牌 + 取回规则短标签 + 时点细线",
+  "composition": "取回三规则 + 损失分流双轨 + 在途货物分叉",
+  "surface": "轨道与驿站框, 方形时点章, 无圆角",
+  "motion": "取回规则依次亮起, 损失沿受理前后分轨, 在途货物沿主张与否分叉",
+  "transition": "轨道与驿站颜色角色贯穿场景",
+  "catalog": {
+    "status": "variant",
+    "sourceDirectionId": "transit-map"
+  }
+}

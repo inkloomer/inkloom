@@ -1,0 +1,16 @@
+{
+  "directionId": "archival-dossier",
+  "derivedFrom": "promoter",
+  "variation": "债权申报柜台: 老平钱三要件闸口, 保证人申报分档, 保证人破产与双破产对照",
+  "family": "claim-counter",
+  "palette": "#F3EEE2 + #24262E + #2E6D4F + #B23A30 + #C9A23C",
+  "typography": "WenKai 柜台牌匾 + 申报要件短标签 + 期限数字",
+  "composition": "申报范围闸口 + 保证人申报双档 + 双破产对照栏",
+  "surface": "柜台档条与方形申报章, 无圆角",
+  "motion": "三要件依次盖章, 保证人申报沿双档分流, 双破产两栏并置对照",
+  "transition": "柜台框架与申报章颜色角色贯穿场景",
+  "catalog": {
+    "status": "variant",
+    "sourceDirectionId": "archival-dossier"
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "bankruptcy-revocation-right-scene-01",
+      "export": "BankruptcyRevocationRight01Scene",
+      "layout": "critical-calendar-1",
+      "anchor": "timeline-gate",
+      "grammar": [
+        "critical-period-axis",
+        "four-stage-zones"
+      ],
+      "textTreatments": [
+        "label-block",
+        "thin-underline",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "connector",
+        "motion",
+        "locator"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "bankruptcy-revocation-right-knowledge-1",
+        "bankruptcy-revocation-right-scene-01-stage-0",
+        "bankruptcy-revocation-right-scene-01-stage-1",
+        "bankruptcy-revocation-right-scene-01-stage-2",
+        "bankruptcy-revocation-right-scene-01-stage-3"
+      ],
+      "statefulObjects": [
+        "bankruptcy-revocation-right-calendar"
+      ]
+    },
+    {
+      "id": "bankruptcy-revocation-right-scene-02",
+      "export": "BankruptcyRevocationRight02Scene",
+      "layout": "fraud-five-2",
+      "anchor": "typographic-sequence",
+      "grammar": [
+        "fraudulent-acts",
+        "one-year-window"
+      ],
+      "textTreatments": [
+        "stamp",
+        "soft-highlight",
+        "label-block"
+      ],
+      "focalChannels": [
+        "enclosure",
+        "motion",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "bankruptcy-revocation-right-knowledge-2",
+        "bankruptcy-revocation-right-scene-02-act-0",
+        "bankruptcy-revocation-right-scene-02-act-1",
+        "bankruptcy-revocation-right-scene-02-act-2",
+        "bankruptcy-revocation-right-scene-02-act-3",
+        "bankruptcy-revocation-right-scene-02-act-4"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "bankruptcy-revocation-right-scene-03",
+      "export": "BankruptcyRevocationRight03Scene",
+      "layout": "repayment-exceptions-3",
+      "anchor": "boundary",
+      "grammar": [
+        "individual-repayment",
+        "exception-gates"
+      ],
+      "textTreatments": [
+        "external-negation",
+        "soft-highlight",
+        "stamp"
+      ],
+      "focalChannels": [
+        "enclosure",
+        "contrast",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "bankruptcy-revocation-right-knowledge-3",
+        "bankruptcy-revocation-right-scene-03-rule",
+        "bankruptcy-revocation-right-scene-03-exceptions"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

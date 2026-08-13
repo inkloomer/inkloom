@@ -1,0 +1,89 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "recovery-right-scene-01",
+      "export": "RecoveryRight01Scene",
+      "layout": "clawback-net-1",
+      "anchor": "flow-path",
+      "grammar": [
+        "clawback-targets",
+        "debtor-property-return"
+      ],
+      "textTreatments": [
+        "label-block",
+        "thin-underline",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "connector",
+        "motion",
+        "enclosure"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "recovery-right-knowledge-1",
+        "recovery-right-scene-01-target-0",
+        "recovery-right-scene-01-target-1",
+        "recovery-right-scene-01-effect"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "recovery-right-scene-02",
+      "export": "RecoveryRight02Scene",
+      "layout": "abnormal-income-2",
+      "anchor": "role-pair",
+      "grammar": [
+        "abnormal-income-tiers",
+        "wage-vs-ordinary"
+      ],
+      "textTreatments": [
+        "soft-highlight",
+        "stamp",
+        "external-negation"
+      ],
+      "focalChannels": [
+        "contrast",
+        "connector",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "recovery-right-knowledge-2",
+        "recovery-right-scene-02-income",
+        "recovery-right-scene-02-return"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "recovery-right-scene-03",
+      "export": "RecoveryRight03Scene",
+      "layout": "contribution-clawback-3",
+      "anchor": "boundary",
+      "grammar": [
+        "unpaid-contribution",
+        "withdrawn-contribution"
+      ],
+      "textTreatments": [
+        "external-negation",
+        "label-block",
+        "stamp"
+      ],
+      "focalChannels": [
+        "enclosure",
+        "contrast",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "recovery-right-knowledge-3",
+        "recovery-right-scene-03-contribution",
+        "recovery-right-scene-03-parties"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

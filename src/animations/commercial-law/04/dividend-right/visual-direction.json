@@ -1,0 +1,16 @@
+{
+  "directionId": "constructivist-geometry",
+  "derivedFrom": "demo-constructivist-geometry",
+  "variation": "利润瀑布几何: 分配依据双楔对照, 税后利润沿公积金阶梯逐级跌落, 决议门槛成诉讼闸口",
+  "family": "profit-waterfall",
+  "palette": "#F4F0E6 + #20232B + #B23A30 + #15677E + #D9A62E",
+  "typography": "WenKai 楔形大字 + 阶梯短标签 + 数字强调",
+  "composition": "分配依据双楔 + 利润瀑布三阶梯 + 决议闸口与例外",
+  "surface": "硬楔块与阶梯平台, 方形数字章, 无圆角",
+  "motion": "利润沿瀑布逐级跌落, 三个公积金数字依次盖章, 例外从闸口弹出",
+  "transition": "瀑布阶梯与数字章颜色角色贯穿场景",
+  "catalog": {
+    "status": "variant",
+    "sourceDirectionId": "constructivist-geometry"
+  }
+}

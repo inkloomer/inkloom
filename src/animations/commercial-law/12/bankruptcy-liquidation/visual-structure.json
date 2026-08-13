@@ -1,0 +1,91 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "bankruptcy-liquidation-scene-01",
+      "export": "BankruptcyLiquidation01Scene",
+      "layout": "declaration-gate-1",
+      "anchor": "boundary",
+      "grammar": [
+        "declaration-effects",
+        "no-return-to-reorganization"
+      ],
+      "textTreatments": [
+        "stamp",
+        "external-negation",
+        "label-block"
+      ],
+      "focalChannels": [
+        "enclosure",
+        "contrast",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "bankruptcy-liquidation-knowledge-1",
+        "bankruptcy-liquidation-scene-01-effects",
+        "bankruptcy-liquidation-scene-01-noreturn"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "bankruptcy-liquidation-scene-02",
+      "export": "BankruptcyLiquidation02Scene",
+      "layout": "secured-priority-2",
+      "anchor": "role-pair",
+      "grammar": [
+        "secured-creditor-priority",
+        "unsecured-collective"
+      ],
+      "textTreatments": [
+        "label-block",
+        "soft-highlight",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "contrast",
+        "connector",
+        "spatial"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "bankruptcy-liquidation-knowledge-2",
+        "bankruptcy-liquidation-scene-02-secured",
+        "bankruptcy-liquidation-scene-02-unsecured"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "bankruptcy-liquidation-scene-03",
+      "export": "BankruptcyLiquidation03Scene",
+      "layout": "distribution-waterfall-3",
+      "anchor": "flow-path",
+      "grammar": [
+        "payment-waterfall",
+        "worker-priority"
+      ],
+      "textTreatments": [
+        "soft-highlight",
+        "stamp",
+        "label-block"
+      ],
+      "focalChannels": [
+        "connector",
+        "motion",
+        "enclosure"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "bankruptcy-liquidation-knowledge-3",
+        "bankruptcy-liquidation-scene-03-step-0",
+        "bankruptcy-liquidation-scene-03-step-1",
+        "bankruptcy-liquidation-scene-03-step-2"
+      ],
+      "statefulObjects": [
+        "bankruptcy-liquidation-waterfall"
+      ]
+    }
+  ]
+}

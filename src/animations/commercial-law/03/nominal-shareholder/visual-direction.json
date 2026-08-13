@@ -1,0 +1,16 @@
+{
+  "directionId": "evidence-board",
+  "derivedFrom": "demo-evidence-board",
+  "variation": "代持关系钉板: 隐名显名与公司债权人四角色牵线, 无权处分沿善意取得分叉, 代持与冒名以合意为界",
+  "family": "nominee-pinboard",
+  "palette": "#EFE9DE + #26262E + #15725F + #B23A30 + #C9992F",
+  "typography": "WenKai 角色名牌 + 牵线短标签 + 要件细线",
+  "composition": "代持四角色钉板 + 善意取得要件分叉 + 合意边界两案",
+  "surface": "图钉与牵线、纸卡角色牌、方章, 无圆角",
+  "motion": "角色牌依次钉上, 牵线逐条拉直, 处分路径沿要件分叉, 边界线劈开代持与冒名",
+  "transition": "角色牌颜色与牵线角色贯穿场景",
+  "catalog": {
+    "status": "variant",
+    "sourceDirectionId": "evidence-board"
+  }
+}

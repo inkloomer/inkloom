@@ -1,0 +1,16 @@
+{
+  "directionId": "promoter-liability-chain",
+  "family": "promoter-liability-chain",
+  "palette": "暖锻灰 #F1EDE4 + 深炭 #23272E + 钢蓝 #3A5C78 + 铜红 #B4532A + 铜金 #C08A2D",
+  "typography": "WenKai 链节大字 + 责任短标签 + 销钉条件",
+  "composition": "发起人责任链: 三档责任连环扣, 瑕疵/抽逃双链对照, 失权断链流程",
+  "surface": "链节硬边、方形链板、销钉铆接, 无圆角无阴影",
+  "motion": "链节依次咬合, 瑕疵沿链条传导连带, 失权时链节脱落",
+  "transition": "链节与销钉色角色贯穿三场景",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/commercial-law/02/promoter/",
+    "title": "发起人责任链"
+  }
+}

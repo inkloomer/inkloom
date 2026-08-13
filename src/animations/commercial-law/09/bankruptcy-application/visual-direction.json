@@ -1,0 +1,16 @@
+{
+  "directionId": "insolvency-diagnosis",
+  "derivedFrom": "bankruptcy-grounds",
+  "variation": "申请受理开关台: 四类申请者的程序开关矩阵, 受理后保全执行诉讼三闸, 集中管辖时点刻度",
+  "family": "application-switchboard",
+  "palette": "#EEF1F2 + #232A33 + #245E8F + #B23A30 + #C9A23C",
+  "typography": "WenKai 开关标牌 + 申请者短标签 + 程序限制章",
+  "composition": "申请者程序矩阵 + 受理三闸 + 管辖时点刻度",
+  "surface": "开关面板与方形限制章, 无圆角",
+  "motion": "四类申请者依次拨动开关, 受理三闸逐个落下, 管辖刻度划过受理线",
+  "transition": "开关面板与限制章颜色角色贯穿场景",
+  "catalog": {
+    "status": "variant",
+    "sourceDirectionId": "insolvency-diagnosis"
+  }
+}

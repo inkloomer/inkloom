@@ -1,0 +1,16 @@
+{
+  "directionId": "incorporation-assembly-line",
+  "family": "incorporation-assembly-line",
+  "palette": "冷灰钢蓝 #E9EEF2 + 深铁灰 #1C232B + 工业蓝 #2C5F8A + 安全橙 #D97A2E + 钢青 #3E6B5C",
+  "typography": "WenKai 工牌大字 + 站点短标签 + 铆钉条件",
+  "composition": "设立装配线: 发起/募集双产线对照, 募集四站传送带汇入成立大会, 章程内外边界规格台",
+  "surface": "钢板硬边、方形站点、铆钉螺栓点缀, 无圆角无阴影",
+  "motion": "货物沿传送带依次进站, 站点逐一点亮, 边界线从中间切开内外",
+  "transition": "传送带与站点色角色贯穿三场景",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/commercial-law/02/company-incorporation/",
+    "title": "设立装配线"
+  }
+}

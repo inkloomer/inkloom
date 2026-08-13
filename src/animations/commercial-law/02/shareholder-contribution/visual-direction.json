@@ -1,0 +1,16 @@
+{
+  "directionId": "contribution-dockyard",
+  "family": "contribution-dockyard",
+  "palette": "#EAF0EC + #1F2A36 + #0E7C66 + #C2542B + #D8A129",
+  "typography": "WenKai 泊位大字 + 要件短标签 + 细线条件",
+  "composition": "出资泊位港: 货币与非货币双泊位, 六项禁入物品排档, 认缴时钟与加速到期",
+  "surface": "泊位框线与港区分隔, 方形禁入章, 无圆角",
+  "motion": "货物入泊, 禁入品依次封章, 五年时钟走完触发加速到期",
+  "transition": "港区框与泊位颜色角色贯穿场景",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/commercial-law/02/shareholder-contribution/",
+    "title": "出资泊位港"
+  }
+}

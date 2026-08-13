@@ -1,0 +1,16 @@
+{
+  "directionId": "insolvency-diagnosis",
+  "derivedFrom": "bankruptcy-costs",
+  "variation": "追回网诊断: 三类追回对象, 董监高非正常收入三档分流, 出资追回不受期限限制",
+  "family": "clawback-net",
+  "palette": "#EFF1ED + #232A26 + #B23A30 + #2E6D4F + #C08A2D",
+  "typography": "WenKai 追回对象大字 + 收入档短标签 + 债性分流线",
+  "composition": "追回三对象 + 非正常收入三档与债性分流 + 出资追回边界",
+  "surface": "网线与档条, 方形追回章, 无圆角",
+  "motion": "三对象依次落网, 收入按档分流成两种债权, 出资追回跨越期限线",
+  "transition": "网线与追回章颜色角色贯穿场景",
+  "catalog": {
+    "status": "variant",
+    "sourceDirectionId": "insolvency-diagnosis"
+  }
+}

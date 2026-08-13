@@ -1,0 +1,96 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "company-classification-scene-01",
+      "export": "CompanyClassification01Scene",
+      "layout": "branch-lanes-1",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "twin-branch-contrast",
+        "personality-split"
+      ],
+      "textTreatments": [
+        "label-block",
+        "external-negation",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "spatial",
+        "icon"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "company-classification-knowledge-1",
+        "company-classification-scene-01-branch",
+        "company-classification-scene-01-subsidiary",
+        "company-classification-scene-01-duty-branch",
+        "company-classification-scene-01-duty-subsidiary"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "company-classification-scene-02",
+      "export": "CompanyClassification02Scene",
+      "layout": "clause-duel-2",
+      "anchor": "role-pair",
+      "grammar": [
+        "clause-duel",
+        "shared-license"
+      ],
+      "textTreatments": [
+        "thin-underline",
+        "label-block",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "locator",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "company-classification-knowledge-2",
+        "company-classification-scene-02-license-branch",
+        "company-classification-scene-02-license-subsidiary",
+        "company-classification-scene-02-suit-branch",
+        "company-classification-scene-02-suit-subsidiary"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "company-classification-scene-03",
+      "export": "CompanyClassification03Scene",
+      "layout": "execution-chain-3",
+      "anchor": "flow-path",
+      "grammar": [
+        "execution-cascade",
+        "branch-fallback"
+      ],
+      "textTreatments": [
+        "stamp",
+        "thin-underline",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "connector",
+        "motion",
+        "enclosure"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "company-classification-knowledge-3",
+        "company-classification-scene-03-step-0",
+        "company-classification-scene-03-step-1",
+        "company-classification-scene-03-step-2",
+        "company-classification-scene-03-mnemonic"
+      ],
+      "statefulObjects": [
+        "company-classification-execution-order"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "directionId": "transfer-mart",
+  "derivedFrom": "llc-equity-transfer",
+  "variation": "股份发行转让档口: 法定与授权双制对照、面额与无面额双票对照, 董监高转让限制三刻度, 回购与资助闸口",
+  "family": "share-ledger-tracks",
+  "palette": "#EEF1F2 + #232A33 + #2B5F8F + #C2542B + #C9A23C",
+  "typography": "WenKai 双制档牌 + 限制刻度 + 期限数字",
+  "composition": "资本制双档 + 票面双档 + 转让限制三刻度 + 回购资助闸口",
+  "surface": "档口牌匾与刻度细线, 方形期限章, 无圆角",
+  "motion": "双制档先后开张, 转让限制按刻度依次封禁, 回购闸口逐项开合",
+  "transition": "档口框架与牌匾颜色角色贯穿场景",
+  "catalog": {
+    "status": "variant",
+    "sourceDirectionId": "transfer-mart"
+  }
+}

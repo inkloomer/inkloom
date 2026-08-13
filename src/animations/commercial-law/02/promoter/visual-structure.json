@@ -1,0 +1,94 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "promoter-scene-01",
+      "export": "Promoter01Scene",
+      "layout": "duty-chain-triple-1",
+      "anchor": "role-pair",
+      "grammar": [
+        "chain-link-duty",
+        "third-party-choice"
+      ],
+      "textTreatments": [
+        "label-block",
+        "thin-underline",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "locator",
+        "icon"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "promoter-knowledge-1",
+        "promoter-scene-01-duty-0",
+        "promoter-scene-01-duty-1",
+        "promoter-scene-01-duty-2"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "promoter-scene-02",
+      "export": "Promoter02Scene",
+      "layout": "flaw-dual-chain-2",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "flaw-vs-withdrawal-chain",
+        "creditor-supplement"
+      ],
+      "textTreatments": [
+        "soft-highlight",
+        "stamp",
+        "external-negation"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "promoter-knowledge-2",
+        "promoter-scene-02-lane-0",
+        "promoter-scene-02-lane-1",
+        "promoter-scene-02-devalue"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "promoter-scene-03",
+      "export": "Promoter03Scene",
+      "layout": "disqualification-chain-3",
+      "anchor": "timeline-gate",
+      "grammar": [
+        "cure-window-gate",
+        "link-break"
+      ],
+      "textTreatments": [
+        "label-block",
+        "soft-highlight",
+        "stamp"
+      ],
+      "focalChannels": [
+        "connector",
+        "motion",
+        "locator"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "promoter-knowledge-3",
+        "promoter-scene-03-gate-0",
+        "promoter-scene-03-gate-1",
+        "promoter-scene-03-gate-2",
+        "promoter-scene-03-suit"
+      ],
+      "statefulObjects": [
+        "promoter-disqualification-notice"
+      ]
+    }
+  ]
+}

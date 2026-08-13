@@ -1,0 +1,90 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "company-dissolution-scene-01",
+      "export": "CompanyDissolution01Scene",
+      "layout": "dissolution-causes-1",
+      "anchor": "flow-path",
+      "grammar": [
+        "dissolution-triad",
+        "continuation-threshold"
+      ],
+      "textTreatments": [
+        "label-block",
+        "soft-highlight",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "connector",
+        "contrast",
+        "motion"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "company-dissolution-knowledge-1",
+        "company-dissolution-scene-01-cause-0",
+        "company-dissolution-scene-01-cause-1",
+        "company-dissolution-scene-01-cause-2"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "company-dissolution-scene-02",
+      "export": "CompanyDissolution02Scene",
+      "layout": "judicial-dissolution-gate-2",
+      "anchor": "boundary",
+      "grammar": [
+        "three-element-gate",
+        "non-acceptance-list"
+      ],
+      "textTreatments": [
+        "external-negation",
+        "soft-highlight",
+        "stamp"
+      ],
+      "focalChannels": [
+        "enclosure",
+        "contrast",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "company-dissolution-knowledge-2",
+        "company-dissolution-scene-02-accept",
+        "company-dissolution-scene-02-reject"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "company-dissolution-scene-03",
+      "export": "CompanyDissolution03Scene",
+      "layout": "dissolution-suit-3",
+      "anchor": "role-pair",
+      "grammar": [
+        "suit-parties",
+        "mediation-relief"
+      ],
+      "textTreatments": [
+        "label-block",
+        "stamp",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "contrast",
+        "locator",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "company-dissolution-knowledge-3",
+        "company-dissolution-scene-03-plaintiff",
+        "company-dissolution-scene-03-defendant",
+        "company-dissolution-scene-03-mediation"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

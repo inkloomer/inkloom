@@ -1,0 +1,16 @@
+{
+  "directionId": "insolvency-diagnosis",
+  "family": "insolvency-diagnosis",
+  "palette": "#EFF1ED + #232A26 + #B23A30 + #2E6D4F + #C08A2D",
+  "typography": "WenKai 诊断结论大字 + 情形短标签 + 条件细线",
+  "composition": "破产诊断台: 三判定指标表, 缺乏清偿力四情形排档, 债务人自身视角边界",
+  "surface": "仪表刻度与诊断框, 方形结论牌, 无圆角",
+  "motion": "三个判定指标依次点亮, 四情形按口诀顺序排档, 第三人从诊断视野中排除",
+  "transition": "诊断台框架与结论牌颜色角色贯穿场景",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/commercial-law/09/bankruptcy-grounds/",
+    "title": "破产诊断台"
+  }
+}

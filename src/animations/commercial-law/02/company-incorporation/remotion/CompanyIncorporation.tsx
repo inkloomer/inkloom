@@ -1,0 +1,150 @@
+import type {ReactNode} from 'react';
+import {Factory, Megaphone, Handshake, Landmark, Stethoscope, ScrollText, ClipboardCheck, Users} from 'lucide-react';
+import {AbsoluteFill, interpolate, useCurrentFrame} from 'remotion';
+import {CLAMP, TimelineSequence} from '../../../../shared/remotion-runtime';
+import {SCENES} from './storyboard';
+
+const COLORS={background:'#E9EEF2', ink:'#1C232B', blue:'#2C5F8A', orange:'#D97A2E', teal:'#3E6B5C', paper:'#F7FAFC'} as const;
+const PLAYER_CONTROL_SAFE_BOTTOM = 160;
+
+const Shell=({code,title,children}:{readonly code:string;readonly title:string;readonly children:ReactNode})=>(
+  <AbsoluteFill data-player-control-safe-bottom={PLAYER_CONTROL_SAFE_BOTTOM} style={{background:COLORS.background, color:COLORS.ink, overflow:'hidden'}}>
+    <div style={{position:'absolute',left:0,top:0,right:0,height:12,background:'repeating-linear-gradient(90deg,'+COLORS.orange+' 0 22px,'+COLORS.ink+' 22px 44px)'}}/>
+    <div style={{position:'absolute',left:76,top:36,padding:'12px 22px',background:COLORS.ink,color:COLORS.orange,fontSize:24,fontWeight:900,letterSpacing:4,border:'3px solid '+COLORS.blue}}>{code}</div>
+    <div style={{position:'absolute',left:76,right:76,top:120,fontSize:48,fontWeight:900,lineHeight:1.08,borderLeft:'12px solid '+COLORS.blue,paddingLeft:22}}>{title}</div>
+    <div style={{position:'absolute',left:76,right:76,top:206,bottom: PLAYER_CONTROL_SAFE_BOTTOM}}>{children}</div>
+  </AbsoluteFill>
+);
+
+const Belt=({color,width}:{readonly color:string;readonly width:number})=>(
+  <div style={{width,height:14,background:'repeating-linear-gradient(90deg,'+color+' 0 16px,transparent 16px 26px)',borderTop:'3px solid '+COLORS.ink,borderBottom:'3px solid '+COLORS.ink}}/>
+);
+
+export const CompanyIncorporation01Scene=()=>{
+  const frame=useCurrentFrame();
+  const enter=(a:number,b:number)=>interpolate(frame,[a,b],[0,1],CLAMP);
+  const slide=(a:number,b:number,from:string)=>interpolate(frame,[a,b],[from,'0px 0px'],CLAMP);
+  return <Shell code="02.1" title="设立方式：发起 与 募集">
+    <div data-layout="assembly-dual-line-1" data-visual-anchor="comparison-axis" data-visual-grammar="dual-line-contrast,thirty-five-floor" data-text-treatments="label-block,thin-underline,soft-highlight" data-focal-rule="company-incorporation-scene-01-rule" data-focal-channels="contrast,spatial,icon" style={{position:'absolute',inset:0}}>
+      <div data-final-knowledge="company-incorporation-knowledge-1" style={{position:'absolute',left:0,right:0,top:0,textAlign:'center',fontSize:24,fontWeight:900,letterSpacing:6,color:COLORS.blue,opacity:enter(12,36)}}>区分关键：发起人是否找外人</div>
+      <div data-final-knowledge="company-incorporation-scene-01-mode-0" style={{position:'absolute',left:24,top:56,width:846,border:'5px solid '+COLORS.blue,background:COLORS.paper,opacity:enter(28,54),translate:slide(28,54,'-26px 0px')}}>
+        <div style={{display:'flex',alignItems:'center',gap:16,padding:'14px 22px',background:COLORS.ink,color:COLORS.paper}}>
+          <Factory size={38} color={COLORS.orange}/>
+          <div style={{fontSize:30,fontWeight:900}}>发起设立</div>
+          <div style={{marginLeft:'auto',padding:'5px 14px',border:'2px solid '+COLORS.blue,color:COLORS.blue,fontSize:21,fontWeight:900,background:COLORS.paper}}>不找外人</div>
+        </div>
+        <div style={{padding:'18px 24px',display:'grid',gap:10}}>
+          <div style={{fontSize:24,fontWeight:800,lineHeight:1.4,padding:'10px 14px',background:COLORS.blue+'10'}}>发起人认购应发行的<span style={{background:COLORS.blue+'30',padding:'2px 8px',fontWeight:900}}>全部股份</span></div>
+          <div style={{fontSize:24,fontWeight:800,lineHeight:1.4,padding:'10px 14px',background:COLORS.blue+'10'}}>适用：<span style={{fontWeight:900}}>有限责任公司</span> / <span style={{fontWeight:900}}>股份有限公司</span></div>
+        </div>
+        <Belt color={COLORS.blue} width={846}/>
+      </div>
+      <div data-final-knowledge="company-incorporation-scene-01-mode-1" style={{position:'absolute',right:24,top:56,width:846,border:'5px solid '+COLORS.orange,background:COLORS.paper,opacity:enter(46,72),translate:slide(46,72,'26px 0px')}}>
+        <div style={{display:'flex',alignItems:'center',gap:16,padding:'14px 22px',background:COLORS.ink,color:COLORS.paper}}>
+          <Megaphone size={38} color={COLORS.orange}/>
+          <div style={{fontSize:30,fontWeight:900}}>募集设立</div>
+          <div style={{marginLeft:'auto',padding:'5px 14px',border:'2px solid '+COLORS.orange,color:COLORS.orange,fontSize:21,fontWeight:900,background:COLORS.paper}}>得找外人</div>
+        </div>
+        <div style={{padding:'18px 24px',display:'grid',gap:10}}>
+          <div style={{fontSize:24,fontWeight:800,lineHeight:1.4,padding:'10px 14px',background:COLORS.orange+'12'}}>发起人认购应发行股份的<span style={{background:COLORS.orange+'32',padding:'2px 8px',fontWeight:900}}>35%以上</span>，其余公开或向特定对象募集</div>
+          <div style={{fontSize:24,fontWeight:800,lineHeight:1.4,padding:'10px 14px',background:COLORS.orange+'12'}}>适用：<span style={{fontWeight:900}}>仅股份有限公司</span></div>
+        </div>
+        <Belt color={COLORS.orange} width={846}/>
+      </div>
+      <div style={{position:'absolute',left:0,right:0,bottom:0,display:'flex',alignItems:'center',gap:16,border:'4px solid '+COLORS.ink,background:COLORS.paper,padding:'13px 24px',opacity:enter(78,106)}}>
+        <ClipboardCheck size={36} color={COLORS.orange}/>
+        <div style={{fontSize:24,fontWeight:800,lineHeight:1.4}}>募集设立需<span style={{background:COLORS.blue+'24',padding:'2px 8px',fontWeight:900}}>承销 + 代收股款</span>双协议；发起人认购股份<span style={{borderBottom:'4px solid '+COLORS.orange,paddingBottom:2,fontWeight:900}}>缴足前不得向他人募集</span></div>
+      </div>
+    </div>
+  </Shell>;
+};
+
+export const CompanyIncorporation02Scene=()=>{
+  const frame=useCurrentFrame();
+  const enter=(a:number,b:number)=>interpolate(frame,[a,b],[0,1],CLAMP);
+  const progress=interpolate(frame,[110,300],[0,1],CLAMP);
+  const Station=({n,title,caption,color,delay}:{readonly n:string;readonly title:string;readonly caption:string;readonly color:string;readonly delay:number})=>(
+    <div style={{opacity:enter(delay,delay+26)}}>
+      <div style={{display:'grid',gridTemplateColumns:'56px 1fr',gap:12,alignItems:'center',padding:'13px 16px',border:'4px solid '+COLORS.ink,background:COLORS.paper,minHeight:106}}>
+        <div style={{width:56,height:56,border:'4px solid '+COLORS.ink,background:color,color:COLORS.paper,display:'grid',placeItems:'center',fontSize:26,fontWeight:900}}>{n}</div>
+        <div>
+          <div style={{fontSize:24,fontWeight:900,marginBottom:5}}>{title}</div>
+          <div style={{fontSize:22,fontWeight:700,color:COLORS.blue,lineHeight:1.3}}>{caption}</div>
+        </div>
+      </div>
+    </div>
+  );
+  return <Shell code="02.1" title="募集设立流程与成立大会">
+    <div data-layout="raising-conveyor-2" data-visual-anchor="flow-path" data-visual-grammar="conveyor-stations,dual-protocol-fork" data-text-treatments="soft-highlight,stamp,thin-underline" data-focal-rule="company-incorporation-scene-02-rule" data-focal-channels="connector,motion,enclosure" style={{position:'absolute',inset:0}}>
+      <div data-final-knowledge="company-incorporation-knowledge-2" style={{position:'absolute',left:0,right:0,top:0,display:'flex',alignItems:'center',gap:14,opacity:enter(12,36)}}>
+        <div style={{padding:'8px 18px',background:COLORS.orange,color:COLORS.paper,fontSize:23,fontWeight:900}}>前置</div>
+        <div style={{fontSize:25,fontWeight:900}}>发起人认购≥35%并<span style={{borderBottom:'4px solid '+COLORS.orange,paddingBottom:2}}>实缴</span>，缴足验资后<span style={{background:COLORS.orange+'28',padding:'2px 8px'}}>30日内</span>召开成立大会</div>
+      </div>
+      <div style={{position:'absolute',left:0,right:0,top:74,display:'grid',gridTemplateColumns:'repeat(4,minmax(0,1fr))',gap:16}}>
+        <div data-final-knowledge="company-incorporation-scene-02-step-0"><Station n="1" title="公告招股说明书" caption="制作认股书 · 向募集对象介绍" color={COLORS.blue} delay={28}/></div>
+        <div data-final-knowledge="company-incorporation-scene-02-step-1"><Station n="2" title="承销协议" caption="公司同证券公司签订 · 由证券公司募集" color={COLORS.teal} delay={46}/></div>
+        <div data-final-knowledge="company-incorporation-scene-02-step-2"><Station n="3" title="代收股款协议" caption="公司同银行签订 · 募集资金存银行" color={COLORS.teal} delay={64}/></div>
+        <div data-final-knowledge="company-incorporation-scene-02-step-3"><Station n="4" title="验资机构验资" caption="股款缴足后验资 · 出具证明" color={COLORS.orange} delay={82}/></div>
+      </div>
+      <div style={{position:'absolute',left:0,right:0,top:250,height:0}}/>
+      <div style={{position:'absolute',left:0,top:250,width:1768,height:14,background:'repeating-linear-gradient(90deg,'+COLORS.ink+' 0 16px,transparent 16px 26px)',borderTop:'3px solid '+COLORS.blue,borderBottom:'3px solid '+COLORS.blue}}/>
+      <div style={{position:'absolute',left:0,top:250,width:interpolate(progress,[0,1],[0,1768],CLAMP),height:14,background:'repeating-linear-gradient(90deg,'+COLORS.orange+' 0 16px,transparent 16px 26px)'}}/>
+      <div data-stateful-source="company-incorporation-raising-progress" style={{position:'absolute',left:interpolate(progress,[0,1],[0,1724],CLAMP),top:238,width:44,height:38,background:COLORS.orange,border:'4px solid '+COLORS.ink,opacity:progress>0.95?0:1,zIndex:4}}/>
+      <div data-final-knowledge="company-incorporation-scene-02-congress" style={{position:'absolute',left:0,right:0,top:330,display:'flex',alignItems:'center',gap:18,border:'4px solid '+COLORS.blue,background:COLORS.paper,padding:'16px 26px',opacity:enter(124,152)}}>
+        <div style={{padding:'8px 20px',border:'4px solid '+COLORS.blue,color:COLORS.blue,fontSize:24,fontWeight:900,background:COLORS.paper}}>成立大会</div>
+        <div style={{fontSize:23,fontWeight:800,lineHeight:1.45}}>出席：表决权<span style={{fontWeight:900,color:COLORS.blue}}>过半数</span>的认股人；通过：出席会议的认股人所持表决权<span style={{fontWeight:900,color:COLORS.blue}}>过半数</span>。大会结束后30日内，<span style={{fontWeight:900}}>董事会</span>授权代表申请设立登记</div>
+        <div data-stateful-terminal="company-incorporation-raising-progress" style={{marginLeft:'auto',padding:'8px 18px',border:'3px solid '+COLORS.ink,background:COLORS.orange,color:COLORS.paper,fontSize:21,fontWeight:900,opacity:enter(152,172)}}>募集完成</div>
+      </div>
+    </div>
+  </Shell>;
+};
+
+export const CompanyIncorporation03Scene=()=>{
+  const frame=useCurrentFrame();
+  const enter=(a:number,b:number)=>interpolate(frame,[a,b],[0,1],CLAMP);
+  const boundaryProgress=interpolate(frame,[96,160],[0,1],CLAMP);
+  return <Shell code="02.1" title="设立条件与章程效力">
+    <div data-layout="spec-sheet-boundary-3" data-visual-anchor="boundary" data-visual-grammar="charter-boundary,spec-sheet" data-text-treatments="label-block,external-negation,soft-highlight" data-focal-rule="company-incorporation-scene-03-rule" data-focal-channels="enclosure,annotation,spatial" style={{position:'absolute',inset:0}}>
+      <div data-final-knowledge="company-incorporation-knowledge-3" style={{position:'absolute',left:0,top:0,display:'flex',alignItems:'center',gap:14,opacity:enter(12,36)}}>
+        <ScrollText size={40} color={COLORS.blue}/>
+        <div style={{fontSize:29,fontWeight:900}}>章程：必备性 · 法定性 · 自治性</div>
+      </div>
+      <div style={{position:'absolute',left:0,top:96,width:interpolate(boundaryProgress,[0,1],[0,940],CLAMP),height:6,background:COLORS.orange,opacity:enter(96,118)}}/>
+      <div data-final-knowledge="company-incorporation-scene-03-charter-in" style={{position:'absolute',left:0,top:128,width:920,padding:'18px 24px',border:'5px solid '+COLORS.blue,background:COLORS.paper,opacity:enter(48,74)}}>
+        <div style={{display:'flex',alignItems:'center',gap:12,marginBottom:10}}>
+          <div style={{padding:'7px 16px',background:COLORS.blue,color:COLORS.paper,fontSize:23,fontWeight:900}}>对内</div>
+          <div style={{fontSize:26,fontWeight:900}}>有约束力</div>
+        </div>
+        <div style={{fontSize:23,fontWeight:800,lineHeight:1.45}}>对公司、股东、董监高有约束力</div>
+      </div>
+      <div data-final-knowledge="company-incorporation-scene-03-charter-out" style={{position:'absolute',left:0,top:344,width:920,padding:'18px 24px',border:'5px dashed '+COLORS.orange,background:COLORS.paper,opacity:enter(66,92)}}>
+        <div style={{display:'flex',alignItems:'center',gap:12,marginBottom:10}}>
+          <div style={{width:34,height:34,border:'3px solid '+COLORS.orange,position:'relative',flexShrink:0}}>
+            <div style={{position:'absolute',left:13,top:3,width:4,height:22,background:COLORS.orange,transform:'rotate(45deg)'}}/>
+            <div style={{position:'absolute',left:13,top:3,width:4,height:22,background:COLORS.orange,transform:'rotate(-45deg)'}}/>
+          </div>
+          <div style={{fontSize:26,fontWeight:900}}>对外<span style={{color:COLORS.orange}}>不发生约束力</span></div>
+        </div>
+        <div style={{fontSize:23,fontWeight:800,lineHeight:1.45}}>对公司外部人（如债权人）不约束，<span style={{background:COLORS.orange+'28',padding:'2px 6px',fontWeight:900}}>不得对抗善意相对人</span></div>
+      </div>
+      <div data-final-knowledge="company-incorporation-scene-03-capital" style={{position:'absolute',right:0,top:96,width:770,padding:'18px 24px',border:'4px solid '+COLORS.ink,background:COLORS.paper,opacity:enter(40,66)}}>
+        <div style={{fontSize:26,fontWeight:900,marginBottom:10}}>注册资本<span style={{background:COLORS.blue+'26',padding:'2px 8px'}}>无最低限额</span></div>
+        <div style={{fontSize:22,fontWeight:800,lineHeight:1.5}}>理论上1元也可设立公司（法律、行政法规及国务院另有规定的除外）</div>
+      </div>
+      <div data-final-knowledge="company-incorporation-scene-03-persons" style={{position:'absolute',right:0,top:290,width:770,padding:'18px 24px',border:'4px solid '+COLORS.ink,background:COLORS.paper,opacity:enter(58,84)}}>
+        <div style={{display:'flex',alignItems:'center',gap:10,marginBottom:10}}>
+          <Users size={34} color={COLORS.teal}/>
+          <div style={{fontSize:26,fontWeight:900}}>人数与资本</div>
+        </div>
+        <div style={{fontSize:22,fontWeight:800,lineHeight:1.55}}>有限：股东<span style={{fontWeight:900,color:COLORS.blue}}>1–50人</span>，注册资本＝全体股东认缴出资额</div>
+        <div style={{fontSize:22,fontWeight:800,lineHeight:1.55}}>股份：发起人<span style={{fontWeight:900,color:COLORS.blue}}>1–200人</span>＋半数以上境内有住所（无国籍要求）；注册资本＝实收股本总额（<span style={{fontWeight:900}}>实缴制</span>）</div>
+      </div>
+    </div>
+  </Shell>;
+};
+
+export const CompanyIncorporation=()=> <AbsoluteFill>
+  <TimelineSequence name="01-company-incorporation-scene-01" start={SCENES['company-incorporation-scene-01'].start} duration={SCENES['company-incorporation-scene-01'].duration}><CompanyIncorporation01Scene/></TimelineSequence>
+  <TimelineSequence name="02-company-incorporation-scene-02" start={SCENES['company-incorporation-scene-02'].start} duration={SCENES['company-incorporation-scene-02'].duration}><CompanyIncorporation02Scene/></TimelineSequence>
+  <TimelineSequence name="03-company-incorporation-scene-03" start={SCENES['company-incorporation-scene-03'].start} duration={SCENES['company-incorporation-scene-03'].duration}><CompanyIncorporation03Scene/></TimelineSequence>
+</AbsoluteFill>;

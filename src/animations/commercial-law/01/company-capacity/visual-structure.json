@@ -1,0 +1,94 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "company-capacity-scene-01",
+      "export": "CompanyCapacity01Scene",
+      "layout": "capacity-timeline-1",
+      "anchor": "timeline-gate",
+      "grammar": [
+        "capacity-twin-arc",
+        "scope-validity-note"
+      ],
+      "textTreatments": [
+        "label-block",
+        "thin-underline",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "spatial",
+        "locator",
+        "icon"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "company-capacity-knowledge-1",
+        "company-capacity-scene-01-gate-birth",
+        "company-capacity-scene-01-gate-death",
+        "company-capacity-scene-01-scope"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "company-capacity-scene-02",
+      "export": "CompanyCapacity02Scene",
+      "layout": "guarantee-dual-gate-2",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "related-party-gate",
+        "non-related-gate"
+      ],
+      "textTreatments": [
+        "label-block",
+        "soft-highlight",
+        "stamp"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "connector"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "company-capacity-knowledge-2",
+        "company-capacity-scene-02-related",
+        "company-capacity-scene-02-nonrelated",
+        "company-capacity-scene-02-rule"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "company-capacity-scene-03",
+      "export": "CompanyCapacity03Scene",
+      "layout": "waiver-triad-3",
+      "anchor": "flow-target",
+      "grammar": [
+        "waiver-converge",
+        "listed-carveout"
+      ],
+      "textTreatments": [
+        "soft-highlight",
+        "external-negation",
+        "stamp"
+      ],
+      "focalChannels": [
+        "connector",
+        "motion",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "company-capacity-knowledge-3",
+        "company-capacity-scene-03-waiver-0",
+        "company-capacity-scene-03-waiver-1",
+        "company-capacity-scene-03-waiver-2",
+        "company-capacity-scene-03-conclusion",
+        "company-capacity-scene-03-listed",
+        "company-capacity-scene-03-review"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

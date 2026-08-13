@@ -1,0 +1,16 @@
+{
+  "directionId": "resolution-cabinet",
+  "derivedFrom": "director-duties",
+  "variation": "债权人会议三会镜像柜: 会议管理人债委会三舱类比, 职权与决议规则抽屉, 重大处分四步流程",
+  "family": "creditor-organ-mirror",
+  "palette": "#F2ECE1 + #26222E + #7A3E65 + #3E6B4F + #C08A2D",
+  "typography": "WenKai 镜像舱标牌 + 职权短标签 + 比例数字",
+  "composition": "三会类比镜像 + 职权与决议抽屉 + 重大处分四步流水",
+  "surface": "硬边抽屉与镜像分隔, 方形比例章, 无圆角",
+  "motion": "三舱镜像依次点亮, 职权抽屉逐个拉开, 处分流程沿四步推进",
+  "transition": "镜像柜框架与比例章颜色角色贯穿场景",
+  "catalog": {
+    "status": "variant",
+    "sourceDirectionId": "resolution-cabinet"
+  }
+}

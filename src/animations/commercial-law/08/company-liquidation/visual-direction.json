@@ -1,0 +1,16 @@
+{
+  "directionId": "timeline-chronicle",
+  "derivedFrom": "demo-timeline-chronicle",
+  "variation": "清算编年带: 自行与指定清算双栏, 简易与强制注销双闸, 分配顺序五级瀑布",
+  "family": "liquidation-cascade",
+  "palette": "#F1EFE6 + #22262E + #2E6D4F + #B23A30 + #C08A2D",
+  "typography": "WenKai 编年栏题 + 程序短标签 + 期限数字",
+  "composition": "清算双栏 + 注销双闸 + 分配五级瀑布",
+  "surface": "编年栏线与方形期限章, 无圆角",
+  "motion": "双栏先后展开, 注销双闸按公告期开合, 分配瀑布逐级跌落",
+  "transition": "编年带与期限章颜色角色贯穿场景",
+  "catalog": {
+    "status": "variant",
+    "sourceDirectionId": "timeline-chronicle"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "claim-filing-scene-01",
+      "export": "ClaimFiling01Scene",
+      "layout": "claim-gate-1",
+      "anchor": "boundary",
+      "grammar": [
+        "old-equal-money-test",
+        "file-vs-nofile"
+      ],
+      "textTreatments": [
+        "label-block",
+        "stamp",
+        "external-negation"
+      ],
+      "focalChannels": [
+        "enclosure",
+        "contrast",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "claim-filing-knowledge-1",
+        "claim-filing-scene-01-gate",
+        "claim-filing-scene-01-file",
+        "claim-filing-scene-01-nofile"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "claim-filing-scene-02",
+      "export": "ClaimFiling02Scene",
+      "layout": "surety-filing-2",
+      "anchor": "flow-path",
+      "grammar": [
+        "paid-vs-unpaid",
+        "future-recourse"
+      ],
+      "textTreatments": [
+        "thin-underline",
+        "soft-highlight",
+        "label-block"
+      ],
+      "focalChannels": [
+        "connector",
+        "contrast",
+        "motion"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "claim-filing-knowledge-2",
+        "claim-filing-scene-02-branch-0",
+        "claim-filing-scene-02-branch-1",
+        "claim-filing-scene-02-note"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "claim-filing-scene-03",
+      "export": "ClaimFiling03Scene",
+      "layout": "dual-filing-3",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "surety-bankruptcy",
+        "double-bankruptcy"
+      ],
+      "textTreatments": [
+        "label-block",
+        "stamp",
+        "external-negation"
+      ],
+      "focalChannels": [
+        "contrast",
+        "spatial",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "claim-filing-knowledge-3",
+        "claim-filing-scene-03-surety",
+        "claim-filing-scene-03-both"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "shareholder-qualification-scene-01",
+      "export": "ShareholderQualification01Scene",
+      "layout": "roster-ledger-split-1",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "roster-vs-registry",
+        "inner-outer-rule"
+      ],
+      "textTreatments": [
+        "label-block",
+        "thin-underline",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "spatial",
+        "icon"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "shareholder-qualification-knowledge-1",
+        "shareholder-qualification-scene-01-roster",
+        "shareholder-qualification-scene-01-registry"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "shareholder-qualification-scene-02",
+      "export": "ShareholderQualification02Scene",
+      "layout": "identity-clash-2",
+      "anchor": "role-pair",
+      "grammar": [
+        "internal-roster-side",
+        "external-trust-side"
+      ],
+      "textTreatments": [
+        "soft-highlight",
+        "external-negation",
+        "label-block"
+      ],
+      "focalChannels": [
+        "contrast",
+        "locator",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "shareholder-qualification-knowledge-2",
+        "shareholder-qualification-scene-02-inside",
+        "shareholder-qualification-scene-02-outside",
+        "shareholder-qualification-scene-02-conclusion"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "shareholder-qualification-scene-03",
+      "export": "ShareholderQualification03Scene",
+      "layout": "roster-time-gate-3",
+      "anchor": "timeline-gate",
+      "grammar": [
+        "registry-time-gate",
+        "public-trust-effect"
+      ],
+      "textTreatments": [
+        "stamp",
+        "soft-highlight",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "connector",
+        "motion",
+        "enclosure"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "shareholder-qualification-knowledge-3",
+        "shareholder-qualification-scene-03-before",
+        "shareholder-qualification-scene-03-after",
+        "shareholder-qualification-scene-03-note"
+      ],
+      "statefulObjects": [
+        "shareholder-qualification-registry-record"
+      ]
+    }
+  ]
+}

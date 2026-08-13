@@ -1,0 +1,16 @@
+{
+  "directionId": "resolution-cabinet",
+  "derivedFrom": "company-capacity",
+  "variation": "任职资格闸柜: 四类禁入情形封闸, 绝对与相对义务分级抽屉, 四线责任依次开闸",
+  "family": "duty-gate-cabinet",
+  "palette": "#F2ECE1 + #26222E + #7A3E65 + #3E6B4F + #C08A2D",
+  "typography": "WenKai 闸柜标牌 + 资格短标签 + 期限数字",
+  "composition": "禁入四闸 + 义务双层抽屉 + 责任四线开闸",
+  "surface": "硬边抽屉与闸门, 方形封禁章, 无圆角",
+  "motion": "四类禁入依次封闸, 义务抽屉从上到下拉开, 责任线依次点亮",
+  "transition": "闸柜框架与封禁章颜色角色贯穿场景",
+  "catalog": {
+    "status": "variant",
+    "sourceDirectionId": "resolution-cabinet"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "directionId": "isometric-mechanism",
+  "derivedFrom": "demo-isometric-mechanism",
+  "variation": "公司机构舱室: 股东会董事会经理监事会四层舱与人事权传动, 双会条款并排对照, 召集顺序沿舱梯下传",
+  "family": "organ-chamber",
+  "palette": "#E9EDE9 + #232A26 + #3E6B4F + #C2542B + #C9A23C",
+  "typography": "WenKai 舱室标牌 + 职权短标签 + 顺序细线",
+  "composition": "四层机构舱 + 董事会监事会双条款舱 + 召集顺序舱梯",
+  "surface": "舱室隔板与传动细线, 方形标牌, 无圆角",
+  "motion": "四舱依次点亮并传动人事权, 双条款舱并排翻开, 召集顺序沿舱梯逐级下传",
+  "transition": "舱室框架与标牌颜色角色贯穿场景",
+  "catalog": {
+    "status": "variant",
+    "sourceDirectionId": "isometric-mechanism"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "directionId": "split-screen-comparison",
+  "derivedFrom": "demo-split-screen-comparison",
+  "variation": "所有权试金石: 一个标准切开两栏, 属于与不属于财产分列, 只看所有权不看登记",
+  "family": "title-sieve",
+  "palette": "#EFF1ED + #232A26 + #2E6D4F + #B23A30 + #C9A23C",
+  "typography": "WenKai 试金石大字 + 财产短标签 + 标准细线",
+  "composition": "所有权标准闸 + 属于财产列 + 不属于财产列",
+  "surface": "双栏分隔与方形标准章, 无圆角",
+  "motion": "试金石先落定, 属于列依次落入, 不属于列随后分拣",
+  "transition": "双栏分隔与标准章颜色角色贯穿场景",
+  "catalog": {
+    "status": "variant",
+    "sourceDirectionId": "split-screen-comparison"
+  }
+}

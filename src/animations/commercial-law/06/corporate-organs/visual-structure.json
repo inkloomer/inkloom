@@ -1,0 +1,98 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "corporate-organs-scene-01",
+      "export": "CorporateOrgans01Scene",
+      "layout": "organ-tower-1",
+      "anchor": "concept-icon",
+      "grammar": [
+        "organ-tower",
+        "personnel-transmission"
+      ],
+      "textTreatments": [
+        "label-block",
+        "thin-underline",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "spatial",
+        "connector",
+        "icon"
+      ],
+      "tokens": [
+        "Crown",
+        "Briefcase"
+      ],
+      "finalKnowledge": [
+        "corporate-organs-knowledge-1",
+        "corporate-organs-scene-01-organ-0",
+        "corporate-organs-scene-01-organ-1",
+        "corporate-organs-scene-01-organ-2",
+        "corporate-organs-scene-01-organ-3"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "corporate-organs-scene-02",
+      "export": "CorporateOrgans02Scene",
+      "layout": "organ-clauses-2",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "board-term-clause",
+        "recall-resign-clause"
+      ],
+      "textTreatments": [
+        "label-block",
+        "stamp",
+        "external-negation"
+      ],
+      "focalChannels": [
+        "contrast",
+        "locator",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "corporate-organs-knowledge-2",
+        "corporate-organs-scene-02-board",
+        "corporate-organs-scene-02-supervisor",
+        "corporate-organs-scene-02-recall"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "corporate-organs-scene-03",
+      "export": "CorporateOrgans03Scene",
+      "layout": "meeting-order-3",
+      "anchor": "flow-path",
+      "grammar": [
+        "convene-chain",
+        "special-two-thirds"
+      ],
+      "textTreatments": [
+        "thin-underline",
+        "soft-highlight",
+        "label-block"
+      ],
+      "focalChannels": [
+        "connector",
+        "motion",
+        "enclosure"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "corporate-organs-knowledge-3",
+        "corporate-organs-scene-03-step-0",
+        "corporate-organs-scene-03-step-1",
+        "corporate-organs-scene-03-step-2",
+        "corporate-organs-scene-03-special"
+      ],
+      "statefulObjects": [
+        "corporate-organs-convene-order"
+      ]
+    }
+  ]
+}

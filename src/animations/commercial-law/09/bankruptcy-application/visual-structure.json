@@ -1,0 +1,93 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "bankruptcy-application-scene-01",
+      "export": "BankruptcyApplication01Scene",
+      "layout": "application-switch-1",
+      "anchor": "role-pair",
+      "grammar": [
+        "applicant-switch",
+        "program-restriction"
+      ],
+      "textTreatments": [
+        "label-block",
+        "external-negation",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "connector",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "bankruptcy-application-knowledge-1",
+        "bankruptcy-application-scene-01-applicant-0",
+        "bankruptcy-application-scene-01-applicant-1",
+        "bankruptcy-application-scene-01-applicant-2",
+        "bankruptcy-application-scene-01-applicant-3"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "bankruptcy-application-scene-02",
+      "export": "BankruptcyApplication02Scene",
+      "layout": "acceptance-gates-2",
+      "anchor": "boundary",
+      "grammar": [
+        "preservation-halt",
+        "centralized-jurisdiction"
+      ],
+      "textTreatments": [
+        "stamp",
+        "soft-highlight",
+        "label-block"
+      ],
+      "focalChannels": [
+        "enclosure",
+        "motion",
+        "contrast"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "bankruptcy-application-knowledge-2",
+        "bankruptcy-application-scene-02-gate-0",
+        "bankruptcy-application-scene-02-gate-1",
+        "bankruptcy-application-scene-02-gate-2"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "bankruptcy-application-scene-03",
+      "export": "BankruptcyApplication03Scene",
+      "layout": "jurisdiction-clock-3",
+      "anchor": "timeline-gate",
+      "grammar": [
+        "pre-acceptance-court",
+        "post-acceptance-court"
+      ],
+      "textTreatments": [
+        "thin-underline",
+        "label-block",
+        "stamp"
+      ],
+      "focalChannels": [
+        "connector",
+        "motion",
+        "locator"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "bankruptcy-application-knowledge-3",
+        "bankruptcy-application-scene-03-before",
+        "bankruptcy-application-scene-03-after"
+      ],
+      "statefulObjects": [
+        "bankruptcy-application-jurisdiction"
+      ]
+    }
+  ]
+}

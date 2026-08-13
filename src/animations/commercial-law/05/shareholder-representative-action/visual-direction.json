@@ -1,0 +1,16 @@
+{
+  "directionId": "transit-map",
+  "derivedFrom": "information-right",
+  "variation": "派生诉讼回路: 侵权类型切换请求机关, 四类免前置闸口旁通, 诉讼三角将胜诉利益送回公司",
+  "family": "derivative-circuit",
+  "palette": "#EDF0EE + #1D2420 + #245E8F + #C2542B + #B08A2E",
+  "typography": "WenKai 回路站牌 + 请求对象短标签 + 期限细线",
+  "composition": "前置请求切换器 + 免前置四闸 + 诉讼三角回路",
+  "surface": "回路轨道与站牌, 方形期限章, 无圆角",
+  "motion": "请求沿切换器分轨, 四闸依次旁通, 胜诉利益沿回路送回公司",
+  "transition": "轨道与原告被告第三人色角色贯穿场景",
+  "catalog": {
+    "status": "variant",
+    "sourceDirectionId": "transit-map"
+  }
+}

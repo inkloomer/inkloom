@@ -1,0 +1,16 @@
+{
+  "directionId": "reorganization-rail",
+  "family": "reorganization-rail",
+  "palette": "#EDF0EE + #1D2420 + #245E8F + #C2542B + #B08A2E",
+  "typography": "WenKai 轨道站牌 + 程序短标签 + 期限数字",
+  "composition": "重整轨道: 六站流程与失败岔道, 分组表决五舱双门槛, 重整期间保护六线",
+  "surface": "轨道细线与站牌, 方形期限章, 无圆角",
+  "motion": "列车沿轨道逐站进发, 五舱表决依次点亮, 保护线逐条落下",
+  "transition": "轨道与站牌颜色角色贯穿场景",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/commercial-law/12/bankruptcy-reorganization/",
+    "title": "重整轨道"
+  }
+}

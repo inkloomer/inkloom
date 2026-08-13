@@ -1,0 +1,16 @@
+{
+  "directionId": "insolvency-diagnosis",
+  "derivedFrom": "bankruptcy-application",
+  "variation": "费用共益双池诊断: 程序性支出与债权人利益双池对照, 共益债务六项清单, 清偿顺序刻度",
+  "family": "cost-common-pool",
+  "palette": "#EFF1ED + #232A26 + #2E6D4F + #B23A30 + #C08A2D",
+  "typography": "WenKai 池名大字 + 债务短标签 + 顺序刻度",
+  "composition": "破产费用与共益债务双池 + 共益六项清单 + 清偿顺序刻度",
+  "surface": "池区分隔线与方形刻度章, 无圆角",
+  "motion": "双池先后注水, 六项共益逐条点亮, 清偿刻度沿顺序走完",
+  "transition": "池区框架与刻度章颜色角色贯穿场景",
+  "catalog": {
+    "status": "variant",
+    "sourceDirectionId": "insolvency-diagnosis"
+  }
+}

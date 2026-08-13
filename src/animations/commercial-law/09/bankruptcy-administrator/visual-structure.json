@@ -1,0 +1,94 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "bankruptcy-administrator-scene-01",
+      "export": "BankruptcyAdministrator01Scene",
+      "layout": "administrator-source-1",
+      "anchor": "role-pair",
+      "grammar": [
+        "court-appointment",
+        "candidate-pool"
+      ],
+      "textTreatments": [
+        "label-block",
+        "external-negation",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "connector",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "bankruptcy-administrator-knowledge-1",
+        "bankruptcy-administrator-scene-01-court",
+        "bankruptcy-administrator-scene-01-pool"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "bankruptcy-administrator-scene-02",
+      "export": "BankruptcyAdministrator02Scene",
+      "layout": "contract-choice-2",
+      "anchor": "flow-path",
+      "grammar": [
+        "continue-or-rescind",
+        "deemed-rescission"
+      ],
+      "textTreatments": [
+        "thin-underline",
+        "stamp",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "connector",
+        "contrast",
+        "motion"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "bankruptcy-administrator-knowledge-2",
+        "bankruptcy-administrator-scene-02-branch-0",
+        "bankruptcy-administrator-scene-02-branch-1",
+        "bankruptcy-administrator-scene-02-deemed"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "bankruptcy-administrator-scene-03",
+      "export": "BankruptcyAdministrator03Scene",
+      "layout": "power-cabinet-3",
+      "anchor": "concept-icon",
+      "grammar": [
+        "takeover-power",
+        "litigation-representation"
+      ],
+      "textTreatments": [
+        "label-block",
+        "soft-highlight",
+        "stamp"
+      ],
+      "focalChannels": [
+        "enclosure",
+        "icon",
+        "spatial"
+      ],
+      "tokens": [
+        "KeyRound",
+        "Scale"
+      ],
+      "finalKnowledge": [
+        "bankruptcy-administrator-knowledge-3",
+        "bankruptcy-administrator-scene-03-power-0",
+        "bankruptcy-administrator-scene-03-power-1",
+        "bankruptcy-administrator-scene-03-power-2",
+        "bankruptcy-administrator-scene-03-power-3"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

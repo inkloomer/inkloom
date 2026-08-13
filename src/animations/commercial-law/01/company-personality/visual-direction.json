@@ -1,0 +1,16 @@
+{
+  "directionId": "personality-shell",
+  "family": "personality-shell",
+  "palette": "象牙纸 #F6F1E5 + 墨青 #1C2A33 + 朱砂 #C4453B + 青瓷 #0F7A6E + 赭金 #C08A2D",
+  "typography": "WenKai 大号概念词 + 短标签 + 细线强调",
+  "composition": "人格壳层剖面: 股东出资注入公司壳, 三独立立柱支撑壳层, 责任分流为两条对比带",
+  "surface": "硬边 4px 墨线卡片、层叠壳层描边、外置否定徽记, 无圆角",
+  "motion": "出资先注入壳层、立柱随后升立, 例外以分叉线集中汇入连带结论",
+  "transition": "公司壳层轮廓作为跨场景共享载体, 场景切换保留壳线",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/commercial-law/01/company-personality/",
+    "title": "公司人格壳层"
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "dividend-right-scene-01",
+      "export": "DividendRight01Scene",
+      "layout": "allocation-basis-1",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "allocation-basis-split",
+        "six-month-deadline"
+      ],
+      "textTreatments": [
+        "label-block",
+        "thin-underline",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "spatial",
+        "icon"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "dividend-right-knowledge-1",
+        "dividend-right-scene-01-llc",
+        "dividend-right-scene-01-jsc",
+        "dividend-right-scene-01-deadline"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "dividend-right-scene-02",
+      "export": "DividendRight02Scene",
+      "layout": "profit-waterfall-2",
+      "anchor": "flow-path",
+      "grammar": [
+        "waterfall-steps",
+        "reserve-numbers"
+      ],
+      "textTreatments": [
+        "soft-highlight",
+        "stamp",
+        "label-block"
+      ],
+      "focalChannels": [
+        "connector",
+        "motion",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "dividend-right-knowledge-2",
+        "dividend-right-scene-02-step-0",
+        "dividend-right-scene-02-step-1",
+        "dividend-right-scene-02-step-2",
+        "dividend-right-scene-02-numbers"
+      ],
+      "statefulObjects": [
+        "dividend-right-profit-flow"
+      ]
+    },
+    {
+      "id": "dividend-right-scene-03",
+      "export": "DividendRight03Scene",
+      "layout": "resolution-gate-3",
+      "anchor": "boundary",
+      "grammar": [
+        "resolution-threshold",
+        "abuse-exception"
+      ],
+      "textTreatments": [
+        "external-negation",
+        "stamp",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "enclosure",
+        "contrast",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "dividend-right-knowledge-3",
+        "dividend-right-scene-03-rule",
+        "dividend-right-scene-03-exception",
+        "dividend-right-scene-03-illegal"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "resolution-validity-scene-01",
+      "export": "ResolutionValidity01Scene",
+      "layout": "validity-fork-1",
+      "anchor": "flow-path",
+      "grammar": [
+        "defect-fork",
+        "void-vs-voidable"
+      ],
+      "textTreatments": [
+        "label-block",
+        "soft-highlight",
+        "stamp"
+      ],
+      "focalChannels": [
+        "connector",
+        "contrast",
+        "motion"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "resolution-validity-knowledge-1",
+        "resolution-validity-scene-01-branch-0",
+        "resolution-validity-scene-01-branch-1",
+        "resolution-validity-scene-01-branch-2",
+        "resolution-validity-scene-01-note"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "resolution-validity-scene-02",
+      "export": "ResolutionValidity02Scene",
+      "layout": "minority-defect-2",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "minor-defect",
+        "major-defect"
+      ],
+      "textTreatments": [
+        "external-negation",
+        "thin-underline",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "resolution-validity-knowledge-2",
+        "resolution-validity-scene-02-minor",
+        "resolution-validity-scene-02-major"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "resolution-validity-scene-03",
+      "export": "ResolutionValidity03Scene",
+      "layout": "revocation-clock-3",
+      "anchor": "timeline-gate",
+      "grammar": [
+        "sixty-day-clock",
+        "one-year-cutoff"
+      ],
+      "textTreatments": [
+        "thin-underline",
+        "label-block",
+        "stamp"
+      ],
+      "focalChannels": [
+        "connector",
+        "motion",
+        "locator"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "resolution-validity-knowledge-3",
+        "resolution-validity-scene-03-clock-0",
+        "resolution-validity-scene-03-clock-1",
+        "resolution-validity-scene-03-clock-2",
+        "resolution-validity-scene-03-effect"
+      ],
+      "statefulObjects": [
+        "resolution-validity-clock-hand"
+      ]
+    }
+  ]
+}

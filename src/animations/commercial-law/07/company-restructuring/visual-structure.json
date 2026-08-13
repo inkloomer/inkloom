@@ -1,0 +1,94 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "company-restructuring-scene-01",
+      "export": "CompanyRestructuring01Scene",
+      "layout": "capital-change-lanes-1",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "increase-lane",
+        "simple-reduction"
+      ],
+      "textTreatments": [
+        "label-block",
+        "thin-underline",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "spatial",
+        "icon"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "company-restructuring-knowledge-1",
+        "company-restructuring-scene-01-increase",
+        "company-restructuring-scene-01-reduce",
+        "company-restructuring-scene-01-simple"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "company-restructuring-scene-02",
+      "export": "CompanyRestructuring02Scene",
+      "layout": "merge-split-duel-2",
+      "anchor": "role-pair",
+      "grammar": [
+        "merge-creditor-remedy",
+        "split-joint-debt"
+      ],
+      "textTreatments": [
+        "label-block",
+        "stamp",
+        "external-negation"
+      ],
+      "focalChannels": [
+        "contrast",
+        "connector",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "company-restructuring-knowledge-2",
+        "company-restructuring-scene-02-merge",
+        "company-restructuring-scene-02-split",
+        "company-restructuring-scene-02-simple-merge"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "company-restructuring-scene-03",
+      "export": "CompanyRestructuring03Scene",
+      "layout": "reduction-pipeline-3",
+      "anchor": "flow-path",
+      "grammar": [
+        "reduction-five-steps",
+        "illegal-reduction"
+      ],
+      "textTreatments": [
+        "thin-underline",
+        "stamp",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "connector",
+        "motion",
+        "enclosure"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "company-restructuring-knowledge-3",
+        "company-restructuring-scene-03-step-0",
+        "company-restructuring-scene-03-step-1",
+        "company-restructuring-scene-03-step-2",
+        "company-restructuring-scene-03-illegal"
+      ],
+      "statefulObjects": [
+        "company-restructuring-reduction-order"
+      ]
+    }
+  ]
+}

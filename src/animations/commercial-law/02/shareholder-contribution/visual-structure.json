@@ -1,0 +1,99 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "shareholder-contribution-scene-01",
+      "export": "ShareholderContribution01Scene",
+      "layout": "contribution-docks-1",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "money-dock",
+        "in-kind-dock"
+      ],
+      "textTreatments": [
+        "label-block",
+        "thin-underline",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "icon",
+        "spatial"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "shareholder-contribution-knowledge-1",
+        "shareholder-contribution-scene-01-dock-0",
+        "shareholder-contribution-scene-01-dock-1"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "shareholder-contribution-scene-02",
+      "export": "ShareholderContribution02Scene",
+      "layout": "banned-six-2",
+      "anchor": "typographic-sequence",
+      "grammar": [
+        "banned-registry",
+        "credit-debt-notes"
+      ],
+      "textTreatments": [
+        "stamp",
+        "external-negation",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "enclosure",
+        "motion",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "shareholder-contribution-knowledge-2",
+        "shareholder-contribution-scene-02-ban-0",
+        "shareholder-contribution-scene-02-ban-1",
+        "shareholder-contribution-scene-02-ban-2",
+        "shareholder-contribution-scene-02-ban-3",
+        "shareholder-contribution-scene-02-ban-4",
+        "shareholder-contribution-scene-02-ban-5",
+        "shareholder-contribution-scene-02-equity",
+        "shareholder-contribution-scene-02-credit"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "shareholder-contribution-scene-03",
+      "export": "ShareholderContribution03Scene",
+      "layout": "subscription-clock-3",
+      "anchor": "timeline-gate",
+      "grammar": [
+        "five-year-clock",
+        "acceleration-trigger"
+      ],
+      "textTreatments": [
+        "thin-underline",
+        "label-block",
+        "stamp"
+      ],
+      "focalChannels": [
+        "connector",
+        "motion",
+        "enclosure"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "shareholder-contribution-knowledge-3",
+        "shareholder-contribution-scene-03-clock",
+        "shareholder-contribution-scene-03-interest",
+        "shareholder-contribution-scene-03-accelerate",
+        "shareholder-contribution-scene-03-execution",
+        "shareholder-contribution-scene-03-paidup"
+      ],
+      "statefulObjects": [
+        "shareholder-contribution-acceleration"
+      ]
+    }
+  ]
+}

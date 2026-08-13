@@ -1,0 +1,96 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "director-duties-scene-01",
+      "export": "DirectorDuties01Scene",
+      "layout": "qualification-gate-1",
+      "anchor": "boundary",
+      "grammar": [
+        "disqualification-gates",
+        "role-election"
+      ],
+      "textTreatments": [
+        "label-block",
+        "external-negation",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "enclosure",
+        "contrast",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "director-duties-knowledge-1",
+        "director-duties-scene-01-gate-0",
+        "director-duties-scene-01-gate-1",
+        "director-duties-scene-01-gate-2",
+        "director-duties-scene-01-gate-3",
+        "director-duties-scene-01-note"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "director-duties-scene-02",
+      "export": "DirectorDuties02Scene",
+      "layout": "duty-tiers-2",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "absolute-vs-relative",
+        "recusal-quorum"
+      ],
+      "textTreatments": [
+        "stamp",
+        "thin-underline",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "director-duties-knowledge-2",
+        "director-duties-scene-02-absolute",
+        "director-duties-scene-02-relative",
+        "director-duties-scene-02-recusal"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "director-duties-scene-03",
+      "export": "DirectorDuties03Scene",
+      "layout": "liability-lines-3",
+      "anchor": "flow-path",
+      "grammar": [
+        "disgorgement-line",
+        "shadow-director-chain"
+      ],
+      "textTreatments": [
+        "label-block",
+        "stamp",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "connector",
+        "motion",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "director-duties-knowledge-3",
+        "director-duties-scene-03-line-0",
+        "director-duties-scene-03-line-1",
+        "director-duties-scene-03-line-2",
+        "director-duties-scene-03-line-3"
+      ],
+      "statefulObjects": [
+        "director-duties-gains"
+      ]
+    }
+  ]
+}

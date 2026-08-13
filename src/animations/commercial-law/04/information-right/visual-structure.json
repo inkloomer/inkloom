@@ -1,0 +1,92 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "information-right-scene-01",
+      "export": "InformationRight01Scene",
+      "layout": "inspection-routes-1",
+      "anchor": "flow-path",
+      "grammar": [
+        "dual-inspection-route",
+        "ledger-request-gate"
+      ],
+      "textTreatments": [
+        "label-block",
+        "thin-underline",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "connector",
+        "motion",
+        "spatial"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "information-right-knowledge-1",
+        "information-right-scene-01-route-0",
+        "information-right-scene-01-route-1"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "information-right-scene-02",
+      "export": "InformationRight02Scene",
+      "layout": "improper-purpose-gate-2",
+      "anchor": "boundary",
+      "grammar": [
+        "refusal-gate",
+        "substantial-competition"
+      ],
+      "textTreatments": [
+        "external-negation",
+        "soft-highlight",
+        "stamp"
+      ],
+      "focalChannels": [
+        "enclosure",
+        "contrast",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "information-right-knowledge-2",
+        "information-right-scene-02-reason-0",
+        "information-right-scene-02-reason-1",
+        "information-right-scene-02-reason-2",
+        "information-right-scene-02-substantive"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "information-right-scene-03",
+      "export": "InformationRight03Scene",
+      "layout": "suit-qualification-fork-3",
+      "anchor": "document-fork",
+      "grammar": [
+        "suit-qualification-fork",
+        "pierce-wholly-owned"
+      ],
+      "textTreatments": [
+        "label-block",
+        "soft-highlight",
+        "stamp"
+      ],
+      "focalChannels": [
+        "connector",
+        "contrast",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "information-right-knowledge-3",
+        "information-right-scene-03-branch-0",
+        "information-right-scene-03-branch-1",
+        "information-right-scene-03-branch-2",
+        "information-right-scene-03-branch-3"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "bankruptcy-grounds-scene-01",
+      "export": "BankruptcyGrounds01Scene",
+      "layout": "diagnosis-triad-1",
+      "anchor": "flow-path",
+      "grammar": [
+        "two-condition-test",
+        "reorganization-only-branch"
+      ],
+      "textTreatments": [
+        "label-block",
+        "thin-underline",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "connector",
+        "contrast",
+        "motion"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "bankruptcy-grounds-knowledge-1",
+        "bankruptcy-grounds-scene-01-branch-0",
+        "bankruptcy-grounds-scene-01-branch-1",
+        "bankruptcy-grounds-scene-01-branch-2"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "bankruptcy-grounds-scene-02",
+      "export": "BankruptcyGrounds02Scene",
+      "layout": "insolvency-four-2",
+      "anchor": "typographic-sequence",
+      "grammar": [
+        "four-signs-registry",
+        "mnemonic-chain"
+      ],
+      "textTreatments": [
+        "stamp",
+        "soft-highlight",
+        "external-negation"
+      ],
+      "focalChannels": [
+        "enclosure",
+        "motion",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "bankruptcy-grounds-knowledge-2",
+        "bankruptcy-grounds-scene-02-sign-0",
+        "bankruptcy-grounds-scene-02-sign-1",
+        "bankruptcy-grounds-scene-02-sign-2",
+        "bankruptcy-grounds-scene-02-sign-3"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "bankruptcy-grounds-scene-03",
+      "export": "BankruptcyGrounds03Scene",
+      "layout": "debtor-only-3",
+      "anchor": "boundary",
+      "grammar": [
+        "debtor-only-view",
+        "guarantor-excluded"
+      ],
+      "textTreatments": [
+        "external-negation",
+        "label-block",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "enclosure",
+        "contrast",
+        "spatial"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "bankruptcy-grounds-knowledge-3",
+        "bankruptcy-grounds-scene-03-inside",
+        "bankruptcy-grounds-scene-03-outside"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

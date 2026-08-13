@@ -1,0 +1,93 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "bankruptcy-costs-scene-01",
+      "export": "BankruptcyCosts01Scene",
+      "layout": "cost-pool-split-1",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "procedural-expense",
+        "common-interest-debt"
+      ],
+      "textTreatments": [
+        "label-block",
+        "thin-underline",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "spatial",
+        "icon"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "bankruptcy-costs-knowledge-1",
+        "bankruptcy-costs-scene-01-cost",
+        "bankruptcy-costs-scene-01-common"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "bankruptcy-costs-scene-02",
+      "export": "BankruptcyCosts02Scene",
+      "layout": "common-debt-list-2",
+      "anchor": "typographic-sequence",
+      "grammar": [
+        "contract-type-debts",
+        "operation-type-debts"
+      ],
+      "textTreatments": [
+        "soft-highlight",
+        "stamp",
+        "external-negation"
+      ],
+      "focalChannels": [
+        "enclosure",
+        "motion",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "bankruptcy-costs-knowledge-2",
+        "bankruptcy-costs-scene-02-item-0",
+        "bankruptcy-costs-scene-02-item-1",
+        "bankruptcy-costs-scene-02-item-2",
+        "bankruptcy-costs-scene-02-item-3",
+        "bankruptcy-costs-scene-02-note"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "bankruptcy-costs-scene-03",
+      "export": "BankruptcyCosts03Scene",
+      "layout": "payment-order-3",
+      "anchor": "flow-path",
+      "grammar": [
+        "order-rule",
+        "proportional-rule"
+      ],
+      "textTreatments": [
+        "stamp",
+        "label-block",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "connector",
+        "motion",
+        "enclosure"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "bankruptcy-costs-knowledge-3",
+        "bankruptcy-costs-scene-03-rule",
+        "bankruptcy-costs-scene-03-example"
+      ],
+      "statefulObjects": [
+        "bankruptcy-costs-payment-flow"
+      ]
+    }
+  ]
+}

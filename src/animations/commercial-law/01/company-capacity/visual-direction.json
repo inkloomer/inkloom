@@ -1,0 +1,16 @@
+{
+  "directionId": "resolution-cabinet",
+  "family": "resolution-cabinet",
+  "palette": "亚麻 #F3EDE2 + 深紫墨 #2A2438 + 绛紫 #7A3E65 + 苔绿 #3E6B4F + 赭金 #C08A2D",
+  "typography": "WenKai 门牌大字 + 决议短标签 + 细线条件",
+  "composition": "担保决议柜: 能力双闸时间轴、关联/非关联两扇决议门、无须决议三卡汇入免议闸口",
+  "surface": "硬边抽屉与闸门、方形决议印、外置否定标, 无圆角",
+  "motion": "时间轴闸门依次开合, 关联门先于非关联门开启, 三张豁免卡按本业-全资-签字顺序滑入闸口",
+  "transition": "闸门与抽屉框架贯穿三场景, 决议印色角色保持一致",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/commercial-law/01/company-capacity/",
+    "title": "担保决议柜"
+  }
+}

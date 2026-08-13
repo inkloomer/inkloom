@@ -1,0 +1,16 @@
+{
+  "directionId": "courtroom-blueprint",
+  "derivedFrom": "demo-courtroom-blueprint",
+  "variation": "管理人指挥图: 法院指定的来源与三类人选, 双务合同选择开关, 职权四舱接管图",
+  "family": "administrator-command",
+  "palette": "#EDF0F2 + #1E2A33 + #245E8F + #B23A30 + #C9A23C",
+  "typography": "WenKai 指挥标牌 + 职权短标签 + 期限数字",
+  "composition": "指定来源档 + 合同选择开关 + 职权四舱",
+  "surface": "蓝图层网格与方形指挥章, 无圆角",
+  "motion": "法院指定线先划出, 合同开关左右拨动, 职权舱依次接管",
+  "transition": "蓝图网格与指挥章颜色角色贯穿场景",
+  "catalog": {
+    "status": "variant",
+    "sourceDirectionId": "courtroom-blueprint"
+  }
+}

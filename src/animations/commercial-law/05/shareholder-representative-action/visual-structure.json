@@ -1,0 +1,95 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "shareholder-representative-action-scene-01",
+      "export": "ShareholderRepresentativeAction01Scene",
+      "layout": "precondition-switch-1",
+      "anchor": "role-pair",
+      "grammar": [
+        "request-switch",
+        "thirty-day-window"
+      ],
+      "textTreatments": [
+        "label-block",
+        "thin-underline",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "connector",
+        "locator"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "shareholder-representative-action-knowledge-1",
+        "shareholder-representative-action-scene-01-route-0",
+        "shareholder-representative-action-scene-01-route-1",
+        "shareholder-representative-action-scene-01-window"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "shareholder-representative-action-scene-02",
+      "export": "ShareholderRepresentativeAction02Scene",
+      "layout": "bypass-gates-2",
+      "anchor": "boundary",
+      "grammar": [
+        "bypass-branches",
+        "related-party-exemption"
+      ],
+      "textTreatments": [
+        "external-negation",
+        "soft-highlight",
+        "stamp"
+      ],
+      "focalChannels": [
+        "enclosure",
+        "contrast",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "shareholder-representative-action-knowledge-2",
+        "shareholder-representative-action-scene-02-bypass-0",
+        "shareholder-representative-action-scene-02-bypass-1",
+        "shareholder-representative-action-scene-02-bypass-2",
+        "shareholder-representative-action-scene-02-bypass-3"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "shareholder-representative-action-scene-03",
+      "export": "ShareholderRepresentativeAction03Scene",
+      "layout": "suit-triangle-3",
+      "anchor": "flow-target",
+      "grammar": [
+        "suit-triangle",
+        "victory-returns"
+      ],
+      "textTreatments": [
+        "label-block",
+        "stamp",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "connector",
+        "motion",
+        "spatial"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "shareholder-representative-action-knowledge-3",
+        "shareholder-representative-action-scene-03-plaintiff",
+        "shareholder-representative-action-scene-03-defendant",
+        "shareholder-representative-action-scene-03-third",
+        "shareholder-representative-action-scene-03-effect"
+      ],
+      "statefulObjects": [
+        "shareholder-representative-action-award"
+      ]
+    }
+  ]
+}

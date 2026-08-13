@@ -1,0 +1,16 @@
+{
+  "directionId": "branch-charter",
+  "family": "branch-charter",
+  "palette": "雾蓝 #EEF1F6 + 墨黑 #20242B + 钢蓝 #2F5FA8 + 橘铜 #C9722E + 铅灰 #6B7480",
+  "typography": "WenKai 双列大标题 + 条款短标签 + 细线对照",
+  "composition": "双轨法人谱系: 分公司与子公司两条并列章程柱沿中轴逐项对照, 执行顺序横向阶梯推进",
+  "surface": "细框平面、条款挂签、矩形标签, 无圆角无阴影",
+  "motion": "左列先立再右列对照, 逐项条款成对点亮, 执行链按 分→总→其他分 阶梯推进",
+  "transition": "中轴对照线与双列色角色贯穿场景, 第三场景将双列收束为执行链",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/commercial-law/01/company-classification/",
+    "title": "双轨法人谱系"
+  }
+}

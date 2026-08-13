@@ -1,0 +1,90 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "reclaim-right-scene-01",
+      "export": "ReclaimRight01Scene",
+      "layout": "retrieval-rules-1",
+      "anchor": "boundary",
+      "grammar": [
+        "retrieval-deadline",
+        "unpaid-fee-lien"
+      ],
+      "textTreatments": [
+        "label-block",
+        "thin-underline",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "enclosure",
+        "locator",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "reclaim-right-knowledge-1",
+        "reclaim-right-scene-01-deadline",
+        "reclaim-right-scene-01-fee",
+        "reclaim-right-scene-01-perishable"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "reclaim-right-scene-02",
+      "export": "ReclaimRight02Scene",
+      "layout": "loss-split-2",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "pre-acceptance-ordinary",
+        "post-acceptance-common"
+      ],
+      "textTreatments": [
+        "soft-highlight",
+        "stamp",
+        "external-negation"
+      ],
+      "focalChannels": [
+        "contrast",
+        "connector",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "reclaim-right-knowledge-2",
+        "reclaim-right-scene-02-branch-0",
+        "reclaim-right-scene-02-branch-1"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "reclaim-right-scene-03",
+      "export": "ReclaimRight03Scene",
+      "layout": "in-transit-3",
+      "anchor": "flow-path",
+      "grammar": [
+        "in-transit-claim",
+        "arrival-report-only"
+      ],
+      "textTreatments": [
+        "thin-underline",
+        "stamp",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "connector",
+        "motion",
+        "contrast"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "reclaim-right-knowledge-3",
+        "reclaim-right-scene-03-claimed",
+        "reclaim-right-scene-03-unclaimed",
+        "reclaim-right-scene-03-pay"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}
