@@ -1,5 +1,8 @@
 import type {AnimationTypographyConfiguration} from './animation-presets';
-import {ADMINISTRATIVE_LAW_TYPOGRAPHY_CONFIGURATIONS} from './administrative-law-animation-registry';
+import {typography as administrativeTypography01} from '../animations/administrative-law/01/administrative-principles-compass/animation.meta';
+import {typography as administrativeTypography02} from '../animations/administrative-law/02/administrative-subject-command/animation.meta';
+import {typography as administrativeTypography03} from '../animations/administrative-law/03/civil-servant-career-file/animation.meta';
+import {typography as administrativeTypography04} from '../animations/administrative-law/04/abstract-act-printworks/animation.meta';
 import {typography as typography0} from '../animations/civil-procedure/01/dispute-resolution/animation.meta';
 import {typography as typography1} from '../animations/civil-procedure/01/law-attributes/animation.meta';
 import {typography as typography2} from '../animations/civil-procedure/01/trial-procedure/animation.meta';
@@ -95,9 +98,12 @@ import {typography as typography58} from '../animations/demo/demo-split-screen-c
 import {typography as typography59} from '../animations/demo/demo-statute-commentary/animation.meta';
 import {typography as typography60} from '../animations/demo/demo-timeline-chronicle/animation.meta';
 import {typography as typography61} from '../animations/demo/demo-transit-map/animation.meta';
-  ...ADMINISTRATIVE_LAW_TYPOGRAPHY_CONFIGURATIONS,
 
 const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypographyConfiguration>> = {
+  'administrative-principles-compass': {metadata: administrativeTypography01, scope: {animationId: 'administrative-principles-compass', subject: 'administrative-law', topic: '01'}},
+  'administrative-subject-command': {metadata: administrativeTypography02, scope: {animationId: 'administrative-subject-command', subject: 'administrative-law', topic: '02'}},
+  'civil-servant-career-file': {metadata: administrativeTypography03, scope: {animationId: 'civil-servant-career-file', subject: 'administrative-law', topic: '03'}},
+  'abstract-act-printworks': {metadata: administrativeTypography04, scope: {animationId: 'abstract-act-printworks', subject: 'administrative-law', topic: '04'}},
   'dispute-resolution': {metadata: typography0, scope: {animationId: 'dispute-resolution', subject: 'civil-procedure', topic: '01'}},
   'law-attributes': {metadata: typography1, scope: {animationId: 'law-attributes', subject: 'civil-procedure', topic: '01'}},
   'trial-procedure': {metadata: typography2, scope: {animationId: 'trial-procedure', subject: 'civil-procedure', topic: '01'}},

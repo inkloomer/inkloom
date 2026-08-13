@@ -4,6 +4,8 @@ import {AdministrativeSubjectCommand} from '../../animations/administrative-law/
 import {DURATION_FRAMES as DURATION_FRAMES_02, FPS as FPS_02} from '../../animations/administrative-law/02/administrative-subject-command/remotion/storyboard';
 import {CivilServantCareerFile} from '../../animations/administrative-law/03/civil-servant-career-file/remotion/CivilServantCareerFile';
 import {DURATION_FRAMES as DURATION_FRAMES_03, FPS as FPS_03} from '../../animations/administrative-law/03/civil-servant-career-file/remotion/storyboard';
+import {AbstractActPrintworks} from '../../animations/administrative-law/04/abstract-act-printworks/remotion/AbstractActPrintworks';
+import {DURATION_FRAMES as DURATION_FRAMES_04, FPS as FPS_04} from '../../animations/administrative-law/04/abstract-act-printworks/remotion/storyboard';
 import type {DemoDefinition} from './demo-registry';
 
 export const ADMINISTRATIVE_LAW_STYLE_DEMOS = [
@@ -37,10 +39,21 @@ export const ADMINISTRATIVE_LAW_STYLE_DEMOS = [
     durationInFrames: DURATION_FRAMES_03,
     fps: FPS_03,
   },
+  {
+    id: 'administrative-law-04-abstract-act-printworks',
+    slug: 'abstract-act-printworks',
+    title: '法规套色印坊',
+    direction: 'Legislative Printworks',
+    component: AbstractActPrintworks,
+    href: '/inkloom/objective/administrative-law/04/abstract-act-printworks/',
+    durationInFrames: DURATION_FRAMES_04,
+    fps: FPS_04,
+  },
 ] as const satisfies readonly DemoDefinition[];
 
 export const ADMINISTRATIVE_LAW_DEMO_ADDED_AT = {
   'administrative-law-01-administrative-principles-compass': '2026-08-13T12:00:00+08:00',
   'administrative-law-02-administrative-subject-command': '2026-08-13T13:00:00+08:00',
   'administrative-law-03-civil-servant-career-file': '2026-08-13T14:00:00+08:00',
+  'administrative-law-04-abstract-act-printworks': '2026-08-13T15:00:00+08:00',
 } as const;

@@ -59,7 +59,7 @@ const Shell = ({
 }) => (
   <AbsoluteFill
     data-player-control-safe-bottom={PLAYER_CONTROL_SAFE_BOTTOM}
-    style={{background: C.paper, color: C.ink, overflow: 'hidden', fontFamily: 'inherit'}}
+    style={{background: C.paper, color: C.ink, overflow: 'hidden'}}
   >
     <div
       style={{
