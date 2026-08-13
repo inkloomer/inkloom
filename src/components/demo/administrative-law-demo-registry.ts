@@ -12,6 +12,8 @@ import {LicenseTransitHub} from '../../animations/administrative-law/06/license-
 import {DURATION_FRAMES as DURATION_FRAMES_06, FPS as FPS_06} from '../../animations/administrative-law/06/license-transit-hub/remotion/storyboard';
 import {PenaltyVerdictArena} from '../../animations/administrative-law/07/penalty-verdict-arena/remotion/PenaltyVerdictArena';
 import {DURATION_FRAMES as DURATION_FRAMES_07, FPS as FPS_07} from '../../animations/administrative-law/07/penalty-verdict-arena/remotion/storyboard';
+import {CompulsionSafetyInterlock} from '../../animations/administrative-law/08/compulsion-safety-interlock/remotion/CompulsionSafetyInterlock';
+import {DURATION_FRAMES as DURATION_FRAMES_08, FPS as FPS_08} from '../../animations/administrative-law/08/compulsion-safety-interlock/remotion/storyboard';
 import type {DemoDefinition} from './demo-registry';
 
 export const ADMINISTRATIVE_LAW_STYLE_DEMOS = [
@@ -85,6 +87,16 @@ export const ADMINISTRATIVE_LAW_STYLE_DEMOS = [
     durationInFrames: DURATION_FRAMES_07,
     fps: FPS_07,
   },
+  {
+    id: 'administrative-law-08-compulsion-safety-interlock',
+    slug: 'compulsion-safety-interlock',
+    title: '安全联锁工程图',
+    direction: 'Compulsion Safety Interlock',
+    component: CompulsionSafetyInterlock,
+    href: '/inkloom/objective/administrative-law/08/compulsion-safety-interlock/',
+    durationInFrames: DURATION_FRAMES_08,
+    fps: FPS_08,
+  },
 ] as const satisfies readonly DemoDefinition[];
 
 export const ADMINISTRATIVE_LAW_DEMO_ADDED_AT = {
@@ -95,4 +107,5 @@ export const ADMINISTRATIVE_LAW_DEMO_ADDED_AT = {
   'administrative-law-05-concrete-act-laboratory': '2026-08-13T16:00:00+08:00',
   'administrative-law-06-license-transit-hub': '2026-08-13T17:00:00+08:00',
   'administrative-law-07-penalty-verdict-arena': '2026-08-13T21:00:00+08:00',
+  'administrative-law-08-compulsion-safety-interlock': '2026-08-13T22:30:00+08:00',
 } as const;

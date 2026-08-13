@@ -1,0 +1,16 @@
+{
+  "directionId": "compulsion-safety-interlock",
+  "family": "civic-containment-engineering",
+  "palette": "graphite steel, blueprint white, hazard yellow, isolation orange, procedure cyan, release green",
+  "typography": "WenKai engineering labels with oversized time numerals, lockout tags, inspection stamps and narrow process captions",
+  "composition": "split containment bays, sequential safety interlocks, clamp filters, deadline gauges, bank freeze valves, execution power grids and judicial review chambers",
+  "surface": "flat industrial schematics, steel rails, hazard stripes, seals and transparent control layers without transit stations or verdict cards",
+  "motion": "legal objects are clamped, isolated, released or routed only after the matching statutory interlock visibly opens",
+  "transition": "mechanical shutters, lockout-tag handoffs and measured horizontal blueprint wipes",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/administrative-law/08/compulsion-safety-interlock/",
+    "title": "安全联锁工程图"
+  }
+}
