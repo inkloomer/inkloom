@@ -381,7 +381,7 @@ export const FreeChoiceTrackScene = () => {
             style={{
               position: "absolute",
               left: 130 + i * 830,
-              top: 366,
+              top: 344,
               width: 760,
               border: `5px solid ${x[2]}`,
               background: `${x[2]}10`,
@@ -400,7 +400,7 @@ export const FreeChoiceTrackScene = () => {
           style={{
             position: "absolute",
             left: 130,
-            top: 576,
+            top: 538,
             width: 1630,
             border: `4px dashed ${C.red}`,
             padding: "16px 20px",
@@ -419,7 +419,7 @@ export const FreeChoiceTrackScene = () => {
           style={{
             position: "absolute",
             left: 130,
-            top: 630,
+            top: 648,
             width: 1630,
             border: `4px solid ${C.gold}`,
             padding: "14px 18px",
@@ -483,7 +483,7 @@ export const MandatoryFirstTrackScene = () => {
             style={{
               position: "absolute",
               left: 80 + (i % 2) * 860,
-              top: 208 + Math.floor(i / 2) * 158,
+              top: 196 + Math.floor(i / 2) * 150,
               width: 800,
               minHeight: 130,
               border: `4px solid ${x[2]}`,
@@ -503,7 +503,7 @@ export const MandatoryFirstTrackScene = () => {
           style={{
             position: "absolute",
             left: 80,
-            top: 632,
+            top: 646,
             width: 1660,
             border: `4px solid ${C.green}`,
             padding: "12px 18px",
@@ -660,7 +660,7 @@ export const SwitchyardTrapsScene = () => {
             style={{
               position: "absolute",
               left: 60 + (i % 2) * 900,
-              top: 36 + Math.floor(i / 2) * 158,
+              top: 30 + Math.floor(i / 2) * 146,
               width: 850,
               height: 140,
               border: `4px solid ${x[2] ? C.green : C.red}`,
@@ -700,7 +700,7 @@ export const SwitchyardTrapsScene = () => {
           style={{
             position: "absolute",
             left: 460,
-            top: 628,
+            top: 636,
             width: 1000,
             textAlign: "center",
             ...enter(f, 76),

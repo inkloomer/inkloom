@@ -3,7 +3,7 @@
   "compositionId": "LinkageRailSwitch",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-08-13T16:59:30.286Z",
+  "generatedAt": "2026-08-13T17:05:07.593Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -16,13 +16,13 @@
       "title": "三模式总览",
       "durationMs": 7000,
       "file": "three-mode-overview.avif",
-      "fileSize": 297909,
+      "fileSize": 299382,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "4ba80036f879a39e9fc2ee0f91f321a3adb230648380226d8b6c4b8367bb472f",
+      "sha256": "86ff8664e5472b038fe5b96cec732a2d3aa6526263f80b610687e2189beeb273",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "b2be127adbb9ae2f3de144c5d9d87460a464137ecada83db1cc3a735ae015489"
+      "sceneFingerprint": "aa507eddcfb9949010c806ce665c4e10cd64398c385702f8658951864475f772"
     },
     {
       "endFrame": 899,
@@ -33,13 +33,13 @@
       "title": "自由选择",
       "durationMs": 8000,
       "file": "free-choice-track.avif",
-      "fileSize": 388413,
+      "fileSize": 362460,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "a7eb67f8704c9753794ecaa1cd7448b7b5e9008ddd46c0e2ca187d91e86de883",
+      "sha256": "d04d13c14f217824d1933825be1bb38ec2d1ee377d6aa88c0138bb3a10b54471",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "b2be127adbb9ae2f3de144c5d9d87460a464137ecada83db1cc3a735ae015489"
+      "sceneFingerprint": "aa507eddcfb9949010c806ce665c4e10cd64398c385702f8658951864475f772"
     },
     {
       "endFrame": 1379,
@@ -50,13 +50,13 @@
       "title": "复议前置",
       "durationMs": 8000,
       "file": "mandatory-first-track.avif",
-      "fileSize": 397424,
+      "fileSize": 401642,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "5b5772f8570361db0aa621d7d8caafac613a8c7ed2b2711dfc823dcba54fea59",
+      "sha256": "54a9f251e9e8b9616b0dc88f6d4631c5fc7ecff9722db2ba52f578095be19a24",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "b2be127adbb9ae2f3de144c5d9d87460a464137ecada83db1cc3a735ae015489"
+      "sceneFingerprint": "aa507eddcfb9949010c806ce665c4e10cd64398c385702f8658951864475f772"
     },
     {
       "endFrame": 1799,
@@ -67,13 +67,13 @@
       "title": "复议终局",
       "durationMs": 7000,
       "file": "final-review-track.avif",
-      "fileSize": 257785,
+      "fileSize": 258239,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "b3020b45c7cd93a4895023ff82cb2a81b22cdeacaccd6e857b1e392cac7a927a",
+      "sha256": "83e83f78c82cfc9ed1788cbfaa71904de7e17d1dca2bf917b49da633ff6ee4cc",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "b2be127adbb9ae2f3de144c5d9d87460a464137ecada83db1cc3a735ae015489"
+      "sceneFingerprint": "aa507eddcfb9949010c806ce665c4e10cd64398c385702f8658951864475f772"
     },
     {
       "endFrame": 2279,
@@ -84,13 +84,13 @@
       "title": "最爱考判断",
       "durationMs": 8000,
       "file": "switchyard-traps.avif",
-      "fileSize": 390290,
+      "fileSize": 392897,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "dd7f3b48c3837b1717f7b8e074d106745d90021fb2ec1eed8ac5e832c403ad2c",
+      "sha256": "7c0a105b73524f7b4d6548ea5f1e1e71d0c3c32f576c876d9864888f4bbc5d07",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "b2be127adbb9ae2f3de144c5d9d87460a464137ecada83db1cc3a735ae015489"
+      "sceneFingerprint": "aa507eddcfb9949010c806ce665c4e10cd64398c385702f8658951864475f772"
     }
   ],
   "size": {
@@ -98,7 +98,7 @@
     "width": 2560
   },
   "sourceFps": 60,
-  "sourceFingerprint": "b2be127adbb9ae2f3de144c5d9d87460a464137ecada83db1cc3a735ae015489",
+  "sourceFingerprint": "aa507eddcfb9949010c806ce665c4e10cd64398c385702f8658951864475f772",
   "targetFps": 30,
-  "totalFileSize": 1731821
+  "totalFileSize": 1714620
 }
