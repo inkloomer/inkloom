@@ -9,7 +9,7 @@ export const RemotionRoot = () => (
     id="TransparencyOpticsLab"
     component={withAnimationTypography(
       TransparencyOpticsLab,
-      getAnimationTypographyConfiguration("transparency-optics-lab"),
+      getAnimationTypographyConfiguration('transparency-optics-lab'),
     )}
     durationInFrames={DURATION_FRAMES}
     fps={FPS}
