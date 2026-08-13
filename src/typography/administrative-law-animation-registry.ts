@@ -7,6 +7,7 @@ import {typography as typography6} from '../animations/administrative-law/06/lic
 import {typography as typography7} from '../animations/administrative-law/07/penalty-verdict-arena/animation.meta';
 import {typography as typography8} from '../animations/administrative-law/08/compulsion-safety-interlock/animation.meta';
 import {typography as typography9} from '../animations/administrative-law/09/transparency-optics-lab/animation.meta';
+import {typography as typography10} from '../animations/administrative-law/10/disclosure-case-desk/animation.meta';
 
 export const ADMINISTRATIVE_LAW_TYPOGRAPHY_CONFIGURATIONS = {
   'administrative-principles-compass': {
@@ -44,5 +45,9 @@ export const ADMINISTRATIVE_LAW_TYPOGRAPHY_CONFIGURATIONS = {
   'transparency-optics-lab': {
     metadata: typography9,
     scope: {animationId: 'transparency-optics-lab', subject: 'administrative-law', topic: '09'},
+  },
+  'disclosure-case-desk': {
+    metadata: typography10,
+    scope: {animationId: 'disclosure-case-desk', subject: 'administrative-law', topic: '10'},
   },
 } as const;

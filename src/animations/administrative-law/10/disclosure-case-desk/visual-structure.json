@@ -1,0 +1,348 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 10,
+  "scenes": [
+    {
+      "id": "case-mainline",
+      "export": "CaseMainlineScene",
+      "layout": "three-station-case-conveyor",
+      "anchor": "flow-path",
+      "grammar": [
+        "case-slip-travels-apply-respond-remedy",
+        "procedural-exceptions-block-the-route"
+      ],
+      "textTreatments": [
+        "label-block",
+        "thin-underline",
+        "stamp"
+      ],
+      "focalChannels": [
+        "connector",
+        "locator",
+        "motion"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "station-apply",
+        "station-respond",
+        "station-remedy",
+        "proactive-not-directly-sue",
+        "procedural-notice-not-sue",
+        "burden-overview"
+      ],
+      "statefulObjects": [
+        "mainline-slip"
+      ]
+    },
+    {
+      "id": "plaintiff-gate",
+      "export": "PlaintiffGateScene",
+      "layout": "two-lane-plaintiff-gate",
+      "anchor": "role-pair",
+      "grammar": [
+        "active-disclosure-lane-is-blocked",
+        "application-lane-passes-through"
+      ],
+      "textTreatments": [
+        "label-block",
+        "stamp",
+        "external-negation"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "icon"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "plaintiff-interest",
+        "proactive-no-standing",
+        "application-lane-valid",
+        "notify-apply-first"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "defendant-routing",
+      "export": "DefendantRoutingScene",
+      "layout": "defendant-routing-board",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "four-behavior-lanes-route-to-their-organs",
+        "archive-case-takes-a-separate-track"
+      ],
+      "textTreatments": [
+        "label-block",
+        "thin-underline",
+        "stamp"
+      ],
+      "focalChannels": [
+        "contrast",
+        "connector",
+        "spatial"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "defendant-proactive",
+        "defendant-application",
+        "defendant-overdue",
+        "defendant-designated",
+        "archive-track",
+        "defendant-examples",
+        "designated-office-example"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "admission-tray",
+      "export": "AdmissionTrayScene",
+      "layout": "five-slip-admission-tray",
+      "anchor": "flow-target",
+      "grammar": [
+        "five-case-slips-slide-into-the-acceptance-tray",
+        "procedural-blockers-never-reach-the-tray"
+      ],
+      "textTreatments": [
+        "label-block",
+        "soft-highlight",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "connector",
+        "enclosure",
+        "spatial"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "admission-tray",
+        "admit-unable",
+        "admit-review",
+        "admit-mismatch",
+        "admit-privacy",
+        "admit-other"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "rejection-gate",
+      "export": "RejectionGateScene",
+      "layout": "ten-slip-rejection-gate",
+      "anchor": "boundary",
+      "grammar": [
+        "ten-slips-approach-the-gate-and-are-blocked",
+        "invalid-procedural-requests-stack-behind-the-bar"
+      ],
+      "textTreatments": [
+        "label-block",
+        "stamp",
+        "external-negation"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "motion"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "rejection-gate",
+        "reject-01",
+        "reject-02",
+        "reject-03",
+        "reject-04",
+        "reject-05",
+        "reject-06",
+        "reject-07",
+        "reject-08",
+        "reject-09",
+        "reject-10",
+        "reject-summary"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "trial-desk",
+      "export": "TrialDeskScene",
+      "layout": "three-panel-trial-desk",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "summary-procedure-confidential-hearing-and-stop-disclosure-are-three-independent-panels",
+        "privacy-and-secrecy-guard-the-hearing-room"
+      ],
+      "textTreatments": [
+        "label-block",
+        "thin-underline",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "locator"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "summary-procedure",
+        "confidential-hearing",
+        "stop-disclosure"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "defendant-proof-scale",
+      "export": "DefendantProofScaleScene",
+      "layout": "defendant-proof-scale",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "eight-weights-drop-on-the-defendant-pan",
+        "plaintiff-pan-carries-only-application-and-damage"
+      ],
+      "textTreatments": [
+        "label-block",
+        "thin-underline",
+        "stamp"
+      ],
+      "focalChannels": [
+        "contrast",
+        "motion",
+        "spatial"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "plaintiff-weight-01",
+        "plaintiff-weight-02",
+        "plaintiff-weight-03",
+        "def-weight-01",
+        "def-weight-02",
+        "def-weight-03",
+        "def-weight-04",
+        "def-weight-05",
+        "def-weight-06",
+        "def-weight-07",
+        "def-weight-08",
+        "defendant-burden-core"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "plaintiff-proof-scale",
+      "export": "PlaintiffProofScaleScene",
+      "layout": "plaintiff-proof-scale",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "three-plaintiff-weights-lift-on-the-plaintiff-pan",
+        "court-may-order-supplementary-evidence-below"
+      ],
+      "textTreatments": [
+        "label-block",
+        "soft-highlight",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "contrast",
+        "connector",
+        "spatial"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "pl-burden-application",
+        "pl-burden-privacy",
+        "pl-burden-damage",
+        "court-supplement",
+        "burden-mnemonic"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "judgment-seals",
+      "export": "JudgmentSealsScene",
+      "layout": "four-verdict-seal-stations",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "four-judgment-types-are-stamped-at-four-stations",
+        "perform-duty-seal-carries-the-twenty-working-day-rule"
+      ],
+      "textTreatments": [
+        "stamp",
+        "label-block",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "locator"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "judgment-dismiss",
+        "judgment-perform",
+        "judgment-confirm",
+        "judgment-prohibit",
+        "twenty-day-rule"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "trap-quiz",
+      "export": "TrapQuizScene",
+      "layout": "six-judgment-slips",
+      "anchor": "typographic-sequence",
+      "grammar": [
+        "six-exam-statements-are-stamped-correct",
+        "procedural-matters-are-not-separately-sueable"
+      ],
+      "textTreatments": [
+        "stamp",
+        "label-block",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "icon"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "trap-01",
+        "trap-02",
+        "trap-03",
+        "trap-04",
+        "trap-05",
+        "trap-06",
+        "trap-summary"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "privacy-case",
+      "export": "PrivacyCaseScene",
+      "layout": "privacy-case-verdict-board",
+      "anchor": "role-pair",
+      "grammar": [
+        "six-verdicts-are-stamped-onto-the-disclosure-dispute",
+        "stop-and-prohibit-rules-follow-the-public-interest-balance"
+      ],
+      "textTreatments": [
+        "stamp",
+        "label-block",
+        "external-negation"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "icon"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "privacy-case-setup",
+        "case-01",
+        "case-02",
+        "case-03",
+        "case-04",
+        "case-05",
+        "case-06",
+        "privacy-balance-key"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}
