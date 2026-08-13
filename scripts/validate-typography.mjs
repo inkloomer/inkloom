@@ -52,7 +52,8 @@ const main = async () => {
   const componentFiles = (await collectFiles(COMPONENTS_ROOT, (filePath) => /\.(?:astro|ts|tsx|css)$/.test(filePath))).filter(tracked);
   const metadataFiles = animationFiles.filter((filePath) => filePath.endsWith('animation.meta.ts'));
   const registrySource = await readFile(REGISTRY_PATH, 'utf8');
-  const animationMetadataRegistrySource = await readFile(ANIMATION_METADATA_REGISTRY_PATH, 'utf8');
+  const animationMetadataRegistryFiles = (await collectFiles(path.join(PROJECT_ROOT, 'src', 'typography'), (filePath) => filePath.endsWith('-registry.ts')));
+  const animationMetadataRegistrySource = (await Promise.all(animationMetadataRegistryFiles.map((filePath) => readFile(filePath, 'utf8')))).join('\n');
 
   for (const filePath of animationFiles) {
     const source = await readFile(filePath, 'utf8');
