@@ -6,16 +6,17 @@
     {
       "id": "nominal-shareholder-scene-01",
       "export": "NominalShareholder01Scene",
-      "layout": "nominee-board-1",
+      "layout": "dual-mirror-roles-1",
       "anchor": "role-pair",
       "grammar": [
-        "nominee-agreement",
-        "hidden-vs-visible"
+        "mirror-hidden-visible",
+        "nominee-agreement"
       ],
       "textTreatments": [
         "label-block",
         "thin-underline",
-        "soft-highlight"
+        "soft-highlight",
+        "external-negation"
       ],
       "focalChannels": [
         "contrast",
@@ -43,7 +44,8 @@
       "textTreatments": [
         "soft-highlight",
         "stamp",
-        "thin-underline"
+        "thin-underline",
+        "external-negation"
       ],
       "focalChannels": [
         "connector",
@@ -63,7 +65,7 @@
     {
       "id": "nominal-shareholder-scene-03",
       "export": "NominalShareholder03Scene",
-      "layout": "consent-boundary-3",
+      "layout": "consent-mirror-boundary-3",
       "anchor": "boundary",
       "grammar": [
         "agreement-boundary",
@@ -72,7 +74,8 @@
       "textTreatments": [
         "label-block",
         "external-negation",
-        "stamp"
+        "stamp",
+        "soft-highlight"
       ],
       "focalChannels": [
         "enclosure",
