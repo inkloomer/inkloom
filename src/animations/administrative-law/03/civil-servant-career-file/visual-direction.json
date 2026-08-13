@@ -1,0 +1,16 @@
+{
+  "directionId": "career-record-office",
+  "family": "human-resources-lifecycle",
+  "palette": "graphite ledger, registry ivory, vermilion seal, teal route, cobalt docket",
+  "typography": "WenKai personnel-file headings with numeric deadline emphasis",
+  "composition": "dual ladder, entry doors, recruitment runway, contract dossier, exchange map, countdown gate, balance, sanction scale, appeal selector, remedy fork",
+  "surface": "civil-service personnel record office",
+  "motion": "one personnel file advances through gates, routes, status changes, and remedy channels",
+  "transition": "file-tab cuts and directional handoffs",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/administrative-law/03/civil-servant-career-file/",
+    "title": "人事档案流转图"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "directionId":"institutional-command-map",
+  "family":"organizational-systems-diagram",
+  "palette":"mist paper, institutional navy, authority green, warning red, decision gold",
+  "typography":"WenKai institutional labels with decision-owner emphasis",
+  "composition":"identity radar, absorption shell, agency tree, dispatch switch, dual tracks, two gates, staffing command board",
+  "surface":"public administration operations room",
+  "motion":"authority and liability travel through explicit organizational routes",
+  "transition":"hard command-board cuts",
+  "catalog":{"status":"featured","source":"original-node","route":"/inkloom/objective/administrative-law/02/administrative-subject-command/","title":"机构指挥图"}
+}

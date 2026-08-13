@@ -1,4 +1,5 @@
 import type {AnimationTypographyConfiguration} from './animation-presets';
+import {ADMINISTRATIVE_LAW_TYPOGRAPHY_CONFIGURATIONS} from './administrative-law-animation-registry';
 import {typography as typography0} from '../animations/civil-procedure/01/dispute-resolution/animation.meta';
 import {typography as typography1} from '../animations/civil-procedure/01/law-attributes/animation.meta';
 import {typography as typography2} from '../animations/civil-procedure/01/trial-procedure/animation.meta';
@@ -94,6 +95,7 @@ import {typography as typography58} from '../animations/demo/demo-split-screen-c
 import {typography as typography59} from '../animations/demo/demo-statute-commentary/animation.meta';
 import {typography as typography60} from '../animations/demo/demo-timeline-chronicle/animation.meta';
 import {typography as typography61} from '../animations/demo/demo-transit-map/animation.meta';
+  ...ADMINISTRATIVE_LAW_TYPOGRAPHY_CONFIGURATIONS,
 
 const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypographyConfiguration>> = {
   'dispute-resolution': {metadata: typography0, scope: {animationId: 'dispute-resolution', subject: 'civil-procedure', topic: '01'}},

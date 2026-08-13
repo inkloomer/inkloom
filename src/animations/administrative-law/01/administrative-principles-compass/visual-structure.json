@@ -1,0 +1,139 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 7,
+  "scenes": [
+    {
+      "id": "six-principles-overview",
+      "export": "PrinciplesOverviewScene",
+      "layout": "mnemonic-radial-compass",
+      "anchor": "flow-path",
+      "grammar": ["mnemonic-to-six-principles", "administrative-act-to-classification"],
+      "textTreatments": ["label-block", "soft-highlight", "thin-underline"],
+      "focalChannels": ["spatial", "connector", "icon"],
+      "tokens": ["Landmark"],
+      "finalKnowledge": [
+        "overview-mnemonic",
+        "overview-classification",
+        "overview-principle-1",
+        "overview-principle-2",
+        "overview-principle-3",
+        "overview-principle-4",
+        "overview-principle-5",
+        "overview-principle-6"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "legality-boundary",
+      "export": "LegalityBoundaryScene",
+      "layout": "law-ceiling-and-authorization-gate",
+      "anchor": "boundary",
+      "grammar": ["valid-law-above-agency", "authorization-gate-blocks-extra-power"],
+      "textTreatments": ["external-negation", "label-block", "thin-underline"],
+      "focalChannels": ["enclosure", "connector", "icon"],
+      "tokens": ["BookOpen", "ShieldCheck", "FileCheck2", "LockKeyhole"],
+      "finalKnowledge": [
+        "legality-valid-law",
+        "legality-priority",
+        "legality-authorization",
+        "legality-reservation",
+        "legality-no-extra-power"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "reasonableness-scale",
+      "export": "ReasonablenessScaleScene",
+      "layout": "fairness-axis-relevance-sieve-proportionality-stairs",
+      "anchor": "comparison-axis",
+      "grammar": ["fairness-split-to-relevance-sieve", "relevance-sieve-to-proportionality-stairs"],
+      "textTreatments": ["label-block", "soft-highlight", "stamp"],
+      "focalChannels": ["contrast", "connector", "motion"],
+      "tokens": ["Scale", "Check", "X"],
+      "finalKnowledge": [
+        "fairness-equal",
+        "fairness-different",
+        "relevant-factors",
+        "proportionality-purpose",
+        "proportionality-suitability",
+        "proportionality-minimum-harm"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "due-process-timeline",
+      "export": "DueProcessTimelineScene",
+      "layout": "recusal-rail-participation-timeline-publicity-curtain",
+      "anchor": "timeline-gate",
+      "grammar": ["recusal-guardrail", "before-during-after", "publicity-default-with-three-exceptions"],
+      "textTreatments": ["label-block", "external-negation", "thin-underline"],
+      "focalChannels": ["spatial", "connector", "icon"],
+      "tokens": ["ShieldCheck", "Users", "Eye"],
+      "finalKnowledge": [
+        "recusal-two-types",
+        "participation-before",
+        "participation-during",
+        "participation-after",
+        "publicity-rule"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "good-faith-vault",
+      "export": "GoodFaithVaultScene",
+      "layout": "truth-document-and-reliance-protection-file",
+      "anchor": "flow-target",
+      "grammar": ["agency-information-to-truth-seal", "reliance-elements-to-two-protection-methods"],
+      "textTreatments": ["stamp", "label-block", "soft-highlight"],
+      "focalChannels": ["enclosure", "icon", "connector"],
+      "tokens": ["Building2", "FileCheck2", "Handshake", "UserCheck"],
+      "finalKnowledge": [
+        "truth-information",
+        "reliance-principle",
+        "reliance-elements",
+        "reliance-methods"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "efficiency-responsibility",
+      "export": "EfficiencyResponsibilityScene",
+      "layout": "service-current-and-power-responsibility-engine",
+      "anchor": "role-pair",
+      "grammar": ["efficiency-to-public", "power-means-to-agency-liability", "three-exam-signals"],
+      "textTreatments": ["label-block", "stamp", "thin-underline"],
+      "focalChannels": ["contrast", "icon", "connector"],
+      "tokens": ["Gauge", "Clock3", "Users", "Scale", "CircleDollarSign", "UserCheck", "Eye"],
+      "finalKnowledge": [
+        "efficiency-deadline-duty",
+        "efficiency-convenience",
+        "efficiency-exam-signal",
+        "power-effectiveness",
+        "power-liability",
+        "responsibility-signal-compensation",
+        "responsibility-signal-accountability",
+        "responsibility-signal-supervision"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "exam-triage",
+      "export": "ExamTriageScene",
+      "layout": "four-stop-diagnostic-route",
+      "anchor": "flow-path",
+      "grammar": ["statement-to-verdict-to-correct-principle", "four-distinct-misclassification-repairs"],
+      "textTreatments": ["stamp", "external-negation", "soft-highlight"],
+      "focalChannels": ["motion", "connector", "contrast"],
+      "tokens": [],
+      "finalKnowledge": [
+        "exam-case-1",
+        "exam-case-2",
+        "exam-case-3",
+        "exam-case-4",
+        "exam-responsibility-rule"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}
