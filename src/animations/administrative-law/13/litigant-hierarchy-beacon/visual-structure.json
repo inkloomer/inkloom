@@ -1,0 +1,331 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 8,
+  "scenes": [
+    {
+      "id": "defendant-general-board",
+      "export": "DefendantGeneralBoardScene",
+      "layout": "nine-slot-defendant-registry",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "nine-behavior-slots-map-to-their-defendants",
+        "joint-acts-split-into-defendant-and-third-party"
+      ],
+      "textTreatments": [
+        "label-block",
+        "thin-underline",
+        "stamp"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "spatial"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "def-slot-01",
+        "def-slot-02",
+        "def-slot-03",
+        "def-slot-04",
+        "def-slot-05",
+        "def-slot-06",
+        "def-slot-07",
+        "def-slot-08",
+        "def-slot-09",
+        "defendant-mnemonic"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "defendant-special-routes",
+      "export": "DefendantSpecialRoutesScene",
+      "layout": "four-special-defendant-routes",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "four-special-subjects-route-to-their-defendants-by-name-or-authority",
+        "development-zones-follow-approval-and-authorization"
+      ],
+      "textTreatments": [
+        "label-block",
+        "thin-underline",
+        "external-negation"
+      ],
+      "focalChannels": [
+        "contrast",
+        "connector",
+        "enclosure"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "special-route-1",
+        "special-route-2",
+        "special-route-3",
+        "special-route-4",
+        "special-summary"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "defendant-gov-rules",
+      "export": "DefendantGovRulesScene",
+      "layout": "government-defendant-three-rule-panels",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "guidance-keeps-the-department-as-defendant",
+        "orders-name-the-government",
+        "demands-follow-the-document"
+      ],
+      "textTreatments": [
+        "label-block",
+        "stamp",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "locator"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "gov-rule-guidance",
+        "gov-rule-document",
+        "gov-rule-force"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "defendant-after-review",
+      "export": "DefendantAfterReviewScene",
+      "layout": "three-review-outcome-beams",
+      "anchor": "flow-path",
+      "grammar": [
+        "three-review-outcomes-beam-to-their-defendant-slots",
+        "mixed-outcomes-join-as-co-defendants"
+      ],
+      "textTreatments": [
+        "label-block",
+        "stamp",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "contrast",
+        "connector",
+        "spatial"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "review-change",
+        "review-uphold",
+        "review-inaction",
+        "change-detection",
+        "mixed-outcome-rule"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "plaintiff-concept-lantern",
+      "export": "PlaintiffConceptLanternScene",
+      "layout": "five-concept-lanterns",
+      "anchor": "typographic-sequence",
+      "grammar": [
+        "five-requirement-lanterns-light-the-plaintiff-concept",
+        "each-lantern-tests-one-element"
+      ],
+      "textTreatments": [
+        "label-block",
+        "soft-highlight",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "icon"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "plaintiff-definition",
+        "lantern-1",
+        "lantern-2",
+        "lantern-3",
+        "lantern-4",
+        "lantern-5",
+        "lantern-six-relationship"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "related-party-five-ties",
+      "export": "RelatedPartyFiveTiesScene",
+      "layout": "five-tie-relationship-board",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "five-relationship-lanes-decide-the-related-partys-standing",
+        "kinship-alone-carries-no-standing"
+      ],
+      "textTreatments": [
+        "label-block",
+        "thin-underline",
+        "external-negation"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "spatial"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "tie-1",
+        "tie-2",
+        "tie-3",
+        "tie-4",
+        "tie-5",
+        "tie-mnemonic"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "organization-plaintiffs",
+      "export": "OrganizationPlaintiffsScene",
+      "layout": "organization-plaintiff-registry",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "seven-organization-types-slot-into-their-own-name-or-entity-name",
+        "long-entity-names-signal-the-three-exam-points"
+      ],
+      "textTreatments": [
+        "label-block",
+        "thin-underline",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "spatial"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "org-01",
+        "org-02",
+        "org-03",
+        "org-04",
+        "org-05",
+        "org-06",
+        "org-07",
+        "org-08",
+        "org-exam-tip"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "third-party-seat",
+      "export": "ThirdPartySeatScene",
+      "layout": "third-party-seat-board",
+      "anchor": "role-pair",
+      "grammar": [
+        "third-party-sits-between-the-parties-with-independent-claims",
+        "plaintiff-type-and-defendant-type-seats-are-marked"
+      ],
+      "textTreatments": [
+        "label-block",
+        "stamp",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "icon"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "third-party-core",
+        "third-party-plaintiff-type",
+        "third-party-defendant-type",
+        "third-party-procedure"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "jurisdiction-floors",
+      "export": "JurisdictionFloorsScene",
+      "layout": "jurisdiction-lighthouse-floors",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "basic-floor-and-intermediate-floor-hold-distinct-cases",
+        "co-defendant-levels-follow-the-original-actor"
+      ],
+      "textTreatments": [
+        "label-block",
+        "thin-underline",
+        "stamp"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "locator"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "jurisdiction-basic-floor",
+        "jurisdiction-intermediate-floor",
+        "jurisdiction-co-defendant-rule"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "territorial-steps",
+      "export": "TerritorialStepsScene",
+      "layout": "territorial-four-step-ladder",
+      "anchor": "flow-path",
+      "grammar": [
+        "four-territorial-steps-are-climbed-in-order",
+        "immovable-property-leads-then-review-and-detention"
+      ],
+      "textTreatments": [
+        "label-block",
+        "thin-underline",
+        "external-negation"
+      ],
+      "focalChannels": [
+        "contrast",
+        "connector",
+        "motion"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "step-1",
+        "step-2",
+        "step-3",
+        "step-4",
+        "territorial-order-tip"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "representative-desk",
+      "export": "RepresentativeDeskScene",
+      "layout": "representative-vs-agent-desk",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "representative-and-agent-split-the-desk",
+        "quota-rules-define-both-roles"
+      ],
+      "textTreatments": [
+        "label-block",
+        "stamp",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "locator"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "representative-rule",
+        "agent-rule"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

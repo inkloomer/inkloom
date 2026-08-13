@@ -58,6 +58,11 @@ import {
   DURATION_FRAMES as DURATION_FRAMES_12,
   FPS as FPS_12,
 } from "../../animations/administrative-law/12/linkage-rail-switch/remotion/storyboard";
+import { LitigantHierarchyBeacon } from "../../animations/administrative-law/13/litigant-hierarchy-beacon/remotion/LitigantHierarchyBeacon";
+import {
+  DURATION_FRAMES as DURATION_FRAMES_13,
+  FPS as FPS_13,
+} from "../../animations/administrative-law/13/litigant-hierarchy-beacon/remotion/storyboard";
 import type { DemoDefinition } from "./demo-registry";
 
 export const ADMINISTRATIVE_LAW_STYLE_DEMOS = [
@@ -181,6 +186,16 @@ export const ADMINISTRATIVE_LAW_STYLE_DEMOS = [
     durationInFrames: DURATION_FRAMES_12,
     fps: FPS_12,
   },
+  {
+    id: "administrative-law-13-litigant-hierarchy-beacon",
+    slug: "litigant-hierarchy-beacon",
+    title: "参加人层级灯塔",
+    direction: "Litigant Hierarchy Beacon",
+    component: LitigantHierarchyBeacon,
+    href: "/inkloom/objective/administrative-law/13/litigant-hierarchy-beacon/",
+    durationInFrames: DURATION_FRAMES_13,
+    fps: FPS_13,
+  },
 ] as const satisfies readonly DemoDefinition[];
 
 export const ADMINISTRATIVE_LAW_DEMO_ADDED_AT = {
@@ -200,4 +215,5 @@ export const ADMINISTRATIVE_LAW_DEMO_ADDED_AT = {
   "administrative-law-10-disclosure-case-desk": "2026-08-14T00:30:00+08:00",
   "administrative-law-11-misc-acts-showcase": "2026-08-14T09:30:00+08:00",
   "administrative-law-12-linkage-rail-switch": "2026-08-14T10:30:00+08:00",
+  "administrative-law-13-litigant-hierarchy-beacon": "2026-08-14T12:00:00+08:00",
 } as const;

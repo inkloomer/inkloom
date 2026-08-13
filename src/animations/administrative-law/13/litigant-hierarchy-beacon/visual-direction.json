@@ -1,0 +1,16 @@
+{
+  "directionId": "litigant-hierarchy-beacon",
+  "family": "civic-litigant-beacon",
+  "palette": "night beacon navy, court white, plaintiff blue, defendant red, third-party amber, jurisdiction gold",
+  "typography": "WenKai registry plaques with litigant numerals, role captions, thin jurisdiction underlines and seal stamps",
+  "composition": "litigant registry towers, role beams, jurisdiction floors, party nameplates and court gates",
+  "surface": "stone registry walls and brass nameplates without rails, vitrines or desks",
+  "motion": "beams rotate between role slots, nameplates slide into floors, jurisdiction lights climb the tower",
+  "transition": "beam sweeps, floor wipes and nameplate slides",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/administrative-law/13/litigant-hierarchy-beacon/",
+    "title": "参加人层级灯塔"
+  }
+}
