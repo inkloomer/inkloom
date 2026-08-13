@@ -6,6 +6,8 @@ import {CivilServantCareerFile} from '../../animations/administrative-law/03/civ
 import {DURATION_FRAMES as DURATION_FRAMES_03, FPS as FPS_03} from '../../animations/administrative-law/03/civil-servant-career-file/remotion/storyboard';
 import {AbstractActPrintworks} from '../../animations/administrative-law/04/abstract-act-printworks/remotion/AbstractActPrintworks';
 import {DURATION_FRAMES as DURATION_FRAMES_04, FPS as FPS_04} from '../../animations/administrative-law/04/abstract-act-printworks/remotion/storyboard';
+import {ConcreteActLaboratory} from '../../animations/administrative-law/05/concrete-act-laboratory/remotion/ConcreteActLaboratory';
+import {DURATION_FRAMES as DURATION_FRAMES_05, FPS as FPS_05} from '../../animations/administrative-law/05/concrete-act-laboratory/remotion/storyboard';
 import type {DemoDefinition} from './demo-registry';
 
 export const ADMINISTRATIVE_LAW_STYLE_DEMOS = [
@@ -49,6 +51,16 @@ export const ADMINISTRATIVE_LAW_STYLE_DEMOS = [
     durationInFrames: DURATION_FRAMES_04,
     fps: FPS_04,
   },
+  {
+    id: 'administrative-law-05-concrete-act-laboratory',
+    slug: 'concrete-act-laboratory',
+    title: '行政行为检验实验室',
+    direction: 'Administrative Act Laboratory',
+    component: ConcreteActLaboratory,
+    href: '/inkloom/objective/administrative-law/05/concrete-act-laboratory/',
+    durationInFrames: DURATION_FRAMES_05,
+    fps: FPS_05,
+  },
 ] as const satisfies readonly DemoDefinition[];
 
 export const ADMINISTRATIVE_LAW_DEMO_ADDED_AT = {
@@ -56,4 +68,5 @@ export const ADMINISTRATIVE_LAW_DEMO_ADDED_AT = {
   'administrative-law-02-administrative-subject-command': '2026-08-13T13:00:00+08:00',
   'administrative-law-03-civil-servant-career-file': '2026-08-13T14:00:00+08:00',
   'administrative-law-04-abstract-act-printworks': '2026-08-13T15:00:00+08:00',
+  'administrative-law-05-concrete-act-laboratory': '2026-08-13T16:00:00+08:00',
 } as const;
