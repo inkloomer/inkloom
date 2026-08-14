@@ -3,7 +3,7 @@
   "compositionId": "AcceptanceSecurityGate",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-08-13T18:12:53.426Z",
+  "generatedAt": "2026-08-14T04:43:05.595Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -16,13 +16,13 @@
       "title": "正面列举11类",
       "durationMs": 8000,
       "file": "positive-list-lane.avif",
-      "fileSize": 339891,
+      "fileSize": 564351,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "852652c407bcb6313c7e663e0310f80ab16c433bb5e32412ed0d74a24801d039",
+      "sha256": "676c670bfe3914e021560a10e174ed3d9177be6459572d05399e41d0c1b1ab1f",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "bc2d69e525ec115e8b3e600590ece547ee3203941ec2ef2183dd4aeab5ecf787"
+      "sceneFingerprint": "bc965811d9d3c601d103f4bbb9b86f1e725a49b90b371165199d371e8d32840a"
     },
     {
       "endFrame": 959,
@@ -33,13 +33,13 @@
       "title": "反面排除5类",
       "durationMs": 8000,
       "file": "exclusion-barriers.avif",
-      "fileSize": 337713,
+      "fileSize": 343951,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "6a93cdfefe82a7192a0cd04c93f76db335912597b25e119c98da2248daef01ee",
+      "sha256": "2118ab8d318c8ad812a9719bcf8947854ee5168a2c06c6601c918459dcbc3493",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "bc2d69e525ec115e8b3e600590ece547ee3203941ec2ef2183dd4aeab5ecf787"
+      "sceneFingerprint": "bc965811d9d3c601d103f4bbb9b86f1e725a49b90b371165199d371e8d32840a"
     },
     {
       "endFrame": 1439,
@@ -50,13 +50,13 @@
       "title": "行政协议",
       "durationMs": 8000,
       "file": "agreement-counter.avif",
-      "fileSize": 341967,
+      "fileSize": 341827,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "7bab950b5ba37f287e5d03fbf4d8995d371930924e8898375a8147d99814afe5",
+      "sha256": "f5cf806c5f1708baedda52c96ec60c1dc4e1be63c7e19fcb13421b89f6843875",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "bc2d69e525ec115e8b3e600590ece547ee3203941ec2ef2183dd4aeab5ecf787"
+      "sceneFingerprint": "bc965811d9d3c601d103f4bbb9b86f1e725a49b90b371165199d371e8d32840a"
     },
     {
       "endFrame": 1919,
@@ -70,10 +70,10 @@
       "fileSize": 280182,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "5f9bd421f236c82c27bde27e59086e3162b316894872b262e66fd129afe2ae3f",
+      "sha256": "e91418fcd050161ac2ebd2e15ace274dc953867e89d910837e46a69f886a18d5",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "bc2d69e525ec115e8b3e600590ece547ee3203941ec2ef2183dd4aeab5ecf787"
+      "sceneFingerprint": "bc965811d9d3c601d103f4bbb9b86f1e725a49b90b371165199d371e8d32840a"
     },
     {
       "endFrame": 2399,
@@ -87,10 +87,10 @@
       "fileSize": 302196,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "a982697d0070595a9e1548401f33a0ff988d39cea9d9afb2f8c4d5ce4a99bfbe",
+      "sha256": "7059091629789f1d2ce4f018d55be981902c439a120422c1b50d8fd447ddc603",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "bc2d69e525ec115e8b3e600590ece547ee3203941ec2ef2183dd4aeab5ecf787"
+      "sceneFingerprint": "bc965811d9d3c601d103f4bbb9b86f1e725a49b90b371165199d371e8d32840a"
     },
     {
       "endFrame": 2879,
@@ -104,10 +104,10 @@
       "fileSize": 350943,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "111596db3bb6cb68300c8e8d64f8ae5cd3c3321145211501373b2ec9bcf1caa3",
+      "sha256": "1c7c19423f3c16956313a5a49fa84aae8cc60b1d7ac34b1f4fd32897c7e8089e",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "bc2d69e525ec115e8b3e600590ece547ee3203941ec2ef2183dd4aeab5ecf787"
+      "sceneFingerprint": "bc965811d9d3c601d103f4bbb9b86f1e725a49b90b371165199d371e8d32840a"
     },
     {
       "endFrame": 3359,
@@ -121,10 +121,10 @@
       "fileSize": 271201,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "aae1019e8d27d7431cdc38587121ecf5b033bff1db6dfccae4e0337686f752af",
+      "sha256": "dfb0ec59d8ae8e7af76a9cf0cede4f0a69b3a3723bd33f7ea5b7e40ba1f7faf0",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "bc2d69e525ec115e8b3e600590ece547ee3203941ec2ef2183dd4aeab5ecf787"
+      "sceneFingerprint": "bc965811d9d3c601d103f4bbb9b86f1e725a49b90b371165199d371e8d32840a"
     },
     {
       "endFrame": 3839,
@@ -135,13 +135,13 @@
       "title": "最爱考十判断",
       "durationMs": 8000,
       "file": "gate-traps.avif",
-      "fileSize": 409182,
+      "fileSize": 409933,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "6e5c4eba9cf2f69a717d987671a026ff8f8d639eb2c02f996b747e08b1b8c3c1",
+      "sha256": "b2a715044ac257fb4a9662f796bee951d0cb9aca28f3213e302eb6e03ffc727e",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "bc2d69e525ec115e8b3e600590ece547ee3203941ec2ef2183dd4aeab5ecf787"
+      "sceneFingerprint": "bc965811d9d3c601d103f4bbb9b86f1e725a49b90b371165199d371e8d32840a"
     }
   ],
   "size": {
@@ -149,7 +149,7 @@
     "width": 2560
   },
   "sourceFps": 60,
-  "sourceFingerprint": "bc2d69e525ec115e8b3e600590ece547ee3203941ec2ef2183dd4aeab5ecf787",
+  "sourceFingerprint": "bc965811d9d3c601d103f4bbb9b86f1e725a49b90b371165199d371e8d32840a",
   "targetFps": 30,
-  "totalFileSize": 2633275
+  "totalFileSize": 2864584
 }
