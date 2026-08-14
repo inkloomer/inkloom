@@ -6,12 +6,11 @@
     {
       "id": "setting-spectrum",
       "export": "SettingSpectrumScene",
-      "layout": "four-independent-attenuation-beams",
+      "layout": "four-authority-staircases",
       "anchor": "boundary",
       "grammar": [
-        "four-independent-authority-beams-enter-at-the-law-level",
-        "each-beam-narrows-or-terminates-at-its-own-normative-boundary",
-        "terminal-shutters-make-the-different-loss-points-visible-without-a-grid"
+        "four-authority-staircases-share-one-normative-axis",
+        "each-staircase-stops-at-its-own-legislative-boundary"
       ],
       "textTreatments": ["label-block", "soft-highlight", "external-negation"],
       "focalChannels": ["contrast", "connector", "spatial"],
@@ -27,11 +26,11 @@
     {
       "id": "rulemaking-chronology",
       "export": "RulemakingChronologyScene",
-      "layout": "three-era-rulemaking-refraction",
+      "layout": "three-era-rulemaking-timeline",
       "anchor": "timeline-gate",
       "grammar": [
-        "three-statutes-arrive-in-chronological-order",
-        "rulemaking-authority-refracts-from-general-to-provincial-only-to-none"
+        "three-statutes-align-on-one-chronological-ruler",
+        "rulemaking-authority-narrows-from-general-to-provincial-only-to-none"
       ],
       "textTreatments": ["thin-underline", "label-block", "stamp"],
       "focalChannels": ["locator", "contrast", "motion"],
@@ -47,14 +46,14 @@
     {
       "id": "setting-trap-lenses",
       "export": "SettingTrapLensesScene",
-      "layout": "four-lens-setting-trap-test",
-      "anchor": "flow-target",
+      "layout": "four-verdict-ticket-stack",
+      "anchor": "typographic-sequence",
       "grammar": [
-        "four-exam-statements-enter-independent-lenses",
-        "only-the-license-suspension-statement-exits-as-correct"
+        "four-exam-statements-enter-as-independent-tickets",
+        "each-ticket-ends-with-a-verdict-and-correct-rule"
       ],
       "textTreatments": ["external-negation", "stamp", "soft-highlight"],
-      "focalChannels": ["icon", "contrast", "enclosure"],
+      "focalChannels": ["annotation", "contrast", "enclosure"],
       "tokens": [],
       "finalKnowledge": [
         "trap-department-decision",
@@ -67,11 +66,11 @@
     {
       "id": "authorization-prism",
       "export": "AuthorizationPrismScene",
-      "layout": "three-face-authorization-prism",
-      "anchor": "role-pair",
+      "layout": "source-power-pyramid",
+      "anchor": "boundary",
       "grammar": [
-        "penalty-and-license-accept-authorization-from-laws-and-regulations",
-        "compulsory-measures-block-local-regulations-and-accept-only-laws-and-administrative-regulations"
+        "three-authority-routes-enter-one-source-pyramid",
+        "each-power-stops-at-its-own-authorizing-level"
       ],
       "textTreatments": ["label-block", "thin-underline", "external-negation"],
       "focalChannels": ["connector", "contrast", "spatial"],
@@ -87,15 +86,14 @@
     {
       "id": "delegation-filters",
       "export": "DelegationFiltersScene",
-      "layout": "three-delegation-filter-columns",
-      "anchor": "comparison-axis",
+      "layout": "three-delegation-lanes",
+      "anchor": "flow-path",
       "grammar": [
-        "delegation-light-passes-through-qualified-organizations-for-penalties",
-        "through-administrative-organs-for-licenses",
-        "and-is-fully-blocked-for-compulsory-measures"
+        "three-delegation-lanes-start-from-administrative-organs",
+        "recipient-and-validity-differ-across-penalty-license-and-compulsion"
       ],
       "textTreatments": ["label-block", "stamp", "external-negation"],
-      "focalChannels": ["contrast", "enclosure", "spatial"],
+      "focalChannels": ["connector", "contrast", "spatial"],
       "tokens": [],
       "finalKnowledge": [
         "penalty-delegation",
@@ -107,11 +105,11 @@
     {
       "id": "concentration-apertures",
       "export": "ConcentrationAperturesScene",
-      "layout": "four-aperture-concentration-board",
+      "layout": "concentration-ring-field",
       "anchor": "boundary",
       "grammar": [
-        "penalty-license-and-related-measure-powers-pass-through-distinct-concentration-apertures",
-        "enforcement-power-remains-behind-a-closed-plate"
+        "three-concentration-rings-close-around-one-organ",
+        "enforcement-power-remains-outside-the-rings"
       ],
       "textTreatments": ["soft-highlight", "label-block", "external-negation"],
       "focalChannels": ["enclosure", "contrast", "locator"],
@@ -127,11 +125,11 @@
     {
       "id": "subject-trap-darkroom",
       "export": "SubjectTrapDarkroomScene",
-      "layout": "four-specimen-subject-darkroom",
+      "layout": "four-case-file-branches",
       "anchor": "document-fork",
       "grammar": [
-        "four-subject-problems-develop-from-source-documents",
-        "the-resulting-defendant-or-validity-label-appears-only-after-the-authority-source-is-tested"
+        "four-case-files-unfold-from-power-source",
+        "each-file-terminates-in-defendant-or-validity"
       ],
       "textTreatments": ["stamp", "thin-underline", "external-negation"],
       "focalChannels": ["connector", "contrast", "enclosure"],
@@ -147,11 +145,11 @@
     {
       "id": "hearing-signal-split",
       "export": "HearingSignalSplitScene",
-      "layout": "three-channel-hearing-signal-split",
+      "layout": "three-hearing-signal-lanes",
       "anchor": "comparison-axis",
       "grammar": [
-        "penalty-and-license-channels-carry-hearing-signals",
-        "compulsory-measures-and-enforcement-remain-a-flat-silent-line"
+        "penalty-and-license-signals-travel-on-active-lanes",
+        "compulsion-remains-a-flat-no-hearing-line"
       ],
       "textTreatments": ["label-block", "soft-highlight", "external-negation"],
       "focalChannels": ["contrast", "motion", "spatial"],
@@ -166,11 +164,11 @@
     {
       "id": "penalty-hearing-waveband",
       "export": "PenaltyHearingWavebandScene",
-      "layout": "three-band-penalty-hearing-spectrum",
+      "layout": "three-band-penalty-hearing-map",
       "anchor": "flow-path",
       "grammar": [
-        "penalty-hearing-scope-is-separated-into-statutory-agreed-and-public-security-bands",
-        "the-adult-detention-signal-enters-only-the-discretionary-band"
+        "three-hearing-trigger-bands-run-in-parallel",
+        "adult-detention-enters-only-through-discretionary-hearing"
       ],
       "textTreatments": ["label-block", "thin-underline", "stamp"],
       "focalChannels": ["connector", "contrast", "locator"],
@@ -185,11 +183,11 @@
     {
       "id": "license-hearing-focus",
       "export": "LicenseHearingFocusScene",
-      "layout": "dual-focus-license-hearing-lenses",
-      "anchor": "role-pair",
+      "layout": "dual-license-hearing-fork",
+      "anchor": "document-fork",
       "grammar": [
-        "public-interest-license-matters-focus-through-ex-officio-hearing",
-        "major-interests-between-applicant-and-others-focus-through-application"
+        "one-license-file-forks-by-interest-type",
+        "public-interest-and-private-major-interest-trigger-different-hearing-routes"
       ],
       "textTreatments": ["soft-highlight", "label-block", "thin-underline"],
       "focalChannels": ["contrast", "enclosure", "locator"],
@@ -203,11 +201,11 @@
     {
       "id": "hearing-clock-array",
       "export": "HearingClockArrayScene",
-      "layout": "three-dial-hearing-clock-array",
+      "layout": "three-statutory-hearing-clocks",
       "anchor": "timeline-gate",
       "grammar": [
-        "both-systems-share-five-day-application-and-seven-day-notice-clocks",
-        "only-license-hearing-has-a-twenty-day-organization-clock"
+        "five-and-seven-day-clocks-are-shared",
+        "only-license-adds-the-twenty-day-organization-clock"
       ],
       "textTreatments": ["stamp", "thin-underline", "label-block"],
       "focalChannels": ["locator", "contrast", "enclosure"],
@@ -222,11 +220,11 @@
     {
       "id": "hearing-common-console",
       "export": "HearingCommonConsoleScene",
-      "layout": "five-switch-hearing-common-console",
+      "layout": "radial-five-rule-hearing-console",
       "anchor": "flow-target",
       "grammar": [
-        "five-common-hearing-guarantees-activate-on-one-console",
-        "the-record-switch-directly-feeds-the-final-decision"
+        "five-common-hearing-rules-orbit-one-decision-hub",
+        "the-record-rule-feeds-the-final-decision"
       ],
       "textTreatments": ["label-block", "soft-highlight", "stamp"],
       "focalChannels": ["icon", "connector", "enclosure"],
@@ -243,11 +241,11 @@
     {
       "id": "hearing-trap-scope",
       "export": "HearingTrapScopeScene",
-      "layout": "five-scanline-hearing-trap-scope",
+      "layout": "five-trap-verdict-scan",
       "anchor": "typographic-sequence",
       "grammar": [
-        "five-common-hearing-misstatements-are-scanned-line-by-line",
-        "the-correct-trigger-or-negation-locks-at-the-end-of-each-line"
+        "five-statements-pass-one-verdict-scan",
+        "each-row-locks-a-corrective-rule-at-the-end"
       ],
       "textTreatments": ["external-negation", "thin-underline", "stamp"],
       "focalChannels": ["annotation", "contrast", "motion"],
@@ -264,57 +262,56 @@
     {
       "id": "information-definition-projector",
       "export": "InformationDefinitionProjectorScene",
-      "layout": "two-source-information-projector",
+      "layout": "dual-source-information-file",
       "anchor": "flow-target",
       "grammar": [
-        "made-and-acquired-information-reels-enter-one-projector",
-        "only-recorded-and-preserved-administrative-management-information-appears-on-screen"
+        "made-and-acquired-information-enter-from-two-sources",
+        "management-function-plus-recorded-form-complete-the-definition"
       ],
-      "textTreatments": ["label-block", "thin-underline", "soft-highlight"],
-      "focalChannels": ["connector", "enclosure", "icon"],
+      "textTreatments": ["label-block", "soft-highlight", "thin-underline"],
+      "focalChannels": ["connector", "icon", "enclosure"],
       "tokens": [],
       "finalKnowledge": [
-        "information-made",
-        "information-acquired",
-        "government-information-definition"
+        "information-maker",
+        "information-acquirer",
+        "information-recorded",
+        "information-management-function"
       ],
       "statefulObjects": []
     },
     {
       "id": "disclosure-source-routing",
       "export": "DisclosureSourceRoutingScene",
-      "layout": "three-route-disclosure-source-map",
+      "layout": "four-source-disclosure-route-map",
       "anchor": "document-fork",
       "grammar": [
-        "information-routes-to-the-maker-or-original-acquirer",
-        "authorized-branches-publish-in-their-own-name",
-        "and-joint-information-routes-to-the-lead-organ"
+        "four-information-origins-enter-a-routing-map",
+        "each-origin-terminates-at-the-responsible-disclosure-organ"
       ],
-      "textTreatments": ["label-block", "stamp", "thin-underline"],
-      "focalChannels": ["connector", "locator", "contrast"],
+      "textTreatments": ["label-block", "thin-underline", "stamp"],
+      "focalChannels": ["connector", "contrast", "spatial"],
       "tokens": [],
       "finalKnowledge": [
-        "information-origin",
-        "maker-or-holder-discloses",
-        "authorized-unit-discloses",
-        "lead-organ-discloses"
+        "made-information-route",
+        "acquired-information-route",
+        "authorized-office-route",
+        "joint-information-route"
       ],
       "statefulObjects": []
     },
     {
       "id": "absolute-secrecy-shutter",
       "export": "AbsoluteSecrecyShutterScene",
-      "layout": "three-blade-absolute-secrecy-shutter",
+      "layout": "three-seal-nondisclosure-wall",
       "anchor": "boundary",
       "grammar": [
-        "three-independent-blackout-blades-close-over-state-secrets",
-        "statutory-prohibitions-and-major-security-risks"
+        "three-absolute-bars-seal-one-information-file",
+        "any-bar-closes-the-publication-route"
       ],
-      "textTreatments": ["external-negation", "stamp", "label-block"],
+      "textTreatments": ["stamp", "external-negation", "label-block"],
       "focalChannels": ["enclosure", "contrast", "motion"],
       "tokens": [],
       "finalKnowledge": [
-        "absolute-nondisclosure-core",
         "state-secret",
         "statutory-nondisclosure",
         "security-risk"
@@ -324,11 +321,11 @@
     {
       "id": "privacy-balance-filter",
       "export": "PrivacyBalanceFilterScene",
-      "layout": "third-party-privacy-balance-filter",
-      "anchor": "document-fork",
+      "layout": "third-party-public-interest-scale",
+      "anchor": "role-pair",
       "grammar": [
-        "privacy-and-trade-secret-information-enters-written-consultation",
-        "the-third-party-response-and-public-interest-weight-determine-the-output"
+        "written-third-party-opinion-enters-one-scale",
+        "consent-reason-public-interest-and-silence-produce-distinct-outcomes"
       ],
       "textTreatments": ["label-block", "soft-highlight", "stamp"],
       "focalChannels": ["connector", "contrast", "enclosure"],
@@ -343,11 +340,11 @@
     {
       "id": "optional-nondisclosure-dimmers",
       "export": "OptionalNondisclosureDimmersScene",
-      "layout": "three-dimmer-optional-nondisclosure-board",
+      "layout": "three-category-discretion-axis",
       "anchor": "comparison-axis",
       "grammar": [
-        "three-discretionary-information-categories-use-independent-dimmers",
-        "statutory-disclosure-rules-can-override-the-process-and-file-dimmers"
+        "three-information-categories-align-on-one-discretion-axis",
+        "statutory-publication-rules-can-override-optional-nondisclosure"
       ],
       "textTreatments": ["label-block", "thin-underline", "external-negation"],
       "focalChannels": ["contrast", "locator", "enclosure"],
@@ -362,18 +359,18 @@
     {
       "id": "active-disclosure-beam",
       "export": "ActiveDisclosureBeamScene",
-      "layout": "three-trigger-active-disclosure-beam",
+      "layout": "three-trigger-active-disclosure-radial",
       "anchor": "flow-target",
       "grammar": [
-        "three-public-interest-triggers-converge-on-the-active-disclosure-projector",
-        "representative-information-examples-appear-on-the-projection-screen"
+        "three-publicity-triggers-radiate-to-one-duty-center",
+        "representative-examples-confirm-active-disclosure-scope"
       ],
-      "textTreatments": ["soft-highlight", "label-block", "thin-underline"],
-      "focalChannels": ["connector", "enclosure", "icon"],
+      "textTreatments": ["soft-highlight", "label-block", "stamp"],
+      "focalChannels": ["connector", "icon", "contrast"],
       "tokens": [],
       "finalKnowledge": [
         "public-interest-adjustment",
-        "broad-public-awareness",
+        "public-awareness",
         "public-participation",
         "active-disclosure-examples"
       ],
@@ -382,76 +379,79 @@
     {
       "id": "active-disclosure-exposure",
       "export": "ActiveDisclosureExposureScene",
-      "layout": "active-disclosure-exposure-timeline",
+      "layout": "deadline-channel-venue-route",
       "anchor": "timeline-gate",
       "grammar": [
-        "information-formation-or-change-starts-a-single-twenty-working-day-exposure",
-        "the-result-disperses-through-mandatory-and-optional-publication-venues"
+        "formation-or-change-starts-one-twenty-day-clock",
+        "media-channels-and-mandatory-venues-complete-publication"
       ],
-      "textTreatments": ["stamp", "label-block", "external-negation"],
-      "focalChannels": ["locator", "connector", "contrast"],
+      "textTreatments": ["stamp", "label-block", "thin-underline"],
+      "focalChannels": ["locator", "connector", "enclosure"],
       "tokens": [],
       "finalKnowledge": [
-        "active-disclosure-deadline",
-        "active-disclosure-channels",
-        "active-disclosure-venues"
+        "active-twenty-day-rule",
+        "active-disclosure-media",
+        "mandatory-venues"
       ],
       "statefulObjects": []
     },
     {
       "id": "application-input-specimen",
       "export": "ApplicationInputSpecimenScene",
-      "layout": "application-input-specimen-tray",
+      "layout": "application-field-blueprint",
       "anchor": "document-fork",
       "grammar": [
-        "the-obsolete-special-need-requirement-is-removed",
-        "the-application-tray-still-requires-identity-search-description-and-delivery-form"
+        "one-application-sheet-exposes-three-required-fields",
+        "purpose-is-relaxed-while-identity-proof-remains-required"
       ],
-      "textTreatments": ["external-negation", "label-block", "thin-underline"],
-      "focalChannels": ["contrast", "enclosure", "locator"],
+      "textTreatments": ["label-block", "thin-underline", "external-negation"],
+      "focalChannels": ["enclosure", "locator", "contrast"],
       "tokens": [],
       "finalKnowledge": [
-        "application-relaxed-requirements",
-        "application-required-elements"
+        "application-no-purpose",
+        "application-form",
+        "application-identity",
+        "application-description",
+        "application-delivery-form"
       ],
       "statefulObjects": []
     },
     {
       "id": "receipt-clock-detectors",
       "export": "ReceiptClockDetectorsScene",
-      "layout": "three-detector-receipt-clock",
-      "anchor": "comparison-axis",
+      "layout": "three-channel-receipt-timeline",
+      "anchor": "timeline-gate",
       "grammar": [
-        "three-application-channels-trigger-receipt-on-submission-signature-or-mutual-confirmation",
-        "the-clock-origin-changes-with-the-delivery-method"
+        "three-delivery-channels-start-the-clock-at-different-events",
+        "receipt-date-connects-to-the-twenty-plus-twenty-response-window"
       ],
-      "textTreatments": ["label-block", "soft-highlight", "stamp"],
-      "focalChannels": ["locator", "contrast", "enclosure"],
+      "textTreatments": ["stamp", "soft-highlight", "label-block"],
+      "focalChannels": ["locator", "connector", "contrast"],
       "tokens": [],
       "finalKnowledge": [
         "receipt-in-person",
-        "receipt-signed-mail",
-        "receipt-confirmed-channel"
+        "receipt-mail",
+        "receipt-online",
+        "response-deadline"
       ],
       "statefulObjects": []
     },
     {
       "id": "response-spectrum-splitter",
       "export": "ResponseSpectrumSplitterScene",
-      "layout": "five-output-response-spectrum-splitter",
-      "anchor": "flow-target",
+      "layout": "five-branch-response-tree",
+      "anchor": "document-fork",
       "grammar": [
-        "one-disclosure-application-enters-a-five-output-splitter",
-        "deadline-form-cost-severability-and-negative-response-each-use-a-distinct-output"
+        "one-application-branches-to-five-response-types",
+        "form-fee-severability-and-negative-results-stay-distinct"
       ],
-      "textTreatments": ["label-block", "stamp", "thin-underline"],
-      "focalChannels": ["connector", "contrast", "enclosure"],
+      "textTreatments": ["label-block", "thin-underline", "stamp"],
+      "focalChannels": ["connector", "contrast", "spatial"],
       "tokens": [],
       "finalKnowledge": [
-        "response-deadline",
+        "response-public",
         "response-form",
-        "response-splitter",
-        "response-cost",
+        "response-fee",
         "response-severability",
         "negative-response"
       ],
@@ -463,8 +463,8 @@
       "layout": "seven-day-supplement-correction-gate",
       "anchor": "timeline-gate",
       "grammar": [
-        "an-unclear-application-enters-guidance-and-one-time-notice",
-        "the-applicant-either-corrects-or-exits-after-unjustified-delay"
+        "unclear-content-enters-guidance-and-one-time-notice",
+        "correction-or-unjustified-delay-produces-two-terminal-results"
       ],
       "textTreatments": ["external-negation", "thin-underline", "stamp"],
       "focalChannels": ["connector", "locator", "contrast"],
@@ -479,11 +479,11 @@
     {
       "id": "special-request-router",
       "export": "SpecialRequestRouterScene",
-      "layout": "five-port-special-request-router",
+      "layout": "five-port-special-request-route",
       "anchor": "document-fork",
       "grammar": [
-        "five-special-request-types-enter-a-central-router",
-        "each-exits-through-its-own-statutory-treatment-port"
+        "five-special-request-types-enter-one-switch",
+        "each-request-exits-through-its-own-statutory-treatment"
       ],
       "textTreatments": ["label-block", "soft-highlight", "external-negation"],
       "focalChannels": ["connector", "contrast", "locator"],
@@ -501,11 +501,11 @@
     {
       "id": "abuse-throttle-remedy",
       "export": "AbuseThrottleRemedyScene",
-      "layout": "abuse-throttle-and-remedy-output",
+      "layout": "abuse-reason-throttle-route",
       "anchor": "flow-path",
       "grammar": [
-        "excessive-frequency-enters-a-reason-throttle",
-        "unreasonable-reasons-stop-processing-while-reasonable-but-impracticable-requests-receive-a-notified-delay"
+        "excessive-frequency-enters-a-reason-gauge",
+        "unreasonable-and-reasonable-but-impracticable-cases-end-differently"
       ],
       "textTreatments": ["stamp", "thin-underline", "label-block"],
       "focalChannels": ["connector", "contrast", "locator"],

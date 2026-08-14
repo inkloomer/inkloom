@@ -10,17 +10,17 @@ import {
 } from "../../../remotion/RemotionDeck";
 
 const scenes: readonly RemotionScene[] = [
-  {id: 'six-act-showcase', number: '01', title: '六种行为总览', ...SCENES['six-act-showcase']},
-  {id: 'levy-vs-requisition', number: '02', title: '征收vs征用', ...SCENES['levy-vs-requisition']},
-  {id: 'adjudication-vs-confirmation', number: '03', title: '裁决vs确认', ...SCENES['adjudication-vs-confirmation']},
-  {id: 'grant-vs-award', number: '04', title: '给付vs奖励', ...SCENES['grant-vs-award']},
-  {id: 'mnemonic-recap', number: '05', title: '记忆口诀', ...SCENES['mnemonic-recap']},
+  { id: 'power-prism-dispersion', number: '01', title: '权力光谱六向分流', ...SCENES['power-prism-dispersion'] },
+  { id: 'levy-requisition-kinetic-balance', number: '02', title: '征收vs征用平衡台', ...SCENES['levy-requisition-kinetic-balance'] },
+  { id: 'adjudication-field-confirmation-scanner', number: '03', title: '裁决力场vs确认透镜', ...SCENES['adjudication-field-confirmation-scanner'] },
+  { id: 'welfare-hydraulics-merit-launcher', number: '04', title: '给付安全网vs奖励台', ...SCENES['welfare-hydraulics-merit-launcher'] },
+  { id: 'exam-radar-steel-verdict', number: '05', title: '真题雷达与终审钢印', ...SCENES['exam-radar-steel-verdict'] },
 ];
 
 export const MiscActsShowcasePlayer = () => (
   <RemotionDeck
     animationId="misc-acts-showcase"
-    title="其他具体行政行为"
+    title="公法权力光谱分流仪"
     component={MiscActsShowcase}
     scenes={scenes}
     durationInFrames={DURATION_FRAMES}

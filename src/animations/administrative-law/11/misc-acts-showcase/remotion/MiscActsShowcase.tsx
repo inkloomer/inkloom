@@ -1,764 +1,1159 @@
 import React from "react";
-import { AbsoluteFill, Easing, interpolate, useCurrentFrame } from "remotion";
-import { TimelineSequence } from "../../../../shared/remotion-runtime";
+import {
+  AbsoluteFill,
+  Easing,
+  interpolate,
+  Sequence,
+  spring,
+  useCurrentFrame,
+  useVideoConfig,
+} from "remotion";
 import { SCENES } from "./storyboard";
 
-const C = {
-  porcelain: "#F7F4EC",
-  white: "#FFFFFF",
-  ink: "#1E2A45",
-  jade: "#2E7D5B",
-  red: "#C0392B",
-  gold: "#B8892F",
-  slate: "#7C8798",
-  glass: "#DDE3EC",
-};
 const PLAYER_CONTROL_SAFE_BOTTOM = 160;
-const enter = (f: number, d = 0, y = 26) => ({
-  opacity: interpolate(f, [d, d + 16], [0, 1], {
-    extrapolateLeft: "clamp",
-    extrapolateRight: "clamp",
-  }),
-  translate: `0 ${interpolate(f, [d, d + 24], [y, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: Easing.out(Easing.cubic) })}px`,
-});
 
-const Shell = ({
-  code,
-  title,
-  children,
-}: {
-  code: string;
+// Optical & Kinetic Physics Laboratory Theme
+const OPTICS = {
+  bg: "#070b14",
+  bgGradient: "radial-gradient(ellipse at 50% 18%, #111d33 0%, #05080f 100%)",
+  benchSurface: "rgba(11, 18, 32, 0.92)",
+  benchBorder: "rgba(56, 189, 248, 0.22)",
+  gridLine: "rgba(56, 189, 248, 0.05)",
+  laserWhite: "#ffffff",
+  laserWhiteGlow: "rgba(255, 255, 255, 0.6)",
+  rubyCrimson: "#f43f5e",
+  rubyGlow: "rgba(244, 63, 94, 0.35)",
+  emeraldBeam: "#10b981",
+  emeraldGlow: "rgba(16, 185, 129, 0.35)",
+  celestialPurple: "#a855f7",
+  purpleGlow: "rgba(168, 85, 247, 0.35)",
+  cyanLaser: "#06b6d4",
+  cyanGlow: "rgba(6, 182, 212, 0.35)",
+  amberSurge: "#f59e0b",
+  amberGlow: "rgba(245, 158, 11, 0.35)",
+  roseFlash: "#ec4899",
+  roseGlow: "rgba(236, 72, 153, 0.35)",
+  textPrimary: "#f8fafc",
+  textSecondary: "#94a3b8",
+  textMuted: "#64748b",
+  brassGold: "#eab308",
+};
+
+const InstrumentHeader: React.FC<{
+  channel: string;
   title: string;
-  children: React.ReactNode;
-}) => (
-  <AbsoluteFill
-    data-player-control-safe-bottom={PLAYER_CONTROL_SAFE_BOTTOM}
-    className="font-animation-body"
-    style={{
-      background: C.porcelain,
-      color: C.ink,
-      overflow: "hidden",
-      backgroundImage:
-        "linear-gradient(rgba(30,42,69,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(30,42,69,.04) 1px,transparent 1px)",
-      backgroundSize: "auto,64px 64px,64px 64px",
-    }}
-  >
-    <header
-      style={{
-        position: "absolute",
-        left: 60,
-        right: 60,
-        top: 34,
-        height: 112,
-        display: "flex",
-        alignItems: "center",
-        gap: 24,
-        borderBottom: `4px solid ${C.ink}`,
-      }}
-    >
-      <div
-        style={{
-          width: 150,
-          height: 78,
-          border: `4px solid ${C.gold}`,
-          display: "grid",
-          placeItems: "center",
-          fontSize: 21,
-          fontWeight: 950,
-          color: C.gold,
-          letterSpacing: 2,
-        }}
-      >
-        EXHIBIT {code}
-      </div>
-      <h1
-        className="font-animation-title"
-        style={{ fontSize: 46, lineHeight: 1.08, margin: 0 }}
-      >
-        {title}
-      </h1>
-      <div
-        style={{
-          marginLeft: "auto",
-          fontSize: 17,
-          fontWeight: 900,
-          letterSpacing: 3,
-          color: C.slate,
-        }}
-      >
-        CIVIC ACT · SHOWCASE
-      </div>
-    </header>
-    <main
-      style={{
-        position: "absolute",
-        left: 60,
-        right: 60,
-        top: 172,
-        bottom: PLAYER_CONTROL_SAFE_BOTTOM,
-      }}
-    >
-      {children}
-    </main>
-  </AbsoluteFill>
-);
+  subtitle: string;
+  themeColor?: string;
+}> = ({ channel, title, subtitle, themeColor = OPTICS.cyanLaser }) => {
+  const frame = useCurrentFrame();
+  const { fps } = useVideoConfig();
+  const progress = spring({ frame, fps, config: { damping: 14 } });
+  const opacity = interpolate(progress, [0, 1], [0, 1]);
+  const translateY = interpolate(progress, [0, 1], [-18, 0]);
 
-const Plate = ({
-  children,
-  color = C.ink,
-  style,
-}: {
-  children: React.ReactNode;
-  color?: string;
-  style?: React.CSSProperties;
-}) => (
-  <div
-    style={{
-      border: `3px solid ${color}`,
-      background: C.white,
-      padding: "10px 14px",
-      boxShadow: `5px 5px 0 ${color}1f`,
-      fontSize: 22,
-      fontWeight: 850,
-      lineHeight: 1.3,
-      color: C.ink,
-      ...style,
-    }}
-  >
-    {children}
-  </div>
-);
-
-const Label = ({
-  children,
-  color = C.ink,
-  style,
-}: {
-  children: React.ReactNode;
-  color?: string;
-  style?: React.CSSProperties;
-}) => (
-  <div
-    style={{
-      fontSize: 27,
-      fontWeight: 950,
-      color,
-      borderBottom: `4px solid ${color}`,
-      display: "inline-block",
-      paddingBottom: 6,
-      ...style,
-    }}
-  >
-    {children}
-  </div>
-);
-
-const Specimen = ({
-  title,
-  color,
-  lines,
-  style,
-  finalKnowledge,
-}: {
-  title: string;
-  color: string;
-  lines: React.ReactNode[];
-  style?: React.CSSProperties;
-  finalKnowledge?: string;
-}) => (
-  <div
-    data-final-knowledge={finalKnowledge}
-    style={{
-      background: C.white,
-      border: `4px solid ${color}`,
-      boxShadow: `10px 10px 0 ${color}1f`,
-      padding: "18px 20px",
-      ...style,
-    }}
-  >
-    <Label color={color}>{title}</Label>
-    <div style={{ marginTop: 12, display: "flex", flexDirection: "column", gap: 8 }}>
-      {lines.map((l, i) => (
-        <div key={i} style={{ fontSize: 22, fontWeight: 800, lineHeight: 1.3 }}>
-          {l}
-        </div>
-      ))}
-    </div>
-  </div>
-);
-
-export const SixActShowcaseScene = () => {
-  /* Static audit inventory: data-final-knowledge="levy-ownership" data-final-knowledge="requisition-use" data-final-knowledge="adjudication" data-final-knowledge="confirmation" data-final-knowledge="grant" data-final-knowledge="award" data-final-knowledge="six-act-summary" */
-  const f = useCurrentFrame();
-  const acts = [
-    ["行政征收", "所有权", C.red, "levy-ownership"],
-    ["行政征用", "使用权", C.jade, "requisition-use"],
-    ["行政裁决", "居间处理民事争议", C.gold, "adjudication"],
-    ["行政确认", "甄别 · 宣告", C.ink, "confirmation"],
-    ["行政给付", "生存保障", C.jade, "grant"],
-    ["行政奖励", "表彰先进", C.gold, "award"],
-  ];
   return (
-    <Shell code="01" title="六种其他具体行政行为：政务展柜总览">
-      <div
-        data-layout="six-specimen-showcase-wall"
-        data-visual-anchor="comparison-axis"
-        data-visual-grammar="six-act-specimens-stand-on-their-own-pedestals,each-act-carries-its-distinct-legal-marker"
-        data-text-treatments="label-block,thin-underline,soft-highlight"
-        data-focal-rule="six-other-concrete-acts-and-their-core-markers"
-        data-focal-channels="contrast,enclosure,spatial"
-        style={{ position: "absolute", inset: 18 }}
-      >
-        {acts.map((x, i) => (
-          <div
-            key={String(x[0])}
-            style={{
-              position: "absolute",
-              left: 60 + (i % 3) * 600,
-              top: 40 + Math.floor(i / 3) * 350,
-              width: 540,
-              height: 300,
-              border: `4px solid ${x[2]}`,
-              background: C.white,
-              boxShadow: `10px 10px 0 ${x[2]}1f`,
-              padding: "20px 22px",
-              ...enter(f, 8 + i * 8),
-            }}
-          >
-            <div
-              style={{
-                fontSize: 34,
-                fontWeight: 950,
-                color: x[2],
-                borderBottom: `4px solid ${x[2]}`,
-                display: "inline-block",
-                paddingBottom: 6,
-              }}
-            >
-              {x[0]}
-            </div>
-            <div
-              data-final-knowledge={String(x[3])}
-              style={{
-                marginTop: 20,
-                fontSize: 24,
-                fontWeight: 900,
-                color: C.ink,
-                background: "#" + (x[2] === C.red ? "C0392B" : x[2] === C.jade ? "2E7D5B" : "B8892F") + "14",
-                border: `2px solid ${x[2]}`,
-                padding: "12px 14px",
-              }}
-            >
-              {x[1]}
-            </div>
-          </div>
-        ))}
+    <div
+      style={{
+        position: "absolute",
+        top: 30,
+        left: 60,
+        right: 60,
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "flex-end",
+        borderBottom: `2px solid ${themeColor}`,
+        paddingBottom: 14,
+        opacity,
+        transform: `translateY(${translateY}px)`,
+        zIndex: 10,
+      }}
+    >
+      <div style={{ display: "flex", alignItems: "baseline", gap: 20 }}>
         <div
-          data-final-knowledge="six-act-summary"
           style={{
-            position: "absolute",
-            left: 500,
-            top: 604,
-            width: 920,
-            textAlign: "center",
-            ...enter(f, 60),
+            padding: "4px 14px",
+            backgroundColor: `${themeColor}18`,
+            border: `1.5px solid ${themeColor}`,
+            borderRadius: "6px",
+            color: themeColor,
+            fontSize: "20px",
+            fontWeight: 900,
+            fontFamily: "var(--inkloom-animation-mono)",
+            letterSpacing: "2px",
           }}
         >
-          <div
-            style={{
-              fontSize: 26,
-              fontWeight: 950,
-              color: C.ink,
-              background: "#F7F4EC",
-              border: `3px dashed ${C.gold}`,
-              padding: "14px 18px",
-            }}
-          >
-            口诀：征收所有权 · 征用使用权 · 裁决居中 · 确认宣告 · 给付保生存 · 奖励扬先进
-          </div>
+          CHANNEL {channel}
         </div>
+        <h2
+          style={{
+            color: OPTICS.textPrimary,
+            fontSize: "36px",
+            fontWeight: 900,
+            fontFamily: "var(--inkloom-animation-title)",
+            margin: 0,
+            letterSpacing: "1px",
+          }}
+        >
+          {title}
+        </h2>
       </div>
-    </Shell>
+      <div
+        style={{
+          color: themeColor,
+          fontSize: "22px",
+          fontFamily: "var(--inkloom-animation-label)",
+          fontWeight: 700,
+          letterSpacing: "1px",
+        }}
+      >
+        {subtitle}
+      </div>
+    </div>
   );
 };
 
-export const LevyVsRequisitionScene = () => {
-  /* Static audit inventory: data-final-knowledge="levy-specimen" data-final-knowledge="levy-kind-1" data-final-knowledge="levy-kind-2" data-final-knowledge="levy-kind-3" data-final-knowledge="levy-kind-4" data-final-knowledge="requisition-specimen" data-final-knowledge="levy-requisition-difference" */
-  const f = useCurrentFrame();
+const LaserStamp: React.FC<{
+  label: string;
+  color?: string;
+  delay?: number;
+  rotation?: number;
+  style?: React.CSSProperties;
+}> = ({ label, color = OPTICS.emeraldBeam, delay = 0, rotation = -4, style }) => {
+  const frame = useCurrentFrame();
+  const { fps } = useVideoConfig();
+  const effectiveFrame = Math.max(0, frame - delay);
+  const scale = spring({
+    frame: effectiveFrame,
+    fps,
+    config: { damping: 10, stiffness: 240, mass: 0.6 },
+  });
+  const opacity = interpolate(effectiveFrame, [0, 4], [0, 1], { extrapolateRight: "clamp" });
+
   return (
-    <Shell code="02" title="征收 vs 征用：所有权与使用权">
+    <div
+      style={{
+        display: "inline-flex",
+        alignItems: "center",
+        justifyContent: "center",
+        padding: "8px 22px",
+        border: `3px solid ${color}`,
+        borderRadius: "8px",
+        color,
+        fontSize: "24px",
+        fontWeight: 950,
+        fontFamily: "var(--inkloom-animation-title)",
+        letterSpacing: "2px",
+        textTransform: "uppercase",
+        backgroundColor: "rgba(7, 11, 20, 0.95)",
+        transform: `scale(${scale}) rotate(${rotation}deg)`,
+        opacity,
+        boxShadow: `0 0 20px ${color}44`,
+        ...style,
+      }}
+    >
+      {label}
+    </div>
+  );
+};
+
+// -------------------------------------------------------------
+// SCENE 1: 权力光谱六向色散仪 (PowerPrismDispersionScene)
+// -------------------------------------------------------------
+export const PowerPrismDispersionScene: React.FC = () => {
+  const frame = useCurrentFrame();
+  const { fps } = useVideoConfig();
+
+  const beamPulse = interpolate(frame, [0, 60], [0, 1], { extrapolateRight: "clamp" });
+  const prismRotation = interpolate(frame, [0, 180], [0, 6], { extrapolateRight: "clamp" });
+
+  return (
+    <AbsoluteFill
+      data-layout="six-channel-power-prism"
+      data-visual-anchor="flow-target"
+      data-text-treatments="label-block,soft-highlight,thin-underline"
+      data-visual-grammar="white-mandate-beam-strikes-central-crystal-prism,six-colored-laser-conduits-energize-distinct-act-nodes,each-node-reveals-its-defining-legal-signature"
+      data-focal-channels="connector,contrast,spatial"
+      data-focal-rule="行政权力光束经由法理棱镜色散为六类具体行政行为"
+      style={{
+        background: OPTICS.bgGradient,
+        color: OPTICS.textPrimary,
+        padding: "40px 60px",
+      }}
+    >
+      <InstrumentHeader
+        channel="01"
+        title="行政权力光谱分流仪"
+        subtitle="六大其他具体行政行为 · 动能与权属性质全景"
+        themeColor={OPTICS.cyanLaser}
+      />
+
       <div
-        data-layout="twin-vitrine-levy-requisition"
-        data-visual-anchor="comparison-axis"
-        data-visual-grammar="levy-and-requisition-face-each-other-across-the-vitrine,use-and-ownership-split-the-specimens"
-        data-text-treatments="label-block,thin-underline,stamp"
-        data-focal-rule="levy-takes-ownership-requisition-borrows-use"
-        data-focal-channels="contrast,connector,enclosure"
-        style={{ position: "absolute", inset: 20 }}
+        style={{
+          position: "absolute",
+          top: 130,
+          left: 60,
+          right: 60,
+          bottom: PLAYER_CONTROL_SAFE_BOTTOM,
+          display: "grid",
+          gridTemplateColumns: "1fr 1fr 1fr",
+          gridTemplateRows: "1fr 1fr",
+          gap: 22,
+        }}
       >
+        {/* Node 1: 行政征收 */}
+        <div
+          data-final-knowledge="levy-ownership"
+          style={{
+            backgroundColor: OPTICS.benchSurface,
+            border: `2px solid ${OPTICS.rubyCrimson}`,
+            borderRadius: 16,
+            padding: "20px 24px",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "space-between",
+            boxShadow: `0 8px 30px ${OPTICS.rubyGlow}`,
+            position: "relative",
+            overflow: "hidden",
+          }}
+        >
+          <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 5, backgroundColor: OPTICS.rubyCrimson }} />
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+            <span style={{ fontSize: "16px", fontWeight: 900, color: OPTICS.rubyCrimson, fontFamily: "var(--inkloom-animation-mono)" }}>SPECTRUM · 01</span>
+            <span style={{ padding: "3px 10px", borderRadius: 6, backgroundColor: `${OPTICS.rubyCrimson}22`, border: `1.5px solid ${OPTICS.rubyCrimson}`, color: OPTICS.rubyCrimson, fontSize: "22px", fontWeight: 800 }}>限制所有权</span>
+          </div>
+          <div style={{ fontSize: "32px", fontWeight: 900, color: OPTICS.textPrimary, fontFamily: "var(--inkloom-animation-title)" }}>
+            行政征收
+          </div>
+          <div style={{ fontSize: "22px", color: OPTICS.textSecondary, fontFamily: "var(--inkloom-animation-body)", backgroundColor: "rgba(0,0,0,0.4)", padding: "8px 12px", borderRadius: 8 }}>
+            强制征收税费或私有财产（税/费/地/房）➔ 所有权永久转移归国家
+          </div>
+        </div>
+
+        {/* Node 2: 行政征用 */}
+        <div
+          data-final-knowledge="requisition-use"
+          style={{
+            backgroundColor: OPTICS.benchSurface,
+            border: `2px solid ${OPTICS.emeraldBeam}`,
+            borderRadius: 16,
+            padding: "20px 24px",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "space-between",
+            boxShadow: `0 8px 30px ${OPTICS.emeraldGlow}`,
+            position: "relative",
+            overflow: "hidden",
+          }}
+        >
+          <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 5, backgroundColor: OPTICS.emeraldBeam }} />
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+            <span style={{ fontSize: "16px", fontWeight: 900, color: OPTICS.emeraldBeam, fontFamily: "var(--inkloom-animation-mono)" }}>SPECTRUM · 02</span>
+            <span style={{ padding: "3px 10px", borderRadius: 6, backgroundColor: `${OPTICS.emeraldBeam}22`, border: `1.5px solid ${OPTICS.emeraldBeam}`, color: OPTICS.emeraldBeam, fontSize: "22px", fontWeight: 800 }}>限制使用权</span>
+          </div>
+          <div style={{ fontSize: "32px", fontWeight: 900, color: OPTICS.textPrimary, fontFamily: "var(--inkloom-animation-title)" }}>
+            行政征用
+          </div>
+          <div style={{ fontSize: "22px", color: OPTICS.textSecondary, fontFamily: "var(--inkloom-animation-body)", backgroundColor: "rgba(0,0,0,0.4)", padding: "8px 12px", borderRadius: 8 }}>
+            公共利益突发需要（抢险救灾/防疫）＋ 法定补偿 ➔ 用完必须归还
+          </div>
+        </div>
+
+        {/* Node 3: 行政裁决 */}
+        <div
+          data-final-knowledge="adjudication"
+          style={{
+            backgroundColor: OPTICS.benchSurface,
+            border: `2px solid ${OPTICS.celestialPurple}`,
+            borderRadius: 16,
+            padding: "20px 24px",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "space-between",
+            boxShadow: `0 8px 30px ${OPTICS.purpleGlow}`,
+            position: "relative",
+            overflow: "hidden",
+          }}
+        >
+          <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 5, backgroundColor: OPTICS.celestialPurple }} />
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+            <span style={{ fontSize: "16px", fontWeight: 900, color: OPTICS.celestialPurple, fontFamily: "var(--inkloom-animation-mono)" }}>SPECTRUM · 03</span>
+            <span style={{ padding: "3px 10px", borderRadius: 6, backgroundColor: `${OPTICS.celestialPurple}22`, border: `1.5px solid ${OPTICS.celestialPurple}`, color: OPTICS.celestialPurple, fontSize: "22px", fontWeight: 800 }}>居间第三方中立</span>
+          </div>
+          <div style={{ fontSize: "32px", fontWeight: 900, color: OPTICS.textPrimary, fontFamily: "var(--inkloom-animation-title)" }}>
+            行政裁决
+          </div>
+          <div style={{ fontSize: "22px", color: OPTICS.textSecondary, fontFamily: "var(--inkloom-animation-body)", backgroundColor: "rgba(0,0,0,0.4)", padding: "8px 12px", borderRadius: 8 }}>
+            机关居间中立处理特定民事纠纷 ➔ 必然涵盖三方主体法律关系
+          </div>
+        </div>
+
+        {/* Node 4: 行政确认 */}
+        <div
+          data-final-knowledge="confirmation"
+          style={{
+            backgroundColor: OPTICS.benchSurface,
+            border: `2px solid ${OPTICS.cyanLaser}`,
+            borderRadius: 16,
+            padding: "20px 24px",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "space-between",
+            boxShadow: `0 8px 30px ${OPTICS.cyanGlow}`,
+            position: "relative",
+            overflow: "hidden",
+          }}
+        >
+          <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 5, backgroundColor: OPTICS.cyanLaser }} />
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+            <span style={{ fontSize: "16px", fontWeight: 900, color: OPTICS.cyanLaser, fontFamily: "var(--inkloom-animation-mono)" }}>SPECTRUM · 04</span>
+            <span style={{ padding: "3px 10px", borderRadius: 6, backgroundColor: `${OPTICS.cyanLaser}22`, border: `1.5px solid ${OPTICS.cyanLaser}`, color: OPTICS.cyanLaser, fontSize: "22px", fontWeight: 800 }}>双方 · 管理者</span>
+          </div>
+          <div style={{ fontSize: "32px", fontWeight: 900, color: OPTICS.textPrimary, fontFamily: "var(--inkloom-animation-title)" }}>
+            行政确认
+          </div>
+          <div style={{ fontSize: "22px", color: OPTICS.textSecondary, fontFamily: "var(--inkloom-animation-body)", backgroundColor: "rgba(0,0,0,0.4)", padding: "8px 12px", borderRadius: 8 }}>
+            甄别并宣告法律地位/事实（工伤认定/权属确认）➔ 加强既存权利
+          </div>
+        </div>
+
+        {/* Node 5: 行政给付 */}
+        <div
+          data-final-knowledge="grant"
+          style={{
+            backgroundColor: OPTICS.benchSurface,
+            border: `2px solid ${OPTICS.amberSurge}`,
+            borderRadius: 16,
+            padding: "20px 24px",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "space-between",
+            boxShadow: `0 8px 30px ${OPTICS.amberGlow}`,
+            position: "relative",
+            overflow: "hidden",
+          }}
+        >
+          <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 5, backgroundColor: OPTICS.amberSurge }} />
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+            <span style={{ fontSize: "16px", fontWeight: 900, color: OPTICS.amberSurge, fontFamily: "var(--inkloom-animation-mono)" }}>SPECTRUM · 05</span>
+            <span style={{ padding: "3px 10px", borderRadius: 6, backgroundColor: `${OPTICS.amberSurge}22`, border: `1.5px solid ${OPTICS.amberSurge}`, color: OPTICS.amberSurge, fontSize: "22px", fontWeight: 800 }}>生存底线救助</span>
+          </div>
+          <div style={{ fontSize: "32px", fontWeight: 900, color: OPTICS.textPrimary, fontFamily: "var(--inkloom-animation-title)" }}>
+            行政给付
+          </div>
+          <div style={{ fontSize: "22px", color: OPTICS.textSecondary, fontFamily: "var(--inkloom-animation-body)", backgroundColor: "rgba(0,0,0,0.4)", padding: "8px 12px", borderRadius: 8 }}>
+            法定生存保障义务（低保/五保/灾害救济/社保/创业财政扶持）
+          </div>
+        </div>
+
+        {/* Node 6: 行政奖励 */}
+        <div
+          data-final-knowledge="award"
+          style={{
+            backgroundColor: OPTICS.benchSurface,
+            border: `2px solid ${OPTICS.roseFlash}`,
+            borderRadius: 16,
+            padding: "20px 24px",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "space-between",
+            boxShadow: `0 8px 30px ${OPTICS.roseGlow}`,
+            position: "relative",
+            overflow: "hidden",
+          }}
+        >
+          <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 5, backgroundColor: OPTICS.roseFlash }} />
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+            <span style={{ fontSize: "16px", fontWeight: 900, color: OPTICS.roseFlash, fontFamily: "var(--inkloom-animation-mono)" }}>SPECTRUM · 06</span>
+            <span style={{ padding: "3px 10px", borderRadius: 6, backgroundColor: `${OPTICS.roseFlash}22`, border: `1.5px solid ${OPTICS.roseFlash}`, color: OPTICS.roseFlash, fontSize: "22px", fontWeight: 800 }}>表彰先进功绩</span>
+          </div>
+          <div style={{ fontSize: "32px", fontWeight: 900, color: OPTICS.textPrimary, fontFamily: "var(--inkloom-animation-title)" }}>
+            行政奖励
+          </div>
+          <div style={{ fontSize: "22px", color: OPTICS.textSecondary, fontFamily: "var(--inkloom-animation-body)", backgroundColor: "rgba(0,0,0,0.4)", padding: "8px 12px", borderRadius: 8 }}>
+            表彰先进激励后进（精神荣誉称号/嘉奖 ＋ 物质奖金/晋升）
+          </div>
+        </div>
+      </div>
+
+      {/* Footer Bar */}
+      <div
+        data-final-knowledge="six-act-summary"
+        style={{
+          position: "absolute",
+          left: 60,
+          right: 60,
+          bottom: PLAYER_CONTROL_SAFE_BOTTOM - 20,
+          height: 48,
+          backgroundColor: "rgba(6, 182, 212, 0.12)",
+          border: `1.5px dashed ${OPTICS.cyanLaser}`,
+          borderRadius: 8,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          color: "#e0f2fe",
+          fontSize: "22px",
+          fontWeight: 800,
+          fontFamily: "var(--inkloom-animation-label)",
+          letterSpacing: "1px",
+        }}
+      >
+        🔬 核心口诀：征收所有权 · 征用使用权 · 裁决居间中立 · 确认宣告加强 · 给付救济生存 · 奖励表彰先进
+      </div>
+    </AbsoluteFill>
+  );
+};
+
+// -------------------------------------------------------------
+// SCENE 2: 征收 vs 征用 动能杠杆与补偿滑轨 (LevyRequisitionKineticBalanceScene)
+// -------------------------------------------------------------
+export const LevyRequisitionKineticBalanceScene: React.FC = () => {
+  const frame = useCurrentFrame();
+  const { fps } = useVideoConfig();
+
+  const balancePhysics = spring({
+    frame: Math.max(0, frame - 15),
+    fps,
+    config: { damping: 9, stiffness: 130, mass: 0.9 },
+  });
+  const tiltAngle = interpolate(balancePhysics, [0, 1], [-10, 5]);
+
+  return (
+    <AbsoluteFill
+      data-layout="kinetic-balance-beam-levy-requisition"
+      data-visual-anchor="comparison-axis"
+      data-text-treatments="label-block,thin-underline,stamp"
+      data-visual-grammar="mechanical-beam-tips-under-four-heavy-property-blocks,ownership-arrow-permanently-locks-into-state-vault,borrowed-asset-conveys-with-rebounding-compensation-coin"
+      data-focal-channels="contrast,connector,enclosure"
+      data-focal-rule="征收剥夺所有权与征用借调使用权动能比对"
+      style={{
+        background: OPTICS.bgGradient,
+        color: OPTICS.textPrimary,
+        padding: "40px 60px",
+      }}
+    >
+      <InstrumentHeader
+        channel="02"
+        title="征收 vs 征用 动力学平衡台"
+        subtitle="所有权永久移转（可能有偿/无偿） VS 使用权临时借调（法定刚性补偿）"
+        themeColor={OPTICS.rubyCrimson}
+      />
+
+      <div
+        style={{
+          position: "absolute",
+          top: 130,
+          left: 60,
+          right: 60,
+          bottom: PLAYER_CONTROL_SAFE_BOTTOM,
+          display: "grid",
+          gridTemplateColumns: "1fr 1fr",
+          gap: 36,
+        }}
+      >
+        {/* Left Side: 行政征收 (所有权) */}
         <div
           data-final-knowledge="levy-specimen"
           style={{
-            position: "absolute",
-            left: 60,
-            top: 50,
-            width: 840,
-            height: 640,
-            border: `6px solid ${C.red}`,
-            background: "#C0392B0d",
-            padding: "26px 28px",
-            ...enter(f, 6),
+            backgroundColor: OPTICS.benchSurface,
+            border: `2.5px solid ${OPTICS.rubyCrimson}`,
+            borderRadius: 20,
+            padding: 28,
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "space-between",
+            boxShadow: `0 12px 36px ${OPTICS.rubyGlow}`,
+            position: "relative",
           }}
         >
-          <Label color={C.red} style={{ fontSize: 32 }}>行政征收 · 所有权</Label>
-          <div style={{ marginTop: 18 }}>
-            <Plate>行政机关依法强制征收税费或私有财产</Plate>
-          </div>
-          <div style={{ marginTop: 16, fontSize: 24, fontWeight: 950, color: C.ink }}>
-            种类：
-          </div>
-          <div style={{ marginTop: 10, display: "flex", gap: 12, flexWrap: "wrap" }}>
-            {["征税", "征费", "土地征收", "房屋征收"].map((x, i) => (
+          <div>
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 14 }}>
               <span
-                key={x}
-                data-final-knowledge={`levy-kind-${i + 1}`}
                 style={{
-                  border: `3px solid ${C.red}`,
-                  padding: "8px 14px",
-                  fontSize: 22,
+                  padding: "4px 14px",
+                  backgroundColor: "rgba(244, 63, 94, 0.2)",
+                  border: `1.5px solid ${OPTICS.rubyCrimson}`,
+                  borderRadius: 8,
+                  color: "#fca5a5",
+                  fontSize: "22px",
                   fontWeight: 900,
-                  color: C.red,
-                  background: C.white,
-                  ...enter(f, 18 + i * 8),
+                  fontFamily: "var(--inkloom-animation-label)",
                 }}
               >
-                {x}
+                限制【所有权】
               </span>
-            ))}
-          </div>
-          <div style={{ marginTop: 20, fontSize: 23, fontWeight: 850 }}>
-            可能有偿，也可能无偿
-          </div>
-        </div>
-        <div
-          data-final-knowledge="requisition-specimen"
-          style={{
-            position: "absolute",
-            left: 1000,
-            top: 50,
-            width: 840,
-            height: 640,
-            border: `6px solid ${C.jade}`,
-            background: "#2E7D5B0d",
-            padding: "26px 28px",
-            ...enter(f, 14),
-          }}
-        >
-          <Label color={C.jade} style={{ fontSize: 32 }}>行政征用 · 使用权</Label>
-          <div style={{ marginTop: 18 }}>
-            <Plate>
-              为<u style={{ textDecorationThickness: 3, textDecorationColor: C.jade }}>公共利益</u>需要，依法强制使用财产并给予
-              <b style={{ color: C.jade }}>补偿</b>
-            </Plate>
-          </div>
-          <div style={{ marginTop: 22, fontSize: 23, fontWeight: 850 }}>
-            限制的是使用权，非所有权
-          </div>
-          <div style={{ marginTop: 16 }}>
-            <span
-              style={{
-                border: `3px solid ${C.jade}`,
-                background: C.white,
-                padding: "8px 14px",
-                fontSize: 22,
-                fontWeight: 900,
-                color: C.jade,
-              }}
-            >
-              征用具有补偿性
-            </span>
-          </div>
-        </div>
-        <div
-          data-final-knowledge="levy-requisition-difference"
-          style={{
-            position: "absolute",
-            left: 460,
-            top: 658,
-            width: 1000,
-            textAlign: "center",
-            ...enter(f, 50),
-          }}
-        >
-          <div
-            style={{
-              fontSize: 26,
-              fontWeight: 950,
-              color: C.ink,
-              background: C.white,
-              border: `4px solid ${C.gold}`,
-              padding: "14px 16px",
-            }}
-          >
-            征收限制所有权 · 征用限制使用权；征用必补偿，征收或有偿或无偿
-          </div>
-        </div>
-      </div>
-    </Shell>
-  );
-};
+              <span style={{ fontSize: "32px", fontWeight: 900, color: OPTICS.rubyCrimson, fontFamily: "var(--inkloom-animation-title)" }}>
+                行政征收
+              </span>
+            </div>
 
-export const AdjudicationVsConfirmationScene = () => {
-  /* Static audit inventory: data-final-knowledge="adjudication-specimen" data-final-knowledge="adjudication-role-1" data-final-knowledge="adjudication-role-2" data-final-knowledge="confirmation-specimen" data-final-knowledge="confirmation-role-1" data-final-knowledge="confirmation-role-2" data-final-knowledge="license-vs-confirmation" */
-  const f = useCurrentFrame();
-  return (
-    <Shell code="03" title="裁决 vs 确认：居间与宣告">
-      <div
-        data-layout="twin-vitrine-adjudication-confirmation"
-        data-visual-anchor="role-pair"
-        data-visual-grammar="adjudication-stands-between-three-parties,confirmation-stands-over-two-parties"
-        data-text-treatments="label-block,thin-underline,external-negation"
-        data-focal-rule="adjudication-is-neutral-third-party-confirmation-is-manager"
-        data-focal-channels="contrast,connector,spatial"
-        style={{ position: "absolute", inset: 20 }}
-      >
-        <div
-          data-final-knowledge="adjudication-specimen"
-          style={{
-            position: "absolute",
-            left: 60,
-            top: 50,
-            width: 840,
-            height: 620,
-            border: `6px solid ${C.gold}`,
-            background: "#B8892F0d",
-            padding: "26px 28px",
-            ...enter(f, 6),
-          }}
-        >
-          <Label color={C.gold} style={{ fontSize: 32 }}>行政裁决 · 居间</Label>
-          <div style={{ marginTop: 18 }}>
-            <Plate>行政机关居间对特定民事争议作出有约束力的处理</Plate>
-          </div>
-          <div style={{ marginTop: 18, fontSize: 23, fontWeight: 850, lineHeight: 1.5 }}>
-            以<u style={{ textDecorationThickness: 3, textDecorationColor: C.gold }}>第三方中立</u>主体身份出现
-            <br />
-            必然涉及<b style={{ color: C.gold }}>三方主体</b>
-          </div>
-          <div style={{ marginTop: 16, display: "flex", gap: 10 }}>
-            {["行政机关", "争议双方"].map((x, i) => (
-              <span
-                key={x}
-                data-final-knowledge={`adjudication-role-${i + 1}`}
-                style={{
-                  border: `3px solid ${C.gold}`,
-                  background: C.white,
-                  padding: "8px 12px",
-                  fontSize: 22,
-                  fontWeight: 900,
-                  color: C.gold,
-                  ...enter(f, 18 + i * 8),
-                }}
-              >
-                {x}
-              </span>
-            ))}
-          </div>
-        </div>
-        <div
-          data-final-knowledge="confirmation-specimen"
-          style={{
-            position: "absolute",
-            left: 1000,
-            top: 50,
-            width: 840,
-            height: 620,
-            border: `6px solid ${C.jade}`,
-            background: "#2E7D5B0d",
-            padding: "26px 28px",
-            ...enter(f, 14),
-          }}
-        >
-          <Label color={C.jade} style={{ fontSize: 32 }}>行政确认 · 宣告</Label>
-          <div style={{ marginTop: 18 }}>
-            <Plate>
-              对法律地位、法律关系或法律事实甄别、确定、认定、证明并宣告
-            </Plate>
-          </div>
-          <div style={{ marginTop: 18, fontSize: 23, fontWeight: 850, lineHeight: 1.5 }}>
-            以<u style={{ textDecorationThickness: 3, textDecorationColor: C.jade }}>管理者</u>身份出现
-            <br />
-            机关与相对人的<b style={{ color: C.jade }}>双方</b>法律关系
-          </div>
-          <div style={{ marginTop: 16, display: "flex", gap: 10 }}>
-            {["行政机关", "行政相对人"].map((x, i) => (
-              <span
-                key={x}
-                data-final-knowledge={`confirmation-role-${i + 1}`}
-                style={{
-                  border: `3px solid ${C.jade}`,
-                  background: C.white,
-                  padding: "8px 12px",
-                  fontSize: 22,
-                  fontWeight: 900,
-                  color: C.jade,
-                  ...enter(f, 20 + i * 8),
-                }}
-              >
-                {x}
-              </span>
-            ))}
-          </div>
-        </div>
-        <div
-          data-final-knowledge="license-vs-confirmation"
-          style={{
-            position: "absolute",
-            left: 300,
-            top: 648,
-            width: 1320,
-            textAlign: "center",
-            ...enter(f, 46),
-          }}
-        >
-          <div
-            style={{
-              fontSize: 25,
-              fontWeight: 950,
-              background: C.white,
-              border: `4px solid ${C.gold}`,
-              padding: "14px 16px",
-            }}
-          >
-            许可 = 赋权（权利来自政府赋予） · 确认 = 加强既存事实与法律关系（权利并非来自政府）
-          </div>
-        </div>
-      </div>
-    </Shell>
-  );
-};
+            <div style={{ fontSize: "24px", color: OPTICS.textPrimary, fontFamily: "var(--inkloom-animation-body)", lineHeight: 1.5, marginBottom: 16 }}>
+              行政机关依法向相对人<span style={{ color: "#f87171", fontWeight: 800, borderBottom: "2px solid #f87171" }}>强制征收税费或私有财产</span>，财产所有权永久归国家。
+            </div>
 
-export const GrantVsAwardScene = () => {
-  /* Static audit inventory: data-final-knowledge="grant-specimen" data-final-knowledge="grant-kind-1" data-final-knowledge="grant-kind-2" data-final-knowledge="grant-kind-3" data-final-knowledge="grant-kind-4" data-final-knowledge="award-specimen" data-final-knowledge="award-kind-1" data-final-knowledge="award-kind-2" */
-  const f = useCurrentFrame();
-  return (
-    <Shell code="04" title="给付 vs 奖励：保障与表彰">
-      <div
-        data-layout="twin-vitrine-grant-award"
-        data-visual-anchor="comparison-axis"
-        data-visual-grammar="grant-secures-survival-award-honors-contribution,specimens-cover-welfare-and-recognition"
-        data-text-treatments="label-block,soft-highlight,thin-underline"
-        data-focal-rule="grant-is-survival-duty-award-is-recognition-system"
-        data-focal-channels="contrast,enclosure,locator"
-        style={{ position: "absolute", inset: 20 }}
-      >
-        <div
-          data-final-knowledge="grant-specimen"
-          style={{
-            position: "absolute",
-            left: 60,
-            top: 50,
-            width: 840,
-            height: 660,
-            border: `6px solid ${C.jade}`,
-            background: "#2E7D5B0d",
-            padding: "26px 28px",
-            ...enter(f, 6),
-          }}
-        >
-          <Label color={C.jade} style={{ fontSize: 32 }}>行政给付 · 生存保障</Label>
-          <div style={{ marginTop: 18 }}>
-            <Plate>政府提供必需生存条件、防范生活风险和社会共同生活条件的行政义务</Plate>
-          </div>
-          <div style={{ marginTop: 16, fontSize: 24, fontWeight: 950, color: C.ink }}>
-            种类：
-          </div>
-          <div style={{ marginTop: 10, display: "flex", gap: 12, flexWrap: "wrap" }}>
-            {[
-              "城市低保金",
-              "五保户救济金",
-              "灾害生活救济金",
-              "国家承担的社会保险费",
-            ].map((x, i) => (
-              <span
-                key={x}
-                data-final-knowledge={`grant-kind-${i + 1}`}
-                style={{
-                  border: `3px solid ${C.jade}`,
-                  background: C.white,
-                  padding: "8px 12px",
-                  fontSize: 22,
-                  fontWeight: 900,
-                  color: C.jade,
-                  ...enter(f, 16 + i * 8),
-                }}
-              >
-                {x}
-              </span>
-            ))}
-          </div>
-          <div style={{ marginTop: 14 }}>
-            <Plate>财政支持费用：企业科技开发、大学生自主创业等</Plate>
-          </div>
-        </div>
-        <div
-          data-final-knowledge="award-specimen"
-          style={{
-            position: "absolute",
-            left: 1000,
-            top: 50,
-            width: 840,
-            height: 660,
-            border: `6px solid ${C.gold}`,
-            background: "#B8892F0d",
-            padding: "26px 28px",
-            ...enter(f, 14),
-          }}
-        >
-          <Label color={C.gold} style={{ fontSize: 32 }}>行政奖励 · 表彰先进</Label>
-          <div style={{ marginTop: 18 }}>
-            <Plate>
-              给予遵纪守法或为国家社会作出成就贡献者
-              <b style={{ color: C.gold }}>物质或精神奖励</b>
-            </Plate>
-          </div>
-          <div style={{ marginTop: 18, fontSize: 23, fontWeight: 850, lineHeight: 1.5 }}>
-            目的：<u style={{ textDecorationThickness: 3, textDecorationColor: C.gold }}>表彰先进、激励后进</u>
-            <br />
-            调动和激发积极性、创造性
-          </div>
-          <div style={{ marginTop: 16, display: "flex", gap: 10 }}>
-            {["物质奖励", "精神奖励"].map((x, i) => (
-              <span
-                key={x}
-                data-final-knowledge={`award-kind-${i + 1}`}
-                style={{
-                  border: `3px solid ${C.gold}`,
-                  background: C.white,
-                  padding: "8px 12px",
-                  fontSize: 22,
-                  fontWeight: 900,
-                  color: C.gold,
-                  ...enter(f, 22 + i * 8),
-                }}
-              >
-                {x}
-              </span>
-            ))}
-          </div>
-        </div>
-      </div>
-    </Shell>
-  );
-};
-
-export const MnemonicRecapScene = () => {
-  /* Static audit inventory: data-final-knowledge="memo-levy" data-final-knowledge="memo-requisition" data-final-knowledge="memo-adjudication" data-final-knowledge="memo-confirmation" data-final-knowledge="memo-grant" data-final-knowledge="memo-award" data-final-knowledge="mnemonic-exam-tip" */
-  const f = useCurrentFrame();
-  return (
-    <Shell code="05" title="记忆口诀：征收所有权，征用使用权">
-      <div
-        data-layout="mnemonic-plaque-wall"
-        data-visual-anchor="typographic-sequence"
-        data-visual-grammar="six-mnemonics-engrave-onto-plaques-in-reading-order,exam-favorites-are-stamped-last"
-        data-text-treatments="stamp,label-block,soft-highlight"
-        data-focal-rule="mnemonic-for-other-concrete-acts"
-        data-focal-channels="contrast,enclosure,icon"
-        style={{ position: "absolute", inset: 30 }}
-      >
-        {[
-          ["征收", "所有权 · 收税费、土地、房屋", C.red, "memo-levy"],
-          ["征用", "使用权 · 公共利益 + 补偿", C.jade, "memo-requisition"],
-          ["裁决", "居间 · 第三方中立 · 三方主体", C.gold, "memo-adjudication"],
-          ["确认", "宣告 · 管理者身份 · 双方", C.ink, "memo-confirmation"],
-          ["给付", "保生存 · 低保救济社保", C.jade, "memo-grant"],
-          ["奖励", "扬先进 · 物质精神激励", C.gold, "memo-award"],
-        ].map((x, i) => (
-          <div
-            key={String(x[0])}
-            data-final-knowledge={String(x[3])}
-            style={{
-              position: "absolute",
-              left: 90 + (i % 3) * 580,
-              top: 40 + Math.floor(i / 3) * 300,
-              width: 520,
-              height: 250,
-              border: `5px solid ${x[2]}`,
-              background: C.white,
-              boxShadow: `10px 10px 0 ${x[2]}1f`,
-              padding: "22px 24px",
-              ...enter(f, 6 + i * 8),
-            }}
-          >
-            <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
-              <span
-                style={{
-                  width: 74,
-                  height: 74,
-                  borderRadius: "50%",
-                  border: `5px solid ${x[2]}`,
-                  display: "grid",
-                  placeItems: "center",
-                  fontSize: 32,
-                  fontWeight: 950,
-                  color: x[2],
-                  flex: "0 0 auto",
-                }}
-              >
-                {x[0]}
-              </span>
-              <div style={{ fontSize: 25, fontWeight: 900, lineHeight: 1.35 }}>
-                {x[1]}
+            {/* 4 Types Grid */}
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, marginBottom: 14 }}>
+              <div data-final-knowledge="levy-kind-1" style={{ backgroundColor: "rgba(0,0,0,0.5)", border: "1px solid rgba(244, 63, 94, 0.3)", borderRadius: 10, padding: "10px 14px", fontSize: "22px", color: "#fecdd3", fontFamily: "var(--inkloom-animation-label)" }}>
+                ① 征税（法定无偿）
+              </div>
+              <div data-final-knowledge="levy-kind-2" style={{ backgroundColor: "rgba(0,0,0,0.5)", border: "1px solid rgba(244, 63, 94, 0.3)", borderRadius: 10, padding: "10px 14px", fontSize: "22px", color: "#fecdd3", fontFamily: "var(--inkloom-animation-label)" }}>
+                ② 征费（可能无偿）
+              </div>
+              <div data-final-knowledge="levy-kind-3" style={{ backgroundColor: "rgba(0,0,0,0.5)", border: "1px solid rgba(244, 63, 94, 0.3)", borderRadius: 10, padding: "10px 14px", fontSize: "22px", color: "#fecdd3", fontFamily: "var(--inkloom-animation-label)" }}>
+                ③ 土地征收（法定有偿）
+              </div>
+              <div data-final-knowledge="levy-kind-4" style={{ backgroundColor: "rgba(0,0,0,0.5)", border: "1px solid rgba(244, 63, 94, 0.3)", borderRadius: 10, padding: "10px 14px", fontSize: "22px", color: "#fecdd3", fontFamily: "var(--inkloom-animation-label)" }}>
+                ④ 房屋征收（法定有偿）
               </div>
             </div>
           </div>
-        ))}
-        <div
-          data-final-knowledge="mnemonic-exam-tip"
-          style={{
-            position: "absolute",
-            left: 460,
-            top: 612,
-            width: 1000,
-            textAlign: "center",
-            ...enter(f, 60),
-          }}
-        >
+
           <div
+            data-final-knowledge="levy-requisition-difference"
             style={{
-              display: "inline-block",
-              border: `4px solid ${C.gold}`,
-              color: C.gold,
-              padding: "12px 20px",
-              fontSize: 27,
-              fontWeight: 950,
-              rotate: "-2deg",
+              backgroundColor: "rgba(244, 63, 94, 0.12)",
+              borderRadius: 12,
+              padding: "12px 18px",
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
             }}
           >
-            考频最高：征收 vs 征用 · 裁决 vs 确认
+            <span style={{ fontSize: "22px", color: "#fecdd3", fontWeight: 700, fontFamily: "var(--inkloom-animation-body)" }}>
+              ⚖️ 补偿属性：征收有可能有偿，有可能无偿
+            </span>
+            <LaserStamp label="所有权移转" color={OPTICS.rubyCrimson} delay={60} rotation={-4} />
+          </div>
+        </div>
+
+        {/* Right Side: 行政征用 (使用权) */}
+        <div
+          data-final-knowledge="requisition-specimen"
+          style={{
+            backgroundColor: OPTICS.benchSurface,
+            border: `2.5px solid ${OPTICS.emeraldBeam}`,
+            borderRadius: 20,
+            padding: 28,
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "space-between",
+            boxShadow: `0 12px 36px ${OPTICS.emeraldGlow}`,
+            position: "relative",
+          }}
+        >
+          <div>
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 14 }}>
+              <span
+                style={{
+                  padding: "4px 14px",
+                  backgroundColor: "rgba(16, 185, 129, 0.2)",
+                  border: `1.5px solid ${OPTICS.emeraldBeam}`,
+                  borderRadius: 8,
+                  color: "#6ee7b7",
+                  fontSize: "22px",
+                  fontWeight: 900,
+                  fontFamily: "var(--inkloom-animation-label)",
+                }}
+              >
+                限制【使用权】
+              </span>
+              <span style={{ fontSize: "32px", fontWeight: 900, color: OPTICS.emeraldBeam, fontFamily: "var(--inkloom-animation-title)" }}>
+                行政征用
+              </span>
+            </div>
+
+            <div style={{ fontSize: "24px", color: OPTICS.textPrimary, fontFamily: "var(--inkloom-animation-body)", lineHeight: 1.5, marginBottom: 16 }}>
+              因<span style={{ color: "#34d399", fontWeight: 800, borderBottom: "2px solid #34d399" }}>公共利益需要</span>强制使用财产并<span style={{ color: "#f59e0b", fontWeight: 800, borderBottom: "2px solid #f59e0b" }}>给予补偿</span>（用完归还，用坏赔偿）。
+            </div>
+
+            {/* Core Conditions */}
+            <div style={{ display: "flex", flexDirection: "column", gap: 10, marginBottom: 14 }}>
+              <div style={{ backgroundColor: "rgba(0,0,0,0.5)", border: "1px solid rgba(16, 185, 129, 0.3)", borderRadius: 10, padding: "10px 14px", fontSize: "22px", color: "#a7f3d0", fontFamily: "var(--inkloom-animation-body)" }}>
+                🚨 适用目的：抢险救灾、突发疫情防控等公共危机
+              </div>
+              <div style={{ backgroundColor: "rgba(0,0,0,0.5)", border: "1px solid rgba(16, 185, 129, 0.3)", borderRadius: 10, padding: "10px 14px", fontSize: "22px", color: "#a7f3d0", fontFamily: "var(--inkloom-animation-body)" }}>
+                🔄 权属保留：所有权仍归相对人，仅临时移转占有使用
+              </div>
+            </div>
+          </div>
+
+          <div
+            style={{
+              backgroundColor: "rgba(16, 185, 129, 0.12)",
+              borderRadius: 12,
+              padding: "12px 18px",
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+            }}
+          >
+            <span style={{ fontSize: "22px", color: "#a7f3d0", fontWeight: 700, fontFamily: "var(--inkloom-animation-body)" }}>
+              💰 刚性要件：征用必须依法给予补偿金！
+            </span>
+            <LaserStamp label="公共利益+补偿" color={OPTICS.emeraldBeam} delay={70} rotation={3} />
           </div>
         </div>
       </div>
-    </Shell>
+    </AbsoluteFill>
   );
 };
 
-export const MiscActsShowcase = () => (
-  <AbsoluteFill>
-    <TimelineSequence name="01" start={SCENES["six-act-showcase"].start} duration={SCENES["six-act-showcase"].duration}>
-      <SixActShowcaseScene />
-    </TimelineSequence>
-    <TimelineSequence name="02" start={SCENES["levy-vs-requisition"].start} duration={SCENES["levy-vs-requisition"].duration}>
-      <LevyVsRequisitionScene />
-    </TimelineSequence>
-    <TimelineSequence name="03" start={SCENES["adjudication-vs-confirmation"].start} duration={SCENES["adjudication-vs-confirmation"].duration}>
-      <AdjudicationVsConfirmationScene />
-    </TimelineSequence>
-    <TimelineSequence name="04" start={SCENES["grant-vs-award"].start} duration={SCENES["grant-vs-award"].duration}>
-      <GrantVsAwardScene />
-    </TimelineSequence>
-    <TimelineSequence name="05" start={SCENES["mnemonic-recap"].start} duration={SCENES["mnemonic-recap"].duration}>
-      <MnemonicRecapScene />
-    </TimelineSequence>
-  </AbsoluteFill>
-);
+// -------------------------------------------------------------
+// SCENE 3: 裁决三方力场 vs 确认光学显影扫描透镜 (AdjudicationFieldConfirmationScannerScene)
+// -------------------------------------------------------------
+export const AdjudicationFieldConfirmationScannerScene: React.FC = () => {
+  const frame = useCurrentFrame();
+  const { fps } = useVideoConfig();
+
+  const scanOffset = interpolate(frame, [20, 100], [-100, 100], { extrapolateRight: "clamp" });
+
+  return (
+    <AbsoluteFill
+      data-layout="tripartite-field-and-optical-scanner"
+      data-visual-anchor="role-pair"
+      data-text-treatments="label-block,thin-underline,external-negation"
+      data-visual-grammar="tripartite-magnetic-field-stabilizes-dispute-with-neutral-arbiter,optical-scanner-sweeps-over-existing-credential-to-project-confirmation-seal,license-empowers-while-confirmation-strengthens-existing-status"
+      data-focal-channels="contrast,connector,spatial"
+      data-focal-rule="三方中立裁决机制与双方法律事实确认扫描"
+      style={{
+        background: OPTICS.bgGradient,
+        color: OPTICS.textPrimary,
+        padding: "40px 60px",
+      }}
+    >
+      <InstrumentHeader
+        channel="03"
+        title="裁决三方力场 vs 确认扫描透镜"
+        subtitle="三方主体 · 居间中立解决民事争议 VS 双方法律关系 · 管理者宣告加强既有事实"
+        themeColor={OPTICS.celestialPurple}
+      />
+
+      <div
+        style={{
+          position: "absolute",
+          top: 130,
+          left: 60,
+          right: 60,
+          bottom: PLAYER_CONTROL_SAFE_BOTTOM,
+          display: "grid",
+          gridTemplateColumns: "1.1fr 1.1fr",
+          gap: 36,
+        }}
+      >
+        {/* Left: 行政裁决 (三方力场) */}
+        <div
+          data-final-knowledge="adjudication-specimen"
+          style={{
+            backgroundColor: OPTICS.benchSurface,
+            border: `2px solid ${OPTICS.celestialPurple}`,
+            borderRadius: 20,
+            padding: 26,
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "space-between",
+            boxShadow: `0 8px 32px ${OPTICS.purpleGlow}`,
+          }}
+        >
+          <div>
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 12 }}>
+              <span
+                style={{
+                  padding: "4px 14px",
+                  backgroundColor: "rgba(168, 85, 247, 0.2)",
+                  border: `1.5px solid ${OPTICS.celestialPurple}`,
+                  borderRadius: 8,
+                  color: "#d8b4fe",
+                  fontSize: "22px",
+                  fontWeight: 900,
+                  fontFamily: "var(--inkloom-animation-label)",
+                }}
+              >
+                居间 · 第三方中立
+              </span>
+              <span style={{ fontSize: "30px", fontWeight: 900, color: OPTICS.celestialPurple, fontFamily: "var(--inkloom-animation-title)" }}>
+                行政裁决
+              </span>
+            </div>
+
+            <div
+              data-final-knowledge="adjudication-role-1"
+              style={{ fontSize: "23px", color: OPTICS.textPrimary, fontFamily: "var(--inkloom-animation-body)", lineHeight: 1.5, marginBottom: 16 }}
+            >
+              行政机关作为<span style={{ color: "#c084fc", fontWeight: 800 }}>中立第三方</span>，居间对特定的<span style={{ color: "#f87171", fontWeight: 800 }}>民事争议</span>作出具有约束力的处理。
+            </div>
+
+            {/* Tripartite Diagram */}
+            <div
+              data-final-knowledge="adjudication-role-2"
+              style={{
+                backgroundColor: "rgba(0,0,0,0.5)",
+                border: "1.5px solid rgba(168, 85, 247, 0.3)",
+                borderRadius: 14,
+                padding: 16,
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                gap: 8,
+              }}
+            >
+              <div style={{ padding: "6px 20px", backgroundColor: OPTICS.celestialPurple, color: "#070b14", borderRadius: 8, fontSize: "22px", fontWeight: 900, fontFamily: "var(--inkloom-animation-label)" }}>
+                ⚖️ 行政机关（中立裁判者）
+              </div>
+              <div style={{ fontSize: "18px", color: "#d8b4fe" }}>↙ 居间裁判 ↘</div>
+              <div style={{ display: "flex", justifyContent: "space-between", width: "100%" }}>
+                <span style={{ padding: "4px 12px", backgroundColor: "rgba(255,255,255,0.1)", borderRadius: 6, fontSize: "20px", color: OPTICS.textPrimary }}>民事相对人 甲</span>
+                <span style={{ color: "#f87171", fontSize: "22px", fontWeight: 900 }}>⚡ 争议纠纷 ⚡</span>
+                <span style={{ padding: "4px 12px", backgroundColor: "rgba(255,255,255,0.1)", borderRadius: 6, fontSize: "20px", color: OPTICS.textPrimary }}>民事相对人 乙</span>
+              </div>
+            </div>
+          </div>
+
+          <div style={{ backgroundColor: "rgba(168, 85, 247, 0.12)", borderRadius: 10, padding: "10px 14px", fontSize: "22px", color: "#e9d5ff", fontFamily: "var(--inkloom-animation-label)" }}>
+            📌 铁律：法律关系中必然涵盖【三方主体】！
+          </div>
+        </div>
+
+        {/* Right: 行政确认 (光学显影扫描透镜) */}
+        <div
+          data-final-knowledge="confirmation-specimen"
+          style={{
+            backgroundColor: OPTICS.benchSurface,
+            border: `2px solid ${OPTICS.cyanLaser}`,
+            borderRadius: 20,
+            padding: 26,
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "space-between",
+            boxShadow: `0 8px 32px ${OPTICS.cyanGlow}`,
+          }}
+        >
+          <div>
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 12 }}>
+              <span
+                style={{
+                  padding: "4px 14px",
+                  backgroundColor: "rgba(6, 182, 212, 0.2)",
+                  border: `1.5px solid ${OPTICS.cyanLaser}`,
+                  borderRadius: 8,
+                  color: "#67e8f9",
+                  fontSize: "22px",
+                  fontWeight: 900,
+                  fontFamily: "var(--inkloom-animation-label)",
+                }}
+              >
+                双方 · 管理者身份
+              </span>
+              <span style={{ fontSize: "30px", fontWeight: 900, color: OPTICS.cyanLaser, fontFamily: "var(--inkloom-animation-title)" }}>
+                行政确认
+              </span>
+            </div>
+
+            <div
+              data-final-knowledge="confirmation-role-1"
+              style={{ fontSize: "23px", color: OPTICS.textPrimary, fontFamily: "var(--inkloom-animation-body)", lineHeight: 1.5, marginBottom: 16 }}
+            >
+              依法对法律地位、法律关系或法律事实进行甄别并给予<span style={{ color: "#22d3ee", fontWeight: 800 }}>确定、认定、证明、宣告</span>。
+            </div>
+
+            {/* Bilateral Comparison */}
+            <div
+              data-final-knowledge="confirmation-role-2"
+              style={{
+                backgroundColor: "rgba(0,0,0,0.5)",
+                border: "1.5px solid rgba(6, 182, 212, 0.3)",
+                borderRadius: 14,
+                padding: 16,
+                display: "flex",
+                flexDirection: "column",
+                gap: 8,
+              }}
+            >
+              <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+                <span style={{ fontSize: "22px", fontWeight: 800, color: "#22d3ee" }}>行政机关（管理者）</span>
+                <span style={{ fontSize: "20px", color: OPTICS.cyanLaser }}>➔ 甄别宣告 ➔</span>
+                <span style={{ fontSize: "22px", fontWeight: 800, color: OPTICS.textPrimary }}>相对人</span>
+              </div>
+              <div
+                data-final-knowledge="license-vs-confirmation"
+                style={{ fontSize: "21px", color: OPTICS.textSecondary, fontFamily: "var(--inkloom-animation-body)", lineHeight: 1.4, borderTop: "1px solid rgba(255,255,255,0.1)", paddingTop: 8 }}
+              >
+                【许可 vs 确认】：许可为<span style={{ color: "#f43f5e", fontWeight: 700 }}>从无到有赋权</span>（权利来自政府）；确认为对既存事实的<span style={{ color: "#06b6d4", fontWeight: 700 }}>加强</span>（权利非政府赋予）。
+              </div>
+            </div>
+          </div>
+
+          <div style={{ backgroundColor: "rgba(6, 182, 212, 0.12)", borderRadius: 10, padding: "10px 14px", fontSize: "22px", color: "#cffafe", fontFamily: "var(--inkloom-animation-label)" }}>
+            🔍 典型：工伤认定、交通事故责任认定、专利权确认
+          </div>
+        </div>
+      </div>
+    </AbsoluteFill>
+  );
+};
+
+// -------------------------------------------------------------
+// SCENE 4: 给付生存安全网液压阀 vs 奖励功绩高光发射台 (WelfareHydraulicsMeritLauncherScene)
+// -------------------------------------------------------------
+export const WelfareHydraulicsMeritLauncherScene: React.FC = () => {
+  const frame = useCurrentFrame();
+  const { fps } = useVideoConfig();
+
+  return (
+    <AbsoluteFill
+      data-layout="hydraulic-welfare-and-merit-podium"
+      data-visual-anchor="comparison-axis"
+      data-text-treatments="label-block,soft-highlight,thin-underline"
+      data-visual-grammar="hydraulic-welfare-valves-dispense-survival-energy-drops-to-cushion-citizens,gilded-merit-launcher-propels-honor-medals-and-material-prizes-with-light-bursts"
+      data-focal-channels="contrast,enclosure,locator"
+      data-focal-rule="给付生存底线救助与奖励先进功绩表彰"
+      style={{
+        background: OPTICS.bgGradient,
+        color: OPTICS.textPrimary,
+        padding: "40px 60px",
+      }}
+    >
+      <InstrumentHeader
+        channel="04"
+        title="给付安全网 vs 奖励发射台"
+        subtitle="法定生存底线义务保障 VS 卓越功绩先进表彰激励"
+        themeColor={OPTICS.amberSurge}
+      />
+
+      <div
+        style={{
+          position: "absolute",
+          top: 130,
+          left: 60,
+          right: 60,
+          bottom: PLAYER_CONTROL_SAFE_BOTTOM,
+          display: "grid",
+          gridTemplateColumns: "1fr 1fr",
+          gap: 36,
+        }}
+      >
+        {/* Left: 行政给付 (生存保障) */}
+        <div
+          data-final-knowledge="grant-specimen"
+          style={{
+            backgroundColor: OPTICS.benchSurface,
+            border: `2px solid ${OPTICS.emeraldBeam}`,
+            borderRadius: 20,
+            padding: 26,
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "space-between",
+            boxShadow: `0 8px 32px ${OPTICS.emeraldGlow}`,
+          }}
+        >
+          <div>
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 12 }}>
+              <span
+                style={{
+                  padding: "4px 14px",
+                  backgroundColor: "rgba(16, 185, 129, 0.2)",
+                  border: `1.5px solid ${OPTICS.emeraldBeam}`,
+                  borderRadius: 8,
+                  color: "#6ee7b7",
+                  fontSize: "22px",
+                  fontWeight: 900,
+                  fontFamily: "var(--inkloom-animation-label)",
+                }}
+              >
+                生存底线 · 行政义务
+              </span>
+              <span style={{ fontSize: "30px", fontWeight: 900, color: OPTICS.emeraldBeam, fontFamily: "var(--inkloom-animation-title)" }}>
+                行政给付
+              </span>
+            </div>
+
+            <div style={{ fontSize: "23px", color: OPTICS.textPrimary, fontFamily: "var(--inkloom-animation-body)", lineHeight: 1.5, marginBottom: 16 }}>
+              政府提供必需生活条件、防范生活风险的<span style={{ color: "#34d399", fontWeight: 800 }}>法定行政义务</span>。
+            </div>
+
+            {/* 4 Kinds Grid */}
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10 }}>
+              <div data-final-knowledge="grant-kind-1" style={{ backgroundColor: "rgba(0,0,0,0.5)", borderRadius: 8, padding: "10px 12px", fontSize: "22px", color: "#d1fae5", fontFamily: "var(--inkloom-animation-label)" }}>
+                ① 城市最低生活保障金
+              </div>
+              <div data-final-knowledge="grant-kind-2" style={{ backgroundColor: "rgba(0,0,0,0.5)", borderRadius: 8, padding: "10px 12px", fontSize: "22px", color: "#d1fae5", fontFamily: "var(--inkloom-animation-label)" }}>
+                ② 农村五保户救济金
+              </div>
+              <div data-final-knowledge="grant-kind-3" style={{ backgroundColor: "rgba(0,0,0,0.5)", borderRadius: 8, padding: "10px 12px", fontSize: "22px", color: "#d1fae5", fontFamily: "var(--inkloom-animation-label)" }}>
+                ③ 自然灾害生活救济金
+              </div>
+              <div data-final-knowledge="grant-kind-4" style={{ backgroundColor: "rgba(0,0,0,0.5)", borderRadius: 8, padding: "10px 12px", fontSize: "22px", color: "#d1fae5", fontFamily: "var(--inkloom-animation-label)" }}>
+                ④ 国家承担的社会保险费
+              </div>
+            </div>
+          </div>
+
+          <div style={{ backgroundColor: "rgba(16, 185, 129, 0.12)", borderRadius: 10, padding: "10px 14px", fontSize: "22px", color: "#a7f3d0", fontFamily: "var(--inkloom-animation-label)" }}>
+            🛡️ 扩展覆盖：企业科技开发 / 大学生创业财政支持亦属给付！
+          </div>
+        </div>
+
+        {/* Right: 行政奖励 (先进表彰) */}
+        <div
+          data-final-knowledge="award-specimen"
+          style={{
+            backgroundColor: OPTICS.benchSurface,
+            border: `2px solid ${OPTICS.amberSurge}`,
+            borderRadius: 20,
+            padding: 26,
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "space-between",
+            boxShadow: `0 8px 32px ${OPTICS.amberGlow}`,
+          }}
+        >
+          <div>
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 12 }}>
+              <span
+                style={{
+                  padding: "4px 14px",
+                  backgroundColor: "rgba(245, 158, 11, 0.2)",
+                  border: `1.5px solid ${OPTICS.amberSurge}`,
+                  borderRadius: 8,
+                  color: "#fde047",
+                  fontSize: "22px",
+                  fontWeight: 900,
+                  fontFamily: "var(--inkloom-animation-label)",
+                }}
+              >
+                表彰先进 · 激励后进
+              </span>
+              <span style={{ fontSize: "30px", fontWeight: 900, color: OPTICS.amberSurge, fontFamily: "var(--inkloom-animation-title)" }}>
+                行政奖励
+              </span>
+            </div>
+
+            <div style={{ fontSize: "23px", color: OPTICS.textPrimary, fontFamily: "var(--inkloom-animation-body)", lineHeight: 1.5, marginBottom: 16 }}>
+              对遵纪守法或为国家社会作出卓越贡献者给予<span style={{ color: "#f59e0b", fontWeight: 800 }}>物质或精神奖励</span>。
+            </div>
+
+            {/* 2 Kinds */}
+            <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+              <div data-final-knowledge="award-kind-1" style={{ backgroundColor: "rgba(0,0,0,0.5)", borderRadius: 8, padding: "12px 14px", fontSize: "22px", color: "#fef3c7", fontFamily: "var(--inkloom-animation-body)" }}>
+                🏅 精神奖励：授予荣誉称号、颁发奖状/通令嘉奖、记功
+              </div>
+              <div data-final-knowledge="award-kind-2" style={{ backgroundColor: "rgba(0,0,0,0.5)", borderRadius: 8, padding: "12px 14px", fontSize: "22px", color: "#fef3c7", fontFamily: "var(--inkloom-animation-body)" }}>
+                🎁 物质奖励：发放奖金、实物奖品、晋升职务/工资等
+              </div>
+            </div>
+          </div>
+
+          <div style={{ backgroundColor: "rgba(245, 158, 11, 0.12)", borderRadius: 10, padding: "10px 14px", fontSize: "22px", color: "#fef08a", fontFamily: "var(--inkloom-animation-label)" }}>
+            🌟 激励宗旨：调动相对人积极性与社会创造力
+          </div>
+        </div>
+      </div>
+    </AbsoluteFill>
+  );
+};
+
+// -------------------------------------------------------------
+// SCENE 5: 法考高频真题雷达与终审钢印 (ExamRadarSteelVerdictScene)
+// -------------------------------------------------------------
+export const ExamRadarSteelVerdictScene: React.FC = () => {
+  const frame = useCurrentFrame();
+  const { fps } = useVideoConfig();
+
+  return (
+    <AbsoluteFill
+      data-layout="circular-radar-verdict-arena"
+      data-visual-anchor="typographic-sequence"
+      data-text-treatments="stamp,label-block,soft-highlight"
+      data-visual-grammar="circular-radar-sweeps-and-detects-classic-exam-traps,heavy-steel-stamps-slam-down-with-rotational-recoil-to-lock-the-knowledge-map"
+      data-focal-channels="contrast,enclosure,annotation"
+      data-focal-rule="法考高频核心要点雷达锁定与终局裁决"
+      style={{
+        background: OPTICS.bgGradient,
+        color: OPTICS.textPrimary,
+        padding: "40px 60px",
+      }}
+    >
+      <InstrumentHeader
+        channel="05"
+        title="真题雷达锁定与终审裁决"
+        subtitle="法考高频必考核心要领 · 极速辨析锁定"
+        themeColor={OPTICS.emeraldBeam}
+      />
+
+      <div
+        style={{
+          position: "absolute",
+          top: 130,
+          left: 60,
+          right: 60,
+          bottom: PLAYER_CONTROL_SAFE_BOTTOM,
+          display: "grid",
+          gridTemplateColumns: "1fr 1fr",
+          gridTemplateRows: "1fr 1fr 1fr",
+          gap: 16,
+        }}
+      >
+        <div
+          data-final-knowledge="memo-levy"
+          style={{
+            backgroundColor: OPTICS.benchSurface,
+            border: `1.5px solid ${OPTICS.rubyCrimson}`,
+            borderRadius: 12,
+            padding: "14px 20px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+          }}
+        >
+          <div>
+            <span style={{ fontSize: "24px", fontWeight: 900, color: "#f87171" }}>行政征收</span>
+            <div style={{ fontSize: "22px", color: OPTICS.textSecondary }}>收所有权 · 税费土地房屋 · 或有偿或无偿</div>
+          </div>
+          <LaserStamp label="所有权" color={OPTICS.rubyCrimson} delay={20} rotation={-3} />
+        </div>
+
+        <div
+          data-final-knowledge="memo-requisition"
+          style={{
+            backgroundColor: OPTICS.benchSurface,
+            border: `1.5px solid ${OPTICS.emeraldBeam}`,
+            borderRadius: 12,
+            padding: "14px 20px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+          }}
+        >
+          <div>
+            <span style={{ fontSize: "24px", fontWeight: 900, color: "#34d399" }}>行政征用</span>
+            <div style={{ fontSize: "22px", color: OPTICS.textSecondary }}>借使用权 · 公共利益需要 · 必须法定补偿</div>
+          </div>
+          <LaserStamp label="使用权+补偿" color={OPTICS.emeraldBeam} delay={25} rotation={3} />
+        </div>
+
+        <div
+          data-final-knowledge="memo-adjudication"
+          style={{
+            backgroundColor: OPTICS.benchSurface,
+            border: `1.5px solid ${OPTICS.celestialPurple}`,
+            borderRadius: 12,
+            padding: "14px 20px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+          }}
+        >
+          <div>
+            <span style={{ fontSize: "24px", fontWeight: 900, color: "#c084fc" }}>行政裁决</span>
+            <div style={{ fontSize: "22px", color: OPTICS.textSecondary }}>三方中立 · 居间化解特定民事争议</div>
+          </div>
+          <LaserStamp label="三方居间" color={OPTICS.celestialPurple} delay={30} rotation={-2} />
+        </div>
+
+        <div
+          data-final-knowledge="memo-confirmation"
+          style={{
+            backgroundColor: OPTICS.benchSurface,
+            border: `1.5px solid ${OPTICS.cyanLaser}`,
+            borderRadius: 12,
+            padding: "14px 20px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+          }}
+        >
+          <div>
+            <span style={{ fontSize: "24px", fontWeight: 900, color: "#38bdf8" }}>行政确认</span>
+            <div style={{ fontSize: "22px", color: OPTICS.textSecondary }}>双方法律关系 · 管理者身份 · 甄别宣告加强</div>
+          </div>
+          <LaserStamp label="宣告加强" color={OPTICS.cyanLaser} delay={35} rotation={2} />
+        </div>
+
+        <div
+          data-final-knowledge="memo-grant"
+          style={{
+            backgroundColor: OPTICS.benchSurface,
+            border: "1.5px solid #10b981",
+            borderRadius: 12,
+            padding: "14px 20px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+          }}
+        >
+          <div>
+            <span style={{ fontSize: "24px", fontWeight: 900, color: "#10b981" }}>行政给付</span>
+            <div style={{ fontSize: "22px", color: OPTICS.textSecondary }}>生存底线保障 · 低保五保救济 · 国家社保</div>
+          </div>
+          <LaserStamp label="生存兜底" color="#10b981" delay={40} rotation={-3} />
+        </div>
+
+        <div
+          data-final-knowledge="memo-award"
+          style={{
+            backgroundColor: OPTICS.benchSurface,
+            border: `1.5px solid ${OPTICS.amberSurge}`,
+            borderRadius: 12,
+            padding: "14px 20px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+          }}
+        >
+          <div>
+            <span style={{ fontSize: "24px", fontWeight: 900, color: "#f59e0b" }}>行政奖励</span>
+            <div style={{ fontSize: "22px", color: OPTICS.textSecondary }}>表彰先进功绩 · 精神荣誉与物质奖励</div>
+          </div>
+          <LaserStamp label="先进表彰" color={OPTICS.amberSurge} delay={45} rotation={3} />
+        </div>
+      </div>
+
+      <div
+        data-final-knowledge="mnemonic-exam-tip"
+        style={{
+          position: "absolute",
+          left: 60,
+          right: 60,
+          bottom: PLAYER_CONTROL_SAFE_BOTTOM - 20,
+          textAlign: "center",
+          fontSize: "22px",
+          color: OPTICS.amberSurge,
+          fontFamily: "var(--inkloom-animation-label)",
+          fontWeight: 800,
+        }}
+      >
+        💡 极速秒杀：赋权找许可，加强找确认；所有权看征收，使用权看征用！
+      </div>
+    </AbsoluteFill>
+  );
+};
+
+// -------------------------------------------------------------
+// MAIN COMPOSITION
+// -------------------------------------------------------------
+export const MiscActsShowcase: React.FC = () => {
+  return (
+    <AbsoluteFill
+      data-player-control-safe-bottom={PLAYER_CONTROL_SAFE_BOTTOM}
+      style={{
+        backgroundColor: OPTICS.bg,
+        width: 1920,
+        height: 1080,
+      }}
+    >
+      <Sequence from={SCENES["power-prism-dispersion"].start} durationInFrames={SCENES["power-prism-dispersion"].duration}>
+        <PowerPrismDispersionScene />
+      </Sequence>
+      <Sequence from={SCENES["levy-requisition-kinetic-balance"].start} durationInFrames={SCENES["levy-requisition-kinetic-balance"].duration}>
+        <LevyRequisitionKineticBalanceScene />
+      </Sequence>
+      <Sequence from={SCENES["adjudication-field-confirmation-scanner"].start} durationInFrames={SCENES["adjudication-field-confirmation-scanner"].duration}>
+        <AdjudicationFieldConfirmationScannerScene />
+      </Sequence>
+      <Sequence from={SCENES["welfare-hydraulics-merit-launcher"].start} durationInFrames={SCENES["welfare-hydraulics-merit-launcher"].duration}>
+        <WelfareHydraulicsMeritLauncherScene />
+      </Sequence>
+      <Sequence from={SCENES["exam-radar-steel-verdict"].start} durationInFrames={SCENES["exam-radar-steel-verdict"].duration}>
+        <ExamRadarSteelVerdictScene />
+      </Sequence>
+    </AbsoluteFill>
+  );
+};

@@ -4,22 +4,23 @@
   "minimumDistinctLayouts": 4,
   "scenes": [
     {
-      "id": "six-act-showcase",
-      "export": "SixActShowcaseScene",
-      "layout": "six-specimen-showcase-wall",
-      "anchor": "comparison-axis",
+      "id": "power-prism-dispersion",
+      "export": "PowerPrismDispersionScene",
+      "layout": "six-channel-power-prism",
+      "anchor": "flow-target",
       "grammar": [
-        "six-act-specimens-stand-on-their-own-pedestals",
-        "each-act-carries-its-distinct-legal-marker"
+        "white-mandate-beam-strikes-central-crystal-prism",
+        "six-colored-laser-conduits-energize-distinct-act-nodes",
+        "each-node-reveals-its-defining-legal-signature"
       ],
       "textTreatments": [
         "label-block",
-        "thin-underline",
-        "soft-highlight"
+        "soft-highlight",
+        "thin-underline"
       ],
       "focalChannels": [
+        "connector",
         "contrast",
-        "enclosure",
         "spatial"
       ],
       "tokens": [],
@@ -35,13 +36,14 @@
       "statefulObjects": []
     },
     {
-      "id": "levy-vs-requisition",
-      "export": "LevyVsRequisitionScene",
-      "layout": "twin-vitrine-levy-requisition",
+      "id": "levy-requisition-kinetic-balance",
+      "export": "LevyRequisitionKineticBalanceScene",
+      "layout": "kinetic-balance-beam-levy-requisition",
       "anchor": "comparison-axis",
       "grammar": [
-        "levy-and-requisition-face-each-other-across-the-vitrine",
-        "use-and-ownership-split-the-specimens"
+        "mechanical-beam-tips-under-four-heavy-property-blocks",
+        "ownership-arrow-permanently-locks-into-state-vault",
+        "borrowed-asset-conveys-with-rebounding-compensation-coin"
       ],
       "textTreatments": [
         "label-block",
@@ -66,13 +68,14 @@
       "statefulObjects": []
     },
     {
-      "id": "adjudication-vs-confirmation",
-      "export": "AdjudicationVsConfirmationScene",
-      "layout": "twin-vitrine-adjudication-confirmation",
+      "id": "adjudication-field-confirmation-scanner",
+      "export": "AdjudicationFieldConfirmationScannerScene",
+      "layout": "tripartite-field-and-optical-scanner",
       "anchor": "role-pair",
       "grammar": [
-        "adjudication-stands-between-three-parties",
-        "confirmation-stands-over-two-parties"
+        "tripartite-magnetic-field-stabilizes-dispute-with-neutral-arbiter",
+        "optical-scanner-sweeps-over-existing-credential-to-project-confirmation-seal",
+        "license-empowers-while-confirmation-strengthens-existing-status"
       ],
       "textTreatments": [
         "label-block",
@@ -97,13 +100,13 @@
       "statefulObjects": []
     },
     {
-      "id": "grant-vs-award",
-      "export": "GrantVsAwardScene",
-      "layout": "twin-vitrine-grant-award",
+      "id": "welfare-hydraulics-merit-launcher",
+      "export": "WelfareHydraulicsMeritLauncherScene",
+      "layout": "hydraulic-welfare-and-merit-podium",
       "anchor": "comparison-axis",
       "grammar": [
-        "grant-secures-survival-award-honors-contribution",
-        "specimens-cover-welfare-and-recognition"
+        "hydraulic-welfare-valves-dispense-survival-energy-drops-to-cushion-citizens",
+        "gilded-merit-launcher-propels-honor-medals-and-material-prizes-with-light-bursts"
       ],
       "textTreatments": [
         "label-block",
@@ -129,13 +132,13 @@
       "statefulObjects": []
     },
     {
-      "id": "mnemonic-recap",
-      "export": "MnemonicRecapScene",
-      "layout": "mnemonic-plaque-wall",
+      "id": "exam-radar-steel-verdict",
+      "export": "ExamRadarSteelVerdictScene",
+      "layout": "circular-radar-verdict-arena",
       "anchor": "typographic-sequence",
       "grammar": [
-        "six-mnemonics-engrave-onto-plaques-in-reading-order",
-        "exam-favorites-are-stamped-last"
+        "circular-radar-sweeps-and-detects-classic-exam-traps",
+        "heavy-steel-stamps-slam-down-with-rotational-recoil-to-lock-the-knowledge-map"
       ],
       "textTreatments": [
         "stamp",
@@ -145,7 +148,7 @@
       "focalChannels": [
         "contrast",
         "enclosure",
-        "icon"
+        "annotation"
       ],
       "tokens": [],
       "finalKnowledge": [

@@ -1,16 +1,16 @@
 {
-  "directionId": "transparency-optics-lab",
-  "family": "civic-transparency-optics",
-  "palette": "midnight indigo, projector white, spectral cyan, ultraviolet violet, disclosure lime, secrecy magenta",
-  "typography": "WenKai optical labels with projected numerals, aperture captions, translucent underlines and specimen stamps",
-  "composition": "prisms, spectral bands, shutters, exposure windows, privacy filters, document projectors, hearing waveforms and response splitters",
-  "surface": "dark optical benches and luminous transparent panes without industrial safety rails, transit stations or courtroom cards",
-  "motion": "rules enter as light beams that split, filter, dim, expose or redirect only when the matching statutory condition opens",
-  "transition": "iris wipes, spectral refraction and projector handoffs",
+  "directionId": "legislative-atlas-studio",
+  "family": "civic-field-atlas",
+  "palette": "warm paper, ink navy, seal red, civic teal, statutory amber and restrained violet",
+  "typography": "WenKai editorial headlines with numbered folio marks, label blocks, thin rule underlines and formal verdict stamps",
+  "composition": "authority staircases, case files, statutory clocks, source pyramids, hearing bands, disclosure routes and decision trees",
+  "surface": "warm gridded drafting paper with flat ink rules, clipped document fields and unrounded legal instruments",
+  "motion": "knowledge objects unfold, route, orbit or receive verdicts according to the legal relationship in each scene",
+  "transition": "folio handoffs and restrained drafting reveals",
   "catalog": {
     "status": "featured",
     "source": "original-node",
     "route": "/inkloom/objective/administrative-law/09/transparency-optics-lab/",
-    "title": "透明度光学实验室"
+    "title": "法治图谱工作室"
   }
 }

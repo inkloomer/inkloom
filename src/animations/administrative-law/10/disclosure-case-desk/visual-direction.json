@@ -1,16 +1,16 @@
 {
-  "directionId": "disclosure-case-dispatch-desk",
-  "family": "civic-disclosure-case-desk",
-  "palette": "warm paper cream, ink navy, seal red, ink blue, disclosure green, reject gray, ledger amber",
-  "typography": "WenKai docket labels with form numerals, case-slip captions, translucent underlines and rotated seal stamps",
-  "composition": "intake trays, case slips, sorting gates, desk scales, verdict seals and filing rails",
-  "surface": "paper forms and wooden desk planes without optical benches, stadiums or transit lines",
-  "motion": "case slips slide between stations, gates open only for admissible cases, weights drop on scales and seals stamp verdicts",
-  "transition": "desk pan wipes, gate sweeps and stamp handoffs",
+  "directionId": "civic-transparency-ledger",
+  "family": "civic-transparency-ledger",
+  "palette": "deep navy canvas, warm bone, cyan beacon, amber signal, seal crimson, slate boundary",
+  "typography": "WenKai status headings with dial numbers, token pills, stamped badges and thin underlines",
+  "composition": "intake conduits, verification gates, countdown clock dials, 3-tier vaults, decision switchboards and verdict stamps",
+  "surface": "digital civic transparency ledger console with luminous paths and tactile cards",
+  "motion": "packets flow into conduits, clock dials sweep, gates toggle open on statutory criteria, and stamps strike operative conclusions",
+  "transition": "conduit wipes, gate opens and stamp handoffs",
   "catalog": {
     "status": "featured",
     "source": "original-node",
     "route": "/inkloom/objective/administrative-law/10/disclosure-case-desk/",
-    "title": "案件收发分拣台"
+    "title": "政务公开矩阵台"
   }
 }

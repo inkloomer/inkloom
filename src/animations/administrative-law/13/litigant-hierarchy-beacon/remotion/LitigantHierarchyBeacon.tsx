@@ -3,99 +3,190 @@ import { AbsoluteFill, Easing, interpolate, useCurrentFrame } from "remotion";
 import { TimelineSequence } from "../../../../shared/remotion-runtime";
 import { SCENES } from "./storyboard";
 
-const C = {
-  navy: "#0F1730",
-  deep: "#1A2547",
-  white: "#F4F6FB",
-  blue: "#3D7BD9",
-  red: "#D64545",
-  amber: "#E0A63C",
-  gold: "#C9A24B",
-  gray: "#8E99B8",
+// Courtroom Docket Bench Design Palette
+const J = {
+  courtNavy: "#0a101f",
+  docketDark: "#111a2e",
+  benchWalnut: "#1a162b",
+  cardBg: "rgba(17, 26, 46, 0.85)",
+  cardBorder: "rgba(212, 175, 55, 0.28)",
+  gold: "#d4af37",
+  goldGlow: "rgba(212, 175, 55, 0.4)",
+  brass: "#c59b27",
+  parchment: "#f8fafc",
+  subText: "#94a3b8",
+  plaintiffBlue: "#3b82f6",
+  plaintiffBg: "rgba(59, 130, 246, 0.12)",
+  plaintiffBorder: "rgba(59, 130, 246, 0.5)",
+  defendantRed: "#ef4444",
+  defendantBg: "rgba(239, 68, 68, 0.12)",
+  defendantBorder: "rgba(239, 68, 68, 0.5)",
+  thirdAmber: "#f59e0b",
+  thirdBg: "rgba(245, 158, 11, 0.12)",
+  thirdBorder: "rgba(245, 158, 11, 0.5)",
+  verdictGreen: "#10b981",
+  verdictBg: "rgba(16, 185, 129, 0.12)",
+  verdictBorder: "rgba(16, 185, 129, 0.5)",
+  purpleAccent: "#a855f7",
 };
+
 const PLAYER_CONTROL_SAFE_BOTTOM = 160;
-const enter = (f: number, d = 0, y = 26) => ({
+
+const enter = (f: number, d = 0, y = 24) => ({
   opacity: interpolate(f, [d, d + 16], [0, 1], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
   }),
-  translate: `0 ${interpolate(f, [d, d + 24], [y, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: Easing.out(Easing.cubic) })}px`,
+  transform: `translateY(${interpolate(f, [d, d + 22], [y, 0], {
+    extrapolateLeft: "clamp",
+    extrapolateRight: "clamp",
+    easing: Easing.out(Easing.cubic),
+  })}px)`,
 });
 
-const Shell = ({
+const CourtHeader = ({
   code,
   title,
+  subLabel,
+}: {
+  code: string;
+  title: string;
+  subLabel: string;
+}) => (
+  <header
+    style={{
+      position: "absolute",
+      left: 56,
+      right: 56,
+      top: 32,
+      height: 106,
+      display: "flex",
+      alignItems: "center",
+      gap: 22,
+      borderBottom: `2px solid rgba(212, 175, 55, 0.4)`,
+      background: "linear-gradient(90deg, rgba(212,175,55,0.08) 0%, transparent 60%)",
+      padding: "0 20px",
+      borderRadius: "8px 8px 0 0",
+    }}
+  >
+    {/* Gavel / Docket Badge */}
+    <div
+      style={{
+        height: 64,
+        padding: "0 22px",
+        background: "linear-gradient(135deg, #d4af37 0%, #aa7c11 100%)",
+        display: "flex",
+        alignItems: "center",
+        gap: 10,
+        borderRadius: 6,
+        boxShadow: "0 4px 16px rgba(212, 175, 55, 0.35)",
+      }}
+    >
+      <span style={{ fontSize: 24 }}>⚖️</span>
+      <span
+        style={{
+          fontSize: 20,
+          fontWeight: 900,
+          color: "#0a101f",
+          letterSpacing: 2,
+          fontFamily: "var(--inkloom-animation-mono, monospace)",
+        }}
+      >
+        卷宗 {code}
+      </span>
+    </div>
+
+    {/* Main Headline */}
+    <div>
+      <h1
+        className="font-animation-title"
+        style={{
+          fontSize: 42,
+          lineHeight: 1.1,
+          margin: 0,
+          color: J.parchment,
+          fontWeight: 900,
+          letterSpacing: 1,
+        }}
+      >
+        {title}
+      </h1>
+      <div
+        style={{
+          fontSize: 16,
+          color: J.gold,
+          marginTop: 4,
+          fontWeight: 700,
+          letterSpacing: 2,
+          fontFamily: "var(--inkloom-animation-label, sans-serif)",
+        }}
+      >
+        {subLabel}
+      </div>
+    </div>
+
+    {/* Courtroom Watermark */}
+    <div
+      style={{
+        marginLeft: "auto",
+        display: "flex",
+        alignItems: "center",
+        gap: 12,
+        background: "rgba(212, 175, 55, 0.1)",
+        border: "1px solid rgba(212, 175, 55, 0.3)",
+        padding: "8px 18px",
+        borderRadius: 20,
+      }}
+    >
+      <span style={{ fontSize: 16, color: J.gold, fontWeight: 900, letterSpacing: 2 }}>
+        🏛️ 行政审判中枢 · COURT DOCKET BENCH
+      </span>
+    </div>
+  </header>
+);
+
+const CourtShell = ({
+  code,
+  title,
+  subLabel,
   children,
 }: {
   code: string;
   title: string;
+  subLabel: string;
   children: React.ReactNode;
 }) => (
   <AbsoluteFill
     data-player-control-safe-bottom={PLAYER_CONTROL_SAFE_BOTTOM}
     className="font-animation-body"
     style={{
-      background: C.navy,
-      color: C.white,
+      background: `radial-gradient(ellipse at 50% 0%, #162444 0%, #0a101f 70%, #060913 100%)`,
+      color: J.parchment,
       overflow: "hidden",
-      backgroundImage:
-        "radial-gradient(circle at 12% 6%,rgba(61,123,217,.16),transparent 28%),linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px)",
-      backgroundSize: "auto,58px 58px,58px 58px",
     }}
   >
-    <header
+    {/* Architectural Blueprint Grid Lines */}
+    <div
       style={{
         position: "absolute",
-        left: 60,
-        right: 60,
-        top: 34,
-        height: 112,
-        display: "flex",
-        alignItems: "center",
-        gap: 24,
-        borderBottom: `4px solid ${C.gold}`,
+        inset: 0,
+        backgroundImage: `
+          linear-gradient(rgba(212, 175, 55, 0.04) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(212, 175, 55, 0.04) 1px, transparent 1px)
+        `,
+        backgroundSize: "60px 60px",
+        pointerEvents: "none",
       }}
-    >
-      <div
-        style={{
-          width: 168,
-          height: 78,
-          background: C.gold,
-          clipPath: "polygon(0 0,100% 0,100% 100%,0 100%,14px 50%)",
-          display: "grid",
-          placeItems: "center",
-          fontSize: 21,
-          fontWeight: 950,
-          color: C.navy,
-          letterSpacing: 2,
-        }}
-      >
-        BEACON {code}
-      </div>
-      <h1
-        className="font-animation-title"
-        style={{ fontSize: 45, lineHeight: 1.08, margin: 0 }}
-      >
-        {title}
-      </h1>
-      <div
-        style={{
-          marginLeft: "auto",
-          fontSize: 17,
-          fontWeight: 900,
-          letterSpacing: 3,
-          color: C.gray,
-        }}
-      >
-        LITIGANT · BEACON
-      </div>
-    </header>
+    />
+
+    <CourtHeader code={code} title={title} subLabel={subLabel} />
+
     <main
       style={{
         position: "absolute",
-        left: 60,
-        right: 60,
-        top: 172,
+        left: 56,
+        right: 56,
+        top: 156,
         bottom: PLAYER_CONTROL_SAFE_BOTTOM,
       }}
     >
@@ -104,75 +195,27 @@ const Shell = ({
   </AbsoluteFill>
 );
 
-const Plate = ({
-  children,
-  color = C.blue,
-  style,
-  finalKnowledge,
-}: {
-  children: React.ReactNode;
-  color?: string;
-  style?: React.CSSProperties;
-  finalKnowledge?: string;
-}) => (
-  <div
-    data-final-knowledge={finalKnowledge}
-    style={{
-      background: `${color}12`,
-      border: `3px solid ${color}`,
-      boxShadow: `0 0 22px ${color}26`,
-      padding: "13px 16px",
-      fontSize: 22,
-      fontWeight: 850,
-      lineHeight: 1.3,
-      color: C.white,
-      ...style,
-    }}
-  >
-    {children}
-  </div>
-);
-
-const Role = ({
-  label,
-  color,
-  style,
-  finalKnowledge,
-}: {
-  label: string;
-  color: string;
-  style?: React.CSSProperties;
-  finalKnowledge?: string;
-}) => (
-  <div
-    data-final-knowledge={finalKnowledge}
-    style={{
-      border: `4px solid ${color}`,
-      background: `${color}10`,
-      padding: "14px 16px",
-      ...style,
-    }}
-  >
-    <div
-      style={{
-        fontSize: 26,
-        fontWeight: 950,
-        color,
-        borderBottom: `3px solid ${color}`,
-        display: "inline-block",
-        paddingBottom: 6,
-      }}
-    >
-      {label}
-    </div>
-  </div>
-);
-
+// ==========================================
+// SCENE 01: 直接起诉九宫格被告登记席
+// ==========================================
 export const DefendantGeneralBoardScene = () => {
   /* Static audit inventory: data-final-knowledge="def-slot-01" data-final-knowledge="def-slot-02" data-final-knowledge="def-slot-03" data-final-knowledge="def-slot-04" data-final-knowledge="def-slot-05" data-final-knowledge="def-slot-06" data-final-knowledge="def-slot-07" data-final-knowledge="def-slot-08" data-final-knowledge="def-slot-09" data-final-knowledge="defendant-mnemonic" */
   const f = useCurrentFrame();
+
+  const slots = [
+    { label: "1. 作出行为的行政机关", def: "该行政机关", color: J.plaintiffBlue, badge: "本位机关" },
+    { label: "2. 法律/法规/规章授权组织", def: "该授权组织（村居委/高校/协会）", color: J.thirdAmber, badge: "授权主体" },
+    { label: "3. 行政机关委托的组织", def: "委托的行政机关作被告", color: J.defendantRed, badge: "委托归责" },
+    { label: "4. 派出机关（行署/区公所/街道）", def: "派出机关独立作被告", color: J.plaintiffBlue, badge: "派出主体" },
+    { label: "5. 被撤销的行政机关", def: "继受机关 / 所属政府 / 垂直上一级", color: J.defendantRed, badge: "职权继受" },
+    { label: "6. 临时组建的机构", def: "组建机关为被告", color: J.plaintiffBlue, badge: "组建责任" },
+    { label: "7. 共同行为（共同署名）", def: "共同被告（不同意追加转第三人）", color: J.defendantRed, badge: "共同诉讼" },
+    { label: "8. 假共同行为（混编署名）", def: "行政主体是被告，非行政主体是第三人", color: J.thirdAmber, badge: "主体剥离" },
+    { label: "9. 经批准的行政行为", def: "诉讼看名义（对外署名者为被告）", color: J.gold, badge: "名义原则" },
+  ];
+
   return (
-    <Shell code="01" title="直接起诉：九宫格被告登记板">
+    <CourtShell code="01" title="直接起诉：九大被告确定席位矩阵" subLabel="DIRECT SUIT DEFENDANT REGISTRATION MATRIX">
       <div
         data-layout="nine-slot-defendant-registry"
         data-visual-anchor="comparison-axis"
@@ -180,82 +223,106 @@ export const DefendantGeneralBoardScene = () => {
         data-text-treatments="label-block,thin-underline,stamp"
         data-focal-rule="direct-suit-defendant-identification"
         data-focal-channels="contrast,enclosure,spatial"
-        style={{ position: "absolute", inset: 16 }}
+        style={{ position: "absolute", inset: 8 }}
       >
-        {[
-          ["作出行政行为的机关", "该行政机关", C.blue],
-          ["法规规章授权的组织", "该授权组织（村居委、高校、行业协会）", C.amber],
-          ["委托的组织", "委托的行政机关", C.red],
-          ["派出机关", "派出机关", C.blue],
-          ["被撤销的机关", "继受机关 / 所属政府 / 垂直上一级", C.red],
-          ["临时组建的机构", "组建机关", C.blue],
-          ["共同行为", "共同被告；不同意追加→第三人", C.red],
-          ["假共同行为", "行政主体为被告，非行政主体为第三人", C.amber],
-          ["经批准的行政行为", "诉讼看名义", C.gold],
-        ].map((x, i) => (
-          <div
-            key={String(x[0])}
-            data-final-knowledge={`def-slot-${String(i + 1).padStart(2, "0")}`}
-            style={{
-              position: "absolute",
-              left: 40 + (i % 3) * 610,
-              top: 30 + Math.floor(i / 3) * 215,
-              width: 570,
-              height: 185,
-              border: `4px solid ${x[2]}`,
-              background: `${x[2]}0e`,
-              padding: "16px 18px",
-              ...enter(f, 6 + i * 8),
-            }}
-          >
-            <div style={{ fontSize: 23, fontWeight: 950, color: x[2] }}>{x[0]}</div>
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(3, 1fr)",
+            gridTemplateRows: "repeat(3, 178px)",
+            gap: 16,
+          }}
+        >
+          {slots.map((s, i) => (
             <div
+              key={s.label}
+              data-final-knowledge={`def-slot-${String(i + 1).padStart(2, "0")}`}
               style={{
-                marginTop: 10,
-                fontSize: 22,
-                fontWeight: 850,
-                lineHeight: 1.35,
-                color: C.white,
+                background: J.cardBg,
+                border: `2px solid ${s.color}66`,
+                borderLeft: `6px solid ${s.color}`,
+                borderRadius: 8,
+                padding: "16px 20px",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-between",
+                boxShadow: `0 6px 20px rgba(0,0,0,0.4), inset 0 0 16px ${s.color}0d`,
+                ...enter(f, 4 + i * 5),
               }}
             >
-              → <b style={{ color: x[2] }}>{x[1]}</b>
+              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                <span style={{ fontSize: 21, fontWeight: 900, color: J.parchment }}>
+                  {s.label}
+                </span>
+                <span
+                  style={{
+                    fontSize: 14,
+                    fontWeight: 850,
+                    padding: "3px 10px",
+                    borderRadius: 4,
+                    background: `${s.color}22`,
+                    color: s.color,
+                    border: `1px solid ${s.color}55`,
+                  }}
+                >
+                  {s.badge}
+                </span>
+              </div>
+              <div
+                style={{
+                  fontSize: 22,
+                  fontWeight: 900,
+                  color: s.color,
+                  background: "rgba(0,0,0,0.35)",
+                  padding: "10px 14px",
+                  borderRadius: 6,
+                  border: `1px dashed ${s.color}44`,
+                }}
+              >
+                ➔ 被告：{s.def}
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
+
+        {/* Bottom Gavel Ribbon */}
         <div
           data-final-knowledge="defendant-mnemonic"
           style={{
             position: "absolute",
-            left: 460,
-            top: 656,
-            width: 1000,
-            textAlign: "center",
-            ...enter(f, 80),
+            left: 0,
+            right: 0,
+            bottom: 6,
+            height: 58,
+            background: "linear-gradient(90deg, rgba(212,175,55,0.15) 0%, rgba(212,175,55,0.3) 50%, rgba(212,175,55,0.15) 100%)",
+            border: `2px solid ${J.gold}`,
+            borderRadius: 8,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            gap: 16,
+            ...enter(f, 54),
           }}
         >
-          <span
-            style={{
-              display: "inline-block",
-              border: `4px solid ${C.gold}`,
-              padding: "10px 18px",
-              fontSize: 23,
-              fontWeight: 950,
-              color: C.gold,
-            }}
-          >
-            口诀：谁行为谁被告；授权组织自己当；委托告委托方；共同行为一起告
+          <span style={{ fontSize: 24 }}>📜</span>
+          <span style={{ fontSize: 22, fontWeight: 950, color: J.gold, letterSpacing: 1.5 }}>
+            【被告总口诀】谁行为谁被告 · 授权组织自己当 · 委托告委托方 · 批准看对外名义
           </span>
         </div>
       </div>
-    </Shell>
+    </CourtShell>
   );
 };
 
+// ==========================================
+// SCENE 02: 特别主体被告确定案卷台
+// ==========================================
 export const DefendantSpecialRoutesScene = () => {
   /* Static audit inventory: data-final-knowledge="special-route-1" data-final-knowledge="special-route-2" data-final-knowledge="special-route-3" data-final-knowledge="special-route-4" data-final-knowledge="special-summary" */
   const f = useCurrentFrame();
+
   return (
-    <Shell code="02" title="特别主体：内设、开发区、征收、大队支队">
+    <CourtShell code="02" title="特别主体：内设、开发区、征收、大队支队" subLabel="SPECIAL ADMINISTRATIVE SUBJECT DEFENDANT ROUTES">
       <div
         data-layout="four-special-defendant-routes"
         data-visual-anchor="comparison-axis"
@@ -263,128 +330,171 @@ export const DefendantSpecialRoutesScene = () => {
         data-text-treatments="label-block,thin-underline,external-negation"
         data-focal-rule="special-subject-defendant-routes"
         data-focal-channels="contrast,connector,enclosure"
-        style={{ position: "absolute", inset: 18 }}
+        style={{ position: "absolute", inset: 8 }}
       >
-        <div
-          data-final-knowledge="special-route-1"
-          style={{
-            position: "absolute",
-            left: 50,
-            top: 34,
-            width: 900,
-            border: `5px solid ${C.blue}`,
-            padding: "18px 20px",
-            ...enter(f, 6),
-          }}
-        >
-          <div style={{ fontSize: 26, fontWeight: 950, color: C.blue }}>
-            内设机构、派出机构（有授权，如派出所）
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20, height: 530 }}>
+          {/* Card 1: 内设机构 / 派出机构 */}
+          <div
+            data-final-knowledge="special-route-1"
+            style={{
+              background: J.cardBg,
+              border: `2px solid ${J.plaintiffBlue}77`,
+              borderTop: `6px solid ${J.plaintiffBlue}`,
+              borderRadius: 8,
+              padding: "20px 24px",
+              display: "flex",
+              flexDirection: "column",
+              gap: 14,
+              ...enter(f, 6),
+            }}
+          >
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+              <span style={{ fontSize: 26, fontWeight: 950, color: J.plaintiffBlue }}>
+                ① 内设机构与派出机构（如派出所）
+              </span>
+              <span style={{ fontSize: 16, background: `${J.plaintiffBlue}22`, color: J.plaintiffBlue, padding: "4px 12px", borderRadius: 4, fontWeight: 800 }}>
+                授权/名义区分
+              </span>
+            </div>
+            <div style={{ fontSize: 21, lineHeight: 1.6, color: J.parchment }}>
+              • 以所属机关名义 ➔ 被告为 <b style={{ color: J.plaintiffBlue }}>所属机关</b>
+              <br />
+              • 以自己名义 ➔ 被告为 <b style={{ color: J.gold }}>派出机构/内设机构自身</b>
+              <br />
+              • <span style={{ color: J.defendantRed, fontWeight: 900 }}>【致命陷阱】种类越权</span>（如派出所作出拘留）➔ 仍以 <b style={{ color: J.defendantRed }}>所属机关（县公安局）</b> 为被告！
+            </div>
           </div>
-          <div style={{ marginTop: 10, fontSize: 22, fontWeight: 850, lineHeight: 1.4 }}>
-            以所属机关名义 → 被告为<b style={{ color: C.blue }}>所属机关</b>
-            <br />
-            以自己名义 → 被告为机构本身；但<b style={{ color: C.red }}>种类越权</b> → 所属机关
+
+          {/* Card 2: 开发区管理机构 */}
+          <div
+            data-final-knowledge="special-route-2"
+            style={{
+              background: J.cardBg,
+              border: `2px solid ${J.thirdAmber}77`,
+              borderTop: `6px solid ${J.thirdAmber}`,
+              borderRadius: 8,
+              padding: "20px 24px",
+              display: "flex",
+              flexDirection: "column",
+              gap: 14,
+              ...enter(f, 14),
+            }}
+          >
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+              <span style={{ fontSize: 26, fontWeight: 950, color: J.thirdAmber }}>
+                ② 开发区管理机构
+              </span>
+              <span style={{ fontSize: 16, background: `${J.thirdAmber}22`, color: J.thirdAmber, padding: "4px 12px", borderRadius: 4, fontWeight: 800 }}>
+                三级审批体系
+              </span>
+            </div>
+            <div style={{ fontSize: 21, lineHeight: 1.6, color: J.parchment }}>
+              • <b style={{ color: J.verdictGreen }}>国务院/省级政府批准</b> ➔ 管委会及其职能部门 <b style={{ color: J.verdictGreen }}>均具独立被告资格</b>
+              <br />
+              • <b style={{ color: J.thirdAmber }}>非国/省批但有授权</b> ➔ 仅 <b style={{ color: J.thirdAmber }}>管委会为被告</b>（内设职能部门不能作被告）
+              <br />
+              • <b style={{ color: J.defendantRed }}>非国/省批且无授权</b> ➔ <b style={{ color: J.defendantRed }}>设立该机构的地方政府</b> 为被告
+            </div>
+          </div>
+
+          {/* Card 3: 房屋征收补偿 */}
+          <div
+            data-final-knowledge="special-route-3"
+            style={{
+              background: J.cardBg,
+              border: `2px solid ${J.defendantRed}77`,
+              borderTop: `6px solid ${J.defendantRed}`,
+              borderRadius: 8,
+              padding: "20px 24px",
+              display: "flex",
+              flexDirection: "column",
+              gap: 14,
+              ...enter(f, 22),
+            }}
+          >
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+              <span style={{ fontSize: 26, fontWeight: 950, color: J.defendantRed }}>
+                ③ 房屋征收补偿案件
+              </span>
+              <span style={{ fontSize: 16, background: `${J.defendantRed}22`, color: J.defendantRed, padding: "4px 12px", borderRadius: 4, fontWeight: 800 }}>
+                征收部门责任
+              </span>
+            </div>
+            <div style={{ fontSize: 21, lineHeight: 1.6, color: J.parchment }}>
+              • 市县政府确定的房屋征收部门（如区住建局）实施征收补偿 ➔ <b style={{ color: J.defendantRed }}>房屋征收部门为被告</b>
+              <br />
+              • 征收实施单位（如拆迁公司）受委托从事补偿行为 ➔ 仍以 <b style={{ color: J.defendantRed }}>委托的征收部门为被告</b>
+            </div>
+          </div>
+
+          {/* Card 4: 大队与支队 */}
+          <div
+            data-final-knowledge="special-route-4"
+            style={{
+              background: J.cardBg,
+              border: `2px solid ${J.gold}77`,
+              borderTop: `6px solid ${J.gold}`,
+              borderRadius: 8,
+              padding: "20px 24px",
+              display: "flex",
+              flexDirection: "column",
+              gap: 14,
+              ...enter(f, 30),
+            }}
+          >
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+              <span style={{ fontSize: 26, fontWeight: 950, color: J.gold }}>
+                ④ 交警大队与支队
+              </span>
+              <span style={{ fontSize: 16, background: `${J.gold}22`, color: J.gold, padding: "4px 12px", borderRadius: 4, fontWeight: 800 }}>
+                法定授权主体
+              </span>
+            </div>
+            <div style={{ fontSize: 21, lineHeight: 1.6, color: J.parchment }}>
+              • 县交警大队 ≈ 县交管局；市交警支队 ≈ 市交管局
+              <br />
+              • 法律法规直接授权：大队、支队均 <b style={{ color: J.gold }}>具有独立诉讼被告资格</b>
+            </div>
           </div>
         </div>
-        <div
-          data-final-knowledge="special-route-2"
-          style={{
-            position: "absolute",
-            left: 1000,
-            top: 34,
-            width: 870,
-            border: `5px solid ${C.amber}`,
-            padding: "18px 20px",
-            ...enter(f, 12),
-          }}
-        >
-          <div style={{ fontSize: 26, fontWeight: 950, color: C.amber }}>
-            开发区管理机构
-          </div>
-          <div style={{ marginTop: 10, fontSize: 22, fontWeight: 850, lineHeight: 1.4 }}>
-            国务院/省级批准 → 机构及职能部门<b style={{ color: C.amber }}>独立作被告</b>
-            <br />
-            非批准但有授权 → 管理机构为被告
-            <br />
-            非批准无授权 → <b style={{ color: C.red }}>设立的地方政府</b>为被告
-          </div>
-        </div>
-        <div
-          data-final-knowledge="special-route-3"
-          style={{
-            position: "absolute",
-            left: 50,
-            top: 360,
-            width: 900,
-            border: `5px solid ${C.red}`,
-            padding: "18px 20px",
-            ...enter(f, 18),
-          }}
-        >
-          <div style={{ fontSize: 26, fontWeight: 950, color: C.red }}>
-            房屋征收补偿
-          </div>
-          <div style={{ marginTop: 10, fontSize: 22, fontWeight: 850, lineHeight: 1.4 }}>
-            市县级政府确定的征收部门 → <b style={{ color: C.red }}>征收部门</b>为被告
-            <br />
-            征收实施单位受委托 → 委托的<b style={{ color: C.red }}>征收部门</b>为被告
-          </div>
-        </div>
-        <div
-          data-final-knowledge="special-route-4"
-          style={{
-            position: "absolute",
-            left: 1000,
-            top: 360,
-            width: 870,
-            border: `5px solid ${C.gold}`,
-            padding: "18px 20px",
-            ...enter(f, 24),
-          }}
-        >
-          <div style={{ fontSize: 26, fontWeight: 950, color: C.gold }}>
-            大队与支队
-          </div>
-          <div style={{ marginTop: 10, fontSize: 22, fontWeight: 850, lineHeight: 1.4 }}>
-            县交警大队 ≈ 县交管局；市交警支队 ≈ 市交管局
-            <br />
-            大队、支队均具有<b style={{ color: C.gold }}>被告资格</b>
-          </div>
-        </div>
+
+        {/* Summary Footer */}
         <div
           data-final-knowledge="special-summary"
           style={{
             position: "absolute",
-            left: 460,
-            top: 652,
-            width: 1000,
-            textAlign: "center",
-            ...enter(f, 60),
+            left: 0,
+            right: 0,
+            bottom: 6,
+            height: 52,
+            background: "rgba(212,175,55,0.12)",
+            border: `2px dashed ${J.gold}`,
+            borderRadius: 8,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            fontSize: 22,
+            fontWeight: 900,
+            color: J.gold,
+            ...enter(f, 44),
           }}
         >
-          <span
-            style={{
-              display: "inline-block",
-              border: `4px dashed ${C.gray}`,
-              padding: "10px 18px",
-              fontSize: 23,
-              fontWeight: 900,
-              color: C.gray,
-            }}
-          >
-            例外重点：种类越权告所属机关 · 开发区看批准与授权
-          </span>
+          ⚡ 考点核心：种类越权告所属机关 · 开发区看国省批与授权 · 拆迁公司不当被告
         </div>
       </div>
-    </Shell>
+    </CourtShell>
   );
 };
 
+// ==========================================
+// SCENE 03: 县级以上地方政府及部门被告规则
+// ==========================================
 export const DefendantGovRulesScene = () => {
   /* Static audit inventory: data-final-knowledge="gov-rule-guidance" data-final-knowledge="gov-rule-document" data-final-knowledge="gov-rule-force" */
   const f = useCurrentFrame();
+
   return (
-    <Shell code="03" title="县级以上政府：谁行为、看文书、看力度">
+    <CourtShell code="03" title="县级以上地方政府：谁行为、看文书、看力度" subLabel="COUNTY GOVERNMENT DEFENDANT CRITERIA">
       <div
         data-layout="government-defendant-three-rule-panels"
         data-visual-anchor="comparison-axis"
@@ -392,133 +502,122 @@ export const DefendantGovRulesScene = () => {
         data-text-treatments="label-block,stamp,thin-underline"
         data-focal-rule="county-government-defendant-rules"
         data-focal-channels="contrast,enclosure,locator"
-        style={{ position: "absolute", inset: 18 }}
+        style={{ position: "absolute", inset: 8 }}
       >
-        <div
-          data-final-knowledge="gov-rule-guidance"
-          style={{
-            position: "absolute",
-            left: 60,
-            top: 36,
-            width: 580,
-            height: 570,
-            border: `5px solid ${C.blue}`,
-            padding: "20px 22px",
-            ...enter(f, 6),
-          }}
-        >
-          <div style={{ fontSize: 27, fontWeight: 950, color: C.blue }}>
-            谁行为，谁被告
-          </div>
-          <div style={{ marginTop: 12, fontSize: 22, fontWeight: 850, lineHeight: 1.45 }}>
-            县政府"指导"（听取报告、开会、下发文件）
-            <br />
-            → 被告为<b style={{ color: C.blue }}>职能部门的机关</b>
-          </div>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 20, height: 570 }}>
+          {/* Panel 1: 谁行为，谁被告 */}
           <div
+            data-final-knowledge="gov-rule-guidance"
             style={{
-              marginTop: 16,
-              fontSize: 22,
-              fontWeight: 900,
-              color: C.amber,
-              border: `3px solid ${C.amber}`,
-              padding: "10px 12px",
+              background: J.cardBg,
+              border: `2px solid ${J.plaintiffBlue}77`,
+              borderTop: `6px solid ${J.plaintiffBlue}`,
+              borderRadius: 8,
+              padding: "24px 22px",
+              display: "flex",
+              flexDirection: "column",
+              gap: 16,
+              ...enter(f, 6),
             }}
           >
-            例：市政府开会指导市文旅局行政协议 → 被告是市文旅局
+            <div style={{ fontSize: 26, fontWeight: 950, color: J.plaintiffBlue }}>
+              规则一：谁行为，谁被告
+            </div>
+            <div style={{ fontSize: 21, lineHeight: 1.55, color: J.parchment }}>
+              • <b style={{ color: J.plaintiffBlue }}>政府柔性指导</b>（听取汇报/开协调会/下发意见）➔ 被告为 <b style={{ color: J.plaintiffBlue }}>具体履职的职能部门</b>
+              <div
+                style={{
+                  marginTop: 12,
+                  background: `${J.plaintiffBlue}1a`,
+                  border: `1px solid ${J.plaintiffBlue}55`,
+                  padding: "10px 14px",
+                  borderRadius: 6,
+                  fontSize: 19,
+                  color: J.parchment,
+                }}
+              >
+                例：市政府召开协调会指导市文旅局签订行政协议 ➔ 协议纠纷被告为<b>市文旅局</b>
+              </div>
+              <br />
+              • <b style={{ color: J.thirdAmber }}>信息公开指定机构</b> 以自己名义答复 ➔ 被告为 <b style={{ color: J.thirdAmber }}>该指定机构</b>（突破一般法理特例！）
+            </div>
           </div>
-          <div style={{ marginTop: 16, fontSize: 22, fontWeight: 850, lineHeight: 1.45 }}>
-            信息公开指定机构以自己名义
-            <br />
-            → 被告为<b style={{ color: C.blue }}>该指定机构</b>（特别记忆）
-          </div>
-        </div>
-        <div
-          data-final-knowledge="gov-rule-document"
-          style={{
-            position: "absolute",
-            left: 680,
-            top: 36,
-            width: 580,
-            height: 570,
-            border: `5px solid ${C.red}`,
-            padding: "20px 22px",
-            ...enter(f, 12),
-          }}
-        >
-          <div style={{ fontSize: 27, fontWeight: 950, color: C.red }}>
-            有文书，看文书；没文书，告部门
-          </div>
-          <div style={{ marginTop: 12, fontSize: 22, fontWeight: 850, lineHeight: 1.45 }}>
-            责成职能部门强拆：
-            <br />
-            ① 有强制拆除决定书 → 作出决定的机关
-            <br />
-            ② 无决定书 → 具体实施拆除的职能部门
-          </div>
+
+          {/* Panel 2: 有文书看文书，没文书告部门 */}
           <div
+            data-final-knowledge="gov-rule-document"
             style={{
-              marginTop: 16,
-              fontSize: 22,
-              fontWeight: 900,
-              color: C.amber,
-              border: `3px solid ${C.amber}`,
-              padding: "10px 12px",
+              background: J.cardBg,
+              border: `2px solid ${J.defendantRed}77`,
+              borderTop: `6px solid ${J.defendantRed}`,
+              borderRadius: 8,
+              padding: "24px 22px",
+              display: "flex",
+              flexDirection: "column",
+              gap: 16,
+              ...enter(f, 14),
             }}
           >
-            集体土地、国有土地征收拆除同此规则
+            <div style={{ fontSize: 26, fontWeight: 950, color: J.defendantRed }}>
+              规则二：文书与实施分离
+            </div>
+            <div style={{ fontSize: 21, lineHeight: 1.55, color: J.parchment }}>
+              <div style={{ fontSize: 22, fontWeight: 900, color: J.gold, marginBottom: 6 }}>
+                【口诀】有文书看文书；没文书告部门
+              </div>
+              • 县政府责成职能部门实施违建强拆：
+              <br />
+              ① <b style={{ color: J.verdictGreen }}>有强拆决定书</b> ➔ 以作出决定的机关为被告
+              <br />
+              ② <b style={{ color: J.defendantRed }}>无决定书直接拆</b> ➔ 以具体实施强拆的部门为被告
+              <br /><br />
+              • 集体土地房屋拆除 / 国有土地征收强拆均适用此规则！
+            </div>
           </div>
-        </div>
-        <div
-          data-final-knowledge="gov-rule-force"
-          style={{
-            position: "absolute",
-            left: 1300,
-            top: 36,
-            width: 560,
-            height: 570,
-            border: `5px solid ${C.amber}`,
-            padding: "20px 22px",
-            ...enter(f, 18),
-          }}
-        >
-          <div style={{ fontSize: 27, fontWeight: 950, color: C.amber }}>
-            指令 vs 责成
-          </div>
-          <div style={{ marginTop: 12, fontSize: 22, fontWeight: 850, lineHeight: 1.45 }}>
-            <b style={{ color: C.red }}>指令/责令</b>：命令照方案办，下级如提线木偶
-            <br />
-            → 被告为<b style={{ color: C.red }}>县政府</b>
-          </div>
-          <div style={{ marginTop: 14, fontSize: 22, fontWeight: 850, lineHeight: 1.45 }}>
-            <b style={{ color: C.blue }}>责成</b>：指定去办，被责成对象有独立意思空间
-            <br />
-            → 按"有文书看文书"判断
-          </div>
+
+          {/* Panel 3: 指令 vs 责成 */}
           <div
+            data-final-knowledge="gov-rule-force"
             style={{
-              marginTop: 16,
-              fontSize: 22,
-              fontWeight: 900,
-              color: C.gray,
-              border: `3px dashed ${C.gray}`,
-              padding: "10px 12px",
+              background: J.cardBg,
+              border: `2px solid ${J.thirdAmber}77`,
+              borderTop: `6px solid ${J.thirdAmber}`,
+              borderRadius: 8,
+              padding: "24px 22px",
+              display: "flex",
+              flexDirection: "column",
+              gap: 16,
+              ...enter(f, 22),
             }}
           >
-            力度：指令 &gt; 责成
+            <div style={{ fontSize: 26, fontWeight: 950, color: J.thirdAmber }}>
+              规则三：指令 vs 责成力度
+            </div>
+            <div style={{ fontSize: 21, lineHeight: 1.55, color: J.parchment }}>
+              • <b style={{ color: J.defendantRed }}>指令 / 责令</b>（命令照方案办，下级如提线木偶）➔ 意志作出者为被告 ➔ <b style={{ color: J.defendantRed }}>县政府为被告</b>
+              <br /><br />
+              • <b style={{ color: J.plaintiffBlue }}>责成</b>（指定交办，下级有独立意思裁量空间）➔ 按“有文书看文书，没文书告部门”分情况判断
+              <br /><br />
+              <span style={{ fontSize: 20, color: J.gold, fontWeight: 900 }}>
+                力度等级：指令 (刚性) &gt; 责成 (交办) &gt; 指导 (柔性)
+              </span>
+            </div>
           </div>
         </div>
       </div>
-    </Shell>
+    </CourtShell>
   );
 };
 
-
+// ==========================================
+// SCENE 04: 经过复议后再起诉三大金律
+// ==========================================
 export const DefendantAfterReviewScene = () => {
   /* Static audit inventory: data-final-knowledge="review-change" data-final-knowledge="review-uphold" data-final-knowledge="review-inaction" data-final-knowledge="change-detection" data-final-knowledge="mixed-outcome-rule" */
   const f = useCurrentFrame();
+
   return (
-    <Shell code="04" title="经过复议：改变单独告、维持共同告、不作为择一告">
+    <CourtShell code="04" title="经过复议：改变单独告、维持共同告、不作为择一告" subLabel="DEFENDANT AFTER ADMINISTRATIVE RECONSIDERATION">
       <div
         data-layout="three-review-outcome-beams"
         data-visual-anchor="flow-path"
@@ -526,82 +625,148 @@ export const DefendantAfterReviewScene = () => {
         data-text-treatments="label-block,stamp,thin-underline"
         data-focal-rule="defendant-after-review-decides-by-outcome"
         data-focal-channels="contrast,connector,spatial"
-        style={{ position: "absolute", inset: 18 }}
+        style={{ position: "absolute", inset: 8 }}
       >
-        {[
-          ["复议改变", "行为结果改变 → 被告为复议机关", C.green, "review-change", 0],
-          ["复议维持", "审过且结果没变 → 原机关+复议机关共同被告", C.red, "review-uphold", 1],
-          ["复议不作为", "没审理过 → 择一告（复议机关或原机关）", C.amber, "review-inaction", 2],
-        ].map((x, i) => (
+        <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
+          {/* Track 1: 复议改变 */}
           <div
-            key={String(x[0])}
-            data-final-knowledge={String(x[3])}
+            data-final-knowledge="review-change"
             style={{
-              position: "absolute",
-              left: 90,
-              top: 36 + i * 178,
-              width: 1740,
-              height: 160,
-              border: `5px solid ${x[2]}`,
-              background: `${x[2]}10`,
-              padding: "18px 22px",
-              ...enter(f, 6 + i * 12),
+              background: J.cardBg,
+              border: `2px solid ${J.verdictGreen}77`,
+              borderLeft: `8px solid ${J.verdictGreen}`,
+              borderRadius: 8,
+              padding: "16px 24px",
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+              ...enter(f, 6),
             }}
           >
-            <div style={{ fontSize: 27, fontWeight: 950, color: x[2] }}>{x[0]}</div>
-            <div style={{ marginTop: 10, fontSize: 23, fontWeight: 850, lineHeight: 1.35 }}>
-              {x[1]}
+            <div>
+              <span style={{ fontSize: 26, fontWeight: 950, color: J.verdictGreen }}>
+                ① 复议改变（单独告）
+              </span>
+              <div style={{ fontSize: 21, color: J.parchment, marginTop: 4 }}>
+                复议机关改变了原行为处理结果 ➔ <b style={{ color: J.verdictGreen }}>仅以复议机关为被告</b>（原机关转列为第三人）
+              </div>
+            </div>
+            <div style={{ background: `${J.verdictGreen}22`, color: J.verdictGreen, padding: "8px 18px", borderRadius: 6, fontWeight: 900, fontSize: 20 }}>
+              被告：复议机关
             </div>
           </div>
-        ))}
-        <div
-          data-final-knowledge="change-detection"
-          style={{
-            position: "absolute",
-            left: 90,
-            top: 580,
-            width: 860,
-            border: `4px solid ${C.gray}`,
-            padding: "14px 18px",
-            ...enter(f, 46),
-          }}
-        >
-          <div style={{ fontSize: 22, fontWeight: 950, color: C.gray }}>
-            改变 = 行为结果改变
+
+          {/* Track 2: 复议维持 */}
+          <div
+            data-final-knowledge="review-uphold"
+            style={{
+              background: J.cardBg,
+              border: `2px solid ${J.defendantRed}77`,
+              borderLeft: `8px solid ${J.defendantRed}`,
+              borderRadius: 8,
+              padding: "16px 24px",
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+              ...enter(f, 14),
+            }}
+          >
+            <div>
+              <span style={{ fontSize: 26, fontWeight: 950, color: J.defendantRed }}>
+                ② 复议维持（共同告）
+              </span>
+              <div style={{ fontSize: 21, color: J.parchment, marginTop: 4 }}>
+                实质审理过且行为结果未改变 ➔ <b style={{ color: J.defendantRed }}>原行为机关与复议机关为共同被告</b>（告漏了通知追加，原告拒绝仍列共同被告）
+              </div>
+            </div>
+            <div style={{ background: `${J.defendantRed}22`, color: J.defendantRed, padding: "8px 18px", borderRadius: 6, fontWeight: 900, fontSize: 20 }}>
+              共同被告：原机关 + 复议机关
+            </div>
           </div>
-          <div style={{ fontSize: 22, fontWeight: 850, marginTop: 6, lineHeight: 1.35 }}>
-            确认无效属改变；确认违法一般属改变（以违反法定程序为由确认违法的除外）；只变依据结果未变 = 维持
+
+          {/* Track 3: 复议不作为 */}
+          <div
+            data-final-knowledge="review-inaction"
+            style={{
+              background: J.cardBg,
+              border: `2px solid ${J.thirdAmber}77`,
+              borderLeft: `8px solid ${J.thirdAmber}`,
+              borderRadius: 8,
+              padding: "16px 24px",
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+              ...enter(f, 22),
+            }}
+          >
+            <div>
+              <span style={{ fontSize: 26, fontWeight: 950, color: J.thirdAmber }}>
+                ③ 复议不作为（择一告）
+              </span>
+              <div style={{ fontSize: 21, color: J.parchment, marginTop: 4 }}>
+                未进行实质审理（超期未答复/违法驳回申请）➔ 对不作为不服告复议机关；对原行为不服告原机关
+              </div>
+            </div>
+            <div style={{ background: `${J.thirdAmber}22`, color: J.thirdAmber, padding: "8px 18px", borderRadius: 6, fontWeight: 900, fontSize: 20 }}>
+              二选一：复议机关 OR 原机关
+            </div>
           </div>
-        </div>
-        <div
-          data-final-knowledge="mixed-outcome-rule"
-          style={{
-            position: "absolute",
-            left: 1000,
-            top: 580,
-            width: 830,
-            border: `4px solid ${C.red}`,
-            padding: "14px 18px",
-            ...enter(f, 54),
-          }}
-        >
-          <div style={{ fontSize: 22, fontWeight: 950, color: C.red }}>
-            多重因素：既有维持又有改变内容
-          </div>
-          <div style={{ fontSize: 22, fontWeight: 850, marginTop: 6, lineHeight: 1.35 }}>
-            → 原机关和复议机关为共同被告
+
+          {/* Bottom Dual Explanations */}
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, marginTop: 6 }}>
+            <div
+              data-final-knowledge="change-detection"
+              style={{
+                background: "rgba(0,0,0,0.3)",
+                border: `1px solid ${J.gold}55`,
+                borderRadius: 8,
+                padding: "14px 20px",
+                fontSize: 20,
+                lineHeight: 1.5,
+                ...enter(f, 32),
+              }}
+            >
+              <b style={{ color: J.gold }}>改变的实质认定：</b>确认无效属改变；确认违法一般属改变（程序瑕疵确认违法除外）；仅改变法律事实依据但结果未变 ➔ <b style={{ color: J.defendantRed }}>仍属维持！</b>
+            </div>
+
+            <div
+              data-final-knowledge="mixed-outcome-rule"
+              style={{
+                background: "rgba(0,0,0,0.3)",
+                border: `1px solid ${J.defendantRed}55`,
+                borderRadius: 8,
+                padding: "14px 20px",
+                fontSize: 20,
+                lineHeight: 1.5,
+                ...enter(f, 40),
+              }}
+            >
+              <b style={{ color: J.defendantRed }}>多重因素规则：</b>复议决定既有维持内容，又有改变或不予受理内容的 ➔ <b style={{ color: J.defendantRed }}>一律以作出原行政行为的机关和复议机关为共同被告！</b>
+            </div>
           </div>
         </div>
       </div>
-    </Shell>
+    </CourtShell>
   );
 };
 
+// ==========================================
+// SCENE 05: 原告资格概念五大审判柱石
+// ==========================================
 export const PlaintiffConceptLanternScene = () => {
   /* Static audit inventory: data-final-knowledge="plaintiff-definition" data-final-knowledge="lantern-1" data-final-knowledge="lantern-2" data-final-knowledge="lantern-3" data-final-knowledge="lantern-4" data-final-knowledge="lantern-5" data-final-knowledge="lantern-six-relationship" */
   const f = useCurrentFrame();
+
+  const lanterns = [
+    { title: "主体要件", desc: "公民、法人或其他组织（行政机关作为行政主体时不享有原告资格）", color: J.plaintiffBlue },
+    { title: "主观要件", desc: "“认为”受侵犯即可提起诉讼，属主观认识，不以实体胜诉为前提", color: J.thirdAmber },
+    { title: "侵犯要件", desc: "实体权利受到必然影响（权利义务发生增减变化）", color: J.defendantRed },
+    { title: "自身要件", desc: "“其”合法权益受损（自身利益；普通公民无提起公益诉讼原告资格）", color: J.gold },
+    { title: "合法要件", desc: "受法律保护的“合法权益”，行政诉讼不保护非法利益", color: J.verdictGreen },
+  ];
+
   return (
-    <Shell code="05" title="原告概念：五盏判断灯">
+    <CourtShell code="05" title="原告资格：法庭审理五大准入基石" subLabel="PLAINTIFF STANDING FIVE JURISDICTIONAL PILLARS">
       <div
         data-layout="five-concept-lanterns"
         data-visual-anchor="typographic-sequence"
@@ -609,105 +774,116 @@ export const PlaintiffConceptLanternScene = () => {
         data-text-treatments="label-block,soft-highlight,thin-underline"
         data-focal-rule="plaintiff-concept-five-elements"
         data-focal-channels="contrast,enclosure,icon"
-        style={{ position: "absolute", inset: 20 }}
+        style={{ position: "absolute", inset: 8 }}
       >
+        {/* Core Definition Banner */}
         <div
           data-final-knowledge="plaintiff-definition"
           style={{
-            position: "absolute",
-            left: 460,
-            top: 24,
-            width: 1000,
+            background: "linear-gradient(90deg, rgba(212,175,55,0.15) 0%, rgba(212,175,55,0.25) 50%, rgba(212,175,55,0.15) 100%)",
+            border: `2px solid ${J.gold}`,
+            borderRadius: 8,
+            padding: "14px 24px",
             textAlign: "center",
+            fontSize: 24,
+            fontWeight: 950,
+            color: J.parchment,
             ...enter(f, 4),
           }}
         >
-          <div
-            style={{
-              fontSize: 27,
-              fontWeight: 950,
-              color: C.white,
-              border: `4px solid ${C.gold}`,
-              padding: "14px 16px",
-              background: `${C.gold}10`,
-            }}
-          >
-            原告：认为行政行为侵犯其合法权益的公民、法人或其他组织（须有法律上的利害关系）
-          </div>
+          原告定义：<span style={{ color: J.gold }}>认为行政行为侵犯其合法权益</span>，并与该行为具有<span style={{ color: J.verdictGreen }}>法律上利害关系</span>的公民、法人或其他组织
         </div>
-        {[
-          ["公民法人组织", "行政机关无原告资格（不能当原告）", C.blue],
-          ["认为", "主观认识即可，不要求实体上确受影响", C.amber],
-          ["侵犯", "实体权利受到必然影响（权利义务变化）", C.red],
-          ["其", "自身利益受损；不能为他人、为公益（无普通公益诉讼）", C.gold],
-          ["合法权益", "不保护非法利益", C.blue],
-        ].map((x, i) => (
-          <div
-            key={String(x[0])}
-            data-final-knowledge={`lantern-${i + 1}`}
-            style={{
-              position: "absolute",
-              left: 90 + (i % 3) * 590,
-              top: 150 + Math.floor(i / 3) * 230,
-              width: 550,
-              height: 190,
-              border: `5px solid ${x[2]}`,
-              background: `${x[2]}0e`,
-              padding: "18px 20px",
-              ...enter(f, 10 + i * 9),
-            }}
-          >
+
+        {/* Five Pillars Grid */}
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(5, 1fr)", gap: 14, marginTop: 18, height: 350 }}>
+          {lanterns.map((l, i) => (
             <div
+              key={l.title}
+              data-final-knowledge={`lantern-${i + 1}`}
               style={{
-                width: 74,
-                height: 74,
-                borderRadius: "50%",
-                border: `5px solid ${x[2]}`,
-                display: "grid",
-                placeItems: "center",
-                fontSize: 30,
-                fontWeight: 950,
-                color: x[2],
+                background: J.cardBg,
+                border: `2px solid ${l.color}66`,
+                borderTop: `6px solid ${l.color}`,
+                borderRadius: 8,
+                padding: "20px 16px",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                textAlign: "center",
+                gap: 12,
+                boxShadow: `0 6px 18px rgba(0,0,0,0.35)`,
+                ...enter(f, 10 + i * 6),
               }}
             >
-              {x[0]}
+              <div
+                style={{
+                  width: 58,
+                  height: 58,
+                  borderRadius: "50%",
+                  background: `${l.color}22`,
+                  border: `2px solid ${l.color}`,
+                  display: "grid",
+                  placeItems: "center",
+                  fontSize: 24,
+                  fontWeight: 950,
+                  color: l.color,
+                }}
+              >
+                0{i + 1}
+              </div>
+              <div style={{ fontSize: 23, fontWeight: 950, color: l.color }}>
+                {l.title}
+              </div>
+              <div style={{ fontSize: 18, lineHeight: 1.45, color: J.parchment, marginTop: 4 }}>
+                {l.desc}
+              </div>
             </div>
-            <div style={{ marginTop: 12, fontSize: 22, fontWeight: 850, lineHeight: 1.35 }}>
-              {x[1]}
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
+
+        {/* Distinction Banner */}
         <div
           data-final-knowledge="lantern-six-relationship"
           style={{
-            position: "absolute",
-            left: 90,
-            top: 574,
-            width: 550,
-            height: 120,
-            border: `4px solid ${C.amber}`,
-            background: `${C.amber}0a`,
-            padding: "14px 16px",
-            ...enter(f, 56),
+            marginTop: 14,
+            background: "rgba(0,0,0,0.35)",
+            border: `2px dashed ${J.thirdAmber}`,
+            borderRadius: 8,
+            padding: "12px 24px",
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            fontSize: 21,
+            fontWeight: 900,
+            ...enter(f, 46),
           }}
         >
-          <div style={{ fontSize: 22, fontWeight: 950, color: C.amber }}>
-            法律上的利害关系
-          </div>
-          <div style={{ fontSize: 22, fontWeight: 850, marginTop: 6, lineHeight: 1.3 }}>
-            相对人必然有；相关人看与行为的利害关系
-          </div>
+          <span style={{ color: J.parchment }}>
+            ⚖️ 利害关系双分法：<b style={{ color: J.plaintiffBlue }}>行政相对人（必然有原告资格）</b> vs <b style={{ color: J.thirdAmber }}>行政相关人（视具体法律利害关系而定）</b>
+          </span>
         </div>
       </div>
-    </Shell>
+    </CourtShell>
   );
 };
 
+// ==========================================
+// SCENE 06: 行政相关人五种关系与五种结论
+// ==========================================
 export const RelatedPartyFiveTiesScene = () => {
   /* Static audit inventory: data-final-knowledge="tie-1" data-final-knowledge="tie-2" data-final-knowledge="tie-3" data-final-knowledge="tie-4" data-final-knowledge="tie-5" data-final-knowledge="tie-mnemonic" */
   const f = useCurrentFrame();
+
+  const ties = [
+    { title: "1. 侵权关系", status: "有原告资格", ok: true, desc: "侵权受害人：行政机关不予处理，或处罚加害人轻微 ➔ 受害人有权起诉要求追究/加重责任", color: J.verdictGreen },
+    { title: "2. 亲属关系", status: "无原告资格", ok: false, desc: "仅凭亲属关系（父子/夫妻/兄弟）仅具有事实利害关系，不具有法律上利害关系 ➔ 无资格", color: J.defendantRed },
+    { title: "3. 物权关系", status: "有原告资格", ok: true, desc: "所有权与所有权/相邻权/用益物权冲突（如建楼遮挡相邻采光、土地确权重叠） ➔ 有权起诉", color: J.verdictGreen },
+    { title: "4. 公平竞争关系", status: "有原告资格", ok: true, desc: "行政机关滥用行政权力排除或限制竞争，使经营者陷入不利竞争地位 ➔ 有权起诉", color: J.verdictGreen },
+    { title: "5. 合同关系", status: "口诀判定", ok: true, desc: "【口诀】相关人自身“有民诉，没行政；没民诉，有行政”（买卖合同被吊销执照不能起诉）", color: J.thirdAmber },
+  ];
+
   return (
-    <Shell code="06" title="相关人利害关系：五种关系五种结论">
+    <CourtShell code="06" title="相关人利害关系：五种民行关系五种裁决" subLabel="RELATED PARTY STANDING: FIVE RELATIONSHIP CATEGORIES">
       <div
         data-layout="five-tie-relationship-board"
         data-visual-anchor="comparison-axis"
@@ -715,92 +891,97 @@ export const RelatedPartyFiveTiesScene = () => {
         data-text-treatments="label-block,thin-underline,external-negation"
         data-focal-rule="related-party-standing-by-relationship-type"
         data-focal-channels="contrast,enclosure,spatial"
-        style={{ position: "absolute", inset: 16 }}
+        style={{ position: "absolute", inset: 8 }}
       >
-        {[
-          ["侵权关系", "受害人：机关不处理或处罚过轻 → 可诉", C.blue, true],
-          ["亲属关系", "仅亲属关系 = 事实利害 → 无原告资格", C.gray, false],
-          ["物权关系", "所有权/相邻权/用益物权 → 有资格", C.blue, true],
-          ["公平竞争关系", "排除限制竞争受损 → 有资格", C.blue, true],
-          ["合同关系", "有民诉没行政；没民诉有行政", C.amber, true],
-        ].map((x, i) => (
-          <div
-            key={String(x[0])}
-            data-final-knowledge={String(x[2] ? `tie-${i + 1}` : `tie-${i + 1}`)}
-            style={{
-              position: "absolute",
-              left: 60 + (i % 2) * 910,
-              top: 36 + Math.floor(i / 2) * 205,
-              width: 870,
-              height: 175,
-              border: `5px solid ${x[2] ? C.blue : C.gray}`,
-              background: `${x[2] ? C.blue : C.gray}0d`,
-              padding: "16px 20px",
-              ...enter(f, 8 + i * 9),
-            }}
-          >
-            <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-              <span
+        <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+          {ties.map((t, i) => (
+            <div
+              key={t.title}
+              data-final-knowledge={`tie-${i + 1}`}
+              style={{
+                background: J.cardBg,
+                border: `2px solid ${t.color}66`,
+                borderLeft: `8px solid ${t.color}`,
+                borderRadius: 8,
+                padding: "12px 20px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "space-between",
+                ...enter(f, 4 + i * 7),
+              }}
+            >
+              <div style={{ width: 220, fontSize: 23, fontWeight: 950, color: t.color, display: "flex", alignItems: "center", gap: 10 }}>
+                <span>{t.ok ? "🟢" : "🔴"}</span>
+                <span>{t.title}</span>
+              </div>
+              <div style={{ flex: 1, fontSize: 20, color: J.parchment, padding: "0 16px" }}>
+                {t.desc}
+              </div>
+              <div
                 style={{
-                  width: 46,
-                  height: 46,
-                  borderRadius: "50%",
-                  background: x[2] ? C.blue : C.gray,
-                  color: C.white,
-                  display: "grid",
-                  placeItems: "center",
-                  fontSize: 24,
-                  fontWeight: 950,
-                  flex: "0 0 auto",
+                  background: `${t.color}22`,
+                  color: t.color,
+                  border: `1px solid ${t.color}66`,
+                  padding: "6px 14px",
+                  borderRadius: 6,
+                  fontSize: 18,
+                  fontWeight: 900,
                 }}
               >
-                {x[2] ? "✓" : "✕"}
-              </span>
-              <div>
-                <div style={{ fontSize: 24, fontWeight: 950, color: x[2] ? C.blue : C.gray }}>
-                  {x[0]}
-                </div>
-                <div style={{ fontSize: 22, fontWeight: 850, marginTop: 4, lineHeight: 1.3 }}>
-                  {x[1]}
-                </div>
+                {t.status}
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
+
+        {/* Contract Rule Footer */}
         <div
           data-final-knowledge="tie-mnemonic"
           style={{
             position: "absolute",
-            left: 460,
-            top: 660,
-            width: 1000,
-            textAlign: "center",
-            ...enter(f, 56),
+            left: 0,
+            right: 0,
+            bottom: 6,
+            height: 52,
+            background: "linear-gradient(90deg, rgba(212,175,55,0.15) 0%, rgba(212,175,55,0.3) 50%, rgba(212,175,55,0.15) 100%)",
+            border: `2px solid ${J.gold}`,
+            borderRadius: 8,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            fontSize: 22,
+            fontWeight: 950,
+            color: J.gold,
+            ...enter(f, 44),
           }}
         >
-          <span
-            style={{
-              display: "inline-block",
-              border: `4px solid ${C.gold}`,
-              padding: "10px 18px",
-              fontSize: 23,
-              fontWeight: 950,
-              color: C.gold,
-            }}
-          >
-            口诀：相关人自身"有民诉，没行政；没民诉，有行政"
-          </span>
+          📜 合同关系做题必杀口诀：相关人自身“有民诉，没行政；没民诉，有行政”
         </div>
       </div>
-    </Shell>
+    </CourtShell>
   );
 };
 
+// ==========================================
+// SCENE 07: 特殊组织的原告资格八大席位
+// ==========================================
 export const OrganizationPlaintiffsScene = () => {
   /* Static audit inventory: data-final-knowledge="org-01" data-final-knowledge="org-02" data-final-knowledge="org-03" data-final-knowledge="org-04" data-final-knowledge="org-05" data-final-knowledge="org-06" data-final-knowledge="org-07" data-final-knowledge="org-08" data-final-knowledge="org-exam-tip" */
   const f = useCurrentFrame();
+
+  const orgs = [
+    { name: "1. 合伙企业", who: "核准登记的字号为原告", color: J.plaintiffBlue },
+    { name: "2. 个人合伙（未领照）", who: "全体合伙人为共同原告（可推选代表人）", color: J.thirdAmber },
+    { name: "3. 个体工商户", who: "有字号以字号为原告；无字号以经营者为原告", color: J.plaintiffBlue },
+    { name: "4. 非营利法人", who: "出资人、设立人可以自己的名义起诉", color: J.thirdAmber },
+    { name: "5. 业主委员会", who: "业委会以自己名义起诉；不起诉则过半数业主起诉", color: J.verdictGreen },
+    { name: "6. 股份制企业", who: "股东会/董事会/法定代表人均以企业名义起诉", color: J.defendantRed },
+    { name: "7. 联营/合资/合作投资人", who: "投资人均可以自己的名义起诉（保护合资利益）", color: J.gold },
+    { name: "8. 非国有企业撤销兼并", who: "企业或者其法定代表人可以自己的名义起诉", color: J.defendantRed },
+  ];
+
   return (
-    <Shell code="07" title="组织原告：谁以自己的名义起诉">
+    <CourtShell code="07" title="组织原告：谁能以自己的名义起诉" subLabel="ORGANIZATIONAL PLAINTIFF STANDING REGISTRY">
       <div
         data-layout="organization-plaintiff-registry"
         data-visual-anchor="comparison-axis"
@@ -808,74 +989,72 @@ export const OrganizationPlaintiffsScene = () => {
         data-text-treatments="label-block,thin-underline,soft-highlight"
         data-focal-rule="organization-plaintiff-name-rules"
         data-focal-channels="contrast,enclosure,spatial"
-        style={{ position: "absolute", inset: 16 }}
+        style={{ position: "absolute", inset: 8 }}
       >
-        {[
-          ["合伙企业", "字号为原告", C.blue],
-          ["个人合伙（未登记）", "全体合伙人共同原告，可推选代表人", C.amber],
-          ["个体工商户", "无字号→经营者；有字号→字号+经营者信息", C.blue],
-          ["非营利法人出资人/设立人", "以自己名义起诉", C.amber],
-          ["业主委员会", "自己名义；业委会不起诉→过半数业主起诉", C.blue],
-          ["股份制企业", "股东会/董事会/法定代表人以企业名义起诉", C.red],
-          ["投资人（联营合资合作）", "以自己名义起诉", C.amber],
-          ["非国有企业", "被注销撤销合并强令兼并→企业或法定代表人", C.red],
-        ].map((x, i) => (
-          <div
-            key={String(x[0])}
-            data-final-knowledge={`org-${String(i + 1).padStart(2, "0")}`}
-            style={{
-              position: "absolute",
-              left: 40 + (i % 2) * 920,
-              top: 30 + Math.floor(i / 2) * 155,
-              width: 880,
-              height: 130,
-              border: `4px solid ${x[2]}`,
-              background: `${x[2]}0d`,
-              padding: "14px 18px",
-              ...enter(f, 6 + i * 8),
-            }}
-          >
-            <div style={{ fontSize: 23, fontWeight: 950, color: x[2] }}>{x[0]}</div>
-            <div style={{ fontSize: 22, fontWeight: 850, marginTop: 6, lineHeight: 1.3 }}>
-              → <b style={{ color: x[2] }}>{x[1]}</b>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}>
+          {orgs.map((o, i) => (
+            <div
+              key={o.name}
+              data-final-knowledge={`org-${String(i + 1).padStart(2, "0")}`}
+              style={{
+                background: J.cardBg,
+                border: `2px solid ${o.color}66`,
+                borderLeft: `6px solid ${o.color}`,
+                borderRadius: 8,
+                padding: "14px 20px",
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+                ...enter(f, 4 + i * 5),
+              }}
+            >
+              <div style={{ fontSize: 22, fontWeight: 950, color: J.parchment }}>
+                {o.name}
+              </div>
+              <div style={{ fontSize: 20, fontWeight: 900, color: o.color }}>
+                ➔ {o.who}
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
+
+        {/* Exam Tip Banner */}
         <div
           data-final-knowledge="org-exam-tip"
           style={{
             position: "absolute",
-            left: 460,
-            top: 668,
-            width: 1000,
-            textAlign: "center",
-            ...enter(f, 76),
+            left: 0,
+            right: 0,
+            bottom: 6,
+            height: 52,
+            background: "rgba(212,175,55,0.12)",
+            border: `2px dashed ${J.gold}`,
+            borderRadius: 8,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            fontSize: 21,
+            fontWeight: 900,
+            color: J.gold,
+            ...enter(f, 48),
           }}
         >
-          <span
-            style={{
-              display: "inline-block",
-              border: `4px dashed ${C.gray}`,
-              padding: "10px 18px",
-              fontSize: 23,
-              fontWeight: 900,
-              color: C.gray,
-            }}
-          >
-            应试：企业名称写得很长（股份、合资、非国有）→ 考的就是这三处原告资格
-          </span>
+          💡 试卷密码：题干中企业名称表述特别长（股份制、合资、非国有）➔ 考点必在原告起诉名义！
         </div>
       </div>
-    </Shell>
+    </CourtShell>
   );
 };
 
-
+// ==========================================
+// SCENE 08: 第三人特征与两种类型
+// ==========================================
 export const ThirdPartySeatScene = () => {
   /* Static audit inventory: data-final-knowledge="third-party-core" data-final-knowledge="third-party-plaintiff-type" data-final-knowledge="third-party-defendant-type" data-final-knowledge="third-party-procedure" */
   const f = useCurrentFrame();
+
   return (
-    <Shell code="08" title="第三人：独三特征与两种类型">
+    <CourtShell code="08" title="第三人：独三特征与两大席位类型" subLabel="THIRD PARTY STANDING AND JOINDER RULES">
       <div
         data-layout="third-party-seat-board"
         data-visual-anchor="role-pair"
@@ -883,114 +1062,114 @@ export const ThirdPartySeatScene = () => {
         data-text-treatments="label-block,stamp,thin-underline"
         data-focal-rule="third-party-characteristics-and-two-types"
         data-focal-channels="contrast,enclosure,icon"
-        style={{ position: "absolute", inset: 18 }}
+        style={{ position: "absolute", inset: 8 }}
       >
+        {/* Top Feature Banner */}
         <div
           data-final-knowledge="third-party-core"
           style={{
-            position: "absolute",
-            left: 120,
-            top: 36,
-            width: 1680,
-            border: `5px solid ${C.amber}`,
-            padding: "16px 20px",
+            background: J.cardBg,
+            border: `2px solid ${J.thirdAmber}`,
+            borderRadius: 8,
+            padding: "14px 24px",
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
             ...enter(f, 4),
           }}
         >
-          <div style={{ fontSize: 26, fontWeight: 950, color: C.amber }}>
-            均为有独立请求权的第三人（独三）
+          <div style={{ fontSize: 24, fontWeight: 950, color: J.thirdAmber }}>
+            🏛️ 核心特征：行政诉讼第三人均为【有独立请求权第三人】
           </div>
-          <div style={{ fontSize: 22, fontWeight: 850, marginTop: 8, lineHeight: 1.35 }}>
-            可以上诉、申请调取证据、申请执行生效裁判
+          <div style={{ fontSize: 20, color: J.parchment }}>
+            享有一审当事人完整权利：可上诉、申请调取证据、申请执行生效裁判
           </div>
         </div>
-        <div
-          data-final-knowledge="third-party-plaintiff-type"
-          style={{
-            position: "absolute",
-            left: 120,
-            top: 190,
-            width: 810,
-            height: 400,
-            border: `5px solid ${C.blue}`,
-            padding: "20px 22px",
-            ...enter(f, 10),
-          }}
-        >
-          <div style={{ fontSize: 26, fontWeight: 950, color: C.blue }}>
-            原告型第三人
-          </div>
-          <div style={{ marginTop: 12, fontSize: 22, fontWeight: 850, lineHeight: 1.45 }}>
-            与被诉行为有法律上利害关系：起诉是原告，他人起诉时有资格作第三人
-          </div>
+
+        {/* Dual Type Columns */}
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20, marginTop: 16, height: 380 }}>
+          {/* Plaintiff-type Third Party */}
           <div
+            data-final-knowledge="third-party-plaintiff-type"
             style={{
-              marginTop: 14,
-              fontSize: 22,
-              fontWeight: 900,
-              color: C.white,
-              border: `3px solid ${C.blue}`,
-              padding: "10px 12px",
-              lineHeight: 1.4,
+              background: J.cardBg,
+              border: `2px solid ${J.plaintiffBlue}77`,
+              borderTop: `6px solid ${J.plaintiffBlue}`,
+              borderRadius: 8,
+              padding: "20px 22px",
+              ...enter(f, 12),
             }}
           >
-            利益相反 → 直接追加为第三人
-            <br />
-            利益一致 → 先考虑共同原告，不同意再列第三人
+            <div style={{ fontSize: 25, fontWeight: 950, color: J.plaintiffBlue, marginBottom: 12 }}>
+              原告型第三人（民）
+            </div>
+            <div style={{ fontSize: 21, lineHeight: 1.6, color: J.parchment }}>
+              • 与被诉行政行为有法律上利害关系：自己起诉是原告；他人先起诉时有资格作第三人
+              <br /><br />
+              • <b style={{ color: J.thirdAmber }}>利益相反</b>（如争议地块判给甲，乙起诉）➔ <b style={{ color: J.thirdAmber }}>直接追加甲为第三人</b>
+              <br />
+              • <b style={{ color: J.verdictGreen }}>利益一致</b>（如夫妇被罚款5000元，夫起诉）➔ <b style={{ color: J.verdictGreen }}>先考虑共同原告</b>，妻不同意再列第三人
+            </div>
+          </div>
+
+          {/* Defendant-type Third Party */}
+          <div
+            data-final-knowledge="third-party-defendant-type"
+            style={{
+              background: J.cardBg,
+              border: `2px solid ${J.defendantRed}77`,
+              borderTop: `6px solid ${J.defendantRed}`,
+              borderRadius: 8,
+              padding: "20px 22px",
+              ...enter(f, 20),
+            }}
+          >
+            <div style={{ fontSize: 25, fontWeight: 950, color: J.defendantRed, marginBottom: 12 }}>
+              被告型第三人（官 · 仅4种情形！）
+            </div>
+            <div style={{ fontSize: 21, lineHeight: 1.6, color: J.parchment }}>
+              ① <b style={{ color: J.gold }}>假共同行为</b>：共同署名的非行政组织（如消协）
+              <br />
+              ② <b style={{ color: J.gold }}>相互矛盾行政行为</b> 中非被告的行政机关
+              <br />
+              ③ <b style={{ color: J.gold }}>共同行为告漏了</b>：法院通知追加原告拒绝 ➔ 通知该机关为第三人
+              <br />
+              ④ <b style={{ color: J.gold }}>复议改变后再起诉</b>：被告为复议机关，原机关为第三人
+            </div>
           </div>
         </div>
-        <div
-          data-final-knowledge="third-party-defendant-type"
-          style={{
-            position: "absolute",
-            left: 990,
-            top: 190,
-            width: 810,
-            height: 400,
-            border: `5px solid ${C.red}`,
-            padding: "20px 22px",
-            ...enter(f, 16),
-          }}
-        >
-          <div style={{ fontSize: 26, fontWeight: 950, color: C.red }}>
-            被告型第三人（仅四种）
-          </div>
-          <div style={{ marginTop: 12, fontSize: 22, fontWeight: 850, lineHeight: 1.5 }}>
-            ① 假共同：共同署名的非行政组织
-            <br />
-            ② 相互矛盾的行政行为中非被告的机关
-            <br />
-            ③ 应追加被告而原告不同意 → 通知为第三人
-            <br />
-            ④ 复议改变后，原机关为第三人
-          </div>
-        </div>
+
+        {/* Bottom Procedure Notice */}
         <div
           data-final-knowledge="third-party-procedure"
           style={{
-            position: "absolute",
-            left: 120,
-            top: 620,
-            width: 1680,
-            border: `4px dashed ${C.gray}`,
-            padding: "14px 18px",
-            ...enter(f, 40),
+            marginTop: 14,
+            background: "rgba(0,0,0,0.3)",
+            border: `1px dashed ${J.gold}`,
+            borderRadius: 8,
+            padding: "10px 20px",
+            fontSize: 20,
+            fontWeight: 800,
+            color: J.gold,
+            ...enter(f, 32),
           }}
         >
-          <div style={{ fontSize: 22, fontWeight: 900, color: C.gray, lineHeight: 1.4 }}>
-            参加时间：一审中、判决作出前。一审漏通知 → 二审撤销原判发回重审；因不能归责事由未参加且判决损害其权益 → 6个月内申请再审。应当通知（同一行为多利害关系人）/ 可以通知（同类行为）。不参加不影响审理。
-          </div>
+          ⚠️ 程序铁律：一审应通知第三人而未通知 ➔ 二审法院必须【撤销原判，发回重审】！
         </div>
       </div>
-    </Shell>
+    </CourtShell>
   );
 };
 
+// ==========================================
+// SCENE 09: 级别管辖双层法庭沙盘
+// ==========================================
 export const JurisdictionFloorsScene = () => {
   /* Static audit inventory: data-final-knowledge="jurisdiction-basic-floor" data-final-knowledge="jurisdiction-intermediate-floor" data-final-knowledge="jurisdiction-co-defendant-rule" */
   const f = useCurrentFrame();
+
   return (
-    <Shell code="09" title="级别管辖：灯塔分层">
+    <CourtShell code="09" title="级别管辖：基层原则与中院四类案件" subLabel="COURT HIERARCHY LEVEL JURISDICTION">
       <div
         data-layout="jurisdiction-lighthouse-floors"
         data-visual-anchor="comparison-axis"
@@ -998,93 +1177,109 @@ export const JurisdictionFloorsScene = () => {
         data-text-treatments="label-block,thin-underline,stamp"
         data-focal-rule="level-jurisdiction-two-floors"
         data-focal-channels="contrast,enclosure,locator"
-        style={{ position: "absolute", inset: 20 }}
+        style={{ position: "absolute", inset: 8 }}
       >
-        <div
-          data-final-knowledge="jurisdiction-basic-floor"
-          style={{
-            position: "absolute",
-            left: 110,
-            top: 330,
-            width: 800,
-            height: 380,
-            border: `6px solid ${C.blue}`,
-            background: `${C.blue}0d`,
-            padding: "24px 26px",
-            ...enter(f, 8),
-          }}
-        >
-          <div style={{ fontSize: 30, fontWeight: 950, color: C.blue }}>基层法院</div>
-          <div style={{ marginTop: 14, fontSize: 23, fontWeight: 850, lineHeight: 1.4 }}>
-            原则上管辖第一审行政诉讼
-          </div>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1.3fr", gap: 20, height: 490 }}>
+          {/* Basic Court */}
           <div
+            data-final-knowledge="jurisdiction-basic-floor"
             style={{
-              marginTop: 18,
-              fontSize: 22,
-              fontWeight: 900,
-              color: C.gray,
-              border: `3px dashed ${C.gray}`,
-              padding: "10px 12px",
+              background: J.cardBg,
+              border: `2px solid ${J.plaintiffBlue}77`,
+              borderTop: `6px solid ${J.plaintiffBlue}`,
+              borderRadius: 8,
+              padding: "24px 26px",
+              display: "flex",
+              flexDirection: "column",
+              gap: 16,
+              ...enter(f, 6),
             }}
           >
-            默认楼层 · 其余全归此处
+            <div style={{ fontSize: 28, fontWeight: 950, color: J.plaintiffBlue }}>
+              基层人民法院（第一审原则）
+            </div>
+            <div style={{ fontSize: 22, lineHeight: 1.6, color: J.parchment }}>
+              • 第一审行政案件原则上由基层人民法院管辖
+              <br /><br />
+              • 除法律规定由中院、高院、最高法管辖的第一审案件外，其余案件全部归基层法院！
+            </div>
+            <div style={{ marginTop: "auto", background: `${J.plaintiffBlue}1a`, padding: "12px 16px", borderRadius: 6, fontSize: 20, color: J.gold }}>
+              🏛️ 兜底管辖楼层：凡未明确列举归中院者，一律基层管辖
+            </div>
+          </div>
+
+          {/* Intermediate Court */}
+          <div
+            data-final-knowledge="jurisdiction-intermediate-floor"
+            style={{
+              background: J.cardBg,
+              border: `2px solid ${J.gold}77`,
+              borderTop: `6px solid ${J.gold}`,
+              borderRadius: 8,
+              padding: "24px 26px",
+              display: "flex",
+              flexDirection: "column",
+              gap: 14,
+              ...enter(f, 14),
+            }}
+          >
+            <div style={{ fontSize: 28, fontWeight: 950, color: J.gold }}>
+              中级人民法院（法定四类案件）
+            </div>
+            <div style={{ fontSize: 21, lineHeight: 1.55, color: J.parchment }}>
+              ① <b style={{ color: J.gold }}>级别高</b>：被告为县级以上地方政府、国务院部门（注意：不含县级政府工作部门！）
+              <br />
+              ② <b style={{ color: J.gold }}>性质特</b>：海关处理的案件；证券交易所为被告或第三人的案件
+              <br />
+              ③ <b style={{ color: J.gold }}>人数多</b>：本辖区内社会影响重大的共同诉讼案件
+              <br />
+              ④ <b style={{ color: J.gold }}>有涉外</b>：涉外或者涉及香港特别行政区、澳门特别行政区、台湾地区的案件
+            </div>
           </div>
         </div>
-        <div
-          data-final-knowledge="jurisdiction-intermediate-floor"
-          style={{
-            position: "absolute",
-            left: 1010,
-            top: 60,
-            width: 800,
-            height: 650,
-            border: `6px solid ${C.gold}`,
-            background: `${C.gold}0d`,
-            padding: "24px 26px",
-            ...enter(f, 14),
-          }}
-        >
-          <div style={{ fontSize: 30, fontWeight: 950, color: C.gold }}>中级法院（四种）</div>
-          <div style={{ marginTop: 14, fontSize: 23, fontWeight: 850, lineHeight: 1.55 }}>
-            <b style={{ color: C.gold }}>级别高</b>：县级以上地方政府、国务院部门为被告（不含工作部门）
-            <br />
-            <b style={{ color: C.gold }}>性质特</b>：海关处理案件；证交所为被告或第三人
-            <br />
-            <b style={{ color: C.gold }}>人数多</b>：社会影响重大的共同诉讼
-            <br />
-            <b style={{ color: C.gold }}>有涉外</b>：涉外或涉港澳台案件
-          </div>
-        </div>
+
+        {/* Co-defendant Rule Banner */}
         <div
           data-final-knowledge="jurisdiction-co-defendant-rule"
           style={{
-            position: "absolute",
-            left: 110,
-            top: 60,
-            width: 800,
-            border: `4px solid ${C.red}`,
-            padding: "16px 20px",
-            ...enter(f, 30),
+            marginTop: 14,
+            background: "linear-gradient(90deg, rgba(239,68,68,0.15) 0%, rgba(239,68,68,0.25) 50%, rgba(239,68,68,0.15) 100%)",
+            border: `2px solid ${J.defendantRed}`,
+            borderRadius: 8,
+            padding: "14px 24px",
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            fontSize: 22,
+            fontWeight: 950,
+            ...enter(f, 26),
           }}
         >
-          <div style={{ fontSize: 23, fontWeight: 950, color: C.red }}>
-            复议维持共同被告 → 就低原则
-          </div>
-          <div style={{ fontSize: 22, fontWeight: 850, marginTop: 8, lineHeight: 1.35 }}>
-            以作出原行政行为的机关确定级别管辖；复议改变 → 复议机关自己定级别
-          </div>
+          <span style={{ color: J.defendantRed }}>
+            ⚡ 复议维持共同被告“就低原则”：以作出原行政行为的机关确定级别管辖（原机关为县公安局 ➔ 基层法院管辖！）
+          </span>
         </div>
       </div>
-    </Shell>
+    </CourtShell>
   );
 };
 
+// ==========================================
+// SCENE 10: 地域管辖四步走法则
+// ==========================================
 export const TerritorialStepsScene = () => {
   /* Static audit inventory: data-final-knowledge="step-1" data-final-knowledge="step-2" data-final-knowledge="step-3" data-final-knowledge="step-4" data-final-knowledge="territorial-order-tip" */
   const f = useCurrentFrame();
+
+  const steps = [
+    { num: "01", title: "不动产案件", who: "不动产所在地法院专属管辖", desc: "土地、房屋等不动产征收、登记纠纷，排他专属", color: J.defendantRed },
+    { num: "02", title: "经过复议案件", who: "原机关所在地 或 复议机关所在地", desc: "维持或改变均可由最初机关或复议机关所在地管辖", color: J.thirdAmber },
+    { num: "03", title: "限制人身自由", who: "原告所在地 或 被告所在地", desc: "原告地含户籍地、经常居住地、被限制人身自由地", color: J.plaintiffBlue },
+    { num: "04", title: "一般地域管辖", who: "原告就被告（最初机关所在地）", desc: "由最初作出行政行为的行政机关所在地法院管辖", color: J.verdictGreen },
+  ];
+
   return (
-    <Shell code="10" title="地域管辖：四步走">
+    <CourtShell code="10" title="地域管辖：四步走判定法庭" subLabel="TERRITORIAL VENUE FOUR-STEP DETERMINATION LADDER">
       <div
         data-layout="territorial-four-step-ladder"
         data-visual-anchor="flow-path"
@@ -1092,81 +1287,75 @@ export const TerritorialStepsScene = () => {
         data-text-treatments="label-block,thin-underline,external-negation"
         data-focal-rule="territorial-jurisdiction-step-order"
         data-focal-channels="contrast,connector,motion"
-        style={{ position: "absolute", inset: 20 }}
+        style={{ position: "absolute", inset: 8 }}
       >
-        {[
-          ["第一步 · 不动产案件", "不动产所在地法院专属管辖", C.red],
-          ["第二步 · 经过复议", "原机关所在地或复议机关所在地法院", C.amber],
-          ["第三步 · 限制人身自由", "被关了的人诉关的强制措施 → 原告或被告所在地", C.blue],
-          ["第四步 · 一般规则", "原告就被告 → 最初作出行为机关所在地", C.green],
-        ].map((x, i) => (
-          <div
-            key={String(x[0])}
-            data-final-knowledge={`step-${i + 1}`}
-            style={{
-              position: "absolute",
-              left: 90 + i * 430,
-              top: 60,
-              width: 390,
-              height: 540,
-              border: `5px solid ${x[2]}`,
-              background: `${x[2]}0d`,
-              padding: "20px 22px",
-              ...enter(f, 8 + i * 12, 0, 30),
-            }}
-          >
-            <div style={{ fontSize: 24, fontWeight: 950, color: x[2], lineHeight: 1.3 }}>
-              {x[0]}
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 16, height: 490 }}>
+          {steps.map((s, i) => (
+            <div
+              key={s.num}
+              data-final-knowledge={`step-${i + 1}`}
+              style={{
+                background: J.cardBg,
+                border: `2px solid ${s.color}66`,
+                borderTop: `6px solid ${s.color}`,
+                borderRadius: 8,
+                padding: "22px 18px",
+                display: "flex",
+                flexDirection: "column",
+                gap: 14,
+                boxShadow: "0 6px 20px rgba(0,0,0,0.35)",
+                ...enter(f, 6 + i * 8),
+              }}
+            >
+              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                <span style={{ fontSize: 28, fontWeight: 950, color: s.color }}>第 {i + 1} 步</span>
+                <span style={{ fontSize: 16, background: `${s.color}22`, color: s.color, padding: "2px 8px", borderRadius: 4, fontWeight: 800 }}>STEP {s.num}</span>
+              </div>
+              <div style={{ fontSize: 24, fontWeight: 950, color: J.parchment }}>
+                {s.title}
+              </div>
+              <div style={{ fontSize: 20, fontWeight: 900, color: s.color, background: "rgba(0,0,0,0.3)", padding: "10px 12px", borderRadius: 6 }}>
+                ➔ {s.who}
+              </div>
+              <div style={{ fontSize: 18, lineHeight: 1.5, color: J.subText, marginTop: "auto" }}>
+                {s.desc}
+              </div>
             </div>
-            <div style={{ marginTop: 14, fontSize: 22, fontWeight: 850, lineHeight: 1.4 }}>
-              {x[1]}
-            </div>
-          </div>
-        ))}
-        <div
-          style={{
-            position: "absolute",
-            top: 330,
-            left: 470,
-            width: 980,
-            height: 8,
-            background: C.gray,
-          }}
-        />
+          ))}
+        </div>
+
+        {/* Decision Order Tip */}
         <div
           data-final-knowledge="territorial-order-tip"
           style={{
-            position: "absolute",
-            left: 300,
-            top: 640,
-            width: 1320,
+            marginTop: 14,
+            background: "linear-gradient(90deg, rgba(212,175,55,0.15) 0%, rgba(212,175,55,0.3) 50%, rgba(212,175,55,0.15) 100%)",
+            border: `2px solid ${J.gold}`,
+            borderRadius: 8,
+            padding: "12px 24px",
             textAlign: "center",
-            ...enter(f, 56),
+            fontSize: 22,
+            fontWeight: 950,
+            color: J.gold,
+            ...enter(f, 44),
           }}
         >
-          <span
-            style={{
-              display: "inline-block",
-              border: `4px solid ${C.gold}`,
-              padding: "12px 18px",
-              fontSize: 24,
-              fontWeight: 950,
-              color: C.gold,
-            }}
-          >
-            做题顺序：先定被告 → 先级别后地域 → 地域：不动产 → 复议/人身自由 → 原告就被告
-          </span>
+          ⚖️ 做题黄金顺序：先定被告 ➔ 先级别后地域 ➔ 地域：不动产 ➔ 复议 / 人身自由 ➔ 原告就被告
         </div>
       </div>
-    </Shell>
+    </CourtShell>
   );
 };
 
+// ==========================================
+// SCENE 11: 诉讼代表人与代理人席位
+// ==========================================
 export const RepresentativeDeskScene = () => {
   /* Static audit inventory: data-final-knowledge="representative-rule" data-final-knowledge="agent-rule" */
   const f = useCurrentFrame();
+
   return (
-    <Shell code="11" title="诉讼代表人与诉讼代理人">
+    <CourtShell code="11" title="诉讼席位：诉讼代表人与诉讼代理人" subLabel="LITIGATION REPRESENTATIVES AND LEGAL AGENTS">
       <div
         data-layout="representative-vs-agent-desk"
         data-visual-anchor="comparison-axis"
@@ -1174,65 +1363,85 @@ export const RepresentativeDeskScene = () => {
         data-text-treatments="label-block,stamp,thin-underline"
         data-focal-rule="representative-and-agent-quotas"
         data-focal-channels="contrast,enclosure,locator"
-        style={{ position: "absolute", inset: 24 }}
+        style={{ position: "absolute", inset: 8 }}
       >
-        <div
-          data-final-knowledge="representative-rule"
-          style={{
-            position: "absolute",
-            left: 60,
-            top: 40,
-            width: 880,
-            height: 660,
-            border: `6px solid ${C.blue}`,
-            padding: "24px 26px",
-            ...enter(f, 6),
-          }}
-        >
-          <div style={{ fontSize: 30, fontWeight: 950, color: C.blue }}>
-            诉讼代表人
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24, height: 570 }}>
+          {/* Representative Column */}
+          <div
+            data-final-knowledge="representative-rule"
+            style={{
+              background: J.cardBg,
+              border: `2px solid ${J.plaintiffBlue}77`,
+              borderTop: `8px solid ${J.plaintiffBlue}`,
+              borderRadius: 8,
+              padding: "28px 28px",
+              display: "flex",
+              flexDirection: "column",
+              gap: 18,
+              ...enter(f, 6),
+            }}
+          >
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+              <span style={{ fontSize: 30, fontWeight: 950, color: J.plaintiffBlue }}>
+                👥 诉讼代表人（本身是原告）
+              </span>
+              <span style={{ fontSize: 18, background: `${J.plaintiffBlue}22`, color: J.plaintiffBlue, padding: "4px 12px", borderRadius: 4, fontWeight: 800 }}>
+                2 ~ 5 人
+              </span>
+            </div>
+            <div style={{ fontSize: 22, lineHeight: 1.65, color: J.parchment }}>
+              ① <b style={{ color: J.plaintiffBlue }}>适用门槛</b>：同案原告人数须为 <b style={{ color: J.plaintiffBlue }}>10人以上</b>
+              <br />
+              ② <b style={{ color: J.plaintiffBlue }}>推选人数</b>：由原告推选 <b style={{ color: J.plaintiffBlue }}>2 ~ 5 名代表人</b>
+              <br />
+              ③ <b style={{ color: J.gold }}>指定产生</b>：限期内未选定的，由人民法院依职权指定
+              <br />
+              ④ <b style={{ color: J.verdictGreen }}>裁判效力</b>：代表人的诉讼行为及裁判效力 <b style={{ color: J.verdictGreen }}>及于全体当事人</b>
+            </div>
           </div>
-          <div style={{ marginTop: 16, fontSize: 23, fontWeight: 850, lineHeight: 1.6 }}>
-            ① 同案原告人数须为<b style={{ color: C.blue }}>10人以上</b>
-            <br />
-            ② 代表人总数限<b style={{ color: C.blue }}>2~5人</b>
-            <br />
-            ③ 限期内未选定 → 法院依职权指定
-            <br />
-            ④ 裁判效力及于全体当事人
-          </div>
-        </div>
-        <div
-          data-final-knowledge="agent-rule"
-          style={{
-            position: "absolute",
-            left: 980,
-            top: 40,
-            width: 880,
-            height: 660,
-            border: `6px solid ${C.amber}`,
-            padding: "24px 26px",
-            ...enter(f, 12),
-          }}
-        >
-          <div style={{ fontSize: 30, fontWeight: 950, color: C.amber }}>
-            诉讼代理人
-          </div>
-          <div style={{ marginTop: 16, fontSize: 23, fontWeight: 850, lineHeight: 1.6 }}>
-            ① 可委托<b style={{ color: C.amber }}>1~2人</b>
-            <br />
-            ② 授权委托书载明委托事项和具体权限
-            <br />
-            ③ 原则上书面；被限制人身自由可<b style={{ color: C.amber }}>口头委托近亲属</b>，近亲属可先行起诉
-            <br />
-            ④ 解除或变更委托应书面报告法院
+
+          {/* Agent Column */}
+          <div
+            data-final-knowledge="agent-rule"
+            style={{
+              background: J.cardBg,
+              border: `2px solid ${J.thirdAmber}77`,
+              borderTop: `8px solid ${J.thirdAmber}`,
+              borderRadius: 8,
+              padding: "28px 28px",
+              display: "flex",
+              flexDirection: "column",
+              gap: 18,
+              ...enter(f, 14),
+            }}
+          >
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+              <span style={{ fontSize: 30, fontWeight: 950, color: J.thirdAmber }}>
+                ⚖️ 诉讼代理人（受托代为诉讼）
+              </span>
+              <span style={{ fontSize: 18, background: `${J.thirdAmber}22`, color: J.thirdAmber, padding: "4px 12px", borderRadius: 4, fontWeight: 800 }}>
+                1 ~ 2 人
+              </span>
+            </div>
+            <div style={{ fontSize: 22, lineHeight: 1.65, color: J.parchment }}>
+              ① <b style={{ color: J.thirdAmber }}>委托人数</b>：当事人、法定代理人可委托 <b style={{ color: J.thirdAmber }}>1 ~ 2 人</b>
+              <br />
+              ② <b style={{ color: J.thirdAmber }}>委托手续</b>：应向法院提交授权委托书，记明委托事项与具体权限
+              <br />
+              ③ <b style={{ color: J.defendantRed }}>【特例】口头委托</b>：被限制人身自由无法书面委托的，可 <b style={{ color: J.defendantRed }}>口头委托近亲属</b>，近亲属可先行起诉
+              <br />
+              ④ <b style={{ color: J.gold }}>变更解除</b>：解除或变更委托的，应当书面报告法院
+            </div>
           </div>
         </div>
       </div>
-    </Shell>
+    </CourtShell>
   );
 };
 
+// ==========================================
+// MAIN COMPOSITION
+// ==========================================
 export const LitigantHierarchyBeacon = () => (
   <AbsoluteFill>
     <TimelineSequence name="01" start={SCENES["defendant-general-board"].start} duration={SCENES["defendant-general-board"].duration}>
@@ -1271,4 +1480,4 @@ export const LitigantHierarchyBeacon = () => (
   </AbsoluteFill>
 );
 
-
+export default LitigantHierarchyBeacon;

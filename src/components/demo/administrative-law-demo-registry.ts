@@ -154,7 +154,7 @@ export const ADMINISTRATIVE_LAW_STYLE_DEMOS = [
   {
     id: "administrative-law-09-transparency-optics-lab",
     slug: "transparency-optics-lab",
-    title: "透明度光学实验室",
+    title: "法治图谱工作室",
     direction: "Transparency Optics Lab",
     component: TransparencyOpticsLab,
     href: "/inkloom/objective/administrative-law/09/transparency-optics-lab/",
@@ -164,8 +164,8 @@ export const ADMINISTRATIVE_LAW_STYLE_DEMOS = [
   {
     id: "administrative-law-10-disclosure-case-desk",
     slug: "disclosure-case-desk",
-    title: "案件收发分拣台",
-    direction: "Disclosure Case Dispatch Desk",
+    title: "政务公开矩阵台",
+    direction: "Civic Transparency Ledger",
     component: DisclosureCaseDesk,
     href: "/inkloom/objective/administrative-law/10/disclosure-case-desk/",
     durationInFrames: DURATION_FRAMES_10,
@@ -174,8 +174,8 @@ export const ADMINISTRATIVE_LAW_STYLE_DEMOS = [
   {
     id: "administrative-law-11-misc-acts-showcase",
     slug: "misc-acts-showcase",
-    title: "政务行为展柜",
-    direction: "Civic Act Showcase Gallery",
+    title: "公法权力光谱分流仪",
+    direction: "Administrative Power Prism",
     component: MiscActsShowcase,
     href: "/inkloom/objective/administrative-law/11/misc-acts-showcase/",
     durationInFrames: DURATION_FRAMES_11,
@@ -194,8 +194,8 @@ export const ADMINISTRATIVE_LAW_STYLE_DEMOS = [
   {
     id: "administrative-law-13-litigant-hierarchy-beacon",
     slug: "litigant-hierarchy-beacon",
-    title: "参加人层级灯塔",
-    direction: "Litigant Hierarchy Beacon",
+    title: "行政诉讼法庭席位中枢",
+    direction: "Courtroom Docket Bench",
     component: LitigantHierarchyBeacon,
     href: "/inkloom/objective/administrative-law/13/litigant-hierarchy-beacon/",
     durationInFrames: DURATION_FRAMES_13,
@@ -230,6 +230,7 @@ export const ADMINISTRATIVE_LAW_DEMO_ADDED_AT = {
   "administrative-law-10-disclosure-case-desk": "2026-08-14T00:30:00+08:00",
   "administrative-law-11-misc-acts-showcase": "2026-08-14T09:30:00+08:00",
   "administrative-law-12-linkage-rail-switch": "2026-08-14T10:30:00+08:00",
-  "administrative-law-13-litigant-hierarchy-beacon": "2026-08-14T12:00:00+08:00",
+  "administrative-law-13-litigant-hierarchy-beacon":
+    "2026-08-14T12:00:00+08:00",
   "administrative-law-14-acceptance-security-gate": "2026-08-14T13:30:00+08:00",
 } as const;

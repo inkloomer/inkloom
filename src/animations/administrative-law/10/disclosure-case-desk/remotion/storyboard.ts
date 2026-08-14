@@ -1,19 +1,17 @@
 export const FPS = 60;
-const duration = 420;
-const dense = 480;
 export const SCENES = {
-  "case-mainline": { start: 0, duration, previewEndTrimFrames: 0 },
-  "plaintiff-gate": { start: 420, duration, previewEndTrimFrames: 0 },
-  "defendant-routing": { start: 840, duration: dense, previewEndTrimFrames: 0 },
-  "admission-tray": { start: 1320, duration, previewEndTrimFrames: 0 },
-  "rejection-gate": { start: 1740, duration: dense, previewEndTrimFrames: 0 },
-  "trial-desk": { start: 2220, duration, previewEndTrimFrames: 0 },
-  "defendant-proof-scale": { start: 2640, duration: dense, previewEndTrimFrames: 0 },
-  "plaintiff-proof-scale": { start: 3120, duration, previewEndTrimFrames: 0 },
-  "judgment-seals": { start: 3540, duration: dense, previewEndTrimFrames: 0 },
-  "trap-quiz": { start: 4020, duration: dense, previewEndTrimFrames: 0 },
-  "privacy-case": { start: 4500, duration: dense, previewEndTrimFrames: 0 },
+  "info-definition-scope": { start: 0, duration: 420, previewEndTrimFrames: 0 },
+  "disclosure-subject-matrix": { start: 420, duration: 450, previewEndTrimFrames: 0 },
+  "nondisclosure-tier-matrix": { start: 870, duration: 480, previewEndTrimFrames: 0 },
+  "active-disclosure-scope-clock": { start: 1350, duration: 420, previewEndTrimFrames: 0 },
+  "active-channels-venues": { start: 1770, duration: 420, previewEndTrimFrames: 0 },
+  "application-intake-rules": { start: 2190, duration: 450, previewEndTrimFrames: 0 },
+  "response-deadline-clock": { start: 2640, duration: 450, previewEndTrimFrames: 0 },
+  "response-classification-matrix": { start: 3090, duration: 480, previewEndTrimFrames: 0 },
+  "special-application-router": { start: 3570, duration: 480, previewEndTrimFrames: 0 },
+  "exam-traps-verdict": { start: 4050, duration: 480, previewEndTrimFrames: 0 },
 } as const;
-export const DURATION_FRAMES = 4980;
+
+export const DURATION_FRAMES = 4530;
 export const DURATION_SECONDS = DURATION_FRAMES / FPS;
 export const PREVIEW_EXIT_TRIM_FRAMES = 0;

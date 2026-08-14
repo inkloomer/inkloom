@@ -1,16 +1,16 @@
 {
-  "directionId": "litigant-hierarchy-beacon",
-  "family": "civic-litigant-beacon",
-  "palette": "night beacon navy, court white, plaintiff blue, defendant red, third-party amber, jurisdiction gold",
-  "typography": "WenKai registry plaques with litigant numerals, role captions, thin jurisdiction underlines and seal stamps",
-  "composition": "litigant registry towers, role beams, jurisdiction floors, party nameplates and court gates",
-  "surface": "stone registry walls and brass nameplates without rails, vitrines or desks",
-  "motion": "beams rotate between role slots, nameplates slide into floors, jurisdiction lights climb the tower",
-  "transition": "beam sweeps, floor wipes and nameplate slides",
+  "directionId": "courtroom-docket-bench",
+  "family": "courtroom-docket",
+  "palette": "court navy, judicial mahogany, parchment white, plaintiff blue, defendant crimson, third-party amber, brass gold, verdict emerald",
+  "typography": "WenKai courtroom plaques with docket numerals, seat captions, brass ruling lines and engraved judicial seal stamps",
+  "composition": "courtroom benches, judicial podiums, sliding brass nameplates, review outcome convergence tracks, and jurisdiction scale sandtables",
+  "surface": "walnut judicial court benches and parchment dockets with brass dividers and wax seal stamps",
+  "motion": "brass nameplates slide into courtroom seat slots, gavels strike with recoil, review outcomes route into joint or single seats, jurisdiction sandtables elevate",
+  "transition": "docket book folds, gavel wipes and bench rotations",
   "catalog": {
     "status": "featured",
     "source": "original-node",
     "route": "/inkloom/objective/administrative-law/13/litigant-hierarchy-beacon/",
-    "title": "参加人层级灯塔"
+    "title": "行政诉讼法庭席位中枢"
   }
 }

@@ -1,103 +1,121 @@
-﻿import React from "react";
+import React from "react";
 import { AbsoluteFill, Easing, interpolate, useCurrentFrame } from "remotion";
 import { TimelineSequence } from "../../../../shared/remotion-runtime";
 import { SCENES } from "./storyboard";
 
-const C = {
-  night: "#11142A",
-  deep: "#20264D",
-  paper: "#F8F5ED",
-  white: "#FFFFFF",
-  cyan: "#37C9E7",
-  violet: "#8267E8",
-  lime: "#A8D94E",
-  magenta: "#E54885",
-  amber: "#F3B53F",
-  gray: "#A8B2C8",
-  ink: "#191D34",
+const P = {
+  paper: "#F4EFE3",
+  paperDeep: "#E8DDC8",
+  ink: "#172338",
+  muted: "#647083",
+  red: "#C33D2E",
+  teal: "#16877B",
+  blue: "#2E69A5",
+  amber: "#D89524",
+  green: "#4E8A46",
+  violet: "#73549D",
+  white: "#FFFDF8",
 };
+
 const PLAYER_CONTROL_SAFE_BOTTOM = 160;
-const enter = (f: number, d = 0, x = 0, y = 24) => ({
-  opacity: interpolate(f, [d, d + 16], [0, 1], {
+const ease = Easing.bezier(0.16, 1, 0.3, 1);
+const enter = (frame: number, delay = 0, x = 0, y = 28) => ({
+  opacity: interpolate(frame, [delay, delay + 18], [0, 1], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
+    easing: ease,
   }),
-  translate: `${interpolate(f, [d, d + 22], [x, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: Easing.out(Easing.cubic) })}px ${interpolate(f, [d, d + 22], [y, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: Easing.out(Easing.cubic) })}px`,
+  translate: `${interpolate(frame, [delay, delay + 24], [x, 0], {
+    extrapolateLeft: "clamp",
+    extrapolateRight: "clamp",
+    easing: ease,
+  })}px ${interpolate(frame, [delay, delay + 24], [y, 0], {
+    extrapolateLeft: "clamp",
+    extrapolateRight: "clamp",
+    easing: ease,
+  })}px`,
 });
 
-const Shell = ({
+const AtlasShell = ({
   code,
   title,
+  section,
   children,
 }: {
   code: string;
   title: string;
+  section: string;
   children: React.ReactNode;
 }) => (
   <AbsoluteFill
     data-player-control-safe-bottom={PLAYER_CONTROL_SAFE_BOTTOM}
     className="font-animation-body"
     style={{
-      background: C.night,
-      color: C.white,
+      color: P.ink,
       overflow: "hidden",
+      backgroundColor: P.paper,
       backgroundImage:
-        "radial-gradient(circle at 14% 8%,rgba(55,201,231,.18),transparent 24%),linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px)",
-      backgroundSize: "auto,52px 52px,52px 52px",
+        "linear-gradient(rgba(23,35,56,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(23,35,56,.055) 1px,transparent 1px),radial-gradient(circle at 84% 8%,rgba(216,149,36,.13),transparent 25%)",
+      backgroundSize: "48px 48px,48px 48px,auto",
     }}
   >
     <header
       style={{
         position: "absolute",
-        left: 60,
-        right: 60,
-        top: 35,
+        left: 64,
+        right: 64,
+        top: 34,
         height: 112,
-        display: "flex",
+        display: "grid",
+        gridTemplateColumns: "110px 1fr auto",
         alignItems: "center",
         gap: 24,
-        borderBottom: `3px solid ${C.cyan}`,
+        borderBottom: `4px solid ${P.ink}`,
       }}
     >
       <div
         style={{
-          width: 86,
-          height: 70,
-          border: `3px solid ${C.cyan}`,
+          width: 94,
+          height: 72,
           display: "grid",
           placeItems: "center",
-          fontSize: 24,
+          border: `4px solid ${P.red}`,
+          color: P.red,
+          fontSize: 28,
           fontWeight: 950,
-          color: C.cyan,
-          clipPath: "polygon(18% 0,82% 0,100% 50%,82% 100%,18% 100%,0 50%)",
+          rotate: "-2deg",
         }}
       >
         {code}
       </div>
       <h1
         className="font-animation-title"
-        style={{ fontSize: 46, lineHeight: 1.08, margin: 0 }}
+        style={{ fontSize: 45, lineHeight: 1.08, margin: 0, fontWeight: 950 }}
       >
         {title}
       </h1>
-      <div
-        style={{
-          marginLeft: "auto",
-          fontSize: 17,
-          fontWeight: 900,
-          letterSpacing: 3,
-          color: C.gray,
-        }}
-      >
-        TRANSPARENCY · OPTICS LAB
+      <div style={{ textAlign: "right" }}>
+        <div style={{ color: P.teal, fontSize: 20, fontWeight: 950 }}>
+          {section}
+        </div>
+        <div
+          style={{
+            marginTop: 7,
+            color: P.muted,
+            fontSize: 16,
+            fontWeight: 800,
+          }}
+        >
+          ADMINISTRATIVE LAW · FIELD ATLAS
+        </div>
       </div>
     </header>
     <main
       style={{
         position: "absolute",
-        left: 60,
-        right: 60,
-        top: 175,
+        left: 64,
+        right: 64,
+        top: 172,
         bottom: PLAYER_CONTROL_SAFE_BOTTOM,
       }}
     >
@@ -105,61 +123,36 @@ const Shell = ({
     </main>
   </AbsoluteFill>
 );
-const Chip = ({
+
+const Tag = ({
   children,
-  color = C.cyan,
-  fill = false,
+  color = P.blue,
 }: {
   children: React.ReactNode;
   color?: string;
-  fill?: boolean;
 }) => (
   <span
     style={{
       display: "inline-flex",
       alignItems: "center",
-      justifyContent: "center,min-content",
-      minHeight: 46,
-      padding: "8px 14px",
+      justifyContent: "center",
+      minHeight: 42,
+      padding: "6px 13px",
       border: `3px solid ${color}`,
-      background: fill ? color : "transparent",
-      color: fill ? C.night : C.white,
+      background: P.white,
+      color,
       fontSize: 22,
-      fontWeight: 900,
-      lineHeight: 1.2,
-      textAlign: "center",
+      fontWeight: 950,
+      lineHeight: 1.15,
     }}
   >
     {children}
   </span>
 );
-const Pane = ({
-  title,
-  color = C.cyan,
+
+const Seal = ({
   children,
-  style,
-}: {
-  title: string;
-  color?: string;
-  children: React.ReactNode;
-  style?: React.CSSProperties;
-}) => (
-  <div
-    style={{
-      background: "rgba(255,255,255,.06)",
-      border: `4px solid ${color}`,
-      padding: 22,
-      boxShadow: `0 0 28px ${color}33`,
-      ...style,
-    }}
-  >
-    <div style={{ fontSize: 29, fontWeight: 950, color }}>{title}</div>
-    <div style={{ marginTop: 18 }}>{children}</div>
-  </div>
-);
-const Stamp = ({
-  children,
-  color = C.magenta,
+  color = P.red,
 }: {
   children: React.ReactNode;
   color?: string;
@@ -167,264 +160,263 @@ const Stamp = ({
   <span
     style={{
       display: "inline-block",
-      border: `4px solid ${color}`,
+      padding: "8px 15px",
+      border: `4px double ${color}`,
       color,
-      padding: "7px 13px",
-      fontSize: 22,
+      fontSize: 23,
       fontWeight: 950,
       rotate: "-2deg",
+      background: `${P.paper}EE`,
     }}
   >
     {children}
   </span>
 );
+
 const Arrow = ({
-  color = C.amber,
-  down = false,
-  style,
+  color = P.red,
+  vertical = false,
 }: {
   color?: string;
-  down?: boolean;
-  style?: React.CSSProperties;
+  vertical?: boolean;
 }) => (
-  <span
-    style={{ fontSize: 48, color, fontWeight: 950, lineHeight: 1, ...style }}
-  >
-    {down ? "↓" : "→"}
+  <span style={{ color, fontSize: 50, fontWeight: 950, lineHeight: 1 }}>
+    {vertical ? "↓" : "→"}
   </span>
 );
+
+const Line = ({ color = P.ink }: { color?: string }) => (
+  <div style={{ height: 5, background: color, width: "100%" }} />
+);
+
+const sceneBox: React.CSSProperties = { position: "absolute", inset: 10 };
 
 export const SettingSpectrumScene = () => {
   /* Stable generated markers: data-final-knowledge="penalty-setting" data-final-knowledge="license-setting" data-final-knowledge="measure-setting" data-final-knowledge="execution-setting" */
   const f = useCurrentFrame();
+  const rows = [
+    [
+      "行政处罚",
+      P.red,
+      "全部",
+      "除人身自由",
+      "再除吊照等",
+      "警告·通报·一定罚款",
+      "penalty-setting",
+    ],
+    [
+      "行政许可",
+      P.blue,
+      "全部",
+      "经常性",
+      "本地经常性",
+      "省级·1年临时",
+      "license-setting",
+    ],
+    [
+      "强制措施",
+      P.violet,
+      "全部",
+      "除人身·冻结·保留",
+      "仅查封·扣押",
+      "×",
+      "measure-setting",
+    ],
+    ["强制执行", P.amber, "仅法律", "×", "×", "×", "execution-setting"],
+  ] as const;
   return (
-    <Shell code="01" title="设定权光谱：四类行为随规范层级逐级失光">
+    <AtlasShell
+      code="01"
+      title="设定权限：四条规范阶梯在哪里停止"
+      section="设定权"
+    >
       <div
-        data-layout="four-independent-attenuation-beams"
+        data-layout="four-authority-staircases"
         data-visual-anchor="boundary"
-        data-visual-grammar="four-independent-authority-beams-enter-at-the-law-level,each-beam-narrows-or-terminates-at-its-own-normative-boundary,terminal-shutters-make-the-different-loss-points-visible-without-a-grid"
+        data-visual-grammar="four-authority-staircases-share-one-normative-axis,each-staircase-stops-at-its-own-legislative-boundary"
         data-text-treatments="label-block,soft-highlight,external-negation"
         data-focal-rule="comparison-of-setting-authority"
         data-focal-channels="contrast,connector,spatial"
-        style={{ position: "absolute", inset: 20 }}
+        style={sceneBox}
       >
         <div
           style={{
             position: "absolute",
-            left: 245,
-            right: 20,
+            left: 270,
+            right: 10,
             top: 0,
-            height: 60,
+            display: "grid",
+            gridTemplateColumns: "repeat(4,1fr)",
           }}
         >
-          {["法律", "行政法规", "地方性法规", "规章"].map((label, i) => (
+          {["法律", "行政法规", "地方性法规", "规章"].map((x, i) => (
             <div
-              key={label}
+              key={x}
               style={{
-                position: "absolute",
-                left: 35 + i * 365,
-                top: 0,
-                width: 260,
                 textAlign: "center",
-                fontSize: 23,
+                fontSize: 25,
                 fontWeight: 950,
-                color: [C.lime, C.cyan, C.violet, C.amber][i],
-                borderBottom: `3px solid ${[C.lime, C.cyan, C.violet, C.amber][i]}`,
-                paddingBottom: 8,
+                color: [P.green, P.blue, P.violet, P.amber][i],
               }}
             >
-              {label}
+              {x}
+              <div
+                style={{
+                  height: 4,
+                  margin: "10px 24px 0",
+                  background: [P.green, P.blue, P.violet, P.amber][i],
+                }}
+              />
             </div>
           ))}
         </div>
-        {[
-          {
-            id: "penalty-setting",
-            name: "行政处罚",
-            color: C.magenta,
-            y: 95,
-            stops: [
-              "全部",
-              "除人身自由",
-              "再除吊销执照等",
-              "警告·通报·一定罚款",
-            ],
-            widths: [1, 0.83, 0.58, 0.34],
-          },
-          {
-            id: "license-setting",
-            name: "行政许可",
-            color: C.cyan,
-            y: 245,
-            stops: ["全部", "经常性许可", "本地经常性许可", "省级规章·1年临时"],
-            widths: [1, 0.78, 0.54, 0.3],
-          },
-          {
-            id: "measure-setting",
-            name: "强制措施",
-            color: C.violet,
-            y: 395,
-            stops: ["全部", "除人身·冻结·保留", "仅查封·扣押", "熄灭"],
-            widths: [1, 0.72, 0.38, 0],
-          },
-          {
-            id: "execution-setting",
-            name: "强制执行",
-            color: C.amber,
-            y: 545,
-            stops: ["仅法律", "熄灭", "熄灭", "熄灭"],
-            widths: [1, 0, 0, 0],
-          },
-        ].map((beam, beamIndex) => (
+        {rows.map((row, r) => (
           <div
-            key={beam.id}
-            data-final-knowledge={beam.id}
+            key={row[0]}
+            data-final-knowledge={row[6]}
             style={{
               position: "absolute",
               left: 0,
               right: 0,
-              top: beam.y,
-              height: 118,
-              ...enter(f, 5 + beamIndex * 12),
+              top: 90 + r * 145,
+              height: 106,
+              ...enter(f, 6 + r * 12, -24, 0),
             }}
           >
             <div
               style={{
                 position: "absolute",
                 left: 0,
-                top: 28,
-                width: 205,
-                fontSize: 29,
+                top: 25,
+                width: 245,
+                fontSize: 31,
                 fontWeight: 950,
-                color: beam.color,
+                color: row[1],
               }}
             >
-              {beam.name}
+              {row[0]}
             </div>
-            {beam.widths.map((intensity, segmentIndex) => (
+            <div
+              style={{
+                position: "absolute",
+                left: 245,
+                right: 10,
+                top: 44,
+                height: 6,
+                background: row[1],
+                opacity: 0.4,
+              }}
+            />
+            {row.slice(2, 6).map((x, i) => (
               <div
-                key={`${beam.id}-segment-${segmentIndex}`}
+                key={`${x}-${i}`}
                 style={{
                   position: "absolute",
-                  left: 215 + segmentIndex * 365,
-                  top: 52 - intensity * 7,
-                  width: segmentIndex === 3 ? 330 : 365,
-                  height: Math.max(4, intensity * 14),
-                  opacity: intensity === 0 ? 0.12 : 1,
-                  background:
-                    intensity === 0
-                      ? `repeating-linear-gradient(90deg,${C.magenta} 0 10px,transparent 10px 22px)`
-                      : `linear-gradient(90deg,${beam.color},${beam.color}88)`,
-                  boxShadow:
-                    intensity === 0 ? "none" : `0 0 22px ${beam.color}`,
+                  left: 270 + i * 365,
+                  top: i % 2 === 0 ? 0 : 22,
+                  width: 300,
+                  minHeight: 72,
+                  padding: "10px 14px",
+                  display: "grid",
+                  placeItems: "center",
+                  textAlign: "center",
+                  fontSize: 22,
+                  fontWeight: 900,
+                  color: x === "×" ? P.red : P.ink,
+                  background: x === "×" ? `${P.red}12` : P.white,
+                  borderLeft: `8px solid ${x === "×" ? P.red : row[1]}`,
+                  boxShadow: "0 8px 22px rgba(23,35,56,.09)",
                 }}
-              />
+              >
+                {x === "×" ? "× 不得设定" : x}
+              </div>
             ))}
-            {beam.stops.map((label, stopIndex) => {
-              const active = beam.widths[stopIndex] > 0;
-              return (
-                <div
-                  key={`${beam.id}-${stopIndex}-${label}`}
-                  style={{
-                    position: "absolute",
-                    left: 250 + stopIndex * 365,
-                    top: active ? 5 : 15,
-                    width: active ? 260 : 130,
-                    minHeight: active ? 82 : 62,
-                    display: "grid",
-                    placeItems: "center",
-                    textAlign: "center",
-                    padding: "8px 12px",
-                    fontSize: stopIndex === 0 ? 25 : 22,
-                    fontWeight: 900,
-                    lineHeight: 1.15,
-                    color: active ? C.white : C.magenta,
-                    background: active ? C.deep : C.night,
-                    border: active
-                      ? `4px solid ${beam.color}`
-                      : `4px solid ${C.magenta}`,
-                    clipPath: active
-                      ? "polygon(8% 0,100% 0,92% 100%,0 100%)"
-                      : "polygon(12% 0,88% 0,100% 50%,88% 100%,12% 100%,0 50%)",
-                  }}
-                >
-                  {active ? label : <span>× {label}</span>}
-                </div>
-              );
-            })}
           </div>
         ))}
       </div>
-    </Shell>
+    </AtlasShell>
   );
 };
 
 export const RulemakingChronologyScene = () => {
   /* Stable generated markers: data-final-knowledge="penalty-rulemaking-era" data-final-knowledge="license-rulemaking-era" data-final-knowledge="compulsion-rulemaking-era" data-final-knowledge="normative-document-exception" */
   const f = useCurrentFrame();
+  const eras = [
+    [
+      "1996 / 2021",
+      "处罚法",
+      "所有规章可设警告、通报、一定罚款",
+      P.red,
+      "penalty-rulemaking-era",
+    ],
+    [
+      "2003 / 2019",
+      "许可法",
+      "仅省级规章·1年临时许可",
+      P.blue,
+      "license-rulemaking-era",
+    ],
+    [
+      "2011",
+      "强制法",
+      "所有规章均无设定权",
+      P.violet,
+      "compulsion-rulemaking-era",
+    ],
+  ] as const;
   return (
-    <Shell code="02" title="规章权限三次衰减：处罚有、许可仅省级、强制全无">
+    <AtlasShell code="02" title="规章设定权：三部法律依次收紧" section="时间轴">
       <div
-        data-layout="three-era-rulemaking-refraction"
+        data-layout="three-era-rulemaking-timeline"
         data-visual-anchor="timeline-gate"
-        data-visual-grammar="three-statutes-arrive-in-chronological-order,rulemaking-authority-refracts-from-general-to-provincial-only-to-none"
+        data-visual-grammar="three-statutes-align-on-one-chronological-ruler,rulemaking-authority-narrows-from-general-to-provincial-only-to-none"
         data-text-treatments="thin-underline,label-block,stamp"
         data-focal-rule="chronology-of-rulemaking-authority"
         data-focal-channels="locator,contrast,motion"
-        style={{ position: "absolute", inset: 30 }}
+        style={sceneBox}
       >
         <div
           style={{
             position: "absolute",
-            left: 100,
-            right: 100,
-            top: 315,
-            height: 12,
-            background: C.gray,
+            left: 90,
+            right: 90,
+            top: 338,
+            height: 8,
+            background: P.ink,
           }}
         />
-        {[
-          ["1996/2021", "处罚法", "所有规章", C.magenta],
-          ["2003/2019", "许可法", "仅省级规章·1年临时", C.cyan],
-          ["2011", "强制法", "所有规章均无权", C.violet],
-        ].map((x, i) => (
+        {eras.map((x, i) => (
           <div
             key={x[0]}
-            data-final-knowledge={
-              [
-                "penalty-rulemaking-era",
-                "license-rulemaking-era",
-                "compulsion-rulemaking-era",
-              ][i]
-            }
+            data-final-knowledge={x[4]}
             style={{
               position: "absolute",
-              left: 80 + i * 570,
-              top: i === 1 ? 60 : 365,
-              width: 480,
-              height: 235,
-              border: `5px solid ${x[3]}`,
-              background: C.deep,
-              padding: 28,
-              ...enter(f, 8 + i * 18),
+              left: 70 + i * 570,
+              top: i === 1 ? 70 : 375,
+              width: 500,
+              minHeight: 205,
+              padding: 24,
+              background: P.white,
+              borderTop: `9px solid ${x[3]}`,
+              ...enter(f, 8 + i * 16, 0, i === 1 ? -24 : 24),
             }}
           >
-            <div
-              style={{
-                fontSize: 48,
-                fontWeight: 950,
-                color: x[3],
-                borderBottom: `4px solid ${x[3]}`,
-                display: "inline-block",
-              }}
-            >
+            <div style={{ fontSize: 46, fontWeight: 950, color: x[3] }}>
               {x[0]}
             </div>
-            <div style={{ fontSize: 31, fontWeight: 950, marginTop: 18 }}>
+            <div style={{ fontSize: 29, fontWeight: 950, marginTop: 9 }}>
               {x[1]}
             </div>
-            <div style={{ marginTop: 24 }}>
-              <Chip color={x[3]}>{x[2]}</Chip>
+            <div
+              style={{
+                fontSize: 23,
+                fontWeight: 850,
+                marginTop: 18,
+                borderBottom: `3px solid ${x[3]}`,
+                paddingBottom: 7,
+              }}
+            >
+              {x[2]}
             </div>
           </div>
         ))}
@@ -432,429 +424,84 @@ export const RulemakingChronologyScene = () => {
           data-final-knowledge="normative-document-exception"
           style={{
             position: "absolute",
-            left: 510,
-            right: 510,
-            bottom: 0,
+            left: 640,
+            top: 565,
+            width: 590,
             textAlign: "center",
+            ...enter(f, 62),
           }}
         >
-          <Stamp color={C.lime}>
-            其他规范性文件原则无权；唯一例外：国务院决定可设临时许可
-          </Stamp>
+          <Seal color={P.amber}>
+            其他规范性文件原则无权 · 国务院决定可设临时许可
+          </Seal>
         </div>
       </div>
-    </Shell>
+    </AtlasShell>
   );
 };
 
 export const SettingTrapLensesScene = () => {
   /* Stable generated markers: data-final-knowledge="trap-department-decision" data-final-knowledge="trap-license-suspension" data-final-knowledge="trap-regulation-freeze" data-final-knowledge="trap-rule-seizure" */
   const f = useCurrentFrame();
+  const traps = [
+    [
+      "国务院部门决定设临时许可",
+      "错",
+      "只能国务院决定",
+      "trap-department-decision",
+    ],
+    [
+      "地方性法规暂扣营业执照",
+      "对",
+      "可暂扣，不可吊销",
+      "trap-license-suspension",
+    ],
+    ["行政法规设冻结措施", "错", "冻结由法律保留", "trap-regulation-freeze"],
+    ["省级规章设临时扣押", "错", "规章无强制设定权", "trap-rule-seizure"],
+  ] as const;
   return (
-    <Shell code="03" title="高频陷阱透镜：四句只留一束真光">
+    <AtlasShell
+      code="03"
+      title="设定权陷阱：四张判断票逐一盖章"
+      section="考点校准"
+    >
       <div
-        data-layout="four-lens-setting-trap-test"
-        data-visual-anchor="flow-target"
-        data-visual-grammar="four-exam-statements-enter-independent-lenses,only-the-license-suspension-statement-exits-as-correct"
+        data-layout="four-verdict-ticket-stack"
+        data-visual-anchor="typographic-sequence"
+        data-visual-grammar="four-exam-statements-enter-as-independent-tickets,each-ticket-ends-with-a-verdict-and-correct-rule"
         data-text-treatments="external-negation,stamp,soft-highlight"
         data-focal-rule="setting-authority-traps"
-        data-focal-channels="icon,contrast,enclosure"
+        data-focal-channels="annotation,contrast,enclosure"
         style={{
+          ...sceneBox,
           display: "grid",
-          gridTemplateColumns: "repeat(4,1fr)",
-          gap: 22,
-          padding: "45px 10px",
+          gridTemplateRows: "repeat(4,1fr)",
+          gap: 18,
+          padding: "20px 80px",
         }}
       >
-        {[
-          ["国务院部门决定", "临时许可", "错：只能国务院决定", C.magenta],
-          ["地方性法规", "暂扣营业执照", "对：禁吊销，不禁暂扣", C.lime],
-          ["行政法规", "冻结", "错：不得限制钱自由", C.violet],
-          ["省级规章", "临时扣押", "错：强制设定权为零", C.amber],
-        ].map((x, i) => (
+        {traps.map((x, i) => (
           <div
             key={x[0]}
-            data-final-knowledge={
-              [
-                "trap-department-decision",
-                "trap-license-suspension",
-                "trap-regulation-freeze",
-                "trap-rule-seizure",
-              ][i]
-            }
-            style={{
-              position: "relative",
-              height: 520,
-              border: `4px solid ${x[3]}`,
-              borderRadius: "50%",
-              display: "grid",
-              placeItems: "center",
-              textAlign: "center",
-              padding: 35,
-              ...enter(f, 6 + i * 13, 0, 28),
-            }}
-          >
-            <div>
-              <div style={{ fontSize: 28, fontWeight: 950, color: x[3] }}>
-                {x[0]}
-              </div>
-              <div style={{ fontSize: 38, fontWeight: 950, marginTop: 30 }}>
-                {x[1]}
-              </div>
-              <div style={{ marginTop: 38 }}>
-                <Stamp color={x[3]}>{x[2]}</Stamp>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-    </Shell>
-  );
-};
-
-export const AuthorizationPrismScene = () => {
-  /* Stable generated markers: data-final-knowledge="penalty-authorization" data-final-knowledge="license-authorization" data-final-knowledge="measure-authorization" data-final-knowledge="authorization-object" */
-  const f = useCurrentFrame();
-  return (
-    <Shell code="04" title="授权棱镜：强制措施比处罚、许可少一层光源">
-      <div
-        data-layout="three-face-authorization-prism"
-        data-visual-anchor="role-pair"
-        data-visual-grammar="penalty-and-license-accept-authorization-from-laws-and-regulations,compulsory-measures-block-local-regulations-and-accept-only-laws-and-administrative-regulations"
-        data-text-treatments="label-block,thin-underline,external-negation"
-        data-focal-rule="authorization-sources-and-effects"
-        data-focal-channels="connector,contrast,spatial"
-        style={{ position: "absolute", inset: 20 }}
-      >
-        <div
-          style={{
-            position: "absolute",
-            left: 700,
-            top: 190,
-            width: 360,
-            height: 310,
-            clipPath: "polygon(50% 0,100% 100%,0 100%)",
-            background:
-              "linear-gradient(135deg,rgba(55,201,231,.6),rgba(130,103,232,.65))",
-            display: "grid",
-            placeItems: "end center",
-            paddingBottom: 45,
-            fontSize: 32,
-            fontWeight: 950,
-          }}
-        >
-          被授权组织
-          <br />
-          <span style={{ fontSize: 22 }}>取得行政主体资格</span>
-        </div>
-        {[
-          ["处罚授权", "法律＋法规", 80, 70, C.magenta],
-          ["许可授权", "法律＋法规", 80, 430, C.cyan],
-          ["措施授权", "法律＋行政法规", 1230, 240, C.violet],
-        ].map((x, i) => (
-          <div
-            key={x[0]}
-            data-final-knowledge={
-              [
-                "penalty-authorization",
-                "license-authorization",
-                "measure-authorization",
-              ][i]
-            }
-            style={{
-              position: "absolute",
-              left: x[2],
-              top: x[3],
-              width: 430,
-              height: 180,
-              border: `5px solid ${x[4]}`,
-              padding: 25,
-              ...enter(f, 10 + i * 17, i === 2 ? 30 : -30, 0),
-            }}
-          >
-            <div style={{ fontSize: 31, fontWeight: 950, color: x[4] }}>
-              {x[0]}
-            </div>
-            <div
-              style={{
-                fontSize: 27,
-                marginTop: 22,
-                borderBottom: `3px solid ${x[4]}`,
-                display: "inline-block",
-              }}
-            >
-              {x[1]}
-            </div>
-          </div>
-        ))}
-        <div
-          data-final-knowledge="authorization-object"
-          style={{ position: "absolute", right: 100, bottom: 15 }}
-        >
-          <Chip color={C.lime}>授权对象：原无行政权能的组织</Chip>
-        </div>
-      </div>
-    </Shell>
-  );
-};
-
-export const DelegationFiltersScene = () => {
-  /* Stable generated markers: data-final-knowledge="penalty-delegation" data-final-knowledge="license-delegation" data-final-knowledge="measure-delegation" */
-  const f = useCurrentFrame();
-  return (
-    <Shell code="05" title="委托滤镜：处罚给组织，许可给机关，措施光路封死">
-      <div
-        data-layout="three-delegation-filter-columns"
-        data-visual-anchor="comparison-axis"
-        data-visual-grammar="delegation-light-passes-through-qualified-organizations-for-penalties,through-administrative-organs-for-licenses,and-is-fully-blocked-for-compulsory-measures"
-        data-text-treatments="label-block,stamp,external-negation"
-        data-focal-rule="delegation-subjects-and-effects"
-        data-focal-channels="contrast,enclosure,spatial"
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(3,1fr)",
-          gap: 32,
-          padding: "45px 30px",
-        }}
-      >
-        {[
-          ["行政处罚", "符合条件的组织", "受托者无独立主体资格", C.magenta],
-          ["行政许可", "其他行政机关", "受托者无独立主体资格", C.cyan],
-          ["强制措施", "禁止委托", "保管财物可作民事委托", C.violet],
-        ].map((x, i) => (
-          <div
-            key={x[0]}
-            data-final-knowledge={
-              [
-                "penalty-delegation",
-                "license-delegation",
-                "measure-delegation",
-              ][i]
-            }
-            style={{
-              height: 520,
-              background:
-                i === 2 ? "rgba(229,72,133,.12)" : "rgba(255,255,255,.05)",
-              border: `5px ${i === 2 ? "dashed" : "solid"} ${x[3]}`,
-              padding: 35,
-              textAlign: "center",
-              ...enter(f, 8 + i * 18, 0, 25),
-            }}
-          >
-            <div style={{ fontSize: 36, fontWeight: 950, color: x[3] }}>
-              {x[0]}
-            </div>
-            <div style={{ fontSize: 50, fontWeight: 950, marginTop: 65 }}>
-              {x[1]}
-            </div>
-            <div style={{ marginTop: 55 }}>
-              {i === 2 ? (
-                <Stamp>{x[2]}</Stamp>
-              ) : (
-                <Chip color={x[3]}>{x[2]}</Chip>
-              )}
-            </div>
-          </div>
-        ))}
-      </div>
-    </Shell>
-  );
-};
-
-export const ConcentrationAperturesScene = () => {
-  /* Stable generated markers: data-final-knowledge="penalty-concentration" data-final-knowledge="license-concentration" data-final-knowledge="measure-concentration" data-final-knowledge="execution-no-concentration" */
-  const f = useCurrentFrame();
-  return (
-    <Shell code="06" title="集中实施光圈：前三权有孔径，执行权没有集中制度">
-      <div
-        data-layout="four-aperture-concentration-board"
-        data-visual-anchor="boundary"
-        data-visual-grammar="penalty-license-and-related-measure-powers-pass-through-distinct-concentration-apertures,enforcement-power-remains-behind-a-closed-plate"
-        data-text-treatments="soft-highlight,label-block,external-negation"
-        data-focal-rule="concentrated-exercise-of-powers"
-        data-focal-channels="enclosure,contrast,locator"
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(4,1fr)",
-          gap: 20,
-          padding: "60px 5px",
-        }}
-      >
-        {[
-          ["处罚权", "国务院或省政府决定", "人身自由处罚不得集中", C.magenta],
-          ["许可权", "国务院批准＋省政府决定", "无权限种类限制", C.cyan],
-          ["措施权", "随集中处罚权联动", "限相关强制措施", C.violet],
-          ["执行权", "无集中制度", "不可类推", C.amber],
-        ].map((x, i) => (
-          <div
-            key={x[0]}
-            data-final-knowledge={
-              [
-                "penalty-concentration",
-                "license-concentration",
-                "measure-concentration",
-                "execution-no-concentration",
-              ][i]
-            }
-            style={{
-              height: 500,
-              borderRadius: "50%",
-              border: `8px ${i === 3 ? "dashed" : "solid"} ${x[3]}`,
-              display: "grid",
-              placeItems: "center",
-              textAlign: "center",
-              padding: 35,
-              ...enter(f, 8 + i * 14),
-            }}
-          >
-            <div>
-              <div style={{ fontSize: 38, fontWeight: 950, color: x[3] }}>
-                {x[0]}
-              </div>
-              <div style={{ fontSize: 27, fontWeight: 900, marginTop: 35 }}>
-                {x[1]}
-              </div>
-              <div style={{ marginTop: 35 }}>
-                <Chip color={x[3]}>{x[2]}</Chip>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-    </Shell>
-  );
-};
-
-export const SubjectTrapDarkroomScene = () => {
-  /* Stable generated markers: data-final-knowledge="delegated-defendant" data-final-knowledge="invalid-authorization-defendant" data-final-knowledge="compulsion-delegation-trap" data-final-knowledge="custody-delegation-valid" */
-  const f = useCurrentFrame();
-  return (
-    <Shell code="07" title="主体陷阱暗房：先找权力来源，再找真正被告">
-      <div
-        data-layout="four-specimen-subject-darkroom"
-        data-visual-anchor="document-fork"
-        data-visual-grammar="four-subject-problems-develop-from-source-documents,the-resulting-defendant-or-validity-label-appears-only-after-the-authority-source-is-tested"
-        data-text-treatments="stamp,thin-underline,external-negation"
-        data-focal-rule="implementation-subject-traps"
-        data-focal-channels="connector,contrast,enclosure"
-        style={{ position: "absolute", inset: 25 }}
-      >
-        {[
-          [
-            "生态环境局委托乡政府",
-            "乡政府是帮手",
-            "被告：生态环境局",
-            C.magenta,
-            35,
-            40,
-          ],
-          [
-            "县文件“授权”生猪办",
-            "规范性文件无授权资格",
-            "视为县政府委托；被告县政府",
-            C.cyan,
-            900,
-            40,
-          ],
-          ["委托城管扣押设备", "强制措施禁止委托", "违法", C.violet, 35, 365],
-          ["委托仓库保管设备", "属于民事保管委托", "可以", C.lime, 900, 365],
-        ].map((x, i) => (
-          <div
-            key={x[0]}
-            data-final-knowledge={
-              [
-                "delegated-defendant",
-                "invalid-authorization-defendant",
-                "compulsion-delegation-trap",
-                "custody-delegation-valid",
-              ][i]
-            }
-            style={{
-              position: "absolute",
-              left: x[4],
-              top: x[5],
-              width: 780,
-              height: 260,
-              border: `4px solid ${x[3]}`,
-              padding: 26,
-              background: "rgba(255,255,255,.05)",
-              ...enter(f, 7 + i * 13, i % 2 ? 25 : -25, 0),
-            }}
-          >
-            <div
-              style={{
-                fontSize: 29,
-                fontWeight: 950,
-                color: x[3],
-                borderBottom: `3px solid ${x[3]}`,
-                display: "inline-block",
-              }}
-            >
-              {x[0]}
-            </div>
-            <div style={{ fontSize: 23, marginTop: 24 }}>{x[1]}</div>
-            <div style={{ marginTop: 25 }}>
-              <Stamp color={x[3]}>{x[2]}</Stamp>
-            </div>
-          </div>
-        ))}
-      </div>
-    </Shell>
-  );
-};
-
-export const HearingSignalSplitScene = () => {
-  /* Stable generated markers: data-final-knowledge="penalty-hearing-exists" data-final-knowledge="license-hearing-exists" data-final-knowledge="compulsion-no-hearing" */
-  const f = useCurrentFrame();
-  return (
-    <Shell code="08" title="听证信号分流：处罚与许可有波形，强制保持静默">
-      <div
-        data-layout="three-channel-hearing-signal-split"
-        data-visual-anchor="comparison-axis"
-        data-visual-grammar="penalty-and-license-channels-carry-hearing-signals,compulsory-measures-and-enforcement-remain-a-flat-silent-line"
-        data-text-treatments="label-block,soft-highlight,external-negation"
-        data-focal-rule="existence-of-hearing-systems"
-        data-focal-channels="contrast,motion,spatial"
-        style={{
-          display: "grid",
-          gridTemplateRows: "repeat(3,1fr)",
-          gap: 28,
-          padding: "30px 50px",
-        }}
-      >
-        {[
-          ["行政处罚", "法定＋约定＋治安必要听证", "∿ ∿∿ ∿ ∿∿", C.magenta],
-          ["行政许可", "依职权＋依申请", "∿∿ ∿ ∿∿ ∿", C.cyan],
-          ["行政强制", "措施、执行均无听证制度", "────────", C.gray],
-        ].map((x, i) => (
-          <div
-            key={x[0]}
-            data-final-knowledge={
-              [
-                "penalty-hearing-exists",
-                "license-hearing-exists",
-                "compulsion-no-hearing",
-              ][i]
-            }
+            data-final-knowledge={x[3]}
             style={{
               display: "grid",
-              gridTemplateColumns: "300px 1fr 520px",
+              gridTemplateColumns: "1fr 110px 1fr",
               alignItems: "center",
-              borderLeft: `12px solid ${x[3]}`,
-              padding: "10px 30px",
-              ...enter(f, 8 + i * 18, -30, 0),
+              gap: 30,
+              padding: "14px 26px",
+              background: i % 2 ? P.white : `${P.paperDeep}88`,
+              borderLeft: `7px solid ${x[1] === "对" ? P.green : P.red}`,
+              ...enter(f, 5 + i * 14, -35, 0),
             }}
           >
-            <div style={{ fontSize: 35, fontWeight: 950, color: x[3] }}>
-              {x[0]}
-            </div>
-            <div style={{ fontSize: 25 }}>{x[1]}</div>
+            <div style={{ fontSize: 27, fontWeight: 900 }}>{x[0]}</div>
+            <Seal color={x[1] === "对" ? P.green : P.red}>{x[1]}</Seal>
             <div
               style={{
-                fontSize: 46,
-                fontWeight: 950,
-                color: x[3],
-                letterSpacing: 8,
+                fontSize: 23,
+                fontWeight: 850,
+                color: x[1] === "对" ? P.green : P.red,
               }}
             >
               {x[2]}
@@ -862,115 +509,542 @@ export const HearingSignalSplitScene = () => {
           </div>
         ))}
       </div>
-    </Shell>
+    </AtlasShell>
+  );
+};
+
+export const AuthorizationPrismScene = () => {
+  /* Stable generated markers: data-final-knowledge="penalty-authorization" data-final-knowledge="license-authorization" data-final-knowledge="measure-authorization" data-final-knowledge="authorization-object" */
+  const f = useCurrentFrame();
+  return (
+    <AtlasShell
+      code="04"
+      title="授权来源：同一座权源金字塔，不同入口"
+      section="实施主体"
+    >
+      <div
+        data-layout="source-power-pyramid"
+        data-visual-anchor="boundary"
+        data-visual-grammar="three-authority-routes-enter-one-source-pyramid,each-power-stops-at-its-own-authorizing-level"
+        data-text-treatments="label-block,thin-underline,external-negation"
+        data-focal-rule="authorization-sources"
+        data-focal-channels="connector,contrast,spatial"
+        style={sceneBox}
+      >
+        <div
+          style={{
+            position: "absolute",
+            left: 650,
+            top: 60,
+            width: 470,
+            height: 540,
+            clipPath: "polygon(50% 0,100% 100%,0 100%)",
+            background: `linear-gradient(${P.red} 0 32%,${P.blue} 32% 66%,${P.violet} 66%)`,
+            opacity: 0.16,
+          }}
+        />
+        {["法律", "行政法规", "地方性法规"].map((x, i) => (
+          <div
+            key={x}
+            style={{
+              position: "absolute",
+              left: 785,
+              top: 170 + i * 145,
+              width: 200,
+              textAlign: "center",
+              fontSize: 27,
+              fontWeight: 950,
+            }}
+          >
+            {x}
+          </div>
+        ))}
+        {[
+          ["处罚", "法律＋法规", P.red, 50, 110, "penalty-authorization"],
+          ["许可", "法律＋法规", P.blue, 1180, 120, "license-authorization"],
+          [
+            "强制措施",
+            "法律＋行政法规",
+            P.violet,
+            1180,
+            420,
+            "measure-authorization",
+          ],
+        ].map((x, i) => (
+          <div
+            key={String(x[0])}
+            data-final-knowledge={String(x[5])}
+            style={{
+              position: "absolute",
+              left: Number(x[3]),
+              top: Number(x[4]),
+              width: 430,
+              padding: 26,
+              background: P.white,
+              borderBottom: `7px solid ${x[2]}`,
+              ...enter(f, 8 + i * 18, i === 0 ? -40 : 40, 0),
+            }}
+          >
+            <div style={{ fontSize: 34, fontWeight: 950, color: x[2] }}>
+              {x[0]}
+            </div>
+            <div style={{ marginTop: 18, fontSize: 25, fontWeight: 900 }}>
+              {x[1]}
+            </div>
+          </div>
+        ))}
+        <div
+          data-final-knowledge="authorization-object"
+          style={{
+            position: "absolute",
+            left: 585,
+            bottom: 10,
+            width: 600,
+            textAlign: "center",
+            ...enter(f, 65),
+          }}
+        >
+          <Seal color={P.teal}>
+            授权对象：无行政权能组织 → 获得行政主体资格
+          </Seal>
+        </div>
+      </div>
+    </AtlasShell>
+  );
+};
+
+export const DelegationFiltersScene = () => {
+  /* Stable generated markers: data-final-knowledge="penalty-delegation" data-final-knowledge="license-delegation" data-final-knowledge="measure-delegation" */
+  const f = useCurrentFrame();
+  const lanes = [
+    [
+      "处罚委托",
+      "行政机关",
+      "符合条件的组织",
+      "责任仍归委托机关",
+      P.red,
+      "penalty-delegation",
+    ],
+    [
+      "许可委托",
+      "行政机关",
+      "行政机关",
+      "公告受托机关和事项",
+      P.blue,
+      "license-delegation",
+    ],
+    [
+      "强制措施",
+      "行政机关",
+      "禁止委托",
+      "只能法定主体实施",
+      P.violet,
+      "measure-delegation",
+    ],
+  ] as const;
+  return (
+    <AtlasShell
+      code="05"
+      title="委托边界：对象不同，强制措施直接封路"
+      section="主体通道"
+    >
+      <div
+        data-layout="three-delegation-lanes"
+        data-visual-anchor="flow-path"
+        data-visual-grammar="three-delegation-lanes-start-from-administrative-organs,recipient-and-validity-differ-across-penalty-license-and-compulsion"
+        data-text-treatments="label-block,stamp,external-negation"
+        data-focal-rule="delegation-differences"
+        data-focal-channels="connector,contrast,spatial"
+        style={{ ...sceneBox, padding: "45px 40px" }}
+      >
+        {lanes.map((x, i) => (
+          <div
+            key={x[0]}
+            data-final-knowledge={x[5]}
+            style={{
+              height: 175,
+              display: "grid",
+              gridTemplateColumns: "280px 260px 90px 350px 1fr",
+              alignItems: "center",
+              gap: 20,
+              borderBottom: `3px dashed ${P.muted}66`,
+              ...enter(f, 8 + i * 18, -40, 0),
+            }}
+          >
+            <div style={{ fontSize: 34, fontWeight: 950, color: x[4] }}>
+              {x[0]}
+            </div>
+            <Tag color={x[4]}>{x[1]}</Tag>
+            <Arrow color={x[4]} />
+            {x[2] === "禁止委托" ? (
+              <Seal color={P.red}>× 禁止委托</Seal>
+            ) : (
+              <Tag color={P.teal}>{x[2]}</Tag>
+            )}
+            <div
+              style={{
+                fontSize: 23,
+                fontWeight: 850,
+                borderBottom: `3px solid ${x[4]}`,
+                paddingBottom: 8,
+              }}
+            >
+              {x[3]}
+            </div>
+          </div>
+        ))}
+      </div>
+    </AtlasShell>
+  );
+};
+
+export const ConcentrationAperturesScene = () => {
+  /* Stable generated markers: data-final-knowledge="penalty-concentration" data-final-knowledge="license-concentration" data-final-knowledge="measure-concentration" data-final-knowledge="execution-no-concentration" */
+  const f = useCurrentFrame();
+  const rings = [
+    [
+      "处罚权",
+      "国务院或省级政府决定",
+      "人身自由处罚不得集中",
+      P.red,
+      "penalty-concentration",
+    ],
+    [
+      "许可权",
+      "国务院批准＋省级政府决定",
+      "无权限限制",
+      P.blue,
+      "license-concentration",
+    ],
+    [
+      "相关措施",
+      "随相对集中处罚权",
+      "仅法律法规规定且相关",
+      P.violet,
+      "measure-concentration",
+    ],
+  ] as const;
+  return (
+    <AtlasShell
+      code="06"
+      title="相对集中：三圈权限收束，执行权留在圈外"
+      section="权限边界"
+    >
+      <div
+        data-layout="concentration-ring-field"
+        data-visual-anchor="boundary"
+        data-visual-grammar="three-concentration-rings-close-around-one-organ,enforcement-power-remains-outside-the-rings"
+        data-text-treatments="soft-highlight,label-block,external-negation"
+        data-focal-rule="concentrated-authority"
+        data-focal-channels="enclosure,contrast,locator"
+        style={sceneBox}
+      >
+        {rings.map((x, i) => (
+          <div
+            key={x[0]}
+            data-final-knowledge={x[4]}
+            style={{
+              position: "absolute",
+              left: 170 + i * 410,
+              top: 80 + i * 80,
+              width: 760 - i * 120,
+              height: 500 - i * 120,
+              border: `${11 - i * 2}px solid ${x[3]}`,
+              borderRadius: "50%",
+              opacity: 0.88,
+              ...enter(f, 8 + i * 18),
+            }}
+          />
+        ))}
+        <div
+          style={{
+            position: "absolute",
+            left: 650,
+            top: 255,
+            width: 470,
+            textAlign: "center",
+          }}
+        >
+          <div style={{ fontSize: 43, fontWeight: 950 }}>一个机关</div>
+          <div style={{ fontSize: 24, marginTop: 16, fontWeight: 850 }}>
+            承接相关行政权
+          </div>
+        </div>
+        {rings.map((x, i) => (
+          <div
+            key={`${x[0]}-label`}
+            style={{
+              position: "absolute",
+              left: 70 + i * 520,
+              top: 40 + i * 180,
+              width: 380,
+              padding: 18,
+              background: P.white,
+              borderLeft: `7px solid ${x[3]}`,
+              ...enter(f, 40 + i * 10),
+            }}
+          >
+            <div style={{ fontSize: 29, fontWeight: 950, color: x[3] }}>
+              {x[0]}
+            </div>
+            <div style={{ fontSize: 21, marginTop: 8, fontWeight: 850 }}>
+              {x[1]}
+            </div>
+            <div style={{ fontSize: 20, marginTop: 7, color: P.muted }}>
+              {x[2]}
+            </div>
+          </div>
+        ))}
+        <div
+          data-final-knowledge="execution-no-concentration"
+          style={{
+            position: "absolute",
+            right: 50,
+            bottom: 25,
+            ...enter(f, 72),
+          }}
+        >
+          <Seal color={P.red}>强制执行权：不得相对集中</Seal>
+        </div>
+      </div>
+    </AtlasShell>
+  );
+};
+
+export const SubjectTrapDarkroomScene = () => {
+  /* Stable generated markers: data-final-knowledge="delegated-defendant" data-final-knowledge="invalid-authorization-defendant" data-final-knowledge="compulsion-delegation-trap" data-final-knowledge="custody-delegation-valid" */
+  const f = useCurrentFrame();
+  const cases = [
+    ["处罚委托", "委托机关", "受托者不独立担责", P.red, "delegated-defendant"],
+    [
+      "文件非法授权",
+      "设立机关",
+      "组织无授权资格",
+      P.amber,
+      "invalid-authorization-defendant",
+    ],
+    [
+      "委托扣押",
+      "无效",
+      "强制措施禁止委托",
+      P.violet,
+      "compulsion-delegation-trap",
+    ],
+    [
+      "委托仓库保管",
+      "有效",
+      "属于民事保管",
+      P.teal,
+      "custody-delegation-valid",
+    ],
+  ] as const;
+  return (
+    <AtlasShell
+      code="07"
+      title="主体陷阱：沿权力来源追到真正被告"
+      section="身份鉴别"
+    >
+      <div
+        data-layout="four-case-file-branches"
+        data-visual-anchor="document-fork"
+        data-visual-grammar="four-case-files-unfold-from-power-source,each-file-terminates-in-defendant-or-validity"
+        data-text-treatments="stamp,thin-underline,external-negation"
+        data-focal-rule="subject-traps"
+        data-focal-channels="connector,contrast,enclosure"
+        style={{
+          ...sceneBox,
+          padding: "25px 70px",
+          display: "grid",
+          gridTemplateColumns: "1fr 1fr",
+          gap: 30,
+        }}
+      >
+        {cases.map((x, i) => (
+          <div
+            key={x[0]}
+            data-final-knowledge={x[4]}
+            style={{
+              position: "relative",
+              padding: 28,
+              background: P.white,
+              borderTop: `10px solid ${x[3]}`,
+              ...enter(f, 8 + i * 15, i % 2 ? 30 : -30, 0),
+            }}
+          >
+            <div style={{ fontSize: 28, fontWeight: 950, color: x[3] }}>
+              案卷 {String(i + 1).padStart(2, "0")} · {x[0]}
+            </div>
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: 22,
+                marginTop: 34,
+              }}
+            >
+              <Tag color={P.ink}>行为来源</Tag>
+              <Arrow color={x[3]} />
+              <Seal color={x[1] === "无效" ? P.red : x[3]}>{x[1]}</Seal>
+            </div>
+            <div
+              style={{
+                marginTop: 28,
+                fontSize: 23,
+                fontWeight: 850,
+                borderBottom: `3px solid ${x[3]}`,
+                paddingBottom: 8,
+              }}
+            >
+              {x[2]}
+            </div>
+          </div>
+        ))}
+      </div>
+    </AtlasShell>
+  );
+};
+
+export const HearingSignalSplitScene = () => {
+  /* Stable generated markers: data-final-knowledge="penalty-hearing-exists" data-final-knowledge="license-hearing-exists" data-final-knowledge="compulsion-no-hearing" */
+  const f = useCurrentFrame();
+  const signals = [
+    ["行政处罚", "有听证", P.red, "∿∿∿∿∿", "penalty-hearing-exists"],
+    ["行政许可", "有听证", P.blue, "∿∿∿∿∿", "license-hearing-exists"],
+    ["行政强制", "无听证制度", P.violet, "────────", "compulsion-no-hearing"],
+  ] as const;
+  return (
+    <AtlasShell
+      code="08"
+      title="听证总开关：处罚、许可有信号，强制静音"
+      section="听证分流"
+    >
+      <div
+        data-layout="three-hearing-signal-lanes"
+        data-visual-anchor="comparison-axis"
+        data-visual-grammar="penalty-and-license-signals-travel-on-active-lanes,compulsion-remains-a-flat-no-hearing-line"
+        data-text-treatments="label-block,soft-highlight,external-negation"
+        data-focal-rule="hearing-availability"
+        data-focal-channels="contrast,motion,spatial"
+        style={{ ...sceneBox, padding: "40px 70px" }}
+      >
+        {signals.map((x, i) => (
+          <div
+            key={x[0]}
+            data-final-knowledge={x[4]}
+            style={{
+              height: 190,
+              display: "grid",
+              gridTemplateColumns: "330px 1fr 330px",
+              alignItems: "center",
+              gap: 40,
+              ...enter(f, 8 + i * 18, -40, 0),
+            }}
+          >
+            <div style={{ fontSize: 38, fontWeight: 950, color: x[2] }}>
+              {x[0]}
+            </div>
+            <div
+              style={{
+                fontSize: 70,
+                letterSpacing: 12,
+                color: x[2],
+                whiteSpace: "nowrap",
+                overflow: "hidden",
+              }}
+            >
+              {x[3]}
+            </div>
+            {i === 2 ? (
+              <Seal color={P.red}>× {x[1]}</Seal>
+            ) : (
+              <Tag color={x[2]}>● {x[1]}</Tag>
+            )}
+          </div>
+        ))}
+      </div>
+    </AtlasShell>
   );
 };
 
 export const PenaltyHearingWavebandScene = () => {
   /* Stable generated markers: data-final-knowledge="statutory-penalty-hearing" data-final-knowledge="security-penalty-hearing" data-final-knowledge="agreed-penalty-hearing" */
   const f = useCurrentFrame();
+  const bands = [
+    [
+      "法定听证",
+      "较大罚没 · 降级吊证 · 关停限业 · 其他较重",
+      P.red,
+      "statutory-penalty-hearing",
+    ],
+    [
+      "治安法定",
+      "吊证 · 4000元以上罚款 · 停业整顿 · 未成年人可能拘留",
+      P.amber,
+      "security-penalty-hearing",
+    ],
+    [
+      "约定听证",
+      "案情复杂或重大社会影响 · 当事人要求 · 公安认为必要",
+      P.teal,
+      "agreed-penalty-hearing",
+    ],
+  ] as const;
   return (
-    <Shell code="09" title="处罚听证波段：法定高频、约定中频、治安特殊频">
+    <AtlasShell
+      code="09"
+      title="处罚听证：三条触发波段不能混用"
+      section="处罚听证"
+    >
       <div
-        data-layout="three-band-penalty-hearing-spectrum"
+        data-layout="three-band-penalty-hearing-map"
         data-visual-anchor="flow-path"
-        data-visual-grammar="penalty-hearing-scope-is-separated-into-statutory-agreed-and-public-security-bands,the-adult-detention-signal-enters-only-the-discretionary-band"
+        data-visual-grammar="three-hearing-trigger-bands-run-in-parallel,adult-detention-enters-only-through-discretionary-hearing"
         data-text-treatments="label-block,thin-underline,stamp"
-        data-focal-rule="scope-of-penalty-hearings"
+        data-focal-rule="penalty-hearing-scope"
         data-focal-channels="connector,contrast,locator"
-        style={{ position: "absolute", inset: 18 }}
+        style={{ ...sceneBox, padding: "35px 70px" }}
       >
-        <div
-          data-final-knowledge="statutory-penalty-hearing"
-          style={{
-            position: "absolute",
-            left: 25,
-            top: 20,
-            width: 740,
-            height: 570,
-            border: `5px solid ${C.magenta}`,
-            padding: 28,
-          }}
-        >
-          <div style={{ fontSize: 34, fontWeight: 950, color: C.magenta }}>
-            法定听证 · 应告知＋申请
-          </div>
+        {bands.map((x, i) => (
           <div
+            key={x[0]}
+            data-final-knowledge={x[3]}
             style={{
-              display: "flex",
-              flexWrap: "wrap",
-              gap: 12,
-              marginTop: 28,
+              position: "relative",
+              height: 185,
+              marginBottom: 22,
+              background: `linear-gradient(90deg,${x[2]}18,transparent)`,
+              borderLeft: `15px solid ${x[2]}`,
+              padding: "24px 34px",
+              ...enter(f, 8 + i * 18, -50, 0),
             }}
           >
-            {[
-              "较大罚款/没收",
-              "降级/吊销许可证件",
-              "停产停业/关闭",
-              "限制从业",
-              "其他较重处罚",
-            ].map((x) => (
-              <Chip key={x} color={C.magenta}>
-                {x}
-              </Chip>
-            ))}
+            <div style={{ display: "flex", alignItems: "center", gap: 30 }}>
+              <div
+                style={{
+                  fontSize: 35,
+                  fontWeight: 950,
+                  color: x[2],
+                  width: 250,
+                }}
+              >
+                {x[0]}
+              </div>
+              <Line color={x[2]} />
+            </div>
+            <div
+              style={{
+                marginTop: 26,
+                fontSize: 24,
+                fontWeight: 850,
+                lineHeight: 1.4,
+              }}
+            >
+              {x[1]}
+            </div>
           </div>
-          <div
-            style={{
-              fontSize: 23,
-              marginTop: 28,
-              borderBottom: `3px solid ${C.magenta}`,
-              display: "inline-block",
-            }}
-          >
-            口诀：降级吊证件，责令关停业
-          </div>
-        </div>
-        <div
-          data-final-knowledge="security-penalty-hearing"
-          style={{
-            position: "absolute",
-            right: 25,
-            top: 20,
-            width: 900,
-            height: 300,
-            border: `5px solid ${C.amber}`,
-            padding: 28,
-          }}
-        >
-          <div style={{ fontSize: 32, fontWeight: 950, color: C.amber }}>
-            治安法定：4·停·吊
-          </div>
-          <div style={{ display: "flex", gap: 13, marginTop: 28 }}>
-            <Chip color={C.amber}>4000元以上罚款</Chip>
-            <Chip color={C.amber}>停业整顿</Chip>
-            <Chip color={C.amber}>吊销许可证件</Chip>
-            <Chip color={C.amber}>未成年人可能执行拘留</Chip>
-          </div>
-        </div>
-        <div
-          data-final-knowledge="agreed-penalty-hearing"
-          style={{
-            position: "absolute",
-            right: 25,
-            bottom: 20,
-            width: 900,
-            height: 250,
-            border: `5px solid ${C.violet}`,
-            padding: 28,
-          }}
-        >
-          <div style={{ fontSize: 32, fontWeight: 950, color: C.violet }}>
-            约定 / 治安必要听证
-          </div>
-          <div style={{ display: "flex", gap: 18, marginTop: 28 }}>
-            <Chip color={C.violet}>案情复杂或重大影响</Chip>
-            <Chip color={C.violet}>当事人要求＋机关认为必要</Chip>
-            <Stamp color={C.magenta}>成年人拘留：可听证，不属法定告知</Stamp>
-          </div>
-        </div>
+        ))}
       </div>
-    </Shell>
+    </AtlasShell>
   );
 };
 
@@ -978,571 +1052,577 @@ export const LicenseHearingFocusScene = () => {
   /* Stable generated markers: data-final-knowledge="license-ex-officio-hearing" data-final-knowledge="license-on-application-hearing" */
   const f = useCurrentFrame();
   return (
-    <Shell
+    <AtlasShell
       code="10"
-      title="许可听证双焦点：公共利益由机关启动，重大利害由申请启动"
+      title="许可听证：公共利益与私人重大利益两条焦点"
+      section="许可听证"
     >
       <div
-        data-layout="dual-focus-license-hearing-lenses"
-        data-visual-anchor="role-pair"
-        data-visual-grammar="public-interest-license-matters-focus-through-ex-officio-hearing,major-interests-between-applicant-and-others-focus-through-application"
+        data-layout="dual-license-hearing-fork"
+        data-visual-anchor="document-fork"
+        data-visual-grammar="one-license-file-forks-by-interest-type,public-interest-and-private-major-interest-trigger-different-hearing-routes"
         data-text-treatments="soft-highlight,label-block,thin-underline"
-        data-focal-rule="scope-of-license-hearings"
+        data-focal-rule="license-hearing-triggers"
         data-focal-channels="contrast,enclosure,locator"
-        style={{
-          display: "grid",
-          gridTemplateColumns: "1fr 180px 1fr",
-          alignItems: "center",
-          height: "100%",
-          padding: "0 45px",
-        }}
+        style={sceneBox}
       >
+        <div
+          style={{
+            position: "absolute",
+            left: 710,
+            top: 250,
+            width: 340,
+            height: 170,
+            display: "grid",
+            placeItems: "center",
+            background: P.ink,
+            color: P.white,
+            fontSize: 37,
+            fontWeight: 950,
+            clipPath: "polygon(12% 0,88% 0,100% 50%,88% 100%,12% 100%,0 50%)",
+            ...enter(f, 5),
+          }}
+        >
+          许可事项
+        </div>
         <div
           data-final-knowledge="license-ex-officio-hearing"
           style={{
-            height: 500,
-            borderRadius: "50%",
-            border: `8px solid ${C.cyan}`,
-            display: "grid",
-            placeItems: "center",
-            textAlign: "center",
-            padding: 55,
-            ...enter(f, 7, -35, 0),
+            position: "absolute",
+            left: 80,
+            top: 80,
+            width: 540,
+            minHeight: 430,
+            padding: 36,
+            border: `8px solid ${P.blue}`,
+            background: P.white,
+            ...enter(f, 22, -35, 0),
           }}
         >
-          <div>
-            <div style={{ fontSize: 34, fontWeight: 950, color: C.cyan }}>
-              依职权
-            </div>
-            <div style={{ fontSize: 48, fontWeight: 950, marginTop: 35 }}>
-              公共利益
-            </div>
-            <div style={{ marginTop: 30 }}>
-              <Chip color={C.cyan}>法/法规/规章规定应听证</Chip>
-              <Chip color={C.cyan}>重大许可事项</Chip>
-            </div>
+          <div style={{ fontSize: 39, fontWeight: 950, color: P.blue }}>
+            依职权
           </div>
-        </div>
-        <div style={{ fontSize: 70, textAlign: "center", color: C.gray }}>
-          ＋
+          <div style={{ fontSize: 28, fontWeight: 900, marginTop: 34 }}>
+            法定应听证
+          </div>
+          <div style={{ fontSize: 28, fontWeight: 900, marginTop: 22 }}>
+            涉及公共利益的重大许可
+          </div>
+          <div style={{ marginTop: 38 }}>
+            <Seal color={P.blue}>公告</Seal>
+          </div>
         </div>
         <div
           data-final-knowledge="license-on-application-hearing"
           style={{
-            height: 500,
-            borderRadius: "50%",
-            border: `8px solid ${C.violet}`,
-            display: "grid",
-            placeItems: "center",
-            textAlign: "center",
-            padding: 55,
-            ...enter(f, 28, 35, 0),
+            position: "absolute",
+            right: 80,
+            top: 130,
+            width: 540,
+            minHeight: 430,
+            padding: 36,
+            border: `8px solid ${P.teal}`,
+            background: P.white,
+            ...enter(f, 38, 35, 0),
           }}
         >
-          <div>
-            <div style={{ fontSize: 34, fontWeight: 950, color: C.violet }}>
-              依申请
-            </div>
-            <div style={{ fontSize: 42, fontWeight: 950, marginTop: 35 }}>
-              申请人与他人
-            </div>
-            <div
-              style={{
-                fontSize: 34,
-                fontWeight: 950,
-                marginTop: 15,
-                borderBottom: `4px solid ${C.violet}`,
-                display: "inline-block",
-              }}
-            >
-              重大利益关系
-            </div>
-            <div style={{ marginTop: 30 }}>
-              <Stamp color={C.violet}>单独告知，不必公告</Stamp>
-            </div>
+          <div style={{ fontSize: 39, fontWeight: 950, color: P.teal }}>
+            依申请
+          </div>
+          <div style={{ fontSize: 28, fontWeight: 900, marginTop: 34 }}>
+            申请人与他人
+          </div>
+          <div style={{ fontSize: 28, fontWeight: 900, marginTop: 22 }}>
+            存在重大利益关系
+          </div>
+          <div style={{ marginTop: 38 }}>
+            <Seal color={P.teal}>单独告知</Seal>
           </div>
         </div>
+        <div style={{ position: "absolute", left: 600, top: 280 }}>
+          <Arrow color={P.blue} />
+        </div>
+        <div style={{ position: "absolute", right: 600, top: 330 }}>
+          <Arrow color={P.teal} />
+        </div>
       </div>
-    </Shell>
+    </AtlasShell>
   );
 };
 
 export const HearingClockArrayScene = () => {
   /* Stable generated markers: data-final-knowledge="hearing-application-five-days" data-final-knowledge="license-hearing-twenty-days" data-final-knowledge="hearing-notice-seven-days" */
   const f = useCurrentFrame();
+  const clocks = [
+    ["5", "日内申请", "处罚＋许可", P.red, "hearing-application-five-days"],
+    ["20", "日内组织", "仅许可", P.blue, "license-hearing-twenty-days"],
+    ["7", "日前通知", "处罚＋许可", P.amber, "hearing-notice-seven-days"],
+  ] as const;
   return (
-    <Shell code="11" title="听证时钟阵列：共同5与7，许可独有20">
+    <AtlasShell
+      code="11"
+      title="听证时间：5、20、7 三只法定钟"
+      section="期限记忆"
+    >
       <div
-        data-layout="three-dial-hearing-clock-array"
+        data-layout="three-statutory-hearing-clocks"
         data-visual-anchor="timeline-gate"
-        data-visual-grammar="both-systems-share-five-day-application-and-seven-day-notice-clocks,only-license-hearing-has-a-twenty-day-organization-clock"
+        data-visual-grammar="five-and-seven-day-clocks-are-shared,only-license-adds-the-twenty-day-organization-clock"
         data-text-treatments="stamp,thin-underline,label-block"
-        data-focal-rule="hearing-procedure-deadlines"
+        data-focal-rule="hearing-deadlines"
         data-focal-channels="locator,contrast,enclosure"
         style={{
+          ...sceneBox,
           display: "flex",
-          alignItems: "center",
           justifyContent: "space-around",
-          height: "100%",
-          padding: "0 90px",
+          alignItems: "center",
+          padding: "10px 55px",
         }}
       >
-        {[
-          ["5日", "被告知后提出申请", "处罚＋许可", C.lime],
-          ["20日", "许可机关组织听证", "处罚无此期限", C.cyan],
-          ["7日前", "通知时间地点", "许可必要时公告", C.amber],
-        ].map((x, i) => (
+        {clocks.map((x, i) => (
           <div
             key={x[0]}
-            data-final-knowledge={
-              [
-                "hearing-application-five-days",
-                "license-hearing-twenty-days",
-                "hearing-notice-seven-days",
-              ][i]
-            }
+            data-final-knowledge={x[4]}
             style={{
-              width: 430,
-              height: 430,
+              width: 440,
+              height: 440,
               borderRadius: "50%",
-              border: `9px solid ${x[3]}`,
+              border: `12px solid ${x[3]}`,
+              background: P.white,
               display: "grid",
               placeItems: "center",
               textAlign: "center",
-              ...enter(f, 8 + i * 18, 0, 25),
+              boxShadow: `0 15px 0 ${x[3]}22`,
+              ...enter(f, 8 + i * 18, 0, 35),
             }}
           >
             <div>
-              <div style={{ fontSize: 88, fontWeight: 950, color: x[3] }}>
+              <div
+                style={{
+                  fontSize: 112,
+                  lineHeight: 1,
+                  fontWeight: 950,
+                  color: x[3],
+                }}
+              >
                 {x[0]}
               </div>
-              <div style={{ fontSize: 28, fontWeight: 950, marginTop: 15 }}>
+              <div style={{ fontSize: 33, fontWeight: 950, marginTop: 12 }}>
                 {x[1]}
               </div>
-              <div style={{ marginTop: 25 }}>
-                <Stamp color={x[3]}>{x[2]}</Stamp>
+              <div
+                style={{
+                  fontSize: 24,
+                  marginTop: 20,
+                  fontWeight: 850,
+                  borderBottom: `3px solid ${x[3]}`,
+                  paddingBottom: 7,
+                }}
+              >
+                {x[2]}
               </div>
             </div>
           </div>
         ))}
       </div>
-    </Shell>
+    </AtlasShell>
   );
 };
 
 export const HearingCommonConsoleScene = () => {
   /* Stable generated markers: data-final-knowledge="hearing-record-basis" data-final-knowledge="hearing-public" data-final-knowledge="hearing-recusal" data-final-knowledge="hearing-agent" data-final-knowledge="hearing-free" */
   const f = useCurrentFrame();
+  const items = [
+    ["笔录", "决定依据", P.red, "hearing-record-basis"],
+    ["公开", "依法公开", P.blue, "hearing-public"],
+    ["回避", "主持人回避", P.violet, "hearing-recusal"],
+    ["代理", "可委托代理人", P.teal, "hearing-agent"],
+    ["费用", "不收费", P.green, "hearing-free"],
+  ] as const;
   return (
-    <Shell
+    <AtlasShell
       code="12"
-      title="听证共同控制台：笔录、公开、回避、代理、免费同时点亮"
+      title="听证共同规则：五枚控制钮同时生效"
+      section="共同程序"
     >
       <div
-        data-layout="five-switch-hearing-common-console"
+        data-layout="radial-five-rule-hearing-console"
         data-visual-anchor="flow-target"
-        data-visual-grammar="five-common-hearing-guarantees-activate-on-one-console,the-record-switch-directly-feeds-the-final-decision"
+        data-visual-grammar="five-common-hearing-rules-orbit-one-decision-hub,the-record-rule-feeds-the-final-decision"
         data-text-treatments="label-block,soft-highlight,stamp"
-        data-focal-rule="common-rules-of-penalty-and-license-hearings"
+        data-focal-rule="common-hearing-rules"
         data-focal-channels="icon,connector,enclosure"
-        style={{ position: "absolute", inset: 30 }}
+        style={sceneBox}
       >
         <div
-          data-final-knowledge="hearing-record-basis"
           style={{
             position: "absolute",
-            left: 580,
-            top: 150,
-            width: 600,
-            height: 330,
-            border: `7px solid ${C.cyan}`,
-            background: C.deep,
+            left: 670,
+            top: 210,
+            width: 450,
+            height: 250,
             display: "grid",
             placeItems: "center",
             textAlign: "center",
+            background: P.ink,
+            color: P.white,
+            borderRadius: "50%",
           }}
         >
           <div>
-            <div style={{ fontSize: 44, fontWeight: 950, color: C.cyan }}>
-              听证笔录
-            </div>
-            <div style={{ fontSize: 34, fontWeight: 950, marginTop: 25 }}>
-              行政决定必须“根据”笔录
-            </div>
+            <div style={{ fontSize: 41, fontWeight: 950 }}>听证程序</div>
+            <div style={{ fontSize: 23, marginTop: 14 }}>共同保障</div>
           </div>
         </div>
-        {[
-          ["公开", 80, 40, C.lime],
-          ["主持人回避", 1270, 40, C.violet],
-          ["可委托代理人", 80, 430, C.amber],
-          ["不收费", 1270, 430, C.magenta],
-        ].map((x, i) => (
-          <div
-            key={x[0]}
-            data-final-knowledge={
-              [
-                "hearing-public",
-                "hearing-recusal",
-                "hearing-agent",
-                "hearing-free",
-              ][i]
-            }
-            style={{
-              position: "absolute",
-              left: x[1],
-              top: x[2],
-              width: 420,
-              height: 180,
-              border: `5px solid ${x[3]}`,
-              display: "grid",
-              placeItems: "center",
-              fontSize: 31,
-              fontWeight: 950,
-              color: x[3],
-              ...enter(f, 8 + i * 14),
-            }}
-          >
-            {x[0]}
-          </div>
-        ))}
+        {items.map((x, i) => {
+          const angle = ((-150 + i * 75) * Math.PI) / 180;
+          const left = 690 + Math.cos(angle) * 620;
+          const top = 250 + Math.sin(angle) * 250;
+          return (
+            <div
+              key={x[0]}
+              data-final-knowledge={x[3]}
+              style={{
+                position: "absolute",
+                left,
+                top,
+                width: 330,
+                minHeight: 135,
+                padding: 22,
+                background: P.white,
+                border: `5px solid ${x[2]}`,
+                textAlign: "center",
+                ...enter(f, 8 + i * 12),
+              }}
+            >
+              <div style={{ fontSize: 31, fontWeight: 950, color: x[2] }}>
+                {x[0]}
+              </div>
+              <div style={{ fontSize: 22, fontWeight: 850, marginTop: 14 }}>
+                {x[1]}
+              </div>
+            </div>
+          );
+        })}
       </div>
-    </Shell>
+    </AtlasShell>
   );
 };
 
 export const HearingTrapScopeScene = () => {
   /* Stable generated markers: data-final-knowledge="trap-no-compulsion-hearing" data-final-knowledge="trap-fine-carries-detention" data-final-knowledge="trap-suspension-no-hearing" data-final-knowledge="trap-private-interest-no-notice" data-final-knowledge="trap-hearing-publicity" */
   const f = useCurrentFrame();
+  const rows = [
+    ["扣押200万应告知听证", "错 · 强制无听证", "trap-no-compulsion-hearing"],
+    [
+      "成年拘留＋5000元罚款",
+      "对 · 罚款带入法定听证",
+      "trap-fine-carries-detention",
+    ],
+    [
+      "暂扣许可证必须听证",
+      "错 · 暂扣不在法定范围",
+      "trap-suspension-no-hearing",
+    ],
+    [
+      "私人重大利益听证需公告",
+      "错 · 单独告知",
+      "trap-private-interest-no-notice",
+    ],
+    ["听证是否公开可裁量", "错 · 依法公开", "trap-hearing-publicity"],
+  ] as const;
   return (
-    <Shell code="13" title="听证误区扫描：强制静默、暂扣不触发、公开不是裁量">
+    <AtlasShell code="13" title="听证陷阱扫描：五条错误边界" section="判断题">
       <div
-        data-layout="five-scanline-hearing-trap-scope"
+        data-layout="five-trap-verdict-scan"
         data-visual-anchor="typographic-sequence"
-        data-visual-grammar="five-common-hearing-misstatements-are-scanned-line-by-line,the-correct-trigger-or-negation-locks-at-the-end-of-each-line"
+        data-visual-grammar="five-statements-pass-one-verdict-scan,each-row-locks-a-corrective-rule-at-the-end"
         data-text-treatments="external-negation,thin-underline,stamp"
-        data-focal-rule="hearing-exam-traps"
+        data-focal-rule="hearing-traps"
         data-focal-channels="annotation,contrast,motion"
-        style={{ display: "grid", gap: 18, padding: "30px 110px" }}
+        style={{ ...sceneBox, padding: "15px 90px" }}
       >
-        {[
-          ["扣押200万元商品", "强制措施无听证", C.violet],
-          ["成年人拘留10日＋罚款5000", "罚款搭便车：应告知听证", C.lime],
-          ["暂扣卫生许可证", "不属法定听证", C.magenta],
-          ["个人重大利益许可听证", "单独告知，不公告", C.cyan],
-          ["是否公开听证", "法定规则，不是自由裁量", C.amber],
-        ].map((x, i) => (
+        {rows.map((x, i) => (
           <div
             key={x[0]}
-            data-final-knowledge={
-              [
-                "trap-no-compulsion-hearing",
-                "trap-fine-carries-detention",
-                "trap-suspension-no-hearing",
-                "trap-private-interest-no-notice",
-                "trap-hearing-publicity",
-              ][i]
-            }
+            data-final-knowledge={x[2]}
             style={{
+              height: 118,
               display: "grid",
-              gridTemplateColumns: "1fr 70px 1fr",
+              gridTemplateColumns: "1.5fr 1fr",
               alignItems: "center",
-              borderBottom: `3px solid ${x[2]}`,
-              padding: "15px 20px",
-              ...enter(f, 5 + i * 11, -25, 0),
+              gap: 40,
+              borderBottom: `4px solid ${i === 1 ? P.green : P.red}`,
+              ...enter(f, 5 + i * 12, -30, 0),
             }}
           >
             <div style={{ fontSize: 27, fontWeight: 900 }}>{x[0]}</div>
-            <Arrow color={x[2]} />
-            <div style={{ fontSize: 27, fontWeight: 950, color: x[2] }}>
+            <div
+              style={{
+                fontSize: 25,
+                fontWeight: 950,
+                color: i === 1 ? P.green : P.red,
+              }}
+            >
               {x[1]}
             </div>
           </div>
         ))}
       </div>
-    </Shell>
+    </AtlasShell>
   );
 };
 
 export const InformationDefinitionProjectorScene = () => {
-  /* Stable generated markers: data-final-knowledge="information-made" data-final-knowledge="information-acquired" data-final-knowledge="government-information-definition" */
+  /* Stable generated markers: data-final-knowledge="information-maker" data-final-knowledge="information-acquirer" data-final-knowledge="information-recorded" data-final-knowledge="information-management-function" */
   const f = useCurrentFrame();
   return (
-    <Shell code="14" title="政府信息投影：履职中制作或获取，并被记录保存">
+    <AtlasShell
+      code="14"
+      title="政府信息定义：制作或获取，并被记录保存"
+      section="信息定义"
+    >
       <div
-        data-layout="two-source-information-projector"
+        data-layout="dual-source-information-file"
         data-visual-anchor="flow-target"
-        data-visual-grammar="made-and-acquired-information-reels-enter-one-projector,only-recorded-and-preserved-administrative-management-information-appears-on-screen"
-        data-text-treatments="label-block,thin-underline,soft-highlight"
-        data-focal-rule="definition-of-government-information"
-        data-focal-channels="connector,enclosure,icon"
-        style={{ position: "absolute", inset: 25 }}
+        data-visual-grammar="made-and-acquired-information-enter-from-two-sources,management-function-plus-recorded-form-complete-the-definition"
+        data-text-treatments="label-block,soft-highlight,thin-underline"
+        data-focal-rule="government-information-definition"
+        data-focal-channels="connector,icon,enclosure"
+        style={sceneBox}
       >
         <div
-          data-final-knowledge="information-made"
+          data-final-knowledge="information-maker"
           style={{
             position: "absolute",
-            left: 60,
-            top: 80,
-            width: 420,
-            height: 200,
-            border: `5px solid ${C.cyan}`,
-            padding: 30,
-            ...enter(f, 7, -30, 0),
+            left: 80,
+            top: 90,
+            width: 470,
+            height: 210,
+            padding: 32,
+            background: P.white,
+            borderLeft: `12px solid ${P.red}`,
+            ...enter(f, 8, -30, 0),
           }}
         >
-          <div style={{ fontSize: 33, fontWeight: 950, color: C.cyan }}>
+          <div style={{ fontSize: 39, fontWeight: 950, color: P.red }}>
             制作
           </div>
-          <div style={{ fontSize: 25, marginTop: 20 }}>许可监督检查笔录</div>
+          <div style={{ fontSize: 25, marginTop: 24, fontWeight: 850 }}>
+            例：监督检查笔录
+          </div>
         </div>
         <div
-          data-final-knowledge="information-acquired"
+          data-final-knowledge="information-acquirer"
           style={{
             position: "absolute",
-            left: 60,
+            left: 80,
             bottom: 80,
-            width: 420,
-            height: 200,
-            border: `5px solid ${C.violet}`,
-            padding: 30,
+            width: 470,
+            height: 210,
+            padding: 32,
+            background: P.white,
+            borderLeft: `12px solid ${P.blue}`,
             ...enter(f, 24, -30, 0),
           }}
         >
-          <div style={{ fontSize: 33, fontWeight: 950, color: C.violet }}>
+          <div style={{ fontSize: 39, fontWeight: 950, color: P.blue }}>
             获取
           </div>
-          <div style={{ fontSize: 25, marginTop: 20 }}>企业登记信息</div>
-        </div>
-        <div
-          style={{
-            position: "absolute",
-            left: 530,
-            top: 170,
-            fontSize: 120,
-            color: C.amber,
-          }}
-        >
-          ▷
-        </div>
-        <div
-          data-final-knowledge="government-information-definition"
-          style={{
-            position: "absolute",
-            right: 80,
-            top: 65,
-            width: 900,
-            height: 520,
-            border: `7px solid ${C.lime}`,
-            background: "rgba(168,217,78,.08)",
-            padding: 55,
-            display: "grid",
-            placeItems: "center",
-            textAlign: "center",
-          }}
-        >
-          <div>
-            <div style={{ fontSize: 52, fontWeight: 950, color: C.lime }}>
-              政府信息
-            </div>
-            <div style={{ fontSize: 31, fontWeight: 900, marginTop: 35 }}>
-              行政机关履行行政管理职能过程中
-            </div>
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                gap: 18,
-                marginTop: 35,
-              }}
-            >
-              <Chip color={C.cyan}>制作或获取</Chip>
-              <Chip color={C.lime}>一定形式记录</Chip>
-              <Chip color={C.lime}>保存</Chip>
-            </div>
+          <div style={{ fontSize: 25, marginTop: 24, fontWeight: 850 }}>
+            例：企业登记信息
           </div>
         </div>
+        <div style={{ position: "absolute", left: 590, top: 260 }}>
+          <Arrow color={P.teal} />
+        </div>
+        <div
+          data-final-knowledge="information-recorded"
+          style={{
+            position: "absolute",
+            right: 100,
+            top: 90,
+            width: 760,
+            height: 430,
+            padding: 50,
+            background: P.ink,
+            color: P.white,
+            clipPath: "polygon(0 0,92% 0,100% 12%,100% 100%,0 100%)",
+            ...enter(f, 40, 35, 0),
+          }}
+        >
+          <div style={{ fontSize: 48, fontWeight: 950 }}>
+            以一定形式记录、保存
+          </div>
+          <div style={{ fontSize: 28, marginTop: 42, fontWeight: 850 }}>
+            不是仅指主动公开的信息
+          </div>
+          <div style={{ marginTop: 45 }}>
+            <Tag color={P.amber}>信息载体可多样</Tag>
+          </div>
+        </div>
+        <div
+          data-final-knowledge="information-management-function"
+          style={{
+            position: "absolute",
+            right: 250,
+            bottom: 35,
+            ...enter(f, 58),
+          }}
+        >
+          <Seal color={P.teal}>前提：行政机关履行行政管理职能</Seal>
+        </div>
       </div>
-    </Shell>
+    </AtlasShell>
   );
 };
 
 export const DisclosureSourceRoutingScene = () => {
-  /* Stable generated markers: data-final-knowledge="information-origin" data-final-knowledge="maker-or-holder-discloses" data-final-knowledge="authorized-unit-discloses" data-final-knowledge="lead-organ-discloses" */
+  /* Stable generated markers: data-final-knowledge="made-information-route" data-final-knowledge="acquired-information-route" data-final-knowledge="authorized-office-route" data-final-knowledge="joint-information-route" */
   const f = useCurrentFrame();
+  const routes = [
+    ["谁制作", "制作机关公开", P.red, "made-information-route"],
+    ["谁保存", "保存机关公开", P.blue, "acquired-information-route"],
+    [
+      "派出/内设机构",
+      "获授权后自己名义公开",
+      P.violet,
+      "authorized-office-route",
+    ],
+    [
+      "共同制作",
+      "牵头机关公开 · 其他机关15日回复",
+      P.teal,
+      "joint-information-route",
+    ],
+  ] as const;
   return (
-    <Shell
+    <AtlasShell
       code="15"
-      title="公开主体路由：制作/保存者、获授权机构、共同信息牵头者"
+      title="公开主体：沿信息来源找到出口"
+      section="主体路由"
     >
       <div
-        data-layout="three-route-disclosure-source-map"
+        data-layout="four-source-disclosure-route-map"
         data-visual-anchor="document-fork"
-        data-visual-grammar="information-routes-to-the-maker-or-original-acquirer,authorized-branches-publish-in-their-own-name,and-joint-information-routes-to-the-lead-organ"
-        data-text-treatments="label-block,stamp,thin-underline"
-        data-focal-rule="subjects-responsible-for-disclosure"
-        data-focal-channels="connector,locator,contrast"
-        style={{ position: "absolute", inset: 20 }}
+        data-visual-grammar="four-information-origins-enter-a-routing-map,each-origin-terminates-at-the-responsible-disclosure-organ"
+        data-text-treatments="label-block,thin-underline,stamp"
+        data-focal-rule="disclosure-responsibility"
+        data-focal-channels="connector,contrast,spatial"
+        style={sceneBox}
       >
         <div
-          data-final-knowledge="information-origin"
           style={{
             position: "absolute",
-            left: 690,
-            top: 10,
-            width: 400,
-            height: 160,
-            background: C.cyan,
-            color: C.night,
+            left: 700,
+            top: 235,
+            width: 360,
+            height: 180,
             display: "grid",
             placeItems: "center",
-            fontSize: 35,
+            background: P.ink,
+            color: P.white,
+            fontSize: 38,
             fontWeight: 950,
+            rotate: "-2deg",
           }}
         >
-          政府信息光源
+          政府信息
         </div>
-        <div
-          style={{
-            position: "absolute",
-            left: 880,
-            top: 170,
-            width: 12,
-            height: 90,
-            background: C.gray,
-          }}
-        />
-        <div
-          style={{
-            position: "absolute",
-            left: 170,
-            right: 170,
-            top: 250,
-            height: 12,
-            background: C.gray,
-          }}
-        />
-        {[
-          ["谁制作/保存", "谁公开", "其他机关信息：制作或最初获取者", C.cyan],
-          ["派出/内设机构", "获授权且以自己名义履职", "机构自己公开", C.violet],
-          [
-            "共同信息",
-            "牵头机关公开",
-            "征求意见15工作日；不回复视为同意",
-            C.lime,
-          ],
-        ].map((x, i) => (
-          <div
-            key={x[0]}
-            data-final-knowledge={
-              [
-                "maker-or-holder-discloses",
-                "authorized-unit-discloses",
-                "lead-organ-discloses",
-              ][i]
-            }
-            style={{
-              position: "absolute",
-              left: 65 + i * 570,
-              top: 335,
-              width: 520,
-              height: 250,
-              border: `5px solid ${x[3]}`,
-              padding: 28,
-              ...enter(f, 18 + i * 14, 0, 25),
-            }}
-          >
-            <div style={{ fontSize: 31, fontWeight: 950, color: x[3] }}>
-              {x[0]}
-            </div>
+        {routes.map((x, i) => {
+          const positions = [
+            [40, 60],
+            [1180, 60],
+            [40, 420],
+            [1180, 420],
+          ];
+          return (
             <div
+              key={x[0]}
+              data-final-knowledge={x[3]}
               style={{
-                fontSize: 28,
-                fontWeight: 950,
-                marginTop: 20,
-                borderBottom: `3px solid ${x[3]}`,
-                display: "inline-block",
+                position: "absolute",
+                left: positions[i][0],
+                top: positions[i][1],
+                width: 520,
+                minHeight: 180,
+                padding: 28,
+                background: P.white,
+                borderBottom: `8px solid ${x[2]}`,
+                ...enter(f, 8 + i * 14, i % 2 ? 30 : -30, 0),
               }}
             >
-              {x[1]}
+              <div style={{ fontSize: 34, fontWeight: 950, color: x[2] }}>
+                {x[0]}
+              </div>
+              <div style={{ fontSize: 24, fontWeight: 850, marginTop: 28 }}>
+                {x[1]}
+              </div>
             </div>
-            <div style={{ fontSize: 22, marginTop: 22 }}>{x[2]}</div>
-          </div>
-        ))}
+          );
+        })}
       </div>
-    </Shell>
+    </AtlasShell>
   );
 };
 
 export const AbsoluteSecrecyShutterScene = () => {
-  /* Stable generated markers: data-final-knowledge="absolute-nondisclosure-core" data-final-knowledge="state-secret" data-final-knowledge="statutory-nondisclosure" data-final-knowledge="security-risk" */
+  /* Stable generated markers: data-final-knowledge="state-secret" data-final-knowledge="statutory-nondisclosure" data-final-knowledge="security-risk" */
   const f = useCurrentFrame();
+  const blocks = [
+    ["国家秘密", "state-secret"],
+    ["法律、行政法规禁止公开", "statutory-nondisclosure"],
+    ["危及国安·公安·经安·社会稳定", "security-risk"],
+  ] as const;
   return (
-    <Shell code="16" title="绝对遮光阀：三类信息一律不公开">
+    <AtlasShell code="16" title="绝对不公开：三道红色封条" section="不公开范围">
       <div
-        data-layout="three-blade-absolute-secrecy-shutter"
+        data-layout="three-seal-nondisclosure-wall"
         data-visual-anchor="boundary"
-        data-visual-grammar="three-independent-blackout-blades-close-over-state-secrets,statutory-prohibitions-and-major-security-risks"
-        data-text-treatments="external-negation,stamp,label-block"
+        data-visual-grammar="three-absolute-bars-seal-one-information-file,any-bar-closes-the-publication-route"
+        data-text-treatments="stamp,external-negation,label-block"
         data-focal-rule="absolute-nondisclosure"
         data-focal-channels="enclosure,contrast,motion"
-        style={{ position: "absolute", inset: 25 }}
+        style={sceneBox}
       >
         <div
-          data-final-knowledge="absolute-nondisclosure-core"
           style={{
             position: "absolute",
-            left: 660,
-            top: 190,
-            width: 460,
-            height: 260,
-            border: `8px solid ${C.magenta}`,
-            display: "grid",
-            placeItems: "center",
-            textAlign: "center",
-            background: C.deep,
+            inset: "60px 100px",
+            border: `10px solid ${P.ink}`,
+            background: P.white,
           }}
-        >
-          <div>
-            <div style={{ fontSize: 52, fontWeight: 950, color: C.magenta }}>
-              一律不公开
-            </div>
-            <div style={{ marginTop: 25 }}>
-              <Stamp>不得权衡</Stamp>
-            </div>
-          </div>
-        </div>
-        {[
-          ["国家秘密", 70, 70],
-          ["法律/行政法规禁止公开", 1240, 70],
-          ["危及国安/公安/经安/社会稳定", 540, 475],
-        ].map((x, i) => (
+        />
+        {blocks.map((x, i) => (
           <div
             key={x[0]}
-            data-final-knowledge={
-              ["state-secret", "statutory-nondisclosure", "security-risk"][i]
-            }
+            data-final-knowledge={x[1]}
             style={{
               position: "absolute",
-              left: x[1],
-              top: x[2],
-              width: i === 2 ? 700 : 480,
-              height: 170,
-              background: C.magenta,
-              color: C.white,
+              left: 120 + i * 520,
+              top: 75 + i * 95,
+              width: 500,
+              height: 430 - i * 30,
               display: "grid",
               placeItems: "center",
               textAlign: "center",
-              fontSize: 29,
+              padding: 36,
+              background: `${P.red}EE`,
+              color: P.white,
+              clipPath: "polygon(0 0,92% 0,100% 50%,92% 100%,0 100%,8% 50%)",
+              fontSize: 31,
               fontWeight: 950,
-              clipPath: "polygon(0 0,92% 0,100% 50%,92% 100%,0 100%)",
-              ...enter(f, 8 + i * 18, i === 1 ? 30 : -30, 0),
+              ...enter(f, 8 + i * 18, 0, -45),
             }}
           >
             {x[0]}
           </div>
         ))}
+        <div style={{ position: "absolute", right: 90, bottom: 24 }}>
+          <Seal color={P.red}>一律不公开</Seal>
+        </div>
       </div>
-    </Shell>
+    </AtlasShell>
   );
 };
 
@@ -1550,65 +1630,72 @@ export const PrivacyBalanceFilterScene = () => {
   /* Stable generated markers: data-final-knowledge="privacy-input" data-final-knowledge="written-consultation" data-final-knowledge="privacy-outcomes" */
   const f = useCurrentFrame();
   return (
-    <Shell
+    <AtlasShell
       code="17"
-      title="隐私与商业秘密滤镜：15日征求意见后仍要做公共利益权衡"
+      title="隐私与商业秘密：15日征求意见后仍需权衡"
+      section="利益衡量"
     >
       <div
-        data-layout="third-party-privacy-balance-filter"
-        data-visual-anchor="document-fork"
-        data-visual-grammar="privacy-and-trade-secret-information-enters-written-consultation,the-third-party-response-and-public-interest-weight-determine-the-output"
+        data-layout="third-party-public-interest-scale"
+        data-visual-anchor="role-pair"
+        data-visual-grammar="written-third-party-opinion-enters-one-scale,consent-reason-public-interest-and-silence-produce-distinct-outcomes"
         data-text-treatments="label-block,soft-highlight,stamp"
         data-focal-rule="conditional-nondisclosure-of-private-information"
         data-focal-channels="connector,contrast,enclosure"
-        style={{ position: "absolute", inset: 20 }}
+        style={sceneBox}
       >
         <div
           data-final-knowledge="privacy-input"
           style={{
             position: "absolute",
-            left: 40,
-            top: 220,
-            width: 360,
-            height: 220,
-            border: `6px solid ${C.violet}`,
-            display: "grid",
-            placeItems: "center",
-            textAlign: "center",
-            fontSize: 32,
-            fontWeight: 950,
+            left: 50,
+            top: 200,
+            width: 380,
+            minHeight: 210,
+            padding: 35,
+            background: P.white,
+            borderLeft: `12px solid ${P.violet}`,
+            ...enter(f, 8, -35, 0),
           }}
         >
-          商业秘密
-          <br />
-          个人隐私
+          <div style={{ fontSize: 38, fontWeight: 950, color: P.violet }}>
+            商业秘密
+          </div>
+          <div
+            style={{
+              fontSize: 38,
+              fontWeight: 950,
+              color: P.violet,
+              marginTop: 24,
+            }}
+          >
+            个人隐私
+          </div>
         </div>
-        <Arrow
-          color={C.amber}
-          style={{ position: "absolute", left: 420, top: 290 }}
-        />
         <div
           data-final-knowledge="written-consultation"
           style={{
             position: "absolute",
-            left: 500,
-            top: 150,
-            width: 430,
-            height: 360,
+            left: 560,
+            top: 100,
+            width: 420,
+            height: 420,
             borderRadius: "50%",
-            border: `8px solid ${C.cyan}`,
+            border: `10px solid ${P.blue}`,
+            background: P.white,
             display: "grid",
             placeItems: "center",
             textAlign: "center",
+            ...enter(f, 25),
           }}
         >
           <div>
-            <div style={{ fontSize: 78, fontWeight: 950, color: C.cyan }}>
+            <div style={{ fontSize: 100, fontWeight: 950, color: P.blue }}>
               15
             </div>
             <div style={{ fontSize: 29, fontWeight: 950 }}>工作日书面征求</div>
-            <div style={{ marginTop: 20 }}>
-              <Chip color={C.cyan}>第三方意见</Chip>
+            <div style={{ marginTop: 22 }}>
+              <Tag color={P.blue}>第三方意见</Tag>
             </div>
           </div>
         </div>
@@ -1616,607 +1703,611 @@ export const PrivacyBalanceFilterScene = () => {
           data-final-knowledge="privacy-outcomes"
           style={{
             position: "absolute",
-            right: 30,
-            top: 40,
-            width: 740,
-            height: 570,
-            display: "grid",
-            gridTemplateRows: "repeat(4,1fr)",
-            gap: 12,
+            right: 40,
+            top: 30,
+            width: 650,
+            height: 590,
+            ...enter(f, 45, 35, 0),
           }}
         >
           {[
-            ["同意", "公开", C.lime],
-            ["不同意＋合理理由", "原则不公开", C.magenta],
-            ["不同意但重大公共利益", "公开", C.amber],
-            ["逾期未表态", "机关权衡；不视为同意/拒绝", C.violet],
+            ["同意", "公开", P.green],
+            ["不同意＋合理理由", "原则不公开", P.red],
+            ["重大公共利益", "仍可公开", P.amber],
+            ["逾期未表态", "机关权衡，不视为同意/拒绝", P.violet],
           ].map((x) => (
             <div
-              key={x[0]}
+              key={String(x[0])}
               style={{
                 display: "grid",
-                gridTemplateColumns: "1fr 1.4fr",
+                gridTemplateColumns: "1.1fr 1.4fr",
                 alignItems: "center",
-                border: `4px solid ${x[2]}`,
-                padding: "12px 20px",
+                minHeight: 128,
+                marginBottom: 14,
+                padding: "15px 22px",
+                background: P.white,
+                borderLeft: `9px solid ${x[2]}`,
               }}
             >
               <div style={{ fontSize: 24, fontWeight: 950, color: x[2] }}>
                 {x[0]}
               </div>
-              <div style={{ fontSize: 23, fontWeight: 900 }}>{x[1]}</div>
+              <div style={{ fontSize: 22, fontWeight: 850 }}>{x[1]}</div>
             </div>
           ))}
         </div>
+        <div style={{ position: "absolute", left: 450, top: 280 }}>
+          <Arrow color={P.amber} />
+        </div>
       </div>
-    </Shell>
+    </AtlasShell>
   );
 };
 
 export const OptionalNondisclosureDimmersScene = () => {
   /* Stable generated markers: data-final-knowledge="internal-affairs-information" data-final-knowledge="process-information" data-final-knowledge="enforcement-file-information" */
   const f = useCurrentFrame();
+  const dims = [
+    ["内部事务", "人事·后勤·内部流程", 35, "internal-affairs-information"],
+    ["过程性信息", "讨论记录·过程稿·磋商·请示报告", 58, "process-information"],
+    [
+      "执法案卷",
+      "法律法规规章另有规定则公开",
+      75,
+      "enforcement-file-information",
+    ],
+  ] as const;
   return (
-    <Shell
+    <AtlasShell
       code="18"
-      title="可不公开调光器：内部事务、过程信息、执法案卷可选择降光"
+      title="可以不公开：三只裁量调光器"
+      section="选择性不公开"
     >
       <div
-        data-layout="three-dimmer-optional-nondisclosure-board"
+        data-layout="three-category-discretion-axis"
         data-visual-anchor="comparison-axis"
-        data-visual-grammar="three-discretionary-information-categories-use-independent-dimmers,statutory-disclosure-rules-can-override-the-process-and-file-dimmers"
+        data-visual-grammar="three-information-categories-align-on-one-discretion-axis,statutory-publication-rules-can-override-optional-nondisclosure"
         data-text-treatments="label-block,thin-underline,external-negation"
         data-focal-rule="optional-nondisclosure"
         data-focal-channels="contrast,locator,enclosure"
         style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(3,1fr)",
-          gap: 28,
-          padding: "55px 20px",
+          ...sceneBox,
+          display: "flex",
+          justifyContent: "space-around",
+          alignItems: "center",
+          padding: "20px 60px",
         }}
       >
-        {[
-          ["内部事务", "人事·后勤·内部流程", "可以不公开", C.cyan],
-          [
-            "过程性信息",
-            "讨论记录·过程稿·磋商·请示报告",
-            "法律法规规章另有规定则公开",
-            C.violet,
-          ],
-          ["行政执法案卷", "案卷材料", "法律法规规章另有规定则公开", C.amber],
-        ].map((x, i) => (
+        {dims.map((x, i) => (
           <div
             key={x[0]}
-            data-final-knowledge={
-              [
-                "internal-affairs-information",
-                "process-information",
-                "enforcement-file-information",
-              ][i]
-            }
+            data-final-knowledge={x[3]}
             style={{
+              width: 470,
               height: 500,
-              border: `5px solid ${x[3]}`,
-              padding: 35,
-              background: `linear-gradient(180deg,${x[3]}33,transparent)`,
-              ...enter(f, 8 + i * 15, 0, 30),
+              padding: 34,
+              background: P.white,
+              ...enter(f, 8 + i * 18, 0, 35),
             }}
           >
             <div
               style={{
-                height: 150,
-                width: 38,
-                background: `linear-gradient(${x[3]} 0 ${35 + i * 20}%,${C.deep} ${35 + i * 20}% 100%)`,
-                float: "right",
-                border: `3px solid ${x[3]}`,
+                fontSize: 37,
+                fontWeight: 950,
+                color: [P.teal, P.violet, P.amber][i],
               }}
-            />
-            <div style={{ fontSize: 38, fontWeight: 950, color: x[3] }}>
+            >
               {x[0]}
             </div>
-            <div style={{ fontSize: 24, marginTop: 35, maxWidth: 360 }}>
+            <div
+              style={{
+                fontSize: 23,
+                minHeight: 80,
+                marginTop: 24,
+                fontWeight: 850,
+              }}
+            >
               {x[1]}
             </div>
-            <div style={{ marginTop: 65 }}>
-              <Stamp color={x[3]}>{x[2]}</Stamp>
+            <div style={{ position: "relative", height: 250, marginTop: 35 }}>
+              <div
+                style={{
+                  position: "absolute",
+                  left: 55,
+                  right: 55,
+                  top: 115,
+                  height: 12,
+                  background: P.paperDeep,
+                }}
+              />
+              <div
+                style={{
+                  position: "absolute",
+                  left: 50 + Number(x[2]) * 2.6,
+                  top: 75,
+                  width: 90,
+                  height: 90,
+                  borderRadius: "50%",
+                  background: [P.teal, P.violet, P.amber][i],
+                  boxShadow: `0 0 0 14px ${[P.teal, P.violet, P.amber][i]}22`,
+                }}
+              />
             </div>
+            <Seal color={[P.teal, P.violet, P.amber][i]}>可以不公开</Seal>
           </div>
         ))}
       </div>
-    </Shell>
+    </AtlasShell>
   );
 };
 
 export const ActiveDisclosureBeamScene = () => {
-  /* Stable generated markers: data-final-knowledge="public-interest-adjustment" data-final-knowledge="broad-public-awareness" data-final-knowledge="public-participation" data-final-knowledge="active-disclosure-examples" */
+  /* Stable generated markers: data-final-knowledge="public-interest-adjustment" data-final-knowledge="public-awareness" data-final-knowledge="public-participation" data-final-knowledge="active-disclosure-examples" */
   const f = useCurrentFrame();
+  const rays = [
+    ["公众利益调整", P.red, "public-interest-adjustment"],
+    ["公众广泛知晓", P.blue, "public-awareness"],
+    ["公众参与决策", P.teal, "public-participation"],
+  ] as const;
   return (
-    <Shell code="19" title="主动公开光束：公众利益、广泛知晓、公众参与三项触发">
+    <AtlasShell
+      code="19"
+      title="主动公开：三种公共性触发一束曝光"
+      section="主动公开"
+    >
       <div
-        data-layout="three-trigger-active-disclosure-beam"
+        data-layout="three-trigger-active-disclosure-radial"
         data-visual-anchor="flow-target"
-        data-visual-grammar="three-public-interest-triggers-converge-on-the-active-disclosure-projector,representative-information-examples-appear-on-the-projection-screen"
-        data-text-treatments="soft-highlight,label-block,thin-underline"
-        data-focal-rule="content-of-active-disclosure"
-        data-focal-channels="connector,enclosure,icon"
-        style={{ position: "absolute", inset: 20 }}
+        data-visual-grammar="three-publicity-triggers-radiate-to-one-duty-center,representative-examples-confirm-active-disclosure-scope"
+        data-text-treatments="soft-highlight,label-block,stamp"
+        data-focal-rule="active-disclosure-scope"
+        data-focal-channels="connector,icon,contrast"
+        style={sceneBox}
       >
-        {[
-          ["公众利益调整", 60, 45, C.lime],
-          ["需要广泛知晓", 60, 245, C.cyan],
-          ["需要公众参与决策", 60, 445, C.violet],
-        ].map((x, i) => (
+        <div
+          style={{
+            position: "absolute",
+            left: 650,
+            top: 130,
+            width: 480,
+            height: 480,
+            borderRadius: "50%",
+            display: "grid",
+            placeItems: "center",
+            textAlign: "center",
+            background: P.amber,
+            color: P.ink,
+            boxShadow: `0 0 0 35px ${P.amber}22`,
+            ...enter(f, 10),
+          }}
+        >
+          <div>
+            <div style={{ fontSize: 50, fontWeight: 950 }}>主动公开</div>
+            <div style={{ fontSize: 25, marginTop: 18, fontWeight: 850 }}>
+              无需申请
+            </div>
+          </div>
+        </div>
+        {rays.map((x, i) => (
           <div
             key={x[0]}
-            data-final-knowledge={
-              [
-                "public-interest-adjustment",
-                "broad-public-awareness",
-                "public-participation",
-              ][i]
-            }
+            data-final-knowledge={x[2]}
             style={{
               position: "absolute",
-              left: x[1],
-              top: x[2],
-              width: 480,
-              height: 145,
-              border: `5px solid ${x[3]}`,
-              display: "grid",
-              placeItems: "center",
-              fontSize: 30,
+              left: [70, 1170, 650][i],
+              top: [90, 90, 500][i],
+              width: 500,
+              padding: 28,
+              textAlign: "center",
+              background: P.white,
+              borderTop: `8px solid ${x[1]}`,
+              fontSize: 31,
               fontWeight: 950,
-              color: x[3],
-              ...enter(f, 6 + i * 14, -30, 0),
+              ...enter(f, 28 + i * 14),
             }}
           >
             {x[0]}
           </div>
         ))}
         <div
-          style={{
-            position: "absolute",
-            left: 550,
-            top: 275,
-            fontSize: 90,
-            color: C.amber,
-          }}
-        >
-          ▷
-        </div>
-        <div
           data-final-knowledge="active-disclosure-examples"
           style={{
             position: "absolute",
-            right: 60,
-            top: 35,
-            width: 1020,
-            height: 555,
-            border: `7px solid ${C.lime}`,
-            padding: 45,
-            background: "rgba(168,217,78,.07)",
+            left: 160,
+            bottom: 20,
+            width: 580,
+            ...enter(f, 65),
           }}
         >
-          <div style={{ fontSize: 40, fontWeight: 950, color: C.lime }}>
-            主动公开投影
-          </div>
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "1fr 1fr",
-              gap: 20,
-              marginTop: 40,
-            }}
-          >
-            <Chip color={C.magenta}>有一定社会影响的处罚决定</Chip>
-            <Chip color={C.cyan}>环保/卫生/安全/食品等监督检查</Chip>
-            <Chip color={C.violet}>公务员职位·名额·条件</Chip>
-            <Chip color={C.lime}>公务员录用结果</Chip>
-          </div>
+          <Seal color={P.red}>
+            例：有社会影响处罚 · 监督检查 · 公务员录用结果
+          </Seal>
         </div>
       </div>
-    </Shell>
+    </AtlasShell>
   );
 };
 
 export const ActiveDisclosureExposureScene = () => {
-  /* Stable generated markers: data-final-knowledge="active-disclosure-deadline" data-final-knowledge="active-disclosure-channels" data-final-knowledge="active-disclosure-venues" */
+  /* Stable generated markers: data-final-knowledge="active-twenty-day-rule" data-final-knowledge="active-disclosure-media" data-final-knowledge="mandatory-venues" */
   const f = useCurrentFrame();
   return (
-    <Shell code="20" title="主动公开曝光：20个工作日，不存在延长曝光">
+    <AtlasShell
+      code="20"
+      title="主动公开程序：20日、传播渠道、法定场所"
+      section="公开程序"
+    >
       <div
-        data-layout="active-disclosure-exposure-timeline"
+        data-layout="deadline-channel-venue-route"
         data-visual-anchor="timeline-gate"
-        data-visual-grammar="information-formation-or-change-starts-a-single-twenty-working-day-exposure,the-result-disperses-through-mandatory-and-optional-publication-venues"
-        data-text-treatments="stamp,label-block,external-negation"
-        data-focal-rule="procedure-for-active-disclosure"
-        data-focal-channels="locator,connector,contrast"
-        style={{ position: "absolute", inset: 25 }}
+        data-visual-grammar="formation-or-change-starts-one-twenty-day-clock,media-channels-and-mandatory-venues-complete-publication"
+        data-text-treatments="stamp,label-block,thin-underline"
+        data-focal-rule="active-disclosure-procedure"
+        data-focal-channels="locator,connector,enclosure"
+        style={sceneBox}
       >
         <div
-          data-final-knowledge="active-disclosure-deadline"
+          data-final-knowledge="active-twenty-day-rule"
           style={{
             position: "absolute",
             left: 60,
-            top: 120,
-            width: 560,
-            height: 380,
-            borderRadius: "50%",
-            border: `10px solid ${C.lime}`,
-            display: "grid",
-            placeItems: "center",
-            textAlign: "center",
+            top: 70,
+            width: 520,
+            height: 500,
+            background: P.white,
+            border: `8px solid ${P.red}`,
+            padding: 34,
+            ...enter(f, 8, -35, 0),
           }}
         >
-          <div>
-            <div style={{ fontSize: 100, fontWeight: 950, color: C.lime }}>
-              20
-            </div>
-            <div style={{ fontSize: 30, fontWeight: 950 }}>工作日</div>
-            <div style={{ fontSize: 23, marginTop: 15 }}>
-              信息形成或变更之日起
-            </div>
-            <div style={{ marginTop: 22 }}>
-              <Stamp>无延长制度</Stamp>
-            </div>
+          <div style={{ fontSize: 98, fontWeight: 950, color: P.red }}>20</div>
+          <div style={{ fontSize: 34, fontWeight: 950 }}>工作日内公开</div>
+          <div style={{ fontSize: 23, marginTop: 30, fontWeight: 850 }}>
+            自信息形成或变更之日起
+          </div>
+          <div style={{ marginTop: 45 }}>
+            <Seal color={P.red}>无延长制度</Seal>
           </div>
         </div>
         <div
-          data-final-knowledge="active-disclosure-channels"
+          data-final-knowledge="active-disclosure-media"
           style={{
             position: "absolute",
-            right: 40,
-            top: 30,
-            width: 980,
-            height: 310,
-            border: `5px solid ${C.cyan}`,
-            padding: 30,
+            left: 680,
+            top: 40,
+            width: 480,
+            height: 260,
+            padding: 32,
+            background: P.ink,
+            color: P.white,
+            ...enter(f, 28),
           }}
         >
-          <div style={{ fontSize: 31, fontWeight: 950, color: C.cyan }}>
-            公开方式
+          <div style={{ fontSize: 35, fontWeight: 950, color: P.amber }}>
+            传播渠道
           </div>
-          <div
-            style={{
-              display: "flex",
-              flexWrap: "wrap",
-              gap: 12,
-              marginTop: 25,
-            }}
-          >
-            {[
-              "政府公报",
-              "政府网站/政务媒体",
-              "新闻发布会",
-              "报刊",
-              "广播",
-              "电视",
-            ].map((x) => (
-              <Chip key={x} color={C.cyan}>
-                {x}
-              </Chip>
-            ))}
+          <div style={{ fontSize: 25, marginTop: 27, lineHeight: 1.5 }}>
+            公报 · 网站 · 政务媒体
+            <br />
+            发布会 · 报刊 · 广播电视
           </div>
         </div>
         <div
-          data-final-knowledge="active-disclosure-venues"
+          data-final-knowledge="mandatory-venues"
           style={{
             position: "absolute",
             right: 40,
-            bottom: 25,
-            width: 980,
-            height: 250,
-            border: `5px solid ${C.violet}`,
-            padding: 28,
+            bottom: 50,
+            width: 620,
+            height: 340,
+            padding: 38,
+            background: P.white,
+            borderLeft: `12px solid ${P.teal}`,
+            ...enter(f, 48, 35, 0),
           }}
         >
-          <div style={{ fontSize: 31, fontWeight: 950, color: C.violet }}>
-            公开场所
+          <div style={{ fontSize: 36, fontWeight: 950, color: P.teal }}>
+            法定场所
           </div>
-          <div style={{ display: "flex", gap: 14, marginTop: 28 }}>
-            <Chip color={C.lime}>国家档案馆</Chip>
-            <Chip color={C.lime}>公共图书馆</Chip>
-            <Chip color={C.lime}>政务服务场所</Chip>
-            <Chip color={C.violet}>查阅室/索取点/公告栏/电子屏</Chip>
+          <div style={{ fontSize: 28, marginTop: 30, fontWeight: 900 }}>
+            国家档案馆
+          </div>
+          <div style={{ fontSize: 28, marginTop: 20, fontWeight: 900 }}>
+            公共图书馆
+          </div>
+          <div style={{ fontSize: 28, marginTop: 20, fontWeight: 900 }}>
+            政务服务场所
           </div>
         </div>
       </div>
-    </Shell>
+    </AtlasShell>
   );
 };
 
 export const ApplicationInputSpecimenScene = () => {
-  /* Stable generated markers: data-final-knowledge="application-relaxed-requirements" data-final-knowledge="application-required-elements" */
+  /* Stable generated markers: data-final-knowledge="application-no-purpose" data-final-knowledge="application-form" data-final-knowledge="application-identity" data-final-knowledge="application-description" data-final-knowledge="application-delivery-form" */
   const f = useCurrentFrame();
+  const fields = [
+    ["身份", "姓名/名称 · 身份证明 · 联系方式", "application-identity"],
+    ["信息特征", "名称 · 文号 · 便于查询的描述", "application-description"],
+    ["提供形式", "获取方式 · 获取途径", "application-delivery-form"],
+  ] as const;
   return (
-    <Shell code="21" title="申请公开标本：用途要求放松，身份与检索信息收紧">
+    <AtlasShell
+      code="21"
+      title="申请公开：一张表单的三个必填区"
+      section="申请入口"
+    >
       <div
-        data-layout="application-input-specimen-tray"
+        data-layout="application-field-blueprint"
         data-visual-anchor="document-fork"
-        data-visual-grammar="the-obsolete-special-need-requirement-is-removed,the-application-tray-still-requires-identity-search-description-and-delivery-form"
-        data-text-treatments="external-negation,label-block,thin-underline"
-        data-focal-rule="requirements-for-disclosure-applications"
-        data-focal-channels="contrast,enclosure,locator"
-        style={{ position: "absolute", inset: 20 }}
+        data-visual-grammar="one-application-sheet-exposes-three-required-fields,purpose-is-relaxed-while-identity-proof-remains-required"
+        data-text-treatments="label-block,thin-underline,external-negation"
+        data-focal-rule="application-requirements"
+        data-focal-channels="enclosure,locator,contrast"
+        style={sceneBox}
       >
         <div
-          data-final-knowledge="application-relaxed-requirements"
+          data-final-knowledge="application-form"
           style={{
             position: "absolute",
-            left: 40,
-            top: 60,
-            width: 520,
-            height: 470,
-            border: `6px dashed ${C.magenta}`,
-            padding: 35,
+            left: 80,
+            top: 20,
+            width: 1050,
+            height: 600,
+            padding: 40,
+            background: P.white,
+            boxShadow: "18px 18px 0 rgba(23,35,56,.12)",
+            ...enter(f, 8),
           }}
         >
-          <div style={{ fontSize: 38, fontWeight: 950, color: C.magenta }}>
-            一松
-          </div>
-          <div style={{ fontSize: 31, fontWeight: 950, marginTop: 45 }}>
-            无需特殊需要
-          </div>
-          <div style={{ fontSize: 26, marginTop: 25 }}>无需说明用途</div>
-          <div style={{ marginTop: 55 }}>
-            <Stamp>书面为主；确有困难可口头</Stamp>
-          </div>
-        </div>
-        <div
-          data-final-knowledge="application-required-elements"
-          style={{
-            position: "absolute",
-            right: 40,
-            top: 30,
-            width: 1060,
-            height: 560,
-            border: `7px solid ${C.cyan}`,
-            padding: 42,
-          }}
-        >
-          <div style={{ fontSize: 38, fontWeight: 950, color: C.cyan }}>
-            一紧 · 三组输入
-          </div>
           <div
             style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(3,1fr)",
-              gap: 22,
-              marginTop: 45,
+              fontSize: 39,
+              fontWeight: 950,
+              borderBottom: `5px solid ${P.ink}`,
+              paddingBottom: 15,
             }}
           >
-            <Pane title="申请人" color={C.lime}>
-              <Chip color={C.lime}>姓名/名称</Chip>
-              <Chip color={C.lime}>身份证明</Chip>
-              <Chip color={C.lime}>联系方式</Chip>
-            </Pane>
-            <Pane title="检索特征" color={C.cyan}>
-              <Chip color={C.cyan}>名称</Chip>
-              <Chip color={C.cyan}>文号</Chip>
-              <Chip color={C.cyan}>其他特征描述</Chip>
-            </Pane>
-            <Pane title="提供形式" color={C.violet}>
-              <Chip color={C.violet}>获取方式</Chip>
-              <Chip color={C.violet}>获取途径</Chip>
-              <Chip color={C.violet}>形式要求</Chip>
-            </Pane>
+            政府信息公开申请
           </div>
+          {fields.map((x, i) => (
+            <div
+              key={x[0]}
+              data-final-knowledge={x[2]}
+              style={{
+                display: "grid",
+                gridTemplateColumns: "230px 1fr",
+                gap: 25,
+                alignItems: "center",
+                minHeight: 140,
+                borderBottom: `3px solid ${[P.red, P.blue, P.teal][i]}66`,
+              }}
+            >
+              <div
+                style={{
+                  fontSize: 30,
+                  fontWeight: 950,
+                  color: [P.red, P.blue, P.teal][i],
+                }}
+              >
+                {x[0]}
+              </div>
+              <div style={{ fontSize: 24, fontWeight: 850 }}>{x[1]}</div>
+            </div>
+          ))}
+        </div>
+        <div
+          data-final-knowledge="application-no-purpose"
+          style={{
+            position: "absolute",
+            right: 50,
+            top: 70,
+            width: 520,
+            height: 240,
+            padding: 34,
+            background: `${P.green}12`,
+            border: `7px dashed ${P.green}`,
+            ...enter(f, 35, 35, 0),
+          }}
+        >
+          <div style={{ fontSize: 34, fontWeight: 950, color: P.green }}>
+            一松
+          </div>
+          <div style={{ fontSize: 27, marginTop: 26, fontWeight: 900 }}>
+            无需特殊需要
+          </div>
+          <div style={{ fontSize: 23, marginTop: 18 }}>无需说明用途</div>
+        </div>
+        <div
+          style={{
+            position: "absolute",
+            right: 80,
+            bottom: 65,
+            width: 470,
+            ...enter(f, 52),
+          }}
+        >
+          <Tag color={P.blue}>书面为主 · 确有困难可口头</Tag>
         </div>
       </div>
-    </Shell>
+    </AtlasShell>
   );
 };
 
 export const ReceiptClockDetectorsScene = () => {
-  /* Stable generated markers: data-final-knowledge="receipt-in-person" data-final-knowledge="receipt-signed-mail" data-final-knowledge="receipt-confirmed-channel" */
+  /* Stable generated markers: data-final-knowledge="receipt-in-person" data-final-knowledge="receipt-mail" data-final-knowledge="receipt-online" data-final-knowledge="response-deadline" */
   const f = useCurrentFrame();
+  const events = [
+    ["当面", "提交之日", P.red, "receipt-in-person"],
+    ["邮寄", "签收日；平信以确认日", P.blue, "receipt-mail"],
+    ["网络/传真", "双方确认日", P.teal, "receipt-online"],
+  ] as const;
   return (
-    <Shell
+    <AtlasShell
       code="22"
-      title="收到日探测器：当面看提交，签收邮寄看签收，其余看确认"
+      title="收到申请：三种渠道从不同节点起算"
+      section="起算点"
     >
       <div
-        data-layout="three-detector-receipt-clock"
-        data-visual-anchor="comparison-axis"
-        data-visual-grammar="three-application-channels-trigger-receipt-on-submission-signature-or-mutual-confirmation,the-clock-origin-changes-with-the-delivery-method"
-        data-text-treatments="label-block,soft-highlight,stamp"
-        data-focal-rule="date-of-receipt-for-applications"
-        data-focal-channels="locator,contrast,enclosure"
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(3,1fr)",
-          gap: 30,
-          padding: "50px 20px",
-        }}
+        data-layout="three-channel-receipt-timeline"
+        data-visual-anchor="timeline-gate"
+        data-visual-grammar="three-delivery-channels-start-the-clock-at-different-events,receipt-date-connects-to-the-twenty-plus-twenty-response-window"
+        data-text-treatments="stamp,soft-highlight,label-block"
+        data-focal-rule="receipt-date-and-response-period"
+        data-focal-channels="locator,connector,contrast"
+        style={sceneBox}
       >
-        {[
-          ["当面申请", "提交之日", "即时触发", C.lime],
-          ["需签收邮寄", "机关签收之日", "签收触发", C.cyan],
-          [
-            "普通信函/互联网/传真",
-            "双方确认之日",
-            "普通信函须当日确认",
-            C.violet,
-          ],
-        ].map((x, i) => (
+        <div
+          style={{
+            position: "absolute",
+            left: 110,
+            right: 120,
+            top: 350,
+            height: 10,
+            background: P.ink,
+          }}
+        />
+        {events.map((x, i) => (
           <div
             key={x[0]}
-            data-final-knowledge={
-              [
-                "receipt-in-person",
-                "receipt-signed-mail",
-                "receipt-confirmed-channel",
-              ][i]
-            }
+            data-final-knowledge={x[3]}
             style={{
-              height: 500,
-              border: `6px solid ${x[3]}`,
-              padding: 40,
-              textAlign: "center",
-              ...enter(f, 8 + i * 17, 0, 30),
+              position: "absolute",
+              left: 80 + i * 520,
+              top: i === 1 ? 70 : 390,
+              width: 440,
+              minHeight: 210,
+              padding: 28,
+              background: P.white,
+              borderTop: `9px solid ${x[2]}`,
+              ...enter(f, 8 + i * 18, 0, i === 1 ? -30 : 30),
             }}
           >
-            <div style={{ fontSize: 34, fontWeight: 950, color: x[3] }}>
+            <div style={{ fontSize: 36, fontWeight: 950, color: x[2] }}>
               {x[0]}
             </div>
-            <div
-              style={{
-                width: 180,
-                height: 180,
-                borderRadius: "50%",
-                border: `8px solid ${x[3]}`,
-                margin: "45px auto 0",
-                display: "grid",
-                placeItems: "center",
-                fontSize: 30,
-                fontWeight: 950,
-              }}
-            >
+            <div style={{ fontSize: 25, marginTop: 30, fontWeight: 900 }}>
               {x[1]}
-            </div>
-            <div style={{ marginTop: 35 }}>
-              <Stamp color={x[3]}>{x[2]}</Stamp>
             </div>
           </div>
         ))}
-      </div>
-    </Shell>
-  );
-};
-
-export const ResponseSpectrumSplitterScene = () => {
-  /* Stable generated markers: data-final-knowledge="response-deadline" data-final-knowledge="response-form" data-final-knowledge="response-splitter" data-final-knowledge="response-cost" data-final-knowledge="response-severability" data-final-knowledge="negative-response" */
-  const f = useCurrentFrame();
-  return (
-    <Shell code="23" title="答复分光器：期限、形式、费用、分割、去向分别输出">
-      <div
-        data-layout="five-output-response-spectrum-splitter"
-        data-visual-anchor="flow-target"
-        data-visual-grammar="one-disclosure-application-enters-a-five-output-splitter,deadline-form-cost-severability-and-negative-response-each-use-a-distinct-output"
-        data-text-treatments="label-block,stamp,thin-underline"
-        data-focal-rule="response-to-disclosure-applications"
-        data-focal-channels="connector,contrast,enclosure"
-        style={{ position: "absolute", inset: 18 }}
-      >
         <div
           data-final-knowledge="response-deadline"
           style={{
             position: "absolute",
-            left: 30,
-            top: 45,
-            width: 400,
-            height: 250,
-            border: `6px solid ${C.lime}`,
-            padding: 26,
-          }}
-        >
-          <div style={{ fontSize: 70, fontWeight: 950, color: C.lime }}>
-            当场 / 20＋20
-          </div>
-          <div style={{ fontSize: 22, marginTop: 20 }}>
-            延长须负责人同意并告知；征求第三方/其他机关意见时间不计
-          </div>
-        </div>
-        <div
-          data-final-knowledge="response-form"
-          style={{
-            position: "absolute",
-            left: 30,
-            bottom: 30,
-            width: 400,
-            height: 250,
-            border: `6px solid ${C.cyan}`,
-            padding: 26,
-          }}
-        >
-          <div style={{ fontSize: 32, fontWeight: 950, color: C.cyan }}>
-            提供形式
-          </div>
-          <div style={{ fontSize: 23, marginTop: 24 }}>
-            结合申请要求＋机关保存实际；载体风险/成本过高可改电子、查阅、抄录
-          </div>
-        </div>
-        <div
-          data-final-knowledge="response-splitter"
-          style={{
-            position: "absolute",
-            left: 680,
-            top: 185,
-            width: 360,
-            height: 300,
-            clipPath: "polygon(50% 0,100% 50%,50% 100%,0 50%)",
-            background:
-              "linear-gradient(135deg,rgba(55,201,231,.7),rgba(130,103,232,.8))",
+            right: 40,
+            top: 85,
+            width: 370,
+            height: 240,
             display: "grid",
             placeItems: "center",
             textAlign: "center",
-            fontSize: 34,
-            fontWeight: 950,
+            background: P.red,
+            color: P.white,
+            ...enter(f, 62),
           }}
         >
-          申请
-          <br />
-          答复
-        </div>
-        <div
-          data-final-knowledge="response-cost"
-          style={{
-            position: "absolute",
-            right: 30,
-            top: 30,
-            width: 540,
-            height: 160,
-            border: `5px solid ${C.amber}`,
-            padding: 24,
-          }}
-        >
-          <div style={{ fontSize: 29, fontWeight: 950, color: C.amber }}>
-            费用
-          </div>
-          <div style={{ fontSize: 22, marginTop: 16 }}>
-            原则免费；数量频次明显超合理范围可收信息处理费
-          </div>
-        </div>
-        <div
-          data-final-knowledge="response-severability"
-          style={{
-            position: "absolute",
-            right: 30,
-            top: 225,
-            width: 540,
-            height: 180,
-            border: `5px solid ${C.violet}`,
-            padding: 24,
-          }}
-        >
-          <div style={{ fontSize: 29, fontWeight: 950, color: C.violet }}>
-            可分割处理
-          </div>
-          <div style={{ fontSize: 22, marginTop: 16 }}>
-            公开可公开部分；不公开部分说明理由
-          </div>
-        </div>
-        <div
-          data-final-knowledge="negative-response"
-          style={{
-            position: "absolute",
-            right: 30,
-            bottom: 30,
-            width: 540,
-            height: 180,
-            border: `5px solid ${C.magenta}`,
-            padding: 24,
-          }}
-        >
-          <div style={{ fontSize: 29, fontWeight: 950, color: C.magenta }}>
-            不公开 / 不存在 / 非本机关
-          </div>
-          <div style={{ fontSize: 22, marginTop: 14 }}>
-            说明理由；可确定负责机关时告知名称、联系方式
+          <div>
+            <div style={{ fontSize: 72, fontWeight: 950 }}>20＋20</div>
+            <div style={{ fontSize: 25, fontWeight: 900 }}>答复＋最长延长</div>
+            <div style={{ fontSize: 20, marginTop: 13 }}>
+              征求意见时间不计入
+            </div>
           </div>
         </div>
       </div>
-    </Shell>
+    </AtlasShell>
+  );
+};
+
+export const ResponseSpectrumSplitterScene = () => {
+  /* Stable generated markers: data-final-knowledge="response-public" data-final-knowledge="response-form" data-final-knowledge="response-fee" data-final-knowledge="response-severability" data-final-knowledge="negative-response" */
+  const f = useCurrentFrame();
+  const branches = [
+    ["公开", "按保存情况和申请要求提供", P.green, "response-public"],
+    ["形式调整", "载体安全/成本过高可改适当形式", P.blue, "response-form"],
+    ["费用", "原则免费；明显超合理范围可收费", P.amber, "response-fee"],
+    [
+      "区分处理",
+      "公开可公开部分并说明其余理由",
+      P.teal,
+      "response-severability",
+    ],
+    ["否定答复", "不公开/不存在/非本机关均须说明", P.red, "negative-response"],
+  ] as const;
+  return (
+    <AtlasShell
+      code="23"
+      title="答复方式：一份申请分成五个出口"
+      section="答复分支"
+    >
+      <div
+        data-layout="five-branch-response-tree"
+        data-visual-anchor="document-fork"
+        data-visual-grammar="one-application-branches-to-five-response-types,form-fee-severability-and-negative-results-stay-distinct"
+        data-text-treatments="label-block,thin-underline,stamp"
+        data-focal-rule="response-methods"
+        data-focal-channels="connector,contrast,spatial"
+        style={sceneBox}
+      >
+        <div
+          style={{
+            position: "absolute",
+            left: 65,
+            top: 230,
+            width: 330,
+            height: 190,
+            display: "grid",
+            placeItems: "center",
+            background: P.ink,
+            color: P.white,
+            fontSize: 36,
+            fontWeight: 950,
+            clipPath: "polygon(0 0,88% 0,100% 50%,88% 100%,0 100%)",
+          }}
+        >
+          公开申请
+        </div>
+        <div style={{ position: "absolute", left: 400, top: 300 }}>
+          <Arrow color={P.red} />
+        </div>
+        <div
+          style={{
+            position: "absolute",
+            left: 590,
+            top: 75,
+            width: 10,
+            height: 500,
+            background: P.ink,
+          }}
+        />
+        {branches.map((x, i) => (
+          <div
+            key={x[0]}
+            data-final-knowledge={x[3]}
+            style={{
+              position: "absolute",
+              left: 650 + (i % 2) * 540,
+              top: 20 + Math.floor(i / 2) * 205,
+              width: 490,
+              minHeight: 165,
+              padding: 24,
+              background: P.white,
+              borderLeft: `9px solid ${x[2]}`,
+              ...enter(f, 15 + i * 10, 35, 0),
+            }}
+          >
+            <div style={{ fontSize: 30, fontWeight: 950, color: x[2] }}>
+              {x[0]}
+            </div>
+            <div style={{ fontSize: 22, fontWeight: 850, marginTop: 19 }}>
+              {x[1]}
+            </div>
+          </div>
+        ))}
+      </div>
+    </AtlasShell>
   );
 };
 
@@ -2224,74 +2315,74 @@ export const SupplementCorrectionGateScene = () => {
   /* Stable generated markers: data-final-knowledge="unclear-application" data-final-knowledge="supplement-notice" data-final-knowledge="supplement-outcomes" */
   const f = useCurrentFrame();
   return (
-    <Shell code="24" title="材料补正闸：7日内一次告知，逾期不补正才退出">
+    <AtlasShell
+      code="24"
+      title="材料补正：7日内一次告知，逾期不补才退出"
+      section="补正程序"
+    >
       <div
         data-layout="seven-day-supplement-correction-gate"
         data-visual-anchor="timeline-gate"
-        data-visual-grammar="an-unclear-application-enters-guidance-and-one-time-notice,the-applicant-either-corrects-or-exits-after-unjustified-delay"
+        data-visual-grammar="unclear-content-enters-guidance-and-one-time-notice,correction-or-unjustified-delay-produces-two-terminal-results"
         data-text-treatments="external-negation,thin-underline,stamp"
         data-focal-rule="supplementing-unclear-applications"
         data-focal-channels="connector,locator,contrast"
-        style={{ position: "absolute", inset: 25 }}
+        style={sceneBox}
       >
         <div
           data-final-knowledge="unclear-application"
           style={{
             position: "absolute",
             left: 50,
-            top: 220,
-            width: 360,
+            top: 210,
+            width: 400,
             height: 220,
-            border: `6px dashed ${C.gray}`,
             display: "grid",
             placeItems: "center",
-            fontSize: 32,
-            fontWeight: 950,
             textAlign: "center",
+            border: `8px dashed ${P.muted}`,
+            background: P.white,
+            fontSize: 34,
+            fontWeight: 950,
+            ...enter(f, 8, -35, 0),
           }}
         >
           申请内容
           <br />
           不明确
         </div>
-        <Arrow
-          color={C.cyan}
-          style={{ position: "absolute", left: 445, top: 290 }}
-        />
+        <div style={{ position: "absolute", left: 470, top: 285 }}>
+          <Arrow color={P.blue} />
+        </div>
         <div
           data-final-knowledge="supplement-notice"
           style={{
             position: "absolute",
-            left: 560,
-            top: 110,
-            width: 540,
-            height: 450,
+            left: 610,
+            top: 90,
+            width: 520,
+            height: 480,
             borderRadius: "50%",
-            border: `9px solid ${C.cyan}`,
+            border: `11px solid ${P.blue}`,
             display: "grid",
             placeItems: "center",
             textAlign: "center",
+            background: P.white,
+            ...enter(f, 28),
           }}
         >
           <div>
-            <div style={{ fontSize: 88, fontWeight: 950, color: C.cyan }}>
+            <div style={{ fontSize: 98, fontWeight: 950, color: P.blue }}>
               7
             </div>
             <div style={{ fontSize: 30, fontWeight: 950 }}>
               工作日内一次告知
             </div>
-            <div
-              style={{
-                fontSize: 24,
-                marginTop: 20,
-                borderBottom: `3px solid ${C.cyan}`,
-                display: "inline-block",
-              }}
-            >
+            <div style={{ fontSize: 24, marginTop: 22, fontWeight: 850 }}>
               指导＋释明＋更改/补充
             </div>
-            <div style={{ marginTop: 25 }}>
-              <Stamp color={C.magenta}>不能直接拒绝公开</Stamp>
+            <div style={{ marginTop: 32 }}>
+              <Seal color={P.red}>不能直接拒绝</Seal>
             </div>
           </div>
         </div>
@@ -2300,130 +2391,130 @@ export const SupplementCorrectionGateScene = () => {
           style={{
             position: "absolute",
             right: 40,
-            top: 110,
-            width: 530,
-            height: 450,
-            display: "grid",
-            gap: 25,
+            top: 80,
+            width: 500,
+            ...enter(f, 48, 35, 0),
           }}
         >
-          <Pane title="按期补正" color={C.lime}>
-            <Chip color={C.lime}>继续处理申请</Chip>
-          </Pane>
-          <Pane title="无正当理由逾期" color={C.magenta}>
-            <Chip color={C.magenta}>视为放弃</Chip>
-            <Chip color={C.magenta}>机关不再处理</Chip>
-          </Pane>
-          <Stamp color={C.violet}>补正通知是过程行为，不可单独诉</Stamp>
+          <div
+            style={{
+              padding: 30,
+              background: P.white,
+              borderLeft: `10px solid ${P.green}`,
+              marginBottom: 34,
+            }}
+          >
+            <div style={{ fontSize: 32, fontWeight: 950, color: P.green }}>
+              按期补正
+            </div>
+            <div style={{ fontSize: 24, marginTop: 20 }}>继续处理申请</div>
+          </div>
+          <div
+            style={{
+              padding: 30,
+              background: P.white,
+              borderLeft: `10px solid ${P.red}`,
+            }}
+          >
+            <div style={{ fontSize: 32, fontWeight: 950, color: P.red }}>
+              无正当理由逾期
+            </div>
+            <div style={{ fontSize: 24, marginTop: 20 }}>
+              视为放弃 · 不再处理
+            </div>
+          </div>
+          <div style={{ marginTop: 35 }}>
+            <Seal color={P.violet}>补正通知不可单独诉</Seal>
+          </div>
         </div>
       </div>
-    </Shell>
+    </AtlasShell>
   );
 };
 
 export const SpecialRequestRouterScene = () => {
   /* Stable generated markers: data-final-knowledge="special-router" data-final-knowledge="motive-channel" data-final-knowledge="analysis-request" data-final-knowledge="published-material" data-final-knowledge="correction-request" data-final-knowledge="application-to-active" */
   const f = useCurrentFrame();
+  const routes = [
+    ["信访/投诉/举报", "告知走相应渠道", P.red, "motive-channel"],
+    ["加工分析", "可以不予提供", P.violet, "analysis-request"],
+    ["公开出版物", "告知获取途径", P.amber, "published-material"],
+    ["信息有误", "更正或转送有权机关", P.blue, "correction-request"],
+    ["多人申请同一信息", "可转入主动公开", P.green, "application-to-active"],
+  ] as const;
   return (
-    <Shell
+    <AtlasShell
       code="25"
-      title="特殊申请路由器：错频道、加工、已公开、更正、转主动各走一口"
+      title="特殊申请：五种请求切换到不同轨道"
+      section="特殊处理"
     >
       <div
-        data-layout="five-port-special-request-router"
+        data-layout="five-port-special-request-route"
         data-visual-anchor="document-fork"
-        data-visual-grammar="five-special-request-types-enter-a-central-router,each-exits-through-its-own-statutory-treatment-port"
+        data-visual-grammar="five-special-request-types-enter-one-switch,each-request-exits-through-its-own-statutory-treatment"
         data-text-treatments="label-block,soft-highlight,external-negation"
         data-focal-rule="special-treatment-of-disclosure-requests"
         data-focal-channels="connector,contrast,locator"
-        style={{ position: "absolute", inset: 20 }}
+        style={sceneBox}
       >
         <div
           data-final-knowledge="special-router"
           style={{
             position: "absolute",
             left: 690,
-            top: 190,
-            width: 380,
-            height: 300,
-            borderRadius: "50%",
-            background: C.deep,
-            border: `8px solid ${C.cyan}`,
+            top: 205,
+            width: 400,
+            height: 250,
             display: "grid",
             placeItems: "center",
             textAlign: "center",
-            fontSize: 36,
+            background: P.ink,
+            color: P.white,
+            clipPath: "polygon(25% 0,75% 0,100% 50%,75% 100%,25% 100%,0 50%)",
+            fontSize: 38,
             fontWeight: 950,
+            ...enter(f, 8),
           }}
         >
           特殊申请
           <br />
-          路由器
+          切换器
         </div>
-        {[
-          [
-            "信访/投诉/举报",
-            "告知不作为公开申请；可指引相应渠道",
-            40,
-            25,
-            C.magenta,
-            "motive-channel",
-          ],
-          [
-            "加工分析信息",
-            "可以不予提供",
-            1230,
-            25,
-            C.violet,
-            "analysis-request",
-          ],
-          [
-            "公报/报刊/书籍",
-            "告知获取途径",
-            30,
-            455,
-            C.amber,
-            "published-material",
-          ],
-          [
-            "信息有误更正",
-            "有权机关更正；无权可转送或告知",
-            1210,
-            455,
-            C.lime,
-            "correction-request",
-          ],
-          [
-            "多人申请同一可公开信息",
-            "可以转为主动公开",
-            580,
-            510,
-            C.cyan,
-            "application-to-active",
-          ],
-        ].map((x) => (
-          <div
-            key={x[0]}
-            data-final-knowledge={x[5]}
-            style={{
-              position: "absolute",
-              left: x[2],
-              top: x[3],
-              width: x[5] === "application-to-active" ? 600 : 500,
-              height: x[5] === "application-to-active" ? 130 : 180,
-              border: `5px solid ${x[4]}`,
-              padding: 22,
-              ...enter(f, 8, 0, 20),
-            }}
-          >
-            <div style={{ fontSize: 27, fontWeight: 950, color: x[4] }}>
-              {x[0]}
+        {routes.map((x, i) => {
+          const pos = [
+            [40, 40],
+            [1220, 40],
+            [50, 470],
+            [1220, 470],
+            [650, 485],
+          ][i];
+          return (
+            <div
+              key={x[0]}
+              data-final-knowledge={x[3]}
+              style={{
+                position: "absolute",
+                left: pos[0],
+                top: pos[1],
+                width: i === 4 ? 500 : 480,
+                minHeight: 150,
+                padding: 24,
+                background: P.white,
+                borderTop: `8px solid ${x[2]}`,
+                ...enter(f, 25 + i * 10, i % 2 ? 30 : -30, 0),
+              }}
+            >
+              <div style={{ fontSize: 28, fontWeight: 950, color: x[2] }}>
+                {x[0]}
+              </div>
+              <div style={{ fontSize: 22, fontWeight: 850, marginTop: 18 }}>
+                {x[1]}
+              </div>
             </div>
-            <div style={{ fontSize: 21, marginTop: 17 }}>{x[1]}</div>
-          </div>
-        ))}
+          );
+        })}
       </div>
-    </Shell>
+    </AtlasShell>
   );
 };
 
@@ -2431,286 +2522,182 @@ export const AbuseThrottleRemedyScene = () => {
   /* Stable generated markers: data-final-knowledge="excessive-request" data-final-knowledge="reason-throttle" data-final-knowledge="abuse-outcomes" */
   const f = useCurrentFrame();
   return (
-    <Shell code="26" title="滥用申请节流与救济：先问理由，再决定不处理或延迟">
+    <AtlasShell
+      code="26"
+      title="滥用申请权：先说明理由，再决定节流方式"
+      section="权利边界"
+    >
       <div
-        data-layout="abuse-throttle-and-remedy-output"
+        data-layout="abuse-reason-throttle-route"
         data-visual-anchor="flow-path"
-        data-visual-grammar="excessive-frequency-enters-a-reason-throttle,unreasonable-reasons-stop-processing-while-reasonable-but-impracticable-requests-receive-a-notified-delay"
+        data-visual-grammar="excessive-frequency-enters-a-reason-gauge,unreasonable-and-reasonable-but-impracticable-cases-end-differently"
         data-text-treatments="stamp,thin-underline,label-block"
         data-focal-rule="abusive-requests-and-remedies"
         data-focal-channels="connector,contrast,locator"
-        style={{ position: "absolute", inset: 20 }}
+        style={sceneBox}
       >
         <div
           data-final-knowledge="excessive-request"
           style={{
             position: "absolute",
-            left: 30,
-            top: 210,
-            width: 390,
-            height: 230,
-            border: `7px solid ${C.magenta}`,
+            left: 50,
+            top: 190,
+            width: 420,
+            height: 250,
             display: "grid",
             placeItems: "center",
             textAlign: "center",
+            background: P.white,
+            border: `9px solid ${P.red}`,
+            ...enter(f, 8, -35, 0),
           }}
         >
           <div>
-            <div style={{ fontSize: 34, fontWeight: 950, color: C.magenta }}>
+            <div style={{ fontSize: 36, fontWeight: 950, color: P.red }}>
               数量 / 频次
             </div>
-            <div style={{ fontSize: 44, fontWeight: 950, marginTop: 20 }}>
-              明显超合理范围
+            <div style={{ fontSize: 31, fontWeight: 950, marginTop: 28 }}>
+              明显超过合理范围
             </div>
           </div>
         </div>
-        <Arrow
-          color={C.amber}
-          style={{ position: "absolute", left: 465, top: 290 }}
-        />
+        <div style={{ position: "absolute", left: 500, top: 285 }}>
+          <Arrow color={P.amber} />
+        </div>
         <div
           data-final-knowledge="reason-throttle"
           style={{
             position: "absolute",
-            left: 570,
-            top: 120,
-            width: 470,
-            height: 410,
+            left: 650,
+            top: 95,
+            width: 460,
+            height: 460,
             borderRadius: "50%",
-            border: `9px solid ${C.amber}`,
+            border: `12px solid ${P.amber}`,
+            background: P.white,
             display: "grid",
             placeItems: "center",
             textAlign: "center",
+            ...enter(f, 28),
           }}
         >
           <div>
-            <div style={{ fontSize: 39, fontWeight: 950, color: C.amber }}>
+            <div style={{ fontSize: 38, fontWeight: 950, color: P.amber }}>
               要求说明理由
             </div>
             <div
               style={{
-                fontSize: 24,
-                marginTop: 24,
-                borderBottom: `3px solid ${C.amber}`,
-                display: "inline-block",
+                width: 280,
+                height: 14,
+                background: P.paperDeep,
+                margin: "45px auto 0",
+                position: "relative",
               }}
             >
-              不是立即拒绝
+              <div
+                style={{
+                  position: "absolute",
+                  left: 170,
+                  top: -23,
+                  width: 60,
+                  height: 60,
+                  borderRadius: "50%",
+                  background: P.red,
+                }}
+              />
             </div>
+            <div style={{ fontSize: 22, marginTop: 45 }}>合理性校验</div>
           </div>
         </div>
         <div
           data-final-knowledge="abuse-outcomes"
           style={{
             position: "absolute",
-            right: 30,
-            top: 50,
-            width: 620,
-            height: 520,
-            display: "grid",
-            gap: 24,
+            right: 35,
+            top: 70,
+            width: 520,
+            ...enter(f, 50, 35, 0),
           }}
         >
-          <Pane title="理由不合理" color={C.magenta}>
-            <Stamp>告知不予处理</Stamp>
-          </Pane>
-          <Pane title="理由合理但法定期内无法答复" color={C.cyan}>
-            <Chip color={C.cyan}>确定合理延迟期限</Chip>
-            <Chip color={C.cyan}>告知申请人</Chip>
-          </Pane>
-          <Pane title="救济边界" color={C.lime}>
-            <Chip color={C.lime}>公开/不公开等最终答复可诉</Chip>
-            <Chip color={C.violet}>补正通知过程性，不可单诉</Chip>
-          </Pane>
+          <div
+            style={{
+              padding: 30,
+              background: P.white,
+              borderLeft: `10px solid ${P.red}`,
+              marginBottom: 28,
+            }}
+          >
+            <div style={{ fontSize: 31, fontWeight: 950, color: P.red }}>
+              理由不合理
+            </div>
+            <div style={{ fontSize: 24, marginTop: 18 }}>告知不予处理</div>
+          </div>
+          <div
+            style={{
+              padding: 30,
+              background: P.white,
+              borderLeft: `10px solid ${P.blue}`,
+              marginBottom: 30,
+            }}
+          >
+            <div style={{ fontSize: 31, fontWeight: 950, color: P.blue }}>
+              理由合理但无法按期答复
+            </div>
+            <div style={{ fontSize: 24, marginTop: 18 }}>
+              确定合理延迟期限并告知
+            </div>
+          </div>
+          <Seal color={P.teal}>最终答复可诉 · 补正通知不可单诉</Seal>
         </div>
       </div>
-    </Shell>
+    </AtlasShell>
   );
 };
 
+const SCENE_COMPONENTS = {
+  "setting-spectrum": SettingSpectrumScene,
+  "rulemaking-chronology": RulemakingChronologyScene,
+  "setting-trap-lenses": SettingTrapLensesScene,
+  "authorization-prism": AuthorizationPrismScene,
+  "delegation-filters": DelegationFiltersScene,
+  "concentration-apertures": ConcentrationAperturesScene,
+  "subject-trap-darkroom": SubjectTrapDarkroomScene,
+  "hearing-signal-split": HearingSignalSplitScene,
+  "penalty-hearing-waveband": PenaltyHearingWavebandScene,
+  "license-hearing-focus": LicenseHearingFocusScene,
+  "hearing-clock-array": HearingClockArrayScene,
+  "hearing-common-console": HearingCommonConsoleScene,
+  "hearing-trap-scope": HearingTrapScopeScene,
+  "information-definition-projector": InformationDefinitionProjectorScene,
+  "disclosure-source-routing": DisclosureSourceRoutingScene,
+  "absolute-secrecy-shutter": AbsoluteSecrecyShutterScene,
+  "privacy-balance-filter": PrivacyBalanceFilterScene,
+  "optional-nondisclosure-dimmers": OptionalNondisclosureDimmersScene,
+  "active-disclosure-beam": ActiveDisclosureBeamScene,
+  "active-disclosure-exposure": ActiveDisclosureExposureScene,
+  "application-input-specimen": ApplicationInputSpecimenScene,
+  "receipt-clock-detectors": ReceiptClockDetectorsScene,
+  "response-spectrum-splitter": ResponseSpectrumSplitterScene,
+  "supplement-correction-gate": SupplementCorrectionGateScene,
+  "special-request-router": SpecialRequestRouterScene,
+  "abuse-throttle-remedy": AbuseThrottleRemedyScene,
+} as const;
+
 export const TransparencyOpticsLab = () => (
   <AbsoluteFill>
-    <TimelineSequence
-      name="01"
-      start={SCENES["setting-spectrum"].start}
-      duration={SCENES["setting-spectrum"].duration}
-    >
-      <SettingSpectrumScene />
-    </TimelineSequence>
-    <TimelineSequence
-      name="02"
-      start={SCENES["rulemaking-chronology"].start}
-      duration={SCENES["rulemaking-chronology"].duration}
-    >
-      <RulemakingChronologyScene />
-    </TimelineSequence>
-    <TimelineSequence
-      name="03"
-      start={SCENES["setting-trap-lenses"].start}
-      duration={SCENES["setting-trap-lenses"].duration}
-    >
-      <SettingTrapLensesScene />
-    </TimelineSequence>
-    <TimelineSequence
-      name="04"
-      start={SCENES["authorization-prism"].start}
-      duration={SCENES["authorization-prism"].duration}
-    >
-      <AuthorizationPrismScene />
-    </TimelineSequence>
-    <TimelineSequence
-      name="05"
-      start={SCENES["delegation-filters"].start}
-      duration={SCENES["delegation-filters"].duration}
-    >
-      <DelegationFiltersScene />
-    </TimelineSequence>
-    <TimelineSequence
-      name="06"
-      start={SCENES["concentration-apertures"].start}
-      duration={SCENES["concentration-apertures"].duration}
-    >
-      <ConcentrationAperturesScene />
-    </TimelineSequence>
-    <TimelineSequence
-      name="07"
-      start={SCENES["subject-trap-darkroom"].start}
-      duration={SCENES["subject-trap-darkroom"].duration}
-    >
-      <SubjectTrapDarkroomScene />
-    </TimelineSequence>
-    <TimelineSequence
-      name="08"
-      start={SCENES["hearing-signal-split"].start}
-      duration={SCENES["hearing-signal-split"].duration}
-    >
-      <HearingSignalSplitScene />
-    </TimelineSequence>
-    <TimelineSequence
-      name="09"
-      start={SCENES["penalty-hearing-waveband"].start}
-      duration={SCENES["penalty-hearing-waveband"].duration}
-    >
-      <PenaltyHearingWavebandScene />
-    </TimelineSequence>
-    <TimelineSequence
-      name="10"
-      start={SCENES["license-hearing-focus"].start}
-      duration={SCENES["license-hearing-focus"].duration}
-    >
-      <LicenseHearingFocusScene />
-    </TimelineSequence>
-    <TimelineSequence
-      name="11"
-      start={SCENES["hearing-clock-array"].start}
-      duration={SCENES["hearing-clock-array"].duration}
-    >
-      <HearingClockArrayScene />
-    </TimelineSequence>
-    <TimelineSequence
-      name="12"
-      start={SCENES["hearing-common-console"].start}
-      duration={SCENES["hearing-common-console"].duration}
-    >
-      <HearingCommonConsoleScene />
-    </TimelineSequence>
-    <TimelineSequence
-      name="13"
-      start={SCENES["hearing-trap-scope"].start}
-      duration={SCENES["hearing-trap-scope"].duration}
-    >
-      <HearingTrapScopeScene />
-    </TimelineSequence>
-    <TimelineSequence
-      name="14"
-      start={SCENES["information-definition-projector"].start}
-      duration={SCENES["information-definition-projector"].duration}
-    >
-      <InformationDefinitionProjectorScene />
-    </TimelineSequence>
-    <TimelineSequence
-      name="15"
-      start={SCENES["disclosure-source-routing"].start}
-      duration={SCENES["disclosure-source-routing"].duration}
-    >
-      <DisclosureSourceRoutingScene />
-    </TimelineSequence>
-    <TimelineSequence
-      name="16"
-      start={SCENES["absolute-secrecy-shutter"].start}
-      duration={SCENES["absolute-secrecy-shutter"].duration}
-    >
-      <AbsoluteSecrecyShutterScene />
-    </TimelineSequence>
-    <TimelineSequence
-      name="17"
-      start={SCENES["privacy-balance-filter"].start}
-      duration={SCENES["privacy-balance-filter"].duration}
-    >
-      <PrivacyBalanceFilterScene />
-    </TimelineSequence>
-    <TimelineSequence
-      name="18"
-      start={SCENES["optional-nondisclosure-dimmers"].start}
-      duration={SCENES["optional-nondisclosure-dimmers"].duration}
-    >
-      <OptionalNondisclosureDimmersScene />
-    </TimelineSequence>
-    <TimelineSequence
-      name="19"
-      start={SCENES["active-disclosure-beam"].start}
-      duration={SCENES["active-disclosure-beam"].duration}
-    >
-      <ActiveDisclosureBeamScene />
-    </TimelineSequence>
-    <TimelineSequence
-      name="20"
-      start={SCENES["active-disclosure-exposure"].start}
-      duration={SCENES["active-disclosure-exposure"].duration}
-    >
-      <ActiveDisclosureExposureScene />
-    </TimelineSequence>
-    <TimelineSequence
-      name="21"
-      start={SCENES["application-input-specimen"].start}
-      duration={SCENES["application-input-specimen"].duration}
-    >
-      <ApplicationInputSpecimenScene />
-    </TimelineSequence>
-    <TimelineSequence
-      name="22"
-      start={SCENES["receipt-clock-detectors"].start}
-      duration={SCENES["receipt-clock-detectors"].duration}
-    >
-      <ReceiptClockDetectorsScene />
-    </TimelineSequence>
-    <TimelineSequence
-      name="23"
-      start={SCENES["response-spectrum-splitter"].start}
-      duration={SCENES["response-spectrum-splitter"].duration}
-    >
-      <ResponseSpectrumSplitterScene />
-    </TimelineSequence>
-    <TimelineSequence
-      name="24"
-      start={SCENES["supplement-correction-gate"].start}
-      duration={SCENES["supplement-correction-gate"].duration}
-    >
-      <SupplementCorrectionGateScene />
-    </TimelineSequence>
-    <TimelineSequence
-      name="25"
-      start={SCENES["special-request-router"].start}
-      duration={SCENES["special-request-router"].duration}
-    >
-      <SpecialRequestRouterScene />
-    </TimelineSequence>
-    <TimelineSequence
-      name="26"
-      start={SCENES["abuse-throttle-remedy"].start}
-      duration={SCENES["abuse-throttle-remedy"].duration}
-    >
-      <AbuseThrottleRemedyScene />
-    </TimelineSequence>
+    {(Object.keys(SCENES) as Array<keyof typeof SCENES>).map((key, index) => {
+      const Component = SCENE_COMPONENTS[key];
+      const scene = SCENES[key];
+      return (
+        <TimelineSequence
+          key={key}
+          name={String(index + 1).padStart(2, "0")}
+          start={scene.start}
+          duration={scene.duration}
+        >
+          <Component />
+        </TimelineSequence>
+      );
+    })}
   </AbsoluteFill>
 );
