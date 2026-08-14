@@ -411,6 +411,77 @@ const Icon = ({ name, size, color }: { name: string; size: number; color: string
         <path d="m18 15-2-2" /><path d="m15 18-2-2" />
       </svg>
     ),
+    Flag: (
+      <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" /><line x1="4" x2="4" y1="22" y2="15" />
+      </svg>
+    ),
+    Handcuffs: (
+      <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M11 17h2" /><path d="m21 7-2.5-2.5" /><path d="M3 7l2.5-2.5" />
+        <path d="M12 22a6 6 0 0 0 6-6V8" /><circle cx="12" cy="16" r="2" />
+        <path d="M6 8v8a6 6 0 0 0 6 6" /><circle cx="12" cy="8" r="4" />
+      </svg>
+    ),
+    Briefcase: (
+      <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <rect width="20" height="14" x="2" y="7" rx="2" ry="2" /><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+      </svg>
+    ),
+    Handshake: (
+      <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="m11 17 2 2a1 1 0 1 0 3-3" /><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4" />
+        <path d="m21 3 1 11h-2" /><path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3" /><path d="M3 4h8" />
+      </svg>
+    ),
+    RotateCcw: (
+      <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" /><path d="M3 3v5h5" />
+      </svg>
+    ),
+    Clock3: (
+      <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" />
+      </svg>
+    ),
+    MessageSquare: (
+      <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+      </svg>
+    ),
+    FileText: (
+      <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" /><path d="M14 2v4a2 2 0 0 0 2 2h4" />
+        <path d="M10 9H8" /><path d="M16 13H8" /><path d="M16 17H8" />
+      </svg>
+    ),
+    Users: (
+      <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M22 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" />
+      </svg>
+    ),
+    Building2: (
+      <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z" /><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2" />
+        <path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2" /><path d="M10 6h4" /><path d="M10 10h4" /><path d="M10 14h4" /><path d="M10 18h4" />
+      </svg>
+    ),
+    GitBranch: (
+      <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <line x1="6" x2="6" y1="3" y2="15" /><circle cx="18" cy="6" r="3" /><circle cx="6" cy="18" r="3" />
+        <path d="M18 9a9 9 0 0 1-9 9" />
+      </svg>
+    ),
+    Lock: (
+      <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <rect width="18" height="11" x="3" y="11" rx="2" ry="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" />
+      </svg>
+    ),
+    Globe: (
+      <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="12" cy="12" r="10" /><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" /><path d="M2 12h20" />
+      </svg>
+    ),
     FileQuestion: (
       <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
@@ -424,69 +495,143 @@ const Icon = ({ name, size, color }: { name: string; size: number; color: string
 export const ExclusionBarriersScene = () => {
   /* Static audit inventory: data-final-knowledge="exclude-1" data-final-knowledge="exclude-2" data-final-knowledge="exclude-3" data-final-knowledge="exclude-4" data-final-knowledge="exclude-5" data-final-knowledge="exclusion-mnemonic" */
   const f = useCurrentFrame();
+  const bars = [
+    ["无行政性", "国家行为 · 刑事司法行为 · 行政协助司法执行", "Flag", C.red, [
+      ["国家行为", "Flag"],
+      ["刑事司法", "Handcuffs"],
+      ["行政协助", "Briefcase"],
+    ]],
+    ["无处分性", "暴力侵权 · 行政指导 · 调解仲裁 · 重复处理 · 信访", "Handshake", C.red, [
+      ["行政指导", "Handshake"],
+      ["重复处理", "RotateCcw"],
+      ["过程性行为", "Clock3"],
+      ["信访", "MessageSquare"],
+    ]],
+    ["无特定性", "抽象行政行为：不可以直接起诉", "FileText", C.amber, [
+      ["抽象行为", "FileText"],
+    ]],
+    ["无外部性", "公务员奖惩任免 · 机关间内部行为 · 层级监督", "Users", C.red, [
+      ["奖惩任免", "Users"],
+      ["内部行为", "Building2"],
+      ["层级监督", "GitBranch"],
+    ]],
+    ["法定最终裁决", "国务院复议决定 · 对外国人限制人身自由的复议决定", "Lock", C.amber, [
+      ["国务院决定", "Lock"],
+      ["对外国人措施", "Globe"],
+    ]],
+  ];
   return (
-    <Shell code="02" title="反面排除：五道栏杆拦住不可诉行为">
+    <Shell code="02" title="反面排除：五道升降栏杆拦住不可诉">
       <div
-        data-layout="five-exclusion-barriers"
+        data-layout="five-rising-exclusion-bars"
         data-visual-anchor="boundary"
-        data-visual-grammar="five-exclusion-reasons-bar-their-case-types,abstract-acts-need-no-direct-suit"
+        data-visual-grammar="five-exclusion-bars-rise-to-block-their-case-types,barred-acts-stack-behind-each-rail"
         data-text-treatments="label-block,stamp,external-negation"
         data-focal-rule="negative-exclusion-five-reasons"
-        data-focal-channels="contrast,enclosure,icon"
+        data-focal-channels="contrast,enclosure,motion"
         style={{ position: "absolute", inset: 16 }}
       >
-        {[
-          ["无行政性", "国家行为 · 刑事司法行为 · 行政协助司法执行", C.red],
-          ["无处分性", "暴力侵权 · 行政指导 · 行政调解仲裁 · 重复处理 · 过程性行为 · 信访", C.red],
-          ["无特定性", "抽象行政行为（不可以直接起诉）", C.amber],
-          ["无外部性", "公务员奖惩任免 · 机关间内部行为 · 层级监督", C.red],
-          ["法定最终裁决", "国务院复议决定 · 对外国人限制人身自由的复议决定", C.amber],
-        ].map((x, i) => (
-          <div
-            key={String(x[0])}
-            data-final-knowledge={`exclude-${i + 1}`}
-            style={{
-              position: "absolute",
-              left: 90,
-              top: 40 + i * 132,
-              width: 1740,
-              height: 112,
-              border: `5px solid ${x[2]}`,
-              background: `${x[2]}0a`,
-              padding: "14px 20px",
-              ...enter(f, 8 + i * 10),
-            }}
-          >
-            <div style={{ display: "flex", gap: 14, alignItems: "center" }}>
-              <span
+        {/* incoming case beam */}
+        <div
+          style={{
+            position: "absolute",
+            left: 30,
+            top: 6,
+            width: 400,
+            height: 26,
+            background: C.gray,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            gap: 10,
+            ...enter(f, 2),
+          }}
+        >
+          <span style={{ fontSize: 20, fontWeight: 950, color: C.slate, letterSpacing: 1 }}>
+            案件流入 →
+          </span>
+        </div>
+        {bars.map((x, i) => {
+          const rise = interpolate(f, [10 + i * 12, 34 + i * 12], [56, 0], {
+            extrapolateLeft: "clamp",
+            extrapolateRight: "clamp",
+            easing: Easing.out(Easing.cubic),
+          });
+          return (
+            <div key={String(x[0])} style={{ position: "absolute", left: 30, right: 30, top: 34 + i * 118 }}>
+              {/* blocked case chips above the bar */}
+              <div style={{ display: "flex", gap: 12, position: "absolute", left: 250, top: 0, zIndex: 2 }}>
+                {(x[4] as [string, string][]).map((c, j) => (
+                  <div
+                    key={String(c[0])}
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: 8,
+                      border: `3px solid ${x[3]}`,
+                      background: `${x[3]}14`,
+                      padding: "6px 12px",
+                      opacity: interpolate(f, [16 + i * 12 + j * 6, 30 + i * 12 + j * 6], [0, 1], {
+                        extrapolateLeft: "clamp",
+                        extrapolateRight: "clamp",
+                      }),
+                      translate: `0 ${interpolate(f, [16 + i * 12 + j * 6, 30 + i * 12 + j * 6], [18, 0], {
+                        extrapolateLeft: "clamp",
+                        extrapolateRight: "clamp",
+                      })}px`,
+                    }}
+                  >
+                    <Icon name={String(c[1])} size={24} color={String(x[3])} />
+                    <span style={{ fontSize: 22, fontWeight: 900, color: C.white }}>{c[0]}</span>
+                  </div>
+                ))}
+              </div>
+              {/* rising bar */}
+              <div
+                data-final-knowledge={`exclude-${i + 1}`}
                 style={{
-                  width: 88,
-                  height: 46,
-                  background: x[2],
-                  color: C.slate,
-                  display: "grid",
-                  placeItems: "center",
-                  fontSize: 22,
-                  fontWeight: 950,
-                  flex: "0 0 auto",
-                  rotate: "-2deg",
+                  position: "absolute",
+                  left: 0,
+                  right: 0,
+                  top: 52,
+                  height: 40,
+                  background: `${x[3]}dd`,
+                  border: `3px solid ${x[3]}`,
+                  boxShadow: `0 8px 22px rgba(0,0,0,.4)`,
+                  translate: `0 ${rise}px`,
+                  zIndex: 3,
                 }}
               >
-                {x[0]}
-              </span>
-              <div style={{ fontSize: 22, fontWeight: 850, lineHeight: 1.3 }}>{x[1]}</div>
+                <div style={{ display: "flex", alignItems: "center", gap: 16, height: "100%", padding: "0 22px" }}>
+                  <span
+                    style={{
+                      background: C.slate,
+                      color: C.white,
+                      fontSize: 22,
+                      fontWeight: 950,
+                      padding: "4px 14px",
+                      letterSpacing: 1,
+                    }}
+                  >
+                    ✕ {x[0]}
+                  </span>
+                  <span style={{ fontSize: 22, fontWeight: 850, color: C.slate, lineHeight: 1.2 }}>
+                    {x[1]}
+                  </span>
+                </div>
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
         <div
           data-final-knowledge="exclusion-mnemonic"
           style={{
             position: "absolute",
-            left: 460,
-            top: 662,
+            left: 430,
+            top: 622,
             width: 1000,
             textAlign: "center",
-            ...enter(f, 62),
+            ...enter(f, 66),
           }}
         >
           <span
@@ -497,9 +642,10 @@ export const ExclusionBarriersScene = () => {
               fontSize: 23,
               fontWeight: 950,
               color: C.gray,
+              background: `${C.gray}0d`,
             }}
           >
-            排除五因：无行政性、无处分性、无特定性、无外部性、法定终局
+            排除五因：无行政性 · 无处分性 · 无特定性 · 无外部性 · 法定终局
           </span>
         </div>
       </div>

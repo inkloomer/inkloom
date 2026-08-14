@@ -43,11 +43,11 @@
     {
       "id": "exclusion-barriers",
       "export": "ExclusionBarriersScene",
-      "layout": "five-exclusion-barriers",
+      "layout": "five-rising-exclusion-bars",
       "anchor": "boundary",
       "grammar": [
-        "five-exclusion-reasons-bar-their-case-types",
-        "abstract-acts-need-no-direct-suit"
+        "five-exclusion-bars-rise-to-block-their-case-types",
+        "barred-acts-stack-behind-each-rail"
       ],
       "textTreatments": [
         "label-block",
