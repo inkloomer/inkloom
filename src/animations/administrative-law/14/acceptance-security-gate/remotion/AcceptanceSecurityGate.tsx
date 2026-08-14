@@ -133,93 +133,292 @@ const Lane = ({
 );
 
 export const PositiveListLaneScene = () => {
-  /* Static audit inventory: data-final-knowledge="positive-01" data-final-knowledge="positive-02" data-final-knowledge="positive-03" data-final-knowledge="positive-04" data-final-knowledge="positive-05" data-final-knowledge="positive-06" data-final-knowledge="positive-07" data-final-knowledge="positive-08" data-final-knowledge="positive-09" data-final-knowledge="positive-10" data-final-knowledge="positive-11" */
+  /* Static audit inventory: data-final-knowledge="positive-01" data-final-knowledge="positive-02" data-final-knowledge="positive-03" data-final-knowledge="positive-04" data-final-knowledge="positive-05" data-final-knowledge="positive-06" data-final-knowledge="positive-07" data-final-knowledge="positive-08" data-final-knowledge="positive-09" data-final-knowledge="positive-10" data-final-knowledge="positive-11" data-final-knowledge="positive-entrance" data-final-knowledge="positive-mnemonic" */
   const f = useCurrentFrame();
+  const scanX = interpolate(f, [40, 300], [-120, 1830], {
+    extrapolateLeft: "clamp",
+    extrapolateRight: "clamp",
+    easing: Easing.inOut(Easing.cubic),
+  });
+  const items = [
+    ["处罚", "行政处罚类行为", "Gavel", C.green],
+    ["强制", "行政强制措施与强制执行", "LockKeyhole", C.green],
+    ["许可", "行政许可类行为", "FileCheck2", C.green],
+    ["确权", "自然资源所有权/使用权确认决定", "MapPin", C.green],
+    ["征补", "征收征用及补偿决定", "House", C.green],
+    ["履职", "不履行保护人身财产权法定职责", "ShieldAlert", C.green],
+    ["自主权", "侵犯经营自主权/土地承包经营权", "Factory", C.green],
+    ["竞争", "滥用行政权力排除限制竞争", "Scale", C.green],
+    ["摊派", "违法集资摊派/违法要求履行义务", "Coins", C.green],
+    ["给付", "未依法支付抚恤金低保社保待遇", "HeartHandshake", C.green],
+    ["其他", "其他侵犯人身权财产权行为", "FileQuestion", C.green],
+  ];
   return (
-    <Shell code="01" title="正面列举：十一类可诉行为进绿道">
+    <Shell code="01" title="正面列举：十一类可诉行为过安检">
       <div
-        data-layout="eleven-item-admission-lane"
-        data-visual-anchor="comparison-axis"
-        data-visual-grammar="eleven-admissible-act-types-line-the-green-lane,each-type-enters-the-court-one-by-one"
-        data-text-treatments="label-block,thin-underline,soft-highlight"
+        data-layout="conveyor-admission-line"
+        data-visual-anchor="flow-path"
+        data-visual-grammar="eleven-admissible-acts-travel-the-green-conveyor,scan-beam-approves-each-item-into-the-court"
+        data-text-treatments="label-block,soft-highlight,stamp"
         data-focal-rule="eleven-positive-list-categories"
-        data-focal-channels="contrast,enclosure,spatial"
+        data-focal-channels="contrast,enclosure,motion"
         style={{ position: "absolute", inset: 16 }}
       >
+        {/* conveyor rail */}
         <div
           style={{
             position: "absolute",
-            left: 90,
-            top: 40,
-            width: 260,
-            height: 660,
-            border: `6px solid ${C.green}`,
-            background: `${C.green}12`,
+            left: 30,
+            right: 30,
+            top: 578,
+            height: 16,
+            borderRadius: 8,
+            background: C.deep,
+            border: `3px solid ${C.gray}55`,
+            ...enter(f, 20),
+          }}
+        />
+        <div
+          style={{
+            position: "absolute",
+            left: 30,
+            right: 30,
+            top: 578,
+            height: 16,
+            borderRadius: 8,
+            overflow: "hidden",
+            backgroundImage:
+              "repeating-linear-gradient(90deg, rgba(255,255,255,.16) 0 26px, transparent 26px 52px)",
+            ...enter(f, 20),
+          }}
+        />
+        {/* scan beam */}
+        <div
+          style={{
+            position: "absolute",
+            top: 600,
+            left: scanX,
+            width: 26,
+            height: 90,
+            background: C.green,
+            boxShadow: `0 0 30px ${C.green}`,
+            opacity: 0.85,
+            zIndex: 3,
+          }}
+        />
+        {/* court entrance */}
+        <div
+          data-final-knowledge="positive-entrance"
+          style={{
+            position: "absolute",
+            right: 20,
+            top: 634,
+            width: 210,
+            height: 70,
+            background: C.green,
             display: "grid",
             placeItems: "center",
-            ...enter(f, 4),
+            ...enter(f, 34),
           }}
         >
-          <div style={{ textAlign: "center" }}>
-            <div style={{ fontSize: 30, fontWeight: 950, color: C.green }}>绿道</div>
-            <div style={{ fontSize: 22, fontWeight: 800, color: C.gray, marginTop: 8 }}>
-              可诉 · 受理
-            </div>
-          </div>
+          <span style={{ fontSize: 26, fontWeight: 950, color: C.slate }}>
+            法院受理 →
+          </span>
         </div>
-        {[
-          "行政处罚类行为",
-          "行政强制措施与强制执行",
-          "行政许可类行为",
-          "确认自然资源所有权/使用权决定",
-          "征收征用及补偿决定",
-          "不履行保护人身财产权法定职责",
-          "侵犯经营自主权/土地承包经营权",
-          "滥用行政权力排除限制竞争",
-          "违法集资摊派/违法要求履行义务",
-          "未依法支付抚恤金低保社保待遇",
-          "其他侵犯人身权财产权行为",
-        ].map((x, i) => (
+        {items.map((x, i) => (
           <div
             key={String(i)}
             data-final-knowledge={`positive-${String(i + 1).padStart(2, "0")}`}
             style={{
               position: "absolute",
-              left: 400 + (i % 2) * 750,
-              top: 34 + Math.floor(i / 2) * 112,
-              width: 700,
-              height: 92,
-              border: `3px solid ${C.green}`,
-              background: `${C.green}0a`,
-              display: "flex",
-              alignItems: "center",
-              gap: 14,
-              padding: "10px 16px",
-              ...enter(f, 8 + i * 7),
+              left: i < 6 ? 36 + i * 292 : 240 + (i - 6) * 292,
+              top: i < 6 ? 24 : 316,
+              width: 268,
+              height: 238,
+              background: "rgba(255,255,255,.05)",
+              border: `4px solid ${x[3]}`,
+              borderTop: `10px solid ${x[3]}`,
+              boxShadow: `0 10px 24px rgba(0,0,0,.35)`,
+              borderRadius: 12,
+              padding: "18px 20px",
+              ...enter(f, 8 + i * 9, i < 6 ? -60 : 60, 0),
             }}
           >
-            <span
+            <div
               style={{
-                width: 44,
-                height: 44,
-                borderRadius: "50%",
-                background: C.green,
-                color: C.slate,
-                display: "grid",
-                placeItems: "center",
-                fontSize: 22,
-                fontWeight: 950,
-                flex: "0 0 auto",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "space-between",
               }}
             >
-              {String(i + 1).padStart(2, "0")}
+              <span
+                style={{
+                  fontSize: 15,
+                  fontWeight: 950,
+                  letterSpacing: 2,
+                  color: C.gray,
+                  background: "rgba(255,255,255,.07)",
+                  padding: "3px 8px",
+                }}
+              >
+                CASE {String(i + 1).padStart(2, "0")}
+              </span>
+              <span
+                style={{
+                  display: "inline-grid",
+                  placeItems: "center",
+                  width: 54,
+                  height: 54,
+                  borderRadius: 12,
+                  background: `${x[3]}22`,
+                  border: `3px solid ${x[3]}`,
+                }}
+              >
+                <Icon name={String(x[2])} size={30} color={String(x[3])} />
+              </span>
+            </div>
+            <div
+              style={{
+                marginTop: 16,
+                fontSize: 26,
+                fontWeight: 950,
+                lineHeight: 1.25,
+                color: C.white,
+              }}
+            >
+              {x[1]}
+            </div>
+            <div
+              style={{
+                marginTop: 12,
+                fontSize: 15,
+                fontWeight: 800,
+                color: C.gray,
+              }}
+            >
+              类型：{x[0]}
+            </div>
+            <span
+              style={{
+                position: "absolute",
+                right: 14,
+                bottom: 12,
+                border: `3px solid ${C.green}`,
+                color: C.green,
+                padding: "3px 9px",
+                fontSize: 18,
+                fontWeight: 950,
+                rotate: "-3deg",
+                opacity: interpolate(f, [60 + i * 9, 80 + i * 9], [0, 1], {
+                  extrapolateLeft: "clamp",
+                  extrapolateRight: "clamp",
+                }),
+              }}
+            >
+              可诉 ✓
             </span>
-            <span style={{ fontSize: 22, fontWeight: 850, lineHeight: 1.25 }}>{x}</span>
           </div>
         ))}
+        <div
+          data-final-knowledge="positive-mnemonic"
+          style={{
+            position: "absolute",
+            left: 430,
+            top: 634,
+            width: 980,
+            textAlign: "center",
+            ...enter(f, 66),
+          }}
+        >
+          <span
+            style={{
+              display: "inline-block",
+              border: `3px dashed ${C.green}`,
+              padding: "10px 18px",
+              fontSize: 23,
+              fontWeight: 950,
+              color: C.green,
+              background: `${C.green}0d`,
+            }}
+          >
+            记忆：罚强制许可确权征补 → 履职自主权竞争摊派给付其他
+          </span>
+        </div>
       </div>
     </Shell>
   );
+};
+
+const Icon = ({ name, size, color }: { name: string; size: number; color: string }) => {
+  const glyphs: Record<string, React.ReactNode> = {
+    Gavel: (
+      <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="m14 13-7.5 7.5c-.83.83-2.17.83-3 0 0 0 0 0 0 0a2.12 2.12 0 0 1 0-3L11 10" />
+        <path d="m16 16 6-6" /><path d="m8 8 6-6" /><path d="m9 7 8 8" /><path d="m21 11-8-8" />
+      </svg>
+    ),
+    LockKeyhole: (
+      <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="12" cy="16" r="1" /><rect x="3" y="10" width="18" height="12" rx="2" />
+        <path d="M7 10V7a5 5 0 0 1 10 0v3" />
+      </svg>
+    ),
+    FileCheck2: (
+      <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M4 22h14a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v4" /><path d="M14 2v4a2 2 0 0 0 2 2h4" />
+        <path d="m3 15 2 2 4-4" />
+      </svg>
+    ),
+    MapPin: (
+      <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" /><circle cx="12" cy="10" r="3" />
+      </svg>
+    ),
+    House: (
+      <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" />
+        <path d="M3 10a2 2 0 0 1 .709-1.527l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+      </svg>
+    ),
+    ShieldAlert: (
+      <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
+        <path d="M12 8v4" /><path d="M12 16h.01" />
+      </svg>
+    ),
+    Factory: (
+      <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7 5V8l-7 5V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z" />
+        <path d="M17 18h1" /><path d="M12 18h1" /><path d="M7 18h1" />
+      </svg>
+    ),
+    Scale: (
+      <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z" /><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z" />
+        <path d="M7 21h10" /><path d="M12 3v18" /><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2" />
+      </svg>
+    ),
+    Coins: (
+      <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="8" cy="8" r="6" /><path d="M18.09 10.37A6 6 0 1 1 10.34 18" />
+        <path d="M7 6h1v4" /><path d="m16.71 13.88.7.71-2.82 2.82" />
+      </svg>
+    ),
+    HeartHandshake: (
+      <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+        <path d="M12 5 9.04 7.96a2.17 2.17 0 0 0 0 3.08c.82.82 2.13.85 3 .07l2.07-1.9a2.82 2.82 0 0 1 3.79 0l2.96 2.66" />
+        <path d="m18 15-2-2" /><path d="m15 18-2-2" />
+      </svg>
+    ),
+    FileQuestion: (
+      <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
+        <path d="M10 9a3 3 0 1 1 4 2.83c-.65.3-1 .94-1 1.67" /><path d="M13 17h.01" />
+      </svg>
+    ),
+  };
+  return <>{glyphs[name] ?? null}</>;
 };
 
 export const ExclusionBarriersScene = () => {

@@ -6,21 +6,21 @@
     {
       "id": "positive-list-lane",
       "export": "PositiveListLaneScene",
-      "layout": "eleven-item-admission-lane",
-      "anchor": "comparison-axis",
+      "layout": "conveyor-admission-line",
+      "anchor": "flow-path",
       "grammar": [
-        "eleven-admissible-act-types-line-the-green-lane",
-        "each-type-enters-the-court-one-by-one"
+        "eleven-admissible-acts-travel-the-green-conveyor",
+        "scan-beam-approves-each-item-into-the-court"
       ],
       "textTreatments": [
         "label-block",
-        "thin-underline",
-        "soft-highlight"
+        "soft-highlight",
+        "stamp"
       ],
       "focalChannels": [
         "contrast",
         "enclosure",
-        "spatial"
+        "motion"
       ],
       "tokens": [],
       "finalKnowledge": [
@@ -34,7 +34,9 @@
         "positive-08",
         "positive-09",
         "positive-10",
-        "positive-11"
+        "positive-11",
+        "positive-entrance",
+        "positive-mnemonic"
       ],
       "statefulObjects": []
     },
