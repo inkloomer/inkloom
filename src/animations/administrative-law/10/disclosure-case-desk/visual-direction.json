@@ -1,16 +1,16 @@
 {
-  "directionId": "civic-transparency-ledger",
-  "family": "civic-transparency-ledger",
-  "palette": "deep navy canvas, warm bone, cyan beacon, amber signal, seal crimson, slate boundary",
-  "typography": "WenKai status headings with dial numbers, token pills, stamped badges and thin underlines",
-  "composition": "intake conduits, verification gates, countdown clock dials, 3-tier vaults, decision switchboards and verdict stamps",
-  "surface": "digital civic transparency ledger console with luminous paths and tactile cards",
-  "motion": "packets flow into conduits, clock dials sweep, gates toggle open on statutory criteria, and stamps strike operative conclusions",
-  "transition": "conduit wipes, gate opens and stamp handoffs",
+  "directionId": "sunlit-archive-reading-room",
+  "family": "sunlit-archive-reading-room",
+  "palette": "warm paper ivory, archive ink, vermilion seal red, ledger teal, ochre amber, moss approval green, indigo branch",
+  "typography": "WenKai scroll headings with dossier numerals, paper token tags, vermilion seal stamps and thin underlines",
+  "composition": "paper intake trays, archival identification desks, three-tier reading-room vaults, seal countdown dials, channel distribution boards, response docket grids and verdict benches",
+  "surface": "sunlit paper archive reading room with tactile dossiers, ledger lines and vermilion seals",
+  "motion": "dossiers slide into trays, seal dials sweep, verdict stamps strike and decision chips settle",
+  "transition": "paper wipes, seal strikes and tray handoffs",
   "catalog": {
     "status": "featured",
     "source": "original-node",
     "route": "/inkloom/objective/administrative-law/10/disclosure-case-desk/",
-    "title": "政务公开矩阵台"
+    "title": "阳光档案阅览室"
   }
 }

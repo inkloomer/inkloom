@@ -6,11 +6,11 @@
     {
       "id": "three-mode-overview",
       "export": "ThreeModeOverviewScene",
-      "layout": "three-rail-lines-overview",
+      "layout": "three-metro-lines-overview",
       "anchor": "flow-path",
       "grammar": [
-        "three-linkage-modes-run-as-three-parallel-tracks",
-        "free-choice-is-green-mandatory-red-final-gold"
+        "three-linkage-modes-run-as-three-parallel-metro-lines",
+        "free-choice-is-jade-mandatory-coral-final-amber"
       ],
       "textTreatments": [
         "label-block",
@@ -34,10 +34,10 @@
     {
       "id": "free-choice-track",
       "export": "FreeChoiceTrackScene",
-      "layout": "dual-track-free-choice",
+      "layout": "dual-track-free-choice-platform",
       "anchor": "flow-path",
       "grammar": [
-        "a-train-runs-along-two-parallel-tracks",
+        "a-dispute-train-runs-along-two-parallel-tracks",
         "choice-locks-after-first-pick"
       ],
       "textTreatments": [
@@ -65,11 +65,11 @@
     {
       "id": "mandatory-first-track",
       "export": "MandatoryFirstTrackScene",
-      "layout": "mandatory-first-gate",
+      "layout": "mandatory-first-concourse",
       "anchor": "boundary",
       "grammar": [
         "six-dispute-categories-pass-through-the-review-gate",
-        "three-exceptions-bypass-it"
+        "three-exceptions-bypass-the-gate"
       ],
       "textTreatments": [
         "label-block",
@@ -96,10 +96,10 @@
     {
       "id": "final-review-track",
       "export": "FinalReviewTrackScene",
-      "layout": "final-stop-terminal",
+      "layout": "final-stop-terminal-platform",
       "anchor": "flow-target",
       "grammar": [
-        "four-immigration-measures-arrive-at-the-final-review-terminal",
+        "four-immigration-measures-arrive-at-the-final-terminal",
         "the-review-decision-is-the-end-of-the-line"
       ],
       "textTreatments": [
@@ -127,11 +127,11 @@
     {
       "id": "switchyard-traps",
       "export": "SwitchyardTrapsScene",
-      "layout": "eight-judgment-switches",
+      "layout": "eight-judgment-interchange-signals",
       "anchor": "typographic-sequence",
       "grammar": [
-        "eight-exam-statements-are-routed-to-green-or-red-switches",
-        "review-gate-exceptions-are-green"
+        "eight-exam-statements-route-to-jade-or-coral-signals",
+        "review-gate-exceptions-light-up-jade"
       ],
       "textTreatments": [
         "stamp",

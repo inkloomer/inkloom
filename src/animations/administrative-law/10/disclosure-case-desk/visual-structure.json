@@ -6,12 +6,12 @@
     {
       "id": "info-definition-scope",
       "export": "InfoDefinitionScopeScene",
-      "layout": "dual-channel-info-definition",
+      "layout": "paper-intake-and-definition-desk",
       "anchor": "flow-target",
       "grammar": [
-        "two-information-streams-enter-the-core-vault",
-        "recorded-and-preserved-administrative-data-is-stamped-as-government-info",
-        "pure-personal-or-unrelated-items-are-diverted"
+        "made-and-acquired-dossiers-enter-the-identification-desk",
+        "two-statutory-elements-must-coexist-to-qualify",
+        "recorded-and-preserved-material-receives-the-government-info-seal"
       ],
       "textTreatments": ["label-block", "soft-highlight", "stamp"],
       "focalChannels": ["contrast", "connector", "enclosure"],
@@ -26,12 +26,12 @@
     {
       "id": "disclosure-subject-matrix",
       "export": "DisclosureSubjectMatrixScene",
-      "layout": "four-branch-subject-matrix",
+      "layout": "four-branch-subject-register",
       "anchor": "document-fork",
       "grammar": [
-        "information-routes-to-producing-or-preserving-authority",
-        "derived-info-traces-back-to-origin-source",
-        "joint-info-routes-to-lead-organ-with-fifteen-day-consultation"
+        "produced-or-preserved-dossiers-stay-with-their-own-agency",
+        "derived-information-traces-back-to-the-original-source",
+        "jointly-produced-information-lands-on-the-lead-agency-with-fifteen-day-replies"
       ],
       "textTreatments": ["label-block", "thin-underline", "stamp"],
       "focalChannels": ["connector", "locator", "contrast"],
@@ -47,12 +47,12 @@
     {
       "id": "nondisclosure-tier-matrix",
       "export": "NondisclosureTierMatrixScene",
-      "layout": "three-tier-nondisclosure-gateway",
+      "layout": "three-tier-reading-room-gateway",
       "anchor": "boundary",
       "grammar": [
-        "absolute-prohibition-locks-the-iron-shutter",
-        "relative-exceptions-weigh-privacy-against-public-interest",
-        "discretionary-internal-records-dim-at-gate"
+        "absolute-prohibition-seals-the-confidential-vault",
+        "commercial-secrets-and-privacy-open-only-after-consultation",
+        "discretionary-internal-records-remain-behind-frosted-glass"
       ],
       "textTreatments": ["external-negation", "stamp", "label-block"],
       "focalChannels": ["enclosure", "contrast", "motion"],
@@ -68,12 +68,12 @@
     {
       "id": "active-disclosure-scope-clock",
       "export": "ActiveDisclosureScopeClockScene",
-      "layout": "twenty-day-active-disclosure-clock",
+      "layout": "twenty-day-active-disclosure-seal-clock",
       "anchor": "timeline-gate",
       "grammar": [
         "four-public-interest-categories-enter-the-active-lane",
-        "twenty-working-day-clock-counts-down-from-formation-or-change",
-        "rigid-lock-forbids-any-deadline-extension"
+        "twenty-working-day-clock-counts-from-formation-or-change",
+        "the-active-disclosure-clock-never-accepts-an-extension"
       ],
       "textTreatments": ["label-block", "soft-highlight", "external-negation"],
       "focalChannels": ["locator", "contrast", "spatial"],
@@ -89,12 +89,12 @@
     {
       "id": "active-channels-venues",
       "export": "ActiveChannelsVenuesScene",
-      "layout": "channel-and-venue-distribution-dock",
+      "layout": "channel-and-venue-distribution-board",
       "anchor": "flow-target",
       "grammar": [
         "disclosure-stream-fans-out-through-five-media-channels",
         "physical-access-anchors-into-three-statutory-venues",
-        "supplementary-access-points-expand-coverage"
+        "optional-access-points-expand-the-reading-room-network"
       ],
       "textTreatments": ["label-block", "thin-underline", "stamp"],
       "focalChannels": ["connector", "spatial", "contrast"],
@@ -112,9 +112,9 @@
       "layout": "intake-balance-and-receipt-detector",
       "anchor": "comparison-axis",
       "grammar": [
-        "relaxed-purpose-requirement-balances-against-mandatory-id-rule",
+        "relaxed-purpose-requirement-balances-the-mandatory-id-rule",
         "four-intake-methods-trigger-distinct-receipt-milestones",
-        "formal-written-intake-leads-over-oral-exception"
+        "written-form-leads-with-an-oral-exception"
       ],
       "textTreatments": ["external-negation", "label-block", "stamp"],
       "focalChannels": ["contrast", "locator", "enclosure"],
@@ -122,20 +122,20 @@
       "finalKnowledge": [
         "relaxed-purpose-rule",
         "mandatory-identity-rule",
-        "four-receipt-date-rules",
-        "written-priority-form"
+        "written-priority-form",
+        "four-receipt-date-rules"
       ],
       "statefulObjects": ["citizen-application-file"]
     },
     {
       "id": "response-deadline-clock",
       "export": "ResponseDeadlineClockScene",
-      "layout": "twenty-plus-twenty-response-timeline",
+      "layout": "twenty-plus-twenty-response-calendar",
       "anchor": "timeline-gate",
       "grammar": [
-        "base-twenty-day-track-opens-on-application-receipt",
-        "extension-gate-permits-up-to-twenty-additional-days-with-approval",
-        "third-party-consultation-pauses-the-clock"
+        "base-twenty-day-track-opens-on-receipt",
+        "extension-gate-permits-twenty-more-days-only-with-approval",
+        "consultation-days-step-out-of-the-clock"
       ],
       "textTreatments": ["label-block", "soft-highlight", "thin-underline"],
       "focalChannels": ["locator", "connector", "contrast"],
@@ -150,21 +150,22 @@
     {
       "id": "response-classification-matrix",
       "export": "ResponseClassificationMatrixScene",
-      "layout": "six-route-response-switchboard",
+      "layout": "six-route-response-docket-board",
       "anchor": "flow-target",
       "grammar": [
-        "mixed-confidential-packet-undergoes-severability-split",
-        "seven-day-supplement-notice-triggers-for-unclear-contents",
-        "no-fee-standard-applies-unless-abuse-threshold-breached"
+        "mixed-confidential-records-undergo-severability-split",
+        "unclear-requests-receive-a-seven-day-supplement-notice",
+        "no-fee-rule-applies-unless-abuse-threshold-breached"
       ],
       "textTreatments": ["label-block", "stamp", "thin-underline"],
       "focalChannels": ["connector", "contrast", "enclosure"],
       "tokens": [],
       "finalKnowledge": [
-        "severability-disclosure",
-        "seven-day-supplement-notice",
         "no-fee-with-cost-exception",
-        "non-existent-guidance-duty"
+        "severability-disclosure",
+        "non-existent-search-duty",
+        "not-this-agency-guidance-duty",
+        "seven-day-supplement-notice"
       ],
       "statefulObjects": ["severable-record-token"]
     },
@@ -174,7 +175,7 @@
       "layout": "six-port-special-case-router",
       "anchor": "document-fork",
       "grammar": [
-        "six-anomalous-application-types-route-to-statutory-ports",
+        "six-anomalous-applications-route-to-statutory-ports",
         "petition-motives-redirect-to-complaint-channels",
         "multiple-identical-requests-convert-into-active-disclosure"
       ],
@@ -194,12 +195,12 @@
     {
       "id": "exam-traps-verdict",
       "export": "ExamTrapsVerdictScene",
-      "layout": "five-trap-verdict-arena",
+      "layout": "five-trap-verdict-bench",
       "anchor": "role-pair",
       "grammar": [
-        "five-classic-exam-misconceptions-enter-the-adjudication-bench",
-        "statutory-rules-strike-false-assumptions-with-verdict-stamps",
-        "final-summary-locks-the-complete-disclosure-mindmap"
+        "five-classic-misconceptions-face-the-verdict-bench",
+        "statutory-rules-strike-false-assumptions-with-seal-stamps",
+        "the-final-row-locks-one-oral-form-allowance"
       ],
       "textTreatments": ["external-negation", "stamp", "soft-highlight"],
       "focalChannels": ["contrast", "annotation", "locator"],

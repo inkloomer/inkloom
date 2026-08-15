@@ -1,16 +1,16 @@
 {
-  "directionId": "linkage-rail-switchyard",
-  "family": "procedural-rail-switchyard",
-  "palette": "deep control-rail navy, signal green, warning red, final gold, track steel gray, platform white",
-  "typography": "WenKai platform signs with track numerals, route captions, thin signal underlines and final-stop stamps",
-  "composition": "rail switchyards, diverging tracks, signal gantries, platform boards and terminal stops",
-  "surface": "steel rails and dark signal towers without desks, vitrines or optical benches",
-  "motion": "trains travel the chosen track, switch points throw between routes, signal lamps light per mode",
-  "transition": "track pans, switch throws and signal sweeps",
+  "directionId": "daylight-metro-interchange",
+  "family": "daylight-metro-interchange",
+  "palette": "daylight concrete, ink navy, free-choice jade, litigation blue, mandatory coral, final amber, steel gray rail",
+  "typography": "WenKai station signs with route numerals, platform captions, thin signal underlines and interchange stamps",
+  "composition": "interchange hubs, diverging metro lines, station chips, gate concourses and terminal platforms",
+  "surface": "bright metro interchange map with rounded station nodes and concrete platforms",
+  "motion": "trains glide along route lines, switch points throw between routes, gate lights toggle per mode",
+  "transition": "line sweeps, switch throws and platform handoffs",
   "catalog": {
     "status": "featured",
     "source": "original-node",
     "route": "/inkloom/objective/administrative-law/12/linkage-rail-switch/",
-    "title": "程序转辙信号站"
+    "title": "晨光换乘导览图"
   }
 }
