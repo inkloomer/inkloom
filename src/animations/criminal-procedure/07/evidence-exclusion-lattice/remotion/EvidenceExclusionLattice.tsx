@@ -601,9 +601,6 @@ export const UnlawfulGradingScene: React.FC = () => {
             data-focal-rule="按违法的主观程度与严重程度分级，而不是一律排除"
             style={{display: 'flex', flexDirection: 'column', gap: 6, marginLeft: 40}}
           >
-            <div style={{fontSize: 18, letterSpacing: 3, color: C.inkSoft, fontFamily: 'var(--inkloom-animation-mono)'}}>
-              INTAKE RULE
-            </div>
             <div style={{fontSize: 36, fontWeight: 950, lineHeight: 1.2}}>
               取证行为
               <SoftHighlight color={C.vermilion}>违反法定程序</SoftHighlight>
@@ -683,7 +680,7 @@ const LANES: readonly Lane[] = [
     verdict: '应当排除',
   },
   {
-    condition: '以损害本人及近亲属合法权益相威胁',
+    condition: '严重损害本人及近亲属合法权益',
     index: '02',
     method: '威胁',
     verdict: '应当排除',
