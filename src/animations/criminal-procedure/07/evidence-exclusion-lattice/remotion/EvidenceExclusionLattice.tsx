@@ -605,12 +605,12 @@ export const UnlawfulGradingScene: React.FC = () => {
               取证行为
               <SoftHighlight color={C.vermilion}>违反法定程序</SoftHighlight>
             </div>
-            <div
-              data-final-knowledge="unlawful-intake-rule"
-              style={{fontSize: 22, color: C.inkSoft, lineHeight: 1.35}}
-            >
-              <ThinUnderline color={C.vermilion}>先定违法程度，再定证据命运</ThinUnderline>
-            </div>
+          </div>
+          <div
+            data-final-knowledge="unlawful-intake-rule"
+            style={{marginLeft: 'auto', fontSize: 24, fontWeight: 800, color: C.inkSoft, lineHeight: 1.35}}
+          >
+            <ThinUnderline color={C.vermilion}>先定违法程度，再定证据命运</ThinUnderline>
           </div>
         </div>
 
