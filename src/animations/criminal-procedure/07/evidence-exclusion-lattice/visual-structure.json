@@ -1,0 +1,78 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "unlawful-grading",
+      "export": "UnlawfulGradingScene",
+      "layout": "graded-intake-shaft-bay",
+      "anchor": "flow-path",
+      "grammar": [
+        "unlawfully-obtained-evidence-enters-one-intake-rail",
+        "three-culpability-grades-split-into-three-outcome-shafts",
+        "only-the-minor-defect-shaft-keeps-a-correction-branch-open"
+      ],
+      "textTreatments": ["label-block", "stamp", "thin-underline"],
+      "focalChannels": ["connector", "contrast", "enclosure", "spatial"],
+      "tokens": ["FileText", "ShieldAlert", "ClipboardX", "Wrench"],
+      "finalKnowledge": [
+        "unlawful-intake-rule",
+        "intentional-grade-track",
+        "negligent-grade-track",
+        "minor-defect-track"
+      ],
+      "statefulObjects": ["evidence-specimen-card"]
+    },
+    {
+      "id": "intentional-confession-routes",
+      "export": "IntentionalConfessionRoutesScene",
+      "layout": "four-lane-confession-bay-with-exhibit-row",
+      "anchor": "typographic-sequence",
+      "grammar": [
+        "violence-or-cruel-treatment-plus-unbearable-pain-excludes-the-confession",
+        "threatening-lawful-rights-excludes-only-with-unbearable-pain",
+        "unlawful-detention-excludes-without-any-pain-requirement",
+        "repeated-confessions-fall-with-the-original-unless-voluntarily-re-made",
+        "witness-and-victim-statements-exclude-on-any-listed-illegal-method",
+        "enticement-deceit-and-self-invented-confessions-stay-outside-the-rule"
+      ],
+      "textTreatments": ["label-block", "soft-highlight", "external-negation"],
+      "focalChannels": ["enclosure", "contrast", "locator", "annotation"],
+      "tokens": ["Mic", "Users", "FileSearch", "Ban"],
+      "finalKnowledge": [
+        "violence-route",
+        "threat-route",
+        "detention-route",
+        "repetition-route",
+        "repetition-exception",
+        "witness-victim-route",
+        "physical-evidence-route",
+        "outside-exclusion-band"
+      ],
+      "statefulObjects": ["confession-specimen"]
+    },
+    {
+      "id": "correction-fork-gate",
+      "export": "CorrectionForkGateScene",
+      "layout": "correction-fork-and-terminal-bay",
+      "anchor": "document-fork",
+      "grammar": [
+        "defective-exhibits-and-minor-flaws-both-enter-the-correction-bench",
+        "a-corrected-flaw-returns-into-the-conviction-basis",
+        "an-uncorrectable-flaw-drops-into-the-exclusion-bay",
+        "intentional-and-grave-negligent-unlawfulness-have-no-correction-channel"
+      ],
+      "textTreatments": ["label-block", "stamp", "thin-underline"],
+      "focalChannels": ["connector", "contrast", "enclosure", "motion"],
+      "tokens": ["FileSearch", "ClipboardList", "Wrench", "Ban"],
+      "finalKnowledge": [
+        "correction-bench-rule",
+        "admissible-terminal",
+        "excluded-terminal",
+        "no-correction-channel"
+      ],
+      "statefulObjects": ["defective-evidence-card"]
+    }
+  ]
+}

@@ -14,6 +14,8 @@ import {SplitScreenComparisonDemo} from '../../animations/demo/demo-split-screen
 import {StatuteCommentaryDemo} from '../../animations/demo/demo-statute-commentary/remotion/StatuteCommentaryDemo';
 import {TimelineChronicleDemo} from '../../animations/demo/demo-timeline-chronicle/remotion/TimelineChronicleDemo';
 import {TransitMapDemo} from '../../animations/demo/demo-transit-map/remotion/TransitMapDemo';
+import {EvidenceExclusionLattice} from '../../animations/criminal-procedure/07/evidence-exclusion-lattice/remotion/EvidenceExclusionLattice';
+import {DURATION_FRAMES as EVIDENCE_EXCLUSION_DURATION_FRAMES, FPS as EVIDENCE_EXCLUSION_FPS} from '../../animations/criminal-procedure/07/evidence-exclusion-lattice/remotion/storyboard';
 import {ThirdPartyRevocation} from '../../animations/civil-procedure/07/third-party-revocation/remotion/ThirdPartyRevocation';
 import {ThirdPartyTypes} from '../../animations/civil-procedure/07/third-party-types/remotion/ThirdPartyTypes';
 import {JointLitigation} from '../../animations/civil-procedure/06/joint-litigation/remotion/JointLitigation';
@@ -156,6 +158,7 @@ export const STYLE_DEMOS = [
   {id: 'civil-procedure-20-appeal-review-decision-map', slug: 'appeal-review-decision-map', title: '上诉棱镜编排', direction: 'Appellate Editorial Prism', component: AppealReviewDecisionMap, href: '/inkloom/objective/civil-procedure/20/appeal-review-decision-map/', durationInFrames: APPEAL_REVIEW_DURATION_FRAMES, fps: APPEAL_REVIEW_FPS},
   {id: 'civil-law-contract-book-atlas', slug: 'contract-book-atlas', title: '条文折页', direction: 'Statute Folio', component: ContractBookAtlas, href: '/inkloom/objective/civil-law/contracts/contract-book-atlas/', durationInFrames: CONTRACT_BOOK_DURATION_FRAMES, fps: CONTRACT_BOOK_FPS},
   {id: 'civil-procedure-32-penalty-adjustment-procedure', slug: 'penalty-adjustment-procedure', title: '裁判控制台', direction: 'Judicial Control Desk', component: PenaltyAdjustmentProcedure, href: '/inkloom/objective/civil-procedure/32/penalty-adjustment-procedure/', durationInFrames: PENALTY_ADJUSTMENT_DURATION_FRAMES, fps: PENALTY_ADJUSTMENT_FPS},
+  {id: 'criminal-procedure-07-evidence-exclusion-lattice', slug: 'evidence-exclusion-lattice', title: '证物分级检验柜', direction: 'Exclusion Grading Lattice', component: EvidenceExclusionLattice, href: '/inkloom/objective/criminal-procedure/07/evidence-exclusion-lattice/', durationInFrames: EVIDENCE_EXCLUSION_DURATION_FRAMES, fps: EVIDENCE_EXCLUSION_FPS},
   ...COMMERCIAL_LAW_STYLE_DEMOS,
 ] as const satisfies readonly DemoDefinition[];
 
@@ -213,6 +216,7 @@ const DEMO_ADDED_AT: Record<(typeof STYLE_DEMOS)[number]['id'], string> = {
   'civil-procedure-20-appeal-review-decision-map': '2026-08-05T21:15:25+08:00',
   'civil-law-contract-book-atlas': '2026-08-08T18:17:31+08:00',
   'civil-procedure-32-penalty-adjustment-procedure': '2026-08-08T18:17:31+08:00',
+  'criminal-procedure-07-evidence-exclusion-lattice': '2026-08-28T20:10:00+08:00',
   ...COMMERCIAL_LAW_DEMO_ADDED_AT,
 };
 

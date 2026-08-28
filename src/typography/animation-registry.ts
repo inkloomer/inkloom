@@ -13,6 +13,7 @@ import {typography as administrativeTypography11} from '../animations/administra
 import {typography as administrativeTypography12} from '../animations/administrative-law/12/linkage-rail-switch/animation.meta';
 import {typography as administrativeTypography13} from '../animations/administrative-law/13/litigant-hierarchy-beacon/animation.meta';
 import {typography as administrativeTypography14} from '../animations/administrative-law/14/acceptance-security-gate/animation.meta';
+import {typography as typography95} from '../animations/criminal-procedure/07/evidence-exclusion-lattice/animation.meta';
 import {typography as typography0} from '../animations/civil-procedure/01/dispute-resolution/animation.meta';
 import {typography as typography1} from '../animations/civil-procedure/01/law-attributes/animation.meta';
 import {typography as typography2} from '../animations/civil-procedure/01/trial-procedure/animation.meta';
@@ -197,6 +198,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'termination-withdrawal-timeline': {metadata: typography91, scope: {animationId: 'termination-withdrawal-timeline', subject: 'civil-procedure', topic: '31'}},
   'penalty-adjustment-procedure': {metadata: typography93, scope: {animationId: 'penalty-adjustment-procedure', subject: 'civil-procedure', topic: '32'}},
   'contract-book-atlas': {metadata: typography94, scope: {animationId: 'contract-book-atlas', subject: 'civil-law', topic: 'contracts'}},
+  'evidence-exclusion-lattice': {metadata: typography95, scope: {animationId: 'evidence-exclusion-lattice', subject: 'criminal-procedure', topic: '07'}},
   'card-selling-funds-viewpoint': {metadata: typography40, scope: {animationId: 'card-selling-funds-viewpoint', subject: 'criminal', topic: '19'}},
   'occupational-embezzlement-flowchart': {metadata: typography41, scope: {animationId: 'occupational-embezzlement-flowchart', subject: 'criminal', topic: '19'}},
   'property-interests-keypoints': {metadata: typography42, scope: {animationId: 'property-interests-keypoints', subject: 'criminal', topic: '19'}},

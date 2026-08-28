@@ -1,0 +1,16 @@
+{
+  "directionId": "exclusion-grading-lattice",
+  "family": "evidence-grading-lattice",
+  "palette": "porcelain slate cabinet, docket bone cards, exclusion vermilion, correction ochre, defect cobalt, admissibility pine, graphite ink",
+  "typography": "WenKai grading-plate headings with specimen codes, verdict hang-tags and thin condition rules",
+  "composition": "one intake rail dropping into three graded shafts, each ending in a hanging verdict tag, with a correction bench branching off the minor-defect shaft",
+  "surface": "porcelain grading cabinet with paper evidence cards, recessed track channels and hanging verdict tags",
+  "motion": "specimen cards ride the intake rail, receive a grade stamp at the reading mouth, drop through shafts and settle as verdict hang-tags; the correction bench turns one defective card back into the admissible tray",
+  "transition": "the cabinet frame and intake rail persist while shaft groups are replaced",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/criminal-procedure/07/evidence-exclusion-lattice/",
+    "title": "证物分级检验柜"
+  }
+}
