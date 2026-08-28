@@ -992,10 +992,7 @@ export const CorrectionForkGateScene: React.FC = () => {
           }}
         >
           <ClipboardList size={34} strokeWidth={2.5} style={{color: C.cobaltInk, flexShrink: 0}} />
-          <div
-            data-stateful-source="defective-evidence-card"
-            style={{minWidth: 0, transform: `translateX(${interpolate(frame, [30, 92], [0, -30], clamp)}px)`}}
-          >
+          <div data-stateful-source="defective-evidence-card" style={{minWidth: 0}}>
             <div style={{fontSize: 26, fontWeight: 950, color: C.cobaltInk, lineHeight: 1.2}}>瑕疵证据</div>
             <div style={{fontSize: 22, color: C.ink, lineHeight: 1.3}}>仅存在轻微程序瑕疵</div>
           </div>
@@ -1026,7 +1023,7 @@ export const CorrectionForkGateScene: React.FC = () => {
               >
                 补正台
               </span>
-              <Chip color={C.ochre} label="补正或者作出合理解释" />
+              <Chip color={C.ochre} label="分流闸门" />
             </div>
 
             <div style={{fontSize: 23, lineHeight: 1.4, fontWeight: 700, color: C.ink, marginBottom: 10}}>
