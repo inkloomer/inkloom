@@ -470,7 +470,7 @@ const CycleStation = ({
       position: 'absolute',
       left,
       top,
-      width: 280,
+      width: 330,
       height: 122,
       backgroundColor: C.panel,
       border: `3px solid ${accent}`,
@@ -594,8 +594,8 @@ export const HermeneuticCircleScene = () => {
               <span style={{fontSize: 22, fontWeight: 830, color: C.azurite}}>被解释的某一条文</span>
             </div>
           </CycleStation>
-          <CycleStation accent={C.malachite} delay={72} left={539} top={384}>
-            <div data-final-knowledge="cycle-station-system" style={{fontSize: 29, fontWeight: 950, color: C.plaque}}>
+          <CycleStation accent={C.malachite} delay={72} left={559} top={384}>
+            <div data-final-knowledge="cycle-station-system" style={{fontSize: 27, fontWeight: 950, color: C.plaque, whiteSpace: 'nowrap'}}>
               放回整个法律体系
             </div>
             <div
@@ -614,8 +614,8 @@ export const HermeneuticCircleScene = () => {
               <span style={{fontSize: 22, fontWeight: 830, color: C.malachite}}>条文已在体系中定位</span>
             </div>
           </CycleStation>
-          <CycleStation accent={C.gamboge} delay={104} left={141} top={384}>
-            <div data-final-knowledge="cycle-station-meaning" style={{fontSize: 29, fontWeight: 950, color: C.plaque}}>
+          <CycleStation accent={C.gamboge} delay={104} left={121} top={384}>
+            <div data-final-knowledge="cycle-station-meaning" style={{fontSize: 27, fontWeight: 950, color: C.plaque, whiteSpace: 'nowrap'}}>
               含义在体系中确定
             </div>
             <div style={{fontSize: 22, fontWeight: 800, color: C.ink}}>
