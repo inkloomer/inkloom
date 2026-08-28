@@ -1,0 +1,70 @@
+{
+  "animationId": "procedure-structure-orrery",
+  "compositionId": "ProcedureStructureOrrery",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-28T16:30:35.129Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 499,
+      "frameCount": 250,
+      "id": "purpose-chain-gears",
+      "number": "01",
+      "startFrame": 0,
+      "title": "因果齿轮",
+      "durationMs": 8333,
+      "file": "purpose-chain-gears.avif",
+      "fileSize": 342166,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "dc48076ded514d87faaf841f3b9253a2be6874f58eedb667dc2f2e45e52584d4",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "491032b1b3d38cdfb642a72db056dbc693f8267834d1e68d6c79732180669dd7"
+    },
+    {
+      "endFrame": 1219,
+      "frameCount": 360,
+      "id": "four-construction-quadrants",
+      "number": "02",
+      "startFrame": 500,
+      "title": "四大轨道",
+      "durationMs": 12000,
+      "file": "four-construction-quadrants.avif",
+      "fileSize": 262238,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "7b1ec62affe718d14bd2f389a1272c104d132e23a5708711fdc25de7863f963c",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "491032b1b3d38cdfb642a72db056dbc693f8267834d1e68d6c79732180669dd7"
+    },
+    {
+      "endFrame": 1779,
+      "frameCount": 280,
+      "id": "separation-two-step-gate",
+      "number": "03",
+      "startFrame": 1220,
+      "title": "控审分离",
+      "durationMs": 9333,
+      "file": "separation-two-step-gate.avif",
+      "fileSize": 314828,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "ded14589d14b8221134b79d768867b59d8531ac02dbf42d83a6b8ecf3dc222d3",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "491032b1b3d38cdfb642a72db056dbc693f8267834d1e68d6c79732180669dd7"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "491032b1b3d38cdfb642a72db056dbc693f8267834d1e68d6c79732180669dd7",
+  "targetFps": 30,
+  "totalFileSize": 919232
+}

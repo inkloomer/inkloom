@@ -1,0 +1,16 @@
+{
+  "directionId": "brass-orrery-structure",
+  "family": "brass-orrery-family",
+  "palette": "deep-space indigo, polished brass rings, ember prosecution planet, cobalt defense planet, gilded adjudication sun, parchment plates",
+  "typography": "WenKai star-chart headings with engraved brass chips and observatory plates",
+  "composition": "a causation gear train feeding a large structure gear beside a stage-presence bay, a four-quadrant orbital comparison, and a two-step separation gate into a verdict bay",
+  "surface": "a dark observatory room with starfield specks, brass dashed orbit rings and parchment instrument plates",
+  "motion": "gears spin into mesh one after another, orbit bodies settle onto their rings, and the dossier chip travels through both separation gates to its verdict",
+  "transition": "the observatory backdrop and brass frame persist while instrument plates are replaced",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/criminal-procedure/01/procedure-structure-orrery/",
+    "title": "黄铜构造星盘"
+  }
+}

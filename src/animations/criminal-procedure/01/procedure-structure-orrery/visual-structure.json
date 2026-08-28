@@ -1,0 +1,73 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "purpose-chain-gears",
+      "export": "PurposeChainScene",
+      "layout": "gear-chain-with-stage-bay",
+      "anchor": "flow-path",
+      "grammar": [
+        "value-influences-purpose-through-a-meshed-gear",
+        "purpose-decides-structure-as-the-large-driver",
+        "no-direct-gear-couples-value-to-structure",
+        "full-triad-orbit-exists-only-at-the-trial-stage"
+      ],
+      "textTreatments": ["label-block", "external-negation", "soft-highlight"],
+      "focalChannels": ["connector", "contrast", "enclosure", "spatial"],
+      "tokens": ["Landmark"],
+      "finalKnowledge": [
+        "no-direct-value-route",
+        "pre-trial-dual-relation",
+        "trial-full-triad",
+        "structure-driver-gear"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "four-construction-quadrants",
+      "export": "ConstructionComparisonScene",
+      "layout": "four-quadrant-orbit-bay",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "adversarial-system-lets-two-planets-lead-the-orbit",
+        "inquisitorial-system-centers-the-judge-sun",
+        "mixed-system-shifts-orbit-from-inquisitorial-to-adversarial",
+        "china-control-model-separates-prosecution-from-adjudication"
+      ],
+      "textTreatments": ["chip", "thin-underline", "label-block"],
+      "focalChannels": ["contrast", "enclosure", "spatial", "locator"],
+      "tokens": [],
+      "finalKnowledge": [
+        "adversarial-quadrant",
+        "inquisitorial-quadrant",
+        "mixed-quadrant",
+        "china-quadrant"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "separation-two-step-gate",
+      "export": "SeparationTwoStepScene",
+      "layout": "two-step-gate-with-verdict-bay",
+      "anchor": "flow-target",
+      "grammar": [
+        "step-one-tests-prosecution-adjudication-relation",
+        "supervision-function-is-not-prosecution",
+        "step-two-tests-separation-in-both-directions",
+        "control-cannot-decide-trial-and-trial-cannot-decide-control"
+      ],
+      "textTreatments": ["chip", "external-negation", "label-block"],
+      "focalChannels": ["connector", "annotation", "contrast", "enclosure"],
+      "tokens": ["Split", "Ban", "CheckCircle2"],
+      "finalKnowledge": [
+        "relation-test",
+        "separation-test",
+        "lawful-separation-verdict",
+        "unlawful-separation-verdict"
+      ],
+      "statefulObjects": ["review-dossier"]
+    }
+  ]
+}

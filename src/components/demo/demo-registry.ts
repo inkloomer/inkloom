@@ -16,6 +16,8 @@ import {TimelineChronicleDemo} from '../../animations/demo/demo-timeline-chronic
 import {TransitMapDemo} from '../../animations/demo/demo-transit-map/remotion/TransitMapDemo';
 import {EvidenceExclusionLattice} from '../../animations/criminal-procedure/07/evidence-exclusion-lattice/remotion/EvidenceExclusionLattice';
 import {DURATION_FRAMES as EVIDENCE_EXCLUSION_DURATION_FRAMES, FPS as EVIDENCE_EXCLUSION_FPS} from '../../animations/criminal-procedure/07/evidence-exclusion-lattice/remotion/storyboard';
+import {ProcedureStructureOrrery} from '../../animations/criminal-procedure/01/procedure-structure-orrery/remotion/ProcedureStructureOrrery';
+import {DURATION_FRAMES as PROCEDURE_STRUCTURE_DURATION_FRAMES, FPS as PROCEDURE_STRUCTURE_FPS} from '../../animations/criminal-procedure/01/procedure-structure-orrery/remotion/storyboard';
 import {ThirdPartyRevocation} from '../../animations/civil-procedure/07/third-party-revocation/remotion/ThirdPartyRevocation';
 import {ThirdPartyTypes} from '../../animations/civil-procedure/07/third-party-types/remotion/ThirdPartyTypes';
 import {JointLitigation} from '../../animations/civil-procedure/06/joint-litigation/remotion/JointLitigation';
@@ -162,6 +164,7 @@ export const STYLE_DEMOS = [
   {id: 'civil-procedure-32-penalty-adjustment-procedure', slug: 'penalty-adjustment-procedure', title: '裁判控制台', direction: 'Judicial Control Desk', component: PenaltyAdjustmentProcedure, href: '/inkloom/objective/civil-procedure/32/penalty-adjustment-procedure/', durationInFrames: PENALTY_ADJUSTMENT_DURATION_FRAMES, fps: PENALTY_ADJUSTMENT_FPS},
   {id: 'theoretical-law-17-legal-interpretation', slug: 'legal-interpretation', title: '宋式藻井图', direction: 'Song Caisson Paintwork', component: LegalInterpretation, href: '/inkloom/objective/theoretical-law/17/legal-interpretation/', durationInFrames: LEGAL_INTERPRETATION_DURATION_FRAMES, fps: LEGAL_INTERPRETATION_FPS},
   {id: 'criminal-procedure-07-evidence-exclusion-lattice', slug: 'evidence-exclusion-lattice', title: '证物分级检验柜', direction: 'Exclusion Grading Lattice', component: EvidenceExclusionLattice, href: '/inkloom/objective/criminal-procedure/07/evidence-exclusion-lattice/', durationInFrames: EVIDENCE_EXCLUSION_DURATION_FRAMES, fps: EVIDENCE_EXCLUSION_FPS},
+  {id: 'criminal-procedure-01-procedure-structure-orrery', slug: 'procedure-structure-orrery', title: '黄铜构造星盘', direction: 'Brass Orrery Structure', component: ProcedureStructureOrrery, href: '/inkloom/objective/criminal-procedure/01/procedure-structure-orrery/', durationInFrames: PROCEDURE_STRUCTURE_DURATION_FRAMES, fps: PROCEDURE_STRUCTURE_FPS},
   ...COMMERCIAL_LAW_STYLE_DEMOS,
 ] as const satisfies readonly DemoDefinition[];
 
@@ -221,6 +224,7 @@ const DEMO_ADDED_AT: Record<(typeof STYLE_DEMOS)[number]['id'], string> = {
   'civil-procedure-32-penalty-adjustment-procedure': '2026-08-08T18:17:31+08:00',
   'theoretical-law-17-legal-interpretation': '2026-08-28T19:56:14+08:00',
   'criminal-procedure-07-evidence-exclusion-lattice': '2026-08-28T20:10:00+08:00',
+  'criminal-procedure-01-procedure-structure-orrery': '2026-08-28T22:30:00+08:00',
   ...COMMERCIAL_LAW_DEMO_ADDED_AT,
 };
 
