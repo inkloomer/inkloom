@@ -379,7 +379,6 @@ type Grade = {
   readonly grade: string;
   readonly ink: string;
   readonly items: readonly string[];
-  readonly note: string;
   readonly qualifier: string;
   readonly soft: string;
   readonly verdict: string;
@@ -394,13 +393,8 @@ const GRADES: readonly Grade[] = [
     code: 'I',
     grade: '故意非法',
     ink: C.vermilionInk,
-    items: [
-      '殴打、违法使用戒具等暴力方法或者变相肉刑',
-      '以暴力或者严重损害本人及近亲属合法权益相威胁',
-      '非法拘禁等非法限制人身自由的方法',
-    ],
-    note: '属非法证据排除规则直接规制的故意违法',
-    qualifier: '故意违反法定程序',
+    items: ['暴力方法 / 变相肉刑', '威胁损害本人及近亲属权益', '非法拘禁等限制人身自由'],
+    qualifier: '主观：故意',
     soft: C.vermilionSoft,
     verdict: '应当予以排除',
   },
@@ -409,13 +403,8 @@ const GRADES: readonly Grade[] = [
     code: 'II',
     grade: '严重程序失误',
     ink: C.ochreInk,
-    items: [
-      '物证、书证未附笔录或者清单，且不能证明来源',
-      '询问证人没有个别进行、书面证言未经核对确认',
-      '讯问未成年人无法定代理人或者合适成年人在场',
-    ],
-    note: '无须再判断是否能够补正',
-    qualifier: '过失造成严重违法',
+    items: ['物证书证未附笔录、来源不明', '证言未个别询问、未经核对', '讯问未成年人无合适成年人在场'],
+    qualifier: '主观：过失',
     soft: C.ochreSoft,
     verdict: '不得作为定案根据',
   },
@@ -424,8 +413,7 @@ const GRADES: readonly Grade[] = [
     code: 'III',
     grade: '轻微错误',
     ink: C.cobaltInk,
-    items: ['询问笔录仅有的一名侦查人员签名', '辨认时忘记邀请见证人到场', '电子数据未以封存状态移送'],
-    note: '能补正则采，不能补正则排',
+    items: ['笔录仅一名侦查人员签名', '辨认未邀请见证人', '电子数据未封存移送'],
     qualifier: '瑕疵证据',
     soft: C.cobaltSoft,
     verdict: '允许补正或解释',
@@ -474,32 +462,24 @@ export const UnlawfulGradingScene: React.FC = () => {
           backgroundColor: C.card,
           border: `3px solid ${C.line}`,
           borderRadius: 10,
-          padding: '18px 20px',
+          padding: '18px 24px',
           boxSizing: 'border-box',
           display: 'flex',
           flexDirection: 'column',
-          gap: 14,
+          justifyContent: 'center',
+          gap: 22,
         }}
       >
-        <div
-          style={{
-            fontSize: 18,
-            letterSpacing: 3,
-            color: C.inkSoft,
-            fontFamily: 'var(--inkloom-animation-mono)',
-            fontWeight: 800,
-          }}
-        >
-          TYPICAL UNLAWFUL PATTERNS
-        </div>
         {grade.items.map((item, itemIndex) => (
           <div
             key={item}
             style={{
               display: 'flex',
+              alignItems: 'center',
               gap: 12,
-              fontSize: 22,
+              fontSize: 23,
               lineHeight: 1.4,
+              fontWeight: 700,
               color: C.ink,
               opacity: interpolate(frame, [shaftDelay + 30 + itemIndex * 16, shaftDelay + 48 + itemIndex * 16], [0, 1], clamp),
             }}
@@ -518,7 +498,6 @@ export const UnlawfulGradingScene: React.FC = () => {
                 fontSize: 15,
                 fontWeight: 900,
                 fontFamily: 'var(--inkloom-animation-mono)',
-                marginTop: 3,
               }}
             >
               {itemIndex + 1}
@@ -551,7 +530,6 @@ export const UnlawfulGradingScene: React.FC = () => {
         }}
       >
         <Stamp color={grade.accent} ink={grade.ink} label={grade.verdict} soft={C.card} />
-        <div style={{fontSize: 22, color: grade.ink, lineHeight: 1.3, textAlign: 'center'}}>{grade.note}</div>
         <div
           data-stateful-terminal="evidence-specimen-card"
           style={{transform: `rotate(${interpolate(frame, [shaftDelay + 112, shaftDelay + 140], [-4, 0], clamp)}deg)`}}
@@ -637,16 +615,6 @@ export const UnlawfulGradingScene: React.FC = () => {
               <ThinUnderline color={C.vermilion}>先定违法程度，再定证据命运</ThinUnderline>
             </div>
           </div>
-          <div style={{marginLeft: 'auto', display: 'flex', gap: 10}}>
-            {GRADES.map((grade, index) => (
-              <Chip
-                key={grade.code}
-                color={grade.accent}
-                label={`${grade.code} · ${grade.grade}`}
-                style={{opacity: interpolate(frame, [78 + index * 12, 96 + index * 12], [0, 1], clamp)}}
-              />
-            ))}
-          </div>
         </div>
 
         <DropArrow
@@ -700,7 +668,6 @@ export const UnlawfulGradingScene: React.FC = () => {
 type Lane = {
   readonly condition: string;
   readonly index: string;
-  readonly means: string;
   readonly method: string;
   readonly verdict: string;
 };
@@ -710,30 +677,26 @@ const LANE_HEIGHT = 360;
 
 const LANES: readonly Lane[] = [
   {
-    condition: '使其遭受难以忍受的痛苦而违背意愿作出供述',
+    condition: '致难以忍受痛苦而违背意愿',
     index: '01',
-    means: '殴打、违法使用戒具等暴力方法或者变相肉刑的恶劣手段',
     method: '暴力 / 变相肉刑',
     verdict: '应当排除',
   },
   {
-    condition: '使其遭受难以忍受的痛苦而违背意愿作出供述',
+    condition: '以损害本人及近亲属合法权益相威胁',
     index: '02',
-    means: '以暴力或者严重损害本人及其近亲属合法权益等方法相威胁',
     method: '威胁',
     verdict: '应当排除',
   },
   {
     condition: '无需“痛苦”条件',
     index: '03',
-    means: '采用非法拘禁等方法，主要如在法定讯问地点之外讯问',
-    method: '非法限制人身自由',
+    method: '非法拘禁等限制人身自由',
     verdict: '应当排除',
   },
   {
-    condition: '与原供述一并排除',
+    condition: '受原刑讯影响 · 与原供述相同',
     index: '04',
-    means: '受刑讯逼供行为影响作出的与原供述相同的重复性供述',
     method: '重复性供述',
     verdict: '一并排除',
   },
@@ -775,13 +738,11 @@ export const IntentionalConfessionRoutesScene: React.FC = () => {
         <span style={{fontSize: 30, fontWeight: 950, color: C.vermilionInk, lineHeight: 1.2}}>{lane.method}</span>
       </div>
 
-      <div style={{fontSize: 22, lineHeight: 1.4, color: C.ink}}>{lane.means}</div>
-
-      <div style={{fontSize: 22, lineHeight: 1.4, color: C.ink}}>
+      <div style={{fontSize: 23, lineHeight: 1.4, fontWeight: 700, color: C.ink, marginTop: 4}}>
         <ThinUnderline color={C.vermilion}>{lane.condition}</ThinUnderline>
       </div>
 
-      <div style={{fontSize: 22, lineHeight: 1.4}}>{tip}</div>
+      <div style={{fontSize: 22, lineHeight: 1.45, marginTop: 4}}>{tip}</div>
 
       <div style={{marginTop: 'auto', display: 'flex', justifyContent: 'center'}}>
         <div
@@ -846,7 +807,7 @@ export const IntentionalConfessionRoutesScene: React.FC = () => {
           data-final-knowledge="violence-route"
           style={{position: 'absolute', left: 0, top: 48, width: LANE_WIDTH, height: LANE_HEIGHT, ...enter(frame, 40, 30)}}
         >
-          {renderLane(LANES[0], 40, <SoftHighlight color={C.ochre}>未写“痛苦”仍应排除；只排供述不排辩解</SoftHighlight>)}
+          {renderLane(LANES[0], 40, <SoftHighlight color={C.ochre}>未写“痛苦”仍应排除 · 不含辩解</SoftHighlight>)}
         </div>
 
         <div
@@ -856,7 +817,7 @@ export const IntentionalConfessionRoutesScene: React.FC = () => {
           {renderLane(
             LANES[1],
             80,
-            <ExternalNegation color={C.vermilionInk}>未写“痛苦”不排除；损害非法权益的威胁、引诱欺骗也不排除</ExternalNegation>,
+            <ExternalNegation color={C.vermilionInk}>未写“痛苦”则无需排除</ExternalNegation>,
           )}
         </div>
 
@@ -864,7 +825,7 @@ export const IntentionalConfessionRoutesScene: React.FC = () => {
           data-final-knowledge="detention-route"
           style={{position: 'absolute', left: 914, top: 48, width: LANE_WIDTH, height: LANE_HEIGHT, ...enter(frame, 120, 30)}}
         >
-          {renderLane(LANES[2], 120, <SoftHighlight color={C.ochre}>只要非法限制人身自由，所获供述即应排除</SoftHighlight>)}
+          {renderLane(LANES[2], 120, <SoftHighlight color={C.ochre}>典型：法定讯问场所之外讯问</SoftHighlight>)}
         </div>
 
         <div
@@ -875,7 +836,7 @@ export const IntentionalConfessionRoutesScene: React.FC = () => {
             LANES[3],
             160,
             <div data-final-knowledge="repetition-exception">
-              <SoftHighlight color={C.pine}>例外：更换侦查人员后自愿供述，或告知权利后自愿供述的，无需排除</SoftHighlight>
+              <SoftHighlight color={C.pine}>例外：更换侦查人员 / 告知权利后自愿供述</SoftHighlight>
             </div>,
           )}
         </div>
@@ -890,9 +851,10 @@ export const IntentionalConfessionRoutesScene: React.FC = () => {
               <span style={{fontSize: 30, fontWeight: 950, color: C.ochreInk, lineHeight: 1.2}}>证人证言、被害人陈述</span>
               <Chip color={C.ochre} label="无需痛苦" style={{marginLeft: 'auto'}} />
             </div>
-            <div style={{fontSize: 22, lineHeight: 1.45, color: C.ink, marginBottom: 10}}>
-              采用<SoftHighlight color={C.ochre}>暴力、威胁以及非法限制人身自由</SoftHighlight>
-              等非法方法收集的，应当予以排除。
+            <div style={{display: 'flex', gap: 10, justifyContent: 'center', marginBottom: 12}}>
+              <Chip color={C.ochre} label="暴力" />
+              <Chip color={C.ochre} label="威胁" />
+              <Chip color={C.ochre} label="非法限制人身自由" />
             </div>
             <div style={{display: 'flex', justifyContent: 'center'}}>
               <Stamp color={C.ochre} ink={C.ochreInk} label="应当予以排除" soft={C.ochreSoft} />
@@ -910,9 +872,21 @@ export const IntentionalConfessionRoutesScene: React.FC = () => {
               <span style={{fontSize: 30, fontWeight: 950, color: C.cobaltInk, lineHeight: 1.2}}>物证、书证</span>
               <Chip color={C.cobalt} label="可补正" style={{marginLeft: 'auto'}} />
             </div>
-            <div style={{fontSize: 22, lineHeight: 1.45, color: C.ink, marginBottom: 8}}>
-              收集程序<ThinUnderline color={C.cobalt}>不符合法定程序</ThinUnderline>，可能严重影响司法公正，且
-              <ThinUnderline color={C.cobalt}>不能补正或者作出合理解释</ThinUnderline>的，应当予以排除。
+            <div
+              style={{
+                display: 'flex',
+                gap: 8,
+                justifyContent: 'center',
+                alignItems: 'center',
+                marginBottom: 10,
+                flexWrap: 'wrap',
+              }}
+            >
+              <Chip color={C.cobalt} label="程序违法" />
+              <span style={{fontSize: 22, fontWeight: 900, color: C.cobaltInk}}>＋</span>
+              <Chip color={C.cobalt} label="严重影响司法公正" />
+              <span style={{fontSize: 22, fontWeight: 900, color: C.cobaltInk}}>＋</span>
+              <Chip color={C.cobalt} label="不能补正或解释" />
             </div>
             <div style={{display: 'flex', justifyContent: 'center'}}>
               <Stamp color={C.cobalt} ink={C.cobaltInk} label="应当予以排除" soft={C.cobaltSoft} />
@@ -945,9 +919,9 @@ export const IntentionalConfessionRoutesScene: React.FC = () => {
             <span style={{fontSize: 26, fontWeight: 950, color: C.slate, lineHeight: 1.2}}>不适用排非规则</span>
           </div>
           <div style={{display: 'flex', gap: 22, fontSize: 22, lineHeight: 1.4, color: C.slate}}>
-            <span>① 以“引诱、欺骗”方式获取的供述</span>
-            <span>② 以损害非法权益相威胁获取的供述</span>
-            <span>③ 被告人自行编造的虚假供述</span>
+            <span>① 引诱、欺骗所得供述</span>
+            <span>② 损害非法权益的威胁所得供述</span>
+            <span>③ 自行编造的虚假供述</span>
           </div>
         </div>
       </div>
@@ -1058,9 +1032,8 @@ export const CorrectionForkGateScene: React.FC = () => {
               <Chip color={C.ochre} label="补正或者作出合理解释" />
             </div>
 
-            <div style={{fontSize: 22, lineHeight: 1.5, color: C.ink, marginBottom: 10}}>
-              两类证据都要先过补正台：能<SoftHighlight color={C.pine}>补正或者作出合理解释</SoftHighlight>的，可以不予排除；
-              <ThinUnderline color={C.vermilion}>不能补正或者解释</ThinUnderline>的，应当依法排除。
+            <div style={{fontSize: 23, lineHeight: 1.4, fontWeight: 700, color: C.ink, marginBottom: 10}}>
+              分流标准：能否<SoftHighlight color={C.pine}>补正或者作出合理解释</SoftHighlight>
             </div>
 
             <div
@@ -1077,7 +1050,7 @@ export const CorrectionForkGateScene: React.FC = () => {
             >
               <SpecimenChip color={C.ochre} icon={ClipboardList} label="瑕疵检材" soft={C.ochreSoft} />
               <span style={{fontSize: 22, lineHeight: 1.4, color: C.ink}}>
-                如询问笔录仅一名侦查人员签名、辨认未邀请见证人、电子数据未以封存状态移送
+                笔录仅一人签名 · 辨认未邀见证人 · 电子数据未封存
               </span>
               <span
                 style={{
@@ -1101,18 +1074,16 @@ export const CorrectionForkGateScene: React.FC = () => {
           style={{position: 'absolute', left: 1220, top: 108, width: 580, height: 280, ...enter(frame, 140, 30)}}
         >
           <Panel accent={C.vermilion} height={280} left={0} top={0} width={580}>
-            <div style={{display: 'flex', alignItems: 'center', gap: 10, marginBottom: 12}}>
+            <div style={{display: 'flex', alignItems: 'center', gap: 10, marginBottom: 14}}>
               <Ban size={32} strokeWidth={2.6} style={{color: C.vermilionInk, flexShrink: 0}} />
               <span style={{fontSize: 28, fontWeight: 950, color: C.vermilionInk, lineHeight: 1.2}}>没有补正通道</span>
             </div>
-            <div style={{fontSize: 22, lineHeight: 1.5}}>
-              <ExternalNegation color={C.vermilionInk}>
-                故意非法与严重程序失误的证据，直接排除，不存在补正机会。
-              </ExternalNegation>
+            <div style={{display: 'flex', gap: 10, marginBottom: 16}}>
+              <Chip color={C.vermilion} label="故意非法" solid />
+              <Chip color={C.vermilion} label="严重失误" solid />
             </div>
-            <div style={{fontSize: 22, lineHeight: 1.5, color: C.ink, marginTop: 12}}>
-              只有<SoftHighlight color={C.cobalt}>轻微错误（瑕疵证据）</SoftHighlight>
-              与物证、书证的程序违法，才谈得上补正。
+            <div style={{fontSize: 22, lineHeight: 1.5}}>
+              <ExternalNegation color={C.vermilionInk}>直接排除，不存在补正机会</ExternalNegation>
             </div>
           </Panel>
         </div>
@@ -1129,8 +1100,8 @@ export const CorrectionForkGateScene: React.FC = () => {
               <CheckCircle2 size={36} strokeWidth={2.6} style={{color: C.pineInk, flexShrink: 0}} />
               <span style={{fontSize: 32, fontWeight: 950, color: C.pineInk, lineHeight: 1.2}}>可以作为定案根据</span>
             </div>
-            <div style={{fontSize: 22, lineHeight: 1.45, color: C.ink, marginBottom: 12}}>
-              <ThinUnderline color={C.pine}>能补正或者作出合理解释</ThinUnderline>的，证据被救回，仍可作为定案根据。
+            <div style={{fontSize: 23, lineHeight: 1.4, fontWeight: 700, color: C.ink, marginBottom: 14}}>
+              <ThinUnderline color={C.pine}>能补正或解释</ThinUnderline> → 瑕疵消除，仍作定案根据
             </div>
             <div
               data-stateful-terminal="defective-evidence-card"
@@ -1163,9 +1134,8 @@ export const CorrectionForkGateScene: React.FC = () => {
               <Ban size={36} strokeWidth={2.6} style={{color: C.vermilionInk, flexShrink: 0}} />
               <span style={{fontSize: 32, fontWeight: 950, color: C.vermilionInk, lineHeight: 1.2}}>应当依法排除</span>
             </div>
-            <div style={{fontSize: 22, lineHeight: 1.45, color: C.ink, marginBottom: 12}}>
-              <ThinUnderline color={C.vermilion}>不能补正或者作出合理解释</ThinUnderline>
-              的，证据落入排除终点，不得作为定案根据。
+            <div style={{fontSize: 23, lineHeight: 1.4, fontWeight: 700, color: C.ink, marginBottom: 14}}>
+              <ThinUnderline color={C.vermilion}>不能补正或解释</ThinUnderline> → 不得作为定案根据
             </div>
             <div
               data-audit-boundary="true"
