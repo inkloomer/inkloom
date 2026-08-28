@@ -1,0 +1,89 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 4,
+  "playerControlSafeBottom": 176,
+  "scenes": [
+    {
+      "id": "dispute-premise",
+      "export": "DisputePremiseScene",
+      "layout": "axis-question-with-qualifier-gates",
+      "anchor": "boundary",
+      "grammar": ["definitional-gate", "qualifier-scope", "concession-contrast"],
+      "textTreatments": ["label-block", "soft-highlight", "thin-underline", "external-negation"],
+      "focalChannels": ["icon", "enclosure", "annotation", "spatial", "contrast"],
+      "tokens": ["HelpCircle", "Ban", "Check"],
+      "finalKnowledge": [
+        "question-plaque",
+        "qualifier-conceptual",
+        "qualifier-necessary",
+        "qualifier-warning",
+        "concession-content-link",
+        "concession-conceptual-contingent",
+        "focus-conclusion"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "positivist-camp",
+      "export": "PositivistCampScene",
+      "layout": "detached-systems-with-mirrored-school-lanes",
+      "anchor": "comparison-axis",
+      "grammar": ["criterion-weighting", "school-contrast", "separate-systems"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "stamp"],
+      "focalChannels": ["icon", "spatial", "contrast", "enclosure", "annotation"],
+      "tokens": ["FileText", "HeartHandshake", "ScrollText", "Users"],
+      "finalKnowledge": [
+        "positivist-verdict",
+        "law-system-block",
+        "moral-system-block",
+        "detach-note",
+        "analytic-school-lane",
+        "sociology-school-lane",
+        "positivist-mnemonic"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "non-positivist-camp",
+      "export": "NonPositivistCampScene",
+      "layout": "moral-containment-with-school-pair",
+      "anchor": "role-pair",
+      "grammar": ["moral-containment", "element-count-contrast", "school-pair"],
+      "textTreatments": ["label-block", "soft-highlight", "stamp", "chip", "external-negation"],
+      "focalChannels": ["icon", "enclosure", "motion", "contrast", "annotation"],
+      "tokens": ["Landmark", "HeartHandshake", "FileText", "Feather", "Layers", "Ban"],
+      "finalKnowledge": [
+        "non-positivist-verdict",
+        "moral-containment-frame",
+        "law-subordinate-token",
+        "detach-negation",
+        "classical-natural-law-card",
+        "third-road-card",
+        "pair-divergence-note",
+        "non-positivist-mnemonic"
+      ],
+      "statefulObjects": ["law-subordinate-morality"]
+    },
+    {
+      "id": "elements-evil-law",
+      "export": "ElementsEvilLawScene",
+      "layout": "element-lexicon-with-verdict-pair",
+      "anchor": "typographic-sequence",
+      "grammar": ["element-lexicon", "moral-standard-isolation", "verdict-pair"],
+      "textTreatments": ["label-block", "chip", "stamp", "thin-underline", "external-negation"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["Landmark", "Users", "HeartHandshake", "Key"],
+      "finalKnowledge": [
+        "lexicon-heading",
+        "element-authority",
+        "element-effectiveness",
+        "element-content-correct",
+        "discriminator-key",
+        "evil-law-positivist",
+        "evil-law-non-positivist",
+        "final-mnemonic"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}
