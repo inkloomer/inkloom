@@ -1,0 +1,70 @@
+{
+  "animationId": "evidence-exclusion-lattice",
+  "compositionId": "EvidenceExclusionLattice",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-28T13:44:52.580Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 449,
+      "frameCount": 225,
+      "id": "unlawful-grading",
+      "number": "01",
+      "startFrame": 0,
+      "title": "三重筛格",
+      "durationMs": 7500,
+      "file": "unlawful-grading.avif",
+      "fileSize": 645864,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "829d9c376a5990c7f4f9f95e97055f151ee80e317d258c5610b8dda4edd79110",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "26fb4d9b8065f22828a28279104758d8a0005ec45b63aadbb485b27073f3b9ce"
+    },
+    {
+      "endFrame": 1169,
+      "frameCount": 360,
+      "id": "intentional-confession-routes",
+      "number": "02",
+      "startFrame": 450,
+      "title": "供述四路",
+      "durationMs": 12000,
+      "file": "intentional-confession-routes.avif",
+      "fileSize": 600203,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "4737ca2f850d4a6eb679c7dea5559d3f7e18bd22d16e854a3e61f1118ae155d6",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "26fb4d9b8065f22828a28279104758d8a0005ec45b63aadbb485b27073f3b9ce"
+    },
+    {
+      "endFrame": 1589,
+      "frameCount": 210,
+      "id": "correction-fork-gate",
+      "number": "03",
+      "startFrame": 1170,
+      "title": "补正岔路",
+      "durationMs": 7000,
+      "file": "correction-fork-gate.avif",
+      "fileSize": 537448,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "dba630c46fcb6ed830ce673ec2e20e1f7007a5c6919e0b9b8d1cb912e8ef66fb",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "26fb4d9b8065f22828a28279104758d8a0005ec45b63aadbb485b27073f3b9ce"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "26fb4d9b8065f22828a28279104758d8a0005ec45b63aadbb485b27073f3b9ce",
+  "targetFps": 30,
+  "totalFileSize": 1783515
+}
