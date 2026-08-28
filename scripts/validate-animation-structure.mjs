@@ -6,7 +6,7 @@ const ANIMATIONS_ROOT = path.join(PROJECT_ROOT, 'src', 'animations');
 const BASELINE_PATH = path.join(import.meta.dirname, 'animation-style-baseline.json');
 const ALLOWED_CHANNELS = new Set(['annotation', 'connector', 'contrast', 'enclosure', 'icon', 'locator', 'motion', 'spatial']);
 const ALLOWED_ANCHORS = new Set(['boundary', 'comparison-axis', 'concept-icon', 'document-fork', 'flow-path', 'flow-target', 'role-pair', 'timeline-gate', 'typographic-sequence']);
-const ALLOWED_TEXT_TREATMENTS = new Set(['external-negation', 'label-block', 'soft-highlight', 'stamp', 'thin-underline']);
+const ALLOWED_TEXT_TREATMENTS = new Set(['chip', 'external-negation', 'label-block', 'soft-highlight', 'stamp', 'thin-underline']);
 const MINIMUM_PLAYER_CONTROL_SAFE_BOTTOM = 160;
 
 const isFile = async (filePath) => {

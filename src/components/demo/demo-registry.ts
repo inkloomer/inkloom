@@ -86,6 +86,8 @@ import {DURATION_FRAMES as THIRD_PARTY_REMEDY_DURATION_FRAMES, FPS as THIRD_PART
 import {DURATION_FRAMES as APPEAL_REVIEW_DURATION_FRAMES, FPS as APPEAL_REVIEW_FPS} from '../../animations/civil-procedure/20/appeal-review-decision-map/remotion/storyboard';
 import {DURATION_FRAMES as PENALTY_ADJUSTMENT_DURATION_FRAMES, FPS as PENALTY_ADJUSTMENT_FPS} from '../../animations/civil-procedure/32/penalty-adjustment-procedure/remotion/storyboard';
 import {DURATION_FRAMES as CONTRACT_BOOK_DURATION_FRAMES, FPS as CONTRACT_BOOK_FPS} from '../../animations/civil-law/contracts/contract-book-atlas/remotion/storyboard';
+import {LegalInterpretation} from '../../animations/theoretical-law/17/legal-interpretation/remotion/LegalInterpretation';
+import {DURATION_FRAMES as LEGAL_INTERPRETATION_DURATION_FRAMES, FPS as LEGAL_INTERPRETATION_FPS} from '../../animations/theoretical-law/17/legal-interpretation/remotion/storyboard';
 import {DURATION_FRAMES as FIGHT_DURATION_FRAMES, FPS as FIGHT_FPS} from '../../animations/criminal/22/fight-defense-diagram/remotion/storyboard';
 import {DURATION_FRAMES as ALTITUDE_DURATION_FRAMES, FPS as ALTITUDE_FPS} from '../../animations/criminal/22/high-altitude-throwing-diagram/remotion/storyboard';
 import {DURATION_FRAMES as THEFT_DURATION_FRAMES, FPS as THEFT_FPS} from '../../animations/criminal/19/theft-mistake-analysis/remotion/storyboard';
@@ -158,6 +160,7 @@ export const STYLE_DEMOS = [
   {id: 'civil-procedure-20-appeal-review-decision-map', slug: 'appeal-review-decision-map', title: '上诉棱镜编排', direction: 'Appellate Editorial Prism', component: AppealReviewDecisionMap, href: '/inkloom/objective/civil-procedure/20/appeal-review-decision-map/', durationInFrames: APPEAL_REVIEW_DURATION_FRAMES, fps: APPEAL_REVIEW_FPS},
   {id: 'civil-law-contract-book-atlas', slug: 'contract-book-atlas', title: '条文折页', direction: 'Statute Folio', component: ContractBookAtlas, href: '/inkloom/objective/civil-law/contracts/contract-book-atlas/', durationInFrames: CONTRACT_BOOK_DURATION_FRAMES, fps: CONTRACT_BOOK_FPS},
   {id: 'civil-procedure-32-penalty-adjustment-procedure', slug: 'penalty-adjustment-procedure', title: '裁判控制台', direction: 'Judicial Control Desk', component: PenaltyAdjustmentProcedure, href: '/inkloom/objective/civil-procedure/32/penalty-adjustment-procedure/', durationInFrames: PENALTY_ADJUSTMENT_DURATION_FRAMES, fps: PENALTY_ADJUSTMENT_FPS},
+  {id: 'theoretical-law-17-legal-interpretation', slug: 'legal-interpretation', title: '宋式藻井图', direction: 'Song Caisson Paintwork', component: LegalInterpretation, href: '/inkloom/objective/theoretical-law/17/legal-interpretation/', durationInFrames: LEGAL_INTERPRETATION_DURATION_FRAMES, fps: LEGAL_INTERPRETATION_FPS},
   {id: 'criminal-procedure-07-evidence-exclusion-lattice', slug: 'evidence-exclusion-lattice', title: '证物分级检验柜', direction: 'Exclusion Grading Lattice', component: EvidenceExclusionLattice, href: '/inkloom/objective/criminal-procedure/07/evidence-exclusion-lattice/', durationInFrames: EVIDENCE_EXCLUSION_DURATION_FRAMES, fps: EVIDENCE_EXCLUSION_FPS},
   ...COMMERCIAL_LAW_STYLE_DEMOS,
 ] as const satisfies readonly DemoDefinition[];
@@ -216,6 +219,7 @@ const DEMO_ADDED_AT: Record<(typeof STYLE_DEMOS)[number]['id'], string> = {
   'civil-procedure-20-appeal-review-decision-map': '2026-08-05T21:15:25+08:00',
   'civil-law-contract-book-atlas': '2026-08-08T18:17:31+08:00',
   'civil-procedure-32-penalty-adjustment-procedure': '2026-08-08T18:17:31+08:00',
+  'theoretical-law-17-legal-interpretation': '2026-08-28T19:56:14+08:00',
   'criminal-procedure-07-evidence-exclusion-lattice': '2026-08-28T20:10:00+08:00',
   ...COMMERCIAL_LAW_DEMO_ADDED_AT,
 };

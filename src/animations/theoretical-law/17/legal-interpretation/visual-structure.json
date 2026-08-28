@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 5,
+  "playerControlSafeBottom": 176,
+  "scenes": [
+    {
+      "id": "method-sources",
+      "export": "MethodSourcesScene",
+      "layout": "six-source-bay-grid",
+      "anchor": "concept-icon",
+      "grammar": ["source-of-meaning", "method-identification", "contrast"],
+      "textTreatments": ["label-block", "soft-highlight", "thin-underline", "chip"],
+      "focalChannels": ["icon", "enclosure", "annotation", "spatial", "contrast"],
+      "tokens": ["FileText", "ArrowRight", "ALargeSmall", "ScrollText", "History", "Globe", "Network", "Scale"],
+      "finalKnowledge": [
+        "wenyi-bay",
+        "legislator-purpose-bay",
+        "historical-bay",
+        "comparative-bay",
+        "systematic-bay",
+        "objective-purpose-bay",
+        "marker-focus-note"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "hermeneutic-circle",
+      "export": "HermeneuticCircleScene",
+      "layout": "cycle-ring-with-role-pair",
+      "anchor": "flow-path",
+      "grammar": ["hermeneutic-cycle", "systematic-relation", "interpreter-role"],
+      "textTreatments": ["soft-highlight", "stamp", "external-negation", "label-block"],
+      "focalChannels": ["icon", "motion", "enclosure", "annotation", "spatial"],
+      "tokens": ["Ban", "Network", "FileText", "Users", "Gavel", "ArrowRight"],
+      "finalKnowledge": [
+        "cycle-station-provision",
+        "cycle-station-system",
+        "cycle-station-meaning",
+        "cycle-medallion-systematic",
+        "negation-isolated-reading",
+        "public-reader-role",
+        "legal-professional-role"
+      ],
+      "statefulObjects": ["provision-into-system"]
+    },
+    {
+      "id": "rank-order",
+      "export": "RankOrderScene",
+      "layout": "descending-rank-ladder",
+      "anchor": "timeline-gate",
+      "grammar": ["priority-order", "override", "mnemonic"],
+      "textTreatments": ["label-block", "stamp", "thin-underline", "chip"],
+      "focalChannels": ["spatial", "annotation", "icon", "enclosure", "motion"],
+      "tokens": ["ArrowDownRight", "Quote", "Repeat2", "Ban", "ArrowRight", "Layers", "Scale"],
+      "finalKnowledge": [
+        "rank-step-1",
+        "rank-step-2",
+        "rank-step-3",
+        "rank-step-4",
+        "rank-step-5",
+        "rank-step-6",
+        "mnemonic-plaque",
+        "override-bracket",
+        "practice-alternation",
+        "practice-note"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "institutional-system",
+      "export": "InstitutionalSystemScene",
+      "layout": "three-branch-authority-fork",
+      "anchor": "document-fork",
+      "grammar": ["institutional-competence", "application-scope", "filing-duty"],
+      "textTreatments": ["label-block", "soft-highlight", "external-negation", "chip"],
+      "focalChannels": ["icon", "connector", "enclosure", "contrast", "annotation"],
+      "tokens": ["FileQuestion", "Landmark", "Building2", "Gavel", "Archive"],
+      "finalKnowledge": [
+        "legislative-branch",
+        "administrative-branch",
+        "judicial-branch",
+        "filing-terminal"
+      ],
+      "statefulObjects": ["judicial-interpretation-filing"]
+    },
+    {
+      "id": "formal-boundary",
+      "export": "FormalBoundaryScene",
+      "layout": "validity-boundary-registers",
+      "anchor": "boundary",
+      "grammar": ["formal-validity", "creative-vs-applicative", "review-channel"],
+      "textTreatments": ["stamp", "external-negation", "thin-underline", "label-block", "chip"],
+      "focalChannels": ["contrast", "enclosure", "icon", "annotation", "spatial"],
+      "tokens": ["Check", "Ban", "Sparkles", "ShieldAlert", "ClipboardList", "MessageSquareText"],
+      "finalKnowledge": [
+        "formal-trio",
+        "informal-negation",
+        "creative-legislative",
+        "applicative-administrative-judicial",
+        "review-request",
+        "review-suggestion"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}
