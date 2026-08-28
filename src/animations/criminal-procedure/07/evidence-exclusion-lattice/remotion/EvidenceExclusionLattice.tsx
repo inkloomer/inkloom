@@ -1006,7 +1006,14 @@ export const CorrectionForkGateScene: React.FC = () => {
           data-final-knowledge="correction-bench-rule"
           style={{position: 'absolute', left: 0, top: 108, width: 1180, height: 280, ...enter(frame, 116, 30)}}
         >
-          <Panel accent={C.ochre} height={280} left={0} top={0} width={1180}>
+          <Panel
+            accent={C.ochre}
+            height={280}
+            left={0}
+            style={{display: 'flex', flexDirection: 'column', justifyContent: 'center'}}
+            top={0}
+            width={1180}
+          >
             <div style={{display: 'flex', alignItems: 'center', gap: 12, marginBottom: 12}}>
               <Wrench
                 size={36}
@@ -1067,7 +1074,14 @@ export const CorrectionForkGateScene: React.FC = () => {
           data-final-knowledge="no-correction-channel"
           style={{position: 'absolute', left: 1220, top: 108, width: 580, height: 280, ...enter(frame, 140, 30)}}
         >
-          <Panel accent={C.vermilion} height={280} left={0} top={0} width={580}>
+          <Panel
+            accent={C.vermilion}
+            height={280}
+            left={0}
+            style={{display: 'flex', flexDirection: 'column', justifyContent: 'center'}}
+            top={0}
+            width={580}
+          >
             <div style={{display: 'flex', alignItems: 'center', gap: 10, marginBottom: 14}}>
               <Ban size={32} strokeWidth={2.6} style={{color: C.vermilionInk, flexShrink: 0}} />
               <span style={{fontSize: 28, fontWeight: 950, color: C.vermilionInk, lineHeight: 1.2}}>没有补正通道</span>
@@ -1089,7 +1103,14 @@ export const CorrectionForkGateScene: React.FC = () => {
           data-final-knowledge="admissible-terminal"
           style={{position: 'absolute', left: 0, top: 420, width: 880, height: 342, ...enter(frame, 210, 30)}}
         >
-          <Panel accent={C.pine} height={342} left={0} top={0} width={880}>
+          <Panel
+            accent={C.pine}
+            height={342}
+            left={0}
+            style={{display: 'flex', flexDirection: 'column', justifyContent: 'center'}}
+            top={0}
+            width={880}
+          >
             <div style={{display: 'flex', alignItems: 'center', gap: 12, marginBottom: 12}}>
               <CheckCircle2 size={36} strokeWidth={2.6} style={{color: C.pineInk, flexShrink: 0}} />
               <span style={{fontSize: 32, fontWeight: 950, color: C.pineInk, lineHeight: 1.2}}>可以作为定案根据</span>
@@ -1123,7 +1144,14 @@ export const CorrectionForkGateScene: React.FC = () => {
           data-final-knowledge="excluded-terminal"
           style={{position: 'absolute', left: 920, top: 420, width: 880, height: 342, ...enter(frame, 232, 30)}}
         >
-          <Panel accent={C.vermilion} height={342} left={0} top={0} width={880}>
+          <Panel
+            accent={C.vermilion}
+            height={342}
+            left={0}
+            style={{display: 'flex', flexDirection: 'column', justifyContent: 'center'}}
+            top={0}
+            width={880}
+          >
             <div style={{display: 'flex', alignItems: 'center', gap: 12, marginBottom: 12}}>
               <Ban size={36} strokeWidth={2.6} style={{color: C.vermilionInk, flexShrink: 0}} />
               <span style={{fontSize: 32, fontWeight: 950, color: C.vermilionInk, lineHeight: 1.2}}>应当依法排除</span>
