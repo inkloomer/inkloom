@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "playerControlSafeBottom": 168,
+  "scenes": [
+    {
+      "id": "piercing-grounds-chain",
+      "export": "PiercingGroundsScene",
+      "layout": "forge-strike-sequence",
+      "anchor": "flow-path",
+      "grammar": ["causal-strike-chain", "liability-linkage"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "motion", "spatial"],
+      "tokens": ["Users", "Building2", "Hammer", "Link", "HandCoins", "GraduationCap"],
+      "finalKnowledge": [
+        "pierce-abuse-act",
+        "pierce-company-insolvent",
+        "pierce-hammer-strike",
+        "pierce-joint-liability",
+        "pierce-exam-verdict"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "suit-structure-roster",
+      "export": "SuitStructureScene",
+      "layout": "three-roster-comparison",
+      "anchor": "document-fork",
+      "grammar": ["roster-variant-comparison", "clarification-gate"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["Megaphone", "FileX", "Users", "Building2", "HandCoins"],
+      "finalKnowledge": [
+        "suit-clarify-rule",
+        "suit-refuse-dismiss",
+        "suit-company-third",
+        "suit-joint-defendants"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "triangle-pierce-map",
+      "export": "TrianglePierceScene",
+      "layout": "hub-two-vaults-triangle",
+      "anchor": "concept-icon",
+      "grammar": ["hub-spoke-pierce", "exception-exclusion"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["Hammer", "Shuffle", "Link", "Building2", "Users", "GraduationCap"],
+      "finalKnowledge": [
+        "triangle-overreach-hub",
+        "triangle-fund-mixing",
+        "triangle-innocent-shareholder",
+        "triangle-joint-result",
+        "triangle-recap-reverse"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

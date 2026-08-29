@@ -1,0 +1,27 @@
+{
+  "directionId": "locksmith-chain-forge-atelier",
+  "family": "locksmith-chain-forge",
+  "palette": "iron charcoal forge + ember strike orange + brass fittings + chalk lines + rice paper tags + seal red",
+  "typography": "forge-stamped headlines, roster desk labels, square ember verdict stamps, dashed park-bench seat rules",
+  "composition": "a strike sequence from abuse to insolvency to joint liability, a three-desk defendant-roster comparison, and a hub-two-vaults triangle piercing map",
+  "surface": "dark iron forge walls with rice-paper rosters and chain links; no glossy panels",
+  "motion": "hammer strikes advance the causal chain, roster seats fill in argument order, chain links snap across the triangle; no idle loops",
+  "transition": "the forge wall persists while each scene re-stages the same bench for a new question",
+  "conceptTokens": {
+    "股东": "Users",
+    "公司": "Building2",
+    "债权人": "HandCoins",
+    "连带": "Link",
+    "刺破": "Hammer",
+    "财务混同": "Shuffle",
+    "释明": "Megaphone",
+    "驳回起诉": "FileX",
+    "真题": "GraduationCap"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/commercial-economic-law/01/veil-piercing-forge/",
+    "title": "锁匠链环锻坊"
+  }
+}

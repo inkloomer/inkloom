@@ -1,0 +1,70 @@
+{
+  "animationId": "veil-piercing-forge",
+  "compositionId": "VeilPiercingForge",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-29T20:36:55.099Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 299,
+      "frameCount": 300,
+      "id": "piercing-grounds-chain",
+      "number": "01",
+      "startFrame": 0,
+      "title": "锤穿面纱：滥用换来连带",
+      "durationMs": 10000,
+      "file": "piercing-grounds-chain.avif",
+      "fileSize": 581377,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "0db38b40e7059f1c5ba0b89027fbe43fd1985f71a18eefc7f1c6b8e08fe6f08c",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "649164883c0d5359ff4a32e1ac977e0bc39464703262645c3da837bc87dec9bc"
+    },
+    {
+      "endFrame": 629,
+      "frameCount": 330,
+      "id": "suit-structure-roster",
+      "number": "02",
+      "startFrame": 300,
+      "title": "被告名单怎么摆：释明而不代劳",
+      "durationMs": 11000,
+      "file": "suit-structure-roster.avif",
+      "fileSize": 543793,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "d18f055f615cd8bd856c87aaa5bafe6b39213aaa5620a4dda07edc71ca5cee89",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "649164883c0d5359ff4a32e1ac977e0bc39464703262645c3da837bc87dec9bc"
+    },
+    {
+      "endFrame": 929,
+      "frameCount": 300,
+      "id": "triangle-pierce-map",
+      "number": "03",
+      "startFrame": 630,
+      "title": "三角刺破：一条链锁三扇门",
+      "durationMs": 10000,
+      "file": "triangle-pierce-map.avif",
+      "fileSize": 493432,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "44447b68f786995109aa4be4cd3d77f8f6f2511df1ffac37ec0895e8c24a3cfd",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "649164883c0d5359ff4a32e1ac977e0bc39464703262645c3da837bc87dec9bc"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "649164883c0d5359ff4a32e1ac977e0bc39464703262645c3da837bc87dec9bc",
+  "targetFps": 30,
+  "totalFileSize": 1618602
+}
