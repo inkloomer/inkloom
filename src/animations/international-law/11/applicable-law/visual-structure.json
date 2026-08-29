@@ -1,0 +1,259 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 4,
+  "scenes": [
+    {
+      "id": "autonomy-closest",
+      "export": "AutonomyClosestScene",
+      "layout": "dual-principle-ledger-spread",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "autonomy-valid-only-if-law-allows",
+        "closest-connection-is-catch-all-fallback"
+      ],
+      "textTreatments": [
+        "label-block",
+        "soft-highlight",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "locator"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "autonomy-gate-law-allows",
+        "autonomy-no-actual-contact-limit",
+        "autonomy-deadline-first-instance",
+        "autonomy-treaty-object",
+        "autonomy-conduct-mode",
+        "closest-connection-catch-all"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "subjects-agency",
+      "export": "SubjectsAgencyScene",
+      "layout": "three-desk-personal-status-bench",
+      "anchor": "role-pair",
+      "grammar": [
+        "natural-person-habitual-residence-rule",
+        "legal-person-registration-main-business-rule",
+        "agency-splits-internal-external"
+      ],
+      "textTreatments": [
+        "label-block",
+        "soft-highlight",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "locator"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "natural-person-habitual-residence",
+        "natural-person-exception-conduct-place",
+        "legal-person-registration-main-business",
+        "legal-person-three-elements",
+        "limitation-follows-foundation",
+        "agency-internal-external",
+        "trust-autonomy-property-place"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "marriage",
+      "export": "MarriageScene",
+      "layout": "marriage-fork-ledger",
+      "anchor": "document-fork",
+      "grammar": [
+        "marriage-ceremony-one-of-many-laws",
+        "divorce-agreement-limited-autonomy",
+        "litigation-divorce-court-law"
+      ],
+      "textTreatments": [
+        "label-block",
+        "soft-highlight",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "connector"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "marriage-ceremony-flexible",
+        "marriage-conditions-order",
+        "divorce-agreement-limited-autonomy",
+        "litigation-divorce-court-law",
+        "spousal-personal-property",
+        "marriage-closest-connection-fallback"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "family-protection",
+      "export": "FamilyProtectionScene",
+      "layout": "weak-party-protection-stair",
+      "anchor": "boundary",
+      "grammar": [
+        "parent-child-support-guardianship-protect-weak",
+        "adoption-procedure-and-applicable-law"
+      ],
+      "textTreatments": [
+        "label-block",
+        "soft-highlight",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "connector"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "parent-child-weak-protection",
+        "support-weak-protection",
+        "guardianship-weak-protection",
+        "adoption-document-mode",
+        "adoption-conditions-overlap",
+        "adoption-effect-dissolution"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "succession-property",
+      "export": "SuccessionPropertyScene",
+      "layout": "succession-property-twin-columns",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "statutory-succession-splits-by-property-type",
+        "will-form-one-of-many-laws",
+        "property-rights-location-rule"
+      ],
+      "textTreatments": [
+        "label-block",
+        "soft-highlight",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "locator"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "statutory-immovable-location",
+        "statutory-movable-habitual-residence",
+        "will-form-flexible",
+        "will-effect-dual-window",
+        "estate-administration-location",
+        "movable-autonomy-then-location",
+        "transport-securities-pledge-exceptions"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "contract-torts",
+      "export": "ContractTortsScene",
+      "layout": "contract-tort-dual-gate",
+      "anchor": "flow-path",
+      "grammar": [
+        "contract-autonomy-then-closest",
+        "consumer-labor-restricted-choice",
+        "tort-autonomy-common-residence-conduct-place"
+      ],
+      "textTreatments": [
+        "label-block",
+        "soft-highlight",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "connector"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "contract-general-rule",
+        "three-chinese-foreign-contracts",
+        "consumer-contract-choice",
+        "labor-contract-forbidden-choice",
+        "tort-general-rule",
+        "product-liability-restricted",
+        "personality-rights-rule",
+        "ip-infringement-court-place"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "enrichment-ip-negotiable",
+      "export": "EnrichmentIpNegotiableScene",
+      "layout": "three-rule-memo-bench",
+      "anchor": "typographic-sequence",
+      "grammar": [
+        "unjust-enrichment-autonomy-common-residence-place",
+        "ip-ownership-protection-place",
+        "instrument-conduct-place"
+      ],
+      "textTreatments": [
+        "label-block",
+        "soft-highlight",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "connector"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "unjust-enrichment-rule",
+        "ip-ownership-content",
+        "ip-transfer-license",
+        "ip-infringement-limited-autonomy",
+        "instrument-conduct-place",
+        "instrument-remission-draw-place",
+        "instrument-others-pay-place"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "maritime-aviation",
+      "export": "MaritimeAviationScene",
+      "layout": "maritime-aviation-harbor-board",
+      "anchor": "role-pair",
+      "grammar": [
+        "ship-aircraft-property-flags",
+        "collision-routes-by-waters",
+        "general-average-adjustment-place"
+      ],
+      "textTreatments": [
+        "label-block",
+        "soft-highlight",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "connector"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "ship-property-flag-state",
+        "priority-court-place",
+        "aircraft-property-registration",
+        "collision-autonomy-then-flag",
+        "collision-territorial-public-sea",
+        "oil-pollution-damage-place",
+        "general-average-adjustment-contribution"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

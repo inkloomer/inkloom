@@ -1,0 +1,16 @@
+{
+  "directionId": "emerald-ledger-hall",
+  "family": "emerald-ledger-hall",
+  "palette": "deep emerald ledger, cream rulings, jade principle columns, gold maxim stamps, persimmon exception gates, slate route lanes",
+  "typography": "WenKai ledger headings with solid gold seal discs, jade ink highlights and thin underlines",
+  "composition": "ledger hall with eight-station rail and columned rule benches split by relation type",
+  "surface": "emerald panels with vertical ledger rulings, no light cards",
+  "motion": "bench entries by relation with stamped maxim verdicts",
+  "transition": "content swap under a persistent ledger frame and station rail",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/international-law/11/applicable-law/",
+    "title": "翡翠台账馆"
+  }
+}
