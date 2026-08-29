@@ -92,6 +92,8 @@ import {DURATION_FRAMES as PENALTY_ADJUSTMENT_DURATION_FRAMES, FPS as PENALTY_AD
 import {DURATION_FRAMES as CONTRACT_BOOK_DURATION_FRAMES, FPS as CONTRACT_BOOK_FPS} from '../../animations/civil-law/contracts/contract-book-atlas/remotion/storyboard';
 import {LegalInterpretation} from '../../animations/theoretical-law/17/legal-interpretation/remotion/LegalInterpretation';
 import {DURATION_FRAMES as LEGAL_INTERPRETATION_DURATION_FRAMES, FPS as LEGAL_INTERPRETATION_FPS} from '../../animations/theoretical-law/17/legal-interpretation/remotion/storyboard';
+import {ConceptOfLawDispute} from '../../animations/theoretical-law/01/concept-of-law-dispute/remotion/ConceptOfLawDispute';
+import {DURATION_FRAMES as CONCEPT_OF_LAW_DURATION_FRAMES, FPS as CONCEPT_OF_LAW_FPS} from '../../animations/theoretical-law/01/concept-of-law-dispute/remotion/storyboard';
 import {DURATION_FRAMES as FIGHT_DURATION_FRAMES, FPS as FIGHT_FPS} from '../../animations/criminal/22/fight-defense-diagram/remotion/storyboard';
 import {DURATION_FRAMES as ALTITUDE_DURATION_FRAMES, FPS as ALTITUDE_FPS} from '../../animations/criminal/22/high-altitude-throwing-diagram/remotion/storyboard';
 import {DURATION_FRAMES as THEFT_DURATION_FRAMES, FPS as THEFT_FPS} from '../../animations/criminal/19/theft-mistake-analysis/remotion/storyboard';
@@ -168,6 +170,7 @@ export const STYLE_DEMOS = [
   {id: 'criminal-procedure-07-evidence-exclusion-lattice', slug: 'evidence-exclusion-lattice', title: '证物分级检验柜', direction: 'Exclusion Grading Lattice', component: EvidenceExclusionLattice, href: '/inkloom/objective/criminal-procedure/07/evidence-exclusion-lattice/', durationInFrames: EVIDENCE_EXCLUSION_DURATION_FRAMES, fps: EVIDENCE_EXCLUSION_FPS},
   {id: 'criminal-procedure-01-procedure-structure-orrery', slug: 'procedure-structure-orrery', title: '黄铜构造星盘', direction: 'Brass Orrery Structure', component: ProcedureStructureOrrery, href: '/inkloom/objective/criminal-procedure/01/procedure-structure-orrery/', durationInFrames: PROCEDURE_STRUCTURE_DURATION_FRAMES, fps: PROCEDURE_STRUCTURE_FPS},
   {id: 'criminal-procedure-02-plea-leniency-caliper', slug: 'plea-leniency-caliper', title: '认罚量尺工坊', direction: 'Maple Caliper Workshop', component: PleaLeniencyCaliper, href: '/inkloom/objective/criminal-procedure/02/plea-leniency-caliper/', durationInFrames: PLEA_LENIENTY_DURATION_FRAMES, fps: PLEA_LENIENTY_FPS},
+  {id: 'theoretical-law-01-concept-of-law-dispute', slug: 'concept-of-law-dispute', title: '漆屏对峙', direction: 'Lacquer Twin-Screen', component: ConceptOfLawDispute, href: '/inkloom/objective/theoretical-law/01/concept-of-law-dispute/', durationInFrames: CONCEPT_OF_LAW_DURATION_FRAMES, fps: CONCEPT_OF_LAW_FPS},
   ...COMMERCIAL_LAW_STYLE_DEMOS,
 ] as const satisfies readonly DemoDefinition[];
 
@@ -229,6 +232,7 @@ const DEMO_ADDED_AT: Record<(typeof STYLE_DEMOS)[number]['id'], string> = {
   'criminal-procedure-07-evidence-exclusion-lattice': '2026-08-28T20:10:00+08:00',
   'criminal-procedure-01-procedure-structure-orrery': '2026-08-28T22:30:00+08:00',
   'criminal-procedure-02-plea-leniency-caliper': '2026-08-29T01:05:00+08:00',
+  'theoretical-law-01-concept-of-law-dispute': '2026-08-28T23:30:00+08:00',
   ...COMMERCIAL_LAW_DEMO_ADDED_AT,
 };
 

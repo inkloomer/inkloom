@@ -8,10 +8,29 @@
       "export": "DisputePremiseScene",
       "layout": "axis-question-with-qualifier-gates",
       "anchor": "boundary",
-      "grammar": ["definitional-gate", "qualifier-scope", "concession-contrast"],
-      "textTreatments": ["label-block", "soft-highlight", "thin-underline", "external-negation"],
-      "focalChannels": ["icon", "enclosure", "annotation", "spatial", "contrast"],
-      "tokens": ["HelpCircle", "Ban", "Check"],
+      "grammar": [
+        "definitional-gate",
+        "qualifier-scope",
+        "concession-contrast"
+      ],
+      "textTreatments": [
+        "label-block",
+        "soft-highlight",
+        "thin-underline",
+        "external-negation"
+      ],
+      "focalChannels": [
+        "icon",
+        "enclosure",
+        "annotation",
+        "spatial",
+        "contrast"
+      ],
+      "tokens": [
+        "HelpCircle",
+        "Ban",
+        "Check"
+      ],
       "finalKnowledge": [
         "question-plaque",
         "qualifier-conceptual",
@@ -28,10 +47,30 @@
       "export": "PositivistCampScene",
       "layout": "detached-systems-with-mirrored-school-lanes",
       "anchor": "comparison-axis",
-      "grammar": ["criterion-weighting", "school-contrast", "separate-systems"],
-      "textTreatments": ["label-block", "chip", "soft-highlight", "stamp"],
-      "focalChannels": ["icon", "spatial", "contrast", "enclosure", "annotation"],
-      "tokens": ["FileText", "HeartHandshake", "ScrollText", "Users"],
+      "grammar": [
+        "criterion-weighting",
+        "school-contrast",
+        "separate-systems"
+      ],
+      "textTreatments": [
+        "label-block",
+        "chip",
+        "soft-highlight",
+        "stamp"
+      ],
+      "focalChannels": [
+        "icon",
+        "spatial",
+        "contrast",
+        "enclosure",
+        "annotation"
+      ],
+      "tokens": [
+        "FileText",
+        "HeartHandshake",
+        "ScrollText",
+        "Users"
+      ],
       "finalKnowledge": [
         "positivist-verdict",
         "law-system-block",
@@ -48,10 +87,32 @@
       "export": "NonPositivistCampScene",
       "layout": "moral-containment-with-school-pair",
       "anchor": "role-pair",
-      "grammar": ["moral-containment", "element-count-contrast", "school-pair"],
-      "textTreatments": ["label-block", "soft-highlight", "stamp", "chip", "external-negation"],
-      "focalChannels": ["icon", "enclosure", "motion", "contrast", "annotation"],
-      "tokens": ["Landmark", "HeartHandshake", "FileText", "Feather", "Layers", "Ban"],
+      "grammar": [
+        "moral-containment",
+        "element-count-contrast",
+        "school-pair"
+      ],
+      "textTreatments": [
+        "label-block",
+        "soft-highlight",
+        "stamp",
+        "chip",
+        "external-negation"
+      ],
+      "focalChannels": [
+        "icon",
+        "enclosure",
+        "motion",
+        "contrast",
+        "annotation"
+      ],
+      "tokens": [
+        "Landmark",
+        "HeartHandshake",
+        "Feather",
+        "Layers",
+        "Ban"
+      ],
       "finalKnowledge": [
         "non-positivist-verdict",
         "moral-containment-frame",
@@ -62,17 +123,40 @@
         "pair-divergence-note",
         "non-positivist-mnemonic"
       ],
-      "statefulObjects": ["law-subordinate-morality"]
+      "statefulObjects": [
+        "law-subordinate-morality"
+      ]
     },
     {
       "id": "elements-evil-law",
       "export": "ElementsEvilLawScene",
       "layout": "element-lexicon-with-verdict-pair",
       "anchor": "typographic-sequence",
-      "grammar": ["element-lexicon", "moral-standard-isolation", "verdict-pair"],
-      "textTreatments": ["label-block", "chip", "stamp", "thin-underline", "external-negation"],
-      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
-      "tokens": ["Landmark", "Users", "HeartHandshake", "Key"],
+      "grammar": [
+        "element-lexicon",
+        "moral-standard-isolation",
+        "verdict-pair"
+      ],
+      "textTreatments": [
+        "label-block",
+        "chip",
+        "stamp",
+        "thin-underline",
+        "external-negation"
+      ],
+      "focalChannels": [
+        "icon",
+        "contrast",
+        "enclosure",
+        "spatial",
+        "annotation"
+      ],
+      "tokens": [
+        "Landmark",
+        "Users",
+        "HeartHandshake",
+        "Key"
+      ],
       "finalKnowledge": [
         "lexicon-heading",
         "element-authority",
