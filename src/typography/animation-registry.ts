@@ -34,6 +34,7 @@ import {typography as typographyIl07} from '../animations/international-law/07/d
 import {typography as typographyIl08} from '../animations/international-law/08/war-armed-conflict/animation.meta';
 import {typography as typographyIl09} from '../animations/international-law/09/cross-border-disputes/animation.meta';
 import {typography as typographyIl10} from '../animations/international-law/10/conflict-of-laws-rules/animation.meta';
+import {typography as typographyIl11} from '../animations/international-law/11/applicable-law/animation.meta';
 import {typography as typographyCpOrgansRelay} from '../animations/criminal-procedure/03/organs-relay-map/animation.meta';
 import {typography as typographyCpPleaCaliper} from '../animations/criminal-procedure/02/plea-leniency-caliper/animation.meta';
 import {typography as typographyCpJurisdiction} from '../animations/criminal-procedure/04/jurisdiction-sluice-terrace/animation.meta';
@@ -259,6 +260,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'war-armed-conflict': {metadata: typographyIl08, scope: {animationId: 'war-armed-conflict', subject: 'international-law', topic: '08'}},
   'cross-border-disputes': {metadata: typographyIl09, scope: {animationId: 'cross-border-disputes', subject: 'international-law', topic: '09'}},
   'conflict-of-laws-rules': {metadata: typographyIl10, scope: {animationId: 'conflict-of-laws-rules', subject: 'international-law', topic: '10'}},
+  'applicable-law': {metadata: typographyIl11, scope: {animationId: 'applicable-law', subject: 'international-law', topic: '11'}},
   'plea-leniency-caliper': {metadata: typographyCpPleaCaliper, scope: {animationId: 'plea-leniency-caliper', subject: 'criminal-procedure', topic: '02'}},
   'organs-relay-map': {metadata: typographyCpOrgansRelay, scope: {animationId: 'organs-relay-map', subject: 'criminal-procedure', topic: '03'}},
   'jurisdiction-sluice-terrace': {metadata: typographyCpJurisdiction, scope: {animationId: 'jurisdiction-sluice-terrace', subject: 'criminal-procedure', topic: '04'}},

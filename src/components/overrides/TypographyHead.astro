@@ -1,15 +1,9 @@
 ---
 import Default from '@astrojs/starlight/components/Head.astro';
-import {FONT_REGISTRY} from '@/typography/font-registry';
 import {siteTypographyCss, type SiteTypographyPresetId} from '@/typography/site-presets';
 
 const preset = Astro.locals.starlightRoute.entry.data.typography as SiteTypographyPresetId | undefined;
-const source = FONT_REGISTRY.wenkai.sources.find((candidate) => candidate.kind === 'local');
-if (!source || source.kind !== 'local') throw new Error('LXGW WenKai Screen requires a local font source.');
-const baseUrl = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
-const fontHref = `${baseUrl}${source.path}`;
 ---
 
 <Default {...Astro.props} />
-<link rel="preload" href={fontHref} as="font" type="font/woff2" crossorigin="anonymous" />
 <style is:global set:html={siteTypographyCss(preset)} />

@@ -1,16 +1,9 @@
 @import "tailwindcss";
 @import "@astrojs/starlight-tailwind";
+@import "lxgw-wenkai-screen-web/lxgwwenkaiscreen/result.css";
 @import "lxgw-wenkai-mono-gb-screen-webfont/fonts/style.css";
 
 @source "../";
-
-@font-face {
-  font-family: "LXGW WenKai Screen";
-  src: url("../../public/fonts/lxgw-wenkai-screen/lxgw-wenkai-screen-regular.woff2") format("woff2");
-  font-style: normal;
-  font-weight: 400;
-  font-display: block;
-}
 
 @theme inline {
   --font-site-body: var(--inkloom-site-body);

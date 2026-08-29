@@ -1,4 +1,3 @@
-import {createHash} from 'node:crypto';
 import {execFile} from 'node:child_process';
 import {access, readFile, readdir} from 'node:fs/promises';
 import path from 'node:path';
@@ -26,7 +25,6 @@ const collectFiles = async (directory, predicate) => {
 };
 
 const exists = async (filePath) => access(filePath).then(() => true, () => false);
-const sha256 = async (filePath) => createHash('sha256').update(await readFile(filePath)).digest('hex');
 const relative = (filePath) => path.relative(PROJECT_ROOT, filePath).replaceAll(path.sep, '/');
 
 const validateRoleReferences = ({errors, filePath, source, prefix, allowedRoles}) => {
@@ -112,28 +110,25 @@ const main = async () => {
     if (/font-\[[^\]]+\]/.test(source)) errors.push(`${relative(filePath)}: Tailwind arbitrary font utility is forbidden.`);
   }
 
-  const screenPath = registeredTextValue({registrySource, property: 'path', fontId: 'wenkai'});
-  const expectedScreenHash = registeredTextValue({registrySource, property: 'sha256', fontId: 'wenkai'});
-  const monoPackage = registeredTextValue({registrySource, property: 'packageName', fontId: 'wenkai-mono'});
-  const monoVersion = registeredTextValue({registrySource, property: 'version', fontId: 'wenkai-mono'});
-  const monoIntegrity = registeredTextValue({registrySource, property: 'integrity', fontId: 'wenkai-mono'});
-  if (!screenPath || !expectedScreenHash || !monoPackage || !monoVersion || !monoIntegrity) {
-    errors.push('The font registry is missing a required WenKai source definition.');
-  }
-
-  const screenFont = path.join(PROJECT_ROOT, 'public', screenPath ?? 'missing-font');
-  if (!(await exists(screenFont))) {
-    errors.push('LXGW WenKai Screen source is missing.');
-  } else if (await sha256(screenFont) !== expectedScreenHash) {
-    errors.push('LXGW WenKai Screen source hash does not match the registry.');
-  }
-
-  const monoStylesheet = path.join(PROJECT_ROOT, 'node_modules', monoPackage ?? 'missing-font-package', 'fonts', 'style.css');
-  if (!(await exists(monoStylesheet))) errors.push('LXGW WenKai Mono GB Screen package stylesheet is missing.');
-
+  const fontPackageChecks = ['wenkai', 'wenkai-mono'].map((fontId) => ({
+    fontId,
+    packageName: registeredTextValue({registrySource, property: 'packageName', fontId}),
+    version: registeredTextValue({registrySource, property: 'version', fontId}),
+    integrity: registeredTextValue({registrySource, property: 'integrity', fontId}),
+    stylesheet: registeredTextValue({registrySource, property: 'stylesheet', fontId}),
+  }));
   const lockfile = await readFile(path.join(PROJECT_ROOT, 'pnpm-lock.yaml'), 'utf8');
-  if (!lockfile.includes(`${monoPackage}@${monoVersion}`) || !lockfile.includes(monoIntegrity ?? 'missing-integrity')) {
-    errors.push('LXGW WenKai Mono GB Screen package version or integrity is not locked.');
+  for (const {fontId, packageName, version, integrity, stylesheet} of fontPackageChecks) {
+    if (!packageName || !version || !integrity || !stylesheet) {
+      errors.push(`The font registry is missing a required ${fontId} package source definition.`);
+      continue;
+    }
+    if (!(await exists(path.join(PROJECT_ROOT, 'node_modules', ...stylesheet.split('/'))))) {
+      errors.push(`${packageName} package stylesheet is missing: ${stylesheet}.`);
+    }
+    if (!lockfile.includes(`${packageName}@${version}`) || !lockfile.includes(integrity)) {
+      errors.push(`${packageName} package version or integrity is not locked.`);
+    }
   }
 
   if (errors.length > 0) throw new Error(`[typography] ${errors.join('\n[typography] ')}`);

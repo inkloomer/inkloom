@@ -1,7 +1,6 @@
 import type {CSSProperties, ComponentType, ReactNode} from 'react';
 import {createContext, useContext, useEffect, useMemo, useState} from 'react';
-import {loadFont} from '@remotion/fonts';
-import {cancelRender, continueRender, delayRender, staticFile} from 'remotion';
+import {cancelRender, continueRender, delayRender} from 'remotion';
 import {resolveAnimationTypography, type AnimationTypographyConfiguration} from './animation-presets';
 
 import '../animations/styles/animation-tailwind.css';
@@ -9,19 +8,15 @@ import '../animations/styles/animation-tailwind.css';
 type AnimationTypographyContextValue = {readonly configuration?: AnimationTypographyConfiguration};
 
 const AnimationTypographyContext = createContext<AnimationTypographyContextValue>({});
-const localWenkaiPath = 'fonts/lxgw-wenkai-screen/lxgw-wenkai-screen-regular.woff2';
 let fontsReady: Promise<void> | undefined;
 let animationFontsLoaded = false;
 
-const publicFontUrl = () => {
-  if (typeof window !== 'undefined' && window.location.pathname.startsWith('/inkloom/')) return `/inkloom/${localWenkaiPath}`;
-  return staticFile(localWenkaiPath);
-};
-
+// Faces are registered by the split webfont stylesheets (unicode-range chunks);
+// load() only has to fetch the slices covering the sampled characters.
 const ensureAnimationFonts = () => {
   fontsReady ??= (async () => {
-    await loadFont({family: 'LXGW WenKai Screen', url: publicFontUrl(), format: 'woff2', weight: '400', style: 'normal', display: 'block'});
     if (typeof document !== 'undefined') {
+      await document.fonts.load('400 16px "LXGW WenKai Screen"', 'InkLoom法考动画字体就绪检查0123456789');
       await document.fonts.load('400 16px "LXGW WenKai Mono GB Screen"', 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789');
       await document.fonts.ready;
     }

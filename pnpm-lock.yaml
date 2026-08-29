@@ -41,6 +41,9 @@ importers:
       lxgw-wenkai-mono-gb-screen-webfont:
         specifier: 1.0.1
         version: 1.0.1
+      lxgw-wenkai-screen-web:
+        specifier: 1.522.0
+        version: 1.522.0
       neotraverse:
         specifier: 1.0.1
         version: 1.0.1
@@ -777,6 +780,9 @@ packages:
 
   '@jridgewell/sourcemap-codec@1.5.5':
     resolution: {integrity: sha512-cYQ9310grqxueWbl+WuIUIaiUaDcj7WOq5fVhEljNVgRfOUhY9fy2zTvfoqWsnebh8Sl70VScFbICvJnLKB0Og==}
+
+  '@jridgewell/sourcemap-codec@1.6.0':
+    resolution: {integrity: sha512-T7jf+5zgsZHwNJ4lvQ7/aezbyk0nNX+zJVWpmHA7VYsEx7a7qr5Rg5IbtJFqkgze5Y2sruq1RUY8Q837Od7iFw==}
 
   '@jridgewell/trace-mapping@0.3.31':
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
@@ -2672,6 +2678,9 @@ packages:
 
   lxgw-wenkai-mono-gb-screen-webfont@1.0.1:
     resolution: {integrity: sha512-GuJbWOsusYJjPifhhIVH25WEADKnaRPrbSLlhjDN/FtFOwa8sCj7s/FAYOGkzbM/7jEAFp7DM+6ImEQuXSSzxg==}
+
+  lxgw-wenkai-screen-web@1.522.0:
+    resolution: {integrity: sha512-LH1nDJz9prHgMYNKErg8XpDEIhs9+1bf6hPVKviy29be1r6Z4AXXbo9uuwmOH2hAzKMbe3kZ5+rzJ9zb/58+jw==}
 
   magic-string@0.30.21:
     resolution: {integrity: sha512-vd2F4YUyEXKGcLHoq+TEyCjxueSeHnFxyyjNp80yg0XV4vUhnDer/lvvlqM/arB5bXQN5K2/3oinyCRyx8T2CQ==}
@@ -4597,7 +4606,7 @@ snapshots:
   '@jridgewell/gen-mapping@0.3.5':
     dependencies:
       '@jridgewell/set-array': 1.2.1
-      '@jridgewell/sourcemap-codec': 1.4.14
+      '@jridgewell/sourcemap-codec': 1.6.0
       '@jridgewell/trace-mapping': 0.3.31
 
   '@jridgewell/remapping@2.3.5':
@@ -4619,6 +4628,8 @@ snapshots:
   '@jridgewell/sourcemap-codec@1.5.0': {}
 
   '@jridgewell/sourcemap-codec@1.5.5': {}
+
+  '@jridgewell/sourcemap-codec@1.6.0': {}
 
   '@jridgewell/trace-mapping@0.3.31':
     dependencies:
@@ -6679,6 +6690,8 @@ snapshots:
       react: 19.2.8
 
   lxgw-wenkai-mono-gb-screen-webfont@1.0.1: {}
+
+  lxgw-wenkai-screen-web@1.522.0: {}
 
   magic-string@0.30.21:
     dependencies:
