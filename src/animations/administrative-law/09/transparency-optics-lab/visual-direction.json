@@ -1,16 +1,16 @@
 {
-  "directionId": "legislative-atlas-studio",
-  "family": "civic-field-atlas",
-  "palette": "warm paper, ink navy, seal red, civic teal, statutory amber and restrained violet",
-  "typography": "WenKai editorial headlines with numbered folio marks, label blocks, thin rule underlines and formal verdict stamps",
-  "composition": "authority staircases, case files, statutory clocks, source pyramids, hearing bands, disclosure routes and decision trees",
-  "surface": "warm gridded drafting paper with flat ink rules, clipped document fields and unrounded legal instruments",
-  "motion": "knowledge objects unfold, route, orbit or receive verdicts according to the legal relationship in each scene",
-  "transition": "folio handoffs and restrained drafting reveals",
+  "directionId": "bronze-rubbing-atlas-record",
+  "family": "bronze-rubbing-atlas",
+  "palette": "aged paper ground with faint ink-wash stains, heavy ink rubbing panels, bronze-gold and patina accents, rusted bronze for prohibitions",
+  "typography": "title-face stele headlines, ink body text on rubbing cards, mono numerals for era dates and clocks",
+  "composition": "staircase panel ladders, stele timelines, verdict ticket stacks, ink pyramid stele, delegation lanes, concentration rings, case-file rubbings, signal lanes, wavebands, fork focuses, dial arrays, spoke consoles, scan rows, route maps, seal walls, scales, dimmer axes, radial beams, sheet blueprints, channel timelines, branch trees, gates, port switches, throttle flows",
+  "surface": "aged paper with blotches and registration corner marks, double ink borders on every rubbing card",
+  "motion": "rubbings surface in legal order and hold, ink seals press last",
+  "transition": "paper grain settles as the next rubbing surfaces",
   "catalog": {
     "status": "featured",
     "source": "original-node",
     "route": "/inkloom/objective/administrative-law/09/transparency-optics-lab/",
-    "title": "法治图谱工作室"
+    "title": "金石墨拓图鉴"
   }
 }

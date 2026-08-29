@@ -3,7 +3,7 @@
   "compositionId": "TransparencyOpticsLab",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-08-14T08:31:34.412Z",
+  "generatedAt": "2026-08-29T12:50:17.486Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -16,13 +16,13 @@
       "title": "设定权光谱",
       "durationMs": 7000,
       "file": "setting-spectrum.avif",
-      "fileSize": 251450,
+      "fileSize": 307469,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "f6ad72995a4412aa14a5e160704b2c64e7266a024c1f9f4f388863b90ebe4862",
+      "sha256": "81b1e624330886e76258fc00a42b0a0357caea96468b07c9c599891015de4e44",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "1723aaeae95129ed6ac7e6b4cc66bfb3796e4d0bec2b4f387128792caceaca26"
+      "sceneFingerprint": "2e75d8f62ae8fd5d78e406b4c6415fd17992622f8653e0737c108d0d5192d98b"
     },
     {
       "endFrame": 839,
@@ -33,13 +33,13 @@
       "title": "规章权限衰减",
       "durationMs": 7000,
       "file": "rulemaking-chronology.avif",
-      "fileSize": 202928,
+      "fileSize": 234576,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "6c33f1bd124a835290a035cf8a21e118553a3a3ccff13a8732ec5459f7beac27",
+      "sha256": "7671a3c062f589b87c791aac4dd72a9102a4796bc1a98f5eeb25802f96befa86",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "1723aaeae95129ed6ac7e6b4cc66bfb3796e4d0bec2b4f387128792caceaca26"
+      "sceneFingerprint": "2e75d8f62ae8fd5d78e406b4c6415fd17992622f8653e0737c108d0d5192d98b"
     },
     {
       "endFrame": 1259,
@@ -50,13 +50,13 @@
       "title": "设定陷阱透镜",
       "durationMs": 7000,
       "file": "setting-trap-lenses.avif",
-      "fileSize": 236656,
+      "fileSize": 238923,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "b680ec7bc5e0e5fa72e6fe66758a8872dfd74a605d9a6ae842c7b69df16671ce",
+      "sha256": "837747fba75cd6977b04cf43425e8e86fc97cb0723ed6a9f14d92048d23e4906",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "1723aaeae95129ed6ac7e6b4cc66bfb3796e4d0bec2b4f387128792caceaca26"
+      "sceneFingerprint": "2e75d8f62ae8fd5d78e406b4c6415fd17992622f8653e0737c108d0d5192d98b"
     },
     {
       "endFrame": 1679,
@@ -67,13 +67,13 @@
       "title": "授权棱镜",
       "durationMs": 7000,
       "file": "authorization-prism.avif",
-      "fileSize": 189721,
+      "fileSize": 216134,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "eb70506c2c5d3f7c727c5be38b96b9884ec16c8830d1c3f49fddc6112edad3bc",
+      "sha256": "83ba8999de17d1479f48e5d0f90976f458a18489347134a6b2ba8bd288a77b94",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "1723aaeae95129ed6ac7e6b4cc66bfb3796e4d0bec2b4f387128792caceaca26"
+      "sceneFingerprint": "2e75d8f62ae8fd5d78e406b4c6415fd17992622f8653e0737c108d0d5192d98b"
     },
     {
       "endFrame": 2099,
@@ -84,13 +84,13 @@
       "title": "委托滤镜",
       "durationMs": 7000,
       "file": "delegation-filters.avif",
-      "fileSize": 215079,
+      "fileSize": 229426,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "1244dbbcb3a248188dc26b311528c8b0fe844df9c38f38de841af46e2a1196e5",
+      "sha256": "959b82c9ebcac1e6564002ea6b283baf107f289a176dcfc740667f9d4da27202",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "1723aaeae95129ed6ac7e6b4cc66bfb3796e4d0bec2b4f387128792caceaca26"
+      "sceneFingerprint": "2e75d8f62ae8fd5d78e406b4c6415fd17992622f8653e0737c108d0d5192d98b"
     },
     {
       "endFrame": 2519,
@@ -101,13 +101,13 @@
       "title": "集中实施光圈",
       "durationMs": 7000,
       "file": "concentration-apertures.avif",
-      "fileSize": 266556,
+      "fileSize": 314084,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "da4fd52b953e4c5a13a0b76576f3835b3c77acee76fd2715cc3c7bd42a451c2f",
+      "sha256": "f0af20991b6866fd147f20aeea53cd3def8ccf95f7da6a786e1fa84b70911c0b",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "1723aaeae95129ed6ac7e6b4cc66bfb3796e4d0bec2b4f387128792caceaca26"
+      "sceneFingerprint": "2e75d8f62ae8fd5d78e406b4c6415fd17992622f8653e0737c108d0d5192d98b"
     },
     {
       "endFrame": 2939,
@@ -118,13 +118,13 @@
       "title": "主体陷阱暗房",
       "durationMs": 7000,
       "file": "subject-trap-darkroom.avif",
-      "fileSize": 258497,
+      "fileSize": 291493,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "0c0fe2e63a36a5108d75361617540bb32e436297e7e4702fa06cb502f36e872f",
+      "sha256": "6f12a31f4cadb5633857047e0d99447cd682bb02d9b78f1d3b6d6f24fc40b520",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "1723aaeae95129ed6ac7e6b4cc66bfb3796e4d0bec2b4f387128792caceaca26"
+      "sceneFingerprint": "2e75d8f62ae8fd5d78e406b4c6415fd17992622f8653e0737c108d0d5192d98b"
     },
     {
       "endFrame": 3359,
@@ -135,13 +135,13 @@
       "title": "听证信号分流",
       "durationMs": 7000,
       "file": "hearing-signal-split.avif",
-      "fileSize": 133097,
+      "fileSize": 144781,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "3ee6e1982885f57910d4219e3ebaa115e5fb4d637bae19abb37c7def72372e62",
+      "sha256": "30a6931861764df05cfe8dfa9e8444747700fde15a7d9e251dc86911ce3f81a8",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "1723aaeae95129ed6ac7e6b4cc66bfb3796e4d0bec2b4f387128792caceaca26"
+      "sceneFingerprint": "2e75d8f62ae8fd5d78e406b4c6415fd17992622f8653e0737c108d0d5192d98b"
     },
     {
       "endFrame": 3839,
@@ -152,13 +152,13 @@
       "title": "处罚听证波段",
       "durationMs": 8000,
       "file": "penalty-hearing-waveband.avif",
-      "fileSize": 199773,
+      "fileSize": 224820,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "15e67de679316e2da123f2993033843c2e3071bae30be8b1c51a57b3585aff3a",
+      "sha256": "bb29d42b7dc58e5b4ecb98e67c489e9152b28ea8814c97ee2fe1743791f82ca4",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "1723aaeae95129ed6ac7e6b4cc66bfb3796e4d0bec2b4f387128792caceaca26"
+      "sceneFingerprint": "2e75d8f62ae8fd5d78e406b4c6415fd17992622f8653e0737c108d0d5192d98b"
     },
     {
       "endFrame": 4259,
@@ -169,13 +169,13 @@
       "title": "许可听证双焦点",
       "durationMs": 7000,
       "file": "license-hearing-focus.avif",
-      "fileSize": 192219,
+      "fileSize": 207380,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "ef16b0903f4f290fd4dee6360a9b5090f3b676781aa29a8931fa57812a55efaf",
+      "sha256": "b7b221987327f51881787ca34e579a89f881d1a03dd1e1a3c2b4a70e1864f196",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "1723aaeae95129ed6ac7e6b4cc66bfb3796e4d0bec2b4f387128792caceaca26"
+      "sceneFingerprint": "2e75d8f62ae8fd5d78e406b4c6415fd17992622f8653e0737c108d0d5192d98b"
     },
     {
       "endFrame": 4679,
@@ -186,13 +186,13 @@
       "title": "听证时钟阵列",
       "durationMs": 7000,
       "file": "hearing-clock-array.avif",
-      "fileSize": 182603,
+      "fileSize": 226150,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "53c0f1b017ff9f2de454cdc1367ba64067dd8960b9ed60d380fd1504b7bba842",
+      "sha256": "b227814eec6cf6da6bd047c3741762f797a7cc92c4ae9684c409f42a01519f28",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "1723aaeae95129ed6ac7e6b4cc66bfb3796e4d0bec2b4f387128792caceaca26"
+      "sceneFingerprint": "2e75d8f62ae8fd5d78e406b4c6415fd17992622f8653e0737c108d0d5192d98b"
     },
     {
       "endFrame": 5099,
@@ -203,13 +203,13 @@
       "title": "听证共同控制台",
       "durationMs": 7000,
       "file": "hearing-common-console.avif",
-      "fileSize": 149895,
+      "fileSize": 177196,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "e81675eb48fc5e2898b731903f9350784c2ba751e0065bb982f2ed6ff472f38d",
+      "sha256": "fd2a3d9ea84dbee4be263fdf9fa3493fe74f104f58beaf580efa34efa091d2fc",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "1723aaeae95129ed6ac7e6b4cc66bfb3796e4d0bec2b4f387128792caceaca26"
+      "sceneFingerprint": "2e75d8f62ae8fd5d78e406b4c6415fd17992622f8653e0737c108d0d5192d98b"
     },
     {
       "endFrame": 5519,
@@ -220,13 +220,13 @@
       "title": "听证误区扫描",
       "durationMs": 7000,
       "file": "hearing-trap-scope.avif",
-      "fileSize": 221312,
+      "fileSize": 218832,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "440c1e07f42f4e2b501349bc4bb7d11bffac8cd0371447edb77859e94b2119c6",
+      "sha256": "292944024cc1ca669e8ac089c7189c5bb03b3a9b90c93e7fb6ee3e7767dd38e6",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "1723aaeae95129ed6ac7e6b4cc66bfb3796e4d0bec2b4f387128792caceaca26"
+      "sceneFingerprint": "2e75d8f62ae8fd5d78e406b4c6415fd17992622f8653e0737c108d0d5192d98b"
     },
     {
       "endFrame": 5939,
@@ -237,13 +237,13 @@
       "title": "政府信息投影",
       "durationMs": 7000,
       "file": "information-definition-projector.avif",
-      "fileSize": 206381,
+      "fileSize": 226228,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "8e6b4bf41a4d91a02bed8c6d951bac6b497504b7f9eb2deacba7dbd733ff1426",
+      "sha256": "2bc4715b96ba3cfc28134d0312aa9f8b02fa647677a35dde875dfa3a205965a9",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "1723aaeae95129ed6ac7e6b4cc66bfb3796e4d0bec2b4f387128792caceaca26"
+      "sceneFingerprint": "2e75d8f62ae8fd5d78e406b4c6415fd17992622f8653e0737c108d0d5192d98b"
     },
     {
       "endFrame": 6359,
@@ -254,13 +254,13 @@
       "title": "公开主体路由",
       "durationMs": 7000,
       "file": "disclosure-source-routing.avif",
-      "fileSize": 179117,
+      "fileSize": 205280,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "9be1aaf54b2f856f911b40fd65628742f1c3646c08f810010cc41e12aad61775",
+      "sha256": "433983191042fecb416874bfa170815cd7399b746d07b6a94f18ba8e519bd964",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "1723aaeae95129ed6ac7e6b4cc66bfb3796e4d0bec2b4f387128792caceaca26"
+      "sceneFingerprint": "2e75d8f62ae8fd5d78e406b4c6415fd17992622f8653e0737c108d0d5192d98b"
     },
     {
       "endFrame": 6779,
@@ -271,13 +271,13 @@
       "title": "绝对遮光阀",
       "durationMs": 7000,
       "file": "absolute-secrecy-shutter.avif",
-      "fileSize": 125435,
+      "fileSize": 142411,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "283a416696c8442f71323018d4645a53ce86416bd69feaeac52c789f3f323dc0",
+      "sha256": "4500bced1406f5aa74b2fcb290f38d7bc6fd17a0f99ecd65924b3870d5fdfe2a",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "1723aaeae95129ed6ac7e6b4cc66bfb3796e4d0bec2b4f387128792caceaca26"
+      "sceneFingerprint": "2e75d8f62ae8fd5d78e406b4c6415fd17992622f8653e0737c108d0d5192d98b"
     },
     {
       "endFrame": 7259,
@@ -288,13 +288,13 @@
       "title": "隐私平衡滤镜",
       "durationMs": 8000,
       "file": "privacy-balance-filter.avif",
-      "fileSize": 211462,
+      "fileSize": 252327,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "1a4034d6b21924eb17fd4515cd815dc4190baaa40455e468b1b41daf321eb5b9",
+      "sha256": "f3fd6c965f0864e87f51314b4809b32549771bfd0d315f2d0f05b3e852e4313b",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "1723aaeae95129ed6ac7e6b4cc66bfb3796e4d0bec2b4f387128792caceaca26"
+      "sceneFingerprint": "2e75d8f62ae8fd5d78e406b4c6415fd17992622f8653e0737c108d0d5192d98b"
     },
     {
       "endFrame": 7679,
@@ -305,13 +305,13 @@
       "title": "可不公开调光器",
       "durationMs": 7000,
       "file": "optional-nondisclosure-dimmers.avif",
-      "fileSize": 186310,
+      "fileSize": 217371,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "2ec8731f504c5e66feb19e0929cd4f033f06da1d5987492d7092202947565b06",
+      "sha256": "10bd15f98540776e447374687d72e90e61c548c4413e58486d268c9aa857ba5d",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "1723aaeae95129ed6ac7e6b4cc66bfb3796e4d0bec2b4f387128792caceaca26"
+      "sceneFingerprint": "2e75d8f62ae8fd5d78e406b4c6415fd17992622f8653e0737c108d0d5192d98b"
     },
     {
       "endFrame": 8099,
@@ -322,13 +322,13 @@
       "title": "主动公开光束",
       "durationMs": 7000,
       "file": "active-disclosure-beam.avif",
-      "fileSize": 185044,
+      "fileSize": 226193,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "292f6c8132fe83e0bf1f3b3bc2380343a8fa2ca2bd57d0f4ab3c364bcaf8f1f8",
+      "sha256": "0b85da8cdbedd05dea984e90aaf846ebf2212d949e92baba344ebb335aada36f",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "1723aaeae95129ed6ac7e6b4cc66bfb3796e4d0bec2b4f387128792caceaca26"
+      "sceneFingerprint": "2e75d8f62ae8fd5d78e406b4c6415fd17992622f8653e0737c108d0d5192d98b"
     },
     {
       "endFrame": 8519,
@@ -339,13 +339,13 @@
       "title": "主动公开曝光",
       "durationMs": 7000,
       "file": "active-disclosure-exposure.avif",
-      "fileSize": 215827,
+      "fileSize": 238152,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "000fb3c92285191788002ff977424d2779dc5bdfba5c28883bbc47316d07fdd8",
+      "sha256": "a640a7817d090c52f4e90815df95cd6bb39f362590fad3363afee980c42ffbf3",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "1723aaeae95129ed6ac7e6b4cc66bfb3796e4d0bec2b4f387128792caceaca26"
+      "sceneFingerprint": "2e75d8f62ae8fd5d78e406b4c6415fd17992622f8653e0737c108d0d5192d98b"
     },
     {
       "endFrame": 8939,
@@ -356,13 +356,13 @@
       "title": "申请输入标本",
       "durationMs": 7000,
       "file": "application-input-specimen.avif",
-      "fileSize": 224527,
+      "fileSize": 238430,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "6ccfa353469b8870cf5cd89e6a53109e2309f3a4682281a6b5782bc605b1eb33",
+      "sha256": "af6de8459cac65849d50b75e5beea6e84ae22f8e249a368a72440bc8f808ce87",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "1723aaeae95129ed6ac7e6b4cc66bfb3796e4d0bec2b4f387128792caceaca26"
+      "sceneFingerprint": "2e75d8f62ae8fd5d78e406b4c6415fd17992622f8653e0737c108d0d5192d98b"
     },
     {
       "endFrame": 9359,
@@ -373,13 +373,13 @@
       "title": "收到日探测器",
       "durationMs": 7000,
       "file": "receipt-clock-detectors.avif",
-      "fileSize": 148768,
+      "fileSize": 175755,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "a6cd665d76a6de70aa1da61dba3ed5f0ba22a27d6d90379694e59bc681e33507",
+      "sha256": "062789cf6642d80b43944dacb3f759e0232c95d198600d3f4cf0ef71f6907ac6",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "1723aaeae95129ed6ac7e6b4cc66bfb3796e4d0bec2b4f387128792caceaca26"
+      "sceneFingerprint": "2e75d8f62ae8fd5d78e406b4c6415fd17992622f8653e0737c108d0d5192d98b"
     },
     {
       "endFrame": 9839,
@@ -390,13 +390,13 @@
       "title": "答复分光器",
       "durationMs": 8000,
       "file": "response-spectrum-splitter.avif",
-      "fileSize": 245363,
+      "fileSize": 268455,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "81ef4aed0c9cfa8a4f7fde0a4e346b00fa867dde1946cfa81c6de8ebad31b579",
+      "sha256": "7dbe043d91ab45c2e9c019c85c21a871c47787bb5ca1c0b525bd6207e77987ae",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "1723aaeae95129ed6ac7e6b4cc66bfb3796e4d0bec2b4f387128792caceaca26"
+      "sceneFingerprint": "2e75d8f62ae8fd5d78e406b4c6415fd17992622f8653e0737c108d0d5192d98b"
     },
     {
       "endFrame": 10259,
@@ -407,13 +407,13 @@
       "title": "材料补正闸",
       "durationMs": 7000,
       "file": "supplement-correction-gate.avif",
-      "fileSize": 238882,
+      "fileSize": 274091,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "5203b21f4bea66a5f496a82bb38f03b9fe728ebb7a1a911c818cc320193f3d9b",
+      "sha256": "68fdca9d2d36e0039698d464ce27dfeecf972ba40f6c764f9fe971674ef403aa",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "1723aaeae95129ed6ac7e6b4cc66bfb3796e4d0bec2b4f387128792caceaca26"
+      "sceneFingerprint": "2e75d8f62ae8fd5d78e406b4c6415fd17992622f8653e0737c108d0d5192d98b"
     },
     {
       "endFrame": 10739,
@@ -424,13 +424,13 @@
       "title": "特殊申请路由器",
       "durationMs": 8000,
       "file": "special-request-router.avif",
-      "fileSize": 211237,
+      "fileSize": 244739,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "dadecc8b38e03f3465a727a5b891328d8fa3983bd79b66628821401e330a8e88",
+      "sha256": "212453ceb76521dd82a4761cbf8b2368f0ce176e0402d0df116f97ae55da8bc7",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "1723aaeae95129ed6ac7e6b4cc66bfb3796e4d0bec2b4f387128792caceaca26"
+      "sceneFingerprint": "2e75d8f62ae8fd5d78e406b4c6415fd17992622f8653e0737c108d0d5192d98b"
     },
     {
       "endFrame": 11219,
@@ -441,13 +441,13 @@
       "title": "滥用申请节流",
       "durationMs": 8000,
       "file": "abuse-throttle-remedy.avif",
-      "fileSize": 239709,
+      "fileSize": 267642,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "8cc329273f8b55e17ffafbbd042307a38ab12beee716e505a5526e0e37b26dbb",
+      "sha256": "a52ad24f6fb5332540f636958025a93fad7bccedc312c486f5c8c8c6fa788ea0",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "1723aaeae95129ed6ac7e6b4cc66bfb3796e4d0bec2b4f387128792caceaca26"
+      "sceneFingerprint": "2e75d8f62ae8fd5d78e406b4c6415fd17992622f8653e0737c108d0d5192d98b"
     }
   ],
   "size": {
@@ -455,7 +455,7 @@
     "width": 2560
   },
   "sourceFps": 60,
-  "sourceFingerprint": "1723aaeae95129ed6ac7e6b4cc66bfb3796e4d0bec2b4f387128792caceaca26",
+  "sourceFingerprint": "2e75d8f62ae8fd5d78e406b4c6415fd17992622f8653e0737c108d0d5192d98b",
   "targetFps": 30,
-  "totalFileSize": 5317848
+  "totalFileSize": 6008338
 }

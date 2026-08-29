@@ -154,8 +154,8 @@ export const ADMINISTRATIVE_LAW_STYLE_DEMOS = [
   {
     id: "administrative-law-09-transparency-optics-lab",
     slug: "transparency-optics-lab",
-    title: "法治图谱工作室",
-    direction: "Transparency Optics Lab",
+    title: "金石墨拓图鉴",
+    direction: "Bronze Rubbing Atlas",
     component: TransparencyOpticsLab,
     href: "/inkloom/objective/administrative-law/09/transparency-optics-lab/",
     durationInFrames: DURATION_FRAMES_09,
