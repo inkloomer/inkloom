@@ -100,6 +100,10 @@ import {FunctionsOfLaw} from '../../animations/theoretical-law/01/functions-of-l
 import {DURATION_FRAMES as FUNCTIONS_OF_LAW_DURATION_FRAMES, FPS as FUNCTIONS_OF_LAW_FPS} from '../../animations/theoretical-law/01/functions-of-law/remotion/storyboard';
 import {ConceptOfLawDispute} from '../../animations/theoretical-law/01/concept-of-law-dispute/remotion/ConceptOfLawDispute';
 import {DURATION_FRAMES as CONCEPT_OF_LAW_DURATION_FRAMES, FPS as CONCEPT_OF_LAW_FPS} from '../../animations/theoretical-law/01/concept-of-law-dispute/remotion/storyboard';
+import {SourcesOfInternationalLaw} from '../../animations/international-law/01/sources-of-international-law/remotion/SourcesOfInternationalLaw';
+import {DURATION_FRAMES as SOURCES_INTERNATIONAL_LAW_DURATION_FRAMES, FPS as SOURCES_INTERNATIONAL_LAW_FPS} from '../../animations/international-law/01/sources-of-international-law/remotion/storyboard';
+import {getAnimationTypographyConfiguration} from '../../typography/animation-registry';
+import {withAnimationTypography} from '../../typography/animation-provider';
 import {DURATION_FRAMES as FIGHT_DURATION_FRAMES, FPS as FIGHT_FPS} from '../../animations/criminal/22/fight-defense-diagram/remotion/storyboard';
 import {DURATION_FRAMES as ALTITUDE_DURATION_FRAMES, FPS as ALTITUDE_FPS} from '../../animations/criminal/22/high-altitude-throwing-diagram/remotion/storyboard';
 import {DURATION_FRAMES as THEFT_DURATION_FRAMES, FPS as THEFT_FPS} from '../../animations/criminal/19/theft-mistake-analysis/remotion/storyboard';
@@ -178,6 +182,7 @@ export const STYLE_DEMOS = [
   {id: 'criminal-procedure-03-organs-relay-map', slug: 'organs-relay-map', title: '青砖驿路图', direction: 'Slate Courier Relay', component: OrgansRelayMap, href: '/inkloom/objective/criminal-procedure/03/organs-relay-map/', durationInFrames: ORGANS_RELAY_DURATION_FRAMES, fps: ORGANS_RELAY_FPS},
   {id: 'criminal-procedure-02-plea-leniency-caliper', slug: 'plea-leniency-caliper', title: '认罚量尺工坊', direction: 'Maple Caliper Workshop', component: PleaLeniencyCaliper, href: '/inkloom/objective/criminal-procedure/02/plea-leniency-caliper/', durationInFrames: PLEA_LENIENTY_DURATION_FRAMES, fps: PLEA_LENIENTY_FPS},
   {id: 'theoretical-law-01-concept-of-law-dispute', slug: 'concept-of-law-dispute', title: '漆屏对峙', direction: 'Lacquer Twin-Screen', component: ConceptOfLawDispute, href: '/inkloom/objective/theoretical-law/01/concept-of-law-dispute/', durationInFrames: CONCEPT_OF_LAW_DURATION_FRAMES, fps: CONCEPT_OF_LAW_FPS},
+  {id: 'international-law-01-sources-of-international-law', slug: 'sources-of-international-law', title: '外交条约卷册', direction: 'Diplomatic Treaty Folio', component: withAnimationTypography(SourcesOfInternationalLaw, getAnimationTypographyConfiguration('sources-of-international-law')), href: '/inkloom/objective/international-law/01/sources-of-international-law/', durationInFrames: SOURCES_INTERNATIONAL_LAW_DURATION_FRAMES, fps: SOURCES_INTERNATIONAL_LAW_FPS},
   {id: 'theoretical-law-01-marxist-law-essence', slug: 'marxist-law-essence', title: '蓝晒制图', direction: 'Cyanotype Drafting', component: MarxistLawEssence, href: '/inkloom/objective/theoretical-law/01/marxist-law-essence/', durationInFrames: MARXIST_LAW_DURATION_FRAMES, fps: MARXIST_LAW_FPS},
   {id: 'theoretical-law-01-features-of-law', slug: 'features-of-law', title: '标本陈列柜', direction: 'Specimen Gallery Cabinet', component: FeaturesOfLaw, href: '/inkloom/objective/theoretical-law/01/features-of-law/', durationInFrames: FEATURES_OF_LAW_DURATION_FRAMES, fps: FEATURES_OF_LAW_FPS},
   {id: 'theoretical-law-01-functions-of-law', slug: 'functions-of-law', title: '灯塔信号站', direction: 'Night Beacon Station', component: FunctionsOfLaw, href: '/inkloom/objective/theoretical-law/01/functions-of-law/', durationInFrames: FUNCTIONS_OF_LAW_DURATION_FRAMES, fps: FUNCTIONS_OF_LAW_FPS},
@@ -244,6 +249,7 @@ const DEMO_ADDED_AT: Record<(typeof STYLE_DEMOS)[number]['id'], string> = {
   'criminal-procedure-03-organs-relay-map': '2026-08-29T01:30:00+08:00',
   'criminal-procedure-02-plea-leniency-caliper': '2026-08-29T01:05:00+08:00',
   'theoretical-law-01-concept-of-law-dispute': '2026-08-28T23:30:00+08:00',
+  'international-law-01-sources-of-international-law': '2026-08-29T10:00:00+08:00',
   'theoretical-law-01-marxist-law-essence': '2026-08-29T13:40:00+08:00',
   'theoretical-law-01-features-of-law': '2026-08-29T15:10:00+08:00',
   'theoretical-law-01-functions-of-law': '2026-08-29T16:40:00+08:00',

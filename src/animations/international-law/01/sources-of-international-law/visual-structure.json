@@ -1,0 +1,172 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 5,
+  "scenes": [
+    {
+      "id": "sources",
+      "export": "SourcesScene",
+      "layout": "three-source-vault-with-exclusion-strip",
+      "anchor": "boundary",
+      "grammar": [
+        "three-sources-enter-the-gold-vault",
+        "rejected-materials-stay-behind-the-dashed-boundary"
+      ],
+      "textTreatments": [
+        "label-block",
+        "soft-highlight",
+        "external-negation"
+      ],
+      "focalChannels": [
+        "enclosure",
+        "contrast",
+        "spatial"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "sources-treaty",
+        "sources-custom",
+        "sources-principle",
+        "sources-only-three",
+        "exclusion-precedent",
+        "exclusion-doctrine",
+        "exclusion-resolution",
+        "exclusion-domestic"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "custom-formation",
+      "export": "CustomFormationScene",
+      "layout": "practice-loop-into-binding-flow",
+      "anchor": "flow-path",
+      "grammar": [
+        "repeated-practice-crystallizes-into-custom",
+        "persistent-objector-gate-requires-both-keys"
+      ],
+      "textTreatments": [
+        "thin-underline",
+        "label-block",
+        "stamp"
+      ],
+      "focalChannels": [
+        "connector",
+        "enclosure",
+        "motion"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "custom-practice",
+        "custom-forms",
+        "custom-binding",
+        "objector-exception",
+        "objector-start",
+        "objector-consistent",
+        "objector-both",
+        "evidence-strip"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "custom-vs-convention",
+      "export": "CustomVsConventionScene",
+      "layout": "split-ledger-comparison-lane",
+      "anchor": "role-pair",
+      "grammar": [
+        "two-ledgers-aligned-on-a-shared-axis",
+        "binding-force-diverges-at-the-practice-owner"
+      ],
+      "textTreatments": [
+        "soft-highlight",
+        "thin-underline",
+        "label-block"
+      ],
+      "focalChannels": [
+        "contrast",
+        "spatial",
+        "enclosure"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "habit-owner",
+        "habit-force",
+        "habit-exception",
+        "comparison-axis",
+        "convention-owner",
+        "convention-force",
+        "convention-source"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "counter-sanctions",
+      "export": "CounterSanctionsScene",
+      "layout": "decree-fork-into-measure-cards",
+      "anchor": "document-fork",
+      "grammar": [
+        "decree-issues-from-the-state-council-desk",
+        "linked-parties-fork-below-the-target",
+        "three-measure-cards-stack-in-any-combination"
+      ],
+      "textTreatments": [
+        "label-block",
+        "stamp",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "connector",
+        "enclosure",
+        "contrast"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "decree-desk",
+        "target-person",
+        "target-org",
+        "linked-person",
+        "linked-org",
+        "measure-exit",
+        "measure-property",
+        "measure-trade",
+        "measure-other",
+        "measure-combo"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "blockade-chain",
+      "export": "BlockadeChainScene",
+      "layout": "four-stage-chain-with-three-not-gates",
+      "anchor": "flow-path",
+      "grammar": [
+        "four-stages-run-identification-to-relief",
+        "three-not-gates-block-foreign-jurisdiction",
+        "malicious-list-closes-the-remedy-loop"
+      ],
+      "textTreatments": [
+        "stamp",
+        "thin-underline",
+        "label-block"
+      ],
+      "focalChannels": [
+        "locator",
+        "connector",
+        "contrast"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "chain-identify",
+        "chain-blockade",
+        "chain-counter",
+        "chain-relief",
+        "not-recognize",
+        "not-execute",
+        "not-comply",
+        "relief-sue",
+        "relief-liability",
+        "chain-mnemonic"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

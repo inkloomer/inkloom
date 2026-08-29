@@ -1,0 +1,16 @@
+{
+  "directionId": "diplomatic-treaty-folio",
+  "family": "diplomatic-treaty-folio",
+  "palette": "parchment paper, ink navy, wax-seal red, treaty gold trim",
+  "typography": "WenKai folio headings with seal stamps, label blocks, thin underlines and soft highlights",
+  "composition": "double-ruled treaty folio frame with a left station spine, gold vault containers and dashed exclusion zones",
+  "surface": "parchment panels with double borders and seal-stamped verdicts, no dark slabs",
+  "motion": "stage-by-stage folio entry with connector traversal and stamped verdicts",
+  "transition": "content swap under a persistent folio frame and station spine",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/international-law/01/sources-of-international-law/",
+    "title": "外交条约卷册"
+  }
+}
