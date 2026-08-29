@@ -1,0 +1,70 @@
+{
+  "animationId": "legal-principles",
+  "compositionId": "LegalPrinciples",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-29T09:51:16.690Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 275,
+      "frameCount": 276,
+      "id": "dimension-compare",
+      "number": "01",
+      "startFrame": 0,
+      "title": "规则与原则对照表",
+      "durationMs": 9200,
+      "file": "dimension-compare.avif",
+      "fileSize": 634782,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "eed00d385ffd581c849b318e590c7d4a8d85468b37491228e874813ecf0558e1",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "7ac488c6f676e08d354095a4fd6ca8fd9ac7aa01255651e0208ffc8d0cdba944"
+    },
+    {
+      "endFrame": 539,
+      "frameCount": 264,
+      "id": "all-or-weighing",
+      "number": "02",
+      "startFrame": 276,
+      "title": "闸刀与天平",
+      "durationMs": 8800,
+      "file": "all-or-weighing.avif",
+      "fileSize": 527734,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "d1b96a58f6416ab79954f3fda7544985523f6343737232d5c192ba3c8e631234",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "7ac488c6f676e08d354095a4fd6ca8fd9ac7aa01255651e0208ffc8d0cdba944"
+    },
+    {
+      "endFrame": 791,
+      "frameCount": 252,
+      "id": "threshold-conditions",
+      "number": "03",
+      "startFrame": 540,
+      "title": "两把钥匙一道门",
+      "durationMs": 8400,
+      "file": "threshold-conditions.avif",
+      "fileSize": 488960,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "841ab60be8274858cf95ad5603fef867f62d2b7643a7d0f9e00d3f1baebc1c7a",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "7ac488c6f676e08d354095a4fd6ca8fd9ac7aa01255651e0208ffc8d0cdba944"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "7ac488c6f676e08d354095a4fd6ca8fd9ac7aa01255651e0208ffc8d0cdba944",
+  "targetFps": 30,
+  "totalFileSize": 1651476
+}

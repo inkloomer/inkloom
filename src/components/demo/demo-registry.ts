@@ -124,6 +124,8 @@ import {ValueConflict} from '../../animations/theoretical-law/01/value-conflict/
 import {DURATION_FRAMES as VALUE_CONFLICT_DURATION_FRAMES, FPS as VALUE_CONFLICT_FPS} from '../../animations/theoretical-law/01/value-conflict/remotion/storyboard';
 import {LegalRules} from '../../animations/theoretical-law/01/legal-rules/remotion/LegalRules';
 import {DURATION_FRAMES as LEGAL_RULES_DURATION_FRAMES, FPS as LEGAL_RULES_FPS} from '../../animations/theoretical-law/01/legal-rules/remotion/storyboard';
+import {LegalPrinciples} from '../../animations/theoretical-law/01/legal-principles/remotion/LegalPrinciples';
+import {DURATION_FRAMES as LEGAL_PRINCIPLES_DURATION_FRAMES, FPS as LEGAL_PRINCIPLES_FPS} from '../../animations/theoretical-law/01/legal-principles/remotion/storyboard';
 import {OrgansRelayMap} from '../../animations/criminal-procedure/03/organs-relay-map/remotion/OrgansRelayMap';
 import {DURATION_FRAMES as ORGANS_RELAY_DURATION_FRAMES, FPS as ORGANS_RELAY_FPS} from '../../animations/criminal-procedure/03/organs-relay-map/remotion/storyboard';
 import {ConceptOfLawDispute} from '../../animations/theoretical-law/01/concept-of-law-dispute/remotion/ConceptOfLawDispute';
@@ -248,6 +250,7 @@ export const STYLE_DEMOS = [
   {id: 'theoretical-law-01-limitations-of-law', slug: 'limitations-of-law', title: '警戒界桩', direction: 'Hazard Boundary Post', component: LimitationsOfLaw, href: '/inkloom/objective/theoretical-law/01/limitations-of-law/', durationInFrames: LIMITATIONS_OF_LAW_DURATION_FRAMES, fps: LIMITATIONS_OF_LAW_FPS},
   {id: 'theoretical-law-01-value-conflict', slug: 'value-conflict', title: '金底嵌画', direction: 'Gold-Ground Mosaic', component: ValueConflict, href: '/inkloom/objective/theoretical-law/01/value-conflict/', durationInFrames: VALUE_CONFLICT_DURATION_FRAMES, fps: VALUE_CONFLICT_FPS},
   {id: 'theoretical-law-01-legal-rules', slug: 'legal-rules', title: '红蓝账本', direction: 'Red-Blue Ledger', component: LegalRules, href: '/inkloom/objective/theoretical-law/01/legal-rules/', durationInFrames: LEGAL_RULES_DURATION_FRAMES, fps: LEGAL_RULES_FPS},
+  {id: 'theoretical-law-01-legal-principles', slug: 'legal-principles', title: '黑板讲席', direction: 'Chalkboard Lecture', component: LegalPrinciples, href: '/inkloom/objective/theoretical-law/01/legal-principles/', durationInFrames: LEGAL_PRINCIPLES_DURATION_FRAMES, fps: LEGAL_PRINCIPLES_FPS},
   ...COMMERCIAL_LAW_STYLE_DEMOS,
 ] as const satisfies readonly DemoDefinition[];
 
@@ -335,6 +338,7 @@ const DEMO_ADDED_AT: Record<(typeof STYLE_DEMOS)[number]['id'], string> = {
   'theoretical-law-01-limitations-of-law': '2026-08-29T18:00:00+08:00',
   'theoretical-law-01-value-conflict': '2026-08-29T19:20:00+08:00',
   'theoretical-law-01-legal-rules': '2026-08-29T20:40:00+08:00',
+  'theoretical-law-01-legal-principles': '2026-08-29T22:00:00+08:00',
   ...COMMERCIAL_LAW_DEMO_ADDED_AT,
 };
 

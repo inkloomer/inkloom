@@ -1,0 +1,61 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 4,
+  "playerControlSafeBottom": 176,
+  "scenes": [
+    {
+      "id": "dimension-compare",
+      "export": "DimensionCompareScene",
+      "layout": "three-dimension-chalk-table",
+      "anchor": "comparison-axis",
+      "grammar": ["content-dimension", "scope-dimension", "method-dimension"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "thin-underline"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["FileText", "Landmark", "Gavel"],
+      "finalKnowledge": [
+        "compare-heading",
+        "content-row",
+        "scope-row",
+        "method-row",
+        "compare-summary"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "all-or-weighing",
+      "export": "AllOrWeighingScene",
+      "layout": "switch-versus-balance-stage",
+      "anchor": "role-pair",
+      "grammar": ["all-or-nothing-switch", "strength-weighing", "rivalry-contrast"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "stamp", "external-negation"],
+      "focalChannels": ["icon", "motion", "contrast", "enclosure", "annotation"],
+      "tokens": ["ToggleLeft", "Scale", "Users"],
+      "finalKnowledge": [
+        "method-heading",
+        "all-or-nothing-card",
+        "weighing-card",
+        "lighter-principles-note",
+        "rivalry-note"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "threshold-conditions",
+      "export": "ThresholdConditionsScene",
+      "layout": "guarded-gate-with-double-key",
+      "anchor": "flow-target",
+      "grammar": ["exhaustion-gate", "double-key-replace", "no-shortcut-warning"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "external-negation", "stamp"],
+      "focalChannels": ["icon", "motion", "contrast", "enclosure", "annotation"],
+      "tokens": ["DoorClosed", "Key", "ShieldAlert"],
+      "finalKnowledge": [
+        "threshold-heading",
+        "exhaustion-gate-note",
+        "gap-filling-chip",
+        "double-key-note",
+        "no-shortcut-warning"
+      ],
+      "statefulObjects": ["principle-enters-case"]
+    }
+  ]
+}

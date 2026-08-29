@@ -1,0 +1,16 @@
+{
+  "directionId": "chalkboard-lecture",
+  "family": "chalk-on-board",
+  "palette": "deep board green + chalk white + chalk yellow emphasis + chalk pink caution + chalk blue citation + warm wood tray",
+  "typography": "hand-set chalk headings with double chalk underlines, dashed chalk frames for boxes, chalk-yellow chips for principles and chalk-blue chips for rules, pink reserved for warnings",
+  "composition": "each scene is a board spread: the comparison sits as a chalk table with a wood chalk-tray header, the method stage splits into a switch board and a balance, the threshold gate draws as a dashed door with keys",
+  "surface": "flat board green with faint chalk dust smears and eraser ghosting, dashed chalk strokes, solid wood tray strip at the bottom edge, no gradients, no rounded cards, no drop shadows",
+  "motion": "chalk strokes draw themselves, chips get underlined as they are spoken, the switch flips once and holds, the balance pans settle, keys slide into the gate lock",
+  "transition": "an eraser swipe ghosts the board clean before the next spread",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/theoretical-law/01/legal-principles/",
+    "title": "黑板讲席"
+  }
+}
