@@ -18,6 +18,8 @@ import {EvidenceExclusionLattice} from '../../animations/criminal-procedure/07/e
 import {DURATION_FRAMES as EVIDENCE_EXCLUSION_DURATION_FRAMES, FPS as EVIDENCE_EXCLUSION_FPS} from '../../animations/criminal-procedure/07/evidence-exclusion-lattice/remotion/storyboard';
 import {ProcedureStructureOrrery} from '../../animations/criminal-procedure/01/procedure-structure-orrery/remotion/ProcedureStructureOrrery';
 import {DURATION_FRAMES as PROCEDURE_STRUCTURE_DURATION_FRAMES, FPS as PROCEDURE_STRUCTURE_FPS} from '../../animations/criminal-procedure/01/procedure-structure-orrery/remotion/storyboard';
+import {PleaLeniencyCaliper} from '../../animations/criminal-procedure/02/plea-leniency-caliper/remotion/PleaLeniencyCaliper';
+import {DURATION_FRAMES as PLEA_LENIENTY_DURATION_FRAMES, FPS as PLEA_LENIENTY_FPS} from '../../animations/criminal-procedure/02/plea-leniency-caliper/remotion/storyboard';
 import {ThirdPartyRevocation} from '../../animations/civil-procedure/07/third-party-revocation/remotion/ThirdPartyRevocation';
 import {ThirdPartyTypes} from '../../animations/civil-procedure/07/third-party-types/remotion/ThirdPartyTypes';
 import {JointLitigation} from '../../animations/civil-procedure/06/joint-litigation/remotion/JointLitigation';
