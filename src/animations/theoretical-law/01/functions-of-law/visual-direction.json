@@ -1,0 +1,16 @@
+{
+  "directionId": "night-beacon-station",
+  "family": "lighthouse-signal-night",
+  "palette": "night navy ground + luminous beam amber + signal teal + slate instrument panels + pale chart text + alarm coral accents",
+  "typography": "pale chart headings with amber beam underlines, slate panels with light engraved labels, teal chips for scopes, coral stamps reserved for sanctions and verdicts",
+  "composition": "each scene is a night signal chart: scopes split into twin watch panels, the five functions fan out as beam lanes from one lamp rail, the verdict flows along a lit bearing line, social roles stand as twin pillars on a shared base slab",
+  "surface": "flat deep navy with faint horizon band and star ticks, slate panels with hairline light borders, glowing beam wedges kept flat (no gradients), brass instrument rules; no rounded cards, no drop shadows",
+  "motion": "beams sweep once to their bearing and hold, lanes light up in reading order, the verdict token travels its bearing line into the sanction chip, pillars rise from the base slab",
+  "transition": "a horizon-line wipe where the previous chart dims to night before the next lights up",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/theoretical-law/01/functions-of-law/",
+    "title": "灯塔信号站"
+  }
+}

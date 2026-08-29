@@ -1,0 +1,83 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 4,
+  "playerControlSafeBottom": 176,
+  "scenes": [
+    {
+      "id": "two-layer-structure",
+      "export": "TwoLayerStructureScene",
+      "layout": "twin-scope-panels-with-order-relation",
+      "anchor": "comparison-axis",
+      "grammar": ["scope-split", "premise-purpose-order"],
+      "textTreatments": ["label-block", "soft-highlight", "chip", "thin-underline"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["User", "Users", "ArrowRight"],
+      "finalKnowledge": [
+        "two-layer-heading",
+        "normative-panel",
+        "social-panel",
+        "premise-note",
+        "purpose-note",
+        "order-relation-chip"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "five-guiding-functions",
+      "export": "FiveGuidingFunctionsScene",
+      "layout": "five-beam-function-lanes",
+      "anchor": "typographic-sequence",
+      "grammar": ["who-when-matrix", "beam-lane-series", "mnemonic-strip"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["Compass", "Search", "Megaphone", "Telescope", "Gavel"],
+      "finalKnowledge": [
+        "functions-heading",
+        "guidance-lane",
+        "evaluation-lane",
+        "education-lane",
+        "prediction-lane",
+        "coercion-lane",
+        "who-when-mnemonic"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "evaluation-verdict-flow",
+      "export": "EvaluationVerdictFlowScene",
+      "layout": "verdict-flow-with-attached-coercion",
+      "anchor": "flow-path",
+      "grammar": ["legal-not-moral-scale", "verdict-implies-evaluation", "loss-attaches-coercion"],
+      "textTreatments": ["label-block", "soft-highlight", "chip", "external-negation", "stamp"],
+      "focalChannels": ["icon", "motion", "contrast", "enclosure", "annotation"],
+      "tokens": ["Scale", "FileText", "Gavel"],
+      "finalKnowledge": [
+        "evaluation-heading",
+        "scale-standard-note",
+        "lawful-unlawful-chip",
+        "moral-scale-negation",
+        "verdict-evaluation-note",
+        "loss-coercion-chip"
+      ],
+      "statefulObjects": ["losing-verdict-into-coercion"]
+    },
+    {
+      "id": "social-role-pillars",
+      "export": "SocialRolePillarsScene",
+      "layout": "twin-pillars-on-common-base",
+      "anchor": "role-pair",
+      "grammar": ["class-rule-pillar", "public-affairs-pillar", "base-foundation-relation"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["Crown", "HeartHandshake", "Landmark"],
+      "finalKnowledge": [
+        "social-heading",
+        "class-rule-pillar",
+        "public-affairs-pillar",
+        "normal-existence-chip",
+        "foundation-note"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

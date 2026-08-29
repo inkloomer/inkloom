@@ -96,6 +96,8 @@ import {MarxistLawEssence} from '../../animations/theoretical-law/01/marxist-law
 import {DURATION_FRAMES as MARXIST_LAW_DURATION_FRAMES, FPS as MARXIST_LAW_FPS} from '../../animations/theoretical-law/01/marxist-law-essence/remotion/storyboard';
 import {FeaturesOfLaw} from '../../animations/theoretical-law/01/features-of-law/remotion/FeaturesOfLaw';
 import {DURATION_FRAMES as FEATURES_OF_LAW_DURATION_FRAMES, FPS as FEATURES_OF_LAW_FPS} from '../../animations/theoretical-law/01/features-of-law/remotion/storyboard';
+import {FunctionsOfLaw} from '../../animations/theoretical-law/01/functions-of-law/remotion/FunctionsOfLaw';
+import {DURATION_FRAMES as FUNCTIONS_OF_LAW_DURATION_FRAMES, FPS as FUNCTIONS_OF_LAW_FPS} from '../../animations/theoretical-law/01/functions-of-law/remotion/storyboard';
 import {ConceptOfLawDispute} from '../../animations/theoretical-law/01/concept-of-law-dispute/remotion/ConceptOfLawDispute';
 import {DURATION_FRAMES as CONCEPT_OF_LAW_DURATION_FRAMES, FPS as CONCEPT_OF_LAW_FPS} from '../../animations/theoretical-law/01/concept-of-law-dispute/remotion/storyboard';
 import {DURATION_FRAMES as FIGHT_DURATION_FRAMES, FPS as FIGHT_FPS} from '../../animations/criminal/22/fight-defense-diagram/remotion/storyboard';
@@ -178,6 +180,7 @@ export const STYLE_DEMOS = [
   {id: 'theoretical-law-01-concept-of-law-dispute', slug: 'concept-of-law-dispute', title: '漆屏对峙', direction: 'Lacquer Twin-Screen', component: ConceptOfLawDispute, href: '/inkloom/objective/theoretical-law/01/concept-of-law-dispute/', durationInFrames: CONCEPT_OF_LAW_DURATION_FRAMES, fps: CONCEPT_OF_LAW_FPS},
   {id: 'theoretical-law-01-marxist-law-essence', slug: 'marxist-law-essence', title: '蓝晒制图', direction: 'Cyanotype Drafting', component: MarxistLawEssence, href: '/inkloom/objective/theoretical-law/01/marxist-law-essence/', durationInFrames: MARXIST_LAW_DURATION_FRAMES, fps: MARXIST_LAW_FPS},
   {id: 'theoretical-law-01-features-of-law', slug: 'features-of-law', title: '标本陈列柜', direction: 'Specimen Gallery Cabinet', component: FeaturesOfLaw, href: '/inkloom/objective/theoretical-law/01/features-of-law/', durationInFrames: FEATURES_OF_LAW_DURATION_FRAMES, fps: FEATURES_OF_LAW_FPS},
+  {id: 'theoretical-law-01-functions-of-law', slug: 'functions-of-law', title: '灯塔信号站', direction: 'Night Beacon Station', component: FunctionsOfLaw, href: '/inkloom/objective/theoretical-law/01/functions-of-law/', durationInFrames: FUNCTIONS_OF_LAW_DURATION_FRAMES, fps: FUNCTIONS_OF_LAW_FPS},
   ...COMMERCIAL_LAW_STYLE_DEMOS,
 ] as const satisfies readonly DemoDefinition[];
 
@@ -243,6 +246,7 @@ const DEMO_ADDED_AT: Record<(typeof STYLE_DEMOS)[number]['id'], string> = {
   'theoretical-law-01-concept-of-law-dispute': '2026-08-28T23:30:00+08:00',
   'theoretical-law-01-marxist-law-essence': '2026-08-29T13:40:00+08:00',
   'theoretical-law-01-features-of-law': '2026-08-29T15:10:00+08:00',
+  'theoretical-law-01-functions-of-law': '2026-08-29T16:40:00+08:00',
   ...COMMERCIAL_LAW_DEMO_ADDED_AT,
 };
 
