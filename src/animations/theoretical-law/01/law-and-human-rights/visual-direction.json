@@ -1,0 +1,16 @@
+{
+  "directionId": "hearth-flame-candelabra",
+  "family": "candle-flame-gallery",
+  "palette": "burgundy vigil ground + parchment panels + candle-gold flame accents + ember red stamps + pale-wax light chips + walnut candelabra beams",
+  "typography": "ink headings on parchment plaques, dark vigil label tabs with candle-gold left bar, ember stamps reserved for verdicts, gold chips for rights claims, thin ink underline for tests",
+  "composition": "the concept sits as a definition plaque above a growing flame band; the priority scene sets the human-right flame before the state-and-law post; the legalization scene joins a codification bench with a dual-existence row and four value plaques",
+  "surface": "flat burgundy ground with faint candelabra beam hairlines, parchment panels with hairline weathered borders and corner wax dots, no gradients, no rounded cards, no drop shadows",
+  "motion": "flames rise once and hold steady, the priority plaque slides before the state post, value plaques light up in canon order, the dual-existence chips twin together",
+  "transition": "a candle is snuffed and the vigil clears for the next reading",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/theoretical-law/01/law-and-human-rights/",
+    "title": "生而秉炬"
+  }
+}

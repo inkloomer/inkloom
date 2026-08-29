@@ -1,0 +1,125 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "dominion-request-contrast",
+      "export": "DominionRequestScene",
+      "layout": "twin-tower-contrast-rack",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "dominion-rights-bind-everyone-and-realise-directly",
+        "request-rights-bind-only-the-counterparty-and-need-cooperation",
+        "multiple-request-rights-can-coexist-on-one-object",
+        "the-renter-cannot-sue-the-thief-but-the-owner-can"
+      ],
+      "textTreatments": ["label-block", "soft-highlight", "stamp", "thin-underline"],
+      "focalChannels": ["contrast", "icon", "enclosure", "annotation"],
+      "tokens": ["Crown", "Handshake", "Ban"],
+      "finalKnowledge": [
+        "dominion-tower",
+        "request-tower",
+        "feature-ladder",
+        "rental-case-verdict"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "three-request-lanes",
+      "export": "ThreeRequestLanesScene",
+      "layout": "triple-request-lane-hall",
+      "anchor": "typographic-sequence",
+      "grammar": [
+        "claim-request-demands-yours-as-yours-and-is-grounded-in-credit",
+        "property-request-restores-my-full-dominion-and-is-grounded-in-property",
+        "possession-request-restores-my-held-thing-and-is-grounded-in-possession",
+        "consumables-are-owned-by-possession-so-their-return-is-always-a-claim"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["spatial", "icon", "connector", "annotation"],
+      "tokens": ["Handshake", "Home", "Hand", "Coins"],
+      "finalKnowledge": [
+        "claim-lane",
+        "property-lane",
+        "possession-lane",
+        "consumable-trap"
+      ],
+      "statefulObjects": ["sheep-claim-ticket"]
+    },
+    {
+      "id": "return-nuisance-danger-forks",
+      "export": "ReturnNuisanceDangerScene",
+      "layout": "fork-bench-with-dual-targets",
+      "anchor": "document-fork",
+      "grammar": [
+        "property-return-grounds-on-present-right-possessory-return-on-past-holding",
+        "mortgage-and-servitude-lack-possession-so-never-ground-return",
+        "possessory-return-expires-one-year-after-dispossession",
+        "return-targets-only-unauthorised-possessors-direct-or-indirect",
+        "nuisance-targets-both-actors-and-controlling-bystanders",
+        "proprietary-requests-ignore-fault-unlike-damage-claims"
+      ],
+      "textTreatments": ["label-block", "stamp", "external-negation", "thin-underline"],
+      "focalChannels": ["connector", "contrast", "enclosure", "annotation"],
+      "tokens": ["Home", "Hand", "Ban", "Timer", "Gavel"],
+      "finalKnowledge": [
+        "ground-fork",
+        "mortgage-ban",
+        "one-year-expiry",
+        "target-rule",
+        "nuisance-targets",
+        "fault-contrast"
+      ],
+      "statefulObjects": ["laptop-return-claim"]
+    },
+    {
+      "id": "defence-formative-powers",
+      "export": "DefenceFormativeScene",
+      "layout": "shield-bench-and-formation-gate",
+      "anchor": "flow-path",
+      "grammar": [
+        "defence-shields-against-claims-without-breach-of-contract",
+        "defences-need-assertion-and-may-be-waived",
+        "formative-rights-reshape-relations-by-single-will",
+        "formative-rights-need-exercise-through-ordered-notice-or-silence",
+        "exclusive-periods-are-invariant-and-extinguish-formation"
+      ],
+      "textTreatments": ["label-block", "stamp", "soft-highlight", "thin-underline"],
+      "focalChannels": ["connector", "motion", "contrast", "annotation"],
+      "tokens": ["Shield", "Zap", "Timer", "Megaphone", "ScrollText"],
+      "finalKnowledge": [
+        "shield-bench",
+        "no-breach-rule",
+        "formation-gate",
+        "exercise-modes",
+        "exclusive-period"
+      ],
+      "statefulObjects": ["formation-notice"]
+    },
+    {
+      "id": "self-help-triple-stand",
+      "export": "SelfHelpTripleScene",
+      "layout": "triple-stand-defence-wall",
+      "anchor": "role-pair",
+      "grammar": [
+        "necessity-sacrifices-the-smaller-interest-to-save-the-larger",
+        "necessity-losses-are-borne-by-the-danger-causer-or-beneficiary",
+        "defence-caps-at-necessary-limits-and-excess-brings-liability",
+        "self-help-seizes-only-to-preserve-relief-and-must-reach-public-remedies"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["icon", "contrast", "enclosure", "annotation"],
+      "tokens": ["Shield", "Scale", "Key", "Ban"],
+      "finalKnowledge": [
+        "necessity-stand",
+        "defence-stand",
+        "selfhelp-stand",
+        "simaguang-verdicts",
+        "melon-verdict",
+        "key-verdict"
+      ],
+      "statefulObjects": ["rescue-hammer"]
+    }
+  ]
+}

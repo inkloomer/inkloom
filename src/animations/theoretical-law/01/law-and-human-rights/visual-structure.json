@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "playerControlSafeBottom": 176,
+  "scenes": [
+    {
+      "id": "concept-history",
+      "export": "ConceptHistoryScene",
+      "layout": "definition-flame-plaque",
+      "anchor": "concept-icon",
+      "grammar": ["rights-definition", "historic-concept-note", "expansion-trend-band"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "thin-underline"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["Flame", "TrendingUp"],
+      "finalKnowledge": [
+        "concept-heading",
+        "rights-definition",
+        "historic-concept-note",
+        "expansion-trend-band"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "nature-priority",
+      "export": "NaturePriorityScene",
+      "layout": "priority-position-board",
+      "anchor": "role-pair",
+      "grammar": ["pre-state-priority", "moral-right-nature", "evaluation-standard-role"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["Flame", "Landmark", "Scale"],
+      "finalKnowledge": [
+        "priority-heading",
+        "priority-position-board",
+        "moral-right-note",
+        "evaluation-standard-note"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "legalization-duality",
+      "export": "LegalizationDualityScene",
+      "layout": "codification-bench-with-value-row",
+      "anchor": "comparison-axis",
+      "grammar": ["legalization-claim", "dual-existence-row", "value-canon-row"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "thin-underline"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["BookMarked", "Scale", "Flame"],
+      "finalKnowledge": [
+        "legalization-heading",
+        "legalization-bench",
+        "dual-existence-row",
+        "value-canon-row"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

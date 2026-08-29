@@ -1,89 +1,13 @@
-import type {CSSProperties, ReactNode} from 'react';
-import {Building2, CircleDashed, CirclePlay, DoorClosed, Flag, GraduationCap, Landmark, Mail, Megaphone, PhoneCall, Users, X, Zap} from 'lucide-react';
-import {AbsoluteFill, interpolate, useCurrentFrame} from 'remotion';
-import {CLAMP, TimelineSequence} from '../../../../shared/remotion-runtime';
+import type {ReactNode} from 'react';
+import {Building2, CircleDashed, CirclePlay, DoorClosed, Flag, GraduationCap, Landmark, Mail, Megaphone, PhoneCall, Users, Zap} from 'lucide-react';
+import {AbsoluteFill, useCurrentFrame} from 'remotion';
+import {TimelineSequence} from '../../../../shared/remotion-runtime';
 import {SCENES} from './storyboard';
-
-const C = {
-  field: '#EFE7D6',
-  track: '#C05B3D',
-  chalk: '#F3E9D2',
-  chalkDim: 'rgba(243,233,210,0.55)',
-  ink: '#201B14',
-  paper: '#FBF6EA',
-  prep: '#6E675A',
-  flash: '#E8A13C',
-  warm: '#B33A26',
-  cool: '#2E6E9E',
-  white: '#FFFDF7',
-  danger: '#8C2F1F',
-  negDark: '#FFB4A0',
-  ghost: 'rgba(255,253,247,0.35)',
-  panelWhite: 'rgba(255,253,247,0.10)',
-} as const;
-
-const PLAYER_CONTROL_SAFE_BOTTOM = 168;
-
-const reveal = (frame: number, delay: number, span = 16) => interpolate(frame, [delay, delay + span], [0, 1], CLAMP);
-
-const Enter = ({children, delay = 0, y = 22, style}: {children: ReactNode; delay?: number; y?: number; style?: CSSProperties}) => {
-  const frame = useCurrentFrame();
-  const p = reveal(frame, delay);
-  return <div style={{opacity: p, translate: `0 ${(1 - p) * y}px`, ...style}}>{children}</div>;
-};
-
-const Dash = ({children, delay = 0, style}: {children: ReactNode; delay?: number; style?: CSSProperties}) => {
-  const frame = useCurrentFrame();
-  const p = reveal(frame, delay);
-  return <div style={{scale: `${p} 1`, transformOrigin: 'left', ...style}}>{children}</div>;
-};
-
-const Chip = ({children, tone = 'chalk', style}: {children: ReactNode; tone?: 'chalk' | 'warm' | 'cool' | 'ink' | 'prep'; style?: CSSProperties}) => {
-  const bg = tone === 'chalk' ? 'rgba(243,233,210,0.16)' : C[tone];
-  const color = tone === 'chalk' ? C.chalk : C.white;
-  return <span style={{display: 'inline-flex', alignItems: 'center', gap: 8, padding: '5px 13px', backgroundColor: bg, color, fontSize: 22, fontWeight: 800, borderRadius: 8, whiteSpace: 'nowrap', ...style}}>{children}</span>;
-};
-
-const LabelBlock = ({children, color = C.flash, ink = false, size = 28, style}: {children: ReactNode; color?: string; ink?: boolean; size?: number; style?: CSSProperties}) => (
-  <span style={{display: 'inline-flex', alignItems: 'center', gap: 10, borderLeft: `6px solid ${color}`, padding: '2px 12px', color: ink ? C.ink : C.white, fontSize: size, fontWeight: 900, whiteSpace: 'nowrap', ...style}}>{children}</span>
-);
-
-const SoftHi = ({children, dark = false, style}: {children: ReactNode; dark?: boolean; style?: CSSProperties}) => (
-  <span style={{display: 'inline-flex', alignItems: 'center', gap: 8, backgroundColor: dark ? 'rgba(232,161,60,0.30)' : 'rgba(232,161,60,0.24)', padding: '4px 12px', borderRadius: 8, color: dark ? C.ink : C.white, fontSize: 24, fontWeight: 900, whiteSpace: 'nowrap', ...style}}>{children}</span>
-);
-
-const ThinU = ({children, color = C.ink}: {children: ReactNode; color?: string}) => (
-  <span style={{position: 'relative', display: 'inline-block', color}}>{children}<span style={{position: 'absolute', left: 0, right: 0, bottom: -4, height: 3, backgroundColor: color, opacity: 0.8}} /></span>
-);
-
-const Neg = ({children, dark = false, size = 26}: {children: ReactNode; dark?: boolean; size?: number}) => (
-  <span style={{display: 'inline-flex', alignItems: 'center', gap: 8, color: dark ? C.danger : C.negDark, fontSize: size, fontWeight: 900, whiteSpace: 'nowrap'}}>
-    <X size={size + 4} strokeWidth={3.5} />
-    <span>{children}</span>
-  </span>
-);
-
-const Stamp = ({children, delay = 0, tone = 'flash'}: {children: ReactNode; delay?: number; tone?: 'flash' | 'prep' | 'chalk'}) => {
-  const frame = useCurrentFrame();
-  const p = reveal(frame, delay);
-  const bg = tone === 'flash' ? C.flash : tone === 'prep' ? C.prep : 'transparent';
-  const color = tone === 'chalk' ? C.chalk : C.ink;
-  return <span style={{display: 'inline-flex', padding: '3px 12px', border: `3px solid ${tone === 'chalk' ? C.chalk : tone === 'prep' ? C.prep : C.flash}`, backgroundColor: bg, color, fontSize: 22, fontWeight: 950, rotate: '-2deg', opacity: p, scale: 0.9 + p * 0.1, whiteSpace: 'nowrap'}}>{children}</span>;
-};
-
-const Shell = ({code, title, children}: {code: string; title: string; children: ReactNode}) => (
-  <AbsoluteFill data-player-control-safe-bottom={PLAYER_CONTROL_SAFE_BOTTOM} style={{overflow: 'hidden', backgroundColor: C.field, color: C.ink, fontFamily: 'var(--inkloom-animation-body)'}}>
-    <div style={{position: 'absolute', inset: 0, backgroundImage: 'repeating-linear-gradient(90deg, rgba(32,27,20,0.05) 0 3px, transparent 3px 190px)'}} />
-    <div style={{position: 'absolute', left: 72, top: 42, fontSize: 17, fontWeight: 900, letterSpacing: 3, color: C.prep}}>CRIMINAL LAW · ATTEMPT THRESHOLD / {code}</div>
-    <div style={{position: 'absolute', left: 72, top: 70, fontSize: 46, fontWeight: 950}}>{title}</div>
-    <div style={{position: 'absolute', left: 72, right: 72, top: 138, height: 5, backgroundColor: C.ink}} />
-    <main style={{position: 'absolute', left: 72, right: 72, top: 168, bottom: PLAYER_CONTROL_SAFE_BOTTOM}}>{children}</main>
-    <div style={{position: 'absolute', left: 72, right: 72, bottom: 40, display: 'flex', justifyContent: 'space-between', fontSize: 16, fontWeight: 800, color: C.prep}}>
-      <span>刑法 · 第11讲 犯罪形态</span>
-      <span>ON YOUR MARKS — GUN — RUN</span>
-    </div>
-  </AbsoluteFill>
-);
+import {C, Chip, Dash, Enter, LabelBlock, Neg, Shell, SoftHi, Stamp, ThinU} from './theme';
+import {AttemptElementsScene, FormsOverviewScene, PreparationGatesScene, PreparationStageForkScene} from './scenes-forms';
+import {DangerTheoriesScene, ImpossibilityForkScene} from './scenes-impossibility';
+import {AutomatismFrankFormulaScene, DiscontinuationConductScene, DiscontinuationPenaltyScene, EffectivenessMatrixScene, InterveningTwoStepsScene, MistakeSpecificObjectScene} from './scenes-discontinuation';
+import {CausationChainsScene, CompletionElementsScene, FormsExclusionScene, ObjectTransferScene, RepeatAttacksScene} from './scenes-completion';
 
 export const StageBoundaryScene = () => {
   const frame = useCurrentFrame();
@@ -156,8 +80,6 @@ export const StageBoundaryScene = () => {
   </Shell>;
 };
 
-const GhostNumeral = ({n}: {n: string}) => <span style={{fontSize: 40, fontWeight: 950, color: C.ghost, width: 34, lineHeight: 1}}>{n}</span>;
-
 export const ExamCommencementMapScene = () => {
   const BlocksChip = ({children}: {children: ReactNode}) => (
     <Chip tone="chalk" style={{border: `2px dashed ${C.chalkDim}`, borderRadius: 8}}>
@@ -171,7 +93,7 @@ export const ExamCommencementMapScene = () => {
       <div style={{position: 'absolute', left: 0, top: 0, width: 872, height: 560, backgroundColor: C.track, borderRadius: 18, padding: '16px 20px'}}>
         <div data-final-knowledge="map-family-violent">
           <Enter delay={6} style={{display: 'flex', alignItems: 'center', gap: 12}}>
-            <Zap size={30} color={C.flash} />
+            <Zap size={30} color={C.flash} style={{flexShrink: 0}} />
             <LabelBlock size={28}>暴力·侵入型</LabelBlock>
             <span style={{fontSize: 22, color: C.chalk, fontWeight: 700}}>对人身开始强制，或侵入住宅</span>
           </Enter>
@@ -182,7 +104,7 @@ export const ExamCommencementMapScene = () => {
             <LabelBlock size={27}>抢劫罪</LabelBlock>
             <BlocksChip>各就位：准备凶器、诱骗上车</BlocksChip>
             <Dash delay={34} style={{flex: 1, borderTop: `3px dashed ${C.chalkDim}`}} />
-            <Flag size={24} color={C.chalk} />
+            <Flag size={24} color={C.chalk} style={{flexShrink: 0}} />
           </Enter>
           <Enter delay={44} style={{marginTop: 10, marginLeft: 46, display: 'flex', alignItems: 'center', gap: 12}}>
             <CirclePlay size={24} color={C.flash} style={{flexShrink: 0}} />
@@ -195,11 +117,16 @@ export const ExamCommencementMapScene = () => {
             <LabelBlock size={27}>强奸罪</LabelBlock>
             <BlocksChip>各就位：埋伏、尾随</BlocksChip>
             <Dash delay={80} style={{flex: 1, borderTop: `3px dashed ${C.chalkDim}`}} />
-            <Flag size={24} color={C.chalk} />
+            <Flag size={24} color={C.chalk} style={{flexShrink: 0}} />
           </Enter>
           <Enter delay={90} style={{marginTop: 10, marginLeft: 46, display: 'flex', alignItems: 'center', gap: 12}}>
             <CirclePlay size={24} color={C.flash} style={{flexShrink: 0}} />
             <SoftHi>对妇女实施暴力·胁迫·强制手段时</SoftHi>
+          </Enter>
+          <Enter delay={102} style={{marginTop: 8, marginLeft: 46, display: 'flex', alignItems: 'center', gap: 10}}>
+            <GraduationCap size={22} color={C.flash} />
+            <span style={{fontSize: 22, color: C.chalk, fontWeight: 800, whiteSpace: 'nowrap'}}>2006真题：埋伏未等到</span>
+            <Stamp delay={110} tone="chalk">预备</Stamp>
             <span style={{flex: 1}} />
             <Chip style={{fontSize: 22}}>认定标准——而非奸淫时</Chip>
           </Enter>
@@ -208,16 +135,16 @@ export const ExamCommencementMapScene = () => {
           <Enter delay={126} style={{display: 'flex', alignItems: 'center', gap: 12}}>
             <GhostNumeral n="3" />
             <LabelBlock size={27}>盗窃罪·入户</LabelBlock>
-            <DoorClosed size={26} color={C.chalk} />
+            <DoorClosed size={26} color={C.chalk} style={{flexShrink: 0}} />
             <BlocksChip>各就位：翻墙、潜至屋外</BlocksChip>
             <Dash delay={134} style={{flex: 1, borderTop: `3px dashed ${C.chalkDim}`}} />
-            <Flag size={24} color={C.chalk} />
+            <Flag size={24} color={C.chalk} style={{flexShrink: 0}} />
           </Enter>
           <Enter delay={144} style={{marginTop: 8, marginLeft: 46, display: 'flex', alignItems: 'center', gap: 10}}>
             <Neg size={24}>翻院墙——不算着手（仍在各就位）</Neg>
           </Enter>
           <Enter delay={158} style={{marginTop: 8, marginLeft: 46, display: 'flex', alignItems: 'center', gap: 10}}>
-            <CirclePlay size={22} color={C.flash} />
+            <CirclePlay size={22} color={C.flash} style={{flexShrink: 0}} />
             <span style={{fontSize: 24, fontWeight: 900, color: C.white, whiteSpace: 'nowrap'}}>屋里没人：撬门时 ＝ 着手</span>
             <span style={{fontSize: 24, fontWeight: 900, color: C.white, whiteSpace: 'nowrap', marginLeft: 40}}>屋里有人：进门后才算着手</span>
           </Enter>
@@ -229,7 +156,7 @@ export const ExamCommencementMapScene = () => {
       <div style={{position: 'absolute', left: 904, top: 0, width: 872, height: 560, backgroundColor: C.track, borderRadius: 18, padding: '16px 20px'}}>
         <div data-final-knowledge="map-family-communicated">
           <Enter delay={12} style={{display: 'flex', alignItems: 'center', gap: 12}}>
-            <Megaphone size={30} color={C.flash} />
+            <Megaphone size={30} color={C.flash} style={{flexShrink: 0}} />
             <LabelBlock size={28} color={C.cool}>意思传达型</LabelBlock>
             <span style={{fontSize: 22, color: C.chalk, fontWeight: 700}}>犯罪意思传达到对方</span>
           </Enter>
@@ -240,7 +167,7 @@ export const ExamCommencementMapScene = () => {
             <LabelBlock size={27} color={C.cool}>诈骗罪</LabelBlock>
             <BlocksChip>各就位：伪造证件、编写话术</BlocksChip>
             <Dash delay={206} style={{flex: 1, borderTop: `3px dashed ${C.chalkDim}`}} />
-            <Flag size={24} color={C.chalk} />
+            <Flag size={24} color={C.chalk} style={{flexShrink: 0}} />
           </Enter>
           <Enter delay={216} style={{marginTop: 10, marginLeft: 46, display: 'flex', alignItems: 'center', gap: 12}}>
             <CirclePlay size={24} color={C.flash} style={{flexShrink: 0}} />
@@ -257,7 +184,7 @@ export const ExamCommencementMapScene = () => {
             <LabelBlock size={27} color={C.cool}>保险诈骗罪</LabelBlock>
             <BlocksChip>各就位：制造保险事故</BlocksChip>
             <Dash delay={258} style={{flex: 1, borderTop: `3px dashed ${C.chalkDim}`}} />
-            <Flag size={24} color={C.chalk} />
+            <Flag size={24} color={C.chalk} style={{flexShrink: 0}} />
           </Enter>
           <Enter delay={268} style={{marginTop: 10, marginLeft: 46, display: 'flex', alignItems: 'center', gap: 12}}>
             <CirclePlay size={24} color={C.flash} style={{flexShrink: 0}} />
@@ -273,7 +200,7 @@ export const ExamCommencementMapScene = () => {
             <LabelBlock size={27} color={C.cool}>诬告陷害罪</LabelBlock>
             <BlocksChip>各就位：写诬告材料</BlocksChip>
             <Dash delay={302} style={{flex: 1, borderTop: `3px dashed ${C.chalkDim}`}} />
-            <Flag size={24} color={C.chalk} />
+            <Flag size={24} color={C.chalk} style={{flexShrink: 0}} />
           </Enter>
           <Enter delay={310} style={{marginTop: 10, marginLeft: 46, display: 'flex', alignItems: 'center', gap: 12}}>
             <CirclePlay size={24} color={C.flash} style={{flexShrink: 0}} />
@@ -299,9 +226,6 @@ export const ExamCommencementMapScene = () => {
   );
 };
 
-const RelayNode = ({label, delay}: {label: string; delay: number}) => (
-  <Enter delay={delay} style={{backgroundColor: C.ink, color: C.white, fontSize: 24, fontWeight: 900, padding: '10px 18px', borderRadius: 10, whiteSpace: 'nowrap'}}>{label}</Enter>
-);
 
 export const SpecialCasesLaneScene = () => (
   <Shell code="03" title="特殊问题：隔离犯与间接正犯">
@@ -321,11 +245,11 @@ export const SpecialCasesLaneScene = () => (
           <Enter delay={40} style={{display: 'flex', alignItems: 'center', gap: 12}}>
             <Chip tone="warm">途中有危险</Chip>
             <Dash delay={48} style={{flex: 1, borderTop: `3px dashed ${C.warm}`}} />
-            <CirclePlay size={26} color={C.warm} />
+            <CirclePlay size={26} color={C.warm} style={{flexShrink: 0}} />
             <SoftHi dark>寄出时 ＝ 着手</SoftHi>
           </Enter>
           <Enter delay={58} style={{marginTop: 12, display: 'flex', alignItems: 'center', gap: 10, fontSize: 22, color: C.ink, fontWeight: 700}}>
-            <GraduationCap size={22} color={C.warm} />
+            <GraduationCap size={22} color={C.warm} style={{flexShrink: 0}} />
             例2 炭疽热病毒粉——途中一旦泄漏即有传播危险
           </Enter>
           <Enter delay={66} style={{marginTop: 8, marginLeft: 32, fontSize: 22, color: C.prep, fontWeight: 700}}>
@@ -336,11 +260,11 @@ export const SpecialCasesLaneScene = () => (
           <Enter delay={78} style={{display: 'flex', alignItems: 'center', gap: 12}}>
             <Chip tone="cool">途中无危险</Chip>
             <Dash delay={86} style={{flex: 1, borderTop: `3px dashed ${C.cool}`}} />
-            <CirclePlay size={26} color={C.cool} />
+            <CirclePlay size={26} color={C.cool} style={{flexShrink: 0}} />
             <SoftHi dark>收到打开时 ＝ 着手</SoftHi>
           </Enter>
           <Enter delay={96} style={{marginTop: 12, display: 'flex', alignItems: 'center', gap: 10, fontSize: 22, color: C.ink, fontWeight: 700}}>
-            <GraduationCap size={22} color={C.cool} />
+            <GraduationCap size={22} color={C.cool} style={{flexShrink: 0}} />
             例1 有毒饼干——乙收到时才算着手
           </Enter>
           <Enter delay={106} style={{marginTop: 8, marginLeft: 32, fontSize: 22, color: C.prep, fontWeight: 700}}>
@@ -366,7 +290,7 @@ export const SpecialCasesLaneScene = () => (
             <Neg dark size={24}>甲指使时——不算着手</Neg>
           </Enter>
           <Enter delay={68} style={{marginTop: 10, display: 'flex', alignItems: 'center', gap: 10}}>
-            <CirclePlay size={24} color={C.warm} />
+            <CirclePlay size={24} color={C.warm} style={{flexShrink: 0}} />
             <span style={{fontSize: 24, fontWeight: 900}}>小孩着手实施时——甲才算着手</span>
           </Enter>
           <Enter delay={84} style={{marginTop: 12, display: 'flex', alignItems: 'center', gap: 10}}>
@@ -398,10 +322,31 @@ export const SpecialCasesLaneScene = () => (
   </Shell>
 );
 
+const RelayNode = ({label, delay}: {label: string; delay: number}) => (
+  <Enter delay={delay} style={{backgroundColor: C.ink, color: C.white, fontSize: 24, fontWeight: 900, padding: '10px 18px', borderRadius: 10, whiteSpace: 'nowrap'}}>{label}</Enter>
+);
+
 export const CommencementThresholdMap = () => (
   <AbsoluteFill>
     <TimelineSequence name="01-stage-boundary" {...SCENES.stageBoundary}><StageBoundaryScene /></TimelineSequence>
     <TimelineSequence name="02-exam-commencement-map" {...SCENES.examCommencementMap}><ExamCommencementMapScene /></TimelineSequence>
     <TimelineSequence name="03-special-cases-lane" {...SCENES.specialCasesLane}><SpecialCasesLaneScene /></TimelineSequence>
+    <TimelineSequence name="04-forms-overview" {...SCENES.formsOverview}><FormsOverviewScene /></TimelineSequence>
+    <TimelineSequence name="05-preparation-gates" {...SCENES.preparationGates}><PreparationGatesScene /></TimelineSequence>
+    <TimelineSequence name="06-preparation-stage-fork" {...SCENES.preparationStageFork}><PreparationStageForkScene /></TimelineSequence>
+    <TimelineSequence name="07-attempt-elements" {...SCENES.attemptElements}><AttemptElementsScene /></TimelineSequence>
+    <TimelineSequence name="08-impossibility-fork" {...SCENES.impossibilityFork}><ImpossibilityForkScene /></TimelineSequence>
+    <TimelineSequence name="09-danger-theories" {...SCENES.dangerTheories}><DangerTheoriesScene /></TimelineSequence>
+    <TimelineSequence name="10-automatism-frank-formula" {...SCENES.automatismFrankFormula}><AutomatismFrankFormulaScene /></TimelineSequence>
+    <TimelineSequence name="11-mistake-specific-object" {...SCENES.mistakeSpecificObject}><MistakeSpecificObjectScene /></TimelineSequence>
+    <TimelineSequence name="12-discontinuation-conduct" {...SCENES.discontinuationConduct}><DiscontinuationConductScene /></TimelineSequence>
+    <TimelineSequence name="13-effectiveness-matrix" {...SCENES.effectivenessMatrix}><EffectivenessMatrixScene /></TimelineSequence>
+    <TimelineSequence name="14-intervening-two-steps" {...SCENES.interveningTwoSteps}><InterveningTwoStepsScene /></TimelineSequence>
+    <TimelineSequence name="15-discontinuation-penalty" {...SCENES.discontinuationPenalty}><DiscontinuationPenaltyScene /></TimelineSequence>
+    <TimelineSequence name="16-completion-elements" {...SCENES.completionElements}><CompletionElementsScene /></TimelineSequence>
+    <TimelineSequence name="17-causation-chains" {...SCENES.causationChains}><CausationChainsScene /></TimelineSequence>
+    <TimelineSequence name="18-object-transfer" {...SCENES.objectTransfer}><ObjectTransferScene /></TimelineSequence>
+    <TimelineSequence name="19-forms-exclusion" {...SCENES.formsExclusion}><FormsExclusionScene /></TimelineSequence>
+    <TimelineSequence name="20-repeat-attacks" {...SCENES.repeatAttacks}><RepeatAttacksScene /></TimelineSequence>
   </AbsoluteFill>
 );

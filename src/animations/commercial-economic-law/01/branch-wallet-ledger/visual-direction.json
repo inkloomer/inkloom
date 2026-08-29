@@ -1,0 +1,26 @@
+{
+  "directionId": "shanxi-draft-bank-counter",
+  "family": "draft-bank-wallet-counter",
+  "palette": "walnut counter field + wood drawers + rice-paper tickets + cinnabar seal red + brass fittings + ink black",
+  "typography": "draft-bank counter headlines, ledger drawer labels, square cinnabar verdict stamps, dashed compartment rules",
+  "composition": "a head-office vault with dashed branch compartments beside an independent subsidiary vault, a three-drawer execution rail, and a verdict desk stamping exam tickets",
+  "surface": "dark walnut counter with rice-paper cards and seal stamps; no glossy panels",
+  "motion": "vaults and tickets enter in legal-reasoning order, drawer connectors traverse in draw sequence, verdict stamps land with a slight rotation; no idle loops",
+  "transition": "the walnut counter persists while each scene re-stages the same vault for a new question",
+  "conceptTokens": {
+    "总公司": "Landmark",
+    "分公司": "Building2",
+    "子公司": "Building",
+    "财产共享": "Wallet",
+    "债权人": "HandCoins",
+    "执行受偿": "Banknote",
+    "割裂血脉": "Scissors",
+    "真题": "GraduationCap"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/commercial-economic-law/01/branch-wallet-ledger/",
+    "title": "票号夹层钱柜"
+  }
+}

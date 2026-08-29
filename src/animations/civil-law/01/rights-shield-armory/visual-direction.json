@@ -1,0 +1,21 @@
+{
+  "directionId": "spear-shield-armory",
+  "family": "spear-shield-armory",
+  "palette": "armory midnight navy, spearhead silver, shield crimson, parchment cream, brass ring gold, moss green, graphite ink",
+  "typography": "WenKai headings on brass-bound shield bosses, etched condition lines and crimson wax verdicts",
+  "composition": "a central armory aisle with twin spear-shield racks; request lanes, fork benches and a three-stand defence wall occupy the hall",
+  "surface": "steel plates, parchment cards, leather straps, crimson wax seals",
+  "motion": "spear tokens thrust along request lanes, shield tokens rise to meet them; claim tickets travel forks and settle as sealed terminal states",
+  "transition": "the armory floor, banner rail and steel racks persist while the racks and stands are re-dressed between scenes",
+  "conceptTokens": {
+    "请求权之矛": "Sword",
+    "抗辩之盾": "Shield",
+    "占有": "Hand"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/civil-law/01/rights-shield-armory/",
+    "title": "矛盾武库"
+  }
+}
