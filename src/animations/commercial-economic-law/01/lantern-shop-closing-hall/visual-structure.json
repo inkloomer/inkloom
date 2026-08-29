@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "playerControlSafeBottom": 168,
+  "scenes": [
+    {
+      "id": "closing-lane",
+      "export": "ClosingLaneScene",
+      "layout": "three-step-closing-lane",
+      "anchor": "flow-path",
+      "grammar": ["death-trilogy-progression", "liquidation-duty-scope"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["Stamp", "Scale", "Landmark", "GraduationCap"],
+      "finalKnowledge": [
+        "close-step-dissolve",
+        "close-step-liquidate",
+        "close-step-deregister",
+        "close-exam-verdict"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "court-track",
+      "export": "CourtTrackScene",
+      "layout": "dual-track-court-board",
+      "anchor": "comparison-axis",
+      "grammar": ["dissolution-vs-bankruptcy-track", "representative-continuity"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["Users", "FileWarning", "GraduationCap"],
+      "finalKnowledge": [
+        "ct-dissolution-track",
+        "ct-bankruptcy-track",
+        "ct-exam-verdict"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "simple-deregister",
+      "export": "SimpleDeregisterScene",
+      "layout": "pledge-deregister-desk",
+      "anchor": "document-fork",
+      "grammar": ["pledge-substitutes-liquidation", "false-pledge-joint-liability"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["HandCoins", "Bell", "FileWarning", "GraduationCap"],
+      "finalKnowledge": [
+        "dg-premise-desk",
+        "dg-notice-gate",
+        "dg-false-pledge-board"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}
