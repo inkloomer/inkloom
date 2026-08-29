@@ -1,0 +1,16 @@
+{
+  "directionId": "code-forge-foundry",
+  "family": "bill-forge-line",
+  "palette": "brick-kiln ground + sand-mold panels + molten-orange bill accents + iron-gray frames + forge-black ink + brass verdict stamps",
+  "typography": "forge-black headings on sand-mold plaques, dark kiln label tabs with molten-orange left bar, brass stamps reserved for passage verdicts and mnemonics, orange chips for bill states, thin ink underline for procedural tests",
+  "composition": "principles and proposal sit as two mold benches; deliberation runs as a casting line from first reading to the vote gate; the review scene draws a relations flow with a filing-mnemonic rail; the adjudication scene forks four conflict cases over a self-then-superior rule strip",
+  "surface": "flat brick-kiln ground with faint mold-joint hairlines, sand panels with hairline weathered borders and corner clamps, no gradients, no rounded cards, no drop shadows",
+  "motion": "the bill ingot slides along the casting line, reading stations light as it passes, the vote gate stamps once, relation arrows draw along the flow, the fork arms swing to their posts",
+  "transition": "the kiln door closes and the foundry clears for the next pour",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/theoretical-law/01/legislation-law/",
+    "title": "法典铸坊"
+  }
+}

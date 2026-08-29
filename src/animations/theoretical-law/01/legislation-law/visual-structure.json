@@ -1,0 +1,76 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "playerControlSafeBottom": 176,
+  "scenes": [
+    {
+      "id": "principles-proposal",
+      "export": "PrinciplesProposalScene",
+      "layout": "principles-bench-with-proposal-pair",
+      "anchor": "comparison-axis",
+      "grammar": ["three-principles-bench", "assembly-proposal-lane", "standing-committee-proposal-lane"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "thin-underline"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["Compass", "Users", "ShieldCheck"],
+      "finalKnowledge": [
+        "principles-heading",
+        "principles-bench",
+        "assembly-proposal-lane",
+        "committee-proposal-lane"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "deliberation-voting",
+      "export": "DeliberationVotingScene",
+      "layout": "bill-casting-line-with-vote-gate",
+      "anchor": "timeline-gate",
+      "grammar": ["assembly-five-step-lane", "committee-three-reading-lane", "vote-passage-gate"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "motion", "annotation"],
+      "tokens": ["FileText", "Clock", "Vote"],
+      "finalKnowledge": [
+        "deliberation-heading",
+        "assembly-lane",
+        "committee-lane",
+        "vote-gate",
+        "passage-verdict"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "review-filing",
+      "export": "ReviewFilingScene",
+      "layout": "review-relations-flow-with-filing-rail",
+      "anchor": "flow-path",
+      "grammar": ["prior-approval-gate", "leadership-supervision-branches", "passive-review-rail"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial", "annotation"],
+      "tokens": ["Stamp", "ArrowUpDown", "ClipboardCheck"],
+      "finalKnowledge": [
+        "review-heading",
+        "prior-approval-gate",
+        "relations-branches",
+        "filing-rail",
+        "passive-review-rail"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "adjudication",
+      "export": "AdjudicationScene",
+      "layout": "four-conflict-fork-board",
+      "anchor": "document-fork",
+      "grammar": ["same-maker-conflict", "rule-regulation-conflict", "delegated-conflict"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "stamp"],
+      "focalChannels": ["icon", "contrast", "connector", "spatial", "annotation"],
+      "tokens": ["GitBranch", "Landmark"],
+      "finalKnowledge": [
+        "adjudication-heading",
+        "conflict-fork-board",
+        "self-then-superior-rule"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}
