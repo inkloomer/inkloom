@@ -6,35 +6,53 @@
     {
       "id": "info-definition-scope",
       "export": "InfoDefinitionScopeScene",
-      "layout": "paper-intake-and-definition-desk",
+      "layout": "twin-source-verification-gimbal",
       "anchor": "flow-target",
       "grammar": [
-        "made-and-acquired-dossiers-enter-the-identification-desk",
+        "made-and-acquired-dossiers-enter-the-verification-gimbal",
         "two-statutory-elements-must-coexist-to-qualify",
-        "recorded-and-preserved-material-receives-the-government-info-seal"
+        "verified-material-receives-the-government-info-seal"
       ],
-      "textTreatments": ["label-block", "soft-highlight", "stamp"],
-      "focalChannels": ["contrast", "connector", "enclosure"],
+      "textTreatments": [
+        "label-block",
+        "soft-highlight",
+        "stamp"
+      ],
+      "focalChannels": [
+        "contrast",
+        "connector",
+        "enclosure"
+      ],
       "tokens": [],
       "finalKnowledge": [
         "info-concept-definition",
         "made-vs-acquired",
         "recorded-preserved-standard"
       ],
-      "statefulObjects": ["info-specimen-token"]
+      "statefulObjects": [
+        "info-specimen-token"
+      ]
     },
     {
       "id": "disclosure-subject-matrix",
       "export": "DisclosureSubjectMatrixScene",
-      "layout": "four-branch-subject-register",
+      "layout": "four-bearing-subject-ring",
       "anchor": "document-fork",
       "grammar": [
         "produced-or-preserved-dossiers-stay-with-their-own-agency",
         "derived-information-traces-back-to-the-original-source",
         "jointly-produced-information-lands-on-the-lead-agency-with-fifteen-day-replies"
       ],
-      "textTreatments": ["label-block", "thin-underline", "stamp"],
-      "focalChannels": ["connector", "locator", "contrast"],
+      "textTreatments": [
+        "label-block",
+        "thin-underline",
+        "stamp"
+      ],
+      "focalChannels": [
+        "connector",
+        "locator",
+        "contrast"
+      ],
       "tokens": [],
       "finalKnowledge": [
         "who-makes-discloses",
@@ -42,20 +60,30 @@
         "authorized-branch-duty",
         "joint-lead-organ-rule"
       ],
-      "statefulObjects": ["origin-authority-token"]
+      "statefulObjects": [
+        "origin-authority-token"
+      ]
     },
     {
       "id": "nondisclosure-tier-matrix",
       "export": "NondisclosureTierMatrixScene",
-      "layout": "three-tier-reading-room-gateway",
+      "layout": "three-deck-tiered-gate",
       "anchor": "boundary",
       "grammar": [
         "absolute-prohibition-seals-the-confidential-vault",
         "commercial-secrets-and-privacy-open-only-after-consultation",
         "discretionary-internal-records-remain-behind-frosted-glass"
       ],
-      "textTreatments": ["external-negation", "stamp", "label-block"],
-      "focalChannels": ["enclosure", "contrast", "motion"],
+      "textTreatments": [
+        "external-negation",
+        "stamp",
+        "label-block"
+      ],
+      "focalChannels": [
+        "enclosure",
+        "contrast",
+        "motion"
+      ],
       "tokens": [],
       "finalKnowledge": [
         "absolute-nondisclosure-tier",
@@ -63,20 +91,30 @@
         "discretionary-exemption-tier",
         "dispute-determination-rule"
       ],
-      "statefulObjects": ["confidential-packet"]
+      "statefulObjects": [
+        "confidential-packet"
+      ]
     },
     {
       "id": "active-disclosure-scope-clock",
       "export": "ActiveDisclosureScopeClockScene",
-      "layout": "twenty-day-active-disclosure-seal-clock",
+      "layout": "chronometer-fixed-escapement",
       "anchor": "timeline-gate",
       "grammar": [
         "four-public-interest-categories-enter-the-active-lane",
         "twenty-working-day-clock-counts-from-formation-or-change",
         "the-active-disclosure-clock-never-accepts-an-extension"
       ],
-      "textTreatments": ["label-block", "soft-highlight", "external-negation"],
-      "focalChannels": ["locator", "contrast", "spatial"],
+      "textTreatments": [
+        "label-block",
+        "soft-highlight",
+        "external-negation"
+      ],
+      "focalChannels": [
+        "locator",
+        "contrast",
+        "spatial"
+      ],
       "tokens": [],
       "finalKnowledge": [
         "public-interest-scope",
@@ -84,40 +122,60 @@
         "twenty-day-deadline",
         "no-extension-rule"
       ],
-      "statefulObjects": ["active-release-payload"]
+      "statefulObjects": [
+        "active-release-payload"
+      ]
     },
     {
       "id": "active-channels-venues",
       "export": "ActiveChannelsVenuesScene",
-      "layout": "channel-and-venue-distribution-board",
-      "anchor": "flow-target",
+      "layout": "channel-lighthouse-venue-chart",
+      "anchor": "flow-path",
       "grammar": [
         "disclosure-stream-fans-out-through-five-media-channels",
         "physical-access-anchors-into-three-statutory-venues",
         "optional-access-points-expand-the-reading-room-network"
       ],
-      "textTreatments": ["label-block", "thin-underline", "stamp"],
-      "focalChannels": ["connector", "spatial", "contrast"],
+      "textTreatments": [
+        "label-block",
+        "thin-underline",
+        "stamp"
+      ],
+      "focalChannels": [
+        "connector",
+        "spatial",
+        "contrast"
+      ],
       "tokens": [],
       "finalKnowledge": [
         "five-media-channels",
         "three-statutory-venues",
         "optional-access-points"
       ],
-      "statefulObjects": ["public-gazette-packet"]
+      "statefulObjects": [
+        "public-gazette-packet"
+      ]
     },
     {
       "id": "application-intake-rules",
       "export": "ApplicationIntakeRulesScene",
-      "layout": "intake-balance-and-receipt-detector",
+      "layout": "twin-gate-receipt-scale",
       "anchor": "comparison-axis",
       "grammar": [
         "relaxed-purpose-requirement-balances-the-mandatory-id-rule",
         "four-intake-methods-trigger-distinct-receipt-milestones",
         "written-form-leads-with-an-oral-exception"
       ],
-      "textTreatments": ["external-negation", "label-block", "stamp"],
-      "focalChannels": ["contrast", "locator", "enclosure"],
+      "textTreatments": [
+        "external-negation",
+        "label-block",
+        "stamp"
+      ],
+      "focalChannels": [
+        "contrast",
+        "locator",
+        "enclosure"
+      ],
       "tokens": [],
       "finalKnowledge": [
         "relaxed-purpose-rule",
@@ -125,40 +183,60 @@
         "written-priority-form",
         "four-receipt-date-rules"
       ],
-      "statefulObjects": ["citizen-application-file"]
+      "statefulObjects": [
+        "citizen-application-file"
+      ]
     },
     {
       "id": "response-deadline-clock",
       "export": "ResponseDeadlineClockScene",
-      "layout": "twenty-plus-twenty-response-calendar",
+      "layout": "twenty-plus-twenty-cascade-dials",
       "anchor": "timeline-gate",
       "grammar": [
         "base-twenty-day-track-opens-on-receipt",
         "extension-gate-permits-twenty-more-days-only-with-approval",
         "consultation-days-step-out-of-the-clock"
       ],
-      "textTreatments": ["label-block", "soft-highlight", "thin-underline"],
-      "focalChannels": ["locator", "connector", "contrast"],
+      "textTreatments": [
+        "label-block",
+        "soft-highlight",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "locator",
+        "connector",
+        "contrast"
+      ],
       "tokens": [],
       "finalKnowledge": [
         "base-twenty-day-limit",
         "extension-approval-condition",
         "consultation-time-exclusion"
       ],
-      "statefulObjects": ["response-timeline-token"]
+      "statefulObjects": [
+        "response-timeline-token"
+      ]
     },
     {
       "id": "response-classification-matrix",
       "export": "ResponseClassificationMatrixScene",
-      "layout": "six-route-response-docket-board",
+      "layout": "six-sector-response-compass",
       "anchor": "flow-target",
       "grammar": [
         "mixed-confidential-records-undergo-severability-split",
         "unclear-requests-receive-a-seven-day-supplement-notice",
         "no-fee-rule-applies-unless-abuse-threshold-breached"
       ],
-      "textTreatments": ["label-block", "stamp", "thin-underline"],
-      "focalChannels": ["connector", "contrast", "enclosure"],
+      "textTreatments": [
+        "label-block",
+        "stamp",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "connector",
+        "contrast",
+        "enclosure"
+      ],
       "tokens": [],
       "finalKnowledge": [
         "no-fee-with-cost-exception",
@@ -167,20 +245,30 @@
         "not-this-agency-guidance-duty",
         "seven-day-supplement-notice"
       ],
-      "statefulObjects": ["severable-record-token"]
+      "statefulObjects": [
+        "severable-record-token"
+      ]
     },
     {
       "id": "special-application-router",
       "export": "SpecialApplicationRouterScene",
-      "layout": "six-port-special-case-router",
+      "layout": "telescope-routing-deck",
       "anchor": "document-fork",
       "grammar": [
         "six-anomalous-applications-route-to-statutory-ports",
         "petition-motives-redirect-to-complaint-channels",
         "multiple-identical-requests-convert-into-active-disclosure"
       ],
-      "textTreatments": ["label-block", "external-negation", "stamp"],
-      "focalChannels": ["connector", "locator", "contrast"],
+      "textTreatments": [
+        "label-block",
+        "external-negation",
+        "stamp"
+      ],
+      "focalChannels": [
+        "connector",
+        "locator",
+        "contrast"
+      ],
       "tokens": [],
       "finalKnowledge": [
         "abuse-request-handling",
@@ -190,20 +278,30 @@
         "error-correction-duty",
         "application-to-active-conversion"
       ],
-      "statefulObjects": ["special-request-dossier"]
+      "statefulObjects": [
+        "special-request-dossier"
+      ]
     },
     {
       "id": "exam-traps-verdict",
       "export": "ExamTrapsVerdictScene",
-      "layout": "five-trap-verdict-bench",
-      "anchor": "role-pair",
+      "layout": "five-entry-verdict-log",
+      "anchor": "typographic-sequence",
       "grammar": [
         "five-classic-misconceptions-face-the-verdict-bench",
         "statutory-rules-strike-false-assumptions-with-seal-stamps",
         "the-final-row-locks-one-oral-form-allowance"
       ],
-      "textTreatments": ["external-negation", "stamp", "soft-highlight"],
-      "focalChannels": ["contrast", "annotation", "locator"],
+      "textTreatments": [
+        "external-negation",
+        "stamp",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "annotation",
+        "locator"
+      ],
       "tokens": [],
       "finalKnowledge": [
         "trap-process-vs-internal",
@@ -212,7 +310,9 @@
         "trap-clarification-notice-duty",
         "trap-oral-form-allowance"
       ],
-      "statefulObjects": ["exam-test-ticket"]
+      "statefulObjects": [
+        "exam-test-ticket"
+      ]
     }
   ]
 }

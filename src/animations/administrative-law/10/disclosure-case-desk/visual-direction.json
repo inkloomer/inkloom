@@ -1,16 +1,16 @@
 {
-  "directionId": "sunlit-archive-reading-room",
-  "family": "sunlit-archive-reading-room",
-  "palette": "warm paper ivory, archive ink, vermilion seal red, ledger teal, ochre amber, moss approval green, indigo branch",
-  "typography": "WenKai scroll headings with dossier numerals, paper token tags, vermilion seal stamps and thin underlines",
-  "composition": "paper intake trays, archival identification desks, three-tier reading-room vaults, seal countdown dials, channel distribution boards, response docket grids and verdict benches",
-  "surface": "sunlit paper archive reading room with tactile dossiers, ledger lines and vermilion seals",
-  "motion": "dossiers slide into trays, seal dials sweep, verdict stamps strike and decision chips settle",
-  "transition": "paper wipes, seal strikes and tray handoffs",
+  "directionId": "marine-chronometer-observatory",
+  "family": "marine-chronometer-observatory",
+  "palette": "navy night-sky ground, brass dials with tick rings, cream starlight text, azure signal accents, coral warning accents",
+  "typography": "title-face plaques on navy panels, cream body text, brass mono tags and tick numerals",
+  "composition": "twin-source verification gimbal, four-bearing subject ring, three-deck tiered gate, chronometer escapement, lighthouse channel chart, twin-gate receipt scale, twenty-plus-twenty cascade, six-sector compass, telescope routing deck, verdict log",
+  "surface": "deep navy panels with brass edges and subtle star specks, glowing dial rings",
+  "motion": "dials sweep once then hold, entries stagger in legal order, seals press last",
+  "transition": "the observatory slews to the next dial as starlight settles",
   "catalog": {
     "status": "featured",
     "source": "original-node",
     "route": "/inkloom/objective/administrative-law/10/disclosure-case-desk/",
-    "title": "阳光档案阅览室"
+    "title": "黄铜天文钟观测台"
   }
 }

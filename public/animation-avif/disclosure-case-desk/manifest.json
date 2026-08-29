@@ -3,7 +3,7 @@
   "compositionId": "DisclosureCaseDesk",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-08-14T05:18:06.744Z",
+  "generatedAt": "2026-08-29T09:03:17.554Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -16,13 +16,13 @@
       "title": "内涵判定",
       "durationMs": 7000,
       "file": "info-definition-scope.avif",
-      "fileSize": 429249,
+      "fileSize": 498433,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "b167d8cb39ebdcbf9d46fe865fb9710e5104f3d49b20190428afe0f3063b473b",
+      "sha256": "a68bed643057ac98598c5536b8af7ec9c86ee907e1aac76f7c22cf694a82c52c",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "a857c47ca2073c77e4447df0fb924b19e56000ad85203fb9d7b085c195c71fda"
+      "sceneFingerprint": "0122790d0ba2b6197df7c56c02a0eb58079aa0f24115897535ae5ddc83f10cb8"
     },
     {
       "endFrame": 869,
@@ -33,13 +33,13 @@
       "title": "主体权属",
       "durationMs": 7500,
       "file": "disclosure-subject-matrix.avif",
-      "fileSize": 803640,
+      "fileSize": 547205,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "4ea78cf2cb77eccb8092cf91cd41426b97f132de1b4e62c25243a9d5aa8411a0",
+      "sha256": "269401078db74df8e50a26e00cb116cd7c9a5292a4ff5b3bbebfe05e61c0d968",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "a857c47ca2073c77e4447df0fb924b19e56000ad85203fb9d7b085c195c71fda"
+      "sceneFingerprint": "0122790d0ba2b6197df7c56c02a0eb58079aa0f24115897535ae5ddc83f10cb8"
     },
     {
       "endFrame": 1349,
@@ -50,13 +50,13 @@
       "title": "三级梯队",
       "durationMs": 8000,
       "file": "nondisclosure-tier-matrix.avif",
-      "fileSize": 702162,
+      "fileSize": 619510,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "acd95a75db2ea6fcf9e4b43e75c0464583a3a41924814517332699c8644a7ff8",
+      "sha256": "121532c725e50e2d7014f6ce7fd74f33f5c95eaebed816e6080a3c55c48f5457",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "a857c47ca2073c77e4447df0fb924b19e56000ad85203fb9d7b085c195c71fda"
+      "sceneFingerprint": "0122790d0ba2b6197df7c56c02a0eb58079aa0f24115897535ae5ddc83f10cb8"
     },
     {
       "endFrame": 1769,
@@ -67,13 +67,13 @@
       "title": "主动公开",
       "durationMs": 7000,
       "file": "active-disclosure-scope-clock.avif",
-      "fileSize": 514040,
+      "fileSize": 389937,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "d972577f4fe4366b9de0842f3dfe65cc6070d99c08ebb9353022ace48e5856e0",
+      "sha256": "539e9cb29d310c15b2d1e11ad07d27fe941a8f3cb0020eb84d1615e3bbc23f86",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "a857c47ca2073c77e4447df0fb924b19e56000ad85203fb9d7b085c195c71fda"
+      "sceneFingerprint": "0122790d0ba2b6197df7c56c02a0eb58079aa0f24115897535ae5ddc83f10cb8"
     },
     {
       "endFrame": 2189,
@@ -84,13 +84,13 @@
       "title": "渠道场所",
       "durationMs": 7000,
       "file": "active-channels-venues.avif",
-      "fileSize": 706992,
+      "fileSize": 374047,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "489a71c57bc65fbe4a42f5584a594573004d0c1cae820f5bf0f0da516ea098d4",
+      "sha256": "6e3d62c504d3d66613dfc8e5f892ffe9619aa5813a10c837ae90a06c4d63f954",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "a857c47ca2073c77e4447df0fb924b19e56000ad85203fb9d7b085c195c71fda"
+      "sceneFingerprint": "0122790d0ba2b6197df7c56c02a0eb58079aa0f24115897535ae5ddc83f10cb8"
     },
     {
       "endFrame": 2639,
@@ -101,13 +101,13 @@
       "title": "准入与收到",
       "durationMs": 7500,
       "file": "application-intake-rules.avif",
-      "fileSize": 580160,
+      "fileSize": 442588,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "4b824343efa9b7e546f19cab2a64432c3372330ab073b90a904f6eeab4129487",
+      "sha256": "c52c57e17cd954b8b25b513da99bee7576179922fa11d6cc745363f9bab6ec59",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "a857c47ca2073c77e4447df0fb924b19e56000ad85203fb9d7b085c195c71fda"
+      "sceneFingerprint": "0122790d0ba2b6197df7c56c02a0eb58079aa0f24115897535ae5ddc83f10cb8"
     },
     {
       "endFrame": 3089,
@@ -118,13 +118,13 @@
       "title": "答复时限",
       "durationMs": 7500,
       "file": "response-deadline-clock.avif",
-      "fileSize": 600988,
+      "fileSize": 369019,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "2d4e0c993450c8cedfaa95ef2df466de0c50dd2e2b47dd31f1aa819e5a66a3f5",
+      "sha256": "bbb63cf611b8a3d7e3ecc2f5c8b94e00a32552dd0bc3f832fc9b3068645510a3",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "a857c47ca2073c77e4447df0fb924b19e56000ad85203fb9d7b085c195c71fda"
+      "sceneFingerprint": "0122790d0ba2b6197df7c56c02a0eb58079aa0f24115897535ae5ddc83f10cb8"
     },
     {
       "endFrame": 3569,
@@ -135,13 +135,13 @@
       "title": "答复分类",
       "durationMs": 8000,
       "file": "response-classification-matrix.avif",
-      "fileSize": 466709,
+      "fileSize": 549302,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "a4f52ea23b02ff31b124fcf8056c6d083abe0c8cedcf00ad517f38c46718fc43",
+      "sha256": "818d84aca4b0fefd4deed71b9ce99706b7b5310aa71323627d35339ef9eeea5b",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "a857c47ca2073c77e4447df0fb924b19e56000ad85203fb9d7b085c195c71fda"
+      "sceneFingerprint": "0122790d0ba2b6197df7c56c02a0eb58079aa0f24115897535ae5ddc83f10cb8"
     },
     {
       "endFrame": 4049,
@@ -152,13 +152,13 @@
       "title": "特殊处置",
       "durationMs": 8000,
       "file": "special-application-router.avif",
-      "fileSize": 312335,
+      "fileSize": 423418,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "c1b510ad70a4fd333f80cc8ebc6c8fda7ece08c81f7fb5baf8c13474d0429145",
+      "sha256": "60b97838ffb3e624b4451fb8d59b18b1ed6b28b2e6eab29044737cb844ae63d6",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "a857c47ca2073c77e4447df0fb924b19e56000ad85203fb9d7b085c195c71fda"
+      "sceneFingerprint": "0122790d0ba2b6197df7c56c02a0eb58079aa0f24115897535ae5ddc83f10cb8"
     },
     {
       "endFrame": 4529,
@@ -169,13 +169,13 @@
       "title": "真题避坑",
       "durationMs": 8000,
       "file": "exam-traps-verdict.avif",
-      "fileSize": 433898,
+      "fileSize": 435531,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "ebf6921aea7868c37263f941e61a8fc48788f5d15c17ec416cb31b050df27206",
+      "sha256": "4c420a361cfa642b58929d9311ef3262511b51b7fcbb47f2439aae95f0369aef",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "a857c47ca2073c77e4447df0fb924b19e56000ad85203fb9d7b085c195c71fda"
+      "sceneFingerprint": "0122790d0ba2b6197df7c56c02a0eb58079aa0f24115897535ae5ddc83f10cb8"
     }
   ],
   "size": {
@@ -183,7 +183,7 @@
     "width": 2560
   },
   "sourceFps": 60,
-  "sourceFingerprint": "a857c47ca2073c77e4447df0fb924b19e56000ad85203fb9d7b085c195c71fda",
+  "sourceFingerprint": "0122790d0ba2b6197df7c56c02a0eb58079aa0f24115897535ae5ddc83f10cb8",
   "targetFps": 30,
-  "totalFileSize": 5550173
+  "totalFileSize": 4648990
 }

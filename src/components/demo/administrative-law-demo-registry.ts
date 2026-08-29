@@ -164,8 +164,8 @@ export const ADMINISTRATIVE_LAW_STYLE_DEMOS = [
   {
     id: "administrative-law-10-disclosure-case-desk",
     slug: "disclosure-case-desk",
-    title: "政务公开矩阵台",
-    direction: "Civic Transparency Ledger",
+    title: "黄铜天文钟观测台",
+    direction: "Marine Chronometer Observatory",
     component: DisclosureCaseDesk,
     href: "/inkloom/objective/administrative-law/10/disclosure-case-desk/",
     durationInFrames: DURATION_FRAMES_10,
