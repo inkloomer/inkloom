@@ -1,0 +1,70 @@
+{
+  "animationId": "capital-adjust-clepsydra",
+  "compositionId": "CapitalAdjustClepsydra",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-29T23:13:46.666Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 299,
+      "frameCount": 300,
+      "id": "capital-rise",
+      "number": "01",
+      "startFrame": 0,
+      "title": "注水升格：增资的刻度与滴漏",
+      "durationMs": 10000,
+      "file": "capital-rise.avif",
+      "fileSize": 360721,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "6ee958cd35676fb2796119ef3e0630f84105d93d19fe9b1ff7566ca5b40a2529",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "0adae93401aa6d62c4f0b6b32625fa209f42f7f28cd73741b0aa36a22773a0a2"
+    },
+    {
+      "endFrame": 599,
+      "frameCount": 300,
+      "id": "uneven-cut",
+      "number": "02",
+      "startFrame": 300,
+      "title": "斜切水位：非等比减资须全员点头",
+      "durationMs": 10000,
+      "file": "uneven-cut.avif",
+      "fileSize": 381305,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "a155fe6e5d3dcc2a832047583e026c17a2e6d669152ab04878bb0a5a7e77a843",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "0adae93401aa6d62c4f0b6b32625fa209f42f7f28cd73741b0aa36a22773a0a2"
+    },
+    {
+      "endFrame": 889,
+      "frameCount": 290,
+      "id": "paper-cut",
+      "number": "03",
+      "startFrame": 600,
+      "title": "简易减资：只拨指针，不放水",
+      "durationMs": 9667,
+      "file": "paper-cut.avif",
+      "fileSize": 323847,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "96c068e4ad99c50b1a1f2211f8039daf1446376b33847eedab59b515786991c2",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "0adae93401aa6d62c4f0b6b32625fa209f42f7f28cd73741b0aa36a22773a0a2"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "0adae93401aa6d62c4f0b6b32625fa209f42f7f28cd73741b0aa36a22773a0a2",
+  "targetFps": 30,
+  "totalFileSize": 1065873
+}

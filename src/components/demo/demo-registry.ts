@@ -72,6 +72,7 @@ import {DURATION_FRAMES as GUARANTY_DESK_DURATION_FRAMES, FPS as GUARANTY_DESK_F
 import {DURATION_FRAMES as SEAT_RULE_HALL_DURATION_FRAMES, FPS as SEAT_RULE_HALL_FPS} from '../../animations/commercial-economic-law/01/directors-desk-rule-hall/remotion/storyboard';
 import {DURATION_FRAMES as CANYON_MERGER_DURATION_FRAMES, FPS as CANYON_MERGER_FPS} from '../../animations/commercial-economic-law/01/canyon-confluence-merger/remotion/storyboard';
 import {DURATION_FRAMES as ESCORT_BANNER_DURATION_FRAMES, FPS as ESCORT_BANNER_FPS} from '../../animations/commercial-economic-law/01/escort-banner-transfer-hall/remotion/storyboard';
+import {DURATION_FRAMES as ADJUST_CLEPSYDRA_DURATION_FRAMES, FPS as ADJUST_CLEPSYDRA_FPS} from '../../animations/commercial-economic-law/01/capital-adjust-clepsydra/remotion/storyboard';
 import {DURATION_FRAMES as CAPITAL_REGIME_DURATION_FRAMES, FPS as CAPITAL_REGIME_FPS} from '../../animations/commercial-economic-law/01/capital-regime-vote-hall/remotion/storyboard';
 import {DURATION_FRAMES as LIABILITY_CONCURRENCE_DURATION_FRAMES, FPS as LIABILITY_CONCURRENCE_FPS} from '../../animations/theoretical-law/01/liability-concurrence/remotion/storyboard';
 import {DURATION_FRAMES as JUDICIAL_VS_ADMINISTRATIVE_DURATION_FRAMES, FPS as JUDICIAL_VS_ADMINISTRATIVE_FPS} from '../../animations/theoretical-law/01/judicial-vs-administrative/remotion/storyboard';
@@ -270,6 +271,7 @@ export const STYLE_DEMOS = [
   {id: 'commercial-economic-law-01-directors-desk-rule-hall', slug: 'directors-desk-rule-hall', title: '座次规鉴堂', direction: 'Velvet Seat Rule Gallery', component: lazyDemo(() => import('../../animations/commercial-economic-law/01/directors-desk-rule-hall/remotion/DirectorsDeskRuleHall').then((m) => ({default: m.DirectorsDeskRuleHall}))), href: '/inkloom/objective/commercial-economic-law/01/directors-desk-rule-hall/', durationInFrames: SEAT_RULE_HALL_DURATION_FRAMES, fps: SEAT_RULE_HALL_FPS},
   {id: 'commercial-economic-law-01-canyon-confluence-merger', slug: 'canyon-confluence-merger', title: '峡谷汇流图', direction: 'Canyon Confluence Survey', component: lazyDemo(() => import('../../animations/commercial-economic-law/01/canyon-confluence-merger/remotion/CanyonConfluenceMerger').then((m) => ({default: m.CanyonConfluenceMerger}))), href: '/inkloom/objective/commercial-economic-law/01/canyon-confluence-merger/', durationInFrames: CANYON_MERGER_DURATION_FRAMES, fps: CANYON_MERGER_FPS},
   {id: 'commercial-economic-law-01-escort-banner-transfer-hall', slug: 'escort-banner-transfer-hall', title: '杏黄镖旗局', direction: 'Apricot Banner Escort Hall', component: lazyDemo(() => import('../../animations/commercial-economic-law/01/escort-banner-transfer-hall/remotion/EscortBannerTransferHall').then((m) => ({default: m.EscortBannerTransferHall}))), href: '/inkloom/objective/commercial-economic-law/01/escort-banner-transfer-hall/', durationInFrames: ESCORT_BANNER_DURATION_FRAMES, fps: ESCORT_BANNER_FPS},
+  {id: 'commercial-economic-law-01-capital-adjust-clepsydra', slug: 'capital-adjust-clepsydra', title: '青铜刻漏坊', direction: 'Bronze Clepsydra Works', component: lazyDemo(() => import('../../animations/commercial-economic-law/01/capital-adjust-clepsydra/remotion/CapitalAdjustClepsydra').then((m) => ({default: m.CapitalAdjustClepsydra}))), href: '/inkloom/objective/commercial-economic-law/01/capital-adjust-clepsydra/', durationInFrames: ADJUST_CLEPSYDRA_DURATION_FRAMES, fps: ADJUST_CLEPSYDRA_FPS},
   {id: 'commercial-economic-law-01-capital-regime-vote-hall', slug: 'capital-regime-vote-hall', title: '宣纸票匦堂', direction: 'Xuan-Paper Vote Urn Hall', component: lazyDemo(() => import('../../animations/commercial-economic-law/01/capital-regime-vote-hall/remotion/CapitalRegimeVoteHall').then((m) => ({default: m.CapitalRegimeVoteHall}))), href: '/inkloom/objective/commercial-economic-law/01/capital-regime-vote-hall/', durationInFrames: CAPITAL_REGIME_DURATION_FRAMES, fps: CAPITAL_REGIME_FPS},
   ...COMMERCIAL_LAW_STYLE_DEMOS,
 ] as const satisfies readonly DemoDefinition[];
@@ -409,6 +411,7 @@ const DEMO_ADDED_AT: Record<(typeof STYLE_DEMOS)[number]['id'], string> = {
   'commercial-economic-law-01-directors-desk-rule-hall': '2026-08-31T04:00:00+08:00',
   'commercial-economic-law-01-canyon-confluence-merger': '2026-08-31T04:50:00+08:00',
   'commercial-economic-law-01-escort-banner-transfer-hall': '2026-08-31T05:40:00+08:00',
+  'commercial-economic-law-01-capital-adjust-clepsydra': '2026-08-31T06:30:00+08:00',
   'commercial-economic-law-01-capital-regime-vote-hall': '2026-08-31T01:20:00+08:00',
   ...COMMERCIAL_LAW_DEMO_ADDED_AT,
 };

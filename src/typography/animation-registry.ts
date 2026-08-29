@@ -185,6 +185,7 @@ import {typography as typographyAutoCompanyGuarantySealDesk} from '../animations
 import {typography as typographyAutoDirectorsDeskRuleHall} from '../animations/commercial-economic-law/01/directors-desk-rule-hall/animation.meta';
 import {typography as typographyAutoCanyonConfluenceMerger} from '../animations/commercial-economic-law/01/canyon-confluence-merger/animation.meta';
 import {typography as typographyAutoEscortBannerTransferHall} from '../animations/commercial-economic-law/01/escort-banner-transfer-hall/animation.meta';
+import {typography as typographyAutoCapitalAdjustClepsydra} from '../animations/commercial-economic-law/01/capital-adjust-clepsydra/animation.meta';
 import {typography as typographyAutoReckoningAbacusDesk} from '../animations/administrative-law/24/reckoning-abacus-desk/animation.meta';
 import {typography as typographyAutoBambooScrollRestoration} from '../animations/administrative-law/23/bamboo-scroll-restoration/animation.meta';
 import {typography as typographyAutoLighthouseWatchNetwork} from '../animations/administrative-law/20/lighthouse-watch-network/animation.meta';
@@ -376,6 +377,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'directors-desk-rule-hall': {metadata: typographyAutoDirectorsDeskRuleHall, scope: {animationId: 'directors-desk-rule-hall', subject: 'commercial-economic-law', topic: '01'}},
   'canyon-confluence-merger': {metadata: typographyAutoCanyonConfluenceMerger, scope: {animationId: 'canyon-confluence-merger', subject: 'commercial-economic-law', topic: '01'}},
   'escort-banner-transfer-hall': {metadata: typographyAutoEscortBannerTransferHall, scope: {animationId: 'escort-banner-transfer-hall', subject: 'commercial-economic-law', topic: '01'}},
+  'capital-adjust-clepsydra': {metadata: typographyAutoCapitalAdjustClepsydra, scope: {animationId: 'capital-adjust-clepsydra', subject: 'commercial-economic-law', topic: '01'}},
   'reckoning-abacus-desk': {metadata: typographyAutoReckoningAbacusDesk, scope: {animationId: 'reckoning-abacus-desk', subject: 'administrative-law', topic: '24'}},
   'bamboo-scroll-restoration': {metadata: typographyAutoBambooScrollRestoration, scope: {animationId: 'bamboo-scroll-restoration', subject: 'administrative-law', topic: '23'}},
   'lighthouse-watch-network': {metadata: typographyAutoLighthouseWatchNetwork, scope: {animationId: 'lighthouse-watch-network', subject: 'administrative-law', topic: '20'}},

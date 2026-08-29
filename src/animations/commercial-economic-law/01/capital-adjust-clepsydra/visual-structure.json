@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "playerControlSafeBottom": 168,
+  "scenes": [
+    {
+      "id": "capital-rise",
+      "export": "CapitalRiseScene",
+      "layout": "clepsydra-graduation-desk",
+      "anchor": "timeline-gate",
+      "grammar": ["subscription-axis-rule", "charter-registry-mandatory"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["ArrowDownUp", "Droplets", "PenLine", "GraduationCap"],
+      "finalKnowledge": [
+        "rise-axis-board",
+        "rise-drip-board",
+        "rise-mandatory-strip",
+        "rise-exam-verdict"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "uneven-cut",
+      "export": "UnevenCutScene",
+      "layout": "uneven-cut-scale",
+      "anchor": "comparison-axis",
+      "grammar": ["architecture-break-consensus", "invalidity-discrimination"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["TrendingDown", "Users", "Scale", "GraduationCap"],
+      "finalKnowledge": [
+        "cut-scale-board",
+        "cut-vote-verdict",
+        "cut-discrimination",
+        "cut-exam-verdict"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "paper-cut",
+      "export": "PaperCutScene",
+      "layout": "paper-cut-dial",
+      "anchor": "document-fork",
+      "grammar": ["paper-reduction-rule", "creditor-unchanged-rule"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["TrendingDown", "FileText", "Landmark", "Users", "GraduationCap"],
+      "finalKnowledge": [
+        "paper-why-simple",
+        "paper-procedure-gate",
+        "paper-boundary-board",
+        "paper-exam-verdict"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}
