@@ -1,0 +1,16 @@
+{
+  "directionId": "gold-ground-mosaic",
+  "family": "byzantine-mosaic-clash",
+  "palette": "deep wine ground + gold tessera borders + cream tessera panels + slate blue opposing chips + copper accents",
+  "typography": "cream mosaic plaques with gold double rules, wine nameplates with cream lettering, slate-blue chips reserved for the opposing value, copper underline for the operative standard",
+  "composition": "conflicts read as facing tessera pairs across a gold seam; the rank principle steps downward like a mosaic staircase; the proportion dial is a round tessera medallion; the value field spreads as an open arc bounded by a gold rim",
+  "surface": "flat wine field with faint tessera grid, gold hairline frames with corner cubes, cream panels set slightly inset, no gradients, no rounded cards, no drop shadows",
+  "motion": "pairs slide in from opposite seams and lock across the gold line, the rank staircase descends step by step with the sacrifice arrow falling, the dial needle sweeps once to minimal harm, the value arc lays tesserae clockwise",
+  "transition": "a gold seam wipe travels diagonally as the next panel inlays",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/theoretical-law/01/value-conflict/",
+    "title": "金底嵌画"
+  }
+}

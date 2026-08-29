@@ -1,0 +1,80 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 4,
+  "playerControlSafeBottom": 176,
+  "scenes": [
+    {
+      "id": "conflict-arenas",
+      "export": "ConflictArenasScene",
+      "layout": "three-clash-pair-cards",
+      "anchor": "role-pair",
+      "grammar": ["individual-clash", "community-clash", "mixed-clash"],
+      "textTreatments": ["label-block", "soft-highlight", "chip", "thin-underline"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["User", "Users", "Globe", "Landmark"],
+      "finalKnowledge": [
+        "arenas-heading",
+        "individual-clash-card",
+        "community-clash-card",
+        "mixed-clash-card",
+        "arenas-note"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "rank-principle",
+      "export": "RankPrincipleScene",
+      "layout": "value-rank-steps-with-scope-rings",
+      "anchor": "typographic-sequence",
+      "grammar": ["high-low-sacrifice", "three-scope-levels", "name-plate-verdict"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "motion", "annotation"],
+      "tokens": ["ChevronsUp", "ChevronsDown", "Layers"],
+      "finalKnowledge": [
+        "rank-heading",
+        "rank-steps",
+        "sacrifice-note",
+        "scope-levels",
+        "rank-verdict-plate"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "proportion-principle",
+      "export": "ProportionPrincipleScene",
+      "layout": "case-balance-with-minimal-harm-dial",
+      "anchor": "concept-icon",
+      "grammar": ["case-weighing", "minimal-harm-rule", "venue-contrast-pair"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "external-negation"],
+      "focalChannels": ["icon", "motion", "contrast", "enclosure", "annotation"],
+      "tokens": ["Scale", "Gauge", "Crosshair"],
+      "finalKnowledge": [
+        "proportion-heading",
+        "case-weighing-note",
+        "minimal-harm-dial",
+        "venue-contrast-pair",
+        "proportion-mnemonic"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "value-field-limits",
+      "export": "ValueFieldLimitsScene",
+      "layout": "open-concept-field-with-freedom-guards",
+      "anchor": "boundary",
+      "grammar": ["open-concept-field", "freedom-supremacy-note", "three-limit-principles"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "external-negation"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["Sparkles", "Dove", "ShieldHalf"],
+      "finalKnowledge": [
+        "field-heading",
+        "open-concept-note",
+        "value-chips",
+        "conflict-possible-chip",
+        "freedom-supremacy-note",
+        "three-limit-principles"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

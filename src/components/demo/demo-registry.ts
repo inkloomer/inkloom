@@ -102,6 +102,8 @@ import {FunctionsOfLaw} from '../../animations/theoretical-law/01/functions-of-l
 import {DURATION_FRAMES as FUNCTIONS_OF_LAW_DURATION_FRAMES, FPS as FUNCTIONS_OF_LAW_FPS} from '../../animations/theoretical-law/01/functions-of-law/remotion/storyboard';
 import {LimitationsOfLaw} from '../../animations/theoretical-law/01/limitations-of-law/remotion/LimitationsOfLaw';
 import {DURATION_FRAMES as LIMITATIONS_OF_LAW_DURATION_FRAMES, FPS as LIMITATIONS_OF_LAW_FPS} from '../../animations/theoretical-law/01/limitations-of-law/remotion/storyboard';
+import {ValueConflict} from '../../animations/theoretical-law/01/value-conflict/remotion/ValueConflict';
+import {DURATION_FRAMES as VALUE_CONFLICT_DURATION_FRAMES, FPS as VALUE_CONFLICT_FPS} from '../../animations/theoretical-law/01/value-conflict/remotion/storyboard';
 import {OrgansRelayMap} from '../../animations/criminal-procedure/03/organs-relay-map/remotion/OrgansRelayMap';
 import {DURATION_FRAMES as ORGANS_RELAY_DURATION_FRAMES, FPS as ORGANS_RELAY_FPS} from '../../animations/criminal-procedure/03/organs-relay-map/remotion/storyboard';
 import {ConceptOfLawDispute} from '../../animations/theoretical-law/01/concept-of-law-dispute/remotion/ConceptOfLawDispute';
@@ -197,6 +199,7 @@ export const STYLE_DEMOS = [
   {id: 'theoretical-law-01-features-of-law', slug: 'features-of-law', title: '标本陈列柜', direction: 'Specimen Gallery Cabinet', component: FeaturesOfLaw, href: '/inkloom/objective/theoretical-law/01/features-of-law/', durationInFrames: FEATURES_OF_LAW_DURATION_FRAMES, fps: FEATURES_OF_LAW_FPS},
   {id: 'theoretical-law-01-functions-of-law', slug: 'functions-of-law', title: '灯塔信号站', direction: 'Night Beacon Station', component: FunctionsOfLaw, href: '/inkloom/objective/theoretical-law/01/functions-of-law/', durationInFrames: FUNCTIONS_OF_LAW_DURATION_FRAMES, fps: FUNCTIONS_OF_LAW_FPS},
   {id: 'theoretical-law-01-limitations-of-law', slug: 'limitations-of-law', title: '警戒界桩', direction: 'Hazard Boundary Post', component: LimitationsOfLaw, href: '/inkloom/objective/theoretical-law/01/limitations-of-law/', durationInFrames: LIMITATIONS_OF_LAW_DURATION_FRAMES, fps: LIMITATIONS_OF_LAW_FPS},
+  {id: 'theoretical-law-01-value-conflict', slug: 'value-conflict', title: '金底嵌画', direction: 'Gold-Ground Mosaic', component: ValueConflict, href: '/inkloom/objective/theoretical-law/01/value-conflict/', durationInFrames: VALUE_CONFLICT_DURATION_FRAMES, fps: VALUE_CONFLICT_FPS},
   ...COMMERCIAL_LAW_STYLE_DEMOS,
 ] as const satisfies readonly DemoDefinition[];
 
@@ -267,6 +270,7 @@ const DEMO_ADDED_AT: Record<(typeof STYLE_DEMOS)[number]['id'], string> = {
   'theoretical-law-01-features-of-law': '2026-08-29T15:10:00+08:00',
   'theoretical-law-01-functions-of-law': '2026-08-29T16:40:00+08:00',
   'theoretical-law-01-limitations-of-law': '2026-08-29T18:00:00+08:00',
+  'theoretical-law-01-value-conflict': '2026-08-29T19:20:00+08:00',
   ...COMMERCIAL_LAW_DEMO_ADDED_AT,
 };
 
