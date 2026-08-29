@@ -62,6 +62,7 @@ import {DURATION_FRAMES as CREATION_OF_CONSTITUTION_DURATION_FRAMES, FPS as CREA
 import {DURATION_FRAMES as RESERVE_GRANARY_DURATION_FRAMES, FPS as RESERVE_GRANARY_FPS} from '../../animations/commercial-economic-law/01/profit-reserve-granary/remotion/storyboard';
 import {DURATION_FRAMES as PROMOTER_ROPEWALK_DURATION_FRAMES, FPS as PROMOTER_ROPEWALK_FPS} from '../../animations/commercial-economic-law/01/promoter-liability-ropewalk/remotion/storyboard';
 import {DURATION_FRAMES as REGISTER_PIGEONHOLE_DURATION_FRAMES, FPS as REGISTER_PIGEONHOLE_FPS} from '../../animations/commercial-economic-law/01/shareholder-register-pigeonhole/remotion/storyboard';
+import {DURATION_FRAMES as NOMINEE_MASKS_DURATION_FRAMES, FPS as NOMINEE_MASKS_FPS} from '../../animations/commercial-economic-law/01/nominee-impersonation-masks/remotion/storyboard';
 import {DURATION_FRAMES as LIABILITY_CONCURRENCE_DURATION_FRAMES, FPS as LIABILITY_CONCURRENCE_FPS} from '../../animations/theoretical-law/01/liability-concurrence/remotion/storyboard';
 import {DURATION_FRAMES as JUDICIAL_VS_ADMINISTRATIVE_DURATION_FRAMES, FPS as JUDICIAL_VS_ADMINISTRATIVE_FPS} from '../../animations/theoretical-law/01/judicial-vs-administrative/remotion/storyboard';
 import {DURATION_FRAMES as APPLICATION_OF_LAW_DURATION_FRAMES, FPS as APPLICATION_OF_LAW_FPS} from '../../animations/theoretical-law/01/application-of-law/remotion/storyboard';
@@ -249,6 +250,7 @@ export const STYLE_DEMOS = [
   {id: 'commercial-economic-law-01-profit-reserve-granary', slug: 'profit-reserve-granary', title: '丰廒粮栈', direction: 'Granary Harvest Reserve Hall', component: lazyDemo(() => import('../../animations/commercial-economic-law/01/profit-reserve-granary/remotion/ProfitReserveGranary').then((m) => ({default: m.ProfitReserveGranary}))), href: '/inkloom/objective/commercial-economic-law/01/profit-reserve-granary/', durationInFrames: RESERVE_GRANARY_DURATION_FRAMES, fps: RESERVE_GRANARY_FPS},
   {id: 'commercial-economic-law-01-promoter-liability-ropewalk', slug: 'promoter-liability-ropewalk', title: '合股缆棚', direction: 'Indigo Ropewalk Shed', component: lazyDemo(() => import('../../animations/commercial-economic-law/01/promoter-liability-ropewalk/remotion/PromoterLiabilityRopewalk').then((m) => ({default: m.PromoterLiabilityRopewalk}))), href: '/inkloom/objective/commercial-economic-law/01/promoter-liability-ropewalk/', durationInFrames: PROMOTER_ROPEWALK_DURATION_FRAMES, fps: PROMOTER_ROPEWALK_FPS},
   {id: 'commercial-economic-law-01-shareholder-register-pigeonhole', slug: 'shareholder-register-pigeonhole', title: '铜格登记廊', direction: 'Brass Pigeonhole Registry', component: lazyDemo(() => import('../../animations/commercial-economic-law/01/shareholder-register-pigeonhole/remotion/ShareholderRegisterPigeonhole').then((m) => ({default: m.ShareholderRegisterPigeonhole}))), href: '/inkloom/objective/commercial-economic-law/01/shareholder-register-pigeonhole/', durationInFrames: REGISTER_PIGEONHOLE_DURATION_FRAMES, fps: REGISTER_PIGEONHOLE_FPS},
+  {id: 'commercial-economic-law-01-nominee-impersonation-masks', slug: 'nominee-impersonation-masks', title: '朱漆脸谱箱', direction: 'Crimson Opera Mask Trunk', component: lazyDemo(() => import('../../animations/commercial-economic-law/01/nominee-impersonation-masks/remotion/NomineeImpersonationMasks').then((m) => ({default: m.NomineeImpersonationMasks}))), href: '/inkloom/objective/commercial-economic-law/01/nominee-impersonation-masks/', durationInFrames: NOMINEE_MASKS_DURATION_FRAMES, fps: NOMINEE_MASKS_FPS},
   ...COMMERCIAL_LAW_STYLE_DEMOS,
 ] as const satisfies readonly DemoDefinition[];
 
@@ -377,6 +379,7 @@ const DEMO_ADDED_AT: Record<(typeof STYLE_DEMOS)[number]['id'], string> = {
   'commercial-economic-law-01-profit-reserve-granary': '2026-08-30T22:20:00+08:00',
   'commercial-economic-law-01-promoter-liability-ropewalk': '2026-08-30T23:10:00+08:00',
   'commercial-economic-law-01-shareholder-register-pigeonhole': '2026-08-30T23:50:00+08:00',
+  'commercial-economic-law-01-nominee-impersonation-masks': '2026-08-31T00:30:00+08:00',
   ...COMMERCIAL_LAW_DEMO_ADDED_AT,
 };
 

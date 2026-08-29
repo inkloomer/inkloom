@@ -209,6 +209,7 @@ import {typography as typographyCo} from '../animations/theoretical-law/01/creat
 import {typography as typographyPrg} from '../animations/commercial-economic-law/01/profit-reserve-granary/animation.meta';
 import {typography as typographyPlr} from '../animations/commercial-economic-law/01/promoter-liability-ropewalk/animation.meta';
 import {typography as typographySrp} from '../animations/commercial-economic-law/01/shareholder-register-pigeonhole/animation.meta';
+import {typography as typographyNim} from '../animations/commercial-economic-law/01/nominee-impersonation-masks/animation.meta';
 import {typography as typography48} from '../animations/demo/demo-archival-dossier/animation.meta';
 import {typography as typography49} from '../animations/demo/demo-constructivist-geometry/animation.meta';
 import {typography as typography50} from '../animations/demo/demo-courtroom-blueprint/animation.meta';
@@ -430,6 +431,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'profit-reserve-granary': {metadata: typographyPrg, scope: {animationId: 'profit-reserve-granary', subject: 'commercial-economic-law', topic: '01'}},
   'promoter-liability-ropewalk': {metadata: typographyPlr, scope: {animationId: 'promoter-liability-ropewalk', subject: 'commercial-economic-law', topic: '01'}},
   'shareholder-register-pigeonhole': {metadata: typographySrp, scope: {animationId: 'shareholder-register-pigeonhole', subject: 'commercial-economic-law', topic: '01'}},
+  'nominee-impersonation-masks': {metadata: typographyNim, scope: {animationId: 'nominee-impersonation-masks', subject: 'commercial-economic-law', topic: '01'}},
   'fight-defense-diagram': {metadata: typography44, scope: {animationId: 'fight-defense-diagram', subject: 'criminal', topic: '22'}},
   'high-altitude-throwing-diagram': {metadata: typography45, scope: {animationId: 'high-altitude-throwing-diagram', subject: 'criminal', topic: '22'}},
   'influence-intermediary': {metadata: typography46, scope: {animationId: 'influence-intermediary', subject: 'criminal', topic: '23'}},
