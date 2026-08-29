@@ -1,0 +1,70 @@
+{
+  "animationId": "execution-dispatch-board",
+  "compositionId": "ExecutionDispatchBoard",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-29T13:29:25.586Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 499,
+      "frameCount": 250,
+      "id": "four-berth-dispatch",
+      "number": "01",
+      "startFrame": 0,
+      "title": "四类分流台",
+      "durationMs": 8333,
+      "file": "four-berth-dispatch.avif",
+      "fileSize": 266355,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "2ff2a292fc3884d9cc642bfc77728214752b385c4d67d4e80a3f1b41f5b50b94",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "38ade73f3a3abcdc24b76192075bb8d5148343146a8dc12c09f33441e9ded6dc"
+    },
+    {
+      "endFrame": 959,
+      "frameCount": 230,
+      "id": "document-belt",
+      "number": "02",
+      "startFrame": 500,
+      "title": "十日文书传送带",
+      "durationMs": 7667,
+      "file": "document-belt.avif",
+      "fileSize": 238572,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "6bbe977c5f4edc7b4c566c28ab4ca79bb7bb273c0804fa7a99a35ff50db1e9a1",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "38ade73f3a3abcdc24b76192075bb8d5148343146a8dc12c09f33441e9ded6dc"
+    },
+    {
+      "endFrame": 1419,
+      "frameCount": 230,
+      "id": "trap-board",
+      "number": "03",
+      "startFrame": 960,
+      "title": "易错警示板",
+      "durationMs": 7667,
+      "file": "trap-board.avif",
+      "fileSize": 228478,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "cc0677d626f0468af359f41459c80201b197dc19d7057a6243f25f8ff22e9c0c",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "38ade73f3a3abcdc24b76192075bb8d5148343146a8dc12c09f33441e9ded6dc"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "38ade73f3a3abcdc24b76192075bb8d5148343146a8dc12c09f33441e9ded6dc",
+  "targetFps": 30,
+  "totalFileSize": 733405
+}

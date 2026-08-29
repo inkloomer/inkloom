@@ -1,0 +1,69 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "four-berth-dispatch",
+      "export": "FourBerthScene",
+      "layout": "four-lane-dispatch-board-with-mnemonic-strip",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "court-takes-life-money-and-acquittal",
+        "prison-takes-long-custody-with-detention-center-gap",
+        "community-correction-takes-non-custodial",
+        "police-takes-the-rest-with-station-detail"
+      ],
+      "textTreatments": ["chip", "thin-underline", "soft-highlight"],
+      "focalChannels": ["contrast", "enclosure", "spatial", "locator"],
+      "tokens": ["Gavel", "Building", "ShieldCheck", "Truck"],
+      "finalKnowledge": [
+        "court-lane",
+        "prison-lane",
+        "correction-lane",
+        "police-lane",
+        "mnemonic-strip"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "document-belt",
+      "export": "DocumentBeltScene",
+      "layout": "document-belt-with-trap-banks",
+      "anchor": "flow-path",
+      "grammar": [
+        "first-instance-court-delivers-within-ten-days",
+        "six-documents-tell-the-case-story",
+        "second-instance-court-never-delivers-the-package",
+        "arrest-warrant-is-not-on-the-list"
+      ],
+      "textTreatments": ["chip", "thin-underline", "external-negation"],
+      "focalChannels": ["connector", "contrast", "enclosure", "annotation"],
+      "tokens": ["Mail"],
+      "finalKnowledge": [
+        "delivery-belt",
+        "trap-banks"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "trap-board",
+      "export": "TrapBoardScene",
+      "layout": "three-warning-cards-with-verdict-stamps",
+      "anchor": "role-pair",
+      "grammar": [
+        "residual-term-over-three-months-goes-to-prison",
+        "suspended-sentence-runs-in-community-correction",
+        "political-rights-run-at-local-police-station"
+      ],
+      "textTreatments": ["chip", "thin-underline", "soft-highlight"],
+      "focalChannels": ["contrast", "enclosure", "locator", "annotation"],
+      "tokens": ["AlertTriangle", "CheckCircle2"],
+      "finalKnowledge": [
+        "residual-term-card",
+        "grounding-note"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

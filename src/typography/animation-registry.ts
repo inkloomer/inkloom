@@ -36,6 +36,7 @@ import {typography as typographyCpBench} from '../animations/criminal-procedure/
 import {typography as typographyCpStreet} from '../animations/criminal-procedure/15/first-instance-procession/animation.meta';
 import {typography as typographyCpOneway} from '../animations/criminal-procedure/16/appeal-no-escalation-lock/animation.meta';
 import {typography as typographyCpLoom} from '../animations/criminal-procedure/18/retrial-rewind-loom/animation.meta';
+import {typography as typographyCpDispatch} from '../animations/criminal-procedure/19/execution-dispatch-board/animation.meta';
 import {typography as typographyCpSummit} from '../animations/criminal-procedure/17/death-review-summit/animation.meta';
 import {typography as typography100} from '../animations/international-law/01/sources-of-international-law/animation.meta';
 import {typography as typographyIl02} from '../animations/international-law/02/subjects-responsibility/animation.meta';
@@ -259,6 +260,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'first-instance-procession': {metadata: typographyCpStreet, scope: {animationId: 'first-instance-procession', subject: 'criminal-procedure', topic: '15'}},
   'appeal-no-escalation-lock': {metadata: typographyCpOneway, scope: {animationId: 'appeal-no-escalation-lock', subject: 'criminal-procedure', topic: '16'}},
   'retrial-rewind-loom': {metadata: typographyCpLoom, scope: {animationId: 'retrial-rewind-loom', subject: 'criminal-procedure', topic: '18'}},
+  'execution-dispatch-board': {metadata: typographyCpDispatch, scope: {animationId: 'execution-dispatch-board', subject: 'criminal-procedure', topic: '19'}},
   'death-review-summit': {metadata: typographyCpSummit, scope: {animationId: 'death-review-summit', subject: 'criminal-procedure', topic: '17'}},
   'sources-of-international-law': {metadata: typography100, scope: {animationId: 'sources-of-international-law', subject: 'international-law', topic: '01'}},
   'subjects-responsibility': {metadata: typographyIl02, scope: {animationId: 'subjects-responsibility', subject: 'international-law', topic: '02'}},

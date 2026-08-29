@@ -1,0 +1,16 @@
+{
+  "directionId": "dispatch-board-execution",
+  "family": "dispatch-board-family",
+  "palette": "freight-depot charcoal, waybill cream cards, court copper, prison plum, correction green, police blue, alert vermilion",
+  "typography": "WenKai freight-desk headings with lane chips and waybill banners",
+  "composition": "four dispatch lanes over a mnemonic strip, a document belt with trap banks, and three warning cards grounding on the effective-judgment note",
+  "surface": "a freight dispatch depot with shelf lines, cream waybill cards and colored lane tags",
+  "motion": "lanes load their cargo chips lane by lane, documents ride the belt in order, and warning stamps mark the traps before the grounding note lands",
+  "transition": "the depot backdrop and shelf lines persist while the waybill cards are replaced",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/criminal-procedure/19/execution-dispatch-board/",
+    "title": "交付调度台"
+  }
+}
