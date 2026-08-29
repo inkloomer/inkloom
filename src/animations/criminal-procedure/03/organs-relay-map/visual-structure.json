@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "vertical-lines-compare",
+      "export": "VerticalLinesScene",
+      "layout": "twin-vertical-line-bay",
+      "anchor": "role-pair",
+      "grammar": [
+        "procuratorate-line-passes-orders-downward-as-one-body",
+        "court-line-observes-trial-grade-independence",
+        "supervision-travels-through-appeal-retrial-and-death-review",
+        "fact-evidence-requests-never-travel-up-the-court-line"
+      ],
+      "textTreatments": ["chip", "label-block", "external-negation"],
+      "focalChannels": ["connector", "contrast", "enclosure", "spatial"],
+      "tokens": [],
+      "finalKnowledge": [
+        "procuratorate-line",
+        "court-line"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "investigation-organs-map",
+      "export": "InvestigationMapScene",
+      "layout": "central-hub-with-four-outpost-posts",
+      "anchor": "concept-icon",
+      "grammar": [
+        "public-security-hub-handles-ordinary-criminal-cases",
+        "four-outposts-exercise-similar-investigation-power-in-their-own-terms",
+        "prison-post-carries-two-negation-tags",
+        "prison-excluded-matters-fall-to-the-procuratorate"
+      ],
+      "textTreatments": ["chip", "soft-highlight", "external-negation"],
+      "focalChannels": ["enclosure", "icon", "locator", "contrast"],
+      "tokens": ["Siren"],
+      "finalKnowledge": [
+        "police-hub",
+        "prison-post",
+        "prison-exclusion-tags",
+        "hub-outpost-links"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "procuratorate-rules-route",
+      "export": "ProcuratorateRulesScene",
+      "layout": "case-handling-rules-with-filing-route",
+      "anchor": "flow-path",
+      "grammar": [
+        "major-matters-are-decided-by-the-chief-procurator",
+        "documents-are-issued-under-his-signature-with-delegable-matters",
+        "case-groups-name-one-lead-prosecutor",
+        "own-case-investigation-files-at-city-level"
+      ],
+      "textTreatments": ["stamp", "thin-underline", "label-block"],
+      "focalChannels": ["connector", "contrast", "enclosure", "locator"],
+      "tokens": [],
+      "finalKnowledge": [
+        "handling-organization-rule",
+        "lead-prosecutor-rule",
+        "document-signing-rule",
+        "city-level-filing-route"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

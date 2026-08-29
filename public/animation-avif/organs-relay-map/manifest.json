@@ -1,0 +1,70 @@
+{
+  "animationId": "organs-relay-map",
+  "compositionId": "OrgansRelayMap",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-29T05:30:59.001Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 539,
+      "frameCount": 270,
+      "id": "vertical-lines-compare",
+      "number": "01",
+      "startFrame": 0,
+      "title": "领导与监督",
+      "durationMs": 9000,
+      "file": "vertical-lines-compare.avif",
+      "fileSize": 326746,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "8a6442e46db0fec4a87dbdd58e1adb28fc9837ba9a486cb6cb8ba126b35dbbe1",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "a0e12310de544b3c06a678b7574ae11ab64544764f35f5d510fa171353879349"
+    },
+    {
+      "endFrame": 1099,
+      "frameCount": 280,
+      "id": "investigation-organs-map",
+      "number": "02",
+      "startFrame": 540,
+      "title": "侦查权驿站图",
+      "durationMs": 9333,
+      "file": "investigation-organs-map.avif",
+      "fileSize": 259118,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "fb796e89566fb141ee85f84960a96fb3f734fdee77690a75af161f951ad0ace9",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "a0e12310de544b3c06a678b7574ae11ab64544764f35f5d510fa171353879349"
+    },
+    {
+      "endFrame": 1739,
+      "frameCount": 320,
+      "id": "procuratorate-rules-route",
+      "number": "03",
+      "startFrame": 1100,
+      "title": "检察内部令牌",
+      "durationMs": 10667,
+      "file": "procuratorate-rules-route.avif",
+      "fileSize": 431604,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "22b72cbbbd7e3ea4ac6e6f94cf8b9676df5ac2ab039d362368db0ef25403620a",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "a0e12310de544b3c06a678b7574ae11ab64544764f35f5d510fa171353879349"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "a0e12310de544b3c06a678b7574ae11ab64544764f35f5d510fa171353879349",
+  "targetFps": 30,
+  "totalFileSize": 1017468
+}

@@ -18,6 +18,7 @@ import {typography as typography98} from '../animations/theoretical-law/01/conce
 import {typography as typography101} from '../animations/theoretical-law/01/marxist-law-essence/animation.meta';
 import {typography as typography102} from '../animations/theoretical-law/01/features-of-law/animation.meta';
 import {typography as typography99} from '../animations/criminal-procedure/01/procedure-structure-orrery/animation.meta';
+import {typography as typographyCpOrgansRelay} from '../animations/criminal-procedure/03/organs-relay-map/animation.meta';
 import {typography as typographyCpPleaCaliper} from '../animations/criminal-procedure/02/plea-leniency-caliper/animation.meta';
 import {typography as typography0} from '../animations/civil-procedure/01/dispute-resolution/animation.meta';
 import {typography as typography1} from '../animations/civil-procedure/01/law-attributes/animation.meta';

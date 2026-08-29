@@ -17,6 +17,9 @@ export const collections = {
 	}),
 	autoSidebar: defineCollection({
 		loader: autoSidebarLoader(),
-		schema: autoSidebarSchema(),
+		schema: autoSidebarSchema().extend({
+			// Tolerated informational key: declared entry order; sidebar sorting stays controlled by `sort`.
+			entries: z.array(z.string()).optional(),
+		}),
 	}),
 };

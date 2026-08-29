@@ -1,0 +1,16 @@
+{
+  "directionId": "slate-courier-relay",
+  "family": "slate-courier-family",
+  "palette": "celadon brick grid, alum paper tiles, procuratorate cinnabar, court indigo, police pine green, relay-banner ochre",
+  "typography": "WenKai way-station headings with stamped node badges and courier route chips",
+  "composition": "twin vertical command lines with drop connectors, a central police hub ringed by four outpost posts with a walled prison post, and a three-plaque rule stack beside a city-level filing route ladder",
+  "surface": "a courier relay yard paved with celadon bricks, paper notices nailed to posts and vermilion seals on route tags",
+  "motion": "command lines draw downward between node badges, outpost cards peg themselves around the hub, and the filing route climbs rung by rung to the city level",
+  "transition": "the brick yard and header rail persist while the relay boards are rearranged",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/criminal-procedure/03/organs-relay-map/",
+    "title": "青砖驿路图"
+  }
+}
