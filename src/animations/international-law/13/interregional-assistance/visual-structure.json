@@ -1,0 +1,147 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 4,
+  "scenes": [
+    {
+      "id": "document-service",
+      "export": "DocumentServiceScene",
+      "layout": "night-splitflap-service-lanes",
+      "anchor": "flow-path",
+      "grammar": [
+        "three-regional-service-lanes-between-courts",
+        "uniform-two-month-service-deadline"
+      ],
+      "textTreatments": [
+        "label-block",
+        "soft-highlight",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "connector",
+        "contrast",
+        "enclosure"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "hk-service-lane",
+        "mo-service-lane",
+        "tw-service-lane",
+        "service-deadline-two-months"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "evidence-taking",
+      "export": "EvidenceTakingScene",
+      "layout": "night-desk-split-with-rule-bands",
+      "anchor": "role-pair",
+      "grammar": [
+        "hk-uses-secretariat-mo-uses-final-court",
+        "evidence-deadline-splits-6-and-3-months"
+      ],
+      "textTreatments": [
+        "label-block",
+        "soft-highlight",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "connector"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "evidence-desks-hk-mo",
+        "evidence-deadline-6-3-months",
+        "evidence-common-rules",
+        "macau-special-arrangements"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "judgment-enforcement",
+      "export": "JudgmentEnforcementScene",
+      "layout": "night-three-lane-arrangement-board",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "hk-mo-tw-judgment-channels-split-by-arrangement",
+        "macau-recognition-then-first-court-execution"
+      ],
+      "textTreatments": [
+        "label-block",
+        "soft-highlight",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "connector"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "hk-judgment-channel",
+        "mo-judgment-channel",
+        "tw-judgment-channel",
+        "concurrent-application-rule",
+        "tw-2025-special-rules"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "arbitral-award",
+      "export": "ArbitralAwardScene",
+      "layout": "night-award-preservation-band",
+      "anchor": "document-fork",
+      "grammar": [
+        "hk-mo-tw-arbitral-award-channels",
+        "preservation-covers-property-evidence-conduct"
+      ],
+      "textTreatments": [
+        "label-block",
+        "soft-highlight",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "connector"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "arbitral-award-channels",
+        "arbitral-preservation-scope",
+        "arbitral-preservation-desks"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "common-rules",
+      "export": "CommonRulesScene",
+      "layout": "night-rule-band-triptych",
+      "anchor": "typographic-sequence",
+      "grammar": [
+        "exclusive-jurisdiction-blocks-recognition-only",
+        "fees-and-translation-split-by-assistance-type"
+      ],
+      "textTreatments": [
+        "label-block",
+        "soft-highlight",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "connector"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "exclusive-jurisdiction-effect",
+        "assistance-fees",
+        "chinese-translation-rule",
+        "recognized-award-equal-effect"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

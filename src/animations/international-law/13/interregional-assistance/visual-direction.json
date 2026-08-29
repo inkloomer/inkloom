@@ -1,0 +1,16 @@
+{
+  "directionId": "night-splitflap-board",
+  "family": "night-splitflap-board",
+  "palette": "midnight navy split-flap board, warm paper flap ink, amber Hong Kong lane, mint Macau lane, coral Taiwan lane, signal-red verdicts",
+  "typography": "WenKai flap cells with letterpress inset shadows, solid amber route badges and mono deadline numerals",
+  "composition": "full-width flap lanes under a compact route-badge strip with segment stepper, no side rail",
+  "surface": "midnight panels with horizontal scan ruling and letterpress flap cells",
+  "motion": "flap rows dropping in with vertical scale-settle and stamped verdict chips",
+  "transition": "content swap under a persistent route badge strip and segment stepper",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/international-law/13/interregional-assistance/",
+    "title": "夜航显示牌"
+  }
+}
