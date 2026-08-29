@@ -1,0 +1,16 @@
+{
+  "directionId": "red-blue-ledger",
+  "family": "double-entry-ledger",
+  "palette": "ruled ledger cream + posting red + posting blue + record ink + brass rail accents",
+  "typography": "ink headings with red edge tabs, ledger rows with red/blue posting chips for the two poles of every dichotomy, blue ruled lines kept faint, brass staples on card corners",
+  "composition": "each scene is a ledger spread: the three elements read as a posting flow across columns, rule-vs-text opens a content/form ledger with four case entries, the three classifications hang as dichotomy rails with red-blue poles, omission reads as a matched verdict pair",
+  "surface": "flat ledger cream with faint horizontal blue rules and a vertical red margin line, cream entry cards with hairline ink frames and brass corner staples, no gradients, no rounded cards, no drop shadows",
+  "motion": "entries post left to right and stamp into place, red and blue poles land from opposite margins, the dichotomy rails rule themselves before their chips post, verdict pair closes like a ledger",
+  "transition": "a page-turn shade wipes along the spine as the next spread opens",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/theoretical-law/01/legal-rules/",
+    "title": "红蓝账本"
+  }
+}

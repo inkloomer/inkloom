@@ -20,6 +20,7 @@ import {typography as typography102} from '../animations/theoretical-law/01/feat
 import {typography as typography103} from '../animations/theoretical-law/01/functions-of-law/animation.meta';
 import {typography as typography104} from '../animations/theoretical-law/01/limitations-of-law/animation.meta';
 import {typography as typography105} from '../animations/theoretical-law/01/value-conflict/animation.meta';
+import {typography as typography106} from '../animations/theoretical-law/01/legal-rules/animation.meta';
 import {typography as typography99} from '../animations/criminal-procedure/01/procedure-structure-orrery/animation.meta';
 import {typography as typographyCpJurisdiction} from '../animations/criminal-procedure/04/jurisdiction-sluice-terrace/animation.meta';
 import {typography as typographyCpRecusal} from '../animations/criminal-procedure/05/recusal-sentry-rotation/animation.meta';
@@ -225,6 +226,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'functions-of-law': {metadata: typography103, scope: {animationId: 'functions-of-law', subject: 'theoretical-law', topic: '01'}},
   'limitations-of-law': {metadata: typography104, scope: {animationId: 'limitations-of-law', subject: 'theoretical-law', topic: '01'}},
   'value-conflict': {metadata: typography105, scope: {animationId: 'value-conflict', subject: 'theoretical-law', topic: '01'}},
+  'legal-rules': {metadata: typography106, scope: {animationId: 'legal-rules', subject: 'theoretical-law', topic: '01'}},
   'procedure-structure-orrery': {metadata: typography99, scope: {animationId: 'procedure-structure-orrery', subject: 'criminal-procedure', topic: '01'}},
   'organs-relay-map': {metadata: typographyCpOrgansRelay, scope: {animationId: 'organs-relay-map', subject: 'criminal-procedure', topic: '03'}},
   'jurisdiction-sluice-terrace': {metadata: typographyCpJurisdiction, scope: {animationId: 'jurisdiction-sluice-terrace', subject: 'criminal-procedure', topic: '04'}},

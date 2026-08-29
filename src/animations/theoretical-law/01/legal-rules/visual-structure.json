@@ -1,0 +1,80 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 4,
+  "playerControlSafeBottom": 176,
+  "scenes": [
+    {
+      "id": "three-elements-flow",
+      "export": "ThreeElementsFlowScene",
+      "layout": "element-flow-with-mode-triplet",
+      "anchor": "flow-path",
+      "grammar": ["assumption-gate", "mode-triplet", "consequence-split"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "thin-underline"],
+      "focalChannels": ["icon", "motion", "enclosure", "contrast", "annotation"],
+      "tokens": ["Milestone", "Footprints", "Gavel"],
+      "finalKnowledge": [
+        "structure-heading",
+        "assumption-gate-card",
+        "mode-triplet-card",
+        "consequence-split-card",
+        "structure-mnemonic"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "rule-vs-text-ledger",
+      "export": "RuleVsTextLedgerScene",
+      "layout": "content-form-ledger-with-cases",
+      "anchor": "concept-icon",
+      "grammar": ["content-form-relation", "four-cases-row", "normative-split"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["BookOpen", "FileStack", "Info"],
+      "finalKnowledge": [
+        "ledger-heading",
+        "content-form-relation",
+        "four-cases-note",
+        "normative-card",
+        "non-normative-card"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "classification-axes",
+      "export": "ClassificationAxesScene",
+      "layout": "three-dichotomy-rails",
+      "anchor": "comparison-axis",
+      "grammar": ["authorization-duty-axis", "certainty-axis", "mandatory-optional-axis"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "thin-underline"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["KeyRound", "CircleQuestionMark", "Lock", "LockOpen"],
+      "finalKnowledge": [
+        "classify-heading",
+        "authorization-duty-rail",
+        "certainty-rail",
+        "mandatory-optional-rail",
+        "duty-split-note",
+        "classify-mnemonic"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "omission-mnemonic",
+      "export": "OmissionMnemonicScene",
+      "layout": "logic-vs-wording-verdict-pair",
+      "anchor": "role-pair",
+      "grammar": ["logic-complete-claim", "wording-omissible-claim", "exam-default-note"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "stamp", "external-negation"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["Check", "Eraser", "PenLine"],
+      "finalKnowledge": [
+        "omission-heading",
+        "logic-complete-card",
+        "wording-omissible-card",
+        "exam-default-chip",
+        "omission-mnemonic-strip"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}
