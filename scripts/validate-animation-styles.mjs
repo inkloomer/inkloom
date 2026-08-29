@@ -64,6 +64,21 @@ const main = async () => {
         errors.push(`${animation.id}: visual-direction.json requires a descriptive "${field}" string`);
       }
     }
+    if (direction.conceptTokens !== undefined) {
+      const conceptTokens = direction.conceptTokens;
+      if (typeof conceptTokens !== 'object' || conceptTokens === null || Array.isArray(conceptTokens)) {
+        errors.push(`${animation.id}: visual-direction.json conceptTokens must be an object mapping concepts to pictogram component names`);
+      } else {
+        for (const [concept, component] of Object.entries(conceptTokens)) {
+          if (typeof concept !== 'string' || concept.trim().length === 0) {
+            errors.push(`${animation.id}: conceptTokens keys must be non-empty concept names`);
+          }
+          if (typeof component !== 'string' || !/^[A-Z][A-Za-z0-9]*$/.test(component)) {
+            errors.push(`${animation.id}: conceptTokens["${concept}"] must name a pictogram component in PascalCase`);
+          }
+        }
+      }
+    }
     if (errors.some((entry) => entry.startsWith(`${animation.id}:`))) continue;
 
     const fingerprint = REQUIRED_FIELDS.slice(1).map((field) => normalize(direction[field])).join('|');

@@ -193,6 +193,20 @@ const main = async () => {
 
     if (source.includes('@remotion/rough-notation')) errors.push(`${animation.id}: audited nodes may not overlay rough annotations on focal text`);
 
+    const directionPath = path.join(animation.directory, 'visual-direction.json');
+    if (await isFile(directionPath)) {
+      try {
+        const direction = JSON.parse(await readFile(directionPath, 'utf8'));
+        for (const [concept, component] of Object.entries(direction.conceptTokens ?? {})) {
+          if (typeof component === 'string' && !source.includes(`<${component}`)) {
+            errors.push(`${animation.id}: declared concept token ${JSON.stringify(concept)} pictogram ${component} is not rendered in the Remotion source`);
+          }
+        }
+      } catch {
+        // invalid JSON is already reported by the styles audit
+      }
+    }
+
     const minimumLayouts = Math.min(contract.scenes.length, Math.max(3, Number(contract.minimumDistinctLayouts) || 3));
     if (layouts.size < minimumLayouts) errors.push(`${animation.id}: ${contract.scenes.length} scenes reuse only ${layouts.size} layout skeleton(s); require ${minimumLayouts}`);
     if (grammarVocabulary.size < 4) errors.push(`${animation.id}: relationship grammar is too repetitive across scenes`);
