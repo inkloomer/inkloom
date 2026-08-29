@@ -142,6 +142,7 @@ import {typography as typography96} from '../animations/theoretical-law/17/legal
 import {typography as typographyTds} from '../animations/theoretical-law/01/legal-departments-system/animation.meta';
 import {typography as typographyLv} from '../animations/theoretical-law/01/legal-validity/animation.meta';
 import {typography as typographyLc} from '../animations/theoretical-law/01/liability-concurrence/animation.meta';
+import {typography as typographyJv} from '../animations/theoretical-law/01/judicial-vs-administrative/animation.meta';
 import {typography as typography40} from '../animations/criminal/19/card-selling-funds-viewpoint/animation.meta';
 import {typography as typography41} from '../animations/criminal/19/occupational-embezzlement-flowchart/animation.meta';
 import {typography as typography42} from '../animations/criminal/19/property-interests-keypoints/animation.meta';
@@ -269,6 +270,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'legal-rules': {metadata: typography106, scope: {animationId: 'legal-rules', subject: 'theoretical-law', topic: '01'}},
   'legal-principles': {metadata: typography107, scope: {animationId: 'legal-principles', subject: 'theoretical-law', topic: '01'}},
   'liability-concurrence': {metadata: typographyLc, scope: {animationId: 'liability-concurrence', subject: 'theoretical-law', topic: '01'}},
+  'judicial-vs-administrative': {metadata: typographyJv, scope: {animationId: 'judicial-vs-administrative', subject: 'theoretical-law', topic: '01'}},
   'legal-departments-system': {metadata: typographyTds, scope: {animationId: 'legal-departments-system', subject: 'theoretical-law', topic: '01'}},
   'legal-validity': {metadata: typographyLv, scope: {animationId: 'legal-validity', subject: 'theoretical-law', topic: '01'}},
   'procedure-structure-orrery': {metadata: typography99, scope: {animationId: 'procedure-structure-orrery', subject: 'criminal-procedure', topic: '01'}},

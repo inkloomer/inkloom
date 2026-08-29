@@ -1,0 +1,70 @@
+{
+  "animationId": "judicial-vs-administrative",
+  "compositionId": "JudicialVsAdministrative",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-29T17:51:46.454Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 239,
+      "frameCount": 240,
+      "id": "dual-meanings",
+      "number": "01",
+      "startFrame": 0,
+      "title": "司法与行政的定义",
+      "durationMs": 8000,
+      "file": "dual-meanings.avif",
+      "fileSize": 446728,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "f14ed02208b205e65930abd47c55f33c7922210347676aa833de16a001360cae",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "378f697fa374d8440b7f63cfc7bfc30f5dee6916d544e5dfd3c2893872f09404"
+    },
+    {
+      "endFrame": 515,
+      "frameCount": 276,
+      "id": "four-criteria",
+      "number": "02",
+      "startFrame": 240,
+      "title": "司法与执法四别",
+      "durationMs": 9200,
+      "file": "four-criteria.avif",
+      "fileSize": 420333,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "a3a4432607667defd13ce241d0138463a073c072a2f76adf78b7233b18086196",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "378f697fa374d8440b7f63cfc7bfc30f5dee6916d544e5dfd3c2893872f09404"
+    },
+    {
+      "endFrame": 779,
+      "frameCount": 264,
+      "id": "authority-independence",
+      "number": "03",
+      "startFrame": 516,
+      "title": "最终判断与司法独立",
+      "durationMs": 8800,
+      "file": "authority-independence.avif",
+      "fileSize": 427773,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "dba5a9891f79e0176dfedc3dc87d80c4dd82583a20e8efc2712f748a254bb085",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "378f697fa374d8440b7f63cfc7bfc30f5dee6916d544e5dfd3c2893872f09404"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "378f697fa374d8440b7f63cfc7bfc30f5dee6916d544e5dfd3c2893872f09404",
+  "targetFps": 30,
+  "totalFileSize": 1294834
+}

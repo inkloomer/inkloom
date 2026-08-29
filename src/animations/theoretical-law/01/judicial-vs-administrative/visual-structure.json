@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "playerControlSafeBottom": 176,
+  "scenes": [
+    {
+      "id": "dual-meanings",
+      "export": "DualMeaningsScene",
+      "layout": "facing-desk-definition-pair",
+      "anchor": "role-pair",
+      "grammar": ["judicial-definition-desk", "administrative-definition-desk", "enforcement-scope-note"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "thin-underline"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["Gavel", "Briefcase"],
+      "finalKnowledge": [
+        "meanings-heading",
+        "judicial-desk",
+        "administrative-desk",
+        "enforcement-scope-note"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "four-criteria",
+      "export": "FourCriteriaScene",
+      "layout": "four-criterion-paired-lanes",
+      "anchor": "comparison-axis",
+      "grammar": ["subject-criterion", "scope-criterion", "procedure-criterion", "initiative-criterion"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "thin-underline"],
+      "focalChannels": ["icon", "contrast", "connector", "spatial", "annotation"],
+      "tokens": ["Gavel", "BookOpen", "Feather"],
+      "finalKnowledge": [
+        "criteria-heading",
+        "criterion-lanes",
+        "criteria-recap"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "authority-independence",
+      "export": "AuthorityIndependenceScene",
+      "layout": "finality-plaque-with-independence-wall",
+      "anchor": "boundary",
+      "grammar": ["finality-contrast", "independence-boundary", "separation-caution"],
+      "textTreatments": ["label-block", "chip", "external-negation", "stamp"],
+      "focalChannels": ["icon", "enclosure", "contrast", "spatial", "annotation"],
+      "tokens": ["Stamp", "Landmark", "Flag"],
+      "finalKnowledge": [
+        "authority-heading",
+        "finality-plaque",
+        "independence-wall",
+        "separation-caution"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

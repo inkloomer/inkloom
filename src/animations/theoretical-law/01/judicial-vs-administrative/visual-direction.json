@@ -1,0 +1,16 @@
+{
+  "directionId": "dual-desk-criterion-hall",
+  "family": "paired-desk-hall",
+  "palette": "gray-green ink-stone hall ground + rice-paper desk panels + cinnabar judicial accents + indigo administrative accents + bronze criterion line + graphite ink",
+  "typography": "ink headings on rice-paper plaques, dark hall label tabs with cinnabar left bar for judicial and indigo left bar for administrative, cinnabar stamps reserved for judicial finality and prohibitions, indigo chips for administrative notes, thin ink underline for criteria",
+  "composition": "the definitions sit as two facing desk plaques across the hall; the four differences read as paired lanes crossed by a bronze criterion line; the authority scene sets a finality plaque against a proposal plaque beside an independence wall of allowed and prohibited separations",
+  "surface": "flat ink-stone ground with faint desk-grain hairlines, rice-paper panels with hairline weathered borders and corner ink seals, no gradients, no rounded cards, no drop shadows",
+  "motion": "the two desks slide in from opposite sides, criterion lanes ink row by row across the bronze line, the finality stamp lands once and holds, the independence wall bricks fill from bottom to top",
+  "transition": "a bronze criterion line sweeps vertically and the hall clears for the next spread",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/theoretical-law/01/judicial-vs-administrative/",
+    "title": "对席案牍"
+  }
+}
