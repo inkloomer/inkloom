@@ -171,7 +171,6 @@ import {typography as typographyAutoCompanyPersonality} from '../animations/comm
 import {typography as typographyAutoCompanyClassification} from '../animations/commercial-law/01/company-classification/animation.meta';
 import {typography as typographyAutoCompanyCapacity} from '../animations/commercial-law/01/company-capacity/animation.meta';
 import {typography as typographyAutoEvidenceVitrineMuseum} from '../animations/administrative-law/16/evidence-vitrine-museum/animation.meta';
-import {typography as typographyAutoApplicationSilkLoom} from '../animations/administrative-law/17/application-silk-loom/animation.meta';
 import {typography as typographyCsg} from '../animations/civil-procedure/12/compulsory-summons-gate/animation.meta';
 import {typography as typography109} from '../animations/theoretical-law/01/sources-of-law/animation.meta';
 import {typography as typography96} from '../animations/theoretical-law/17/legal-interpretation/animation.meta';
@@ -328,7 +327,6 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'company-classification': {metadata: typographyAutoCompanyClassification, scope: {animationId: 'company-classification', subject: 'commercial-law', topic: '01'}},
   'company-capacity': {metadata: typographyAutoCompanyCapacity, scope: {animationId: 'company-capacity', subject: 'commercial-law', topic: '01'}},
   'evidence-vitrine-museum': {metadata: typographyAutoEvidenceVitrineMuseum, scope: {animationId: 'evidence-vitrine-museum', subject: 'administrative-law', topic: '16'}},
-  'application-silk-loom': {metadata: typographyAutoApplicationSilkLoom, scope: {animationId: 'application-silk-loom', subject: 'administrative-law', topic: '17'}},
   'compulsory-summons-gate': {metadata: typographyCsg, scope: {animationId: 'compulsory-summons-gate', subject: 'civil-procedure', topic: '12'}},
   'sources-of-law': {metadata: typography109, scope: {animationId: 'sources-of-law', subject: 'theoretical-law', topic: '01'}},
   'legal-interpretation': {metadata: typography96, scope: {animationId: 'legal-interpretation', subject: 'theoretical-law', topic: '17'}},
