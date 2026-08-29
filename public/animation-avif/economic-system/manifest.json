@@ -1,0 +1,70 @@
+{
+  "animationId": "economic-system",
+  "compositionId": "EconomicSystem",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-29T23:40:51.945Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 287,
+      "frameCount": 288,
+      "id": "ownership-map",
+      "number": "01",
+      "startFrame": 0,
+      "title": "所有制三档归属",
+      "durationMs": 9600,
+      "file": "ownership-map.avif",
+      "fileSize": 428662,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "53c915bde9c704ea4fc25461b751fca4323de18a1331ab4dca49e7459c0e055e",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "44f949341a2d8ae75988e24e792b711e171207b61a0908dfc4ad7b1b6e439f55"
+    },
+    {
+      "endFrame": 551,
+      "frameCount": 264,
+      "id": "three-economies",
+      "number": "02",
+      "startFrame": 288,
+      "title": "三种经济成分",
+      "durationMs": 8800,
+      "file": "three-economies.avif",
+      "fileSize": 584868,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "c39d58da70ba15f09dacd57127d9e7260613d34687175d495b7c6247d8e85b46",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "44f949341a2d8ae75988e24e792b711e171207b61a0908dfc4ad7b1b6e439f55"
+    },
+    {
+      "endFrame": 791,
+      "frameCount": 240,
+      "id": "property-weimar",
+      "number": "03",
+      "startFrame": 552,
+      "title": "财产保护与魏玛",
+      "durationMs": 8000,
+      "file": "property-weimar.avif",
+      "fileSize": 430957,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "af4f48f1c0f2bccbe0dece2ce3d33a15763bfbc7cd4c59026a9ba06aa3983b80",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "44f949341a2d8ae75988e24e792b711e171207b61a0908dfc4ad7b1b6e439f55"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "44f949341a2d8ae75988e24e792b711e171207b61a0908dfc4ad7b1b6e439f55",
+  "targetFps": 30,
+  "totalFileSize": 1444487
+}

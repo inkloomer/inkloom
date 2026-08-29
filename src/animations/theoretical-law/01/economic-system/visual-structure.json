@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "playerControlSafeBottom": 176,
+  "scenes": [
+    {
+      "id": "ownership-map",
+      "export": "OwnershipMapScene",
+      "layout": "three-band-parcel-map",
+      "anchor": "comparison-axis",
+      "grammar": ["state-absolute-band", "dual-band", "collective-absolute-band"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["Map", "ArrowLeftRight", "Home"],
+      "finalKnowledge": [
+        "ownership-heading",
+        "state-absolute-band",
+        "dual-band",
+        "collective-absolute-band",
+        "mnemonic-stamp"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "three-economies",
+      "export": "ThreeEconomiesScene",
+      "layout": "three-economy-column-row",
+      "anchor": "typographic-sequence",
+      "grammar": ["state-economy-column", "collective-economy-column", "nonpublic-economy-column"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "thin-underline"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["Landmark", "Users", "Store"],
+      "finalKnowledge": [
+        "economy-heading",
+        "economy-row",
+        "distribution-strip"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "property-weimar",
+      "export": "PropertyWeimarScene",
+      "layout": "property-protect-divide",
+      "anchor": "boundary",
+      "grammar": ["public-property-plate", "private-property-plate", "weimar-note"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["ShieldCheck", "Coins", "BookOpen"],
+      "finalKnowledge": [
+        "property-heading",
+        "public-plate",
+        "private-plate",
+        "weimar-note"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

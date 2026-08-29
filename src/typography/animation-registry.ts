@@ -223,6 +223,7 @@ import {typography as typographyCdv} from '../animations/theoretical-law/01/cons
 import {typography as typographyCp} from '../animations/theoretical-law/01/constitution-principles/animation.meta';
 import {typography as typographyCss} from '../animations/theoretical-law/01/constitution-sources-structure/animation.meta';
 import {typography as typographySs} from '../animations/theoretical-law/01/state-system/animation.meta';
+import {typography as typographyEs} from '../animations/theoretical-law/01/economic-system/animation.meta';
 import {typography as typographyPrg} from '../animations/commercial-economic-law/01/profit-reserve-granary/animation.meta';
 import {typography as typographyPlr} from '../animations/commercial-economic-law/01/promoter-liability-ropewalk/animation.meta';
 import {typography as typography48} from '../animations/demo/demo-archival-dossier/animation.meta';
@@ -460,6 +461,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'constitution-principles': {metadata: typographyCp, scope: {animationId: 'constitution-principles', subject: 'theoretical-law', topic: '01'}},
   'constitution-sources-structure': {metadata: typographyCss, scope: {animationId: 'constitution-sources-structure', subject: 'theoretical-law', topic: '01'}},
   'state-system': {metadata: typographySs, scope: {animationId: 'state-system', subject: 'theoretical-law', topic: '01'}},
+  'economic-system': {metadata: typographyEs, scope: {animationId: 'economic-system', subject: 'theoretical-law', topic: '01'}},
   'profit-reserve-granary': {metadata: typographyPrg, scope: {animationId: 'profit-reserve-granary', subject: 'commercial-economic-law', topic: '01'}},
   'promoter-liability-ropewalk': {metadata: typographyPlr, scope: {animationId: 'promoter-liability-ropewalk', subject: 'commercial-economic-law', topic: '01'}},
   'fight-defense-diagram': {metadata: typography44, scope: {animationId: 'fight-defense-diagram', subject: 'criminal', topic: '22'}},

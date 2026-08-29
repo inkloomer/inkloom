@@ -1,0 +1,16 @@
+{
+  "directionId": "land-parcel-survey-map",
+  "family": "field-parcel-survey",
+  "palette": "paddy-chart pale green ground + wheat and paddy parcel panels + boundary-red survey lines + dark field notes + brass benchmark marks",
+  "typography": "field-note headings on parcel panels, dark survey label tabs with brass left bar, red boundary lines for ownership divides, red stamps reserved for verdicts, thin ink underline for tests",
+  "composition": "the ownership bands map as three parcel strips with mnemonics; the three economies stand as a wheat-paddy column row with a distribution strip; the property scene divides public sacrosanct from private protected beside a Weimar note",
+  "surface": "flat pale green chart ground with faint survey hairlines, parcel panels with hairline weathered borders and corner benchmark dots, no gradients, no rounded cards, no drop shadows",
+  "motion": "boundary lines draw between parcels, parcels fill with wheat and paddy tones, economy columns rise in canon, the red verdict stamps land once",
+  "transition": "the surveyor rolls the chart and the field clears for the next plot",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/theoretical-law/01/economic-system/",
+    "title": "田亩界尺"
+  }
+}
