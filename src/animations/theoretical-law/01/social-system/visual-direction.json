@@ -1,0 +1,16 @@
+{
+  "directionId": "shelter-umbrella-promenade",
+  "family": "umbrella-shelter-row",
+  "palette": "dusk promenade ground + alternating umbrella canopy panels + rain-line silver accents + warm shelter amber + ink notes",
+  "typography": "ink headings on canopy panels, dark promenade label tabs with amber left bar, amber chips for article numbers, ink chips for scope words, thin ink underline for tests",
+  "composition": "the three scopes and three traits sit as a canopy bench; seven constitutional items open as a canopy row with article tabs; the exam focus draws a shelter core with a contents rail",
+  "surface": "flat dusk promenade ground with faint rain-line hairlines, canopy panels with hairline weathered borders and pole dots, no gradients, no rounded cards, no drop shadows",
+  "motion": "canopies open one by one with a settle, article tabs ink in, the shelter core lights once, the contents rail draws left to right",
+  "transition": "an umbrella tilts and the promenade clears for the next stand",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/theoretical-law/01/social-system/",
+    "title": "伞棚连廊"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "playerControlSafeBottom": 176,
+  "scenes": [
+    {
+      "id": "concept-scope",
+      "export": "ConceptScopeScene",
+      "layout": "scope-triangle-canopy-bench",
+      "anchor": "comparison-axis",
+      "grammar": ["three-scope-row", "three-traits-row", "core-note"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "thin-underline"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["Globe", "Layers", "Umbrella"],
+      "finalKnowledge": [
+        "concept-heading",
+        "scope-row",
+        "traits-row",
+        "core-note"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "constitution-items",
+      "export": "ConstitutionItemsScene",
+      "layout": "seven-item-canopy-row",
+      "anchor": "typographic-sequence",
+      "grammar": ["social-security-items", "labor-talent-items", "order-family-items"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "thin-underline"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["HeartPulse", "Landmark", "Scale"],
+      "finalKnowledge": [
+        "items-heading",
+        "items-rail",
+        "family-note"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "exam-focus",
+      "export": "ExamFocusScene",
+      "layout": "focus-core-with-contents-rail",
+      "anchor": "boundary",
+      "grammar": ["scope-verdict", "core-2004-note", "contents-rail"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["Umbrella", "ListChecks"],
+      "finalKnowledge": [
+        "focus-heading",
+        "scope-verdict",
+        "core-2004-note",
+        "contents-rail"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "animationId": "social-system",
+  "compositionId": "SocialSystem",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-29T23:58:11.355Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 263,
+      "frameCount": 264,
+      "id": "concept-scope",
+      "number": "01",
+      "startFrame": 0,
+      "title": "概念三义与特征",
+      "durationMs": 8800,
+      "file": "concept-scope.avif",
+      "fileSize": 373036,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "735883fcd1c0963eabe1bc3d583b3887e8e444d5e9d2615fec31dca49ffc259b",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "9a05e2f8a8504c147d7eac8a2c252e63bada27c368464e2daa122ba256ff16a1"
+    },
+    {
+      "endFrame": 551,
+      "frameCount": 288,
+      "id": "constitution-items",
+      "number": "02",
+      "startFrame": 264,
+      "title": "宪法七类体现",
+      "durationMs": 9600,
+      "file": "constitution-items.avif",
+      "fileSize": 556449,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "81243c65c8df7e03589578a6d11e503563e6b73f9b69ca65594f647aed36f54e",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "9a05e2f8a8504c147d7eac8a2c252e63bada27c368464e2daa122ba256ff16a1"
+    },
+    {
+      "endFrame": 791,
+      "frameCount": 240,
+      "id": "exam-focus",
+      "number": "03",
+      "startFrame": 552,
+      "title": "考试聚焦",
+      "durationMs": 8000,
+      "file": "exam-focus.avif",
+      "fileSize": 558326,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "aa44dbca520e7548bf4883aeb39f7d434ef91a1a65fee8d3ae81e318126b8b95",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "9a05e2f8a8504c147d7eac8a2c252e63bada27c368464e2daa122ba256ff16a1"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "9a05e2f8a8504c147d7eac8a2c252e63bada27c368464e2daa122ba256ff16a1",
+  "targetFps": 30,
+  "totalFileSize": 1487811
+}
