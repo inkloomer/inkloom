@@ -1,0 +1,16 @@
+{
+  "directionId": "astrolabe-night-observatory",
+  "family": "night-observatory",
+  "palette": "deep teal-green night ground + brass instrument rings + pale chart parchment panels + silver star points + dusk coral warnings + ink chart annotations",
+  "typography": "ink headings on parchment chart plaques, brass label tabs with cinnabar left bar, teal chips for reasoning modes, coral reserved for warnings and negations, silver ordinals, thin ink underlines",
+  "composition": "the definition stands as a chart plaque with three feature panels; deduction draws as a three-step syllogism descent toward the verdict; induction and analogy rest as twin chart plates; abduction, reverse and a-fortiori queue as three instrument columns; the verdict map lays six mode flags on a reading grid",
+  "surface": "flat deep teal-green night with faint brass graticule hairlines, parchment chart panels with hairline borders, no gradients, no rounded cards, no drop shadows",
+  "motion": "chart panels slide onto the reading desk, graticule strokes ink in, the syllogism descends step by step, mode flags swing in and hold",
+  "transition": "a night wipe sweeps the previous chart off the desk",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/theoretical-law/01/legal-reasoning/",
+    "title": "测天星盘"
+  }
+}

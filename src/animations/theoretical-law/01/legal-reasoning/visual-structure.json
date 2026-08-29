@@ -1,0 +1,94 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 4,
+  "playerControlSafeBottom": 176,
+  "scenes": [
+    {
+      "id": "concept-features",
+      "export": "ConceptFeaturesScene",
+      "layout": "definition-plaque-with-feature-panels",
+      "anchor": "concept-icon",
+      "grammar": ["definition-claim", "three-features", "modality-note"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["BookMarked", "Landmark", "BadgeCheck"],
+      "finalKnowledge": [
+        "concept-heading",
+        "feature-basis",
+        "feature-bound",
+        "feature-justify",
+        "modality-note"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "syllogism-deduction",
+      "export": "SyllogismDeductionScene",
+      "layout": "three-step-syllogism-descent",
+      "anchor": "flow-path",
+      "grammar": ["major-premise", "minor-premise", "conclusion"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "stamp"],
+      "focalChannels": ["icon", "motion", "enclosure", "contrast", "annotation"],
+      "tokens": ["Landmark", "FileText", "Gavel"],
+      "finalKnowledge": [
+        "syllogism-heading",
+        "major-premise",
+        "minor-premise",
+        "conclusion",
+        "deduction-chips",
+        "deduction-example"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "inductive-analogy",
+      "export": "InductiveAnalogyScene",
+      "layout": "twin-mode-plates-with-contrast-note",
+      "anchor": "comparison-axis",
+      "grammar": ["induction-rules", "analogy-formula", "contrast-note"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "thin-underline"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["Layers", "ArrowLeftRight"],
+      "finalKnowledge": [
+        "modes-heading",
+        "induction-plate",
+        "analogy-plate",
+        "contrast-note"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "abductive-reverse-a-fortiori",
+      "export": "AbductiveReverseAFortioriScene",
+      "layout": "three-instrument-columns",
+      "anchor": "concept-icon",
+      "grammar": ["abduction-form", "reverse-form", "a-fortiori-cases"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["Lightbulb", "Ban", "Scale"],
+      "finalKnowledge": [
+        "trio-heading",
+        "abduction-plate",
+        "reverse-plate",
+        "a-fortiori-plate"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "verdict-map",
+      "export": "VerdictMapScene",
+      "layout": "six-flag-grid-with-summary",
+      "anchor": "typographic-sequence",
+      "grammar": ["six-flags", "modality-summary"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "thin-underline"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["Compass"],
+      "finalKnowledge": [
+        "map-heading",
+        "mode-map",
+        "summary-note"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}
