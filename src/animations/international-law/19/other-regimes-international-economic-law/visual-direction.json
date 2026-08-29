@@ -1,0 +1,20 @@
+{
+  "directionId": "celadon-convention-gallery",
+  "family": "celadon-convention-gallery",
+  "palette": "pale celadon gallery wall, deep tea-green ink text, glaze teal and ochre mineral accents, plum verdict seals",
+  "typography": "WenKai hall headings with dashed ochre medallions, glaze ink highlights and plum underlines",
+  "composition": "convention gallery with hall rail, twin convention cards, tiered treaty shelves and comparison lanes",
+  "surface": "celadon panels with glaze hairline frames, no dark cards",
+  "motion": "hall-to-hall entries with stamped mnemonics and shelf disclosures",
+  "transition": "content swap under a persistent gallery frame and hall rail",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/international-law/19/other-regimes-international-economic-law/",
+    "title": "青瓷公约馆"
+  },
+  "conceptTokens": {
+    "convention-text": "TokTreaty",
+    "court-order": "TokCourt"
+  }
+}

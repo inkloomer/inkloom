@@ -1,0 +1,167 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 4,
+  "scenes": [
+    {
+      "id": "paris-berne",
+      "export": "ParisBerneScene",
+      "layout": "twin-convention-cards",
+      "anchor": "role-pair",
+      "grammar": [
+        "paris-guards-industrial-property-with-priority-windows",
+        "berne-protects-copyright-automatically-via-dual-nationality",
+        "independence-principle-shared-by-both"
+      ],
+      "textTreatments": [
+        "label-block",
+        "soft-highlight",
+        "thin-underline",
+        "chip"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "locator",
+        "icon"
+      ],
+      "tokens": [
+        "TokTreaty"
+      ],
+      "finalKnowledge": [
+        "paris-principles",
+        "berne-principles"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "trips-upgrade",
+      "export": "TripsUpgradeScene",
+      "layout": "trips-tiered-shelves",
+      "anchor": "typographic-sequence",
+      "grammar": [
+        "trips-first-brings-most-favoured-treatment-into-ip",
+        "enforces-civil-administrative-criminal-procedures",
+        "raises-protection-on-top-of-four-conventions"
+      ],
+      "textTreatments": [
+        "label-block",
+        "chip",
+        "thin-underline",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "locator",
+        "icon"
+      ],
+      "tokens": [
+        "TokTreaty"
+      ],
+      "finalKnowledge": [
+        "trips-features",
+        "trips-incorporated-conventions",
+        "trips-upgrades"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "miga-icsid",
+      "export": "MigaIcsidScene",
+      "layout": "twin-mechanism-gates",
+      "anchor": "boundary",
+      "grammar": [
+        "miga-insures-political-risk-for-into-developing-hosts",
+        "icsid-hears-one-public-one-private-consent-disputes",
+        "icsid-awards-are-final-and-exclude-other-remedies"
+      ],
+      "textTreatments": [
+        "label-block",
+        "chip",
+        "thin-underline",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "enclosure",
+        "contrast",
+        "locator",
+        "icon"
+      ],
+      "tokens": [
+        "TokCourt"
+      ],
+      "finalKnowledge": [
+        "miga-essentials",
+        "miga-risks",
+        "icsid-essentials",
+        "icsid-award-effect"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "loans-guarantees",
+      "export": "LoansGuaranteesScene",
+      "layout": "lending-shelves-with-guarantee-gate",
+      "anchor": "flow-path",
+      "grammar": [
+        "syndicated-loan-pools-lenders-on-uniform-terms",
+        "demand-guarantee-pays-on-surface-match-alone",
+        "fraud-stop-order-needs-court-and-evidence"
+      ],
+      "textTreatments": [
+        "label-block",
+        "chip",
+        "thin-underline",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "connector",
+        "contrast",
+        "enclosure",
+        "icon"
+      ],
+      "tokens": [
+        "TokCourt"
+      ],
+      "finalKnowledge": [
+        "syndicated-loan",
+        "demand-guarantee-traits",
+        "other-guarantees"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "tax-regimes",
+      "export": "TaxRegimesScene",
+      "layout": "tax-jurisdiction-comparison",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "resident-jurisdiction-taxes-worldwide-source-jurisdiction-taxes-local",
+        "repeated-taxation-same-taxpayer-overlap-two-taxpayers",
+        "crs-auto-exchanges-financial-accounts-yearly"
+      ],
+      "textTreatments": [
+        "label-block",
+        "chip",
+        "thin-underline",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "locator",
+        "icon"
+      ],
+      "tokens": [
+        "TokTreaty"
+      ],
+      "finalKnowledge": [
+        "tax-jurisdiction-pair",
+        "double-vs-overlap",
+        "crs-exchange"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}
