@@ -1,0 +1,16 @@
+{
+  "directionId": "border-customs-checkpoint",
+  "family": "frontier-pass-office",
+  "palette": "frontier navy ground + ivory pass panels + customs verdigris accents + carmine entry stamps + brass grommet dots + dusk-gold lane markings",
+  "typography": "ink headings on ivory pass plaques, dark pass-office label tabs with brass left bar, verdigris chips for adopted standards, carmine stamps reserved for rulings and carve-outs, thin ink underline for legal tests",
+  "composition": "the four personal-reach doctrines queue as criterion lanes with the adopted compromise lane stamped; spatial reach draws as a two-tier territory envelope with a central-in-local adjustment counter; temporal validity runs as a checkpoint timeline from publication through repeal gates to the retroactivity window",
+  "surface": "flat frontier navy with faint brass lane hairlines, ivory pass panels with hairline weathered borders and corner grommet dots, no gradients on panels, no rounded cards, no drop shadows",
+  "motion": "pass panels slide up to the inspection counter, criterion chips ink in, the adopted lane receives one carmine stamp, territory tiers unfurl outward, timeline gates swing once and hold, the retroactivity window opens a narrow slit",
+  "transition": "a gate arm sweeps the frame clean like a checkpoint barrier before the next hall",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/theoretical-law/01/legal-validity/",
+    "title": "验讫关防"
+  }
+}

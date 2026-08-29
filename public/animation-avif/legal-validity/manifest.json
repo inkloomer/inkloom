@@ -1,0 +1,70 @@
+{
+  "animationId": "legal-validity",
+  "compositionId": "LegalValidity",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-29T16:26:28.987Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 239,
+      "frameCount": 240,
+      "id": "personal-reach",
+      "number": "01",
+      "startFrame": 0,
+      "title": "对人效力四主义",
+      "durationMs": 8000,
+      "file": "personal-reach.avif",
+      "fileSize": 452708,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "25e903fd261575ea0136327a34223c4397a992567485a78f0eebb2f706635839",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "00718597ce25f72de5815555ab96583e87fe4a581d1a5a62c93e742eb07eb2ce"
+    },
+    {
+      "endFrame": 491,
+      "frameCount": 252,
+      "id": "spatial-reach",
+      "number": "02",
+      "startFrame": 240,
+      "title": "空间效力与调整实施",
+      "durationMs": 8400,
+      "file": "spatial-reach.avif",
+      "fileSize": 555450,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "8a22a1fda153f14b7ad90d4988ebecb8a7fe35fd5715ee5db020bf41f7662b9b",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "00718597ce25f72de5815555ab96583e87fe4a581d1a5a62c93e742eb07eb2ce"
+    },
+    {
+      "endFrame": 755,
+      "frameCount": 264,
+      "id": "temporal-reach",
+      "number": "03",
+      "startFrame": 492,
+      "title": "生效失效与溯及力",
+      "durationMs": 8800,
+      "file": "temporal-reach.avif",
+      "fileSize": 443250,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "e7cccc2e97ef0e85dcb9334105f0e21eb9e8a307663eea233a4b8370bfdf93c5",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "00718597ce25f72de5815555ab96583e87fe4a581d1a5a62c93e742eb07eb2ce"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "00718597ce25f72de5815555ab96583e87fe4a581d1a5a62c93e742eb07eb2ce",
+  "targetFps": 30,
+  "totalFileSize": 1451408
+}

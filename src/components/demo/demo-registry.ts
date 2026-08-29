@@ -47,6 +47,7 @@ import {DURATION_FRAMES as LEGAL_PRINCIPLES_DURATION_FRAMES, FPS as LEGAL_PRINCI
 import {DURATION_FRAMES as CONCEPT_OF_LAW_DURATION_FRAMES, FPS as CONCEPT_OF_LAW_FPS} from '../../animations/theoretical-law/01/concept-of-law-dispute/remotion/storyboard';
 import {DURATION_FRAMES as SOURCES_OF_LAW_DURATION_FRAMES, FPS as SOURCES_OF_LAW_FPS} from '../../animations/theoretical-law/01/sources-of-law/remotion/storyboard';
 import {DURATION_FRAMES as LEGAL_DEPARTMENTS_SYSTEM_DURATION_FRAMES, FPS as LEGAL_DEPARTMENTS_SYSTEM_FPS} from '../../animations/theoretical-law/01/legal-departments-system/remotion/storyboard';
+import {DURATION_FRAMES as LEGAL_VALIDITY_DURATION_FRAMES, FPS as LEGAL_VALIDITY_FPS} from '../../animations/theoretical-law/01/legal-validity/remotion/storyboard';
 import {DURATION_FRAMES as ORGANS_RELAY_DURATION_FRAMES, FPS as ORGANS_RELAY_FPS} from '../../animations/criminal-procedure/03/organs-relay-map/remotion/storyboard';
 import {DURATION_FRAMES as JURISDICTION_SLUICE_DURATION_FRAMES, FPS as JURISDICTION_SLUICE_FPS} from '../../animations/criminal-procedure/04/jurisdiction-sluice-terrace/remotion/storyboard';
 import {DURATION_FRAMES as RECUSAL_SENTRY_DURATION_FRAMES, FPS as RECUSAL_SENTRY_FPS} from '../../animations/criminal-procedure/05/recusal-sentry-rotation/remotion/storyboard';
@@ -193,6 +194,7 @@ export const STYLE_DEMOS = [
   {id: 'theoretical-law-01-legal-principles', slug: 'legal-principles', title: '黑板讲席', direction: 'Chalkboard Lecture', component: lazyDemo(() => import('../../animations/theoretical-law/01/legal-principles/remotion/LegalPrinciples').then((m) => ({default: m.LegalPrinciples}))), href: '/inkloom/objective/theoretical-law/01/legal-principles/', durationInFrames: LEGAL_PRINCIPLES_DURATION_FRAMES, fps: LEGAL_PRINCIPLES_FPS},
   {id: 'theoretical-law-01-sources-of-law', slug: 'sources-of-law', title: '碑林拓片', direction: 'Stele Forest Rubbing', component: lazyDemo(() => import('../../animations/theoretical-law/01/sources-of-law/remotion/SourcesOfLaw').then((m) => ({default: m.SourcesOfLaw}))), href: '/inkloom/objective/theoretical-law/01/sources-of-law/', durationInFrames: SOURCES_OF_LAW_DURATION_FRAMES, fps: SOURCES_OF_LAW_FPS},
   {id: 'theoretical-law-01-legal-departments-system', slug: 'legal-departments-system', title: '经纬织坊', direction: 'Weaving Loom Atelier', component: lazyDemo(() => import('../../animations/theoretical-law/01/legal-departments-system/remotion/LegalDepartmentsSystem').then((m) => ({default: m.LegalDepartmentsSystem}))), href: '/inkloom/objective/theoretical-law/01/legal-departments-system/', durationInFrames: LEGAL_DEPARTMENTS_SYSTEM_DURATION_FRAMES, fps: LEGAL_DEPARTMENTS_SYSTEM_FPS},
+  {id: 'theoretical-law-01-legal-validity', slug: 'legal-validity', title: '验讫关防', direction: 'Frontier Pass Office', component: lazyDemo(() => import('../../animations/theoretical-law/01/legal-validity/remotion/LegalValidity').then((m) => ({default: m.LegalValidity}))), href: '/inkloom/objective/theoretical-law/01/legal-validity/', durationInFrames: LEGAL_VALIDITY_DURATION_FRAMES, fps: LEGAL_VALIDITY_FPS},
   ...COMMERCIAL_LAW_STYLE_DEMOS,
 ] as const satisfies readonly DemoDefinition[];
 
@@ -293,6 +295,7 @@ const DEMO_ADDED_AT: Record<(typeof STYLE_DEMOS)[number]['id'], string> = {
   'theoretical-law-01-legal-principles': '2026-08-29T22:00:00+08:00',
   'theoretical-law-01-sources-of-law': '2026-08-29T23:30:00+08:00',
   'theoretical-law-01-legal-departments-system': '2026-08-30T00:10:00+08:00',
+  'theoretical-law-01-legal-validity': '2026-08-30T00:40:00+08:00',
   ...COMMERCIAL_LAW_DEMO_ADDED_AT,
 };
 

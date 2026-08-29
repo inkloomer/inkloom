@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "playerControlSafeBottom": 176,
+  "scenes": [
+    {
+      "id": "personal-reach",
+      "export": "PersonalReachScene",
+      "layout": "four-doctrine-criterion-lanes",
+      "anchor": "comparison-axis",
+      "grammar": ["doctrine-claims", "criterion-ladder", "adopted-standard-stamp"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["Users", "MapPin", "Shield", "Blend"],
+      "finalKnowledge": [
+        "personal-heading",
+        "doctrine-lanes",
+        "compromise-lane",
+        "adoption-stamp"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "spatial-reach",
+      "export": "SpatialReachScene",
+      "layout": "territory-envelope-with-adjustment-counter",
+      "anchor": "boundary",
+      "grammar": ["nationwide-tier", "regional-tier", "central-adjustment-strip"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "thin-underline"],
+      "focalChannels": ["icon", "enclosure", "contrast", "spatial", "annotation"],
+      "tokens": ["Landmark", "MapPinned", "CirclePause"],
+      "finalKnowledge": [
+        "spatial-heading",
+        "nationwide-tier",
+        "regional-tier",
+        "adjustment-strip",
+        "maker-mnemonic"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "temporal-reach",
+      "export": "TemporalReachScene",
+      "layout": "validity-timeline-with-retroactivity-gate",
+      "anchor": "timeline-gate",
+      "grammar": ["publication-gate", "repeal-fork", "retroactivity-window"],
+      "textTreatments": ["label-block", "chip", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "motion", "annotation"],
+      "tokens": ["Megaphone", "FileX2", "Hourglass"],
+      "finalKnowledge": [
+        "temporal-heading",
+        "publication-gate",
+        "repeal-fork",
+        "retroactivity-window",
+        "presumed-knowledge-note"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}
