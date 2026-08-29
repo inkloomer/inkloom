@@ -162,6 +162,7 @@ import {typography as typographyAutoCorporateOrgans} from '../animations/commerc
 import {typography as typographyAutoShareholderRepresentativeAction} from '../animations/commercial-law/05/shareholder-representative-action/animation.meta';
 import {typography as typographyAutoDirectorDuties} from '../animations/commercial-law/05/director-duties/animation.meta';
 import {typography as typographyAutoInformationRight} from '../animations/commercial-law/04/information-right/animation.meta';
+import {typography as typographyAutoRightsShieldArmory} from '../animations/civil-law/01/rights-shield-armory/animation.meta';
 import {typography as typographyAutoDividendRight} from '../animations/commercial-law/04/dividend-right/animation.meta';
 import {typography as typographyAutoShareholderQualification} from '../animations/commercial-law/03/shareholder-qualification/animation.meta';
 import {typography as typographyAutoNominalShareholder} from '../animations/commercial-law/03/nominal-shareholder/animation.meta';
@@ -175,6 +176,7 @@ import {typography as typographyAutoEvidenceVitrineMuseum} from '../animations/a
 import {typography as typographyAutoApplicationSilkLoom} from '../animations/administrative-law/17/application-silk-loom/animation.meta';
 import {typography as typographyAutoJudgmentExecutionClockwork} from '../animations/administrative-law/18/judgment-execution-clockwork/animation.meta';
 import {typography as typographyAutoReviewRelayNetwork} from '../animations/administrative-law/19/review-relay-network/animation.meta';
+import {typography as typographyAutoContractTwinMastHarbor} from '../animations/administrative-law/22/contract-twin-mast-harbor/animation.meta';
 import {typography as typographyAutoLighthouseWatchNetwork} from '../animations/administrative-law/20/lighthouse-watch-network/animation.meta';
 import {typography as typographyAutoDisclosureDarkroomStudio} from '../animations/administrative-law/21/disclosure-darkroom-studio/animation.meta';
 import {typography as typographyAutoLegalReasoning} from '../animations/theoretical-law/01/legal-reasoning/animation.meta';
@@ -182,7 +184,6 @@ import {typography as typographyFam} from '../animations/theoretical-law/01/lega
 import {typography as typographyMod} from '../animations/theoretical-law/01/legal-modernization/animation.meta';
 import {typography as typographyLm} from '../animations/theoretical-law/01/law-and-morality/animation.meta';
 import {typography as typographyHr} from '../animations/theoretical-law/01/law-and-human-rights/animation.meta';
-import {typography as typographyLl} from '../animations/theoretical-law/01/legislation-law/animation.meta';
 import {typography as typographyCsg} from '../animations/civil-procedure/12/compulsory-summons-gate/animation.meta';
 import {typography as typography109} from '../animations/theoretical-law/01/sources-of-law/animation.meta';
 import {typography as typography96} from '../animations/theoretical-law/17/legal-interpretation/animation.meta';
@@ -202,6 +203,9 @@ import {typography as typography47} from '../animations/criminal/23/official-int
 import {typography as typographyCt11} from '../animations/criminal/11/commencement-threshold-map/animation.meta';
 import {typography as typographyBel} from '../animations/commercial-economic-law/01/branch-wallet-ledger/animation.meta';
 import {typography as typographyVpf} from '../animations/commercial-economic-law/01/veil-piercing-forge/animation.meta';
+import {typography as typographyLl} from '../animations/theoretical-law/01/legislation-law/animation.meta';
+import {typography as typographyFc} from '../animations/theoretical-law/01/features-of-constitution/animation.meta';
+import {typography as typographyPrg} from '../animations/commercial-economic-law/01/profit-reserve-granary/animation.meta';
 import {typography as typography48} from '../animations/demo/demo-archival-dossier/animation.meta';
 import {typography as typography49} from '../animations/demo/demo-constructivist-geometry/animation.meta';
 import {typography as typography50} from '../animations/demo/demo-courtroom-blueprint/animation.meta';
@@ -333,6 +337,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'shareholder-representative-action': {metadata: typographyAutoShareholderRepresentativeAction, scope: {animationId: 'shareholder-representative-action', subject: 'commercial-law', topic: '05'}},
   'director-duties': {metadata: typographyAutoDirectorDuties, scope: {animationId: 'director-duties', subject: 'commercial-law', topic: '05'}},
   'information-right': {metadata: typographyAutoInformationRight, scope: {animationId: 'information-right', subject: 'commercial-law', topic: '04'}},
+  'rights-shield-armory': {metadata: typographyAutoRightsShieldArmory, scope: {animationId: 'rights-shield-armory', subject: 'civil-law', topic: '01'}},
   'dividend-right': {metadata: typographyAutoDividendRight, scope: {animationId: 'dividend-right', subject: 'commercial-law', topic: '04'}},
   'shareholder-qualification': {metadata: typographyAutoShareholderQualification, scope: {animationId: 'shareholder-qualification', subject: 'commercial-law', topic: '03'}},
   'nominal-shareholder': {metadata: typographyAutoNominalShareholder, scope: {animationId: 'nominal-shareholder', subject: 'commercial-law', topic: '03'}},
@@ -346,6 +351,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'application-silk-loom': {metadata: typographyAutoApplicationSilkLoom, scope: {animationId: 'application-silk-loom', subject: 'administrative-law', topic: '17'}},
   'judgment-execution-clockwork': {metadata: typographyAutoJudgmentExecutionClockwork, scope: {animationId: 'judgment-execution-clockwork', subject: 'administrative-law', topic: '18'}},
   'review-relay-network': {metadata: typographyAutoReviewRelayNetwork, scope: {animationId: 'review-relay-network', subject: 'administrative-law', topic: '19'}},
+  'contract-twin-mast-harbor': {metadata: typographyAutoContractTwinMastHarbor, scope: {animationId: 'contract-twin-mast-harbor', subject: 'administrative-law', topic: '22'}},
   'lighthouse-watch-network': {metadata: typographyAutoLighthouseWatchNetwork, scope: {animationId: 'lighthouse-watch-network', subject: 'administrative-law', topic: '20'}},
   'disclosure-darkroom-studio': {metadata: typographyAutoDisclosureDarkroomStudio, scope: {animationId: 'disclosure-darkroom-studio', subject: 'administrative-law', topic: '21'}},
   'legal-reasoning': {metadata: typographyAutoLegalReasoning, scope: {animationId: 'legal-reasoning', subject: 'theoretical-law', topic: '01'}},
@@ -353,7 +359,6 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'legal-modernization': {metadata: typographyMod, scope: {animationId: 'legal-modernization', subject: 'theoretical-law', topic: '01'}},
   'law-and-morality': {metadata: typographyLm, scope: {animationId: 'law-and-morality', subject: 'theoretical-law', topic: '01'}},
   'law-and-human-rights': {metadata: typographyHr, scope: {animationId: 'law-and-human-rights', subject: 'theoretical-law', topic: '01'}},
-  'legislation-law': {metadata: typographyLl, scope: {animationId: 'legislation-law', subject: 'theoretical-law', topic: '01'}},
   'compulsory-summons-gate': {metadata: typographyCsg, scope: {animationId: 'compulsory-summons-gate', subject: 'civil-procedure', topic: '12'}},
   'sources-of-law': {metadata: typography109, scope: {animationId: 'sources-of-law', subject: 'theoretical-law', topic: '01'}},
   'legal-interpretation': {metadata: typography96, scope: {animationId: 'legal-interpretation', subject: 'theoretical-law', topic: '17'}},
@@ -416,6 +421,9 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'commencement-threshold-map': {metadata: typographyCt11, scope: {animationId: 'commencement-threshold-map', subject: 'criminal', topic: '11'}},
   'branch-wallet-ledger': {metadata: typographyBel, scope: {animationId: 'branch-wallet-ledger', subject: 'commercial-economic-law', topic: '01'}},
   'veil-piercing-forge': {metadata: typographyVpf, scope: {animationId: 'veil-piercing-forge', subject: 'commercial-economic-law', topic: '01'}},
+  'legislation-law': {metadata: typographyLl, scope: {animationId: 'legislation-law', subject: 'theoretical-law', topic: '01'}},
+  'features-of-constitution': {metadata: typographyFc, scope: {animationId: 'features-of-constitution', subject: 'theoretical-law', topic: '01'}},
+  'profit-reserve-granary': {metadata: typographyPrg, scope: {animationId: 'profit-reserve-granary', subject: 'commercial-economic-law', topic: '01'}},
   'fight-defense-diagram': {metadata: typography44, scope: {animationId: 'fight-defense-diagram', subject: 'criminal', topic: '22'}},
   'high-altitude-throwing-diagram': {metadata: typography45, scope: {animationId: 'high-altitude-throwing-diagram', subject: 'criminal', topic: '22'}},
   'influence-intermediary': {metadata: typography46, scope: {animationId: 'influence-intermediary', subject: 'criminal', topic: '23'}},

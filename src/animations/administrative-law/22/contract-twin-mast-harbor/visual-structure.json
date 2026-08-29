@@ -1,0 +1,172 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 6,
+  "scenes": [
+    {
+      "id": "concept-kind-harbor",
+      "export": "ConceptKindHarborScene",
+      "layout": "concept-kind-harbor-map",
+      "anchor": "flow-target",
+      "grammar": [
+        "five-agreement-kinds-moar-at-the-harbor-map",
+        "internal-agreements-are-turned-away-at-the-harbor-gate"
+      ],
+      "textTreatments": [
+        "label-block",
+        "chip",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "spatial",
+        "enclosure",
+        "contrast"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "agreement-concept",
+        "agreement-five-kinds",
+        "internal-agreement-excluded"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "dual-nature-masts",
+      "export": "DualNatureMastsScene",
+      "layout": "dual-nature-twin-masts",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "administrative-and-contract-natures-rise-as-twin-masts",
+        "no-counterclaim-keeps-the-citizen-suit-one-way"
+      ],
+      "textTreatments": [
+        "label-block",
+        "soft-highlight",
+        "chip"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "spatial"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "administrative-nature",
+        "contract-nature",
+        "subject-org-people",
+        "no-counterclaim-rule"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "validity-tide-gauge",
+      "export": "ValidityTideGaugeScene",
+      "layout": "validity-tide-gauge",
+      "anchor": "boundary",
+      "grammar": [
+        "validity-tide-gauge-fills-through-pending-void-and-revocable",
+        "defect-remedies-print-at-the-gauge-base"
+      ],
+      "textTreatments": [
+        "label-block",
+        "stamp",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "locator"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "validity-pending-approval",
+        "validity-void-reasons",
+        "validity-revocable",
+        "validity-consequences"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "jurisdiction-tide-chart",
+      "export": "JurisdictionTideChartScene",
+      "layout": "jurisdiction-tide-chart",
+      "anchor": "timeline-gate",
+      "grammar": [
+        "jurisdiction-chart-plots-exclusive-then-agreement-stops",
+        "limitation-periods-split-by-dual-nature"
+      ],
+      "textTreatments": [
+        "label-block",
+        "chip",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "locator",
+        "contrast",
+        "connector"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "jurisdiction-level-exclusive",
+        "jurisdiction-agreement-five-stops",
+        "limitation-dual-track"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "review-mast-split",
+      "export": "ReviewMastSplitScene",
+      "layout": "review-mast-split",
+      "anchor": "document-fork",
+      "grammar": [
+        "legality-and-contract-review-split-across-two-masts",
+        "old-case-new-case-split-at-may-first-2015"
+      ],
+      "textTreatments": [
+        "label-block",
+        "chip",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "contrast",
+        "connector",
+        "enclosure"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "review-dual-track",
+        "mediation-allowed",
+        "burden-dual-track",
+        "law-application-old-new"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "verdict-dock-berths",
+      "export": "VerdictDockBerthsScene",
+      "layout": "verdict-dock-berths",
+      "anchor": "flow-path",
+      "grammar": [
+        "unilateral-change-and-non-performance-moor-at-separate-berths",
+        "invalid-switch-prints-the-want-to-change-mnemonic"
+      ],
+      "textTreatments": [
+        "label-block",
+        "stamp",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "contrast",
+        "connector",
+        "enclosure"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "verdict-unilateral-change",
+        "verdict-non-performance",
+        "verdict-invalid-switch"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

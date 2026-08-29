@@ -1,0 +1,16 @@
+{
+  "directionId": "contract-twin-mast-harbor-docks",
+  "family": "contract-twin-mast-harbor",
+  "palette": "deep harbor blue night, dock-lantern gold, sail cream, signal teal for the administrative mast and warm coral for the contract mast",
+  "typography": "title-face dock headlines, ink body text on sail-cream cards, mono berth codes",
+  "composition": "concept-kind harbor map, dual-nature twin masts, validity tide gauge, jurisdiction tide chart, review mast split, verdict dock berths",
+  "surface": "harbor water gradient with mooring lines, sail-cream cards, rope-framed panels",
+  "motion": "twin masts rise per dual track, tide gauge fills, dock lanterns light berth by berth",
+  "transition": "the harbor tide carries to the next dock",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/administrative-law/22/contract-twin-mast-harbor/",
+    "title": "契约双桅港"
+  }
+}
