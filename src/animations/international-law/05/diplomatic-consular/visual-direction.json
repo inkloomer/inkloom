@@ -1,0 +1,16 @@
+{
+  "directionId": "iris-violet-chancery",
+  "family": "iris-violet-chancery",
+  "palette": "lavender-iris paper, violet ribbons, plum wax seals, sage verdicts",
+  "typography": "WenKai chancery headings with plum teardrop seals, ribbon label blocks and violet ink highlights",
+  "composition": "teardrop-station chancery frame with crest cards, comparison ledgers and numbered duty ladder",
+  "surface": "lavender hatched paper with violet double frame, no dark slabs",
+  "motion": "crest-by-crest reveals with side-sliding rows and wax verdict stamps",
+  "transition": "content swap under a persistent chancery frame and teardrop rail",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/international-law/05/diplomatic-consular/",
+    "title": "鸢尾紫章"
+  }
+}

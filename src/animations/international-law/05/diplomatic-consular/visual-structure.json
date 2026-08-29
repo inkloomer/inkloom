@@ -1,0 +1,176 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 5,
+  "scenes": [
+    {
+      "id": "mission-comparison",
+      "export": "MissionComparisonScene",
+      "layout": "four-row-mission-comparison-ledger",
+      "anchor": "role-pair",
+      "grammar": [
+        "embassy-and-consulate-align-on-four-comparison-rows",
+        "district-work-needs-receiving-state-consent"
+      ],
+      "textTreatments": [
+        "label-block",
+        "thin-underline",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "spatial",
+        "enclosure"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "embassy-row",
+        "consulate-row",
+        "outside-district-consent"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "envoy-structure",
+      "export": "EnvoyStructureScene",
+      "layout": "three-envoy-crests-with-central-organs-strip",
+      "anchor": "concept-icon",
+      "grammar": [
+        "three-envoy-crests-rank-by-accredited-principal",
+        "central-organs-stay-behind-the-missions"
+      ],
+      "textTreatments": [
+        "label-block",
+        "thin-underline",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "enclosure",
+        "contrast",
+        "spatial"
+      ],
+      "tokens": [
+        "Crown"
+      ],
+      "finalKnowledge": [
+        "envoy-levels",
+        "envoy-same-duties",
+        "central-organs"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "staff-protocol",
+      "export": "StaffProtocolScene",
+      "layout": "staff-class-table-with-nomination-gate",
+      "anchor": "typographic-sequence",
+      "grammar": [
+        "three-staff-classes-carry-two-verdict-labels",
+        "nomination-gate-guards-four-person-types"
+      ],
+      "textTreatments": [
+        "label-block",
+        "stamp",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "locator"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "staff-classes",
+        "persona-non-grata",
+        "nomination-mnemonic",
+        "duty-start-rules"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "premises-immunity",
+      "export": "PremisesImmunityScene",
+      "layout": "premises-gate-pair-with-mailbag-strip",
+      "anchor": "boundary",
+      "grammar": [
+        "embassy-premises-close-absolutely-consulate-premises-keep-emergency-lane",
+        "mailbag-protected-strictly-then-loosely"
+      ],
+      "textTreatments": [
+        "label-block",
+        "thin-underline",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "spatial"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "embassy-premises",
+        "consulate-premises",
+        "mailbag-contrast",
+        "tax-note"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "personal-immunities",
+      "export": "PersonalImmunitiesScene",
+      "layout": "immunity-verdict-board-with-exception-grid",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "criminal-jurisdiction-immunity-divides-from-criminal-liability",
+        "four-civil-exceptions-open-the-court-door"
+      ],
+      "textTreatments": [
+        "label-block",
+        "stamp",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "locator"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "criminal-jurisdiction-immunity",
+        "consular-official-rule",
+        "civil-four-exceptions",
+        "special-mission-note"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "mission-duties",
+      "export": "MissionDutiesScene",
+      "layout": "five-duty-steps-ladder",
+      "anchor": "typographic-sequence",
+      "grammar": [
+        "five-obligations-descend-as-numbered-steps",
+        "commerce-ban-explains-the-civil-exception"
+      ],
+      "textTreatments": [
+        "label-block",
+        "thin-underline",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "locator",
+        "contrast",
+        "enclosure"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "duty-respect-law",
+        "duty-no-interference",
+        "duty-premises-use",
+        "duty-channel",
+        "duty-no-commerce"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}
