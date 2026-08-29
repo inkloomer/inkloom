@@ -1,0 +1,70 @@
+{
+  "animationId": "constitution-sources-structure",
+  "compositionId": "ConstitutionSourcesStructure",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-29T23:05:32.669Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 275,
+      "frameCount": 276,
+      "id": "sources-five",
+      "number": "01",
+      "startFrame": 0,
+      "title": "五种宪法渊源",
+      "durationMs": 9200,
+      "file": "sources-five.avif",
+      "fileSize": 504342,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "e14db06afb88a92b8fd8a2cccf6954d2d4793fc7cb5f1d3d78ab14f3ace02abd",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "078c8ff9db23ef6b9716c980e2e68a52fa8661661d55e865971a285e117ea643"
+    },
+    {
+      "endFrame": 539,
+      "frameCount": 264,
+      "id": "codex-structure",
+      "number": "02",
+      "startFrame": 276,
+      "title": "宪法典三段结构",
+      "durationMs": 8800,
+      "file": "codex-structure.avif",
+      "fileSize": 521043,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "2f8ed6d0e802cbf4c7270accdff6cb1c09042ac626dade71136b05c102bc1c5c",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "078c8ff9db23ef6b9716c980e2e68a52fa8661661d55e865971a285e117ea643"
+    },
+    {
+      "endFrame": 779,
+      "frameCount": 240,
+      "id": "verdict-board",
+      "number": "03",
+      "startFrame": 540,
+      "title": "渊源判词与中美对比",
+      "durationMs": 8000,
+      "file": "verdict-board.avif",
+      "fileSize": 331956,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "2a39fefbb85125eddfef189503129fda472b2907dfe27c5fcdd7f3346b1f9239",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "078c8ff9db23ef6b9716c980e2e68a52fa8661661d55e865971a285e117ea643"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "078c8ff9db23ef6b9716c980e2e68a52fa8661661d55e865971a285e117ea643",
+  "targetFps": 30,
+  "totalFileSize": 1357341
+}

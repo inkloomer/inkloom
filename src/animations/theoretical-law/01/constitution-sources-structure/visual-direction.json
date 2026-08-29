@@ -1,0 +1,16 @@
+{
+  "directionId": "sources-confluence-map",
+  "family": "confluence-river-map",
+  "palette": "deep river-chart blue ground + pale chart panels + confluence cyan streams + rust-red verdict seals + sand annotations + dark chart ink",
+  "typography": "chart-ink headings on pale panels, dark map label tabs with cyan left bar, rust stamps reserved for verdicts, cyan chips for sources, thin ink underline for tests",
+  "composition": "the five sources run as five stream panels converging toward one river head; the codex structure stacks preface body and schedule as a vertical chart with the rights section highlighted; the verdict board splits china-has china-has-not and unspecified into three lanes",
+  "surface": "flat deep blue ground with faint contour hairlines, pale panels with hairline weathered borders and corner buoys, no gradients, no rounded cards, no drop shadows",
+  "motion": "streams flow toward the confluence and settle, panels surface one by one, the structure chart fills top-down, verdict seals stamp lane by lane",
+  "transition": "the river mouth opens and the chart clears for the next survey",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/theoretical-law/01/constitution-sources-structure/",
+    "title": "五源汇流图"
+  }
+}

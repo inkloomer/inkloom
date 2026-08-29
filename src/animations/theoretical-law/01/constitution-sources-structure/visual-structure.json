@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "playerControlSafeBottom": 176,
+  "scenes": [
+    {
+      "id": "sources-five",
+      "export": "SourcesFiveScene",
+      "layout": "five-source-stream-row",
+      "anchor": "typographic-sequence",
+      "grammar": ["codex-stream", "custom-practice-stream", "precedent-treaty-streams"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["BookMarked", "ScrollText", "Users", "Gavel", "Globe"],
+      "finalKnowledge": [
+        "sources-heading",
+        "source-row",
+        "china-verdicts"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "codex-structure",
+      "export": "CodexStructureScene",
+      "layout": "codex-vertical-structure-chart",
+      "anchor": "flow-path",
+      "grammar": ["preflight-section", "body-sections", "schedule-section"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "thin-underline"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial", "annotation"],
+      "tokens": ["FileText", "Landmark", "Scale"],
+      "finalKnowledge": [
+        "structure-heading",
+        "preface-leaf",
+        "body-leaf",
+        "schedule-leaf",
+        "rights-order-note"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "verdict-board",
+      "export": "VerdictBoardScene",
+      "layout": "three-lane-verdict-boundary-board",
+      "anchor": "boundary",
+      "grammar": ["china-has-lane", "china-not-lane", "us-comparison-lane"],
+      "textTreatments": ["label-block", "chip", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["CheckCircle2", "XCircle", "CircleHelp"],
+      "finalKnowledge": [
+        "verdict-heading",
+        "china-has-lane",
+        "china-not-lane",
+        "us-comparison-lane"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}
