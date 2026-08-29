@@ -1,0 +1,16 @@
+{
+  "directionId": "pledge-counter-vault",
+  "family": "pawn-counter-ledger",
+  "palette": "walnut counter brown, pawn-ticket cream, brass nameplate gold, cinnabar seal red, celadon safe-deposit green, registry indigo, graphite ink",
+  "typography": "pawn-ticket WenKai headings under brass numbered plates, thin condition rules and cinnabar seal-stamp verdicts",
+  "composition": "one walnut counter rail carrying four publicity windows, later splitting into twin fate lanes and a twin priority ladder",
+  "surface": "walnut counter boards, pawn-ticket paper cards, brass plates, enamel number tags, celadon safe-deposit boxes",
+  "motion": "collateral tickets slide across the counter, halt at their publicity gate, then settle as sealed or stored terminal cards; the limitation key turns and splits the twin fate lanes",
+  "transition": "the walnut counter frame, brass plates and ticket paper persist while window groups and ladder bays are exchanged",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/civil-law/14/security-publicity-fate/",
+    "title": "当铺柜台"
+  }
+}

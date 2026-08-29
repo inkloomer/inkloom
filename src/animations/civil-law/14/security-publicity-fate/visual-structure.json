@@ -1,0 +1,78 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "creation-publicity-gate",
+      "export": "CreationPublicityGateScene",
+      "layout": "four-window-publicity-counter",
+      "anchor": "boundary",
+      "grammar": [
+        "real-property-mortgage-stays-a-ordinary-claim-until-registration-creates-the-right",
+        "chattel-mortgage-arises-on-contract-and-only-registration-makes-it-opposable",
+        "pledge-arises-on-delivery-and-retention-of-possession-never-creates-it",
+        "lien-arises-by-law-from-lawful-possession-same-cause-and-default-alone"
+      ],
+      "textTreatments": ["label-block", "stamp", "thin-underline", "external-negation"],
+      "focalChannels": ["enclosure", "connector", "locator", "annotation"],
+      "tokens": ["Landmark", "FileText", "Package", "Hand", "Ban"],
+      "finalKnowledge": [
+        "real-property-mortgage-window",
+        "chattel-mortgage-window",
+        "pledge-window",
+        "lien-window"
+      ],
+      "statefulObjects": ["mortgage-ticket", "chattel-ticket", "pledge-goods", "lien-goods"]
+    },
+    {
+      "id": "limitation-fate-split",
+      "export": "LimitationFateSplitScene",
+      "layout": "twin-fate-lane-split-bench",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "registration-publicity-security-rights-extinguish-when-limitation-expires",
+        "possession-publicity-security-rights-survive-when-limitation-expires",
+        "a-surviving-possessory-right-keeps-retention-but-loses-realisation",
+        "the-publicity-method-alone-decides-which-of-the-two-fates-applies"
+      ],
+      "textTreatments": ["label-block", "stamp", "soft-highlight", "external-negation"],
+      "focalChannels": ["contrast", "enclosure", "annotation", "motion"],
+      "tokens": ["Landmark", "Package", "Ban", "Timer", "Lock"],
+      "finalKnowledge": [
+        "registration-lane-outcome",
+        "possession-lane-outcome",
+        "retention-defence",
+        "realisation-bar",
+        "deadlock-badge"
+      ],
+      "statefulObjects": ["registration-security-token", "possession-security-token"]
+    },
+    {
+      "id": "priority-ladder-gate",
+      "export": "PriorityLadderGateScene",
+      "layout": "twin-priority-ladder-with-bypass-banner",
+      "anchor": "timeline-gate",
+      "grammar": [
+        "lien-takes-the-first-rank-above-every-consensual-security-right",
+        "registered-mortgage-and-directly-possessed-pledge-share-rank-by-earlier-publicity",
+        "an-unpossessed-pledge-still-outranks-an-unregistered-mortgage",
+        "purchase-money-security-registered-within-ten-days-jumps-ahead-except-against-lien",
+        "immovable-ranking-puts-buyer-refund-then-construction-priority-then-mortgage"
+      ],
+      "textTreatments": ["label-block", "soft-highlight", "stamp", "thin-underline"],
+      "focalChannels": ["spatial", "connector", "enclosure", "annotation"],
+      "tokens": ["Hand", "Landmark", "Package", "Clock", "Hammer", "Home"],
+      "finalKnowledge": [
+        "lien-rank",
+        "publicity-rank",
+        "unpossessed-pledge-rank",
+        "unregistered-mortgage-rank",
+        "purchase-money-bypass",
+        "immovable-ladder",
+        "mortgage-variation-limit"
+      ],
+      "statefulObjects": ["distribution-proceeds"]
+    }
+  ]
+}
