@@ -1,0 +1,26 @@
+{
+  "directionId": "indigo-ropewalk-atelier",
+  "family": "hemp-ropewalk-shed",
+  "palette": "indigo dyed shed + hemp rope gold + steel hook gray + rice paper tags + seal red scissors marks + ink black",
+  "typography": "ropewalk shed headlines, hangtag roster labels, square hemp verdict stamps, dashed strand dividers",
+  "composition": "a three-strand rope stand fusing promoters into one liability rope, dual signing lanes that fork by contracting name, and a tort boundary line with a private-benefit strand carved out",
+  "surface": "dark indigo shed walls with hemp strands and paper hangtags; no glossy panels",
+  "motion": "strands fuse in legal order, liability links travel along the rope, scissors carve the private-benefit strand; no idle loops",
+  "transition": "the ropewalk shed persists while each scene re-stages the same rope for a new question",
+  "conceptTokens": {
+    "发起人": "Users",
+    "债权人": "HandCoins",
+    "连带": "Link",
+    "签约": "FileText",
+    "公司": "Building2",
+    "个人侵权": "AlertTriangle",
+    "私利剪除": "Scissors",
+    "真题": "GraduationCap"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/commercial-economic-law/01/promoter-liability-ropewalk/",
+    "title": "合股缆棚"
+  }
+}

@@ -59,6 +59,7 @@ import {DURATION_FRAMES as LAW_AND_HUMAN_RIGHTS_DURATION_FRAMES, FPS as LAW_AND_
 import {DURATION_FRAMES as LEGISLATION_LAW_DURATION_FRAMES, FPS as LEGISLATION_LAW_FPS} from '../../animations/theoretical-law/01/legislation-law/remotion/storyboard';
 import {DURATION_FRAMES as FEATURES_OF_CONSTITUTION_DURATION_FRAMES, FPS as FEATURES_OF_CONSTITUTION_FPS} from '../../animations/theoretical-law/01/features-of-constitution/remotion/storyboard';
 import {DURATION_FRAMES as RESERVE_GRANARY_DURATION_FRAMES, FPS as RESERVE_GRANARY_FPS} from '../../animations/commercial-economic-law/01/profit-reserve-granary/remotion/storyboard';
+import {DURATION_FRAMES as PROMOTER_ROPEWALK_DURATION_FRAMES, FPS as PROMOTER_ROPEWALK_FPS} from '../../animations/commercial-economic-law/01/promoter-liability-ropewalk/remotion/storyboard';
 import {DURATION_FRAMES as LIABILITY_CONCURRENCE_DURATION_FRAMES, FPS as LIABILITY_CONCURRENCE_FPS} from '../../animations/theoretical-law/01/liability-concurrence/remotion/storyboard';
 import {DURATION_FRAMES as JUDICIAL_VS_ADMINISTRATIVE_DURATION_FRAMES, FPS as JUDICIAL_VS_ADMINISTRATIVE_FPS} from '../../animations/theoretical-law/01/judicial-vs-administrative/remotion/storyboard';
 import {DURATION_FRAMES as APPLICATION_OF_LAW_DURATION_FRAMES, FPS as APPLICATION_OF_LAW_FPS} from '../../animations/theoretical-law/01/application-of-law/remotion/storyboard';
@@ -243,6 +244,7 @@ export const STYLE_DEMOS = [
   {id: 'theoretical-law-01-legislation-law', slug: 'legislation-law', title: '法典铸坊', direction: 'Code Forge Foundry', component: lazyDemo(() => import('../../animations/theoretical-law/01/legislation-law/remotion/LegislationLaw').then((m) => ({default: m.LegislationLaw}))), href: '/inkloom/objective/theoretical-law/01/legislation-law/', durationInFrames: LEGISLATION_LAW_DURATION_FRAMES, fps: LEGISLATION_LAW_FPS},
   {id: 'theoretical-law-01-features-of-constitution', slug: 'features-of-constitution', title: '奠基石台', direction: 'Cornerstone Terrace Workshop', component: lazyDemo(() => import('../../animations/theoretical-law/01/features-of-constitution/remotion/FeaturesOfConstitution').then((m) => ({default: m.FeaturesOfConstitution}))), href: '/inkloom/objective/theoretical-law/01/features-of-constitution/', durationInFrames: FEATURES_OF_CONSTITUTION_DURATION_FRAMES, fps: FEATURES_OF_CONSTITUTION_FPS},
   {id: 'commercial-economic-law-01-profit-reserve-granary', slug: 'profit-reserve-granary', title: '丰廒粮栈', direction: 'Granary Harvest Reserve Hall', component: lazyDemo(() => import('../../animations/commercial-economic-law/01/profit-reserve-granary/remotion/ProfitReserveGranary').then((m) => ({default: m.ProfitReserveGranary}))), href: '/inkloom/objective/commercial-economic-law/01/profit-reserve-granary/', durationInFrames: RESERVE_GRANARY_DURATION_FRAMES, fps: RESERVE_GRANARY_FPS},
+  {id: 'commercial-economic-law-01-promoter-liability-ropewalk', slug: 'promoter-liability-ropewalk', title: '合股缆棚', direction: 'Indigo Ropewalk Shed', component: lazyDemo(() => import('../../animations/commercial-economic-law/01/promoter-liability-ropewalk/remotion/PromoterLiabilityRopewalk').then((m) => ({default: m.PromoterLiabilityRopewalk}))), href: '/inkloom/objective/commercial-economic-law/01/promoter-liability-ropewalk/', durationInFrames: PROMOTER_ROPEWALK_DURATION_FRAMES, fps: PROMOTER_ROPEWALK_FPS},
   ...COMMERCIAL_LAW_STYLE_DEMOS,
 ] as const satisfies readonly DemoDefinition[];
 
@@ -368,6 +370,7 @@ const DEMO_ADDED_AT: Record<(typeof STYLE_DEMOS)[number]['id'], string> = {
   'theoretical-law-01-legislation-law': '2026-08-30T06:10:00+08:00',
   'theoretical-law-01-features-of-constitution': '2026-08-30T06:40:00+08:00',
   'commercial-economic-law-01-profit-reserve-granary': '2026-08-30T22:20:00+08:00',
+  'commercial-economic-law-01-promoter-liability-ropewalk': '2026-08-30T23:10:00+08:00',
   ...COMMERCIAL_LAW_DEMO_ADDED_AT,
 };
 
