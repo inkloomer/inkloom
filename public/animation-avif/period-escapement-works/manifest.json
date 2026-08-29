@@ -1,0 +1,70 @@
+{
+  "animationId": "period-escapement-works",
+  "compositionId": "PeriodEscapementWorks",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-29T08:58:00.608Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 459,
+      "frameCount": 230,
+      "id": "counting-units-gears",
+      "number": "01",
+      "startFrame": 0,
+      "title": "计算齿轮",
+      "durationMs": 7667,
+      "file": "counting-units-gears.avif",
+      "fileSize": 237333,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "2c5001f747aed6690e37ca6de0aac4bd6730ca2c8c43c91a81cfee6cf1c6875e",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "aa652de53b12f7f0efd5930df5e3321a1d5869e57bafa332fba2e8158df1c906"
+    },
+    {
+      "endFrame": 959,
+      "frameCount": 250,
+      "id": "recalc-special-cases",
+      "number": "02",
+      "startFrame": 460,
+      "title": "重算与特殊",
+      "durationMs": 8333,
+      "file": "recalc-special-cases.avif",
+      "fileSize": 380842,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "794aefdc3d86228c9fc42341f99924e4c0f91ba4cb8b887fb35bfeac680b2abf",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "aa652de53b12f7f0efd5930df5e3321a1d5869e57bafa332fba2e8158df1c906"
+    },
+    {
+      "endFrame": 1459,
+      "frameCount": 250,
+      "id": "service-modes-board",
+      "number": "03",
+      "startFrame": 960,
+      "title": "送达方式板",
+      "durationMs": 8333,
+      "file": "service-modes-board.avif",
+      "fileSize": 362407,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "bd81bddc50ae564c003db76298e0c4a6b22819d06dd18ff2893bc779f00d08ca",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "aa652de53b12f7f0efd5930df5e3321a1d5869e57bafa332fba2e8158df1c906"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "aa652de53b12f7f0efd5930df5e3321a1d5869e57bafa332fba2e8158df1c906",
+  "targetFps": 30,
+  "totalFileSize": 980582
+}

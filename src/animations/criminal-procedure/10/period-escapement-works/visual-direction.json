@@ -1,0 +1,16 @@
+{
+  "directionId": "escapement-works-periods",
+  "family": "escapement-works-family",
+  "palette": "dark walnut workshop, brass escapement frames, cream calendar dials, stamp vermilion marks, sage and dusk-blue accents",
+  "typography": "WenKai horologist headings with dial chips and stamp notes",
+  "composition": "three counting dial gears over a start-exclusion strip, a recalc mnemonic beside a special-rule grid and restoration band, and five service-mode rows closing into an exception banner",
+  "surface": "a horologist bench with wood-grain weave, brass dials and cream calendar cards",
+  "motion": "dials rise in unit order, recalc chips stamp beside their rules, and service rows tick into place before the exception banner seals the board",
+  "transition": "the walnut backdrop and brass weave persist while the dial cards are replaced",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/criminal-procedure/10/period-escapement-works/",
+    "title": "机械日历坊"
+  }
+}

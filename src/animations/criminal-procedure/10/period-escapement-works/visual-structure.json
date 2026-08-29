@@ -1,0 +1,70 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "counting-units-gears",
+      "export": "CountingGearsScene",
+      "layout": "three-dial-gears-with-mnemonic-strip",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "hours-tick-from-the-next-hour",
+        "days-tick-from-the-next-day",
+        "months-run-same-day-to-same-day",
+        "half-month-always-fifteen-days"
+      ],
+      "textTreatments": ["chip", "thin-underline", "soft-highlight"],
+      "focalChannels": ["contrast", "enclosure", "spatial", "locator"],
+      "tokens": ["Clock", "CalendarDays", "RefreshCw"],
+      "finalKnowledge": [
+        "hour-gear",
+        "day-gear",
+        "month-gear",
+        "start-exclusion-note"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "recalc-special-cases",
+      "export": "RecalcSpecialScene",
+      "layout": "recalc-mnemonic-with-special-case-grid",
+      "anchor": "flow-path",
+      "grammar": [
+        "new-crime-supplement-remand-and-venue-change-restart-clocks",
+        "holiday-ends-extend-except-custody",
+        "posting-before-deadline-counts-as-filed",
+        "travel-time-between-organs-is-deducted"
+      ],
+      "textTreatments": ["chip", "thin-underline", "external-negation"],
+      "focalChannels": ["connector", "contrast", "enclosure", "annotation"],
+      "tokens": ["RefreshCw", "CheckCircle2"],
+      "finalKnowledge": [
+        "recalc-mnemonic",
+        "special-case-grid",
+        "restoration-note"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "service-modes-board",
+      "export": "ServiceModesScene",
+      "layout": "five-mode-rows-with-exception-banner",
+      "anchor": "typographic-sequence",
+      "grammar": [
+        "every-service-carries-a-receipt",
+        "retained-service-needs-witness-or-recording",
+        "no-notice-or-electronic-service-except-absentia-trial",
+        "military-and-inmate-serve-by-transfer"
+      ],
+      "textTreatments": ["chip", "thin-underline", "label-block"],
+      "focalChannels": ["contrast", "enclosure", "locator", "annotation"],
+      "tokens": ["UserCheck", "XCircle"],
+      "finalKnowledge": [
+        "five-mode-board",
+        "no-electronic-service-note"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

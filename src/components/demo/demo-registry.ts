@@ -28,6 +28,8 @@ import {CoercionPressureLadder} from '../../animations/criminal-procedure/08/coe
 import {DURATION_FRAMES as COERCION_LADDER_DURATION_FRAMES, FPS as COERCION_LADDER_FPS} from '../../animations/criminal-procedure/08/coercion-pressure-ladder/remotion/storyboard';
 import {AttachedSuitViaduct} from '../../animations/criminal-procedure/09/attached-suit-viaduct/remotion/AttachedSuitViaduct';
 import {DURATION_FRAMES as ATTACHED_SUIT_DURATION_FRAMES, FPS as ATTACHED_SUIT_FPS} from '../../animations/criminal-procedure/09/attached-suit-viaduct/remotion/storyboard';
+import {PeriodEscapementWorks} from '../../animations/criminal-procedure/10/period-escapement-works/remotion/PeriodEscapementWorks';
+import {DURATION_FRAMES as PERIOD_ESCAPEMENT_DURATION_FRAMES, FPS as PERIOD_ESCAPEMENT_FPS} from '../../animations/criminal-procedure/10/period-escapement-works/remotion/storyboard';
 import {PleaLeniencyCaliper} from '../../animations/criminal-procedure/02/plea-leniency-caliper/remotion/PleaLeniencyCaliper';
 import {DURATION_FRAMES as PLEA_LENIENTY_DURATION_FRAMES, FPS as PLEA_LENIENTY_FPS} from '../../animations/criminal-procedure/02/plea-leniency-caliper/remotion/storyboard';
 import {ThirdPartyRevocation} from '../../animations/civil-procedure/07/third-party-revocation/remotion/ThirdPartyRevocation';
@@ -208,6 +210,7 @@ export const STYLE_DEMOS = [
   {id: 'criminal-procedure-06-defense-pilot-harbor', slug: 'defense-pilot-harbor', title: '灯塔引航港', direction: 'Pilot Harbor Defense', component: DefensePilotHarbor, href: '/inkloom/objective/criminal-procedure/06/defense-pilot-harbor/', durationInFrames: DEFENSE_PILOT_DURATION_FRAMES, fps: DEFENSE_PILOT_FPS},
   {id: 'criminal-procedure-08-coercion-pressure-ladder', slug: 'coercion-pressure-ladder', title: '锅炉压力梯', direction: 'Boiler Pressure Coercion', component: CoercionPressureLadder, href: '/inkloom/objective/criminal-procedure/08/coercion-pressure-ladder/', durationInFrames: COERCION_LADDER_DURATION_FRAMES, fps: COERCION_LADDER_FPS},
   {id: 'criminal-procedure-09-attached-suit-viaduct', slug: 'attached-suit-viaduct', title: '双轨合流桥', direction: 'Viaduct Merge Attached Suit', component: AttachedSuitViaduct, href: '/inkloom/objective/criminal-procedure/09/attached-suit-viaduct/', durationInFrames: ATTACHED_SUIT_DURATION_FRAMES, fps: ATTACHED_SUIT_FPS},
+  {id: 'criminal-procedure-10-period-escapement-works', slug: 'period-escapement-works', title: '机械日历坊', direction: 'Escapement Works Periods', component: PeriodEscapementWorks, href: '/inkloom/objective/criminal-procedure/10/period-escapement-works/', durationInFrames: PERIOD_ESCAPEMENT_DURATION_FRAMES, fps: PERIOD_ESCAPEMENT_FPS},
   {id: 'criminal-procedure-03-organs-relay-map', slug: 'organs-relay-map', title: '青砖驿路图', direction: 'Slate Courier Relay', component: OrgansRelayMap, href: '/inkloom/objective/criminal-procedure/03/organs-relay-map/', durationInFrames: ORGANS_RELAY_DURATION_FRAMES, fps: ORGANS_RELAY_FPS},
   {id: 'criminal-procedure-02-plea-leniency-caliper', slug: 'plea-leniency-caliper', title: '认罚量尺工坊', direction: 'Maple Caliper Workshop', component: PleaLeniencyCaliper, href: '/inkloom/objective/criminal-procedure/02/plea-leniency-caliper/', durationInFrames: PLEA_LENIENTY_DURATION_FRAMES, fps: PLEA_LENIENTY_FPS},
   {id: 'theoretical-law-01-concept-of-law-dispute', slug: 'concept-of-law-dispute', title: '漆屏对峙', direction: 'Lacquer Twin-Screen', component: ConceptOfLawDispute, href: '/inkloom/objective/theoretical-law/01/concept-of-law-dispute/', durationInFrames: CONCEPT_OF_LAW_DURATION_FRAMES, fps: CONCEPT_OF_LAW_FPS},
@@ -286,6 +289,7 @@ const DEMO_ADDED_AT: Record<(typeof STYLE_DEMOS)[number]['id'], string> = {
   'criminal-procedure-06-defense-pilot-harbor': '2026-08-29T16:20:00+08:00',
   'criminal-procedure-08-coercion-pressure-ladder': '2026-08-29T16:50:00+08:00',
   'criminal-procedure-09-attached-suit-viaduct': '2026-08-29T17:20:00+08:00',
+  'criminal-procedure-10-period-escapement-works': '2026-08-29T17:50:00+08:00',
   'criminal-procedure-03-organs-relay-map': '2026-08-29T01:30:00+08:00',
   'criminal-procedure-02-plea-leniency-caliper': '2026-08-29T01:05:00+08:00',
   'theoretical-law-01-concept-of-law-dispute': '2026-08-28T23:30:00+08:00',
