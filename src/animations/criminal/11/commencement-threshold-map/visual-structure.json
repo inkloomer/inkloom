@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "minimumDistinctLayouts": 3,
+  "minimumDistinctLayouts": 12,
   "playerControlSafeBottom": 168,
   "scenes": [
     {
@@ -12,15 +12,7 @@
       "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
       "focalChannels": ["icon", "connector", "contrast", "spatial"],
       "tokens": ["CircleDashed", "CirclePlay", "GraduationCap"],
-      "finalKnowledge": [
-        "boundary-prep-zone",
-        "boundary-start-gate",
-        "boundary-run-zone",
-        "boundary-danger-standard",
-        "boundary-exam-sent",
-        "boundary-exam-received",
-        "boundary-exam-exception-note"
-      ],
+      "finalKnowledge": ["boundary-prep-zone", "boundary-start-gate", "boundary-run-zone", "boundary-danger-standard", "boundary-exam-sent", "boundary-exam-received", "boundary-exam-exception-note"],
       "statefulObjects": []
     },
     {
@@ -32,17 +24,7 @@
       "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
       "focalChannels": ["icon", "connector", "contrast", "spatial"],
       "tokens": ["Zap", "Megaphone", "CircleDashed", "CirclePlay", "GraduationCap", "DoorClosed", "Building2", "Landmark", "PhoneCall"],
-      "finalKnowledge": [
-        "map-family-violent",
-        "map-family-communicated",
-        "map-lane-robbery",
-        "map-lane-rape",
-        "map-lane-burglary",
-        "map-lane-fraud",
-        "map-lane-insurance",
-        "map-lane-accusation",
-        "map-shared-rule"
-      ],
+      "finalKnowledge": ["map-family-violent", "map-family-communicated", "map-lane-robbery", "map-lane-rape", "map-lane-burglary", "map-lane-fraud", "map-lane-insurance", "map-lane-accusation", "map-shared-rule"],
       "statefulObjects": []
     },
     {
@@ -54,14 +36,211 @@
       "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
       "focalChannels": ["icon", "connector", "contrast", "spatial"],
       "tokens": ["Mail", "Users", "CircleDashed", "CirclePlay", "GraduationCap"],
-      "finalKnowledge": [
-        "special-isolated-board",
-        "special-isolated-dangerous-route",
-        "special-isolated-safe-route",
-        "special-indirect-board",
-        "special-indirect-standard",
-        "special-indirect-case"
-      ],
+      "finalKnowledge": ["special-isolated-board", "special-isolated-dangerous-route", "special-isolated-safe-route", "special-indirect-board", "special-indirect-standard", "special-indirect-case"],
+      "statefulObjects": []
+    },
+    {
+      "id": "forms-overview",
+      "export": "FormsOverviewScene",
+      "layout": "four-forms-stage-map",
+      "anchor": "flow-path",
+      "grammar": ["overview-progression", "exclusion-rules"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["CheckCheck", "CircleDashed", "Flag", "HandHeart", "Zap"],
+      "finalKnowledge": ["overview-rules-strip", "overview-stage-map", "overview-prep-form", "overview-attempt-form", "overview-completion-form", "overview-discontinue-forms"],
+      "statefulObjects": []
+    },
+    {
+      "id": "preparation-gates",
+      "export": "PreparationGatesScene",
+      "layout": "triple-gate-preparation",
+      "anchor": "flow-path",
+      "grammar": ["gate-checklist", "concept-isolation"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": [],
+      "finalKnowledge": ["prep-gate-intent", "prep-gate-act", "prep-gate-cause"],
+      "statefulObjects": []
+    },
+    {
+      "id": "preparation-stage-fork",
+      "export": "PreparationStageForkScene",
+      "layout": "prep-stage-auto-fork",
+      "anchor": "document-fork",
+      "grammar": ["auto-fork", "exam-application"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["CircleDashed", "GraduationCap", "HandHeart"],
+      "finalKnowledge": ["fork-preparation-branch", "fork-discontinue-branch", "fork-exam-2010"],
+      "statefulObjects": []
+    },
+    {
+      "id": "attempt-elements",
+      "export": "AttemptElementsScene",
+      "layout": "attempt-elements-duo",
+      "anchor": "timeline-gate",
+      "grammar": ["dual-elements", "case-application"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["CirclePlay", "GraduationCap"],
+      "finalKnowledge": ["attempt-element-commence", "attempt-element-failure", "attempt-case-bulldozer"],
+      "statefulObjects": []
+    },
+    {
+      "id": "impossibility-fork",
+      "export": "ImpossibilityForkScene",
+      "layout": "impossibility-double-fork",
+      "anchor": "document-fork",
+      "grammar": ["object-means-fork", "danger-verdict"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["Target", "Wand2"],
+      "finalKnowledge": ["impossibility-object-pair", "impossibility-means-pair"],
+      "statefulObjects": []
+    },
+    {
+      "id": "danger-theories",
+      "export": "DangerTheoriesScene",
+      "layout": "danger-theory-quadrant",
+      "anchor": "comparison-axis",
+      "grammar": ["theory-quadrant", "case-application"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "annotation", "spatial"],
+      "tokens": ["Flame", "CircleSlash", "GraduationCap"],
+      "finalKnowledge": ["theory-subjective", "theory-objective", "theory-objective-danger", "theory-concrete-danger", "theory-three-cases"],
+      "statefulObjects": []
+    },
+    {
+      "id": "automatism-frank-formula",
+      "export": "AutomatismFrankFormulaScene",
+      "layout": "frank-formula-two-step",
+      "anchor": "typographic-sequence",
+      "grammar": ["formula-verdict", "two-step-check"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "stamp"],
+      "focalChannels": ["icon", "contrast", "spatial", "annotation"],
+      "tokens": ["Siren", "GraduationCap"],
+      "finalKnowledge": ["frank-stop-side", "frank-fail-side", "frank-step-possibility", "frank-step-voluntary", "frank-three-cases", "frank-common-traps"],
+      "statefulObjects": []
+    },
+    {
+      "id": "mistake-specific-object",
+      "export": "MistakeSpecificObjectScene",
+      "layout": "mistake-ladder-panels",
+      "anchor": "flow-path",
+      "grammar": ["mistake-ladder", "specific-object-rules"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "annotation", "spatial"],
+      "tokens": [],
+      "finalKnowledge": ["mistake-panel", "specific-object-panel"],
+      "statefulObjects": []
+    },
+    {
+      "id": "discontinuation-conduct",
+      "export": "DiscontinuationConductScene",
+      "layout": "terminated-untimed-quadrants",
+      "anchor": "boundary",
+      "grammar": ["terminated-untimed-quadrants", "remedy-requirement"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
+      "tokens": ["CircleDashed", "HandHeart", "Stethoscope"],
+      "finalKnowledge": ["conduct-untimed-fail", "conduct-untimed-stop", "conduct-timed-fail", "conduct-timed-stop"],
+      "statefulObjects": []
+    },
+    {
+      "id": "effectiveness-matrix",
+      "export": "EffectivenessMatrixScene",
+      "layout": "effectiveness-four-outcomes",
+      "anchor": "comparison-axis",
+      "grammar": ["outcome-matrix", "causation-note"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
+      "tokens": ["Stethoscope"],
+      "finalKnowledge": ["matrix-stop", "matrix-attempt", "matrix-completion", "matrix-intervening", "matrix-causation-note"],
+      "statefulObjects": []
+    },
+    {
+      "id": "intervening-two-steps",
+      "export": "InterveningTwoStepsScene",
+      "layout": "intervening-two-step-cases",
+      "anchor": "flow-path",
+      "grammar": ["two-step-causation", "case-verdicts"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["Car", "GraduationCap"],
+      "finalKnowledge": ["step-abnormality", "step-force", "case-2014-crash", "case-2015-jump", "case-2020-fall"],
+      "statefulObjects": []
+    },
+    {
+      "id": "discontinuation-penalty",
+      "export": "DiscontinuationPenaltyScene",
+      "layout": "damage-scope-rules",
+      "anchor": "flow-target",
+      "grammar": ["damage-scope", "causal-attribution"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "annotation", "spatial"],
+      "tokens": [],
+      "finalKnowledge": ["penalty-scope-panel", "penalty-causation-panel"],
+      "statefulObjects": []
+    },
+    {
+      "id": "completion-elements",
+      "export": "CompletionElementsScene",
+      "layout": "completion-stage-cases",
+      "anchor": "timeline-gate",
+      "grammar": ["stage-premature-result", "case-pair"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["CircleDashed", "CirclePlay", "CheckCheck", "GraduationCap"],
+      "finalKnowledge": ["completion-stage-rule", "completion-premature-case", "completion-sacrifice-case"],
+      "statefulObjects": []
+    },
+    {
+      "id": "causation-chains",
+      "export": "CausationChainsScene",
+      "layout": "four-crime-chain-lanes",
+      "anchor": "comparison-axis",
+      "grammar": ["chain-break", "lane-comparison"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["Scale"],
+      "finalKnowledge": ["chain-fraud", "chain-extortion", "chain-robbery", "chain-rape", "chain-rule-strip"],
+      "statefulObjects": []
+    },
+    {
+      "id": "object-transfer",
+      "export": "ObjectTransferScene",
+      "layout": "transfer-property-personal-pair",
+      "anchor": "role-pair",
+      "grammar": ["transfer-pair", "penalty-contrast"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
+      "tokens": ["Banknote", "Users"],
+      "finalKnowledge": ["transfer-property-panel", "transfer-personal-panel"],
+      "statefulObjects": []
+    },
+    {
+      "id": "forms-exclusion",
+      "export": "FormsExclusionScene",
+      "layout": "exclusion-gate-lanes",
+      "anchor": "boundary",
+      "grammar": ["exclusion-rules", "terminal-gate"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": [],
+      "finalKnowledge": ["exclusion-terminal-gate", "exclusion-done-over-stop", "exclusion-done-over-fail", "exclusion-stop-over-fail", "exclusion-fail-over-stop"],
+      "statefulObjects": []
+    },
+    {
+      "id": "repeat-attacks",
+      "export": "RepeatAttacksScene",
+      "layout": "repeat-interval-timeline",
+      "anchor": "timeline-gate",
+      "grammar": ["interval-assessment", "overall-review"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["GraduationCap"],
+      "finalKnowledge": ["repeat-long-interval", "repeat-short-interval", "repeat-gold-question"],
       "statefulObjects": []
     }
   ]

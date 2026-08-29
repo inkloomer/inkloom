@@ -116,7 +116,7 @@ export const AnalogyExamStripScene = () => (
           <Enter delay={80}><Neg size={24}>类推 · 明显超出预测可能性</Neg></Enter>
         </div>
         <div data-final-knowledge="limit-verdict">
-          <Enter delay={96} style={{marginTop: 22, border: `2px dashed ${C.ink}`, borderRadius: 8, padding: '10px 14px', fontSize: 22, fontWeight: 800}}>
+          <Enter delay={96} style={{position: 'absolute', left: 22, right: 22, bottom: 18, border: `2px dashed ${C.ink}`, borderRadius: 8, padding: '12px 14px', fontSize: 22, fontWeight: 800}}>
             一秒判：一般人凭语感还<ThinU>想得到</ThinU>→ 扩大；<ThinU>想不到</ThinU> → 类推
           </Enter>
         </div>

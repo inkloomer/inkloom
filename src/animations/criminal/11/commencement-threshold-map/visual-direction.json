@@ -10,7 +10,10 @@
   "conceptTokens": {
     "预备": "CircleDashed",
     "着手": "CirclePlay",
-    "真题": "GraduationCap"
+    "真题": "GraduationCap",
+    "中止": "HandHeart",
+    "未遂": "CircleSlash",
+    "既遂": "CheckCheck"
   },
   "catalog": {
     "status": "featured",
