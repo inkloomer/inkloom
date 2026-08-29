@@ -3,9 +3,9 @@
   "family": "celadon-convention-gallery",
   "palette": "pale celadon gallery wall, deep tea-green ink text, glaze teal and ochre mineral accents, plum verdict seals",
   "typography": "WenKai hall headings with dashed ochre medallions, glaze ink highlights and plum underlines",
-  "composition": "convention gallery with hall rail, twin convention cards, tiered treaty shelves and comparison lanes",
+  "composition": "wayfinding gallery with top plate strip, full-width display cases and asymmetric twin panels, no side rail",
   "surface": "celadon panels with glaze hairline frames, no dark cards",
-  "motion": "hall-to-hall entries with stamped mnemonics and shelf disclosures",
+  "motion": "plate-strip wayfinding with full-width case disclosures and stamped mnemonics",
   "transition": "content swap under a persistent gallery frame and hall rail",
   "catalog": {
     "status": "featured",

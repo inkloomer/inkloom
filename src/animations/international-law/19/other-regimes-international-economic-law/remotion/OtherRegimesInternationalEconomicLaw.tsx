@@ -16,17 +16,21 @@ const enterX = (frame: number, delay: number, x = 52): CSSProperties => ({
   translate: `${interpolate(frame, [delay, delay + 24], [x, 0], {...CLAMP, easing: Easing.out(Easing.cubic)})}px 0px`,
 });
 
-const HALL_CODES = ['壹', '贰', '叁', '肆', '伍'];
+const HALL_PLATES = [
+  {code: '01', name: '知产公约'},
+  {code: '02', name: 'TRIPS'},
+  {code: '03', name: '投资机制'},
+  {code: '04', name: '融资担保'},
+  {code: '05', name: '税收与CRS'},
+];
 
-const GalleryShell = ({
+const CaseShell = ({
   children,
   code,
-  station,
   title,
 }: {
   readonly children: ReactNode;
   readonly code: number;
-  readonly station: number;
   readonly title: string;
 }) => (
   <AbsoluteFill
@@ -35,46 +39,48 @@ const GalleryShell = ({
       color: PALETTE.paperText,
       backgroundColor: PALETTE.celadon,
       backgroundImage:
-        'repeating-linear-gradient(90deg, rgba(37,66,55,0.04) 0 1px, transparent 1px 92px), radial-gradient(circle at 10% 8%, rgba(46,125,110,0.1), transparent 30%)',
+        'repeating-linear-gradient(0deg, rgba(37,66,55,0.035) 0 1px, transparent 1px 104px), radial-gradient(circle at 92% 6%, rgba(176,125,63,0.12), transparent 30%)',
       overflow: 'hidden',
     }}
   >
     <div style={{position: 'absolute', inset: 22, border: `2px solid ${PALETTE.glaze}`}} />
     <div style={{position: 'absolute', inset: 28, border: `1px solid ${PALETTE.line}`}} />
-    <header style={{position: 'absolute', left: 64, right: 64, top: 44, height: 104, display: 'flex', alignItems: 'center', gap: 24, borderBottom: `3px solid ${PALETTE.glaze}`}}>
-      <div style={{width: 74, height: 74, borderRadius: 37, border: `3px dashed ${PALETTE.ochre}`, backgroundColor: PALETTE.panel, display: 'grid', placeItems: 'center'}}>
-        <Landmark size={30} color={PALETTE.glaze} />
-      </div>
-      <h1 className="font-animation-title" style={{fontSize: 42, lineHeight: 1.1, margin: 0, fontWeight: 800, color: PALETTE.ink}}>
+    <header style={{position: 'absolute', left: 64, right: 64, top: 46, height: 66, display: 'flex', alignItems: 'center', gap: 20}}>
+      <h1 className="font-animation-title" style={{fontSize: 38, lineHeight: 1.1, margin: 0, fontWeight: 800, color: PALETTE.ink}}>
         {title}
       </h1>
       <div style={{marginLeft: 'auto', textAlign: 'right'}}>
         <div style={{fontSize: 16, fontWeight: 700, letterSpacing: 4, color: PALETTE.muted}}>CELADON CONVENTION GALLERY · 三国法</div>
-        <div style={{fontSize: 18, color: PALETTE.muted, marginTop: 6}}>国际经济法其他制度 · {HALL_CODES[code]}号展厅</div>
+        <div style={{fontSize: 17, color: PALETTE.muted, marginTop: 4}}>国际经济法其他制度 · {HALL_PLATES[code].name}</div>
       </div>
     </header>
-    <div style={{position: 'absolute', left: 66, top: 205, width: 104, height: 615, display: 'flex', flexDirection: 'column', justifyContent: 'space-between', alignItems: 'center'}}>
-      {[0, 1, 2, 3, 4].map((index) => {
-        const active = index === station;
+    <div
+      data-layout-marker="wayfinding-plate-strip"
+      style={{position: 'absolute', left: 64, right: 64, top: 126, height: 58, display: 'flex', gap: 10}}
+    >
+      {HALL_PLATES.map((plate, index) => {
+        const active = index === code;
         return (
           <div
-            key={index}
+            key={plate.code}
             style={{
-              width: 60,
-              height: 60,
-              borderRadius: 30,
-              border: `2px dashed ${active ? PALETTE.glaze : PALETTE.line}`,
+              flex: 1,
+              border: `2px solid ${active ? PALETTE.glaze : PALETTE.line}`,
+              borderTop: `6px solid ${active ? PALETTE.glaze : PALETTE.line}`,
               backgroundColor: active ? PALETTE.glaze : PALETTE.panel,
-              display: 'grid',
-              placeItems: 'center',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: 10,
             }}
           >
-            <span className="font-animation-mono" style={{fontSize: 18, fontWeight: 700, color: active ? PALETTE.panel : PALETTE.muted}}>{String(index + 1).padStart(2, '0')}</span>
+            <span className="font-animation-mono" style={{fontSize: 17, fontWeight: 700, color: active ? PALETTE.panel : PALETTE.muted}}>{plate.code}</span>
+            <span style={{fontSize: 21, fontWeight: 700, color: active ? PALETTE.panel : PALETTE.ink}}>{plate.name}</span>
           </div>
         );
       })}
     </div>
-    <main style={{position: 'absolute', left: 210, right: 64, top: 190, bottom: PLAYER_CONTROL_SAFE_BOTTOM}}>{children}</main>
+    <main style={{position: 'absolute', left: 64, right: 64, top: 210, bottom: PLAYER_CONTROL_SAFE_BOTTOM}}>{children}</main>
   </AbsoluteFill>
 );
 
@@ -130,7 +136,7 @@ export const ParisBerneScene = () => {
   /* Stable-final-frame inventory: data-final-knowledge="paris-principles" data-final-knowledge="berne-principles" */
   const frame = useCurrentFrame();
   return (
-    <GalleryShell code={0} station={0} title="巴黎公约 × 伯尔尼公约">
+    <CaseShell code={0} title="巴黎公约 × 伯尔尼公约">
       <div
         data-layout="twin-convention-cards"
         data-visual-anchor="role-pair"
@@ -192,7 +198,7 @@ export const ParisBerneScene = () => {
           <GalleryStamp delay={160} frame={frame} text={'优先权靠「在先申请」而非「在先获权」——须申请并提交证明'} />
         </div>
       </div>
-    </GalleryShell>
+    </CaseShell>
   );
 };
 
@@ -207,7 +213,7 @@ export const TripsUpgradeScene = () => {
     {name: '地理标志', color: PALETTE.glaze, detail: '禁止不正当竞争使用或注册为商标'},
   ];
   return (
-    <GalleryShell code={1} station={1} title="TRIPS：纳入与拔高">
+    <CaseShell code={1} title="TRIPS：纳入与拔高">
       <div
         data-layout="trips-tiered-shelves"
         data-visual-anchor="typographic-sequence"
@@ -255,7 +261,7 @@ export const TripsUpgradeScene = () => {
           <GalleryStamp delay={200} frame={frame} color={PALETTE.plum} text={'TRIPS 在我国转化适用 —— 符合我国知产法即符合 TRIPS'} />
         </div>
       </div>
-    </GalleryShell>
+    </CaseShell>
   );
 };
 
@@ -264,7 +270,7 @@ export const MigaIcsidScene = () => {
   const frame = useCurrentFrame();
   const risks = ['货币汇兑险', '征收和类似措施险', '战争内乱险', '政府违约险'];
   return (
-    <GalleryShell code={2} station={2} title="MIGA 担保 × ICSID 仲裁">
+    <CaseShell code={2} title="MIGA 担保 × ICSID 仲裁">
       <div
         data-layout="twin-mechanism-gates"
         data-visual-anchor="boundary"
@@ -333,7 +339,7 @@ export const MigaIcsidScene = () => {
           <TokCourt size={26} />
         </div>
       </div>
-    </GalleryShell>
+    </CaseShell>
   );
 };
 
@@ -341,7 +347,7 @@ export const LoansGuaranteesScene = () => {
   /* Stable-final-frame inventory: data-final-knowledge="syndicated-loan" data-final-knowledge="demand-guarantee-traits" data-final-knowledge="other-guarantees" */
   const frame = useCurrentFrame();
   return (
-    <GalleryShell code={3} station={3} title="国际贷款与见索即付保函">
+    <CaseShell code={3} title="国际贷款与见索即付保函">
       <div
         data-layout="lending-shelves-with-guarantee-gate"
         data-visual-anchor="flow-path"
@@ -408,7 +414,7 @@ export const LoansGuaranteesScene = () => {
           </div>
         </div>
       </div>
-    </GalleryShell>
+    </CaseShell>
   );
 };
 
@@ -416,7 +422,7 @@ export const TaxRegimesScene = () => {
   /* Stable-final-frame inventory: data-final-knowledge="tax-jurisdiction-pair" data-final-knowledge="double-vs-overlap" data-final-knowledge="crs-exchange" */
   const frame = useCurrentFrame();
   return (
-    <GalleryShell code={4} station={4} title="税收管辖权与 CRS">
+    <CaseShell code={4} title="税收管辖权与 CRS">
       <div
         data-layout="tax-jurisdiction-comparison"
         data-visual-anchor="comparison-axis"
@@ -488,7 +494,7 @@ export const TaxRegimesScene = () => {
           （不含海外房产珠宝艺术品）
         </div>
       </div>
-    </GalleryShell>
+    </CaseShell>
   );
 };
 

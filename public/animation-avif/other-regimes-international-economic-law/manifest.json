@@ -3,7 +3,7 @@
   "compositionId": "OtherRegimesInternationalEconomicLaw",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-08-29T18:11:34.258Z",
+  "generatedAt": "2026-08-29T18:27:23.713Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -16,13 +16,13 @@
       "title": "巴黎×伯尔尼公约",
       "durationMs": 7500,
       "file": "paris-berne.avif",
-      "fileSize": 459146,
+      "fileSize": 468736,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "e69c93a9a32c7808cb2ac772e629a72a774d83f4ce0afce53b9c243d083d60aa",
+      "sha256": "1a8035a887f898975d230886eea016b118c28ad6b33a52c47293f272a4c048b1",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "f21c8c96a0abfb36fa370938b682e7b1f51bccb01d5ff131970c6ee8c841a52f"
+      "sceneFingerprint": "4b3f9f6cea59f8dfaf347c6ab8304202e6210aee7232a1d82da311cf0e513987"
     },
     {
       "endFrame": 899,
@@ -33,13 +33,13 @@
       "title": "TRIPS",
       "durationMs": 7500,
       "file": "trips-upgrade.avif",
-      "fileSize": 407280,
+      "fileSize": 410576,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "0e79a73198be11dacbd2daa5c79a63f276c819bbc44d3a70b1f88179764eccd1",
+      "sha256": "270730ebc7c50859db0861ec24d7e94c59c77eeb0c93f94cb1430cb8ed199c1c",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "f21c8c96a0abfb36fa370938b682e7b1f51bccb01d5ff131970c6ee8c841a52f"
+      "sceneFingerprint": "4b3f9f6cea59f8dfaf347c6ab8304202e6210aee7232a1d82da311cf0e513987"
     },
     {
       "endFrame": 1379,
@@ -50,13 +50,13 @@
       "title": "MIGA×ICSID",
       "durationMs": 8000,
       "file": "miga-icsid.avif",
-      "fileSize": 500334,
+      "fileSize": 513594,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "ebd8bb1aa31895fd7b255a82f96a95d1596da4c4b278eee25c6a295b44dc8bc5",
+      "sha256": "72dc8984c6b40fe78c96af4b3aedb14ea5c6f1be8283c143756154344c19b869",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "f21c8c96a0abfb36fa370938b682e7b1f51bccb01d5ff131970c6ee8c841a52f"
+      "sceneFingerprint": "4b3f9f6cea59f8dfaf347c6ab8304202e6210aee7232a1d82da311cf0e513987"
     },
     {
       "endFrame": 1859,
@@ -67,13 +67,13 @@
       "title": "贷款与保函",
       "durationMs": 8000,
       "file": "loans-guarantees.avif",
-      "fileSize": 476915,
+      "fileSize": 491018,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "a11850b5932ebdb5912693fce80bca784fc7f7bd61c6a8f0528b86d76ee67758",
+      "sha256": "ead37596d8482c82c7ce2507e944d722a34128786988c4eb4a216fb9c9800cd4",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "f21c8c96a0abfb36fa370938b682e7b1f51bccb01d5ff131970c6ee8c841a52f"
+      "sceneFingerprint": "4b3f9f6cea59f8dfaf347c6ab8304202e6210aee7232a1d82da311cf0e513987"
     },
     {
       "endFrame": 2339,
@@ -84,13 +84,13 @@
       "title": "税收管辖与CRS",
       "durationMs": 8000,
       "file": "tax-regimes.avif",
-      "fileSize": 459043,
+      "fileSize": 467845,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "d09248974975b12c47f7d574c968b3a1c2c0d1907e988bc539f254b5fbee1561",
+      "sha256": "3ab1d6c635229b7a5684e67d706290a927226da7a32389143c1858571e7513c4",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "f21c8c96a0abfb36fa370938b682e7b1f51bccb01d5ff131970c6ee8c841a52f"
+      "sceneFingerprint": "4b3f9f6cea59f8dfaf347c6ab8304202e6210aee7232a1d82da311cf0e513987"
     }
   ],
   "size": {
@@ -98,7 +98,7 @@
     "width": 2560
   },
   "sourceFps": 60,
-  "sourceFingerprint": "f21c8c96a0abfb36fa370938b682e7b1f51bccb01d5ff131970c6ee8c841a52f",
+  "sourceFingerprint": "4b3f9f6cea59f8dfaf347c6ab8304202e6210aee7232a1d82da311cf0e513987",
   "targetFps": 30,
-  "totalFileSize": 2302718
+  "totalFileSize": 2351769
 }
