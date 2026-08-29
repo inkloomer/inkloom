@@ -1,0 +1,22 @@
+{
+  "directionId": "concrete-quay-dispatch",
+  "family": "concrete-quay-dispatch",
+  "palette": "light concrete dock board, rust-orange container accents, petrol teal sea lanes, dark brass stamps, ink linework on pale panels",
+  "typography": "WenKai berth headings with dashed rust medallions, petrol ink highlights and rust underlines on pale cards",
+  "composition": "quay dispatch board with berth rail, three-ship comparison columns, correspondence ladders and voyage risk gates",
+  "surface": "pale concrete panels with hairline ink frames and square berth markers, no dark cards",
+  "motion": "container-column entries along berth lanes with stamped mnemonics and gate disclosures",
+  "transition": "content swap under a persistent quay frame and berth rail",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/international-law/14/international-sale-of-goods/",
+    "title": "混凝土码头调度板"
+  },
+  "conceptTokens": {
+    "risk-on-board": "TokShip",
+    "seller-side": "TokSeller",
+    "buyer-side": "TokBuyer",
+    "insurance-duty": "TokInsure"
+  }
+}

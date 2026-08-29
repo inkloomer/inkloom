@@ -1,0 +1,175 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 4,
+  "scenes": [
+    {
+      "id": "fob-cfr-cif",
+      "export": "TermsCarriersScene",
+      "layout": "three-ship-column-comparison",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "risk-passes-when-goods-on-board-at-shipment-port",
+        "three-terms-differ-only-in-freight-insurance-notice"
+      ],
+      "textTreatments": [
+        "label-block",
+        "soft-highlight",
+        "thin-underline",
+        "chip"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "locator",
+        "icon"
+      ],
+      "tokens": [
+        "TokShip",
+        "TokInsure"
+      ],
+      "finalKnowledge": [
+        "shared-risk-rule",
+        "three-terms-columns",
+        "terms-mnemonic"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "terms-correspondence",
+      "export": "TermsLadderScene",
+      "layout": "correspondence-ladder-with-duty-spectrum",
+      "anchor": "typographic-sequence",
+      "grammar": [
+        "multimodal-terms-mirror-sea-terms-one-to-one",
+        "arrival-terms-differ-only-in-unloading",
+        "exw-and-ddp-mark-the-duty-extremes"
+      ],
+      "textTreatments": [
+        "label-block",
+        "chip",
+        "thin-underline",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "locator",
+        "icon"
+      ],
+      "tokens": [
+        "TokShip",
+        "TokSeller",
+        "TokInsure"
+      ],
+      "finalKnowledge": [
+        "correspondence-ladder",
+        "arrival-pair",
+        "duty-spectrum",
+        "misc-rules"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "cisg-scope",
+      "export": "CisgScopeScene",
+      "layout": "convention-scope-gate-with-exclusion-shelves",
+      "anchor": "boundary",
+      "grammar": [
+        "cisg-gate-needs-different-contracting-states",
+        "cargo-types-and-legal-questions-excluded",
+        "party-autonomy-partially-derogates-via-trade-terms"
+      ],
+      "textTreatments": [
+        "label-block",
+        "chip",
+        "soft-highlight",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "enclosure",
+        "contrast",
+        "locator",
+        "icon"
+      ],
+      "tokens": [
+        "TokBuyer",
+        "TokSeller"
+      ],
+      "finalKnowledge": [
+        "cisg-subjects",
+        "cisg-excluded-objects",
+        "cisg-uncovered-content",
+        "cisg-derogability"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "seller-buyer-duties",
+      "export": "DutiesLedgersScene",
+      "layout": "twin-duty-ledgers",
+      "anchor": "role-pair",
+      "grammar": [
+        "seller-delivers-matches-and-guarantees",
+        "buyer-pays-receives-and-inspects",
+        "receiving-is-not-accepting"
+      ],
+      "textTreatments": [
+        "label-block",
+        "soft-highlight",
+        "thin-underline",
+        "chip"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "locator",
+        "icon"
+      ],
+      "tokens": [
+        "TokSeller",
+        "TokBuyer"
+      ],
+      "finalKnowledge": [
+        "seller-deliver-match",
+        "seller-ip-guarantee",
+        "buyer-pay-receive",
+        "buyer-inspection"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "risk-transfer",
+      "export": "RiskTimelineScene",
+      "layout": "voyage-risk-timeline",
+      "anchor": "timeline-gate",
+      "grammar": [
+        "agreement-gates-risk-before-default-rules",
+        "in-transit-goods-pass-risk-at-conclusion",
+        "carrier-fault-still-counts-as-risk"
+      ],
+      "textTreatments": [
+        "label-block",
+        "soft-highlight",
+        "thin-underline",
+        "chip"
+      ],
+      "focalChannels": [
+        "connector",
+        "contrast",
+        "enclosure",
+        "icon"
+      ],
+      "tokens": [
+        "TokShip"
+      ],
+      "finalKnowledge": [
+        "risk-agreement-first",
+        "risk-default-delivery",
+        "risk-in-transit",
+        "risk-scope-note"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}
