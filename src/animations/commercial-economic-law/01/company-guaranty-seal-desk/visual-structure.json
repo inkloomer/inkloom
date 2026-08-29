@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "playerControlSafeBottom": 168,
+  "scenes": [
+    {
+      "id": "sole-guaranty",
+      "export": "SoleGuarantyScene",
+      "layout": "sole-bench-guaranty-desk",
+      "anchor": "concept-icon",
+      "grammar": ["solo-guaranty-no-resolution", "no-priority-among-sole"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["Users", "Stamp", "ArrowRightLeft", "Link", "GraduationCap"],
+      "finalKnowledge": [
+        "sole-structure-board",
+        "sole-validity-verdict",
+        "sole-exam-strip",
+        "sole-recall-line"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "inversion-scale",
+      "export": "InversionScene",
+      "layout": "inversion-tilt-scale",
+      "anchor": "comparison-axis",
+      "grammar": ["property-independence-test", "burden-inversion-rule"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["HandCoins", "Scale", "VenetianMask"],
+      "finalKnowledge": [
+        "inv-drain-chain",
+        "inv-inversion-scale",
+        "inv-recap-verdict"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "forged-resolution",
+      "export": "ForgedResolutionScene",
+      "layout": "forged-seal-desk",
+      "anchor": "document-fork",
+      "grammar": ["forged-resolution-nullity", "bonafide-counterparty-gate"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["FileWarning", "UserCheck", "VenetianMask", "GraduationCap"],
+      "finalKnowledge": [
+        "forged-nullity-desk",
+        "forged-bonafide-gate",
+        "forged-verdict-board"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "directionId": "indigo-seal-paste-cabinet",
+  "family": "lacquer-seal-paste-cabinet",
+  "palette": "black lacquer cabinet + indigo paste blue + guaranty paper cream + silver rule lines + cinnabar forged marks + ink black",
+  "typography": "seal cabinet headlines, guaranty slip labels, square indigo-jade verdict stamps, dashed paste rules",
+  "composition": "a sole-bench guaranty desk with one shareholder one stool, a tilting scale of burden inversion, and a forged-seal desk walking four questions of ultra vires",
+  "surface": "black lacquer walls with paper guaranty slips and indigo paste stamps; no glossy panels",
+  "motion": "seals are pressed in legal order, the scale tilts as burden inverts, the forged seal cracks into the four-question fork; no idle loops",
+  "transition": "the lacquer cabinet persists while each scene re-stages the same desk for a new question",
+  "conceptTokens": {
+    "股东": "Users",
+    "登记印章": "Stamp",
+    "股权转让": "ArrowRightLeft",
+    "连带": "Link",
+    "真题": "GraduationCap",
+    "债权人": "HandCoins",
+    "财产独立": "Scale",
+    "名义面具": "VenetianMask",
+    "伪造决议": "FileWarning",
+    "善意人": "UserCheck"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/commercial-economic-law/01/company-guaranty-seal-desk/",
+    "title": "靛印保状铺"
+  }
+}

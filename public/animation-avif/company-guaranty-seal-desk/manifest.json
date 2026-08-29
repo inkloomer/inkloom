@@ -1,0 +1,70 @@
+{
+  "animationId": "company-guaranty-seal-desk",
+  "compositionId": "CompanyGuarantySealDesk",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-29T22:11:06.571Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 279,
+      "frameCount": 280,
+      "id": "sole-guaranty",
+      "number": "01",
+      "startFrame": 0,
+      "title": "一人公司为股东担保：无需决议",
+      "durationMs": 9333,
+      "file": "sole-guaranty.avif",
+      "fileSize": 413186,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "a78d919cf677cb903383bd25d8dea64d3999112dbc0772fcfe5c75538436bf06",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "edda94dcac90ced6ef97d9cfefe3799b829ab0a7c434e5cca0d884eaee13d2f6"
+    },
+    {
+      "endFrame": 529,
+      "frameCount": 250,
+      "id": "inversion-scale",
+      "number": "02",
+      "startFrame": 280,
+      "title": "担保担穿了：举证责任倒置的连带",
+      "durationMs": 8333,
+      "file": "inversion-scale.avif",
+      "fileSize": 404272,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "84eaccf9bcf1c52baf60aae01e27883c3e4dfc3fa198f6c93edc2dea207d94f9",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "edda94dcac90ced6ef97d9cfefe3799b829ab0a7c434e5cca0d884eaee13d2f6"
+    },
+    {
+      "endFrame": 829,
+      "frameCount": 300,
+      "id": "forged-resolution",
+      "number": "03",
+      "startFrame": 530,
+      "title": "伪造的决议：越权担保四连问",
+      "durationMs": 10000,
+      "file": "forged-resolution.avif",
+      "fileSize": 441923,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "2588b19de6d27fdcb928f82f353ffd1a8801f8458f27dcf7df9a49e68479838e",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "edda94dcac90ced6ef97d9cfefe3799b829ab0a7c434e5cca0d884eaee13d2f6"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "edda94dcac90ced6ef97d9cfefe3799b829ab0a7c434e5cca0d884eaee13d2f6",
+  "targetFps": 30,
+  "totalFileSize": 1259381
+}
