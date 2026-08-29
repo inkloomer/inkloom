@@ -175,6 +175,7 @@ import {typography as typographyAutoEvidenceVitrineMuseum} from '../animations/a
 import {typography as typographyAutoApplicationSilkLoom} from '../animations/administrative-law/17/application-silk-loom/animation.meta';
 import {typography as typographyAutoJudgmentExecutionClockwork} from '../animations/administrative-law/18/judgment-execution-clockwork/animation.meta';
 import {typography as typographyAutoReviewRelayNetwork} from '../animations/administrative-law/19/review-relay-network/animation.meta';
+import {typography as typographyAutoLighthouseWatchNetwork} from '../animations/administrative-law/20/lighthouse-watch-network/animation.meta';
 import {typography as typographyAutoLegalReasoning} from '../animations/theoretical-law/01/legal-reasoning/animation.meta';
 import {typography as typographyFam} from '../animations/theoretical-law/01/legal-families/animation.meta';
 import {typography as typographyMod} from '../animations/theoretical-law/01/legal-modernization/animation.meta';
@@ -339,6 +340,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'application-silk-loom': {metadata: typographyAutoApplicationSilkLoom, scope: {animationId: 'application-silk-loom', subject: 'administrative-law', topic: '17'}},
   'judgment-execution-clockwork': {metadata: typographyAutoJudgmentExecutionClockwork, scope: {animationId: 'judgment-execution-clockwork', subject: 'administrative-law', topic: '18'}},
   'review-relay-network': {metadata: typographyAutoReviewRelayNetwork, scope: {animationId: 'review-relay-network', subject: 'administrative-law', topic: '19'}},
+  'lighthouse-watch-network': {metadata: typographyAutoLighthouseWatchNetwork, scope: {animationId: 'lighthouse-watch-network', subject: 'administrative-law', topic: '20'}},
   'legal-reasoning': {metadata: typographyAutoLegalReasoning, scope: {animationId: 'legal-reasoning', subject: 'theoretical-law', topic: '01'}},
   'legal-families': {metadata: typographyFam, scope: {animationId: 'legal-families', subject: 'theoretical-law', topic: '01'}},
   'legal-modernization': {metadata: typographyMod, scope: {animationId: 'legal-modernization', subject: 'theoretical-law', topic: '01'}},

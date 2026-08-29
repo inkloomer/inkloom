@@ -1,0 +1,70 @@
+{
+  "animationId": "lighthouse-watch-network",
+  "compositionId": "LighthouseWatchNetwork",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-29T19:52:56.730Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 429,
+      "frameCount": 215,
+      "id": "proposer-and-civil-compare",
+      "number": "01",
+      "startFrame": 0,
+      "title": "提出主体对比",
+      "durationMs": 7167,
+      "file": "proposer-and-civil-compare.avif",
+      "fileSize": 162867,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "58f60e7dfb41147c6a4ee65be0b82e21903b7c51f666e96593ac433e45488b3c",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "2f0fc28dbf5047bf11ce1fd61fcc96cfbd14d4eb2a1e4b23d254a2daa2c67017"
+    },
+    {
+      "endFrame": 909,
+      "frameCount": 240,
+      "id": "three-step-beam-path",
+      "number": "02",
+      "startFrame": 430,
+      "title": "三步程序",
+      "durationMs": 8000,
+      "file": "three-step-beam-path.avif",
+      "fileSize": 355569,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "ca976604ada63e1bd213e9e86ab140cce456072bfd23e0f037be217dc9ce6eb7",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "2f0fc28dbf5047bf11ce1fd61fcc96cfbd14d4eb2a1e4b23d254a2daa2c67017"
+    },
+    {
+      "endFrame": 1309,
+      "frameCount": 200,
+      "id": "mnemonic-light-signal",
+      "number": "03",
+      "startFrame": 910,
+      "title": "灯语口诀",
+      "durationMs": 6667,
+      "file": "mnemonic-light-signal.avif",
+      "fileSize": 149667,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "60ad160fe56749f5d1a7cc902f5bbb9a51495e50b1e8ab596aa201dcbec369e1",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "2f0fc28dbf5047bf11ce1fd61fcc96cfbd14d4eb2a1e4b23d254a2daa2c67017"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "2f0fc28dbf5047bf11ce1fd61fcc96cfbd14d4eb2a1e4b23d254a2daa2c67017",
+  "targetFps": 30,
+  "totalFileSize": 668103
+}

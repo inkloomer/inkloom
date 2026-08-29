@@ -1,0 +1,87 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "proposer-and-civil-compare",
+      "export": "ProposerAndCivilCompareScene",
+      "layout": "proposer-compare-twin-towers",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "administrative-and-civil-proposer-rules-stand-on-twin-towers",
+        "support-suit-differs-from-first-choice"
+      ],
+      "textTreatments": [
+        "label-block",
+        "chip",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "spatial",
+        "enclosure"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "proposer-procuratorate",
+        "civil-compare-support"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "three-step-beam-path",
+      "export": "ThreeStepBeamPathScene",
+      "layout": "three-step-beam-path",
+      "anchor": "flow-path",
+      "grammar": [
+        "three-procedure-steps-light-up-along-one-beam-path",
+        "urgent-cases-shorten-the-reply-window-to-fifteen-days"
+      ],
+      "textTreatments": [
+        "label-block",
+        "stamp",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "connector",
+        "locator",
+        "contrast"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "step-procuratorial-recommendation",
+        "step-two-month-performance",
+        "step-fifteen-day-urgent",
+        "step-file-suit"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "mnemonic-light-signal",
+      "export": "MnemonicLightSignalScene",
+      "layout": "mnemonic-light-signal",
+      "anchor": "boundary",
+      "grammar": [
+        "one-light-signal-encodes-the-whole-procedure",
+        "civil-announcement-differs-from-administrative-recommendation"
+      ],
+      "textTreatments": [
+        "stamp",
+        "label-block",
+        "chip"
+      ],
+      "focalChannels": [
+        "contrast",
+        "annotation",
+        "enclosure"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "mnemonic-beam-code",
+        "civil-announcement-differs"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

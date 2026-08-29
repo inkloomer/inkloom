@@ -1,0 +1,16 @@
+{
+  "directionId": "lighthouse-watch-beam",
+  "family": "lighthouse-watch-network",
+  "palette": "deep teal-green night sea, warm cream lighthouse beams, signal red-white stripes, brass lantern fittings",
+  "typography": "title-face signal headlines, ink body text on beam-lit cards, mono watch codes",
+  "composition": "proposer compare twin towers, three-step beam path, mnemonic light signal",
+  "surface": "night sea horizon with beam sweeps, striped lighthouse towers, signal flags",
+  "motion": "beams sweep once per step, condition cards surface at each beam stop, the light signal closes the watch",
+  "transition": "the beam refocuses toward the next watch point",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/administrative-law/20/lighthouse-watch-network/",
+    "title": "灯塔守望网"
+  }
+}
