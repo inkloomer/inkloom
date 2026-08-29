@@ -1,5 +1,5 @@
 import type {CSSProperties, ReactNode} from 'react';
-import {BookOpen, Briefcase, Feather, Flag, Gavel, Landmark, Stamp} from 'lucide-react';
+import {BookOpen, Briefcase, Feather, Flag, Gavel, Landmark} from 'lucide-react';
 import {AbsoluteFill, interpolate, useCurrentFrame} from 'remotion';
 import {CLAMP, TimelineSequence} from '../../../../shared/remotion-runtime';
 import {SCENES} from './storyboard';
