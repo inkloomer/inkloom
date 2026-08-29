@@ -1,0 +1,70 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "three-stage-loop",
+      "export": "ThreeStageLoopScene",
+      "layout": "stage-loop-with-return-lanes",
+      "anchor": "flow-path",
+      "grammar": [
+        "investigation-flows-into-prosecution-then-trial",
+        "charged-facts-return-from-trial-to-prosecution",
+        "omitted-persons-or-crimes-return-from-trial-to-investigation",
+        "each-stage-knows-who-supplements"
+      ],
+      "textTreatments": ["chip", "thin-underline", "soft-highlight"],
+      "focalChannels": ["connector", "contrast", "enclosure", "spatial"],
+      "tokens": ["Repeat", "Search"],
+      "finalKnowledge": [
+        "stage-flow-belt",
+        "charged-facts-return",
+        "omitted-return"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "count-time-dials",
+      "export": "CountTimeDialsScene",
+      "layout": "triple-stage-dials-with-self-supplement-note",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "investigation-stage-has-no-count-cap",
+        "prosecution-and-trial-caps-run-two-times-one-month-each",
+        "review-stage-clock-restarts-after-each-return",
+        "self-supplement-stays-inside-prosecution-deadline"
+      ],
+      "textTreatments": ["chip", "thin-underline", "soft-highlight"],
+      "focalChannels": ["contrast", "enclosure", "connector", "annotation"],
+      "tokens": ["Hourglass", "UserCheck", "ClipboardCheck"],
+      "finalKnowledge": [
+        "stage-dials",
+        "self-supplement-note",
+        "pre-arrest-note"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "custody-stays-note",
+      "export": "CustodyStaysScene",
+      "layout": "dual-dossier-lanes-with-slogan-stamp",
+      "anchor": "document-fork",
+      "grammar": [
+        "supervision-cases-return-files-only-for-further-investigation",
+        "procuratorate-keeps-custody-of-the-transferred-suspect",
+        "self-supplement-remains-available-when-necessary",
+        "examination-approval-needs-no-replacement-of-investigators"
+      ],
+      "textTreatments": ["chip", "thin-underline", "soft-highlight"],
+      "focalChannels": ["contrast", "enclosure", "connector", "annotation"],
+      "tokens": ["Repeat", "UserCheck"],
+      "finalKnowledge": [
+        "file-return-lane",
+        "custody-keep-lane",
+        "custody-slogan-stamp"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

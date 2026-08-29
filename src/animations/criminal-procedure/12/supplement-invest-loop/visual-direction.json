@@ -1,0 +1,16 @@
+{
+  "directionId": "inspection-loop-supplement",
+  "family": "inspection-loop-family",
+  "palette": "dark inspection-lab slate, bench cream cards, loop orange returns, pass green and fail red verdicts, lab blue accents",
+  "typography": "WenKai inspection-bench headings with loop chips and verdict cards",
+  "composition": "a three-stage conveyor loop with two return lanes, triple stage dials for counts and clocks over self-supplement and pre-arrest notes, and a dual dossier lane closing into a slogan stamp",
+  "surface": "an inspection lab bench with loop lines, cream bench cards and verdict accents",
+  "motion": "stage cards roll onto the belt, return lanes draw their arrows back upstream, dials fill their counts, and the custody slogan stamps the final frame",
+  "transition": "the lab backdrop and loop lines persist while the bench cards are replaced",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/criminal-procedure/12/supplement-invest-loop/",
+    "title": "回旋检验环"
+  }
+}

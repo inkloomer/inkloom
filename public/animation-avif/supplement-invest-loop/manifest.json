@@ -1,0 +1,70 @@
+{
+  "animationId": "supplement-invest-loop",
+  "compositionId": "SupplementInvestLoop",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-29T09:18:49.358Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 479,
+      "frameCount": 240,
+      "id": "three-stage-loop",
+      "number": "01",
+      "startFrame": 0,
+      "title": "三阶段回旋环",
+      "durationMs": 8000,
+      "file": "three-stage-loop.avif",
+      "fileSize": 224384,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "ae49e0b745d6e722b3ef9b286a0833be36a247a7074d0c1a9925b51597c9945e",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "213250e5eea3964dca7ad22799043437e5b14b48ffaac96b78fbecc6585fdd33"
+    },
+    {
+      "endFrame": 999,
+      "frameCount": 260,
+      "id": "count-time-dials",
+      "number": "02",
+      "startFrame": 480,
+      "title": "次数与时限盘",
+      "durationMs": 8667,
+      "file": "count-time-dials.avif",
+      "fileSize": 303189,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "a5c93e6ea93e13580faaf4c3859d893df809752e876f79e0d0cf22df3eab0d7f",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "213250e5eea3964dca7ad22799043437e5b14b48ffaac96b78fbecc6585fdd33"
+    },
+    {
+      "endFrame": 1439,
+      "frameCount": 220,
+      "id": "custody-stays-note",
+      "number": "03",
+      "startFrame": 1000,
+      "title": "退案不退人",
+      "durationMs": 7333,
+      "file": "custody-stays-note.avif",
+      "fileSize": 277042,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "950a61ec8bc06fc10240e6b65d3a2ac88f08badf06c0ef901e0e23e6751c5610",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "213250e5eea3964dca7ad22799043437e5b14b48ffaac96b78fbecc6585fdd33"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "213250e5eea3964dca7ad22799043437e5b14b48ffaac96b78fbecc6585fdd33",
+  "targetFps": 30,
+  "totalFileSize": 804615
+}
