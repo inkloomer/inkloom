@@ -52,6 +52,7 @@ import {DURATION_FRAMES as LEGAL_DEPARTMENTS_SYSTEM_DURATION_FRAMES, FPS as LEGA
 import {DURATION_FRAMES as LEGAL_VALIDITY_DURATION_FRAMES, FPS as LEGAL_VALIDITY_FPS} from '../../animations/theoretical-law/01/legal-validity/remotion/storyboard';
 import {DURATION_FRAMES as LEGAL_RELATIONS_DURATION_FRAMES, FPS as LEGAL_RELATIONS_FPS} from '../../animations/theoretical-law/01/legal-relations/remotion/storyboard';
 import {DURATION_FRAMES as LEGAL_REASONING_DURATION_FRAMES, FPS as LEGAL_REASONING_FPS} from '../../animations/theoretical-law/01/legal-reasoning/remotion/storyboard';
+import {DURATION_FRAMES as LEGAL_FAMILIES_DURATION_FRAMES, FPS as LEGAL_FAMILIES_FPS} from '../../animations/theoretical-law/01/legal-families/remotion/storyboard';
 import {DURATION_FRAMES as LIABILITY_CONCURRENCE_DURATION_FRAMES, FPS as LIABILITY_CONCURRENCE_FPS} from '../../animations/theoretical-law/01/liability-concurrence/remotion/storyboard';
 import {DURATION_FRAMES as JUDICIAL_VS_ADMINISTRATIVE_DURATION_FRAMES, FPS as JUDICIAL_VS_ADMINISTRATIVE_FPS} from '../../animations/theoretical-law/01/judicial-vs-administrative/remotion/storyboard';
 import {DURATION_FRAMES as APPLICATION_OF_LAW_DURATION_FRAMES, FPS as APPLICATION_OF_LAW_FPS} from '../../animations/theoretical-law/01/application-of-law/remotion/storyboard';
@@ -225,6 +226,7 @@ export const STYLE_DEMOS = [
   {id: 'theoretical-law-01-application-of-law', slug: 'application-of-law', title: '绳墨规矩', direction: 'Ink Line Rule Workshop', component: lazyDemo(() => import('../../animations/theoretical-law/01/application-of-law/remotion/ApplicationOfLaw').then((m) => ({default: m.ApplicationOfLaw}))), href: '/inkloom/objective/theoretical-law/01/application-of-law/', durationInFrames: APPLICATION_OF_LAW_DURATION_FRAMES, fps: APPLICATION_OF_LAW_FPS},
   {id: 'theoretical-law-01-legal-loopholes', slug: 'legal-loopholes', title: '补阙裱工', direction: 'Mending Press Workshop', component: lazyDemo(() => import('../../animations/theoretical-law/01/legal-loopholes/remotion/LegalLoopholes').then((m) => ({default: m.LegalLoopholes}))), href: '/inkloom/objective/theoretical-law/01/legal-loopholes/', durationInFrames: LEGAL_LOOPHOLES_DURATION_FRAMES, fps: LEGAL_LOOPHOLES_FPS},
   {id: 'theoretical-law-01-legal-reasoning', slug: 'legal-reasoning', title: '测天星盘', direction: 'Astrolabe Night Observatory', component: lazyDemo(() => import('../../animations/theoretical-law/01/legal-reasoning/remotion/LegalReasoning').then((m) => ({default: m.LegalReasoning}))), href: '/inkloom/objective/theoretical-law/01/legal-reasoning/', durationInFrames: LEGAL_REASONING_DURATION_FRAMES, fps: LEGAL_REASONING_FPS},
+  {id: 'theoretical-law-01-legal-families', slug: 'legal-families', title: '胡桃对厅', direction: 'Walnut Comparison Hall', component: lazyDemo(() => import('../../animations/theoretical-law/01/legal-families/remotion/LegalFamilies').then((m) => ({default: m.LegalFamilies}))), href: '/inkloom/objective/theoretical-law/01/legal-families/', durationInFrames: LEGAL_FAMILIES_DURATION_FRAMES, fps: LEGAL_FAMILIES_FPS},
   ...COMMERCIAL_LAW_STYLE_DEMOS,
 ] as const satisfies readonly DemoDefinition[];
 
@@ -341,6 +343,7 @@ const DEMO_ADDED_AT: Record<(typeof STYLE_DEMOS)[number]['id'], string> = {
   'theoretical-law-01-application-of-law': '2026-08-30T02:50:00+08:00',
   'theoretical-law-01-legal-loopholes': '2026-08-30T03:20:00+08:00',
   'theoretical-law-01-legal-reasoning': '2026-08-30T03:30:00+08:00',
+  'theoretical-law-01-legal-families': '2026-08-30T04:10:00+08:00',
   ...COMMERCIAL_LAW_DEMO_ADDED_AT,
 };
 
