@@ -1,0 +1,215 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 6,
+  "scenes": [
+    {
+      "id": "territory-parts",
+      "export": "TerritoryPartsScene",
+      "layout": "layered-territory-strata-with-river-cards",
+      "anchor": "boundary",
+      "grammar": [
+        "four-territory-strata-stack-from-surface-to-subsoil",
+        "five-river-regimes-line-the-water-band"
+      ],
+      "textTreatments": [
+        "label-block",
+        "soft-highlight",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "enclosure",
+        "contrast",
+        "spatial"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "border-regime",
+        "river-rules",
+        "airspace-rule",
+        "subsoil-rule"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "territory-acquisition",
+      "export": "TerritoryAcquisitionScene",
+      "layout": "dual-verdict-acquisition-board",
+      "anchor": "typographic-sequence",
+      "grammar": [
+        "lawful-and-unlawful-modes-sort-into-two-verdict-columns",
+        "cession-and-lease-split-acquisition-from-limitation"
+      ],
+      "textTreatments": [
+        "stamp",
+        "soft-highlight",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "locator"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "acquire-lawful",
+        "acquire-unlawful",
+        "occupation-elements",
+        "accretion-rule",
+        "cession-rule",
+        "lease-contrast",
+        "limitation-types"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "sea-zones",
+      "export": "SeaZonesScene",
+      "layout": "descending-sea-zone-strata",
+      "anchor": "flow-path",
+      "grammar": [
+        "five-sea-zones-descend-from-shore-to-high-seas",
+        "each-zone-carries-its-key-rule-plaque"
+      ],
+      "textTreatments": [
+        "label-block",
+        "soft-highlight",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "spatial",
+        "contrast",
+        "locator"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "internal-waters-zone",
+        "territorial-sea-zone",
+        "contiguous-zone",
+        "eez-zone",
+        "high-seas-zone",
+        "port-jurisdiction",
+        "innocent-passage-rule"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "hot-pursuit",
+      "export": "HotPursuitScene",
+      "layout": "twin-powers-pair-with-pursuit-steps",
+      "anchor": "role-pair",
+      "grammar": [
+        "visit-and-pursuit-diverge-at-the-jurisdiction-start",
+        "pursuit-marches-signal-to-termination"
+      ],
+      "textTreatments": [
+        "label-block",
+        "thin-underline",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "connector",
+        "enclosure"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "visit-subjects",
+        "visit-start",
+        "pursuit-start",
+        "pursuit-steps"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "continental-shelf",
+      "export": "ContinentalShelfScene",
+      "layout": "three-shelf-distance-bands-with-seabed-rules",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "three-distance-bands-measure-the-shelf-limit",
+        "seabed-regimes-close-the-bottom-band"
+      ],
+      "textTreatments": [
+        "soft-highlight",
+        "thin-underline",
+        "label-block"
+      ],
+      "focalChannels": [
+        "contrast",
+        "spatial",
+        "enclosure"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "shelf-under-200",
+        "shelf-200-350",
+        "shelf-over-350",
+        "shelf-rights",
+        "seabed-area-regime"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "special-waters",
+      "export": "SpecialWatersScene",
+      "layout": "archipelago-panel-with-strait-regime-fork",
+      "anchor": "document-fork",
+      "grammar": [
+        "strait-traffic-forks-into-four-regimes",
+        "archipelago-waters-hold-innocent-passage"
+      ],
+      "textTreatments": [
+        "label-block",
+        "soft-highlight",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "contrast",
+        "connector",
+        "enclosure"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "archipelago-regime",
+        "strait-definition",
+        "transit-passage",
+        "innocent-strait",
+        "free-passage",
+        "special-agreement"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "antarctica-space",
+      "export": "AntarcticaSpaceScene",
+      "layout": "polar-panel-with-space-regime-stack",
+      "anchor": "flow-path",
+      "grammar": [
+        "space-regimes-stack-registration-rescue-liability",
+        "liability-splits-air-to-ground-versus-air-to-air"
+      ],
+      "textTreatments": [
+        "label-block",
+        "stamp",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "locator"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "antarctica-freeze",
+        "registration-regime",
+        "rescue-regime",
+        "liability-launch-state",
+        "space-ground-strict",
+        "space-space-fault",
+        "register-vs-launch"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

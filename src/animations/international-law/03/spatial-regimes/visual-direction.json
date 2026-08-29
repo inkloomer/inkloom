@@ -1,0 +1,16 @@
+{
+  "directionId": "nautical-survey-chart",
+  "family": "nautical-survey-chart",
+  "palette": "deep chart navy, depth-grid teal, sand plaques, signal orange bearings, alert red for unlawful",
+  "typography": "WenKai sand headings with diamond chart codes, buoy label blocks, orange soft highlights",
+  "composition": "survey chart with diamond station rail, descending sea-zone strata and three-band distance rulers",
+  "surface": "navy chart panels with depth grid lines and rotated diamond markers, no paper cards",
+  "motion": "zone-by-zone shore-to-high-seas entries with side-sliding band reveals and stamped verdicts",
+  "transition": "content swap under a persistent chart frame and diamond rail",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/international-law/03/spatial-regimes/",
+    "title": "海图测绘室"
+  }
+}
