@@ -264,7 +264,6 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'value-conflict': {metadata: typography105, scope: {animationId: 'value-conflict', subject: 'theoretical-law', topic: '01'}},
   'legal-rules': {metadata: typography106, scope: {animationId: 'legal-rules', subject: 'theoretical-law', topic: '01'}},
   'legal-principles': {metadata: typography107, scope: {animationId: 'legal-principles', subject: 'theoretical-law', topic: '01'}},
-  'sources-of-law': {metadata: typography108, scope: {animationId: 'sources-of-law', subject: 'theoretical-law', topic: '01'}},
   'liability-concurrence': {metadata: typographyLc, scope: {animationId: 'liability-concurrence', subject: 'theoretical-law', topic: '01'}},
   'legal-departments-system': {metadata: typographyTds, scope: {animationId: 'legal-departments-system', subject: 'theoretical-law', topic: '01'}},
   'legal-validity': {metadata: typographyLv, scope: {animationId: 'legal-validity', subject: 'theoretical-law', topic: '01'}},
