@@ -7,6 +7,12 @@
   "surface": "walnut counter boards, pawn-ticket paper cards, brass plates, enamel number tags, celadon safe-deposit boxes",
   "motion": "collateral tickets slide across the counter, halt at their publicity gate, then settle as sealed or stored terminal cards; the limitation key turns and splits the twin fate lanes",
   "transition": "the walnut counter frame, brass plates and ticket paper persist while window groups and ladder bays are exchanged",
+  "conceptTokens": {
+    "登记公示": "Landmark",
+    "占有公示": "Package",
+    "留置权": "Hand",
+    "变价禁止": "Ban"
+  },
   "catalog": {
     "status": "featured",
     "source": "original-node",

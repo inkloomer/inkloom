@@ -1,0 +1,143 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 4,
+  "scenes": [
+    {
+      "id": "wto-foundation",
+      "export": "WtoFoundationScene",
+      "layout": "roundtable-hub-with-statute-column",
+      "anchor": "boundary",
+      "grammar": [
+        "general-council-serves-as-two-bodies",
+        "china-carries-common-and-specific-obligations"
+      ],
+      "textTreatments": [
+        "label-block",
+        "soft-highlight",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "locator"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "wto-members",
+        "general-council-dual-role",
+        "china-obligations",
+        "china-non-binding-agreements"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "mfn-principle",
+      "export": "MfnPrincipleScene",
+      "layout": "mfn-equation-ring-with-exception-belt",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "national-treatment-versus-mfn-equations",
+        "rcep-forms-mfn-exception"
+      ],
+      "textTreatments": [
+        "label-block",
+        "soft-highlight",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "connector"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "non-discrimination-pair",
+        "mfn-three-traits",
+        "mfn-exceptions",
+        "rcep-fruit"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "trims-ban",
+      "export": "TrimsBanScene",
+      "layout": "trims-gate-with-four-ban-lanes",
+      "anchor": "boundary",
+      "grammar": [
+        "only-goods-trade-related-measures-regulated",
+        "four-prohibited-investment-measures"
+      ],
+      "textTreatments": [
+        "label-block",
+        "soft-highlight",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "connector"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "trims-scope-gate",
+        "trims-four-prohibited",
+        "trims-out-of-scope"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "gats-modes",
+      "export": "GatsModesScene",
+      "layout": "gats-mode-quadrant-with-framework-column",
+      "anchor": "role-pair",
+      "grammar": [
+        "four-service-trade-modes-by-who-crosses",
+        "market-access-depends-on-member-commitments"
+      ],
+      "textTreatments": [
+        "label-block",
+        "soft-highlight",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "connector"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "gats-four-modes",
+        "gats-framework-content"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "dispute-settlement",
+      "export": "DisputeSettlementScene",
+      "layout": "dispute-pipeline-with-appeal-fork",
+      "anchor": "flow-path",
+      "grammar": [
+        "violation-versus-non-violation-appeals",
+        "five-station-dispute-pipeline"
+      ],
+      "textTreatments": [
+        "label-block",
+        "soft-highlight",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "contrast",
+        "connector",
+        "enclosure"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "dispute-appeal-types",
+        "dispute-pipeline-stations",
+        "cross-retaliation-rule"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

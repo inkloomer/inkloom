@@ -1,0 +1,16 @@
+{
+  "directionId": "celadon-roundtable",
+  "family": "celadon-roundtable",
+  "palette": "deep celadon teal, cream treaty text, gold ring emblem, coral objections, sky lanes, moss concessions",
+  "typography": "WenKai roundtable headings with dashed gold ring emblem, coral verdict chips and sky equation bars",
+  "composition": "roundtable seat dial in header with hub-ring diagrams, equation bars, ban lanes and a five-station dispute pipeline",
+  "surface": "celadon panels with diagonal treaty hatching and double-ruled table stamps",
+  "motion": "panel rises and lane sweeps with stamped verdicts settling at the pipeline end",
+  "transition": "content swap under a persistent ring emblem and seat dial",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/international-law/18/wto/",
+    "title": "青瓷圆桌会"
+  }
+}

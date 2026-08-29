@@ -38,6 +38,7 @@ import {typography as typographyIl09} from '../animations/international-law/09/c
 import {typography as typographyIl10} from '../animations/international-law/10/conflict-of-laws-rules/animation.meta';
 import {typography as typographyIl11} from '../animations/international-law/11/applicable-law/animation.meta';
 import {typography as typographyIl13} from '../animations/international-law/13/interregional-assistance/animation.meta';
+import {typography as typographyIl18} from '../animations/international-law/18/wto/animation.meta';
 import {typography as typographyIl15} from '../animations/international-law/15/goods-transport-insurance/animation.meta';
 import {typography as typographyIl12} from '../animations/international-law/12/extraterritorial-assistance/animation.meta';
 import {typography as typographyIl14} from '../animations/international-law/14/international-sale-of-goods/animation.meta';
@@ -135,6 +136,7 @@ import {typography as typography91} from '../animations/civil-procedure/31/termi
 import {typography as typography93} from '../animations/civil-procedure/32/penalty-adjustment-procedure/animation.meta';
 import {typography as typography94} from '../animations/civil-law/contracts/contract-book-atlas/animation.meta';
 import {typography as typographySpf} from '../animations/civil-law/14/security-publicity-fate/animation.meta';
+import {typography as typographyCsg} from '../animations/civil-procedure/12/compulsory-summons-gate/animation.meta';
 import {typography as typography109} from '../animations/theoretical-law/01/sources-of-law/animation.meta';
 import {typography as typography96} from '../animations/theoretical-law/17/legal-interpretation/animation.meta';
 import {typography as typographyTds} from '../animations/theoretical-law/01/legal-departments-system/animation.meta';
@@ -254,6 +256,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'penalty-adjustment-procedure': {metadata: typography93, scope: {animationId: 'penalty-adjustment-procedure', subject: 'civil-procedure', topic: '32'}},
   'contract-book-atlas': {metadata: typography94, scope: {animationId: 'contract-book-atlas', subject: 'civil-law', topic: 'contracts'}},
   'security-publicity-fate': {metadata: typographySpf, scope: {animationId: 'security-publicity-fate', subject: 'civil-law', topic: '14'}},
+  'compulsory-summons-gate': {metadata: typographyCsg, scope: {animationId: 'compulsory-summons-gate', subject: 'civil-procedure', topic: '12'}},
   'sources-of-law': {metadata: typography109, scope: {animationId: 'sources-of-law', subject: 'theoretical-law', topic: '01'}},
   'legal-interpretation': {metadata: typography96, scope: {animationId: 'legal-interpretation', subject: 'theoretical-law', topic: '17'}},
   'evidence-exclusion-lattice': {metadata: typography97, scope: {animationId: 'evidence-exclusion-lattice', subject: 'criminal-procedure', topic: '07'}},
@@ -281,6 +284,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'conflict-of-laws-rules': {metadata: typographyIl10, scope: {animationId: 'conflict-of-laws-rules', subject: 'international-law', topic: '10'}},
   'applicable-law': {metadata: typographyIl11, scope: {animationId: 'applicable-law', subject: 'international-law', topic: '11'}},
   'interregional-assistance': {metadata: typographyIl13, scope: {animationId: 'interregional-assistance', subject: 'international-law', topic: '13'}},
+  'wto': {metadata: typographyIl18, scope: {animationId: 'wto', subject: 'international-law', topic: '18'}},
   'goods-transport-insurance': {metadata: typographyIl15, scope: {animationId: 'goods-transport-insurance', subject: 'international-law', topic: '15'}},
   'extraterritorial-assistance': {metadata: typographyIl12, scope: {animationId: 'extraterritorial-assistance', subject: 'international-law', topic: '12'}},
   'international-sale-of-goods': {metadata: typographyIl14, scope: {animationId: 'international-sale-of-goods', subject: 'international-law', topic: '14'}},
