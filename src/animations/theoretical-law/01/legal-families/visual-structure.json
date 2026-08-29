@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 4,
+  "playerControlSafeBottom": 176,
+  "scenes": [
+    {
+      "id": "family-gates",
+      "export": "FamilyGatesScene",
+      "layout": "definition-plaque-with-family-gates",
+      "anchor": "concept-icon",
+      "grammar": ["definition-claim", "three-families", "tradition-note"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["BookMarked", "Landmark", "Gavel", "Flag"],
+      "finalKnowledge": [
+        "families-heading",
+        "tradition-note",
+        "civil-gate",
+        "common-gate",
+        "socialist-gate"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "twin-crests",
+      "export": "TwinCrestsScene",
+      "layout": "twin-crest-plates-with-alias-scrolls",
+      "anchor": "role-pair",
+      "grammar": ["civil-crest", "common-crest", "misfit-regions"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "thin-underline"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["Landmark", "Gavel", "ScrollText", "MapPin"],
+      "finalKnowledge": [
+        "crests-heading",
+        "civil-crest",
+        "common-crest",
+        "misfit-regions"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "macro-lanes",
+      "export": "MacroLanesScene",
+      "layout": "five-comparison-lanes",
+      "anchor": "comparison-axis",
+      "grammar": ["five-dimensions", "paired-lanes"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "thin-underline"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["Brain", "ScrollText", "GitMerge", "Scale", "BookCopy"],
+      "finalKnowledge": [
+        "lanes-heading",
+        "macro-lanes",
+        "degree-note"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "degree-footnotes",
+      "export": "DegreeFootnotesScene",
+      "layout": "two-footnote-plates-with-exam-chips",
+      "anchor": "concept-icon",
+      "grammar": ["degree-difference", "globalization-note", "exam-judgments"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["Gauge", "Globe"],
+      "finalKnowledge": [
+        "footnotes-heading",
+        "degree-plate",
+        "globalization-plate",
+        "exam-chips"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "directionId": "apothecary-index-cabinet",
+  "family": "apothecary-index-cabinet",
+  "palette": "dark cabinet walnut ground, xuan-paper slips, cinnabar seal red, indigo category tags, mugwort green, brass scale accents",
+  "typography": "cinnabar drawer plates with mono case codes, xuan-paper knowledge slips at reading size, brass eyebrow rails, thin mugwort underlines for decisive conditions",
+  "composition": "three-drawer fee wall, oral-versus-written contrast gate, announcement shelf, four-stage seal grid, three-ledger signature columns, recording grid bound to a headcount ladder, six-tier exclusion stair, dosage number groups, suit-and-review stage grids",
+  "surface": "walnut cabinet wall with brass rail lines, wooden drawer faces with paper labels and brass ring pulls, xuan-paper slips with soft shadow, brass weighing-beam scales for durations",
+  "motion": "drawers slide open in legal order, herb slips drop into their own drawer and stay, permission bars grow down the exclusion stair, penalty ladders rise to twenty-four months",
+  "transition": "the cabinet advances one drawer bay at a time as the next detail group is retrieved",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/administrative-law/25/key-details-apothecary/",
+    "title": "百子药柜索引"
+  }
+}

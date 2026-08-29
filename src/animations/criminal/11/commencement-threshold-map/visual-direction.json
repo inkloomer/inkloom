@@ -1,0 +1,21 @@
+{
+  "directionId": "open-stadium-start-system",
+  "family": "stadium-start-line",
+  "palette": "cream field + terracotta cinder track + chalk white + warm black + start-flash amber + graphite preparation gray",
+  "typography": "heavy athletic sans headlines, ghost lane numerals, chalk-style label blocks, square verdict stamps",
+  "composition": "running-track straightaways where each crime owns a lane and its start line sits at a different distance: preparation blocks before the line, one lit start gate on the line, running phase after it",
+  "surface": "cinder track bands, chalk lane lines, dashed starting blocks, photo-finish review strips, paper evidence cards; no glossy panels",
+  "motion": "lanes enter in legal-reasoning order, each start line flashes once when its gun fires, negation marks land beside the text; no idle loops",
+  "transition": "the lit start gate persists as the carrier while each scene re-stages the same straightaway for a new question",
+  "conceptTokens": {
+    "预备": "CircleDashed",
+    "着手": "CirclePlay",
+    "真题": "GraduationCap"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/criminal/11/commencement-threshold-map/",
+    "title": "露天跑道发令台"
+  }
+}

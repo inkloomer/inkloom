@@ -1,0 +1,242 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 10,
+  "scenes": [
+    {
+      "id": "fee-drawer-triad",
+      "export": "FeeDrawerTriadScene",
+      "layout": "three-fee-drawer-wall",
+      "anchor": "boundary",
+      "grammar": [
+        "three-fee-drawers-split-the-charge-question",
+        "free-drawer-holds-application-and-hearing-items",
+        "chargeable-drawer-holds-cost-shifting-items",
+        "partial-drawer-keeps-its-principle-and-statutory-exception"
+      ],
+      "textTreatments": ["label-block", "thin-underline", "stamp"],
+      "focalChannels": ["contrast", "enclosure", "spatial"],
+      "tokens": [],
+      "finalKnowledge": [
+        "fee-free-drawer",
+        "fee-chargeable-drawer",
+        "fee-partial-drawer",
+        "fee-license-statutory-exception",
+        "fee-information-processing-fee"
+      ],
+      "statefulObjects": ["herb-slip-fee-stream"]
+    },
+    {
+      "id": "oral-form-gate",
+      "export": "OralFormGateScene",
+      "layout": "oral-written-contrast-gate",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "oral-and-written-forms-split-into-two-contrast-lanes",
+        "penalty-license-and-compulsion-stay-on-the-written-lane",
+        "information-review-suit-and-compensation-open-the-oral-lane",
+        "two-named-exceptions-sit-outside-their-own-default"
+      ],
+      "textTreatments": ["label-block", "external-negation", "stamp"],
+      "focalChannels": ["contrast", "enclosure", "locator"],
+      "tokens": [],
+      "finalKnowledge": [
+        "oral-prohibited-track",
+        "oral-permitted-track",
+        "oral-entrustment-exception"
+      ],
+      "statefulObjects": ["herb-slip-oral-stream"]
+    },
+    {
+      "id": "announcement-shelf",
+      "export": "AnnouncementShelfScene",
+      "layout": "announcement-three-drawer-shelf",
+      "anchor": "boundary",
+      "grammar": [
+        "seven-announcement-domains-file-into-three-index-drawers",
+        "penalty-drawer-carries-the-densest-publication-duties",
+        "adverse-effect-decisions-stay-outside-the-publication-shelf",
+        "social-impact-penalty-decisions-re-enter-as-active-disclosure"
+      ],
+      "textTreatments": ["label-block", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["contrast", "enclosure", "spatial"],
+      "tokens": [],
+      "finalKnowledge": [
+        "announcement-penalty-drawer",
+        "announcement-license-drawer",
+        "announcement-litigation-drawer",
+        "announcement-adverse-effect-rule",
+        "announcement-social-impact-exception"
+      ],
+      "statefulObjects": ["herb-slip-announcement-stream"]
+    },
+    {
+      "id": "seal-drawer-quartet",
+      "export": "SealDrawerQuartetScene",
+      "layout": "four-stage-seal-drawer-grid",
+      "anchor": "document-fork",
+      "grammar": [
+        "four-procedure-stages-file-into-four-seal-drawers",
+        "each-document-carries-either-the-agency-seal-or-the-court-seal",
+        "the-execution-application-adds-the-head-signature-beside-the-agency-seal",
+        "fourteen-numbered-documents-stay-visible-in-their-own-drawer"
+      ],
+      "textTreatments": ["label-block", "soft-highlight", "thin-underline"],
+      "focalChannels": ["enclosure", "contrast", "connector"],
+      "tokens": [],
+      "finalKnowledge": [
+        "seal-admin-procedure-drawer",
+        "seal-review-procedure-drawer",
+        "seal-litigation-procedure-drawer",
+        "seal-compensation-execution-drawer",
+        "seal-authority-legend"
+      ],
+      "statefulObjects": ["herb-slip-seal-stream"]
+    },
+    {
+      "id": "signature-herb-ledger",
+      "export": "SignatureHerbLedgerScene",
+      "layout": "three-ledger-signature-columns",
+      "anchor": "typographic-sequence",
+      "grammar": [
+        "twelve-signature-duties-file-into-three-record-ledgers",
+        "on-the-spot-decisions-lead-the-ledger",
+        "public-security-records-add-the-fingerprint-and-annotation-variants",
+        "signature-sealing-and-fingerprint-count-as-equivalent-forms"
+      ],
+      "textTreatments": ["label-block", "soft-highlight", "thin-underline"],
+      "focalChannels": ["enclosure", "contrast", "locator"],
+      "tokens": [],
+      "finalKnowledge": [
+        "signature-decision-column",
+        "signature-security-record-column",
+        "signature-general-record-column",
+        "signature-equivalent-forms"
+      ],
+      "statefulObjects": ["herb-slip-signature-stream"]
+    },
+    {
+      "id": "recording-headcount-lock",
+      "export": "RecordingHeadcountLockScene",
+      "layout": "recording-grid-bound-to-headcount-ladder",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "six-recording-conditions-file-into-six-index-cells",
+        "one-officer-policing-locks-onto-full-course-recording",
+        "headcount-ladder-rises-from-one-to-five",
+        "the-mnemonic-one-on-the-spot-remote-and-case-handling-closes-the-scene"
+      ],
+      "textTreatments": ["label-block", "soft-highlight", "stamp"],
+      "focalChannels": ["connector", "contrast", "enclosure"],
+      "tokens": [],
+      "finalKnowledge": [
+        "recording-six-conditions",
+        "headcount-one-officer",
+        "headcount-two-officers",
+        "headcount-three-panel",
+        "headcount-five-representatives",
+        "recording-headcount-binding",
+        "recording-mnemonic"
+      ],
+      "statefulObjects": ["herb-slip-recording-stream"]
+    },
+    {
+      "id": "exclusion-tier-stair",
+      "export": "ExclusionTierStairScene",
+      "layout": "six-tier-exclusion-ladder",
+      "anchor": "boundary",
+      "grammar": [
+        "six-statutory-tiers-climb-from-law-only-to-any-normative-document",
+        "each-tier-widens-the-permission-bar-for-a-different-exception",
+        "the-permission-bar-grows-from-left-to-right-down-the-stair",
+        "every-exception-keeps-its-own-statute-citation-inside-its-tier"
+      ],
+      "textTreatments": ["label-block", "chip", "thin-underline"],
+      "focalChannels": ["spatial", "contrast", "enclosure"],
+      "tokens": [],
+      "finalKnowledge": [
+        "exclusion-tier-law-only",
+        "exclusion-tier-law-and-regulation",
+        "exclusion-tier-law-and-rules",
+        "exclusion-tier-law-rules-and-regulations",
+        "exclusion-tier-law-regulation-and-department-rules",
+        "exclusion-tier-widest-scope",
+        "exclusion-ladder-progression"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "number-scale-penalty",
+      "export": "NumberScalePenaltyScene",
+      "layout": "three-group-penalty-number-scale",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "penalty-numbers-file-into-three-dosage-groups",
+        "each-number-carries-its-unit-fact-and-qualifier",
+        "the-duration-beam-orders-seven-thirty-and-ninety-days",
+        "administrative-detention-hearing-threshold-sits-apart-from-fines"
+      ],
+      "textTreatments": ["label-block", "soft-highlight", "stamp"],
+      "focalChannels": ["contrast", "enclosure", "spatial"],
+      "tokens": [],
+      "finalKnowledge": [
+        "number-penalty-limitation-group",
+        "number-penalty-summary-group",
+        "number-penalty-coercion-group",
+        "number-penalty-duration-beam"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "number-scale-suit-review",
+      "export": "NumberScaleSuitReviewScene",
+      "layout": "suit-review-four-stage-number-grid",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "litigation-and-review-numbers-face-each-other-across-four-stages",
+        "each-stage-row-holds-its-own-deadline-chips",
+        "suit-deadlines-run-in-months-while-review-runs-in-sixty-days",
+        "the-two-columns-share-the-same-five-and-twenty-year-outer-limit"
+      ],
+      "textTreatments": ["label-block", "chip", "soft-highlight"],
+      "focalChannels": ["contrast", "spatial", "enclosure"],
+      "tokens": [],
+      "finalKnowledge": [
+        "number-suit-deadline-row",
+        "number-suit-pretrial-row",
+        "number-suit-trial-row",
+        "number-suit-appeal-row",
+        "number-review-application-row",
+        "number-review-pretrial-row",
+        "number-review-hearing-row",
+        "number-review-examination-row",
+        "number-suit-review-summary-contrast"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "number-scale-remainder",
+      "export": "NumberScaleRemainderScene",
+      "layout": "two-by-two-remainder-number-cabinet",
+      "anchor": "typographic-sequence",
+      "grammar": [
+        "four-remaining-domains-file-into-a-two-by-two-number-cabinet",
+        "civil-service-penalty-periods-climb-as-a-measured-ladder",
+        "license-decision-periods-branch-between-single-and-joint-handling",
+        "disclosure-periods-count-in-working-days-not-calendar-days",
+        "compensation-splits-mental-harm-into-two-severity-bands"
+      ],
+      "textTreatments": ["label-block", "chip", "thin-underline"],
+      "focalChannels": ["contrast", "enclosure", "spatial"],
+      "tokens": [],
+      "finalKnowledge": [
+        "number-civil-service-group",
+        "number-civil-service-penalty-ladder",
+        "number-license-procedure-group",
+        "number-information-disclosure-group",
+        "number-state-compensation-group"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

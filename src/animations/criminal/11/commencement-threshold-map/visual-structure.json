@@ -1,0 +1,68 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "playerControlSafeBottom": 168,
+  "scenes": [
+    {
+      "id": "stage-boundary",
+      "export": "StageBoundaryScene",
+      "layout": "straightaway-phase-gate",
+      "anchor": "timeline-gate",
+      "grammar": ["stage-progression", "threshold-test"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["CircleDashed", "CirclePlay", "GraduationCap"],
+      "finalKnowledge": [
+        "boundary-prep-zone",
+        "boundary-start-gate",
+        "boundary-run-zone",
+        "boundary-danger-standard",
+        "boundary-exam-sent",
+        "boundary-exam-received",
+        "boundary-exam-exception-note"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "exam-commencement-map",
+      "export": "ExamCommencementMapScene",
+      "layout": "dual-family-lane-board",
+      "anchor": "comparison-axis",
+      "grammar": ["family-lane-comparison", "per-lane-threshold-shift"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["Zap", "Megaphone", "CircleDashed", "CirclePlay", "GraduationCap", "DoorClosed", "Building2", "Landmark"],
+      "finalKnowledge": [
+        "map-family-violent",
+        "map-family-communicated",
+        "map-lane-robbery",
+        "map-lane-rape",
+        "map-lane-burglary",
+        "map-lane-fraud",
+        "map-lane-insurance",
+        "map-lane-accusation",
+        "map-shared-rule"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "special-cases-lane",
+      "export": "SpecialCasesLaneScene",
+      "layout": "dual-special-rule-boards",
+      "anchor": "role-pair",
+      "grammar": ["time-space-threshold", "proxy-standard-transfer"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["Mail", "Users", "CircleDashed", "CirclePlay", "GraduationCap"],
+      "finalKnowledge": [
+        "special-isolated-board",
+        "special-isolated-dangerous-route",
+        "special-isolated-safe-route",
+        "special-indirect-board",
+        "special-indirect-standard",
+        "special-indirect-case"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

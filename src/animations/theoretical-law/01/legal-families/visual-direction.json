@@ -1,0 +1,16 @@
+{
+  "directionId": "walnut-comparison-hall",
+  "family": "twin-hall-comparison",
+  "palette": "deep walnut brown ground + cream panel plaques + indigo civil-law accents + rust common-law accents + brass hairlines + oxblood seals",
+  "typography": "ink headings on cream plaques, walnut label tabs with brass left bar, indigo reserved for the civil-law side, rust reserved for the common-law side, oxblood seals for rulings, thin ink underlines",
+  "composition": "the definition hangs as a hall plaque above three family gateways; the two great families face each other as twin crest plates with alias scrolls; five macro differences cross the hall as paired comparison lanes; degree footnotes close as two side plates with exam chips",
+  "surface": "flat deep walnut brown with faint brass graining hairlines, cream panels with hairline borders, no gradients, no rounded cards, no drop shadows",
+  "motion": "panels slide in from the paired halls, crest plates tip toward each other once, comparison lanes draw across left then right, seals stamp once",
+  "transition": "a velvet wipe draws the previous panel off the hall floor",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/theoretical-law/01/legal-families/",
+    "title": "胡桃对厅"
+  }
+}
