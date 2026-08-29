@@ -1,0 +1,70 @@
+{
+  "animationId": "canyon-confluence-merger",
+  "compositionId": "CanyonConfluenceMerger",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-29T22:44:28.812Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 299,
+      "frameCount": 300,
+      "id": "simplified-merger",
+      "number": "01",
+      "startFrame": 0,
+      "title": "简易合并：主河道吞下支流",
+      "durationMs": 10000,
+      "file": "simplified-merger.avif",
+      "fileSize": 460308,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "18289a799a76b5d319c2547d6004e3ec95055e94a39575c7e345408b9f50dcdf",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "656fcd79b018c83f4686b2769a4bfdbbb5f3aa953a41ca5f42a6d48d7e2ac84d"
+    },
+    {
+      "endFrame": 569,
+      "frameCount": 270,
+      "id": "survivor-vote",
+      "number": "02",
+      "startFrame": 300,
+      "title": "合并方的闸：七件大事要 2/3",
+      "durationMs": 9000,
+      "file": "survivor-vote.avif",
+      "fileSize": 457698,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "34523cbb8f42f6d9d6c031b1b2e685aa501b2bf667d16cb2168255a5589e5d5c",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "656fcd79b018c83f4686b2769a4bfdbbb5f3aa953a41ca5f42a6d48d7e2ac84d"
+    },
+    {
+      "endFrame": 849,
+      "frameCount": 280,
+      "id": "minority-notice",
+      "number": "03",
+      "startFrame": 570,
+      "title": "岸边救生梯：通知与回购权",
+      "durationMs": 9333,
+      "file": "minority-notice.avif",
+      "fileSize": 391608,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "a66ca2a499d8ebad5c5b793a543c7c7909fb937c983f4758c6ee6b3e76bdfca4",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "656fcd79b018c83f4686b2769a4bfdbbb5f3aa953a41ca5f42a6d48d7e2ac84d"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "656fcd79b018c83f4686b2769a4bfdbbb5f3aa953a41ca5f42a6d48d7e2ac84d",
+  "targetFps": 30,
+  "totalFileSize": 1309614
+}

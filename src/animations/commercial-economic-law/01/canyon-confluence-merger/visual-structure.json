@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "playerControlSafeBottom": 168,
+  "scenes": [
+    {
+      "id": "simplified-merger",
+      "export": "SimplifiedMergerScene",
+      "layout": "parent-child-merger-gate",
+      "anchor": "flow-path",
+      "grammar": ["parent-threshold-rule", "board-decision-simplification"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["Percent", "FileText", "Scale", "GraduationCap"],
+      "finalKnowledge": [
+        "mer-parent-threshold",
+        "mer-board-decision",
+        "mer-exam-note",
+        "mer-conflict-recall"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "survivor-vote",
+      "export": "SurvivorVoteScene",
+      "layout": "two-thirds-vote-dial",
+      "anchor": "timeline-gate",
+      "grammar": ["supermajority-seven-matters", "vote-share-shortfall"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["Landmark", "Vote", "GraduationCap"],
+      "finalKnowledge": [
+        "surv-seven-matters",
+        "surv-vote-dial",
+        "surv-recap"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "minority-notice",
+      "export": "MinorityNoticeScene",
+      "layout": "notice-buyout-desk",
+      "anchor": "comparison-axis",
+      "grammar": ["notice-right-preserved", "buyout-parity-rule"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["Bell", "LifeBuoy", "GraduationCap"],
+      "finalKnowledge": [
+        "min-notice-board",
+        "min-buyout-board",
+        "min-recap-verdict"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

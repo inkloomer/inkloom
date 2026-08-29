@@ -1,0 +1,26 @@
+{
+  "directionId": "river-gorge-confluence-survey",
+  "family": "canyon-confluence-survey",
+  "palette": "grey-green gorge rock + teal river bands + depth-survey gold + rescue-buoy vermilion + ivory tags + ink black",
+  "typography": "confluence survey headlines, water-gauge gate labels, square jade-buoy verdict stamps, dashed flow rules",
+  "composition": "a parent-child confluence gate at the ninety-percent line, a two-thirds floodgate dial for the surviving company, and a bank-side rescue ladder of notice and buyout",
+  "surface": "grey gorge walls with teal water bands and gold survey lines; no glossy panels",
+  "motion": "rivers merge gate by gate, the vote dial fills to the shortfall, rescue stamps land on the minority rights; no idle loops",
+  "transition": "the gorge persists while each scene re-stages the same riverbed for a new question",
+  "conceptTokens": {
+    "九成线": "Percent",
+    "董事会决议": "FileText",
+    "七件大事": "Landmark",
+    "表决权": "Vote",
+    "通知": "Bell",
+    "回购": "LifeBuoy",
+    "陷阱对照": "Scale",
+    "真题": "GraduationCap"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/commercial-economic-law/01/canyon-confluence-merger/",
+    "title": "峡谷汇流图"
+  }
+}

@@ -67,6 +67,7 @@ import {DURATION_FRAMES as NOMINEE_MASKS_DURATION_FRAMES, FPS as NOMINEE_MASKS_F
 import {DURATION_FRAMES as DEFECT_AUDIT_DURATION_FRAMES, FPS as DEFECT_AUDIT_FPS} from '../../animations/commercial-economic-law/01/contribution-defect-audit/remotion/storyboard';
 import {DURATION_FRAMES as GUARANTY_DESK_DURATION_FRAMES, FPS as GUARANTY_DESK_FPS} from '../../animations/commercial-economic-law/01/company-guaranty-seal-desk/remotion/storyboard';
 import {DURATION_FRAMES as SEAT_RULE_HALL_DURATION_FRAMES, FPS as SEAT_RULE_HALL_FPS} from '../../animations/commercial-economic-law/01/directors-desk-rule-hall/remotion/storyboard';
+import {DURATION_FRAMES as CANYON_MERGER_DURATION_FRAMES, FPS as CANYON_MERGER_FPS} from '../../animations/commercial-economic-law/01/canyon-confluence-merger/remotion/storyboard';
 import {DURATION_FRAMES as CAPITAL_REGIME_DURATION_FRAMES, FPS as CAPITAL_REGIME_FPS} from '../../animations/commercial-economic-law/01/capital-regime-vote-hall/remotion/storyboard';
 import {DURATION_FRAMES as LIABILITY_CONCURRENCE_DURATION_FRAMES, FPS as LIABILITY_CONCURRENCE_FPS} from '../../animations/theoretical-law/01/liability-concurrence/remotion/storyboard';
 import {DURATION_FRAMES as JUDICIAL_VS_ADMINISTRATIVE_DURATION_FRAMES, FPS as JUDICIAL_VS_ADMINISTRATIVE_FPS} from '../../animations/theoretical-law/01/judicial-vs-administrative/remotion/storyboard';
@@ -260,6 +261,7 @@ export const STYLE_DEMOS = [
   {id: 'commercial-economic-law-01-contribution-defect-audit', slug: 'contribution-defect-audit', title: '墨斗验讫坊', direction: 'Inkline Inspection Bench', component: lazyDemo(() => import('../../animations/commercial-economic-law/01/contribution-defect-audit/remotion/ContributionDefectAudit').then((m) => ({default: m.ContributionDefectAudit}))), href: '/inkloom/objective/commercial-economic-law/01/contribution-defect-audit/', durationInFrames: DEFECT_AUDIT_DURATION_FRAMES, fps: DEFECT_AUDIT_FPS},
   {id: 'commercial-economic-law-01-company-guaranty-seal-desk', slug: 'company-guaranty-seal-desk', title: '靛印保状铺', direction: 'Indigo Seal-Paste Cabinet', component: lazyDemo(() => import('../../animations/commercial-economic-law/01/company-guaranty-seal-desk/remotion/CompanyGuarantySealDesk').then((m) => ({default: m.CompanyGuarantySealDesk}))), href: '/inkloom/objective/commercial-economic-law/01/company-guaranty-seal-desk/', durationInFrames: GUARANTY_DESK_DURATION_FRAMES, fps: GUARANTY_DESK_FPS},
   {id: 'commercial-economic-law-01-directors-desk-rule-hall', slug: 'directors-desk-rule-hall', title: '座次规鉴堂', direction: 'Velvet Seat Rule Gallery', component: lazyDemo(() => import('../../animations/commercial-economic-law/01/directors-desk-rule-hall/remotion/DirectorsDeskRuleHall').then((m) => ({default: m.DirectorsDeskRuleHall}))), href: '/inkloom/objective/commercial-economic-law/01/directors-desk-rule-hall/', durationInFrames: SEAT_RULE_HALL_DURATION_FRAMES, fps: SEAT_RULE_HALL_FPS},
+  {id: 'commercial-economic-law-01-canyon-confluence-merger', slug: 'canyon-confluence-merger', title: '峡谷汇流图', direction: 'Canyon Confluence Survey', component: lazyDemo(() => import('../../animations/commercial-economic-law/01/canyon-confluence-merger/remotion/CanyonConfluenceMerger').then((m) => ({default: m.CanyonConfluenceMerger}))), href: '/inkloom/objective/commercial-economic-law/01/canyon-confluence-merger/', durationInFrames: CANYON_MERGER_DURATION_FRAMES, fps: CANYON_MERGER_FPS},
   {id: 'commercial-economic-law-01-capital-regime-vote-hall', slug: 'capital-regime-vote-hall', title: '宣纸票匦堂', direction: 'Xuan-Paper Vote Urn Hall', component: lazyDemo(() => import('../../animations/commercial-economic-law/01/capital-regime-vote-hall/remotion/CapitalRegimeVoteHall').then((m) => ({default: m.CapitalRegimeVoteHall}))), href: '/inkloom/objective/commercial-economic-law/01/capital-regime-vote-hall/', durationInFrames: CAPITAL_REGIME_DURATION_FRAMES, fps: CAPITAL_REGIME_FPS},
   ...COMMERCIAL_LAW_STYLE_DEMOS,
 ] as const satisfies readonly DemoDefinition[];
@@ -394,6 +396,7 @@ const DEMO_ADDED_AT: Record<(typeof STYLE_DEMOS)[number]['id'], string> = {
   'commercial-economic-law-01-contribution-defect-audit': '2026-08-31T02:10:00+08:00',
   'commercial-economic-law-01-company-guaranty-seal-desk': '2026-08-31T03:00:00+08:00',
   'commercial-economic-law-01-directors-desk-rule-hall': '2026-08-31T04:00:00+08:00',
+  'commercial-economic-law-01-canyon-confluence-merger': '2026-08-31T04:50:00+08:00',
   'commercial-economic-law-01-capital-regime-vote-hall': '2026-08-31T01:20:00+08:00',
   ...COMMERCIAL_LAW_DEMO_ADDED_AT,
 };
