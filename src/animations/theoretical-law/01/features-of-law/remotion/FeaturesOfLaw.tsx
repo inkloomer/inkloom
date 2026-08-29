@@ -12,7 +12,7 @@ import {
   Scale,
   ScrollText,
   Shield,
-  Stamp,
+  Stamp as StampIcon,
   Users,
 } from 'lucide-react';
 import {AbsoluteFill, interpolate, useCurrentFrame} from 'remotion';
@@ -383,7 +383,7 @@ export const StateWillPathsScene = () => {
         <Enter delay={62} from="none" marker="recognition-path" style={{position: 'absolute', left: 560, top: 330, width: 540}}>
           <div style={{backgroundColor: C.cream, border: `4px solid ${C.woodDeep}`, padding: '16px 22px'}}>
             <div style={{display: 'flex', alignItems: 'center', gap: 16}}>
-              <Stamp size={46} color={C.oxblood} strokeWidth={2.3} />
+              <StampIcon size={46} color={C.oxblood} strokeWidth={2.3} />
               <div>
                 <div style={{fontSize: 30, fontWeight: 950, color: C.soot}}>认可</div>
                 <div style={{marginTop: 6, fontSize: 22, fontWeight: 870, color: C.ink}}>
