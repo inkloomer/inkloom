@@ -23,6 +23,7 @@ import {typography as typography104} from '../animations/theoretical-law/01/limi
 import {typography as typography105} from '../animations/theoretical-law/01/value-conflict/animation.meta';
 import {typography as typography106} from '../animations/theoretical-law/01/legal-rules/animation.meta';
 import {typography as typography107} from '../animations/theoretical-law/01/legal-principles/animation.meta';
+import {typography as typography108} from '../animations/theoretical-law/01/sources-of-law/animation.meta';
 import {typography as typography99} from '../animations/criminal-procedure/01/procedure-structure-orrery/animation.meta';
 import {typography as typography100} from '../animations/international-law/01/sources-of-international-law/animation.meta';
 import {typography as typographyIl02} from '../animations/international-law/02/subjects-responsibility/animation.meta';
@@ -249,6 +250,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'value-conflict': {metadata: typography105, scope: {animationId: 'value-conflict', subject: 'theoretical-law', topic: '01'}},
   'legal-rules': {metadata: typography106, scope: {animationId: 'legal-rules', subject: 'theoretical-law', topic: '01'}},
   'legal-principles': {metadata: typography107, scope: {animationId: 'legal-principles', subject: 'theoretical-law', topic: '01'}},
+  'sources-of-law': {metadata: typography108, scope: {animationId: 'sources-of-law', subject: 'theoretical-law', topic: '01'}},
   'procedure-structure-orrery': {metadata: typography99, scope: {animationId: 'procedure-structure-orrery', subject: 'criminal-procedure', topic: '01'}},
   'sources-of-international-law': {metadata: typography100, scope: {animationId: 'sources-of-international-law', subject: 'international-law', topic: '01'}},
   'subjects-responsibility': {metadata: typographyIl02, scope: {animationId: 'subjects-responsibility', subject: 'international-law', topic: '02'}},

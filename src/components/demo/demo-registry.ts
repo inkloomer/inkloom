@@ -45,6 +45,7 @@ import {DURATION_FRAMES as VALUE_CONFLICT_DURATION_FRAMES, FPS as VALUE_CONFLICT
 import {DURATION_FRAMES as LEGAL_RULES_DURATION_FRAMES, FPS as LEGAL_RULES_FPS} from '../../animations/theoretical-law/01/legal-rules/remotion/storyboard';
 import {DURATION_FRAMES as LEGAL_PRINCIPLES_DURATION_FRAMES, FPS as LEGAL_PRINCIPLES_FPS} from '../../animations/theoretical-law/01/legal-principles/remotion/storyboard';
 import {DURATION_FRAMES as CONCEPT_OF_LAW_DURATION_FRAMES, FPS as CONCEPT_OF_LAW_FPS} from '../../animations/theoretical-law/01/concept-of-law-dispute/remotion/storyboard';
+import {DURATION_FRAMES as SOURCES_OF_LAW_DURATION_FRAMES, FPS as SOURCES_OF_LAW_FPS} from '../../animations/theoretical-law/01/sources-of-law/remotion/storyboard';
 import {DURATION_FRAMES as ORGANS_RELAY_DURATION_FRAMES, FPS as ORGANS_RELAY_FPS} from '../../animations/criminal-procedure/03/organs-relay-map/remotion/storyboard';
 import {DURATION_FRAMES as JURISDICTION_SLUICE_DURATION_FRAMES, FPS as JURISDICTION_SLUICE_FPS} from '../../animations/criminal-procedure/04/jurisdiction-sluice-terrace/remotion/storyboard';
 import {DURATION_FRAMES as RECUSAL_SENTRY_DURATION_FRAMES, FPS as RECUSAL_SENTRY_FPS} from '../../animations/criminal-procedure/05/recusal-sentry-rotation/remotion/storyboard';
@@ -187,6 +188,7 @@ export const STYLE_DEMOS = [
   {id: 'theoretical-law-01-value-conflict', slug: 'value-conflict', title: '金底嵌画', direction: 'Gold-Ground Mosaic', component: lazyDemo(() => import('../../animations/theoretical-law/01/value-conflict/remotion/ValueConflict').then((m) => ({default: m.ValueConflict}))), href: '/inkloom/objective/theoretical-law/01/value-conflict/', durationInFrames: VALUE_CONFLICT_DURATION_FRAMES, fps: VALUE_CONFLICT_FPS},
   {id: 'theoretical-law-01-legal-rules', slug: 'legal-rules', title: '红蓝账本', direction: 'Red-Blue Ledger', component: lazyDemo(() => import('../../animations/theoretical-law/01/legal-rules/remotion/LegalRules').then((m) => ({default: m.LegalRules}))), href: '/inkloom/objective/theoretical-law/01/legal-rules/', durationInFrames: LEGAL_RULES_DURATION_FRAMES, fps: LEGAL_RULES_FPS},
   {id: 'theoretical-law-01-legal-principles', slug: 'legal-principles', title: '黑板讲席', direction: 'Chalkboard Lecture', component: lazyDemo(() => import('../../animations/theoretical-law/01/legal-principles/remotion/LegalPrinciples').then((m) => ({default: m.LegalPrinciples}))), href: '/inkloom/objective/theoretical-law/01/legal-principles/', durationInFrames: LEGAL_PRINCIPLES_DURATION_FRAMES, fps: LEGAL_PRINCIPLES_FPS},
+  {id: 'theoretical-law-01-sources-of-law', slug: 'sources-of-law', title: '碑林拓片', direction: 'Stele Forest Rubbing', component: lazyDemo(() => import('../../animations/theoretical-law/01/sources-of-law/remotion/SourcesOfLaw').then((m) => ({default: m.SourcesOfLaw}))), href: '/inkloom/objective/theoretical-law/01/sources-of-law/', durationInFrames: SOURCES_OF_LAW_DURATION_FRAMES, fps: SOURCES_OF_LAW_FPS},
   ...COMMERCIAL_LAW_STYLE_DEMOS,
 ] as const satisfies readonly DemoDefinition[];
 
@@ -284,6 +286,7 @@ const DEMO_ADDED_AT: Record<(typeof STYLE_DEMOS)[number]['id'], string> = {
   'theoretical-law-01-value-conflict': '2026-08-29T19:20:00+08:00',
   'theoretical-law-01-legal-rules': '2026-08-29T20:40:00+08:00',
   'theoretical-law-01-legal-principles': '2026-08-29T22:00:00+08:00',
+  'theoretical-law-01-sources-of-law': '2026-08-29T23:30:00+08:00',
   ...COMMERCIAL_LAW_DEMO_ADDED_AT,
 };
 
