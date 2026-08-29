@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "playerControlSafeBottom": 168,
+  "scenes": [
+    {
+      "id": "intent-slip",
+      "export": "IntentSlipScene",
+      "layout": "intent-slip-dual-exit",
+      "anchor": "role-pair",
+      "grammar": ["preliminary-contract-dual-exit", "deposit-liability-rule"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["FileText", "Users", "GraduationCap"],
+      "finalKnowledge": [
+        "int-slip-nature",
+        "int-exit-both",
+        "int-verdict-desk"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "preemption-precondition",
+      "export": "PreemptionPreconditionScene",
+      "layout": "preemption-precondition-line",
+      "anchor": "boundary",
+      "grammar": ["preemption-precondition-rule", "proration-negotiation-rule"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["ShieldCheck", "Scale", "HandCoins"],
+      "finalKnowledge": [
+        "pre-precondition-gate",
+        "pre-proration-board",
+        "pre-culpa-verdict"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "financial-aid",
+      "export": "FinancialAidScene",
+      "layout": "dual-gate-aid-counter",
+      "anchor": "comparison-axis",
+      "grammar": ["aid-prohibition-exceptions", "quorum-absence-rule"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["Coins", "Users", "ShieldCheck", "GraduationCap"],
+      "finalKnowledge": [
+        "aid-default-ban",
+        "aid-employee-lane",
+        "aid-company-lane",
+        "aid-recap-verdict"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

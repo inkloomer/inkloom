@@ -1,0 +1,70 @@
+{
+  "animationId": "escort-banner-transfer-hall",
+  "compositionId": "EscortBannerTransferHall",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-29T22:58:10.607Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 279,
+      "frameCount": 280,
+      "id": "intent-slip",
+      "number": "01",
+      "startFrame": 0,
+      "title": "预订单不是镖单：预约可退",
+      "durationMs": 9333,
+      "file": "intent-slip.avif",
+      "fileSize": 456982,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "c52d58942ebfee51d94b892a88e2a99633be9c183f83e90f9b08275581498b33",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "c0c4b411f75eee60936614e2099eb384b56555c8c1b13bff6bbac9ccb941a853"
+    },
+    {
+      "endFrame": 569,
+      "frameCount": 290,
+      "id": "preemption-precondition",
+      "number": "02",
+      "startFrame": 280,
+      "title": "同路保票的前提：船真的开了",
+      "durationMs": 9667,
+      "file": "preemption-precondition.avif",
+      "fileSize": 388052,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "c2471d3e5c85ffad723353646da7af16554ac5016bff4c7325ffc7df38534713",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "c0c4b411f75eee60936614e2099eb384b56555c8c1b13bff6bbac9ccb941a853"
+    },
+    {
+      "endFrame": 879,
+      "frameCount": 310,
+      "id": "financial-aid",
+      "number": "03",
+      "startFrame": 570,
+      "title": "借镖两道闸：员工道宽，公司道严",
+      "durationMs": 10333,
+      "file": "financial-aid.avif",
+      "fileSize": 493824,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "4a4d7c06e38db2934604e4a166da2a1f6410976caa0bcdd06e946a20e52de2df",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "c0c4b411f75eee60936614e2099eb384b56555c8c1b13bff6bbac9ccb941a853"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "c0c4b411f75eee60936614e2099eb384b56555c8c1b13bff6bbac9ccb941a853",
+  "targetFps": 30,
+  "totalFileSize": 1338858
+}
