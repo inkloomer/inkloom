@@ -1,0 +1,115 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 4,
+  "scenes": [
+    {
+      "id": "coercive-means",
+      "export": "CoerciveMeansScene",
+      "layout": "three-tier-legality-board",
+      "anchor": "typographic-sequence",
+      "grammar": [
+        "coercive-means-sort-into-three-legality-tiers",
+        "retorsion-reprisal-split-on-legality-of-first-act"
+      ],
+      "textTreatments": [
+        "stamp",
+        "thin-underline",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "locator"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "forced-illegal",
+        "blockade-un-council",
+        "retorsion-reprisal"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "political-means",
+      "export": "PoliticalMeansScene",
+      "layout": "three-method-pair-ledger",
+      "anchor": "role-pair",
+      "grammar": [
+        "three-method-pairs-line-the-bench",
+        "each-pair-splits-on-third-party-degree"
+      ],
+      "textTreatments": [
+        "label-block",
+        "thin-underline",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "spatial",
+        "enclosure"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "negotiate-pair",
+        "mediate-pair",
+        "inquire-pair"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "icj-jurisdiction",
+      "export": "IcjJurisdictionScene",
+      "layout": "dual-jurisdiction-benches",
+      "anchor": "role-pair",
+      "grammar": [
+        "contentious-and-advisory-benches-split-the-court",
+        "ad-hoc-judges-replace-nationality-recusal"
+      ],
+      "textTreatments": [
+        "label-block",
+        "thin-underline",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "spatial"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "icj-contentious",
+        "icj-advisory",
+        "ad-hoc-judge-rule"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "tribunal-comparison",
+      "export": "TribunalComparisonScene",
+      "layout": "arbitration-and-tribunal-benches",
+      "anchor": "flow-path",
+      "grammar": [
+        "arbitration-and-tribunal-bench-beside-the-court",
+        "sea-disputes-mirror-between-two-forums"
+      ],
+      "textTreatments": [
+        "label-block",
+        "thin-underline",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "connector"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "arbitration-court",
+        "itlos-three-points",
+        "sea-dispute-mirror"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}
