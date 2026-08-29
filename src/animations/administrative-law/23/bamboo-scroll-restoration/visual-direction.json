@@ -1,0 +1,16 @@
+{
+  "directionId": "bamboo-scroll-restoration-hall",
+  "family": "bamboo-scroll-restoration",
+  "palette": "aged bamboo-tan slips with ink inscriptions, deep green restoration-mat ground, ink-brush headers, vermilion restoration stamps",
+  "typography": "title-face slip headers, ink body text on bamboo strips, mono strip numbers",
+  "composition": "authority bamboo wall, procedure slips lane, summary slips drawer, special slips conservation, incidental review desk",
+  "surface": "bamboo strips bound with cord, ink inscriptions, restoration mat texture",
+  "motion": "slips unroll in legal order and lock flat, vermilion restoration stamps press at each bench",
+  "transition": "the scroll rolls onward to the next bench",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/administrative-law/23/bamboo-scroll-restoration/",
+    "title": "竹简修复堂"
+  }
+}

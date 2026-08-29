@@ -1,0 +1,146 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 5,
+  "scenes": [
+    {
+      "id": "review-authority-bamboo-wall",
+      "export": "ReviewAuthorityBambooWallScene",
+      "layout": "authority-bamboo-wall",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "government-wall-and-ministry-wall-hang-on-opposite-wings",
+        "two-exception-slips-break-across-the-normal-routes",
+        "technique-strip-presses-the-reading-order"
+      ],
+      "textTreatments": [
+        "label-block",
+        "chip",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "contrast",
+        "spatial",
+        "enclosure"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "authority-local-government",
+        "authority-national-ministry",
+        "authority-two-exceptions"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "procedure-slips-lane",
+      "export": "ProcedureSlipsLaneScene",
+      "layout": "procedure-slips-lane",
+      "anchor": "flow-path",
+      "grammar": [
+        "four-station-slips-unroll-along-one-lane-with-connector-arrows",
+        "hearing-rules-printed-on-the-listening-station",
+        "deadline-pair-stamped-on-the-final-station"
+      ],
+      "textTreatments": [
+        "label-block",
+        "chip",
+        "stamp"
+      ],
+      "focalChannels": [
+        "connector",
+        "locator",
+        "contrast"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "procedure-application-acceptance",
+        "procedure-ordinary-hearing",
+        "procedure-decision-deadline"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "summary-slips-drawer",
+      "export": "SummarySlipsDrawerScene",
+      "layout": "summary-slips-drawer",
+      "anchor": "timeline-gate",
+      "grammar": [
+        "statutory-and-agreed-summary-slips-slide-open-the-left-drawer",
+        "three-gate-deadline-timeline-runs-across-the-right-shelf",
+        "conversion-note-presses-the-drawer-close"
+      ],
+      "textTreatments": [
+        "label-block",
+        "chip",
+        "stamp"
+      ],
+      "focalChannels": [
+        "locator",
+        "contrast",
+        "enclosure"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "summary-scope-rules",
+        "summary-procedure-deadline"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "special-slips-conservation",
+      "export": "SpecialSlipsConservationScene",
+      "layout": "special-slips-conservation",
+      "anchor": "boundary",
+      "grammar": [
+        "five-conservation-tubes-rest-on-the-shelf-in-legal-order",
+        "recoverable-and-final-zones-split-by-a-vermilion-cord-line",
+        "sixty-day-motto-presses-the-final-zone"
+      ],
+      "textTreatments": [
+        "label-block",
+        "stamp",
+        "chip"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "locator"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "special-withdraw-settle-mediate",
+        "special-stop-terminate"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "incidental-review-desk",
+      "export": "IncidentalReviewDeskScene",
+      "layout": "incidental-review-desk",
+      "anchor": "document-fork",
+      "grammar": [
+        "incidental-review-splits-into-manage-or-transfer-forks",
+        "decision-book-and-opinion-book-print-side-by-side-on-the-desk",
+        "permission-comparison-ledger-presses-the-bottom-row"
+      ],
+      "textTreatments": [
+        "label-block",
+        "stamp",
+        "chip"
+      ],
+      "focalChannels": [
+        "connector",
+        "contrast",
+        "locator"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "incidental-review-flow",
+        "decision-opinion-books",
+        "enforcement-rules",
+        "permission-comparison"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}
