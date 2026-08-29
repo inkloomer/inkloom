@@ -1,0 +1,70 @@
+{
+  "animationId": "juvenile-observatory-greenhouse",
+  "compositionId": "JuvenileObservatoryGreenhouse",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-29T13:49:24.158Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 479,
+      "frameCount": 240,
+      "id": "entry-conditions-panes",
+      "number": "01",
+      "startFrame": 0,
+      "title": "入室条件",
+      "durationMs": 8000,
+      "file": "entry-conditions-panes.avif",
+      "fileSize": 281684,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "1e8f9035c3f0930e73800bb62dd47d3d62518045a4723f30b02d40b45488c2d2",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "bdd07c163f94b160166bd7f9edbc0adc57f622e7f78fb562c3bca83d65379f53"
+    },
+    {
+      "endFrame": 1039,
+      "frameCount": 280,
+      "id": "objection-tunnel-split",
+      "number": "02",
+      "startFrame": 480,
+      "title": "异议分流与考验",
+      "durationMs": 9333,
+      "file": "objection-tunnel-split.avif",
+      "fileSize": 441673,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "36d6ff9dde9072cdc9541d56b3de3ac673942b51a3ee71f127f18f55d8f53f09",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "bdd07c163f94b160166bd7f9edbc0adc57f622e7f78fb562c3bca83d65379f53"
+    },
+    {
+      "endFrame": 1499,
+      "frameCount": 230,
+      "id": "exit-doors-verdict",
+      "number": "03",
+      "startFrame": 1040,
+      "title": "出室两扇门",
+      "durationMs": 7667,
+      "file": "exit-doors-verdict.avif",
+      "fileSize": 315883,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "8166b767d2c06347e39338c2c9dad8825b3c6a04448f4ca70ea58cf320acdacd",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "bdd07c163f94b160166bd7f9edbc0adc57f622e7f78fb562c3bca83d65379f53"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "bdd07c163f94b160166bd7f9edbc0adc57f622e7f78fb562c3bca83d65379f53",
+  "targetFps": 30,
+  "totalFileSize": 1039240
+}

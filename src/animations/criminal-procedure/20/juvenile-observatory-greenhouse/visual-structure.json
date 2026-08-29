@@ -1,0 +1,70 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "entry-conditions-panes",
+      "export": "EntryConditionsScene",
+      "layout": "condition-pane-wall-with-trap-strip",
+      "anchor": "flow-path",
+      "grammar": [
+        "five-conditions-open-the-greenhouse-door",
+        "one-year-cap-replaces-three-year-misread",
+        "single-side-remorse-suffices-without-settlement",
+        "decision-hears-police-victim-and-agents-first"
+      ],
+      "textTreatments": ["chip", "thin-underline", "soft-highlight"],
+      "focalChannels": ["contrast", "enclosure", "spatial", "annotation"],
+      "tokens": [],
+      "finalKnowledge": [
+        "condition-panes",
+        "may-note",
+        "trap-strip"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "objection-tunnel-split",
+      "export": "ObjectionTunnelScene",
+      "layout": "three-way-objection-split-with-obligation-band",
+      "anchor": "document-fork",
+      "grammar": [
+        "suspect-objection-splits-prosecution-or-adjustment",
+        "victim-objection-only-appeals-never-self-suits",
+        "police-objection-climbs-review-then-recheck",
+        "obligation-band-chains-approved-moves-to-procuratorate"
+      ],
+      "textTreatments": ["chip", "thin-underline", "external-negation"],
+      "focalChannels": ["connector", "contrast", "enclosure", "annotation"],
+      "tokens": [],
+      "finalKnowledge": [
+        "suspect-split",
+        "victim-police-split",
+        "obligation-band"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "exit-doors-verdict",
+      "export": "ExitDoorsScene",
+      "layout": "exit-door-pair-with-relocation-banner",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "new-or-omitted-crimes-revoke-and-prosecute",
+        "serious-violations-revoke-and-prosecute",
+        "clean-term-ends-with-procuratorate-approval",
+        "term-end-nonprosecution-counts-as-statutory"
+      ],
+      "textTreatments": ["chip", "thin-underline", "soft-highlight"],
+      "focalChannels": ["contrast", "enclosure", "connector", "annotation"],
+      "tokens": ["DoorClosed", "Sprout"],
+      "finalKnowledge": [
+        "revoke-door",
+        "release-door",
+        "relocation-banner"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}
