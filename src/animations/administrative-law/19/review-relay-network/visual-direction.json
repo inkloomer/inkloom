@@ -1,0 +1,16 @@
+{
+  "directionId": "courier-relay-night-road",
+  "family": "courier-relay-network",
+  "palette": "night slate-blue relay ground, parchment envelopes and dispatch cards, wax-seal red stamps, warm lantern accents on route lines",
+  "typography": "title-face station headers, ink dispatch text on parchment cards, mono relay codes",
+  "composition": "defendant relay station, jurisdiction and deadline twin routes, trial-object and burden ledger, verdict terminal",
+  "surface": "night road with dotted route lines, parchment dispatch cards pinned at each station",
+  "motion": "route lines draw station to station in six-dimension order, wax seals press at each terminal",
+  "transition": "the courier rides on to the next relay station",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/administrative-law/19/review-relay-network/",
+    "title": "驿站信使网"
+  }
+}

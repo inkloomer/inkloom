@@ -1,0 +1,81 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 4,
+  "scenes": [
+    {
+      "id": "defendant-relay-station",
+      "export": "DefendantRelayStationScene",
+      "layout": "defendant-relay-station",
+      "anchor": "flow-path",
+      "grammar": [
+        "three-review-modes-stop-at-three-defendant-stations",
+        "wax-seals-mark-each-suing-mode"
+      ],
+      "textTreatments": ["label-block", "stamp", "thin-underline"],
+      "focalChannels": ["contrast", "connector", "enclosure"],
+      "tokens": [],
+      "finalKnowledge": [
+        "defendant-change",
+        "defendant-uphold-join",
+        "defendant-inaction-choice"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "jurisdiction-deadline-routes",
+      "export": "JurisdictionDeadlineRoutesScene",
+      "layout": "jurisdiction-deadline-twin-routes",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "jurisdiction-and-deadline-run-as-two-parallel-relay-routes",
+        "both-organs-host-the-territorial-stop"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp"],
+      "focalChannels": ["contrast", "connector", "spatial"],
+      "tokens": [],
+      "finalKnowledge": [
+        "jurisdiction-level-rules",
+        "jurisdiction-territorial-both",
+        "suit-deadline-15days"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "trial-object-burden-ledger",
+      "export": "TrialObjectBurdenLedgerScene",
+      "layout": "trial-object-burden-ledger",
+      "anchor": "document-fork",
+      "grammar": [
+        "three-mode-rows-pair-trial-object-with-burden-owner",
+        "who-is-sued-who-proves"
+      ],
+      "textTreatments": ["label-block", "chip", "thin-underline"],
+      "focalChannels": ["contrast", "enclosure", "locator"],
+      "tokens": [],
+      "finalKnowledge": [
+        "trial-object-three",
+        "burden-follows-defendant"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "verdict-type-terminal",
+      "export": "VerdictTypeTerminalScene",
+      "layout": "verdict-type-terminal",
+      "anchor": "flow-target",
+      "grammar": [
+        "uphold-mode-posts-four-joint-verdict-rules",
+        "change-mode-terminates-at-revoke-or-restore"
+      ],
+      "textTreatments": ["label-block", "stamp", "thin-underline"],
+      "focalChannels": ["connector", "contrast", "enclosure"],
+      "tokens": [],
+      "finalKnowledge": [
+        "uphold-joint-verdicts",
+        "change-revoke-or-restore"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

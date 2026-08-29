@@ -174,6 +174,7 @@ import {typography as typographyAutoCompanyCapacity} from '../animations/commerc
 import {typography as typographyAutoEvidenceVitrineMuseum} from '../animations/administrative-law/16/evidence-vitrine-museum/animation.meta';
 import {typography as typographyAutoApplicationSilkLoom} from '../animations/administrative-law/17/application-silk-loom/animation.meta';
 import {typography as typographyAutoJudgmentExecutionClockwork} from '../animations/administrative-law/18/judgment-execution-clockwork/animation.meta';
+import {typography as typographyAutoReviewRelayNetwork} from '../animations/administrative-law/19/review-relay-network/animation.meta';
 import {typography as typographyAutoLegalReasoning} from '../animations/theoretical-law/01/legal-reasoning/animation.meta';
 import {typography as typographyFam} from '../animations/theoretical-law/01/legal-families/animation.meta';
 import {typography as typographyCsg} from '../animations/civil-procedure/12/compulsory-summons-gate/animation.meta';
@@ -336,6 +337,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'evidence-vitrine-museum': {metadata: typographyAutoEvidenceVitrineMuseum, scope: {animationId: 'evidence-vitrine-museum', subject: 'administrative-law', topic: '16'}},
   'application-silk-loom': {metadata: typographyAutoApplicationSilkLoom, scope: {animationId: 'application-silk-loom', subject: 'administrative-law', topic: '17'}},
   'judgment-execution-clockwork': {metadata: typographyAutoJudgmentExecutionClockwork, scope: {animationId: 'judgment-execution-clockwork', subject: 'administrative-law', topic: '18'}},
+  'review-relay-network': {metadata: typographyAutoReviewRelayNetwork, scope: {animationId: 'review-relay-network', subject: 'administrative-law', topic: '19'}},
   'legal-reasoning': {metadata: typographyAutoLegalReasoning, scope: {animationId: 'legal-reasoning', subject: 'theoretical-law', topic: '01'}},
   'legal-families': {metadata: typographyFam, scope: {animationId: 'legal-families', subject: 'theoretical-law', topic: '01'}},
   'compulsory-summons-gate': {metadata: typographyCsg, scope: {animationId: 'compulsory-summons-gate', subject: 'civil-procedure', topic: '12'}},
