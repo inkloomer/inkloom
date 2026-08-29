@@ -1,0 +1,120 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 4,
+  "scenes": [
+    {
+      "id": "war-definition",
+      "export": "WarDefinitionScene",
+      "layout": "intent-marker-board-with-neutrality-strip",
+      "anchor": "boundary",
+      "grammar": [
+        "war-start-and-end-hang-on-declarations",
+        "neutrality-owes-forbearance-prevention-tolerance"
+      ],
+      "textTreatments": [
+        "label-block",
+        "thin-underline",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "locator"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "intent-marker",
+        "neutrality-duties",
+        "neutrality-no-support"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "war-consequences",
+      "export": "WarConsequencesScene",
+      "layout": "four-consequence-bands-with-conflict-caveat",
+      "anchor": "flow-path",
+      "grammar": [
+        "four-consequence-bands-descend-from-relations-to-property",
+        "armed-conflict-yields-none-of-them"
+      ],
+      "textTreatments": [
+        "label-block",
+        "soft-highlight",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "locator"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "consequence-relations",
+        "consequence-treaties",
+        "consequence-trade",
+        "consequence-property",
+        "conflict-no-effect"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "combat-limits",
+      "export": "CombatLimitsScene",
+      "layout": "weapons-grid-with-perfidy-strip",
+      "anchor": "typographic-sequence",
+      "grammar": [
+        "five-weapon-bans-line-the-ammunition-shelf",
+        "perfidy-banned-but-ruses-allowed"
+      ],
+      "textTreatments": [
+        "label-block",
+        "soft-highlight",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "locator"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "banned-weapons",
+        "mine-exception",
+        "three-prohibitions",
+        "perfidy-rule"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "geneva-icc",
+      "export": "GenevaIccScene",
+      "layout": "geneva-panel-with-icc-registry",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "geneva-shields-the-weak-icc-punishes-individuals",
+        "four-jurisdiction-bases-open-the-court-door"
+      ],
+      "textTreatments": [
+        "label-block",
+        "soft-highlight",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "spatial"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "geneva-humanity",
+        "pow-repatriation",
+        "icc-four-points",
+        "icc-crimes",
+        "icc-jurisdiction"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

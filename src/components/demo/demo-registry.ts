@@ -140,6 +140,8 @@ import {LawOfTreaties} from '../../animations/international-law/06/law-of-treati
 import {DURATION_FRAMES as LAW_OF_TREATIES_DURATION_FRAMES, FPS as LAW_OF_TREATIES_FPS} from '../../animations/international-law/06/law-of-treaties/remotion/storyboard';
 import {DisputeSettlement} from '../../animations/international-law/07/dispute-settlement/remotion/DisputeSettlement';
 import {DURATION_FRAMES as DISPUTE_SETTLEMENT_DURATION_FRAMES, FPS as DISPUTE_SETTLEMENT_FPS} from '../../animations/international-law/07/dispute-settlement/remotion/storyboard';
+import {WarArmedConflict} from '../../animations/international-law/08/war-armed-conflict/remotion/WarArmedConflict';
+import {DURATION_FRAMES as WAR_ARMED_CONFLICT_DURATION_FRAMES, FPS as WAR_ARMED_CONFLICT_FPS} from '../../animations/international-law/08/war-armed-conflict/remotion/storyboard';
 import {getAnimationTypographyConfiguration} from '../../typography/animation-registry';
 import {withAnimationTypography} from '../../typography/animation-provider';
 import {DURATION_FRAMES as FIGHT_DURATION_FRAMES, FPS as FIGHT_FPS} from '../../animations/criminal/22/fight-defense-diagram/remotion/storyboard';
@@ -236,6 +238,7 @@ export const STYLE_DEMOS = [
   {id: 'international-law-05-diplomatic-consular', slug: 'diplomatic-consular', title: '鸢尾紫章', direction: 'Iris Violet Chancery', component: withAnimationTypography(DiplomaticConsular, getAnimationTypographyConfiguration('diplomatic-consular')), href: '/inkloom/objective/international-law/05/diplomatic-consular/', durationInFrames: DIPLOMATIC_CONSULAR_DURATION_FRAMES, fps: DIPLOMATIC_CONSULAR_FPS},
   {id: 'international-law-06-law-of-treaties', slug: 'law-of-treaties', title: '钢蓝墨水条约案', direction: 'Steel-Ink Treaty Desk', component: withAnimationTypography(LawOfTreaties, getAnimationTypographyConfiguration('law-of-treaties')), href: '/inkloom/objective/international-law/06/law-of-treaties/', durationInFrames: LAW_OF_TREATIES_DURATION_FRAMES, fps: LAW_OF_TREATIES_FPS},
   {id: 'international-law-07-dispute-settlement', slug: 'dispute-settlement', title: '和平宫仲裁席', direction: 'Peace Palace Bench', component: withAnimationTypography(DisputeSettlement, getAnimationTypographyConfiguration('dispute-settlement')), href: '/inkloom/objective/international-law/07/dispute-settlement/', durationInFrames: DISPUTE_SETTLEMENT_DURATION_FRAMES, fps: DISPUTE_SETTLEMENT_FPS},
+  {id: 'international-law-08-war-armed-conflict', slug: 'war-armed-conflict', title: '战地公报台', direction: 'Field Bulletin Desk', component: withAnimationTypography(WarArmedConflict, getAnimationTypographyConfiguration('war-armed-conflict')), href: '/inkloom/objective/international-law/08/war-armed-conflict/', durationInFrames: WAR_ARMED_CONFLICT_DURATION_FRAMES, fps: WAR_ARMED_CONFLICT_FPS},
   {id: 'theoretical-law-01-marxist-law-essence', slug: 'marxist-law-essence', title: '蓝晒制图', direction: 'Cyanotype Drafting', component: MarxistLawEssence, href: '/inkloom/objective/theoretical-law/01/marxist-law-essence/', durationInFrames: MARXIST_LAW_DURATION_FRAMES, fps: MARXIST_LAW_FPS},
   {id: 'theoretical-law-01-features-of-law', slug: 'features-of-law', title: '标本陈列柜', direction: 'Specimen Gallery Cabinet', component: FeaturesOfLaw, href: '/inkloom/objective/theoretical-law/01/features-of-law/', durationInFrames: FEATURES_OF_LAW_DURATION_FRAMES, fps: FEATURES_OF_LAW_FPS},
   {id: 'theoretical-law-01-functions-of-law', slug: 'functions-of-law', title: '灯塔信号站', direction: 'Night Beacon Station', component: FunctionsOfLaw, href: '/inkloom/objective/theoretical-law/01/functions-of-law/', durationInFrames: FUNCTIONS_OF_LAW_DURATION_FRAMES, fps: FUNCTIONS_OF_LAW_FPS},
@@ -321,6 +324,7 @@ const DEMO_ADDED_AT: Record<(typeof STYLE_DEMOS)[number]['id'], string> = {
   'international-law-05-diplomatic-consular': '2026-08-29T14:00:00+08:00',
   'international-law-06-law-of-treaties': '2026-08-29T15:00:00+08:00',
   'international-law-07-dispute-settlement': '2026-08-29T16:00:00+08:00',
+  'international-law-08-war-armed-conflict': '2026-08-29T17:00:00+08:00',
   'theoretical-law-01-marxist-law-essence': '2026-08-29T13:40:00+08:00',
   'theoretical-law-01-features-of-law': '2026-08-29T15:10:00+08:00',
   'theoretical-law-01-functions-of-law': '2026-08-29T16:40:00+08:00',

@@ -1,0 +1,16 @@
+{
+  "directionId": "field-bulletin-desk",
+  "family": "field-bulletin-desk",
+  "palette": "dark olive field desk, telegram cream, khaki dispatch, censor red verdicts",
+  "typography": "WenKai bulletin headings with censor stamps, khaki wire plaques and cream text",
+  "composition": "field desk with square dispatch rail, consequence bands and weapon shelves",
+  "surface": "olive panels with ruled telegram lines, no light cards",
+  "motion": "dispatch-by-dispatch entries with stamped censorship verdicts",
+  "transition": "content swap under a persistent bulletin frame and dispatch rail",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/international-law/08/war-armed-conflict/",
+    "title": "战地公报台"
+  }
+}
