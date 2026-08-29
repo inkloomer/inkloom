@@ -1,0 +1,16 @@
+{
+  "directionId": "signal-tower-nonprosecution",
+  "family": "signal-tower-family",
+  "palette": "deep signal-tower teal, enamel cream panels, signal amber arms, stop vermilion and go green verdicts, signal blue accents",
+  "typography": "WenKai signal-box headings with arm chips and enamel banners",
+  "composition": "three signal arms with a special nonprosecution banner, a six-gate procedure grid with a memory banner, and four relief columns closing into a standing banner",
+  "surface": "a signal tower board with diagonal amber weave, enamel panels and verdict chips",
+  "motion": "signal arms rise in reading order, procedure gates fill the grid row by row, and relief columns stamp their routes before the banners land",
+  "transition": "the tower backdrop and weave persist while the enamel panels are replaced",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/criminal-procedure/13/nonprosecution-signal-tower/",
+    "title": "四向信号塔"
+  }
+}

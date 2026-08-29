@@ -1,0 +1,72 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "three-kinds-arms",
+      "export": "ThreeKindsScene",
+      "layout": "three-signal-arms-with-special-note",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "statutory-nonprosecution-must-follow-sixteen-circumstances",
+        "discretionary-needs-minor-crime-and-exempt-punishment",
+        "insufficient-evidence-splits-natural-and-excluded-lanes",
+        "new-evidence-can-reopen-prosecution"
+      ],
+      "textTreatments": ["chip", "thin-underline", "soft-highlight"],
+      "focalChannels": ["contrast", "enclosure", "spatial", "locator"],
+      "tokens": [],
+      "finalKnowledge": [
+        "statutory-arm",
+        "discretionary-arm",
+        "insufficient-arm",
+        "special-nonprosecution-note"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "procedure-gates",
+      "export": "ProcedureGatesScene",
+      "layout": "six-gate-grid-with-refile-banner",
+      "anchor": "typographic-sequence",
+      "grammar": [
+        "public-official-crimes-need-higher-approval",
+        "decision-takes-effect-on-public-announcement",
+        "wrong-decisions-are-revoked-never-auto-expire",
+        "refile-flows-back-to-investigation-with-property-handled"
+      ],
+      "textTreatments": ["chip", "thin-underline", "label-block"],
+      "focalChannels": ["contrast", "enclosure", "locator", "annotation"],
+      "tokens": [],
+      "finalKnowledge": [
+        "six-gate-grid",
+        "refile-banner"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "relief-fork-tower",
+      "export": "ReliefForkScene",
+      "layout": "four-relief-columns-with-standing-banner",
+      "anchor": "role-pair",
+      "grammar": [
+        "police-climb-review-then-recheck",
+        "victim-picks-appeal-or-direct-suit",
+        "court-filing-stops-procuratorate-review",
+        "only-discretionary-released-get-appeal"
+      ],
+      "textTreatments": ["chip", "thin-underline", "external-negation"],
+      "focalChannels": ["contrast", "enclosure", "connector", "annotation"],
+      "tokens": [],
+      "finalKnowledge": [
+        "police-relief",
+        "victim-relief",
+        "released-relief",
+        "commission-relief",
+        "standing-banner"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

@@ -30,6 +30,7 @@ import {typography as typographyCpViaduct} from '../animations/criminal-procedur
 import {typography as typographyCpEscapement} from '../animations/criminal-procedure/10/period-escapement-works/animation.meta';
 import {typography as typographyCpGatehouse} from '../animations/criminal-procedure/11/case-filing-gatehouse/animation.meta';
 import {typography as typographyCpLoop} from '../animations/criminal-procedure/12/supplement-invest-loop/animation.meta';
+import {typography as typographyCpTower} from '../animations/criminal-procedure/13/nonprosecution-signal-tower/animation.meta';
 import {typography as typography100} from '../animations/international-law/01/sources-of-international-law/animation.meta';
 import {typography as typographyIl02} from '../animations/international-law/02/subjects-responsibility/animation.meta';
 import {typography as typographyIl03} from '../animations/international-law/03/spatial-regimes/animation.meta';
@@ -243,6 +244,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'period-escapement-works': {metadata: typographyCpEscapement, scope: {animationId: 'period-escapement-works', subject: 'criminal-procedure', topic: '10'}},
   'case-filing-gatehouse': {metadata: typographyCpGatehouse, scope: {animationId: 'case-filing-gatehouse', subject: 'criminal-procedure', topic: '11'}},
   'supplement-invest-loop': {metadata: typographyCpLoop, scope: {animationId: 'supplement-invest-loop', subject: 'criminal-procedure', topic: '12'}},
+  'nonprosecution-signal-tower': {metadata: typographyCpTower, scope: {animationId: 'nonprosecution-signal-tower', subject: 'criminal-procedure', topic: '13'}},
   'sources-of-international-law': {metadata: typography100, scope: {animationId: 'sources-of-international-law', subject: 'international-law', topic: '01'}},
   'subjects-responsibility': {metadata: typographyIl02, scope: {animationId: 'subjects-responsibility', subject: 'international-law', topic: '02'}},
   'spatial-regimes': {metadata: typographyIl03, scope: {animationId: 'spatial-regimes', subject: 'international-law', topic: '03'}},

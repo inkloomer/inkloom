@@ -1,0 +1,70 @@
+{
+  "animationId": "nonprosecution-signal-tower",
+  "compositionId": "NonprosecutionSignalTower",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-29T09:35:33.609Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 519,
+      "frameCount": 260,
+      "id": "three-kinds-arms",
+      "number": "01",
+      "startFrame": 0,
+      "title": "三面信号臂",
+      "durationMs": 8667,
+      "file": "three-kinds-arms.avif",
+      "fileSize": 610543,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "5f63cdc16674eb6d46898cc58a786d050ae91fd1877251130e9fa75c29a7746f",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "4e84040702a46ece68955281837a4907421b73baeef03277281987364e25ad8a"
+    },
+    {
+      "endFrame": 1059,
+      "frameCount": 270,
+      "id": "procedure-gates",
+      "number": "02",
+      "startFrame": 520,
+      "title": "程序六道闸",
+      "durationMs": 9000,
+      "file": "procedure-gates.avif",
+      "fileSize": 565459,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "4a3ca52db8dad98689e1d7000033bb14906d6ff05183125ca0271e07e0454186",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "4e84040702a46ece68955281837a4907421b73baeef03277281987364e25ad8a"
+    },
+    {
+      "endFrame": 1559,
+      "frameCount": 250,
+      "id": "relief-fork-tower",
+      "number": "03",
+      "startFrame": 1060,
+      "title": "救济四向",
+      "durationMs": 8333,
+      "file": "relief-fork-tower.avif",
+      "fileSize": 498535,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "53628cd87d51a49fc91205cba3a3caa8a4ebcd1bc8eb34bb9ed25cf29c4c63e7",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "4e84040702a46ece68955281837a4907421b73baeef03277281987364e25ad8a"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "4e84040702a46ece68955281837a4907421b73baeef03277281987364e25ad8a",
+  "targetFps": 30,
+  "totalFileSize": 1674537
+}

@@ -34,6 +34,8 @@ import {CaseFilingGatehouse} from '../../animations/criminal-procedure/11/case-f
 import {DURATION_FRAMES as FILING_GATEHOUSE_DURATION_FRAMES, FPS as FILING_GATEHOUSE_FPS} from '../../animations/criminal-procedure/11/case-filing-gatehouse/remotion/storyboard';
 import {SupplementInvestLoop} from '../../animations/criminal-procedure/12/supplement-invest-loop/remotion/SupplementInvestLoop';
 import {DURATION_FRAMES as SUPPLEMENT_LOOP_DURATION_FRAMES, FPS as SUPPLEMENT_LOOP_FPS} from '../../animations/criminal-procedure/12/supplement-invest-loop/remotion/storyboard';
+import {NonprosecutionSignalTower} from '../../animations/criminal-procedure/13/nonprosecution-signal-tower/remotion/NonprosecutionSignalTower';
+import {DURATION_FRAMES as NONPROSECUTION_TOWER_DURATION_FRAMES, FPS as NONPROSECUTION_TOWER_FPS} from '../../animations/criminal-procedure/13/nonprosecution-signal-tower/remotion/storyboard';
 import {PleaLeniencyCaliper} from '../../animations/criminal-procedure/02/plea-leniency-caliper/remotion/PleaLeniencyCaliper';
 import {DURATION_FRAMES as PLEA_LENIENTY_DURATION_FRAMES, FPS as PLEA_LENIENTY_FPS} from '../../animations/criminal-procedure/02/plea-leniency-caliper/remotion/storyboard';
 import {ThirdPartyRevocation} from '../../animations/civil-procedure/07/third-party-revocation/remotion/ThirdPartyRevocation';
@@ -223,6 +225,7 @@ export const STYLE_DEMOS = [
   {id: 'criminal-procedure-10-period-escapement-works', slug: 'period-escapement-works', title: '机械日历坊', direction: 'Escapement Works Periods', component: PeriodEscapementWorks, href: '/inkloom/objective/criminal-procedure/10/period-escapement-works/', durationInFrames: PERIOD_ESCAPEMENT_DURATION_FRAMES, fps: PERIOD_ESCAPEMENT_FPS},
   {id: 'criminal-procedure-11-case-filing-gatehouse', slug: 'case-filing-gatehouse', title: '闸门登记所', direction: 'Gatehouse Registry Filing', component: CaseFilingGatehouse, href: '/inkloom/objective/criminal-procedure/11/case-filing-gatehouse/', durationInFrames: FILING_GATEHOUSE_DURATION_FRAMES, fps: FILING_GATEHOUSE_FPS},
   {id: 'criminal-procedure-12-supplement-invest-loop', slug: 'supplement-invest-loop', title: '回旋检验环', direction: 'Inspection Loop Supplement', component: SupplementInvestLoop, href: '/inkloom/objective/criminal-procedure/12/supplement-invest-loop/', durationInFrames: SUPPLEMENT_LOOP_DURATION_FRAMES, fps: SUPPLEMENT_LOOP_FPS},
+  {id: 'criminal-procedure-13-nonprosecution-signal-tower', slug: 'nonprosecution-signal-tower', title: '四向信号塔', direction: 'Signal Tower Nonprosecution', component: NonprosecutionSignalTower, href: '/inkloom/objective/criminal-procedure/13/nonprosecution-signal-tower/', durationInFrames: NONPROSECUTION_TOWER_DURATION_FRAMES, fps: NONPROSECUTION_TOWER_FPS},
   {id: 'criminal-procedure-03-organs-relay-map', slug: 'organs-relay-map', title: '青砖驿路图', direction: 'Slate Courier Relay', component: OrgansRelayMap, href: '/inkloom/objective/criminal-procedure/03/organs-relay-map/', durationInFrames: ORGANS_RELAY_DURATION_FRAMES, fps: ORGANS_RELAY_FPS},
   {id: 'criminal-procedure-02-plea-leniency-caliper', slug: 'plea-leniency-caliper', title: '认罚量尺工坊', direction: 'Maple Caliper Workshop', component: PleaLeniencyCaliper, href: '/inkloom/objective/criminal-procedure/02/plea-leniency-caliper/', durationInFrames: PLEA_LENIENTY_DURATION_FRAMES, fps: PLEA_LENIENTY_FPS},
   {id: 'theoretical-law-01-concept-of-law-dispute', slug: 'concept-of-law-dispute', title: '漆屏对峙', direction: 'Lacquer Twin-Screen', component: ConceptOfLawDispute, href: '/inkloom/objective/theoretical-law/01/concept-of-law-dispute/', durationInFrames: CONCEPT_OF_LAW_DURATION_FRAMES, fps: CONCEPT_OF_LAW_FPS},
@@ -307,6 +310,7 @@ const DEMO_ADDED_AT: Record<(typeof STYLE_DEMOS)[number]['id'], string> = {
   'criminal-procedure-10-period-escapement-works': '2026-08-29T17:50:00+08:00',
   'criminal-procedure-11-case-filing-gatehouse': '2026-08-29T18:20:00+08:00',
   'criminal-procedure-12-supplement-invest-loop': '2026-08-29T18:50:00+08:00',
+  'criminal-procedure-13-nonprosecution-signal-tower': '2026-08-29T19:20:00+08:00',
   'criminal-procedure-03-organs-relay-map': '2026-08-29T01:30:00+08:00',
   'criminal-procedure-02-plea-leniency-caliper': '2026-08-29T01:05:00+08:00',
   'theoretical-law-01-concept-of-law-dispute': '2026-08-28T23:30:00+08:00',
