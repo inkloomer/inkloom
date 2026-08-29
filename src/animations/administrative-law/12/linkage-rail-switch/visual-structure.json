@@ -1,26 +1,27 @@
 {
   "version": 1,
   "playerControlSafeBottom": 160,
-  "minimumDistinctLayouts": 4,
+  "minimumDistinctLayouts": 5,
   "scenes": [
     {
       "id": "three-mode-overview",
       "export": "ThreeModeOverviewScene",
-      "layout": "three-metro-lines-overview",
+      "layout": "source-basin-three-waterways",
       "anchor": "flow-path",
       "grammar": [
-        "three-linkage-modes-run-as-three-parallel-metro-lines",
-        "free-choice-is-jade-mandatory-coral-final-amber"
+        "dispute-source-basin-feeds-three-waterways",
+        "each-waterway-carries-one-linkage-mode-with-its-own-lock",
+        "exceptions-bypass-note-marks-the-free-pass-lane"
       ],
       "textTreatments": [
         "label-block",
-        "thin-underline",
-        "stamp"
+        "chip",
+        "thin-underline"
       ],
       "focalChannels": [
-        "contrast",
+        "spatial",
         "connector",
-        "spatial"
+        "contrast"
       ],
       "tokens": [],
       "finalKnowledge": [
@@ -34,16 +35,17 @@
     {
       "id": "free-choice-track",
       "export": "FreeChoiceTrackScene",
-      "layout": "dual-track-free-choice-platform",
-      "anchor": "flow-path",
+      "layout": "twin-channel-commitment-lock",
+      "anchor": "comparison-axis",
       "grammar": [
-        "a-dispute-train-runs-along-two-parallel-tracks",
-        "choice-locks-after-first-pick"
+        "a-dispute-barge-commits-to-exactly-one-of-two-channels",
+        "one-way-commitment-gate-locks-the-chosen-channel",
+        "no-parallel-sign-forbids-simultaneous-locking"
       ],
       "textTreatments": [
         "label-block",
-        "thin-underline",
-        "external-negation"
+        "external-negation",
+        "thin-underline"
       ],
       "focalChannels": [
         "contrast",
@@ -59,22 +61,23 @@
         "ministry-level-rule"
       ],
       "statefulObjects": [
-        "choice-train"
+        "choice-barge"
       ]
     },
     {
       "id": "mandatory-first-track",
       "export": "MandatoryFirstTrackScene",
-      "layout": "mandatory-first-concourse",
+      "layout": "six-sluice-intake-with-bypass",
       "anchor": "boundary",
       "grammar": [
-        "six-dispute-categories-pass-through-the-review-gate",
-        "three-exceptions-bypass-the-gate"
+        "six-dispute-streams-must-enter-the-mandatory-review-lock",
+        "three-exception-streams-bypass-through-the-free-channel",
+        "lock-keeper-plaque-names-every-gated-category"
       ],
       "textTreatments": [
         "label-block",
         "stamp",
-        "external-negation"
+        "chip"
       ],
       "focalChannels": [
         "contrast",
@@ -96,11 +99,12 @@
     {
       "id": "final-review-track",
       "export": "FinalReviewTrackScene",
-      "layout": "final-stop-terminal-platform",
+      "layout": "closed-terminal-basin",
       "anchor": "flow-target",
       "grammar": [
-        "four-immigration-measures-arrive-at-the-final-terminal",
-        "the-review-decision-is-the-end-of-the-line"
+        "four-immigration-measure-barges-enter-the-closed-basin",
+        "terminal-wall-seals-the-basin-without-litigation-outlet",
+        "scope-annotation-limits-the-basin-to-foreigner-measures"
       ],
       "textTreatments": [
         "stamp",
@@ -110,7 +114,7 @@
       "focalChannels": [
         "contrast",
         "enclosure",
-        "icon"
+        "spatial"
       ],
       "tokens": [],
       "finalKnowledge": [
@@ -127,11 +131,11 @@
     {
       "id": "switchyard-traps",
       "export": "SwitchyardTrapsScene",
-      "layout": "eight-judgment-interchange-signals",
+      "layout": "lock-keeper-signal-board",
       "anchor": "typographic-sequence",
       "grammar": [
-        "eight-exam-statements-route-to-jade-or-coral-signals",
-        "review-gate-exceptions-light-up-jade"
+        "eight-exam-cases-route-to-pass-or-lock-signals",
+        "keeper-board-distills-the-two-step-judgment"
       ],
       "textTreatments": [
         "stamp",

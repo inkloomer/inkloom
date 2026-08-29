@@ -3,22 +3,25 @@ import { AbsoluteFill, Easing, interpolate, useCurrentFrame } from "remotion";
 import { TimelineSequence } from "../../../../shared/remotion-runtime";
 import { SCENES } from "./storyboard";
 
-const C = {
-  concrete: "#F2F4F0",
-  panel: "#FCFDF9",
-  ink: "#25313A",
-  soft: "#66727D",
-  line: "#C6CECA",
-  rail: "#9AA6AE",
-  jade: "#0F8B7D",
-  jadeInk: "#075D53",
-  blue: "#2F6FA7",
-  blueInk: "#1E4E78",
-  coral: "#D45B51",
-  coralInk: "#8E332D",
-  amber: "#D89B24",
-  amberInk: "#7A5612",
-  white: "#FFFFFF",
+// Canal-lock waterway chart: pale nautical chart, teal waterways, slate lock gates
+const W = {
+  chart: "#e9f1f0",
+  panel: "#f8fcfb",
+  ink: "#1d3a3f",
+  soft: "#567679",
+  line: "#bcd4d2",
+  waterDeep: "#1f6b7a",
+  water: "#2e8797",
+  waterLight: "#9ccfd4",
+  lock: "#3c5a63",
+  lockInk: "#24444c",
+  free: "#2f7d5a",
+  freeInk: "#1d5540",
+  brick: "#c25b3a",
+  brickInk: "#8a3a22",
+  brass: "#8a6d2f",
+  brassInk: "#5f4c1d",
+  white: "#ffffff",
 };
 const PLAYER_CONTROL_SAFE_BOTTOM = 160;
 
@@ -51,15 +54,13 @@ const Shell = ({
     data-player-control-safe-bottom={PLAYER_CONTROL_SAFE_BOTTOM}
     className="font-animation-body"
     style={{
-      background: C.concrete,
-      color: C.ink,
+      background: W.chart,
+      color: W.ink,
       overflow: "hidden",
       backgroundImage:
-        "radial-gradient(circle at 86% 8%,rgba(15,139,125,.10),transparent 28%)," +
-        "radial-gradient(circle at 6% 96%,rgba(216,155,36,.12),transparent 26%)," +
-        "linear-gradient(rgba(37,49,58,.045) 1px,transparent 1px)," +
-        "linear-gradient(90deg,rgba(37,49,58,.045) 1px,transparent 1px)",
-      backgroundSize: "auto,auto,52px 52px,52px 52px",
+        "radial-gradient(circle at 90% 6%,rgba(31,107,122,.10),transparent 26%)," +
+        "radial-gradient(circle at 4% 94%,rgba(138,109,47,.10),transparent 24%)," +
+        "repeating-radial-gradient(circle at 50% 120%,transparent 0 58px,rgba(31,107,122,.05) 58px 60px)",
     }}
   >
     <header
@@ -72,25 +73,25 @@ const Shell = ({
         display: "flex",
         alignItems: "center",
         gap: 22,
-        borderBottom: `4px solid ${C.jade}`,
+        borderBottom: `4px solid ${W.lock}`,
       }}
     >
       <div
         style={{
           width: 166,
           height: 76,
-          border: `4px solid ${C.jade}`,
-          backgroundColor: C.panel,
+          border: `4px solid ${W.lock}`,
+          backgroundColor: W.panel,
           display: "grid",
           placeItems: "center",
           fontSize: 21,
           fontWeight: 950,
-          color: C.jadeInk,
+          color: W.lockInk,
           letterSpacing: 2,
           fontFamily: "var(--inkloom-animation-mono)",
         }}
       >
-        ROUTE {code}
+        航道 {code}
       </div>
       <h1
         className="font-animation-title"
@@ -104,11 +105,11 @@ const Shell = ({
           fontSize: 18,
           fontWeight: 950,
           letterSpacing: 3,
-          color: C.soft,
+          color: W.soft,
           fontFamily: "var(--inkloom-animation-label)",
         }}
       >
-        LINKAGE · DAYLIGHT INTERCHANGE
+        LINKAGE · CANAL LOCK CHART
       </div>
     </header>
     <main
@@ -125,29 +126,78 @@ const Shell = ({
   </AbsoluteFill>
 );
 
-const Sign = ({
-  children,
-  color = C.jade,
+// 水路带：渠道水体 + 闸门头
+const Waterway = ({
+  color = W.water,
+  gate = W.lock,
   style,
-  finalKnowledge,
+}: {
+  color?: string;
+  gate?: string;
+  style?: React.CSSProperties;
+}) => (
+  <div
+    style={{
+      position: "relative",
+      height: 16,
+      borderRadius: 8,
+      background: `linear-gradient(90deg,${gate} 0 64px,${color} 64px)`,
+      boxShadow: `inset 0 3px 0 rgba(255,255,255,0.35)`,
+      ...style,
+    }}
+  />
+);
+
+// 闸门图标：两扇对开闸板
+const LockGateIcon = ({ color = W.lock, size = 30, style }: { color?: string; size?: number; style?: React.CSSProperties }) => (
+  <div
+    style={{
+      width: size,
+      height: size * 0.78,
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "flex-end",
+      gap: 3,
+      ...style,
+    }}
+  >
+    <div
+      style={{
+        width: size * 0.4,
+        height: size * 0.78,
+        backgroundColor: color,
+        clipPath: "polygon(0 0, 100% 22%, 100% 100%, 0 100%)",
+      }}
+    />
+    <div
+      style={{
+        width: size * 0.4,
+        height: size * 0.78,
+        backgroundColor: color,
+        clipPath: "polygon(0 22%, 100% 0, 100% 100%, 0 100%)",
+      }}
+    />
+  </div>
+);
+
+const SignalCard = ({
+  children,
+  color = W.lock,
+  style,
+  ...rest
 }: {
   children: React.ReactNode;
   color?: string;
   style?: React.CSSProperties;
-  finalKnowledge?: string;
-}) => (
+} & Record<string, string | undefined>) => (
   <div
-    data-final-knowledge={finalKnowledge}
+    {...rest}
     style={{
-      border: `3px solid ${color}`,
-      background: `${color}14`,
-      boxShadow: `0 0 0 4px ${color}14`,
-      padding: "13px 16px",
-      fontSize: 21,
-      fontWeight: 850,
-      lineHeight: 1.32,
-      color: C.ink,
-      borderRadius: 12,
+      border: `3.5px solid ${color}`,
+      background: W.panel,
+      borderRadius: 14,
+      padding: "14px 18px",
+      boxShadow: `0 6px 0 ${color}22`,
       ...style,
     }}
   >
@@ -155,69 +205,34 @@ const Sign = ({
   </div>
 );
 
-const Track = ({ color = C.rail, style }: { color?: string; style?: React.CSSProperties }) => (
-  <div
-    style={{
-      height: 9,
-      borderRadius: 5,
-      background: `repeating-linear-gradient(90deg,${color} 0 24px,transparent 24px 40px)`,
-      ...style,
-    }}
-  />
-);
-
-const StationDot = ({ color = C.jade, style }: { color?: string; style?: React.CSSProperties }) => (
-  <div
-    style={{
-      position: "absolute",
-      width: 22,
-      height: 22,
-      borderRadius: "50%",
-      border: `5px solid ${color}`,
-      backgroundColor: C.panel,
-      ...style,
-    }}
-  />
-);
-
-const Signal = ({
-  label,
-  color = C.jade,
-  sub,
+const Plate = ({
+  children,
+  color = W.lock,
+  filled = true,
   style,
-  finalKnowledge,
 }: {
-  label: string;
+  children: React.ReactNode;
   color?: string;
-  sub?: string;
+  filled?: boolean;
   style?: React.CSSProperties;
-  finalKnowledge?: string;
 }) => (
-  <div
-    data-final-knowledge={finalKnowledge}
+  <span
     style={{
-      border: `4px solid ${color}`,
-      background: `${color}10`,
-      borderRadius: 14,
-      padding: "16px 18px",
+      display: "inline-block",
+      padding: "5px 16px",
+      backgroundColor: filled ? color : `${color}16`,
+      border: `3px solid ${color}`,
+      borderRadius: 8,
+      color: filled ? W.white : color,
+      fontSize: 22,
+      fontWeight: 950,
+      fontFamily: "var(--inkloom-animation-label)",
+      letterSpacing: 2,
       ...style,
     }}
   >
-    <div
-      className="font-animation-title"
-      style={{
-        fontSize: 27,
-        fontWeight: 950,
-        color,
-        borderBottom: `4px solid ${color}`,
-        display: "inline-block",
-        paddingBottom: 6,
-      }}
-    >
-      {label}
-    </div>
-    {sub && <div style={{ fontSize: 21, fontWeight: 850, marginTop: 10, lineHeight: 1.34 }}>{sub}</div>}
-  </div>
+    {children}
+  </span>
 );
 
 export const ThreeModeOverviewScene = () => {
@@ -226,19 +241,19 @@ export const ThreeModeOverviewScene = () => {
   const modes = [
     {
       label: "自由选择",
-      color: C.jade,
+      color: W.free,
       sub: "复议或诉讼皆可 · 议后可诉 · 一经选择从一而终 · 不能同时进行",
       knowledge: "mode-free-choice",
     },
     {
       label: "复议前置",
-      color: C.coral,
+      color: W.brick,
       sub: "必须先申请复议，不服复议决定再起诉（特定争议）",
       knowledge: "mode-mandatory",
     },
     {
       label: "复议终局",
-      color: C.amber,
+      color: W.brass,
       sub: "复议决定即为最终决定，不可再诉",
       knowledge: "mode-final",
     },
@@ -246,24 +261,25 @@ export const ThreeModeOverviewScene = () => {
   return (
     <Shell code="01" title="三模式总览：自由选择、复议前置、复议终局">
       <div
-        data-layout="three-metro-lines-overview"
+        data-layout="source-basin-three-waterways"
         data-visual-anchor="flow-path"
-        data-visual-grammar="three-linkage-modes-run-as-three-parallel-metro-lines,free-choice-is-jade-mandatory-coral-final-amber"
-        data-text-treatments="label-block,thin-underline,stamp"
+        data-visual-grammar="dispute-source-basin-feeds-three-waterways,each-waterway-carries-one-linkage-mode-with-its-own-lock,exceptions-bypass-note-marks-the-free-pass-lane"
+        data-text-treatments="label-block,chip,thin-underline"
         data-focal-rule="three-linkage-modes-between-review-and-litigation"
-        data-focal-channels="contrast,connector,spatial"
+        data-focal-channels="spatial,connector,contrast"
         style={{ position: "absolute", inset: 16 }}
       >
+        {/* 源头水柜：行政争议 */}
         <div
           style={{
             position: "absolute",
-            left: 70,
-            top: 54,
-            width: 250,
-            height: 590,
-            border: `4px solid ${C.rail}`,
-            borderRadius: 18,
-            backgroundColor: C.panel,
+            left: 40,
+            top: 60,
+            width: 260,
+            height: 560,
+            border: `4px solid ${W.lock}`,
+            borderRadius: "18px 18px 90px 18px",
+            background: `linear-gradient(180deg,${W.panel} 0 42%,${W.waterLight} 42% 100%)`,
             display: "grid",
             placeItems: "center",
             textAlign: "center",
@@ -274,43 +290,62 @@ export const ThreeModeOverviewScene = () => {
             <div className="font-animation-title" style={{ fontSize: 30, fontWeight: 950 }}>
               行政争议
             </div>
-            <div style={{ fontSize: 21, fontWeight: 800, color: C.soft, marginTop: 10, lineHeight: 1.45 }}>
+            <div style={{ fontSize: 21, fontWeight: 800, color: W.soft, marginTop: 10, lineHeight: 1.45 }}>
               行政复议与诉讼
               <br />
               如何衔接？
             </div>
           </div>
         </div>
+
         {modes.map((mode, index) => (
           <React.Fragment key={mode.label}>
-            <StationDot color={mode.color} style={{ left: 338, top: 44 + index * 185 }} />
-            <Track
-              color={mode.color}
-              style={{ position: "absolute", left: 348, top: 52 + index * 185, width: 1426, ...enter(f, 12 + index * 12, 0, 10) }}
-            />
-            <Signal
-              label={mode.label}
-              color={mode.color}
-              sub={mode.sub}
-              finalKnowledge={mode.knowledge}
+            <div
               style={{
                 position: "absolute",
-                left: 426,
-                top: 8 + index * 185,
-                width: 1348,
-                minHeight: 150,
-                ...enter(f, 16 + index * 12),
+                left: 300,
+                top: 108 + index * 178,
+                width: 118,
+                height: 10,
+                borderRadius: 5,
+                background: `linear-gradient(90deg,${W.waterLight},${mode.color})`,
+                ...enter(f, 10 + index * 12, -20, 0),
               }}
             />
+            <LockGateIcon color={mode.color} style={{ position: "absolute", left: 418, top: 84 + index * 178, ...enter(f, 12 + index * 12) }} />
+            <Waterway color={mode.color} gate={mode.color} style={{ position: "absolute", left: 452, top: 100 + index * 178, width: 1320, ...enter(f, 12 + index * 12, 0, 8) }} />
+            <SignalCard
+              color={mode.color}
+              data-final-knowledge={mode.knowledge}
+              style={{
+                position: "absolute",
+                left: 480,
+                top: 132 + index * 178,
+                width: 1290,
+                minHeight: 118,
+                ...enter(f, 18 + index * 12),
+              }}
+            >
+              <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
+                <span
+                  className="font-animation-title"
+                  style={{ fontSize: 29, fontWeight: 950, color: mode.color, borderBottom: `4px solid ${mode.color}`, paddingBottom: 4, whiteSpace: "nowrap" }}
+                >
+                  {mode.label}
+                </span>
+                <span style={{ fontSize: 21.5, fontWeight: 850, lineHeight: 1.36, color: W.ink }}>{mode.sub}</span>
+              </div>
+            </SignalCard>
           </React.Fragment>
         ))}
+
         <div
           data-final-knowledge="overview-exception"
           style={{
             position: "absolute",
-            left: 426,
-            top: 612,
-            width: 1348,
+            left: 480,
+            top: 640,
+            width: 1290,
             textAlign: "center",
             ...enter(f, 58),
           }}
@@ -318,13 +353,13 @@ export const ThreeModeOverviewScene = () => {
           <span
             style={{
               display: "inline-block",
-              border: `4px solid ${C.rail}`,
+              border: `4px solid ${W.free}`,
               borderRadius: 10,
-              background: C.panel,
+              background: `${W.free}12`,
               padding: "9px 18px",
               fontSize: 22,
               fontWeight: 900,
-              color: C.soft,
+              color: W.freeInk,
             }}
           >
             例外提示：处罚、强制、反倾销税三类可直接起诉（前置例外）
@@ -336,9 +371,9 @@ export const ThreeModeOverviewScene = () => {
 };
 
 export const FreeChoiceTrackScene = () => {
-  /* Static audit inventory: data-final-knowledge="free-choice-core" data-final-knowledge="choice-station-1" data-final-knowledge="choice-station-2" data-final-knowledge="no-parallel-rule" data-final-knowledge="ministry-level-rule" data-stateful-source="choice-train" data-stateful-terminal="choice-train" */
+  /* Static audit inventory: data-final-knowledge="free-choice-core" data-final-knowledge="choice-station-1" data-final-knowledge="choice-station-2" data-final-knowledge="no-parallel-rule" data-final-knowledge="ministry-level-rule" data-stateful-source="choice-barge" data-stateful-terminal="choice-barge" */
   const f = useCurrentFrame();
-  const trainX = interpolate(f, [30, 380], [-60, 1620], {
+  const bargeX = interpolate(f, [24, 150], [-80, 356], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
     easing: Easing.inOut(Easing.cubic),
@@ -346,98 +381,140 @@ export const FreeChoiceTrackScene = () => {
   return (
     <Shell code="02" title="自由选择：议后可诉，从一而终">
       <div
-        data-layout="dual-track-free-choice-platform"
-        data-visual-anchor="flow-path"
-        data-visual-grammar="a-dispute-train-runs-along-two-parallel-tracks,choice-locks-after-first-pick"
-        data-text-treatments="label-block,thin-underline,external-negation"
+        data-layout="twin-channel-commitment-lock"
+        data-visual-anchor="comparison-axis"
+        data-visual-grammar="a-dispute-barge-commits-to-exactly-one-of-two-channels,one-way-commitment-gate-locks-the-chosen-channel,no-parallel-sign-forbids-simultaneous-locking"
+        data-text-treatments="label-block,external-negation,thin-underline"
         data-focal-rule="free-choice-locks-after-first-selection"
         data-focal-channels="contrast,connector,motion"
         style={{ position: "absolute", inset: 14 }}
       >
         <div
           data-final-knowledge="free-choice-core"
-          style={{ position: "absolute", left: 80, top: 14, width: 760, ...enter(f, 4) }}
+          style={{ position: "absolute", left: 40, top: 6, width: 820, ...enter(f, 4) }}
         >
-          <Signal
-            label="自由选择"
-            color={C.jade}
-            sub="既可以申请行政复议，也可以提起行政诉讼"
-            style={{ border: 0, background: "transparent", boxShadow: "none" }}
-          />
+          <Plate color={W.free}>自由选择</Plate>
+          <span style={{ fontSize: 22, fontWeight: 850, marginLeft: 14, color: W.ink }}>
+            既可以申请行政复议，也可以提起行政诉讼
+          </span>
         </div>
-        <StationDot color={C.jade} style={{ left: 80, top: 156 }} />
-        <Track color={C.jade} style={{ position: "absolute", left: 90, top: 164, width: 1680 }} />
-        <Track color={C.blue} style={{ position: "absolute", left: 90, top: 240, width: 1680 }} />
+
+        {/* 双渠道水体 */}
+        <Waterway color={W.free} gate={W.free} style={{ position: "absolute", left: 60, top: 118, width: 1780 }} />
+        <Waterway color={W.water} gate={W.water} style={{ position: "absolute", left: 60, top: 208, width: 1780 }} />
         <div
-          data-stateful-source="choice-train"
-          data-stateful-terminal="choice-train"
           style={{
             position: "absolute",
-            top: 150,
-            left: trainX,
-            width: 300,
-            height: 102,
-            background: C.jade,
-            border: `4px solid ${C.white}`,
-            borderRadius: 16,
+            left: 56,
+            top: 128,
+            fontSize: 20,
+            fontWeight: 950,
+            color: W.freeInk,
+            fontFamily: "var(--inkloom-animation-label)",
+          }}
+        >
+          复议渠
+        </div>
+        <div
+          style={{
+            position: "absolute",
+            left: 56,
+            top: 218,
+            fontSize: 20,
+            fontWeight: 950,
+            color: W.waterDeep,
+            fontFamily: "var(--inkloom-animation-label)",
+          }}
+        >
+          诉讼渠
+        </div>
+
+        {/* 争议驳船：驶入分岔口停驻（终态保留） */}
+        <div
+          data-stateful-source="choice-barge"
+          data-stateful-terminal="choice-barge"
+          style={{
+            position: "absolute",
+            top: 96,
+            left: bargeX,
+            width: 320,
+            height: 118,
+            background: W.lock,
+            border: `4px solid ${W.white}`,
+            borderRadius: 14,
             display: "grid",
             placeItems: "center",
             fontSize: 23,
             fontWeight: 950,
-            color: C.white,
+            color: W.white,
             zIndex: 2,
             fontFamily: "var(--inkloom-animation-title)",
+            boxShadow: "0 6px 0 rgba(36,68,76,0.35)",
           }}
         >
-          争议列车 · 二选一
+          争议驳船 · 二选一
         </div>
+        <div
+          style={{
+            position: "absolute",
+            left: 420,
+            top: 190,
+            opacity: interpolate(f, [120, 140], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" }),
+          }}
+        >
+          <LockGateIcon color={W.lockInk} size={40} />
+        </div>
+
+        {/* 两渠详解 */}
         {[
-          ["行政复议", "先复议 → 对复议决定不服仍可诉（省部级对自身行为的复议决定除外）", C.jade, "choice-station-1"],
-          ["行政诉讼", "直接起诉 → 不得再申请复议", C.blue, "choice-station-2"],
+          ["行政复议", "先复议 → 对复议决定不服仍可诉（省部级对自身行为的复议决定除外）", W.free, "choice-station-1"],
+          ["行政诉讼", "直接起诉 → 不得再申请复议", W.water, "choice-station-2"],
         ].map((item, index) => (
           <div
             key={String(item[0])}
             data-final-knowledge={String(item[3])}
             style={{
               position: "absolute",
-              left: 80 + index * 900,
-              top: 292,
-              width: 820,
-              minHeight: 250,
-              border: `4px solid ${item[2]}`,
+              left: 40 + index * 900,
+              top: 268,
+              width: 860,
+              minHeight: 240,
+              border: `4px solid ${String(item[2])}`,
               borderRadius: 16,
-              background: `${item[2]}10`,
+              background: W.panel,
               padding: "18px 20px",
+              boxShadow: `0 6px 0 ${String(item[2])}22`,
               ...enter(f, 20 + index * 10),
             }}
           >
             <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-              <StationDot color={String(item[2])} style={{ position: "relative", left: 0, top: 0 }} />
-              <span className="font-animation-title" style={{ fontSize: 27, fontWeight: 950, color: item[2] }}>
+              <LockGateIcon color={String(item[2])} />
+              <span className="font-animation-title" style={{ fontSize: 28, fontWeight: 950, color: String(item[2]) }}>
                 {String(item[0])}
               </span>
             </div>
-            <div style={{ fontSize: 21, fontWeight: 850, marginTop: 12, lineHeight: 1.42, color: C.ink }}>
+            <div style={{ fontSize: 21.5, fontWeight: 850, marginTop: 12, lineHeight: 1.42, color: W.ink }}>
               {String(item[1])}
             </div>
           </div>
         ))}
+
         <div
           data-final-knowledge="no-parallel-rule"
           style={{
             position: "absolute",
-            left: 80,
-            top: 590,
-            width: 1720,
-            border: `4px dashed ${C.coral}`,
+            left: 40,
+            top: 556,
+            width: 1800,
+            border: `4px dashed ${W.brick}`,
             borderRadius: 12,
-            background: `${C.coral}0A`,
+            background: `${W.brick}0C`,
             padding: "13px 18px",
             ...enter(f, 42),
           }}
         >
-          <div style={{ fontSize: 22, fontWeight: 950, color: C.coralInk }}>不能同时进行：</div>
-          <div style={{ fontSize: 21, fontWeight: 850, marginTop: 6, color: C.ink }}>
+          <div style={{ fontSize: 22, fontWeight: 950, color: W.brickInk }}>⛔ 不能同时进行：</div>
+          <div style={{ fontSize: 21, fontWeight: 850, marginTop: 6, color: W.ink }}>
             已经诉讼 → 不得复议；已经复议 → 复议期间不得诉讼（谁先受理算谁的）
           </div>
         </div>
@@ -445,17 +522,17 @@ export const FreeChoiceTrackScene = () => {
           data-final-knowledge="ministry-level-rule"
           style={{
             position: "absolute",
-            left: 80,
-            top: 682,
-            width: 1720,
-            border: `3px solid ${C.amber}`,
+            left: 40,
+            top: 668,
+            width: 1800,
+            border: `3px solid ${W.brass}`,
             borderRadius: 12,
-            background: `${C.amber}12`,
+            background: `${W.brass}12`,
             padding: "12px 18px",
             ...enter(f, 52),
           }}
         >
-          <div style={{ fontSize: 21, fontWeight: 950, color: C.amberInk }}>
+          <div style={{ fontSize: 21, fontWeight: 950, color: W.brassInk }}>
             省部级单位对自身行为的复议决定：可诉可裁（国务院裁决终局）· 一经选择，从一而终
           </div>
         </div>
@@ -478,10 +555,10 @@ export const MandatoryFirstTrackScene = () => {
   return (
     <Shell code="03" title="复议前置：六类争议先过复议闸">
       <div
-        data-layout="mandatory-first-concourse"
+        data-layout="six-sluice-intake-with-bypass"
         data-visual-anchor="boundary"
-        data-visual-grammar="six-dispute-categories-pass-through-the-review-gate,three-exceptions-bypass-the-gate"
-        data-text-treatments="label-block,stamp,external-negation"
+        data-visual-grammar="six-dispute-streams-must-enter-the-mandatory-review-lock,three-exception-streams-bypass-through-the-free-channel,lock-keeper-plaque-names-every-gated-category"
+        data-text-treatments="label-block,stamp,chip"
         data-focal-rule="mandatory-review-before-litigation-for-six-categories"
         data-focal-channels="contrast,enclosure,locator"
         style={{ position: "absolute", inset: 14 }}
@@ -489,30 +566,33 @@ export const MandatoryFirstTrackScene = () => {
         <div
           style={{
             position: "absolute",
-            left: 680,
-            top: 10,
-            width: 520,
-            height: 106,
-            background: C.coral,
+            left: 640,
+            top: 4,
+            width: 600,
+            height: 104,
+            background: W.brick,
             borderRadius: 16,
-            display: "grid",
-            placeItems: "center",
-            boxShadow: `0 8px 0 ${C.coral}30`,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            gap: 18,
+            boxShadow: `0 8px 0 ${W.brick}33`,
             ...enter(f, 4),
           }}
         >
-          <div style={{ fontSize: 29, fontWeight: 950, color: C.white, textAlign: "center", fontFamily: "var(--inkloom-animation-title)" }}>
+          <LockGateIcon color={W.white} size={44} />
+          <div style={{ fontSize: 29, fontWeight: 950, color: W.white, fontFamily: "var(--inkloom-animation-title)" }}>
             复议前置闸
-            <br />
-            <span style={{ fontSize: 20, fontWeight: 850 }}>必须先申请复议</span>
+            <span style={{ fontSize: 20, fontWeight: 850, marginLeft: 14 }}>必须先申请复议</span>
           </div>
         </div>
+
         <div
           style={{
             position: "absolute",
-            left: 70,
-            top: 128,
-            right: 70,
+            left: 40,
+            top: 126,
+            right: 40,
             display: "grid",
             gridTemplateColumns: "1fr 1fr 1fr",
             gridTemplateRows: "1fr 1fr",
@@ -524,38 +604,45 @@ export const MandatoryFirstTrackScene = () => {
               key={gate.name}
               data-final-knowledge={gate.knowledge}
               style={{
-                border: `4px solid ${C.coral}`,
+                border: `4px solid ${W.lock}`,
+                borderTop: `10px solid ${W.brick}`,
                 borderRadius: 14,
-                background: `${C.coral}0C`,
+                background: W.panel,
                 padding: "14px 16px",
-                minHeight: 190,
+                minHeight: 196,
+                boxShadow: "0 6px 0 rgba(60,90,99,0.18)",
                 ...enter(f, 10 + index * 9),
               }}
             >
-              <div className="font-animation-title" style={{ fontSize: 24, fontWeight: 950, color: C.coralInk }}>
+              <div className="font-animation-title" style={{ fontSize: 25, fontWeight: 950, color: W.brickInk }}>
                 {gate.name}
               </div>
-              <div style={{ fontSize: 20, fontWeight: 850, marginTop: 10, lineHeight: 1.42, color: C.ink }}>
+              <div style={{ fontSize: 20.5, fontWeight: 850, marginTop: 10, lineHeight: 1.42, color: W.ink }}>
                 {gate.text}
               </div>
             </div>
           ))}
         </div>
+
         <div
           data-final-knowledge="mandatory-exceptions"
           style={{
             position: "absolute",
-            left: 70,
-            right: 70,
-            top: 548,
-            border: `4px solid ${C.jade}`,
+            left: 40,
+            right: 40,
+            top: 590,
+            border: `4px solid ${W.free}`,
             borderRadius: 14,
-            background: `${C.jade}10`,
+            background: `${W.free}10`,
             padding: "12px 18px",
+            display: "flex",
+            alignItems: "center",
+            gap: 14,
             ...enter(f, 66),
           }}
         >
-          <div style={{ fontSize: 21, fontWeight: 950, color: C.jadeInk }}>
+          <Plate color={W.free} filled={false}>旁路</Plate>
+          <div style={{ fontSize: 21.5, fontWeight: 950, color: W.freeInk }}>
             例外（可直接起诉）：处罚 · 强制（强制措施、强制执行）· 反倾销税
           </div>
         </div>
@@ -571,31 +658,33 @@ export const FinalReviewTrackScene = () => {
   return (
     <Shell code="04" title="复议终局：出入境措施一锤定音">
       <div
-        data-layout="final-stop-terminal-platform"
+        data-layout="closed-terminal-basin"
         data-visual-anchor="flow-target"
-        data-visual-grammar="four-immigration-measures-arrive-at-the-final-terminal,the-review-decision-is-the-end-of-the-line"
+        data-visual-grammar="four-immigration-measure-barges-enter-the-closed-basin,terminal-wall-seals-the-basin-without-litigation-outlet,scope-annotation-limits-the-basin-to-foreigner-measures"
         data-text-treatments="stamp,label-block,soft-highlight"
         data-focal-rule="immigration-measures-end-at-final-review"
-        data-focal-channels="contrast,enclosure,icon"
+        data-focal-channels="contrast,enclosure,spatial"
         style={{ position: "absolute", inset: 16 }}
       >
         <div
           data-final-knowledge="final-review-rule"
-          style={{ position: "absolute", left: 70, top: 22, width: 800, ...enter(f, 4) }}
+          style={{ position: "absolute", left: 40, top: 8, width: 900, ...enter(f, 4) }}
         >
-          <div className="font-animation-title" style={{ fontSize: 26, fontWeight: 950, color: C.amberInk }}>
+          <div className="font-animation-title" style={{ fontSize: 26, fontWeight: 950, color: W.brassInk }}>
             出入境管理机关对外国人及其他境外人员
           </div>
-          <div style={{ fontSize: 21, fontWeight: 850, marginTop: 10, color: C.ink, lineHeight: 1.42 }}>
-            可以依法申请行政复议，<b style={{ color: C.amberInk }}>该复议决定为最终决定</b>
+          <div style={{ fontSize: 21.5, fontWeight: 850, marginTop: 10, color: W.ink, lineHeight: 1.42 }}>
+            可以依法申请行政复议，<b style={{ color: W.brassInk }}>该复议决定为最终决定</b>
           </div>
         </div>
+
+        {/* 四艘措施驳船：2×2 */}
         <div
           style={{
             position: "absolute",
-            left: 70,
-            top: 138,
-            right: 70,
+            left: 40,
+            top: 128,
+            right: 40,
             display: "grid",
             gridTemplateColumns: "1fr 1fr",
             gridTemplateRows: "1fr 1fr",
@@ -607,32 +696,56 @@ export const FinalReviewTrackScene = () => {
               key={measure}
               data-final-knowledge={`final-measure-${index + 1}`}
               style={{
-                border: `5px solid ${C.amber}`,
+                border: `5px solid ${W.brass}`,
                 borderRadius: 16,
-                background: `${C.amber}10`,
-                display: "grid",
-                placeItems: "center",
-                fontSize: 29,
-                fontWeight: 950,
-                color: C.amberInk,
-                fontFamily: "var(--inkloom-animation-title)",
-                minHeight: 150,
+                background: `linear-gradient(180deg,${W.panel} 0 46%,${W.waterLight} 46% 100%)`,
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "flex-end",
+                paddingBottom: 16,
+                gap: 8,
+                minHeight: 158,
                 ...enter(f, 14 + index * 10),
               }}
             >
-              {measure}
+              <div
+                style={{
+                  width: 46,
+                  height: 26,
+                  backgroundColor: W.brass,
+                  borderRadius: "12px 12px 4px 4px",
+                  marginBottom: -6,
+                }}
+              />
+              <div
+                style={{
+                  fontSize: 29,
+                  fontWeight: 950,
+                  color: W.brassInk,
+                  fontFamily: "var(--inkloom-animation-title)",
+                  background: W.panel,
+                  border: `3px solid ${W.brass}`,
+                  borderRadius: 8,
+                  padding: "2px 16px",
+                }}
+              >
+                {measure}
+              </div>
             </div>
           ))}
         </div>
+
+        {/* 封闭终点池壁 */}
         <div
           data-final-knowledge="final-terminal"
           style={{
             position: "absolute",
-            left: 550,
-            top: 486,
-            width: 800,
-            minHeight: 118,
-            background: C.amber,
+            left: 480,
+            top: 512,
+            width: 940,
+            minHeight: 116,
+            background: W.brass,
             borderRadius: 16,
             display: "grid",
             placeItems: "center",
@@ -640,26 +753,26 @@ export const FinalReviewTrackScene = () => {
             ...enter(f, 54),
           }}
         >
-          <div style={{ fontSize: 29, fontWeight: 950, color: C.white, fontFamily: "var(--inkloom-animation-title)" }}>
-            终点站：复议决定 = 最终决定
+          <div style={{ fontSize: 29, fontWeight: 950, color: W.white, fontFamily: "var(--inkloom-animation-title)" }}>
+            终点池：复议决定 = 最终决定
             <br />
             <span style={{ fontSize: 20, fontWeight: 850 }}>不能再提起行政诉讼</span>
           </div>
         </div>
         <div
           data-final-knowledge="final-summary"
-          style={{ position: "absolute", left: 430, top: 638, width: 1040, textAlign: "center", ...enter(f, 64) }}
+          style={{ position: "absolute", left: 400, top: 656, width: 1100, textAlign: "center", ...enter(f, 64) }}
         >
           <span
             style={{
               display: "inline-block",
-              border: `4px dashed ${C.rail}`,
+              border: `4px dashed ${W.lock}`,
               borderRadius: 10,
-              background: C.panel,
+              background: W.panel,
               padding: "9px 18px",
               fontSize: 21,
               fontWeight: 900,
-              color: C.soft,
+              color: W.soft,
             }}
           >
             仅限对外国人及境外人员的四种出入境强制措施
@@ -686,9 +799,9 @@ export const SwitchyardTrapsScene = () => {
   return (
     <Shell code="05" title="最爱考：谁要过复议闸，谁能直接起诉">
       <div
-        data-layout="eight-judgment-interchange-signals"
+        data-layout="lock-keeper-signal-board"
         data-visual-anchor="typographic-sequence"
-        data-visual-grammar="eight-exam-statements-route-to-jade-or-coral-signals,review-gate-exceptions-light-up-jade"
+        data-visual-grammar="eight-exam-cases-route-to-pass-or-lock-signals,keeper-board-distills-the-two-step-judgment"
         data-text-treatments="stamp,label-block,external-negation"
         data-focal-rule="exam-traps-on-mandatory-review"
         data-focal-channels="contrast,enclosure,icon"
@@ -711,11 +824,12 @@ export const SwitchyardTrapsScene = () => {
               key={String(index)}
               data-final-knowledge={`trap-${String(index + 1).padStart(2, "0")}`}
               style={{
-                border: `4px solid ${trap.pass ? C.jade : C.coral}`,
+                border: `4px solid ${trap.pass ? W.free : W.brick}`,
                 borderRadius: 14,
-                background: `${trap.pass ? C.jade : C.coral}0C`,
+                background: W.panel,
+                boxShadow: `0 6px 0 ${trap.pass ? W.free : W.brick}22`,
                 padding: "10px 18px",
-                minHeight: 128,
+                minHeight: 126,
                 display: "flex",
                 alignItems: "center",
                 ...enter(f, 8 + index * 7),
@@ -727,8 +841,8 @@ export const SwitchyardTrapsScene = () => {
                     width: 44,
                     height: 44,
                     borderRadius: "50%",
-                    background: trap.pass ? C.jade : C.coral,
-                    color: C.white,
+                    background: trap.pass ? W.free : W.brick,
+                    color: W.white,
                     display: "grid",
                     placeItems: "center",
                     fontSize: 23,
@@ -743,7 +857,7 @@ export const SwitchyardTrapsScene = () => {
                   <div className="font-animation-title" style={{ fontSize: 22, fontWeight: 950 }}>
                     {trap.question}
                   </div>
-                  <div style={{ fontSize: 20, fontWeight: 850, marginTop: 5, color: C.soft, lineHeight: 1.32 }}>
+                  <div style={{ fontSize: 20, fontWeight: 850, marginTop: 5, color: W.soft, lineHeight: 1.32 }}>
                     {trap.answer}
                   </div>
                 </div>
@@ -753,18 +867,18 @@ export const SwitchyardTrapsScene = () => {
         </div>
         <div
           data-final-knowledge="trap-summary"
-          style={{ position: "absolute", left: 430, top: 618, width: 1060, textAlign: "center", ...enter(f, 72) }}
+          style={{ position: "absolute", left: 420, top: 634, width: 1080, textAlign: "center", ...enter(f, 72) }}
         >
           <span
             style={{
               display: "inline-block",
-              border: `4px solid ${C.amber}`,
+              border: `4px solid ${W.brass}`,
               borderRadius: 10,
-              background: C.panel,
+              background: W.panel,
               padding: "9px 18px",
               fontSize: 23,
               fontWeight: 950,
-              color: C.amberInk,
+              color: W.brassInk,
               rotate: "-2deg",
             }}
           >

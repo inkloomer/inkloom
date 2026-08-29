@@ -184,8 +184,8 @@ export const ADMINISTRATIVE_LAW_STYLE_DEMOS = [
   {
     id: "administrative-law-12-linkage-rail-switch",
     slug: "linkage-rail-switch",
-    title: "程序转辙信号站",
-    direction: "Procedural Rail Switchyard",
+    title: "水闸航道图",
+    direction: "Canal Lock Waterway",
     component: LinkageRailSwitch,
     href: "/inkloom/objective/administrative-law/12/linkage-rail-switch/",
     durationInFrames: DURATION_FRAMES_12,
