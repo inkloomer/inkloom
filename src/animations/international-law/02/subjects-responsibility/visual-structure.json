@@ -1,0 +1,229 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 6,
+  "scenes": [
+    {
+      "id": "immunity",
+      "export": "ImmunityScene",
+      "layout": "dual-immunity-gate-with-exclusion-list",
+      "anchor": "boundary",
+      "grammar": [
+        "sovereign-acts-pass-the-jurisdiction-gate",
+        "five-commercial-disputes-hit-the-vermilion-bar"
+      ],
+      "textTreatments": [
+        "label-block",
+        "soft-highlight",
+        "external-negation"
+      ],
+      "focalChannels": [
+        "enclosure",
+        "contrast",
+        "spatial"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "immunity-act",
+        "immunity-waiver",
+        "immunity-commercial",
+        "immunity-labor",
+        "immunity-damages",
+        "immunity-property",
+        "immunity-ip",
+        "execution-immunity",
+        "execution-property",
+        "immunity-caption"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "recognition",
+      "export": "RecognitionScene",
+      "layout": "sovereign-recognition-fork",
+      "anchor": "document-fork",
+      "grammar": [
+        "recognition-forks-on-territorial-change",
+        "four-implied-conducts-enter-the-roll"
+      ],
+      "textTreatments": [
+        "label-block",
+        "thin-underline",
+        "stamp"
+      ],
+      "focalChannels": [
+        "connector",
+        "enclosure",
+        "contrast"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "recognition-subject",
+        "recognition-quality",
+        "recognize-new-state",
+        "recognize-new-gov",
+        "implied-four",
+        "irrevocable-state",
+        "revoke-old-gov"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "succession",
+      "export": "SuccessionScene",
+      "layout": "three-inheritance-lanes",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "three-succession-lanes-run-side-by-side",
+        "debt-fate-splits-into-three-rules"
+      ],
+      "textTreatments": [
+        "soft-highlight",
+        "label-block",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "spatial"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "succession-treaty",
+        "succession-property",
+        "succession-debt",
+        "debt-definition",
+        "debt-merger",
+        "debt-separation",
+        "debt-independence"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "organizations",
+      "export": "OrganizationsScene",
+      "layout": "twin-organization-ledgers",
+      "anchor": "role-pair",
+      "grammar": [
+        "two-organization-ledgers-share-one-legal-basis-axis",
+        "specialized-agencies-stand-beside-not-under-the-un"
+      ],
+      "textTreatments": [
+        "label-block",
+        "soft-highlight",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "contrast",
+        "spatial",
+        "enclosure"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "intergov-basis",
+        "intergov-subject",
+        "ngo-basis",
+        "ngo-subject",
+        "distinction-note",
+        "specialized-relation"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "un-organs",
+      "export": "UnOrgansScene",
+      "layout": "twin-organ-panels-with-selection-strip",
+      "anchor": "role-pair",
+      "grammar": [
+        "assembly-and-council-divide-their-powers",
+        "two-selection-rituals-close-the-bench"
+      ],
+      "textTreatments": [
+        "label-block",
+        "thin-underline",
+        "external-negation"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "spatial"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "assembly-deliberation",
+        "assembly-binding",
+        "assembly-not-legislature",
+        "council-composition",
+        "council-binding",
+        "selection-secretary",
+        "selection-judge"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "council-vote",
+      "export": "CouncilVoteScene",
+      "layout": "roll-call-vote-gate-with-double-veto",
+      "anchor": "flow-path",
+      "grammar": [
+        "matters-pass-the-nine-vote-gate",
+        "great-power-unity-guards-substantive-matters"
+      ],
+      "textTreatments": [
+        "stamp",
+        "soft-highlight",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "connector",
+        "contrast",
+        "enclosure"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "procedural-nine",
+        "substantive-nine",
+        "great-power-unity",
+        "abstain-not-veto",
+        "double-veto",
+        "substantive-list",
+        "procedural-judges",
+        "party-vote-rule"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "responsibility",
+      "export": "ResponsibilityScene",
+      "layout": "three-responsibility-bands",
+      "anchor": "flow-path",
+      "grammar": [
+        "liability-expands-downward-into-attribution",
+        "immunity-defenses-close-the-bottom-band"
+      ],
+      "textTreatments": [
+        "label-block",
+        "soft-highlight",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "locator"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "responsibility-individual",
+        "space-liability",
+        "nuclear-liability",
+        "attribution-organs",
+        "attribution-entities",
+        "attribution-destined",
+        "attribution-insurgents",
+        "attribution-individuals",
+        "defenses-strip"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

@@ -3,7 +3,7 @@
   "compositionId": "SourcesOfInternationalLaw",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-08-29T06:58:42.605Z",
+  "generatedAt": "2026-08-29T07:34:00.065Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -16,13 +16,13 @@
       "title": "渊源只有三项",
       "durationMs": 5500,
       "file": "sources.avif",
-      "fileSize": 357761,
+      "fileSize": 357763,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "06f3ec87a3aa6488f04fd5511fb0ffea754d344e1cd7a1a5ddd3491ed5b84ba4",
+      "sha256": "6dd0a7fcabc6e36eae517ddc607c3b70ba51caa40854b5fe6eda88d4bcac9d2d",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "04451d74b80a84a72a7b9712d2794d01a5fbdd05b6c680d3bf82e3dd12615ace"
+      "sceneFingerprint": "c8b0b47f84e07fb0b1ed7a9657bd4b918a568e4b26e4050ae5d6261db9dab1a2"
     },
     {
       "endFrame": 719,
@@ -33,13 +33,13 @@
       "title": "国际习惯：反复实践与持续反对者",
       "durationMs": 6500,
       "file": "custom-formation.avif",
-      "fileSize": 354596,
+      "fileSize": 356978,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "09024316731befa2f6d0fe218eea34b879115e8a4506b0b987c6b5aa9e4df06d",
+      "sha256": "f8af862b381cadebad3a13de4dc01852833b1efabab54a668af70fb19d305c54",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "04451d74b80a84a72a7b9712d2794d01a5fbdd05b6c680d3bf82e3dd12615ace"
+      "sceneFingerprint": "c8b0b47f84e07fb0b1ed7a9657bd4b918a568e4b26e4050ae5d6261db9dab1a2"
     },
     {
       "endFrame": 1019,
@@ -53,10 +53,10 @@
       "fileSize": 247558,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "ff218601a208fce2d1678da2c85a2598944f2ad05d2e49eba5b309f37f9a9f94",
+      "sha256": "227b25dcaaa8004215b56cc0045a53cb8db9ecc1ca351a6bcf1da2ad5ea3adf1",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "04451d74b80a84a72a7b9712d2794d01a5fbdd05b6c680d3bf82e3dd12615ace"
+      "sceneFingerprint": "c8b0b47f84e07fb0b1ed7a9657bd4b918a568e4b26e4050ae5d6261db9dab1a2"
     },
     {
       "endFrame": 1439,
@@ -67,13 +67,13 @@
       "title": "反外国制裁法",
       "durationMs": 7000,
       "file": "counter-sanctions.avif",
-      "fileSize": 363285,
+      "fileSize": 364475,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "e72faa1f7050fff0f803e521466f2d6178415267616769adad05790d7129d287",
+      "sha256": "2bb4cd9e448ed77d0f159b5b5c60d285501299e6cad8e78b2e3fa48ba52f860e",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "04451d74b80a84a72a7b9712d2794d01a5fbdd05b6c680d3bf82e3dd12615ace"
+      "sceneFingerprint": "c8b0b47f84e07fb0b1ed7a9657bd4b918a568e4b26e4050ae5d6261db9dab1a2"
     },
     {
       "endFrame": 1889,
@@ -84,13 +84,13 @@
       "title": "反外国不当域外管辖：全链条",
       "durationMs": 7500,
       "file": "blockade-chain.avif",
-      "fileSize": 459071,
+      "fileSize": 460603,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "7ce710fb64e42cad95283a27058517fe523aa16b35c3e419a40c5d13a72116c5",
+      "sha256": "296fcf35c9bf36f5ca971e05336a7f3771baa3871c7114ffa890a772a7b35325",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "04451d74b80a84a72a7b9712d2794d01a5fbdd05b6c680d3bf82e3dd12615ace"
+      "sceneFingerprint": "c8b0b47f84e07fb0b1ed7a9657bd4b918a568e4b26e4050ae5d6261db9dab1a2"
     }
   ],
   "size": {
@@ -98,7 +98,7 @@
     "width": 2560
   },
   "sourceFps": 60,
-  "sourceFingerprint": "04451d74b80a84a72a7b9712d2794d01a5fbdd05b6c680d3bf82e3dd12615ace",
+  "sourceFingerprint": "c8b0b47f84e07fb0b1ed7a9657bd4b918a568e4b26e4050ae5d6261db9dab1a2",
   "targetFps": 30,
-  "totalFileSize": 1782271
+  "totalFileSize": 1787377
 }

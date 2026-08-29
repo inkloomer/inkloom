@@ -364,10 +364,13 @@ export const SourcesScene = () => {
             top: 676,
             width: 1646,
             height: 50,
-            display: 'grid',
-            placeItems: 'center',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            gap: 12,
             backgroundColor: PALETTE.goldSoft,
             borderTop: `3px solid ${PALETTE.gold}`,
+            whiteSpace: 'nowrap',
           }}
         >
           <span style={{fontSize: 26, fontWeight: 800}}>
@@ -908,12 +911,15 @@ export const BlockadeChainScene = () => {
             top: 656,
             width: 1646,
             height: 56,
-            display: 'grid',
-            placeItems: 'center',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            gap: 12,
             backgroundColor: PALETTE.goldSoft,
             borderTop: `3px solid ${PALETTE.gold}`,
             fontSize: 26,
             fontWeight: 800,
+            whiteSpace: 'nowrap',
           }}
         >
           全链条：<SoftHighlight color="rgba(150,118,46,0.22)">识别 → 阻断 → 反制 → 救济</SoftHighlight>；三不：不承认、不执行、不遵守

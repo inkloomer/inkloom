@@ -1,0 +1,16 @@
+{
+  "directionId": "envoy-assembly-chamber",
+  "family": "envoy-assembly-chamber",
+  "palette": "midnight indigo chamber, porcelain plaques, brass rails, jade consent, vermilion veto",
+  "typography": "WenKai brass plaques with vermilion gavel stamps, jade glow highlights and thin underlines",
+  "composition": "brass-framed chamber with a left roll-call medallion rail, twin porcelain-topped ledgers and bottom verdict strips",
+  "surface": "dark indigo panels with hatched diagonal texture, no paper cards",
+  "motion": "roll-call stanza entries with side-sliding strips and gavel-stamp verdicts",
+  "transition": "content swap under a persistent chamber frame and medallion rail",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/international-law/02/subjects-responsibility/",
+    "title": "外交议事厅"
+  }
+}
