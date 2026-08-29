@@ -1,0 +1,70 @@
+{
+  "animationId": "appeal-no-escalation-lock",
+  "compositionId": "AppealNoEscalationLock",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-29T10:16:44.904Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 479,
+      "frameCount": 240,
+      "id": "one-principle-gate",
+      "number": "01",
+      "startFrame": 0,
+      "title": "单行闸",
+      "durationMs": 8000,
+      "file": "one-principle-gate.avif",
+      "fileSize": 297775,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "f439c6d285681a487731d9386e952c77e404b26f5f6fe3dbc1519ec5253890dd",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "5ea51889efaa87110f1b7f71526e090c61707acaeab3d5f581cb5a83ef21bd9a"
+    },
+    {
+      "endFrame": 959,
+      "frameCount": 240,
+      "id": "escalation-lanes",
+      "number": "02",
+      "startFrame": 480,
+      "title": "三条加重通道",
+      "durationMs": 8000,
+      "file": "escalation-lanes.avif",
+      "fileSize": 258492,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "e85c5b0589a0d9e7ba16a1ff83c705528d01bbd41d41a94ca24030519f33f5f2",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "5ea51889efaa87110f1b7f71526e090c61707acaeab3d5f581cb5a83ef21bd9a"
+    },
+    {
+      "endFrame": 1479,
+      "frameCount": 260,
+      "id": "concrete-bans-grid",
+      "number": "03",
+      "startFrame": 960,
+      "title": "八个具体禁令",
+      "durationMs": 8667,
+      "file": "concrete-bans-grid.avif",
+      "fileSize": 367296,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "33e37afd64ede3254097a54b2c02ce011e707fc3ff1fde825a0992dba083e1c2",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "5ea51889efaa87110f1b7f71526e090c61707acaeab3d5f581cb5a83ef21bd9a"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "5ea51889efaa87110f1b7f71526e090c61707acaeab3d5f581cb5a83ef21bd9a",
+  "targetFps": 30,
+  "totalFileSize": 923563
+}

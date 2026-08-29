@@ -34,6 +34,7 @@ import {typography as typographyCpLoop} from '../animations/criminal-procedure/1
 import {typography as typographyCpTower} from '../animations/criminal-procedure/13/nonprosecution-signal-tower/animation.meta';
 import {typography as typographyCpBench} from '../animations/criminal-procedure/14/trial-bench-composition/animation.meta';
 import {typography as typographyCpStreet} from '../animations/criminal-procedure/15/first-instance-procession/animation.meta';
+import {typography as typographyCpOneway} from '../animations/criminal-procedure/16/appeal-no-escalation-lock/animation.meta';
 import {typography as typography100} from '../animations/international-law/01/sources-of-international-law/animation.meta';
 import {typography as typographyIl02} from '../animations/international-law/02/subjects-responsibility/animation.meta';
 import {typography as typographyIl03} from '../animations/international-law/03/spatial-regimes/animation.meta';
@@ -253,6 +254,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'nonprosecution-signal-tower': {metadata: typographyCpTower, scope: {animationId: 'nonprosecution-signal-tower', subject: 'criminal-procedure', topic: '13'}},
   'trial-bench-composition': {metadata: typographyCpBench, scope: {animationId: 'trial-bench-composition', subject: 'criminal-procedure', topic: '14'}},
   'first-instance-procession': {metadata: typographyCpStreet, scope: {animationId: 'first-instance-procession', subject: 'criminal-procedure', topic: '15'}},
+  'appeal-no-escalation-lock': {metadata: typographyCpOneway, scope: {animationId: 'appeal-no-escalation-lock', subject: 'criminal-procedure', topic: '16'}},
   'sources-of-international-law': {metadata: typography100, scope: {animationId: 'sources-of-international-law', subject: 'international-law', topic: '01'}},
   'subjects-responsibility': {metadata: typographyIl02, scope: {animationId: 'subjects-responsibility', subject: 'international-law', topic: '02'}},
   'spatial-regimes': {metadata: typographyIl03, scope: {animationId: 'spatial-regimes', subject: 'international-law', topic: '03'}},

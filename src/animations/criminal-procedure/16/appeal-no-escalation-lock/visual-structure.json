@@ -1,0 +1,69 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "one-principle-gate",
+      "export": "OnePrincipleScene",
+      "layout": "one-way-gate-with-anchor-bays",
+      "anchor": "concept-icon",
+      "grammar": [
+        "defendant-only-appeals-lock-the-sentencing-gate",
+        "principle-carries-no-exception",
+        "procuratorate-protest-unlocks-the-gate",
+        "unclear-facts-may-still-be-remanded"
+      ],
+      "textTreatments": ["chip", "thin-underline", "external-negation"],
+      "focalChannels": ["icon", "contrast", "enclosure", "annotation"],
+      "tokens": ["MoveRight", "ShieldAlert"],
+      "finalKnowledge": [
+        "one-way-gate",
+        "memory-anchor-bay",
+        "second-protest-note"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "escalation-lanes",
+      "export": "EscalationLanesScene",
+      "layout": "three-escalation-lanes-with-boundary-note",
+      "anchor": "typographic-sequence",
+      "grammar": [
+        "protest-opens-the-gate",
+        "private-prosecutor-appeal-opens-the-gate",
+        "remand-plus-new-crime-plus-supplementary-prosecution-opens-the-gate",
+        "first-original-sentence-remains-the-ceiling-later"
+      ],
+      "textTreatments": ["chip", "thin-underline", "soft-highlight"],
+      "focalChannels": ["connector", "contrast", "enclosure", "annotation"],
+      "tokens": ["Scale", "Undo2"],
+      "finalKnowledge": [
+        "escalation-lane-banks",
+        "principle-vs-exception-banner",
+        "ceiling-note"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "concrete-bans-grid",
+      "export": "ConcreteBansScene",
+      "layout": "eight-ban-grid-with-escalation-note",
+      "anchor": "boundary",
+      "grammar": [
+        "co-defendants-and-partial-protest-protect-others",
+        "charges-and-counts-may-change-without-heavier-execution",
+        "probation-and-bans-cannot-grow",
+        "missing-accessory-punishment-goes-to-retrial-not-direct-addition"
+      ],
+      "textTreatments": ["chip", "thin-underline", "label-block"],
+      "focalChannels": ["contrast", "enclosure", "locator", "annotation"],
+      "tokens": ["CheckCircle2"],
+      "finalKnowledge": [
+        "eight-ban-grid",
+        "retrial-note"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

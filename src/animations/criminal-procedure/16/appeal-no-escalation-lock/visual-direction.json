@@ -1,0 +1,16 @@
+{
+  "directionId": "oneway-lock-appeal",
+  "family": "oneway-lock-family",
+  "palette": "rust-brown bridge dusk, deck cream cards, oxide-red girders, one-way green gates, brass notes and night indigo bays",
+  "typography": "WenKai bridge-deck headings with gate chips and girder verdict cards",
+  "composition": "a one-way gate banner over memory-anchor bays, three escalation lane cards with a principle banner and ceiling note, and an eight-ban grid closing into a channel mnemonic",
+  "surface": "a rust bridge deck with girder lines, cream deck cards and gate signage",
+  "motion": "the one-way gate light turns first, escalation lanes stamp open, and the eight bans settle row by row before the channel mnemonic lands",
+  "transition": "the rust backdrop and girder grid persist while the deck cards are replaced",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/criminal-procedure/16/appeal-no-escalation-lock/",
+    "title": "单行闸桥"
+  }
+}
