@@ -1,0 +1,70 @@
+{
+  "animationId": "jurisdiction-sluice-terrace",
+  "compositionId": "JurisdictionSluiceTerrace",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-29T07:21:27.349Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 559,
+      "frameCount": 280,
+      "id": "level-terrace-gates",
+      "number": "01",
+      "startFrame": 0,
+      "title": "级别闸室",
+      "durationMs": 9333,
+      "file": "level-terrace-gates.avif",
+      "fileSize": 333974,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "8cdd476585e92e6169e8e11a58512f3268ce34ed90de4fbffb752417f2dcedaf",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "bd3356616773afa6077f10574c8256a48aca07e713790d1cb46ad555b226c69a"
+    },
+    {
+      "endFrame": 1059,
+      "frameCount": 250,
+      "id": "territory-main-auxiliary",
+      "number": "02",
+      "startFrame": 560,
+      "title": "主辅水渠",
+      "durationMs": 8333,
+      "file": "territory-main-auxiliary.avif",
+      "fileSize": 409296,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "dc0e6da0f0b39920311d10d9828adfdbe1ba5afe5059a192e0ff5a49ee5759b8",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "bd3356616773afa6077f10574c8256a48aca07e713790d1cb46ad555b226c69a"
+    },
+    {
+      "endFrame": 1619,
+      "frameCount": 280,
+      "id": "transfer-designation-board",
+      "number": "03",
+      "startFrame": 1060,
+      "title": "移送调度",
+      "durationMs": 9333,
+      "file": "transfer-designation-board.avif",
+      "fileSize": 504945,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "a236120d9dbee2941aac22ff110591233272ab342795af6aea3da592330a82a4",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "bd3356616773afa6077f10574c8256a48aca07e713790d1cb46ad555b226c69a"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "bd3356616773afa6077f10574c8256a48aca07e713790d1cb46ad555b226c69a",
+  "targetFps": 30,
+  "totalFileSize": 1248215
+}

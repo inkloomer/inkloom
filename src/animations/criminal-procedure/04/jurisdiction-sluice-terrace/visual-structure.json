@@ -1,0 +1,72 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "level-terrace-gates",
+      "export": "LevelTerraceScene",
+      "layout": "four-tier-sluice-terrace-with-intake-bay",
+      "anchor": "flow-path",
+      "grammar": [
+        "base-court-takes-ordinary-first-instances-by-default",
+        "intermediate-court-intakes-six-listed-channels",
+        "higher-courts-review-downward-appeals-only",
+        "cogravidad-rule-lifts-the-whole-case-to-the-higher-tier"
+      ],
+      "textTreatments": ["chip", "thin-underline", "soft-highlight"],
+      "focalChannels": ["connector", "contrast", "enclosure", "spatial"],
+      "tokens": ["Scale", "CheckCircle2", "Waves"],
+      "finalKnowledge": [
+        "intermediate-six-intakes",
+        "downward-ban-note",
+        "cogravidad-rule",
+        "juvenile-exception",
+        "base-default-gate"
+      ],
+      "statefulObjects": ["level-dossier"]
+    },
+    {
+      "id": "territory-main-auxiliary",
+      "export": "TerritoryChannelScene",
+      "layout": "main-auxiliary-channel-with-rule-chip-row",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "crime-place-channel-is-the-default-territory-gate",
+        "residence-channel-opens-only-when-more-appropriate",
+        "preparation-and-continuing-passages-count-as-crime-place",
+        "first-accepting-court-resolves-peer-conflict"
+      ],
+      "textTreatments": ["chip", "soft-highlight", "thin-underline"],
+      "focalChannels": ["contrast", "enclosure", "spatial", "connector"],
+      "tokens": ["Waves", "Building2", "GitBranch"],
+      "finalKnowledge": [
+        "crime-place-main-channel",
+        "residence-auxiliary-channel",
+        "peer-conflict-rule"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "transfer-designation-board",
+      "export": "TransferDesignationScene",
+      "layout": "dual-column-transfer-board-with-merge-bay",
+      "anchor": "document-fork",
+      "grammar": [
+        "upper-court-may-hear-lower-first-instances",
+        "lower-court-cannot-hear-upper-tier-cases",
+        "designation-stays-inside-one-system-and-dossiers-travel-via-procuratorate",
+        "joined-trials-are-remanded-to-first-instance-only"
+      ],
+      "textTreatments": ["chip", "external-negation", "thin-underline"],
+      "focalChannels": ["connector", "contrast", "enclosure", "annotation"],
+      "tokens": ["Landmark", "Ban", "MoveRight", "Gavel"],
+      "finalKnowledge": [
+        "dossier-via-procuratorate",
+        "transfer-two-exits",
+        "join-at-first-instance-only"
+      ],
+      "statefulObjects": ["transfer-dossier"]
+    }
+  ]
+}

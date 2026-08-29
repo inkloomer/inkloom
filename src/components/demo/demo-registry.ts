@@ -18,6 +18,8 @@ import {EvidenceExclusionLattice} from '../../animations/criminal-procedure/07/e
 import {DURATION_FRAMES as EVIDENCE_EXCLUSION_DURATION_FRAMES, FPS as EVIDENCE_EXCLUSION_FPS} from '../../animations/criminal-procedure/07/evidence-exclusion-lattice/remotion/storyboard';
 import {ProcedureStructureOrrery} from '../../animations/criminal-procedure/01/procedure-structure-orrery/remotion/ProcedureStructureOrrery';
 import {DURATION_FRAMES as PROCEDURE_STRUCTURE_DURATION_FRAMES, FPS as PROCEDURE_STRUCTURE_FPS} from '../../animations/criminal-procedure/01/procedure-structure-orrery/remotion/storyboard';
+import {JurisdictionSluiceTerrace} from '../../animations/criminal-procedure/04/jurisdiction-sluice-terrace/remotion/JurisdictionSluiceTerrace';
+import {DURATION_FRAMES as JURISDICTION_SLUICE_DURATION_FRAMES, FPS as JURISDICTION_SLUICE_FPS} from '../../animations/criminal-procedure/04/jurisdiction-sluice-terrace/remotion/storyboard';
 import {PleaLeniencyCaliper} from '../../animations/criminal-procedure/02/plea-leniency-caliper/remotion/PleaLeniencyCaliper';
 import {DURATION_FRAMES as PLEA_LENIENTY_DURATION_FRAMES, FPS as PLEA_LENIENTY_FPS} from '../../animations/criminal-procedure/02/plea-leniency-caliper/remotion/storyboard';
 import {ThirdPartyRevocation} from '../../animations/civil-procedure/07/third-party-revocation/remotion/ThirdPartyRevocation';
@@ -183,6 +185,7 @@ export const STYLE_DEMOS = [
   {id: 'theoretical-law-17-legal-interpretation', slug: 'legal-interpretation', title: '宋式藻井图', direction: 'Song Caisson Paintwork', component: LegalInterpretation, href: '/inkloom/objective/theoretical-law/17/legal-interpretation/', durationInFrames: LEGAL_INTERPRETATION_DURATION_FRAMES, fps: LEGAL_INTERPRETATION_FPS},
   {id: 'criminal-procedure-07-evidence-exclusion-lattice', slug: 'evidence-exclusion-lattice', title: '证物分级检验柜', direction: 'Exclusion Grading Lattice', component: EvidenceExclusionLattice, href: '/inkloom/objective/criminal-procedure/07/evidence-exclusion-lattice/', durationInFrames: EVIDENCE_EXCLUSION_DURATION_FRAMES, fps: EVIDENCE_EXCLUSION_FPS},
   {id: 'criminal-procedure-01-procedure-structure-orrery', slug: 'procedure-structure-orrery', title: '黄铜构造星盘', direction: 'Brass Orrery Structure', component: ProcedureStructureOrrery, href: '/inkloom/objective/criminal-procedure/01/procedure-structure-orrery/', durationInFrames: PROCEDURE_STRUCTURE_DURATION_FRAMES, fps: PROCEDURE_STRUCTURE_FPS},
+  {id: 'criminal-procedure-04-jurisdiction-sluice-terrace', slug: 'jurisdiction-sluice-terrace', title: '水闸分级渠', direction: 'Sluice Terrace Jurisdiction', component: JurisdictionSluiceTerrace, href: '/inkloom/objective/criminal-procedure/04/jurisdiction-sluice-terrace/', durationInFrames: JURISDICTION_SLUICE_DURATION_FRAMES, fps: JURISDICTION_SLUICE_FPS},
   {id: 'criminal-procedure-03-organs-relay-map', slug: 'organs-relay-map', title: '青砖驿路图', direction: 'Slate Courier Relay', component: OrgansRelayMap, href: '/inkloom/objective/criminal-procedure/03/organs-relay-map/', durationInFrames: ORGANS_RELAY_DURATION_FRAMES, fps: ORGANS_RELAY_FPS},
   {id: 'criminal-procedure-02-plea-leniency-caliper', slug: 'plea-leniency-caliper', title: '认罚量尺工坊', direction: 'Maple Caliper Workshop', component: PleaLeniencyCaliper, href: '/inkloom/objective/criminal-procedure/02/plea-leniency-caliper/', durationInFrames: PLEA_LENIENTY_DURATION_FRAMES, fps: PLEA_LENIENTY_FPS},
   {id: 'theoretical-law-01-concept-of-law-dispute', slug: 'concept-of-law-dispute', title: '漆屏对峙', direction: 'Lacquer Twin-Screen', component: ConceptOfLawDispute, href: '/inkloom/objective/theoretical-law/01/concept-of-law-dispute/', durationInFrames: CONCEPT_OF_LAW_DURATION_FRAMES, fps: CONCEPT_OF_LAW_FPS},
@@ -251,6 +254,7 @@ const DEMO_ADDED_AT: Record<(typeof STYLE_DEMOS)[number]['id'], string> = {
   'theoretical-law-17-legal-interpretation': '2026-08-28T19:56:14+08:00',
   'criminal-procedure-07-evidence-exclusion-lattice': '2026-08-28T20:10:00+08:00',
   'criminal-procedure-01-procedure-structure-orrery': '2026-08-28T22:30:00+08:00',
+  'criminal-procedure-04-jurisdiction-sluice-terrace': '2026-08-29T14:50:00+08:00',
   'criminal-procedure-03-organs-relay-map': '2026-08-29T01:30:00+08:00',
   'criminal-procedure-02-plea-leniency-caliper': '2026-08-29T01:05:00+08:00',
   'theoretical-law-01-concept-of-law-dispute': '2026-08-28T23:30:00+08:00',

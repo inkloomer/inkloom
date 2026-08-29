@@ -1,0 +1,16 @@
+{
+  "directionId": "sluice-terrace-jurisdiction",
+  "family": "sluice-terrace-family",
+  "palette": "deep slate basin, flowing teal channels, bronze gate frames, vermilion warning waterlines, parchment gate cards",
+  "typography": "WenKai gate-plaque headings with waterwork chips and intake tags",
+  "composition": "a four-tier court terrace fed by six intermediate-court intakes, a main-versus-auxiliary territory channel pair, and a dual-column transfer board with two exits and a join bay",
+  "surface": "a waterworks control room with teal channel lines, bronze sluice gates and parchment instrument cards",
+  "motion": "waterlines extend channel by channel, intake chips fill the intermediate gate, a dossier chip travels from request to decision, and rule cards settle in reading order",
+  "transition": "the slate basin, channel grid and bronze frame persist while the gate cards are replaced",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/criminal-procedure/04/jurisdiction-sluice-terrace/",
+    "title": "水闸分级渠"
+  }
+}
