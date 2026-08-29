@@ -1,0 +1,16 @@
+{
+  "directionId": "amendment-leaf-bindery",
+  "family": "codex-amendment-bindery",
+  "palette": "dark olive bindery ground + sewn parchment amendment leaves + crimson linen thread lines + brass grommets + gold year labels + dark sewing ink",
+  "typography": "ink headings on parchment leaves, dark bindery label tabs with gold left bar, crimson thread underlines for year rows, gold chips for amendment numbers, thin ink underline for key insertions",
+  "composition": "the founding timeline stretches as a sewn spine with document leaves; the 1988-1993 and 1999-2004 benches lay out amendment rows per year; the 2018 cluster boards its biggest insertions; the mnemonic leaf rhymes the recurrences",
+  "surface": "flat dark olive ground with faint sewing-guide hairlines, parchment leaves with hairline weathered borders and grommet dots, no gradients, no rounded cards, no drop shadows",
+  "motion": "leaves are sewn onto the spine one by one, year labels ink in, thread lines draw across recurring themes, the 2018 cluster leaves unfold outward",
+  "transition": "the bindery thread pulls taut and the bench clears for the next signature",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/theoretical-law/01/constitution-development/",
+    "title": "补卷装帧室"
+  }
+}

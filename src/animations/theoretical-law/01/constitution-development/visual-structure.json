@@ -1,0 +1,91 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "playerControlSafeBottom": 176,
+  "scenes": [
+    {
+      "id": "documents-timeline",
+      "export": "DocumentsTimelineScene",
+      "layout": "founding-spine-timeline",
+      "anchor": "timeline-gate",
+      "grammar": ["provisional-leaf", "four-constitutions-spine", "five-amendment-band"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial", "annotation"],
+      "tokens": ["ScrollText", "Landmark", "History"],
+      "finalKnowledge": [
+        "timeline-heading",
+        "spine-band",
+        "provisional-note",
+        "amendment-count-note"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "amendments-early",
+      "export": "AmendmentsEarlyScene",
+      "layout": "amendment-year-bench-1988-1993",
+      "anchor": "typographic-sequence",
+      "grammar": ["amendment-1988-rows", "amendment-1993-groups", "tenure-row"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "thin-underline"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["Store", "Home", "Clock"],
+      "finalKnowledge": [
+        "early-heading",
+        "amendment-1988-bench",
+        "amendment-1993-bench"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "amendments-modern",
+      "export": "AmendmentsModernScene",
+      "layout": "amendment-year-bench-1999-2004",
+      "anchor": "comparison-axis",
+      "grammar": ["amendment-1999-groups", "amendment-2004-groups", "rights-insertion"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["BookOpen", "Coins", "Heart"],
+      "finalKnowledge": [
+        "modern-heading",
+        "amendment-1999-bench",
+        "amendment-2004-bench",
+        "rights-insertion-note"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "amendment-2018",
+      "export": "Amendment2018Scene",
+      "layout": "amendment-2018-cluster-board",
+      "anchor": "document-fork",
+      "grammar": ["guidance-cluster", "supervision-cluster", "tenure-local-cluster"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["Building2", "PenLine", "Scale"],
+      "finalKnowledge": [
+        "y2018-heading",
+        "guidance-cluster",
+        "supervision-cluster",
+        "local-cluster"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "mnemonics",
+      "export": "MnemonicsScene",
+      "layout": "mnemonic-rhyme-board",
+      "anchor": "concept-icon",
+      "grammar": ["recurrence-rhymes", "y2018-new-words", "provisional-verdict"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["ListChecks"],
+      "finalKnowledge": [
+        "mnemonics-heading",
+        "recurrence-rhymes",
+        "y2018-new-words",
+        "provisional-verdict"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}
