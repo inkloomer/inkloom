@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "playerControlSafeBottom": 168,
+  "scenes": [
+    {
+      "id": "class-share",
+      "export": "ClassShareScene",
+      "layout": "charter-issue-window",
+      "anchor": "boundary",
+      "grammar": ["charter-mandate-rule", "issue-window-boundary"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["ScrollText", "Landmark", "Split", "Vote", "Users", "GraduationCap"],
+      "finalKnowledge": [
+        "cls-charter-gate",
+        "cls-issue-window",
+        "cls-vote-split",
+        "cls-exam-recap"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "authorized-capital",
+      "export": "AuthorizedCapitalScene",
+      "layout": "dual-path-vote-desk",
+      "anchor": "comparison-axis",
+      "grammar": ["dual-capital-path", "supermajority-threshold"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["Users", "Vote", "GraduationCap", "Lightbulb"],
+      "finalKnowledge": [
+        "cap-general-path",
+        "cap-authorized-path",
+        "cap-case-verdict",
+        "cap-patent-fork"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "reserve-misuse",
+      "export": "ReserveMisuseScene",
+      "layout": "misuse-acceleration-bench",
+      "anchor": "document-fork",
+      "grammar": ["ultra-vires-invalidation", "acceleration-trigger"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["FileX", "Users", "Zap", "Coins"],
+      "finalKnowledge": [
+        "mis-invalid-resolution",
+        "mis-invalidation-fork",
+        "mis-acceleration",
+        "mis-recap"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

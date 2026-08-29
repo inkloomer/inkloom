@@ -1,0 +1,70 @@
+{
+  "animationId": "capital-regime-vote-hall",
+  "compositionId": "CapitalRegimeVoteHall",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-29T21:41:58.034Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 279,
+      "frameCount": 280,
+      "id": "class-share",
+      "number": "01",
+      "startFrame": 0,
+      "title": "类别股：章程写明，公开前后两重天",
+      "durationMs": 9333,
+      "file": "class-share.avif",
+      "fileSize": 531382,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "8790092525d7ebe07b7d9c98497c63adfc4101ef5ad7f3fc566a98342c774ef7",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "bf2128c2557876924e92df8dd2d5c9d124cfefcaecf91d22e54c97c140190d2a"
+    },
+    {
+      "endFrame": 589,
+      "frameCount": 310,
+      "id": "authorized-capital",
+      "number": "02",
+      "startFrame": 280,
+      "title": "增资双径：股东会与董事会的两张票匣",
+      "durationMs": 10333,
+      "file": "authorized-capital.avif",
+      "fileSize": 528483,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "291ef487e2ebbb7c7a3eda956ec2e930ec7a717d077f2aaac1a0f2a86ac0ced7",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "bf2128c2557876924e92df8dd2d5c9d124cfefcaecf91d22e54c97c140190d2a"
+    },
+    {
+      "endFrame": 889,
+      "frameCount": 300,
+      "id": "reserve-misuse",
+      "number": "03",
+      "startFrame": 590,
+      "title": "公积金填出资：无效决议与加速到期",
+      "durationMs": 10000,
+      "file": "reserve-misuse.avif",
+      "fileSize": 650225,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "f060f23435b8dd297f6a918a83877e7a5178fb77afa5b5be12a0d313c962a5a5",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "bf2128c2557876924e92df8dd2d5c9d124cfefcaecf91d22e54c97c140190d2a"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "bf2128c2557876924e92df8dd2d5c9d124cfefcaecf91d22e54c97c140190d2a",
+  "targetFps": 30,
+  "totalFileSize": 1710090
+}

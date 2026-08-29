@@ -1,0 +1,28 @@
+{
+  "directionId": "xuan-paper-vote-urn-hall",
+  "family": "votingslip-urn-hall",
+  "palette": "xuan paper cream field + indigo ink + crimson veto stamps + jade approve stamps + silk gold slips + ink black",
+  "typography": "vote hall headlines, slip box labels, square crimson-jade verdict stamps, dashed issue-window rules",
+  "composition": "a charter gate with an issue-window boundary, a dual-path vote desk comparing shareholders assembly and board urns, and an invalidation bench pairing a voided reserve misuse with acceleration",
+  "surface": "xuan paper walls with slip boxes and silk gold slips; no glossy panels",
+  "motion": "slips drop into urns in legal order, the two paths are weighed side by side, void and acceleration stamps land; no idle loops",
+  "transition": "the vote hall persists while each scene re-stages the same urn desk for a new question",
+  "conceptTokens": {
+    "章程": "ScrollText",
+    "公开发行": "Landmark",
+    "适用分流": "Split",
+    "表决": "Vote",
+    "股东会": "Users",
+    "专利出资": "Lightbulb",
+    "无效决议": "FileX",
+    "加速到期": "Zap",
+    "公积金": "Coins",
+    "真题": "GraduationCap"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/commercial-economic-law/01/capital-regime-vote-hall/",
+    "title": "宣纸票匦堂"
+  }
+}
