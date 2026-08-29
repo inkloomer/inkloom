@@ -1,0 +1,70 @@
+{
+  "animationId": "first-instance-procession",
+  "compositionId": "FirstInstanceProcession",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-29T10:03:22.326Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 519,
+      "frameCount": 260,
+      "id": "five-stage-street",
+      "number": "01",
+      "startFrame": 0,
+      "title": "五阶段流水街",
+      "durationMs": 8667,
+      "file": "five-stage-street.avif",
+      "fileSize": 269879,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "2b99eb76ecd2881cc5fa96acd737173a1ae82947f6b8852e8f0df54be2265d8b",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "486e31efab84d4e3902225d0043f8a907b25cb00a864d30a3282ca3504e69c8b"
+    },
+    {
+      "endFrame": 1019,
+      "frameCount": 250,
+      "id": "opening-rules-lane",
+      "number": "02",
+      "startFrame": 520,
+      "title": "开庭与调查铺规",
+      "durationMs": 8333,
+      "file": "opening-rules-lane.avif",
+      "fileSize": 368605,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "062f8ddc9d31d3985d3a0f3418b48c51a2cf778a88c0ac11adf3f7736e8e647e",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "486e31efab84d4e3902225d0043f8a907b25cb00a864d30a3282ca3504e69c8b"
+    },
+    {
+      "endFrame": 1539,
+      "frameCount": 260,
+      "id": "verdict-square",
+      "number": "03",
+      "startFrame": 1020,
+      "title": "评议宣判广场",
+      "durationMs": 8667,
+      "file": "verdict-square.avif",
+      "fileSize": 346572,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "ffcf05a35b07ec3f13c5c7f2a7d75b02186057235c61b5b6376776c3bfd7ce11",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "486e31efab84d4e3902225d0043f8a907b25cb00a864d30a3282ca3504e69c8b"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "486e31efab84d4e3902225d0043f8a907b25cb00a864d30a3282ca3504e69c8b",
+  "targetFps": 30,
+  "totalFileSize": 985056
+}

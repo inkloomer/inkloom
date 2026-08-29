@@ -1,0 +1,16 @@
+{
+  "directionId": "procession-street-first-instance",
+  "family": "procession-street-family",
+  "palette": "evening indigo street, pavement cream shopfronts, lantern amber, rose tribunal accents, awning green and indigo dusk notes",
+  "typography": "WenKai street-lantern headings with station chips and pavement banners",
+  "composition": "a five-station street with recall lanes, an opening lane beside a forced-attendance bank over an order banner, and a verdict square of kind banks under a mnemonic banner",
+  "surface": "an evening procession street with lantern glow, pavement shopfront cards and awning accents",
+  "motion": "stations light up along the street, recall arrows loop back upstream, rule banks fill their chips, and the mnemonic banner stamps the square",
+  "transition": "the dusk street backdrop persists while the shopfront cards are replaced",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/criminal-procedure/15/first-instance-procession/",
+    "title": "流水街"
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "five-stage-street",
+      "export": "FiveStageStreetScene",
+      "layout": "five-station-street-with-recall-lanes",
+      "anchor": "timeline-gate",
+      "grammar": [
+        "street-walks-opening-investigation-debate-statement-verdict",
+        "debate-can-recall-into-investigation",
+        "new-facts-in-statement-reopen-investigation",
+        "new-defense-in-statement-reopen-debate"
+      ],
+      "textTreatments": ["chip", "thin-underline", "soft-highlight"],
+      "focalChannels": ["connector", "contrast", "enclosure", "spatial"],
+      "tokens": ["RefreshCw", "Megaphone"],
+      "finalKnowledge": [
+        "five-stations",
+        "recall-lanes",
+        "statement-limit-note"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "opening-rules-lane",
+      "export": "OpeningRulesScene",
+      "layout": "opening-lane-with-investigation-banks",
+      "anchor": "document-fork",
+      "grammar": [
+        "opening-deadlines-run-ten-and-three-days",
+        "witnesses-never-sit-in-gallery",
+        "questioning-runs-prosecution-first-evidence-oral-first",
+        "forced-attendance-spares-spouse-parents-children"
+      ],
+      "textTreatments": ["chip", "thin-underline", "external-negation"],
+      "focalChannels": ["connector", "contrast", "enclosure", "annotation"],
+      "tokens": ["ScrollText", "UserCheck", "Gavel"],
+      "finalKnowledge": [
+        "opening-deadline-lane",
+        "forced-attendance-bank",
+        "question-order-note",
+        "witness-order-note"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "verdict-square",
+      "export": "VerdictSquareScene",
+      "layout": "verdict-square-with-mnemonic-banner",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "pre-deliberation-absence-swaps-and-retries",
+        "post-deliberation-absence-keeps-names",
+        "verdicts-split-guilty-innocent-no-liability-and-termination",
+        "all-judgments-announced-publicly"
+      ],
+      "textTreatments": ["chip", "thin-underline", "soft-highlight"],
+      "focalChannels": ["contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["Stamp"],
+      "finalKnowledge": [
+        "swap-mnemonic",
+        "verdict-kind-banks",
+        "withdraw-note"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}
