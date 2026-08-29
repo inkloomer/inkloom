@@ -1,0 +1,147 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 5,
+  "scenes": [
+    {
+      "id": "arbitration-agreement",
+      "export": "ArbitrationAgreementScene",
+      "layout": "arbitration-validity-ladder-with-report-desk",
+      "anchor": "flow-path",
+      "grammar": [
+        "validity-climbs-the-choice-of-law-ladder",
+        "invalid-rulings-climb-to-the-supreme-court"
+      ],
+      "textTreatments": [
+        "label-block",
+        "thin-underline",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "connector",
+        "contrast",
+        "enclosure"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "arbitration-authority",
+        "arbitration-law-ladder",
+        "report-up-rule",
+        "arbitration-place"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "jurisdiction-levels",
+      "export": "JurisdictionLevelsScene",
+      "layout": "amount-ladder-with-exception-strip",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "amount-ladders-rank-high-and-intermediate-courts",
+        "downshift-is-the-rule-concentration-the-exception"
+      ],
+      "textTreatments": [
+        "label-block",
+        "soft-highlight",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "contrast",
+        "spatial",
+        "enclosure"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "level-principle",
+        "level-amounts",
+        "level-exceptions"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "territorial-basics",
+      "export": "TerritorialBasicsScene",
+      "layout": "three-gates-territorial-board",
+      "anchor": "document-fork",
+      "grammar": [
+        "touch-point-contacts-open-the-court-door",
+        "exclusive-gates-stay-shut-but-yield-to-arbitration"
+      ],
+      "textTreatments": [
+        "label-block",
+        "thin-underline",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "connector"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "touch-point-rule",
+        "written-agreement-rule",
+        "exclusive-three",
+        "exclusive-arbitration-note"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "forum-mechanics",
+      "export": "ForumMechanicsScene",
+      "layout": "forum-control-trio-board",
+      "anchor": "flow-path",
+      "grammar": [
+        "parallel-suits-run-until-recognition-closes-them",
+        "cicc-rules-loosen-language-and-evidence"
+      ],
+      "textTreatments": [
+        "label-block",
+        "soft-highlight",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "contrast",
+        "connector",
+        "enclosure"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "forum-non-conveniens",
+        "parallel-lis-pendens",
+        "parallel-suspension",
+        "cicc-rules"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "foreign-status",
+      "export": "ForeignStatusScene",
+      "layout": "status-trio-columns-with-period-strip",
+      "anchor": "role-pair",
+      "grammar": [
+        "language-and-identity-gate-the-foreign-party",
+        "representation-rules-split-trust-from-engagement"
+      ],
+      "textTreatments": [
+        "label-block",
+        "thin-underline",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "locator"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "language-rule",
+        "identity-proof",
+        "representation-rules",
+        "poa-rules",
+        "period-procedure"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}
