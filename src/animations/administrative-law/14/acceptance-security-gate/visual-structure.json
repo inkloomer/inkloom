@@ -1,16 +1,17 @@
 {
   "version": 1,
   "playerControlSafeBottom": 160,
-  "minimumDistinctLayouts": 6,
+  "minimumDistinctLayouts": 8,
   "scenes": [
     {
       "id": "positive-list-lane",
       "export": "PositiveListLaneScene",
-      "layout": "conveyor-admission-line",
+      "layout": "copper-still-collection-bench",
       "anchor": "flow-path",
       "grammar": [
-        "eleven-admissible-acts-travel-the-green-conveyor",
-        "scan-beam-approves-each-item-into-the-court"
+        "raw-acts-heat-in-the-copper-boiler",
+        "distillate-pipe-feeds-eleven-collect-flasks-in-legal-order",
+        "collected-spirit-pours-into-the-court-barrel"
       ],
       "textTreatments": [
         "label-block",
@@ -18,9 +19,9 @@
         "stamp"
       ],
       "focalChannels": [
-        "contrast",
-        "enclosure",
-        "motion"
+        "connector",
+        "motion",
+        "enclosure"
       ],
       "tokens": [],
       "finalKnowledge": [
@@ -38,16 +39,18 @@
         "positive-entrance",
         "positive-mnemonic"
       ],
-      "statefulObjects": []
+      "statefulObjects": [
+        "distillate-flow"
+      ]
     },
     {
       "id": "exclusion-barriers",
       "export": "ExclusionBarriersScene",
-      "layout": "five-rising-exclusion-bars",
+      "layout": "waste-valve-fraction-trap",
       "anchor": "boundary",
       "grammar": [
-        "five-exclusion-bars-rise-to-block-their-case-types",
-        "barred-acts-stack-behind-each-rail"
+        "five-waste-valves-vent-their-barred-case-types",
+        "each-vented-type-condenses-into-a-labeled-residue-chip"
       ],
       "textTreatments": [
         "label-block",
@@ -57,7 +60,7 @@
       "focalChannels": [
         "contrast",
         "enclosure",
-        "icon"
+        "motion"
       ],
       "tokens": [],
       "finalKnowledge": [
@@ -73,15 +76,16 @@
     {
       "id": "agreement-counter",
       "export": "AgreementCounterScene",
-      "layout": "agreement-counter",
+      "layout": "agreement-cask-counter",
       "anchor": "role-pair",
       "grammar": [
-        "agreement-types-enter-the-counter",
-        "only-the-people-side-may-sue"
+        "agreement-concept-plank-mounts-above-the-cask-shelf",
+        "five-cask-heads-cell-every-agreement-kind",
+        "the-direction-scale-weighs-people-versus-agency"
       ],
       "textTreatments": [
         "label-block",
-        "thin-underline",
+        "chip",
         "stamp"
       ],
       "focalChannels": [
@@ -105,11 +109,11 @@
     {
       "id": "incidental-review-entry",
       "export": "IncidentalReviewEntryScene",
-      "layout": "incidental-review-entry-console",
+      "layout": "side-arm-triple-checkpoint",
       "anchor": "flow-path",
       "grammar": [
-        "incidental-request-rides-alongside-the-main-suit",
-        "object-time-and-venue-are-checked-at-entry"
+        "one-manifold-pipe-splits-into-three-checkpoint-columns",
+        "each-column-gauges-way-object-or-time"
       ],
       "textTreatments": [
         "label-block",
@@ -132,11 +136,11 @@
     {
       "id": "review-process-console",
       "export": "ReviewProcessConsoleScene",
-      "layout": "review-process-console",
-      "anchor": "flow-path",
+      "layout": "heat-and-condensate-panels",
+      "anchor": "document-fork",
       "grammar": [
-        "review-process-starts-when-illegality-is-suspected",
-        "the-maker-hears-and-the-court-checks-three-items"
+        "procedure-boiler-heats-on-suspicion-of-illegality",
+        "condenser-column-checks-three-items-and-strains-four-impurities"
       ],
       "textTreatments": [
         "label-block",
@@ -158,11 +162,12 @@
     {
       "id": "court-handling-console",
       "export": "CourtHandlingConsoleScene",
-      "layout": "court-handling-console",
-      "anchor": "flow-path",
+      "layout": "fraction-collection-shelf",
+      "anchor": "document-fork",
       "grammar": [
-        "legal-files-serve-as-basis",
-        "illegal-files-get-not-applied-suggestion-and-copy"
+        "legal-fractions-serve-as-basis-flask",
+        "illegal-fractions-split-into-three-tagged-vials",
+        "two-barrel-staves-note-the-limits"
       ],
       "textTreatments": [
         "label-block",
@@ -186,11 +191,11 @@
     {
       "id": "suggestion-filing-console",
       "export": "SuggestionFilingConsoleScene",
-      "layout": "suggestion-filing-console",
+      "layout": "dispatch-and-filing-stair",
       "anchor": "flow-path",
       "grammar": [
-        "the-suggestion-desk-replies-in-sixty-days",
-        "filing-climbs-to-the-higher-court"
+        "dispatch-desk-replies-the-suggestion-in-sixty-days",
+        "filing-stairs-climb-to-higher-courts"
       ],
       "textTreatments": [
         "label-block",
@@ -212,11 +217,11 @@
     {
       "id": "gate-traps",
       "export": "GateTrapsScene",
-      "layout": "ten-judgment-gates",
+      "layout": "tasting-verdict-board",
       "anchor": "typographic-sequence",
       "grammar": [
-        "ten-exam-statements-pass-through-green-or-red-gates",
-        "incidental-review-five-questions-guide-the-answers"
+        "ten-exam-tastings-stamp-copper-pass-or-fail-seals",
+        "five-question-plate-guides-the-review"
       ],
       "textTreatments": [
         "stamp",

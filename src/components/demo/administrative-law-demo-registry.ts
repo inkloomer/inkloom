@@ -204,8 +204,8 @@ export const ADMINISTRATIVE_LAW_STYLE_DEMOS = [
   {
     id: "administrative-law-14-acceptance-security-gate",
     slug: "acceptance-security-gate",
-    title: "受案范围安检门",
-    direction: "Acceptance Security Gate",
+    title: "铜蒸馏工坊",
+    direction: "Copper Still Distillery",
     component: AcceptanceSecurityGate,
     href: "/inkloom/objective/administrative-law/14/acceptance-security-gate/",
     durationInFrames: DURATION_FRAMES_14,

@@ -3,7 +3,7 @@
   "compositionId": "AcceptanceSecurityGate",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-08-14T04:43:05.595Z",
+  "generatedAt": "2026-08-29T07:08:29.048Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -16,13 +16,13 @@
       "title": "正面列举11类",
       "durationMs": 8000,
       "file": "positive-list-lane.avif",
-      "fileSize": 564351,
+      "fileSize": 489417,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "676c670bfe3914e021560a10e174ed3d9177be6459572d05399e41d0c1b1ab1f",
+      "sha256": "355bf7dd48faf6840056146a52f6c8c96c74cae1eaae7e848a075fbb0a9f4571",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "bc965811d9d3c601d103f4bbb9b86f1e725a49b90b371165199d371e8d32840a"
+      "sceneFingerprint": "74ca80ca2540420576cb9da0ae9df7f582b2e0234379aebca4b26eea0c7e58bd"
     },
     {
       "endFrame": 959,
@@ -33,13 +33,13 @@
       "title": "反面排除5类",
       "durationMs": 8000,
       "file": "exclusion-barriers.avif",
-      "fileSize": 343951,
+      "fileSize": 306954,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "2118ab8d318c8ad812a9719bcf8947854ee5168a2c06c6601c918459dcbc3493",
+      "sha256": "4c506be21f1def1877302c51292b6d92df22753f10edf1f88c5868ab55d64d18",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "bc965811d9d3c601d103f4bbb9b86f1e725a49b90b371165199d371e8d32840a"
+      "sceneFingerprint": "74ca80ca2540420576cb9da0ae9df7f582b2e0234379aebca4b26eea0c7e58bd"
     },
     {
       "endFrame": 1439,
@@ -50,13 +50,13 @@
       "title": "行政协议",
       "durationMs": 8000,
       "file": "agreement-counter.avif",
-      "fileSize": 341827,
+      "fileSize": 385993,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "f5cf806c5f1708baedda52c96ec60c1dc4e1be63c7e19fcb13421b89f6843875",
+      "sha256": "0d61e692559e1872e5634503ad71976b84a56e08287d6e2da2dd55e36a5ca1ce",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "bc965811d9d3c601d103f4bbb9b86f1e725a49b90b371165199d371e8d32840a"
+      "sceneFingerprint": "74ca80ca2540420576cb9da0ae9df7f582b2e0234379aebca4b26eea0c7e58bd"
     },
     {
       "endFrame": 1919,
@@ -67,13 +67,13 @@
       "title": "附带审查入口",
       "durationMs": 8000,
       "file": "incidental-review-entry.avif",
-      "fileSize": 280182,
+      "fileSize": 373422,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "e91418fcd050161ac2ebd2e15ace274dc953867e89d910837e46a69f886a18d5",
+      "sha256": "30d28dc9d6f9658310f81267651e47a35bb347bca4c02eac499543d5a02844ec",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "bc965811d9d3c601d103f4bbb9b86f1e725a49b90b371165199d371e8d32840a"
+      "sceneFingerprint": "74ca80ca2540420576cb9da0ae9df7f582b2e0234379aebca4b26eea0c7e58bd"
     },
     {
       "endFrame": 2399,
@@ -84,13 +84,13 @@
       "title": "审查程序内容",
       "durationMs": 8000,
       "file": "review-process-console.avif",
-      "fileSize": 302196,
+      "fileSize": 348949,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "7059091629789f1d2ce4f018d55be981902c439a120422c1b50d8fd447ddc603",
+      "sha256": "71fb5876af04880c031594f7b811a6c31079feff3a52cda0c62add1e4f92cd4f",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "bc965811d9d3c601d103f4bbb9b86f1e725a49b90b371165199d371e8d32840a"
+      "sceneFingerprint": "74ca80ca2540420576cb9da0ae9df7f582b2e0234379aebca4b26eea0c7e58bd"
     },
     {
       "endFrame": 2879,
@@ -101,13 +101,13 @@
       "title": "法院处理结果",
       "durationMs": 8000,
       "file": "court-handling-console.avif",
-      "fileSize": 350943,
+      "fileSize": 399207,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "1c7c19423f3c16956313a5a49fa84aae8cc60b1d7ac34b1f4fd32897c7e8089e",
+      "sha256": "f618093b06709f47c639b06e3a5f62ef1781f04243dea179e2046ef2043c0f85",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "bc965811d9d3c601d103f4bbb9b86f1e725a49b90b371165199d371e8d32840a"
+      "sceneFingerprint": "74ca80ca2540420576cb9da0ae9df7f582b2e0234379aebca4b26eea0c7e58bd"
     },
     {
       "endFrame": 3359,
@@ -118,13 +118,13 @@
       "title": "建议与备案",
       "durationMs": 8000,
       "file": "suggestion-filing-console.avif",
-      "fileSize": 271201,
+      "fileSize": 373912,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "dfb0ec59d8ae8e7af76a9cf0cede4f0a69b3a3723bd33f7ea5b7e40ba1f7faf0",
+      "sha256": "aed66f877470c9a551b765ff9eedfda4890f9a15e652fe6a0c24bec916aba584",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "bc965811d9d3c601d103f4bbb9b86f1e725a49b90b371165199d371e8d32840a"
+      "sceneFingerprint": "74ca80ca2540420576cb9da0ae9df7f582b2e0234379aebca4b26eea0c7e58bd"
     },
     {
       "endFrame": 3839,
@@ -135,13 +135,13 @@
       "title": "最爱考十判断",
       "durationMs": 8000,
       "file": "gate-traps.avif",
-      "fileSize": 409933,
+      "fileSize": 459471,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "b2a715044ac257fb4a9662f796bee951d0cb9aca28f3213e302eb6e03ffc727e",
+      "sha256": "f7814315e3fe5cb30d03ab9993a4ab7276c29f3d796c8f79fc83332da0f0667b",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "bc965811d9d3c601d103f4bbb9b86f1e725a49b90b371165199d371e8d32840a"
+      "sceneFingerprint": "74ca80ca2540420576cb9da0ae9df7f582b2e0234379aebca4b26eea0c7e58bd"
     }
   ],
   "size": {
@@ -149,7 +149,7 @@
     "width": 2560
   },
   "sourceFps": 60,
-  "sourceFingerprint": "bc965811d9d3c601d103f4bbb9b86f1e725a49b90b371165199d371e8d32840a",
+  "sourceFingerprint": "74ca80ca2540420576cb9da0ae9df7f582b2e0234379aebca4b26eea0c7e58bd",
   "targetFps": 30,
-  "totalFileSize": 2864584
+  "totalFileSize": 3137325
 }

@@ -1,16 +1,16 @@
 {
-  "directionId": "acceptance-security-gate",
-  "family": "civic-acceptance-gate",
-  "palette": "checkpoint slate, gate white, admit green, exclude red, abstract amber, review blue",
-  "typography": "WenKai checkpoint tags with lane numerals, gate captions, thin exclusion underlines and verdict stamps",
-  "composition": "admission lanes, exclusion barriers, agreement counters, incidental-review consoles",
-  "surface": "security gates and lane barriers without beacons, rails or vitrines",
-  "motion": "cases ride the admit lane, excluded cases hit the barrier, incidental requests climb the review console",
-  "transition": "gate lifts, barrier drops and lane sweeps",
+  "directionId": "copper-still-distillery-works",
+  "family": "copper-still-distillery",
+  "palette": "warm workshop dark, glowing copper pipes and boiler, verdigris collect flasks, amber spirit accents, rust waste valves",
+  "typography": "title-face plaques on copper panels, warm body text, brass stamps for verdicts",
+  "composition": "boiler feeding collect-flask bench, waste-valve fraction trap, cask counter with direction scale, side-arm checkpoints, heat-and-condensate fork, fraction shelf, dispatch desk with filing stair, tasting verdict board",
+  "surface": "dark workshop walls with copper glow, riveted panels, patina highlights",
+  "motion": "pipes extend then flasks fill in legal order, valves vent downward, seals stamp last",
+  "transition": "steam clears to reveal the next apparatus stage",
   "catalog": {
     "status": "featured",
     "source": "original-node",
     "route": "/inkloom/objective/administrative-law/14/acceptance-security-gate/",
-    "title": "受案范围安检门"
+    "title": "铜蒸馏工坊"
   }
 }
