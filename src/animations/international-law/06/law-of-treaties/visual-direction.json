@@ -1,0 +1,16 @@
+{
+  "directionId": "steel-ink-treaty-desk",
+  "family": "steel-ink-treaty-desk",
+  "palette": "cold blue-gray desk paper, steel-ink blue, copper wax seals, crimson refusal verdicts",
+  "typography": "WenKai desk headings with copper underline strokes, steel ink highlights and wax verdict stamps",
+  "composition": "double-framed treaty desk with feather-pen masthead, decision-signature matrix and numbered desk rail",
+  "surface": "blue-gray ruled paper with copper hairlines, no dark slabs",
+  "motion": "document-row entries with side-sliding file cards and wax-seal verdicts",
+  "transition": "content swap under a persistent treaty-desk frame and rail",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/international-law/06/law-of-treaties/",
+    "title": "钢蓝墨水条约案"
+  }
+}

@@ -1,0 +1,173 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 5,
+  "scenes": [
+    {
+      "id": "conclusion-elements",
+      "export": "ConclusionElementsScene",
+      "layout": "four-element-registry-sheet",
+      "anchor": "typographic-sequence",
+      "grammar": [
+        "four-elements-file-down-the-registry-sheet",
+        "five-exempt-offices-are-principals-only"
+      ],
+      "textTreatments": [
+        "label-block",
+        "thin-underline",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "locator"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "element-subject",
+        "element-full-powers",
+        "element-consent",
+        "element-jus-cogens"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "conclusion-procedure",
+      "export": "ConclusionProcedureScene",
+      "layout": "decision-signature-matrix",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "important-and-ordinary-treaties-split-the-decision-desk",
+        "signatures-shift-between-president-premier-and-minister"
+      ],
+      "textTreatments": [
+        "label-block",
+        "soft-highlight",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "contrast",
+        "spatial",
+        "enclosure"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "procedure-new-treaty",
+        "procedure-join-treaty",
+        "important-category",
+        "procedure-priority"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "registration-reservation",
+      "export": "RegistrationReservationScene",
+      "layout": "registry-strip-with-reservation-fork",
+      "anchor": "document-fork",
+      "grammar": [
+        "four-reservation-cases-yield-four-effects",
+        "pairwise-rules-split-reserving-opposing-and-accepting-states"
+      ],
+      "textTreatments": [
+        "label-block",
+        "soft-highlight",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "spatial"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "registration-rule",
+        "reservation-timing",
+        "reservation-four-cases",
+        "reservation-pair-rules"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "treaty-effect",
+      "export": "TreatyEffectScene",
+      "layout": "pacta-sunta-columns-with-third-state-strip",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "direct-and-transformed-apply-split-the-pacta-sunta-duty",
+        "third-state-rights-need-no-objection-duties-need-writing"
+      ],
+      "textTreatments": [
+        "label-block",
+        "thin-underline",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "spatial"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "pacta-direct-apply",
+        "pacta-transform-apply",
+        "third-state-rights",
+        "third-state-duties"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "interpretation",
+      "export": "InterpretationScene",
+      "layout": "three-rules-interpretation-board",
+      "anchor": "typographic-sequence",
+      "grammar": [
+        "three-interpreters-take-three-stands",
+        "authoritative-text-gates-all-reading"
+      ],
+      "textTreatments": [
+        "label-block",
+        "soft-highlight",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "locator"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "interpretation-authoritative-text",
+        "interpretation-rules"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "conflict-amendment",
+      "export": "ConflictAmendmentScene",
+      "layout": "conflict-amendment-twin-boards",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "later-treaty-replaces-only-when-parties-grow",
+        "amendment-binds-only-its-acceptors"
+      ],
+      "textTreatments": [
+        "label-block",
+        "soft-highlight",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "spatial"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "conflict-succession-rule",
+        "amendment-binding-scope",
+        "amendment-new-member",
+        "conflict-vs-amendment"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

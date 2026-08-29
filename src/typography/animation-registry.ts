@@ -35,6 +35,7 @@ import {typography as typographyIl02} from '../animations/international-law/02/s
 import {typography as typographyIl03} from '../animations/international-law/03/spatial-regimes/animation.meta';
 import {typography as typographyIl04} from '../animations/international-law/04/individuals-regimes/animation.meta';
 import {typography as typographyIl05} from '../animations/international-law/05/diplomatic-consular/animation.meta';
+import {typography as typographyIl06} from '../animations/international-law/06/law-of-treaties/animation.meta';
 import {typography as typographyCpOrgansRelay} from '../animations/criminal-procedure/03/organs-relay-map/animation.meta';
 import {typography as typographyCpPleaCaliper} from '../animations/criminal-procedure/02/plea-leniency-caliper/animation.meta';
 import {typography as typography0} from '../animations/civil-procedure/01/dispute-resolution/animation.meta';
@@ -246,6 +247,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'spatial-regimes': {metadata: typographyIl03, scope: {animationId: 'spatial-regimes', subject: 'international-law', topic: '03'}},
   'individuals-regimes': {metadata: typographyIl04, scope: {animationId: 'individuals-regimes', subject: 'international-law', topic: '04'}},
   'diplomatic-consular': {metadata: typographyIl05, scope: {animationId: 'diplomatic-consular', subject: 'international-law', topic: '05'}},
+  'law-of-treaties': {metadata: typographyIl06, scope: {animationId: 'law-of-treaties', subject: 'international-law', topic: '06'}},
   'plea-leniency-caliper': {metadata: typographyCpPleaCaliper, scope: {animationId: 'plea-leniency-caliper', subject: 'criminal-procedure', topic: '02'}},
   'card-selling-funds-viewpoint': {metadata: typography40, scope: {animationId: 'card-selling-funds-viewpoint', subject: 'criminal', topic: '19'}},
   'occupational-embezzlement-flowchart': {metadata: typography41, scope: {animationId: 'occupational-embezzlement-flowchart', subject: 'criminal', topic: '19'}},
