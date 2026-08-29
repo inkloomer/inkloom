@@ -1,0 +1,76 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "playerControlSafeBottom": 176,
+  "scenes": [
+    {
+      "id": "concept-precondition",
+      "export": "ConceptPreconditionScene",
+      "layout": "torn-scroll-definition-board",
+      "anchor": "concept-icon",
+      "grammar": ["loophole-definition", "no-refusal-gate", "silence-versus-defect"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["FileWarning", "Gavel", "Landmark"],
+      "finalKnowledge": [
+        "concept-heading",
+        "loophole-definition",
+        "no-refusal-gate",
+        "silence-versus-defect",
+        "system-check-note"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "classification-lattice",
+      "export": "ClassificationLatticeScene",
+      "layout": "three-pair-fault-lattice",
+      "anchor": "comparison-axis",
+      "grammar": ["whole-part-pair", "manifest-hidden-pair", "original-supervenient-pair"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["FileX", "Eye", "EyeClosed"],
+      "finalKnowledge": [
+        "classification-heading",
+        "whole-part-pair",
+        "manifest-hidden-pair",
+        "original-supervenient-pair"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "filling-methods",
+      "export": "FillingMethodsScene",
+      "layout": "expansion-limitation-range-pair",
+      "anchor": "role-pair",
+      "grammar": ["teleological-expansion", "teleological-restriction", "similarity-principle-note"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "enclosure", "annotation"],
+      "tokens": ["Maximize2", "Minimize2"],
+      "finalKnowledge": [
+        "filling-heading",
+        "expansion-press",
+        "restriction-press",
+        "similarity-principle-note"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "interpretation-boundary",
+      "export": "InterpretationBoundaryScene",
+      "layout": "meaning-scope-boundary-board",
+      "anchor": "boundary",
+      "grammar": ["ordinary-sense-zone", "ultra-sense-zone", "restriction-condition-note"],
+      "textTreatments": ["label-block", "chip", "external-negation", "stamp"],
+      "focalChannels": ["icon", "enclosure", "contrast", "spatial", "annotation"],
+      "tokens": ["BookOpen", "Scale"],
+      "finalKnowledge": [
+        "boundary-heading",
+        "ordinary-sense-zone",
+        "ultra-sense-zone",
+        "restriction-condition-note"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

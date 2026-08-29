@@ -139,6 +139,7 @@ import {typography as typography94} from '../animations/civil-law/contracts/cont
 import {typography as typographySpf} from '../animations/civil-law/14/security-publicity-fate/animation.meta';
 import {typography as typographySpp} from '../animations/civil-law/01/six-principles-pillars/animation.meta';
 import {typography as typographyAutoApplicationOfLaw} from '../animations/theoretical-law/01/application-of-law/animation.meta';
+import {typography as typographyLh} from '../animations/theoretical-law/01/legal-loopholes/animation.meta';
 import {typography as typographyAutoBankruptcyReorganization} from '../animations/commercial-law/12/bankruptcy-reorganization/animation.meta';
 import {typography as typographyAutoBankruptcyLiquidation} from '../animations/commercial-law/12/bankruptcy-liquidation/animation.meta';
 import {typography as typographyAutoRecoveryRight} from '../animations/commercial-law/11/recovery-right/animation.meta';
@@ -295,6 +296,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'security-publicity-fate': {metadata: typographySpf, scope: {animationId: 'security-publicity-fate', subject: 'civil-law', topic: '14'}},
   'six-principles-pillars': {metadata: typographySpp, scope: {animationId: 'six-principles-pillars', subject: 'civil-law', topic: '01'}},
   'application-of-law': {metadata: typographyAutoApplicationOfLaw, scope: {animationId: 'application-of-law', subject: 'theoretical-law', topic: '01'}},
+  'legal-loopholes': {metadata: typographyLh, scope: {animationId: 'legal-loopholes', subject: 'theoretical-law', topic: '01'}},
   'bankruptcy-reorganization': {metadata: typographyAutoBankruptcyReorganization, scope: {animationId: 'bankruptcy-reorganization', subject: 'commercial-law', topic: '12'}},
   'bankruptcy-liquidation': {metadata: typographyAutoBankruptcyLiquidation, scope: {animationId: 'bankruptcy-liquidation', subject: 'commercial-law', topic: '12'}},
   'recovery-right': {metadata: typographyAutoRecoveryRight, scope: {animationId: 'recovery-right', subject: 'commercial-law', topic: '11'}},
