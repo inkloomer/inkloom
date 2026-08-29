@@ -1,0 +1,70 @@
+{
+  "animationId": "creation-of-constitution",
+  "compositionId": "CreationOfConstitution",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-29T21:31:24.432Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 263,
+      "frameCount": 264,
+      "id": "four-subjects",
+      "number": "01",
+      "startFrame": 0,
+      "title": "制宪修宪释宪监督",
+      "durationMs": 8800,
+      "file": "four-subjects.avif",
+      "fileSize": 362424,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "cef888ed2ce1b3385a57c6096309450afdc3f0fa420a5350b30a3315809fb8de",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "431e9536687ba8113d65511bed4aac0d9c070a8257a13b33b5f57c683e408f58"
+    },
+    {
+      "endFrame": 527,
+      "frameCount": 264,
+      "id": "creation-procedure",
+      "number": "02",
+      "startFrame": 264,
+      "title": "制宪程序四步",
+      "durationMs": 8800,
+      "file": "creation-procedure.avif",
+      "fileSize": 490415,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "af87bef287dedc3f6850de082c91f1caf52893f9e8d44a9c5baf1f7429632bc1",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "431e9536687ba8113d65511bed4aac0d9c070a8257a13b33b5f57c683e408f58"
+    },
+    {
+      "endFrame": 767,
+      "frameCount": 240,
+      "id": "delegation-power",
+      "number": "03",
+      "startFrame": 528,
+      "title": "委托关系与权界",
+      "durationMs": 8000,
+      "file": "delegation-power.avif",
+      "fileSize": 381526,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "616d6ce3529558105e479910fde220b0b5a067327fb44d02680ff32e8be2d23a",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "431e9536687ba8113d65511bed4aac0d9c070a8257a13b33b5f57c683e408f58"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "431e9536687ba8113d65511bed4aac0d9c070a8257a13b33b5f57c683e408f58",
+  "targetFps": 30,
+  "totalFileSize": 1234365
+}

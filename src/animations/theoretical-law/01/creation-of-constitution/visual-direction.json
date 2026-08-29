@@ -1,0 +1,16 @@
+{
+  "directionId": "founding-copper-engraving",
+  "family": "bronze-engraving-atelier",
+  "palette": "patina-bronze ground + engraved copper plates + pale chiseled inscriptions + oxide-green seals + warm brass ordinals + dark engraving ink",
+  "typography": "chiseled pale inscriptions on copper plates, dark atelier label tabs with brass left bar, oxide-green stamps reserved for delegation verdicts, brass ordinal marks, thin pale underline for tests",
+  "composition": "the four subjects stand as an engraved plate row with year stamps; the creation procedure runs as a four-step engraving line from drafting to promulgation; the delegation scene pairs the people with their commission beside a power-boundary plate",
+  "surface": "flat patina-bronze ground with faint engraving-rule hairlines, copper plates with hairline weathered borders and corner rivets, no gradients, no rounded cards, no drop shadows",
+  "motion": "inscriptions carve onto the plates stroke by stroke, year stamps land once and hold, the procedure line draws step by step, the commission link ties the two plates together",
+  "transition": "a burnishing pass sweeps the frame and the atelier clears for the next plate",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/theoretical-law/01/creation-of-constitution/",
+    "title": "铸宪铜版"
+  }
+}

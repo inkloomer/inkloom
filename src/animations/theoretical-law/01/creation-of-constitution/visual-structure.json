@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "playerControlSafeBottom": 176,
+  "scenes": [
+    {
+      "id": "four-subjects",
+      "export": "FourSubjectsScene",
+      "layout": "engraved-plate-subject-row",
+      "anchor": "comparison-axis",
+      "grammar": ["constituent-power-plate", "amendment-interpretation-plates", "supervision-plate"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["Users", "Landmark", "Gavel"],
+      "finalKnowledge": [
+        "subjects-heading",
+        "subject-row",
+        "year-stamps"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "creation-procedure",
+      "export": "CreationProcedureScene",
+      "layout": "four-step-engraving-line",
+      "anchor": "flow-path",
+      "grammar": ["drafting-body-step", "draft-proposal-step", "passage-promulgation-steps"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "thin-underline"],
+      "focalChannels": ["icon", "connector", "contrast", "motion", "annotation"],
+      "tokens": ["PenTool", "Vote", "Megaphone"],
+      "finalKnowledge": [
+        "procedure-heading",
+        "creation-line",
+        "enumeration-example"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "delegation-power",
+      "export": "DelegationPowerScene",
+      "layout": "commission-pair-with-power-boundary",
+      "anchor": "role-pair",
+      "grammar": ["people-commission-link", "no-own-power-note", "power-boundary-plate"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "connector", "annotation"],
+      "tokens": ["Link", "Lock"],
+      "finalKnowledge": [
+        "delegation-heading",
+        "commission-pair",
+        "power-boundary-plate"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

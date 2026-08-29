@@ -205,6 +205,7 @@ import {typography as typographyBel} from '../animations/commercial-economic-law
 import {typography as typographyVpf} from '../animations/commercial-economic-law/01/veil-piercing-forge/animation.meta';
 import {typography as typographyLl} from '../animations/theoretical-law/01/legislation-law/animation.meta';
 import {typography as typographyFc} from '../animations/theoretical-law/01/features-of-constitution/animation.meta';
+import {typography as typographyCo} from '../animations/theoretical-law/01/creation-of-constitution/animation.meta';
 import {typography as typographyPrg} from '../animations/commercial-economic-law/01/profit-reserve-granary/animation.meta';
 import {typography as typographyPlr} from '../animations/commercial-economic-law/01/promoter-liability-ropewalk/animation.meta';
 import {typography as typographySrp} from '../animations/commercial-economic-law/01/shareholder-register-pigeonhole/animation.meta';
@@ -425,6 +426,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'veil-piercing-forge': {metadata: typographyVpf, scope: {animationId: 'veil-piercing-forge', subject: 'commercial-economic-law', topic: '01'}},
   'legislation-law': {metadata: typographyLl, scope: {animationId: 'legislation-law', subject: 'theoretical-law', topic: '01'}},
   'features-of-constitution': {metadata: typographyFc, scope: {animationId: 'features-of-constitution', subject: 'theoretical-law', topic: '01'}},
+  'creation-of-constitution': {metadata: typographyCo, scope: {animationId: 'creation-of-constitution', subject: 'theoretical-law', topic: '01'}},
   'profit-reserve-granary': {metadata: typographyPrg, scope: {animationId: 'profit-reserve-granary', subject: 'commercial-economic-law', topic: '01'}},
   'promoter-liability-ropewalk': {metadata: typographyPlr, scope: {animationId: 'promoter-liability-ropewalk', subject: 'commercial-economic-law', topic: '01'}},
   'shareholder-register-pigeonhole': {metadata: typographySrp, scope: {animationId: 'shareholder-register-pigeonhole', subject: 'commercial-economic-law', topic: '01'}},
