@@ -15,6 +15,7 @@ import {typography as administrativeTypography13} from '../animations/administra
 import {typography as administrativeTypography14} from '../animations/administrative-law/14/acceptance-security-gate/animation.meta';
 import {typography as typography97} from '../animations/criminal-procedure/07/evidence-exclusion-lattice/animation.meta';
 import {typography as typography98} from '../animations/theoretical-law/01/concept-of-law-dispute/animation.meta';
+import {typography as typography101} from '../animations/theoretical-law/01/marxist-law-essence/animation.meta';
 import {typography as typography99} from '../animations/criminal-procedure/01/procedure-structure-orrery/animation.meta';
 import {typography as typographyCpPleaCaliper} from '../animations/criminal-procedure/02/plea-leniency-caliper/animation.meta';
 import {typography as typography0} from '../animations/civil-procedure/01/dispute-resolution/animation.meta';
@@ -205,6 +206,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'legal-interpretation': {metadata: typography96, scope: {animationId: 'legal-interpretation', subject: 'theoretical-law', topic: '17'}},
   'evidence-exclusion-lattice': {metadata: typography97, scope: {animationId: 'evidence-exclusion-lattice', subject: 'criminal-procedure', topic: '07'}},
   'concept-of-law-dispute': {metadata: typography98, scope: {animationId: 'concept-of-law-dispute', subject: 'theoretical-law', topic: '01'}},
+  'marxist-law-essence': {metadata: typography101, scope: {animationId: 'marxist-law-essence', subject: 'theoretical-law', topic: '01'}},
   'procedure-structure-orrery': {metadata: typography99, scope: {animationId: 'procedure-structure-orrery', subject: 'criminal-procedure', topic: '01'}},
   'plea-leniency-caliper': {metadata: typographyCpPleaCaliper, scope: {animationId: 'plea-leniency-caliper', subject: 'criminal-procedure', topic: '02'}},
   'card-selling-funds-viewpoint': {metadata: typography40, scope: {animationId: 'card-selling-funds-viewpoint', subject: 'criminal', topic: '19'}},

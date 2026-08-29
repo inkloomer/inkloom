@@ -1,0 +1,172 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 4,
+  "playerControlSafeBottom": 176,
+  "scenes": [
+    {
+      "id": "official-formality",
+      "export": "OfficialFormalityScene",
+      "layout": "state-apparatus-issuance-flow",
+      "anchor": "flow-path",
+      "grammar": [
+        "state-issuance",
+        "enforcement-tether",
+        "official-rename"
+      ],
+      "textTreatments": [
+        "label-block",
+        "soft-highlight",
+        "chip",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "icon",
+        "motion",
+        "enclosure",
+        "annotation",
+        "spatial"
+      ],
+      "tokens": [
+        "Landmark",
+        "FileText",
+        "ShieldCheck"
+      ],
+      "finalKnowledge": [
+        "formality-heading",
+        "issuance-flow",
+        "enforcement-tether",
+        "formality-note",
+        "state-nature-rename",
+        "official-nature-chip",
+        "initial-position-note"
+      ],
+      "statefulObjects": [
+        "statute-issued-by-state"
+      ]
+    },
+    {
+      "id": "class-will",
+      "export": "ClassWillScene",
+      "layout": "class-pair-with-will-gate",
+      "anchor": "role-pair",
+      "grammar": [
+        "sole-will-claim",
+        "exclusion-negation",
+        "concession-valve",
+        "whole-vs-part-contrast"
+      ],
+      "textTreatments": [
+        "label-block",
+        "soft-highlight",
+        "chip",
+        "external-negation",
+        "stamp"
+      ],
+      "focalChannels": [
+        "icon",
+        "contrast",
+        "enclosure",
+        "motion",
+        "annotation"
+      ],
+      "tokens": [
+        "Crown",
+        "UserX"
+      ],
+      "finalKnowledge": [
+        "class-heading",
+        "ruling-class-block",
+        "ruled-class-block",
+        "sole-will-claim",
+        "exclusion-negation",
+        "aspiration-valve",
+        "whole-longterm-note"
+      ],
+      "statefulObjects": [
+        "aspiration-through-valve"
+      ]
+    },
+    {
+      "id": "material-determinism",
+      "export": "MaterialDeterminismScene",
+      "layout": "foundation-superstructure-with-tributaries",
+      "anchor": "flow-target",
+      "grammar": [
+        "base-determines-superstructure",
+        "scribe-not-author",
+        "non-sole-factor"
+      ],
+      "textTreatments": [
+        "label-block",
+        "soft-highlight",
+        "chip",
+        "stamp",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "icon",
+        "motion",
+        "enclosure",
+        "contrast",
+        "annotation"
+      ],
+      "tokens": [
+        "Factory",
+        "ScrollText",
+        "Landmark",
+        "GitBranch"
+      ],
+      "finalKnowledge": [
+        "material-heading",
+        "material-base-block",
+        "law-superstructure-token",
+        "determine-arrow",
+        "scribe-quote",
+        "factor-diversity-note",
+        "decisive-not-sole-chip"
+      ],
+      "statefulObjects": [
+        "economic-requirement-into-law"
+      ]
+    },
+    {
+      "id": "depth-ladder-status",
+      "export": "DepthLadderStatusScene",
+      "layout": "depth-ladder-with-status-plaque",
+      "anchor": "typographic-sequence",
+      "grammar": [
+        "shallow-to-deep-ladder",
+        "theory-status",
+        "quote-attestation"
+      ],
+      "textTreatments": [
+        "label-block",
+        "chip",
+        "stamp",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "spatial",
+        "contrast",
+        "icon",
+        "annotation",
+        "enclosure"
+      ],
+      "tokens": [
+        "Layers",
+        "Landmark",
+        "Quote"
+      ],
+      "finalKnowledge": [
+        "ladder-heading",
+        "formality-step",
+        "class-step",
+        "material-step",
+        "organic-bond-note",
+        "status-plaque",
+        "marx-quote-strip"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

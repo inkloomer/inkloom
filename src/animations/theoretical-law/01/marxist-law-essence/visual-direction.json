@@ -1,0 +1,16 @@
+{
+  "directionId": "cyanotype-drafting",
+  "family": "blueprint-industrial-drafting",
+  "palette": "steel-blue drafting ground + white drafting-paper panels + soot ink + signal red edge tabs + brass measurement ticks",
+  "typography": "heavy kai plaques with red edge stripes on drafting paper, soot annotations with measured leader lines, stencil-like ordinal tabs, thin underline reserved for the operative standard",
+  "composition": "each scene is a drafting sheet on a steel-blue grid: flows read left to right along dimension lines, containment reads as a foundation elevation, the depth ladder rises like an elevation section",
+  "surface": "flat drafting-paper panels pinned on the blue grid, hairline steel rules, corner registration crosshairs, red edge tab on every plaque; no gradients, no rounded cards, no drop shadows",
+  "motion": "dimension lines draw before the parts they measure, the law sheet travels along its issuance dimension, the aspiration arrow threads its valve, the base slab presses upward into the superstructure, the ladder rises step by step",
+  "transition": "a horizontal drafting-line wipe that redraws the grid before the next sheet pins",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/theoretical-law/01/marxist-law-essence/",
+    "title": "蓝晒制图"
+  }
+}
