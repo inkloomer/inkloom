@@ -1,0 +1,16 @@
+{
+  "directionId": "aubergine-routing-board",
+  "family": "aubergine-routing-board",
+  "palette": "dark aubergine board, amber compass routes, sage renvoi lanes, terracotta blockades",
+  "typography": "WenKai routing headings with dashed compass medallions, amber ink highlights and sage underlines",
+  "composition": "routing board with dashed compass rail, route lanes between states and quadrant ascertaining desks",
+  "surface": "aubergine panels with diagonal amber hatch lines, no light cards",
+  "motion": "route-lane entries between states with stamped verdicts",
+  "transition": "content swap under a persistent routing frame and compass rail",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/international-law/10/conflict-of-laws-rules/",
+    "title": "紫檀罗盘局"
+  }
+}

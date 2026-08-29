@@ -42,6 +42,8 @@ import {FirstInstanceProcession} from '../../animations/criminal-procedure/15/fi
 import {DURATION_FRAMES as FIRST_INSTANCE_DURATION_FRAMES, FPS as FIRST_INSTANCE_FPS} from '../../animations/criminal-procedure/15/first-instance-procession/remotion/storyboard';
 import {AppealNoEscalationLock} from '../../animations/criminal-procedure/16/appeal-no-escalation-lock/remotion/AppealNoEscalationLock';
 import {DURATION_FRAMES as APPEAL_LOCK_DURATION_FRAMES, FPS as APPEAL_LOCK_FPS} from '../../animations/criminal-procedure/16/appeal-no-escalation-lock/remotion/storyboard';
+import {DeathReviewSummit} from '../../animations/criminal-procedure/17/death-review-summit/remotion/DeathReviewSummit';
+import {DURATION_FRAMES as DEATH_REVIEW_DURATION_FRAMES, FPS as DEATH_REVIEW_FPS} from '../../animations/criminal-procedure/17/death-review-summit/remotion/storyboard';
 import {PleaLeniencyCaliper} from '../../animations/criminal-procedure/02/plea-leniency-caliper/remotion/PleaLeniencyCaliper';
 import {DURATION_FRAMES as PLEA_LENIENTY_DURATION_FRAMES, FPS as PLEA_LENIENTY_FPS} from '../../animations/criminal-procedure/02/plea-leniency-caliper/remotion/storyboard';
 import {ThirdPartyRevocation} from '../../animations/civil-procedure/07/third-party-revocation/remotion/ThirdPartyRevocation';
@@ -152,6 +154,8 @@ import {WarArmedConflict} from '../../animations/international-law/08/war-armed-
 import {DURATION_FRAMES as WAR_ARMED_CONFLICT_DURATION_FRAMES, FPS as WAR_ARMED_CONFLICT_FPS} from '../../animations/international-law/08/war-armed-conflict/remotion/storyboard';
 import {CrossBorderDisputes} from '../../animations/international-law/09/cross-border-disputes/remotion/CrossBorderDisputes';
 import {DURATION_FRAMES as CROSS_BORDER_DISPUTES_DURATION_FRAMES, FPS as CROSS_BORDER_DISPUTES_FPS} from '../../animations/international-law/09/cross-border-disputes/remotion/storyboard';
+import {ConflictOfLawsRules} from '../../animations/international-law/10/conflict-of-laws-rules/remotion/ConflictOfLawsRules';
+import {DURATION_FRAMES as CONFLICT_OF_LAWS_RULES_DURATION_FRAMES, FPS as CONFLICT_OF_LAWS_RULES_FPS} from '../../animations/international-law/10/conflict-of-laws-rules/remotion/storyboard';
 import {getAnimationTypographyConfiguration} from '../../typography/animation-registry';
 import {withAnimationTypography} from '../../typography/animation-provider';
 import {DURATION_FRAMES as FIGHT_DURATION_FRAMES, FPS as FIGHT_FPS} from '../../animations/criminal/22/fight-defense-diagram/remotion/storyboard';
@@ -241,6 +245,7 @@ export const STYLE_DEMOS = [
   {id: 'criminal-procedure-14-trial-bench-composition', slug: 'trial-bench-composition', title: '席位拼合台', direction: 'Bench Assembly Trial Organs', component: TrialBenchComposition, href: '/inkloom/objective/criminal-procedure/14/trial-bench-composition/', durationInFrames: TRIAL_BENCH_DURATION_FRAMES, fps: TRIAL_BENCH_FPS},
   {id: 'criminal-procedure-15-first-instance-procession', slug: 'first-instance-procession', title: '流水街', direction: 'Procession Street First Instance', component: FirstInstanceProcession, href: '/inkloom/objective/criminal-procedure/15/first-instance-procession/', durationInFrames: FIRST_INSTANCE_DURATION_FRAMES, fps: FIRST_INSTANCE_FPS},
   {id: 'criminal-procedure-16-appeal-no-escalation-lock', slug: 'appeal-no-escalation-lock', title: '单行闸桥', direction: 'One-Way Lock Appeal', component: AppealNoEscalationLock, href: '/inkloom/objective/criminal-procedure/16/appeal-no-escalation-lock/', durationInFrames: APPEAL_LOCK_DURATION_FRAMES, fps: APPEAL_LOCK_FPS},
+  {id: 'criminal-procedure-17-death-review-summit', slug: 'death-review-summit', title: '峰顶复审营', direction: 'Summit Camp Death Review', component: DeathReviewSummit, href: '/inkloom/objective/criminal-procedure/17/death-review-summit/', durationInFrames: DEATH_REVIEW_DURATION_FRAMES, fps: DEATH_REVIEW_FPS},
   {id: 'criminal-procedure-03-organs-relay-map', slug: 'organs-relay-map', title: '青砖驿路图', direction: 'Slate Courier Relay', component: OrgansRelayMap, href: '/inkloom/objective/criminal-procedure/03/organs-relay-map/', durationInFrames: ORGANS_RELAY_DURATION_FRAMES, fps: ORGANS_RELAY_FPS},
   {id: 'criminal-procedure-02-plea-leniency-caliper', slug: 'plea-leniency-caliper', title: '认罚量尺工坊', direction: 'Maple Caliper Workshop', component: PleaLeniencyCaliper, href: '/inkloom/objective/criminal-procedure/02/plea-leniency-caliper/', durationInFrames: PLEA_LENIENTY_DURATION_FRAMES, fps: PLEA_LENIENTY_FPS},
   {id: 'theoretical-law-01-concept-of-law-dispute', slug: 'concept-of-law-dispute', title: '漆屏对峙', direction: 'Lacquer Twin-Screen', component: ConceptOfLawDispute, href: '/inkloom/objective/theoretical-law/01/concept-of-law-dispute/', durationInFrames: CONCEPT_OF_LAW_DURATION_FRAMES, fps: CONCEPT_OF_LAW_FPS},
@@ -253,6 +258,7 @@ export const STYLE_DEMOS = [
   {id: 'international-law-07-dispute-settlement', slug: 'dispute-settlement', title: '和平宫仲裁席', direction: 'Peace Palace Bench', component: withAnimationTypography(DisputeSettlement, getAnimationTypographyConfiguration('dispute-settlement')), href: '/inkloom/objective/international-law/07/dispute-settlement/', durationInFrames: DISPUTE_SETTLEMENT_DURATION_FRAMES, fps: DISPUTE_SETTLEMENT_FPS},
   {id: 'international-law-08-war-armed-conflict', slug: 'war-armed-conflict', title: '战地公报台', direction: 'Field Bulletin Desk', component: withAnimationTypography(WarArmedConflict, getAnimationTypographyConfiguration('war-armed-conflict')), href: '/inkloom/objective/international-law/08/war-armed-conflict/', durationInFrames: WAR_ARMED_CONFLICT_DURATION_FRAMES, fps: WAR_ARMED_CONFLICT_FPS},
   {id: 'international-law-09-cross-border-disputes', slug: 'cross-border-disputes', title: '珊瑚港事厅', direction: 'Coral Harbor Exchange', component: withAnimationTypography(CrossBorderDisputes, getAnimationTypographyConfiguration('cross-border-disputes')), href: '/inkloom/objective/international-law/09/cross-border-disputes/', durationInFrames: CROSS_BORDER_DISPUTES_DURATION_FRAMES, fps: CROSS_BORDER_DISPUTES_FPS},
+  {id: 'international-law-10-conflict-of-laws-rules', slug: 'conflict-of-laws-rules', title: '紫檀罗盘局', direction: 'Aubergine Routing Board', component: withAnimationTypography(ConflictOfLawsRules, getAnimationTypographyConfiguration('conflict-of-laws-rules')), href: '/inkloom/objective/international-law/10/conflict-of-laws-rules/', durationInFrames: CONFLICT_OF_LAWS_RULES_DURATION_FRAMES, fps: CONFLICT_OF_LAWS_RULES_FPS},
   {id: 'theoretical-law-01-marxist-law-essence', slug: 'marxist-law-essence', title: '蓝晒制图', direction: 'Cyanotype Drafting', component: MarxistLawEssence, href: '/inkloom/objective/theoretical-law/01/marxist-law-essence/', durationInFrames: MARXIST_LAW_DURATION_FRAMES, fps: MARXIST_LAW_FPS},
   {id: 'theoretical-law-01-features-of-law', slug: 'features-of-law', title: '标本陈列柜', direction: 'Specimen Gallery Cabinet', component: FeaturesOfLaw, href: '/inkloom/objective/theoretical-law/01/features-of-law/', durationInFrames: FEATURES_OF_LAW_DURATION_FRAMES, fps: FEATURES_OF_LAW_FPS},
   {id: 'theoretical-law-01-functions-of-law', slug: 'functions-of-law', title: '灯塔信号站', direction: 'Night Beacon Station', component: FunctionsOfLaw, href: '/inkloom/objective/theoretical-law/01/functions-of-law/', durationInFrames: FUNCTIONS_OF_LAW_DURATION_FRAMES, fps: FUNCTIONS_OF_LAW_FPS},
@@ -332,6 +338,7 @@ const DEMO_ADDED_AT: Record<(typeof STYLE_DEMOS)[number]['id'], string> = {
   'criminal-procedure-14-trial-bench-composition': '2026-08-29T19:50:00+08:00',
   'criminal-procedure-15-first-instance-procession': '2026-08-29T20:20:00+08:00',
   'criminal-procedure-16-appeal-no-escalation-lock': '2026-08-29T20:50:00+08:00',
+  'criminal-procedure-17-death-review-summit': '2026-08-29T21:20:00+08:00',
   'criminal-procedure-03-organs-relay-map': '2026-08-29T01:30:00+08:00',
   'criminal-procedure-02-plea-leniency-caliper': '2026-08-29T01:05:00+08:00',
   'theoretical-law-01-concept-of-law-dispute': '2026-08-28T23:30:00+08:00',
@@ -344,6 +351,7 @@ const DEMO_ADDED_AT: Record<(typeof STYLE_DEMOS)[number]['id'], string> = {
   'international-law-07-dispute-settlement': '2026-08-29T16:00:00+08:00',
   'international-law-08-war-armed-conflict': '2026-08-29T17:00:00+08:00',
   'international-law-09-cross-border-disputes': '2026-08-29T18:00:00+08:00',
+  'international-law-10-conflict-of-laws-rules': '2026-08-29T19:00:00+08:00',
   'theoretical-law-01-marxist-law-essence': '2026-08-29T13:40:00+08:00',
   'theoretical-law-01-features-of-law': '2026-08-29T15:10:00+08:00',
   'theoretical-law-01-functions-of-law': '2026-08-29T16:40:00+08:00',

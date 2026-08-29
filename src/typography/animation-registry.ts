@@ -35,6 +35,7 @@ import {typography as typographyCpTower} from '../animations/criminal-procedure/
 import {typography as typographyCpBench} from '../animations/criminal-procedure/14/trial-bench-composition/animation.meta';
 import {typography as typographyCpStreet} from '../animations/criminal-procedure/15/first-instance-procession/animation.meta';
 import {typography as typographyCpOneway} from '../animations/criminal-procedure/16/appeal-no-escalation-lock/animation.meta';
+import {typography as typographyCpSummit} from '../animations/criminal-procedure/17/death-review-summit/animation.meta';
 import {typography as typography100} from '../animations/international-law/01/sources-of-international-law/animation.meta';
 import {typography as typographyIl02} from '../animations/international-law/02/subjects-responsibility/animation.meta';
 import {typography as typographyIl03} from '../animations/international-law/03/spatial-regimes/animation.meta';
@@ -44,6 +45,7 @@ import {typography as typographyIl06} from '../animations/international-law/06/l
 import {typography as typographyIl07} from '../animations/international-law/07/dispute-settlement/animation.meta';
 import {typography as typographyIl08} from '../animations/international-law/08/war-armed-conflict/animation.meta';
 import {typography as typographyIl09} from '../animations/international-law/09/cross-border-disputes/animation.meta';
+import {typography as typographyIl10} from '../animations/international-law/10/conflict-of-laws-rules/animation.meta';
 import {typography as typographyCpOrgansRelay} from '../animations/criminal-procedure/03/organs-relay-map/animation.meta';
 import {typography as typographyCpPleaCaliper} from '../animations/criminal-procedure/02/plea-leniency-caliper/animation.meta';
 import {typography as typography0} from '../animations/civil-procedure/01/dispute-resolution/animation.meta';
@@ -255,6 +257,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'trial-bench-composition': {metadata: typographyCpBench, scope: {animationId: 'trial-bench-composition', subject: 'criminal-procedure', topic: '14'}},
   'first-instance-procession': {metadata: typographyCpStreet, scope: {animationId: 'first-instance-procession', subject: 'criminal-procedure', topic: '15'}},
   'appeal-no-escalation-lock': {metadata: typographyCpOneway, scope: {animationId: 'appeal-no-escalation-lock', subject: 'criminal-procedure', topic: '16'}},
+  'death-review-summit': {metadata: typographyCpSummit, scope: {animationId: 'death-review-summit', subject: 'criminal-procedure', topic: '17'}},
   'sources-of-international-law': {metadata: typography100, scope: {animationId: 'sources-of-international-law', subject: 'international-law', topic: '01'}},
   'subjects-responsibility': {metadata: typographyIl02, scope: {animationId: 'subjects-responsibility', subject: 'international-law', topic: '02'}},
   'spatial-regimes': {metadata: typographyIl03, scope: {animationId: 'spatial-regimes', subject: 'international-law', topic: '03'}},
@@ -264,6 +267,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'dispute-settlement': {metadata: typographyIl07, scope: {animationId: 'dispute-settlement', subject: 'international-law', topic: '07'}},
   'war-armed-conflict': {metadata: typographyIl08, scope: {animationId: 'war-armed-conflict', subject: 'international-law', topic: '08'}},
   'cross-border-disputes': {metadata: typographyIl09, scope: {animationId: 'cross-border-disputes', subject: 'international-law', topic: '09'}},
+  'conflict-of-laws-rules': {metadata: typographyIl10, scope: {animationId: 'conflict-of-laws-rules', subject: 'international-law', topic: '10'}},
   'plea-leniency-caliper': {metadata: typographyCpPleaCaliper, scope: {animationId: 'plea-leniency-caliper', subject: 'criminal-procedure', topic: '02'}},
   'card-selling-funds-viewpoint': {metadata: typography40, scope: {animationId: 'card-selling-funds-viewpoint', subject: 'criminal', topic: '19'}},
   'occupational-embezzlement-flowchart': {metadata: typography41, scope: {animationId: 'occupational-embezzlement-flowchart', subject: 'criminal', topic: '19'}},

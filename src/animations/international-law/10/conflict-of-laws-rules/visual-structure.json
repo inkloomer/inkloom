@@ -1,0 +1,142 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 4,
+  "scenes": [
+    {
+      "id": "concept-types",
+      "export": "ConceptTypesScene",
+      "layout": "concept-board-with-four-type-shelf",
+      "anchor": "typographic-sequence",
+      "grammar": [
+        "four-rule-types-shelve-by-connecting-point-count",
+        "lex-causa-is-substantive-law-found-by-routing"
+      ],
+      "textTreatments": [
+        "label-block",
+        "soft-highlight",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "locator"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "rule-not-jurisdiction",
+        "lex-causa",
+        "four-rule-types"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "characterization",
+      "export": "CharacterizationScene",
+      "layout": "characterization-split-board",
+      "anchor": "role-pair",
+      "grammar": [
+        "identification-is-court-law-territory",
+        "multiple-relations-split-their-applicable-laws"
+      ],
+      "textTreatments": [
+        "label-block",
+        "thin-underline",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "locator"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "characterization-court-law",
+        "characterization-split"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "renvoi",
+      "export": "RenvoiScene",
+      "layout": "three-renvoi-route-lanes",
+      "anchor": "flow-path",
+      "grammar": [
+        "three-renvoi-routes-travel-between-states",
+        "china-blocks-all-renvoi-with-one-stop-rule"
+      ],
+      "textTreatments": [
+        "label-block",
+        "thin-underline",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "connector",
+        "contrast",
+        "enclosure"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "renvoi-transmission",
+        "renvoi-remission",
+        "renvoi-indirect",
+        "renvoi-prohibited"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "foreign-law-ascertainment",
+      "export": "ForeignLawAscertainmentScene",
+      "layout": "ascertainment-quadrant-board",
+      "anchor": "document-fork",
+      "grammar": [
+        "who-chooses-decides-who-ascertains",
+        "unascertainable-foreign-law-falls-back-to-chinese-law"
+      ],
+      "textTreatments": [
+        "label-block",
+        "thin-underline",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "connector"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "ascertainment-subject",
+        "unascertainable-consequence",
+        "ascertainment-channels",
+        "ascertainment-review"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "public-policy",
+      "export": "PublicPolicyScene",
+      "layout": "policy-exclusion-gate-with-fallback",
+      "anchor": "boundary",
+      "grammar": [
+        "public-order-gate-excludes-foreign-law",
+        "excluded-foreign-law-falls-back-to-chinese-law"
+      ],
+      "textTreatments": [
+        "stamp",
+        "thin-underline",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "connector"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "public-policy-exclusion",
+        "public-policy-fallback"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}
