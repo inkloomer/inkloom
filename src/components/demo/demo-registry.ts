@@ -55,6 +55,7 @@ import {DURATION_FRAMES as LEGAL_REASONING_DURATION_FRAMES, FPS as LEGAL_REASONI
 import {DURATION_FRAMES as LEGAL_FAMILIES_DURATION_FRAMES, FPS as LEGAL_FAMILIES_FPS} from '../../animations/theoretical-law/01/legal-families/remotion/storyboard';
 import {DURATION_FRAMES as LEGAL_MODERNIZATION_DURATION_FRAMES, FPS as LEGAL_MODERNIZATION_FPS} from '../../animations/theoretical-law/01/legal-modernization/remotion/storyboard';
 import {DURATION_FRAMES as LAW_AND_MORALITY_DURATION_FRAMES, FPS as LAW_AND_MORALITY_FPS} from '../../animations/theoretical-law/01/law-and-morality/remotion/storyboard';
+import {DURATION_FRAMES as LAW_AND_HUMAN_RIGHTS_DURATION_FRAMES, FPS as LAW_AND_HUMAN_RIGHTS_FPS} from '../../animations/theoretical-law/01/law-and-human-rights/remotion/storyboard';
 import {DURATION_FRAMES as LIABILITY_CONCURRENCE_DURATION_FRAMES, FPS as LIABILITY_CONCURRENCE_FPS} from '../../animations/theoretical-law/01/liability-concurrence/remotion/storyboard';
 import {DURATION_FRAMES as JUDICIAL_VS_ADMINISTRATIVE_DURATION_FRAMES, FPS as JUDICIAL_VS_ADMINISTRATIVE_FPS} from '../../animations/theoretical-law/01/judicial-vs-administrative/remotion/storyboard';
 import {DURATION_FRAMES as APPLICATION_OF_LAW_DURATION_FRAMES, FPS as APPLICATION_OF_LAW_FPS} from '../../animations/theoretical-law/01/application-of-law/remotion/storyboard';
@@ -99,6 +100,7 @@ import {getAnimationTypographyConfiguration} from '../../typography/animation-re
 import {withAnimationTypography} from '../../typography/animation-provider';
 import {DURATION_FRAMES as FIGHT_DURATION_FRAMES, FPS as FIGHT_FPS} from '../../animations/criminal/22/fight-defense-diagram/remotion/storyboard';
 import {DURATION_FRAMES as COMMENCEMENT_DURATION_FRAMES, FPS as COMMENCEMENT_FPS} from '../../animations/criminal/11/commencement-threshold-map/remotion/storyboard';
+import {DURATION_FRAMES as BRANCH_WALLET_DURATION_FRAMES, FPS as BRANCH_WALLET_FPS} from '../../animations/commercial-economic-law/01/branch-wallet-ledger/remotion/storyboard';
 import {DURATION_FRAMES as ALTITUDE_DURATION_FRAMES, FPS as ALTITUDE_FPS} from '../../animations/criminal/22/high-altitude-throwing-diagram/remotion/storyboard';
 import {DURATION_FRAMES as THEFT_DURATION_FRAMES, FPS as THEFT_FPS} from '../../animations/criminal/19/theft-mistake-analysis/remotion/storyboard';
 import {DURATION_FRAMES as OCCUPATIONAL_DURATION_FRAMES, FPS as OCCUPATIONAL_FPS} from '../../animations/criminal/19/occupational-embezzlement-flowchart/remotion/storyboard';
@@ -158,6 +160,7 @@ export const STYLE_DEMOS = [
   {id: 'civil-procedure-14-service-delivery-network', slug: 'service-delivery-network', title: '送达卷宗流', direction: 'Service Dossier Flow', component: lazyDemo(() => import('../../animations/civil-procedure/14/service-delivery-network/remotion/ServiceDeliveryNetwork').then((m) => ({default: m.ServiceDeliveryNetwork}))), href: '/inkloom/objective/civil-procedure/14/service-delivery-network/', durationInFrames: SERVICE_DURATION_FRAMES, fps: SERVICE_FPS},
   {id: 'criminal-22-fight-defense-diagram', slug: 'fight-defense-diagram', title: '意图对抗场', direction: 'Intent Combat Field', component: lazyDemo(() => import('../../animations/criminal/22/fight-defense-diagram/remotion/FightDefenseDiagram').then((m) => ({default: m.FightDefenseDiagram}))), href: '/inkloom/objective/criminal/22/fight-defense-diagram/', durationInFrames: FIGHT_DURATION_FRAMES, fps: FIGHT_FPS},
   {id: 'criminal-11-commencement-threshold-map', slug: 'commencement-threshold-map', title: '露天跑道发令台', direction: 'Open-Stadium Start System', component: lazyDemo(() => import('../../animations/criminal/11/commencement-threshold-map/remotion/CommencementThresholdMap').then((m) => ({default: m.CommencementThresholdMap}))), href: '/inkloom/objective/criminal/11/commencement-threshold-map/', durationInFrames: COMMENCEMENT_DURATION_FRAMES, fps: COMMENCEMENT_FPS},
+  {id: 'commercial-economic-law-01-branch-wallet-ledger', slug: 'branch-wallet-ledger', title: '票号夹层钱柜', direction: 'Shanxi Draft Bank Counter', component: lazyDemo(() => import('../../animations/commercial-economic-law/01/branch-wallet-ledger/remotion/BranchWalletLedger').then((m) => ({default: m.BranchWalletLedger}))), href: '/inkloom/objective/commercial-economic-law/01/branch-wallet-ledger/', durationInFrames: BRANCH_WALLET_DURATION_FRAMES, fps: BRANCH_WALLET_FPS},
   {id: 'criminal-22-high-altitude-throwing-diagram', slug: 'high-altitude-throwing-diagram', title: '垂直危险剖面', direction: 'Vertical Risk Section', component: lazyDemo(() => import('../../animations/criminal/22/high-altitude-throwing-diagram/remotion/HighAltitudeThrowingDiagram').then((m) => ({default: m.HighAltitudeThrowingDiagram}))), href: '/inkloom/objective/criminal/22/high-altitude-throwing-diagram/', durationInFrames: ALTITUDE_DURATION_FRAMES, fps: ALTITUDE_FPS},
   {id: 'criminal-19-theft-mistake-analysis', slug: 'theft-mistake-analysis', title: '双焦校准台', direction: 'Dual-Focus Calibration', component: lazyDemo(() => import('../../animations/criminal/19/theft-mistake-analysis/remotion/TheftMistakeAnalysis').then((m) => ({default: m.TheftMistakeAnalysis}))), href: '/inkloom/objective/criminal/19/theft-mistake-analysis/', durationInFrames: THEFT_DURATION_FRAMES, fps: THEFT_FPS},
   {id: 'criminal-19-occupational-embezzlement-flowchart', slug: 'occupational-embezzlement-flowchart', title: '要件质检线', direction: 'Industrial Elements Inspection', component: lazyDemo(() => import('../../animations/criminal/19/occupational-embezzlement-flowchart/remotion/OccupationalEmbezzlementFlowchart').then((m) => ({default: m.OccupationalEmbezzlementFlowchart}))), href: '/inkloom/objective/criminal/19/occupational-embezzlement-flowchart/', durationInFrames: OCCUPATIONAL_DURATION_FRAMES, fps: OCCUPATIONAL_FPS},
@@ -233,6 +236,7 @@ export const STYLE_DEMOS = [
   {id: 'theoretical-law-01-legal-families', slug: 'legal-families', title: '胡桃对厅', direction: 'Walnut Comparison Hall', component: lazyDemo(() => import('../../animations/theoretical-law/01/legal-families/remotion/LegalFamilies').then((m) => ({default: m.LegalFamilies}))), href: '/inkloom/objective/theoretical-law/01/legal-families/', durationInFrames: LEGAL_FAMILIES_DURATION_FRAMES, fps: LEGAL_FAMILIES_FPS},
   {id: 'theoretical-law-01-legal-modernization', slug: 'legal-modernization', title: '嫁接苗圃', direction: 'Botanical Graft Nursery', component: lazyDemo(() => import('../../animations/theoretical-law/01/legal-modernization/remotion/LegalModernization').then((m) => ({default: m.LegalModernization}))), href: '/inkloom/objective/theoretical-law/01/legal-modernization/', durationInFrames: LEGAL_MODERNIZATION_DURATION_FRAMES, fps: LEGAL_MODERNIZATION_FPS},
   {id: 'theoretical-law-01-law-and-morality', slug: 'law-and-morality', title: '双秤量铺', direction: 'Twin Balance Scale Hall', component: lazyDemo(() => import('../../animations/theoretical-law/01/law-and-morality/remotion/LawAndMorality').then((m) => ({default: m.LawAndMorality}))), href: '/inkloom/objective/theoretical-law/01/law-and-morality/', durationInFrames: LAW_AND_MORALITY_DURATION_FRAMES, fps: LAW_AND_MORALITY_FPS},
+  {id: 'theoretical-law-01-law-and-human-rights', slug: 'law-and-human-rights', title: '生而秉炬', direction: 'Candle Flame Gallery', component: lazyDemo(() => import('../../animations/theoretical-law/01/law-and-human-rights/remotion/LawAndHumanRights').then((m) => ({default: m.LawAndHumanRights}))), href: '/inkloom/objective/theoretical-law/01/law-and-human-rights/', durationInFrames: LAW_AND_HUMAN_RIGHTS_DURATION_FRAMES, fps: LAW_AND_HUMAN_RIGHTS_FPS},
   ...COMMERCIAL_LAW_STYLE_DEMOS,
 ] as const satisfies readonly DemoDefinition[];
 
@@ -278,6 +282,7 @@ const DEMO_ADDED_AT: Record<(typeof STYLE_DEMOS)[number]['id'], string> = {
   'civil-procedure-14-service-delivery-network': '2026-08-03T19:18:55+08:00',
   'criminal-22-fight-defense-diagram': '2026-08-01T22:16:39+08:00',
   'criminal-11-commencement-threshold-map': '2026-08-30T12:00:00+08:00',
+  'commercial-economic-law-01-branch-wallet-ledger': '2026-08-30T21:00:00+08:00',
   'criminal-22-high-altitude-throwing-diagram': '2026-08-01T22:16:39+08:00',
   'criminal-19-theft-mistake-analysis': '2026-08-01T22:16:39+08:00',
   'criminal-19-occupational-embezzlement-flowchart': '2026-08-01T22:16:39+08:00',
@@ -353,6 +358,7 @@ const DEMO_ADDED_AT: Record<(typeof STYLE_DEMOS)[number]['id'], string> = {
   'theoretical-law-01-legal-families': '2026-08-30T04:10:00+08:00',
   'theoretical-law-01-legal-modernization': '2026-08-30T04:40:00+08:00',
   'theoretical-law-01-law-and-morality': '2026-08-30T05:10:00+08:00',
+  'theoretical-law-01-law-and-human-rights': '2026-08-30T05:40:00+08:00',
   ...COMMERCIAL_LAW_DEMO_ADDED_AT,
 };
 
