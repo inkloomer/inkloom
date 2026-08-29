@@ -1,0 +1,70 @@
+{
+  "animationId": "case-filing-gatehouse",
+  "compositionId": "CaseFilingGatehouse",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-29T09:07:29.210Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 439,
+      "frameCount": 220,
+      "id": "report-windows-compare",
+      "number": "01",
+      "startFrame": 0,
+      "title": "三扇登记窗",
+      "durationMs": 7333,
+      "file": "report-windows-compare.avif",
+      "fileSize": 241736,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "e62837c98af05e04aea537db8b7dd1a96008684a8581e47cc5b63f9a2cf30764",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "9f3ea3ffb687d01cffb2201f86215e2fa3f2b45a53023ac1b0f866030917bb50"
+    },
+    {
+      "endFrame": 919,
+      "frameCount": 240,
+      "id": "filing-gate-conditions",
+      "number": "02",
+      "startFrame": 440,
+      "title": "立案闸门",
+      "durationMs": 8000,
+      "file": "filing-gate-conditions.avif",
+      "fileSize": 263110,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "b2a7b5649dac9118b85352bfb093839946ba3badcb82b70f634544a2054d5ae8",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "9f3ea3ffb687d01cffb2201f86215e2fa3f2b45a53023ac1b0f866030917bb50"
+    },
+    {
+      "endFrame": 1399,
+      "frameCount": 240,
+      "id": "supervision-fork-roads",
+      "number": "03",
+      "startFrame": 920,
+      "title": "救济岔路",
+      "durationMs": 8000,
+      "file": "supervision-fork-roads.avif",
+      "fileSize": 308173,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "525d492489e8f72eb18c98d68c91a4d5dd5d933179d1dfc3e2b7ba9ae95630f5",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "9f3ea3ffb687d01cffb2201f86215e2fa3f2b45a53023ac1b0f866030917bb50"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "9f3ea3ffb687d01cffb2201f86215e2fa3f2b45a53023ac1b0f866030917bb50",
+  "targetFps": 30,
+  "totalFileSize": 813019
+}

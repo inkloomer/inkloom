@@ -1,0 +1,72 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "report-windows-compare",
+      "export": "ReportWindowsScene",
+      "layout": "three-window-counter-with-victim-note",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "report-window-accepts-everyone-with-facts",
+        "tipoff-window-needs-person-and-facts-excluding-victim",
+        "complaint-window-reserved-for-the-victim",
+        "oral-and-written-both-accepted"
+      ],
+      "textTreatments": ["chip", "thin-underline", "soft-highlight"],
+      "focalChannels": ["contrast", "enclosure", "spatial", "locator"],
+      "tokens": ["Megaphone", "Eye", "MailQuestion"],
+      "finalKnowledge": [
+        "report-window",
+        "tipoff-window",
+        "complaint-window",
+        "victim-note"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "filing-gate-conditions",
+      "export": "FilingGateScene",
+      "layout": "condition-gate-with-measure-split-banks",
+      "anchor": "document-fork",
+      "grammar": [
+        "three-conditions-open-the-filing-gate",
+        "filing-does-not-need-the-suspect-in-custody",
+        "pre-screening-allows-voluntary-measures-only",
+        "coercive-measures-wait-until-after-filing"
+      ],
+      "textTreatments": ["chip", "external-negation", "thin-underline"],
+      "focalChannels": ["connector", "contrast", "enclosure", "annotation"],
+      "tokens": ["DoorOpen", "CheckCircle2", "Ban"],
+      "finalKnowledge": [
+        "three-conditions-gate",
+        "voluntary-measures-bank",
+        "coercive-measures-bank"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "supervision-fork-roads",
+      "export": "SupervisionForkScene",
+      "layout": "triple-fork-roads-with-supervision-note",
+      "anchor": "flow-target",
+      "grammar": [
+        "police-review-then-recheck-chain",
+        "procuratorate-supervises-both-directions",
+        "court-admits-private-prosecution-as-final-fork",
+        "reporters-and-tipsters-never-review"
+      ],
+      "textTreatments": ["chip", "thin-underline", "label-block"],
+      "focalChannels": ["connector", "contrast", "enclosure", "annotation"],
+      "tokens": ["ShieldCheck", "Eye", "Gavel"],
+      "finalKnowledge": [
+        "police-review-road",
+        "procuratorate-road",
+        "private-prosecution-road",
+        "standing-note"
+      ],
+      "statefulObjects": ["complaint-file"]
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "directionId": "gatehouse-registry-filing",
+  "family": "gatehouse-registry-family",
+  "palette": "grey-green sandstone gatehouse, parchment ledger cards, iron grills, gate green stamps, lamp amber notes, wax vermilion seals",
+  "typography": "WenKai register-ledger headings with window chips and seal notes",
+  "composition": "three window counters over a victim note, a filing gate with voluntary and coercive measure banks, and a triple fork of relief roads closing into a standing note",
+  "surface": "a gatehouse registry with stone weave, iron-framed ledgers and lamp-lit cards",
+  "motion": "windows rise side by side, condition chips stamp the gate while measure banks fill in contrast, and the complaint file chip travels into its relief road",
+  "transition": "the sandstone backdrop and weave persist while the ledger cards are replaced",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/criminal-procedure/11/case-filing-gatehouse/",
+    "title": "闸门登记所"
+  }
+}
