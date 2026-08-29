@@ -1,0 +1,70 @@
+{
+  "animationId": "plea-leniency-caliper",
+  "compositionId": "PleaLeniencyCaliper",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-29T05:09:21.550Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 499,
+      "frameCount": 250,
+      "id": "stage-scope-tape",
+      "number": "01",
+      "startFrame": 0,
+      "title": "全程卷尺",
+      "durationMs": 8333,
+      "file": "stage-scope-tape.avif",
+      "fileSize": 259236,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "f0dbf419fa69facf9aeb523d88dde516a9afba4bae8527edeaebbfccabc4f476",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "1d73b75f76145159571a4a4bc1f2816ad01c34ab3d6b14a63dbddb85c2071793"
+    },
+    {
+      "endFrame": 1159,
+      "frameCount": 330,
+      "id": "triple-bench-boundaries",
+      "number": "02",
+      "startFrame": 500,
+      "title": "三台边界",
+      "durationMs": 11000,
+      "file": "triple-bench-boundaries.avif",
+      "fileSize": 515557,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "73b7b2394078d88a3ff278ab8b526bfd592eda4e814b1258353facb52db5e7a9",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "1d73b75f76145159571a4a4bc1f2816ad01c34ab3d6b14a63dbddb85c2071793"
+    },
+    {
+      "endFrame": 1779,
+      "frameCount": 310,
+      "id": "deed-signing-desk",
+      "number": "03",
+      "startFrame": 1160,
+      "title": "具结书签署",
+      "durationMs": 10333,
+      "file": "deed-signing-desk.avif",
+      "fileSize": 404573,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "f2e87709564c9abdfb47c449963ef888e46a0fb3ebc42ed8e7ea214933fb39bc",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "1d73b75f76145159571a4a4bc1f2816ad01c34ab3d6b14a63dbddb85c2071793"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "1d73b75f76145159571a4a4bc1f2816ad01c34ab3d6b14a63dbddb85c2071793",
+  "targetFps": 30,
+  "totalFileSize": 1179366
+}

@@ -1,0 +1,70 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "stage-scope-tape",
+      "export": "StageScopeScene",
+      "layout": "stage-tape-with-scope-bay",
+      "anchor": "timeline-gate",
+      "grammar": [
+        "tape-measures-investigation-prosecution-trial-as-one-continuous-scale",
+        "reversed-attitude-still-qualifies",
+        "withdrawn-guilt-exits-the-scope",
+        "no-case-type-limit-and-both-statutes-apply"
+      ],
+      "textTreatments": ["chip", "external-negation", "thin-underline"],
+      "focalChannels": ["connector", "contrast", "enclosure", "spatial"],
+      "tokens": [],
+      "finalKnowledge": [
+        "reversed-attitude-rule",
+        "statute-scope-rule"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "triple-bench-boundaries",
+      "export": "TripleBenchScene",
+      "layout": "triple-bench-row-with-note-band",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "each-bench-separates-qualifying-marks-from-disqualifying-marks",
+        "guilt-bench-tolerates-nature-defense-but-not-partial-confession",
+        "punishment-bench-tolerates-unrestored-gains-but-not-bad-faith",
+        "leniency-bench-rewards-without-lowering-proof"
+      ],
+      "textTreatments": ["soft-highlight", "thin-underline", "label-block"],
+      "focalChannels": ["contrast", "enclosure", "icon", "spatial"],
+      "tokens": [],
+      "finalKnowledge": [
+        "guilt-bench",
+        "punishment-bench",
+        "leniency-bench",
+        "victim-investigation-band"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "deed-signing-desk",
+      "export": "DeedSigningScene",
+      "layout": "signing-desk-fork-into-exemption-bay",
+      "anchor": "document-fork",
+      "grammar": [
+        "signed-deed-requires-voluntariness-consent-and-counsel-presence",
+        "three-exempt-profiles-bypass-the-deed",
+        "recantation-voids-the-deed",
+        "absence-of-deed-does-not-block-the-system"
+      ],
+      "textTreatments": ["chip", "label-block", "external-negation"],
+      "focalChannels": ["enclosure", "contrast", "locator", "annotation"],
+      "tokens": ["FileSignature"],
+      "finalKnowledge": [
+        "signing-conditions",
+        "exemption-bay",
+        "recant-void-rule"
+      ],
+      "statefulObjects": ["plea-deed-sheet"]
+    }
+  ]
+}
