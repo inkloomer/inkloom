@@ -1,0 +1,73 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "disposition-camp",
+      "export": "DispositionCampScene",
+      "layout": "summit-disposition-banks-with-slogan",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "unclear-facts-new-facts-and-procedural-defects-send-it-back",
+        "direct-approval-and-corrected-approval-both-ratify",
+        "right-facts-wrong-death-allows-either-change-or-remand",
+        "partial-lighter-co-defendant-can-be-changed-alone"
+      ],
+      "textTreatments": ["chip", "thin-underline", "soft-highlight"],
+      "focalChannels": ["contrast", "enclosure", "connector", "annotation"],
+      "tokens": ["Undo2", "CheckCircle2", "Flag"],
+      "finalKnowledge": [
+        "three-remand-bank",
+        "two-approval-bank",
+        "flexible-bank",
+        "mnemonic-banner"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "remand-routes",
+      "export": "RemandRoutesScene",
+      "layout": "dual-remand-routes-with-composition-note",
+      "anchor": "document-fork",
+      "grammar": [
+        "supreme-court-may-remand-either-instance",
+        "first-instance-remand-must-open-trial",
+        "second-instance-remand-may-directly-change-sentence",
+        "remand-panels-are-re-composed-unless-new-facts-or-sentencing"
+      ],
+      "textTreatments": ["chip", "thin-underline", "soft-highlight"],
+      "focalChannels": ["connector", "contrast", "enclosure", "annotation"],
+      "tokens": [],
+      "finalKnowledge": [
+        "first-instance-route",
+        "second-instance-route",
+        "composition-note"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "special-effect-points",
+      "export": "SpecialEffectScene",
+      "layout": "effect-timeline-cards-with-pause-note",
+      "anchor": "timeline-gate",
+      "grammar": [
+        "civil-appeal-alone-frees-criminal-part-after-deadline",
+        "joint-crime-appeal-sends-whole-case-to-second-instance",
+        "non-death-co-defendants-finalize-by-two-instances",
+        "second-review-supervision-corrects-fellow-judgments"
+      ],
+      "textTreatments": ["chip", "thin-underline", "external-negation"],
+      "focalChannels": ["connector", "contrast", "enclosure", "annotation"],
+      "tokens": ["Timer", "ShieldCheck"],
+      "finalKnowledge": [
+        "civil-appeal-point",
+        "joint-crime-point",
+        "partial-death-point",
+        "pause-and-supervision-note",
+        "no-change-note"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

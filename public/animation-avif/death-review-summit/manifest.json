@@ -1,0 +1,70 @@
+{
+  "animationId": "death-review-summit",
+  "compositionId": "DeathReviewSummit",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-29T12:33:45.955Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 459,
+      "frameCount": 230,
+      "id": "disposition-camp",
+      "number": "01",
+      "startFrame": 0,
+      "title": "处理要诀营地",
+      "durationMs": 7667,
+      "file": "disposition-camp.avif",
+      "fileSize": 354530,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "96f90bdc207e20ce07f76e5b40dc86e9036bacbb08520a704e5997246e119de9",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "84783f8411f9ab8fd8b842a70c702446363f64886c0edabf368e1e3d55367da1"
+    },
+    {
+      "endFrame": 919,
+      "frameCount": 230,
+      "id": "remand-routes",
+      "number": "02",
+      "startFrame": 460,
+      "title": "发回下山路",
+      "durationMs": 7667,
+      "file": "remand-routes.avif",
+      "fileSize": 331340,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "232dfb603ce5099060e45f1cc8d483ac3814f4925183db47b940427e91bab169",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "84783f8411f9ab8fd8b842a70c702446363f64886c0edabf368e1e3d55367da1"
+    },
+    {
+      "endFrame": 1399,
+      "frameCount": 240,
+      "id": "special-effect-points",
+      "number": "03",
+      "startFrame": 920,
+      "title": "特殊生效点",
+      "durationMs": 8000,
+      "file": "special-effect-points.avif",
+      "fileSize": 412449,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "34803d34d64194c2a6310aa3e8ff65d9b2afb126a98ceefe18485bf064a953ef",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "84783f8411f9ab8fd8b842a70c702446363f64886c0edabf368e1e3d55367da1"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "84783f8411f9ab8fd8b842a70c702446363f64886c0edabf368e1e3d55367da1",
+  "targetFps": 30,
+  "totalFileSize": 1098319
+}
