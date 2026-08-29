@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "duty-roster-scope",
+      "export": "DutyRosterScene",
+      "layout": "dual-roster-wall-with-banner-note",
+      "anchor": "role-pair",
+      "grammar": [
+        "investigation-prosecution-adjudication-staff-stand-duty",
+        "clerks-assistants-translators-appraisers-share-the-post",
+        "procuratorate-invited-experts-also-rotate",
+        "witness-defender-agent-never-rotate"
+      ],
+      "textTreatments": ["chip", "label-block", "external-negation"],
+      "focalChannels": ["contrast", "enclosure", "icon", "spatial"],
+      "tokens": ["Shield", "UserX", "BadgeCheck"],
+      "finalKnowledge": [
+        "on-duty-roster",
+        "off-duty-roster",
+        "per-person-only-note"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "three-reason-banners",
+      "export": "ReasonBannersScene",
+      "layout": "three-banner-columns-with-stage-flow",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "identity-conflict-flags-the-post",
+        "rule-breaking-flags-the-post",
+        "stage-crossing-flags-the-post",
+        "remand-swap-everyone-but-re-appeal-keeps-the-bench"
+      ],
+      "textTreatments": ["chip", "thin-underline", "external-negation"],
+      "focalChannels": ["contrast", "enclosure", "locator", "annotation"],
+      "tokens": ["ArrowRight", "RefreshCw"],
+      "finalKnowledge": [
+        "identity-banner",
+        "misconduct-banner",
+        "stage-crossing-banner",
+        "remand-swap-note"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "decision-review-board",
+      "export": "DecisionReviewScene",
+      "layout": "decision-chain-board-with-review-strip",
+      "anchor": "flow-target",
+      "grammar": [
+        "three-ways-to-raise-recusal-including-orders",
+        "each-boss-decided-by-his-committee",
+        "pre-decision-investigation-never-pauses",
+        "unlawful-reason-claims-get-rejected-without-review"
+      ],
+      "textTreatments": ["stamp", "label-block", "thin-underline"],
+      "focalChannels": ["connector", "contrast", "enclosure", "annotation"],
+      "tokens": ["Gavel", "CheckCircle2"],
+      "finalKnowledge": [
+        "trial-prosecutor-split",
+        "no-pause-rule",
+        "review-once-rule"
+      ],
+      "statefulObjects": ["recusal-request"]
+    }
+  ]
+}

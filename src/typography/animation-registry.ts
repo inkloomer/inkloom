@@ -22,6 +22,7 @@ import {typography as typography104} from '../animations/theoretical-law/01/limi
 import {typography as typography105} from '../animations/theoretical-law/01/value-conflict/animation.meta';
 import {typography as typography99} from '../animations/criminal-procedure/01/procedure-structure-orrery/animation.meta';
 import {typography as typographyCpJurisdiction} from '../animations/criminal-procedure/04/jurisdiction-sluice-terrace/animation.meta';
+import {typography as typographyCpRecusal} from '../animations/criminal-procedure/05/recusal-sentry-rotation/animation.meta';
 import {typography as typography100} from '../animations/international-law/01/sources-of-international-law/animation.meta';
 import {typography as typographyIl02} from '../animations/international-law/02/subjects-responsibility/animation.meta';
 import {typography as typographyCpOrgansRelay} from '../animations/criminal-procedure/03/organs-relay-map/animation.meta';
@@ -222,6 +223,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'procedure-structure-orrery': {metadata: typography99, scope: {animationId: 'procedure-structure-orrery', subject: 'criminal-procedure', topic: '01'}},
   'organs-relay-map': {metadata: typographyCpOrgansRelay, scope: {animationId: 'organs-relay-map', subject: 'criminal-procedure', topic: '03'}},
   'jurisdiction-sluice-terrace': {metadata: typographyCpJurisdiction, scope: {animationId: 'jurisdiction-sluice-terrace', subject: 'criminal-procedure', topic: '04'}},
+  'recusal-sentry-rotation': {metadata: typographyCpRecusal, scope: {animationId: 'recusal-sentry-rotation', subject: 'criminal-procedure', topic: '05'}},
   'sources-of-international-law': {metadata: typography100, scope: {animationId: 'sources-of-international-law', subject: 'international-law', topic: '01'}},
   'subjects-responsibility': {metadata: typographyIl02, scope: {animationId: 'subjects-responsibility', subject: 'international-law', topic: '02'}},
   'plea-leniency-caliper': {metadata: typographyCpPleaCaliper, scope: {animationId: 'plea-leniency-caliper', subject: 'criminal-procedure', topic: '02'}},

@@ -1,0 +1,16 @@
+{
+  "directionId": "sentry-rotation-recusal",
+  "family": "sentry-rotation-family",
+  "palette": "deep olive post, sand parchment duty cards, olive and khaki accents, alert vermilion flags, stone-grey off-duty plates",
+  "typography": "WenKai sentry-roster headings with name-plate chips and duty-log notes",
+  "composition": "a dual roster wall splitting on-duty and off-duty plates, three reason banner columns with a stage flow, and a decision chain board closing into a review strip",
+  "surface": "a sentry post board with diagonal khaki weave, riveted name plates and duty cards",
+  "motion": "name plates stamp onto the roster one by one, reason banners rise in reading order, and the recusal request chip travels down the decision chain to its review strip",
+  "transition": "the olive post backdrop and weave persist while the duty cards are replaced",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/criminal-procedure/05/recusal-sentry-rotation/",
+    "title": "换防哨位"
+  }
+}

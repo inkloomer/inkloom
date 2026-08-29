@@ -1,0 +1,70 @@
+{
+  "animationId": "recusal-sentry-rotation",
+  "compositionId": "RecusalSentryRotation",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-29T07:41:25.057Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 479,
+      "frameCount": 240,
+      "id": "duty-roster-scope",
+      "number": "01",
+      "startFrame": 0,
+      "title": "哨位名册",
+      "durationMs": 8000,
+      "file": "duty-roster-scope.avif",
+      "fileSize": 550475,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "b776b666fe5c65c44de8ac56c7cfafa7fa880ae8dfbb5acecfedb035b548358a",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "3bb8046009ebb74e46a02e8ee393f23229a0ae70fd3cae048af03f41e919dc44"
+    },
+    {
+      "endFrame": 1019,
+      "frameCount": 270,
+      "id": "three-reason-banners",
+      "number": "02",
+      "startFrame": 480,
+      "title": "三面令旗",
+      "durationMs": 9000,
+      "file": "three-reason-banners.avif",
+      "fileSize": 606435,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "89ee7fed026c21fe9d4a1f887d123809b5862513be3dc3d2c10b1ec30ebc82f8",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "3bb8046009ebb74e46a02e8ee393f23229a0ae70fd3cae048af03f41e919dc44"
+    },
+    {
+      "endFrame": 1579,
+      "frameCount": 280,
+      "id": "decision-review-board",
+      "number": "03",
+      "startFrame": 1020,
+      "title": "换防命令链",
+      "durationMs": 9333,
+      "file": "decision-review-board.avif",
+      "fileSize": 670409,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "c07ec54f68c1810340e0492747f133b495f2bfb17920ca4c48506a779c10474b",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "3bb8046009ebb74e46a02e8ee393f23229a0ae70fd3cae048af03f41e919dc44"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "3bb8046009ebb74e46a02e8ee393f23229a0ae70fd3cae048af03f41e919dc44",
+  "targetFps": 30,
+  "totalFileSize": 1827319
+}
