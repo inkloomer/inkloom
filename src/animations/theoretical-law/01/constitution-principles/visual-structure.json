@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "playerControlSafeBottom": 176,
+  "scenes": [
+    {
+      "id": "five-principles",
+      "export": "FivePrinciplesScene",
+      "layout": "five-principle-colonnade-row",
+      "anchor": "typographic-sequence",
+      "grammar": ["party-leadership-pillar", "sovereignty-rights-pillars", "law-checks-pillars"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["Flag", "Users", "Heart", "BookOpen", "Scale"],
+      "finalKnowledge": [
+        "principles-heading",
+        "colonnade-row",
+        "party-leadership-note"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "rights-law",
+      "export": "RightsLawScene",
+      "layout": "rights-law-duo-bench",
+      "anchor": "comparison-axis",
+      "grammar": ["human-rights-bench", "rule-of-law-bench", "official-control-note"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["Heart", "BookOpen"],
+      "finalKnowledge": [
+        "duo-heading",
+        "rights-bench",
+        "law-bench",
+        "official-control-note"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "checks-stance",
+      "export": "ChecksStanceScene",
+      "layout": "checks-divide-with-stance-board",
+      "anchor": "boundary",
+      "grammar": ["separation-supervision-divide", "npc-stance-board", "independence-negation"],
+      "textTreatments": ["label-block", "chip", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["ArrowLeftRight", "Landmark"],
+      "finalKnowledge": [
+        "checks-heading",
+        "divide-row",
+        "stance-board",
+        "independence-negation"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

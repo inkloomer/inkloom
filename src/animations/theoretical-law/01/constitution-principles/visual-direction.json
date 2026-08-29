@@ -1,0 +1,16 @@
+{
+  "directionId": "principle-colonnade-hall",
+  "family": "pillar-colonnade-hall",
+  "palette": "deep teal colonnade ground + pale stone pillar panels + gold capitals + crimson banner accents + ivory ink",
+  "typography": "ivory headings on stone pillar plaques, dark hall label tabs with gold left bar, crimson stamps reserved for stances and verdicts, gold chips for principle names, thin ivory underline for tests",
+  "composition": "the five principles stand as a colonnade of pillar plaques; the rights and law benches deepen two of them side by side; the checks scene draws a divide between separation and supervision beside a stance board",
+  "surface": "flat deep teal ground with faint colonnade hairlines, pale stone panels with hairline weathered borders and corner plinth dots, no gradients, no rounded cards, no drop shadows",
+  "motion": "pillars rise one by one with a settle, banners unfurl from the capitals, the divide wall fills from the base, stance lines ink in",
+  "transition": "a banner sweep clears the colonnade for the next hall",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/theoretical-law/01/constitution-principles/",
+    "title": "五柱宪廊"
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "animationId": "constitution-principles",
+  "compositionId": "ConstitutionPrinciples",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-29T22:43:51.100Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 275,
+      "frameCount": 276,
+      "id": "five-principles",
+      "number": "01",
+      "startFrame": 0,
+      "title": "五大原则总览",
+      "durationMs": 9200,
+      "file": "five-principles.avif",
+      "fileSize": 434677,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "1a90667ad1e83d87a546c0fffa4e5f8adcff67df044bba817c1a804ce241eb5b",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "3e34980da1db1e55473fc462a5a43ae7017ccbba9cce5c952df296f11b1c9753"
+    },
+    {
+      "endFrame": 515,
+      "frameCount": 240,
+      "id": "rights-law",
+      "number": "02",
+      "startFrame": 276,
+      "title": "人权与法治",
+      "durationMs": 8000,
+      "file": "rights-law.avif",
+      "fileSize": 410907,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "fc6fa23032737d1358c2e140362864c41511ab4c87cec386e05b164a4bf5812a",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "3e34980da1db1e55473fc462a5a43ae7017ccbba9cce5c952df296f11b1c9753"
+    },
+    {
+      "endFrame": 791,
+      "frameCount": 276,
+      "id": "checks-stance",
+      "number": "03",
+      "startFrame": 516,
+      "title": "权力制约与我国立场",
+      "durationMs": 9200,
+      "file": "checks-stance.avif",
+      "fileSize": 435831,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "4e7c14e47904ca2360a49e85a0b78a9d2ddd5436a2f96b42b37e5ebc006cb88a",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "3e34980da1db1e55473fc462a5a43ae7017ccbba9cce5c952df296f11b1c9753"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "3e34980da1db1e55473fc462a5a43ae7017ccbba9cce5c952df296f11b1c9753",
+  "targetFps": 30,
+  "totalFileSize": 1281415
+}
