@@ -1,0 +1,89 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "summons-gate-decision",
+      "export": "SummonsGateDecisionScene",
+      "layout": "three-condition-enamel-gate",
+      "anchor": "flow-path",
+      "grammar": [
+        "three-condition-plates-gate-the-summons-decision",
+        "all-pass-unlocks-the-presidential-approval-counter"
+      ],
+      "textTreatments": [
+        "label-block",
+        "stamp",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "connector",
+        "contrast",
+        "locator"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "summons-object-scope",
+        "summons-two-summons-rule",
+        "summons-no-justified-reason",
+        "summons-approval-warrant"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "measures-comparison-ledger",
+      "export": "MeasuresComparisonLedgerScene",
+      "layout": "three-sign-comparison-ledger",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "three-measure-signs-compare-object-procedure-and-document",
+        "reconsideration-once-never-stays-execution"
+      ],
+      "textTreatments": [
+        "label-block",
+        "chip",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "locator"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "measures-scope-trio",
+        "measures-document-approval",
+        "measures-unit-rules"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "fines-detention-scale",
+      "export": "FinesDetentionScaleScene",
+      "layout": "fine-detention-scale-gate",
+      "anchor": "boundary",
+      "grammar": [
+        "fine-and-detention-amounts-hang-on-one-warning-scale",
+        "reconsideration-once-never-stays-execution"
+      ],
+      "textTreatments": [
+        "label-block",
+        "stamp",
+        "chip"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "locator"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "fines-amount-rules",
+        "detention-day-rules",
+        "reconsideration-once-rule"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

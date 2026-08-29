@@ -1,0 +1,16 @@
+{
+  "directionId": "gate-sign-enamel-panel",
+  "family": "gate-sign-enamel",
+  "palette": "deep gate-green ground, enamel warning plates in cream with red/green state marks, steel posts, brushed sign edges",
+  "typography": "title-face sign legends, ink body text on enamel plates, mono gate codes",
+  "composition": "decision gate with three condition plates and an approval counter, comparison ledger wall of three measure signs",
+  "surface": "enamel plates riveted to steel frames, subtle reflective sheen",
+  "motion": "condition plates light up in check order, the gate unlocks, verdict stamps press last",
+  "transition": "the gate swings to reveal the comparison ledger",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/civil-procedure/12/compulsory-summons-gate/",
+    "title": "珐琅信号闸"
+  }
+}

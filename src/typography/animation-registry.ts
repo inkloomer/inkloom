@@ -14,6 +14,7 @@ import {typography as administrativeTypography12} from '../animations/administra
 import {typography as administrativeTypography15} from '../animations/administrative-law/15/litigation-procedure-press/animation.meta';
 import {typography as administrativeTypography13} from '../animations/administrative-law/13/litigant-hierarchy-beacon/animation.meta';
 import {typography as administrativeTypography14} from '../animations/administrative-law/14/acceptance-security-gate/animation.meta';
+import {typography as administrativeTypography25} from '../animations/administrative-law/25/key-details-apothecary/animation.meta';
 import {typography as typography97} from '../animations/criminal-procedure/07/evidence-exclusion-lattice/animation.meta';
 import {typography as typography98} from '../animations/theoretical-law/01/concept-of-law-dispute/animation.meta';
 import {typography as typography101} from '../animations/theoretical-law/01/marxist-law-essence/animation.meta';
@@ -38,6 +39,7 @@ import {typography as typographyIl10} from '../animations/international-law/10/c
 import {typography as typographyIl11} from '../animations/international-law/11/applicable-law/animation.meta';
 import {typography as typographyIl13} from '../animations/international-law/13/interregional-assistance/animation.meta';
 import {typography as typographyIl12} from '../animations/international-law/12/extraterritorial-assistance/animation.meta';
+import {typography as typographyIl14} from '../animations/international-law/14/international-sale-of-goods/animation.meta';
 import {typography as typographyCpOrgansRelay} from '../animations/criminal-procedure/03/organs-relay-map/animation.meta';
 import {typography as typographyCpPleaCaliper} from '../animations/criminal-procedure/02/plea-leniency-caliper/animation.meta';
 import {typography as typographyCpJurisdiction} from '../animations/criminal-procedure/04/jurisdiction-sluice-terrace/animation.meta';
@@ -129,9 +131,13 @@ import {typography as typography90} from '../animations/civil-procedure/30/revoc
 import {typography as typography91} from '../animations/civil-procedure/31/termination-withdrawal-timeline/animation.meta';
 import {typography as typography93} from '../animations/civil-procedure/32/penalty-adjustment-procedure/animation.meta';
 import {typography as typography94} from '../animations/civil-law/contracts/contract-book-atlas/animation.meta';
+import {typography as typographySpf} from '../animations/civil-law/14/security-publicity-fate/animation.meta';
+import {typography as typography109} from '../animations/theoretical-law/01/sources-of-law/animation.meta';
 import {typography as typography96} from '../animations/theoretical-law/17/legal-interpretation/animation.meta';
 import {typography as typographyTds} from '../animations/theoretical-law/01/legal-departments-system/animation.meta';
 import {typography as typographyLv} from '../animations/theoretical-law/01/legal-validity/animation.meta';
+import {typography as typographyLr} from '../animations/theoretical-law/01/legal-relations/animation.meta';
+import {typography as typographyLc} from '../animations/theoretical-law/01/liability-concurrence/animation.meta';
 import {typography as typography40} from '../animations/criminal/19/card-selling-funds-viewpoint/animation.meta';
 import {typography as typography41} from '../animations/criminal/19/occupational-embezzlement-flowchart/animation.meta';
 import {typography as typography42} from '../animations/criminal/19/property-interests-keypoints/animation.meta';
@@ -171,6 +177,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'litigation-procedure-press': {metadata: administrativeTypography15, scope: {animationId: 'litigation-procedure-press', subject: 'administrative-law', topic: '15'}},
   'litigant-hierarchy-beacon': {metadata: administrativeTypography13, scope: {animationId: 'litigant-hierarchy-beacon', subject: 'administrative-law', topic: '13'}},
   'acceptance-security-gate': {metadata: administrativeTypography14, scope: {animationId: 'acceptance-security-gate', subject: 'administrative-law', topic: '14'}},
+  'key-details-apothecary': {metadata: administrativeTypography25, scope: {animationId: 'key-details-apothecary', subject: 'administrative-law', topic: '25'}},
   'dispute-resolution': {metadata: typography0, scope: {animationId: 'dispute-resolution', subject: 'civil-procedure', topic: '01'}},
   'law-attributes': {metadata: typography1, scope: {animationId: 'law-attributes', subject: 'civil-procedure', topic: '01'}},
   'trial-procedure': {metadata: typography2, scope: {animationId: 'trial-procedure', subject: 'civil-procedure', topic: '01'}},
@@ -244,6 +251,8 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'termination-withdrawal-timeline': {metadata: typography91, scope: {animationId: 'termination-withdrawal-timeline', subject: 'civil-procedure', topic: '31'}},
   'penalty-adjustment-procedure': {metadata: typography93, scope: {animationId: 'penalty-adjustment-procedure', subject: 'civil-procedure', topic: '32'}},
   'contract-book-atlas': {metadata: typography94, scope: {animationId: 'contract-book-atlas', subject: 'civil-law', topic: 'contracts'}},
+  'security-publicity-fate': {metadata: typographySpf, scope: {animationId: 'security-publicity-fate', subject: 'civil-law', topic: '14'}},
+  'sources-of-law': {metadata: typography109, scope: {animationId: 'sources-of-law', subject: 'theoretical-law', topic: '01'}},
   'legal-interpretation': {metadata: typography96, scope: {animationId: 'legal-interpretation', subject: 'theoretical-law', topic: '17'}},
   'evidence-exclusion-lattice': {metadata: typography97, scope: {animationId: 'evidence-exclusion-lattice', subject: 'criminal-procedure', topic: '07'}},
   'concept-of-law-dispute': {metadata: typography98, scope: {animationId: 'concept-of-law-dispute', subject: 'theoretical-law', topic: '01'}},
@@ -255,6 +264,8 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'legal-rules': {metadata: typography106, scope: {animationId: 'legal-rules', subject: 'theoretical-law', topic: '01'}},
   'legal-principles': {metadata: typography107, scope: {animationId: 'legal-principles', subject: 'theoretical-law', topic: '01'}},
   'sources-of-law': {metadata: typography108, scope: {animationId: 'sources-of-law', subject: 'theoretical-law', topic: '01'}},
+  'legal-relations': {metadata: typographyLr, scope: {animationId: 'legal-relations', subject: 'theoretical-law', topic: '01'}},
+  'liability-concurrence': {metadata: typographyLc, scope: {animationId: 'liability-concurrence', subject: 'theoretical-law', topic: '01'}},
   'legal-departments-system': {metadata: typographyTds, scope: {animationId: 'legal-departments-system', subject: 'theoretical-law', topic: '01'}},
   'legal-validity': {metadata: typographyLv, scope: {animationId: 'legal-validity', subject: 'theoretical-law', topic: '01'}},
   'procedure-structure-orrery': {metadata: typography99, scope: {animationId: 'procedure-structure-orrery', subject: 'criminal-procedure', topic: '01'}},
@@ -271,6 +282,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'applicable-law': {metadata: typographyIl11, scope: {animationId: 'applicable-law', subject: 'international-law', topic: '11'}},
   'interregional-assistance': {metadata: typographyIl13, scope: {animationId: 'interregional-assistance', subject: 'international-law', topic: '13'}},
   'extraterritorial-assistance': {metadata: typographyIl12, scope: {animationId: 'extraterritorial-assistance', subject: 'international-law', topic: '12'}},
+  'international-sale-of-goods': {metadata: typographyIl14, scope: {animationId: 'international-sale-of-goods', subject: 'international-law', topic: '14'}},
   'plea-leniency-caliper': {metadata: typographyCpPleaCaliper, scope: {animationId: 'plea-leniency-caliper', subject: 'criminal-procedure', topic: '02'}},
   'organs-relay-map': {metadata: typographyCpOrgansRelay, scope: {animationId: 'organs-relay-map', subject: 'criminal-procedure', topic: '03'}},
   'jurisdiction-sluice-terrace': {metadata: typographyCpJurisdiction, scope: {animationId: 'jurisdiction-sluice-terrace', subject: 'criminal-procedure', topic: '04'}},

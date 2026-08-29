@@ -1,0 +1,70 @@
+{
+  "animationId": "compulsory-summons-gate",
+  "compositionId": "CompulsorySummonsGate",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-29T16:42:02.492Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 459,
+      "frameCount": 230,
+      "id": "summons-gate-decision",
+      "number": "01",
+      "startFrame": 0,
+      "title": "拘传判断门",
+      "durationMs": 7667,
+      "file": "summons-gate-decision.avif",
+      "fileSize": 210585,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "117aa762af9a68e2988935807d00b7207abdcc4311560aa1d6cd12a06a54abe4",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "2c159e0280f022b64b20ab0f09b2143a0d3f37437cb378fd0ddeb9b02b253c44"
+    },
+    {
+      "endFrame": 899,
+      "frameCount": 220,
+      "id": "measures-comparison-ledger",
+      "number": "02",
+      "startFrame": 460,
+      "title": "措施对比",
+      "durationMs": 7333,
+      "file": "measures-comparison-ledger.avif",
+      "fileSize": 188331,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "3eb7dc01869974cfc4d2c4f0271d17fca99148df4935a8080f5cf40ba2eda955",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "2c159e0280f022b64b20ab0f09b2143a0d3f37437cb378fd0ddeb9b02b253c44"
+    },
+    {
+      "endFrame": 1329,
+      "frameCount": 215,
+      "id": "fines-detention-scale",
+      "number": "03",
+      "startFrame": 900,
+      "title": "罚款拘留",
+      "durationMs": 7167,
+      "file": "fines-detention-scale.avif",
+      "fileSize": 186374,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "d6e127fc48a4536a06cd8d90bd4256d18d2ac65aa127afc77736b7f0d855e24d",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "2c159e0280f022b64b20ab0f09b2143a0d3f37437cb378fd0ddeb9b02b253c44"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "2c159e0280f022b64b20ab0f09b2143a0d3f37437cb378fd0ddeb9b02b253c44",
+  "targetFps": 30,
+  "totalFileSize": 585290
+}
