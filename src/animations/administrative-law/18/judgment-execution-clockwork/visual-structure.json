@@ -1,0 +1,171 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 6,
+  "scenes": [
+    {
+      "id": "first-instance-gear-trio",
+      "export": "FirstInstanceGearTrioScene",
+      "layout": "first-instance-gear-trio",
+      "anchor": "flow-target",
+      "grammar": [
+        "three-verdict-gears-mesh-in-one-judgment-train",
+        "invalid-behaviors-bypass-revocation-entirely"
+      ],
+      "textTreatments": [
+        "label-block",
+        "soft-highlight",
+        "stamp"
+      ],
+      "focalChannels": [
+        "contrast",
+        "connector",
+        "enclosure"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "trio-revocation",
+        "trio-modification",
+        "trio-confirm-invalid",
+        "minor-procedure-cases",
+        "major-obvious-invalid"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "revocation-special-gear-train",
+      "export": "RevocationSpecialGearTrainScene",
+      "layout": "revocation-special-gear-train",
+      "anchor": "flow-path",
+      "grammar": [
+        "revocation-drives-rehearing-and-invalid-switch-gears",
+        "modification-and-confirm-gears-mesh-at-the-tail"
+      ],
+      "textTreatments": [
+        "label-block",
+        "stamp",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "connector",
+        "contrast",
+        "enclosure"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "revocation-rehearing-rule",
+        "revocation-invalid-switch",
+        "modification-no-worse",
+        "confirm-remedy-package"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "review-verdict-matrix-board",
+      "export": "ReviewVerdictMatrixBoardScene",
+      "layout": "review-verdict-matrix-board",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "five-scenario-rows-align-original-and-review-verdicts",
+        "restore-original-beats-rehearing-when-only-review-is-unlawful"
+      ],
+      "textTreatments": [
+        "label-block",
+        "thin-underline",
+        "stamp"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "spatial"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "review-change-verdict",
+        "review-matrix-five",
+        "review-restore-original"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "second-instance-verdict-dial",
+      "export": "SecondInstanceVerdictDialScene",
+      "layout": "second-instance-verdict-dial",
+      "anchor": "typographic-sequence",
+      "grammar": [
+        "six-second-instance-outcomes-ring-one-verdict-dial",
+        "compensation-omission-is-the-civil-procedure-exception"
+      ],
+      "textTreatments": [
+        "label-block",
+        "stamp",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "locator"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "appeal-affirm-remand",
+        "appeal-compensation-exception"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "announcement-publicity-panel",
+      "export": "AnnouncementPublicityPanelScene",
+      "layout": "announcement-publicity-panel",
+      "anchor": "boundary",
+      "grammar": [
+        "announcement-and-publicity-mount-on-two-engraved-panels",
+        "time-rules-printed-as-dial-marks"
+      ],
+      "textTreatments": [
+        "label-block",
+        "stamp",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "locator"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "announce-public-rules",
+        "document-publicity-rules"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "execution-mechanism-board",
+      "export": "ExecutionMechanismBoardScene",
+      "layout": "execution-mechanism-board",
+      "anchor": "flow-path",
+      "grammar": [
+        "one-two-year-main-spring-drives-defendant-and-plaintiff-mechanism-tracks",
+        "defendant-default-unlocks-six-escalating-execution-measures",
+        "plaintiff-default-splits-into-self-execution-or-court-application"
+      ],
+      "textTreatments": [
+        "label-block",
+        "stamp",
+        "chip"
+      ],
+      "focalChannels": [
+        "contrast",
+        "connector",
+        "locator"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "execution-body-term",
+        "execution-defendant-measures",
+        "execution-plaintiff-rules"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

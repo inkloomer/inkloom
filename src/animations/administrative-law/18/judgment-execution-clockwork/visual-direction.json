@@ -1,0 +1,16 @@
+{
+  "directionId": "clockwork-tribunal-hall",
+  "family": "clockwork-tribunal",
+  "palette": "graphite-charcoal tribunal hall, oxidized bronze gears and escapements, parchment watch dials, oxblood verdict accents",
+  "typography": "title-face engraved headlines, ink body text on parchment dials, mono gear-train codes",
+  "composition": "first-instance gear trio, revocation gear train, review verdict matrix board, second-instance dial, announcement publicity panel, execution mechanism board",
+  "surface": "brushed graphite plates with gear teeth edges, parchment dials with printed graduations",
+  "motion": "gear trains rotate one step per legal beat and lock, verdict stamps press at each stop, the main dial sweeps once per scene",
+  "transition": "the gear train advances to the next station as the dial resets",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/administrative-law/18/judgment-execution-clockwork/",
+    "title": "齿轮裁判工坊"
+  }
+}
