@@ -1,0 +1,70 @@
+{
+  "animationId": "shareholder-register-pigeonhole",
+  "compositionId": "ShareholderRegisterPigeonhole",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-29T21:23:07.362Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 299,
+      "frameCount": 300,
+      "id": "title-transfer",
+      "number": "01",
+      "startFrame": 0,
+      "title": "换签即取得，挂铜牌才对抗",
+      "durationMs": 10000,
+      "file": "title-transfer.avif",
+      "fileSize": 407378,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "72be71da345cc354d639f5fef0fd66d409fee0e20254a4195b21cd0970303bb5",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "05afaad115f26a801da39acf33fb96021cb5a6f0972613f9241475ef34af0f72"
+    },
+    {
+      "endFrame": 579,
+      "frameCount": 280,
+      "id": "equal-condition",
+      "number": "02",
+      "startFrame": 300,
+      "title": "同等条件：天平两端不可替换",
+      "durationMs": 9333,
+      "file": "equal-condition.avif",
+      "fileSize": 358898,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "897e43dd793d952af2755435db7e3d0584ff037260222d70d0d803ec882f5333",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "05afaad115f26a801da39acf33fb96021cb5a6f0972613f9241475ef34af0f72"
+    },
+    {
+      "endFrame": 889,
+      "frameCount": 310,
+      "id": "bona-fide-pledge",
+      "number": "03",
+      "startFrame": 580,
+      "title": "凭牌善意取得：质权与责任收口",
+      "durationMs": 10333,
+      "file": "bona-fide-pledge.avif",
+      "fileSize": 534359,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "73a0a1d473ebc1d220c213a5fa7230961f6395afca6b291f899b8349530cb678",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "05afaad115f26a801da39acf33fb96021cb5a6f0972613f9241475ef34af0f72"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "05afaad115f26a801da39acf33fb96021cb5a6f0972613f9241475ef34af0f72",
+  "targetFps": 30,
+  "totalFileSize": 1300635
+}

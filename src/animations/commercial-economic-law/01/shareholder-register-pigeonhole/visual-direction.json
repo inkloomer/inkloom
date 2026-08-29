@@ -1,0 +1,28 @@
+{
+  "directionId": "velvet-pigeonhole-registry-hall",
+  "family": "brass-pigeonhole-registry",
+  "palette": "dark green felt hall + brass pigeonhole frames + ivory name plates + seal red stamps + ink black",
+  "typography": "registry hall headlines, ivory plate labels, square brass verdict stamps, dashed silence-waiver rules",
+  "composition": "a brass pigeonhole register where a name plate swaps to mark title transfer, a two-pan balance weighing equity against cash, and a pledge desk pairing a good-faith chain with a recap column",
+  "surface": "green felt walls with brass frames and ivory plates; no glossy panels",
+  "motion": "name plates slide between pigeonholes in legal order, the balance pans tip at the consideration contrast, pledge chain links lock in sequence; no idle loops",
+  "transition": "the felt registry hall persists while each scene re-stages the same wall for a new question",
+  "conceptTokens": {
+    "股东": "Users",
+    "名册": "ScrollText",
+    "登记": "Stamp",
+    "善意人": "UserCheck",
+    "现金对价": "HandCoins",
+    "股权对价": "Link",
+    "质权": "Lock",
+    "同等条件": "Scale",
+    "公司门槛": "Building2",
+    "真题": "GraduationCap"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/commercial-economic-law/01/shareholder-register-pigeonhole/",
+    "title": "铜格登记廊"
+  }
+}
