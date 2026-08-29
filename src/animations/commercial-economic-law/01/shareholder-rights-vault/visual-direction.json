@@ -1,0 +1,25 @@
+{
+  "directionId": "celadon-rights-vault",
+  "family": "porcelain-tablet-hall",
+  "palette": "celadon porcelain white hall + pine green tablets + gilded gold seals + ink black + vermilion vetoes",
+  "typography": "rights vault headlines, tablet labels, square celadon-gold verdict stamps, dashed funnel tiers",
+  "composition": "an inspection gate lane splitting free reads from three-gate ledgers, an exclusive validity funnel sifting nonexistent void and revocable, and a dual claim desk pairing objection buyout with derivative litigation",
+  "surface": "porcelain white walls with pine tablets and gilded accents; no glossy panels",
+  "motion": "tablets are inspected gate by gate, the funnel sifts downward through validity tiers, claim stamps land on the two desks; no idle loops",
+  "transition": "the porcelain vault persists while each scene re-stages the same wall for a new question",
+  "conceptTokens": {
+    "直读": "BookOpen",
+    "三步看": "Search",
+    "漏斗": "Scale",
+    "内外分开": "ArrowRightLeft",
+    "异议回购": "Coins",
+    "代表诉讼": "Gavel",
+    "真题": "GraduationCap"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/commercial-economic-law/01/shareholder-rights-vault/",
+    "title": "青瓷权符阁"
+  }
+}
