@@ -1,0 +1,16 @@
+{
+  "directionId": "stele-forest-rubbing",
+  "family": "stone-stele-garden",
+  "palette": "quarry gray ground + pale stele panels + rubbing ink text + vermilion seal marks + moss green accents + bronze stakes",
+  "typography": "engraved rubbing-ink headings, pale stele cards with chiseled dark labels, vermilion seal chips reserved for rulings and exceptions, moss green for growth notes, bronze ordinal stakes",
+  "composition": "definitions stand as twin steles; the legislative system climbs as a stele ladder from constitution to local rules; conflicts read as two steles colliding across a rubbled seam; the same-level routes fork like a carved decision tree; informal sources rest as three relic slabs",
+  "surface": "flat quarry gray with faint chisel dust, pale stele panels with hairline weathered borders, vermilion seal squares, no gradients, no rounded cards, no drop shadows",
+  "motion": "steles rise from the ground with a settle, chiseled labels ink in stroke by stroke, the collision seam cracks once between conflicting steles, keys of the decision tree carve outward",
+  "transition": "a rubbing wipe drags the previous stele off-frame leaving dust",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/theoretical-law/01/sources-of-law/",
+    "title": "碑林拓片"
+  }
+}

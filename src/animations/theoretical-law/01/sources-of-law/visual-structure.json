@@ -1,0 +1,100 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 4,
+  "playerControlSafeBottom": 176,
+  "scenes": [
+    {
+      "id": "meaning-split",
+      "export": "MeaningSplitScene",
+      "layout": "twin-stele-definition-with-duty-split",
+      "anchor": "role-pair",
+      "grammar": ["formal-source-claim", "informal-source-claim", "dual-function-note"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["BookMarked", "BookOpen", "Ban"],
+      "finalKnowledge": [
+        "meaning-heading",
+        "formal-stele",
+        "informal-stele",
+        "consider-duty-chips",
+        "dual-function-note"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "legislative-ladder",
+      "export": "LegislativeLadderScene",
+      "layout": "source-ladder-with-maker-tags",
+      "anchor": "typographic-sequence",
+      "grammar": ["source-hierarchy-lanes", "maker-annotation", "special-zone-chip"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "thin-underline"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["Landmark", "Building2", "ShieldCheck"],
+      "finalKnowledge": [
+        "ladder-heading",
+        "constitution-lane",
+        "law-lane",
+        "regulation-lanes",
+        "local-lanes",
+        "special-zone-chip",
+        "ladder-mnemonic"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "hierarchy-conflicts",
+      "export": "HierarchyConflictsScene",
+      "layout": "upper-lower-rule-with-two-exceptions",
+      "anchor": "boundary",
+      "grammar": ["upper-precedes-lower", "grid-orientation-mnemonic", "two-exceptions"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "external-negation"],
+      "focalChannels": ["icon", "contrast", "enclosure", "motion", "annotation"],
+      "tokens": ["ArrowUp", "ArrowDown", "Scale"],
+      "finalKnowledge": [
+        "hierarchy-heading",
+        "upper-lower-rule",
+        "grid-mnemonic",
+        "autonomy-exception",
+        "three-zone-exception"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "same-level-conflicts",
+      "export": "SameLevelConflictsScene",
+      "layout": "same-level-principles-with-routed-exceptions",
+      "anchor": "document-fork",
+      "grammar": ["special-over-general", "new-over-old", "routed-adjudication"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "motion", "annotation"],
+      "tokens": ["GitBranch", "Clock", "Landmark"],
+      "finalKnowledge": [
+        "same-heading",
+        "twin-principles",
+        "cross-cut-exception",
+        "local-vs-ministry-route",
+        "ministerial-routes-note"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "informal-sources",
+      "export": "InformalSourcesScene",
+      "layout": "three-relic-cards-with-unify-strip",
+      "anchor": "concept-icon",
+      "grammar": ["custom-card", "policy-card", "precedent-card"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["Handshake", "ScrollText", "Gavel"],
+      "finalKnowledge": [
+        "informal-heading",
+        "custom-card",
+        "policy-card",
+        "precedent-card",
+        "unify-strip",
+        "open-concept-chip"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}
