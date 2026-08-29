@@ -1,0 +1,205 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 4,
+  "playerControlSafeBottom": 176,
+  "scenes": [
+    {
+      "id": "normativity-scope",
+      "export": "NormativityScopeScene",
+      "layout": "action-fork-with-scope-verdict",
+      "anchor": "document-fork",
+      "grammar": [
+        "behavior-not-thought",
+        "other-directed-gate",
+        "scope-verdict"
+      ],
+      "textTreatments": [
+        "label-block",
+        "soft-highlight",
+        "chip",
+        "external-negation"
+      ],
+      "focalChannels": [
+        "icon",
+        "enclosure",
+        "contrast",
+        "annotation",
+        "spatial"
+      ],
+      "tokens": [
+        "Users",
+        "Footprints",
+        "Ban",
+        "Check"
+      ],
+      "finalKnowledge": [
+        "normativity-heading",
+        "social-norm-note",
+        "action-not-thought",
+        "other-directed-gate",
+        "self-directed-negation",
+        "narrower-scope-note",
+        "minimum-moral-chip"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "state-will-paths",
+      "export": "StateWillPathsScene",
+      "layout": "creation-recognition-paths",
+      "anchor": "flow-path",
+      "grammar": [
+        "creation-path",
+        "recognition-path",
+        "expressed-implied-pair"
+      ],
+      "textTreatments": [
+        "label-block",
+        "soft-highlight",
+        "chip",
+        "stamp"
+      ],
+      "focalChannels": [
+        "icon",
+        "motion",
+        "enclosure",
+        "contrast",
+        "annotation"
+      ],
+      "tokens": [
+        "FileText",
+        "Stamp",
+        "ScrollText",
+        "Gavel"
+      ],
+      "finalKnowledge": [
+        "state-will-heading",
+        "creation-path",
+        "recognition-path",
+        "expressed-recognition-card",
+        "implied-recognition-card",
+        "public-power-note",
+        "state-will-mnemonic"
+      ],
+      "statefulObjects": [
+        "custom-rule-into-law"
+      ]
+    },
+    {
+      "id": "universality-equal",
+      "export": "UniversalityEqualScene",
+      "layout": "power-boundary-with-equality-band",
+      "anchor": "boundary",
+      "grammar": [
+        "power-range-boundary",
+        "equality-demand",
+        "universal-consistency"
+      ],
+      "textTreatments": [
+        "label-block",
+        "soft-highlight",
+        "chip",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "icon",
+        "enclosure",
+        "spatial",
+        "contrast",
+        "annotation"
+      ],
+      "tokens": [
+        "Globe",
+        "Equal"
+      ],
+      "finalKnowledge": [
+        "universality-heading",
+        "power-range-ring",
+        "equal-treatment-band",
+        "equality-motto",
+        "national-traits-note",
+        "universal-consistency-chip"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "rights-duties-matrix",
+      "export": "RightsDutiesMatrixScene",
+      "layout": "three-norm-comparison-lanes",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "content-comparison",
+        "obligation-only-contrast",
+        "rights-basis-verdict"
+      ],
+      "textTreatments": [
+        "label-block",
+        "chip",
+        "soft-highlight",
+        "external-negation"
+      ],
+      "focalChannels": [
+        "icon",
+        "contrast",
+        "enclosure",
+        "spatial",
+        "annotation"
+      ],
+      "tokens": [
+        "Cog",
+        "ScrollText",
+        "Scale",
+        "Feather"
+      ],
+      "finalKnowledge": [
+        "matrix-heading",
+        "nature-tech-lane",
+        "other-norms-lane",
+        "law-lane",
+        "rights-basis-chip",
+        "modern-rule-note"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "coercion-justiciability",
+      "export": "CoercionJusticiabilityScene",
+      "layout": "coercion-ladder-with-court-doors",
+      "anchor": "role-pair",
+      "grammar": [
+        "coercion-ladder",
+        "court-door-pair",
+        "commonality-verdict"
+      ],
+      "textTreatments": [
+        "label-block",
+        "chip",
+        "soft-highlight",
+        "external-negation"
+      ],
+      "focalChannels": [
+        "icon",
+        "contrast",
+        "enclosure",
+        "motion",
+        "annotation"
+      ],
+      "tokens": [
+        "Shield",
+        "Gavel",
+        "Ban"
+      ],
+      "finalKnowledge": [
+        "coercion-heading",
+        "general-coercion-step",
+        "state-coercion-step",
+        "final-guarantee-note",
+        "litigable-door",
+        "adjudicable-door",
+        "constitution-note",
+        "commonality-verdict"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

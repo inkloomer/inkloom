@@ -1,0 +1,16 @@
+{
+  "directionId": "specimen-gallery-cabinet",
+  "family": "museum-specimen-cabinet",
+  "palette": "sage museum wall + honey wood specimen frames + cream case cards + soot engraved ink + oxblood accent + brass nameplates",
+  "typography": "engraved soot headings with hairline double rules, brass nameplate labels, oxblood seal chips reserved for the legal discriminator, cream case cards with soot annotations",
+  "composition": "each feature is a specimen case hung on the gallery wall; forks read as branching leads inside a case; comparisons hang as three framed lanes on one rail; the coercion ladder climbs case by case toward the court doors",
+  "surface": "flat sage wall with faint wainscot line, honey wood frames with mitered corners, cream mat boards, hairline engraved rules, brass corner screws; no gradients, no rounded cards, no drop shadows",
+  "motion": "frames pin to the wall with a press, specimens slide from the case lining, brass nameplates engrave left to right, the ladder steps assemble bottom-up, doors swing ajar on hinge",
+  "transition": "a wainscot-line wipe travels across the wall as the next case is hung",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/theoretical-law/01/features-of-law/",
+    "title": "标本陈列柜"
+  }
+}

@@ -94,6 +94,8 @@ import {LegalInterpretation} from '../../animations/theoretical-law/17/legal-int
 import {DURATION_FRAMES as LEGAL_INTERPRETATION_DURATION_FRAMES, FPS as LEGAL_INTERPRETATION_FPS} from '../../animations/theoretical-law/17/legal-interpretation/remotion/storyboard';
 import {MarxistLawEssence} from '../../animations/theoretical-law/01/marxist-law-essence/remotion/MarxistLawEssence';
 import {DURATION_FRAMES as MARXIST_LAW_DURATION_FRAMES, FPS as MARXIST_LAW_FPS} from '../../animations/theoretical-law/01/marxist-law-essence/remotion/storyboard';
+import {FeaturesOfLaw} from '../../animations/theoretical-law/01/features-of-law/remotion/FeaturesOfLaw';
+import {DURATION_FRAMES as FEATURES_OF_LAW_DURATION_FRAMES, FPS as FEATURES_OF_LAW_FPS} from '../../animations/theoretical-law/01/features-of-law/remotion/storyboard';
 import {ConceptOfLawDispute} from '../../animations/theoretical-law/01/concept-of-law-dispute/remotion/ConceptOfLawDispute';
 import {DURATION_FRAMES as CONCEPT_OF_LAW_DURATION_FRAMES, FPS as CONCEPT_OF_LAW_FPS} from '../../animations/theoretical-law/01/concept-of-law-dispute/remotion/storyboard';
 import {DURATION_FRAMES as FIGHT_DURATION_FRAMES, FPS as FIGHT_FPS} from '../../animations/criminal/22/fight-defense-diagram/remotion/storyboard';
@@ -174,6 +176,7 @@ export const STYLE_DEMOS = [
   {id: 'criminal-procedure-02-plea-leniency-caliper', slug: 'plea-leniency-caliper', title: '认罚量尺工坊', direction: 'Maple Caliper Workshop', component: PleaLeniencyCaliper, href: '/inkloom/objective/criminal-procedure/02/plea-leniency-caliper/', durationInFrames: PLEA_LENIENTY_DURATION_FRAMES, fps: PLEA_LENIENTY_FPS},
   {id: 'theoretical-law-01-concept-of-law-dispute', slug: 'concept-of-law-dispute', title: '漆屏对峙', direction: 'Lacquer Twin-Screen', component: ConceptOfLawDispute, href: '/inkloom/objective/theoretical-law/01/concept-of-law-dispute/', durationInFrames: CONCEPT_OF_LAW_DURATION_FRAMES, fps: CONCEPT_OF_LAW_FPS},
   {id: 'theoretical-law-01-marxist-law-essence', slug: 'marxist-law-essence', title: '蓝晒制图', direction: 'Cyanotype Drafting', component: MarxistLawEssence, href: '/inkloom/objective/theoretical-law/01/marxist-law-essence/', durationInFrames: MARXIST_LAW_DURATION_FRAMES, fps: MARXIST_LAW_FPS},
+  {id: 'theoretical-law-01-features-of-law', slug: 'features-of-law', title: '标本陈列柜', direction: 'Specimen Gallery Cabinet', component: FeaturesOfLaw, href: '/inkloom/objective/theoretical-law/01/features-of-law/', durationInFrames: FEATURES_OF_LAW_DURATION_FRAMES, fps: FEATURES_OF_LAW_FPS},
   ...COMMERCIAL_LAW_STYLE_DEMOS,
 ] as const satisfies readonly DemoDefinition[];
 
@@ -237,6 +240,7 @@ const DEMO_ADDED_AT: Record<(typeof STYLE_DEMOS)[number]['id'], string> = {
   'criminal-procedure-02-plea-leniency-caliper': '2026-08-29T01:05:00+08:00',
   'theoretical-law-01-concept-of-law-dispute': '2026-08-28T23:30:00+08:00',
   'theoretical-law-01-marxist-law-essence': '2026-08-29T13:40:00+08:00',
+  'theoretical-law-01-features-of-law': '2026-08-29T15:10:00+08:00',
   ...COMMERCIAL_LAW_DEMO_ADDED_AT,
 };
 
