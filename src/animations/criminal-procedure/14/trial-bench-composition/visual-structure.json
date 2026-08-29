@@ -1,0 +1,70 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "three-forms-bench",
+      "export": "ThreeFormsScene",
+      "layout": "triple-form-cards-with-ladder-strip",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "solo-bench-limits-base-court-summary-and-fast-trial",
+        "collegial-ladder-counts-by-instance-not-court-level",
+        "seven-judge-bench-fixes-three-judges-four-assessors",
+        "parties-never-choose-the-bench-size"
+      ],
+      "textTreatments": ["chip", "thin-underline", "soft-highlight"],
+      "focalChannels": ["contrast", "enclosure", "spatial", "locator"],
+      "tokens": ["User", "Users", "Gavel"],
+      "finalKnowledge": [
+        "solo-form",
+        "collegial-form",
+        "committee-form",
+        "no-choice-note"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "assessor-qualification-desk",
+      "export": "AssessorQualificationScene",
+      "layout": "qualification-fork-with-quota-bench",
+      "anchor": "document-fork",
+      "grammar": [
+        "positive-and-negative-conditions-gate-eligibility",
+        "quota-runs-triple-the-judge-count",
+        "random-draw-seats-seven-days-before-trial",
+        "five-year-term-rarely-renewed"
+      ],
+      "textTreatments": ["chip", "thin-underline", "external-negation"],
+      "focalChannels": ["contrast", "enclosure", "connector", "annotation"],
+      "tokens": ["CheckCircle2", "XCircle"],
+      "finalKnowledge": [
+        "positive-negative-conditions",
+        "quota-draw-bench"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "seven-bench-powers",
+      "export": "SevenBenchPowersScene",
+      "layout": "seven-bench-trigger-with-power-split",
+      "anchor": "concept-icon",
+      "grammar": [
+        "ten-year-death-major-cases-need-seven-bench",
+        "land-eco-food-safety-also-need-seven-bench",
+        "three-bench-votes-both-fact-and-law",
+        "seven-bench-votes-fact-only-voices-law"
+      ],
+      "textTreatments": ["chip", "thin-underline", "soft-highlight"],
+      "focalChannels": ["icon", "contrast", "enclosure", "annotation"],
+      "tokens": ["Users"],
+      "finalKnowledge": [
+        "seven-bench-triggers",
+        "power-split-cards",
+        "assessor-scope-note"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "animationId": "trial-bench-composition",
+  "compositionId": "TrialBenchComposition",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-29T09:49:27.380Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 519,
+      "frameCount": 260,
+      "id": "three-forms-bench",
+      "number": "01",
+      "startFrame": 0,
+      "title": "三种组织形式",
+      "durationMs": 8667,
+      "file": "three-forms-bench.avif",
+      "fileSize": 321454,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "7f4c21576c3e49a3e4fd2255b81528202cace0ee2943b538eee9802898f45060",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "b738bf2330667bbeb29f5f4eaa68c3ee43a277719a669898df9c726d3e84b541"
+    },
+    {
+      "endFrame": 999,
+      "frameCount": 240,
+      "id": "assessor-qualification-desk",
+      "number": "02",
+      "startFrame": 520,
+      "title": "陪审员拼装规格",
+      "durationMs": 8000,
+      "file": "assessor-qualification-desk.avif",
+      "fileSize": 315514,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "1ec7913781a4cdb6c20e35ff8ea713a19625a2bb11cd380bc0c5df83f3cdc746",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "b738bf2330667bbeb29f5f4eaa68c3ee43a277719a669898df9c726d3e84b541"
+    },
+    {
+      "endFrame": 1499,
+      "frameCount": 250,
+      "id": "seven-bench-powers",
+      "number": "03",
+      "startFrame": 1000,
+      "title": "七人庭权限",
+      "durationMs": 8333,
+      "file": "seven-bench-powers.avif",
+      "fileSize": 364347,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "31f701ff6695d3c8c38d2fe7a30a15f6bae686ac707d91246006691835c774de",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "b738bf2330667bbeb29f5f4eaa68c3ee43a277719a669898df9c726d3e84b541"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "b738bf2330667bbeb29f5f4eaa68c3ee43a277719a669898df9c726d3e84b541",
+  "targetFps": 30,
+  "totalFileSize": 1001315
+}
