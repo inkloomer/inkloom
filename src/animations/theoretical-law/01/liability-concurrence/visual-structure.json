@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "playerControlSafeBottom": 176,
+  "scenes": [
+    {
+      "id": "definition-anatomy",
+      "export": "DefinitionAnatomyScene",
+      "layout": "one-act-two-liability-clash",
+      "anchor": "flow-path",
+      "grammar": ["single-actor-ray", "liability-zone-landing", "trait-checklist"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "enclosure", "annotation"],
+      "tokens": ["User", "Hammer"],
+      "finalKnowledge": [
+        "definition-heading",
+        "act-clash-stage",
+        "trait-checklist",
+        "definition-chain"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "cause-and-choice",
+      "export": "CauseChoiceScene",
+      "layout": "overlap-mechanism-with-choice-fork",
+      "anchor": "document-fork",
+      "grammar": ["regulation-overlap-mechanism", "concurrence-path-chain", "private-public-choice-fork"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "thin-underline"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial", "annotation"],
+      "tokens": ["Layers", "Hammer", "Split", "Gavel"],
+      "finalKnowledge": [
+        "cause-heading",
+        "overlap-mechanism",
+        "path-chain",
+        "choice-fork"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "boundary-notes",
+      "export": "BoundaryNotesScene",
+      "layout": "three-cause-plaques-with-sanction-scale",
+      "anchor": "comparison-axis",
+      "grammar": ["cause-plaques", "sanction-scale-note", "common-case-rail"],
+      "textTreatments": ["label-block", "chip", "external-negation", "stamp"],
+      "focalChannels": ["icon", "enclosure", "contrast", "spatial", "annotation"],
+      "tokens": ["ShieldAlert", "FileSignature", "Baby", "Scale"],
+      "finalKnowledge": [
+        "boundary-heading",
+        "cause-plaques",
+        "sanction-scale-note",
+        "common-case-rail",
+        "civil-criminal-note"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

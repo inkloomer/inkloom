@@ -1,0 +1,70 @@
+{
+  "animationId": "liability-concurrence",
+  "compositionId": "LiabilityConcurrence",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-29T17:19:02.459Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 263,
+      "frameCount": 264,
+      "id": "definition-anatomy",
+      "number": "01",
+      "startFrame": 0,
+      "title": "一行为撞上数个责任",
+      "durationMs": 8800,
+      "file": "definition-anatomy.avif",
+      "fileSize": 560218,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "3d0b46c1ae759d26268df390dc29a48bc4fe899f0f3d6dbd4a08e971e61bb441",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "f0fe8fbeb51cb55470e59f775a3f2dfc675db5249c5f7b21ad18dcff5ae20c72"
+    },
+    {
+      "endFrame": 515,
+      "frameCount": 252,
+      "id": "cause-and-choice",
+      "number": "02",
+      "startFrame": 264,
+      "title": "规范重合与分流处理",
+      "durationMs": 8400,
+      "file": "cause-and-choice.avif",
+      "fileSize": 462516,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "7be374f06a64b97363e1a02c113d9c73335fb22eb7db41694bbc4fec003f21cd",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "f0fe8fbeb51cb55470e59f775a3f2dfc675db5249c5f7b21ad18dcff5ae20c72"
+    },
+    {
+      "endFrame": 779,
+      "frameCount": 264,
+      "id": "boundary-notes",
+      "number": "03",
+      "startFrame": 516,
+      "title": "三因生责与责任制裁",
+      "durationMs": 8800,
+      "file": "boundary-notes.avif",
+      "fileSize": 483210,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "f9d1c552636a294567e6312130fa18cfbacddd6d4c625935d069c80d1a0b4284",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "f0fe8fbeb51cb55470e59f775a3f2dfc675db5249c5f7b21ad18dcff5ae20c72"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "f0fe8fbeb51cb55470e59f775a3f2dfc675db5249c5f7b21ad18dcff5ae20c72",
+  "targetFps": 30,
+  "totalFileSize": 1505944
+}
