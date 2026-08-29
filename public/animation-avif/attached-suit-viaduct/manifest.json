@@ -1,0 +1,70 @@
+{
+  "animationId": "attached-suit-viaduct",
+  "compositionId": "AttachedSuitViaduct",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-29T08:44:11.809Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 499,
+      "frameCount": 250,
+      "id": "party-scope-berths",
+      "number": "01",
+      "startFrame": 0,
+      "title": "当事人泊位",
+      "durationMs": 8333,
+      "file": "party-scope-berths.avif",
+      "fileSize": 366711,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "a06c2f3345aa123e08447dccf7a85c0387094d8afeafcf71fe22079c44054cbf",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "021c536859c603ad4d10cabbcd9e72a1cb5e503659d6436b4a6da204bf864a77"
+    },
+    {
+      "endFrame": 959,
+      "frameCount": 230,
+      "id": "material-loss-gate",
+      "number": "02",
+      "startFrame": 500,
+      "title": "物质损失闸门",
+      "durationMs": 7667,
+      "file": "material-loss-gate.avif",
+      "fileSize": 285083,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "5fa446e19e853fb12a5d149c7a3be5aa32d002f694b671cd11499efad74760f4",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "021c536859c603ad4d10cabbcd9e72a1cb5e503659d6436b4a6da204bf864a77"
+    },
+    {
+      "endFrame": 1439,
+      "frameCount": 240,
+      "id": "preservation-fork",
+      "number": "03",
+      "startFrame": 960,
+      "title": "保全分岔",
+      "durationMs": 8000,
+      "file": "preservation-fork.avif",
+      "fileSize": 274659,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "b56ffd8b7c6f423f34a6ec328d0b319eaf9fe5ef4d85e22166260634a05009a7",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "021c536859c603ad4d10cabbcd9e72a1cb5e503659d6436b4a6da204bf864a77"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "021c536859c603ad4d10cabbcd9e72a1cb5e503659d6436b4a6da204bf864a77",
+  "targetFps": 30,
+  "totalFileSize": 926453
+}

@@ -25,6 +25,7 @@ import {typography as typographyCpJurisdiction} from '../animations/criminal-pro
 import {typography as typographyCpRecusal} from '../animations/criminal-procedure/05/recusal-sentry-rotation/animation.meta';
 import {typography as typographyCpPilot} from '../animations/criminal-procedure/06/defense-pilot-harbor/animation.meta';
 import {typography as typographyCpBoiler} from '../animations/criminal-procedure/08/coercion-pressure-ladder/animation.meta';
+import {typography as typographyCpViaduct} from '../animations/criminal-procedure/09/attached-suit-viaduct/animation.meta';
 import {typography as typography100} from '../animations/international-law/01/sources-of-international-law/animation.meta';
 import {typography as typographyIl02} from '../animations/international-law/02/subjects-responsibility/animation.meta';
 import {typography as typographyIl03} from '../animations/international-law/03/spatial-regimes/animation.meta';
@@ -230,6 +231,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'recusal-sentry-rotation': {metadata: typographyCpRecusal, scope: {animationId: 'recusal-sentry-rotation', subject: 'criminal-procedure', topic: '05'}},
   'defense-pilot-harbor': {metadata: typographyCpPilot, scope: {animationId: 'defense-pilot-harbor', subject: 'criminal-procedure', topic: '06'}},
   'coercion-pressure-ladder': {metadata: typographyCpBoiler, scope: {animationId: 'coercion-pressure-ladder', subject: 'criminal-procedure', topic: '08'}},
+  'attached-suit-viaduct': {metadata: typographyCpViaduct, scope: {animationId: 'attached-suit-viaduct', subject: 'criminal-procedure', topic: '09'}},
   'sources-of-international-law': {metadata: typography100, scope: {animationId: 'sources-of-international-law', subject: 'international-law', topic: '01'}},
   'subjects-responsibility': {metadata: typographyIl02, scope: {animationId: 'subjects-responsibility', subject: 'international-law', topic: '02'}},
   'spatial-regimes': {metadata: typographyIl03, scope: {animationId: 'spatial-regimes', subject: 'international-law', topic: '03'}},

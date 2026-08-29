@@ -1,0 +1,16 @@
+{
+  "directionId": "viaduct-merge-attached-suit",
+  "family": "viaduct-merge-family",
+  "palette": "dusk steel viaduct, warm sandstone deck cards, rail red and rail green lanes, signal amber notes, girder grey accents",
+  "typography": "WenKai bridge-deck headings with berth chips and girder label blocks",
+  "composition": "twin party berth banks over a mnemonic strip, a loss gate paired with a reject lane and timing bay, and a common-rule band forking into in-trial and pre-trial preservation lanes",
+  "surface": "a dusk viaduct chart with girder lines, sandstone deck cards and signal notes",
+  "motion": "berth cards rise together, admissible chips stamp while reject lanes cross out claims, and the preservation fork splits into its two lanes before the urgent-ruling note lands",
+  "transition": "the dusk backdrop and girder grid persist while the deck cards are replaced",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/criminal-procedure/09/attached-suit-viaduct/",
+    "title": "双轨合流桥"
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "party-scope-berths",
+      "export": "PartyScopeScene",
+      "layout": "twin-berth-banks-with-mnemonic-strip",
+      "anchor": "role-pair",
+      "grammar": [
+        "victims-and-their-kin-claim-the-plaintiff-berth",
+        "procuratorate-claims-public-berth-for-state-property",
+        "responsible-defendants-including-heirs-fill-the-defense-berth",
+        "fugitives-and-third-parties-never-board"
+      ],
+      "textTreatments": ["chip", "label-block", "external-negation"],
+      "focalChannels": ["contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["Scale", "Gavel", "Landmark"],
+      "finalKnowledge": [
+        "plaintiff-berth",
+        "defendant-berth",
+        "berth-mnemonic-strip"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "material-loss-gate",
+      "export": "MaterialLossScene",
+      "layout": "loss-gate-with-reject-lane-and-timing-bay",
+      "anchor": "flow-path",
+      "grammar": [
+        "direct-material-loss-passes-the-gate",
+        "mental-damage-and-illegal-disposal-reject-the-claim",
+        "duty-crimes-detour-to-state-compensation",
+        "filing-opens-the-timing-window"
+      ],
+      "textTreatments": ["chip", "thin-underline", "external-negation"],
+      "focalChannels": ["connector", "contrast", "enclosure", "annotation"],
+      "tokens": ["CheckCircle2", "Siren"],
+      "finalKnowledge": [
+        "direct-loss-gate",
+        "reject-lane",
+        "filing-timing-bay"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "preservation-fork",
+      "export": "PreservationForkScene",
+      "layout": "common-rule-band-with-fork-comparison-columns",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "preservation-seals-property-related-to-the-case",
+        "court-may-act-and-parties-may-apply",
+        "in-trial-and-pre-trial-preservation-split-venue-and-guarantee",
+        "urgent-rulings-land-within-forty-eight-hours"
+      ],
+      "textTreatments": ["chip", "thin-underline", "label-block"],
+      "focalChannels": ["contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["Lock", "Siren"],
+      "finalKnowledge": [
+        "preservation-common-rule",
+        "in-trial-preservation-lane",
+        "pre-trial-preservation-lane",
+        "urgent-ruling-note"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}
