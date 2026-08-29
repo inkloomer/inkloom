@@ -1,0 +1,70 @@
+{
+  "animationId": "state-system",
+  "compositionId": "StateSystem",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-29T23:20:51.360Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 251,
+      "frameCount": 252,
+      "id": "state-definition",
+      "number": "01",
+      "startFrame": 0,
+      "title": "国体与人民民主专政",
+      "durationMs": 8400,
+      "file": "state-definition.avif",
+      "fileSize": 414773,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "0fa69676878c7b5614475a0d03cbac9163bed55eadda6663b39f55a24cef98fa",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "f3e3cea3c619a4948408d9bc64ceb746eec25915910e353e8ccf41fa08d6c34f"
+    },
+    {
+      "endFrame": 515,
+      "frameCount": 264,
+      "id": "multiparty",
+      "number": "02",
+      "startFrame": 252,
+      "title": "多党合作与政治协商",
+      "durationMs": 8800,
+      "file": "multiparty.avif",
+      "fileSize": 374264,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "902ed45f65ff79f58dd69ecf3f5d06fb674869bb8f3b2d9706dd8d1789086420",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "f3e3cea3c619a4948408d9bc64ceb746eec25915910e353e8ccf41fa08d6c34f"
+    },
+    {
+      "endFrame": 791,
+      "frameCount": 276,
+      "id": "front-cppcc",
+      "number": "03",
+      "startFrame": 516,
+      "title": "统一战线与政协",
+      "durationMs": 9200,
+      "file": "front-cppcc.avif",
+      "fileSize": 419312,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "f32acd91e0bd80a7293290dcf44f98be4d60b30b77226cdaea14027e7efaba29",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "f3e3cea3c619a4948408d9bc64ceb746eec25915910e353e8ccf41fa08d6c34f"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "f3e3cea3c619a4948408d9bc64ceb746eec25915910e353e8ccf41fa08d6c34f",
+  "targetFps": 30,
+  "totalFileSize": 1208349
+}

@@ -1,0 +1,16 @@
+{
+  "directionId": "united-front-banner-gallery",
+  "family": "alliance-banner-gallery",
+  "palette": "pale linen banner gallery ground + silk banner panels + crimson and gold flags + dark calligraphy ink + bronze flagpoles",
+  "typography": "ink headings on silk banner plaques, dark gallery label tabs with crimson left bar, crimson stamps reserved for verdicts and prohibitions, gold chips for alliance members, thin ink underline for tests",
+  "composition": "the state definition hangs as a central banner above two feature banners; the multiparty scene sets the ruling and participating parties across a cooperation table; the front scene sews a four-member banner row with task and cppcc verdict strips",
+  "surface": "flat pale linen ground with faint pole-shadow hairlines, silk panels with hairline weathered borders and corner ring fastenings, no gradients, no rounded cards, no drop shadows",
+  "motion": "banners unfurl downward with a settle, the cooperation table sets two flags facing each other, member flags clip onto the pole one by one, verdict seals stamp and hold",
+  "transition": "a banner rope sways once and the gallery clears for the next hall",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/theoretical-law/01/state-system/",
+    "title": "同舟旗阵"
+  }
+}

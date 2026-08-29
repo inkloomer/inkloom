@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "playerControlSafeBottom": 176,
+  "scenes": [
+    {
+      "id": "state-definition",
+      "export": "StateDefinitionScene",
+      "layout": "central-banner-with-feature-pair",
+      "anchor": "concept-icon",
+      "grammar": ["state-definition-banner", "essence-banner", "feature-pair"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["Users", "Landmark"],
+      "finalKnowledge": [
+        "state-heading",
+        "definition-banner",
+        "essence-banner",
+        "feature-pair"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "multiparty",
+      "export": "MultipartyScene",
+      "layout": "cooperation-table-with-flag-pair",
+      "anchor": "role-pair",
+      "grammar": ["ruling-party-flag", "participating-party-flag", "leadership-boundary-note"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["Handshake", "Flag"],
+      "finalKnowledge": [
+        "multiparty-heading",
+        "cooperation-table",
+        "leadership-boundary-note"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "front-cppcc",
+      "export": "FrontCppccScene",
+      "layout": "member-banner-row-with-verdict-strips",
+      "anchor": "boundary",
+      "grammar": ["member-banner-row", "task-strip", "cppcc-verdict-strip"],
+      "textTreatments": ["label-block", "chip", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["Megaphone", "Ban"],
+      "finalKnowledge": [
+        "front-heading",
+        "member-banner-row",
+        "task-strip",
+        "cppcc-verdict-strip"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}
