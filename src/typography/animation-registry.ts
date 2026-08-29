@@ -42,6 +42,7 @@ import {typography as typographyIl15} from '../animations/international-law/15/g
 import {typography as typographyIl12} from '../animations/international-law/12/extraterritorial-assistance/animation.meta';
 import {typography as typographyIl14} from '../animations/international-law/14/international-sale-of-goods/animation.meta';
 import {typography as typographyIl16} from '../animations/international-law/16/international-trade-payment/animation.meta';
+import {typography as typographyIl17} from '../animations/international-law/17/foreign-trade-administration/animation.meta';
 import {typography as typographyCpOrgansRelay} from '../animations/criminal-procedure/03/organs-relay-map/animation.meta';
 import {typography as typographyCpPleaCaliper} from '../animations/criminal-procedure/02/plea-leniency-caliper/animation.meta';
 import {typography as typographyCpJurisdiction} from '../animations/criminal-procedure/04/jurisdiction-sluice-terrace/animation.meta';
@@ -284,6 +285,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'extraterritorial-assistance': {metadata: typographyIl12, scope: {animationId: 'extraterritorial-assistance', subject: 'international-law', topic: '12'}},
   'international-sale-of-goods': {metadata: typographyIl14, scope: {animationId: 'international-sale-of-goods', subject: 'international-law', topic: '14'}},
   'international-trade-payment': {metadata: typographyIl16, scope: {animationId: 'international-trade-payment', subject: 'international-law', topic: '16'}},
+  'foreign-trade-administration': {metadata: typographyIl17, scope: {animationId: 'foreign-trade-administration', subject: 'international-law', topic: '17'}},
   'plea-leniency-caliper': {metadata: typographyCpPleaCaliper, scope: {animationId: 'plea-leniency-caliper', subject: 'criminal-procedure', topic: '02'}},
   'organs-relay-map': {metadata: typographyCpOrgansRelay, scope: {animationId: 'organs-relay-map', subject: 'criminal-procedure', topic: '03'}},
   'jurisdiction-sluice-terrace': {metadata: typographyCpJurisdiction, scope: {animationId: 'jurisdiction-sluice-terrace', subject: 'criminal-procedure', topic: '04'}},

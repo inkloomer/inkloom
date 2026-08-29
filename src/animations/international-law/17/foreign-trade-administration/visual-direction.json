@@ -1,0 +1,21 @@
+{
+  "directionId": "dunhuang-mineral-bulletin",
+  "family": "dunhuang-mineral-bulletin",
+  "palette": "warm sand bulletin wall, ochre-brown ink text, azurite blue and malachite green mineral accents, cinnabar red gate seals",
+  "typography": "WenKai gate headings with dashed cinnabar medallions, azurite ink highlights and malachite underlines",
+  "composition": "mineral bulletin with gate rail, exception shelves, remedy relay pipelines and three-lane comparison tables",
+  "surface": "sand panels with azurite hairline frames and square gate markers, no dark cards",
+  "motion": "gate-shelf entries with stamped mnemonics and pipeline disclosures",
+  "transition": "content swap under a persistent bulletin frame and gate rail",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/international-law/17/foreign-trade-administration/",
+    "title": "敦煌矿彩关牍"
+  },
+  "conceptTokens": {
+    "ministry-authority": "TokMinistry",
+    "domestic-industry": "TokIndustry",
+    "judicial-review": "TokReview"
+  }
+}

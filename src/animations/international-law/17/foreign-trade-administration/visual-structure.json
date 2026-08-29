@@ -1,0 +1,196 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 4,
+  "scenes": [
+    {
+      "id": "foreign-trade-law",
+      "export": "ForeignTradeLawScene",
+      "layout": "trader-gate-with-exception-shelves",
+      "anchor": "boundary",
+      "grammar": [
+        "foreign-trade-open-by-registration-with-three-licensed-gates",
+        "single-customs-territories-stay-outside",
+        "new-revision-adds-negative-list-and-countermeasures"
+      ],
+      "textTreatments": [
+        "label-block",
+        "chip",
+        "thin-underline",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "enclosure",
+        "contrast",
+        "locator",
+        "icon"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "ftl-scope",
+        "trader-exceptions",
+        "new-institutions"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "export-control",
+      "export": "ExportControlScene",
+      "layout": "control-list-shelves-with-watchtower",
+      "anchor": "typographic-sequence",
+      "grammar": [
+        "listed-items-need-export-licences",
+        "end-users-cannot-divert-to-third-parties",
+        "military-exports-need-franchise-and-licence"
+      ],
+      "textTreatments": [
+        "label-block",
+        "chip",
+        "thin-underline",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "enclosure",
+        "contrast",
+        "locator",
+        "icon"
+      ],
+      "tokens": [
+        "TokMinistry"
+      ],
+      "finalKnowledge": [
+        "control-scope",
+        "three-lists",
+        "end-user-management",
+        "military-dual-condition"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "dumping-conditions",
+      "export": "DumpingConditionsScene",
+      "layout": "dumping-scale-formula",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "dumping-is-export-price-below-normal-value",
+        "normal-value-follows-two-step-order",
+        "causation-needs-one-cause-not-the-only-cause"
+      ],
+      "textTreatments": [
+        "label-block",
+        "soft-highlight",
+        "thin-underline",
+        "chip"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "locator",
+        "icon"
+      ],
+      "tokens": [
+        "TokIndustry"
+      ],
+      "finalKnowledge": [
+        "dumping-formula",
+        "normal-value-order",
+        "injury-causation",
+        "split-case-rule"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "remedy-procedure",
+      "export": "RemedyProcedureScene",
+      "layout": "remedy-relay-pipeline",
+      "anchor": "flow-path",
+      "grammar": [
+        "mofcom-investigates-on-application-or-ex-officio",
+        "preliminary-ruling-opens-provisional-measures",
+        "final-ruling-picks-commitment-or-duty"
+      ],
+      "textTreatments": [
+        "label-block",
+        "chip",
+        "thin-underline",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "connector",
+        "contrast",
+        "enclosure",
+        "icon"
+      ],
+      "tokens": [
+        "TokMinistry",
+        "TokIndustry"
+      ],
+      "finalKnowledge": [
+        "investigation-origin",
+        "procedure-pipeline",
+        "anti-dumping-tax-rules",
+        "price-commitment-rules"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "subsidy-safeguard",
+      "export": "SubsidySafeguardScene",
+      "layout": "twin-remedy-cards",
+      "anchor": "role-pair",
+      "grammar": [
+        "subsidy-needs-specific-financial-benefit",
+        "safeguard-needs-surging-imports-and-serious-injury",
+        "safeguard-has-no-judicial-review"
+      ],
+      "textTreatments": [
+        "label-block",
+        "chip",
+        "thin-underline",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "locator",
+        "icon"
+      ],
+      "tokens": [
+        "TokReview"
+      ],
+      "finalKnowledge": [
+        "countervailing-essentials",
+        "safeguard-essentials"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "remedy-comparison",
+      "export": "RemedyComparisonScene",
+      "layout": "three-lane-remedy-comparison",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "antidumping-countervailing-share-one-column-vs-safeguard",
+        "consultation-intensity-escalates-notice-reasonable-full",
+        "judicial-review-excludes-safeguard-alone"
+      ],
+      "textTreatments": [
+        "label-block",
+        "chip",
+        "thin-underline",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "locator",
+        "icon"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "remedy-comparison-lanes"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}
