@@ -3,7 +3,7 @@
   "compositionId": "LitigantHierarchyBeacon",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-08-14T05:57:23.583Z",
+  "generatedAt": "2026-08-29T09:30:05.862Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -16,13 +16,13 @@
       "title": "直接起诉九宫格",
       "durationMs": 8000,
       "file": "defendant-general-board.avif",
-      "fileSize": 490525,
+      "fileSize": 622471,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "859ddaab15678ef66acb1c9cbfcd47378f4e682363d63234dc52e7f63b2ce1b0",
+      "sha256": "7c3c1d7497d9646ce19409bc7b030dccb13a42134df50643ef154e64327c7907",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "309bacf3cdad8fed2d5c78783e3057b5537b5fd45a45ab4af7815e91ddfcbf7f"
+      "sceneFingerprint": "f5bf4aa6654e96f2119d969fe88124ac16b0bb2ef6e2090f62737bc97cebde97"
     },
     {
       "endFrame": 959,
@@ -33,13 +33,13 @@
       "title": "特别主体被告",
       "durationMs": 8000,
       "file": "defendant-special-routes.avif",
-      "fileSize": 568325,
+      "fileSize": 668759,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "fd0df775107f156f9714760a0c07574f551b8deb026aa96ff5386f6851e96759",
+      "sha256": "943ec1a29071718656268adec3654913ab146605580d57267abcea0679da863d",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "309bacf3cdad8fed2d5c78783e3057b5537b5fd45a45ab4af7815e91ddfcbf7f"
+      "sceneFingerprint": "f5bf4aa6654e96f2119d969fe88124ac16b0bb2ef6e2090f62737bc97cebde97"
     },
     {
       "endFrame": 1439,
@@ -50,13 +50,13 @@
       "title": "政府被告规则",
       "durationMs": 8000,
       "file": "defendant-gov-rules.avif",
-      "fileSize": 507897,
+      "fileSize": 613053,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "1888d8f972ebff50ebcbf81e6e80d9be7981f311b933310bcdb27296246e9dba",
+      "sha256": "4713cf17327a0ce8402626cdfd8fd1224d3e9152187a98af99bfced4a59c7788",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "309bacf3cdad8fed2d5c78783e3057b5537b5fd45a45ab4af7815e91ddfcbf7f"
+      "sceneFingerprint": "f5bf4aa6654e96f2119d969fe88124ac16b0bb2ef6e2090f62737bc97cebde97"
     },
     {
       "endFrame": 1919,
@@ -67,13 +67,13 @@
       "title": "复议后被告",
       "durationMs": 8000,
       "file": "defendant-after-review.avif",
-      "fileSize": 477170,
+      "fileSize": 474052,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "afe7a202e9a947581adcb746c8ade723fb0281d6c5e3e40c7f0a4d93fe171c73",
+      "sha256": "40a819fa522fcb807ceeff4187a218f34b65c672877dd8ec1d2702061186bbf1",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "309bacf3cdad8fed2d5c78783e3057b5537b5fd45a45ab4af7815e91ddfcbf7f"
+      "sceneFingerprint": "f5bf4aa6654e96f2119d969fe88124ac16b0bb2ef6e2090f62737bc97cebde97"
     },
     {
       "endFrame": 2399,
@@ -84,13 +84,13 @@
       "title": "原告五要素",
       "durationMs": 8000,
       "file": "plaintiff-concept-lantern.avif",
-      "fileSize": 466811,
+      "fileSize": 488635,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "b17a173edbbbb201b234c85701b795ecae65c08093b98f34fe80c01864b3de90",
+      "sha256": "bfd7d654117cbc0ff4eda7631b4357460b8f1b860cc19d7a7b7c08bf20ace684",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "309bacf3cdad8fed2d5c78783e3057b5537b5fd45a45ab4af7815e91ddfcbf7f"
+      "sceneFingerprint": "f5bf4aa6654e96f2119d969fe88124ac16b0bb2ef6e2090f62737bc97cebde97"
     },
     {
       "endFrame": 2879,
@@ -101,13 +101,13 @@
       "title": "相关人五关系",
       "durationMs": 8000,
       "file": "related-party-five-ties.avif",
-      "fileSize": 466403,
+      "fileSize": 574674,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "9dd6765fb13d8b81e779a975c718e273433e11e92f23051a17839d2d37a8f0c7",
+      "sha256": "c132499ef8a0eb0a51e8b19fef6a44000c8510de142bc9c0a00b457f6815f9c4",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "309bacf3cdad8fed2d5c78783e3057b5537b5fd45a45ab4af7815e91ddfcbf7f"
+      "sceneFingerprint": "f5bf4aa6654e96f2119d969fe88124ac16b0bb2ef6e2090f62737bc97cebde97"
     },
     {
       "endFrame": 3359,
@@ -118,13 +118,13 @@
       "title": "组织原告",
       "durationMs": 8000,
       "file": "organization-plaintiffs.avif",
-      "fileSize": 405741,
+      "fileSize": 537549,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "e772f7625ad86b174c8c2e3b40d6497fe3d39075b899d6a4756dd2cab4ec1463",
+      "sha256": "97c042c2ba10a626869b1e2e06936dda4af2f5a731a572cb670be6e5c6f1781b",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "309bacf3cdad8fed2d5c78783e3057b5537b5fd45a45ab4af7815e91ddfcbf7f"
+      "sceneFingerprint": "f5bf4aa6654e96f2119d969fe88124ac16b0bb2ef6e2090f62737bc97cebde97"
     },
     {
       "endFrame": 3839,
@@ -135,13 +135,13 @@
       "title": "第三人",
       "durationMs": 8000,
       "file": "third-party-seat.avif",
-      "fileSize": 501861,
+      "fileSize": 574583,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "48969db5c779c88ecbe187dce9c10da9391e341651255f4209bfa9466c52c48a",
+      "sha256": "f0ea3a842bf485628b655c5520a85b21a610b528ac988c400a0ed35e8a92ffce",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "309bacf3cdad8fed2d5c78783e3057b5537b5fd45a45ab4af7815e91ddfcbf7f"
+      "sceneFingerprint": "f5bf4aa6654e96f2119d969fe88124ac16b0bb2ef6e2090f62737bc97cebde97"
     },
     {
       "endFrame": 4319,
@@ -152,13 +152,13 @@
       "title": "级别管辖",
       "durationMs": 8000,
       "file": "jurisdiction-floors.avif",
-      "fileSize": 450018,
+      "fileSize": 573172,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "04270b3666dab300f0aaeeb89bcc7f52dc8ef4b3c7d21041e436f7fe470e8d2b",
+      "sha256": "f66bc1582f5a7d934d9e0afb7fb327f7c1397abd30ae0cb5eec5ae195ca88f5d",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "309bacf3cdad8fed2d5c78783e3057b5537b5fd45a45ab4af7815e91ddfcbf7f"
+      "sceneFingerprint": "f5bf4aa6654e96f2119d969fe88124ac16b0bb2ef6e2090f62737bc97cebde97"
     },
     {
       "endFrame": 4799,
@@ -169,13 +169,13 @@
       "title": "地域管辖",
       "durationMs": 8000,
       "file": "territorial-steps.avif",
-      "fileSize": 332946,
+      "fileSize": 479298,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "a68b5ed30adf7e4eb823ee9ab1bd21f5bcd66911201470c693ed146e3cd4e394",
+      "sha256": "86f528a2ba1852e86e150a1c10085dd84f8421379c90fb17650bf3e743d00ffd",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "309bacf3cdad8fed2d5c78783e3057b5537b5fd45a45ab4af7815e91ddfcbf7f"
+      "sceneFingerprint": "f5bf4aa6654e96f2119d969fe88124ac16b0bb2ef6e2090f62737bc97cebde97"
     },
     {
       "endFrame": 5219,
@@ -186,13 +186,13 @@
       "title": "代表人与代理人",
       "durationMs": 7000,
       "file": "representative-desk.avif",
-      "fileSize": 398987,
+      "fileSize": 485687,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "44c95d980e680e1215938abcb4fad5fffcdcc54f45abecf2e3074d404818a508",
+      "sha256": "e7115e5d72fea6edb92d2bc0ff7fc8ae81a6ef5983228ffa8a76d96e69d80903",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "309bacf3cdad8fed2d5c78783e3057b5537b5fd45a45ab4af7815e91ddfcbf7f"
+      "sceneFingerprint": "f5bf4aa6654e96f2119d969fe88124ac16b0bb2ef6e2090f62737bc97cebde97"
     }
   ],
   "size": {
@@ -200,7 +200,7 @@
     "width": 2560
   },
   "sourceFps": 60,
-  "sourceFingerprint": "309bacf3cdad8fed2d5c78783e3057b5537b5fd45a45ab4af7815e91ddfcbf7f",
+  "sourceFingerprint": "f5bf4aa6654e96f2119d969fe88124ac16b0bb2ef6e2090f62737bc97cebde97",
   "targetFps": 30,
-  "totalFileSize": 5066684
+  "totalFileSize": 6091933
 }

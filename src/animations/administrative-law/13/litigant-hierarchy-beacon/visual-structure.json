@@ -6,7 +6,7 @@
     {
       "id": "defendant-general-board",
       "export": "DefendantGeneralBoardScene",
-      "layout": "nine-slot-defendant-registry",
+      "layout": "nine-stone-defendant-board",
       "anchor": "comparison-axis",
       "grammar": [
         "nine-behavior-slots-map-to-their-defendants",
@@ -40,7 +40,7 @@
     {
       "id": "defendant-special-routes",
       "export": "DefendantSpecialRoutesScene",
-      "layout": "four-special-defendant-routes",
+      "layout": "four-corner-joseki-quadrants",
       "anchor": "comparison-axis",
       "grammar": [
         "four-special-subjects-route-to-their-defendants-by-name-or-authority",
@@ -69,7 +69,7 @@
     {
       "id": "defendant-gov-rules",
       "export": "DefendantGovRulesScene",
-      "layout": "government-defendant-three-rule-panels",
+      "layout": "three-move-basic-rules",
       "anchor": "comparison-axis",
       "grammar": [
         "guidance-keeps-the-department-as-defendant",
@@ -97,7 +97,7 @@
     {
       "id": "defendant-after-review",
       "export": "DefendantAfterReviewScene",
-      "layout": "three-review-outcome-beams",
+      "layout": "three-kifu-line-review",
       "anchor": "flow-path",
       "grammar": [
         "three-review-outcomes-beam-to-their-defendant-slots",
@@ -126,7 +126,7 @@
     {
       "id": "plaintiff-concept-lantern",
       "export": "PlaintiffConceptLanternScene",
-      "layout": "five-concept-lanterns",
+      "layout": "five-star-point-pillars",
       "anchor": "typographic-sequence",
       "grammar": [
         "five-requirement-lanterns-light-the-plaintiff-concept",
@@ -157,7 +157,7 @@
     {
       "id": "related-party-five-ties",
       "export": "RelatedPartyFiveTiesScene",
-      "layout": "five-tie-relationship-board",
+      "layout": "five-lane-standing-paths",
       "anchor": "comparison-axis",
       "grammar": [
         "five-relationship-lanes-decide-the-related-partys-standing",
@@ -187,7 +187,7 @@
     {
       "id": "organization-plaintiffs",
       "export": "OrganizationPlaintiffsScene",
-      "layout": "organization-plaintiff-registry",
+      "layout": "eight-stone-registry-grid",
       "anchor": "comparison-axis",
       "grammar": [
         "seven-organization-types-slot-into-their-own-name-or-entity-name",
@@ -220,7 +220,7 @@
     {
       "id": "third-party-seat",
       "export": "ThirdPartySeatScene",
-      "layout": "third-party-seat-board",
+      "layout": "tri-stone-seat-diagram",
       "anchor": "role-pair",
       "grammar": [
         "third-party-sits-between-the-parties-with-independent-claims",
@@ -248,7 +248,7 @@
     {
       "id": "jurisdiction-floors",
       "export": "JurisdictionFloorsScene",
-      "layout": "jurisdiction-lighthouse-floors",
+      "layout": "two-tier-court-boards",
       "anchor": "comparison-axis",
       "grammar": [
         "basic-floor-and-intermediate-floor-hold-distinct-cases",
@@ -275,7 +275,7 @@
     {
       "id": "territorial-steps",
       "export": "TerritorialStepsScene",
-      "layout": "territorial-four-step-ladder",
+      "layout": "four-move-order-columns",
       "anchor": "flow-path",
       "grammar": [
         "four-territorial-steps-are-climbed-in-order",
@@ -304,7 +304,7 @@
     {
       "id": "representative-desk",
       "export": "RepresentativeDeskScene",
-      "layout": "representative-vs-agent-desk",
+      "layout": "dual-kifu-seating-desk",
       "anchor": "comparison-axis",
       "grammar": [
         "representative-and-agent-split-the-desk",

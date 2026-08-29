@@ -1,16 +1,16 @@
 {
-  "directionId": "courtroom-docket-bench",
-  "family": "courtroom-docket",
-  "palette": "court navy, judicial mahogany, parchment white, plaintiff blue, defendant crimson, third-party amber, brass gold, verdict emerald",
-  "typography": "WenKai courtroom plaques with docket numerals, seat captions, brass ruling lines and engraved judicial seal stamps",
-  "composition": "courtroom benches, judicial podiums, sliding brass nameplates, review outcome convergence tracks, and jurisdiction scale sandtables",
-  "surface": "walnut judicial court benches and parchment dockets with brass dividers and wax seal stamps",
-  "motion": "brass nameplates slide into courtroom seat slots, gavels strike with recoil, review outcomes route into joint or single seats, jurisdiction sandtables elevate",
-  "transition": "docket book folds, gavel wipes and bench rotations",
+  "directionId": "go-board-kifu-record",
+  "family": "go-board-kifu",
+  "palette": "kaya wood board ground with ink grid, lacquer score cards, black and white stones as knowledge nodes, vermillion ribbon accents",
+  "typography": "title-face headlines on lacquer, cream body text, mono kifu coordinates as metadata tags",
+  "composition": "nine-stone defendant board, four-corner joseki quadrants, three basic-move rule columns, three kifu review lines, star-point pillars, five standing lanes, eight-stone registry, tri-stone seat diagram, two-tier court boards, move-order columns, dual seating desk",
+  "surface": "warm kaya wood with fine grid, lacquer cards float above the board with stone shadows",
+  "motion": "stones are placed in legal order and stay, ribbons close each record",
+  "transition": "the board slews to the next record as stones settle",
   "catalog": {
     "status": "featured",
     "source": "original-node",
     "route": "/inkloom/objective/administrative-law/13/litigant-hierarchy-beacon/",
-    "title": "行政诉讼法庭席位中枢"
+    "title": "围棋棋谱盘"
   }
 }

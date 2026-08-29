@@ -194,8 +194,8 @@ export const ADMINISTRATIVE_LAW_STYLE_DEMOS = [
   {
     id: "administrative-law-13-litigant-hierarchy-beacon",
     slug: "litigant-hierarchy-beacon",
-    title: "行政诉讼法庭席位中枢",
-    direction: "Courtroom Docket Bench",
+    title: "围棋棋谱盘",
+    direction: "Go Board Kifu",
     component: LitigantHierarchyBeacon,
     href: "/inkloom/objective/administrative-law/13/litigant-hierarchy-beacon/",
     durationInFrames: DURATION_FRAMES_13,
