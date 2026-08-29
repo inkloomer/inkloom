@@ -11,6 +11,7 @@ import {typography as administrativeTypography09} from '../animations/administra
 import {typography as administrativeTypography10} from '../animations/administrative-law/10/disclosure-case-desk/animation.meta';
 import {typography as administrativeTypography11} from '../animations/administrative-law/11/misc-acts-showcase/animation.meta';
 import {typography as administrativeTypography12} from '../animations/administrative-law/12/linkage-rail-switch/animation.meta';
+import {typography as administrativeTypography15} from '../animations/administrative-law/15/litigation-procedure-press/animation.meta';
 import {typography as administrativeTypography13} from '../animations/administrative-law/13/litigant-hierarchy-beacon/animation.meta';
 import {typography as administrativeTypography14} from '../animations/administrative-law/14/acceptance-security-gate/animation.meta';
 import {typography as typography97} from '../animations/criminal-procedure/07/evidence-exclusion-lattice/animation.meta';
@@ -23,6 +24,18 @@ import {typography as typography105} from '../animations/theoretical-law/01/valu
 import {typography as typography106} from '../animations/theoretical-law/01/legal-rules/animation.meta';
 import {typography as typography107} from '../animations/theoretical-law/01/legal-principles/animation.meta';
 import {typography as typography99} from '../animations/criminal-procedure/01/procedure-structure-orrery/animation.meta';
+import {typography as typography100} from '../animations/international-law/01/sources-of-international-law/animation.meta';
+import {typography as typographyIl02} from '../animations/international-law/02/subjects-responsibility/animation.meta';
+import {typography as typographyIl03} from '../animations/international-law/03/spatial-regimes/animation.meta';
+import {typography as typographyIl04} from '../animations/international-law/04/individuals-regimes/animation.meta';
+import {typography as typographyIl05} from '../animations/international-law/05/diplomatic-consular/animation.meta';
+import {typography as typographyIl06} from '../animations/international-law/06/law-of-treaties/animation.meta';
+import {typography as typographyIl07} from '../animations/international-law/07/dispute-settlement/animation.meta';
+import {typography as typographyIl08} from '../animations/international-law/08/war-armed-conflict/animation.meta';
+import {typography as typographyIl09} from '../animations/international-law/09/cross-border-disputes/animation.meta';
+import {typography as typographyIl10} from '../animations/international-law/10/conflict-of-laws-rules/animation.meta';
+import {typography as typographyCpOrgansRelay} from '../animations/criminal-procedure/03/organs-relay-map/animation.meta';
+import {typography as typographyCpPleaCaliper} from '../animations/criminal-procedure/02/plea-leniency-caliper/animation.meta';
 import {typography as typographyCpJurisdiction} from '../animations/criminal-procedure/04/jurisdiction-sluice-terrace/animation.meta';
 import {typography as typographyCpRecusal} from '../animations/criminal-procedure/05/recusal-sentry-rotation/animation.meta';
 import {typography as typographyCpPilot} from '../animations/criminal-procedure/06/defense-pilot-harbor/animation.meta';
@@ -39,18 +52,6 @@ import {typography as typographyCpLoom} from '../animations/criminal-procedure/1
 import {typography as typographyCpDispatch} from '../animations/criminal-procedure/19/execution-dispatch-board/animation.meta';
 import {typography as typographyCpGreenhouse} from '../animations/criminal-procedure/20/juvenile-observatory-greenhouse/animation.meta';
 import {typography as typographyCpSummit} from '../animations/criminal-procedure/17/death-review-summit/animation.meta';
-import {typography as typography100} from '../animations/international-law/01/sources-of-international-law/animation.meta';
-import {typography as typographyIl02} from '../animations/international-law/02/subjects-responsibility/animation.meta';
-import {typography as typographyIl03} from '../animations/international-law/03/spatial-regimes/animation.meta';
-import {typography as typographyIl04} from '../animations/international-law/04/individuals-regimes/animation.meta';
-import {typography as typographyIl05} from '../animations/international-law/05/diplomatic-consular/animation.meta';
-import {typography as typographyIl06} from '../animations/international-law/06/law-of-treaties/animation.meta';
-import {typography as typographyIl07} from '../animations/international-law/07/dispute-settlement/animation.meta';
-import {typography as typographyIl08} from '../animations/international-law/08/war-armed-conflict/animation.meta';
-import {typography as typographyIl09} from '../animations/international-law/09/cross-border-disputes/animation.meta';
-import {typography as typographyIl10} from '../animations/international-law/10/conflict-of-laws-rules/animation.meta';
-import {typography as typographyCpOrgansRelay} from '../animations/criminal-procedure/03/organs-relay-map/animation.meta';
-import {typography as typographyCpPleaCaliper} from '../animations/criminal-procedure/02/plea-leniency-caliper/animation.meta';
 import {typography as typography0} from '../animations/civil-procedure/01/dispute-resolution/animation.meta';
 import {typography as typography1} from '../animations/civil-procedure/01/law-attributes/animation.meta';
 import {typography as typography2} from '../animations/civil-procedure/01/trial-procedure/animation.meta';
@@ -161,6 +162,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'disclosure-case-desk': {metadata: administrativeTypography10, scope: {animationId: 'disclosure-case-desk', subject: 'administrative-law', topic: '10'}},
   'misc-acts-showcase': {metadata: administrativeTypography11, scope: {animationId: 'misc-acts-showcase', subject: 'administrative-law', topic: '11'}},
   'linkage-rail-switch': {metadata: administrativeTypography12, scope: {animationId: 'linkage-rail-switch', subject: 'administrative-law', topic: '12'}},
+  'litigation-procedure-press': {metadata: administrativeTypography15, scope: {animationId: 'litigation-procedure-press', subject: 'administrative-law', topic: '15'}},
   'litigant-hierarchy-beacon': {metadata: administrativeTypography13, scope: {animationId: 'litigant-hierarchy-beacon', subject: 'administrative-law', topic: '13'}},
   'acceptance-security-gate': {metadata: administrativeTypography14, scope: {animationId: 'acceptance-security-gate', subject: 'administrative-law', topic: '14'}},
   'dispute-resolution': {metadata: typography0, scope: {animationId: 'dispute-resolution', subject: 'civil-procedure', topic: '01'}},
@@ -247,6 +249,17 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'legal-rules': {metadata: typography106, scope: {animationId: 'legal-rules', subject: 'theoretical-law', topic: '01'}},
   'legal-principles': {metadata: typography107, scope: {animationId: 'legal-principles', subject: 'theoretical-law', topic: '01'}},
   'procedure-structure-orrery': {metadata: typography99, scope: {animationId: 'procedure-structure-orrery', subject: 'criminal-procedure', topic: '01'}},
+  'sources-of-international-law': {metadata: typography100, scope: {animationId: 'sources-of-international-law', subject: 'international-law', topic: '01'}},
+  'subjects-responsibility': {metadata: typographyIl02, scope: {animationId: 'subjects-responsibility', subject: 'international-law', topic: '02'}},
+  'spatial-regimes': {metadata: typographyIl03, scope: {animationId: 'spatial-regimes', subject: 'international-law', topic: '03'}},
+  'individuals-regimes': {metadata: typographyIl04, scope: {animationId: 'individuals-regimes', subject: 'international-law', topic: '04'}},
+  'diplomatic-consular': {metadata: typographyIl05, scope: {animationId: 'diplomatic-consular', subject: 'international-law', topic: '05'}},
+  'law-of-treaties': {metadata: typographyIl06, scope: {animationId: 'law-of-treaties', subject: 'international-law', topic: '06'}},
+  'dispute-settlement': {metadata: typographyIl07, scope: {animationId: 'dispute-settlement', subject: 'international-law', topic: '07'}},
+  'war-armed-conflict': {metadata: typographyIl08, scope: {animationId: 'war-armed-conflict', subject: 'international-law', topic: '08'}},
+  'cross-border-disputes': {metadata: typographyIl09, scope: {animationId: 'cross-border-disputes', subject: 'international-law', topic: '09'}},
+  'conflict-of-laws-rules': {metadata: typographyIl10, scope: {animationId: 'conflict-of-laws-rules', subject: 'international-law', topic: '10'}},
+  'plea-leniency-caliper': {metadata: typographyCpPleaCaliper, scope: {animationId: 'plea-leniency-caliper', subject: 'criminal-procedure', topic: '02'}},
   'organs-relay-map': {metadata: typographyCpOrgansRelay, scope: {animationId: 'organs-relay-map', subject: 'criminal-procedure', topic: '03'}},
   'jurisdiction-sluice-terrace': {metadata: typographyCpJurisdiction, scope: {animationId: 'jurisdiction-sluice-terrace', subject: 'criminal-procedure', topic: '04'}},
   'recusal-sentry-rotation': {metadata: typographyCpRecusal, scope: {animationId: 'recusal-sentry-rotation', subject: 'criminal-procedure', topic: '05'}},
@@ -264,17 +277,6 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'execution-dispatch-board': {metadata: typographyCpDispatch, scope: {animationId: 'execution-dispatch-board', subject: 'criminal-procedure', topic: '19'}},
   'juvenile-observatory-greenhouse': {metadata: typographyCpGreenhouse, scope: {animationId: 'juvenile-observatory-greenhouse', subject: 'criminal-procedure', topic: '20'}},
   'death-review-summit': {metadata: typographyCpSummit, scope: {animationId: 'death-review-summit', subject: 'criminal-procedure', topic: '17'}},
-  'sources-of-international-law': {metadata: typography100, scope: {animationId: 'sources-of-international-law', subject: 'international-law', topic: '01'}},
-  'subjects-responsibility': {metadata: typographyIl02, scope: {animationId: 'subjects-responsibility', subject: 'international-law', topic: '02'}},
-  'spatial-regimes': {metadata: typographyIl03, scope: {animationId: 'spatial-regimes', subject: 'international-law', topic: '03'}},
-  'individuals-regimes': {metadata: typographyIl04, scope: {animationId: 'individuals-regimes', subject: 'international-law', topic: '04'}},
-  'diplomatic-consular': {metadata: typographyIl05, scope: {animationId: 'diplomatic-consular', subject: 'international-law', topic: '05'}},
-  'law-of-treaties': {metadata: typographyIl06, scope: {animationId: 'law-of-treaties', subject: 'international-law', topic: '06'}},
-  'dispute-settlement': {metadata: typographyIl07, scope: {animationId: 'dispute-settlement', subject: 'international-law', topic: '07'}},
-  'war-armed-conflict': {metadata: typographyIl08, scope: {animationId: 'war-armed-conflict', subject: 'international-law', topic: '08'}},
-  'cross-border-disputes': {metadata: typographyIl09, scope: {animationId: 'cross-border-disputes', subject: 'international-law', topic: '09'}},
-  'conflict-of-laws-rules': {metadata: typographyIl10, scope: {animationId: 'conflict-of-laws-rules', subject: 'international-law', topic: '10'}},
-  'plea-leniency-caliper': {metadata: typographyCpPleaCaliper, scope: {animationId: 'plea-leniency-caliper', subject: 'criminal-procedure', topic: '02'}},
   'card-selling-funds-viewpoint': {metadata: typography40, scope: {animationId: 'card-selling-funds-viewpoint', subject: 'criminal', topic: '19'}},
   'occupational-embezzlement-flowchart': {metadata: typography41, scope: {animationId: 'occupational-embezzlement-flowchart', subject: 'criminal', topic: '19'}},
   'property-interests-keypoints': {metadata: typography42, scope: {animationId: 'property-interests-keypoints', subject: 'criminal', topic: '19'}},

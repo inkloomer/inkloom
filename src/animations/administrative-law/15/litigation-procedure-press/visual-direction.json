@@ -1,0 +1,16 @@
+{
+  "directionId": "movable-type-press-room",
+  "family": "movable-type-press",
+  "palette": "charcoal press room, lead-steel type sorts, cream printed proofs, print-red roller ink accents",
+  "typography": "title-face headlines set like locked chases, cream proof sheets with printed ink text, mono case codes",
+  "composition": "three-track deadline type columns, typesetter acceptance case, remedy drawer cabinet, compose galley locks, quoin summary lock, keyline second-instance galley, sorting trays, dovetail locks, mediation lock panel, cross typesetting",
+  "surface": "dark press-room walls with steel frame lines, metal type blocks with letterpress texture, printed proofs with registration marks",
+  "motion": "type sorts slide into the composing stick in legal order, proofs print and hold, red ink stamps close each form",
+  "transition": "the galley advances as the next chase is locked",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/administrative-law/15/litigation-procedure-press/",
+    "title": "活字排版工坊"
+  }
+}

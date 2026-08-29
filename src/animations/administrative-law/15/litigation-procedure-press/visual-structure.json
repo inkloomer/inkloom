@@ -1,0 +1,203 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 10,
+  "scenes": [
+    {
+      "id": "suit-deadline-matrix",
+      "export": "SuitDeadlineMatrixScene",
+      "layout": "three-track-deadline-typesetting",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "three-suit-routes-compose-their-own-deadline-lines",
+        "known-partial-and-unknown-cases-set-different-metal-sorts"
+      ],
+      "textTreatments": ["label-block", "thin-underline", "stamp"],
+      "focalChannels": ["contrast", "spatial", "connector"],
+      "tokens": [],
+      "finalKnowledge": [
+        "suit-known-six-months",
+        "suit-partial-one-year",
+        "suit-unknown-five-years",
+        "suit-inaction-rules",
+        "suit-after-review-fifteen"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "acceptance-verdict-compose",
+      "export": "AcceptanceVerdictComposeScene",
+      "layout": "typesetter-acceptance-case",
+      "anchor": "flow-path",
+      "grammar": [
+        "one-filing-decision-composes-four-outcomes",
+        "undecidable-cases-wait-seven-days-then-register"
+      ],
+      "textTreatments": ["label-block", "stamp", "soft-highlight"],
+      "focalChannels": ["connector", "contrast", "enclosure"],
+      "tokens": [],
+      "finalKnowledge": [
+        "acceptance-register",
+        "acceptance-reject",
+        "acceptance-undecided-seven-days",
+        "acceptance-supplement-flow"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "remedy-type-drawer",
+      "export": "RemedyTypeDrawerScene",
+      "layout": "three-drawer-remedy-cabinet",
+      "anchor": "document-fork",
+      "grammar": [
+        "three-remedy-drawers-open-to-distinct-recourse-routes",
+        "acceptance-flaws-complain-while-silent-rejections-sue-higher"
+      ],
+      "textTreatments": ["label-block", "thin-underline", "chip"],
+      "focalChannels": ["connector", "contrast", "locator"],
+      "tokens": [],
+      "finalKnowledge": [
+        "remedy-appeal",
+        "remedy-complaint",
+        "remedy-sue-higher"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "trial-ordinary-compose-lockup",
+      "export": "TrialOrdinaryComposeLockupScene",
+      "layout": "ordinary-trial-compose-galley",
+      "anchor": "flow-path",
+      "grammar": [
+        "document-relay-steps-lock-into-one-galley",
+        "panel-composition-and-six-month-limit-frame-the-trial"
+      ],
+      "textTreatments": ["label-block", "soft-highlight", "thin-underline"],
+      "focalChannels": ["connector", "locator", "contrast"],
+      "tokens": [],
+      "finalKnowledge": [
+        "ordinary-panel-composition",
+        "ordinary-document-relay",
+        "ordinary-object-open-trial",
+        "ordinary-six-month-limit"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "summary-procedure-quoin",
+      "export": "SummaryProcedureQuoinScene",
+      "layout": "summary-quoin-lock",
+      "anchor": "boundary",
+      "grammar": [
+        "statutory-and-agreed-summary-lanes-lock-behind-one-quoin",
+        "forty-five-day-limit-never-extends"
+      ],
+      "textTreatments": ["label-block", "stamp", "external-negation"],
+      "focalChannels": ["contrast", "enclosure", "locator"],
+      "tokens": [],
+      "finalKnowledge": [
+        "summary-statutory-scope",
+        "summary-agreed-scope",
+        "summary-trial-rules",
+        "summary-to-ordinary"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "second-instance-keyline",
+      "export": "SecondInstanceKeylineScene",
+      "layout": "second-instance-keyline-galley",
+      "anchor": "flow-path",
+      "grammar": [
+        "appeal-subjects-and-deadlines-set-the-keyline",
+        "comprehensive-review-differs-from-first-instance"
+      ],
+      "textTreatments": ["label-block", "thin-underline", "soft-highlight"],
+      "focalChannels": ["locator", "contrast", "connector"],
+      "tokens": [],
+      "finalKnowledge": [
+        "appeal-subject-deadlines",
+        "appeal-document-relay",
+        "appeal-trial-object"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "withdrawal-absence-sorting",
+      "export": "WithdrawalAbsenceSortingScene",
+      "layout": "withdrawal-absence-sorting-tray",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "withdrawal-letters-sort-into-change-consent-and-ruling-pigeonholes",
+        "deemed-withdrawal-and-absence-judgment-end-in-distinct-trays"
+      ],
+      "textTreatments": ["label-block", "stamp", "external-negation"],
+      "focalChannels": ["contrast", "enclosure", "locator"],
+      "tokens": [],
+      "finalKnowledge": [
+        "withdrawal-three-rules",
+        "deemed-withdrawal-cases",
+        "withdrawal-consequence",
+        "absence-judgment-rules"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "advance-execution-dovetail",
+      "export": "AdvanceExecutionDovetailScene",
+      "layout": "advance-execution-dovetail-lock",
+      "anchor": "flow-target",
+      "grammar": [
+        "pitiable-applicants-lock-advance-execution-without-guarantee",
+        "judicial-reconsideration-runs-once-for-both-parties"
+      ],
+      "textTreatments": ["label-block", "soft-highlight", "stamp"],
+      "focalChannels": ["connector", "contrast", "enclosure"],
+      "tokens": [],
+      "finalKnowledge": [
+        "advance-execution-conditions",
+        "advance-execution-procedure",
+        "judicial-reconsideration-once"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "mediation-rule-lock",
+      "export": "MediationRuleLockScene",
+      "layout": "mediation-lock-panel",
+      "anchor": "boundary",
+      "grammar": [
+        "mediation-stays-locked-until-compensation-or-discretion-unlocks-it",
+        "signed-mediation-records-take-effect-and-exclude-judgment"
+      ],
+      "textTreatments": ["label-block", "stamp", "soft-highlight"],
+      "focalChannels": ["contrast", "enclosure", "locator"],
+      "tokens": [],
+      "finalKnowledge": [
+        "mediation-principle-exception",
+        "mediation-effective-rules",
+        "mediation-openness"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "court-appearance-and-cross-type",
+      "export": "CourtAppearanceAndCrossTypeScene",
+      "layout": "appearance-cross-typesetting",
+      "anchor": "document-fork",
+      "grammar": [
+        "leader-court-appearance-sets-the-staff-bottom-line",
+        "civil-and-criminal-crossings-typeset-distinct-branches"
+      ],
+      "textTreatments": ["label-block", "stamp", "thin-underline"],
+      "focalChannels": ["contrast", "connector", "locator"],
+      "tokens": [],
+      "finalKnowledge": [
+        "leader-court-appearance-rule",
+        "civil-cross-rules",
+        "criminal-cross-rules"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}
