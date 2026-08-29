@@ -1,0 +1,70 @@
+{
+  "animationId": "nominee-impersonation-masks",
+  "compositionId": "NomineeImpersonationMasks",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-29T21:32:37.353Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 289,
+      "frameCount": 290,
+      "id": "mask-theft",
+      "number": "01",
+      "startFrame": 0,
+      "title": "偷戴的脸谱：被冒名者不是股东",
+      "durationMs": 9667,
+      "file": "mask-theft.avif",
+      "fileSize": 310638,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "ec078e5273cb58f694a26324728376141b7dd93bea5a1f80d9378cd5b8497ff7",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "1af09451cc351fbf22a1770556faa21ba84fb190d23d5ee87a7cc6804387e1fb"
+    },
+    {
+      "endFrame": 549,
+      "frameCount": 260,
+      "id": "negative-suit",
+      "number": "02",
+      "startFrame": 290,
+      "title": "摘脸谱之诉：确认我不是股东",
+      "durationMs": 8667,
+      "file": "negative-suit.avif",
+      "fileSize": 385740,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "caf37ed7c390f1533037d78eced62f55a3c13b7cc64cec919d56881c17c5d49c",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "1af09451cc351fbf22a1770556faa21ba84fb190d23d5ee87a7cc6804387e1fb"
+    },
+    {
+      "endFrame": 859,
+      "frameCount": 310,
+      "id": "proxy-holding",
+      "number": "03",
+      "startFrame": 550,
+      "title": "代持的脸谱：协议有效，价款追缴",
+      "durationMs": 10333,
+      "file": "proxy-holding.avif",
+      "fileSize": 390308,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "1e613b8d8faab6ab447a2305045a32dae56391669aad9a629faf9768a9eb1fd0",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "1af09451cc351fbf22a1770556faa21ba84fb190d23d5ee87a7cc6804387e1fb"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "1af09451cc351fbf22a1770556faa21ba84fb190d23d5ee87a7cc6804387e1fb",
+  "targetFps": 30,
+  "totalFileSize": 1086686
+}

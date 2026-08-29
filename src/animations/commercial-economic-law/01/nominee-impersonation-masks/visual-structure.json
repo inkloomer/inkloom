@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "playerControlSafeBottom": 168,
+  "scenes": [
+    {
+      "id": "mask-theft",
+      "export": "MaskTheftScene",
+      "layout": "mask-theft-backstage",
+      "anchor": "role-pair",
+      "grammar": ["identity-usurpation-fork", "liability-redirection"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["VenetianMask", "Users", "Coins", "HandCoins", "GraduationCap"],
+      "finalKnowledge": [
+        "theft-usurpation-board",
+        "theft-no-consent-verdict",
+        "theft-liability-redirect",
+        "theft-exam-note"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "negative-suit",
+      "export": "NegativeSuitScene",
+      "layout": "confirmation-suit-stage",
+      "anchor": "document-fork",
+      "grammar": ["negative-confirmation-suit", "defendant-seat-rule"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["VenetianMask", "Gavel", "Building2", "GraduationCap"],
+      "finalKnowledge": [
+        "suit-plaintiff-desk",
+        "suit-defendant-seat",
+        "suit-answers-recap"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "proxy-holding",
+      "export": "ProxyHoldingScene",
+      "layout": "proxy-transfer-counter",
+      "anchor": "flow-path",
+      "grammar": ["agreement-validity-rule", "good-faith-transfer-then-trace"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["FileText", "UserCheck", "HandCoins", "Coins"],
+      "finalKnowledge": [
+        "proxy-agreement-valid",
+        "proxy-bonafide-transfer",
+        "proxy-trace-proceeds",
+        "proxy-floor-rule"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}
