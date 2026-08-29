@@ -1,0 +1,22 @@
+{
+  "directionId": "midnight-mail-relay",
+  "family": "midnight-mail-relay",
+  "palette": "midnight navy relay desk, brass mail medallions, wax-seal red refusals, signal teal channels, cream paper text",
+  "typography": "WenKai dispatch headings with dashed brass medallions, teal ink highlights and seal-red refusals",
+  "composition": "relay bureau with station rail, cross-border pipelines through consular and ministry desks, condition gates and comparison lanes",
+  "surface": "midnight navy panels with brass hairline frames, no light cards",
+  "motion": "dispatch entries along relay lanes with stamped verdicts and gate disclosures",
+  "transition": "content swap under a persistent relay frame and station rail",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/international-law/12/extraterritorial-assistance/",
+    "title": "深夜邮传局"
+  },
+  "conceptTokens": {
+    "consular-channel": "TokConsulate",
+    "court-place": "TokCourt",
+    "treaty-basis": "TokTreaty",
+    "two-year-window": "TokClock"
+  }
+}

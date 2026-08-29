@@ -1,0 +1,178 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 4,
+  "scenes": [
+    {
+      "id": "service-routes",
+      "export": "ServiceRoutesScene",
+      "layout": "four-shelf-service-route-board",
+      "anchor": "typographic-sequence",
+      "grammar": [
+        "service-routes-shelve-into-four-groups",
+        "announcement-is-the-only-ordered-last-resort",
+        "actual-conduct-or-expiry-deems-service"
+      ],
+      "textTreatments": [
+        "label-block",
+        "chip",
+        "thin-underline",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "enclosure",
+        "locator",
+        "icon",
+        "contrast"
+      ],
+      "tokens": [
+        "TokConsulate"
+      ],
+      "finalKnowledge": [
+        "route-shelves",
+        "announcement-fallback",
+        "route-limits",
+        "deemed-served"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "hague-inbound",
+      "export": "HagueInboundScene",
+      "layout": "hague-relay-pipeline-with-reject-gates",
+      "anchor": "flow-path",
+      "grammar": [
+        "inbound-service-only-three-official-routes",
+        "hague-pipeline-relays-through-six-stations",
+        "no-translation-lets-recipient-refuse"
+      ],
+      "textTreatments": [
+        "label-block",
+        "chip",
+        "stamp"
+      ],
+      "focalChannels": [
+        "connector",
+        "locator",
+        "contrast",
+        "icon"
+      ],
+      "tokens": [
+        "TokConsulate",
+        "TokCourt",
+        "TokTreaty"
+      ],
+      "finalKnowledge": [
+        "inbound-routes",
+        "hague-pipeline",
+        "never-refuse",
+        "recipient-refusal"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "evidence-lanes",
+      "export": "EvidenceLanesScene",
+      "layout": "evidence-dual-lane-comparison",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "commission-evidence-runs-on-treaty-letters",
+        "consular-evidence-serves-own-citizens-without-coercion",
+        "special-means-need-consent-and-host-permission"
+      ],
+      "textTreatments": [
+        "label-block",
+        "thin-underline",
+        "external-negation",
+        "chip"
+      ],
+      "focalChannels": [
+        "contrast",
+        "icon",
+        "enclosure",
+        "annotation"
+      ],
+      "tokens": [
+        "TokConsulate",
+        "TokTreaty",
+        "TokCourt"
+      ],
+      "finalKnowledge": [
+        "commission-lane",
+        "consular-lane",
+        "special-means",
+        "count-gap"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "judgment-recognition",
+      "export": "JudgmentRecognitionScene",
+      "layout": "recognition-gate-with-divorce-sidetrack",
+      "anchor": "document-fork",
+      "grammar": [
+        "recognition-needs-basis-effect-and-jurisdiction",
+        "substance-gates-guard-fairness-and-order",
+        "divorce-judgments-skip-basis-but-shrink-scope"
+      ],
+      "textTreatments": [
+        "label-block",
+        "soft-highlight",
+        "thin-underline",
+        "chip"
+      ],
+      "focalChannels": [
+        "enclosure",
+        "contrast",
+        "locator",
+        "icon"
+      ],
+      "tokens": [
+        "TokCourt",
+        "TokClock",
+        "TokTreaty"
+      ],
+      "finalKnowledge": [
+        "filing-desk",
+        "basis-gate",
+        "substance-gate",
+        "divorce-sidetrack"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "arbitral-awards",
+      "export": "ArbitralAwardsScene",
+      "layout": "convention-reservation-gate-with-review-toggle",
+      "anchor": "boundary",
+      "grammar": [
+        "new-york-convention-gates-by-seat-and-commerce",
+        "chinese-courts-never-revoke-foreign-awards",
+        "ex-officio-review-limited-to-two-reservations"
+      ],
+      "textTreatments": [
+        "label-block",
+        "chip",
+        "soft-highlight",
+        "stamp"
+      ],
+      "focalChannels": [
+        "spatial",
+        "contrast",
+        "enclosure",
+        "icon"
+      ],
+      "tokens": [
+        "TokCourt",
+        "TokClock"
+      ],
+      "finalKnowledge": [
+        "convention-reservation",
+        "filing-procedure",
+        "no-revocation",
+        "review-toggle"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}
