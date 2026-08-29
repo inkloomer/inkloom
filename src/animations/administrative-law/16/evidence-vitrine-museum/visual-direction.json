@@ -1,0 +1,16 @@
+{
+  "directionId": "glass-vitrine-museum-hall",
+  "family": "glass-vitrine-museum",
+  "palette": "ivory gallery walls, glass vitrine panes with cool reflection streaks, black metal frames, brass plaques, dark velvet plinths",
+  "typography": "title-face brass plaques, ink exhibit labels on cream cards, mono case numbers",
+  "composition": "eight-evidence vitrine hall, twin compare cases, burden ledger wall, deadline vitrine, collection desk, verdict hall tiers",
+  "surface": "glass panes with diagonal reflection strokes, velvet-lined plinths, museum spotlight pools",
+  "motion": "vitrine lights switch on in legal order, exhibit cards settle, brass stamps close each case",
+  "transition": "the gallery pans to the next vitrine as spotlights refocus",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/administrative-law/16/evidence-vitrine-museum/",
+    "title": "玻璃展柜博物馆"
+  }
+}

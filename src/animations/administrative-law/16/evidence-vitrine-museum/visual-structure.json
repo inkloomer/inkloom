@@ -1,0 +1,127 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 6,
+  "scenes": [
+    {
+      "id": "eight-evidence-vitrine-hall",
+      "export": "EightEvidenceVitrineHallScene",
+      "layout": "eight-vitrine-hall",
+      "anchor": "flow-target",
+      "grammar": [
+        "eight-evidence-cases-light-up-in-taxonomic-order",
+        "special-sources-get-their-own-entry-vitrine"
+      ],
+      "textTreatments": ["label-block", "thin-underline", "chip"],
+      "focalChannels": ["spatial", "enclosure", "contrast"],
+      "tokens": [],
+      "finalKnowledge": [
+        "kind-document",
+        "kind-physical",
+        "kind-audiovisual",
+        "kind-electronic",
+        "kind-testimony",
+        "kind-statement",
+        "kind-appraisal",
+        "kind-scene-notes",
+        "kind-special-sources"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "digital-vs-analog-compare",
+      "export": "DigitalVsAnalogCompareScene",
+      "layout": "twin-vitrine-compare-cases",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "one-evidence-file-shines-in-two-compare-cases",
+        "propagation-boundary-splits-the-two-worlds"
+      ],
+      "textTreatments": ["label-block", "chip", "soft-highlight"],
+      "focalChannels": ["contrast", "enclosure", "spatial"],
+      "tokens": [],
+      "finalKnowledge": ["electronic-binary", "analog-signal", "propagation-diff"],
+      "statefulObjects": []
+    },
+    {
+      "id": "burden-of-proof-ledger",
+      "export": "BurdenOfProofLedgerScene",
+      "layout": "burden-ledger-wall",
+      "anchor": "document-fork",
+      "grammar": [
+        "defendant-and-plaintiff-ledgers-hang-on-opposite-walls",
+        "review-join-bridges-the-two-ledgers"
+      ],
+      "textTreatments": ["label-block", "chip", "thin-underline"],
+      "focalChannels": ["contrast", "enclosure", "spatial"],
+      "tokens": [],
+      "finalKnowledge": [
+        "burden-defendant-legality",
+        "burden-review-join",
+        "burden-plaintiff-initial",
+        "burden-plaintiff-scope"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "deadline-and-supplement-vitrine",
+      "export": "DeadlineAndSupplementVitrineScene",
+      "layout": "deadline-twin-vitrine-gate",
+      "anchor": "timeline-gate",
+      "grammar": [
+        "defendant-and-plaintiff-deadlines-run-on-two-clock-vitrines",
+        "first-instance-supplement-lock-behind-eligibility"
+      ],
+      "textTreatments": ["label-block", "stamp", "thin-underline"],
+      "focalChannels": ["locator", "contrast", "enclosure"],
+      "tokens": [],
+      "finalKnowledge": [
+        "deadline-defendant-15",
+        "deadline-plaintiff-rules",
+        "supplement-first-instance"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "evidence-collection-desk",
+      "export": "EvidenceCollectionDeskScene",
+      "layout": "three-desk-collection-bench",
+      "anchor": "flow-path",
+      "grammar": [
+        "three-collection-desks-process-distinct-gatekeeping-rules",
+        "ex-officio-evidence-skips-cross-examination"
+      ],
+      "textTreatments": ["label-block", "thin-underline", "chip"],
+      "focalChannels": ["connector", "contrast", "enclosure"],
+      "tokens": [],
+      "finalKnowledge": [
+        "collection-ex-officio",
+        "collection-on-application",
+        "order-submit-rules"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "cross-exam-and-verdict-hall",
+      "export": "CrossExamAndVerdictHallScene",
+      "layout": "three-tier-verdict-hall",
+      "anchor": "typographic-sequence",
+      "grammar": [
+        "three-effect-tiers-descend-like-museum-steps",
+        "cross-exam-rules-frame-the-entrance"
+      ],
+      "textTreatments": ["label-block", "stamp", "soft-highlight"],
+      "focalChannels": ["contrast", "enclosure", "spatial"],
+      "tokens": [],
+      "finalKnowledge": [
+        "cross-exam-rules",
+        "officer-appearance-four",
+        "guarantee-letter-rule",
+        "verdict-no-effect",
+        "verdict-one-sided",
+        "verdict-weak-solo"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}
