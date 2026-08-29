@@ -8,7 +8,7 @@ const DEFAULT_WORKSPACE = process.env.SIYUAN_WORKSPACE || 'D:/1STUDY/SIYUAN';
 const SIYUAN_BIN = process.env.SIYUAN_BIN || 'D:/scoop/shims/siyuan.exe';
 const BLOCK_ID_PATTERN = /^[0-9]{14}-[a-z0-9]{7}$/;
 const STABLE_ID_PATTERN = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
-const BASE_URL = 'https://inkloomer.github.io/inkloom/animation-avif';
+const BASE_URL = 'https://gcore.jsdelivr.net/gh/inkloomer/inkloom@main/public/animation-avif';
 
 const usage = `
 Insert one published InkLoom scene immediately after one exact SiYuan block.
