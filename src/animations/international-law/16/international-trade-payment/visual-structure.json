@@ -1,0 +1,138 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 4,
+  "scenes": [
+    {
+      "id": "collection-desk",
+      "export": "CollectionDeskScene",
+      "layout": "collection-chain-with-three-neglects",
+      "anchor": "flow-path",
+      "grammar": [
+        "collection-relays-through-principal-remitting-collecting-banks",
+        "banks-ignore-documents-goods-and-recourse",
+        "collection-splits-into-dp-and-da"
+      ],
+      "textTreatments": [
+        "label-block",
+        "chip",
+        "thin-underline",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "connector",
+        "contrast",
+        "enclosure",
+        "icon"
+      ],
+      "tokens": [
+        "TokBank",
+        "TokDocs"
+      ],
+      "finalKnowledge": [
+        "collection-basics",
+        "collection-chain",
+        "bank-three-neglects",
+        "collection-types"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "credit-letter-gate",
+      "export": "CreditLetterGateScene",
+      "layout": "document-gate-with-bank-duties",
+      "anchor": "document-fork",
+      "grammar": [
+        "surface-match-opens-payment-gate",
+        "mismatch-lets-bank-ask-applicant-to-waive",
+        "five-immunities-shield-the-bank"
+      ],
+      "textTreatments": [
+        "label-block",
+        "chip",
+        "thin-underline",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "enclosure",
+        "contrast",
+        "connector",
+        "icon"
+      ],
+      "tokens": [
+        "TokBank",
+        "TokDocs"
+      ],
+      "finalKnowledge": [
+        "lc-basics",
+        "document-gate",
+        "lc-bank-immunities",
+        "confirmed-lc"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "fraud-stop-order",
+      "export": "FraudStopOrderScene",
+      "layout": "fraud-exemption-gate-with-stop-order",
+      "anchor": "boundary",
+      "grammar": [
+        "soft-terms-let-buyer-hijack-payment",
+        "fabricated-documents-trigger-fraud-exception",
+        "court-alone-may-halt-payment-before-good-faith-honour"
+      ],
+      "textTreatments": [
+        "label-block",
+        "chip",
+        "stamp",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "enclosure",
+        "contrast",
+        "locator",
+        "icon"
+      ],
+      "tokens": [
+        "TokDocs",
+        "TokCourt"
+      ],
+      "finalKnowledge": [
+        "soft-terms-fraud",
+        "beneficiary-fraud",
+        "stop-order-conditions",
+        "no-payment-cases"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "case-solving-order",
+      "export": "CaseSolvingOrderScene",
+      "layout": "four-step-case-ladder",
+      "anchor": "timeline-gate",
+      "grammar": [
+        "case-steps-follow-risk-carrier-insurer-bank-order",
+        "independent-relations-never-borrow-each-others-rules",
+        "subrogation-balances-the-final-loss"
+      ],
+      "textTreatments": [
+        "label-block",
+        "chip",
+        "thin-underline",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "connector",
+        "contrast",
+        "enclosure",
+        "icon"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "case-four-steps",
+        "independence-note"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

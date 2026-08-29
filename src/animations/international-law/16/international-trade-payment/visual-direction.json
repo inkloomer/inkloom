@@ -1,0 +1,21 @@
+{
+  "directionId": "oxblood-draft-house",
+  "family": "oxblood-draft-house",
+  "palette": "deep oxblood exchange hall, engraved gold counters, slate-blue document ink, copper verdict stamps, cream paper text",
+  "typography": "WenKai counter headings with dashed gold medallions, gold ink highlights and slate underlines",
+  "composition": "draft house with counter rail, payment relay chains, document gates and condition stamps",
+  "surface": "oxblood panels with gold hairline frames, no light cards",
+  "motion": "counter-to-counter relay entries with stamped verdicts and gate disclosures",
+  "transition": "content swap under a persistent draft-house frame and counter rail",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/international-law/16/international-trade-payment/",
+    "title": "勃艮第汇票行"
+  },
+  "conceptTokens": {
+    "bank-party": "TokBank",
+    "documents": "TokDocs",
+    "court-order": "TokCourt"
+  }
+}
