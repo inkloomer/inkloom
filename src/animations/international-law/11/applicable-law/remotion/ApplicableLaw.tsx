@@ -1,6 +1,6 @@
 import type {CSSProperties, ReactNode} from 'react';
 import {AbsoluteFill, Easing, interpolate, useCurrentFrame} from 'remotion';
-import {Baby, BookOpen, Building2, Coins, Gavel, Handshake, Heart, HeartHandshake, Home, Landmark, Lightbulb, Link2, Network, Receipt, Scale, ScrollText, Ship, Plane, ShieldAlert, ShoppingCart, UserRound, Zap} from 'lucide-react';
+import {BookOpen, Briefcase, Building2, Coins, Gavel, Handshake, Heart, HeartHandshake, Home, Landmark, Lightbulb, Link2, Network, Receipt, Scale, ScrollText, Ship, Plane, ShieldAlert, ShoppingCart, UserRound, Zap} from 'lucide-react';
 import {CLAMP, TimelineSequence} from '../../../../shared/remotion-runtime';
 import {PALETTE, SCENES} from './storyboard';
 
@@ -124,18 +124,18 @@ export const AutonomyClosestScene = () => {
         data-text-treatments="label-block,soft-highlight,thin-underline"
         data-focal-rule="autonomy-not-limited-by-actual-contact-unless-law-provides"
         data-focal-channels="contrast,enclosure,locator"
-        style={{position: 'absolute', inset: 0}}
+        style={{position: 'absolute', inset: 0, display: 'flex', flexDirection: 'column', justifyContent: 'space-between', paddingBottom: 8}}
       >
-        <div style={{display: 'flex', gap: 24, marginTop: 14}}>
+        <div style={{display: 'flex', gap: 24}}>
           <div
             data-final-knowledge="autonomy-gate-law-allows"
-            style={{...enter(frame, 12), flex: 1.25, border: `3px solid ${PALETTE.jade}`, borderTop: `12px solid ${PALETTE.jade}`, backgroundColor: PALETTE.panel, padding: '20px 28px', fontSize: 22, lineHeight: 1.7}}
+            style={{...enter(frame, 12), flex: 1.25, border: `3px solid ${PALETTE.jade}`, borderTop: `12px solid ${PALETTE.jade}`, backgroundColor: PALETTE.panel, padding: '34px 32px', fontSize: 24, lineHeight: 1.9}}
           >
-            <div style={{fontSize: 25, fontWeight: 800, color: PALETTE.jade, display: 'flex', alignItems: 'center', gap: 12}}>
-              <Handshake size={24} color={PALETTE.jade} />
+            <div style={{fontSize: 27, fontWeight: 800, color: PALETTE.jade, display: 'flex', alignItems: 'center', gap: 12}}>
+              <Handshake size={26} color={PALETTE.jade} />
               意思自治 · 四道门
             </div>
-            <div style={{marginTop: 10}}>
+            <div style={{marginTop: 14}}>
               只有法律允许的，当事人法律选择才
               <Ink color={PALETTE.jadeSoft}>有效</Ink>
               ；最晚时间：
@@ -144,26 +144,26 @@ export const AutonomyClosestScene = () => {
           </div>
           <div
             data-final-knowledge="autonomy-no-actual-contact-limit"
-            style={{...enter(frame, 40), flex: 1, border: `3px solid ${PALETTE.persimmon}`, borderTop: `12px solid ${PALETTE.persimmon}`, backgroundColor: PALETTE.persimmonSoft, padding: '20px 28px', fontSize: 22, lineHeight: 1.7}}
+            style={{...enter(frame, 40), flex: 1, border: `3px solid ${PALETTE.persimmon}`, borderTop: `12px solid ${PALETTE.persimmon}`, backgroundColor: PALETTE.persimmonSoft, padding: '34px 32px', fontSize: 24, lineHeight: 1.9}}
           >
-            <div style={{fontSize: 25, fontWeight: 800, color: PALETTE.persimmon, display: 'flex', alignItems: 'center', gap: 10}}>
-              <Link2 size={22} color={PALETTE.persimmon} />
+            <div style={{fontSize: 27, fontWeight: 800, color: PALETTE.persimmon, display: 'flex', alignItems: 'center', gap: 10}}>
+              <Link2 size={24} color={PALETTE.persimmon} />
               突破实际联系
             </div>
-            <div style={{marginTop: 10}}>
+            <div style={{marginTop: 14}}>
               不受
               <Ink color={PALETTE.persimmonSoft}>实际联系原则</Ink>
               限制（法律另有规定除外）
             </div>
           </div>
         </div>
-        <div style={{display: 'flex', gap: 24, marginTop: 22}}>
+        <div style={{display: 'flex', gap: 24}}>
           <div
             data-final-knowledge="autonomy-treaty-object"
-            style={{...enter(frame, 72), flex: 1, border: `3px solid ${PALETTE.gold}`, backgroundColor: PALETTE.goldSoft, padding: '18px 28px', fontSize: 22, lineHeight: 1.7}}
+            style={{...enter(frame, 72), flex: 1, border: `3px solid ${PALETTE.gold}`, backgroundColor: PALETTE.goldSoft, padding: '30px 32px', fontSize: 24, lineHeight: 1.9}}
           >
-            <div style={{fontSize: 24, fontWeight: 800, color: PALETTE.gold}}>国际条约可作自治对象</div>
-            <div style={{marginTop: 8}}>
+            <div style={{fontSize: 26, fontWeight: 800, color: PALETTE.gold}}>国际条约可作自治对象</div>
+            <div style={{marginTop: 12}}>
               含
               <Ink color={PALETTE.goldSoft}>尚未对中国生效</Ink>
               的条约；但不得损害中国社会公共利益、不违反强制性规定
@@ -171,10 +171,10 @@ export const AutonomyClosestScene = () => {
           </div>
           <div
             data-final-knowledge="autonomy-conduct-mode"
-            style={{...enter(frame, 98), flex: 1, border: `3px solid ${PALETTE.line}`, backgroundColor: PALETTE.panel, padding: '18px 28px', fontSize: 22, lineHeight: 1.7}}
+            style={{...enter(frame, 98), flex: 1, border: `3px solid ${PALETTE.line}`, backgroundColor: PALETTE.panel, padding: '30px 32px', fontSize: 24, lineHeight: 1.9}}
           >
-            <div style={{fontSize: 24, fontWeight: 800, color: PALETTE.cream}}>行为方式达成自治 · 两条件</div>
-            <div style={{marginTop: 8}}>
+            <div style={{fontSize: 26, fontWeight: 800, color: PALETTE.cream}}>行为方式达成自治 · 两条件</div>
+            <div style={{marginTop: 12}}>
               各方援引
               <Under color={PALETTE.jade}>相同法律</Under>
               ＋未提出
@@ -184,10 +184,10 @@ export const AutonomyClosestScene = () => {
         </div>
         <div
           data-final-knowledge="closest-connection-catch-all"
-          style={{...enter(frame, 140), marginTop: 26, display: 'flex', justifyContent: 'center', gap: 20, whiteSpace: 'nowrap'}}
+          style={{...enter(frame, 140), display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 22, whiteSpace: 'nowrap', border: `3px solid ${PALETTE.route}`, backgroundColor: PALETTE.routeSoft, padding: '26px 30px'}}
         >
-          <Network size={28} color={PALETTE.jade} />
-          <JadeStamp delay={140} frame={frame} color={PALETTE.jade} text={'兜底原则：无规定时，适用最密切联系地法（《法律适用法》第2条第2款）'} />
+          <Network size={30} color={PALETTE.route} />
+          <JadeStamp delay={140} frame={frame} color={PALETTE.route} text={'兜底原则：无规定时，适用最密切联系地法（《法律适用法》第2条第2款）'} />
         </div>
       </div>
     </LedgerShell>
@@ -206,9 +206,9 @@ export const SubjectsAgencyScene = () => {
         data-text-treatments="label-block,soft-highlight,thin-underline"
         data-focal-rule="natural-person-uses-habitual-residence-conduct-place-when-residence-lacks"
         data-focal-channels="contrast,enclosure,locator"
-        style={{position: 'absolute', inset: 0}}
+        style={{position: 'absolute', inset: 0, display: 'flex', flexDirection: 'column', justifyContent: 'space-between', paddingBottom: 8}}
       >
-        <div style={{display: 'flex', gap: 20, marginTop: 12}}>
+        <div style={{display: 'flex', gap: 20}}>
           <div
             data-final-knowledge="natural-person-habitual-residence"
             style={{...enter(frame, 12), flex: 1.15, border: `3px solid ${PALETTE.jade}`, borderTop: `12px solid ${PALETTE.jade}`, backgroundColor: PALETTE.panel, padding: '18px 26px', fontSize: 21, lineHeight: 1.65}}
@@ -259,7 +259,7 @@ export const SubjectsAgencyScene = () => {
             </div>
           </div>
         </div>
-        <div style={{display: 'flex', gap: 20, marginTop: 22}}>
+        <div style={{display: 'flex', gap: 20}}>
           <div
             data-final-knowledge="agency-internal-external"
             style={{...enter(frame, 96), flex: 1.6, border: `3px solid ${PALETTE.line}`, backgroundColor: PALETTE.panel, padding: '18px 28px', fontSize: 22, lineHeight: 1.7}}
@@ -290,7 +290,7 @@ export const SubjectsAgencyScene = () => {
         </div>
         <div
           data-final-knowledge="legal-person-three-elements"
-          style={{...enter(frame, 158), marginTop: 24, display: 'flex', justifyContent: 'center', gap: 18, whiteSpace: 'nowrap'}}
+          style={{...enter(frame, 158), display: 'flex', justifyContent: 'center', gap: 18, whiteSpace: 'nowrap'}}
         >
           <JadeStamp delay={158} frame={frame} color={PALETTE.gold} text={'口诀：自然人用经居地，居无行有行为地；法人登记主营地'} />
         </div>
@@ -311,9 +311,9 @@ export const MarriageScene = () => {
         data-text-treatments="label-block,soft-highlight,thin-underline"
         data-focal-rule="divorce-agreement-and-property-allow-limited-autonomy"
         data-focal-channels="contrast,enclosure,connector"
-        style={{position: 'absolute', inset: 0}}
+        style={{position: 'absolute', inset: 0, display: 'flex', flexDirection: 'column', justifyContent: 'space-between', paddingBottom: 8}}
       >
-        <div style={{display: 'flex', gap: 22, marginTop: 12}}>
+        <div style={{display: 'flex', gap: 22}}>
           <div
             data-final-knowledge="marriage-ceremony-flexible"
             style={{...enter(frame, 12), flex: 1, border: `3px solid ${PALETTE.jade}`, borderTop: `12px solid ${PALETTE.jade}`, backgroundColor: PALETTE.panel, padding: '18px 26px', fontSize: 21, lineHeight: 1.65}}
@@ -358,7 +358,7 @@ export const MarriageScene = () => {
             </div>
           </div>
         </div>
-        <div style={{display: 'flex', gap: 22, marginTop: 22}}>
+        <div style={{display: 'flex', gap: 22}}>
           <div
             data-final-knowledge="spousal-personal-property"
             style={{...enter(frame, 100), flex: 1.55, border: `3px solid ${PALETTE.route}`, backgroundColor: PALETTE.routeSoft, padding: '18px 28px', fontSize: 22, lineHeight: 1.7}}
@@ -388,7 +388,7 @@ export const MarriageScene = () => {
             </div>
           </div>
         </div>
-        <div style={{...enter(frame, 162), marginTop: 24, display: 'flex', justifyContent: 'center'}}>
+        <div style={{...enter(frame, 162), display: 'flex', justifyContent: 'center'}}>
           <JadeStamp delay={162} frame={frame} color={PALETTE.gold} text={'口诀：结婚手续多法一，诉讼离婚法院地；协离财产自治地，共居共国行为地'} />
         </div>
       </div>
@@ -408,9 +408,9 @@ export const SuccessionPropertyScene = () => {
         data-text-treatments="label-block,soft-highlight,thin-underline"
         data-focal-rule="immovable-follows-location-movable-follows-autonomy-then-location"
         data-focal-channels="contrast,enclosure,locator"
-        style={{position: 'absolute', inset: 0}}
+        style={{position: 'absolute', inset: 0, display: 'flex', flexDirection: 'column', justifyContent: 'space-between', paddingBottom: 8}}
       >
-        <div style={{display: 'flex', gap: 22, marginTop: 12}}>
+        <div style={{display: 'flex', gap: 22}}>
           <div
             data-final-knowledge="statutory-immovable-location"
             style={{...enter(frame, 12), flex: 1, border: `3px solid ${PALETTE.jade}`, borderTop: `12px solid ${PALETTE.jade}`, backgroundColor: PALETTE.panel, padding: '18px 26px', fontSize: 21, lineHeight: 1.65}}
@@ -450,7 +450,7 @@ export const SuccessionPropertyScene = () => {
             </div>
           </div>
         </div>
-        <div style={{display: 'flex', gap: 22, marginTop: 22}}>
+        <div style={{display: 'flex', gap: 22}}>
           <div
             data-final-knowledge="movable-autonomy-then-location"
             style={{...enter(frame, 96), flex: 1, border: `3px solid ${PALETTE.route}`, borderTop: `12px solid ${PALETTE.route}`, backgroundColor: PALETTE.panel, padding: '18px 26px', fontSize: 21, lineHeight: 1.65}}
@@ -480,7 +480,7 @@ export const SuccessionPropertyScene = () => {
             </div>
           </div>
         </div>
-        <div style={{...enter(frame, 158), marginTop: 24, display: 'flex', justifyContent: 'center'}}>
+        <div style={{...enter(frame, 158), display: 'flex', justifyContent: 'center'}}>
           <JadeStamp delay={158} frame={frame} color={PALETTE.gold} text={'口诀：法定不动所在地，动产死亡经居地；不动物之所在地，动产自治获得地'} />
         </div>
       </div>
@@ -500,9 +500,9 @@ export const ContractTortsScene = () => {
         data-text-treatments="label-block,soft-highlight,thin-underline"
         data-focal-rule="consumer-and-labor-restrict-law-choice-to-protect-the-weaker"
         data-focal-channels="contrast,enclosure,connector"
-        style={{position: 'absolute', inset: 0}}
+        style={{position: 'absolute', inset: 0, display: 'flex', flexDirection: 'column', justifyContent: 'space-between', paddingBottom: 8}}
       >
-        <div style={{display: 'flex', gap: 20, marginTop: 12}}>
+        <div style={{display: 'flex', gap: 20}}>
           <div
             data-final-knowledge="contract-general-rule"
             style={{...enter(frame, 12), flex: 0.85, border: `3px solid ${PALETTE.jade}`, borderTop: `12px solid ${PALETTE.jade}`, backgroundColor: PALETTE.panel, padding: '16px 24px', fontSize: 21, lineHeight: 1.6}}
@@ -558,7 +558,7 @@ export const ContractTortsScene = () => {
             </div>
           </div>
         </div>
-        <div style={{display: 'flex', gap: 20, marginTop: 22}}>
+        <div style={{display: 'flex', gap: 20}}>
           <div
             data-final-knowledge="tort-general-rule"
             style={{...enter(frame, 114), flex: 1, border: `3px solid ${PALETTE.jade}`, backgroundColor: PALETTE.panel, padding: '18px 26px', fontSize: 22, lineHeight: 1.65}}
@@ -595,7 +595,7 @@ export const ContractTortsScene = () => {
             </div>
           </div>
         </div>
-        <div style={{...enter(frame, 192), marginTop: 24, display: 'flex', justifyContent: 'center', whiteSpace: 'nowrap'}}>
+        <div style={{...enter(frame, 192), display: 'flex', justifyContent: 'center', whiteSpace: 'nowrap'}}>
           <span data-final-knowledge="ip-infringement-court-place" style={{display: 'inline-flex', alignItems: 'center', gap: 18}}>
             <Lightbulb size={26} color={PALETTE.gold} />
             <JadeStamp delay={192} frame={frame} color={PALETTE.gold} text={'知产侵权：自治只能选法院地法 → 被请求保护地法（原告主张的权利有效地）'} />
@@ -623,9 +623,9 @@ export const FamilyProtectionScene = () => {
         data-text-treatments="label-block,soft-highlight,thin-underline"
         data-focal-rule="all-three-relations-protect-the-weaker-party-first-parent-child-uses-common-residence"
         data-focal-channels="contrast,enclosure,connector"
-        style={{position: 'absolute', inset: 0}}
+        style={{position: 'absolute', inset: 0, display: 'flex', flexDirection: 'column', justifyContent: 'space-between', paddingBottom: 8}}
       >
-        <div style={{display: 'flex', flexDirection: 'column', gap: 16, marginTop: 12}}>
+        <div style={{display: 'flex', flexDirection: 'column', gap: 16}}>
           {guard.map((item) => (
             <div
               key={item.name}
@@ -638,7 +638,7 @@ export const FamilyProtectionScene = () => {
             </div>
           ))}
         </div>
-        <div style={{display: 'flex', gap: 22, marginTop: 22}}>
+        <div style={{display: 'flex', gap: 22}}>
           <div
             data-final-knowledge="adoption-document-mode"
             style={{...enter(frame, 88), flex: 1, border: `3px solid ${PALETTE.route}`, backgroundColor: PALETTE.routeSoft, padding: '18px 26px', fontSize: 21, lineHeight: 1.65}}
@@ -678,7 +678,7 @@ export const FamilyProtectionScene = () => {
             </div>
           </div>
         </div>
-        <div style={{...enter(frame, 168), marginTop: 22, display: 'flex', justifyContent: 'center'}}>
+        <div style={{...enter(frame, 168), display: 'flex', justifyContent: 'center'}}>
           <JadeStamp delay={168} frame={frame} color={PALETTE.gold} text={'口诀：父母监扶重弱者，父母先用共居地；双认条约转亲书，条件手续重叠居'} />
         </div>
       </div>
@@ -698,9 +698,9 @@ export const EnrichmentIpNegotiableScene = () => {
         data-text-treatments="label-block,soft-highlight,thin-underline"
         data-focal-rule="ip-infringement-autonomy-limited-to-court-place-then-requested-protection-place"
         data-focal-channels="contrast,enclosure,connector"
-        style={{position: 'absolute', inset: 0}}
+        style={{position: 'absolute', inset: 0, display: 'flex', flexDirection: 'column', justifyContent: 'space-between', paddingBottom: 8}}
       >
-        <div style={{display: 'flex', gap: 22, marginTop: 14}}>
+        <div style={{display: 'flex', gap: 22}}>
           <div
             data-final-knowledge="unjust-enrichment-rule"
             style={{...enter(frame, 12), flex: 1, border: `3px solid ${PALETTE.jade}`, borderTop: `12px solid ${PALETTE.jade}`, backgroundColor: PALETTE.panel, padding: '20px 28px', fontSize: 22, lineHeight: 1.7}}
@@ -746,7 +746,7 @@ export const EnrichmentIpNegotiableScene = () => {
             </div>
           </div>
         </div>
-        <div style={{display: 'flex', gap: 22, marginTop: 24}}>
+        <div style={{display: 'flex', gap: 22}}>
           <div
             data-final-knowledge="ip-infringement-limited-autonomy"
             style={{...enter(frame, 100), flex: 1, border: `3px solid ${PALETTE.persimmon}`, backgroundColor: PALETTE.persimmonSoft, padding: '18px 28px', fontSize: 22, lineHeight: 1.7}}
@@ -779,7 +779,7 @@ export const EnrichmentIpNegotiableScene = () => {
             </div>
           </div>
         </div>
-        <div style={{...enter(frame, 180), marginTop: 26, display: 'flex', justifyContent: 'center'}}>
+        <div style={{...enter(frame, 180), display: 'flex', justifyContent: 'center'}}>
           <JadeStamp delay={180} frame={frame} color={PALETTE.jade} text={'口诀：自治共居发生地；内容归属保护地，转让许可是协议，侵权法院保护地；票据行为行为地，追索期限出票地'} />
         </div>
       </div>
@@ -799,9 +799,9 @@ export const MaritimeAviationScene = () => {
         data-text-treatments="label-block,soft-highlight,thin-underline"
         data-focal-rule="collision-territorial-uses-conduct-place-public-sea-uses-court-place"
         data-focal-channels="contrast,enclosure,connector"
-        style={{position: 'absolute', inset: 0}}
+        style={{position: 'absolute', inset: 0, display: 'flex', flexDirection: 'column', justifyContent: 'space-between', paddingBottom: 8}}
       >
-        <div style={{display: 'flex', gap: 20, marginTop: 12}}>
+        <div style={{display: 'flex', gap: 20}}>
           <div
             data-final-knowledge="ship-property-flag-state"
             style={{...enter(frame, 12), flex: 1.2, border: `3px solid ${PALETTE.jade}`, borderTop: `12px solid ${PALETTE.jade}`, backgroundColor: PALETTE.panel, padding: '18px 26px', fontSize: 21, lineHeight: 1.65}}
@@ -842,7 +842,7 @@ export const MaritimeAviationScene = () => {
             </div>
           </div>
         </div>
-        <div style={{display: 'flex', gap: 20, marginTop: 22}}>
+        <div style={{display: 'flex', gap: 20}}>
           <div
             data-final-knowledge="collision-autonomy-then-flag"
             style={{...enter(frame, 94), flex: 1.35, border: `3px solid ${PALETTE.gold}`, backgroundColor: PALETTE.goldSoft, padding: '18px 28px', fontSize: 22, lineHeight: 1.7}}
@@ -877,7 +877,7 @@ export const MaritimeAviationScene = () => {
             </div>
           </div>
         </div>
-        <div style={{...enter(frame, 174), marginTop: 24, display: 'flex', justifyContent: 'center'}}>
+        <div style={{...enter(frame, 174), display: 'flex', justifyContent: 'center'}}>
           <span data-final-knowledge="general-average-adjustment-contribution" style={{display: 'inline-flex', alignItems: 'center', gap: 18, whiteSpace: 'nowrap'}}>
             <AnchorIcon />
             <JadeStamp delay={174} frame={frame} color={PALETTE.jade} text={'共同海损：理算适用理算地法；分摊自治 → 航程终止地法。口诀：船旗飞登优法院，共损理算理算地'} />
@@ -921,106 +921,3 @@ export const ApplicableLaw = () => (
     </TimelineSequence>
   </AbsoluteFill>
 );
-  /* Stable-final-frame inventory: data-final-knowledge="natural-person-habitual-residence" data-final-knowledge="natural-person-exception-conduct-place" data-final-knowledge="legal-person-registration-main-business" data-final-knowledge="legal-person-three-elements" data-final-knowledge="limitation-follows-foundation" data-final-knowledge="agency-internal-external" data-final-knowledge="trust-autonomy-property-place" */
-  const frame = useCurrentFrame();
-  return (
-    <LedgerShell code={1} station={1} title="民事主体 · 时效 · 代理 · 信托">
-      <div
-        data-layout="three-desk-personal-status-bench"
-        data-visual-anchor="role-pair"
-        data-visual-grammar="natural-person-habitual-residence-rule,legal-person-registration-main-business-rule,agency-splits-internal-external"
-        data-text-treatments="label-block,soft-highlight,thin-underline"
-        data-focal-rule="natural-person-uses-habitual-residence-conduct-place-when-residence-lacks"
-        data-focal-channels="contrast,enclosure,locator"
-        style={{position: 'absolute', inset: 0}}
-      >
-        <div style={{display: 'flex', gap: 20, marginTop: 12}}>
-          <div
-            data-final-knowledge="natural-person-habitual-residence"
-            style={{...enter(frame, 12), flex: 1.15, border: `3px solid ${PALETTE.jade}`, borderTop: `12px solid ${PALETTE.jade}`, backgroundColor: PALETTE.panel, padding: '18px 26px', fontSize: 21, lineHeight: 1.65}}
-          >
-            <div style={{fontSize: 24, fontWeight: 800, color: PALETTE.jade, display: 'flex', alignItems: 'center', gap: 10}}>
-              <UserRound size={22} color={PALETTE.jade} />
-              自然人
-            </div>
-            <div style={{marginTop: 8}}>
-              原则：
-              <Ink color={PALETTE.jadeSoft}>经常居所地法</Ink>
-              <br />
-              例外：居无行有 →
-              <Under color={PALETTE.jade}>行为地法</Under>
-              认定有行为能力；婚姻继承按各自冲突规范；票据行为能力原则上
-              <Ink color={PALETTE.goldSoft}>本国法</Ink>
-            </div>
-          </div>
-          <div
-            data-final-knowledge="legal-person-registration-main-business"
-            style={{...enter(frame, 38), flex: 1.15, border: `3px solid ${PALETTE.gold}`, borderTop: `12px solid ${PALETTE.gold}`, backgroundColor: PALETTE.panel, padding: '18px 26px', fontSize: 21, lineHeight: 1.65}}
-          >
-            <div style={{fontSize: 24, fontWeight: 800, color: PALETTE.gold, display: 'flex', alignItems: 'center', gap: 10}}>
-              <Building2 size={22} color={PALETTE.gold} />
-              法人及分支
-            </div>
-            <div style={{marginTop: 8}}>
-              原则：
-              <Ink color={PALETTE.goldSoft}>登记地法</Ink>
-              <br />
-              主营业地与登记地不一致 → 可用
-              <Under color={PALETTE.gold}>主营业地法</Under>
-              或登记地法
-            </div>
-          </div>
-          <div
-            data-final-knowledge="limitation-follows-foundation"
-            style={{...enter(frame, 64), flex: 1.15, border: `3px solid ${PALETTE.persimmon}`, borderTop: `12px solid ${PALETTE.persimmon}`, backgroundColor: PALETTE.persimmonSoft, padding: '18px 26px', fontSize: 21, lineHeight: 1.65}}
-          >
-            <div style={{fontSize: 24, fontWeight: 800, color: PALETTE.persimmon, display: 'flex', alignItems: 'center', gap: 10}}>
-              <Scale size={22} color={PALETTE.persimmon} />
-              时效·代理·信托
-            </div>
-            <div style={{marginTop: 8}}>
-              时效与
-              <Ink color={PALETTE.persimmonSoft}>基础关系准据法一致</Ink>
-              ；委托代理、信托允许意思自治
-            </div>
-          </div>
-        </div>
-        <div style={{display: 'flex', gap: 20, marginTop: 22}}>
-          <div
-            data-final-knowledge="agency-internal-external"
-            style={{...enter(frame, 96), flex: 1.6, border: `3px solid ${PALETTE.line}`, backgroundColor: PALETTE.panel, padding: '18px 28px', fontSize: 22, lineHeight: 1.7}}
-          >
-            <div style={{fontSize: 24, fontWeight: 800, color: PALETTE.cream}}>代理 · 内外两分</div>
-            <div style={{display: 'flex', gap: 18, marginTop: 10}}>
-              <div style={{flex: 1, borderLeft: `8px solid ${PALETTE.jade}`, padding: '6px 14px', backgroundColor: 'rgba(15,61,51,0.8)'}}>
-                内部关系（被代理人与代理人）→
-                <Under color={PALETTE.jade}>代理关系发生地法</Under>
-              </div>
-              <div style={{flex: 1, borderLeft: `8px solid ${PALETTE.persimmon}`, padding: '6px 14px', backgroundColor: 'rgba(15,61,51,0.8)'}}>
-                外部关系（代理行为效力）→
-                <Under color={PALETTE.persimmon}>代理行为地法</Under>
-              </div>
-            </div>
-          </div>
-          <div
-            data-final-knowledge="trust-autonomy-property-place"
-            style={{...enter(frame, 122), flex: 1, border: `3px solid ${PALETTE.route}`, backgroundColor: PALETTE.routeSoft, padding: '18px 28px', fontSize: 22, lineHeight: 1.7}}
-          >
-            <div style={{fontSize: 24, fontWeight: 800, color: PALETTE.route}}>信托</div>
-            <div style={{marginTop: 8}}>
-              意思自治优先 → 无选择时
-              <Ink color={PALETTE.routeSoft}>财产所在地法</Ink>
-              或关系发生地法
-            </div>
-          </div>
-        </div>
-        <div
-          data-final-knowledge="legal-person-three-elements"
-          style={{...enter(frame, 158), marginTop: 24, display: 'flex', justifyContent: 'center', gap: 18, whiteSpace: 'nowrap'}}
-        >
-          <JadeStamp delay={158} frame={frame} color={PALETTE.gold} text={'口诀：自然人用经居地，居无行有行为地；法人登记主营地'} />
-        </div>
-      </div>
-    </LedgerShell>
-  );
-};
