@@ -1,0 +1,155 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 5,
+  "scenes": [
+    {
+      "id": "nationality",
+      "export": "NationalityScene",
+      "layout": "registry-gain-loss-columns-with-conflict-strip",
+      "anchor": "flow-path",
+      "grammar": [
+        "birth-and-application-cards-file-into-the-gain-column",
+        "settled-abroad-plus-foreign-nationality-triggers-auto-loss"
+      ],
+      "textTreatments": [
+        "label-block",
+        "soft-highlight",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "spatial"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "birth-jus-sanguinis",
+        "birth-jus-soli",
+        "naturalization-rule",
+        "auto-loss",
+        "loss-restriction",
+        "conflict-positive",
+        "conflict-negative",
+        "dual-note"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "entry-exit",
+      "export": "EntryExitScene",
+      "layout": "dual-entry-exit-columns-with-stamp-strip",
+      "anchor": "document-fork",
+      "grammar": [
+        "visa-refusal-needs-no-reason",
+        "deportation-splits-removal-from-expulsion"
+      ],
+      "textTreatments": [
+        "label-block",
+        "soft-highlight",
+        "stamp"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "connector"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "visa-categories",
+        "visa-free-three",
+        "refusal-no-reason",
+        "three-illegals",
+        "exit-restriction-contrast",
+        "deportation-contrast"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "extradition-refusal",
+      "export": "ExtraditionRefusalScene",
+      "layout": "refusal-mnemonic-board-with-exception-cards",
+      "anchor": "typographic-sequence",
+      "grammar": [
+        "eight-refusal-grounds-recite-in-couplets",
+        "four-crimes-cannot-wear-the-political-badge"
+      ],
+      "textTreatments": [
+        "stamp",
+        "soft-highlight",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "locator"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "extradition-basis",
+        "refusal-mnemonic",
+        "political-crime-exceptions",
+        "ongoing-prosecution-note"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "extradition-process",
+      "export": "ExtraditionProcessScene",
+      "layout": "extradition-desk-chain-with-promise-fork",
+      "anchor": "flow-path",
+      "grammar": [
+        "extradition-files-move-from-foreign-ministry-to-police",
+        "promise-commitments-fork-to-two-supreme-organs"
+      ],
+      "textTreatments": [
+        "label-block",
+        "thin-underline",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "connector",
+        "contrast",
+        "enclosure"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "process-contact",
+        "process-out-review",
+        "process-promise-split",
+        "process-execute",
+        "convention-note"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "protection-asylum",
+      "export": "ProtectionAsylumScene",
+      "layout": "personal-territorial-jurisdiction-pair",
+      "anchor": "role-pair",
+      "grammar": [
+        "protection-and-asylum-split-on-jurisdiction-basis",
+        "diplomatic-asylum-stays-outside-the-law"
+      ],
+      "textTreatments": [
+        "label-block",
+        "thin-underline",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "spatial"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "protection-conditions",
+        "protection-basis",
+        "asylum-elements",
+        "asylum-no-right",
+        "diplomatic-asylum"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

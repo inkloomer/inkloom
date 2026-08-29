@@ -1,0 +1,16 @@
+{
+  "directionId": "civil-registry-ledger",
+  "family": "civil-registry-ledger",
+  "palette": "pale mint ledger paper, graphite ink, stamp pink-red verdicts, verify blue records",
+  "typography": "WenKai ledger headings with pink file tabs, blue ink highlights and underlined conditions",
+  "composition": "registry card rows inside a double-ruled ledger frame with a left index-card station rail",
+  "surface": "mint ruled paper cards with dashed perforation frames, no dark slabs",
+  "motion": "row-by-row card stamping with side-sliding record entries",
+  "transition": "content swap under a persistent ledger frame and index rail",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/international-law/04/individuals-regimes/",
+    "title": "户籍登记所"
+  }
+}
