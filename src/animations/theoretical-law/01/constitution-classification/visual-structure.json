@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "playerControlSafeBottom": 176,
+  "scenes": [
+    {
+      "id": "written-unwritten",
+      "export": "WrittenUnwrittenScene",
+      "layout": "criterion-pair-with-file-lists",
+      "anchor": "role-pair",
+      "grammar": ["codified-claim", "uncodified-claim", "criterion-note"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "thin-underline"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["ScrollText", "FileStack"],
+      "finalKnowledge": [
+        "written-heading",
+        "written-folder",
+        "unwritten-folder",
+        "criterion-note"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "rigid-flexible",
+      "export": "RigidFlexibleScene",
+      "layout": "flexibility-criterion-bench",
+      "anchor": "comparison-axis",
+      "grammar": ["rigid-claim", "flexible-claim", "correspondence-note"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "thin-underline"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["Lock", "Feather"],
+      "finalKnowledge": [
+        "rigid-heading",
+        "rigid-folder",
+        "flexible-folder",
+        "correspondence-note"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "sovereign-forms",
+      "export": "SovereignFormsScene",
+      "layout": "three-sovereign-folder-row",
+      "anchor": "typographic-sequence",
+      "grammar": ["imposed-folder", "popular-folder", "agreed-folder"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["Crown", "Users", "Handshake"],
+      "finalKnowledge": [
+        "sovereign-heading",
+        "sovereign-row",
+        "memorize-verdict"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "animationId": "constitution-classification",
+  "compositionId": "ConstitutionClassification",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-29T21:51:14.622Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 251,
+      "frameCount": 252,
+      "id": "written-unwritten",
+      "number": "01",
+      "startFrame": 0,
+      "title": "成文与不成文",
+      "durationMs": 8400,
+      "file": "written-unwritten.avif",
+      "fileSize": 384260,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "665b60df3c0828f23b8e855b8167b5462cb2486e48bf2a1fe100e5244e801d63",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "a178be78f7d53571d33450e276137b162efb6c5606c34d212737297aa99fc68f"
+    },
+    {
+      "endFrame": 491,
+      "frameCount": 240,
+      "id": "rigid-flexible",
+      "number": "02",
+      "startFrame": 252,
+      "title": "刚性与柔性",
+      "durationMs": 8000,
+      "file": "rigid-flexible.avif",
+      "fileSize": 374460,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "33549f9f76e6cfb78049476eb8c377f7163c8ec0aede3f650176cb9e2e0e6f8f",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "a178be78f7d53571d33450e276137b162efb6c5606c34d212737297aa99fc68f"
+    },
+    {
+      "endFrame": 755,
+      "frameCount": 264,
+      "id": "sovereign-forms",
+      "number": "03",
+      "startFrame": 492,
+      "title": "钦定民定协定",
+      "durationMs": 8800,
+      "file": "sovereign-forms.avif",
+      "fileSize": 401266,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "89113c52d31aff2e51e9e3308818f3c5f6bb37d3be8e74b2edf24ee9ed76dd88",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "a178be78f7d53571d33450e276137b162efb6c5606c34d212737297aa99fc68f"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "a178be78f7d53571d33450e276137b162efb6c5606c34d212737297aa99fc68f",
+  "targetFps": 30,
+  "totalFileSize": 1159986
+}

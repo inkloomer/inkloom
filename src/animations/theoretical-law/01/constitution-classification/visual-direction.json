@@ -1,0 +1,16 @@
+{
+  "directionId": "chronicle-archive-drawer",
+  "family": "chronicle-archive-drawer",
+  "palette": "slate archive ground + manila folder panels + typewriter ink + crimson year tabs + brass drawer pulls",
+  "typography": "typewriter-ink headings on manila folders, dark archive label tabs with brass left bar, crimson year tabs for canonical documents, ink chips for criteria, thin ink underline for tests",
+  "composition": "the written-unwritten pair hangs as two folder plates with file lists; the rigid-flexible pair sits on a criterion bench with a correspondence note; the sovereign forms stand as a three-folder row of makers and documents",
+  "surface": "flat slate ground with faint drawer-rail hairlines, manila panels with hairline weathered borders and corner pulls, no gradients, no rounded cards, no drop shadows",
+  "motion": "folders slide out of their drawers, year tabs stamp onto documents one by one, the criterion line draws between paired folders, the three-folder row rises left to right",
+  "transition": "a drawer shuts and the archive clears for the next cabinet",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/theoretical-law/01/constitution-classification/",
+    "title": "编年档案屉"
+  }
+}
