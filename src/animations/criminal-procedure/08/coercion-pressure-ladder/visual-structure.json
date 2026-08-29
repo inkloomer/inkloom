@@ -1,0 +1,72 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "pressure-ladder-overview",
+      "export": "PressureLadderScene",
+      "layout": "ascending-pressure-ladder-with-dial-bay",
+      "anchor": "timeline-gate",
+      "grammar": [
+        "measures-ascend-from-summons-to-arrest",
+        "deciding-and-executing-organs-split-per-measure",
+        "statutory-caps-run-twelve-and-six-months",
+        "breach-escalates-one-rung-up"
+      ],
+      "textTreatments": ["chip", "label-block", "thin-underline"],
+      "focalChannels": ["connector", "contrast", "enclosure", "spatial"],
+      "tokens": ["Gauge", "Wrench"],
+      "finalKnowledge": [
+        "ladder-rungs",
+        "organ-dial-bay",
+        "escalation-note"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "bail-valve-panel",
+      "export": "BailValveScene",
+      "layout": "bail-condition-board-with-twin-guarantee-banks",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "four-condition-gates-open-bail",
+        "guarantor-and-deposit-are-either-or",
+        "duty-mnemonic-lists-five-core-obligations",
+        "breach-escalates-to-detention"
+      ],
+      "textTreatments": ["chip", "thin-underline", "soft-highlight"],
+      "focalChannels": ["contrast", "enclosure", "connector", "annotation"],
+      "tokens": ["Handcuffs"],
+      "finalKnowledge": [
+        "bail-four-conditions",
+        "guarantor-bank",
+        "deposit-bank",
+        "breach-escalation-note"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "arrest-gauge-board",
+      "export": "ArrestGaugeScene",
+      "layout": "triple-gauge-board-with-review-strip",
+      "anchor": "document-fork",
+      "grammar": [
+        "arrest-needs-evidence-sentence-and-danger-gauges-all-rising",
+        "must-arrest-tightens-when-ten-years-or-repeat-or-unidentified",
+        "leniency-allows-non-arrest-for-lesser-guilty-plea",
+        "review-must-release-detainee-even-when-seeking-reconsideration"
+      ],
+      "textTreatments": ["chip", "thin-underline", "label-block"],
+      "focalChannels": ["contrast", "enclosure", "connector", "annotation"],
+      "tokens": ["Timer", "Gavel"],
+      "finalKnowledge": [
+        "arrest-three-gauges",
+        "leniency-non-arrest",
+        "review-clock-bay",
+        "release-on-review-note"
+      ],
+      "statefulObjects": ["arrest-file"]
+    }
+  ]
+}

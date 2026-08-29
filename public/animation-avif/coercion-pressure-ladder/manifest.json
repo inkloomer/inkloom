@@ -1,0 +1,70 @@
+{
+  "animationId": "coercion-pressure-ladder",
+  "compositionId": "CoercionPressureLadder",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-29T08:35:07.519Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 479,
+      "frameCount": 240,
+      "id": "pressure-ladder-overview",
+      "number": "01",
+      "startFrame": 0,
+      "title": "压力梯谱系",
+      "durationMs": 8000,
+      "file": "pressure-ladder-overview.avif",
+      "fileSize": 297621,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "bfdfcf086ba8bbb70410e000ad6a629fd75e7c6a938ffc4f7c34c92fea714a25",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "2e983855b2e74def9c3f75c9817acf5d064d6491070f6a0efe2387082a1c0961"
+    },
+    {
+      "endFrame": 1039,
+      "frameCount": 280,
+      "id": "bail-valve-panel",
+      "number": "02",
+      "startFrame": 480,
+      "title": "取保阀门盘",
+      "durationMs": 9333,
+      "file": "bail-valve-panel.avif",
+      "fileSize": 414547,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "eb65d2938cbbf33a0aa048237b33301d27370178c63e77e0573dd544dac8e57c",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "2e983855b2e74def9c3f75c9817acf5d064d6491070f6a0efe2387082a1c0961"
+    },
+    {
+      "endFrame": 1579,
+      "frameCount": 270,
+      "id": "arrest-gauge-board",
+      "number": "03",
+      "startFrame": 1040,
+      "title": "逮捕三重仪表",
+      "durationMs": 9000,
+      "file": "arrest-gauge-board.avif",
+      "fileSize": 373234,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "e1fc87ce2cd496f29a7f2cb8865de8879e72b67560f1abb6168e5ef02ad746ec",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "2e983855b2e74def9c3f75c9817acf5d064d6491070f6a0efe2387082a1c0961"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "2e983855b2e74def9c3f75c9817acf5d064d6491070f6a0efe2387082a1c0961",
+  "targetFps": 30,
+  "totalFileSize": 1085402
+}

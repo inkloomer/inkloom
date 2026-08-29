@@ -1,0 +1,16 @@
+{
+  "directionId": "boiler-pressure-coercion",
+  "family": "boiler-pressure-family",
+  "palette": "dark furnace iron, riveted parchment panels, copper pipes, gauge vermilion, brass plates, steam blue accents",
+  "typography": "WenKai boiler-room headings with rivet chips and pressure dial cards",
+  "composition": "an ascending five-rung pressure ladder with an organ-dial bay, a bail condition board flanked by guarantor and deposit banks, and a triple gauge board closing into a review strip",
+  "surface": "an industrial boiler room with riveted iron plates, copper framing and parchment instrument panels",
+  "motion": "ladder rungs rise step by step toward arrest, condition banks fill their chips, and the arrest file chip travels from the request to the release rule",
+  "transition": "the furnace backdrop and copper frame persist while the instrument panels are replaced",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/criminal-procedure/08/coercion-pressure-ladder/",
+    "title": "锅炉压力梯"
+  }
+}
