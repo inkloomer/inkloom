@@ -1,0 +1,70 @@
+{
+  "animationId": "commencement-threshold-map",
+  "compositionId": "CommencementThresholdMap",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-29T18:57:18.567Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 229,
+      "frameCount": 230,
+      "id": "stage-boundary",
+      "number": "01",
+      "startFrame": 0,
+      "title": "区分标准：分界点在着手",
+      "durationMs": 7667,
+      "file": "stage-boundary.avif",
+      "fileSize": 473490,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "96e1deadc5a25a292ef0aec8df78bd30ed2465f9dad385cda69f9bcd40c2bbe8",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "0832f93e9c06907f2f1ecc9471a2608b7c5c0d083859ede108e3a0437ae10d69"
+    },
+    {
+      "endFrame": 589,
+      "frameCount": 360,
+      "id": "exam-commencement-map",
+      "number": "02",
+      "startFrame": 230,
+      "title": "易考情形：六条跑道的发令线",
+      "durationMs": 12000,
+      "file": "exam-commencement-map.avif",
+      "fileSize": 624679,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "019b1b6d1915567f1b84b96d1a483105ac2d3b9f7fd6738cf4adacb71442d1f1",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "0832f93e9c06907f2f1ecc9471a2608b7c5c0d083859ede108e3a0437ae10d69"
+    },
+    {
+      "endFrame": 839,
+      "frameCount": 250,
+      "id": "special-cases-lane",
+      "number": "03",
+      "startFrame": 590,
+      "title": "特殊问题：隔离犯与间接正犯",
+      "durationMs": 8333,
+      "file": "special-cases-lane.avif",
+      "fileSize": 775548,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "259acdd7c9fbd3f38b44f6c032069fe1d6a412056d91e8147d59c6b26b87c451",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "0832f93e9c06907f2f1ecc9471a2608b7c5c0d083859ede108e3a0437ae10d69"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "0832f93e9c06907f2f1ecc9471a2608b7c5c0d083859ede108e3a0437ae10d69",
+  "targetFps": 30,
+  "totalFileSize": 1873717
+}

@@ -1,5 +1,5 @@
 import type {CSSProperties, ReactNode} from 'react';
-import {Building2, CircleDashed, CirclePlay, DoorClosed, Flag, GraduationCap, Landmark, Mail, Megaphone, Users, X, Zap} from 'lucide-react';
+import {Building2, CircleDashed, CirclePlay, DoorClosed, Flag, GraduationCap, Landmark, Mail, Megaphone, PhoneCall, Users, X, Zap} from 'lucide-react';
 import {AbsoluteFill, interpolate, useCurrentFrame} from 'remotion';
 import {CLAMP, TimelineSequence} from '../../../../shared/remotion-runtime';
 import {SCENES} from './storyboard';
@@ -156,16 +156,16 @@ export const StageBoundaryScene = () => {
   </Shell>;
 };
 
-const BlocksChip = ({children}: {children: ReactNode}) => (
-  <Chip tone="chalk" style={{border: `2px dashed ${C.chalkDim}`, borderRadius: 8}}>
-    <CircleDashed size={20} color={C.chalk} />
-    {children}
-  </Chip>
-);
-
 const GhostNumeral = ({n}: {n: string}) => <span style={{fontSize: 40, fontWeight: 950, color: C.ghost, width: 34, lineHeight: 1}}>{n}</span>;
 
-export const ExamCommencementMapScene = () => (
+export const ExamCommencementMapScene = () => {
+  const BlocksChip = ({children}: {children: ReactNode}) => (
+    <Chip tone="chalk" style={{border: `2px dashed ${C.chalkDim}`, borderRadius: 8}}>
+      <CircleDashed size={20} color={C.chalk} />
+      {children}
+    </Chip>
+  );
+  return (
   <Shell code="02" title="易考情形：六条跑道的发令线">
     <div data-layout="dual-family-lane-board" data-visual-anchor="comparison-axis" data-text-treatments="chip,label-block,soft-highlight,thin-underline,external-negation,stamp" data-visual-grammar="family-lane-comparison,per-lane-threshold-shift" data-focal-rule="each-crime-fires-when-force-reaches-the-body-or-intent-reaches-the-other-side" data-focal-channels="icon,connector,contrast,spatial" style={{position: 'absolute', inset: 0}}>
       <div style={{position: 'absolute', left: 0, top: 0, width: 872, height: 560, backgroundColor: C.track, borderRadius: 18, padding: '16px 20px'}}>
@@ -185,12 +185,8 @@ export const ExamCommencementMapScene = () => (
             <Flag size={24} color={C.chalk} />
           </Enter>
           <Enter delay={44} style={{marginTop: 10, marginLeft: 46, display: 'flex', alignItems: 'center', gap: 12}}>
-            <CirclePlay size={24} color={C.flash} />
+            <CirclePlay size={24} color={C.flash} style={{flexShrink: 0}} />
             <SoftHi>对人使用暴力·胁迫·强制手段时</SoftHi>
-            <span style={{flex: 1}} />
-            <GraduationCap size={22} color={C.flash} />
-            <span style={{fontSize: 22, color: C.chalk, fontWeight: 800, whiteSpace: 'nowrap'}}>2024真题：埋伏哨兵未得手</span>
-            <Stamp delay={56} tone="chalk">预备</Stamp>
           </Enter>
         </div>
         <div data-final-knowledge="map-lane-rape" style={{marginTop: 10, backgroundColor: C.panelWhite, borderRadius: 12, padding: '10px 14px'}}>
@@ -202,13 +198,8 @@ export const ExamCommencementMapScene = () => (
             <Flag size={24} color={C.chalk} />
           </Enter>
           <Enter delay={90} style={{marginTop: 10, marginLeft: 46, display: 'flex', alignItems: 'center', gap: 12}}>
-            <CirclePlay size={24} color={C.flash} />
+            <CirclePlay size={24} color={C.flash} style={{flexShrink: 0}} />
             <SoftHi>对妇女实施暴力·胁迫·强制手段时</SoftHi>
-          </Enter>
-          <Enter delay={102} style={{marginTop: 8, marginLeft: 46, display: 'flex', alignItems: 'center', gap: 10}}>
-            <GraduationCap size={22} color={C.flash} />
-            <span style={{fontSize: 22, color: C.chalk, fontWeight: 800, whiteSpace: 'nowrap'}}>2006真题：埋伏未等到</span>
-            <Stamp delay={110} tone="chalk">预备</Stamp>
             <span style={{flex: 1}} />
             <Chip style={{fontSize: 22}}>认定标准——而非奸淫时</Chip>
           </Enter>
@@ -252,56 +243,61 @@ export const ExamCommencementMapScene = () => (
             <Flag size={24} color={C.chalk} />
           </Enter>
           <Enter delay={216} style={{marginTop: 10, marginLeft: 46, display: 'flex', alignItems: 'center', gap: 12}}>
-            <CirclePlay size={24} color={C.flash} />
-            <SoftHi>开始向被害人实施诈骗——开始要钱时（多数说）</SoftHi>
+            <CirclePlay size={24} color={C.flash} style={{flexShrink: 0}} />
+            <SoftHi>开始向被害人实施诈骗</SoftHi>
           </Enter>
-          <Enter delay={230} style={{marginTop: 8, marginLeft: 46, display: 'flex', alignItems: 'center', gap: 10}}>
-            <GraduationCap size={22} color={C.flash} />
-            <span style={{fontSize: 22, color: C.chalk, fontWeight: 800, whiteSpace: 'nowrap'}}>2024年主观题：电话诈骗，话术铺垫后开始要钱</span>
-            <Stamp delay={238} tone="chalk">着手</Stamp>
+          <Enter delay={230} style={{marginTop: 8, marginLeft: 46, display: 'flex', alignItems: 'center', gap: 10, fontSize: 22, color: C.chalk, fontWeight: 800}}>
+            <PhoneCall size={20} color={C.chalk} style={{flexShrink: 0}} />
+            电话诈骗：话术铺垫后，<SoftHi style={{fontSize: 22}}>开始要钱时（多数说）</SoftHi>
           </Enter>
         </div>
         <div data-final-knowledge="map-lane-insurance" style={{marginTop: 10, backgroundColor: C.panelWhite, borderRadius: 12, padding: '10px 14px'}}>
-          <Enter delay={254} style={{display: 'flex', alignItems: 'center', gap: 12}}>
+          <Enter delay={252} style={{display: 'flex', alignItems: 'center', gap: 12}}>
             <GhostNumeral n="5" />
             <LabelBlock size={27} color={C.cool}>保险诈骗罪</LabelBlock>
             <BlocksChip>各就位：制造保险事故</BlocksChip>
-            <Dash delay={262} style={{flex: 1, borderTop: `3px dashed ${C.chalkDim}`}} />
+            <Dash delay={258} style={{flex: 1, borderTop: `3px dashed ${C.chalkDim}`}} />
             <Flag size={24} color={C.chalk} />
           </Enter>
-          <Enter delay={272} style={{marginTop: 10, marginLeft: 46, display: 'flex', alignItems: 'center', gap: 12}}>
-            <CirclePlay size={24} color={C.flash} />
-            <SoftHi><Building2 size={22} color={C.ink} />向保险公司提出索赔时</SoftHi>
-            <span style={{flex: 1}} />
-            <Neg size={22}>打电话询问索赔——不是着手</Neg>
+          <Enter delay={268} style={{marginTop: 10, marginLeft: 46, display: 'flex', alignItems: 'center', gap: 12}}>
+            <CirclePlay size={24} color={C.flash} style={{flexShrink: 0}} />
+            <SoftHi><Building2 size={22} color={C.ink} style={{flexShrink: 0}} />向保险公司提出索赔时</SoftHi>
+          </Enter>
+          <Enter delay={282} style={{marginTop: 8, marginLeft: 46, display: 'flex', alignItems: 'center', gap: 10}}>
+            <Neg size={22}>制造事故后打电话询问索赔——不是着手</Neg>
           </Enter>
         </div>
         <div data-final-knowledge="map-lane-accusation" style={{marginTop: 10, backgroundColor: C.panelWhite, borderRadius: 12, padding: '10px 14px'}}>
-          <Enter delay={290} style={{display: 'flex', alignItems: 'center', gap: 12}}>
+          <Enter delay={296} style={{display: 'flex', alignItems: 'center', gap: 12}}>
             <GhostNumeral n="6" />
             <LabelBlock size={27} color={C.cool}>诬告陷害罪</LabelBlock>
             <BlocksChip>各就位：写诬告材料</BlocksChip>
-            <Dash delay={298} style={{flex: 1, borderTop: `3px dashed ${C.chalkDim}`}} />
+            <Dash delay={302} style={{flex: 1, borderTop: `3px dashed ${C.chalkDim}`}} />
             <Flag size={24} color={C.chalk} />
           </Enter>
-          <Enter delay={308} style={{marginTop: 10, marginLeft: 46, display: 'flex', alignItems: 'center', gap: 12}}>
-            <CirclePlay size={24} color={C.flash} />
-            <SoftHi><Landmark size={22} color={C.ink} />向有关机关告发时</SoftHi>
+          <Enter delay={310} style={{marginTop: 10, marginLeft: 46, display: 'flex', alignItems: 'center', gap: 12}}>
+            <CirclePlay size={24} color={C.flash} style={{flexShrink: 0}} />
+            <SoftHi><Landmark size={22} color={C.ink} style={{flexShrink: 0}} />向有关机关告发时</SoftHi>
           </Enter>
         </div>
       </div>
-      <div data-final-knowledge="map-shared-rule" style={{position: 'absolute', left: 0, right: 0, top: 584, height: 160, backgroundColor: C.paper, border: `3px solid ${C.ink}`, borderRadius: 14, padding: '18px 26px'}}>
-        <Enter delay={318}>
-          <LabelBlock ink color={C.warm} size={28}>同一条跑道——发令线因罪而异</LabelBlock>
+      <div data-final-knowledge="map-shared-rule" style={{position: 'absolute', left: 0, right: 0, top: 584, height: 160, backgroundColor: C.paper, border: `3px solid ${C.ink}`, borderRadius: 14, padding: '16px 26px'}}>
+        <Enter delay={316} style={{display: 'flex', alignItems: 'center', gap: 16}}>
+          <LabelBlock ink color={C.warm} size={27}>同一条跑道——发令线因罪而异</LabelBlock>
+          <span style={{flex: 1}} />
+          <GraduationCap size={26} color={C.ink} style={{flexShrink: 0}} />
+          <span style={{fontSize: 23, fontWeight: 900, whiteSpace: 'nowrap'}}>真题陷阱：埋伏、等待、询问 ＝ 还在各就位</span>
         </Enter>
-        <Enter delay={328} style={{marginTop: 14, display: 'flex', gap: 18, alignItems: 'center'}}>
-          <Chip tone="warm"><Zap size={20} color={C.white} />暴力·侵入型：枪响在 开始对人强制 或 侵入住宅 时</Chip>
-          <Chip tone="cool"><Megaphone size={20} color={C.white} />意思传达型：枪响在 犯罪意思到达对方 时</Chip>
+        <Enter delay={324} style={{marginTop: 14, display: 'flex', gap: 16, alignItems: 'center'}}>
+          <span style={{display: 'inline-flex', alignItems: 'center', gap: 8, border: `2px solid ${C.ink}`, backgroundColor: C.white, padding: '5px 12px', fontSize: 22, fontWeight: 800, whiteSpace: 'nowrap'}}><GraduationCap size={20} color={C.warm} style={{flexShrink: 0}} />抢劫 2024：埋伏哨兵未得手<Stamp delay={328} tone="prep">预备</Stamp></span>
+          <span style={{display: 'inline-flex', alignItems: 'center', gap: 8, border: `2px solid ${C.ink}`, backgroundColor: C.white, padding: '5px 12px', fontSize: 22, fontWeight: 800, whiteSpace: 'nowrap'}}><GraduationCap size={20} color={C.warm} style={{flexShrink: 0}} />强奸 2006：埋伏未等到<Stamp delay={332} tone="prep">预备</Stamp></span>
+          <span style={{display: 'inline-flex', alignItems: 'center', gap: 8, border: `2px solid ${C.ink}`, backgroundColor: C.white, padding: '5px 12px', fontSize: 22, fontWeight: 800, whiteSpace: 'nowrap'}}><GraduationCap size={20} color={C.warm} style={{flexShrink: 0}} />诈骗 2024主观：开始要钱<Stamp delay={336} tone="flash">着手</Stamp></span>
         </Enter>
       </div>
     </div>
   </Shell>
-);
+  );
+};
 
 const RelayNode = ({label, delay}: {label: string; delay: number}) => (
   <Enter delay={delay} style={{backgroundColor: C.ink, color: C.white, fontSize: 24, fontWeight: 900, padding: '10px 18px', borderRadius: 10, whiteSpace: 'nowrap'}}>{label}</Enter>
@@ -359,9 +355,11 @@ export const SpecialCasesLaneScene = () => (
           <Chip tone="ink" style={{backgroundColor: C.ink, fontSize: 22}}>利用他人实施犯罪</Chip>
           <span style={{fontSize: 22, color: C.prep, fontWeight: 800, whiteSpace: 'nowrap'}}>发令人换位</span>
         </Enter>
-        <Enter delay={26} style={{marginTop: 16, fontSize: 25, fontWeight: 850}}>
-          判断标准：<ThinU>以被利用人为标准</ThinU>
-        </Enter>
+        <div data-final-knowledge="special-indirect-standard">
+          <Enter delay={26} style={{marginTop: 16, fontSize: 25, fontWeight: 850}}>
+            判断标准：<ThinU>以被利用人为标准</ThinU>
+          </Enter>
+        </div>
         <div data-final-knowledge="special-indirect-case" style={{marginTop: 14, border: `2px dashed ${C.prep}`, borderRadius: 10, padding: '14px 18px'}}>
           <Enter delay={40} style={{fontSize: 23, fontWeight: 900}}>案例：甲指使小孩入室盗窃乙家</Enter>
           <Enter delay={54} style={{marginTop: 12, display: 'flex', alignItems: 'center', gap: 10}}>

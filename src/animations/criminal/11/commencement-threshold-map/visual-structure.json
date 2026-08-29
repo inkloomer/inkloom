@@ -31,7 +31,7 @@
       "grammar": ["family-lane-comparison", "per-lane-threshold-shift"],
       "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
       "focalChannels": ["icon", "connector", "contrast", "spatial"],
-      "tokens": ["Zap", "Megaphone", "CircleDashed", "CirclePlay", "GraduationCap", "DoorClosed", "Building2", "Landmark"],
+      "tokens": ["Zap", "Megaphone", "CircleDashed", "CirclePlay", "GraduationCap", "DoorClosed", "Building2", "Landmark", "PhoneCall"],
       "finalKnowledge": [
         "map-family-violent",
         "map-family-communicated",

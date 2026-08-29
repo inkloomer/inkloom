@@ -3,10 +3,10 @@ const scene = (start: number, duration: number) => ({start, duration, previewEnd
 
 export const SCENES = {
   stageBoundary: scene(0, 230),
-  examCommencementMap: scene(230, 350),
-  specialCasesLane: scene(580, 250),
+  examCommencementMap: scene(230, 360),
+  specialCasesLane: scene(590, 250),
 } as const;
 
-export const DURATION_FRAMES = 830;
+export const DURATION_FRAMES = 840;
 export const DURATION_SECONDS = DURATION_FRAMES / FPS;
 export const toSourceFrame = (frame: number) => frame;
