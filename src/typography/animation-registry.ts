@@ -128,6 +128,7 @@ import {typography as typography91} from '../animations/civil-procedure/31/termi
 import {typography as typography93} from '../animations/civil-procedure/32/penalty-adjustment-procedure/animation.meta';
 import {typography as typography94} from '../animations/civil-law/contracts/contract-book-atlas/animation.meta';
 import {typography as typography96} from '../animations/theoretical-law/17/legal-interpretation/animation.meta';
+import {typography as typographyTds} from '../animations/theoretical-law/01/legal-departments-system/animation.meta';
 import {typography as typography40} from '../animations/criminal/19/card-selling-funds-viewpoint/animation.meta';
 import {typography as typography41} from '../animations/criminal/19/occupational-embezzlement-flowchart/animation.meta';
 import {typography as typography42} from '../animations/criminal/19/property-interests-keypoints/animation.meta';
@@ -251,6 +252,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'legal-rules': {metadata: typography106, scope: {animationId: 'legal-rules', subject: 'theoretical-law', topic: '01'}},
   'legal-principles': {metadata: typography107, scope: {animationId: 'legal-principles', subject: 'theoretical-law', topic: '01'}},
   'sources-of-law': {metadata: typography108, scope: {animationId: 'sources-of-law', subject: 'theoretical-law', topic: '01'}},
+  'legal-departments-system': {metadata: typographyTds, scope: {animationId: 'legal-departments-system', subject: 'theoretical-law', topic: '01'}},
   'procedure-structure-orrery': {metadata: typography99, scope: {animationId: 'procedure-structure-orrery', subject: 'criminal-procedure', topic: '01'}},
   'sources-of-international-law': {metadata: typography100, scope: {animationId: 'sources-of-international-law', subject: 'international-law', topic: '01'}},
   'subjects-responsibility': {metadata: typographyIl02, scope: {animationId: 'subjects-responsibility', subject: 'international-law', topic: '02'}},

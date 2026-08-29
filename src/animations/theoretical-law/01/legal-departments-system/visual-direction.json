@@ -1,0 +1,16 @@
+{
+  "directionId": "weaving-loom-atelier",
+  "family": "warp-weft-workshop",
+  "palette": "dark walnut workshop ground + undyed linen cloth panels + seven dye-thread accents (indigo vermilion moss ochre plum teal wood) + hemp warp hairlines + ochre number stakes",
+  "typography": "ink headings on cloth plaques, dark label tabs with ochre left bar, thread-tinted chips per dye color, vermilion seal reserved for verdicts like 通说 and 健全, thin ink underline for legal terms",
+  "composition": "the department definition sits as a cloth spread beside a reed that divides warp threads into standard rows; the legal system hangs as a woven cloth with two selvedge boundary panels; the seven departments stand as a row of dyed cloth columns with a milestone strip and a scope-greater strip below",
+  "surface": "flat walnut ground with faint vertical warp hairlines, linen cloth panels with hairline weathered borders and a bottom stitch strip, no gradients on panels, no rounded cards, no drop shadows",
+  "motion": "warp threads tension in first, the reed sweeps once and bundles settle into rows, the shuttle lays weft lines across the cloth, selvedge boundaries zip closed, dye columns rise column by column",
+  "transition": "a shuttle pass drags a weft line across the whole frame before the next spread",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/theoretical-law/01/legal-departments-system/",
+    "title": "经纬织坊"
+  }
+}

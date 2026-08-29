@@ -1,0 +1,70 @@
+{
+  "animationId": "legal-departments-system",
+  "compositionId": "LegalDepartmentsSystem",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-29T16:02:20.708Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 239,
+      "frameCount": 240,
+      "id": "department-standards",
+      "number": "01",
+      "startFrame": 0,
+      "title": "法律部门与划分标准",
+      "durationMs": 8000,
+      "file": "department-standards.avif",
+      "fileSize": 525906,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "9719e9cb84810200e1cfa99f28d22e0e906d357ae02763e856a8b7da13376b9c",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "8679b0829df457d23875084ec40ec991c212e77b463b3ef9d34ee85e7d35ae37"
+    },
+    {
+      "endFrame": 491,
+      "frameCount": 252,
+      "id": "system-features",
+      "number": "02",
+      "startFrame": 240,
+      "title": "法律体系两大特征",
+      "durationMs": 8400,
+      "file": "system-features.avif",
+      "fileSize": 517470,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "04e49cd73a0e00eaa8c072833cbe337221ff2480fe97a5641a68f5f23af0cd2e",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "8679b0829df457d23875084ec40ec991c212e77b463b3ef9d34ee85e7d35ae37"
+    },
+    {
+      "endFrame": 755,
+      "frameCount": 264,
+      "id": "seven-departments",
+      "number": "03",
+      "startFrame": 492,
+      "title": "七大法律部门",
+      "durationMs": 8800,
+      "file": "seven-departments.avif",
+      "fileSize": 456769,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "2ed2f225a0dea0806076784101e9bb6e1347aeeafcee40c9887ee89eccfd7cba",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "8679b0829df457d23875084ec40ec991c212e77b463b3ef9d34ee85e7d35ae37"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "8679b0829df457d23875084ec40ec991c212e77b463b3ef9d34ee85e7d35ae37",
+  "targetFps": 30,
+  "totalFileSize": 1500145
+}

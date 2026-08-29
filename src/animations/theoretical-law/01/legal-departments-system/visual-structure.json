@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "playerControlSafeBottom": 176,
+  "scenes": [
+    {
+      "id": "department-standards",
+      "export": "DepartmentStandardsScene",
+      "layout": "warp-reed-division-bench",
+      "anchor": "flow-path",
+      "grammar": ["definition-claim", "standards-ladder", "warp-division"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "stamp"],
+      "focalChannels": ["icon", "connector", "enclosure", "contrast", "annotation"],
+      "tokens": ["Scissors", "Layers", "Award"],
+      "finalKnowledge": [
+        "dept-heading",
+        "dept-definition-panel",
+        "standards-ladder",
+        "consensus-stamp",
+        "standards-mnemonic"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "system-features",
+      "export": "SystemFeaturesScene",
+      "layout": "woven-cloth-with-selvedge-boundaries",
+      "anchor": "boundary",
+      "grammar": ["system-definition", "exclusion-boundary", "inclusion-exception"],
+      "textTreatments": ["label-block", "chip", "external-negation", "soft-highlight"],
+      "focalChannels": ["icon", "enclosure", "contrast", "spatial", "annotation"],
+      "tokens": ["Network", "Ban", "Globe"],
+      "finalKnowledge": [
+        "system-heading",
+        "woven-whole",
+        "current-law-boundary",
+        "domestic-law-boundary",
+        "warp-weft-gloss"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "seven-departments",
+      "export": "SevenDepartmentsScene",
+      "layout": "seven-dyed-column-row",
+      "anchor": "typographic-sequence",
+      "grammar": ["department-pantheon", "milestone-strip", "scope-greater-note"],
+      "textTreatments": ["label-block", "chip", "thin-underline", "stamp"],
+      "focalChannels": ["icon", "spatial", "contrast", "enclosure", "annotation"],
+      "tokens": ["Landmark", "BookOpen", "Gavel"],
+      "finalKnowledge": [
+        "seven-heading",
+        "department-pantheon",
+        "milestone-strip",
+        "scope-greater-strip"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}
