@@ -1,0 +1,16 @@
+{
+  "directionId": "graft-nursery-bench",
+  "family": "botanical-graft-nursery",
+  "palette": "loam nursery ground + pressed-paper pot panels + sap-green growth accents + bark-brown rootstock + scion lilac + rust grafting-wax seals + ochre row markers",
+  "typography": "ink headings on pot plaques, dark loam label tabs with sap or lilac left bars by origin, wax-red stamps reserved for verdicts and cautions, sap-green chips for native growth, lilac chips for transplanted stock, thin ink underline for tests",
+  "composition": "the definition sits as a seedbed board above two origin pots; the process and friction scene runs two nursery rows with a wax seal over the fusion question; the three marks stand as a row of growth plaques with a trait chip rail",
+  "surface": "flat loam ground with faint seed-row hairlines, pot panels with hairline weathered borders and corner stakes, no gradients, no rounded cards, no drop shadows",
+  "motion": "seedlings rise from the left pot, the scion stock slides in from the right, graft wax seals once and holds, mark plaques grow column by column, trait chips leaf out in sequence",
+  "transition": "a watering pass sweeps the frame and the nursery clears for the next bed",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/theoretical-law/01/legal-modernization/",
+    "title": "嫁接苗圃"
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "playerControlSafeBottom": 176,
+  "scenes": [
+    {
+      "id": "definition-classification",
+      "export": "DefinitionClassificationScene",
+      "layout": "seedbed-board-with-origin-pair",
+      "anchor": "role-pair",
+      "grammar": ["modernization-definition", "endogenous-origin-pot", "exogenous-origin-pot"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["Sprout", "Ship"],
+      "finalKnowledge": [
+        "definition-heading",
+        "definition-board",
+        "endogenous-pot",
+        "exogenous-pot"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "process-friction",
+      "export": "ProcessFrictionScene",
+      "layout": "process-friction-nursery-rows",
+      "anchor": "comparison-axis",
+      "grammar": ["process-direction-pair", "friction-contrast-pair", "fusion-key-verdict"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "stamp"],
+      "focalChannels": ["icon", "contrast", "connector", "spatial", "annotation"],
+      "tokens": ["ArrowUpFromLine", "ArrowDownToLine", "Move"],
+      "finalKnowledge": [
+        "process-heading",
+        "process-direction-pair",
+        "friction-contrast-pair",
+        "fusion-key-verdict"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "modern-marks",
+      "export": "ModernMarksScene",
+      "layout": "three-marks-growth-row",
+      "anchor": "typographic-sequence",
+      "grammar": ["law-morality-separation", "modern-values-guard", "formal-rationality-rail"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "thin-underline"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["Scale", "Feather", "Ruler"],
+      "finalKnowledge": [
+        "marks-heading",
+        "separation-plaque",
+        "values-plaque",
+        "rationality-plaque"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

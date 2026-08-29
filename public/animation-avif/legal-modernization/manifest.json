@@ -1,0 +1,70 @@
+{
+  "animationId": "legal-modernization",
+  "compositionId": "LegalModernization",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-29T19:51:38.967Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 251,
+      "frameCount": 252,
+      "id": "definition-classification",
+      "number": "01",
+      "startFrame": 0,
+      "title": "定义与动力分类",
+      "durationMs": 8400,
+      "file": "definition-classification.avif",
+      "fileSize": 450406,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "a424cb859d506113f19ae8e1b236f22828fa87b16e7836aee275c29550d470e5",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "f8468c44f7e08a920cf1f338f9be94415be624b30ff3ab4b34d07cc094f6eaa7"
+    },
+    {
+      "endFrame": 515,
+      "frameCount": 264,
+      "id": "process-friction",
+      "number": "02",
+      "startFrame": 252,
+      "title": "过程特点与阻碍",
+      "durationMs": 8800,
+      "file": "process-friction.avif",
+      "fileSize": 500715,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "4f0fc91c0064d3671a89c4314b7a7f848d60bd2fe1021c4bed1e3664cd735914",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "f8468c44f7e08a920cf1f338f9be94415be624b30ff3ab4b34d07cc094f6eaa7"
+    },
+    {
+      "endFrame": 779,
+      "frameCount": 264,
+      "id": "modern-marks",
+      "number": "03",
+      "startFrame": 516,
+      "title": "现代化的三个标志",
+      "durationMs": 8800,
+      "file": "modern-marks.avif",
+      "fileSize": 402245,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "6c09451261982c38c6542924786f22dbea7fffe9495b92616ef1ff1094be1d2d",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "f8468c44f7e08a920cf1f338f9be94415be624b30ff3ab4b34d07cc094f6eaa7"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "f8468c44f7e08a920cf1f338f9be94415be624b30ff3ab4b34d07cc094f6eaa7",
+  "targetFps": 30,
+  "totalFileSize": 1353366
+}
