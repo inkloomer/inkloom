@@ -1,0 +1,16 @@
+{
+  "directionId": "burgundy-lading-desk",
+  "family": "burgundy-lading-desk",
+  "palette": "deep burgundy desk, brass ticket tags, marine blue lanes, moss green permits, signal red stamps, paper seal chips",
+  "typography": "WenKai form sheets with dotted-leader field rows, brass corner tags and double-ruled desk stamps",
+  "composition": "full-width form sheets under a brass tag strip with mono form counter, fields ruled like a lading docket",
+  "surface": "burgundy panels with vertical fiber ruling, perforation dashes and paper seal chips",
+  "motion": "form fields rising in with dotted leaders drawing and desk stamps settling",
+  "transition": "content swap under a persistent brass tag strip and dashed perforation",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/international-law/15/goods-transport-insurance/",
+    "title": "酒红提单台"
+  }
+}

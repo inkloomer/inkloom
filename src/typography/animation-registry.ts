@@ -38,6 +38,7 @@ import {typography as typographyIl09} from '../animations/international-law/09/c
 import {typography as typographyIl10} from '../animations/international-law/10/conflict-of-laws-rules/animation.meta';
 import {typography as typographyIl11} from '../animations/international-law/11/applicable-law/animation.meta';
 import {typography as typographyIl13} from '../animations/international-law/13/interregional-assistance/animation.meta';
+import {typography as typographyIl15} from '../animations/international-law/15/goods-transport-insurance/animation.meta';
 import {typography as typographyIl12} from '../animations/international-law/12/extraterritorial-assistance/animation.meta';
 import {typography as typographyIl14} from '../animations/international-law/14/international-sale-of-goods/animation.meta';
 import {typography as typographyIl14} from '../animations/international-law/14/international-sale-of-goods/animation.meta';
@@ -282,6 +283,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'conflict-of-laws-rules': {metadata: typographyIl10, scope: {animationId: 'conflict-of-laws-rules', subject: 'international-law', topic: '10'}},
   'applicable-law': {metadata: typographyIl11, scope: {animationId: 'applicable-law', subject: 'international-law', topic: '11'}},
   'interregional-assistance': {metadata: typographyIl13, scope: {animationId: 'interregional-assistance', subject: 'international-law', topic: '13'}},
+  'goods-transport-insurance': {metadata: typographyIl15, scope: {animationId: 'goods-transport-insurance', subject: 'international-law', topic: '15'}},
   'extraterritorial-assistance': {metadata: typographyIl12, scope: {animationId: 'extraterritorial-assistance', subject: 'international-law', topic: '12'}},
   'international-sale-of-goods': {metadata: typographyIl14, scope: {animationId: 'international-sale-of-goods', subject: 'international-law', topic: '14'}},
   'international-sale-of-goods': {metadata: typographyIl14, scope: {animationId: 'international-sale-of-goods', subject: 'international-law', topic: '14'}},

@@ -1,0 +1,200 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 4,
+  "scenes": [
+    {
+      "id": "bill-of-lading",
+      "export": "BillOfLadingScene",
+      "layout": "lading-form-with-ticket-shelves",
+      "anchor": "document-fork",
+      "grammar": [
+        "billoflading-carries-three-qualities",
+        "three-classification-shelves-split-transfer-rules"
+      ],
+      "textTreatments": [
+        "label-block",
+        "soft-highlight",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "locator"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "lading-three-features",
+        "lading-classification-shelves",
+        "lading-negotiation-rules",
+        "backdate-advance-billoflading",
+        "sea-waybill-contrast"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "carrier-delivery",
+      "export": "CarrierDeliveryScene",
+      "layout": "delivery-liability-form-sheet",
+      "anchor": "boundary",
+      "grammar": [
+        "carrier-and-taker-jointly-liable",
+        "cif-full-compensation-without-maritime-limit"
+      ],
+      "textTreatments": [
+        "label-block",
+        "soft-highlight",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "connector"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "delivery-joint-liability",
+        "delivery-liability-core",
+        "delivery-exemptions",
+        "delivery-limitation-one-year"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "carrier-cargo-loss",
+      "export": "CarrierCargoLossScene",
+      "layout": "cargo-loss-verdict-ladder",
+      "anchor": "boundary",
+      "grammar": [
+        "minimum-obligations-breach-means-compensation",
+        "fault-verdicts-split-by-convention"
+      ],
+      "textTreatments": [
+        "label-block",
+        "soft-highlight",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "connector"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "minimum-obligations",
+        "no-fault-exemption",
+        "fault-verdict-lanes"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "three-rules",
+      "export": "ThreeRulesScene",
+      "layout": "rules-comparison-ledger-lanes",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "hague-visby-incomplete-versus-hamburg-complete-liability",
+        "hamburg-extends-four-new-fields"
+      ],
+      "textTreatments": [
+        "label-block",
+        "soft-highlight",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "locator"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "rules-liability-basis",
+        "rules-period-limit-time",
+        "hamburg-extensions"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "transport-modes",
+      "export": "TransportModesScene",
+      "layout": "modes-three-form-columns",
+      "anchor": "role-pair",
+      "grammar": [
+        "only-sea-billoflading-is-document-of-title",
+        "rail-carries-full-and-unlimited-liability"
+      ],
+      "textTreatments": [
+        "label-block",
+        "soft-highlight",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "locator"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "sea-mode-column",
+        "air-mode-column",
+        "rail-mode-column"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "marine-risks-losses",
+      "export": "MarineRisksLossesScene",
+      "layout": "risk-loss-split-board",
+      "anchor": "document-fork",
+      "grammar": [
+        "marine-versus-external-risk-family",
+        "partial-loss-splits-by-intentional-measures"
+      ],
+      "textTreatments": [
+        "label-block",
+        "soft-highlight",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "connector"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "marine-risk-family",
+        "loss-decision-path",
+        "constructive-total-loss-notice",
+        "general-average-elements"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "insurance-coverage",
+      "export": "InsuranceCoverageScene",
+      "layout": "insurance-coverage-ladder-sheet",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "three-basic-risks-ladder-by-coverage",
+        "warehouse-to-warehouse-period-with-exclusions"
+      ],
+      "textTreatments": [
+        "label-block",
+        "soft-highlight",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "connector"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "coverage-ladder-three-risks",
+        "additional-coverage-chips",
+        "exclusions-and-warehouse-warehouse"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}
