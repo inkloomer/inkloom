@@ -1,0 +1,22 @@
+{
+  "directionId": "granite-pillar-hall",
+  "family": "carved-pillar-hall",
+  "palette": "blue-grey granite, ink-stone charcoal, rice-paper cream, cinnabar rub red, brass inlay gold, moss green, slate indigo",
+  "typography": "WenKai headings on brass-inlaid pillar plaques, chiselled condition lines and cinnabar rub verdicts",
+  "composition": "a granite hall aisle flanked by principle pillars; forks, twin benches and bounded courts occupy the aisle",
+  "surface": "dressed granite blocks, rice-paper plaques, brass inlay strips, chipped violation cracks",
+  "motion": "principle plaques seat onto their pillars, verdict seals press down, fork tokens travel the branching paths and settle as terminal states",
+  "transition": "the hall floor, aisle lighting and pillar flanks persist while the aisle furnishing is exchanged between scenes",
+  "conceptTokens": {
+    "意思表示": "Bird",
+    "特权歧视": "Ban",
+    "公共利益": "Landmark",
+    "绿色原则": "Leaf"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/civil-law/01/six-principles-pillars/",
+    "title": "柱础厅"
+  }
+}

@@ -137,16 +137,49 @@ import {typography as typography91} from '../animations/civil-procedure/31/termi
 import {typography as typography93} from '../animations/civil-procedure/32/penalty-adjustment-procedure/animation.meta';
 import {typography as typography94} from '../animations/civil-law/contracts/contract-book-atlas/animation.meta';
 import {typography as typographySpf} from '../animations/civil-law/14/security-publicity-fate/animation.meta';
+import {typography as typographySpp} from '../animations/civil-law/01/six-principles-pillars/animation.meta';
+import {typography as typographyAutoApplicationOfLaw} from '../animations/theoretical-law/01/application-of-law/animation.meta';
+import {typography as typographyAutoBankruptcyReorganization} from '../animations/commercial-law/12/bankruptcy-reorganization/animation.meta';
+import {typography as typographyAutoBankruptcyLiquidation} from '../animations/commercial-law/12/bankruptcy-liquidation/animation.meta';
+import {typography as typographyAutoRecoveryRight} from '../animations/commercial-law/11/recovery-right/animation.meta';
+import {typography as typographyAutoReclaimRight} from '../animations/commercial-law/11/reclaim-right/animation.meta';
+import {typography as typographyAutoDebtorPropertyScope} from '../animations/commercial-law/11/debtor-property-scope/animation.meta';
+import {typography as typographyAutoBankruptcyRevocationRight} from '../animations/commercial-law/11/bankruptcy-revocation-right/animation.meta';
+import {typography as typographyAutoCreditorsMeeting} from '../animations/commercial-law/10/creditors-meeting/animation.meta';
+import {typography as typographyAutoClaimFiling} from '../animations/commercial-law/10/claim-filing/animation.meta';
+import {typography as typographyAutoBankruptcyGrounds} from '../animations/commercial-law/09/bankruptcy-grounds/animation.meta';
+import {typography as typographyAutoBankruptcyCosts} from '../animations/commercial-law/09/bankruptcy-costs/animation.meta';
+import {typography as typographyAutoBankruptcyApplication} from '../animations/commercial-law/09/bankruptcy-application/animation.meta';
+import {typography as typographyAutoBankruptcyAdministrator} from '../animations/commercial-law/09/bankruptcy-administrator/animation.meta';
+import {typography as typographyAutoCompanyLiquidation} from '../animations/commercial-law/08/company-liquidation/animation.meta';
+import {typography as typographyAutoCompanyDissolution} from '../animations/commercial-law/08/company-dissolution/animation.meta';
+import {typography as typographyAutoShareIssuanceTransfer} from '../animations/commercial-law/07/share-issuance-transfer/animation.meta';
+import {typography as typographyAutoLlcEquityTransfer} from '../animations/commercial-law/07/llc-equity-transfer/animation.meta';
+import {typography as typographyAutoCompanyRestructuring} from '../animations/commercial-law/07/company-restructuring/animation.meta';
+import {typography as typographyAutoResolutionValidity} from '../animations/commercial-law/06/resolution-validity/animation.meta';
+import {typography as typographyAutoCorporateOrgans} from '../animations/commercial-law/06/corporate-organs/animation.meta';
+import {typography as typographyAutoShareholderRepresentativeAction} from '../animations/commercial-law/05/shareholder-representative-action/animation.meta';
+import {typography as typographyAutoDirectorDuties} from '../animations/commercial-law/05/director-duties/animation.meta';
+import {typography as typographyAutoInformationRight} from '../animations/commercial-law/04/information-right/animation.meta';
+import {typography as typographyAutoDividendRight} from '../animations/commercial-law/04/dividend-right/animation.meta';
+import {typography as typographyAutoShareholderQualification} from '../animations/commercial-law/03/shareholder-qualification/animation.meta';
+import {typography as typographyAutoNominalShareholder} from '../animations/commercial-law/03/nominal-shareholder/animation.meta';
+import {typography as typographyAutoShareholderContribution} from '../animations/commercial-law/02/shareholder-contribution/animation.meta';
+import {typography as typographyAutoPromoter} from '../animations/commercial-law/02/promoter/animation.meta';
+import {typography as typographyAutoCompanyIncorporation} from '../animations/commercial-law/02/company-incorporation/animation.meta';
+import {typography as typographyAutoCompanyPersonality} from '../animations/commercial-law/01/company-personality/animation.meta';
+import {typography as typographyAutoCompanyClassification} from '../animations/commercial-law/01/company-classification/animation.meta';
+import {typography as typographyAutoCompanyCapacity} from '../animations/commercial-law/01/company-capacity/animation.meta';
+import {typography as typographyAutoEvidenceVitrineMuseum} from '../animations/administrative-law/16/evidence-vitrine-museum/animation.meta';
+import {typography as typographyAutoApplicationSilkLoom} from '../animations/administrative-law/17/application-silk-loom/animation.meta';
 import {typography as typographyCsg} from '../animations/civil-procedure/12/compulsory-summons-gate/animation.meta';
 import {typography as typography109} from '../animations/theoretical-law/01/sources-of-law/animation.meta';
 import {typography as typography96} from '../animations/theoretical-law/17/legal-interpretation/animation.meta';
 import {typography as typographyTds} from '../animations/theoretical-law/01/legal-departments-system/animation.meta';
 import {typography as typographyLv} from '../animations/theoretical-law/01/legal-validity/animation.meta';
 import {typography as typographyLr} from '../animations/theoretical-law/01/legal-relations/animation.meta';
-import {typography as typographyRs} from '../animations/theoretical-law/01/legal-reasoning/animation.meta';
 import {typography as typographyLc} from '../animations/theoretical-law/01/liability-concurrence/animation.meta';
 import {typography as typographyJv} from '../animations/theoretical-law/01/judicial-vs-administrative/animation.meta';
-import {typography as typographyAol} from '../animations/theoretical-law/01/application-of-law/animation.meta';
 import {typography as typography40} from '../animations/criminal/19/card-selling-funds-viewpoint/animation.meta';
 import {typography as typography41} from '../animations/criminal/19/occupational-embezzlement-flowchart/animation.meta';
 import {typography as typography42} from '../animations/criminal/19/property-interests-keypoints/animation.meta';
@@ -261,6 +294,41 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'penalty-adjustment-procedure': {metadata: typography93, scope: {animationId: 'penalty-adjustment-procedure', subject: 'civil-procedure', topic: '32'}},
   'contract-book-atlas': {metadata: typography94, scope: {animationId: 'contract-book-atlas', subject: 'civil-law', topic: 'contracts'}},
   'security-publicity-fate': {metadata: typographySpf, scope: {animationId: 'security-publicity-fate', subject: 'civil-law', topic: '14'}},
+  'six-principles-pillars': {metadata: typographySpp, scope: {animationId: 'six-principles-pillars', subject: 'civil-law', topic: '01'}},
+  'application-of-law': {metadata: typographyAutoApplicationOfLaw, scope: {animationId: 'application-of-law', subject: 'theoretical-law', topic: '01'}},
+  'bankruptcy-reorganization': {metadata: typographyAutoBankruptcyReorganization, scope: {animationId: 'bankruptcy-reorganization', subject: 'commercial-law', topic: '12'}},
+  'bankruptcy-liquidation': {metadata: typographyAutoBankruptcyLiquidation, scope: {animationId: 'bankruptcy-liquidation', subject: 'commercial-law', topic: '12'}},
+  'recovery-right': {metadata: typographyAutoRecoveryRight, scope: {animationId: 'recovery-right', subject: 'commercial-law', topic: '11'}},
+  'reclaim-right': {metadata: typographyAutoReclaimRight, scope: {animationId: 'reclaim-right', subject: 'commercial-law', topic: '11'}},
+  'debtor-property-scope': {metadata: typographyAutoDebtorPropertyScope, scope: {animationId: 'debtor-property-scope', subject: 'commercial-law', topic: '11'}},
+  'bankruptcy-revocation-right': {metadata: typographyAutoBankruptcyRevocationRight, scope: {animationId: 'bankruptcy-revocation-right', subject: 'commercial-law', topic: '11'}},
+  'creditors-meeting': {metadata: typographyAutoCreditorsMeeting, scope: {animationId: 'creditors-meeting', subject: 'commercial-law', topic: '10'}},
+  'claim-filing': {metadata: typographyAutoClaimFiling, scope: {animationId: 'claim-filing', subject: 'commercial-law', topic: '10'}},
+  'bankruptcy-grounds': {metadata: typographyAutoBankruptcyGrounds, scope: {animationId: 'bankruptcy-grounds', subject: 'commercial-law', topic: '09'}},
+  'bankruptcy-costs': {metadata: typographyAutoBankruptcyCosts, scope: {animationId: 'bankruptcy-costs', subject: 'commercial-law', topic: '09'}},
+  'bankruptcy-application': {metadata: typographyAutoBankruptcyApplication, scope: {animationId: 'bankruptcy-application', subject: 'commercial-law', topic: '09'}},
+  'bankruptcy-administrator': {metadata: typographyAutoBankruptcyAdministrator, scope: {animationId: 'bankruptcy-administrator', subject: 'commercial-law', topic: '09'}},
+  'company-liquidation': {metadata: typographyAutoCompanyLiquidation, scope: {animationId: 'company-liquidation', subject: 'commercial-law', topic: '08'}},
+  'company-dissolution': {metadata: typographyAutoCompanyDissolution, scope: {animationId: 'company-dissolution', subject: 'commercial-law', topic: '08'}},
+  'share-issuance-transfer': {metadata: typographyAutoShareIssuanceTransfer, scope: {animationId: 'share-issuance-transfer', subject: 'commercial-law', topic: '07'}},
+  'llc-equity-transfer': {metadata: typographyAutoLlcEquityTransfer, scope: {animationId: 'llc-equity-transfer', subject: 'commercial-law', topic: '07'}},
+  'company-restructuring': {metadata: typographyAutoCompanyRestructuring, scope: {animationId: 'company-restructuring', subject: 'commercial-law', topic: '07'}},
+  'resolution-validity': {metadata: typographyAutoResolutionValidity, scope: {animationId: 'resolution-validity', subject: 'commercial-law', topic: '06'}},
+  'corporate-organs': {metadata: typographyAutoCorporateOrgans, scope: {animationId: 'corporate-organs', subject: 'commercial-law', topic: '06'}},
+  'shareholder-representative-action': {metadata: typographyAutoShareholderRepresentativeAction, scope: {animationId: 'shareholder-representative-action', subject: 'commercial-law', topic: '05'}},
+  'director-duties': {metadata: typographyAutoDirectorDuties, scope: {animationId: 'director-duties', subject: 'commercial-law', topic: '05'}},
+  'information-right': {metadata: typographyAutoInformationRight, scope: {animationId: 'information-right', subject: 'commercial-law', topic: '04'}},
+  'dividend-right': {metadata: typographyAutoDividendRight, scope: {animationId: 'dividend-right', subject: 'commercial-law', topic: '04'}},
+  'shareholder-qualification': {metadata: typographyAutoShareholderQualification, scope: {animationId: 'shareholder-qualification', subject: 'commercial-law', topic: '03'}},
+  'nominal-shareholder': {metadata: typographyAutoNominalShareholder, scope: {animationId: 'nominal-shareholder', subject: 'commercial-law', topic: '03'}},
+  'shareholder-contribution': {metadata: typographyAutoShareholderContribution, scope: {animationId: 'shareholder-contribution', subject: 'commercial-law', topic: '02'}},
+  'promoter': {metadata: typographyAutoPromoter, scope: {animationId: 'promoter', subject: 'commercial-law', topic: '02'}},
+  'company-incorporation': {metadata: typographyAutoCompanyIncorporation, scope: {animationId: 'company-incorporation', subject: 'commercial-law', topic: '02'}},
+  'company-personality': {metadata: typographyAutoCompanyPersonality, scope: {animationId: 'company-personality', subject: 'commercial-law', topic: '01'}},
+  'company-classification': {metadata: typographyAutoCompanyClassification, scope: {animationId: 'company-classification', subject: 'commercial-law', topic: '01'}},
+  'company-capacity': {metadata: typographyAutoCompanyCapacity, scope: {animationId: 'company-capacity', subject: 'commercial-law', topic: '01'}},
+  'evidence-vitrine-museum': {metadata: typographyAutoEvidenceVitrineMuseum, scope: {animationId: 'evidence-vitrine-museum', subject: 'administrative-law', topic: '16'}},
+  'application-silk-loom': {metadata: typographyAutoApplicationSilkLoom, scope: {animationId: 'application-silk-loom', subject: 'administrative-law', topic: '17'}},
   'compulsory-summons-gate': {metadata: typographyCsg, scope: {animationId: 'compulsory-summons-gate', subject: 'civil-procedure', topic: '12'}},
   'sources-of-law': {metadata: typography109, scope: {animationId: 'sources-of-law', subject: 'theoretical-law', topic: '01'}},
   'legal-interpretation': {metadata: typography96, scope: {animationId: 'legal-interpretation', subject: 'theoretical-law', topic: '17'}},
@@ -275,11 +343,9 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'legal-principles': {metadata: typography107, scope: {animationId: 'legal-principles', subject: 'theoretical-law', topic: '01'}},
   'liability-concurrence': {metadata: typographyLc, scope: {animationId: 'liability-concurrence', subject: 'theoretical-law', topic: '01'}},
   'judicial-vs-administrative': {metadata: typographyJv, scope: {animationId: 'judicial-vs-administrative', subject: 'theoretical-law', topic: '01'}},
-  'application-of-law': {metadata: typographyAol, scope: {animationId: 'application-of-law', subject: 'theoretical-law', topic: '01'}},
   'legal-departments-system': {metadata: typographyTds, scope: {animationId: 'legal-departments-system', subject: 'theoretical-law', topic: '01'}},
   'legal-validity': {metadata: typographyLv, scope: {animationId: 'legal-validity', subject: 'theoretical-law', topic: '01'}},
   'legal-relations': {metadata: typographyLr, scope: {animationId: 'legal-relations', subject: 'theoretical-law', topic: '01'}},
-  'legal-reasoning': {metadata: typographyRs, scope: {animationId: 'legal-reasoning', subject: 'theoretical-law', topic: '01'}},
   'procedure-structure-orrery': {metadata: typography99, scope: {animationId: 'procedure-structure-orrery', subject: 'criminal-procedure', topic: '01'}},
   'sources-of-international-law': {metadata: typography100, scope: {animationId: 'sources-of-international-law', subject: 'international-law', topic: '01'}},
   'subjects-responsibility': {metadata: typographyIl02, scope: {animationId: 'subjects-responsibility', subject: 'international-law', topic: '02'}},

@@ -1,0 +1,96 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "principle-functions-map",
+      "export": "PrincipleFunctionsScene",
+      "layout": "tripartite-function-arena",
+      "anchor": "boundary",
+      "grammar": [
+        "principles-bind-legislation-adjudication-and-conduct-alike",
+        "legislation-builds-norms-on-the-principle-foundation",
+        "adjudication-fills-loopholes-and-points-interpretation",
+        "civil-activity-is-guided-by-the-civil-value-orientation"
+      ],
+      "textTreatments": ["label-block", "soft-highlight", "stamp", "thin-underline"],
+      "focalChannels": ["icon", "enclosure", "connector", "annotation"],
+      "tokens": ["Landmark", "Gavel", "Compass"],
+      "finalKnowledge": [
+        "concept-banner",
+        "legislation-zone",
+        "adjudication-zone",
+        "activity-zone"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "equality-volition-forks",
+      "export": "EqualityVolitionScene",
+      "layout": "twin-pillar-fork-bench",
+      "anchor": "document-fork",
+      "grammar": [
+        "equal-personality-is-the-core-of-civil-relations",
+        "privilege-and-discrimination-breach-equality",
+        "public-interest-purpose-legitimises-differentiation",
+        "fraud-duress-necessity-unfairness-distort-will",
+        "silence-is-no-manifestation-so-no-volition-issue"
+      ],
+      "textTreatments": ["label-block", "stamp", "external-negation"],
+      "focalChannels": ["connector", "contrast", "enclosure", "annotation"],
+      "tokens": ["Scale", "Bird", "Ban"],
+      "finalKnowledge": [
+        "equality-fork",
+        "volition-fork",
+        "public-interest-exemption",
+        "no-manifestation-rule"
+      ],
+      "statefulObjects": ["intent-manifestation"]
+    },
+    {
+      "id": "fairness-goodfaith-benches",
+      "export": "FairnessGoodfaithScene",
+      "layout": "dual-bench-comparison",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "voluntariness-presumes-formal-fairness-without-substantive-review",
+        "advantage-distress-or-standard-terms-trigger-fairness-review",
+        "good-faith-requires-keeping-words-and-well-wishing",
+        "breach-and-malice-harm-are-the-two-faithlessness-modes"
+      ],
+      "textTreatments": ["label-block", "soft-highlight", "stamp", "thin-underline"],
+      "focalChannels": ["contrast", "enclosure", "annotation", "spatial"],
+      "tokens": ["Scale", "Handshake", "Ban"],
+      "finalKnowledge": [
+        "fairness-bench",
+        "goodfaith-bench",
+        "substantive-review-trigger",
+        "springtime-verdict"
+      ],
+      "statefulObjects": ["balance-weight"]
+    },
+    {
+      "id": "order-morals-green-court",
+      "export": "OrderMoralsGreenScene",
+      "layout": "twin-boundary-green-ring",
+      "anchor": "role-pair",
+      "grammar": [
+        "mandatory-rules-protect-public-interest-so-breach-harms-public-order",
+        "public-morals-cover-social-ethics-family-and-dignity",
+        "unfaithful-purpose-gifts-of-common-property-are-void-against-morals",
+        "green-principle-forbids-waste-and-ecological-damage-for-gain"
+      ],
+      "textTreatments": ["label-block", "soft-highlight", "stamp", "external-negation"],
+      "focalChannels": ["icon", "enclosure", "contrast", "annotation"],
+      "tokens": ["Landmark", "Heart", "Leaf", "Ban"],
+      "finalKnowledge": [
+        "public-order-zone",
+        "good-morals-zone",
+        "faithful-purpose-gift-rule",
+        "green-ring"
+      ],
+      "statefulObjects": ["antelope-contract"]
+    }
+  ]
+}
