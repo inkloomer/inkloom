@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "launcher-shuttles",
+      "export": "LauncherShuttlesScene",
+      "layout": "dual-shuttle-banks-with-two-step-note",
+      "anchor": "role-pair",
+      "grammar": [
+        "court-side-spins-from-effective-court-upward",
+        "procuratorate-side-spins-downward-and-appeals-at-same-level",
+        "two-step-solve-locks-effective-court-first",
+        "supreme-procuratorate-is-the-lone-exception"
+      ],
+      "textTreatments": ["chip", "thin-underline", "soft-highlight"],
+      "focalChannels": ["contrast", "enclosure", "spatial", "annotation"],
+      "tokens": [],
+      "finalKnowledge": [
+        "court-shuttle",
+        "procuratorate-shuttle",
+        "two-step-note"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "procedure-weft",
+      "export": "ProcedureWeftScene",
+      "layout": "weft-rule-bands-with-no-escalation-card",
+      "anchor": "flow-path",
+      "grammar": [
+        "retrial-restores-the-original-instance-track",
+        "starter-decides-coercive-measures",
+        "retrial-rarely-adds-punishment-unless-protested",
+        "three-to-six-month-clock-runs"
+      ],
+      "textTreatments": ["chip", "thin-underline", "soft-highlight"],
+      "focalChannels": ["connector", "contrast", "enclosure", "annotation"],
+      "tokens": ["Scissors"],
+      "finalKnowledge": [
+        "instance-band",
+        "no-escalation-card",
+        "measures-clock-card",
+        "composition-note"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "result-shelf",
+      "export": "ResultShelfScene",
+      "layout": "four-shelf-cards-with-effect-band",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "correct-verdicts-keep-original-with-corrections",
+        "wrong-law-or-sentencing-must-change",
+        "second-instance-track-may-change-or-remand",
+        "unclear-facts-after-hearing-announce-innocence"
+      ],
+      "textTreatments": ["chip", "thin-underline", "soft-highlight"],
+      "focalChannels": ["contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["Undo2", "Scale"],
+      "finalKnowledge": [
+        "four-result-cards",
+        "effect-band",
+        "effect-mnemonic-note"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

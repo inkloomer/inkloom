@@ -42,6 +42,8 @@ import {FirstInstanceProcession} from '../../animations/criminal-procedure/15/fi
 import {DURATION_FRAMES as FIRST_INSTANCE_DURATION_FRAMES, FPS as FIRST_INSTANCE_FPS} from '../../animations/criminal-procedure/15/first-instance-procession/remotion/storyboard';
 import {AppealNoEscalationLock} from '../../animations/criminal-procedure/16/appeal-no-escalation-lock/remotion/AppealNoEscalationLock';
 import {DURATION_FRAMES as APPEAL_LOCK_DURATION_FRAMES, FPS as APPEAL_LOCK_FPS} from '../../animations/criminal-procedure/16/appeal-no-escalation-lock/remotion/storyboard';
+import {RetrialRewindLoom} from '../../animations/criminal-procedure/18/retrial-rewind-loom/remotion/RetrialRewindLoom';
+import {DURATION_FRAMES as RETRAL_LOOM_DURATION_FRAMES, FPS as RETRAL_LOOM_FPS} from '../../animations/criminal-procedure/18/retrial-rewind-loom/remotion/storyboard';
 import {DeathReviewSummit} from '../../animations/criminal-procedure/17/death-review-summit/remotion/DeathReviewSummit';
 import {DURATION_FRAMES as DEATH_REVIEW_DURATION_FRAMES, FPS as DEATH_REVIEW_FPS} from '../../animations/criminal-procedure/17/death-review-summit/remotion/storyboard';
 import {PleaLeniencyCaliper} from '../../animations/criminal-procedure/02/plea-leniency-caliper/remotion/PleaLeniencyCaliper';
@@ -245,6 +247,7 @@ export const STYLE_DEMOS = [
   {id: 'criminal-procedure-14-trial-bench-composition', slug: 'trial-bench-composition', title: '席位拼合台', direction: 'Bench Assembly Trial Organs', component: TrialBenchComposition, href: '/inkloom/objective/criminal-procedure/14/trial-bench-composition/', durationInFrames: TRIAL_BENCH_DURATION_FRAMES, fps: TRIAL_BENCH_FPS},
   {id: 'criminal-procedure-15-first-instance-procession', slug: 'first-instance-procession', title: '流水街', direction: 'Procession Street First Instance', component: FirstInstanceProcession, href: '/inkloom/objective/criminal-procedure/15/first-instance-procession/', durationInFrames: FIRST_INSTANCE_DURATION_FRAMES, fps: FIRST_INSTANCE_FPS},
   {id: 'criminal-procedure-16-appeal-no-escalation-lock', slug: 'appeal-no-escalation-lock', title: '单行闸桥', direction: 'One-Way Lock Appeal', component: AppealNoEscalationLock, href: '/inkloom/objective/criminal-procedure/16/appeal-no-escalation-lock/', durationInFrames: APPEAL_LOCK_DURATION_FRAMES, fps: APPEAL_LOCK_FPS},
+  {id: 'criminal-procedure-18-retrial-rewind-loom', slug: 'retrial-rewind-loom', title: '织机回纬', direction: 'Rewind Loom Retrial', component: RetrialRewindLoom, href: '/inkloom/objective/criminal-procedure/18/retrial-rewind-loom/', durationInFrames: RETRAL_LOOM_DURATION_FRAMES, fps: RETRAL_LOOM_FPS},
   {id: 'criminal-procedure-17-death-review-summit', slug: 'death-review-summit', title: '峰顶复审营', direction: 'Summit Camp Death Review', component: DeathReviewSummit, href: '/inkloom/objective/criminal-procedure/17/death-review-summit/', durationInFrames: DEATH_REVIEW_DURATION_FRAMES, fps: DEATH_REVIEW_FPS},
   {id: 'criminal-procedure-03-organs-relay-map', slug: 'organs-relay-map', title: '青砖驿路图', direction: 'Slate Courier Relay', component: OrgansRelayMap, href: '/inkloom/objective/criminal-procedure/03/organs-relay-map/', durationInFrames: ORGANS_RELAY_DURATION_FRAMES, fps: ORGANS_RELAY_FPS},
   {id: 'criminal-procedure-02-plea-leniency-caliper', slug: 'plea-leniency-caliper', title: '认罚量尺工坊', direction: 'Maple Caliper Workshop', component: PleaLeniencyCaliper, href: '/inkloom/objective/criminal-procedure/02/plea-leniency-caliper/', durationInFrames: PLEA_LENIENTY_DURATION_FRAMES, fps: PLEA_LENIENTY_FPS},
@@ -338,6 +341,7 @@ const DEMO_ADDED_AT: Record<(typeof STYLE_DEMOS)[number]['id'], string> = {
   'criminal-procedure-14-trial-bench-composition': '2026-08-29T19:50:00+08:00',
   'criminal-procedure-15-first-instance-procession': '2026-08-29T20:20:00+08:00',
   'criminal-procedure-16-appeal-no-escalation-lock': '2026-08-29T20:50:00+08:00',
+  'criminal-procedure-18-retrial-rewind-loom': '2026-08-29T21:20:00+08:00',
   'criminal-procedure-17-death-review-summit': '2026-08-29T21:20:00+08:00',
   'criminal-procedure-03-organs-relay-map': '2026-08-29T01:30:00+08:00',
   'criminal-procedure-02-plea-leniency-caliper': '2026-08-29T01:05:00+08:00',

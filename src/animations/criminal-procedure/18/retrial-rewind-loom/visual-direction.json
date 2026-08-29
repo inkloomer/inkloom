@@ -1,0 +1,16 @@
+{
+  "directionId": "rewind-loom-retrial",
+  "family": "rewind-loom-family",
+  "palette": "deep umber dye workshop, cream woven cloth cards, madder red and indigo threads, reed green bands, gold reeds",
+  "typography": "WenKai weaving-loom headings with thread chips and cloth banners",
+  "composition": "dual shuttle banks over a two-step note, weft rule bands with a no-escalation card beside an operation card, and four shelf cards under an effect band and mnemonic",
+  "surface": "an indigo dye-loom workshop with warp-weft weave, cream cloth cards and thread accents",
+  "motion": "shuttles weave in from both banks, weft bands fill rule by rule, and the four result shelves stack before the effect band binds them",
+  "transition": "the umber backdrop and warp-weft weave persist while the cloth cards are replaced",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/criminal-procedure/18/retrial-rewind-loom/",
+    "title": "织机回纬"
+  }
+}

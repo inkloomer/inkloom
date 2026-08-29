@@ -1,0 +1,70 @@
+{
+  "animationId": "retrial-rewind-loom",
+  "compositionId": "RetrialRewindLoom",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-29T13:12:23.106Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 479,
+      "frameCount": 240,
+      "id": "launcher-shuttles",
+      "number": "01",
+      "startFrame": 0,
+      "title": "启动双梭",
+      "durationMs": 8000,
+      "file": "launcher-shuttles.avif",
+      "fileSize": 448036,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "641e9cf8daf568eeb8c21860e0580072976b4c84e23e711361ef11b74317eb7c",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "7a581f92555b66215fe684d00cb3cd29bee5207990743efdcd6db04349c95dbe"
+    },
+    {
+      "endFrame": 1019,
+      "frameCount": 270,
+      "id": "procedure-weft",
+      "number": "02",
+      "startFrame": 480,
+      "title": "再审程序纬线",
+      "durationMs": 9000,
+      "file": "procedure-weft.avif",
+      "fileSize": 502232,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "9596f33ba4516cf99e7f1e2ad41e2d8a96c2dfe30fcabc9070d6bd8134c0c3ef",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "7a581f92555b66215fe684d00cb3cd29bee5207990743efdcd6db04349c95dbe"
+    },
+    {
+      "endFrame": 1559,
+      "frameCount": 270,
+      "id": "result-shelf",
+      "number": "03",
+      "startFrame": 1020,
+      "title": "处理结果架",
+      "durationMs": 9000,
+      "file": "result-shelf.avif",
+      "fileSize": 540651,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "68eaf95493967c63a2b05909920527d93cd57f93ddb9a916399250125af5ce45",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "7a581f92555b66215fe684d00cb3cd29bee5207990743efdcd6db04349c95dbe"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "7a581f92555b66215fe684d00cb3cd29bee5207990743efdcd6db04349c95dbe",
+  "targetFps": 30,
+  "totalFileSize": 1490919
+}
