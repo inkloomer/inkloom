@@ -1,155 +1,123 @@
 {
   "version": 1,
   "playerControlSafeBottom": 160,
-  "minimumDistinctLayouts": 4,
+  "minimumDistinctLayouts": 5,
   "scenes": [
     {
       "id": "power-prism-dispersion",
       "export": "PowerPrismDispersionScene",
-      "layout": "six-channel-power-prism",
+      "layout": "gauze-stage-six-plaque-entrance",
       "anchor": "flow-target",
       "grammar": [
-        "white-mandate-beam-strikes-central-crystal-prism",
-        "six-colored-laser-conduits-energize-distinct-act-nodes",
-        "each-node-reveals-its-defining-legal-signature"
+        "lamp-mandate-beam-opens-the-gauze-stage",
+        "six-jointed-plaques-descend-on-bamboo-rods-in-legal-order",
+        "each-plaque-hangs-its-own-legal-signature-chip"
       ],
-      "textTreatments": [
-        "label-block",
-        "soft-highlight",
-        "thin-underline"
-      ],
-      "focalChannels": [
-        "connector",
-        "contrast",
-        "spatial"
-      ],
+      "textTreatments": ["label-block", "chip", "soft-highlight"],
+      "focalChannels": ["spatial", "connector", "contrast"],
       "tokens": [],
       "finalKnowledge": [
-        "levy-ownership",
-        "requisition-use",
-        "adjudication",
-        "confirmation",
-        "grant",
-        "award",
-        "six-act-summary"
+        "levy-overview",
+        "requisition-overview",
+        "adjudication-overview",
+        "confirmation-overview",
+        "grant-overview",
+        "award-overview",
+        "six-act-couplet"
       ],
       "statefulObjects": []
     },
     {
       "id": "levy-requisition-kinetic-balance",
       "export": "LevyRequisitionKineticBalanceScene",
-      "layout": "kinetic-balance-beam-levy-requisition",
+      "layout": "twin-shadow-comparison-lanes",
       "anchor": "comparison-axis",
       "grammar": [
-        "mechanical-beam-tips-under-four-heavy-property-blocks",
-        "ownership-arrow-permanently-locks-into-state-vault",
-        "borrowed-asset-conveys-with-rebounding-compensation-coin"
+        "twin-silhouette-lanes-face-off-across-the-screen-seam",
+        "levy-kinds-and-requisition-conditions-enter-as-warm-interior-chips",
+        "compensation-axis-settles-the-legal-difference-at-the-lane-bottom"
       ],
-      "textTreatments": [
-        "label-block",
-        "thin-underline",
-        "stamp"
-      ],
-      "focalChannels": [
-        "contrast",
-        "connector",
-        "enclosure"
-      ],
+      "textTreatments": ["label-block", "thin-underline", "stamp"],
+      "focalChannels": ["contrast", "enclosure", "connector"],
       "tokens": [],
       "finalKnowledge": [
-        "levy-specimen",
-        "levy-kind-1",
-        "levy-kind-2",
-        "levy-kind-3",
-        "levy-kind-4",
-        "requisition-specimen",
-        "levy-requisition-difference"
+        "levy-definition",
+        "levy-kind-tax",
+        "levy-kind-fee",
+        "levy-kind-land",
+        "levy-kind-house",
+        "levy-compensation-note",
+        "requisition-definition",
+        "requisition-purpose",
+        "requisition-ownership-note",
+        "requisition-compensation-rule",
+        "compensation-axis"
       ],
       "statefulObjects": []
     },
     {
       "id": "adjudication-field-confirmation-scanner",
       "export": "AdjudicationFieldConfirmationScannerScene",
-      "layout": "tripartite-field-and-optical-scanner",
+      "layout": "tripartite-bilateral-stage-vignette",
       "anchor": "role-pair",
       "grammar": [
-        "tripartite-magnetic-field-stabilizes-dispute-with-neutral-arbiter",
-        "optical-scanner-sweeps-over-existing-credential-to-project-confirmation-seal",
-        "license-empowers-while-confirmation-strengthens-existing-status"
+        "arbiter-plaque-overlooks-two-disputing-figures-with-live-connector-threads",
+        "manager-to-party-single-thread-projects-confirmation-onto-existing-facts",
+        "license-confirmation-pair-splits-empowerment-from-reinforcement"
       ],
-      "textTreatments": [
-        "label-block",
-        "thin-underline",
-        "external-negation"
-      ],
-      "focalChannels": [
-        "contrast",
-        "connector",
-        "spatial"
-      ],
+      "textTreatments": ["label-block", "chip", "thin-underline"],
+      "focalChannels": ["connector", "spatial", "contrast"],
       "tokens": [],
       "finalKnowledge": [
-        "adjudication-specimen",
-        "adjudication-role-1",
-        "adjudication-role-2",
-        "confirmation-specimen",
-        "confirmation-role-1",
-        "confirmation-role-2",
-        "license-vs-confirmation"
+        "adjudication-definition",
+        "adjudication-tripartite-structure",
+        "adjudication-three-party-rule",
+        "confirmation-definition",
+        "confirmation-bilateral-relation",
+        "confirmation-examples",
+        "license-confirmation-contrast"
       ],
       "statefulObjects": []
     },
     {
       "id": "welfare-hydraulics-merit-launcher",
       "export": "WelfareHydraulicsMeritLauncherScene",
-      "layout": "hydraulic-welfare-and-merit-podium",
-      "anchor": "comparison-axis",
+      "layout": "descent-provision-ascending-podium",
+      "anchor": "flow-path",
       "grammar": [
-        "hydraulic-welfare-valves-dispense-survival-energy-drops-to-cushion-citizens",
-        "gilded-merit-launcher-propels-honor-medals-and-material-prizes-with-light-bursts"
+        "statutory-duty-plaque-releases-survival-provisions-down-onto-the-subsistence-baseline",
+        "merit-steps-ascend-from-spiritual-to-material-rewards",
+        "extension-chips-widen-the-provision-family"
       ],
-      "textTreatments": [
-        "label-block",
-        "soft-highlight",
-        "thin-underline"
-      ],
-      "focalChannels": [
-        "contrast",
-        "enclosure",
-        "locator"
-      ],
+      "textTreatments": ["chip", "soft-highlight", "label-block"],
+      "focalChannels": ["motion", "spatial", "enclosure"],
       "tokens": [],
       "finalKnowledge": [
-        "grant-specimen",
-        "grant-kind-1",
-        "grant-kind-2",
-        "grant-kind-3",
-        "grant-kind-4",
-        "award-specimen",
-        "award-kind-1",
-        "award-kind-2"
+        "grant-definition",
+        "grant-kind-baozhang",
+        "grant-kind-wubao",
+        "grant-kind-jiuji",
+        "grant-kind-shebao",
+        "grant-extension",
+        "award-definition",
+        "award-spiritual",
+        "award-material",
+        "award-purpose"
       ],
-      "statefulObjects": []
+      "statefulObjects": ["survival-provision-tokens"]
     },
     {
       "id": "exam-radar-steel-verdict",
       "export": "ExamRadarSteelVerdictScene",
-      "layout": "circular-radar-verdict-arena",
+      "layout": "closing-ledger-hanging-plaques",
       "anchor": "typographic-sequence",
       "grammar": [
-        "circular-radar-sweeps-and-detects-classic-exam-traps",
-        "heavy-steel-stamps-slam-down-with-rotational-recoil-to-lock-the-knowledge-map"
+        "six-verdict-plaques-hang-in-staggered-ledger-order-with-miniature-seal-chips",
+        "rapid-recognition-couplet-closes-the-stage-scroll",
+        "terminal-cinnabar-seal-locks-the-knowledge-ledger"
       ],
-      "textTreatments": [
-        "stamp",
-        "label-block",
-        "soft-highlight"
-      ],
-      "focalChannels": [
-        "contrast",
-        "enclosure",
-        "annotation"
-      ],
+      "textTreatments": ["stamp", "label-block", "chip"],
+      "focalChannels": ["contrast", "locator", "annotation"],
       "tokens": [],
       "finalKnowledge": [
         "memo-levy",
@@ -158,7 +126,7 @@
         "memo-confirmation",
         "memo-grant",
         "memo-award",
-        "mnemonic-exam-tip"
+        "exam-tip-couplet"
       ],
       "statefulObjects": []
     }

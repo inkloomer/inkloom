@@ -1,16 +1,16 @@
 {
-  "directionId": "administrative-power-prism",
-  "family": "optical-power-prism",
-  "palette": "obsidian slate, laser white, spectrum crimson, emerald beam, celestial purple, cyan scan, amber surge, rose flash",
-  "typography": "WenKai instrument readouts with laser beam coordinates, holographic indicators, titanium underline tracks and steel verdict stamps",
-  "composition": "optical prism splitters, kinetic balance beams, magnetic tension fields, laser scanning lenses, hydraulic welfare conduits and circular exam radars",
-  "surface": "precision optical laboratory bench and kinetic testing apparatus with dark glass reflections and glowing laser guides",
-  "motion": "prismatic beam refractions, mechanical balance tilts with inertia bounce, magnetic field stabilization, laser scan wipes, hydraulic liquid delivery and heavy stamp impacts",
-  "transition": "optical wipe transitions, laser sweeps and kinetic apparatus shifts",
+  "directionId": "shadow-puppet-stage-arena",
+  "family": "shadow-puppet-stage",
+  "palette": "warm backlit parchment screen, amber lamp glow, ochre umber vignette, deep ink silhouettes, cinnabar seal accents, indigo and bamboo counterpoints",
+  "typography": "WenKai show plaques on ink silhouette panels, warm light body text inside cut-out cards, ink annotations directly on the lit screen",
+  "composition": "backlit gauze stage with hanging puppet plaques, twin comparison lanes, figure-group vignettes, descending and ascending flow columns, and a closing ledger couplet",
+  "surface": "translucent warm gauze with lamp halo and soft stage frame; knowledge cards read as jointed leather silhouettes with warm light interiors",
+  "motion": "puppets and plaques enter the screen in legal order, property tokens travel to their ownership destination, seals stamp operative results, couplets land last",
+  "transition": "screen-light rise between scenes with the lamp re-focusing on the next act",
   "catalog": {
     "status": "featured",
     "source": "original-node",
     "route": "/inkloom/objective/administrative-law/11/misc-acts-showcase/",
-    "title": "公法权力光谱分流仪"
+    "title": "皮影戏台"
   }
 }

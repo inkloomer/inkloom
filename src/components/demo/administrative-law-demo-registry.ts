@@ -174,7 +174,7 @@ export const ADMINISTRATIVE_LAW_STYLE_DEMOS = [
   {
     id: "administrative-law-11-misc-acts-showcase",
     slug: "misc-acts-showcase",
-    title: "公法权力光谱分流仪",
+    title: "皮影戏台",
     direction: "Administrative Power Prism",
     component: MiscActsShowcase,
     href: "/inkloom/objective/administrative-law/11/misc-acts-showcase/",
