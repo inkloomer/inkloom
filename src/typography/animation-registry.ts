@@ -18,6 +18,7 @@ import {typography as typography98} from '../animations/theoretical-law/01/conce
 import {typography as typography101} from '../animations/theoretical-law/01/marxist-law-essence/animation.meta';
 import {typography as typography102} from '../animations/theoretical-law/01/features-of-law/animation.meta';
 import {typography as typography103} from '../animations/theoretical-law/01/functions-of-law/animation.meta';
+import {typography as typography104} from '../animations/theoretical-law/01/limitations-of-law/animation.meta';
 import {typography as typography99} from '../animations/criminal-procedure/01/procedure-structure-orrery/animation.meta';
 import {typography as typography100} from '../animations/international-law/01/sources-of-international-law/animation.meta';
 import {typography as typographyCpOrgansRelay} from '../animations/criminal-procedure/03/organs-relay-map/animation.meta';
@@ -213,6 +214,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'marxist-law-essence': {metadata: typography101, scope: {animationId: 'marxist-law-essence', subject: 'theoretical-law', topic: '01'}},
   'features-of-law': {metadata: typography102, scope: {animationId: 'features-of-law', subject: 'theoretical-law', topic: '01'}},
   'functions-of-law': {metadata: typography103, scope: {animationId: 'functions-of-law', subject: 'theoretical-law', topic: '01'}},
+  'limitations-of-law': {metadata: typography104, scope: {animationId: 'limitations-of-law', subject: 'theoretical-law', topic: '01'}},
   'procedure-structure-orrery': {metadata: typography99, scope: {animationId: 'procedure-structure-orrery', subject: 'criminal-procedure', topic: '01'}},
   'sources-of-international-law': {metadata: typography100, scope: {animationId: 'sources-of-international-law', subject: 'international-law', topic: '01'}},
   'plea-leniency-caliper': {metadata: typographyCpPleaCaliper, scope: {animationId: 'plea-leniency-caliper', subject: 'criminal-procedure', topic: '02'}},

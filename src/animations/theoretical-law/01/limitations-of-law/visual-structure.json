@@ -1,0 +1,84 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 4,
+  "playerControlSafeBottom": 176,
+  "scenes": [
+    {
+      "id": "social-complexity-cards",
+      "export": "SocialComplexityCardsScene",
+      "layout": "three-cause-card-row",
+      "anchor": "concept-icon",
+      "grammar": ["scope-limit-cause", "human-factor-cause", "social-condition-cause"],
+      "textTreatments": ["label-block", "soft-highlight", "chip", "external-negation"],
+      "focalChannels": ["icon", "enclosure", "contrast", "spatial", "annotation"],
+      "tokens": ["Users", "UserCog", "Network"],
+      "finalKnowledge": [
+        "social-heading",
+        "scope-limit-card",
+        "beyond-law-chip",
+        "human-factor-card",
+        "social-condition-card",
+        "system-project-chip"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "law-own-limit-rows",
+      "export": "LawOwnLimitRowsScene",
+      "layout": "five-tension-verdict-rows",
+      "anchor": "typographic-sequence",
+      "grammar": ["trait-reality-tension", "limit-name-verdict", "abstract-stability-source"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "thin-underline"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["MoveHorizontal", "History", "CircleDashed"],
+      "finalKnowledge": [
+        "limit-heading",
+        "rigidity-row",
+        "lag-row",
+        "blank-row",
+        "vagueness-row",
+        "professional-row",
+        "source-note"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "wrong-view-guards",
+      "export": "WrongViewGuardsScene",
+      "layout": "definition-plaque-with-guarded-pair",
+      "anchor": "role-pair",
+      "grammar": ["limitation-definition", "omnipotence-guard", "nihilism-guard"],
+      "textTreatments": ["label-block", "soft-highlight", "chip", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["Crown", "Trash2", "Scale"],
+      "finalKnowledge": [
+        "stance-heading",
+        "limitation-definition-plaque",
+        "not-defect-chip",
+        "omnipotence-guard",
+        "nihilism-guard",
+        "middle-course-note"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "inspiration-mitigation-bench",
+      "export": "InspirationMitigationBenchScene",
+      "layout": "inspiration-rail-with-tool-bench",
+      "anchor": "concept-icon",
+      "grammar": ["rule-of-law-inspirations", "professional-mitigation", "acceptable-range-verdict"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["Landmark", "HeartHandshake", "Flag", "Wrench"],
+      "finalKnowledge": [
+        "bench-heading",
+        "supremacy-inspiration",
+        "morality-combine-inspiration",
+        "leadership-inspiration",
+        "mitigation-card",
+        "acceptable-range-chip"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

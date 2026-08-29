@@ -1,0 +1,16 @@
+{
+  "directionId": "hazard-boundary-post",
+  "family": "hazard-tape-boundary",
+  "palette": "charcoal workshop ground + warning amber with soot diagonal stripes + off-white stencil type + steel gray panels + alert coral seals",
+  "typography": "stencil-like off-white headings with amber edge tabs, steel panels with light labels, amber chips for limit names, coral stamps reserved for warnings and verdicts, soot diagonal tape strips as separators",
+  "composition": "each scene reads as a marked-off work zone: causes stand as three posted billboards, the five limits line up as tension rows between trait posts and reality posts, the wrong views are two guarded barriers, the mitigation bench lays out professional tools",
+  "surface": "flat charcoal with faint concrete grain, steel panels with hairline light borders, flat amber/soot diagonal tape bands, stencil corners; no gradients, no rounded cards, no drop shadows",
+  "motion": "tape strips extend before the panels they bound, billboards post left to right, tension rows draw their opposing arrows, guards lower their bars, tools land on the bench one by one",
+  "transition": "a diagonal tape wipe sweeps the zone before the next section posts",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/theoretical-law/01/limitations-of-law/",
+    "title": "警戒界桩"
+  }
+}
