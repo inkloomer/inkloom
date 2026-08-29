@@ -1,0 +1,16 @@
+{
+  "directionId": "twin-balance-scale-hall",
+  "family": "brass-scale-atelier",
+  "palette": "deep green scale-hall ground + ivory scale-plate panels + brass accents for law + copper accents for morality + crimson seal weights + walnut beams",
+  "typography": "ink headings on ivory plates, dark hall label tabs with brass left bar for law rows and copper left bar for morality rows, crimson stamps reserved for verdicts like 恶法非法, thin ink underline for criteria",
+  "composition": "five bonds climb as a plate ladder; seven differences read as three split lanes with law on the brass side and morality on the copper side; the nature debate sets two verdict plates against each other; the evolution board draws before-and-after columns over a content and function row",
+  "surface": "flat deep green ground with faint beam hairlines, ivory panels with hairline weathered borders and corner balance pivots, no gradients, no rounded cards, no drop shadows",
+  "motion": "plates descend onto the beam one by one, split lanes tilt slightly toward their side then settle level, the two verdict plates swing in from opposite sides and hold, evolution columns unfurl downward",
+  "transition": "a balance beam sweeps across the frame and the hall clears for the next weighing",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/theoretical-law/01/law-and-morality/",
+    "title": "双秤量铺"
+  }
+}

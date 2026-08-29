@@ -1,0 +1,74 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "playerControlSafeBottom": 176,
+  "scenes": [
+    {
+      "id": "connections",
+      "export": "ConnectionsScene",
+      "layout": "five-bond-plate-ladder",
+      "anchor": "typographic-sequence",
+      "grammar": ["origin-bond", "norm-bond", "value-function-bonds"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "thin-underline"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["Link", "Scale"],
+      "finalKnowledge": [
+        "connections-heading",
+        "bond-ladder",
+        "bond-recap"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "differences",
+      "export": "DifferencesScene",
+      "layout": "seven-difference-split-lanes",
+      "anchor": "comparison-axis",
+      "grammar": ["norm-attribute-pairs", "operation-pairs", "dispute-pair"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "thin-underline"],
+      "focalChannels": ["icon", "contrast", "connector", "spatial", "annotation"],
+      "tokens": ["Gavel", "Heart"],
+      "finalKnowledge": [
+        "differences-heading",
+        "norm-attribute-lane",
+        "operation-lane",
+        "dispute-lane"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "nature-debate",
+      "export": "NatureDebateScene",
+      "layout": "bad-law-verdict-duel",
+      "anchor": "role-pair",
+      "grammar": ["natural-law-claim", "positivist-claim", "essence-dispute-note"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["BookX", "BookCheck"],
+      "finalKnowledge": [
+        "debate-heading",
+        "natural-law-plate",
+        "positivist-plate",
+        "essence-dispute-note"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "content-function-evolution",
+      "export": "EvolutionScene",
+      "layout": "before-after-evolution-board",
+      "anchor": "boundary",
+      "grammar": ["content-overlap-shift", "function-emphasis-shift", "rule-of-law-verdict"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["History", "Sparkles"],
+      "finalKnowledge": [
+        "evolution-heading",
+        "before-column",
+        "after-column",
+        "rule-of-law-verdict"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}
