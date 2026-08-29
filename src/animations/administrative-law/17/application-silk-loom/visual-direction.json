@@ -1,0 +1,16 @@
+{
+  "directionId": "silk-weave-loom-hall",
+  "family": "silk-weave-loom",
+  "palette": "deep indigo loom room, five silk threads graded from gold to pale blue by binding strength, wooden beam frames, shuttle highlights",
+  "typography": "title-face beam headers, cream thread labels, mono grade codes",
+  "composition": "five-thread loom wall, conflict shuttle lane, referral gate",
+  "surface": "taut warp threads on wooden beams, soft sheen along each thread",
+  "motion": "threads are woven taut in strength order, the shuttle carries conflict rules across, unresolved threads exit to the referral gate",
+  "transition": "the loom beam rolls to reveal the next section",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/administrative-law/17/application-silk-loom/",
+    "title": "织机经纬坊"
+  }
+}

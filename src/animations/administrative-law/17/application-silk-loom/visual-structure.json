@@ -1,0 +1,88 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "five-thread-loom-wall",
+      "export": "FiveThreadLoomWallScene",
+      "layout": "five-thread-loom-wall",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "five-normative-threads-woven-in-binding-strength-order",
+        "each-thread-carries-its-own-application-rule"
+      ],
+      "textTreatments": [
+        "label-block",
+        "thin-underline",
+        "chip"
+      ],
+      "focalChannels": [
+        "contrast",
+        "spatial",
+        "locator"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "basis-laws-regulations",
+        "reference-rules",
+        "consider-other-norms",
+        "transform-wto",
+        "cite-judicial-interpretation"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "conflict-shuttle-lane",
+      "export": "ConflictShuttleLaneScene",
+      "layout": "conflict-shuttle-lane",
+      "anchor": "flow-path",
+      "grammar": [
+        "one-conflict-shuttle-carries-three-resolution-rules",
+        "unresolvable-threads-exit-to-the-referral-gate"
+      ],
+      "textTreatments": [
+        "label-block",
+        "stamp",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "connector",
+        "contrast",
+        "locator"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "conflict-three-rules",
+        "conflict-unresolvable-referral"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "referral-gate-unresolved",
+      "export": "ReferralGateUnresolvedScene",
+      "layout": "referral-gate-unresolved",
+      "anchor": "boundary",
+      "grammar": [
+        "four-unresolvable-situations-pass-the-referral-gate",
+        "the-gate-exits-to-the-competent-authority"
+      ],
+      "textTreatments": [
+        "label-block",
+        "stamp",
+        "chip"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "locator"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "referral-four-situations",
+        "referral-competent-authority"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}
