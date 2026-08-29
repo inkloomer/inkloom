@@ -1,0 +1,16 @@
+{
+  "directionId": "cobalt-porcelain-registry",
+  "family": "blue-white-porcelain-archive",
+  "palette": "glazed porcelain white ground + cobalt ink calligraphy + pale blue wash panels + celadon accents + iron-brown condition notes + gilt hairline frames",
+  "typography": "cobalt brush headings on porcelain plaques, celadon label chips, iron-brown reserved for conditions and exceptions, gilt hairline underlines, cobalt ordinal medallions",
+  "composition": "the definition stands as a porcelain plaque with three feature medallions; doctrine kinds read as paired plates on shelf rails; objects rest as four dishes on a display rail; the life cycle runs a handscroll fork with event and act gates",
+  "surface": "flat porcelain white with faint glaze crackle hairlines, pale blue wash panels with gilt hairline borders, no gradients, no rounded cards, no drop shadows",
+  "motion": "plates slide onto rail stands and settle, cobalt strokes ink in, paired plates tip toward each other once, gate arches swing open once and hold",
+  "transition": "a glaze wipe sweeps the previous plate off its rail",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/theoretical-law/01/legal-relations/",
+    "title": "青花瓷档"
+  }
+}

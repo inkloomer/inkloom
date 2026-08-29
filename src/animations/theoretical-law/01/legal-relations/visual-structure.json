@@ -1,0 +1,81 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 4,
+  "playerControlSafeBottom": 176,
+  "scenes": [
+    {
+      "id": "concept-features",
+      "export": "ConceptFeaturesScene",
+      "layout": "definition-plaque-with-feature-medallions",
+      "anchor": "concept-icon",
+      "grammar": ["definition-claim", "three-features", "legality-note", "axis-chip"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["Gavel", "Landmark", "Link"],
+      "finalKnowledge": [
+        "concept-heading",
+        "feature-legality",
+        "feature-will",
+        "feature-reality",
+        "legality-note",
+        "axis-chip"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "kind-pairs",
+      "export": "KindPairsScene",
+      "layout": "paired-doctrine-plates-on-rails",
+      "anchor": "comparison-axis",
+      "grammar": ["adjust-protect-pair", "horizontal-vertical-pair", "single-double-multi", "primary-secondary-pair"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["ArrowDownUp", "Gift", "ArrowLeftRight", "Users", "Anchor"],
+      "finalKnowledge": [
+        "kinds-heading",
+        "adjust-protect-pair",
+        "horizontal-vertical-pair",
+        "cardinality-plates",
+        "primary-secondary-pair"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "object-dishes",
+      "export": "ObjectDishesScene",
+      "layout": "four-object-dishes-on-rail",
+      "anchor": "concept-icon",
+      "grammar": ["thing-dish", "person-dish", "spirit-dish", "conduct-dish"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "thin-underline"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["Package", "User", "Lightbulb", "Hammer"],
+      "finalKnowledge": [
+        "objects-heading",
+        "dish-thing",
+        "dish-person",
+        "dish-spirit",
+        "dish-conduct",
+        "object-note"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "lifecycle-facts",
+      "export": "LifecycleFactsScene",
+      "layout": "conditions-strip-with-fact-fork",
+      "anchor": "document-fork",
+      "grammar": ["two-conditions", "event-versus-act", "constitution-note"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "thin-underline"],
+      "focalChannels": ["icon", "contrast", "enclosure", "motion", "annotation"],
+      "tokens": ["ScrollText", "Zap", "Hand"],
+      "finalKnowledge": [
+        "lifecycle-heading",
+        "condition-strip",
+        "event-gate",
+        "act-gate",
+        "constitution-note"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}
