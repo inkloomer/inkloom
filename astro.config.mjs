@@ -22,6 +22,26 @@ export default defineConfig({
 				'@': path.resolve('./src'),
 			},
 		},
+		// Pre-bundle the Remotion stack: client:only pages otherwise pull it as
+		// hundreds of unbundled ESM requests on every dev cold load.
+		optimizeDeps: {
+			include: [
+				'react',
+				'react-dom',
+				'react-dom/client',
+				'react/jsx-runtime',
+				'remotion',
+				'@remotion/player',
+				'@remotion/transitions',
+				'@remotion/effects',
+				'@remotion/rough-notation',
+				'@remotion/fonts',
+				'remotion-animated',
+				'remotion-bits',
+				'lucide-react',
+				'neotraverse',
+			],
+		},
 	},
 
 	integrations: [
