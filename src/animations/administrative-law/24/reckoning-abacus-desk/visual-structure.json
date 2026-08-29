@@ -1,0 +1,122 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 4,
+  "scenes": [
+    {
+      "id": "imputation-abacus-frame",
+      "export": "ImputationAbacusFrameScene",
+      "layout": "imputation-abacus-frame",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "three-imputation-rods-stack-fault-result-illegality-beads",
+        "vermilion-exception-beads-break-the-detention-rows",
+        "elements-strip-presses-the-frame-base"
+      ],
+      "textTreatments": [
+        "label-block",
+        "chip",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "contrast",
+        "spatial",
+        "enclosure"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "imputation-fault",
+        "imputation-result",
+        "imputation-illegality",
+        "detention-imputation-exceptions"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "administrative-claim-desk",
+      "export": "AdministrativeClaimDeskScene",
+      "layout": "administrative-claim-desk",
+      "anchor": "flow-path",
+      "grammar": [
+        "scope-obligor-procedure-columns-run-left-to-right",
+        "dual-track-claims-split-into-joined-and-standalone",
+        "burden-reversal-seal-presses-the-desk-edge"
+      ],
+      "textTreatments": [
+        "label-block",
+        "stamp",
+        "chip"
+      ],
+      "focalChannels": [
+        "connector",
+        "contrast",
+        "locator"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "admin-compensation-scope",
+        "admin-obligor-rules",
+        "admin-dual-procedure",
+        "admin-burden-reversal"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "judicial-compensation-gate",
+      "export": "JudicialCompensationGateScene",
+      "layout": "judicial-compensation-gate",
+      "anchor": "timeline-gate",
+      "grammar": [
+        "nonlitigation-two-step-gates-run-across-the-top",
+        "postposition-principle-panel-lists-the-last-decision-maker",
+        "exemption-and-limitation-slots-close-the-gate-row"
+      ],
+      "textTreatments": [
+        "label-block",
+        "chip",
+        "stamp"
+      ],
+      "focalChannels": [
+        "connector",
+        "locator",
+        "contrast"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "judicial-nonlitigation-steps",
+        "judicial-obligor-postposition",
+        "exemption-split-rule",
+        "limitation-rules"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "indemnity-beads-ledger",
+      "export": "IndemnityBeadsLedgerScene",
+      "layout": "indemnity-beads-ledger",
+      "anchor": "typographic-sequence",
+      "grammar": [
+        "five-personal-injury-bead-rows-read-in-multiple-order",
+        "spiritual-and-property-columns-close-the-ledger",
+        "direct-loss-versus-expected-profit-negation-pair-ends-the-row"
+      ],
+      "textTreatments": [
+        "label-block",
+        "external-negation",
+        "chip"
+      ],
+      "focalChannels": [
+        "locator",
+        "contrast",
+        "enclosure"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "personal-injury-beads",
+        "spiritual-damages",
+        "property-direct-loss"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

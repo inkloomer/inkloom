@@ -1,0 +1,16 @@
+{
+  "directionId": "reckoning-abacus-desk-hall",
+  "family": "reckoning-abacus-desk",
+  "palette": "dark walnut reckoning desk, amber and vermilion abacus beads on brass rods, ink-ledger cream paper panels, vermilion settlement seals",
+  "typography": "title-face ledger headers, ink body text on paper panels, mono bead numerals",
+  "composition": "imputation abacus frame, administrative claim desk, judicial compensation gate, indemnity beads ledger",
+  "surface": "wood grain desk, brass rod lines, stacked beads, paper ledger panels",
+  "motion": "beads slide along rods and lock into columns, vermilion seals press settled rows",
+  "transition": "the reckoning hand sweeps the beads to the next desk",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/administrative-law/24/reckoning-abacus-desk/",
+    "title": "算盘赔偿台"
+  }
+}

@@ -182,6 +182,8 @@ import {typography as typographyAutoNomineeImpersonationMasks} from '../animatio
 import {typography as typographyAutoCapitalRegimeVoteHall} from '../animations/commercial-economic-law/01/capital-regime-vote-hall/animation.meta';
 import {typography as typographyAutoContributionDefectAudit} from '../animations/commercial-economic-law/01/contribution-defect-audit/animation.meta';
 import {typography as typographyAutoCompanyGuarantySealDesk} from '../animations/commercial-economic-law/01/company-guaranty-seal-desk/animation.meta';
+import {typography as typographyAutoDirectorsDeskRuleHall} from '../animations/commercial-economic-law/01/directors-desk-rule-hall/animation.meta';
+import {typography as typographyAutoReckoningAbacusDesk} from '../animations/administrative-law/24/reckoning-abacus-desk/animation.meta';
 import {typography as typographyAutoBambooScrollRestoration} from '../animations/administrative-law/23/bamboo-scroll-restoration/animation.meta';
 import {typography as typographyAutoLighthouseWatchNetwork} from '../animations/administrative-law/20/lighthouse-watch-network/animation.meta';
 import {typography as typographyAutoDisclosureDarkroomStudio} from '../animations/administrative-law/21/disclosure-darkroom-studio/animation.meta';
@@ -366,6 +368,8 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'capital-regime-vote-hall': {metadata: typographyAutoCapitalRegimeVoteHall, scope: {animationId: 'capital-regime-vote-hall', subject: 'commercial-economic-law', topic: '01'}},
   'contribution-defect-audit': {metadata: typographyAutoContributionDefectAudit, scope: {animationId: 'contribution-defect-audit', subject: 'commercial-economic-law', topic: '01'}},
   'company-guaranty-seal-desk': {metadata: typographyAutoCompanyGuarantySealDesk, scope: {animationId: 'company-guaranty-seal-desk', subject: 'commercial-economic-law', topic: '01'}},
+  'directors-desk-rule-hall': {metadata: typographyAutoDirectorsDeskRuleHall, scope: {animationId: 'directors-desk-rule-hall', subject: 'commercial-economic-law', topic: '01'}},
+  'reckoning-abacus-desk': {metadata: typographyAutoReckoningAbacusDesk, scope: {animationId: 'reckoning-abacus-desk', subject: 'administrative-law', topic: '24'}},
   'bamboo-scroll-restoration': {metadata: typographyAutoBambooScrollRestoration, scope: {animationId: 'bamboo-scroll-restoration', subject: 'administrative-law', topic: '23'}},
   'lighthouse-watch-network': {metadata: typographyAutoLighthouseWatchNetwork, scope: {animationId: 'lighthouse-watch-network', subject: 'administrative-law', topic: '20'}},
   'disclosure-darkroom-studio': {metadata: typographyAutoDisclosureDarkroomStudio, scope: {animationId: 'disclosure-darkroom-studio', subject: 'administrative-law', topic: '21'}},
