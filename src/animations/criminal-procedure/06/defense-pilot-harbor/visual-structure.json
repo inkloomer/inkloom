@@ -1,0 +1,73 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "defense-kinds-lanes",
+      "export": "DefenseLanesScene",
+      "layout": "three-berth-lanes-with-notice-bay",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "self-defense-runs-through-every-stage",
+        "commissioned-defense-splits-suspect-and-defendant-timing",
+        "legal-aid-requires-no-commission-and-lawyers-only",
+        "must-notify-list-covers-six-vulnerable-tracks"
+      ],
+      "textTreatments": ["chip", "label-block", "thin-underline"],
+      "focalChannels": ["contrast", "enclosure", "spatial", "locator"],
+      "tokens": ["LifeBuoy", "Siren"],
+      "finalKnowledge": [
+        "self-defense-lane",
+        "commissioned-defense-lane",
+        "legal-aid-lane",
+        "notice-timing-bay"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "duty-lawyer-lighthouse",
+      "export": "DutyLawyerLighthouseScene",
+      "layout": "lighthouse-status-with-permission-banks",
+      "anchor": "concept-icon",
+      "grammar": [
+        "duty-lawyer-is-no-defender-and-no-procedural-subject",
+        "help-list-covers-counseling-advice-and-witnessing",
+        "ban-list-blocks-court-visit-investigation-and-commission",
+        "scope-covers-all-cases-and-all-stages"
+      ],
+      "textTreatments": ["chip", "soft-highlight", "external-negation"],
+      "focalChannels": ["icon", "contrast", "enclosure", "annotation"],
+      "tokens": ["Lightbulb", "CheckCircle2", "XCircle"],
+      "finalKnowledge": [
+        "duty-lawyer-status",
+        "duty-lawyer-may-list",
+        "duty-lawyer-ban-list",
+        "witness-nature-note"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "aid-boundaries-scene",
+      "export": "AidBoundariesScene",
+      "layout": "aid-facts-grid-with-boundary-buoys",
+      "anchor": "boundary",
+      "grammar": [
+        "aid-applications-go-to-the-organ-running-the-case",
+        "vulnerable-applicants-skip-means-testing",
+        "duty-lawyer-cannot-convert-into-commissioned-defender",
+        "earlier-aid-yields-to-defendant-choice"
+      ],
+      "textTreatments": ["chip", "thin-underline", "label-block"],
+      "focalChannels": ["enclosure", "contrast", "locator", "annotation"],
+      "tokens": ["FileText", "UserCheck"],
+      "finalKnowledge": [
+        "aid-application-facts",
+        "aid-six-commitments",
+        "conversion-boundary",
+        "effective-plea-note"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

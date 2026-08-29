@@ -1,0 +1,16 @@
+{
+  "directionId": "pilot-harbor-defense",
+  "family": "pilot-harbor-family",
+  "palette": "night navy harbor, sea-green channels, amber lighthouse beam, buoy red and buoy green markers, chart parchment cards",
+  "typography": "WenKai nautical-chart headings with berth tags and buoy chips",
+  "composition": "three berth lanes for defense kinds, a lighthouse status card flanked by permission and ban banks, and a three-column aid boundary grid with memory buoys",
+  "surface": "a night harbor chart with starfield specks, beam glow and parchment chart cards",
+  "motion": "berth cards rise in lane order, permission and ban chips stamp alternately into their banks, and boundary notes settle as anchored buoys",
+  "transition": "the night harbor backdrop and beam persist while the chart cards are replaced",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/criminal-procedure/06/defense-pilot-harbor/",
+    "title": "灯塔引航港"
+  }
+}

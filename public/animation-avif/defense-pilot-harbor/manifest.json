@@ -1,0 +1,70 @@
+{
+  "animationId": "defense-pilot-harbor",
+  "compositionId": "DefensePilotHarbor",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-29T08:18:35.345Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 499,
+      "frameCount": 250,
+      "id": "defense-kinds-lanes",
+      "number": "01",
+      "startFrame": 0,
+      "title": "三条泊道",
+      "durationMs": 8333,
+      "file": "defense-kinds-lanes.avif",
+      "fileSize": 324362,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "140c2d2e797cf35bfdf95b37413671438cb14febca84556c7c7b8f1a1bc5aac8",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "0656472631d081f95a128195d9bdc94ab0dafe8d30a46c573874a1d3eb73b03d"
+    },
+    {
+      "endFrame": 1059,
+      "frameCount": 280,
+      "id": "duty-lawyer-lighthouse",
+      "number": "02",
+      "startFrame": 500,
+      "title": "值班律师灯塔",
+      "durationMs": 9333,
+      "file": "duty-lawyer-lighthouse.avif",
+      "fileSize": 330775,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "a8361176d10aeb7be17af9b8cd176525b4deba08b90d4e31d74f0d346f8de70a",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "0656472631d081f95a128195d9bdc94ab0dafe8d30a46c573874a1d3eb73b03d"
+    },
+    {
+      "endFrame": 1539,
+      "frameCount": 240,
+      "id": "aid-boundaries-scene",
+      "number": "03",
+      "startFrame": 1060,
+      "title": "法援界碑",
+      "durationMs": 8000,
+      "file": "aid-boundaries-scene.avif",
+      "fileSize": 352538,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "2d7298ff89921a028d37bd8b575f9a9c320964e4a64d8f440ffa3dcd0f231acd",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "0656472631d081f95a128195d9bdc94ab0dafe8d30a46c573874a1d3eb73b03d"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "0656472631d081f95a128195d9bdc94ab0dafe8d30a46c573874a1d3eb73b03d",
+  "targetFps": 30,
+  "totalFileSize": 1007675
+}
