@@ -215,7 +215,6 @@ import {typography as typographyLl} from '../animations/theoretical-law/01/legis
 import {typography as typographyFc} from '../animations/theoretical-law/01/features-of-constitution/animation.meta';
 import {typography as typographyCo} from '../animations/theoretical-law/01/creation-of-constitution/animation.meta';
 import {typography as typographyCc} from '../animations/theoretical-law/01/constitution-classification/animation.meta';
-import {typography as typographyCdv} from '../animations/theoretical-law/01/constitution-development/animation.meta';
 import {typography as typographyPrg} from '../animations/commercial-economic-law/01/profit-reserve-granary/animation.meta';
 import {typography as typographyPlr} from '../animations/commercial-economic-law/01/promoter-liability-ropewalk/animation.meta';
 import {typography as typography48} from '../animations/demo/demo-archival-dossier/animation.meta';
@@ -445,7 +444,6 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'features-of-constitution': {metadata: typographyFc, scope: {animationId: 'features-of-constitution', subject: 'theoretical-law', topic: '01'}},
   'creation-of-constitution': {metadata: typographyCo, scope: {animationId: 'creation-of-constitution', subject: 'theoretical-law', topic: '01'}},
   'constitution-classification': {metadata: typographyCc, scope: {animationId: 'constitution-classification', subject: 'theoretical-law', topic: '01'}},
-  'constitution-development': {metadata: typographyCdv, scope: {animationId: 'constitution-development', subject: 'theoretical-law', topic: '01'}},
   'profit-reserve-granary': {metadata: typographyPrg, scope: {animationId: 'profit-reserve-granary', subject: 'commercial-economic-law', topic: '01'}},
   'promoter-liability-ropewalk': {metadata: typographyPlr, scope: {animationId: 'promoter-liability-ropewalk', subject: 'commercial-economic-law', topic: '01'}},
   'fight-defense-diagram': {metadata: typography44, scope: {animationId: 'fight-defense-diagram', subject: 'criminal', topic: '22'}},

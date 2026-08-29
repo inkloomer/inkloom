@@ -1,0 +1,70 @@
+{
+  "animationId": "directors-desk-rule-hall",
+  "compositionId": "DirectorsDeskRuleHall",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-29T22:29:10.352Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 329,
+      "frameCount": 330,
+      "id": "resign-removal",
+      "number": "01",
+      "startFrame": 0,
+      "title": "董事去留：辞职、解职、超期服役",
+      "durationMs": 11000,
+      "file": "resign-removal.avif",
+      "fileSize": 420155,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "d020e2b9e520c9d42d4f47a34ae684417b9f37e969f3b85de16897acf09ea18b",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "d4aede60934ca206b30697ebc4d0f3ef8651b985071bf0e4b0d2c9eec8095a4c"
+    },
+    {
+      "endFrame": 649,
+      "frameCount": 320,
+      "id": "related-deal",
+      "number": "02",
+      "startFrame": 330,
+      "title": "关联交易：报告、回避、归入",
+      "durationMs": 10667,
+      "file": "related-deal.avif",
+      "fileSize": 500367,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "95da2ac1aa342d3c0f29df91d25d75a0d15ccaa1bfe64ab1c9fd869fffbd2384",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "d4aede60934ca206b30697ebc4d0f3ef8651b985071bf0e4b0d2c9eec8095a4c"
+    },
+    {
+      "endFrame": 929,
+      "frameCount": 280,
+      "id": "shadow-director",
+      "number": "03",
+      "startFrame": 650,
+      "title": "台前幕后：抽逃出资与影子董事",
+      "durationMs": 9333,
+      "file": "shadow-director.avif",
+      "fileSize": 368677,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "5db8a88ae27c0a608ccffa69b4cd57ff2a2403a8dac07d7e25155c1af6a00dcf",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "d4aede60934ca206b30697ebc4d0f3ef8651b985071bf0e4b0d2c9eec8095a4c"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "d4aede60934ca206b30697ebc4d0f3ef8651b985071bf0e4b0d2c9eec8095a4c",
+  "targetFps": 30,
+  "totalFileSize": 1289199
+}

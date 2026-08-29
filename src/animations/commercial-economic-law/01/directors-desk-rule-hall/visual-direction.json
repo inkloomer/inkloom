@@ -1,0 +1,26 @@
+{
+  "directionId": "plum-velvet-seat-gallery",
+  "family": "velvet-seat-rule-gallery",
+  "palette": "dark plum velvet hall + warm gold seat tags + ivory scorecards + seal red vetoes + jade approvals + ink black",
+  "typography": "seat gallery headlines, scorecard labels, square gold verdict stamps, dashed recusal rules",
+  "composition": "a three-rule bench for resignation removal and overservice, a related-deal lane with disclosure recusal and disgorgement stations, and a shadow-seat map pairing the onstage nominee with the behind-scenes controller",
+  "surface": "plum velvet walls with ivory scorecards and gold seat tags; no glossy panels",
+  "motion": "seat tags are claimed, revoked and re-stamped in legal order, the related-deal lane walks gate by gate, the shadow seat lights up behind the nominee; no idle loops",
+  "transition": "the velvet gallery persists while each scene re-stages the same seating plan for a new question",
+  "conceptTokens": {
+    "辞职通知": "Mail",
+    "解职": "Gavel",
+    "股东": "Users",
+    "真题": "GraduationCap",
+    "合法授权": "UserCheck",
+    "程序闸": "Stamp",
+    "归入权": "Coins",
+    "影子董事": "VenetianMask"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/commercial-economic-law/01/directors-desk-rule-hall/",
+    "title": "座次规鉴堂"
+  }
+}

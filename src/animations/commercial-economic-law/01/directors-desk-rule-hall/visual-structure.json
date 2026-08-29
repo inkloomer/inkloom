@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "playerControlSafeBottom": 168,
+  "scenes": [
+    {
+      "id": "resign-removal",
+      "export": "ResignRemovalScene",
+      "layout": "three-rule-bench",
+      "anchor": "document-fork",
+      "grammar": ["unilateral-resignation-rule", "quorum-overservice-rule", "linked-resignation-rule"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["Mail", "Gavel", "Users", "GraduationCap"],
+      "finalKnowledge": [
+        "res-resign-rule",
+        "res-removal-rule",
+        "res-overservice-rule",
+        "res-exam-strip"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "related-deal",
+      "export": "RelatedDealScene",
+      "layout": "related-deal-lane",
+      "anchor": "flow-path",
+      "grammar": ["disclosure-approval-gate", "recusal-quorum-rule"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["UserCheck", "Stamp", "Coins", "GraduationCap"],
+      "finalKnowledge": [
+        "rel-legit-lane",
+        "rel-approval-gate",
+        "rel-disgorgement",
+        "rel-exam-strip"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "shadow-director",
+      "export": "ShadowDirectorScene",
+      "layout": "shadow-seat-map",
+      "anchor": "role-pair",
+      "grammar": ["capital-withdrawal-return", "shadow-director-liability"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["Coins", "VenetianMask", "GraduationCap"],
+      "finalKnowledge": [
+        "sh-withdrawal-board",
+        "sh-shadow-seat",
+        "sh-recap-verdict"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}
