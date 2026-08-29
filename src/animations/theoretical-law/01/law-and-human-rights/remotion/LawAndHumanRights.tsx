@@ -259,6 +259,7 @@ export const ConceptHistoryScene = () => {
 };
 
 export const NaturePriorityScene = () => {
+  const frame = useCurrentFrame();
   /* data-final-knowledge="priority-heading" data-final-knowledge="priority-position-board" data-final-knowledge="moral-right-note" data-final-knowledge="evaluation-standard-note" */
   return (
     <Shell code="02" kicker="人权的性质" title="先于国家与法的权利">
@@ -287,7 +288,7 @@ export const NaturePriorityScene = () => {
               </span>
               <span style={{fontSize: 22, fontWeight: 880, color: C.inkSoft}}>人凭自己是人而享有</span>
             </Parch>
-            <span style={{position: 'absolute', left: 400, top: 88, width: 90, height: 5, backgroundColor: C.gold, scaleX: prog(120, 20), transformOrigin: 'left center', rotate: '18deg'}} />
+            <span style={{position: 'absolute', left: 400, top: 88, width: 90, height: 5, backgroundColor: C.gold, scaleX: prog(frame, 120, 20), transformOrigin: 'left center', rotate: '18deg'}} />
             <span style={{position: 'absolute', left: 498, top: 44, opacity: prog(130, 16)}}>
               <Stamp delay={136} size={25}>逻辑在先</Stamp>
             </span>
@@ -323,7 +324,7 @@ export const NaturePriorityScene = () => {
           <DarkStrip style={{height: 100}}>
             <span style={{padding: '4px 13px', backgroundColor: C.gold, color: C.vigilDeep, fontSize: 22, fontWeight: 900, letterSpacing: 2}}>一句记</span>
             <span style={{fontSize: 25, fontWeight: 900, color: C.paper}}>
-              不是国家赐予的——<Soft color={C.goldPale}>先有 flames 人权</Soft>，后有国家与法
+              不是国家赐予的——<Soft color={C.goldPale}>逻辑上人权在先</Soft>，国家与法在后
             </span>
           </DarkStrip>
         </Enter>
@@ -380,7 +381,10 @@ export const LegalizationDualityScene = () => {
         </Enter>
         <Enter delay={110} from="up" marker="value-canon-row" style={{position: 'absolute', left: 40, top: 360, width: 1736, height: 200}}>
           <Parch tone={C.gold} style={{height: '100%', padding: '18px 24px 20px', display: 'flex', flexDirection: 'column', gap: 14}}>
-            <LabelTab>法律的重要价值之一 · 四值并列</LabelTab>
+            <div style={{display: 'flex', alignItems: 'center', gap: 12}}>
+              <Scale size={38} color={C.ember} strokeWidth={2.3} />
+              <LabelTab>法律的重要价值之一 · 四值并列</LabelTab>
+            </div>
             <div style={{display: 'flex', gap: 16, flex: 1}}>
               <div style={{flex: 1.3, border: `3px solid ${C.ember}`, backgroundColor: `${C.ember}12`, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 8}}>
                 <Flame size={40} color={C.ember} strokeWidth={2.3} />

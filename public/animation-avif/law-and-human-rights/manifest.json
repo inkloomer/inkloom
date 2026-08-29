@@ -1,0 +1,70 @@
+{
+  "animationId": "law-and-human-rights",
+  "compositionId": "LawAndHumanRights",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-29T20:23:05.625Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 251,
+      "frameCount": 252,
+      "id": "concept-history",
+      "number": "01",
+      "startFrame": 0,
+      "title": "人权的概念",
+      "durationMs": 8400,
+      "file": "concept-history.avif",
+      "fileSize": 337262,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "1ce195a0b4917657a0f03b736b8c9ffda51746abeb439adb492121b4f7613522",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "b93f0accfc8a74db300991c94b6be62795760976de5d287e2c94b6c67c6f8ad5"
+    },
+    {
+      "endFrame": 491,
+      "frameCount": 240,
+      "id": "nature-priority",
+      "number": "02",
+      "startFrame": 252,
+      "title": "先于国家与法",
+      "durationMs": 8000,
+      "file": "nature-priority.avif",
+      "fileSize": 250588,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "99432902f1c15397514b686c8793d03998c035b351e7a6814138f01c13cf0cca",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "b93f0accfc8a74db300991c94b6be62795760976de5d287e2c94b6c67c6f8ad5"
+    },
+    {
+      "endFrame": 743,
+      "frameCount": 252,
+      "id": "legalization-duality",
+      "number": "03",
+      "startFrame": 492,
+      "title": "法律化与价值并列",
+      "durationMs": 8400,
+      "file": "legalization-duality.avif",
+      "fileSize": 346480,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "bfc2b36da73c09afedca6a4c97a08f9111a98ebec23239a7742b295b88bd1ca7",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "b93f0accfc8a74db300991c94b6be62795760976de5d287e2c94b6c67c6f8ad5"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "b93f0accfc8a74db300991c94b6be62795760976de5d287e2c94b6c67c6f8ad5",
+  "targetFps": 30,
+  "totalFileSize": 934330
+}

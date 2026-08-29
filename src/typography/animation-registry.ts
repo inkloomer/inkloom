@@ -181,6 +181,7 @@ import {typography as typographyAutoLegalReasoning} from '../animations/theoreti
 import {typography as typographyFam} from '../animations/theoretical-law/01/legal-families/animation.meta';
 import {typography as typographyMod} from '../animations/theoretical-law/01/legal-modernization/animation.meta';
 import {typography as typographyLm} from '../animations/theoretical-law/01/law-and-morality/animation.meta';
+import {typography as typographyHr} from '../animations/theoretical-law/01/law-and-human-rights/animation.meta';
 import {typography as typographyCsg} from '../animations/civil-procedure/12/compulsory-summons-gate/animation.meta';
 import {typography as typography109} from '../animations/theoretical-law/01/sources-of-law/animation.meta';
 import {typography as typography96} from '../animations/theoretical-law/17/legal-interpretation/animation.meta';
@@ -349,6 +350,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'legal-families': {metadata: typographyFam, scope: {animationId: 'legal-families', subject: 'theoretical-law', topic: '01'}},
   'legal-modernization': {metadata: typographyMod, scope: {animationId: 'legal-modernization', subject: 'theoretical-law', topic: '01'}},
   'law-and-morality': {metadata: typographyLm, scope: {animationId: 'law-and-morality', subject: 'theoretical-law', topic: '01'}},
+  'law-and-human-rights': {metadata: typographyHr, scope: {animationId: 'law-and-human-rights', subject: 'theoretical-law', topic: '01'}},
   'compulsory-summons-gate': {metadata: typographyCsg, scope: {animationId: 'compulsory-summons-gate', subject: 'civil-procedure', topic: '12'}},
   'sources-of-law': {metadata: typography109, scope: {animationId: 'sources-of-law', subject: 'theoretical-law', topic: '01'}},
   'legal-interpretation': {metadata: typography96, scope: {animationId: 'legal-interpretation', subject: 'theoretical-law', topic: '17'}},
