@@ -1,0 +1,16 @@
+{
+  "directionId": "ink-line-rule-workshop",
+  "family": "birch-rule-workshop",
+  "palette": "pale birch bench ground + lighter paper panels + inked graphite lines + cinnabar ink-line snap accents + teal verification accents + ochre measure marks",
+  "typography": "graphite headings on paper plaques, dark bench label tabs with ochre left bar, cinnabar stamps reserved for verdicts and mnemonics, teal chips for argument-side claims, thin ink underline for legal tests",
+  "composition": "the syllogism draws as a rule-and-funnel bench with premise stations feeding a verdict gate beside stacked goal plaques; discovery and argument face off as two tool-wall plaques joined by a same-process bridge; internal and external justification stand as twin workbenches over a five-line mnemonic strip",
+  "surface": "flat pale birch ground with faint straightedge hairlines, paper panels with hairline weathered borders and corner ink screws, no gradients, no rounded cards, no drop shadows",
+  "motion": "the ink line snaps taut between stations, premise panels slide onto the bench, versus plaques rise from opposite ends, the mnemonic strip underlines itself phrase by phrase",
+  "transition": "the ink line snaps once and the bench clears for the next spread",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/theoretical-law/01/application-of-law/",
+    "title": "绳墨规矩"
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "animationId": "application-of-law",
+  "compositionId": "ApplicationOfLaw",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-29T18:19:24.431Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 275,
+      "frameCount": 276,
+      "id": "goal-and-steps",
+      "number": "01",
+      "startFrame": 0,
+      "title": "法适用的目标与三段论",
+      "durationMs": 9200,
+      "file": "goal-and-steps.avif",
+      "fileSize": 472385,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "058b2417081c6487bba2ea0f33be557526541441d63dc61938301d59901c4c5f",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "cd8f402706b246abd37fab2974a5548c04cdbbb6b81cb281d7fafb851fc54962"
+    },
+    {
+      "endFrame": 539,
+      "frameCount": 264,
+      "id": "discovery-argument",
+      "number": "02",
+      "startFrame": 276,
+      "title": "法律发现与法律论证",
+      "durationMs": 8800,
+      "file": "discovery-argument.avif",
+      "fileSize": 578547,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "3fecc51648d88bcfce19019386c904a24bba249cf6b0150b5777038a9f5f242b",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "cd8f402706b246abd37fab2974a5548c04cdbbb6b81cb281d7fafb851fc54962"
+    },
+    {
+      "endFrame": 815,
+      "frameCount": 276,
+      "id": "justification",
+      "number": "03",
+      "startFrame": 540,
+      "title": "内部证成与外部证成",
+      "durationMs": 9200,
+      "file": "justification.avif",
+      "fileSize": 599486,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "b19cf5d4ce817e9b7b21b4bc19b421d81aad73e2d1170de936ea4aebdd7764e1",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "cd8f402706b246abd37fab2974a5548c04cdbbb6b81cb281d7fafb851fc54962"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "cd8f402706b246abd37fab2974a5548c04cdbbb6b81cb281d7fafb851fc54962",
+  "targetFps": 30,
+  "totalFileSize": 1650418
+}

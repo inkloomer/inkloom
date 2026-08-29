@@ -52,6 +52,7 @@ import {DURATION_FRAMES as LEGAL_VALIDITY_DURATION_FRAMES, FPS as LEGAL_VALIDITY
 import {DURATION_FRAMES as LEGAL_RELATIONS_DURATION_FRAMES, FPS as LEGAL_RELATIONS_FPS} from '../../animations/theoretical-law/01/legal-relations/remotion/storyboard';
 import {DURATION_FRAMES as LIABILITY_CONCURRENCE_DURATION_FRAMES, FPS as LIABILITY_CONCURRENCE_FPS} from '../../animations/theoretical-law/01/liability-concurrence/remotion/storyboard';
 import {DURATION_FRAMES as JUDICIAL_VS_ADMINISTRATIVE_DURATION_FRAMES, FPS as JUDICIAL_VS_ADMINISTRATIVE_FPS} from '../../animations/theoretical-law/01/judicial-vs-administrative/remotion/storyboard';
+import {DURATION_FRAMES as APPLICATION_OF_LAW_DURATION_FRAMES, FPS as APPLICATION_OF_LAW_FPS} from '../../animations/theoretical-law/01/application-of-law/remotion/storyboard';
 import {DURATION_FRAMES as ORGANS_RELAY_DURATION_FRAMES, FPS as ORGANS_RELAY_FPS} from '../../animations/criminal-procedure/03/organs-relay-map/remotion/storyboard';
 import {DURATION_FRAMES as JURISDICTION_SLUICE_DURATION_FRAMES, FPS as JURISDICTION_SLUICE_FPS} from '../../animations/criminal-procedure/04/jurisdiction-sluice-terrace/remotion/storyboard';
 import {DURATION_FRAMES as RECUSAL_SENTRY_DURATION_FRAMES, FPS as RECUSAL_SENTRY_FPS} from '../../animations/criminal-procedure/05/recusal-sentry-rotation/remotion/storyboard';
@@ -217,6 +218,7 @@ export const STYLE_DEMOS = [
   {id: 'theoretical-law-01-legal-relations', slug: 'legal-relations', title: '青花瓷档', direction: 'Cobalt Porcelain Registry', component: lazyDemo(() => import('../../animations/theoretical-law/01/legal-relations/remotion/LegalRelations').then((m) => ({default: m.LegalRelations}))), href: '/inkloom/objective/theoretical-law/01/legal-relations/', durationInFrames: LEGAL_RELATIONS_DURATION_FRAMES, fps: LEGAL_RELATIONS_FPS},
   {id: 'theoretical-law-01-liability-concurrence', slug: 'liability-concurrence', title: '双叉共鸣台', direction: 'Tuning Fork Resonance Bench', component: lazyDemo(() => import('../../animations/theoretical-law/01/liability-concurrence/remotion/LiabilityConcurrence').then((m) => ({default: m.LiabilityConcurrence}))), href: '/inkloom/objective/theoretical-law/01/liability-concurrence/', durationInFrames: LIABILITY_CONCURRENCE_DURATION_FRAMES, fps: LIABILITY_CONCURRENCE_FPS},
   {id: 'theoretical-law-01-judicial-vs-administrative', slug: 'judicial-vs-administrative', title: '对席案牍', direction: 'Paired Desk Hall', component: lazyDemo(() => import('../../animations/theoretical-law/01/judicial-vs-administrative/remotion/JudicialVsAdministrative').then((m) => ({default: m.JudicialVsAdministrative}))), href: '/inkloom/objective/theoretical-law/01/judicial-vs-administrative/', durationInFrames: JUDICIAL_VS_ADMINISTRATIVE_DURATION_FRAMES, fps: JUDICIAL_VS_ADMINISTRATIVE_FPS},
+  {id: 'theoretical-law-01-application-of-law', slug: 'application-of-law', title: '绳墨规矩', direction: 'Ink Line Rule Workshop', component: lazyDemo(() => import('../../animations/theoretical-law/01/application-of-law/remotion/ApplicationOfLaw').then((m) => ({default: m.ApplicationOfLaw}))), href: '/inkloom/objective/theoretical-law/01/application-of-law/', durationInFrames: APPLICATION_OF_LAW_DURATION_FRAMES, fps: APPLICATION_OF_LAW_FPS},
   ...COMMERCIAL_LAW_STYLE_DEMOS,
 ] as const satisfies readonly DemoDefinition[];
 
@@ -329,6 +331,7 @@ const DEMO_ADDED_AT: Record<(typeof STYLE_DEMOS)[number]['id'], string> = {
   'theoretical-law-01-legal-relations': '2026-08-30T01:20:00+08:00',
   'theoretical-law-01-liability-concurrence': '2026-08-30T01:50:00+08:00',
   'theoretical-law-01-judicial-vs-administrative': '2026-08-30T02:20:00+08:00',
+  'theoretical-law-01-application-of-law': '2026-08-30T02:50:00+08:00',
   ...COMMERCIAL_LAW_DEMO_ADDED_AT,
 };
 

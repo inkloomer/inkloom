@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "playerControlSafeBottom": 176,
+  "scenes": [
+    {
+      "id": "goal-and-steps",
+      "export": "GoalStepsScene",
+      "layout": "syllogism-bench-with-goal-pair",
+      "anchor": "flow-path",
+      "grammar": ["premise-stations", "verdict-gate", "goal-contrast-pair"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "enclosure", "annotation"],
+      "tokens": ["Ruler", "FileSearch", "Scale"],
+      "finalKnowledge": [
+        "goal-heading",
+        "syllogism-bench",
+        "fixed-correspondence-note",
+        "goal-pair",
+        "priority-verdict"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "discovery-argument",
+      "export": "DiscoveryArgumentScene",
+      "layout": "discovery-argument-versus-row",
+      "anchor": "comparison-axis",
+      "grammar": ["discovery-claims", "argument-claims", "same-process-bridge"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["Search", "Quote", "BookMarked"],
+      "finalKnowledge": [
+        "versus-heading",
+        "discovery-plaque",
+        "argument-plaque",
+        "same-process-bridge",
+        "textbook-verdict"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "justification",
+      "export": "JustificationScene",
+      "layout": "twin-justification-benches",
+      "anchor": "boundary",
+      "grammar": ["internal-derivation", "external-premise-check", "mnemonic-strip"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "thin-underline"],
+      "focalChannels": ["icon", "enclosure", "contrast", "spatial", "annotation"],
+      "tokens": ["Waypoints", "Compass"],
+      "finalKnowledge": [
+        "justification-heading",
+        "internal-bench",
+        "external-bench",
+        "mnemonic-strip"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}
