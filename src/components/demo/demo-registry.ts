@@ -100,6 +100,8 @@ import {FunctionsOfLaw} from '../../animations/theoretical-law/01/functions-of-l
 import {DURATION_FRAMES as FUNCTIONS_OF_LAW_DURATION_FRAMES, FPS as FUNCTIONS_OF_LAW_FPS} from '../../animations/theoretical-law/01/functions-of-law/remotion/storyboard';
 import {LimitationsOfLaw} from '../../animations/theoretical-law/01/limitations-of-law/remotion/LimitationsOfLaw';
 import {DURATION_FRAMES as LIMITATIONS_OF_LAW_DURATION_FRAMES, FPS as LIMITATIONS_OF_LAW_FPS} from '../../animations/theoretical-law/01/limitations-of-law/remotion/storyboard';
+import {OrgansRelayMap} from '../../animations/criminal-procedure/03/organs-relay-map/remotion/OrgansRelayMap';
+import {DURATION_FRAMES as ORGANS_RELAY_DURATION_FRAMES, FPS as ORGANS_RELAY_FPS} from '../../animations/criminal-procedure/03/organs-relay-map/remotion/storyboard';
 import {ConceptOfLawDispute} from '../../animations/theoretical-law/01/concept-of-law-dispute/remotion/ConceptOfLawDispute';
 import {DURATION_FRAMES as CONCEPT_OF_LAW_DURATION_FRAMES, FPS as CONCEPT_OF_LAW_FPS} from '../../animations/theoretical-law/01/concept-of-law-dispute/remotion/storyboard';
 import {SourcesOfInternationalLaw} from '../../animations/international-law/01/sources-of-international-law/remotion/SourcesOfInternationalLaw';
