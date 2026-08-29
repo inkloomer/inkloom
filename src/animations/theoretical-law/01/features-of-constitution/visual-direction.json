@@ -1,0 +1,16 @@
+{
+  "directionId": "cornerstone-terrace-workshop",
+  "family": "foundation-stone-terrace",
+  "palette": "limestone terrace ground + heavy stone-block panels + chisel-gold marks + crimson level lines + graphite ink",
+  "typography": "graphite headings on limestone plaques, dark terrace label tabs with gold left bar, crimson stamps reserved for exam verdicts, gold chips for superlatives, thin ink underline for tests",
+  "composition": "the three superlatives sit as a stone bench of content-effect-procedure blocks; the charter scene sets two quotation plaques on a reading plinth; the boundary scene draws a written-unwritten divide beside a fundamentals block rail",
+  "surface": "flat limestone ground with faint block-joint hairlines, stone panels with hairline weathered borders and corner chisel dots, no gradients, no rounded cards, no drop shadows",
+  "motion": "stone blocks settle onto the terrace one by one, level lines draw across, quotation plaques rise onto the plinth, the boundary wall fills brick by brick",
+  "transition": "a chisel tap sounds and the terrace clears for the next course",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/theoretical-law/01/features-of-constitution/",
+    "title": "奠基石台"
+  }
+}

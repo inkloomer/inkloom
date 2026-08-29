@@ -1,0 +1,70 @@
+{
+  "animationId": "features-of-constitution",
+  "compositionId": "FeaturesOfConstitution",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-29T20:53:55.571Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 263,
+      "frameCount": 264,
+      "id": "fundamental-law",
+      "number": "01",
+      "startFrame": 0,
+      "title": "根本法三个最",
+      "durationMs": 8800,
+      "file": "fundamental-law.avif",
+      "fileSize": 413047,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "ec97cb92bbb70ba7de435576de996175240b2a24c2b0ed60ca5b6d9bd47897e5",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "37dfc0d147bc21f4770f20dbafbd5f702bcc39397fe882413955d9e687fb7cdb"
+    },
+    {
+      "endFrame": 503,
+      "frameCount": 240,
+      "id": "charter-quote",
+      "number": "02",
+      "startFrame": 264,
+      "title": "公民权利保障书",
+      "durationMs": 8000,
+      "file": "charter-quote.avif",
+      "fileSize": 388097,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "517105ad620e04948baa3ca3074ba366df4f22183f285334bd3f307ecc9f8374",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "37dfc0d147bc21f4770f20dbafbd5f702bcc39397fe882413955d9e687fb7cdb"
+    },
+    {
+      "endFrame": 755,
+      "frameCount": 252,
+      "id": "boundaries-fundamentals",
+      "number": "03",
+      "startFrame": 504,
+      "title": "效力分界与三个最根本",
+      "durationMs": 8400,
+      "file": "boundaries-fundamentals.avif",
+      "fileSize": 417002,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "8841d7604ee1d467855a2dc9c32cd23b925a3e5d8e1d1f783f21db262e751341",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "37dfc0d147bc21f4770f20dbafbd5f702bcc39397fe882413955d9e687fb7cdb"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "37dfc0d147bc21f4770f20dbafbd5f702bcc39397fe882413955d9e687fb7cdb",
+  "targetFps": 30,
+  "totalFileSize": 1218146
+}

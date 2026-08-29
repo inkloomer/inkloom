@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "playerControlSafeBottom": 176,
+  "scenes": [
+    {
+      "id": "fundamental-law",
+      "export": "FundamentalLawScene",
+      "layout": "three-superlatives-stone-bench",
+      "anchor": "comparison-axis",
+      "grammar": ["content-block", "effect-block", "procedure-block"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["Landmark", "Scale", "Lock"],
+      "finalKnowledge": [
+        "fundamental-heading",
+        "content-block",
+        "effect-block",
+        "procedure-block",
+        "amendment-comparison"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "charter-quote",
+      "export": "CharterQuoteScene",
+      "layout": "quotation-plinth-board",
+      "anchor": "concept-icon",
+      "grammar": ["declaration-quote", "lenin-quote", "democratization-note"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "thin-underline"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["ScrollText", "Feather"],
+      "finalKnowledge": [
+        "charter-heading",
+        "declaration-plaque",
+        "lenin-plaque",
+        "democratization-note"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "boundaries-fundamentals",
+      "export": "BoundaryFundamentalsScene",
+      "layout": "written-unwritten-divide-with-fundamentals-rail",
+      "anchor": "boundary",
+      "grammar": ["written-unwritten-divide", "means-end-note", "fundamentals-rail"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["BookOpen", "Blocks"],
+      "finalKnowledge": [
+        "boundary-heading",
+        "written-unwritten-divide",
+        "means-end-note",
+        "fundamentals-rail"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}
