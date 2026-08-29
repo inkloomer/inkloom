@@ -176,6 +176,7 @@ import {typography as typographyAutoApplicationSilkLoom} from '../animations/adm
 import {typography as typographyAutoJudgmentExecutionClockwork} from '../animations/administrative-law/18/judgment-execution-clockwork/animation.meta';
 import {typography as typographyAutoReviewRelayNetwork} from '../animations/administrative-law/19/review-relay-network/animation.meta';
 import {typography as typographyAutoLighthouseWatchNetwork} from '../animations/administrative-law/20/lighthouse-watch-network/animation.meta';
+import {typography as typographyAutoDisclosureDarkroomStudio} from '../animations/administrative-law/21/disclosure-darkroom-studio/animation.meta';
 import {typography as typographyAutoLegalReasoning} from '../animations/theoretical-law/01/legal-reasoning/animation.meta';
 import {typography as typographyFam} from '../animations/theoretical-law/01/legal-families/animation.meta';
 import {typography as typographyMod} from '../animations/theoretical-law/01/legal-modernization/animation.meta';
@@ -197,6 +198,7 @@ import {typography as typography45} from '../animations/criminal/22/high-altitud
 import {typography as typography46} from '../animations/criminal/23/influence-intermediary/animation.meta';
 import {typography as typography47} from '../animations/criminal/23/official-intermediary/animation.meta';
 import {typography as typographyCt11} from '../animations/criminal/11/commencement-threshold-map/animation.meta';
+import {typography as typographyBel} from '../animations/commercial-economic-law/01/branch-wallet-ledger/animation.meta';
 import {typography as typography48} from '../animations/demo/demo-archival-dossier/animation.meta';
 import {typography as typography49} from '../animations/demo/demo-constructivist-geometry/animation.meta';
 import {typography as typography50} from '../animations/demo/demo-courtroom-blueprint/animation.meta';
@@ -342,6 +344,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'judgment-execution-clockwork': {metadata: typographyAutoJudgmentExecutionClockwork, scope: {animationId: 'judgment-execution-clockwork', subject: 'administrative-law', topic: '18'}},
   'review-relay-network': {metadata: typographyAutoReviewRelayNetwork, scope: {animationId: 'review-relay-network', subject: 'administrative-law', topic: '19'}},
   'lighthouse-watch-network': {metadata: typographyAutoLighthouseWatchNetwork, scope: {animationId: 'lighthouse-watch-network', subject: 'administrative-law', topic: '20'}},
+  'disclosure-darkroom-studio': {metadata: typographyAutoDisclosureDarkroomStudio, scope: {animationId: 'disclosure-darkroom-studio', subject: 'administrative-law', topic: '21'}},
   'legal-reasoning': {metadata: typographyAutoLegalReasoning, scope: {animationId: 'legal-reasoning', subject: 'theoretical-law', topic: '01'}},
   'legal-families': {metadata: typographyFam, scope: {animationId: 'legal-families', subject: 'theoretical-law', topic: '01'}},
   'legal-modernization': {metadata: typographyMod, scope: {animationId: 'legal-modernization', subject: 'theoretical-law', topic: '01'}},
@@ -406,6 +409,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'property-interests-keypoints': {metadata: typography42, scope: {animationId: 'property-interests-keypoints', subject: 'criminal', topic: '19'}},
   'theft-mistake-analysis': {metadata: typography43, scope: {animationId: 'theft-mistake-analysis', subject: 'criminal', topic: '19'}},
   'commencement-threshold-map': {metadata: typographyCt11, scope: {animationId: 'commencement-threshold-map', subject: 'criminal', topic: '11'}},
+  'branch-wallet-ledger': {metadata: typographyBel, scope: {animationId: 'branch-wallet-ledger', subject: 'commercial-economic-law', topic: '01'}},
   'fight-defense-diagram': {metadata: typography44, scope: {animationId: 'fight-defense-diagram', subject: 'criminal', topic: '22'}},
   'high-altitude-throwing-diagram': {metadata: typography45, scope: {animationId: 'high-altitude-throwing-diagram', subject: 'criminal', topic: '22'}},
   'influence-intermediary': {metadata: typography46, scope: {animationId: 'influence-intermediary', subject: 'criminal', topic: '23'}},

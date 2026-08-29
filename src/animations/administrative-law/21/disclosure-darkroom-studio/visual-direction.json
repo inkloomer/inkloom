@@ -1,0 +1,16 @@
+{
+  "directionId": "darkroom-safelight-studio",
+  "family": "darkroom-developing-studio",
+  "palette": "near-black darkroom, red safelight glow, amber developer tray light, cream photographic prints",
+  "typography": "title-face tray headers, printed ink text on cream prints, mono tray codes",
+  "composition": "party and defendant trays, acceptance screening bath, burden developing pan, four verdict troughs",
+  "surface": "darkroom walls with red safelight pools, glossy print surfaces with developer sheen",
+  "motion": "prints develop into view in legal order, red safelight pulses once per station, tray stamps close each bath",
+  "transition": "the print is lifted and moved to the next bath",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/administrative-law/21/disclosure-darkroom-studio/",
+    "title": "暗房显影室"
+  }
+}

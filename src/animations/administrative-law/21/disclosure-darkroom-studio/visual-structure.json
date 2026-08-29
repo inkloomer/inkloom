@@ -1,0 +1,116 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 4,
+  "scenes": [
+    {
+      "id": "party-and-defendant-trays",
+      "export": "PartyAndDefendantTraysScene",
+      "layout": "party-defendant-tray-pair",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "plaintiff-standing-and-defendant-rules-develop-in-two-trays",
+        "archival-custody-splits-applicable-law"
+      ],
+      "textTreatments": [
+        "label-block",
+        "chip",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "locator"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "plaintiff-standing-rule",
+        "defendant-disclosure-org",
+        "defendant-archival-split"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "acceptance-screening-bath",
+      "export": "AcceptanceScreeningBathScene",
+      "layout": "acceptance-screening-bath",
+      "anchor": "boundary",
+      "grammar": [
+        "should-accept-and-should-reject-prints-develop-in-separate-baths",
+        "trial-methods-printed-on-the-divider"
+      ],
+      "textTreatments": [
+        "label-block",
+        "external-negation",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "locator"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "accept-should-list",
+        "accept-should-not-list",
+        "trial-special-methods"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "burden-developing-pan",
+      "export": "BurdenDevelopingPanScene",
+      "layout": "burden-developing-pan",
+      "anchor": "document-fork",
+      "grammar": [
+        "defendant-and-plaintiff-burdens-develop-side-by-side",
+        "court-supplement-power-prints-at-the-pan-edge"
+      ],
+      "textTreatments": [
+        "label-block",
+        "thin-underline",
+        "chip"
+      ],
+      "focalChannels": [
+        "contrast",
+        "connector",
+        "enclosure"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "burden-defendant-list",
+        "burden-plaintiff-list",
+        "evidence-supplement-court"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "verdict-four-troughs",
+      "export": "VerdictFourTroughsScene",
+      "layout": "verdict-four-troughs",
+      "anchor": "flow-target",
+      "grammar": [
+        "four-verdict-troughs-hold-distinct-final-prints",
+        "twenty-working-day-deadline-prints-on-performance-trough"
+      ],
+      "textTreatments": [
+        "label-block",
+        "stamp",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "locator"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "verdict-dismiss-claims",
+        "verdict-perform-disclosure",
+        "verdict-confirm-illegal",
+        "verdict-forbid-publication"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}
