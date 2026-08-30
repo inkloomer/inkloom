@@ -1,0 +1,27 @@
+{
+  "directionId": "herbal-apothecary-cabinet",
+  "family": "herbal-drawer-apothecary",
+  "palette": "rice-paper wall + angelica red + tangerine orange + mint green + licorice gold",
+  "typography": "apothecary ink headlines, mint and angelica label blocks, boxed herb stamps, thin angelica underlines",
+  "composition": "an apothecary wall sorting evidence into drawer cells: twin attribute scales, a four-cell kind cabinet, and a class-pair prism with hearsay and opinion rails",
+  "surface": "translucent rice panels on warm paper with vertical herb-shelf hatching; no porcelain cobalt or chart navy",
+  "motion": "drawer cells and prism rows enter in reasoning order, dashes trace sort rules, stamps land with a slight rotation; no idle loops",
+  "transition": "the apothecary wall persists while each scene re-sorts it for a new question cluster",
+  "conceptTokens": {
+    "关联性": "Anchor",
+    "合法性": "ScanSearch",
+    "种类": "Boxes",
+    "物证": "Fingerprint",
+    "电子数据": "HardDrive",
+    "供述": "MessageSquareQuote",
+    "分类": "Columns3",
+    "传来": "Copy",
+    "真题": "GraduationCap"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/criminal-procedure-gold/07/evidence-apothecary-cabinet/",
+    "title": "百子药柜"
+  }
+}
