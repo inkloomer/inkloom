@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 2,
+  "playerControlSafeBottom": 168,
+  "scenes": [
+    {
+      "id": "guaranty-defence",
+      "export": "GuarantyDefenceScene",
+      "layout": "guaranty-defence-forging-desk",
+      "anchor": "comparison-axis",
+      "grammar": ["guarantor-presumption-rule", "proximate-defence-only-rule"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["Handshake", "Users", "AlertTriangle", "Shield", "Scale", "GraduationCap"],
+      "finalKnowledge": [
+        "gd-presume-desk",
+        "gd-cause-desk",
+        "gd-exam-strip"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "recourse-chain",
+      "export": "RecourseChainScene",
+      "layout": "recourse-subrogation-chain-desk",
+      "anchor": "document-fork",
+      "grammar": ["recourse-all-prior-endorsers-rule", "subrogation-re-recourse-rule"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["CornerUpLeft", "Users", "Handshake", "Gift", "Shield", "AlertTriangle", "GraduationCap"],
+      "finalKnowledge": [
+        "rc-chain-desk",
+        "rc-gratuitous-desk",
+        "rc-exam-strip"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}
