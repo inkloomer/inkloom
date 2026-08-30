@@ -1,0 +1,70 @@
+{
+  "animationId": "harbor-consulate-protocol",
+  "compositionId": "HarborConsulateProtocol",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-30T04:28:06.757Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 289,
+      "frameCount": 290,
+      "id": "requisition",
+      "number": "01",
+      "startFrame": 0,
+      "title": "征用不是征收：方舱改仓库案",
+      "durationMs": 9667,
+      "file": "requisition.avif",
+      "fileSize": 342288,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "46ba0733ce707c44a1adeb7cbe588f2e45c9de7296ee68da4a4f0a86a47b5752",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "3ef260ee45eb729b6296da4462737a53f240398725d494a39f91853d2f750f31"
+    },
+    {
+      "endFrame": 579,
+      "frameCount": 290,
+      "id": "negative-list",
+      "number": "02",
+      "startFrame": 290,
+      "title": "负面清单之外：国民待遇＋备案制",
+      "durationMs": 9667,
+      "file": "negative-list.avif",
+      "fileSize": 261491,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "22cebb0edc63b5c9ead305ade033ec73886c1bed58193974a4cb75578778d350",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "3ef260ee45eb729b6296da4462737a53f240398725d494a39f91853d2f750f31"
+    },
+    {
+      "endFrame": 839,
+      "frameCount": 260,
+      "id": "retroactive",
+      "number": "03",
+      "startFrame": 580,
+      "title": "溯及力与全题收束",
+      "durationMs": 8667,
+      "file": "retroactive.avif",
+      "fileSize": 249874,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "ed903e18e837790640972afb8735b707797d6120cc2176d6d93f129a8d79c3ff",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "3ef260ee45eb729b6296da4462737a53f240398725d494a39f91853d2f750f31"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "3ef260ee45eb729b6296da4462737a53f240398725d494a39f91853d2f750f31",
+  "targetFps": 30,
+  "totalFileSize": 853653
+}

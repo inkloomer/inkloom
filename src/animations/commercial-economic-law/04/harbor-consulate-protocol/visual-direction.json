@@ -1,0 +1,24 @@
+{
+  "directionId": "harbor-consulate-desk",
+  "family": "harbor-consulate-desk",
+  "palette": "dark harbor teal + consulate manifest cream + brass seals + cinnabar vetoes + sky notices + jade passes + ink black",
+  "typography": "harbor consulate headlines, manifest labels, square brass verdict stamps, dashed requisition rules",
+  "composition": "a requisition case desk forking lawful compensation against unlawful liability, a negative-list desk splitting outside from inside regimes, and a retroactive summary strip sealing the exam answers",
+  "surface": "dark harbor walls with manifest papers and brass frames; no glossy panels",
+  "motion": "manifests are stamped in legal order, the list gates split regimes, the retroactive strip seals the summary; no idle loops",
+  "transition": "the harbor consulate persists while each scene re-stages the same manifest desk for a new question",
+  "conceptTokens": {
+    "公共利益": "Landmark",
+    "补偿赔偿": "Scale",
+    "清单外": "ShieldCheck",
+    "清单内": "Ban",
+    "溯及力": "FileText",
+    "真题": "GraduationCap"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/commercial-economic-law/04/harbor-consulate-protocol/",
+    "title": "口岸关防署"
+  }
+}

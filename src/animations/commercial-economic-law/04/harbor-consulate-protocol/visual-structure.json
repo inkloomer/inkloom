@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "playerControlSafeBottom": 168,
+  "scenes": [
+    {
+      "id": "requisition",
+      "export": "RequisitionScene",
+      "layout": "requisition-case-desk",
+      "anchor": "document-fork",
+      "grammar": ["expropriation-vs-requisition-split", "compensation-liability-fork"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["Landmark", "Scale", "HandCoins", "GraduationCap"],
+      "finalKnowledge": [
+        "rq-case-desk",
+        "rq-fork-desk",
+        "rq-compensation-desk",
+        "rq-exam-strip"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "negative-list",
+      "export": "NegativeListScene",
+      "layout": "negative-list-desk",
+      "anchor": "comparison-axis",
+      "grammar": ["national-treatment-rule", "list-outside-inside-split"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "external-negation"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["ShieldCheck", "Ban", "FileText"],
+      "finalKnowledge": [
+        "nl-outside-desk",
+        "nl-inside-desk",
+        "nl-summary-desk"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "retroactive",
+      "export": "RetroactiveScene",
+      "layout": "retroactive-summary-desk",
+      "anchor": "timeline-gate",
+      "grammar": ["retroactive-application-rule", "answer-summary-rule"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["FileText", "GraduationCap"],
+      "finalKnowledge": [
+        "nl-retroactive-desk",
+        "nl-exam-strip",
+        "nl-bridge-strip"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

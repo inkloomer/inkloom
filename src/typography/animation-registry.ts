@@ -197,6 +197,9 @@ import {typography as typographyAutoBoundaryStoneGateHall} from '../animations/c
 import {typography as typographyAutoLpLoungeLimitedPartner} from '../animations/commercial-economic-law/02/lp-lounge-limited-partner/animation.meta';
 import {typography as typographyAutoTerminalStationWindDown} from '../animations/commercial-economic-law/02/terminal-station-wind-down/animation.meta';
 import {typography as typographyAutoSoleProprietorKitchenLegacy} from '../animations/commercial-economic-law/03/sole-proprietor-kitchen-legacy/animation.meta';
+import {typography as typographyAutoHarborConsulateProtocol} from '../animations/commercial-economic-law/04/harbor-consulate-protocol/animation.meta';
+import {typography as typographyAutoSocialSystem} from '../animations/theoretical-law/01/social-system/animation.meta';
+import {typography as typographyAutoRepublicConstitutionHistory} from '../animations/theoretical-law/03/republic-constitution-history/animation.meta';
 import {typography as typographyAutoReckoningAbacusDesk} from '../animations/administrative-law/24/reckoning-abacus-desk/animation.meta';
 import {typography as typographyAutoBambooScrollRestoration} from '../animations/administrative-law/23/bamboo-scroll-restoration/animation.meta';
 import {typography as typographyAutoLighthouseWatchNetwork} from '../animations/administrative-law/20/lighthouse-watch-network/animation.meta';
@@ -239,7 +242,6 @@ import {typography as typographyRea} from '../animations/theoretical-law/01/regi
 import {typography as typographySar} from '../animations/theoretical-law/01/special-administrative-regions/animation.meta';
 import {typography as typographyZhou} from '../animations/theoretical-law/03/zhou-legal-history/animation.meta';
 import {typography as typographySaw} from '../animations/theoretical-law/03/spring-autumn-warring-states/animation.meta';
-import {typography as typographyRch} from '../animations/theoretical-law/03/republic-constitution-history/animation.meta';
 import {typography as typographyHan} from '../animations/theoretical-law/03/han-confucianization/animation.meta';
 import {typography as typographyWjn} from '../animations/theoretical-law/03/wei-jin-nanbei-chaodai/animation.meta';
 import {typography as typographyTcl} from '../animations/theoretical-law/03/tang-code-liuzang-liusha/animation.meta';
@@ -413,6 +415,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'lp-lounge-limited-partner': {metadata: typographyAutoLpLoungeLimitedPartner, scope: {animationId: 'lp-lounge-limited-partner', subject: 'commercial-economic-law', topic: '02'}},
   'terminal-station-wind-down': {metadata: typographyAutoTerminalStationWindDown, scope: {animationId: 'terminal-station-wind-down', subject: 'commercial-economic-law', topic: '02'}},
   'sole-proprietor-kitchen-legacy': {metadata: typographyAutoSoleProprietorKitchenLegacy, scope: {animationId: 'sole-proprietor-kitchen-legacy', subject: 'commercial-economic-law', topic: '03'}},
+  'harbor-consulate-protocol': {metadata: typographyAutoHarborConsulateProtocol, scope: {animationId: 'harbor-consulate-protocol', subject: 'commercial-economic-law', topic: '04'}},
   'reckoning-abacus-desk': {metadata: typographyAutoReckoningAbacusDesk, scope: {animationId: 'reckoning-abacus-desk', subject: 'administrative-law', topic: '24'}},
   'bamboo-scroll-restoration': {metadata: typographyAutoBambooScrollRestoration, scope: {animationId: 'bamboo-scroll-restoration', subject: 'administrative-law', topic: '23'}},
   'lighthouse-watch-network': {metadata: typographyAutoLighthouseWatchNetwork, scope: {animationId: 'lighthouse-watch-network', subject: 'administrative-law', topic: '20'}},
@@ -498,12 +501,13 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'special-administrative-regions': {metadata: typographySar, scope: {animationId: 'special-administrative-regions', subject: 'theoretical-law', topic: '01'}},
   'zhou-legal-history': {metadata: typographyZhou, scope: {animationId: 'zhou-legal-history', subject: 'theoretical-law', topic: '03'}},
   'spring-autumn-warring-states': {metadata: typographySaw, scope: {animationId: 'spring-autumn-warring-states', subject: 'theoretical-law', topic: '03'}},
-  'republic-constitution-history': {metadata: typographyRch, scope: {animationId: 'republic-constitution-history', subject: 'theoretical-law', topic: '03'}},
   'han-confucianization': {metadata: typographyHan, scope: {animationId: 'han-confucianization', subject: 'theoretical-law', topic: '03'}},
   'wei-jin-nanbei-chaodai': {metadata: typographyWjn, scope: {animationId: 'wei-jin-nanbei-chaodai', subject: 'theoretical-law', topic: '03'}},
   'tang-code-liuzang-liusha': {metadata: typographyTcl, scope: {animationId: 'tang-code-liuzang-liusha', subject: 'theoretical-law', topic: '03'}},
   'qing-dynasty-examples': {metadata: typographyQde, scope: {animationId: 'qing-dynasty-examples', subject: 'theoretical-law', topic: '03'}},
   'economic-system': {metadata: typographyEs, scope: {animationId: 'economic-system', subject: 'theoretical-law', topic: '01'}},
+  'social-system': {metadata: typographyAutoSocialSystem, scope: {animationId: 'social-system', subject: 'theoretical-law', topic: '01'}},
+  'republic-constitution-history': {metadata: typographyAutoRepublicConstitutionHistory, scope: {animationId: 'republic-constitution-history', subject: 'theoretical-law', topic: '03'}},
   'profit-reserve-granary': {metadata: typographyPrg, scope: {animationId: 'profit-reserve-granary', subject: 'commercial-economic-law', topic: '01'}},
   'promoter-liability-ropewalk': {metadata: typographyPlr, scope: {animationId: 'promoter-liability-ropewalk', subject: 'commercial-economic-law', topic: '01'}},
   'fight-defense-diagram': {metadata: typography44, scope: {animationId: 'fight-defense-diagram', subject: 'criminal', topic: '22'}},
