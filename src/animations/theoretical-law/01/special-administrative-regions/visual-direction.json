@@ -1,0 +1,16 @@
+{
+  "directionId": "harbor-treaty-desk",
+  "family": "two-harbor-desk",
+  "palette": "harbor slate-blue ground + pale harbor-chart panels + vermilion seal accents + brass compass marks + dark ink notes",
+  "typography": "ink headings on harbor-chart plaques, dark desk label tabs with vermilion left bar, vermilion stamps reserved for central powers and invalid oaths, brass chips for hk-macau pairs, thin ink underline for tests",
+  "composition": "the central-sar power table splits as two facing desks; the officials scene lays hk-macau qualification pairs on a brass desk; the oath scene sets validity conditions against an invalid-oath wall with a basic-law interpretation strip",
+  "surface": "flat harbor slate ground with faint chart-rule hairlines, pale panels with hairline weathered borders and corner compass pins, no gradients, no rounded cards, no drop shadows",
+  "motion": "chart panels slide from facing sides, qualification pairs pair up with a settle, validity seals stamp once, the interpretation strip underlines itself",
+  "transition": "a tide line sweeps the desk and the harbor clears for the next chart",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/theoretical-law/01/special-administrative-regions/",
+    "title": "双港条约桌"
+  }
+}

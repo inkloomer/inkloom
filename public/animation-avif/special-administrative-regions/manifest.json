@@ -1,0 +1,70 @@
+{
+  "animationId": "special-administrative-regions",
+  "compositionId": "SpecialAdministrativeRegions",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-30T01:26:48.681Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 287,
+      "frameCount": 288,
+      "id": "power-split",
+      "number": "01",
+      "startFrame": 0,
+      "title": "中央与特区权力分配",
+      "durationMs": 9600,
+      "file": "power-split.avif",
+      "fileSize": 608048,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "3959201b43051ed353ff27df0530082aa2be530a7bf5b0a28858473bf13220a8",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "5cdb5d83b03ffafda3b052b757978be30f79f1ba2cba31bd7420532180b97304"
+    },
+    {
+      "endFrame": 575,
+      "frameCount": 288,
+      "id": "officials",
+      "number": "02",
+      "startFrame": 288,
+      "title": "港澳官员任职",
+      "durationMs": 9600,
+      "file": "officials.avif",
+      "fileSize": 660386,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "6d008edf388191338bd77a193ceac9cbc11e0f8d25ca46a2b8ab126ba325dde8",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "5cdb5d83b03ffafda3b052b757978be30f79f1ba2cba31bd7420532180b97304"
+    },
+    {
+      "endFrame": 863,
+      "frameCount": 288,
+      "id": "oath-interpret",
+      "number": "03",
+      "startFrame": 576,
+      "title": "宣誓与释法",
+      "durationMs": 9600,
+      "file": "oath-interpret.avif",
+      "fileSize": 587032,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "88450c391f065980568eaef7f6afdbb3dbab2e758af0474f012cb7b8b44817ef",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "5cdb5d83b03ffafda3b052b757978be30f79f1ba2cba31bd7420532180b97304"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "5cdb5d83b03ffafda3b052b757978be30f79f1ba2cba31bd7420532180b97304",
+  "targetFps": 30,
+  "totalFileSize": 1855466
+}

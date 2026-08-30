@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "playerControlSafeBottom": 176,
+  "scenes": [
+    {
+      "id": "power-split",
+      "export": "PowerSplitScene",
+      "layout": "two-desk-power-table",
+      "anchor": "role-pair",
+      "grammar": ["central-power-desk", "sar-autonomy-desk", "backfire-rule-note"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["Landmark", "Anchor", "Undo2"],
+      "finalKnowledge": [
+        "power-heading",
+        "central-desk",
+        "sar-desk",
+        "backfire-note"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "officials",
+      "export": "OfficialsScene",
+      "layout": "hk-macau-qualification-pair",
+      "anchor": "comparison-axis",
+      "grammar": ["chief-executive-pair", "judiciary-pair", "residence-difference-note"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["Crown", "Gavel", "Globe"],
+      "finalKnowledge": [
+        "officials-heading",
+        "qualification-pair",
+        "residence-difference-note"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "oath-interpret",
+      "export": "OathInterpretScene",
+      "layout": "oath-validity-wall-with-interpret-strip",
+      "anchor": "boundary",
+      "grammar": ["valid-oath-side", "invalid-oath-side", "interpret-strip"],
+      "textTreatments": ["label-block", "chip", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["Scale", "Ban", "BookOpen"],
+      "finalKnowledge": [
+        "oath-heading",
+        "validity-wall",
+        "interpret-strip"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

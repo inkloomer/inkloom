@@ -224,6 +224,7 @@ import {typography as typographyLl} from '../animations/theoretical-law/01/legis
 import {typography as typographyFc} from '../animations/theoretical-law/01/features-of-constitution/animation.meta';
 import {typography as typographyCo} from '../animations/theoretical-law/01/creation-of-constitution/animation.meta';
 import {typography as typographyCc} from '../animations/theoretical-law/01/constitution-classification/animation.meta';
+import {typography as typographySar} from '../animations/theoretical-law/01/special-administrative-regions/animation.meta';
 import {typography as typographyRea} from '../animations/theoretical-law/01/regional-ethnic-autonomy/animation.meta';
 import {typography as typographyCdv} from '../animations/theoretical-law/01/constitution-development/animation.meta';
 import {typography as typographyCp} from '../animations/theoretical-law/01/constitution-principles/animation.meta';
@@ -470,6 +471,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'features-of-constitution': {metadata: typographyFc, scope: {animationId: 'features-of-constitution', subject: 'theoretical-law', topic: '01'}},
   'creation-of-constitution': {metadata: typographyCo, scope: {animationId: 'creation-of-constitution', subject: 'theoretical-law', topic: '01'}},
   'constitution-classification': {metadata: typographyCc, scope: {animationId: 'constitution-classification', subject: 'theoretical-law', topic: '01'}},
+  'special-administrative-regions': {metadata: typographySar, scope: {animationId: 'special-administrative-regions', subject: 'theoretical-law', topic: '01'}},
   'regional-ethnic-autonomy': {metadata: typographyRea, scope: {animationId: 'regional-ethnic-autonomy', subject: 'theoretical-law', topic: '01'}},
   'constitution-development': {metadata: typographyCdv, scope: {animationId: 'constitution-development', subject: 'theoretical-law', topic: '01'}},
   'constitution-principles': {metadata: typographyCp, scope: {animationId: 'constitution-principles', subject: 'theoretical-law', topic: '01'}},
