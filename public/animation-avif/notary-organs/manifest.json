@@ -1,0 +1,53 @@
+{
+  "animationId": "notary-organs",
+  "compositionId": "NotaryOrgans",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-30T19:08:28.476Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 215,
+      "frameCount": 216,
+      "id": "concept-setup",
+      "number": "01",
+      "startFrame": 0,
+      "title": "公证机构的概念与设立",
+      "durationMs": 7200,
+      "file": "concept-setup.avif",
+      "fileSize": 468435,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "80cab7f269d1add1c7d4ee49dec1ef5a934891cb1be5190bc70803558f61804e",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "bf5236134e9d06a96fdf865fd489dc921951fb36c917b3eb7091d94ec9874c6e"
+    },
+    {
+      "endFrame": 431,
+      "frameCount": 216,
+      "id": "naming",
+      "number": "02",
+      "startFrame": 216,
+      "title": "冠名方式与字号限制",
+      "durationMs": 7200,
+      "file": "naming.avif",
+      "fileSize": 518039,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "fee25a99d32a5ab49a2ed985266ef659d0083bd70c07eb41ae238f45ce5f5fdd",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "bf5236134e9d06a96fdf865fd489dc921951fb36c917b3eb7091d94ec9874c6e"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "bf5236134e9d06a96fdf865fd489dc921951fb36c917b3eb7091d94ec9874c6e",
+  "targetFps": 30,
+  "totalFileSize": 986474
+}

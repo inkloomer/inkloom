@@ -1,0 +1,29 @@
+{
+  "animationId": "notary-organs",
+  "scenes": [
+    {
+      "id": "concept-setup",
+      "export": "ConceptSetupScene",
+      "layout": "concept-plus-principle",
+      "anchor": "main center",
+      "grammar": "概念（依法设立·不以营利为目的·独立行使公证职能·承担民事责任的证明机构）+设立原则（不按行政区划层层设立·统筹规划合理布局·县级最低）+设立条件四条",
+      "textTreatments": ["concept plaque", "principle rows"],
+      "focalChannels": ["concept plaque", "no-administrative-tiers"],
+      "tokens": ["Landmark", "Building2", "Users"],
+      "finalKnowledge": "concept-setup",
+      "statefulObjects": ["concept panel", "principle panel"]
+    },
+    {
+      "id": "naming",
+      "export": "NamingScene",
+      "layout": "three-naming-plates",
+      "anchor": "main center",
+      "grammar": "冠名三牌（县·不设区的市：省+县市名+公证处无字号/设区的市或市辖区：省+市名+字号+公证处/直辖市或市辖区：直辖市名+字号+公证处）+文字与字号限制，底带点睛",
+      "textTreatments": ["naming plates", "restrict seals"],
+      "focalChannels": ["three plates", "no-trade-name-in-county"],
+      "tokens": ["FileCheck", "Ban", "Scale"],
+      "finalKnowledge": "naming-rules",
+      "statefulObjects": ["naming plate x3"]
+    }
+  ]
+}

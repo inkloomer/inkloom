@@ -1,0 +1,15 @@
+{
+  "directionId": "notary-gate-plate",
+  "family": "gate-plate-notary",
+  "title": "公证挂牌处",
+  "subject": "theoretical-law",
+  "chapter": "04",
+  "concept": "公证挂牌处：设立原则与条件挂上门牌，三种冠名方式作为三块挂牌，字号限制作挂牌刻线。图形层主题；画面文字一律使用源笔记法考名词",
+  "palette": "挂牌堂 organs #2E3330、深堂 organsDeep #232825、面板 panel #F0EBDA、暗面板 panelDim #E1DCC7、镶边 edge #5E7168、墨字 ink #22302A、淡墨 inkSoft #516260、牌金 plate #C0983E、冠名青 naming #4E7D74、限字红 restrict #B04834、纸白 paper #F6F1E0",
+  "typography": "标题用 var(--inkloom-animation-title)，正文用 var(--inkloom-animation-body)；门牌行加粗法考名词，冠名公式用青牌",
+  "composition": "概念主牌 + 设立原则行 + 条件门牌 + 冠名三牌 + 源名词点睛带",
+  "surface": "挂牌堂墙纹 + 门牌框线 + 青牌纹",
+  "motion": "主牌悬升、门牌钉挂、青牌点亮",
+  "transition": "硬切换幕",
+  "catalog": ["考点80 公证机构"]
+}
