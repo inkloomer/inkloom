@@ -153,6 +153,9 @@ const isGeneratedInkLoomImage = (block, url) => {
   return pattern.test(markdownOf(block).trim());
 };
 
+const IMAGE_ONLY_BLOCK_PATTERN = /^\s*!\[[^\]]*\]\([^)]+\)(?:\s*\{:[^}]*\})?\s*$/;
+const isImageOnlyBlock = (block) => IMAGE_ONLY_BLOCK_PATTERN.test(String(block?.markdown || '').trim());
+
 const escapeAltText = (value) => value.replace(/[\]\r\n]+/g, ' ').trim();
 
 const verifyRemoteAsset = async (url) => {
@@ -213,6 +216,13 @@ const main = async () => {
     if (urlBlocks.length !== 1) throw new Error('The next sibling contains the URL but document duplicate lookup disagrees.');
     console.log(`EXISTS ${idOf(nextSibling)} is already the immediate next sibling.`);
     return;
+  }
+
+  if (isImageOnlyBlock(target)) {
+    throw new Error(`Target block ${options.targetId} is itself an image block; stacking images is prohibited. Anchor to the precise text block that states the knowledge point instead.`);
+  }
+  if (nextSibling && isImageOnlyBlock(nextSibling)) {
+    throw new Error(`Next sibling ${idOf(nextSibling)} is already an image block; inserting here would stack two images. Anchor to the precise text block after that image, or pick a more precise anchor for this scene.`);
   }
 
   const existing = urlBlocks[0] || null;
