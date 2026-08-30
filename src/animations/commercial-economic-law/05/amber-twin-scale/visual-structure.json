@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "playerControlSafeBottom": 168,
+  "scenes": [
+    {
+      "id": "twin-loans",
+      "export": "TwinLoansScene",
+      "layout": "twin-loan-counter",
+      "anchor": "comparison-axis",
+      "grammar": ["unregistered-mortgage-void-rule", "new-loan-common-benefit-rule"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["FileWarning", "HandCoins", "Scale", "GraduationCap"],
+      "finalKnowledge": [
+        "ts-jia-desk",
+        "ts-yi-desk",
+        "ts-recall-desk",
+        "ts-exam-strip"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "renewal-fees",
+      "export": "RenewalFeesScene",
+      "layout": "license-renewal-bench",
+      "anchor": "document-fork",
+      "grammar": ["operating-expense-common-benefit-rule", "procedure-expense-split"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["BadgeCheck", "Receipt", "GraduationCap"],
+      "finalKnowledge": [
+        "lr-fork-desk",
+        "lr-trap-desk",
+        "lr-exam-strip"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "priority-recap",
+      "export": "PriorityRecapScene",
+      "layout": "priority-recap-shelf",
+      "anchor": "timeline-gate",
+      "grammar": ["repayment-priority-ladder", "answer-summary-rule"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["Sprout", "GraduationCap", "Scale"],
+      "finalKnowledge": [
+        "pr-order-desk",
+        "pr-exam-strip",
+        "pr-bridge-strip"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "animationId": "amber-twin-scale",
+  "compositionId": "AmberTwinScale",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-30T06:43:28.741Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 289,
+      "frameCount": 290,
+      "id": "twin-loans",
+      "number": "01",
+      "startFrame": 0,
+      "title": "两笔借款对局：未登记与新借款",
+      "durationMs": 9667,
+      "file": "twin-loans.avif",
+      "fileSize": 525594,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "a9693f9af2dc37b77ba5fab8635eaef5bf7d8ae3218417742534eadf2f579d79",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "748b2c41b0f7458f2f559a24ab958ae167eefcb6033a250e1fec638968b0c353"
+    },
+    {
+      "endFrame": 579,
+      "frameCount": 290,
+      "id": "renewal-fees",
+      "number": "02",
+      "startFrame": 290,
+      "title": "5 万续期费：共益还是破产费用",
+      "durationMs": 9667,
+      "file": "renewal-fees.avif",
+      "fileSize": 460508,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "143b0eadacae67cc7c9cf5c3585cedd3b16d45e9b45094fd5bf1e14bc30f75b2",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "748b2c41b0f7458f2f559a24ab958ae167eefcb6033a250e1fec638968b0c353"
+    },
+    {
+      "endFrame": 839,
+      "frameCount": 260,
+      "id": "priority-recap",
+      "number": "03",
+      "startFrame": 580,
+      "title": "清偿顺位总收束：谁先谁后",
+      "durationMs": 8667,
+      "file": "priority-recap.avif",
+      "fileSize": 319342,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "9317664fcf52ba975bf143dd2cb4611a3db000f5479a9200d8bd40a7b5ddb42b",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "748b2c41b0f7458f2f559a24ab958ae167eefcb6033a250e1fec638968b0c353"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "748b2c41b0f7458f2f559a24ab958ae167eefcb6033a250e1fec638968b0c353",
+  "targetFps": 30,
+  "totalFileSize": 1305444
+}
