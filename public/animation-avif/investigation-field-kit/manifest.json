@@ -1,0 +1,70 @@
+{
+  "animationId": "investigation-field-kit",
+  "compositionId": "InvestigationFieldKit",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-30T15:10:37.071Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 264,
+      "frameCount": 265,
+      "id": "interrogation-row",
+      "number": "01",
+      "startFrame": 0,
+      "title": "讯问",
+      "durationMs": 8833,
+      "file": "interrogation-row.avif",
+      "fileSize": 308643,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "aca5351956c4420210b40cee2eba0af92280e11c359e49f98518352c0b7184f6",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "dfacd95db7435b4eca5c9311efa1bc852add9488822e6826478206ff0b3e3451"
+    },
+    {
+      "endFrame": 544,
+      "frameCount": 280,
+      "id": "appraisal-lineup-bench",
+      "number": "02",
+      "startFrame": 265,
+      "title": "鉴定 · 辨认",
+      "durationMs": 9333,
+      "file": "appraisal-lineup-bench.avif",
+      "fileSize": 287796,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "19c7eebf814d2ab3e4320d0b6755efd486a11ca300ef1d8c7ca6c8b0905351ec",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "dfacd95db7435b4eca5c9311efa1bc852add9488822e6826478206ff0b3e3451"
+    },
+    {
+      "endFrame": 844,
+      "frameCount": 300,
+      "id": "tech-surveillance-gate",
+      "number": "03",
+      "startFrame": 545,
+      "title": "技术侦查 · 核准追诉",
+      "durationMs": 10000,
+      "file": "tech-surveillance-gate.avif",
+      "fileSize": 319390,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "537de80039963a906f0a5b6081ade7af9f483f625a47f37c6630f5d247a292d0",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "dfacd95db7435b4eca5c9311efa1bc852add9488822e6826478206ff0b3e3451"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "dfacd95db7435b4eca5c9311efa1bc852add9488822e6826478206ff0b3e3451",
+  "targetFps": 30,
+  "totalFileSize": 915829
+}

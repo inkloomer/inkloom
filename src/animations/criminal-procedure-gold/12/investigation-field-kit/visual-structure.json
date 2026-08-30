@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "playerControlSafeBottom": 168,
+  "scenes": [
+    {
+      "id": "interrogation-row",
+      "export": "InterrogationRowScene",
+      "layout": "interrogation-row",
+      "anchor": "boundary",
+      "grammar": ["venue-rule-row", "rights-checklist-row"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "connector", "spatial"],
+      "tokens": ["MapPin", "MessageSquareQuote", "Bell", "PenLine", "Timer", "GraduationCap"],
+      "finalKnowledge": [
+        "venue-rule-card",
+        "rights-checklist-card"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "appraisal-lineup-bench",
+      "export": "AppraisalLineupScene",
+      "layout": "appraisal-lineup-bench",
+      "anchor": "comparison-axis",
+      "grammar": ["appraisal-verdict-pair", "lineup-mnemonic-rail"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "annotation", "spatial"],
+      "tokens": ["FlaskConical", "ScanFace", "GraduationCap"],
+      "finalKnowledge": [
+        "appraisal-card",
+        "lineup-mnemonic-card"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "tech-surveillance-gate",
+      "export": "TechSurveillanceScene",
+      "layout": "tech-surveillance-gate",
+      "anchor": "flow-path",
+      "grammar": ["three-partition-rule", "reenact-approach-rail"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["Radio", "Trash2", "FileBadge", "GraduationCap"],
+      "finalKnowledge": [
+        "three-partition-card",
+        "evidence-reapproval-card",
+        "approach-rail-card"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

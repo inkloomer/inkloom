@@ -1,0 +1,29 @@
+{
+  "directionId": "olive-field-kit-cart",
+  "family": "olive-field-kit-cart",
+  "palette": "dark olive cart field + brass tools + evidence-tag red + tool-steel blue + moss canvas",
+  "typography": "field-kit parchment headlines, brass and moss label blocks, double-rule tag stamps, thin brass underlines",
+  "composition": "an olive tool cart holding an interrogation venue row beside a rights checklist, an appraisal-and-lineup bench, and a technical-surveillance partition above a reapproval rail",
+  "surface": "translucent parchment panels over olive canvas with diagonal weave; double-rule tags; no teal hall or night sky",
+  "motion": "tool rows, bench cards and rails enter in reasoning order, dashes trace rules, stamps land with a slight rotation; no idle loops",
+  "transition": "the tool cart persists while each scene re-stocks it for a new question cluster",
+  "conceptTokens": {
+    "讯问": "MessageSquareQuote",
+    "讯问地点": "MapPin",
+    "告知": "Bell",
+    "自书": "PenLine",
+    "上限": "Timer",
+    "鉴定": "FlaskConical",
+    "辨认": "ScanFace",
+    "技术侦查": "Radio",
+    "销毁": "Trash2",
+    "核准": "FileBadge",
+    "真题": "GraduationCap"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/criminal-procedure-gold/12/investigation-field-kit/",
+    "title": "勘验工具车"
+  }
+}
