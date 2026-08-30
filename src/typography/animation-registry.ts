@@ -193,6 +193,7 @@ import {typography as typographyAutoPartnershipContributionManifest} from '../an
 import {typography as typographyAutoKitchenPassAuthorityWall} from '../animations/commercial-economic-law/02/kitchen-pass-authority-wall/animation.meta';
 import {typography as typographyAutoTellerWindowPersonalDebt} from '../animations/commercial-economic-law/02/teller-window-personal-debt/animation.meta';
 import {typography as typographyAutoShareSlipTransitVault} from '../animations/commercial-economic-law/02/share-slip-transit-vault/animation.meta';
+import {typography as typographyAutoBoundaryStoneGateHall} from '../animations/commercial-economic-law/02/boundary-stone-gate-hall/animation.meta';
 import {typography as typographyAutoReckoningAbacusDesk} from '../animations/administrative-law/24/reckoning-abacus-desk/animation.meta';
 import {typography as typographyAutoBambooScrollRestoration} from '../animations/administrative-law/23/bamboo-scroll-restoration/animation.meta';
 import {typography as typographyAutoLighthouseWatchNetwork} from '../animations/administrative-law/20/lighthouse-watch-network/animation.meta';
@@ -399,6 +400,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'kitchen-pass-authority-wall': {metadata: typographyAutoKitchenPassAuthorityWall, scope: {animationId: 'kitchen-pass-authority-wall', subject: 'commercial-economic-law', topic: '02'}},
   'teller-window-personal-debt': {metadata: typographyAutoTellerWindowPersonalDebt, scope: {animationId: 'teller-window-personal-debt', subject: 'commercial-economic-law', topic: '02'}},
   'share-slip-transit-vault': {metadata: typographyAutoShareSlipTransitVault, scope: {animationId: 'share-slip-transit-vault', subject: 'commercial-economic-law', topic: '02'}},
+  'boundary-stone-gate-hall': {metadata: typographyAutoBoundaryStoneGateHall, scope: {animationId: 'boundary-stone-gate-hall', subject: 'commercial-economic-law', topic: '02'}},
   'reckoning-abacus-desk': {metadata: typographyAutoReckoningAbacusDesk, scope: {animationId: 'reckoning-abacus-desk', subject: 'administrative-law', topic: '24'}},
   'bamboo-scroll-restoration': {metadata: typographyAutoBambooScrollRestoration, scope: {animationId: 'bamboo-scroll-restoration', subject: 'administrative-law', topic: '23'}},
   'lighthouse-watch-network': {metadata: typographyAutoLighthouseWatchNetwork, scope: {animationId: 'lighthouse-watch-network', subject: 'administrative-law', topic: '20'}},

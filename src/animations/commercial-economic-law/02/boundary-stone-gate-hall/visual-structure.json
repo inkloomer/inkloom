@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "playerControlSafeBottom": 168,
+  "scenes": [
+    {
+      "id": "expulsion",
+      "export": "ExpulsionScene",
+      "layout": "expulsion-timeline-desk",
+      "anchor": "timeline-gate",
+      "grammar": ["expulsion-effective-on-arrival", "pre-exit-debt-continuity"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["UserMinus", "GraduationCap", "HandCoins"],
+      "finalKnowledge": [
+        "exp-timeline-desk",
+        "exp-debt-desk",
+        "exp-recap-verdict"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "admission",
+      "export": "AdmissionScene",
+      "layout": "admission-gate-desk",
+      "anchor": "role-pair",
+      "grammar": ["unanimous-admission-rule", "pre-admission-debt-joinder"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["UserPlus", "HandCoins", "GraduationCap"],
+      "finalKnowledge": [
+        "adm-consent-desk",
+        "adm-debt-desk",
+        "adm-exam-strip"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "inheritance",
+      "export": "InheritanceScene",
+      "layout": "inheritance-settlement-desk",
+      "anchor": "document-fork",
+      "grammar": ["qualification-gated-inheritance", "settlement-not-liquidation"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["Scale", "Landmark", "Bell", "GraduationCap"],
+      "finalKnowledge": [
+        "inh-qualification-desk",
+        "inh-settlement-desk",
+        "inh-removal-notice-desk",
+        "inh-example-desk"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}
