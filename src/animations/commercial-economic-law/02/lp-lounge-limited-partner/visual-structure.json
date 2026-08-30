@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "playerControlSafeBottom": 168,
+  "scenes": [
+    {
+      "id": "red-line",
+      "export": "RedLineScene",
+      "layout": "redline-agreement-desk",
+      "anchor": "comparison-axis",
+      "grammar": ["labor-contribution-ban", "agreement-hierarchy-rule"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["Ban", "FileCheck", "Lock", "GraduationCap"],
+      "finalKnowledge": [
+        "red-labor-desk",
+        "red-agreement-desk",
+        "red-transfer-desk",
+        "red-exam-strip"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "four-errors",
+      "export": "FourErrorsScene",
+      "layout": "four-errors-grid",
+      "anchor": "document-fork",
+      "grammar": ["unanimous-all-partners-rule", "liability-subscribed-cap"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["Users", "HandCoins", "Search", "TrendingDown", "GraduationCap"],
+      "finalKnowledge": [
+        "err-admission-desk",
+        "err-liability-desk",
+        "err-lookup-desk",
+        "err-competition-desk",
+        "err-exam-strip"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "notice-desk",
+      "export": "NoticeDeskScene",
+      "layout": "rights-notice-desk",
+      "anchor": "flow-path",
+      "grammar": ["audited-report-right", "self-interest-lookup-scope"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["FileCheck", "ShieldCheck", "GraduationCap"],
+      "finalKnowledge": [
+        "not-audited-desk",
+        "not-wrong-desk",
+        "not-powers-desk",
+        "not-exam-strip"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}
