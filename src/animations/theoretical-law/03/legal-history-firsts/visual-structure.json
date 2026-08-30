@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "playerControlSafeBottom": 176,
+  "scenes": [
+    {
+      "id": "china-codes",
+      "export": "ChinaCodesScene",
+      "layout": "china-codes-display-row",
+      "anchor": "typographic-sequence",
+      "grammar": ["fajing-item", "yonghui-item", "song-qing-items"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["ScrollText", "BookOpen", "Landmark"],
+      "finalKnowledge": [
+        "codes-heading",
+        "codes-row"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "institutions",
+      "export": "InstitutionsScene",
+      "layout": "institution-firsts-bench",
+      "anchor": "role-pair",
+      "grammar": ["tang-liudian-item", "xiyuan-item", "ming-gao-item"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["Gavel", "HeartPulse"],
+      "finalKnowledge": [
+        "institutions-heading",
+        "institution-row"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "modern-foreign",
+      "export": "ModernForeignScene",
+      "layout": "modern-foreign-split-bench",
+      "anchor": "comparison-axis",
+      "grammar": ["modern-china-panel", "foreign-panel", "foreign-institutions-panel"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["Globe", "Landmark", "BookMarked"],
+      "finalKnowledge": [
+        "modern-heading",
+        "modern-china-panel",
+        "foreign-panel",
+        "foreign-institutions-panel"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

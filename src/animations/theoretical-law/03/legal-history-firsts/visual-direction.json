@@ -1,0 +1,16 @@
+{
+  "directionId": "trophy-case-firsts-gallery",
+  "family": "firsts-trophy-gallery",
+  "palette": "trophy hall warm brown ground + pale display panels + gold trophy accents + seal-red first-place stamps + dark ink annotations",
+  "typography": "ink headings on display panels, dark gallery label tabs with gold left bar, seal-red stamps for first-place verdicts, gold chips for categories, thin ink underline for dates",
+  "composition": "the four categories display as four gallery shelves with trophy items; the exam tips panel anchors the bottom as a verdict strip",
+  "surface": "flat warm brown ground with faint display-case hairlines, pale panels with hairline weathered borders and corner pins, no gradients, no rounded cards, no drop shadows",
+  "motion": "trophy items rise onto their shelves one by one, first-place stamps land with a press, the verdict strip underlines itself",
+  "transition": "a gallery light dims and the hall clears for the next exhibit",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/theoretical-law/03/legal-history-firsts/",
+    "title": "法制之最陈列馆"
+  }
+}

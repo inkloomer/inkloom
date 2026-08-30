@@ -1,0 +1,70 @@
+{
+  "animationId": "legal-history-firsts",
+  "compositionId": "LegalHistoryFirsts",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-30T06:38:53.594Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 263,
+      "frameCount": 264,
+      "id": "china-codes",
+      "number": "01",
+      "startFrame": 0,
+      "title": "中国法典之最",
+      "durationMs": 8800,
+      "file": "china-codes.avif",
+      "fileSize": 328270,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "6819321458f14b4c2ba4162677979abcb1b5466cc8a07123a17511f0efe55452",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "6350a93a2f3c1a3043e0695bd68e03150941a8004fdf3ec996b246d5e8a72631"
+    },
+    {
+      "endFrame": 503,
+      "frameCount": 240,
+      "id": "institutions",
+      "number": "02",
+      "startFrame": 264,
+      "title": "制度首创",
+      "durationMs": 8000,
+      "file": "institutions.avif",
+      "fileSize": 265611,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "e2869a32818505d39ea1c363b57e6b7a632ca5df5c2f931245e56593c31ab918",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "6350a93a2f3c1a3043e0695bd68e03150941a8004fdf3ec996b246d5e8a72631"
+    },
+    {
+      "endFrame": 791,
+      "frameCount": 288,
+      "id": "modern-foreign",
+      "number": "03",
+      "startFrame": 504,
+      "title": "近代与外国之最",
+      "durationMs": 9600,
+      "file": "modern-foreign.avif",
+      "fileSize": 545951,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "605656571d4ac174c7c24d74c06ae8feee606d9c6a09bf6288b113831c346cbb",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "6350a93a2f3c1a3043e0695bd68e03150941a8004fdf3ec996b246d5e8a72631"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "6350a93a2f3c1a3043e0695bd68e03150941a8004fdf3ec996b246d5e8a72631",
+  "targetFps": 30,
+  "totalFileSize": 1139832
+}

@@ -201,6 +201,7 @@ import {typography as typographyAutoHarborConsulateProtocol} from '../animations
 import {typography as typographyAutoSocialSystem} from '../animations/theoretical-law/01/social-system/animation.meta';
 import {typography as typographyAutoRepublicConstitutionHistory} from '../animations/theoretical-law/03/republic-constitution-history/animation.meta';
 import {typography as typographyAutoFrostTribunalDocket} from '../animations/commercial-economic-law/05/frost-tribunal-docket/animation.meta';
+import {typography as typographyAutoAmberTwinScale} from '../animations/commercial-economic-law/05/amber-twin-scale/animation.meta';
 import {typography as typographyAutoReckoningAbacusDesk} from '../animations/administrative-law/24/reckoning-abacus-desk/animation.meta';
 import {typography as typographyAutoBambooScrollRestoration} from '../animations/administrative-law/23/bamboo-scroll-restoration/animation.meta';
 import {typography as typographyAutoLighthouseWatchNetwork} from '../animations/administrative-law/20/lighthouse-watch-network/animation.meta';
@@ -233,6 +234,7 @@ import {typography as typographyLl} from '../animations/theoretical-law/01/legis
 import {typography as typographyFc} from '../animations/theoretical-law/01/features-of-constitution/animation.meta';
 import {typography as typographyCo} from '../animations/theoretical-law/01/creation-of-constitution/animation.meta';
 import {typography as typographyNdl} from '../animations/theoretical-law/03/new-democratic-legal-system/animation.meta';
+import {typography as typographyLhf} from '../animations/theoretical-law/03/legal-history-firsts/animation.meta';
 import {typography as typographyCc} from '../animations/theoretical-law/01/constitution-classification/animation.meta';
 import {typography as typographyCdv} from '../animations/theoretical-law/01/constitution-development/animation.meta';
 import {typography as typographyCp} from '../animations/theoretical-law/01/constitution-principles/animation.meta';
@@ -419,6 +421,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'sole-proprietor-kitchen-legacy': {metadata: typographyAutoSoleProprietorKitchenLegacy, scope: {animationId: 'sole-proprietor-kitchen-legacy', subject: 'commercial-economic-law', topic: '03'}},
   'harbor-consulate-protocol': {metadata: typographyAutoHarborConsulateProtocol, scope: {animationId: 'harbor-consulate-protocol', subject: 'commercial-economic-law', topic: '04'}},
   'frost-tribunal-docket': {metadata: typographyAutoFrostTribunalDocket, scope: {animationId: 'frost-tribunal-docket', subject: 'commercial-economic-law', topic: '05'}},
+  'amber-twin-scale': {metadata: typographyAutoAmberTwinScale, scope: {animationId: 'amber-twin-scale', subject: 'commercial-economic-law', topic: '05'}},
   'reckoning-abacus-desk': {metadata: typographyAutoReckoningAbacusDesk, scope: {animationId: 'reckoning-abacus-desk', subject: 'administrative-law', topic: '24'}},
   'bamboo-scroll-restoration': {metadata: typographyAutoBambooScrollRestoration, scope: {animationId: 'bamboo-scroll-restoration', subject: 'administrative-law', topic: '23'}},
   'lighthouse-watch-network': {metadata: typographyAutoLighthouseWatchNetwork, scope: {animationId: 'lighthouse-watch-network', subject: 'administrative-law', topic: '20'}},
@@ -512,6 +515,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'social-system': {metadata: typographyAutoSocialSystem, scope: {animationId: 'social-system', subject: 'theoretical-law', topic: '01'}},
   'republic-constitution-history': {metadata: typographyAutoRepublicConstitutionHistory, scope: {animationId: 'republic-constitution-history', subject: 'theoretical-law', topic: '03'}},
   'new-democratic-legal-system': {metadata: typographyNdl, scope: {animationId: 'new-democratic-legal-system', subject: 'theoretical-law', topic: '03'}},
+  'legal-history-firsts': {metadata: typographyLhf, scope: {animationId: 'legal-history-firsts', subject: 'theoretical-law', topic: '03'}},
   'profit-reserve-granary': {metadata: typographyPrg, scope: {animationId: 'profit-reserve-granary', subject: 'commercial-economic-law', topic: '01'}},
   'promoter-liability-ropewalk': {metadata: typographyPlr, scope: {animationId: 'promoter-liability-ropewalk', subject: 'commercial-economic-law', topic: '01'}},
   'fight-defense-diagram': {metadata: typography44, scope: {animationId: 'fight-defense-diagram', subject: 'criminal', topic: '22'}},
