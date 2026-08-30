@@ -1,0 +1,29 @@
+{
+  "animationId": "law-firm-types",
+  "scenes": [
+    {
+      "id": "partnerships",
+      "export": "PartnershipsScene",
+      "layout": "twin-partner-columns",
+      "anchor": "main center",
+      "grammar": "普通合伙（书面协议·3名合伙人·3年执业·30万资产·无限连带）对特殊合伙（书面协议·20名合伙人·3年执业·1000万资产·故意重大过失无限其余有限·非故意重大过失全体无限连带）",
+      "textTreatments": ["pillar plaques", "amount seals"],
+      "focalChannels": ["partner counts", "liability split"],
+      "tokens": ["Users", "Coins", "Scale"],
+      "finalKnowledge": "partnership-types",
+      "statefulObjects": ["pillar panel x2"]
+    },
+    {
+      "id": "individual-state",
+      "export": "IndividualStateScene",
+      "layout": "twin-plus-exception-strip",
+      "anchor": "main center",
+      "grammar": "个人所（5年执业·10万资产·个人财产无限责任）对国资所（2名律师·县级司法行政机关筹建·核拨编制经费·有限责任），底带点睛（无限连带为原则·两个例外）",
+      "textTreatments": ["pillar plaques", "exception seals"],
+      "focalChannels": ["individual conditions", "exception strip"],
+      "tokens": ["UserCheck", "Landmark", "Ban"],
+      "finalKnowledge": "individual-state-types",
+      "statefulObjects": ["pillar panel x2"]
+    }
+  ]
+}

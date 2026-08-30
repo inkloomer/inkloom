@@ -1,0 +1,15 @@
+{
+  "directionId": "four-pillar-liability-hall",
+  "family": "pillar-liability-hall",
+  "title": "四柱责府",
+  "subject": "theoretical-law",
+  "chapter": "04",
+  "concept": "四柱责府：四类律所如四根责任柱，柱身刻成立条件、柱础刻责任承担；两例外以梁上朱签呈现。图形层主题；画面文字一律使用源笔记法考名词",
+  "palette": "责府府墙 liability #33302F、深府 liabilityDeep #272423、面板 panel #F0ECDA、暗面板 panelDim #E2DEC8、镶边 edge #6B6459、墨字 ink #282421、淡墨 inkSoft #5B554B、柱金 pillarGold #C0983E、例外朱 exception #B04834、原则青 principleTeal #4E7D74、纸白 paper #F6F1E0",
+  "typography": "标题用 var(--inkloom-animation-title)，正文用 var(--inkloom-animation-body)；柱身行加粗法考名词，金额用刻度印",
+  "composition": "四柱对照 + 柱础责任 + 例外朱签 + 源名词点睛带",
+  "surface": "府墙石纹 + 柱础线 + 朱签缎带",
+  "motion": "立柱升起、柱础沉降、朱签展开",
+  "transition": "硬切换幕",
+  "catalog": ["考点73 律师事务所的分类和责任"]
+}

@@ -1,0 +1,53 @@
+{
+  "animationId": "law-firm-types",
+  "compositionId": "LawFirmTypes",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-30T17:28:44.867Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 263,
+      "frameCount": 264,
+      "id": "partnerships",
+      "number": "01",
+      "startFrame": 0,
+      "title": "合伙律师事务所",
+      "durationMs": 8800,
+      "file": "partnerships.avif",
+      "fileSize": 562569,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "7fae1a05a89437f3b23bf95cfac8f4c3e38a72dcf206299bbaa3d0672171c486",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "8760dbdd22dbad1f9bd3b19982a90206060f2965e92e651f1f65d6861ec63c58"
+    },
+    {
+      "endFrame": 503,
+      "frameCount": 240,
+      "id": "individual-state",
+      "number": "02",
+      "startFrame": 264,
+      "title": "个人所·国资所",
+      "durationMs": 8000,
+      "file": "individual-state.avif",
+      "fileSize": 641772,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "9d70a930f6fdd751bb5c9ad17aa195c793e446f2856d406768d79f78e1e4180b",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "8760dbdd22dbad1f9bd3b19982a90206060f2965e92e651f1f65d6861ec63c58"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "8760dbdd22dbad1f9bd3b19982a90206060f2965e92e651f1f65d6861ec63c58",
+  "targetFps": 30,
+  "totalFileSize": 1204341
+}
