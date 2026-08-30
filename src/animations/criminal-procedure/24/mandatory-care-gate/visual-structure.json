@@ -1,0 +1,77 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "entry-conditions-organs",
+      "export": "EntryConditionsScene",
+      "layout": "four-condition-gate-row-with-organs-band",
+      "anchor": "boundary",
+      "grammar": [
+        "four-gate-conditions-open-violence-danger-appraisal-and-continuing-risk",
+        "five-organs-chain-launch-apply-decide-execute-and-supervise",
+        "police-may-impose-temporary-protective-restraint-before-decision",
+        "mnemonic-gong-bao-ji-ding-names-the-four-gates"
+      ],
+      "textTreatments": ["chip", "thin-underline", "soft-highlight"],
+      "focalChannels": ["contrast", "enclosure", "icon", "annotation"],
+      "tokens": ["ShieldPlus"],
+      "finalKnowledge": ["condition-gates", "organs-band", "restraint-note"],
+      "statefulObjects": []
+    },
+    {
+      "id": "identity-launch-fork",
+      "export": "IdentityLaunchScene",
+      "layout": "identity-fork-with-jurisdiction-lane",
+      "anchor": "document-fork",
+      "grammar": [
+        "application-word-makes-the-patient-a-respondent",
+        "prosecution-route-keeps-defendant-status-with-ex-officio-launch",
+        "application-launch-stays-basic-court-only",
+        "prosecution-launch-may-rise-to-intermediate-or-high-court"
+      ],
+      "textTreatments": ["chip", "label-block", "thin-underline"],
+      "focalChannels": ["connector", "contrast", "enclosure", "annotation"],
+      "tokens": ["Split"],
+      "finalKnowledge": ["identity-fork", "word-note", "jurisdiction-lane"],
+      "statefulObjects": []
+    },
+    {
+      "id": "trial-rule-rows",
+      "export": "TrialRuleScene",
+      "layout": "trial-rule-stack-with-aid-column-and-decision-band",
+      "anchor": "flow-path",
+      "grammar": [
+        "panel-is-mandatory-while-hearing-may-be-waived-by-guardian-request",
+        "respondent-appearance-is-optional-but-requested-appearance-must-be-allowed",
+        "statutory-agent-must-be-summoned-with-near-kin-backup",
+        "legal-aid-counsel-within-three-days-and-appraisal-read-first",
+        "one-month-decision-uses-decision-not-judgment-or-ruling"
+      ],
+      "textTreatments": ["chip", "thin-underline", "external-negation"],
+      "focalChannels": ["contrast", "enclosure", "icon", "annotation"],
+      "tokens": ["HeartPulse"],
+      "finalKnowledge": ["trial-rules", "aid-column", "decision-band"],
+      "statefulObjects": []
+    },
+    {
+      "id": "outcome-relief-release",
+      "export": "OutcomeReliefScene",
+      "layout": "outcome-triptych-with-relief-and-release-bands",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "fit-cases-decide-treatment-or-acquit-then-decide",
+        "unfit-psychosis-rejects-with-strict-care-or-innocence",
+        "criminal-liability-rejects-and-returns-or-continues-trial",
+        "five-day-review-and-twenty-day-correction-never-second-instance",
+        "release-needs-court-approval-with-six-month-reapplication-gap"
+      ],
+      "textTreatments": ["chip", "soft-highlight", "external-negation"],
+      "focalChannels": ["contrast", "enclosure", "connector", "annotation"],
+      "tokens": ["DoorOpen"],
+      "finalKnowledge": ["outcome-triptych", "relief-band", "release-band"],
+      "statefulObjects": []
+    }
+  ]
+}

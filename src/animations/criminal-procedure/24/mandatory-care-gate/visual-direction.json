@@ -1,0 +1,23 @@
+{
+  "directionId": "mandatory-care-gate-psychosis",
+  "family": "mandatory-care-gate-family",
+  "palette": "care-ward deep pine green, patient-chart mint cards, sluice gate steel blue, caution amber, vitals coral, heal teal",
+  "typography": "WenKai ward headings with condition gate plates and punched mnemonic chips",
+  "composition": "a four-condition gate row over an organs chain band, an identity fork beside a jurisdiction lane, a trial-rule stack with an aid column, and an outcome triptych above relief and release bands",
+  "surface": "care-ward wall with soft grid glow, chart cards with steel gate borders, vitals seals and dashed observation underlines",
+  "motion": "condition gates light up one by one, the identity fork splits the two statuses apart, trial rules stack row by row, and the outcome triptych resolves before relief and release bands close the loop",
+  "transition": "the ward backdrop and soft grid persist while the chart cards are replaced",
+  "conceptTokens": {
+    "强制医疗": "HeartPulse",
+    "法院": "Gavel",
+    "检察院": "FileSignature",
+    "公安机关": "Shield",
+    "被申请人": "User"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/criminal-procedure/24/mandatory-care-gate/",
+    "title": "疗监护闸"
+  }
+}
