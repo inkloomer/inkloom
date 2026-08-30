@@ -1,0 +1,70 @@
+{
+  "animationId": "principles-chalkboard-hall",
+  "compositionId": "PrinciplesChalkboardHall",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-30T08:33:54.163Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 279,
+      "frameCount": 280,
+      "id": "principle-pillars",
+      "number": "01",
+      "startFrame": 0,
+      "title": "原则三柱：程序法定·权利保障·专属定罪",
+      "durationMs": 9333,
+      "file": "principle-pillars.avif",
+      "fileSize": 539288,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "2daeb9188b8324501ee11d582dd32bbceb8e10845b5e2f912f18d64a172539a2",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "86b3fed664d114afbb3dd14596383ee739d401941884fbf51bd26622ab7acdd2"
+    },
+    {
+      "endFrame": 579,
+      "frameCount": 300,
+      "id": "supervision-leniency-board",
+      "number": "02",
+      "startFrame": 280,
+      "title": "监督有边界，从宽有闸门",
+      "durationMs": 10000,
+      "file": "supervision-leniency-board.avif",
+      "fileSize": 477434,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "a199ee96f9f4774ab7b9c77947d64518c35ffca4bb24d92d2db90416e52968cd",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "86b3fed664d114afbb3dd14596383ee739d401941884fbf51bd26622ab7acdd2"
+    },
+    {
+      "endFrame": 879,
+      "frameCount": 300,
+      "id": "statute-bar-border-notes",
+      "number": "03",
+      "startFrame": 580,
+      "title": "第16条的边界与涉外的四条规矩",
+      "durationMs": 10000,
+      "file": "statute-bar-border-notes.avif",
+      "fileSize": 466399,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "3e1db601faaaa4b935e4dec0fbbdd0689f997eafdf2058946afb4e9b696a0626",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "86b3fed664d114afbb3dd14596383ee739d401941884fbf51bd26622ab7acdd2"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "86b3fed664d114afbb3dd14596383ee739d401941884fbf51bd26622ab7acdd2",
+  "targetFps": 30,
+  "totalFileSize": 1483121
+}

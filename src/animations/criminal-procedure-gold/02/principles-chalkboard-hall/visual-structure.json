@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "playerControlSafeBottom": 168,
+  "scenes": [
+    {
+      "id": "principle-pillars",
+      "export": "PrinciplePillarsScene",
+      "layout": "chalk-principle-pillars",
+      "anchor": "concept-icon",
+      "grammar": ["pillar-triad-set", "identity-timeline"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "spatial", "annotation"],
+      "tokens": ["ScrollText", "Shield", "Gavel", "GraduationCap"],
+      "finalKnowledge": [
+        "pillar-statutory-procedure",
+        "pillar-rights-protection",
+        "pillar-exclusive-conviction",
+        "pillars-verdict-strip"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "supervision-leniency-board",
+      "export": "SupervisionLeniencyScene",
+      "layout": "supervision-leniency-board",
+      "anchor": "flow-path",
+      "grammar": ["boundary-gate-rows", "condition-action-pairs"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "annotation"],
+      "tokens": ["Eye", "PenLine", "TrendingDown", "Scale", "GraduationCap"],
+      "finalKnowledge": [
+        "supervision-boundary-column",
+        "leniency-condition-gate",
+        "leniency-rule-cards",
+        "leniency-exam-strip"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "statute-bar-border-notes",
+      "export": "StatuteBarBorderNotesScene",
+      "layout": "statute-bar-border-notes",
+      "anchor": "boundary",
+      "grammar": ["statute-bar-fork", "rule-note-stack"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "enclosure", "contrast", "spatial"],
+      "tokens": ["Ban", "Globe", "Shield", "Languages", "Gavel", "GraduationCap"],
+      "finalKnowledge": [
+        "statute-bar-column",
+        "extraterritorial-rule-stack"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}
