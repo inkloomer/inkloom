@@ -1,0 +1,29 @@
+{
+  "animationId": "judicial-independence",
+  "scenes": [
+    {
+      "id": "three-steles",
+      "export": "ThreeStelesScene",
+      "layout": "three-stele-row",
+      "anchor": "main center",
+      "grammar": "三碑鼎立：干预记录通报追责碑（含2015内部人员过问三不得·拒绝权）/司法权威碑（出庭应诉·惩戒拒执藐视法庭）/履职保护碑（非因法定事由非经法定程序不得调离辞退免职降级）",
+      "textTreatments": ["stele plaques", "engraved clauses"],
+      "focalChannels": ["stele headings", "engraved clauses"],
+      "tokens": ["ScrollText", "Gavel", "Shield"],
+      "finalKnowledge": "three-mechanisms",
+      "statefulObjects": ["stele x3"]
+    },
+    {
+      "id": "rebuff-duty",
+      "export": "RebuffDutyScene",
+      "layout": "twin-column-rebuff",
+      "anchor": "main center",
+      "grammar": "对照室：左栏不当干预四相（打探·过问·说情·转递材料→有权拒绝），右栏正常履职（原则书面提出·口头记录在案·其他司法机关依程序了解），底带一句记",
+      "textTreatments": ["rebuff seals", "duty chips"],
+      "focalChannels": ["four improper acts", "written principle"],
+      "tokens": ["Ban", "FileSignature", "UserCheck"],
+      "finalKnowledge": "rebuff-versus-duty",
+      "statefulObjects": ["column panel x2"]
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "animationId": "judicial-independence",
+  "compositionId": "JudicialIndependence",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-30T12:09:30.465Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 251,
+      "frameCount": 252,
+      "id": "three-steles",
+      "number": "01",
+      "startFrame": 0,
+      "title": "碑廊三碑：护航独立职权",
+      "durationMs": 8400,
+      "file": "three-steles.avif",
+      "fileSize": 736932,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "f12e547da8f9d4b8ba320af721a830105f3dc9a3eea01855ae11c8e8ff57a638",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "9c00aab29ddd28d757ef17295e6917dfa0012edfb5f162f2bd824ca6254686e6"
+    },
+    {
+      "endFrame": 491,
+      "frameCount": 240,
+      "id": "rebuff-duty",
+      "number": "02",
+      "startFrame": 252,
+      "title": "对照室：拒绝权与书面道",
+      "durationMs": 8000,
+      "file": "rebuff-duty.avif",
+      "fileSize": 568702,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "f56ff8a04012a886feeafb00a92a5de409ae58ec9d11b5ab24df98767502e6d4",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "9c00aab29ddd28d757ef17295e6917dfa0012edfb5f162f2bd824ca6254686e6"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "9c00aab29ddd28d757ef17295e6917dfa0012edfb5f162f2bd824ca6254686e6",
+  "targetFps": 30,
+  "totalFileSize": 1305634
+}
