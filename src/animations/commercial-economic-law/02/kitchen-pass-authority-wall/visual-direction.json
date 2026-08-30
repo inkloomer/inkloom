@@ -1,0 +1,25 @@
+{
+  "directionId": "pass-kitchen-ticket-wall",
+  "family": "kitchen-pass-ticket-wall",
+  "palette": "dark steel kitchen + order ticket cream + chef red stamps + herb green passes + brass highlights + ink black",
+  "typography": "kitchen pass headlines, order ticket labels, square chef-brass verdict stamps, dashed ticket rails",
+  "composition": "an authority pass lane of unauthorized orders and objection calls, a unanimous seven-matters menu beside the ordinary majority board, and an expulsion desk with the four-commons red line and a profit ladder",
+  "surface": "dark steel walls with order tickets and chef stamps; no glossy panels",
+  "motion": "orders fly through the pass in legal order, the menu gate lights for unanimous items, expulsion stamps land on the desk; no idle loops",
+  "transition": "the kitchen pass persists while each scene re-stages the same ticket wall for a new question",
+  "conceptTokens": {
+    "越权出单": "Stamp",
+    "叫单异议": "Users",
+    "全票菜单": "FileText",
+    "家常菜": "Coins",
+    "摘帽除名": "UserX",
+    "四共红线": "Scale",
+    "真题": "GraduationCap"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/commercial-economic-law/02/kitchen-pass-authority-wall/",
+    "title": "后厨令牌墙"
+  }
+}
