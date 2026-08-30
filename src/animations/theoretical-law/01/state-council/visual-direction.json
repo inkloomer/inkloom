@@ -1,0 +1,30 @@
+{
+  "directionId": "rosewood-ministry-desk",
+  "family": "ministry-desk-set",
+  "title": "紫檀政务案",
+  "subject": "theoretical-law",
+  "chapter": "01",
+  "concept": "紫檀木政务长案上陈列三枚勋章与典章：决议文书盖朱批，组织法亮点作 brass 铭牌，部门调整画成双轨线",
+  "palette": {
+    "rosewood": "#4A2C24",
+    "rosewoodDeep": "#371F19",
+    "panel": "#F2E9D8",
+    "panelDim": "#E4D8C1",
+    "edge": "#7C5A46",
+    "ink": "#2B1D16",
+    "inkSoft": "#63503F",
+    "cinnabar": "#B03A2A",
+    "brass": "#C08A2E",
+    "celadon": "#5E8270",
+    "paper": "#F6F0E0"
+  },
+  "typography": {
+    "title": "var(--inkloom-animation-title)",
+    "body": "var(--inkloom-animation-body)"
+  },
+  "composition": "勋章三枚陈列 + 朱批文书行 + brass 铭牌 + 双轨线",
+  "surface": "紫檀木纹 + 朱批印泥纹 + 铜钉镶边",
+  "motion": "文书滑入、朱批盖印、铭牌点亮",
+  "transition": "硬切换幕",
+  "catalog": ["考点41 国务院"]
+}

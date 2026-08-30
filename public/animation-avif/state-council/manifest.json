@@ -1,0 +1,53 @@
+{
+  "animationId": "state-council",
+  "compositionId": "StateCouncil",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-30T08:30:56.272Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 251,
+      "frameCount": 252,
+      "id": "honors",
+      "number": "01",
+      "startFrame": 0,
+      "title": "三枚勋章的授予规矩",
+      "durationMs": 8400,
+      "file": "honors.avif",
+      "fileSize": 647922,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "0644aaac541e2d67e7910f03df54cd4a33d2972546bc04f49a4e9e2263e25e1a",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "62f3d78e48ee84096ed565e8924a565ffa9bd1213dcaf98fa6c8b21ee8aad924"
+    },
+    {
+      "endFrame": 527,
+      "frameCount": 276,
+      "id": "organization",
+      "number": "02",
+      "startFrame": 252,
+      "title": "首长负责制与组织法亮点",
+      "durationMs": 9200,
+      "file": "organization.avif",
+      "fileSize": 552817,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "01bf9972ffce4dd4b763dbc41d8a79ff896a5df384b75b9a3b068af64374016a",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "62f3d78e48ee84096ed565e8924a565ffa9bd1213dcaf98fa6c8b21ee8aad924"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "62f3d78e48ee84096ed565e8924a565ffa9bd1213dcaf98fa6c8b21ee8aad924",
+  "targetFps": 30,
+  "totalFileSize": 1200739
+}
