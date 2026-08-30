@@ -1,0 +1,70 @@
+{
+  "animationId": "judicial-fairness-efficiency",
+  "compositionId": "JudicialFairnessEfficiency",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-30T11:54:56.112Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 275,
+      "frameCount": 276,
+      "id": "fairness",
+      "number": "01",
+      "startFrame": 0,
+      "title": "明镜高悬：公正的意义与七要素",
+      "durationMs": 9200,
+      "file": "fairness.avif",
+      "fileSize": 406396,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "71c63bd3e14245ec27f4aa842687ab98f5d9948ee3fa3766506b7c2476174f8f",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "c6f9d7ef446a5223c13d5f4040906f3b87c7df21d120a41e7b3e3efb5cebc9c5"
+    },
+    {
+      "endFrame": 575,
+      "frameCount": 300,
+      "id": "openness-integrity",
+      "number": "02",
+      "startFrame": 276,
+      "title": "镜面铭带：公开与廉洁",
+      "durationMs": 10000,
+      "file": "openness-integrity.avif",
+      "fileSize": 892187,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "9c86eeec2b1163176a58f803cedf31cfa1a141e8d024a78fdda4737df42aed65",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "c6f9d7ef446a5223c13d5f4040906f3b87c7df21d120a41e7b3e3efb5cebc9c5"
+    },
+    {
+      "endFrame": 791,
+      "frameCount": 216,
+      "id": "efficiency",
+      "number": "03",
+      "startFrame": 576,
+      "title": "堂训天平：公正优先兼顾效率",
+      "durationMs": 7200,
+      "file": "efficiency.avif",
+      "fileSize": 385678,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "b261470c822cc2ec5a4d01d9f7bb57f503a8d3ca8df79eb02bd79716fac889f0",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "c6f9d7ef446a5223c13d5f4040906f3b87c7df21d120a41e7b3e3efb5cebc9c5"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "c6f9d7ef446a5223c13d5f4040906f3b87c7df21d120a41e7b3e3efb5cebc9c5",
+  "targetFps": 30,
+  "totalFileSize": 1684261
+}

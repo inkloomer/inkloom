@@ -28,6 +28,7 @@ import {DURATION_FRAMES as JUSTIFICATION_DEFENSE_NECESSITY_DURATION_FRAMES, FPS 
 import {DURATION_FRAMES as CRIME_NUMBER_RECKONING_DURATION_FRAMES, FPS as CRIME_NUMBER_RECKONING_FPS} from '../../animations/criminal/13/crime-number-reckoning/remotion/storyboard';
 import {DURATION_FRAMES as PENALTY_SCALE_OFFICE_DURATION_FRAMES, FPS as PENALTY_SCALE_OFFICE_FPS} from '../../animations/criminal/14/penalty-scale-office/remotion/storyboard';
 import {DURATION_FRAMES as SENTENCING_MEASURE_HALL_DURATION_FRAMES, FPS as SENTENCING_MEASURE_HALL_FPS} from '../../animations/criminal/15/sentencing-measure-hall/remotion/storyboard';
+import {DURATION_FRAMES as COMPLICITY_PRINCIPLES_JOINT_PRINCIPAL_DURATION_FRAMES, FPS as COMPLICITY_PRINCIPLES_JOINT_PRINCIPAL_FPS} from '../../animations/criminal/12/complicity-principles-joint-principal/remotion/storyboard';
 import {DURATION_FRAMES as EXECUTION_EXPIRY_STATION_DURATION_FRAMES, FPS as EXECUTION_EXPIRY_STATION_FPS} from '../../animations/criminal/16/execution-expiry-station/remotion/storyboard';
 import {DURATION_FRAMES as INFLUENCE_INTERMEDIARY_DURATION_FRAMES, FPS as INFLUENCE_INTERMEDIARY_FPS} from '../../animations/criminal/23/influence-intermediary/remotion/storyboard';
 import {DURATION_FRAMES as PRESERVATION_DURATION_FRAMES, FPS as PRESERVATION_FPS} from '../../animations/civil-procedure/11/evidence-preservation/remotion/storyboard';
@@ -273,6 +274,7 @@ export const STYLE_DEMOS = [
   {id: 'criminal-13-crime-number-reckoning', slug: 'crime-number-reckoning', title: '地磅计重站', direction: 'Weighbridge Toll Plaza', component: lazyDemo(() => import('../../animations/criminal/13/crime-number-reckoning/remotion/CrimeNumberReckoning').then((m) => ({default: m.CrimeNumberReckoning}))), href: '/inkloom/objective/criminal/13/crime-number-reckoning/', durationInFrames: CRIME_NUMBER_RECKONING_DURATION_FRAMES, fps: CRIME_NUMBER_RECKONING_FPS},
   {id: 'criminal-14-penalty-scale-office', slug: 'penalty-scale-office', title: '五线量刑谱', direction: 'Penalty Staff Score', component: lazyDemo(() => import('../../animations/criminal/14/penalty-scale-office/remotion/PenaltyScaleOffice').then((m) => ({default: m.PenaltyScaleOffice}))), href: '/inkloom/objective/criminal/14/penalty-scale-office/', durationInFrames: PENALTY_SCALE_OFFICE_DURATION_FRAMES, fps: PENALTY_SCALE_OFFICE_FPS},
   {id: 'criminal-15-sentencing-measure-hall', slug: 'sentencing-measure-hall', title: '染坊配色间', direction: 'Dye House Color Bench', component: lazyDemo(() => import('../../animations/criminal/15/sentencing-measure-hall/remotion/SentencingMeasureHall').then((m) => ({default: m.SentencingMeasureHall}))), href: '/inkloom/objective/criminal/15/sentencing-measure-hall/', durationInFrames: SENTENCING_MEASURE_HALL_DURATION_FRAMES, fps: SENTENCING_MEASURE_HALL_FPS},
+  {id: 'criminal-12-complicity-principles-joint-principal', slug: 'complicity-principles-joint-principal', title: '四人轿行', direction: 'Palanquin Crew Line', component: lazyDemo(() => import('../../animations/criminal/12/complicity-principles-joint-principal/remotion/ComplicityPrinciplesJointPrincipal').then((m) => ({default: m.ComplicityPrinciplesJointPrincipal}))), href: '/inkloom/objective/criminal/12/complicity-principles-joint-principal/', durationInFrames: COMPLICITY_PRINCIPLES_JOINT_PRINCIPAL_DURATION_FRAMES, fps: COMPLICITY_PRINCIPLES_JOINT_PRINCIPAL_FPS},
   {id: 'criminal-16-execution-expiry-station', slug: 'execution-expiry-station', title: '年轮锯木场', direction: 'Timber Ring Mill', component: lazyDemo(() => import('../../animations/criminal/16/execution-expiry-station/remotion/ExecutionExpiryStation').then((m) => ({default: m.ExecutionExpiryStation}))), href: '/inkloom/objective/criminal/16/execution-expiry-station/', durationInFrames: EXECUTION_EXPIRY_STATION_DURATION_FRAMES, fps: EXECUTION_EXPIRY_STATION_FPS},
   {id: 'criminal-23-influence-intermediary', slug: 'influence-intermediary', title: '关系引力图谱', direction: 'Private Influence Network', component: lazyDemo(() => import('../../animations/criminal/23/influence-intermediary/remotion/InfluenceIntermediary').then((m) => ({default: m.InfluenceIntermediary}))), href: '/inkloom/objective/criminal/23/joint-crime/', durationInFrames: INFLUENCE_INTERMEDIARY_DURATION_FRAMES, fps: INFLUENCE_INTERMEDIARY_FPS},
   {id: 'civil-procedure-17-summary-procedure-switchyard', slug: 'summary-procedure-switchyard', title: '程序转辙珐琅', direction: 'Enamel Procedure Switchyard', component: lazyDemo(() => import('../../animations/civil-procedure/17/summary-procedure-switchyard/remotion/SummaryProcedureSwitchyard').then((m) => ({default: m.SummaryProcedureSwitchyard}))), href: '/inkloom/objective/civil-procedure/17/summary-procedure-switchyard/', durationInFrames: SUMMARY_PROCEDURE_DURATION_FRAMES, fps: SUMMARY_PROCEDURE_FPS},
@@ -481,6 +483,7 @@ const DEMO_ADDED_AT: Record<(typeof STYLE_DEMOS)[number]['id'], string> = {
   'criminal-13-crime-number-reckoning': '2026-08-30T20:05:00+08:00',
   'criminal-14-penalty-scale-office': '2026-08-30T20:55:00+08:00',
   'criminal-15-sentencing-measure-hall': '2026-08-30T21:45:00+08:00',
+  'criminal-12-complicity-principles-joint-principal': '2026-08-31T02:20:00+08:00',
   'criminal-16-execution-expiry-station': '2026-08-30T22:30:00+08:00',
   'criminal-23-influence-intermediary': '2026-08-01T22:16:39+08:00',
   'civil-procedure-17-summary-procedure-switchyard': '2026-08-05T21:15:25+08:00',
@@ -607,6 +610,7 @@ const DEMO_ADDED_AT: Record<(typeof STYLE_DEMOS)[number]['id'], string> = {
   'commercial-economic-law-05-indigo-estate-vault': '2026-08-31T20:40:00+08:00',
   'commercial-economic-law-05-plum-appeals-clockhouse': '2026-08-31T22:10:00+08:00',
   'commercial-economic-law-05-quartz-sprout-greenhouse': '2026-08-31T23:40:00+08:00',
+  'commercial-economic-law-06-azure-draft-hall': '2026-09-01T01:10:00+08:00',
   'commercial-economic-law-02-lp-lounge-limited-partner': '2026-08-31T13:00:00+08:00',
   'commercial-economic-law-02-terminal-station-wind-down': '2026-08-31T13:50:00+08:00',
   'commercial-economic-law-02-boundary-stone-gate-hall': '2026-08-31T12:10:00+08:00',

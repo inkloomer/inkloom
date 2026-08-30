@@ -1,0 +1,41 @@
+{
+  "animationId": "judicial-fairness-efficiency",
+  "scenes": [
+    {
+      "id": "fairness",
+      "export": "FairnessScene",
+      "layout": "mirror-seven-nails",
+      "anchor": "main center",
+      "grammar": "明镜居中悬（意义+实体/程序公正），镜缘七钉（合法性/中立性/公开性/平等性/参与性/正确性/廉洁性）环列，底带两公正对照",
+      "textTreatments": ["mirror plaque", "nail chips"],
+      "focalChannels": ["mirror center", "seven nails"],
+      "tokens": ["Scale", "Eye", "UserCheck"],
+      "finalKnowledge": "fairness-elements",
+      "statefulObjects": ["mirror plaque", "nail chip x7"]
+    },
+    {
+      "id": "openness-integrity",
+      "export": "OpennessIntegrityScene",
+      "layout": "twin-inscription-panels",
+      "anchor": "main center",
+      "grammar": "左镜带公开性（阳光司法四公开·文书上网五例外·检务公开两档），右镜带廉洁性（六禁止·工作时间场所·3日报告·终身禁业）",
+      "textTreatments": ["inscription bands", "taboo seals"],
+      "focalChannels": ["openness exceptions", "six taboos"],
+      "tokens": ["Eye", "ScrollText", "Ban", "ShieldAlert"],
+      "finalKnowledge": "openness-integrity-rules",
+      "statefulObjects": ["inscription panel x2"]
+    },
+    {
+      "id": "efficiency",
+      "export": "EfficiencyScene",
+      "layout": "balance-hall-motto",
+      "anchor": "main center",
+      "grammar": "天平居中：三效率（时间/资源利用/成本），关系四句（永恒目标/适应形势/内在紧张/公正优先兼顾效率）为堂训金印",
+      "textTreatments": ["balance plaques", "motto seals"],
+      "focalChannels": ["hall motto", "three efficiencies"],
+      "tokens": ["Scale", "Hourglass", "Coins"],
+      "finalKnowledge": "efficiency-relation",
+      "statefulObjects": ["balance plaque x3"]
+    }
+  ]
+}
