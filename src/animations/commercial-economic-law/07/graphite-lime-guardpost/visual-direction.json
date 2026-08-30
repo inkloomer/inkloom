@@ -1,0 +1,26 @@
+{
+  "directionId": "graphite-lime-guardpost",
+  "family": "graphite-lime-guardpost",
+  "palette": "graphite guardpost + chalk green-white text + electric lime warnings + pine approvals + coral refusals + ink strips",
+  "typography": "graphite guardpost headlines, chalk card labels, square lime verdict stamps, dashed protection rules",
+  "composition": "a trustee-representative desk pairing the default lawsuit with the raised-funds purpose limits, and a suitability counter weighing the special written warning against the tilted protections of the lowest tier and mediation",
+  "surface": "graphite walls with chalk cards and lime frames; no glossy panels",
+  "motion": "the trustee mandate is stamped, the funding scale weighs purposes, the warning slip is served at the counter; no idle loops",
+  "transition": "the graphite lime guardpost persists while each scene re-stages the same guard bench for a new question",
+  "conceptTokens": {
+    "受托管理人": "ScrollText",
+    "代表诉讼": "Gavel",
+    "债券持有人会议": "Users",
+    "募集资金": "Coins",
+    "适当性管理": "Scale",
+    "书面风险警示": "FileWarning",
+    "调解": "Handshake",
+    "真题": "GraduationCap"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/commercial-economic-law/07/graphite-lime-guardpost/",
+    "title": "石墨护民哨"
+  }
+}

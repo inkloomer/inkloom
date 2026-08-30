@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 2,
+  "playerControlSafeBottom": 168,
+  "scenes": [
+    {
+      "id": "trustee-sue",
+      "export": "TrusteeSueScene",
+      "layout": "trustee-representative-desk",
+      "anchor": "document-fork",
+      "grammar": ["trustee-representative-litigation-rule", "raised-funds-purpose-rule"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["ScrollText", "Gavel", "Users", "Coins", "GraduationCap"],
+      "finalKnowledge": [
+        "tr-sue-desk",
+        "tr-funds-desk",
+        "tr-exam-strip"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "suitability",
+      "export": "SuitabilityScene",
+      "layout": "suitability-warning-counter",
+      "anchor": "comparison-axis",
+      "grammar": ["special-written-warning-rule", "minimal-tier-sales-ban-rule"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["Scale", "FileWarning", "ShieldCheck", "Handshake", "GraduationCap"],
+      "finalKnowledge": [
+        "sw-warn-desk",
+        "sw-protect-desk",
+        "sw-exam-strip"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

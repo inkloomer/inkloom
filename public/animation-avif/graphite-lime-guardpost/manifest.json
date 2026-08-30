@@ -1,0 +1,53 @@
+{
+  "animationId": "graphite-lime-guardpost",
+  "compositionId": "GraphiteLimeGuardpost",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-30T21:27:00.833Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 319,
+      "frameCount": 320,
+      "id": "trustee-sue",
+      "number": "01",
+      "startFrame": 0,
+      "title": "债券受托管理人与募集资金",
+      "durationMs": 10667,
+      "file": "trustee-sue.avif",
+      "fileSize": 356174,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "33406d76bd40034bf78e794a0c6343416ab6fbcbde9494a020f285e140fa8a32",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "66ee3cadffaebec851bcf10f80d6ac4b1ed30b2707517608c7990920558045db"
+    },
+    {
+      "endFrame": 639,
+      "frameCount": 320,
+      "id": "suitability",
+      "number": "02",
+      "startFrame": 320,
+      "title": "卖者尽责 · 买者自负",
+      "durationMs": 10667,
+      "file": "suitability.avif",
+      "fileSize": 377467,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "89f163116fdcf9c90eb3bcf35975d1a239282b234c5b09abb7a38fd2daa68395",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "66ee3cadffaebec851bcf10f80d6ac4b1ed30b2707517608c7990920558045db"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "66ee3cadffaebec851bcf10f80d6ac4b1ed30b2707517608c7990920558045db",
+  "targetFps": 30,
+  "totalFileSize": 733641
+}

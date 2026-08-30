@@ -225,6 +225,7 @@ import {typography as typographyAutoLacquerSealBureau} from '../animations/comme
 import {typography as typographyAutoJadeCheckCounter} from '../animations/commercial-economic-law/06/jade-check-counter/animation.meta';
 import {typography as typographyAutoCobaltTenderHall} from '../animations/commercial-economic-law/07/cobalt-tender-hall/animation.meta';
 import {typography as typographyAutoMarbleListingGate} from '../animations/commercial-economic-law/07/marble-listing-gate/animation.meta';
+import {typography as typographyAutoGraphiteLimeGuardpost} from '../animations/commercial-economic-law/07/graphite-lime-guardpost/animation.meta';
 import {typography as typographyAutoReckoningAbacusDesk} from '../animations/administrative-law/24/reckoning-abacus-desk/animation.meta';
 import {typography as typographyAutoBambooScrollRestoration} from '../animations/administrative-law/23/bamboo-scroll-restoration/animation.meta';
 import {typography as typographyAutoLighthouseWatchNetwork} from '../animations/administrative-law/20/lighthouse-watch-network/animation.meta';
@@ -533,6 +534,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'jade-check-counter': {metadata: typographyAutoJadeCheckCounter, scope: {animationId: 'jade-check-counter', subject: 'commercial-economic-law', topic: '06'}},
   'cobalt-tender-hall': {metadata: typographyAutoCobaltTenderHall, scope: {animationId: 'cobalt-tender-hall', subject: 'commercial-economic-law', topic: '07'}},
   'marble-listing-gate': {metadata: typographyAutoMarbleListingGate, scope: {animationId: 'marble-listing-gate', subject: 'commercial-economic-law', topic: '07'}},
+  'graphite-lime-guardpost': {metadata: typographyAutoGraphiteLimeGuardpost, scope: {animationId: 'graphite-lime-guardpost', subject: 'commercial-economic-law', topic: '07'}},
   'reckoning-abacus-desk': {metadata: typographyAutoReckoningAbacusDesk, scope: {animationId: 'reckoning-abacus-desk', subject: 'administrative-law', topic: '24'}},
   'bamboo-scroll-restoration': {metadata: typographyAutoBambooScrollRestoration, scope: {animationId: 'bamboo-scroll-restoration', subject: 'administrative-law', topic: '23'}},
   'lighthouse-watch-network': {metadata: typographyAutoLighthouseWatchNetwork, scope: {animationId: 'lighthouse-watch-network', subject: 'administrative-law', topic: '20'}},
