@@ -1,0 +1,70 @@
+{
+  "animationId": "wei-jin-nanbei-chaodai",
+  "compositionId": "WeiJinNanbeiChaodai",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-30T03:04:53.264Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 287,
+      "frameCount": 288,
+      "id": "four-codes",
+      "number": "01",
+      "startFrame": 0,
+      "title": "四大法典里程碑",
+      "durationMs": 9600,
+      "file": "four-codes.avif",
+      "fileSize": 383726,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "d6f316b8ba806f0399f45067ba2fddaf986023a5679281a5835b2a55664c892c",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "71fe2e9f37589cd181928e6c9ae79230f1e6c900c388f0d6126402911d87ae81"
+    },
+    {
+      "endFrame": 551,
+      "frameCount": 264,
+      "id": "ten-crimes",
+      "number": "02",
+      "startFrame": 288,
+      "title": "重罪十条到十恶",
+      "durationMs": 8800,
+      "file": "ten-crimes.avif",
+      "fileSize": 298621,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "e31f23b9f6c01412a31e17dcf785a6f974dc8b8919a0ff3391f61060ca97ff6f",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "71fe2e9f37589cd181928e6c9ae79230f1e6c900c388f0d6126402911d87ae81"
+    },
+    {
+      "endFrame": 791,
+      "frameCount": 240,
+      "id": "sui-transition",
+      "number": "03",
+      "startFrame": 552,
+      "title": "五刑五服与官当",
+      "durationMs": 8000,
+      "file": "sui-transition.avif",
+      "fileSize": 288491,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "c746a1a6a1cd48e156bde7f0f2b6e2c5b6564e049af388273aa27f71c6dcb89d",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "71fe2e9f37589cd181928e6c9ae79230f1e6c900c388f0d6126402911d87ae81"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "71fe2e9f37589cd181928e6c9ae79230f1e6c900c388f0d6126402911d87ae81",
+  "targetFps": 30,
+  "totalFileSize": 970838
+}

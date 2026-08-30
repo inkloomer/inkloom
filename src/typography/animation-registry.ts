@@ -227,6 +227,7 @@ import {typography as typographyLl} from '../animations/theoretical-law/01/legis
 import {typography as typographyFc} from '../animations/theoretical-law/01/features-of-constitution/animation.meta';
 import {typography as typographyCo} from '../animations/theoretical-law/01/creation-of-constitution/animation.meta';
 import {typography as typographyCc} from '../animations/theoretical-law/01/constitution-classification/animation.meta';
+import {typography as typographyWjn} from '../animations/theoretical-law/03/wei-jin-nanbei-chaodai/animation.meta';
 import {typography as typographyCdv} from '../animations/theoretical-law/01/constitution-development/animation.meta';
 import {typography as typographyCp} from '../animations/theoretical-law/01/constitution-principles/animation.meta';
 import {typography as typographyCss} from '../animations/theoretical-law/01/constitution-sources-structure/animation.meta';
@@ -479,6 +480,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'features-of-constitution': {metadata: typographyFc, scope: {animationId: 'features-of-constitution', subject: 'theoretical-law', topic: '01'}},
   'creation-of-constitution': {metadata: typographyCo, scope: {animationId: 'creation-of-constitution', subject: 'theoretical-law', topic: '01'}},
   'constitution-classification': {metadata: typographyCc, scope: {animationId: 'constitution-classification', subject: 'theoretical-law', topic: '01'}},
+  'wei-jin-nanbei-chaodai': {metadata: typographyWjn, scope: {animationId: 'wei-jin-nanbei-chaodai', subject: 'theoretical-law', topic: '03'}},
   'constitution-development': {metadata: typographyCdv, scope: {animationId: 'constitution-development', subject: 'theoretical-law', topic: '01'}},
   'constitution-principles': {metadata: typographyCp, scope: {animationId: 'constitution-principles', subject: 'theoretical-law', topic: '01'}},
   'constitution-sources-structure': {metadata: typographyCss, scope: {animationId: 'constitution-sources-structure', subject: 'theoretical-law', topic: '01'}},

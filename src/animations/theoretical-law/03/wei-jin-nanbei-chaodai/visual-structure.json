@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "playerControlSafeBottom": 176,
+  "scenes": [
+    {
+      "id": "four-codes",
+      "export": "FourCodesScene",
+      "layout": "four-code-tablet-row",
+      "anchor": "typographic-sequence",
+      "grammar": ["wei-lv-plaque", "jin-lv-plaque", "bei-wei-bei-qi-plaques"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "thin-underline"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["Landmark", "Scale", "BookOpen"],
+      "finalKnowledge": [
+        "codes-heading",
+        "code-row",
+        "eight-yi-note"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "ten-crimes",
+      "export": "TenCrimesScene",
+      "layout": "ten-crimes-evolution-tree",
+      "anchor": "flow-path",
+      "grammar": ["bei-qi-origin", "sui-tang-evolution", "eight-yi-exclusion"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial", "annotation"],
+      "tokens": ["AlertTriangle", "Shield"],
+      "finalKnowledge": [
+        "crimes-heading",
+        "lineage-tree",
+        "exclusion-note"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "sui-transition",
+      "export": "SuiTransitionScene",
+      "layout": "five-punishment-sui-transition",
+      "anchor": "boundary",
+      "grammar": ["five-punishment-strip", "five-suit-strip", "official-redeem-note"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "thin-underline"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["Scale", "Users"],
+      "finalKnowledge": [
+        "sui-heading",
+        "five-punishment-strip",
+        "five-suit-strip",
+        "official-redeem-note"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

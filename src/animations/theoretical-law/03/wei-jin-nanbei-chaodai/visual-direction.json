@@ -1,0 +1,16 @@
+{
+  "directionId": "stone-tablet-code-evolution",
+  "family": "carved-stone-code-lineage",
+  "palette": "carved-stone gray ground + pale stone tablet panels + carved ink inscriptions + seal-red lineage lines + brass era tags",
+  "typography": "carved headings on stone tablets, dark lineage label tabs with seal-red left bar, seal-red stamps for evolution milestones, brass era chips, thin ink underline for article counts",
+  "composition": "the four codes stand as a stone tablet row; the ten-crimes evolution draws as a lineage tree connecting Bei-Qi to Sui-Tang; the five-suit system maps as a gradient strip",
+  "surface": "flat carved stone ground with faint chisel hairlines, stone panels with hairline weathered borders and corner pegs, no gradients, no rounded cards, no drop shadows",
+  "motion": "tablets rise from the ground with a settle, era tags stamp onto each tablet, lineage lines draw connecting related codes, the five-suit strip fills segment by segment",
+  "transition": "a chisel tap sounds and the stone clears for the next tablet",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/theoretical-law/03/wei-jin-nanbei-chaodai/",
+    "title": "碑刻法统"
+  }
+}
