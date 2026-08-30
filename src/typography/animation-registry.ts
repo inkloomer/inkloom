@@ -244,9 +244,11 @@ import {typography as typographyAutoJustificationDefenseNecessity} from '../anim
 import {typography as typographyAutoCulpabilityRingAssay} from '../animations/criminal/10/culpability-ring-assay/animation.meta';
 import {typography as typographyAutoCrimeNumberReckoning} from '../animations/criminal/13/crime-number-reckoning/animation.meta';
 import {typography as typographyAutoPenaltyScaleOffice} from '../animations/criminal/14/penalty-scale-office/animation.meta';
+import {typography as typographyAutoSentencingMeasureHall} from '../animations/criminal/15/sentencing-measure-hall/animation.meta';
 import {typography as typographyAutoJurisdictionSeaChart} from '../animations/criminal-procedure-gold/04/jurisdiction-sea-chart/animation.meta';
 import {typography as typographyAutoRecusalBackstageSwap} from '../animations/criminal-procedure-gold/05/recusal-backstage-swap/animation.meta';
 import {typography as typographyAutoDefenseHeraldicHall} from '../animations/criminal-procedure-gold/06/defense-heraldic-hall/animation.meta';
+import {typography as typographyAutoEvidenceApothecaryCabinet} from '../animations/criminal-procedure-gold/07/evidence-apothecary-cabinet/animation.meta';
 import {typography as typographyBel} from '../animations/commercial-economic-law/01/branch-wallet-ledger/animation.meta';
 import {typography as typographyVpf} from '../animations/commercial-economic-law/01/veil-piercing-forge/animation.meta';
 import {typography as typographyOph} from '../animations/criminal-procedure-gold/01/overview-porcelain-hall/animation.meta';
@@ -267,6 +269,7 @@ import {typography as typographyCmc} from '../animations/theoretical-law/01/cent
 import {typography as typographySup} from '../animations/theoretical-law/01/supervisory-organs/animation.meta';
 import {typography as typographyLpc} from '../animations/theoretical-law/01/local-people-congresses/animation.meta';
 import {typography as typographyConst} from '../animations/theoretical-law/01/constitutional-supervision/animation.meta';
+import {typography as typographyJso} from '../animations/theoretical-law/04/judicial-system-overview/animation.meta';
 import {typography as typographyCc} from '../animations/theoretical-law/01/constitution-classification/animation.meta';
 import {typography as typographyCdv} from '../animations/theoretical-law/01/constitution-development/animation.meta';
 import {typography as typographyCp} from '../animations/theoretical-law/01/constitution-principles/animation.meta';
@@ -539,9 +542,11 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'culpability-ring-assay': {metadata: typographyAutoCulpabilityRingAssay, scope: {animationId: 'culpability-ring-assay', subject: 'criminal', topic: '10'}},
   'crime-number-reckoning': {metadata: typographyAutoCrimeNumberReckoning, scope: {animationId: 'crime-number-reckoning', subject: 'criminal', topic: '13'}},
   'penalty-scale-office': {metadata: typographyAutoPenaltyScaleOffice, scope: {animationId: 'penalty-scale-office', subject: 'criminal', topic: '14'}},
+  'sentencing-measure-hall': {metadata: typographyAutoSentencingMeasureHall, scope: {animationId: 'sentencing-measure-hall', subject: 'criminal', topic: '15'}},
   'jurisdiction-sea-chart': {metadata: typographyAutoJurisdictionSeaChart, scope: {animationId: 'jurisdiction-sea-chart', subject: 'criminal-procedure-gold', topic: '04'}},
   'recusal-backstage-swap': {metadata: typographyAutoRecusalBackstageSwap, scope: {animationId: 'recusal-backstage-swap', subject: 'criminal-procedure-gold', topic: '05'}},
   'defense-heraldic-hall': {metadata: typographyAutoDefenseHeraldicHall, scope: {animationId: 'defense-heraldic-hall', subject: 'criminal-procedure-gold', topic: '06'}},
+  'evidence-apothecary-cabinet': {metadata: typographyAutoEvidenceApothecaryCabinet, scope: {animationId: 'evidence-apothecary-cabinet', subject: 'criminal-procedure-gold', topic: '07'}},
   'branch-wallet-ledger': {metadata: typographyBel, scope: {animationId: 'branch-wallet-ledger', subject: 'commercial-economic-law', topic: '01'}},
   'veil-piercing-forge': {metadata: typographyVpf, scope: {animationId: 'veil-piercing-forge', subject: 'commercial-economic-law', topic: '01'}},
   'overview-porcelain-hall': {metadata: typographyOph, scope: {animationId: 'overview-porcelain-hall', subject: 'criminal-procedure-gold', topic: '01'}},
@@ -580,6 +585,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'supervisory-organs': {metadata: typographySup, scope: {animationId: 'supervisory-organs', subject: 'theoretical-law', topic: '01'}},
   'local-people-congresses': {metadata: typographyLpc, scope: {animationId: 'local-people-congresses', subject: 'theoretical-law', topic: '01'}},
   'constitutional-supervision': {metadata: typographyConst, scope: {animationId: 'constitutional-supervision', subject: 'theoretical-law', topic: '01'}},
+  'judicial-system-overview': {metadata: typographyJso, scope: {animationId: 'judicial-system-overview', subject: 'theoretical-law', topic: '04'}},
   'profit-reserve-granary': {metadata: typographyPrg, scope: {animationId: 'profit-reserve-granary', subject: 'commercial-economic-law', topic: '01'}},
   'promoter-liability-ropewalk': {metadata: typographyPlr, scope: {animationId: 'promoter-liability-ropewalk', subject: 'commercial-economic-law', topic: '01'}},
   'fight-defense-diagram': {metadata: typography44, scope: {animationId: 'fight-defense-diagram', subject: 'criminal', topic: '22'}},

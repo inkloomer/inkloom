@@ -1,0 +1,53 @@
+{
+  "animationId": "judicial-system-overview",
+  "compositionId": "JudicialSystemOverview",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-30T11:10:55.631Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 215,
+      "frameCount": 216,
+      "id": "concept",
+      "number": "01",
+      "startFrame": 0,
+      "title": "玉璧镌义：什么是司法",
+      "durationMs": 7200,
+      "file": "concept.avif",
+      "fileSize": 423231,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "93b6c8b12c559156c6b58c67f8469c7b6cfd468d1a5ec414dabd55cb4719b7a3",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "5f1fd110dfeb33f74ef1716feab38cc5f94d0586aae07ea60b7f30c2c8d4395c"
+    },
+    {
+      "endFrame": 431,
+      "frameCount": 216,
+      "id": "comparison",
+      "number": "02",
+      "startFrame": 216,
+      "title": "东西玉屏：司法机关的范围",
+      "durationMs": 7200,
+      "file": "comparison.avif",
+      "fileSize": 398377,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "d97a822b1951ece29684ab6e82682bbb5ebc8152b48bffa1a000684886128587",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "5f1fd110dfeb33f74ef1716feab38cc5f94d0586aae07ea60b7f30c2c8d4395c"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "5f1fd110dfeb33f74ef1716feab38cc5f94d0586aae07ea60b7f30c2c8d4395c",
+  "targetFps": 30,
+  "totalFileSize": 821608
+}

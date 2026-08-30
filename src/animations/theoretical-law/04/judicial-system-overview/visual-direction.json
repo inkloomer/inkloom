@@ -1,0 +1,30 @@
+{
+  "directionId": "inkstone-jade-hall",
+  "family": "jade-court-hall",
+  "title": "墨玉法堂",
+  "subject": "theoretical-law",
+  "chapter": "04",
+  "concept": "墨玉法堂开篇：司法概念以整块玉璧居中镌刻，近代源流（劳森·孟德斯鸠）作铜绿铭牌，英美与我国司法之别以东西玉屏对照",
+  "palette": {
+    "stone": "#2F3538",
+    "stoneDeep": "#22282B",
+    "panel": "#F0EBD9",
+    "panelDim": "#E1DCC6",
+    "edge": "#5F6A6E",
+    "ink": "#23292C",
+    "inkSoft": "#545E62",
+    "cinnabar": "#B3442E",
+    "bronzeGreen": "#4F7A6A",
+    "paleGold": "#CDA85C",
+    "paper": "#F6F1E0"
+  },
+  "typography": {
+    "title": "var(--inkloom-animation-title)",
+    "body": "var(--inkloom-animation-body)"
+  },
+  "composition": "玉璧定义居中 + 铜绿铭牌源流行 + 东西玉屏对照",
+  "surface": "墨玉墙纹 + 玉璧纹理 + 朱印",
+  "motion": "玉璧顿显、铭牌滑入、玉屏分立",
+  "transition": "硬切换幕",
+  "catalog": ["考点56 司法的概述"]
+}
