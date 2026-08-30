@@ -1,0 +1,70 @@
+{
+  "animationId": "spring-autumn-warring-states",
+  "compositionId": "SpringAutumnWarringStates",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-30T02:17:14.645Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 251,
+      "frameCount": 252,
+      "id": "casting",
+      "number": "01",
+      "startFrame": 0,
+      "title": "两次公布成文法",
+      "durationMs": 8400,
+      "file": "casting.avif",
+      "fileSize": 343128,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "841c7bbc0e1c7855e405bd6971ab0a58ebb2480003be3581a49c7b4abbba78e6",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "eeed7f0beb80a00087e8af6278609e752df191c2c6c93d5e6069d4fae3d4be35"
+    },
+    {
+      "endFrame": 515,
+      "frameCount": 264,
+      "id": "fajing",
+      "number": "02",
+      "startFrame": 252,
+      "title": "《法经》六篇",
+      "durationMs": 8800,
+      "file": "fajing.avif",
+      "fileSize": 340775,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "05088d0ad02e4f486a4c8fd32992263d65f04b36bd044a735888e33bdddd674e",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "eeed7f0beb80a00087e8af6278609e752df191c2c6c93d5e6069d4fae3d4be35"
+    },
+    {
+      "endFrame": 755,
+      "frameCount": 240,
+      "id": "shang-yang",
+      "number": "03",
+      "startFrame": 516,
+      "title": "商鞅变法四措施",
+      "durationMs": 8000,
+      "file": "shang-yang.avif",
+      "fileSize": 354499,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "c2af50bf31e553ab84e276dd96dcf463c2607141f0c56c1dc98d962aef863480",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "eeed7f0beb80a00087e8af6278609e752df191c2c6c93d5e6069d4fae3d4be35"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "eeed7f0beb80a00087e8af6278609e752df191c2c6c93d5e6069d4fae3d4be35",
+  "targetFps": 30,
+  "totalFileSize": 1038402
+}

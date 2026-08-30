@@ -235,6 +235,7 @@ import {typography as typographySsd} from '../animations/theoretical-law/01/stat
 import {typography as typographyRea} from '../animations/theoretical-law/01/regional-ethnic-autonomy/animation.meta';
 import {typography as typographySar} from '../animations/theoretical-law/01/special-administrative-regions/animation.meta';
 import {typography as typographyZhou} from '../animations/theoretical-law/03/zhou-legal-history/animation.meta';
+import {typography as typographySaw} from '../animations/theoretical-law/03/spring-autumn-warring-states/animation.meta';
 import {typography as typographyEs} from '../animations/theoretical-law/01/economic-system/animation.meta';
 import {typography as typographyPrg} from '../animations/commercial-economic-law/01/profit-reserve-granary/animation.meta';
 import {typography as typographyPlr} from '../animations/commercial-economic-law/01/promoter-liability-ropewalk/animation.meta';
@@ -485,6 +486,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'regional-ethnic-autonomy': {metadata: typographyRea, scope: {animationId: 'regional-ethnic-autonomy', subject: 'theoretical-law', topic: '01'}},
   'special-administrative-regions': {metadata: typographySar, scope: {animationId: 'special-administrative-regions', subject: 'theoretical-law', topic: '01'}},
   'zhou-legal-history': {metadata: typographyZhou, scope: {animationId: 'zhou-legal-history', subject: 'theoretical-law', topic: '03'}},
+  'spring-autumn-warring-states': {metadata: typographySaw, scope: {animationId: 'spring-autumn-warring-states', subject: 'theoretical-law', topic: '03'}},
   'economic-system': {metadata: typographyEs, scope: {animationId: 'economic-system', subject: 'theoretical-law', topic: '01'}},
   'profit-reserve-granary': {metadata: typographyPrg, scope: {animationId: 'profit-reserve-granary', subject: 'commercial-economic-law', topic: '01'}},
   'promoter-liability-ropewalk': {metadata: typographyPlr, scope: {animationId: 'promoter-liability-ropewalk', subject: 'commercial-economic-law', topic: '01'}},

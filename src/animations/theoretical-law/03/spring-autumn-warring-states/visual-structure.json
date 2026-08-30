@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "playerControlSafeBottom": 176,
+  "scenes": [
+    {
+      "id": "casting",
+      "export": "CastingScene",
+      "layout": "twin-cauldron-casting-plaques",
+      "anchor": "role-pair",
+      "grammar": ["first-casting-plaque", "second-casting-plaque", "date-contrast-note"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["Flame", "Landmark"],
+      "finalKnowledge": [
+        "casting-heading",
+        "first-casting-plaque",
+        "second-casting-plaque",
+        "date-contrast-note"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "fajing",
+      "export": "FajingScene",
+      "layout": "fajing-six-chapter-scroll",
+      "anchor": "typographic-sequence",
+      "grammar": ["status-plaque", "six-chapter-scroll", "jail-capture-note"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "thin-underline"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["ScrollText", "Scale"],
+      "finalKnowledge": [
+        "fajing-heading",
+        "status-plaque",
+        "six-chapter-scroll",
+        "jail-capture-note"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "shang-yang",
+      "export": "ShangYangScene",
+      "layout": "shang-yang-reform-plate",
+      "anchor": "boundary",
+      "grammar": ["law-to-lin-strip", "economy-strip", "harsh-law-strip"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["Gavel", "Users"],
+      "finalKnowledge": [
+        "shang-yang-heading",
+        "reform-plate",
+        "harsh-law-note"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

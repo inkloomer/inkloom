@@ -1,0 +1,16 @@
+{
+  "directionId": "casting-cauldron-chronicle",
+  "family": "bronze-casting-foundry",
+  "palette": "casting-earth ground + molten bronze plaques + charcoal frame + seal-red inscription accents + pale rubbing insets",
+  "typography": "molten headings on bronze panels, dark foundry label tabs with seal-red left bar, seal-red stamps for first-and-second verdicts, pale insets for quotation text, thin ink underline for dates",
+  "composition": "the two castings face off as twin cauldron plaques with date stamps; the fajing scene lays six chapters as a scroll strip; the shang-yang scene reform inscribes four reform measures on a casting plate",
+  "surface": "flat casting earth ground with faint mold hairlines, bronze panels with hairline weathered borders and corner rivets, no gradients, no rounded cards, no drop shadows",
+  "motion": "cauldrons cast with a settle, date stamps land once, the scroll strip unfolds left to right, reform lines carve in sequence",
+  "transition": "molten bronze pours and the foundry clears for the next casting",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/theoretical-law/03/spring-autumn-warring-states/",
+    "title": "铸鼎熔坊"
+  }
+}
