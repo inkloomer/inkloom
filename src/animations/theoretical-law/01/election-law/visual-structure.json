@@ -1,0 +1,91 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "playerControlSafeBottom": 176,
+  "scenes": [
+    {
+      "id": "principles",
+      "export": "PrinciplesScene",
+      "layout": "five-principle-rule-rail",
+      "anchor": "comparison-axis",
+      "grammar": ["universal-equal-principles", "direct-indirect-principle", "margin-secret-principles"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["Users", "Scale", "ArrowLeftRight", "ChevronsUp", "EyeOff"],
+      "finalKnowledge": [
+        "principles-heading",
+        "rule-rail",
+        "special-voters-note"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "hosts-voters",
+      "export": "HostsVotersScene",
+      "layout": "direct-indirect-compare-board",
+      "anchor": "role-pair",
+      "grammar": ["host-compare", "voter-precinct-compare", "voter-list-timeline"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "thin-underline"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["Landmark", "MapPin", "Clock"],
+      "finalKnowledge": [
+        "hosts-heading",
+        "compare-board",
+        "voter-list-timeline",
+        "precinct-rule-note"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "candidates",
+      "export": "CandidatesScene",
+      "layout": "candidate-fork-board",
+      "anchor": "document-fork",
+      "grammar": ["nomination-fork", "margin-fork", "publicity-fork"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "stamp"],
+      "focalChannels": ["icon", "contrast", "connector", "spatial", "annotation"],
+      "tokens": ["UserPlus", "Vote", "Calendar"],
+      "finalKnowledge": [
+        "candidates-heading",
+        "nomination-fork",
+        "margin-fork",
+        "publicity-fork"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "voting-result",
+      "export": "VotingResultScene",
+      "layout": "voting-gate-result-bench",
+      "anchor": "timeline-gate",
+      "grammar": ["double-half-gate", "overflow-lane", "shortfall-lane"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "motion", "annotation"],
+      "tokens": ["Vote", "CheckCircle2", "Repeat"],
+      "finalKnowledge": [
+        "voting-heading",
+        "gate-verdict",
+        "overflow-shortfall-lanes",
+        "announce-note"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "review-recall",
+      "export": "ReviewRecallScene",
+      "layout": "review-questions-wall-with-recall-rail",
+      "anchor": "boundary",
+      "grammar": ["five-questions-wall", "recall-rail", "protection-rail"],
+      "textTreatments": ["label-block", "chip", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["Search", "Ban", "Undo2"],
+      "finalKnowledge": [
+        "review-heading",
+        "five-questions-wall",
+        "recall-rail",
+        "protection-rail"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

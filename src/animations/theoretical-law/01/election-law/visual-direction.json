@@ -1,0 +1,16 @@
+{
+  "directionId": "election-ballot-gate",
+  "family": "ballot-gate-station",
+  "palette": "polling grove dark green ground + ballot-paper cream panels + bamboo-green tick accents + vermilion vote seals + ink rule lines + brass gate posts",
+  "typography": "ink headings on ballot-paper plaques, dark station label tabs with vermilion left bar, vermilion stamps reserved for double-half verdicts and prohibitions, bamboo chips for direct-election items, brass chips for indirect items, thin ink underline for tests",
+  "composition": "five principles queue as a rule rail; the direct-indirect compare board faces two stations; the candidate board forks nomination margins and publicity times; the voting bench runs ballots through a double-half gate to a result strip; the review wall closes with five questions and recall rules",
+  "surface": "flat dark green ground with faint gate-rail hairlines, ballot panels with hairline weathered borders and corner gate posts, no gradients, no rounded cards, no drop shadows",
+  "motion": "ballot panels slide through the gate line, principle rows tick in with bamboo marks, the fork arms swing once, seals stamp on passage verdicts, the review wall bricks fill",
+  "transition": "a gate arm lifts and the station clears for the next ballot",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/theoretical-law/01/election-law/",
+    "title": "选票闸坊"
+  }
+}
