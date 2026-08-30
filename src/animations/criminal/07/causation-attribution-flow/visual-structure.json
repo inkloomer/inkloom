@@ -1,0 +1,93 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "playerControlSafeBottom": 168,
+  "scenes": [
+    {
+      "id": "cause-gate-three-uses",
+      "export": "CauseGateThreeUsesScene",
+      "layout": "cause-uses-gate-berm",
+      "anchor": "flow-path",
+      "grammar": ["three-uses-strip", "danger-permit-gates"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["Zap"],
+      "finalKnowledge": [
+        "use-attempt",
+        "use-aggravated",
+        "use-negligent",
+        "gate-no-danger",
+        "gate-not-permitted"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "effect-gate-three-checks",
+      "export": "EffectGateThreeChecksScene",
+      "layout": "effect-checks-fog-board",
+      "anchor": "comparison-axis",
+      "grammar": ["reality-norm-jurisdiction-checks", "dual-cause-overlay"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
+      "tokens": [],
+      "finalKnowledge": [
+        "check-reality",
+        "check-norm",
+        "check-jurisdiction",
+        "dual-cause-overlay"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "intervener-two-step",
+      "export": "IntervenerTwoStepScene",
+      "layout": "two-step-fork-ladder",
+      "anchor": "document-fork",
+      "grammar": ["abnormality-then-weight-stepwise", "theory-replacement-move"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["MapPin", "Users", "Zap"],
+      "finalKnowledge": [
+        "theory-replace-strip",
+        "step-one-board",
+        "step-two-board",
+        "two-step-quick-rows"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "intervener-case-rows",
+      "export": "IntervenerCaseRowsScene",
+      "layout": "three-kind-case-rows",
+      "anchor": "comparison-axis",
+      "grammar": ["victim-third-physique-rows", "suicide-exception-pair"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
+      "tokens": ["Users"],
+      "finalKnowledge": [
+        "kind-victim-board",
+        "kind-suicide-exceptions",
+        "kind-third-board",
+        "kind-block-rescue-rule",
+        "kind-physique-rule"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "unascertainable-fog",
+      "export": "UnascertainableFogScene",
+      "layout": "fog-split-verdict-board",
+      "anchor": "boundary",
+      "grammar": ["joint-all-responsibility", "doubt-favor-early-death"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "connector"],
+      "tokens": ["Scale", "Users", "GraduationCap"],
+      "finalKnowledge": [
+        "fog-joint-board",
+        "fog-single-board",
+        "fog-case-rows"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

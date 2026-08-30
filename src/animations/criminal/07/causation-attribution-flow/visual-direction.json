@@ -1,0 +1,24 @@
+{
+  "directionId": "domino-run-table",
+  "family": "domino-run-table",
+  "pattern-note": "causation chains staged as domino runs on a walnut table",
+  "palette": "胡桃木桌台 felt + 米白骨牌 domino + 漆红点位 lacquer + 推杆橙 pusher + 松石青 teal",
+  "typography": "heavy run-log headings, square domino chips, pointed label blocks, double-frame verdict tiles",
+  "composition": "each scene lays a domino run: the cause gate checks the first tile, the effect gate checks the last tile, the fork splits abnormality and weight, and the fog board hides the fallen order",
+  "surface": "felt table grain, square pale tiles, dashed independent-relation routes, double-frame verdict tiles; no glossy panels",
+  "motion": "tiles enter along the run in reasoning order, fork gates split the path, verdict tiles land at the attribution point; no idle loops",
+  "transition": "the table felt and tile row persist while each scene re-lays the run",
+  "conceptTokens": {
+    "危害行为": "Zap",
+    "介入因素": "MapPin",
+    "存疑有利于被告": "Scale",
+    "共犯": "Users",
+    "真题": "GraduationCap"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/criminal/07/causation-attribution-flow/",
+    "title": "多米诺推演台"
+  }
+}

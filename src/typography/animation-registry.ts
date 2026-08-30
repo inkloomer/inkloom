@@ -235,6 +235,7 @@ import {typography as typographyAutoInterestRightsBalance} from '../animations/c
 import {typography as typographyAutoIdentityUnitSubject} from '../animations/criminal/04/identity-unit-subject/animation.meta';
 import {typography as typographyAutoConductOmissionGates} from '../animations/criminal/05/conduct-omission-gates/animation.meta';
 import {typography as typographyAutoHarmResultAggravation} from '../animations/criminal/06/harm-result-aggravation/animation.meta';
+import {typography as typographyAutoCausationAttributionFlow} from '../animations/criminal/07/causation-attribution-flow/animation.meta';
 import {typography as typographyBel} from '../animations/commercial-economic-law/01/branch-wallet-ledger/animation.meta';
 import {typography as typographyVpf} from '../animations/commercial-economic-law/01/veil-piercing-forge/animation.meta';
 import {typography as typographyOph} from '../animations/criminal-procedure-gold/01/overview-porcelain-hall/animation.meta';
@@ -248,6 +249,7 @@ import {typography as typographyGa} from '../animations/theoretical-law/01/grass
 import {typography as typographyCfr} from '../animations/theoretical-law/01/citizen-fundamental-rights/animation.meta';
 import {typography as typographyNsc} from '../animations/theoretical-law/01/npc-standing-committee/animation.meta';
 import {typography as typographyNh} from '../animations/theoretical-law/01/national-honors/animation.meta';
+import {typography as typographyScouncil} from '../animations/theoretical-law/01/state-council/animation.meta';
 import {typography as typographyCc} from '../animations/theoretical-law/01/constitution-classification/animation.meta';
 import {typography as typographyCdv} from '../animations/theoretical-law/01/constitution-development/animation.meta';
 import {typography as typographyCp} from '../animations/theoretical-law/01/constitution-principles/animation.meta';
@@ -435,6 +437,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'harbor-consulate-protocol': {metadata: typographyAutoHarborConsulateProtocol, scope: {animationId: 'harbor-consulate-protocol', subject: 'commercial-economic-law', topic: '04'}},
   'frost-tribunal-docket': {metadata: typographyAutoFrostTribunalDocket, scope: {animationId: 'frost-tribunal-docket', subject: 'commercial-economic-law', topic: '05'}},
   'amber-twin-scale': {metadata: typographyAutoAmberTwinScale, scope: {animationId: 'amber-twin-scale', subject: 'commercial-economic-law', topic: '05'}},
+  'indigo-estate-vault': {metadata: typographyAutoIndigoEstateVault, scope: {animationId: 'indigo-estate-vault', subject: 'commercial-economic-law', topic: '05'}},
   'reckoning-abacus-desk': {metadata: typographyAutoReckoningAbacusDesk, scope: {animationId: 'reckoning-abacus-desk', subject: 'administrative-law', topic: '24'}},
   'bamboo-scroll-restoration': {metadata: typographyAutoBambooScrollRestoration, scope: {animationId: 'bamboo-scroll-restoration', subject: 'administrative-law', topic: '23'}},
   'lighthouse-watch-network': {metadata: typographyAutoLighthouseWatchNetwork, scope: {animationId: 'lighthouse-watch-network', subject: 'administrative-law', topic: '20'}},
@@ -510,6 +513,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'identity-unit-subject': {metadata: typographyAutoIdentityUnitSubject, scope: {animationId: 'identity-unit-subject', subject: 'criminal', topic: '04'}},
   'conduct-omission-gates': {metadata: typographyAutoConductOmissionGates, scope: {animationId: 'conduct-omission-gates', subject: 'criminal', topic: '05'}},
   'harm-result-aggravation': {metadata: typographyAutoHarmResultAggravation, scope: {animationId: 'harm-result-aggravation', subject: 'criminal', topic: '06'}},
+  'causation-attribution-flow': {metadata: typographyAutoCausationAttributionFlow, scope: {animationId: 'causation-attribution-flow', subject: 'criminal', topic: '07'}},
   'branch-wallet-ledger': {metadata: typographyBel, scope: {animationId: 'branch-wallet-ledger', subject: 'commercial-economic-law', topic: '01'}},
   'veil-piercing-forge': {metadata: typographyVpf, scope: {animationId: 'veil-piercing-forge', subject: 'commercial-economic-law', topic: '01'}},
   'overview-porcelain-hall': {metadata: typographyOph, scope: {animationId: 'overview-porcelain-hall', subject: 'criminal-procedure-gold', topic: '01'}},
@@ -541,6 +545,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'citizen-fundamental-rights': {metadata: typographyCfr, scope: {animationId: 'citizen-fundamental-rights', subject: 'theoretical-law', topic: '01'}},
   'npc-standing-committee': {metadata: typographyNsc, scope: {animationId: 'npc-standing-committee', subject: 'theoretical-law', topic: '01'}},
   'national-honors': {metadata: typographyNh, scope: {animationId: 'national-honors', subject: 'theoretical-law', topic: '01'}},
+  'state-council': {metadata: typographyScouncil, scope: {animationId: 'state-council', subject: 'theoretical-law', topic: '01'}},
   'profit-reserve-granary': {metadata: typographyPrg, scope: {animationId: 'profit-reserve-granary', subject: 'commercial-economic-law', topic: '01'}},
   'promoter-liability-ropewalk': {metadata: typographyPlr, scope: {animationId: 'promoter-liability-ropewalk', subject: 'commercial-economic-law', topic: '01'}},
   'fight-defense-diagram': {metadata: typography44, scope: {animationId: 'fight-defense-diagram', subject: 'criminal', topic: '22'}},
