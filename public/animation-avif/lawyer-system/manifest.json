@@ -1,0 +1,53 @@
+{
+  "animationId": "lawyer-system",
+  "compositionId": "LawyerSystem",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-30T16:59:44.969Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 251,
+      "frameCount": 252,
+      "id": "concept-qualification",
+      "number": "01",
+      "startFrame": 0,
+      "title": "律师的概念与执业资格",
+      "durationMs": 8400,
+      "file": "concept-qualification.avif",
+      "fileSize": 720208,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "81fc846078e0b9d5caf8a5444abd87df882f232ab399085cb05b16ee11d0b657",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "2516c85811a3a359abb54931725c3bbdaa28528d5cb6f0c82852e6bc69b53855"
+    },
+    {
+      "endFrame": 503,
+      "frameCount": 252,
+      "id": "license",
+      "number": "02",
+      "startFrame": 252,
+      "title": "申请领取律师执业证书",
+      "durationMs": 8400,
+      "file": "license.avif",
+      "fileSize": 675305,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "0f5b33094911012f4466e5d06bfc411dc9863efabe373926c00e3ca6f666bedb",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "2516c85811a3a359abb54931725c3bbdaa28528d5cb6f0c82852e6bc69b53855"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "2516c85811a3a359abb54931725c3bbdaa28528d5cb6f0c82852e6bc69b53855",
+  "targetFps": 30,
+  "totalFileSize": 1395513
+}

@@ -1,0 +1,29 @@
+{
+  "animationId": "lawyer-system",
+  "scenes": [
+    {
+      "id": "concept-qualification",
+      "export": "ConceptQualificationScene",
+      "layout": "concept-plus-qualification",
+      "anchor": "main center",
+      "grammar": "律师概念主册 + 执业资格四条件（国籍/政治/业务/特许）+ 管理体制双轨（行政管理四级/行业管理律协第43·45条）",
+      "textTreatments": ["concept plaque", "qualification rows"],
+      "focalChannels": ["concept plaque", "dual-track management"],
+      "tokens": ["IdCard", "Flag", "GraduationCap", "Landmark"],
+      "finalKnowledge": "concept-qualification",
+      "statefulObjects": ["concept plaque", "qualification row x4"]
+    },
+    {
+      "id": "license",
+      "export": "LicenseScene",
+      "layout": "license-three-columns",
+      "anchor": "main center",
+      "grammar": "申请领取律师执业证书三栏：肯定条件四条/否定性条件三条/限制条件三条，底带点睛（律协设立·过失犯罪·兼任人大常委会）",
+      "textTreatments": ["license columns", "number seals"],
+      "focalChannels": ["three columns", "negligent crime note"],
+      "tokens": ["FileCheck", "Ban", "UserX"],
+      "finalKnowledge": "license-columns",
+      "statefulObjects": ["license column x3"]
+    }
+  ]
+}

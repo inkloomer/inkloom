@@ -1,0 +1,15 @@
+{
+  "directionId": "counsel-ribbon-hall",
+  "family": "ribbon-hall-counsel",
+  "title": "青绶律师署",
+  "subject": "theoretical-law",
+  "chapter": "04",
+  "concept": "青绶律师署：执业资格四条件与执业证书三栏写于署内册页，行政管理四级与律协行业管理双轨呈现。图形层主题；画面文字一律使用源笔记法考名词",
+  "palette": "署堂 counsel #2F3A33、深堂 counselDeep #242D27、面板 panel #F0EBDA、暗面板 panelDim #E1DCC7、镶边 edge #5E7064、墨字 ink #222E27、淡墨 inkSoft #51625A、绶青 ribbon #5E8A7C、资金 qualifyGold #C0983E、限红 restrict #B04834、纸白 paper #F6F1E0",
+  "typography": "标题用 var(--inkloom-animation-title)，正文用 var(--inkloom-animation-body)；册页行加粗法考名词，条件用条编号",
+  "composition": "概念主册 + 资格四条 + 双轨管理 + 执业证书三栏 + 源名词点睛带",
+  "surface": "署堂墙纹 + 册页线 + 绶带纹",
+  "motion": "册页翻开、绶带展放、条编号钉挂",
+  "transition": "硬切换幕",
+  "catalog": ["考点71 律师制度概述"]
+}
