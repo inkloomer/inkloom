@@ -1,0 +1,29 @@
+{
+  "animationId": "judicial-functions",
+  "scenes": [
+    {
+      "id": "five-functions",
+      "export": "FiveFunctionsScene",
+      "layout": "five-bell-row",
+      "anchor": "main center",
+      "grammar": "五钟横列：主钟解决纠纷（最直接）加大居中，四钟（人权保障/调整社会关系/解释补充法律/形成公共政策）分列，钟下铭牌，底带直接间接辨",
+      "textTreatments": ["bell plaques", "clapper icons"],
+      "focalChannels": ["main bell", "direct-indirect strip"],
+      "tokens": ["Handshake", "Shield", "Network", "BookOpen", "Megaphone"],
+      "finalKnowledge": "five-functions",
+      "statefulObjects": ["bell x5"]
+    },
+    {
+      "id": "distinctions",
+      "export": "DistinctionsScene",
+      "layout": "three-lamp-rooms",
+      "anchor": "main center",
+      "grammar": "辨析三室：直接间接（解决纠纷最直接其余间接）/应然实然（应当发挥 vs 实际发挥）/申诉代理（律师代理＋法援兜底），底带一句记",
+      "textTreatments": ["lamp plaques", "contrast seals"],
+      "focalChannels": ["three rooms", "closing strip"],
+      "tokens": ["Lightbulb", "Scale", "UserCheck"],
+      "finalKnowledge": "function-distinctions",
+      "statefulObjects": ["lamp room x3"]
+    }
+  ]
+}

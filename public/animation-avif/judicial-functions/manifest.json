@@ -1,0 +1,53 @@
+{
+  "animationId": "judicial-functions",
+  "compositionId": "JudicialFunctions",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-30T11:41:54.325Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 239,
+      "frameCount": 240,
+      "id": "five-functions",
+      "number": "01",
+      "startFrame": 0,
+      "title": "五音钟楼：司法的功能",
+      "durationMs": 8000,
+      "file": "five-functions.avif",
+      "fileSize": 611571,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "9e17ed67493fe0f1d10a0664a0a25ecd4d906490e0dd42a3c52a9fc0ec07bb79",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "7b5506289de71859009ab2acd0edbe034b792b5a18a33a3c2d9bf5340678b667"
+    },
+    {
+      "endFrame": 455,
+      "frameCount": 216,
+      "id": "distinctions",
+      "number": "02",
+      "startFrame": 240,
+      "title": "辨析三室：直接间接·应然实然·申诉代理",
+      "durationMs": 7200,
+      "file": "distinctions.avif",
+      "fileSize": 545643,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "7a3e8c8a19d6e906e05864baec265033b10e3c3c7cf22c14e7df863b8bddbce2",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "7b5506289de71859009ab2acd0edbe034b792b5a18a33a3c2d9bf5340678b667"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "7b5506289de71859009ab2acd0edbe034b792b5a18a33a3c2d9bf5340678b667",
+  "targetFps": 30,
+  "totalFileSize": 1157214
+}
