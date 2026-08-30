@@ -1,0 +1,25 @@
+{
+  "directionId": "mahogany-manifest-cabinet",
+  "family": "gift-manifest-cabinet-hall",
+  "palette": "dark mahogany cabinet + gift-slip cream + apricot banner gold + cinnabar seals + bamboo green passes + steel gray",
+  "typography": "manifest cabinet headlines, gift-slip labels, square banner verdict stamps, dashed two-layer rules",
+  "composition": "a two-layer relation desk splitting the inner contribution list from outer creditor liability, an arrears two-column desk pairing general-partner breadth with limited-partner makeup duties, and a conversion timeline where switching identity never unloads the debt",
+  "surface": "mahogany cabinet walls with cream gift slips and apricot banners; no glossy panels",
+  "motion": "slips are presented without form limits, arrears desks stamp makeup duties, the conversion timeline walks partner switches; no idle loops",
+  "transition": "the cabinet persists while each scene re-stages the same slip wall for a new question",
+  "conceptTokens": {
+    "使用权出资": "KeyRound",
+    "两层关系": "ArrowDownUp",
+    "偿债": "HandCoins",
+    "普通合伙人": "Users",
+    "有限合伙人": "Coins",
+    "身份转换": "Stamp",
+    "真题": "GraduationCap"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/commercial-economic-law/02/partnership-contribution-manifest/",
+    "title": "红木礼单柜"
+  }
+}

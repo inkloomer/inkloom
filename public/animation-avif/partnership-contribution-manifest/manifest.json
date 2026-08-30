@@ -1,0 +1,70 @@
+{
+  "animationId": "partnership-contribution-manifest",
+  "compositionId": "PartnershipContributionManifest",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-30T00:17:08.900Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 289,
+      "frameCount": 290,
+      "id": "freedom-desk",
+      "number": "01",
+      "startFrame": 0,
+      "title": "礼单不拘形式：出资与偿债两层皮",
+      "durationMs": 9667,
+      "file": "freedom-desk.avif",
+      "fileSize": 493439,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "513b62b74336deb9eae36e8c0f3a29eae1914d033b7ef92de33e581273868798",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "d5066f33f426b37d3bbfc661d75552b2278fbf497791e02faa09a619a9d61562"
+    },
+    {
+      "endFrame": 579,
+      "frameCount": 290,
+      "id": "arrears-desk",
+      "number": "02",
+      "startFrame": 290,
+      "title": "欠缴两本账：普人宽、限人严",
+      "durationMs": 9667,
+      "file": "arrears-desk.avif",
+      "fileSize": 392194,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "52ee9c36dd815ca8fbfc4cb2293e51928c673ada66073727f12750935fbe3057",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "d5066f33f426b37d3bbfc661d75552b2278fbf497791e02faa09a619a9d61562"
+    },
+    {
+      "endFrame": 859,
+      "frameCount": 280,
+      "id": "conversion",
+      "number": "03",
+      "startFrame": 580,
+      "title": "换马不卸鞍：身份转换前后都连带",
+      "durationMs": 9333,
+      "file": "conversion.avif",
+      "fileSize": 379043,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "bcde3c5d7203cadd9892f657f11c0ac8d1f5837b6b17c35aa948c32e8bdf4e55",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "d5066f33f426b37d3bbfc661d75552b2278fbf497791e02faa09a619a9d61562"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "d5066f33f426b37d3bbfc661d75552b2278fbf497791e02faa09a619a9d61562",
+  "targetFps": 30,
+  "totalFileSize": 1264676
+}

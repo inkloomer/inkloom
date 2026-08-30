@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "playerControlSafeBottom": 168,
+  "scenes": [
+    {
+      "id": "freedom-desk",
+      "export": "FreedomDeskScene",
+      "layout": "two-layer-relation-desk",
+      "anchor": "flow-path",
+      "grammar": ["unrestricted-contribution-rule", "internal-external-relation-split"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["KeyRound", "ArrowDownUp", "HandCoins"],
+      "finalKnowledge": [
+        "free-manifest-desk",
+        "free-two-layer-desk",
+        "free-liability-verdict"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "arrears-desk",
+      "export": "ArrearsDeskScene",
+      "layout": "arrears-two-column-desk",
+      "anchor": "comparison-axis",
+      "grammar": ["labor-contribution-scope", "arrears-makeup-rule"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["Users", "Coins", "GraduationCap"],
+      "finalKnowledge": [
+        "arr-labor-desk",
+        "arr-limited-desk",
+        "arr-exam-strip"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "conversion",
+      "export": "ConversionScene",
+      "layout": "conversion-timeline-desk",
+      "anchor": "timeline-gate",
+      "grammar": ["conversion-liability-continuity", "identity-swap-recap"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["Stamp", "ArrowDownUp", "GraduationCap"],
+      "finalKnowledge": [
+        "conv-timeline-desk",
+        "conv-rule-board",
+        "conv-recap-verdict"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}
