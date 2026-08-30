@@ -1,0 +1,22 @@
+{
+  "directionId": "rattan-seal-intention-hall",
+  "family": "rattan-seal-intention-hall",
+  "palette": "deep lacquer brown-black, rattan gold, xuan paper cream, indigo slate, moss green, wine red, graphite ink",
+  "typography": "intention-hall headings on lacquer rail tabs, rattan-gold element chips and wine wax verdicts",
+  "composition": "an intention hall with a twin-element anatomy bench, a duo-desk agreement fork, a triple mask verdict wall, a delivery gate with four contracts and a form gate with dual paths",
+  "surface": "xuan paper files, lacquer desk rails, rattan seals, indigo name slips",
+  "motion": "effect-meaning lanterns light up beside expression slips, signature slips travel between desks, cash tickets stall at the delivery gate and cure paths redraw over missing forms",
+  "transition": "the hall floor, lacquer rails and rattan seal posts persist while benches, gates and walls are re-dressed between scenes",
+  "conceptTokens": {
+    "意思表示": "Brain",
+    "合意": "Users",
+    "戏谑": "Laugh",
+    "交付": "PackageCheck"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/civil-law/03/intention-expression-hall/",
+    "title": "意思表示堂"
+  }
+}

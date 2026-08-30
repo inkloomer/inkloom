@@ -1,0 +1,117 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "intention-expression-anatomy",
+      "export": "IntentionExpressionScene",
+      "layout": "twin-element-anatomy-bench",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "intention-is-the-outward-expression-of-civil-effect-meaning",
+        "effect-meaning-targets-civil-consequences-not-mere-social-talk",
+        "expression-comes-openly-by-words-or-impliedly-by-conduct",
+        "silence-counts-only-where-law-presumes-it-as-declaration"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["contrast", "icon", "enclosure", "annotation"],
+      "tokens": ["Brain", "MessageSquare", "Hand", "BellOff"],
+      "finalKnowledge": [
+        "intention-definition",
+        "effect-meaning-element",
+        "expression-element",
+        "formation-rule"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "agreement-fork",
+      "export": "AgreementForkScene",
+      "layout": "duo-desk-agreement-fork",
+      "anchor": "role-pair",
+      "grammar": [
+        "agreement-is-unanimous-intentions-of-all-actors",
+        "every-actor-must-declare-or-no-agreement-forms",
+        "the-look-of-settling-decides-formation-not-inner-truth",
+        "defective-intent-leaves-agreement-formed-but-voidable"
+      ],
+      "textTreatments": ["label-block", "stamp", "external-negation", "thin-underline"],
+      "focalChannels": ["contrast", "connector", "enclosure", "annotation"],
+      "tokens": ["Users", "PenLine", "Split", "Scale"],
+      "finalKnowledge": [
+        "agreement-definition",
+        "declaration-gate",
+        "settled-look-rule",
+        "notebook-case-verdicts"
+      ],
+      "statefulObjects": ["signature-ticket"]
+    },
+    {
+      "id": "sham-hidden-jest",
+      "export": "ShamHiddenJestScene",
+      "layout": "triple-mask-verdict-wall",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "sham-declarations-by-both-parties-are-void",
+        "hidden-declarations-follow-the-law-that-governs-them",
+        "jest-binds-nobody-who-knows-or-should-know-the-true-mind",
+        "content-place-and-manner-reveal-the-jesting-mind"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "external-negation"],
+      "focalChannels": ["contrast", "icon", "enclosure", "annotation"],
+      "tokens": ["Drama", "EyeOff", "Laugh", "Gavel"],
+      "finalKnowledge": [
+        "sham-rule",
+        "hidden-rule",
+        "jest-rule",
+        "jest-recognition-forks"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "practice-act-delivery",
+      "export": "PracticeActScene",
+      "layout": "delivery-gate-with-four-contracts",
+      "anchor": "flow-path",
+      "grammar": [
+        "consensual-acts-form-on-agreement-alone-as-the-default",
+        "real-acts-need-delivery-of-the-thing-after-agreement",
+        "delivery-opens-real-contracts-and-is-no-duty-to-perform",
+        "refusal-to-deliver-brings-culprit-contracting-liability-only"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["contrast", "connector", "enclosure", "annotation"],
+      "tokens": ["Handshake", "PackageCheck", "KeyRound", "Coins"],
+      "finalKnowledge": [
+        "consensual-vs-real",
+        "formation-formula",
+        "four-real-contracts",
+        "loan-case-verdicts"
+      ],
+      "statefulObjects": ["loan-cash-ticket"]
+    },
+    {
+      "id": "formal-act-dual-path",
+      "export": "FormalActScene",
+      "layout": "form-gate-with-dual-paths",
+      "anchor": "flow-path",
+      "grammar": [
+        "formal-acts-need-the-prescribed-form-by-law-or-agreement",
+        "civil-acts-are-form-free-by-default",
+        "missing-form-leaves-the-act-unformed-unless-performed-and-accepted",
+        "refusing-the-form-invites-culprit-contracting-liability-only"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "external-negation"],
+      "focalChannels": ["contrast", "connector", "enclosure", "annotation"],
+      "tokens": ["FileSignature", "Stamp", "RefreshCw", "Landmark"],
+      "finalKnowledge": [
+        "formal-vs-free",
+        "form-scope-rule",
+        "cure-dual-path",
+        "negotiation-case-verdicts"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}
