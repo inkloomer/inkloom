@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "playerControlSafeBottom": 168,
+  "scenes": [
+    {
+      "id": "production-smuggling",
+      "export": "ProductionSmugglingScene",
+      "layout": "production-smuggling-dual-filing",
+      "anchor": "comparison-axis",
+      "grammar": ["product-panel", "smuggling-panel"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
+      "tokens": ["Scale", "Gavel", "Zap"],
+      "finalKnowledge": ["product-panel", "smuggling-panel"],
+      "statefulObjects": []
+    },
+    {
+      "id": "credit-card-fraud",
+      "export": "CreditCardFraudScene",
+      "layout": "credit-card-tri-filing",
+      "anchor": "typographic-sequence",
+      "grammar": ["cc-basics-panel", "cc-types-panel"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "connector"],
+      "tokens": ["CreditCard", "Ban", "Zap"],
+      "finalKnowledge": ["cc-basics-panel", "cc-types-panel", "cc-machine-panel"],
+      "statefulObjects": []
+    },
+    {
+      "id": "money-laundering-tax",
+      "export": "MoneyLaunderingTaxScene",
+      "layout": "launder-tax-dual-filing",
+      "anchor": "comparison-axis",
+      "grammar": ["launder-panel", "tax-panel"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
+      "tokens": ["Scale", "Zap", "Ban", "Gavel"],
+      "finalKnowledge": ["launder-panel", "tax-panel"],
+      "statefulObjects": []
+    },
+    {
+      "id": "insurance-loan-fraud",
+      "export": "InsuranceLoanFraudScene",
+      "layout": "insurance-loan-dual-filing",
+      "anchor": "comparison-axis",
+      "grammar": ["loan-panel", "insurance-panel"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "connector"],
+      "tokens": ["Ban", "Scale", "Gavel", "Zap"],
+      "finalKnowledge": ["loan-panel", "insurance-panel"],
+      "statefulObjects": []
+    }
+  ]
+}

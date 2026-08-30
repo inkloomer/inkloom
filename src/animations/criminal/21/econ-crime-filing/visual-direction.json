@@ -1,0 +1,23 @@
+{
+  "directionId": "econ-crime-filing-cabinet",
+  "family": "econ-crime-filing-cabinet",
+  "palette": "档案灰绿 filing + 经济青 econ + 印泥红 stamp + 账簿蓝 ledger + 黄铜 brass + 经济墨 night",
+  "typography": "heavy filing headings, square tag chips, econ label blocks, double-frame stamp verdicts",
+  "composition": "an economic crime filing cabinet: production-smuggling dual board, credit-card tri panel, laundering-tax dual, and insurance-loan dual",
+  "surface": "filing paper grain, square tag chips, dashed exclusion zones, double-frame stamps; no glossy panels",
+  "motion": "files enter in reasoning order, stamps land as verdicts; no idle loops",
+  "transition": "the filing cabinet ground persists while each scene mounts a new board",
+  "conceptTokens": {
+    "信用卡诈骗罪": "CreditCard",
+    "走私": "Gavel",
+    "逃税": "Zap",
+    "洗钱": "Scale",
+    "并罚": "Ban"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/criminal/21/econ-crime-filing/",
+    "title": "经济犯罪档案柜"
+  }
+}
