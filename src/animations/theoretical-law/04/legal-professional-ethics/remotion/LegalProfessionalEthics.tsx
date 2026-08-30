@@ -156,7 +156,7 @@ export const ConceptFeaturesScene = () => {
     {name: '更高性', tone: C.annotRed, icon: <TrendingUp size={30} color={C.paper} strokeWidth={2.2} />, body: '更高水准，约束力强制力更明显；吊销执业证书·开除公职的终身执业禁止'},
   ] as const;
   return (
-    <Shell code="01" kicker="概念 · 特征" title="主简五玉章：概念与特征">
+    <Shell code="01" kicker="概念 · 特征" title="法律职业道德的概念与特征">
       <div
         data-layout="master-slip-five-jades"
         data-visual-anchor="main center"
@@ -189,7 +189,7 @@ export const ConceptFeaturesScene = () => {
         <Enter delay={110} from="up" style={{position: 'absolute', left: 0, top: 462, width: 1776}}>
           <SlipStrip style={{height: 128}}>
             <ScrollText size={42} color={C.virtueGold} strokeWidth={2.2} />
-            <span style={{padding: '4px 13px', backgroundColor: C.virtueGold, color: C.celadonDeep, fontSize: 22, fontWeight: 900, letterSpacing: 2 }}>教育五途径</span>
+            <span style={{padding: '4px 13px', backgroundColor: C.virtueGold, color: C.celadonDeep, fontSize: 22, fontWeight: 900, letterSpacing: 2 }}>教育的途径和方法</span>
             <span style={{fontSize: 25, fontWeight: 900, color: C.paper, lineHeight: 1.6}}>
               提高道德<GoldSeal tone={C.slipGreen} delay={160}>认识</GoldSeal> → 确立道德<GoldSeal tone={C.virtueGold} delay={172}>信念</GoldSeal> → 陶冶道德<GoldSeal tone={C.annotRed} delay={184}>情感</GoldSeal> → 锻炼道德<GoldSeal tone={C.slipGreen} delay={196}>意志</GoldSeal> → 养成道德<GoldSeal tone={C.virtueGold} delay={208}>习惯</GoldSeal>
             </span>
@@ -203,7 +203,7 @@ export const ConceptFeaturesScene = () => {
 export const AnnotationsScene = () => {
   /* data-final-knowledge="ethics-annotations" */
   return (
-    <Shell code="02" kicker="点睛三批注" title="朱批三则：道德属性辨析">
+    <Shell code="02" kicker="点睛三批注" title="点睛之笔">
       <div
         data-layout="triplet-annotated-hall"
         data-visual-anchor="main center"

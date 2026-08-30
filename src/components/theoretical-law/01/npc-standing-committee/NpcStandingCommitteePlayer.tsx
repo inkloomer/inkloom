@@ -17,7 +17,7 @@ export const NpcStandingCommitteePlayer = () => (
     durationInFrames={DURATION_FRAMES}
     fps={FPS}
     scenes={scenes}
-    title="全国人大与全国人大常委会：华表议政堂"
+    title="全国人大与全国人大常委会"
   />
 );
 

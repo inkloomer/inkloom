@@ -1,0 +1,15 @@
+{
+  "directionId": "three-balance-charter",
+  "family": "charter-balance-hall",
+  "title": "三衡宪纲",
+  "subject": "theoretical-law",
+  "chapter": "04",
+  "concept": "三衡宪纲堂：公正·廉洁·为民三衡居首，五纲条款以天平刻线排布，《基本准则》条文号作铜牌。图形层主题；画面文字一律使用源笔记法考名词",
+  "palette": "宪堂蓝 charter #2F3D4E、深堂 charterDeep #24303D、面板 panel #F0EBDA、暗面板 panelDim #E1DCC7、镶边 edge #5E6E7E、墨字 ink #232F3B、淡墨 inkSoft #52626F、衡铜 balance #C0983E、纲朱 charter red #B04834、廉青 cleanTeal #4E7D74、纸白 paper #F6F1E0",
+  "typography": "标题用 var(--inkloom-animation-title)，正文用 var(--inkloom-animation-body)；条款行加粗法考名词，《基本准则》条文号用铜牌小签",
+  "composition": "三衡印 + 五纲刻线行 + 条文号铜牌 + 源名词点睛带",
+  "surface": "宪堂墙纹 + 天平刻线 + 铜牌钉纹",
+  "motion": "三衡钤落、刻线延展、铜牌钉挂",
+  "transition": "硬切换幕",
+  "catalog": ["考点64 法官职业道德的主要内容"]
+}

@@ -3,7 +3,7 @@
   "compositionId": "ConstitutionalSupervision",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-08-30T10:30:39.804Z",
+  "generatedAt": "2026-08-30T14:26:45.670Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -16,13 +16,13 @@
       "title": "三足鼎立：宪法解释与保障",
       "durationMs": 9200,
       "file": "interpretation.avif",
-      "fileSize": 599563,
+      "fileSize": 591705,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "d22204c7e787f88eb9ad1647cd9247a400d006a1c686ee750b6122cd70eae0f4",
+      "sha256": "3fd721ee5282455f2ba79233b0d9061ef170538993bc57147e5b8bc7e4136863",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "f7232856936d96e9848cefb0c53983c7f19b4988a2f6b46a3e254523b37a4c14"
+      "sceneFingerprint": "6a8193184bb9e4a9c417bd1272dba3a988cba7f6d27bfaaa0084a07d51592e32"
     },
     {
       "endFrame": 587,
@@ -33,13 +33,13 @@
       "title": "鼎腹铭文：审查流程",
       "durationMs": 10400,
       "file": "procedure.avif",
-      "fileSize": 765393,
+      "fileSize": 765475,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "253e567fb48701583c9708bfd5fcc47907adc6cb08a820ce7b5dcf24abd39473",
+      "sha256": "b5386cfe5bfd01b86a899188f763e9897521c28bb40e5d1cf2909cf65e2962d7",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "f7232856936d96e9848cefb0c53983c7f19b4988a2f6b46a3e254523b37a4c14"
+      "sceneFingerprint": "6a8193184bb9e4a9c417bd1272dba3a988cba7f6d27bfaaa0084a07d51592e32"
     },
     {
       "endFrame": 851,
@@ -50,13 +50,13 @@
       "title": "鎏金誓版：宪法宣誓",
       "durationMs": 8800,
       "file": "oath.avif",
-      "fileSize": 703911,
+      "fileSize": 699928,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "4ef68491cad7db42359f4e228976384b211e0eceaa7caab9fd3b645e2f1407ad",
+      "sha256": "ac23a4f14943aae14f71a50be33d16028adc76c53291c0d2df72a4f4a9d5f8f7",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "f7232856936d96e9848cefb0c53983c7f19b4988a2f6b46a3e254523b37a4c14"
+      "sceneFingerprint": "6a8193184bb9e4a9c417bd1272dba3a988cba7f6d27bfaaa0084a07d51592e32"
     }
   ],
   "size": {
@@ -64,7 +64,7 @@
     "width": 2560
   },
   "sourceFps": 30,
-  "sourceFingerprint": "f7232856936d96e9848cefb0c53983c7f19b4988a2f6b46a3e254523b37a4c14",
+  "sourceFingerprint": "6a8193184bb9e4a9c417bd1272dba3a988cba7f6d27bfaaa0084a07d51592e32",
   "targetFps": 30,
-  "totalFileSize": 2068867
+  "totalFileSize": 2057108
 }

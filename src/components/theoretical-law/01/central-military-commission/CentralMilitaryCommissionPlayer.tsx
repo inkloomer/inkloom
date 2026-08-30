@@ -14,7 +14,7 @@ export const CentralMilitaryCommissionPlayer = () => (
     durationInFrames={DURATION_FRAMES}
     fps={FPS}
     scenes={scenes}
-    title="中央军委：虎符辕门"
+    title="中央军委"
   />
 );
 

@@ -14,7 +14,7 @@ export const JudicialIndependencePlayer = () => (
     durationInFrames={DURATION_FRAMES}
     fps={FPS}
     scenes={scenes}
-    title="独立行使审判权与检察权：拒情碑廊"
+    title="独立行使审判权与独立行使检察权"
   />
 );
 

@@ -15,7 +15,7 @@ export const ConstitutionalSupervisionPlayer = () => (
     durationInFrames={DURATION_FRAMES}
     fps={FPS}
     scenes={scenes}
-    title="宪法监督：青鼎监宪台"
+    title="宪法监督"
   />
 );
 

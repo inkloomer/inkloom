@@ -147,7 +147,7 @@ export const SixFeaturesScene = () => {
     {name: '终极性', tone: C.sealRed, icon: <Gavel size={34} color={C.paper} strokeWidth={2.2} />, body: '解决纠纷·处理冲突的最后环节，结果是最终性决定；现代社会最重要的争端解决手段'},
   ] as const;
   return (
-    <Shell code="01" kicker="司法六特征" title="六印司法墙：特征方阵">
+    <Shell code="01" kicker="司法六特征" title="司法的六个特征">
       <div
         data-layout="six-seal-grid"
         data-visual-anchor="main center"
@@ -190,7 +190,7 @@ export const IndependenceScene = () => {
     {name: '监督辨', tone: C.pine, icon: <Eye size={30} color={C.paper} strokeWidth={2.2} />, body: '未排除人大的监督和党的领导'},
   ] as const;
   return (
-    <Shell code="02" kicker="独立性的理解" title="单室三辨：独立性">
+    <Shell code="02" kicker="独立性的理解" title="独立性的理解">
       <div
         data-layout="single-room-three-notes"
         data-visual-anchor="main center"
@@ -225,7 +225,7 @@ export const IndependenceScene = () => {
           <Panel tone={C.pine} style={{height: 128, padding: '12px 22px', display: 'flex', alignItems: 'center', gap: 14}}>
             <Users size={38} color={C.pine} strokeWidth={2.2} />
             <div style={{fontSize: 22, fontWeight: 880, color: C.ink, lineHeight: 1.6}}>
-              <span style={{fontWeight: 950, color: C.pine}}>六特征连记</span>：独立行使（法治要求）→ 不告不理（被动）→ 当事人参与（交涉）→ 依程序法（程序）→ 最普适（普遍）→ 最后环节·最终决定（终极）
+              <span style={{fontWeight: 950, color: C.pine}}>六个特征</span>：独立行使（法治要求）→ 不告不理（被动）→ 当事人参与（交涉）→ 依程序法（程序）→ 最普适（普遍）→ 最后环节·最终决定（终极）
             </div>
           </Panel>
         </Enter>

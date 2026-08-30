@@ -153,7 +153,7 @@ export const ConceptScene = () => {
     {icon: <Users size={28} color={C.paper} strokeWidth={2.2} />, tone: C.paleGold, title: '社会主义国家司法体制：', body: '司法机关由审判机关和检察机关共同构成'},
   ] as const;
   return (
-    <Shell code="01" kicker="司法概念" title="玉璧镌义：什么是司法">
+    <Shell code="01" kicker="司法概念" title="司法概念">
       <div
         data-layout="jade-medallion-rows"
         data-visual-anchor="main center"
@@ -201,7 +201,7 @@ export const ConceptScene = () => {
 export const ComparisonScene = () => {
   /* data-final-knowledge="common-law-vs-china" */
   return (
-    <Shell code="02" kicker="英美法系 VS 我国" title="东西玉屏：司法机关的范围">
+    <Shell code="02" kicker="英美法系 VS 我国" title="司法机关的范围">
       <div
         data-layout="east-west-jade-screens"
         data-visual-anchor="main center"

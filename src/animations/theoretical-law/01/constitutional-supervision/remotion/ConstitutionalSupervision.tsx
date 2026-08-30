@@ -154,7 +154,7 @@ export const InterpretationScene = () => {
     {name: '专门机关解释', tone: C.sealRed, icon: <Building2 size={30} color={C.paper} strokeWidth={2.2} />, body: '宪法法院与宪法委员会等特设机关：法国为宪法委员会；奥·西·意·德·俄·韩为宪法法院（最早依凯尔森建议设于奥地利）'},
   ] as const;
   return (
-    <Shell code="01" kicker="解释体制 · 监督对象" title="三足鼎立：宪法解释与保障">
+    <Shell code="01" kicker="解释体制 · 监督对象" title="宪法解释机关 · 监督对象">
       <div
         data-layout="tripod-three-legs"
         data-visual-anchor="main center"
@@ -176,7 +176,7 @@ export const InterpretationScene = () => {
         ))}
         <Enter delay={100} from="up" style={{position: 'absolute', left: 0, top: 364, width: 1776}}>
           <Panel tone={C.gilded} watermark={<Scale size={170} color={C.gilded} strokeWidth={1.6} />} style={{height: 300, padding: '14px 22px', display: 'flex', flexDirection: 'column', gap: 12}}>
-            <DingTab bar={C.gilded} icon={<Scale size={26} color={C.paper} strokeWidth={2.2} />}>宪法实施的监督对象（两类合宪性审查）</DingTab>
+            <DingTab bar={C.gilded} icon={<Scale size={26} color={C.paper} strokeWidth={2.2} />}>宪法实施的监督对象</DingTab>
             <IconChip icon={<ScrollText size={28} color={C.paper} strokeWidth={2.2} />} tone={C.verdigris} title="规范性文件：">
               对下位法的合宪性审查 —— 保障下位法不违反上位法，一切法律文件<Mark color={C.verdigris}>不违反宪法</Mark>
             </IconChip>
@@ -193,7 +193,7 @@ export const InterpretationScene = () => {
 export const ProcedureScene = () => {
   /* data-final-knowledge="review-procedure" */
   return (
-    <Shell code="02" kicker="合宪性审查流程" title="鼎腹铭文：审查机关·范围·程序·结果">
+    <Shell code="02" kicker="合宪性审查流程" title="合宪性审查的机关·范围·程序·结果">
       <div
         data-layout="inscription-flow"
         data-visual-anchor="main center"
@@ -205,7 +205,7 @@ export const ProcedureScene = () => {
       >
         <Enter delay={6} from="left" marker="review-procedure" style={{position: 'absolute', left: 0, top: 0, width: 1776}}>
           <Panel tone={C.verdigris} watermark={<SearchCheck size={170} color={C.verdigris} strokeWidth={1.6} />} style={{height: 466, padding: '12px 22px', display: 'flex', flexDirection: 'column', gap: 8}}>
-            <DingTab bar={C.verdigris} icon={<SearchCheck size={26} color={C.paper} strokeWidth={2.2} />}>合宪性审查 · 鼎腹四铭</DingTab>
+            <DingTab bar={C.verdigris} icon={<SearchCheck size={26} color={C.paper} strokeWidth={2.2} />}>合宪性审查</DingTab>
             <IconChip icon={<Landmark size={28} color={C.paper} strokeWidth={2.2} />} tone={C.verdigris} title="机关：">
               全国人大 ＋ 全国人大常委会（1954 人大监督·1982 增加人常；人大非常设，主要由<Mark color={C.verdigris}>全人常</Mark>集中行使）；地方各级人大及其常委会保证宪法在本区域实施
             </IconChip>
@@ -246,7 +246,7 @@ export const OathScene = () => {
     {who: '驻外全权代表', by: '外交部组织', icon: <Globe size={26} color={C.paper} strokeWidth={2.2} />, tone: C.sealRed},
   ] as const;
   return (
-    <Shell code="03" kicker="宪法宣誓制度" title="鎏金誓版：谁宣誓 · 谁组织">
+    <Shell code="03" kicker="宪法宣誓制度" title="宪法宣誓制度">
       <div
         data-layout="gilded-oath-tablet"
         data-visual-anchor="main center"
@@ -265,7 +265,7 @@ export const OathScene = () => {
         </Enter>
         <Enter delay={30} from="up" marker="oath-system" style={{position: 'absolute', left: 0, top: 78, width: 1776}}>
           <Panel tone={C.gilded} watermark={<Handshake size={160} color={C.gilded} strokeWidth={1.6} />} style={{height: 300, padding: '12px 22px', display: 'flex', flexDirection: 'column', gap: 8}}>
-            <DingTab bar={C.gilded} icon={<ScrollText size={26} color={C.paper} strokeWidth={2.2} />}>谁组织（五牍）</DingTab>
+            <DingTab bar={C.gilded} icon={<ScrollText size={26} color={C.paper} strokeWidth={2.2} />}>谁组织</DingTab>
             {organizers.map((item, index) => (
               <div key={item.who} style={{display: 'flex', alignItems: 'center', gap: 12, backgroundColor: C.panelDim, borderLeft: `5px solid ${item.tone}`, padding: '6px 12px'}}>
                 <span style={{flexShrink: 0, width: 44, height: 44, borderRadius: 9, backgroundColor: item.tone, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>{item.icon}</span>

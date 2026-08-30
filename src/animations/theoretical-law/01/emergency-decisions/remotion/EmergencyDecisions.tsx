@@ -150,7 +150,7 @@ const IconChip = ({icon, tone, title, children}: {readonly icon: ReactNode; read
 export const AllocationScene = () => {
   /* data-final-knowledge="power-allocation" data-final-knowledge="announcement-route" */
   return (
-    <Shell code="01" kicker="决定权分配" title="警讯三级：谁来点烽火">
+    <Shell code="01" kicker="决定权分配" title="决定权分配">
       <div
         data-layout="beacon-grade-rows"
         data-visual-anchor="main center"
@@ -162,7 +162,7 @@ export const AllocationScene = () => {
       >
         <Enter delay={6} from="left" marker="power-allocation" style={{position: 'absolute', left: 0, top: 0, width: 1776}}>
           <Panel tone={C.signal} watermark={<Flame size={180} color={C.signal} strokeWidth={1.6} />} style={{height: 404, padding: '12px 22px', display: 'flex', flexDirection: 'column', gap: 9}}>
-            <WatchTab bar={C.signal} icon={<Flame size={26} color={C.paper} strokeWidth={2.2} />}>警讯分级 · 决定权分配</WatchTab>
+            <WatchTab bar={C.signal} icon={<Flame size={26} color={C.paper} strokeWidth={2.2} />}>决定权分配</WatchTab>
             <IconChip icon={<Landmark size={28} color={C.paper} strokeWidth={2.2} />} tone={C.signal} title="全国人大：">
               <Mark color={C.signal}>决定战争与和平</Mark>（开火停火全人大）
             </IconChip>
@@ -202,7 +202,7 @@ export const PremierScene = () => {
     {title: '签署', body: '行政法规·决定命令·向人大人常的议案·任免决定，都由总理签署'},
   ] as const;
   return (
-    <Shell code="02" kicker="机构概况 · 总理负责制" title="国务院席次与总理负责制">
+    <Shell code="02" kicker="机构概况 · 总理负责制" title="机构概况 · 总理负责制">
       <div
         data-layout="seat-plus-four-clauses"
         data-visual-anchor="main center"
@@ -214,7 +214,7 @@ export const PremierScene = () => {
       >
         <Enter delay={6} from="left" marker="council-composition" style={{position: 'absolute', left: 0, top: 0, width: 1776}}>
           <Panel tone={C.beacon} watermark={<Users size={170} color={C.beacon} strokeWidth={1.6} />} style={{height: 212, padding: '12px 22px', display: 'flex', flexDirection: 'column', gap: 9}}>
-            <WatchTab bar={C.beacon} icon={<Landmark size={26} color={C.paper} strokeWidth={2.2} />}>性质与组成</WatchTab>
+            <WatchTab bar={C.beacon} icon={<Landmark size={26} color={C.paper} strokeWidth={2.2} />}>机构概况 · 性质与组成</WatchTab>
             <div style={{fontSize: 22, fontWeight: 880, color: C.ink, lineHeight: 1.55}}>
               性质：中央人民政府 · 最高权力机关的<Mark color={C.beacon}>执行机关</Mark> · <Mark color={C.beacon}>最高行政机关</Mark>
             </div>
@@ -228,7 +228,7 @@ export const PremierScene = () => {
         </Enter>
         <Enter delay={60} from="up" marker="premier-responsibility" style={{position: 'absolute', left: 0, top: 236, width: 1776}}>
           <Panel tone={C.signal} watermark={<UserCheck size={170} color={C.signal} strokeWidth={1.6} />} style={{height: 252, padding: '12px 22px', display: 'flex', flexDirection: 'column', gap: 8}}>
-            <WatchTab bar={C.signal} icon={<UserCheck size={26} color={C.paper} strokeWidth={2.2} />}>总理负责制的四个体现</WatchTab>
+            <WatchTab bar={C.signal} icon={<UserCheck size={26} color={C.paper} strokeWidth={2.2} />}>总理负责制的体现</WatchTab>
             {clauses.map((clause, index) => (
               <div key={clause.title} style={{fontSize: 22, fontWeight: 870, color: C.ink, lineHeight: 1.42, backgroundColor: C.panelDim, borderLeft: `5px solid ${C.signal}`, padding: '5px 11px'}}>
                 <span style={{color: C.signal, fontWeight: 950, marginRight: 8}}>{['壹', '贰', '叁', '肆'][index]}</span>
@@ -254,7 +254,7 @@ export const PremierScene = () => {
 export const MeetingsOrgsScene = () => {
   /* data-final-knowledge="meeting-system" data-final-knowledge="org-audit" */
   return (
-    <Shell code="03" kicker="会议制度 · 组织机构 · 审计" title="两会与部门线 · 审计署">
+    <Shell code="03" kicker="会议制度 · 组织机构 · 审计" title="会议制度 · 组织机构 · 审计">
       <div
         data-layout="twin-column-terrace"
         data-visual-anchor="main center"
@@ -266,7 +266,7 @@ export const MeetingsOrgsScene = () => {
       >
         <Enter delay={6} from="left" marker="meeting-system" style={{position: 'absolute', left: 0, top: 0, width: 866, height: 468}}>
           <Panel tone={C.mist} watermark={<CalendarClock size={170} color={C.mist} strokeWidth={1.6} />} style={{height: '100%', padding: '12px 20px', display: 'flex', flexDirection: 'column', gap: 9}}>
-            <WatchTab bar={C.mist} icon={<CalendarClock size={26} color={C.paper} strokeWidth={2.2} />}>两种会议</WatchTab>
+            <WatchTab bar={C.mist} icon={<CalendarClock size={26} color={C.paper} strokeWidth={2.2} />}>会议制度</WatchTab>
             <IconChip icon={<CalendarDays size={28} color={C.paper} strokeWidth={2.2} />} tone={C.beacon} title="全体会议：">
               全体组成人员参加，一般<Mark color={C.beacon}>每两月</Mark>召开；讨论决定政府工作报告·国民经济和社会发展规划等<Mark color={C.beacon}>重大事项</Mark>，部署重要工作
             </IconChip>
@@ -280,7 +280,7 @@ export const MeetingsOrgsScene = () => {
         </Enter>
         <Enter delay={30} from="right" marker="org-audit" style={{position: 'absolute', left: 910, top: 0, width: 866, height: 468}}>
           <Panel tone={C.watchGold} watermark={<Building2 size={170} color={C.watchGold} strokeWidth={1.6} />} style={{height: '100%', padding: '12px 20px', display: 'flex', flexDirection: 'column', gap: 8}}>
-            <WatchTab bar={C.watchGold} icon={<Building2 size={26} color={C.paper} strokeWidth={2.2} />}>组织机构与审计</WatchTab>
+            <WatchTab bar={C.watchGold} icon={<Building2 size={26} color={C.paper} strokeWidth={2.2} />}>组织机构 · 审计机关</WatchTab>
             <IconChip icon={<Landmark size={28} color={C.paper} strokeWidth={2.2} />} tone={C.beacon} title="组成部门（部委行署）：">
               正职首长为国务院组成人员，由全国人大或全人常<Mark color={C.beacon}>根据总理提名</Mark>任免；部门调整由总理提出·人大人常决定
             </IconChip>

@@ -15,7 +15,7 @@ export const GrassrootsAutonomyPlayer = () => (
     durationInFrames={DURATION_FRAMES}
     fps={FPS}
     scenes={scenes}
-    title="基层群众自治：乡井议事堂"
+    title="基层群众自治"
   />
 );
 

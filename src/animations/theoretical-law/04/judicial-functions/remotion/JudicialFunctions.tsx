@@ -156,7 +156,7 @@ export const FiveFunctionsScene = () => {
     {name: '形成公共政策', tone: C.skyBlue, icon: <Megaphone size={32} color={C.paper} strokeWidth={2.2} />, tag: '角色定位', body: '司法机关参与公共政策制定，表征司法权在国家权力配置与运作中的角色与定位'},
   ] as const;
   return (
-    <Shell code="01" kicker="五大功能" title="五音钟楼：司法的功能">
+    <Shell code="01" kicker="五大功能" title="司法的功能">
       <div
         data-layout="five-bell-row"
         data-visual-anchor="main center"
@@ -179,7 +179,7 @@ export const FiveFunctionsScene = () => {
         <Enter delay={120} from="up" style={{position: 'absolute', left: 0, top: 392, width: 1776}}>
           <BellStrip style={{height: 116}}>
             <Handshake size={42} color={C.mainBell} strokeWidth={2.2} />
-            <span style={{padding: '4px 13px', backgroundColor: C.mainBell, color: C.paper, fontSize: 22, fontWeight: 900, letterSpacing: 2}}>直接 · 间接</span>
+            <span style={{padding: '4px 13px', backgroundColor: C.mainBell, color: C.paper, fontSize: 22, fontWeight: 900, letterSpacing: 2}}>直接与间接</span>
             <span style={{fontSize: 25, fontWeight: 900, color: C.paper, lineHeight: 1.55}}>
               解决纠纷是司法<Mark color={C.paper}>最直接</Mark>的功能 —— 其余所有功能都是<Mark color={C.paper}>间接功能</Mark>
             </span>
@@ -193,7 +193,7 @@ export const FiveFunctionsScene = () => {
 export const DistinctionsScene = () => {
   /* data-final-knowledge="function-distinctions" */
   return (
-    <Shell code="02" kicker="三组辨析" title="辨析三室：直接间接 · 应然实然 · 申诉代理">
+    <Shell code="02" kicker="点睛之笔" title="点睛之笔">
       <div
         data-layout="three-lamp-rooms"
         data-visual-anchor="main center"

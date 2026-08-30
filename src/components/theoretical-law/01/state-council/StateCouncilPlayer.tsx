@@ -14,7 +14,7 @@ export const StateCouncilPlayer = () => (
     durationInFrames={DURATION_FRAMES}
     fps={FPS}
     scenes={scenes}
-    title="国务院：紫檀政务案"
+    title="国务院"
   />
 );
 

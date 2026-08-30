@@ -3,7 +3,7 @@
   "compositionId": "LegalHistoryFirsts",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-08-30T06:38:53.594Z",
+  "generatedAt": "2026-08-30T14:28:59.256Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -19,10 +19,10 @@
       "fileSize": 328270,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "6819321458f14b4c2ba4162677979abcb1b5466cc8a07123a17511f0efe55452",
+      "sha256": "f08034e73abb2091e67df2e375610bcae771164b3e2cec54b08ad28b1c46f53a",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "6350a93a2f3c1a3043e0695bd68e03150941a8004fdf3ec996b246d5e8a72631"
+      "sceneFingerprint": "cf50d9715d75bef9625c835a9b55f87d3992a2ba015f8f7c08f64395844888bc"
     },
     {
       "endFrame": 503,
@@ -33,13 +33,13 @@
       "title": "制度首创",
       "durationMs": 8000,
       "file": "institutions.avif",
-      "fileSize": 265611,
+      "fileSize": 265776,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "e2869a32818505d39ea1c363b57e6b7a632ca5df5c2f931245e56593c31ab918",
+      "sha256": "06a40f6c2e561365dfd40ffdb8771eae0f57a71651fd6ce4b6e48344edeb976f",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "6350a93a2f3c1a3043e0695bd68e03150941a8004fdf3ec996b246d5e8a72631"
+      "sceneFingerprint": "cf50d9715d75bef9625c835a9b55f87d3992a2ba015f8f7c08f64395844888bc"
     },
     {
       "endFrame": 791,
@@ -50,13 +50,13 @@
       "title": "近代与外国之最",
       "durationMs": 9600,
       "file": "modern-foreign.avif",
-      "fileSize": 545951,
+      "fileSize": 545950,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "605656571d4ac174c7c24d74c06ae8feee606d9c6a09bf6288b113831c346cbb",
+      "sha256": "1682dd2e04a4face338d371a72cc25f22e8fd1f55ab6d96afd11aaad7ee5a2e9",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "6350a93a2f3c1a3043e0695bd68e03150941a8004fdf3ec996b246d5e8a72631"
+      "sceneFingerprint": "cf50d9715d75bef9625c835a9b55f87d3992a2ba015f8f7c08f64395844888bc"
     }
   ],
   "size": {
@@ -64,7 +64,7 @@
     "width": 2560
   },
   "sourceFps": 30,
-  "sourceFingerprint": "6350a93a2f3c1a3043e0695bd68e03150941a8004fdf3ec996b246d5e8a72631",
+  "sourceFingerprint": "cf50d9715d75bef9625c835a9b55f87d3992a2ba015f8f7c08f64395844888bc",
   "targetFps": 30,
-  "totalFileSize": 1139832
+  "totalFileSize": 1139996
 }

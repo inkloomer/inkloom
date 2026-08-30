@@ -3,7 +3,7 @@
   "compositionId": "LocalPeopleCongresses",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-08-30T09:56:56.805Z",
+  "generatedAt": "2026-08-30T14:23:35.282Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -16,13 +16,13 @@
       "title": "任期职权·代理正职",
       "durationMs": 9200,
       "file": "tenure-personnel.avif",
-      "fileSize": 477164,
+      "fileSize": 473102,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "b0f3b2883a48c0a50011f39cc348cc77f590270e465728f3757830856378d116",
+      "sha256": "cd6b68892a55f492970b895027418c8cecb4206b0b190a835bc47efe00e5b44b",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "fa452c6f4f3bd24b4ea816b3493952d176f2c017a40ccab18ec732b7a62ff874"
+      "sceneFingerprint": "57cdc49a68f32165db62a08c907ff66f096a5e35dcab512eab15352d4eb70cdc"
     },
     {
       "endFrame": 551,
@@ -33,13 +33,13 @@
       "title": "谁任命谁·提名链",
       "durationMs": 9200,
       "file": "special-appointment.avif",
-      "fileSize": 546509,
+      "fileSize": 529601,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "81e71a10df560771b46895c5767cf9b05e52da8cfbb7cd342371bd4e73915613",
+      "sha256": "e6ee3240aeff157c0ac64b971d584d0b547f61997b114403f6ff1b12057e2322",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "fa452c6f4f3bd24b4ea816b3493952d176f2c017a40ccab18ec732b7a62ff874"
+      "sceneFingerprint": "57cdc49a68f32165db62a08c907ff66f096a5e35dcab512eab15352d4eb70cdc"
     },
     {
       "endFrame": 827,
@@ -50,13 +50,13 @@
       "title": "开会的规矩",
       "durationMs": 9200,
       "file": "meetings.avif",
-      "fileSize": 540868,
+      "fileSize": 544297,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "edb0e2626e91050ccc14f2f183edb3e1797114267d3ef31d3602c88114da1cdb",
+      "sha256": "1091655d2d52b3ae1d7291713f5ac5e8f63e6fb68969246df0a4451be7719212",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "fa452c6f4f3bd24b4ea816b3493952d176f2c017a40ccab18ec732b7a62ff874"
+      "sceneFingerprint": "57cdc49a68f32165db62a08c907ff66f096a5e35dcab512eab15352d4eb70cdc"
     },
     {
       "endFrame": 1139,
@@ -67,13 +67,13 @@
       "title": "奏章双轨与撤职案",
       "durationMs": 10400,
       "file": "motions-removal.avif",
-      "fileSize": 825417,
+      "fileSize": 814431,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "d8b18bf1b0f8596b28ae5759e5e121716b5fa0700998c2052c31c9e022170d90",
+      "sha256": "261406d4ff302567252c914446a357cbe7f30ad29bba963cd537cc36226ef7af",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "fa452c6f4f3bd24b4ea816b3493952d176f2c017a40ccab18ec732b7a62ff874"
+      "sceneFingerprint": "57cdc49a68f32165db62a08c907ff66f096a5e35dcab512eab15352d4eb70cdc"
     }
   ],
   "size": {
@@ -81,7 +81,7 @@
     "width": 2560
   },
   "sourceFps": 30,
-  "sourceFingerprint": "fa452c6f4f3bd24b4ea816b3493952d176f2c017a40ccab18ec732b7a62ff874",
+  "sourceFingerprint": "57cdc49a68f32165db62a08c907ff66f096a5e35dcab512eab15352d4eb70cdc",
   "targetFps": 30,
-  "totalFileSize": 2389958
+  "totalFileSize": 2361431
 }

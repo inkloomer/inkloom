@@ -3,7 +3,7 @@
   "compositionId": "JudicialIndependence",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-08-30T12:09:30.465Z",
+  "generatedAt": "2026-08-30T14:33:34.810Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -16,13 +16,13 @@
       "title": "碑廊三碑：护航独立职权",
       "durationMs": 8400,
       "file": "three-steles.avif",
-      "fileSize": 736932,
+      "fileSize": 722301,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "f12e547da8f9d4b8ba320af721a830105f3dc9a3eea01855ae11c8e8ff57a638",
+      "sha256": "c1b8b8451cab139800348b5ffb3cae5a4a313e8b918d5de50b9b348263d98b78",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "9c00aab29ddd28d757ef17295e6917dfa0012edfb5f162f2bd824ca6254686e6"
+      "sceneFingerprint": "c2a9356b04e6ce3cb66ffc5177d0d0af507a55f2637666a2ee4487bf713c3351"
     },
     {
       "endFrame": 491,
@@ -33,13 +33,13 @@
       "title": "对照室：拒绝权与书面道",
       "durationMs": 8000,
       "file": "rebuff-duty.avif",
-      "fileSize": 568702,
+      "fileSize": 570781,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "f56ff8a04012a886feeafb00a92a5de409ae58ec9d11b5ab24df98767502e6d4",
+      "sha256": "c2d253a8ddd3788e5b97317103ea19f2ae219b77a9d21ebb0ad2ca66787958f0",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "9c00aab29ddd28d757ef17295e6917dfa0012edfb5f162f2bd824ca6254686e6"
+      "sceneFingerprint": "c2a9356b04e6ce3cb66ffc5177d0d0af507a55f2637666a2ee4487bf713c3351"
     }
   ],
   "size": {
@@ -47,7 +47,7 @@
     "width": 2560
   },
   "sourceFps": 30,
-  "sourceFingerprint": "9c00aab29ddd28d757ef17295e6917dfa0012edfb5f162f2bd824ca6254686e6",
+  "sourceFingerprint": "c2a9356b04e6ce3cb66ffc5177d0d0af507a55f2637666a2ee4487bf713c3351",
   "targetFps": 30,
-  "totalFileSize": 1305634
+  "totalFileSize": 1293082
 }

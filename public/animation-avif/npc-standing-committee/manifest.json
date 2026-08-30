@@ -3,7 +3,7 @@
   "compositionId": "NpcStandingCommittee",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-08-30T08:03:04.498Z",
+  "generatedAt": "2026-08-30T14:06:07.487Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -16,13 +16,13 @@
       "title": "两席对照：组成与任期",
       "durationMs": 9200,
       "file": "composition.avif",
-      "fileSize": 646679,
+      "fileSize": 641042,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "b8d9648aaffcd206c1002ed98a2696dbeb17946d87ee968dc24cedad3eee650d",
+      "sha256": "762ce8e2ba378db950cdd4262a885ae303ae91486085937ffca034b804577ebf",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "0bfefe03b27d3cc9d98007766ca7dffd0d9040a5ce870d2e5e66679e170b45c8"
+      "sceneFingerprint": "0392e292178218868140784859b44294551eaaf514b4dbed1daf56713b75ff71"
     },
     {
       "endFrame": 575,
@@ -33,13 +33,13 @@
       "title": "监督方式五法·立法权分工",
       "durationMs": 10000,
       "file": "supervision-legislation.avif",
-      "fileSize": 641284,
+      "fileSize": 633204,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "c131c6cffe0ae265679018080bc351b337ca26556b42b321af0847f4477de7a3",
+      "sha256": "a67839cd2e913c5f7f1f5bd143b33e5f80c5c803276ff8e2b697dbe37c9c9e08",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "0bfefe03b27d3cc9d98007766ca7dffd0d9040a5ce870d2e5e66679e170b45c8"
+      "sceneFingerprint": "0392e292178218868140784859b44294551eaaf514b4dbed1daf56713b75ff71"
     },
     {
       "endFrame": 863,
@@ -50,13 +50,13 @@
       "title": "人事权：选举→决定→任免",
       "durationMs": 9600,
       "file": "personnel.avif",
-      "fileSize": 575931,
+      "fileSize": 574490,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "73f6ade811925d870ae1e6c28df49e4ffd3cda395e9d0cf1dace5ec7aeaf4292",
+      "sha256": "7bf73692f4fed4bd6717830f2981b77571ef01bd24bd49db30e4db135d67e655",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "0bfefe03b27d3cc9d98007766ca7dffd0d9040a5ce870d2e5e66679e170b45c8"
+      "sceneFingerprint": "0392e292178218868140784859b44294551eaaf514b4dbed1daf56713b75ff71"
     },
     {
       "endFrame": 1175,
@@ -67,13 +67,13 @@
       "title": "会议制度·重大事项决定权",
       "durationMs": 10400,
       "file": "meetings-decisions.avif",
-      "fileSize": 722544,
+      "fileSize": 733702,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "043ab6c9be22ac878760eb06f8da6be8ee728dd2bafac0982ff6e9eed55e64d0",
+      "sha256": "f6cde7d3cc95fea620ae0c9cf63d9f7452912e6dbb74ed057a2f2a1ae157f25a",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "0bfefe03b27d3cc9d98007766ca7dffd0d9040a5ce870d2e5e66679e170b45c8"
+      "sceneFingerprint": "0392e292178218868140784859b44294551eaaf514b4dbed1daf56713b75ff71"
     },
     {
       "endFrame": 1475,
@@ -84,13 +84,13 @@
       "title": "议案程序：从提案到公布",
       "durationMs": 10000,
       "file": "motions.avif",
-      "fileSize": 1018335,
+      "fileSize": 1009892,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "844e4f69e83a662842c7373421a86705aa0cc8d69d37722e69e5d1a0247305f4",
+      "sha256": "300e5967d597db3b5cc4968281c746645119a02510e74298601f9f0531497dd3",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "0bfefe03b27d3cc9d98007766ca7dffd0d9040a5ce870d2e5e66679e170b45c8"
+      "sceneFingerprint": "0392e292178218868140784859b44294551eaaf514b4dbed1daf56713b75ff71"
     }
   ],
   "size": {
@@ -98,7 +98,7 @@
     "width": 2560
   },
   "sourceFps": 30,
-  "sourceFingerprint": "0bfefe03b27d3cc9d98007766ca7dffd0d9040a5ce870d2e5e66679e170b45c8",
+  "sourceFingerprint": "0392e292178218868140784859b44294551eaaf514b4dbed1daf56713b75ff71",
   "targetFps": 30,
-  "totalFileSize": 3604773
+  "totalFileSize": 3592330
 }

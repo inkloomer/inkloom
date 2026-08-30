@@ -1,0 +1,15 @@
+{
+  "directionId": "selection-roster-desk",
+  "family": "roster-selection-desk",
+  "title": "铨叙选册",
+  "subject": "theoretical-law",
+  "chapter": "04",
+  "concept": "铨叙选册案：法官遴选的阶梯与考评的等第写入选册，1/3 印章与逐级遴选台阶为图形意象。图形层主题；画面文字一律使用源笔记法考名词",
+  "palette": "选册米黄 roster #EFE8D2、案面深褐 desk #3A322A、深案 deskDeep #2C2620、面板 panel #F1EBD9、暗面板 panelDim #E2DBC5、镶边 edge #6E6557、墨字 ink #2A241D、淡墨 inkSoft #5C5346、铨金 brass #C09A44、遴选青 teal #4E7D74、考红 assess #B04834、纸白 paper #F6F1E0",
+  "typography": "标题用 var(--inkloom-animation-title)，正文用 var(--inkloom-animation-body)；选册行加粗法考名词，等第用朱印",
+  "composition": "遴选台阶行 + 1/3 印章 + 考评等第行 + 源名词口诀带",
+  "surface": "选册纸纹 + 台阶线 + 朱印纹",
+  "motion": "台阶升起、印章钤落、等第翻牌",
+  "transition": "硬切换幕",
+  "catalog": ["考点63 法官(检察官)的管理制度"]
+}

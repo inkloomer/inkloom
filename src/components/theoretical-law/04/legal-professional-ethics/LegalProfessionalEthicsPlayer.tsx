@@ -14,7 +14,7 @@ export const LegalProfessionalEthicsPlayer = () => (
     durationInFrames={DURATION_FRAMES}
     fps={FPS}
     scenes={scenes}
-    title="法律职业道德：玉简德廊"
+    title="法律职业道德"
   />
 );
 

@@ -2,7 +2,7 @@ import {defineAnimationTypography} from '../../../../typography/animation-preset
 
 export default {
   id: 'judicial-fairness-efficiency',
-  title: '司法公正与司法效率：明镜高悬堂',
+  title: "司法公正与司法效率",
   sourceReference: 'Note-3.2/法考/客观/理论法/理论法·马峰/考点59 司法公正与司法效率',
   route: 'objective/theoretical-law/04/judicial-fairness-efficiency',
   subject: 'theoretical-law',

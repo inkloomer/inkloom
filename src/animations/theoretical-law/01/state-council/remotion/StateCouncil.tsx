@@ -154,7 +154,7 @@ export const HonorsScene = () => {
     {name: '国家荣誉称号', tone: C.celadon, icon: <Award size={34} color={C.paper} strokeWidth={2.2} />, body: '命名一般冠以「人民」，也可有其他方式；授予经济·社会·国防·外交·教育·科技·文化·卫生·体育等领域作出重大贡献、享有崇高声誉的杰出人士'},
   ] as const;
   return (
-    <Shell code="01" kicker="国家勋章与主体" title="三枚勋章的授予规矩">
+    <Shell code="01" kicker="国家勋章与主体" title="国家勋章与主体">
       <div
         data-layout="trio-medal-shelf"
         data-visual-anchor="main center"
@@ -176,7 +176,7 @@ export const HonorsScene = () => {
         ))}
         <Enter delay={90} from="left" marker="honor-subjects" style={{position: 'absolute', left: 0, top: 344, width: 1776}}>
           <Panel tone={C.brass} watermark={<ScrollText size={150} color={C.brass} strokeWidth={1.6} />} style={{height: 168, padding: '12px 22px', display: 'flex', flexDirection: 'column', gap: 9}}>
-            <DeskTab bar={C.brass} icon={<ScrollText size={26} color={C.paper} strokeWidth={2.2} />}>谁来定 · 谁来提</DeskTab>
+            <DeskTab bar={C.brass} icon={<ScrollText size={26} color={C.paper} strokeWidth={2.2} />}>决定主体 · 提案主体</DeskTab>
             <IconChip icon={<UserCheck size={28} color={C.paper} strokeWidth={2.2} />} tone={C.cinnabar} title="决定主体：">
               共和国勋章与国家荣誉称号 —— <Mark color={C.cinnabar}>全国人大常委会决定 · 国家主席宣告</Mark>；友谊勋章 —— 国家主席<Mark color={C.brass}>可以直接授予</Mark>
             </IconChip>
@@ -202,7 +202,7 @@ export const HonorsScene = () => {
 export const OrganizationScene = () => {
   /* data-final-knowledge="chief-responsibility" data-final-knowledge="org-law-2024" */
   return (
-    <Shell code="02" kicker="首长负责制 · 组织法亮点" title="谁来拍板：首长制与部门线">
+    <Shell code="02" kicker="首长负责制 · 组织法亮点" title="首长负责制与组织法亮点">
       <div
         data-layout="ledger-plus-dual-track"
         data-visual-anchor="main center"

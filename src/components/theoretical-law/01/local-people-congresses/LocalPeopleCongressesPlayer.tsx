@@ -16,7 +16,7 @@ export const LocalPeopleCongressesPlayer = () => (
     durationInFrames={DURATION_FRAMES}
     fps={FPS}
     scenes={scenes}
-    title="地方各级人大及其常委会：舆图郡县堂"
+    title="地方各级人大及其常委会"
   />
 );
 

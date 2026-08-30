@@ -312,7 +312,7 @@ export const CommitteesScene = () => {
     },
   ] as const;
   return (
-    <Shell code="两委设置" kicker="村里三到七 · 城里五到九" title="村委会 VS 居委会：东西两厢">
+    <Shell code="两委设置" kicker="村里三到七 · 城里五到九" title="村委会 VS 居委会">
       <div
         data-layout="east-west-wing-pair"
         data-visual-anchor="main center"

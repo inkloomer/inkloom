@@ -15,7 +15,7 @@ export const JudicialFairnessEfficiencyPlayer = () => (
     durationInFrames={DURATION_FRAMES}
     fps={FPS}
     scenes={scenes}
-    title="司法公正与司法效率：明镜高悬堂"
+    title="司法公正与司法效率"
   />
 );
 

@@ -3,7 +3,7 @@
   "compositionId": "LegalProfessionalEthics",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-08-30T12:19:58.117Z",
+  "generatedAt": "2026-08-30T14:35:30.166Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -16,13 +16,13 @@
       "title": "主简五玉章：概念与特征",
       "durationMs": 8400,
       "file": "concept-features.avif",
-      "fileSize": 588607,
+      "fileSize": 596906,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "3735ff06bf2daa91fda6aa27a84ef32462ca5301df8b53e79f3c914e52ebece6",
+      "sha256": "9c24a223af362ad71ba471064b173d32944c89b9eaedb8d8dd9020be401e6011",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "33fbc24205f6fd8ba99abaec90dd0a0e942f9bf3eea878f3556de942c7cbc17a"
+      "sceneFingerprint": "84ec8c6cc5297c34f270d2c9d896e0f6cae896362f9e4111d8700abd15ac6719"
     },
     {
       "endFrame": 467,
@@ -33,13 +33,13 @@
       "title": "朱批三则：道德属性辨析",
       "durationMs": 7200,
       "file": "annotations.avif",
-      "fileSize": 414571,
+      "fileSize": 406800,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "5b794a47fa6fd056648902874b503869c466564ccdb7cff643caf9b9e3631c46",
+      "sha256": "ef8f36579cde0b648e699de45e00b0c8680ff3c7ff8434d6730675dbd8ef6b1d",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "33fbc24205f6fd8ba99abaec90dd0a0e942f9bf3eea878f3556de942c7cbc17a"
+      "sceneFingerprint": "84ec8c6cc5297c34f270d2c9d896e0f6cae896362f9e4111d8700abd15ac6719"
     }
   ],
   "size": {
@@ -47,7 +47,7 @@
     "width": 2560
   },
   "sourceFps": 30,
-  "sourceFingerprint": "33fbc24205f6fd8ba99abaec90dd0a0e942f9bf3eea878f3556de942c7cbc17a",
+  "sourceFingerprint": "84ec8c6cc5297c34f270d2c9d896e0f6cae896362f9e4111d8700abd15ac6719",
   "targetFps": 30,
-  "totalFileSize": 1003178
+  "totalFileSize": 1003706
 }

@@ -1,0 +1,15 @@
+{
+  "directionId": "joint-bench-roster",
+  "family": "bench-roster-hall",
+  "title": "同席参审簿",
+  "subject": "theoretical-law",
+  "chapter": "04",
+  "concept": "同席参审簿：资格与名额写入选簿，三人与七人合议庭席位图为图形意象，表决权差异以双色票签呈现。图形层主题；画面文字一律使用源笔记法考名词",
+  "palette": "选簿米 roster #EFE9D3、堂内深 bench #34302B、深堂 benchDeep #272420、面板 panel #F1ECDA、暗面板 panelDim #E2DDC7、镶边 edge #6C655A、墨字 ink #292520、淡墨 inkSoft #5B5449、席金 benchGold #C0983E、参审青 assessorTeal #4E7D74、限权红 restrict #B04834、纸白 paper #F6F1E0",
+  "typography": "标题用 var(--inkloom-animation-title)，正文用 var(--inkloom-animation-body)；簿行加粗法考名词，数字门槛用朱印",
+  "composition": "选簿资格行 + 合议庭席位图 + 双色表决票签 + 保障行",
+  "surface": "簿纸纹 + 席位圈线 + 朱印",
+  "motion": "簿行展开、席位入座、票签落定",
+  "transition": "硬切换幕",
+  "catalog": ["考点66 人民陪审员"]
+}

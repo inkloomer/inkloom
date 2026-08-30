@@ -3,7 +3,7 @@
   "compositionId": "GrassrootsAutonomy",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-08-30T07:04:25.057Z",
+  "generatedAt": "2026-08-30T13:55:19.906Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -16,13 +16,13 @@
       "title": "三性根基：群众性·自治性·基层性",
       "durationMs": 8800,
       "file": "features.avif",
-      "fileSize": 548696,
+      "fileSize": 549571,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "9171ae73d0288cd7d8cdeda012c3cadf37f553b864a101ae0cd0de777016f3f4",
+      "sha256": "7ce3d7d7fca908a716eaa62ef71ed8338ca820088958ce885521d6d8521d02b9",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "8285fc47bc4f2d5961ea58a9fecd5f9915924cfa1ee2615a8967568aea6202ac"
+      "sceneFingerprint": "85f0c87c1abe31e65483b546ba500dca7c9bb8b29307d3cb7a8dcc01462a277a"
     },
     {
       "endFrame": 575,
@@ -33,13 +33,13 @@
       "title": "四会对照：村民会·村代会·居民会·居代会",
       "durationMs": 10400,
       "file": "assemblies.avif",
-      "fileSize": 806796,
+      "fileSize": 808372,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "a2f67857fbf4dc3dbb543a677fdfd3914c9b9ea3a9a321a42251b9a3507e509d",
+      "sha256": "f7696dfb965f14e9f347caa450e0b9059e5b3866e750cd3ea15323b117ff37eb",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "8285fc47bc4f2d5961ea58a9fecd5f9915924cfa1ee2615a8967568aea6202ac"
+      "sceneFingerprint": "85f0c87c1abe31e65483b546ba500dca7c9bb8b29307d3cb7a8dcc01462a277a"
     },
     {
       "endFrame": 911,
@@ -50,13 +50,13 @@
       "title": "村委会 VS 居委会",
       "durationMs": 11200,
       "file": "committees.avif",
-      "fileSize": 1081358,
+      "fileSize": 1077165,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "8dd39250b2d4e8c8b80b74b23cf66e08183c7aa3f48080904a1a6b146f05f062",
+      "sha256": "dc3a583f8ffae7bdf6417ec54472c6691b4f9c9d627a938ee3d0e75b54f9dd09",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "8285fc47bc4f2d5961ea58a9fecd5f9915924cfa1ee2615a8967568aea6202ac"
+      "sceneFingerprint": "85f0c87c1abe31e65483b546ba500dca7c9bb8b29307d3cb7a8dcc01462a277a"
     }
   ],
   "size": {
@@ -64,7 +64,7 @@
     "width": 2560
   },
   "sourceFps": 30,
-  "sourceFingerprint": "8285fc47bc4f2d5961ea58a9fecd5f9915924cfa1ee2615a8967568aea6202ac",
+  "sourceFingerprint": "85f0c87c1abe31e65483b546ba500dca7c9bb8b29307d3cb7a8dcc01462a277a",
   "targetFps": 30,
-  "totalFileSize": 2436850
+  "totalFileSize": 2435108
 }

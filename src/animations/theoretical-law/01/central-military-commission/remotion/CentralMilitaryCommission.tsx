@@ -147,7 +147,7 @@ export const TalliesScene = () => {
     {group: '紧急状态类', tone: C.tally, icon: <Bell size={28} color={C.paper} strokeWidth={2.2} />, item: '省·自治区·直辖市的部分地区进入紧急状态', decide: '国务院', publish: '国务院令公布'},
   ] as const;
   return (
-    <Shell code="01" kicker="军令分级 · 决定与公布" title="虎符令签：决定与公布对照">
+    <Shell code="01" kicker="决定机关 · 公布" title="决定机关与公布">
       <div
         data-layout="tally-sign-rows"
         data-visual-anchor="main center"
@@ -202,7 +202,7 @@ export const CmcScene = () => {
       >
         <Enter delay={6} from="left" marker="cmc-organization" style={{position: 'absolute', left: 0, top: 0, width: 866, height: 264}}>
           <Panel tone={C.army} watermark={<Shield size={160} color={C.army} strokeWidth={1.6} />} style={{height: '100%', padding: '12px 20px', display: 'flex', flexDirection: 'column', gap: 10}}>
-            <GateTab bar={C.army} icon={<Shield size={26} color={C.paper} strokeWidth={2.2} />}>军委三要素</GateTab>
+            <GateTab bar={C.army} icon={<Shield size={26} color={C.paper} strokeWidth={2.2} />}>性质 · 组成 · 任期</GateTab>
             <div style={{fontSize: 23, fontWeight: 900, color: C.ink, lineHeight: 1.55}}>
               <Mark color={C.army}>性质</Mark>：全国武装力量的最高领导机关
               <br />

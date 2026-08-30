@@ -14,7 +14,7 @@ export const JudicialCharacteristicsPlayer = () => (
     durationInFrames={DURATION_FRAMES}
     fps={FPS}
     scenes={scenes}
-    title="我国的司法特征：六印司法墙"
+    title="我国的司法特征"
   />
 );
 

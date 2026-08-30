@@ -14,7 +14,7 @@ export const JudicialFunctionsPlayer = () => (
     durationInFrames={DURATION_FRAMES}
     fps={FPS}
     scenes={scenes}
-    title="司法的功能：五音钟楼"
+    title="司法的功能"
   />
 );
 

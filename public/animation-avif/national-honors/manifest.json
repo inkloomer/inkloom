@@ -3,7 +3,7 @@
   "compositionId": "NationalHonors",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-08-30T08:18:45.173Z",
+  "generatedAt": "2026-08-30T14:08:35.014Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -16,13 +16,13 @@
       "title": "铜牌数字门：301·10·103团",
       "durationMs": 8400,
       "file": "motions.avif",
-      "fileSize": 799652,
+      "fileSize": 780697,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "ba92c2fc83d509fc4a9c65bf6223cb4d1cd48aab29f9e859605be9b83a4c8ae9",
+      "sha256": "7faa4b768d34e93479e44338a7514054c7c1bc2442335cba16893910f0b11ed1",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "49649008bf5fa4691e650be4c0de603116716d2dd8afdde797b0dbba0bf51878"
+      "sceneFingerprint": "70527932e8d84c5a223d60cccd6f3551bd63e58d9ca70e02a7b216bf15c8e41b"
     },
     {
       "endFrame": 503,
@@ -33,13 +33,13 @@
       "title": "勋章授予金线三步",
       "durationMs": 8400,
       "file": "honoring.avif",
-      "fileSize": 439010,
+      "fileSize": 434886,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "063eef7ca236c001b008b370b96a5f282e4e44c843e725662cd3cde15011c17a",
+      "sha256": "427cbf9ba5e43bbf2df8b448661a5e5b4a47de3e1715d879b7a0a50529c99399",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "49649008bf5fa4691e650be4c0de603116716d2dd8afdde797b0dbba0bf51878"
+      "sceneFingerprint": "70527932e8d84c5a223d60cccd6f3551bd63e58d9ca70e02a7b216bf15c8e41b"
     }
   ],
   "size": {
@@ -47,7 +47,7 @@
     "width": 2560
   },
   "sourceFps": 30,
-  "sourceFingerprint": "49649008bf5fa4691e650be4c0de603116716d2dd8afdde797b0dbba0bf51878",
+  "sourceFingerprint": "70527932e8d84c5a223d60cccd6f3551bd63e58d9ca70e02a7b216bf15c8e41b",
   "targetFps": 30,
-  "totalFileSize": 1238662
+  "totalFileSize": 1215583
 }

@@ -3,7 +3,7 @@
   "compositionId": "CitizenFundamentalRights",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-08-30T07:38:39.334Z",
+  "generatedAt": "2026-08-30T14:00:15.405Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -16,13 +16,13 @@
       "title": "平等权与政治权利和自由",
       "durationMs": 9600,
       "file": "equality-political.avif",
-      "fileSize": 771213,
+      "fileSize": 760630,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "36070a5ed1aee6fe2e6ce2830db1ac324335c74595c7fd56066e63f8bf45aaad",
+      "sha256": "142ef6c6f12a39484a1bbffe2f3377fed1778ba70e4772299ebd0747034be0dd",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "c03302d0d2b7cfd090783f711845423f4170f05eb0131d3c75670e7cc527cfdf"
+      "sceneFingerprint": "9adede220db9821426d885261124b3caed7eb49c4e5a9af228e1f0ed35ce0d73"
     },
     {
       "endFrame": 575,
@@ -33,13 +33,13 @@
       "title": "监督权、国家赔偿与宗教信仰自由",
       "durationMs": 9600,
       "file": "supervision-religion.avif",
-      "fileSize": 756721,
+      "fileSize": 746443,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "f4a6b15f6dbb53d8b714fec13adce824688667cd1b8dfa9ab489bf37eb42a88a",
+      "sha256": "fb91046e6a0aa92c55443afca6a03b8504677ac4eaeca88cdfac3932be19a68b",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "c03302d0d2b7cfd090783f711845423f4170f05eb0131d3c75670e7cc527cfdf"
+      "sceneFingerprint": "9adede220db9821426d885261124b3caed7eb49c4e5a9af228e1f0ed35ce0d73"
     },
     {
       "endFrame": 839,
@@ -50,13 +50,13 @@
       "title": "人身自由：一盏灯下四格",
       "durationMs": 8800,
       "file": "personal-freedom.avif",
-      "fileSize": 623383,
+      "fileSize": 613915,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "17fd55b001fcbafb4aa25c111d50b1c3f0c2abbf00039a3bedfc0f0613b97771",
+      "sha256": "2094dfa37f0c72b5aed12ca0b3c575bf7fe44794e116d74e75e1f695a33fe595",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "c03302d0d2b7cfd090783f711845423f4170f05eb0131d3c75670e7cc527cfdf"
+      "sceneFingerprint": "9adede220db9821426d885261124b3caed7eb49c4e5a9af228e1f0ed35ce0d73"
     },
     {
       "endFrame": 1151,
@@ -67,13 +67,13 @@
       "title": "社会经济和文化教育权利",
       "durationMs": 10400,
       "file": "social-economic.avif",
-      "fileSize": 803090,
+      "fileSize": 796994,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "387b7d79d0cefc12b7921106ab9ec6c8d97c160a1861c3fc182787e5713e61c9",
+      "sha256": "8796e61ffb8297905c1a0428004dc4cecc3a762df629633409a5d09436cd4c40",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "c03302d0d2b7cfd090783f711845423f4170f05eb0131d3c75670e7cc527cfdf"
+      "sceneFingerprint": "9adede220db9821426d885261124b3caed7eb49c4e5a9af228e1f0ed35ce0d73"
     }
   ],
   "size": {
@@ -81,7 +81,7 @@
     "width": 2560
   },
   "sourceFps": 30,
-  "sourceFingerprint": "c03302d0d2b7cfd090783f711845423f4170f05eb0131d3c75670e7cc527cfdf",
+  "sourceFingerprint": "9adede220db9821426d885261124b3caed7eb49c4e5a9af228e1f0ed35ce0d73",
   "targetFps": 30,
-  "totalFileSize": 2954407
+  "totalFileSize": 2917982
 }

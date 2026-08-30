@@ -149,7 +149,7 @@ const IconChip = ({icon, tone, title, children}: {readonly icon: ReactNode; read
 export const EqualityPoliticalScene = () => {
   /* data-final-knowledge="equality-scope" data-final-knowledge="political-freedoms" */
   return (
-    <Shell code="01" kicker="第一盏·第二盏 · 平等权与政治自由" title="平等权与政治权利和自由">
+    <Shell code="01" kicker="平等权 · 政治权利和自由" title="平等权与政治权利和自由">
       <div
         data-layout="twin-panel-rights"
         data-visual-anchor="main center"
@@ -161,7 +161,7 @@ export const EqualityPoliticalScene = () => {
       >
         <Enter delay={6} from="left" marker="equality-scope" style={{position: 'absolute', left: 0, top: 0, width: 866, height: 560}}>
           <Panel tone={C.pine} watermark={<Scale size={190} color={C.pine} strokeWidth={1.6} />} style={{height: '100%', padding: '16px 22px', display: 'flex', flexDirection: 'column', gap: 12}}>
-            <LampTab bar={C.pine} icon={<Lamp size={26} color={C.amber} strokeWidth={2.2} />}>第一盏 · 平等权</LampTab>
+            <LampTab bar={C.pine} icon={<Lamp size={26} color={C.amber} strokeWidth={2.2} />}>平等权</LampTab>
             <div style={{fontSize: 22, fontWeight: 900, color: C.ink, lineHeight: 1.55}}>
               法律面前人人平等：指<Mark color={C.pine}>权利能力平等</Mark>，非行为能力和事实意义上的平等
               <br />
@@ -180,7 +180,7 @@ export const EqualityPoliticalScene = () => {
         </Enter>
         <Enter delay={30} from="right" marker="political-freedoms" style={{position: 'absolute', left: 910, top: 0, width: 866, height: 560}}>
           <Panel tone={C.lantern} watermark={<Flag size={190} color={C.lantern} strokeWidth={1.6} />} style={{height: '100%', padding: '16px 22px', display: 'flex', flexDirection: 'column', gap: 10}}>
-            <LampTab bar={C.lantern} icon={<Lamp size={26} color={C.amber} strokeWidth={2.2} />}>第二盏 · 政治权利和自由</LampTab>
+            <LampTab bar={C.lantern} icon={<Lamp size={26} color={C.amber} strokeWidth={2.2} />}>政治权利和自由</LampTab>
             <IconChip icon={<Vote size={30} color={C.paper} strokeWidth={2.2} />} tone={C.lantern} title="选举权和被选举权：">
               选代表 · 被选为代表 · 监督和罢免代表
             </IconChip>
@@ -215,7 +215,7 @@ export const EqualityPoliticalScene = () => {
 export const SupervisionReligionScene = () => {
   /* data-final-knowledge="supervision-rights" data-final-knowledge="religion-freedom" */
   return (
-    <Shell code="02" kicker="第三盏·第四盏 · 监督权与宗教信仰" title="监督权、国家赔偿与宗教信仰自由">
+    <Shell code="02" kicker="监督权 · 国家赔偿 · 宗教信仰自由" title="监督权、国家赔偿与宗教信仰自由">
       <div
         data-layout="twin-panel-rights"
         data-visual-anchor="main center"
@@ -227,7 +227,7 @@ export const SupervisionReligionScene = () => {
       >
         <Enter delay={6} from="left" marker="supervision-rights" style={{position: 'absolute', left: 0, top: 0, width: 866, height: 560}}>
           <Panel tone={C.pine} watermark={<Gavel size={190} color={C.pine} strokeWidth={1.6} />} style={{height: '100%', padding: '16px 22px', display: 'flex', flexDirection: 'column', gap: 11}}>
-            <LampTab bar={C.pine} icon={<Lamp size={26} color={C.amber} strokeWidth={2.2} />}>第三盏 · 监督权和获得国家赔偿权</LampTab>
+            <LampTab bar={C.pine} icon={<Lamp size={26} color={C.amber} strokeWidth={2.2} />}>监督权和获得国家赔偿权</LampTab>
             <IconChip icon={<MessageSquarePlus size={30} color={C.paper} strokeWidth={2.2} />} tone={C.pine} title="批评建议权：">
               对<Mark color={C.pine}>任何</Mark>国家机关和国家工作人员、任何行为 —— <SealStamp tone={C.pine} delay={110}>要态度</SealStamp>
             </IconChip>
@@ -251,7 +251,7 @@ export const SupervisionReligionScene = () => {
         </Enter>
         <Enter delay={30} from="right" marker="religion-freedom" style={{position: 'absolute', left: 910, top: 0, width: 866, height: 560}}>
           <Panel tone={C.amber} watermark={<HandHeart size={190} color={C.amber} strokeWidth={1.6} />} style={{height: '100%', padding: '16px 22px', display: 'flex', flexDirection: 'column', gap: 9}}>
-            <LampTab bar={C.amber} icon={<Lamp size={26} color={C.amber} strokeWidth={2.2} />}>第四盏 · 宗教信仰自由</LampTab>
+            <LampTab bar={C.amber} icon={<Lamp size={26} color={C.amber} strokeWidth={2.2} />}>宗教信仰自由</LampTab>
             <IconChip icon={<HandHeart size={30} color={C.paper} strokeWidth={2.2} />} tone={C.amber} title="内涵：">
               信教不信教 · 过去不信现在信 · 信仰不同宗教 · 信仰这个或那个教派（大陆无传教办教自由，港澳无办教自由）
             </IconChip>
@@ -340,7 +340,7 @@ export const PersonalFreedomScene = () => {
     },
   ] as const;
   return (
-    <Shell code="03" kicker="第五盏 · 人身自由" title="人身自由：一盏灯下四格">
+    <Shell code="03" kicker="人身自由" title="人身自由">
       <div
         data-layout="four-cell-lantern-grid"
         data-visual-anchor="main center"
@@ -385,7 +385,7 @@ export const PersonalFreedomScene = () => {
 export const SocialEconomicScene = () => {
   /* data-final-knowledge="social-economic-rights" data-final-knowledge="rights-boundary" */
   return (
-    <Shell code="04" kicker="第六盏·点睛 · 社会经济文化教育" title="社会经济和文化教育权利">
+    <Shell code="04" kicker="社会经济和文化教育权利" title="社会经济和文化教育权利">
       <div
         data-layout="twin-panel-rights"
         data-visual-anchor="main center"
@@ -397,7 +397,7 @@ export const SocialEconomicScene = () => {
       >
         <Enter delay={6} from="left" marker="social-economic-rights" style={{position: 'absolute', left: 0, top: 0, width: 866, height: 436}}>
           <Panel tone={C.pine} watermark={<Coins size={170} color={C.pine} strokeWidth={1.6} />} style={{height: '100%', padding: '16px 22px', display: 'flex', flexDirection: 'column', gap: 9}}>
-            <LampTab bar={C.pine} icon={<Lamp size={26} color={C.amber} strokeWidth={2.2} />}>第六盏 · 物质与经济性权利</LampTab>
+            <LampTab bar={C.pine} icon={<Lamp size={26} color={C.amber} strokeWidth={2.2} />}>物质与经济性权利</LampTab>
             <IconChip icon={<Coins size={30} color={C.paper} strokeWidth={2.2} />} tone={C.pine} title="财产权：">
               2004 年修宪增加，规定在<Mark color={C.pine}>总纲</Mark>；征收征用<Mark color={C.lantern}>并给予补偿</Mark>
             </IconChip>

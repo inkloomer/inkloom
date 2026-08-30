@@ -3,7 +3,7 @@
   "compositionId": "SupervisoryOrgans",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-08-30T09:28:19.851Z",
+  "generatedAt": "2026-08-30T14:19:12.518Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -16,13 +16,13 @@
       "title": "帅令五章：军委主席负责制",
       "durationMs": 8800,
       "file": "chair.avif",
-      "fileSize": 475799,
+      "fileSize": 473203,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "03fd685c7b487c6ef3225a71e297b619fc5afab999293fe0831965b43cb5b348",
+      "sha256": "a7c05f7bde22156fdd3cffd4e71c83af3d3043103bbc7867ed69cb3cab7a6a7b",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "77d9922767d524f1c5c310fe01e4d85245d83adc40a6b23b6e54a4a0852d2eb4"
+      "sceneFingerprint": "f27b75f81ecded4e2d8398fbb5846545c629ed18f2a9444c7f85701e33251ba4"
     },
     {
       "endFrame": 551,
@@ -33,13 +33,13 @@
       "title": "绣衣双线：双领导·双负责",
       "durationMs": 9600,
       "file": "censor.avif",
-      "fileSize": 642311,
+      "fileSize": 630796,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "ce18a3f11c3ded6a3d30e8a94034320dabdeedad06371037865bc604bfb386d6",
+      "sha256": "290e0f3c25282b2d5575d3264cfae927476358e5705032e8418cb1cbe9ad9072",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "77d9922767d524f1c5c310fe01e4d85245d83adc40a6b23b6e54a4a0852d2eb4"
+      "sceneFingerprint": "f27b75f81ecded4e2d8398fbb5846545c629ed18f2a9444c7f85701e33251ba4"
     }
   ],
   "size": {
@@ -47,7 +47,7 @@
     "width": 2560
   },
   "sourceFps": 30,
-  "sourceFingerprint": "77d9922767d524f1c5c310fe01e4d85245d83adc40a6b23b6e54a4a0852d2eb4",
+  "sourceFingerprint": "f27b75f81ecded4e2d8398fbb5846545c629ed18f2a9444c7f85701e33251ba4",
   "targetFps": 30,
-  "totalFileSize": 1118110
+  "totalFileSize": 1103999
 }

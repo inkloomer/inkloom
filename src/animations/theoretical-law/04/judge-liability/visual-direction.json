@@ -1,0 +1,15 @@
+{
+  "directionId": "liability-folded-ledger",
+  "family": "folded-ledger-hall",
+  "title": "三折责任簿",
+  "subject": "theoretical-law",
+  "chapter": "04",
+  "concept": "三折责任簿：不予·免予·解除三折页并排，处分变更撤销六情形作骑缝印。图形层主题；画面文字一律使用源笔记法考名词",
+  "palette": "簿册米 ledger #EFE9D5、案里深处 hall #3B342C、深折 fold #2C2721、面板 panel #F1ECDA、暗面板 panelDim #E2DBC5、镶边 edge #6E6557、墨字 ink #2A241D、淡墨 inkSoft #5C5346、骑缝金 seam #C09A44、免予青 pardon #4E7D74、追责红 liability #B04834、纸白 paper #F6F1E0",
+  "typography": "标题用 var(--inkloom-animation-title)，正文用 var(--inkloom-animation-body)；折页行加粗法考名词，口诀用源笔记原文",
+  "composition": "三折页 + 骑缝印 + 口诀带（源笔记原文）",
+  "surface": "簿册纸纹 + 折页线 + 朱印纹",
+  "motion": "折页展开、印钤落定、口诀点亮",
+  "transition": "硬切换幕",
+  "catalog": ["考点65 法官职业责任"]
+}

@@ -2,7 +2,7 @@ import {defineAnimationTypography} from '../../../../typography/animation-preset
 
 export default {
   id: 'judicial-characteristics',
-  title: '我国的司法特征：六印司法墙',
+  title: "我国的司法特征",
   sourceReference: 'Note-3.2/法考/客观/理论法/理论法·马峰/考点57 我国的司法特征',
   route: 'objective/theoretical-law/04/judicial-characteristics',
   subject: 'theoretical-law',

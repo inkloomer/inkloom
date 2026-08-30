@@ -14,7 +14,7 @@ export const NationalHonorsPlayer = () => (
     durationInFrames={DURATION_FRAMES}
     fps={FPS}
     scenes={scenes}
-    title="国家勋章与国家荣誉称号：鎏金勋章阁"
+    title="国家勋章与国家荣誉称号"
   />
 );
 

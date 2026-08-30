@@ -149,7 +149,7 @@ const IconChip = ({icon, tone, title, children}: {readonly icon: ReactNode; read
 export const TenurePersonnelScene = () => {
   /* data-final-knowledge="tenure-powers" */
   return (
-    <Shell code="01" kicker="任期与人事任免" title="木牍一：任期职权 · 代理正职">
+    <Shell code="01" kicker="任期与人事任免" title="任期与职权">
       <div
         data-layout="twin-tablet-hall"
         data-visual-anchor="main center"
@@ -172,7 +172,7 @@ export const TenurePersonnelScene = () => {
         </Enter>
         <Enter delay={30} from="right" style={{position: 'absolute', left: 910, top: 0, width: 866, height: 372}}>
           <Panel tone={C.willow} watermark={<UserCheck size={170} color={C.willow} strokeWidth={1.6} />} style={{height: '100%', padding: '14px 22px', display: 'flex', flexDirection: 'column', gap: 11}}>
-            <TabletTab bar={C.willow} icon={<UserCheck size={26} color={C.paper} strokeWidth={2.2} />}>闭会期间的代理正职</TabletTab>
+            <TabletTab bar={C.willow} icon={<UserCheck size={26} color={C.paper} strokeWidth={2.2} />}>代理正职与备案</TabletTab>
             <IconChip icon={<UserCheck size={28} color={C.paper} strokeWidth={2.2} />} tone={C.willow} title="代理正职：">
               地方人大闭会期间，本级人常根据<Mark color={C.willow}>主任会议提名</Mark>，可以从<Mark color={C.willow}>副职中决定代理正职</Mark>
             </IconChip>
@@ -205,7 +205,7 @@ export const SpecialAppointmentScene = () => {
     {name: '人常专属（非人大）', tone: C.willow, icon: <Building2 size={28} color={C.paper} strokeWidth={2.2} />, body: '政府部门首长；法检及监察委其他官员'},
   ] as const;
   return (
-    <Shell code="02" kicker="特殊任免 · 提名制度" title="木牍二：谁任命谁 · 提名链">
+    <Shell code="02" kicker="特殊任免 · 提名制度" title="特殊任免与提名">
       <div
         data-layout="tri-slot-appointment"
         data-visual-anchor="main center"
@@ -228,7 +228,7 @@ export const SpecialAppointmentScene = () => {
         ))}
         <Enter delay={80} from="up" marker="special-appointment" style={{position: 'absolute', left: 0, top: 260, width: 1776}}>
           <Panel tone={C.mapGold} watermark={<Scale size={170} color={C.mapGold} strokeWidth={1.6} />} style={{height: 224, padding: '12px 22px', display: 'flex', flexDirection: 'column', gap: 9}}>
-            <TabletTab bar={C.mapGold} icon={<Scale size={26} color={C.paper} strokeWidth={2.2} />}>特殊任免：地区 · 直辖市的中院与分检（省级人大常委会决定任免）</TabletTab>
+            <TabletTab bar={C.mapGold} icon={<Scale size={26} color={C.paper} strokeWidth={2.2} />}>特殊任免：地区 · 直辖市的中院与分检</TabletTab>
             <IconChip icon={<Landmark size={28} color={C.paper} strokeWidth={2.2} />} tone={C.county} title="中院：">
               院长←<Mark color={C.county}>省级人大常委会主任会议</Mark>提名；审判员以上其他官员←<Mark color={C.county}>省级高院院长</Mark>提名
             </IconChip>
@@ -260,7 +260,7 @@ export const MeetingsScene = () => {
     {label: '主持', icon: <Landmark size={30} color={C.paper} strokeWidth={2.2} />, tone: C.atlasDeep, body: '主席团主持；县级以上主席团由同级人常预备会议选举；乡主席团开会期间选举，乡正副主席为当然成员'},
   ] as const;
   return (
-    <Shell code="03" kicker="会议制度" title="木牍三：开会的规矩">
+    <Shell code="03" kicker="会议制度" title="会议制度">
       <div
         data-layout="four-cell-ledger"
         data-visual-anchor="main center"
@@ -286,7 +286,7 @@ export const MeetingsScene = () => {
         </div>
         <Enter delay={90} from="up" style={{position: 'absolute', left: 0, top: 400, width: 1776}}>
           <Panel tone={C.willow} watermark={<ScrollText size={160} color={C.willow} strokeWidth={1.6} />} style={{height: 130, padding: '12px 22px', display: 'flex', flexDirection: 'column', gap: 8}}>
-            <TabletTab bar={C.willow} icon={<UserCheck size={26} color={C.paper} strokeWidth={2.2} />}>提名与主任会议</TabletTab>
+            <TabletTab bar={C.willow} icon={<UserCheck size={26} color={C.paper} strokeWidth={2.2} />}>提名 · 主任会议</TabletTab>
             <div style={{fontSize: 22, fontWeight: 880, color: C.ink, lineHeight: 1.5}}>
               人大常委会组成人员·乡人大正副主席·各级政府正副首长·监察委主任·两院首长：由<Mark color={C.willow}>主席团或代表提名</Mark>（省级 <MapSeal tone={C.willow} delay={140}>30 人</MapSeal> · 市级 <MapSeal tone={C.willow} delay={152}>20 人</MapSeal> · 县级以下 <MapSeal tone={C.willow} delay={164}>10 人</MapSeal>）；其他官员由本机关首长提名
               <br />
@@ -316,7 +316,7 @@ export const MotionsRemovalScene = () => {
     ]},
   ] as const;
   return (
-    <Shell code="04" kicker="议案 · 质询 · 罢免 · 撤职" title="木牍四：奏章双轨与撤职案">
+    <Shell code="04" kicker="议案 · 质询 · 罢免 · 撤职" title="议案程序 · 撤职案">
       <div
         data-layout="dual-track-memorial"
         data-visual-anchor="main center"
@@ -341,7 +341,7 @@ export const MotionsRemovalScene = () => {
         ))}
         <Enter delay={70} from="up" marker="motion-removal" style={{position: 'absolute', left: 0, top: 452, width: 1776}}>
           <Panel tone={C.mapGold} watermark={<UserMinus size={150} color={C.mapGold} strokeWidth={1.6} />} style={{height: 272, padding: '12px 22px', display: 'flex', flexDirection: 'column', gap: 8}}>
-            <TabletTab bar={C.mapGold} icon={<UserMinus size={26} color={C.paper} strokeWidth={2.2} />}>地方政府撤职案（向本级人常提出）</TabletTab>
+            <TabletTab bar={C.mapGold} icon={<UserMinus size={26} color={C.paper} strokeWidth={2.2} />}>撤职案（向本级人常提出）</TabletTab>
             <IconChip icon={<UserMinus size={28} color={C.paper} strokeWidth={2.2} />} tone={C.county} title="对象：">
               政府个别副职或其任命的组成人员 · 法检副职与审检委员 · <Mark color={C.county}>中院院长 · 分检检察长</Mark> · 监委副主任·委员
             </IconChip>

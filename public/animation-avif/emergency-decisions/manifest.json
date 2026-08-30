@@ -3,7 +3,7 @@
   "compositionId": "EmergencyDecisions",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-08-30T08:56:18.202Z",
+  "generatedAt": "2026-08-30T14:14:29.975Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -16,13 +16,13 @@
       "title": "警讯三级：谁来点烽火",
       "durationMs": 9600,
       "file": "allocation.avif",
-      "fileSize": 496394,
+      "fileSize": 481698,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "6678c06acb4305a0e4d4cf6190c6280e5ab798a8bd4a43059f931e18032a8a74",
+      "sha256": "520d4d52a9d33a224b0a90833b148b59f09801a8d19824797804c0e7e9854871",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "192aa99f5d07f3d8e251a8c3d10f9c01d139754e57fe42c51457d70d28c6beb5"
+      "sceneFingerprint": "aa7873a61d599add6030af64367e4004f545352ad9a30c1a782d8744a12386eb"
     },
     {
       "endFrame": 551,
@@ -33,13 +33,13 @@
       "title": "国务院席次与总理负责制",
       "durationMs": 8800,
       "file": "premier.avif",
-      "fileSize": 668031,
+      "fileSize": 674200,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "4e6164ba626d3821b273fa6ae704390384e2720bd1943eb930d83ff372ced470",
+      "sha256": "20b9083a045f67233dd5427a92d1abb924055bffc28da140da934b4f81e93a26",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "192aa99f5d07f3d8e251a8c3d10f9c01d139754e57fe42c51457d70d28c6beb5"
+      "sceneFingerprint": "aa7873a61d599add6030af64367e4004f545352ad9a30c1a782d8744a12386eb"
     },
     {
       "endFrame": 851,
@@ -50,13 +50,13 @@
       "title": "两会与部门线·审计署",
       "durationMs": 10000,
       "file": "meetings-orgs.avif",
-      "fileSize": 787254,
+      "fileSize": 793377,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "190da6630bcb43cb645776e34aecdd5372f3897eb766dcc50f8c5c509186d2c5",
+      "sha256": "708da7b5f6e71e7e42d58ea87c1976a83aa6166f9fa6dd54ff2aacb4bb38856b",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "192aa99f5d07f3d8e251a8c3d10f9c01d139754e57fe42c51457d70d28c6beb5"
+      "sceneFingerprint": "aa7873a61d599add6030af64367e4004f545352ad9a30c1a782d8744a12386eb"
     }
   ],
   "size": {
@@ -64,7 +64,7 @@
     "width": 2560
   },
   "sourceFps": 30,
-  "sourceFingerprint": "192aa99f5d07f3d8e251a8c3d10f9c01d139754e57fe42c51457d70d28c6beb5",
+  "sourceFingerprint": "aa7873a61d599add6030af64367e4004f545352ad9a30c1a782d8744a12386eb",
   "targetFps": 30,
-  "totalFileSize": 1951679
+  "totalFileSize": 1949275
 }

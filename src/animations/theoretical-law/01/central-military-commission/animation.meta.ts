@@ -2,7 +2,7 @@ import {defineAnimationTypography} from '../../../../typography/animation-preset
 
 export default {
   id: 'central-military-commission',
-  title: '中央军委：虎符辕门',
+  title: "中央军委",
   sourceReference: 'Note-3.2/法考/客观/理论法/理论法·马峰/考点43 中央军委',
   route: 'objective/theoretical-law/01/central-military-commission',
   subject: 'theoretical-law',

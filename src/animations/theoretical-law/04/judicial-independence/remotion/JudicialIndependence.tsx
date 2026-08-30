@@ -187,7 +187,7 @@ export const ThreeStelesScene = () => {
     },
   ] as const;
   return (
-    <Shell code="01" kicker="三个制度机制" title="碑廊三碑：为独立行使职权护航">
+    <Shell code="01" kicker="三个制度机制" title="三个制度机制">
       <div
         data-layout="three-stele-row"
         data-visual-anchor="main center"
@@ -202,7 +202,7 @@ export const ThreeStelesScene = () => {
             <Panel tone={stele.tone} style={{height: 424, padding: '16px 20px', display: 'flex', flexDirection: 'column', gap: 12}}>
               <div style={{display: 'flex', alignItems: 'center', gap: 12}}>
                 <span style={{flexShrink: 0, width: 58, height: 58, borderRadius: 12, backgroundColor: stele.tone, display: 'flex', alignItems: 'center', justifyContent: 'center', border: `3px solid ${C.steleBronze}`, boxShadow: '0 3px 0 rgba(0,0,0,0.22)'}}>{stele.icon}</span>
-                <span style={{fontSize: 25, fontWeight: 950, color: C.ink, fontFamily: 'var(--inkloom-animation-title)'}}>{['第一碑', '第二碑', '第三碑'][index]}</span>
+                <span style={{fontSize: 25, fontWeight: 950, color: C.ink, fontFamily: 'var(--inkloom-animation-title)'}}>{['第一', '第二', '第三'][index]}</span>
               </div>
               <div style={{fontSize: 24, fontWeight: 950, color: stele.tone}}>{stele.name}</div>
               <div style={{fontSize: 22, fontWeight: 870, color: C.ink, lineHeight: 1.6}}>{stele.body}</div>
@@ -212,7 +212,7 @@ export const ThreeStelesScene = () => {
         <Enter delay={120} from="up" style={{position: 'absolute', left: 0, top: 460, width: 1776}}>
           <SteleStrip style={{height: 140}}>
             <ScrollText size={42} color={C.steleBronze} strokeWidth={2.2} />
-            <span style={{padding: '4px 13px', backgroundColor: C.rebuffRed, color: C.paper, fontSize: 22, fontWeight: 900, letterSpacing: 2 }}>碑记</span>
+            <span style={{padding: '4px 13px', backgroundColor: C.rebuffRed, color: C.paper, fontSize: 22, fontWeight: 900, letterSpacing: 2 }}>点睛</span>
             <span style={{fontSize: 24, fontWeight: 900, color: C.paper, lineHeight: 1.55}}>
               领导干部<Mark color={C.paper}>非因正常履职</Mark>的打探·过问·说情·转递材料，均属<Mark color={C.paper}>不当干预</Mark> —— 办案人员<Mark color={C.paper}>有权拒绝</Mark>
             </span>
@@ -227,7 +227,7 @@ export const RebuffDutyScene = () => {
   /* data-final-knowledge="rebuff-versus-duty" */
   const acts = ['打探案情', '过问案件', '说情打招呼', '转递涉案材料'];
   return (
-    <Shell code="02" kicker="不当干预 VS 正常履职" title="对照室：拒绝权与书面道">
+    <Shell code="02" kicker="不当干预 VS 正常履职" title="不当干预与正常履职">
       <div
         data-layout="twin-column-rebuff"
         data-visual-anchor="main center"
@@ -239,7 +239,7 @@ export const RebuffDutyScene = () => {
       >
         <Enter delay={6} from="left" marker="rebuff-versus-duty" style={{position: 'absolute', left: 0, top: 0, width: 866, height: 400}}>
           <Panel tone={C.rebuffRed} watermark={<Ban size={180} color={C.rebuffRed} strokeWidth={1.6} />} style={{height: '100%', padding: '14px 22px', display: 'flex', flexDirection: 'column', gap: 10}}>
-            <SteleTab bar={C.rebuffRed} icon={<Ban size={26} color={C.paper} strokeWidth={2.2} />}>不当干预 · 四相 → 有权拒绝</SteleTab>
+            <SteleTab bar={C.rebuffRed} icon={<Ban size={26} color={C.paper} strokeWidth={2.2} />}>不当干预 → 办案人员有权拒绝</SteleTab>
             <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10}}>
               {acts.map((act, index) => (
                 <div key={act} style={{backgroundColor: `${C.rebuffRed}14`, border: `2px solid ${C.rebuffRed}`, padding: '10px 14px', fontSize: 23, fontWeight: 950, color: C.ink, display: 'flex', alignItems: 'center', gap: 10}}>
@@ -255,7 +255,7 @@ export const RebuffDutyScene = () => {
         </Enter>
         <Enter delay={30} from="right" style={{position: 'absolute', left: 910, top: 0, width: 866, height: 400}}>
           <Panel tone={C.guardPine} watermark={<FileSignature size={180} color={C.guardPine} strokeWidth={1.6} />} style={{height: '100%', padding: '14px 22px', display: 'flex', flexDirection: 'column', gap: 10}}>
-            <SteleTab bar={C.guardPine} icon={<UserCheck size={26} color={C.paper} strokeWidth={2.2} />}>正常履职 · 三道</SteleTab>
+            <SteleTab bar={C.guardPine} icon={<UserCheck size={26} color={C.paper} strokeWidth={2.2} />}>正常履职意见</SteleTab>
             <IconChip icon={<FileSignature size={28} color={C.paper} strokeWidth={2.2} />} tone={C.guardPine} title="书面原则：">
               领导干部和上级司法机关因履行领导·监督职责需对在办案件提指导性意见的，<Mark color={C.guardPine}>应当依照程序以书面形式提出</Mark>
             </IconChip>

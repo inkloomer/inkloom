@@ -1,0 +1,29 @@
+{
+  "animationId": "judge-management",
+  "scenes": [
+    {
+      "id": "selection",
+      "export": "SelectionScene",
+      "layout": "selection-stair-rows",
+      "anchor": "main center",
+      "grammar": "遴选委员会行（最高人民法院和省级人民法院设置·法官代表不少于1/3）+初任基层·逐级遴选·下两级台阶行+公开选拔行（律师执业5年·教研中级以上职称5年）",
+      "textTreatments": ["stair rows", "quota seals"],
+      "focalChannels": ["committee row", "selection stairs"],
+      "tokens": ["Landmark", "Users", "TrendingUp", "UserCheck"],
+      "finalKnowledge": "judge-selection",
+      "statefulObjects": ["stair row x4"]
+    },
+    {
+      "id": "assessment",
+      "export": "AssessmentScene",
+      "layout": "grade-tile-row",
+      "anchor": "main center",
+      "grammar": "年度考核等第四牌（优秀/称职/基本称职/不称职）+考评委员会行（5至9人·主任由本院院长担任），底带一句记",
+      "textTreatments": ["grade tiles", "committee chips"],
+      "focalChannels": ["grade tiles", "committee row"],
+      "tokens": ["Award", "UserCheck", "Users"],
+      "finalKnowledge": "judge-assessment",
+      "statefulObjects": ["grade tile x4"]
+    }
+  ]
+}

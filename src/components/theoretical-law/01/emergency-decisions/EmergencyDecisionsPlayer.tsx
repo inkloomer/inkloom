@@ -15,7 +15,7 @@ export const EmergencyDecisionsPlayer = () => (
     durationInFrames={DURATION_FRAMES}
     fps={FPS}
     scenes={scenes}
-    title="战争宣战动员紧急状态：烽燧警讯台"
+    title="战争、宣战、动员和紧急状态的决定权分配"
   />
 );
 

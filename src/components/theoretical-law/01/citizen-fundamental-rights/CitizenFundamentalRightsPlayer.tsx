@@ -16,7 +16,7 @@ export const CitizenFundamentalRightsPlayer = () => (
     durationInFrames={DURATION_FRAMES}
     fps={FPS}
     scenes={scenes}
-    title="公民的基本权利：六灯权利廊"
+    title="公民的基本权利"
   />
 );
 

@@ -151,7 +151,7 @@ export const FairnessScene = () => {
   /* data-final-knowledge="fairness-elements" */
   const nails = ['合法性', '中立性', '公开性', '平等性', '参与性', '正确性', '廉洁性'];
   return (
-    <Shell code="01" kicker="司法公正" title="明镜高悬：公正的意义与七要素">
+    <Shell code="01" kicker="司法公正" title="司法公正">
       <div
         data-layout="mirror-seven-nails"
         data-visual-anchor="main center"
@@ -186,7 +186,7 @@ export const FairnessScene = () => {
         <Enter delay={120} from="up" style={{position: 'absolute', left: 0, top: 496, width: 1776}}>
           <HallStrip style={{height: 116}}>
             <Eye size={42} color={C.mirrorSilver} strokeWidth={2.2} />
-            <span style={{padding: '4px 13px', backgroundColor: C.justiceGold, color: C.hallDeep, fontSize: 22, fontWeight: 900, letterSpacing: 2 }}>七钉环镜</span>
+            <span style={{padding: '4px 13px', backgroundColor: C.justiceGold, color: C.hallDeep, fontSize: 22, fontWeight: 900, letterSpacing: 2 }}>司法公正的要素</span>
             <span style={{fontSize: 24, fontWeight: 900, color: C.paper, lineHeight: 1.55}}>
               合法 · 中立 · 公开 · 平等 · 参与 · 正确 · 廉洁 —— 第七钉「廉洁性」另有细则专室（下屏）
             </span>
@@ -202,7 +202,7 @@ export const OpennessIntegrityScene = () => {
   const exceptions = ['涉及国家秘密', '涉及未成年人犯罪', '调解结案或确认人民调解协议效力（保护国家·社会·他人利益确有必要公开的除外）', '离婚诉讼或涉及未成年子女抚养·监护', '法院认为不宜公布的其他情形'];
   const taboos = ['泄露办案工作秘密', '推荐介绍代理人·辩护人，介绍案件或暗示更换律师', '接受请客送礼或其他利益', '借款·租借房屋·借用交通工具通讯工具等物品', '委托评估拍卖中徇私舞弊·恶意串通·弄虚作假', '其他不正当接触交往行为'];
   return (
-    <Shell code="02" kicker="公开性 · 廉洁性细则" title="镜面铭带：公开与廉洁">
+    <Shell code="02" kicker="公开性 · 廉洁性细则" title="公开性 · 廉洁性的体现">
       <div
         data-layout="twin-inscription-panels"
         data-visual-anchor="main center"
@@ -256,7 +256,7 @@ export const OpennessIntegrityScene = () => {
 export const EfficiencyScene = () => {
   /* data-final-knowledge="efficiency-relation" */
   return (
-    <Shell code="03" kicker="司法效率 · 关系" title="堂训天平：公正优先，兼顾效率">
+    <Shell code="03" kicker="司法效率 · 关系" title="司法效率与司法公正的关系">
       <div
         data-layout="balance-hall-motto"
         data-visual-anchor="main center"
@@ -291,7 +291,7 @@ export const EfficiencyScene = () => {
         <Enter delay={130} from="up" style={{position: 'absolute', left: 0, top: 508, width: 1776}}>
           <HallStrip style={{height: 128}}>
             <Scale size={44} color={C.justiceGold} strokeWidth={2.2} />
-            <span style={{padding: '4px 13px', backgroundColor: C.sealRed, color: C.paper, fontSize: 22, fontWeight: 900, letterSpacing: 2}}>堂训</span>
+            <span style={{padding: '4px 13px', backgroundColor: C.sealRed, color: C.paper, fontSize: 22, fontWeight: 900, letterSpacing: 2}}>价值选择</span>
             <span style={{fontSize: 27, fontWeight: 950, color: C.paper, letterSpacing: 2, lineHeight: 1.6}}>
               <GoldSeal tone={C.justiceGold} delay={170}>公正优先</GoldSeal> <GoldSeal tone={C.pine} delay={184}>兼顾效率</GoldSeal>
               <br />

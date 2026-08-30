@@ -149,7 +149,7 @@ const IconChip = ({icon, tone, title, children}: {readonly icon: ReactNode; read
 export const MotionsScene = () => {
   /* data-final-knowledge="motion-numbers" data-final-knowledge="presidium-powers" */
   return (
-    <Shell code="01" kicker="议案对比 · 主席团" title="铜牌数字门：301 · 10 · 103团">
+    <Shell code="01" kicker="议案对比 · 主席团" title="议案对比">
       <div
         data-layout="bronze-plaque-rows"
         data-visual-anchor="main center"
@@ -161,7 +161,7 @@ export const MotionsScene = () => {
       >
         <Enter delay={6} from="left" marker="motion-numbers" style={{position: 'absolute', left: 0, top: 0, width: 1776}}>
           <Panel tone={C.gold} watermark={<Landmark size={190} color={C.gold} strokeWidth={1.6} />} style={{height: 340, padding: '12px 22px', display: 'flex', flexDirection: 'column', gap: 9}}>
-            <VelvetTab bar={C.gold} icon={<Landmark size={26} color={C.gold} strokeWidth={2.2} />}>议案对比 · 一般议案 / 质询案 / 鱿鱼案</VelvetTab>
+            <VelvetTab bar={C.gold} icon={<Landmark size={26} color={C.gold} strokeWidth={2.2} />}>一般议案 · 质询案 · 鱿鱼案</VelvetTab>
             <IconChip icon={<Landmark size={28} color={C.paper} strokeWidth={2.2} />} tone={C.jade} title="一般议案：">
               人大机关提案「两央（国务院·中央军委）两高（最高法·最高检）三委（全人常·专门委员会·国家监委）一团（主席团）」，个人 <NumberPlate tone={C.jade} delay={110}>一个代表团或 30 名以上</NumberPlate>；人常机关「两央两高三委」，个人 <NumberPlate tone={C.jade} delay={122}>10 名以上</NumberPlate> —— 机关议案必须列入议程
             </IconChip>
@@ -204,7 +204,7 @@ export const HonoringScene = () => {
     {name: '颁发', tone: C.gold, icon: <Medal size={32} color={C.paper} strokeWidth={2.2} />, body: '国家主席（授予勋章·荣誉称号由主席颁授）'},
   ] as const;
   return (
-    <Shell code="02" kicker="授予流程 · 主席自主权" title="勋章授予金线三步">
+    <Shell code="02" kicker="授予流程 · 主席自主权" title="授予与主席自主权">
       <div
         data-layout="three-step-gold-thread"
         data-visual-anchor="main center"

@@ -149,7 +149,7 @@ const IconChip = ({icon, tone, title, children}: {readonly icon: ReactNode; read
 export const CompositionScene = () => {
   /* data-final-knowledge="npc-composition" data-final-knowledge="sc-composition-tenure" */
   return (
-    <Shell code="01" kicker="组成与任期" title="两席对照：全国人大 · 全人常">
+    <Shell code="01" kicker="组成与任期" title="组成及任期">
       <div
         data-layout="twin-seat-hall"
         data-visual-anchor="main center"
@@ -214,7 +214,7 @@ export const CompositionScene = () => {
 export const SupervisionLegislationScene = () => {
   /* data-final-knowledge="supervision-methods" data-final-knowledge="legislation-powers" */
   return (
-    <Shell code="02" kicker="监督权 · 法规权" title="监督方式五法 · 立法权分工">
+    <Shell code="02" kicker="监督权 · 法规权" title="监督权 · 法规权">
       <div
         data-layout="twin-seat-hall"
         data-visual-anchor="main center"
@@ -316,7 +316,7 @@ export const PersonnelScene = () => {
     },
   ] as const;
   return (
-    <Shell code="03" kicker="人事权" title="红毯三步：选举 → 决定 → 任免">
+    <Shell code="03" kicker="人事权" title="人事权：选举 · 决定 · 任免">
       <div
         data-layout="three-step-red-carpet"
         data-visual-anchor="main center"
@@ -358,7 +358,7 @@ export const MeetingsDecisionsScene = () => {
   const scFriendly = ['批准或废除同外国缔结的条约和重要协定', '决定驻外全权代表任免', '规定军人·外交人员衔级制度', '规定和决定授予国家勋章和荣誉称号', '决定特赦'];
   const scAdversary = ['审批计划预算部分调整', '闭会期间宣布战争状态', '决定全国总动员和局部动员', '决定全国或个别省·自治区·直辖市进入紧急状态'];
   return (
-    <Shell code="04" kicker="会议制度 · 重大事项决定权" title="开会的规矩 · 定大事的权力">
+    <Shell code="04" kicker="会议制度 · 重大事项决定权" title="会议制度 · 重大事项决定权">
       <div
         data-layout="ledger-plus-two-lines"
         data-visual-anchor="main center"
@@ -389,7 +389,7 @@ export const MeetingsDecisionsScene = () => {
         </Enter>
         <Enter delay={50} from="left" marker="major-decision-powers" style={{position: 'absolute', left: 0, top: 190, width: 866, height: 292}}>
           <Panel tone={C.vermilion} watermark={<Landmark size={170} color={C.vermilion} strokeWidth={1.6} />} style={{height: '100%', padding: '12px 20px', display: 'flex', flexDirection: 'column', gap: 7}}>
-            <SeatTab bar={C.vermilion} icon={<Landmark size={24} color={C.liuli} strokeWidth={2.2} />}>全国人大 · 四项</SeatTab>
+            <SeatTab bar={C.vermilion} icon={<Landmark size={24} color={C.liuli} strokeWidth={2.2} />}>全国人大</SeatTab>
             {npcPowers.map((line, index) => (
               <div key={line} style={{backgroundColor: C.panelDim, borderLeft: `5px solid ${C.vermilion}`, padding: '5px 11px', fontSize: 22, fontWeight: 880, color: C.ink}}>
                 <span style={{color: C.vermilion, fontWeight: 950, marginRight: 6}}>{['壹', '贰', '叁', '肆'][index]}</span>
@@ -401,14 +401,14 @@ export const MeetingsDecisionsScene = () => {
         </Enter>
         <Enter delay={80} from="right" style={{position: 'absolute', left: 910, top: 190, width: 866, height: 292}}>
           <Panel tone={C.jade} watermark={<Medal size={170} color={C.jade} strokeWidth={1.6} />} style={{height: '100%', padding: '12px 20px', display: 'flex', flexDirection: 'column', gap: 7}}>
-            <SeatTab bar={C.jade} icon={<Crown size={24} color={C.liuli} strokeWidth={2.2} />}>全人常 · 两条线</SeatTab>
+            <SeatTab bar={C.jade} icon={<Crown size={24} color={C.liuli} strokeWidth={2.2} />}>全人常</SeatTab>
             <div style={{fontSize: 22, fontWeight: 920, color: C.ink, lineHeight: 1.5, backgroundColor: `${C.jade}18`, borderLeft: `5px solid ${C.jade}`, padding: '5px 11px'}}>
               <Medal size={26} color={C.jade} strokeWidth={2.2} style={{verticalAlign: '-4px', marginRight: 6}} />
-              友好：批条约 · 派代表 · 定等级 · 给荣誉 · 搞特赦
+              对外友好一条线：批条约 · 派代表 · 定等级 · 给荣誉 · 搞特赦
             </div>
             <div style={{fontSize: 22, fontWeight: 920, color: C.ink, lineHeight: 1.5, backgroundColor: `${C.vermilion}18`, borderLeft: `5px solid ${C.vermilion}`, padding: '5px 11px'}}>
               <Siren size={26} color={C.vermilion} strokeWidth={2.2} style={{verticalAlign: '-4px', marginRight: 6}} />
-              敌对：搞反击（宣战争状态）· 宣紧急 · 搞动员 · 调计划
+              对外敌对一条线：搞反击（宣战争状态）· 宣紧急 · 搞动员 · 调计划
             </div>
             {scFriendly.slice(0, 2).map((line) => (
               <div key={line} style={{fontSize: 21, fontWeight: 860, color: C.inkSoft, padding: '2px 11px', lineHeight: 1.4}}>· {line}</div>
@@ -441,7 +441,7 @@ export const MotionsScene = () => {
     {icon: <Megaphone size={28} color={C.paper} strokeWidth={2.2} />, tone: C.liuli, title: '公布程序', body: '法律议案由国家主席公布；宪法修正案由主席团公告；选举结果及其他议案可由主席公布或人大自行公布'},
   ] as const;
   return (
-    <Shell code="05" kicker="议案程序" title="奏章七行：从提案到公布">
+    <Shell code="05" kicker="议案程序" title="议案程序">
       <div
         data-layout="memorial-stack"
         data-visual-anchor="main center"

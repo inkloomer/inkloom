@@ -1,0 +1,41 @@
+{
+  "animationId": "people-assessors",
+  "scenes": [
+    {
+      "id": "quota",
+      "export": "QuotaScene",
+      "layout": "roster-columns",
+      "anchor": "main center",
+      "grammar": "资格四条与28周岁印 + 不能担任与不得担任两栏 + 名额产生行（3倍·5倍海选·1/5）",
+      "textTreatments": ["roster rows", "quota seals"],
+      "focalChannels": ["quota seals", "two exclusion columns"],
+      "tokens": ["UserCheck", "Ban", "Users"],
+      "finalKnowledge": "assessor-quota",
+      "statefulObjects": ["roster panel x3"]
+    },
+    {
+      "id": "bench",
+      "export": "BenchScene",
+      "layout": "bench-seat-diagram",
+      "anchor": "main center",
+      "grammar": "合议庭席位图（三人/七人）+参与案件三情形+七人合议庭四类案件+表决权双色票签（事实认定共同表决·法律适用不参加表决）",
+      "textTreatments": ["seat diagram", "vote chips"],
+      "focalChannels": ["seat diagram", "vote split"],
+      "tokens": ["Users", "Scale", "Gavel"],
+      "finalKnowledge": "bench-vote-rules",
+      "statefulObjects": ["bench panel x2"]
+    },
+    {
+      "id": "duty-safety",
+      "export": "DutySafetyScene",
+      "layout": "exemption-plus-safety",
+      "anchor": "main center",
+      "grammar": "免职四情形与通报惩戒+履职保障四行（人身住所安全·不得克扣工资·工作日补助·交通就餐补助）",
+      "textTreatments": ["exemption rows", "safety chips"],
+      "focalChannels": ["exemption rows", "safety rows"],
+      "tokens": ["UserX", "Shield", "Coins"],
+      "finalKnowledge": "duty-safety",
+      "statefulObjects": ["exemption panel", "safety panel"]
+    }
+  ]
+}

@@ -14,7 +14,7 @@ export const SupervisoryOrgansPlayer = () => (
     durationInFrames={DURATION_FRAMES}
     fps={FPS}
     scenes={scenes}
-    title="监察机关：绣衣按察署"
+    title="监察机关"
   />
 );
 

@@ -14,7 +14,7 @@ export const JudicialSystemOverviewPlayer = () => (
     durationInFrames={DURATION_FRAMES}
     fps={FPS}
     scenes={scenes}
-    title="司法的概述：墨玉法堂"
+    title="司法的概述"
   />
 );
 

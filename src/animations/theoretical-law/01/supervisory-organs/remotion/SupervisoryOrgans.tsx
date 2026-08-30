@@ -156,7 +156,7 @@ export const ChairScene = () => {
     {icon: <FileSignature size={28} color={C.paper} strokeWidth={2.2} />, tone: C.gold, title: '签署生效', body: '中央军委的决定、命令必须由主席签署才能具有法律效力'},
   ] as const;
   return (
-    <Shell code="01" kicker="军委主席负责制" title="帅令五章：军委主席负责制">
+    <Shell code="01" kicker="军委主席负责制" title="主席负责制">
       <div
         data-layout="command-clause-stack"
         data-visual-anchor="main center"
@@ -192,7 +192,7 @@ export const ChairScene = () => {
 export const CensorScene = () => {
   /* data-final-knowledge="dual-line-censorship" */
   return (
-    <Shell code="02" kicker="监察机关（2018 新增）" title="绣衣双线：双领导 · 双负责">
+    <Shell code="02" kicker="监察机关（2018 新增）" title="双领导与双负责">
       <div
         data-layout="dual-line-weave"
         data-visual-anchor="main center"
@@ -221,7 +221,7 @@ export const CensorScene = () => {
         </Enter>
         <Enter delay={30} from="right" style={{position: 'absolute', left: 910, top: 0, width: 866, height: 388}}>
           <Panel tone={C.gold} watermark={<Ban size={180} color={C.gold} strokeWidth={1.6} />} style={{height: '100%', padding: '14px 22px', display: 'flex', flexDirection: 'column', gap: 11}}>
-            <BureauTab bar={C.gold} icon={<ScrollText size={26} color={C.paper} strokeWidth={2.2} />}>监察对象边界（獬豸批注）</BureauTab>
+            <BureauTab bar={C.gold} icon={<ScrollText size={26} color={C.paper} strokeWidth={2.2} />}>监察对象</BureauTab>
             <IconChip icon={<UserCheck size={28} color={C.paper} strokeWidth={2.2} />} tone={C.pine} title="监察人：">
               监察<Mark color={C.pine}>国家公职人员</Mark>，而非作为整体的机关
             </IconChip>
