@@ -1,0 +1,110 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "playerControlSafeBottom": 176,
+  "scenes": [
+    {
+      "id": "four-types",
+      "export": "FourTypesScene",
+      "layout": "four-edict-grid",
+      "anchor": "typographic-sequence",
+      "grammar": [
+        "tiaoli-panel",
+        "zeli-panel",
+        "shili-chengli-panel"
+      ],
+      "textTreatments": [
+        "label-block",
+        "chip",
+        "soft-highlight",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "icon",
+        "contrast",
+        "enclosure",
+        "spatial",
+        "annotation"
+      ],
+      "tokens": [
+        "ScrollText",
+        "BookOpen",
+        "Landmark"
+      ],
+      "finalKnowledge": [
+        "types-heading",
+        "tiaoli-panel",
+        "zeli-panel",
+        "shili-panel",
+        "chengli-panel"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "distinctions",
+      "export": "DistinctionsScene",
+      "layout": "distinction-strips-bench",
+      "anchor": "role-pair",
+      "grammar": [
+        "criminal-vs-administrative",
+        "imperial-vs-compiled"
+      ],
+      "textTreatments": [
+        "label-block",
+        "chip",
+        "soft-highlight",
+        "stamp"
+      ],
+      "focalChannels": [
+        "icon",
+        "contrast",
+        "enclosure",
+        "spatial",
+        "annotation"
+      ],
+      "tokens": [
+        "Gavel",
+        "Scale",
+        "Landmark"
+      ],
+      "finalKnowledge": [
+        "distinctions-heading",
+        "criminal-vs-administrative-strip",
+        "imperial-vs-compiled-strip"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "exam-tips",
+      "export": "ExamTipsScene",
+      "layout": "exam-tips-verdict-panel",
+      "anchor": "flow-target",
+      "grammar": [
+        "exam-focus-panel",
+        "mnemonic-strip"
+      ],
+      "textTreatments": [
+        "label-block",
+        "chip",
+        "soft-highlight",
+        "stamp"
+      ],
+      "focalChannels": [
+        "icon",
+        "contrast",
+        "enclosure",
+        "spatial",
+        "annotation"
+      ],
+      "tokens": [
+        "Gavel"
+      ],
+      "finalKnowledge": [
+        "tips-heading",
+        "exam-focus-panel",
+        "mnemonic-strip"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

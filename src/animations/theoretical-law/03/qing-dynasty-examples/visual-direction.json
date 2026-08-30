@@ -1,0 +1,16 @@
+{
+  "directionId": "imperial-edict-scroll-frame",
+  "family": "qing-edict-frame",
+  "palette": "imperial yellow-brown ground + pale edict panels + vermillion seal stamps + dark ink annotations + gold frame borders",
+  "typography": "ink headings on edict panels, dark frame label tabs with gold left bar, gold chips for categories, vermillion stamps for distinctions, thin ink underline for terms",
+  "composition": "four edict panels arranged as a two-by-two grid; the distinctions strip anchors the bottom",
+  "surface": "flat imperial ground with faint scroll hairlines, edict panels with hairline weathered borders and corner seal dots, no gradients, no rounded cards, no drop shadows",
+  "motion": "panels unroll one by one, category chips ink in, the distinction stamps land once",
+  "transition": "a scroll roller sweeps and the court clears for the next edict",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/theoretical-law/03/qing-dynasty-examples/",
+    "title": "清例卷宗"
+  }
+}

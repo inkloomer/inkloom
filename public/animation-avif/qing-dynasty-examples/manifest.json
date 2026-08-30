@@ -1,0 +1,70 @@
+{
+  "animationId": "qing-dynasty-examples",
+  "compositionId": "QingDynastyExamples",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-30T04:06:12.596Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 263,
+      "frameCount": 264,
+      "id": "four-types",
+      "number": "01",
+      "startFrame": 0,
+      "title": "清代的例：四种形式",
+      "durationMs": 8800,
+      "file": "four-types.avif",
+      "fileSize": 271380,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "604ff4193cbbdd31c82ed92cf2d80f212986adeff455aed12ec528fc9a0f98e4",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "61b39abd638ac2cd4ffb9d72fd6defa5711bdfaa194db37f1b9e3440bf35782a"
+    },
+    {
+      "endFrame": 503,
+      "frameCount": 240,
+      "id": "distinctions",
+      "number": "02",
+      "startFrame": 264,
+      "title": "区分要点",
+      "durationMs": 8000,
+      "file": "distinctions.avif",
+      "fileSize": 282080,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "54d87f984481c5879043c51e70d5e79405da2dfa20b16f50965560b283fcd993",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "61b39abd638ac2cd4ffb9d72fd6defa5711bdfaa194db37f1b9e3440bf35782a"
+    },
+    {
+      "endFrame": 731,
+      "frameCount": 228,
+      "id": "exam-tips",
+      "number": "03",
+      "startFrame": 504,
+      "title": "考试聚焦",
+      "durationMs": 7600,
+      "file": "exam-tips.avif",
+      "fileSize": 249836,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "4f14728c1695738c07c11afd049570dd6b20605538495a7e36c59e655e0210e9",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "61b39abd638ac2cd4ffb9d72fd6defa5711bdfaa194db37f1b9e3440bf35782a"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "61b39abd638ac2cd4ffb9d72fd6defa5711bdfaa194db37f1b9e3440bf35782a",
+  "targetFps": 30,
+  "totalFileSize": 803296
+}
