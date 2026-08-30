@@ -1,0 +1,70 @@
+{
+  "animationId": "period-relay-station",
+  "compositionId": "PeriodRelayStation",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-30T13:27:20.081Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 264,
+      "frameCount": 265,
+      "id": "recalc-four-vents",
+      "number": "01",
+      "startFrame": 0,
+      "title": "重算的四个驿口，其余照走",
+      "durationMs": 8833,
+      "file": "recalc-four-vents.avif",
+      "fileSize": 365921,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "0904b99c63a356ebdef2fde924d3f90df4d4730586d30df85caffd5345baa745",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "1c4a6488ecb2c2e9d561c5924c49a3bd3a7fb1c263ea96affbe40c6ee6de44b1"
+    },
+    {
+      "endFrame": 549,
+      "frameCount": 285,
+      "id": "appeal-clock-timeline",
+      "number": "02",
+      "startFrame": 265,
+      "title": "卢某案时刻表：一条十里驿道",
+      "durationMs": 9500,
+      "file": "appeal-clock-timeline.avif",
+      "fileSize": 281852,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "e5c6f48f4397b56d58f0774e26bbfce90ecbe157a4ee7faeb72ed6c2b66b3155",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "1c4a6488ecb2c2e9d561c5924c49a3bd3a7fb1c263ea96affbe40c6ee6de44b1"
+    },
+    {
+      "endFrame": 809,
+      "frameCount": 260,
+      "id": "mail-recovery-rules",
+      "number": "03",
+      "startFrame": 550,
+      "title": "交邮不逾期；无耽误无恢复",
+      "durationMs": 8667,
+      "file": "mail-recovery-rules.avif",
+      "fileSize": 325085,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "d6662d5c55ce2b646da1dd5f2fd3a8032fc78c4953f5ea34524ec6eddee364e5",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "1c4a6488ecb2c2e9d561c5924c49a3bd3a7fb1c263ea96affbe40c6ee6de44b1"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "1c4a6488ecb2c2e9d561c5924c49a3bd3a7fb1c263ea96affbe40c6ee6de44b1",
+  "targetFps": 30,
+  "totalFileSize": 972858
+}
