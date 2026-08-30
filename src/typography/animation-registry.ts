@@ -251,6 +251,7 @@ import {typography as typographyAutoPenaltyScaleOffice} from '../animations/crim
 import {typography as typographyAutoSentencingMeasureHall} from '../animations/criminal/15/sentencing-measure-hall/animation.meta';
 import {typography as typographyAutoComplicityPrinciplesJointPrincipal} from '../animations/criminal/12/complicity-principles-joint-principal/animation.meta';
 import {typography as typographyAutoIndirectPerpetratorDominion} from '../animations/criminal/12/indirect-perpetrator-dominion/animation.meta';
+import {typography as typographyAutoIndirectPerpetratorDominion} from '../animations/criminal/12/indirect-perpetrator-dominion/animation.meta';
 import {typography as typographyAutoExecutionExpiryStation} from '../animations/criminal/16/execution-expiry-station/animation.meta';
 import {typography as typographyAutoJurisdictionSeaChart} from '../animations/criminal-procedure-gold/04/jurisdiction-sea-chart/animation.meta';
 import {typography as typographyAutoRecusalBackstageSwap} from '../animations/criminal-procedure-gold/05/recusal-backstage-swap/animation.meta';
@@ -565,6 +566,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'penalty-scale-office': {metadata: typographyAutoPenaltyScaleOffice, scope: {animationId: 'penalty-scale-office', subject: 'criminal', topic: '14'}},
   'sentencing-measure-hall': {metadata: typographyAutoSentencingMeasureHall, scope: {animationId: 'sentencing-measure-hall', subject: 'criminal', topic: '15'}},
   'complicity-principles-joint-principal': {metadata: typographyAutoComplicityPrinciplesJointPrincipal, scope: {animationId: 'complicity-principles-joint-principal', subject: 'criminal', topic: '12'}},
+  'indirect-perpetrator-dominion': {metadata: typographyAutoIndirectPerpetratorDominion, scope: {animationId: 'indirect-perpetrator-dominion', subject: 'criminal', topic: '12'}},
   'indirect-perpetrator-dominion': {metadata: typographyAutoIndirectPerpetratorDominion, scope: {animationId: 'indirect-perpetrator-dominion', subject: 'criminal', topic: '12'}},
   'execution-expiry-station': {metadata: typographyAutoExecutionExpiryStation, scope: {animationId: 'execution-expiry-station', subject: 'criminal', topic: '16'}},
   'jurisdiction-sea-chart': {metadata: typographyAutoJurisdictionSeaChart, scope: {animationId: 'jurisdiction-sea-chart', subject: 'criminal-procedure-gold', topic: '04'}},

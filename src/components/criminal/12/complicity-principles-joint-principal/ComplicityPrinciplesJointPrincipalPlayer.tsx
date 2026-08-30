@@ -9,7 +9,7 @@ const scenes: readonly RemotionScene[] = [
   {id: 'child-lookout-case', number: '04', title: '10岁儿童与大爷望风案', ...SCENES.childLookoutCase},
   {id: 'co-principal-requirements', number: '05', title: '共同正犯·成立条件', ...SCENES.coPrincipalRequirements},
   {id: 'joint-liability-rule', number: '06', title: '部分实行·全部负责', ...SCENES.jointLiabilityRule},
-  {id: 'negligence-three-theories', number: '07', title: '打野猪案·三说对决', ...SCENES.negligenceThreeTheories},
+  {id: 'negligence-three-theories', number: '07', title: '打野猪案·三说', ...SCENES.negligenceThreeTheories},
   {id: 'co-principal-variants', number: '08', title: '共同正犯的种类', ...SCENES.coPrincipalVariants},
 ];
 

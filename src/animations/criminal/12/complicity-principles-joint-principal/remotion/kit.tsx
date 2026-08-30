@@ -86,12 +86,12 @@ export const Shell = ({code, title, children}: {code: string; title: string; chi
   <AbsoluteFill data-player-control-safe-bottom={PLAYER_CONTROL_SAFE_BOTTOM} style={{overflow: 'hidden', backgroundColor: C.moonWhite, color: C.ink, fontFamily: 'var(--inkloom-animation-body)'}}>
     <div style={{position: 'absolute', inset: 0, backgroundImage: 'repeating-linear-gradient(90deg, rgba(42,58,78,0.05) 0 3px, transparent 3px 92px), repeating-linear-gradient(0deg, rgba(42,58,78,0.035) 0 2px, transparent 2px 58px)'}} />
     <div style={{position: 'absolute', left: 0, right: 0, top: 130, height: 6, backgroundColor: C.poleRed}} />
-    <div style={{position: 'absolute', left: 72, top: 42, fontSize: 17, fontWeight: 900, letterSpacing: 3, color: C.indigo}}>CRIMINAL LAW · PALANQUIN CREW LINE / {code}</div>
+    <div style={{position: 'absolute', left: 72, top: 42, fontSize: 17, fontWeight: 900, letterSpacing: 3, color: C.indigo}}>CRIMINAL LAW · JOINT CRIME / {code}</div>
     <div style={{position: 'absolute', left: 72, top: 66, fontSize: 44, fontWeight: 950}}>{title}</div>
     <main style={{position: 'absolute', left: 72, right: 72, top: 168, bottom: PLAYER_CONTROL_SAFE_BOTTOM}}>{children}</main>
     <div style={{position: 'absolute', left: 72, right: 72, bottom: 40, display: 'flex', justifyContent: 'space-between', fontSize: 16, fontWeight: 800, color: C.indigo}}>
       <span>刑法 · 第12讲 共同犯罪（一）分类原理与共同正犯</span>
-      <span>LIFT TOGETHER — CHANT AS ONE — TALLY ALL</span>
+      <span>JOINT CRIME · GENERAL PART</span>
     </div>
   </AbsoluteFill>
 );

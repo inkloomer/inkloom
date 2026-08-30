@@ -1,0 +1,24 @@
+{
+  "directionId": "kite-line-dominion",
+  "family": "kite-line-dominion",
+  "palette": "天青雾纸 sky-mist + 翠鸢玉绿 kite-jade + 靛线 indigo + 杏黄 apricot + 赭红 alert + 玄墨 ink",
+  "typography": "heavy line-desk headings, jade kite panels, indigo line rules, apricot bait tags, rotated verdict stamps",
+  "composition": "a kite reel desk: dominion formula lane, three-source fan, coercion triptych rows, deception four-bay, dual-lens identity case, two-theory contrast, stage-escalation rail, six-row consequence table",
+  "surface": "mist sky ground with diagonal line-hatch, jade cloth panels, indigo line bars, paper boards; no glossy panels",
+  "motion": "the line descends scene by scene, bait arrows traverse case bays, stage rail climbs with the perpetrator; no idle loops",
+  "transition": "the mist ground and jade header bar persist while each scene reels the line anew",
+  "conceptTokens": {
+    "支配": "Anchor",
+    "欺骗": "Drama",
+    "法定身份": "BadgeCheck",
+    "从属性": "Link",
+    "无罪": "Ban",
+    "例案": "BookOpen"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/criminal/12/indirect-perpetrator-dominion/",
+    "title": "牵鸢线轴"
+  }
+}

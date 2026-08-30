@@ -1,0 +1,103 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "playerControlSafeBottom": 168,
+  "scenes": [
+    {
+      "id": "dominion-formula",
+      "export": "DominionFormulaScene",
+      "layout": "dominion-formula-lane",
+      "anchor": "flow-path",
+      "grammar": ["cause-then-dominate-lane", "subjective-intent-lock"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "enclosure"],
+      "tokens": ["Megaphone", "Anchor", "Brain", "Ban"],
+      "finalKnowledge": ["formula-lane", "elements-board", "subjective-board", "common-ground-strip"],
+      "statefulObjects": []
+    },
+    {
+      "id": "dominion-three-sources",
+      "export": "DominionThreeSourcesScene",
+      "layout": "three-source-fan",
+      "anchor": "concept-icon",
+      "grammar": ["three-source-fan", "tool-nature-band"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
+      "tokens": ["Anchor", "Hand", "Megaphone", "BadgeCheck"],
+      "finalKnowledge": ["sources-head-strip", "coercion-card", "deception-card", "identity-card", "tool-nature-strip"],
+      "statefulObjects": []
+    },
+    {
+      "id": "coercion-modes",
+      "export": "CoercionModesScene",
+      "layout": "coercion-triptych-rows",
+      "anchor": "typographic-sequence",
+      "grammar": ["coercion-triad-rows", "tool-vs-reflex-fork"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
+      "tokens": ["Baby", "Siren", "BookOpen", "Hand", "ShieldAlert", "Drama"],
+      "finalKnowledge": ["coerce-minor-card", "coerce-adult-card", "coerce-victim-card"],
+      "statefulObjects": []
+    },
+    {
+      "id": "deception-modes",
+      "export": "DeceptionModesScene",
+      "layout": "deception-four-bay",
+      "anchor": "document-fork",
+      "grammar": ["deceit-four-bays", "model-borrowed-intent"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
+      "tokens": ["Drama", "Brain", "ShieldAlert"],
+      "finalKnowledge": ["deception-head-strip", "lure-incapable-card", "exploit-negligence-card", "exploit-intent-card", "victim-selfharm-card"],
+      "statefulObjects": []
+    },
+    {
+      "id": "statutory-identity-case",
+      "export": "StatutoryIdentityCaseScene",
+      "layout": "dual-lens-identity-case",
+      "anchor": "role-pair",
+      "grammar": ["dual-lens-role-analysis", "imagination-concurrent-verdict"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
+      "tokens": ["BadgeCheck", "BookOpen", "Split", "Link", "Users"],
+      "finalKnowledge": ["identity-model-strip", "case-lens-board", "final-disposition-row", "modern-view-strip"],
+      "statefulObjects": []
+    },
+    {
+      "id": "accessory-dependence",
+      "export": "AccessoryDependenceScene",
+      "layout": "two-theory-contrast",
+      "anchor": "comparison-axis",
+      "grammar": ["two-theory-contrast", "no-result-acquittals"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
+      "tokens": ["Link", "Hand", "Gavel"],
+      "finalKnowledge": ["relation-head-strip", "independence-card", "dependence-card", "no-result-cases-strip"],
+      "statefulObjects": []
+    },
+    {
+      "id": "form-stage-dependence",
+      "export": "FormStageDependenceScene",
+      "layout": "stage-escalation-timeline",
+      "anchor": "timeline-gate",
+      "grammar": ["stage-escalation-rail", "discontinuation-independence"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "locator"],
+      "tokens": ["Route", "Hand", "Hourglass", "BookOpen", "Flag"],
+      "finalKnowledge": ["form-head-strip", "stage-rule-board", "discontinuation-board", "twin-case-strip"],
+      "statefulObjects": []
+    },
+    {
+      "id": "form-case-quiz",
+      "export": "FormCaseQuizScene",
+      "layout": "six-row-table-quiz",
+      "anchor": "boundary",
+      "grammar": ["six-row-consequence-table", "quiz-verdict-rows"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "locator"],
+      "tokens": ["ClipboardCheck", "GraduationCap"],
+      "finalKnowledge": ["six-row-board", "quiz-strip-2022", "quiz-strip-2024"],
+      "statefulObjects": []
+    }
+  ]
+}

@@ -3,7 +3,7 @@
   "compositionId": "ComplicityPrinciplesJointPrincipal",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-08-30T12:08:55.240Z",
+  "generatedAt": "2026-08-30T13:00:37.490Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -16,13 +16,13 @@
       "title": "共同犯罪·四大角色总览",
       "durationMs": 8333,
       "file": "role-taxonomy.avif",
-      "fileSize": 487126,
+      "fileSize": 478135,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "07ab281412df7344d46f108a50badff9bf1edcad1887f3a3148f302c5bedf3b2",
+      "sha256": "d4062d48a37e5698e07a9b89471736d8b1903c76759be5a8a90534bf95b36ca0",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "492b24fbc600ac699a885690e6534534de3f3f52197c4f3012415aefe8b7b517"
+      "sceneFingerprint": "bbc7ab2d24b6c64577adfc52f3113c1866f47a128bf63829bf3c1c5233b46fd3"
     },
     {
       "endFrame": 519,
@@ -33,13 +33,13 @@
       "title": "正犯两个维度·三类分类",
       "durationMs": 9000,
       "file": "perpetrator-variants.avif",
-      "fileSize": 569095,
+      "fileSize": 561889,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "5d30fd8245336e7fe5a6fbca0fd1f0b0c4c80f506cc9b7c6ba5dcee8cddd8d6b",
+      "sha256": "0d38e9dcb1b2b175b0c648ab7ad5a05cd4a0835c0b31b2ef7d3528766afdb57b",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "6b6b42e23d13e7228729eac66d311ef88958857c04e14b26c73e581f2f802008"
+      "sceneFingerprint": "bc4f25297ea6ffe7b0e16a5e8c7dbc52460530dd39c50cbd3446ebfc9036c33b"
     },
     {
       "endFrame": 779,
@@ -50,13 +50,13 @@
       "title": "『共同』『犯罪』原理拆词",
       "durationMs": 8667,
       "file": "joint-meaning-principle.avif",
-      "fileSize": 495227,
+      "fileSize": 489086,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "168c2b790cc4926d4ea11ba16b806243b78f436456f36d9d6dde957d406b1635",
+      "sha256": "cc392f82f8e91b93f26a653507063fed5a267acb5e493a6ac144e641691c844e",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "5d0120bcf0e1c74f5d69361c7eee4b25e870d5579982cdf40e9841d43d5b37b0"
+      "sceneFingerprint": "7973f53e4acc890a55add11545e3a3f9a135b941ec2e8e61dc908a291ec3f6f9"
     },
     {
       "endFrame": 1029,
@@ -67,13 +67,13 @@
       "title": "10岁儿童与大爷望风案",
       "durationMs": 8333,
       "file": "child-lookout-case.avif",
-      "fileSize": 376796,
+      "fileSize": 370301,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "c5ef807cc8220b1b50df14debb5b554ce79b6da300780e5c5595c392d4130968",
+      "sha256": "df015926626b96eaa0f3d5085860d72c796c6251759cb34386d99d68ee2045ba",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "79851590bfd74c350a2327ea51e26c188e6cb43967707054e0edb2b27e4812cb"
+      "sceneFingerprint": "37e019864b8b743a2a0e40b5b65f4d066aa97178250a75b8ac28b2f694edca70"
     },
     {
       "endFrame": 1279,
@@ -84,13 +84,13 @@
       "title": "共同正犯·成立条件",
       "durationMs": 8333,
       "file": "co-principal-requirements.avif",
-      "fileSize": 413594,
+      "fileSize": 409499,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "3bab303b6537a21c938a74a44fbbe927364de044de3d4b30dfca1cb357c2cc27",
+      "sha256": "41930307afe0a58fe26a0948a4a45f08fec09b6a4ba5eb6e4a9d979100232331",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "f5382dc5610e4b77b58279809aac8d8f566cc7dbf33f1d6ea637398f6d06261e"
+      "sceneFingerprint": "449b2ec422e67c20690054598333e94d9995158d418a9bef78669b78ae5d253d"
     },
     {
       "endFrame": 1549,
@@ -101,13 +101,13 @@
       "title": "部分实行·全部负责",
       "durationMs": 9000,
       "file": "joint-liability-rule.avif",
-      "fileSize": 475482,
+      "fileSize": 467514,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "dc609128debc3828e1b9efdf9a3772267afa1cecbf5e98d54195e96ff361b518",
+      "sha256": "751a465f3198e57b8760ee5ed79cda024b314f5b28b253e0ec0c33861b084a4f",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "581ff3f63eabc4371cfb278b3a16c7bfb4a7cc8efc7d3b66977f06fd7596ae78"
+      "sceneFingerprint": "dd72b0e4b93d8e3834a962fe58a25ec9b3b9db50d9b64bbf2e22a829f830145a"
     },
     {
       "endFrame": 1819,
@@ -115,16 +115,16 @@
       "id": "negligence-three-theories",
       "number": "07",
       "startFrame": 1550,
-      "title": "打野猪案·三说对决",
+      "title": "打野猪案·三说",
       "durationMs": 9000,
       "file": "negligence-three-theories.avif",
-      "fileSize": 629409,
+      "fileSize": 624341,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "665455a5f1febd890533d35e2d1183381cbfa5b4e8cf120fd1d9cf52f3a2ae8d",
+      "sha256": "fdf66a451f6f565c8ff57cf68a431e6b9b277e49005bfbefbc46fdce78088bcf",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "009563402f9c8b504fadc00e3468d0b9dc76e5617c8d72c2cf626407ef6f352a"
+      "sceneFingerprint": "e76f98b7e20176f634c485d5fb38e5652c6d733cb46b934073e920661f124b41"
     },
     {
       "endFrame": 2089,
@@ -135,13 +135,13 @@
       "title": "共同正犯的种类",
       "durationMs": 9000,
       "file": "co-principal-variants.avif",
-      "fileSize": 510608,
+      "fileSize": 506492,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "adf128787d779a5861c7f3d2a3cd659c22f00ebf12c33b16cb4ef4aeed4c0aeb",
+      "sha256": "0e2a55cd0561038640f25244bd36f4faea2902ef1b1bbf98042953ae6f5e854b",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "551e64c47b88b98bd447f18e2d219879aea02a1fb43cd58b98c3103cd1ea5015"
+      "sceneFingerprint": "224d009c69709e698a0ea4e99cf0edd273eb77b6ed64e2be1ab9d6ceacb87ee3"
     }
   ],
   "size": {
@@ -149,7 +149,7 @@
     "width": 2560
   },
   "sourceFps": 30,
-  "sourceFingerprint": "d1063e3e4c94ec1c8378066bd70120e2570eb1615561d32926c19f11c4f02b87",
+  "sourceFingerprint": "2bd76548d625fcd62cb817dd4564bc05eb2c5b3f1a1d440f9c57c5c03e35aeba",
   "targetFps": 30,
-  "totalFileSize": 3957337
+  "totalFileSize": 3907257
 }
