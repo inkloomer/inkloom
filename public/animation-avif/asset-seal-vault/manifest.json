@@ -1,0 +1,70 @@
+{
+  "animationId": "asset-seal-vault",
+  "compositionId": "AssetSealVault",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-30T18:08:52.242Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 499,
+      "frameCount": 250,
+      "id": "entry-conditions-fork",
+      "number": "01",
+      "startFrame": 0,
+      "title": "适用条件",
+      "durationMs": 8333,
+      "file": "entry-conditions-fork.avif",
+      "fileSize": 354871,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "ef059bf0d401b30338aaee473ea25aee17db610ae7cd2c3ff02da9d73b7ecbaf",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "0ae44203d42676bfca0f7615692ec369a1076481a53e06f4ce616798a385cf3d"
+    },
+    {
+      "endFrame": 1079,
+      "frameCount": 290,
+      "id": "application-notice-lane",
+      "number": "02",
+      "startFrame": 500,
+      "title": "申请、管辖与公告",
+      "durationMs": 9667,
+      "file": "application-notice-lane.avif",
+      "fileSize": 386947,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "bdfd9f8a8f9157465aca5ef64bb12931e8f5fdd6c071ddeea3a4683896fc4b90",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "0ae44203d42676bfca0f7615692ec369a1076481a53e06f4ce616798a385cf3d"
+    },
+    {
+      "endFrame": 1699,
+      "frameCount": 310,
+      "id": "trial-verdict-outcome",
+      "number": "03",
+      "startFrame": 1080,
+      "title": "审理、裁定与救济",
+      "durationMs": 10333,
+      "file": "trial-verdict-outcome.avif",
+      "fileSize": 417172,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "ad7b3c70da5d4c4c15b835d21029aca8007877466af1cc0c16bf79e8a9d4af05",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "0ae44203d42676bfca0f7615692ec369a1076481a53e06f4ce616798a385cf3d"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "0ae44203d42676bfca0f7615692ec369a1076481a53e06f4ce616798a385cf3d",
+  "targetFps": 30,
+  "totalFileSize": 1158990
+}

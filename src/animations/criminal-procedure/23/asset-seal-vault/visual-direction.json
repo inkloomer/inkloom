@@ -1,0 +1,24 @@
+{
+  "directionId": "asset-seal-vault-confiscation",
+  "family": "asset-seal-vault-family",
+  "palette": "archive-vault steel slate, brass fittings, parchment waybill cards, wax-seal red, verdigris release green, dispatch blue",
+  "typography": "WenKai vault headings with brass unit plates and punched tag chips",
+  "composition": "a dual-entry vault fork over a property strip, an application-to-notice flow lane beside claimant cards, and a trial-rule stack beside a verdict pair under a relief strip",
+  "surface": "steel vault wall with rivet grid, parchment tag cards with brass borders, wax seals and dashed ticket underlines",
+  "motion": "entry branches unseal one row at a time, the application flow advances station by station, and the verdict pair stamps down before the relief strip closes the loop",
+  "transition": "the steel vault backdrop and rivet grid persist while the tag cards are replaced",
+  "conceptTokens": {
+    "检察院": "Scale",
+    "中院合议庭": "Landmark",
+    "公告": "Megaphone",
+    "裁定": "Stamp",
+    "追缴": "Coins",
+    "利害关系人": "UserPlus"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/criminal-procedure/23/asset-seal-vault/",
+    "title": "资产封存库"
+  }
+}

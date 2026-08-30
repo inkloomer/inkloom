@@ -65,6 +65,7 @@ import {typography as typographyCpGreenhouse} from '../animations/criminal-proce
 import {typography as typographyCpSummit} from '../animations/criminal-procedure/17/death-review-summit/animation.meta';
 import {typography as typographyCpPavilion} from '../animations/criminal-procedure/21/reconciliation-scale-pavilion/animation.meta';
 import {typography as typographyCpCourier} from '../animations/criminal-procedure/22/onyx-courier/animation.meta';
+import {typography as typographyCpVault} from '../animations/criminal-procedure/23/asset-seal-vault/animation.meta';
 import {typography as typography0} from '../animations/civil-procedure/01/dispute-resolution/animation.meta';
 import {typography as typography1} from '../animations/civil-procedure/01/law-attributes/animation.meta';
 import {typography as typography2} from '../animations/civil-procedure/01/trial-procedure/animation.meta';
@@ -567,6 +568,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'death-review-summit': {metadata: typographyCpSummit, scope: {animationId: 'death-review-summit', subject: 'criminal-procedure', topic: '17'}},
   'reconciliation-scale-pavilion': {metadata: typographyCpPavilion, scope: {animationId: 'reconciliation-scale-pavilion', subject: 'criminal-procedure', topic: '21'}},
   'onyx-courier': {metadata: typographyCpCourier, scope: {animationId: 'onyx-courier', subject: 'criminal-procedure', topic: '22'}},
+  'asset-seal-vault': {metadata: typographyCpVault, scope: {animationId: 'asset-seal-vault', subject: 'criminal-procedure', topic: '23'}},
   'card-selling-funds-viewpoint': {metadata: typography40, scope: {animationId: 'card-selling-funds-viewpoint', subject: 'criminal', topic: '19'}},
   'occupational-embezzlement-flowchart': {metadata: typography41, scope: {animationId: 'occupational-embezzlement-flowchart', subject: 'criminal', topic: '19'}},
   'property-interests-keypoints': {metadata: typography42, scope: {animationId: 'property-interests-keypoints', subject: 'criminal', topic: '19'}},

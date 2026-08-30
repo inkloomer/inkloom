@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "entry-conditions-fork",
+      "export": "EntryConditionsScene",
+      "layout": "dual-entry-vault-fork-with-property-strip",
+      "anchor": "document-fork",
+      "grammar": [
+        "fugitive-type-needs-grave-crime-year-manhunt-and-forfeiture-clause",
+        "death-type-needs-only-death-and-forfeiture-clause",
+        "illicit-gains-span-booty-fruits-and-own-tools",
+        "red-notice-counts-toward-the-one-year-manhunt"
+      ],
+      "textTreatments": ["chip", "thin-underline", "soft-highlight"],
+      "focalChannels": ["contrast", "enclosure", "connector", "annotation"],
+      "tokens": ["Vault"],
+      "finalKnowledge": ["fugitive-branch", "death-branch", "property-strip", "mnemonic-band"],
+      "statefulObjects": []
+    },
+    {
+      "id": "application-notice-lane",
+      "export": "ApplicationNoticeScene",
+      "layout": "application-flow-with-notice-participation-band",
+      "anchor": "flow-path",
+      "grammar": [
+        "procuratorate-files-a-written-forfeiture-application",
+        "intermediate-court-panel-at-crime-or-residence-place-accepts",
+        "fifteen-day-notice-opens-an-irreducible-six-month-period",
+        "late-claimants-enter-with-reasonable-explanation-or-second-instance-remedy"
+      ],
+      "textTreatments": ["chip", "label-block", "thin-underline"],
+      "focalChannels": ["connector", "spatial", "contrast", "annotation"],
+      "tokens": ["ScrollText"],
+      "finalKnowledge": ["application-flow", "claimant-cards", "burden-note"],
+      "statefulObjects": []
+    },
+    {
+      "id": "trial-verdict-outcome",
+      "export": "TrialVerdictScene",
+      "layout": "trial-rule-stack-with-verdict-pair-and-relief-strip",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "attendance-decides-open-or-closed-hearing",
+        "near-kin-claims-need-no-proof-while-others-must-prove",
+        "surrender-or-capture-terminates-not-suspends",
+        "high-likelihood-brings-forfeiture-ruling-otherwise-dismissal-and-unseal"
+      ],
+      "textTreatments": ["chip", "soft-highlight", "external-negation"],
+      "focalChannels": ["contrast", "enclosure", "icon", "annotation"],
+      "tokens": ["Gavel"],
+      "finalKnowledge": ["trial-rule-stack", "verdict-pair", "relief-strip"],
+      "statefulObjects": []
+    }
+  ]
+}
