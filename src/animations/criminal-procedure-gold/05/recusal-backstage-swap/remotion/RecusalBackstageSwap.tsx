@@ -7,6 +7,7 @@ import {C, Chip, Dash, Enter, LabelBlock, Neg, Shell, SoftHi, Stamp, ThinU} from
 export const ApplicantGateScene = () => (
   <Shell code="01" title="谁能申请回避，谁本身不回避">
     <div data-layout="applicant-gate-plaques" data-visual-anchor="concept-icon" data-text-treatments="chip,label-block,soft-highlight,thin-underline,external-negation,stamp" data-visual-grammar="entry-plaque-row,exempt-list-contrast" data-focal-rule="parties-legal-representatives-counsel-and-agents-may-apply-while-witnesses-counsel-and-agents-themselves-are-never-recused" data-focal-channels="icon,contrast,enclosure,spatial" style={{position: 'absolute', inset: 0}}>
+      <div style={{position: 'absolute', right: 30, bottom: 16, opacity: 0.07, pointerEvents: 'none'}}><ArrowLeftRight size={230} color={C.ivory} strokeWidth={1.1} /></div>
       <div data-final-knowledge="applicant-gate-card" style={{position: 'absolute', left: 0, top: 0, width: 880, height: 744, backgroundColor: C.panel, border: `3px solid ${C.panelLine}`, borderRadius: 14, padding: '16px 22px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between'}}>
         <div style={{display: 'flex', alignItems: 'center', gap: 14}}>
           <Enter delay={6} style={{display: 'flex', alignItems: 'center', gap: 12}}>
@@ -100,6 +101,7 @@ export const ApplicantGateScene = () => (
 export const ReasonReroomScene = () => (
   <Shell code="02" title="理由只看利害，重审必须换角">
     <div data-layout="reason-reroom-pair" data-visual-anchor="comparison-axis" data-text-treatments="chip,label-block,soft-highlight,thin-underline,external-negation,stamp" data-visual-grammar="reason-contrast-pair,reroom-swap-rule" data-focal-rule="recusal-turns-on-improper-interests-and-remand-requires-the-whole-original-collegial-panel-to-swap" data-focal-channels="icon,contrast,annotation,spatial" style={{position: 'absolute', inset: 0}}>
+      <div style={{position: 'absolute', left: 30, bottom: 16, opacity: 0.07, pointerEvents: 'none'}}><Undo2 size={230} color={C.ivory} strokeWidth={1.1} /></div>
       <div data-final-knowledge="reason-interest-card" style={{position: 'absolute', left: 0, top: 0, width: 866, height: 744, backgroundColor: C.panel, border: `3px solid ${C.panelLine}`, borderRadius: 14, padding: '16px 22px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between'}}>
         <Enter delay={6} style={{display: 'flex', alignItems: 'center', gap: 12}}>
           <Link2 size={30} color={C.plaque} style={{flexShrink: 0}} />
@@ -163,6 +165,7 @@ export const ReasonReroomScene = () => (
 export const DecisionBatonScene = () => (
   <Shell code="03" title="谁拍板，怎么层报，谁能复议">
     <div data-layout="decision-baton-board" data-visual-anchor="role-pair" data-text-treatments="chip,label-block,soft-highlight,thin-underline,external-negation,stamp" data-visual-grammar="decision-relay-chain,escalation-and-rebuttal-pair" data-focal-rule="the-organization-decides-the-chief-and-the-chief-decides-the-rest-while-recusal-rejections-give-the-applicant-one-review" data-focal-channels="icon,connector,contrast,spatial" style={{position: 'absolute', inset: 0}}>
+      <div style={{position: 'absolute', left: 30, bottom: 16, opacity: 0.07, pointerEvents: 'none'}}><ClipboardCheck size={230} color={C.ivory} strokeWidth={1.1} /></div>
       <div data-final-knowledge="decision-relay-card" style={{position: 'absolute', left: 0, top: 0, width: 866, height: 500, backgroundColor: C.panel, border: `3px solid ${C.panelLine}`, borderRadius: 14, padding: '16px 22px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between'}}>
         <Enter delay={6} style={{display: 'flex', alignItems: 'center', gap: 12}}>
           <ClipboardCheck size={30} color={C.plaque} style={{flexShrink: 0}} />
@@ -232,6 +235,10 @@ export const DecisionBatonScene = () => (
             <Neg size={23}>被决定回避的人没有复议权</Neg>
           </Enter>
           <Enter delay={180} style={{fontSize: 22, fontWeight: 750, color: C.ivoryDim }}>换角者退出即可；只有被拒的申请人能翻一次牌</Enter>
+          <Enter delay={192} style={{display: 'flex', alignItems: 'center', gap: 10}}>
+            <GraduationCap size={24} color={C.plaque} style={{flexShrink: 0}} />
+            <span style={{fontSize: 22, fontWeight: 800, color: C.ivoryDim }}>2013-2018年题 · 复议归属与层报指定</span>
+          </Enter>
         </div>
       </div>
     </div>
