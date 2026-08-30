@@ -1,0 +1,70 @@
+{
+  "animationId": "terminal-station-wind-down",
+  "compositionId": "TerminalStationWindDown",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-30T03:02:37.738Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 289,
+      "frameCount": 290,
+      "id": "removal-arrival",
+      "number": "01",
+      "startFrame": 0,
+      "title": "异议不阻生效：齐某的除名与解散",
+      "durationMs": 9667,
+      "file": "removal-arrival.avif",
+      "fileSize": 286356,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "e5d10c499127ba1a9c7e8bb3f1f34542cf22d38f5f1033f7ddf7393fbcf505e3",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "fa2940b6af027484dfc7c7a46c9ae6a913129ff487a0318deed093a307a637b9"
+    },
+    {
+      "endFrame": 569,
+      "frameCount": 280,
+      "id": "notice",
+      "number": "02",
+      "startFrame": 290,
+      "title": "已知债权人也要通知：10日＋60日",
+      "durationMs": 9333,
+      "file": "notice.avif",
+      "fileSize": 374974,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "3a52aabe3f0b7c960e847c4650297d5fecf8868195143c8bc677d70e4792c55e",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "fa2940b6af027484dfc7c7a46c9ae6a913129ff487a0318deed093a307a637b9"
+    },
+    {
+      "endFrame": 859,
+      "frameCount": 290,
+      "id": "liability",
+      "number": "03",
+      "startFrame": 570,
+      "title": "未清偿也可注销：责任分层不灭失",
+      "durationMs": 9667,
+      "file": "liability.avif",
+      "fileSize": 320057,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "a3a788fd9e650e9acc71b780b96463d5e9071d876a8d3d5aeffd6dad6e2ec06f",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "fa2940b6af027484dfc7c7a46c9ae6a913129ff487a0318deed093a307a637b9"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "fa2940b6af027484dfc7c7a46c9ae6a913129ff487a0318deed093a307a637b9",
+  "targetFps": 30,
+  "totalFileSize": 981387
+}

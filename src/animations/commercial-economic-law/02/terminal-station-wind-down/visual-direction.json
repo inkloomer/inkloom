@@ -1,0 +1,25 @@
+{
+  "directionId": "ink-terminal-station-hall",
+  "family": "terminal-station-wind-down",
+  "palette": "dark rail hall + departure board cream + signal amber + stop red + mint clearance + navy accents + ink black",
+  "typography": "terminal hall headlines, departure board labels, square signal-amber verdict stamps, dashed platform rails",
+  "composition": "an removal timeline desk with arrival-effectiveness, a notice deadline board of ten and sixty days, and a liability split desk pairing unlimited joint liability with subscription caps through deregistration",
+  "surface": "dark rail walls with departure boards and amber signals; no glossy panels",
+  "motion": "trains arrive on the timeline as removals take effect, deadline chips stack on the board, the liability split desks stamp verdicts; no idle loops",
+  "transition": "the terminal persists while each scene re-stages the same platform for a new question",
+  "conceptTokens": {
+    "除名": "UserMinus",
+    "决议": "FileText",
+    "清算人": "Users",
+    "通知公告": "Landmark",
+    "限责": "Scale",
+    "安全通过": "ShieldCheck",
+    "真题": "GraduationCap"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/commercial-economic-law/02/terminal-station-wind-down/",
+    "title": "终止站站牌"
+  }
+}
