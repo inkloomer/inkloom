@@ -204,6 +204,7 @@ import {typography as typographyAutoFrostTribunalDocket} from '../animations/com
 import {typography as typographyAutoAmberTwinScale} from '../animations/commercial-economic-law/05/amber-twin-scale/animation.meta';
 import {typography as typographyAutoIndigoEstateVault} from '../animations/commercial-economic-law/05/indigo-estate-vault/animation.meta';
 import {typography as typographyAutoPlumAppealsClockhouse} from '../animations/commercial-economic-law/05/plum-appeals-clockhouse/animation.meta';
+import {typography as typographyAutoQuartzSproutGreenhouse} from '../animations/commercial-economic-law/05/quartz-sprout-greenhouse/animation.meta';
 import {typography as typographyAutoReckoningAbacusDesk} from '../animations/administrative-law/24/reckoning-abacus-desk/animation.meta';
 import {typography as typographyAutoBambooScrollRestoration} from '../animations/administrative-law/23/bamboo-scroll-restoration/animation.meta';
 import {typography as typographyAutoLighthouseWatchNetwork} from '../animations/administrative-law/20/lighthouse-watch-network/animation.meta';
@@ -239,6 +240,7 @@ import {typography as typographyAutoHarmResultAggravation} from '../animations/c
 import {typography as typographyAutoCausationAttributionFlow} from '../animations/criminal/07/causation-attribution-flow/animation.meta';
 import {typography as typographyAutoIntentMensReaMap} from '../animations/criminal/08/intent-mens-rea-map/animation.meta';
 import {typography as typographyAutoJustificationDefenseNecessity} from '../animations/criminal/09/justification-defense-necessity/animation.meta';
+import {typography as typographyAutoCulpabilityRingAssay} from '../animations/criminal/10/culpability-ring-assay/animation.meta';
 import {typography as typographyAutoCrimeNumberReckoning} from '../animations/criminal/13/crime-number-reckoning/animation.meta';
 import {typography as typographyAutoJurisdictionSeaChart} from '../animations/criminal-procedure-gold/04/jurisdiction-sea-chart/animation.meta';
 import {typography as typographyAutoRecusalBackstageSwap} from '../animations/criminal-procedure-gold/05/recusal-backstage-swap/animation.meta';
@@ -261,6 +263,7 @@ import {typography as typographyEmd} from '../animations/theoretical-law/01/emer
 import {typography as typographyCmc} from '../animations/theoretical-law/01/central-military-commission/animation.meta';
 import {typography as typographySup} from '../animations/theoretical-law/01/supervisory-organs/animation.meta';
 import {typography as typographyLpc} from '../animations/theoretical-law/01/local-people-congresses/animation.meta';
+import {typography as typographyConst} from '../animations/theoretical-law/01/constitutional-supervision/animation.meta';
 import {typography as typographyCc} from '../animations/theoretical-law/01/constitution-classification/animation.meta';
 import {typography as typographyCdv} from '../animations/theoretical-law/01/constitution-development/animation.meta';
 import {typography as typographyCp} from '../animations/theoretical-law/01/constitution-principles/animation.meta';
@@ -450,6 +453,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'amber-twin-scale': {metadata: typographyAutoAmberTwinScale, scope: {animationId: 'amber-twin-scale', subject: 'commercial-economic-law', topic: '05'}},
   'indigo-estate-vault': {metadata: typographyAutoIndigoEstateVault, scope: {animationId: 'indigo-estate-vault', subject: 'commercial-economic-law', topic: '05'}},
   'plum-appeals-clockhouse': {metadata: typographyAutoPlumAppealsClockhouse, scope: {animationId: 'plum-appeals-clockhouse', subject: 'commercial-economic-law', topic: '05'}},
+  'quartz-sprout-greenhouse': {metadata: typographyAutoQuartzSproutGreenhouse, scope: {animationId: 'quartz-sprout-greenhouse', subject: 'commercial-economic-law', topic: '05'}},
   'reckoning-abacus-desk': {metadata: typographyAutoReckoningAbacusDesk, scope: {animationId: 'reckoning-abacus-desk', subject: 'administrative-law', topic: '24'}},
   'bamboo-scroll-restoration': {metadata: typographyAutoBambooScrollRestoration, scope: {animationId: 'bamboo-scroll-restoration', subject: 'administrative-law', topic: '23'}},
   'lighthouse-watch-network': {metadata: typographyAutoLighthouseWatchNetwork, scope: {animationId: 'lighthouse-watch-network', subject: 'administrative-law', topic: '20'}},
@@ -528,6 +532,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'causation-attribution-flow': {metadata: typographyAutoCausationAttributionFlow, scope: {animationId: 'causation-attribution-flow', subject: 'criminal', topic: '07'}},
   'intent-mens-rea-map': {metadata: typographyAutoIntentMensReaMap, scope: {animationId: 'intent-mens-rea-map', subject: 'criminal', topic: '08'}},
   'justification-defense-necessity': {metadata: typographyAutoJustificationDefenseNecessity, scope: {animationId: 'justification-defense-necessity', subject: 'criminal', topic: '09'}},
+  'culpability-ring-assay': {metadata: typographyAutoCulpabilityRingAssay, scope: {animationId: 'culpability-ring-assay', subject: 'criminal', topic: '10'}},
   'crime-number-reckoning': {metadata: typographyAutoCrimeNumberReckoning, scope: {animationId: 'crime-number-reckoning', subject: 'criminal', topic: '13'}},
   'jurisdiction-sea-chart': {metadata: typographyAutoJurisdictionSeaChart, scope: {animationId: 'jurisdiction-sea-chart', subject: 'criminal-procedure-gold', topic: '04'}},
   'recusal-backstage-swap': {metadata: typographyAutoRecusalBackstageSwap, scope: {animationId: 'recusal-backstage-swap', subject: 'criminal-procedure-gold', topic: '05'}},
@@ -568,6 +573,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'central-military-commission': {metadata: typographyCmc, scope: {animationId: 'central-military-commission', subject: 'theoretical-law', topic: '01'}},
   'supervisory-organs': {metadata: typographySup, scope: {animationId: 'supervisory-organs', subject: 'theoretical-law', topic: '01'}},
   'local-people-congresses': {metadata: typographyLpc, scope: {animationId: 'local-people-congresses', subject: 'theoretical-law', topic: '01'}},
+  'constitutional-supervision': {metadata: typographyConst, scope: {animationId: 'constitutional-supervision', subject: 'theoretical-law', topic: '01'}},
   'profit-reserve-granary': {metadata: typographyPrg, scope: {animationId: 'profit-reserve-granary', subject: 'commercial-economic-law', topic: '01'}},
   'promoter-liability-ropewalk': {metadata: typographyPlr, scope: {animationId: 'promoter-liability-ropewalk', subject: 'commercial-economic-law', topic: '01'}},
   'fight-defense-diagram': {metadata: typography44, scope: {animationId: 'fight-defense-diagram', subject: 'criminal', topic: '22'}},

@@ -1,0 +1,205 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "playerControlSafeBottom": 168,
+  "scenes": [
+    {
+      "id": "one-act-three-relations",
+      "export": "OneActThreeRelationsScene",
+      "layout": "three-lane-relation-yard",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "relation-trio-lanes",
+        "necessity-test-strip"
+      ],
+      "textTreatments": [
+        "chip",
+        "label-block",
+        "soft-highlight",
+        "thin-underline",
+        "external-negation",
+        "stamp"
+      ],
+      "focalChannels": [
+        "icon",
+        "contrast",
+        "enclosure",
+        "spatial"
+      ],
+      "tokens": [
+        "Zap",
+        "ScrollText",
+        "Scale",
+        "GraduationCap"
+      ],
+      "finalKnowledge": [
+        "street-case-banner",
+        "lane-opposite",
+        "lane-inclusive",
+        "lane-neutral",
+        "misuse-negatives",
+        "misuse-negatives-2",
+        "misuse-negatives-3",
+        "dynamic-shift-board"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "continue-aggravate-lane",
+      "export": "ContinueAggravateLaneScene",
+      "layout": "continuing-aggravate-duo-board",
+      "anchor": "flow-path",
+      "grammar": [
+        "continuing-one-crime",
+        "aggravate-weight-dial"
+      ],
+      "textTreatments": [
+        "chip",
+        "label-block",
+        "soft-highlight",
+        "thin-underline",
+        "external-negation",
+        "stamp"
+      ],
+      "focalChannels": [
+        "icon",
+        "contrast",
+        "enclosure",
+        "connector"
+      ],
+      "tokens": [
+        "Scale",
+        "Hourglass",
+        "Users",
+        "CircleDashed",
+        "Gavel"
+      ],
+      "finalKnowledge": [
+        "continuing-board",
+        "continuing-join-rule",
+        "aggravate-board",
+        "form-shift-board"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "combined-serial-yard",
+      "export": "CombinedSerialYardScene",
+      "layout": "combined-serial-two-act-yard",
+      "anchor": "boundary",
+      "grammar": [
+        "combined-formula-strip",
+        "serial-three-rules"
+      ],
+      "textTreatments": [
+        "chip",
+        "label-block",
+        "soft-highlight",
+        "thin-underline",
+        "external-negation",
+        "stamp"
+      ],
+      "focalChannels": [
+        "icon",
+        "contrast",
+        "enclosure",
+        "spatial"
+      ],
+      "tokens": [
+        "BrickWall",
+        "Zap",
+        "GraduationCap",
+        "ArrowLeftRight",
+        "Milestone"
+      ],
+      "finalKnowledge": [
+        "stolen-car-banner",
+        "combined-board",
+        "combined-vs-aggravate",
+        "serial-board"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "absorb-post-acts",
+      "export": "AbsorbPostActsScene",
+      "layout": "absorb-post-duo-yard",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "heavy-absorbs-light",
+        "post-act-boundary"
+      ],
+      "textTreatments": [
+        "chip",
+        "label-block",
+        "soft-highlight",
+        "thin-underline",
+        "external-negation",
+        "stamp"
+      ],
+      "focalChannels": [
+        "icon",
+        "contrast",
+        "enclosure",
+        "spatial"
+      ],
+      "tokens": [
+        "BrickWall",
+        "Zap",
+        "KeyRound",
+        "FileText",
+        "Gavel",
+        "Stamp",
+        "CirclePlay"
+      ],
+      "finalKnowledge": [
+        "absorb-board",
+        "absorb-row-1",
+        "absorb-row-2",
+        "absorb-row-3",
+        "absorb-row-4",
+        "absorb-row-5",
+        "postact-board"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "involved-principle-floor",
+      "export": "InvolvedPrincipleFloorScene",
+      "layout": "involved-principle-quadrant",
+      "anchor": "boundary",
+      "grammar": [
+        "usual-bond-test",
+        "double-principle-floor"
+      ],
+      "textTreatments": [
+        "chip",
+        "label-block",
+        "soft-highlight",
+        "thin-underline",
+        "external-negation",
+        "stamp"
+      ],
+      "focalChannels": [
+        "icon",
+        "contrast",
+        "enclosure",
+        "connector"
+      ],
+      "tokens": [
+        "Scale",
+        "GraduationCap",
+        "ArrowLeftRight",
+        "Hourglass",
+        "BrickWall",
+        "Gavel"
+      ],
+      "finalKnowledge": [
+        "involved-board",
+        "principle-board",
+        "exam-floor"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}
