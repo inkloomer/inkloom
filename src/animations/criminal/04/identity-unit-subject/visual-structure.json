@@ -1,0 +1,101 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "playerControlSafeBottom": 168,
+  "scenes": [
+    {
+      "id": "status-crime-duality",
+      "export": "StatusCrimeDualityScene",
+      "layout": "dual-badge-status-board",
+      "anchor": "comparison-axis",
+      "grammar": ["badge-status-pairing", "conviction-range-split"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
+      "tokens": ["KeyRound", "Scale"],
+      "finalKnowledge": [
+        "badge-true-status",
+        "badge-true-rule-time",
+        "badge-true-rule-scope",
+        "badge-quasi-status",
+        "badge-subject-floor"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "public-official-dial",
+      "export": "PublicOfficialDialScene",
+      "layout": "duty-dial-case-lanes",
+      "anchor": "concept-icon",
+      "grammar": ["duty-standard-dial", "case-lane-verdicts"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["Landmark", "FileText", "GraduationCap"],
+      "finalKnowledge": [
+        "dial-wrong-standard",
+        "dial-right-standard",
+        "case-vice-director",
+        "case-monday",
+        "case-tuesday",
+        "dial-crime-lanes"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "unit-crime-gate",
+      "export": "UnitCrimeGateScene",
+      "layout": "unit-classify-gate-board",
+      "anchor": "boundary",
+      "grammar": ["crime-classify-strip", "unit-gate-conditions"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "enclosure", "contrast", "spatial"],
+      "tokens": ["Castle", "LockOpen", "Users", "Ban", "GraduationCap"],
+      "finalKnowledge": [
+        "classify-strip",
+        "gate-subject",
+        "gate-branch-two-keys",
+        "gate-mind",
+        "gate-veil",
+        "gate-factory-case"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "four-model-crossing",
+      "export": "FourModelCrossingScene",
+      "layout": "will-benefit-crossing-matrix",
+      "anchor": "comparison-axis",
+      "grammar": ["will-benefit-matrix", "sole-unit-verdict"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
+      "tokens": ["Users"],
+      "finalKnowledge": [
+        "matrix-model1",
+        "matrix-model2",
+        "matrix-model3",
+        "matrix-model4",
+        "matrix-accomplice-note"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "unit-crossing-rules",
+      "export": "UnitCrossingRulesScene",
+      "layout": "crossing-penalty-dissolve-board",
+      "anchor": "boundary",
+      "grammar": ["crossing-redline-pair", "penalty-dissolve-split"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "connector"],
+      "tokens": ["Ban", "Castle", "Gavel", "GraduationCap"],
+      "finalKnowledge": [
+        "crossing-allowed",
+        "crossing-forbidden",
+        "penalty-split",
+        "dissolve-rows",
+        "dissolve-true-row",
+        "dissolve-false-row",
+        "crossing-floor"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

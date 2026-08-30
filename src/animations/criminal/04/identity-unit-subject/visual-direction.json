@@ -1,0 +1,25 @@
+{
+  "directionId": "access-badge-foyer",
+  "family": "access-badge-foyer",
+  "palette": "证件米白 badge + 门禁蓝灰 board + 徽章黄铜 + 许可绿 + 拒绝朱红 + 挂绳棕",
+  "typography": "heavy panel headings, badge-card chips, permit/deny flip strips, double-frame exam seals",
+  "composition": "an access foyer: identity badges unlock crime gates, a public-duty dial with case lanes, unit gates with condition boards, and a will-benefit crossing matrix",
+  "surface": "badge cards, panel boards with fine grid, dashed deny zones, double-frame verdict seals; no glossy panels",
+  "motion": "badges scan into gates, verdict stamps land, matrix cells light in reasoning order, red lines hold at crossings; no idle loops",
+  "transition": "the foyer panel grid persists while each scene mounts a new gate board",
+  "conceptTokens": {
+    "定罪身份": "KeyRound",
+    "量刑身份": "Scale",
+    "国家工作人员": "Landmark",
+    "从事公务": "FileText",
+    "单位": "Castle",
+    "个人": "Users",
+    "真题": "GraduationCap"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/criminal/04/identity-unit-subject/",
+    "title": "门禁徽章厅"
+  }
+}
