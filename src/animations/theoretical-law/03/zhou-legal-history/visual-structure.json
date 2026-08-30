@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "playerControlSafeBottom": 176,
+  "scenes": [
+    {
+      "id": "ideology",
+      "export": "IdeologyScene",
+      "layout": "twin-bronze-ideology-plaques",
+      "anchor": "role-pair",
+      "grammar": ["virtue-heaven-plaque", "rite-punishment-plaque", "han-inheritance-note"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "thin-underline"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["Landmark", "Scale"],
+      "finalKnowledge": [
+        "ideology-heading",
+        "virtue-plaque",
+        "rite-plaque",
+        "han-inheritance-note"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "marriage",
+      "export": "MarriageScene",
+      "layout": "marriage-rubbing-paper-bench",
+      "anchor": "typographic-sequence",
+      "grammar": ["principle-rites-rows", "divorce-rows", "inheritance-row"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "thin-underline"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["Heart", "ScrollText", "Crown"],
+      "finalKnowledge": [
+        "marriage-heading",
+        "principles-rites-rows",
+        "divorce-rows",
+        "inheritance-row"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "judicature",
+      "export": "JudicatureScene",
+      "layout": "judicature-inscription-plaque",
+      "anchor": "boundary",
+      "grammar": ["judge-hierarchy-strip", "case-split-strip", "listen-ask-strip"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["Gavel", "SplitSquareHorizontal"],
+      "finalKnowledge": [
+        "judicature-heading",
+        "judge-hierarchy-strip",
+        "case-split-strip",
+        "listen-ask-strip"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

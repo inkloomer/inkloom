@@ -1,0 +1,16 @@
+{
+  "directionId": "bronze-inscription-chronicle",
+  "family": "ancient-bronze-chronicle",
+  "palette": "patina bronze-brown ground + ritual bronze plaques + ochre inscriptions + seal-red lacquer accents + pale rubbing-paper insets",
+  "typography": "ochre inscribed headings on bronze plaques, dark chronicle label tabs with seal-red left bar, seal-red stamps reserved for verdicts, pale rubbing insets for quotations, thin ink underline for tests",
+  "composition": "the ideology pair hangs as twin bronze plaques; the marriage bench lays the three principles, six rites and seven-out three-back rows on rubbing paper; the judicature scene inscribes the judge hierarchy and the five-listen three-ask technique",
+  "surface": "flat patina ground with faint inscription hairlines, bronze panels with hairline weathered borders and corner rivets, no gradients, no rounded cards, no drop shadows",
+  "motion": "inscriptions carve onto plaques, rubbing insets paste on with a press, the seal stamps land once per verdict, the rite row unfolds left to right",
+  "transition": "a rubbing sheet lifts and the chronicle clears for the next plate",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/theoretical-law/03/zhou-legal-history/",
+    "title": "金文铭刻阁"
+  }
+}
