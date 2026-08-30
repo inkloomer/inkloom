@@ -1,0 +1,22 @@
+{
+  "directionId": "ivory-seal-independence-hall",
+  "family": "ivory-seal-independence-hall",
+  "palette": "deep peacock teal, ivory paper cream, copper seal bronze, berry wine red, sand gold, graphite ink",
+  "typography": "charter-room headings on peacock plate rails, copper-stamped independence clauses and berry wax verdicts",
+  "composition": "a charter atrium with four independence pillars, a classification triptych of wings, a foundation vitrine and a registry counter feeding an incubation lane",
+  "surface": "ivory charter cards, peacock enamel plates, copper seals, sand-gold trims",
+  "motion": "pillar plaques bolt upright one by one, classification wings unfold like folding screens, incubation contracts slide from the registry counter into the formed-person slot",
+  "transition": "the atrium floor, plate rails and copper seal posts persist while pillars, wings and counters are re-dressed between scenes",
+  "conceptTokens": {
+    "法人": "Building2",
+    "基金会": "HeartHandshake",
+    "登记": "Stamp",
+    "裁判": "Scale"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/civil-law/02/legal-person-independence-hall/",
+    "title": "独立印章馆"
+  }
+}

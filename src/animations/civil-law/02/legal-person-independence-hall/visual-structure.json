@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "independence-four-pillars",
+      "export": "IndependenceFourPillarsScene",
+      "layout": "four-pillar-contrast-atrium",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "legal-person-personality-makes-it-a-separate-person-from-its-members",
+        "assets-under-the-legal-person-belong-to-the-person-itself",
+        "the-person-alone-bears-its-debts-with-its-own-property",
+        "the-will-of-the-person-is-formed-by-its-organs-as-one-mind"
+      ],
+      "textTreatments": ["label-block", "stamp", "soft-highlight", "thin-underline"],
+      "focalChannels": ["contrast", "icon", "enclosure", "annotation"],
+      "tokens": ["Building2", "Landmark", "Scale", "Brain"],
+      "finalKnowledge": [
+        "personality-pillar",
+        "property-pillar",
+        "liability-pillar",
+        "will-pillar",
+        "investors-case-verdicts"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "classification-and-foundation",
+      "export": "ClassificationFoundationScene",
+      "layout": "classification-triptych-with-foundation-vitrine",
+      "anchor": "role-pair",
+      "grammar": [
+        "for-profit-persons-pursue-gain-through-company-and-non-company-forms",
+        "non-profit-persons-cover-institutes-associations-and-donation-foundations",
+        "special-persons-serve-public-interest-in-four-fixed-forms",
+        "public-foundations-never-distribute-surplus-to-their-settlors"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["contrast", "icon", "enclosure", "annotation"],
+      "tokens": ["Briefcase", "HeartHandshake", "Landmark", "Gem"],
+      "finalKnowledge": [
+        "for-profit-wing",
+        "non-profit-wing",
+        "special-wing",
+        "foundation-donor-rights",
+        "foundation-winding-rule"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "registration-and-incubation",
+      "export": "RegistrationIncubationScene",
+      "layout": "registry-counter-with-incubator-lane",
+      "anchor": "flow-path",
+      "grammar": [
+        "registration-prevails-over-reality-against-bona-fide-third-parties",
+        "beyond-scope-contracts-stay-valid-absent-mandatory-violations",
+        "pre-formation-debts-fall-on-promoters-when-the-person-never-forms",
+        "formed-persons-take-contracts-made-in-incubation-name-or-by-choice"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "external-negation"],
+      "focalChannels": ["connector", "contrast", "enclosure", "annotation"],
+      "tokens": ["Stamp", "FileWarning", "Baby", "Handshake"],
+      "finalKnowledge": [
+        "registry-precedence-rule",
+        "beyond-scope-rule",
+        "incubation-debt-fork",
+        "huashang-case-verdicts"
+      ],
+      "statefulObjects": ["incubation-contract-ticket"]
+    }
+  ]
+}
