@@ -1,0 +1,70 @@
+{
+  "animationId": "legal-aid",
+  "compositionId": "LegalAid",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-30T18:51:45.182Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 275,
+      "frameCount": 276,
+      "id": "features-objects",
+      "number": "01",
+      "startFrame": 0,
+      "title": "法律援助的特征与对象",
+      "durationMs": 9200,
+      "file": "features-objects.avif",
+      "fileSize": 797865,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "4404a64d00deb7ec19cb0fccd6f2c0ca880b1e7a8e33ffc722ac7bfdb90a8fc5",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "23c9efa18cfdae59ce8cdec4e073bcbe465a0f043ab4771795162800d6632228"
+    },
+    {
+      "endFrame": 563,
+      "frameCount": 288,
+      "id": "appointment-implementation",
+      "number": "02",
+      "startFrame": 276,
+      "title": "指定辩护与实施形式",
+      "durationMs": 9600,
+      "file": "appointment-implementation.avif",
+      "fileSize": 683094,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "a317a3e14c0db629a83f20dbf0168f1467403545da20f4e3feea0c0ab30aaf52",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "23c9efa18cfdae59ce8cdec4e073bcbe465a0f043ab4771795162800d6632228"
+    },
+    {
+      "endFrame": 839,
+      "frameCount": 276,
+      "id": "procedure-remedy",
+      "number": "03",
+      "startFrame": 564,
+      "title": "实施程序、终止与救济",
+      "durationMs": 9200,
+      "file": "procedure-remedy.avif",
+      "fileSize": 829517,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "05a052313f55fff177741bd64e3b1aa8c888398a0eefe696630560931a9f77c1",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "23c9efa18cfdae59ce8cdec4e073bcbe465a0f043ab4771795162800d6632228"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "23c9efa18cfdae59ce8cdec4e073bcbe465a0f043ab4771795162800d6632228",
+  "targetFps": 30,
+  "totalFileSize": 2310476
+}

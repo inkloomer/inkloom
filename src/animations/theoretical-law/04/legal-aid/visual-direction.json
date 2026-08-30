@@ -1,0 +1,15 @@
+{
+  "directionId": "aid-hand-register",
+  "family": "hand-aid-register",
+  "title": "援手青册",
+  "subject": "theoretical-law",
+  "chapter": "04",
+  "concept": "援手青册：四统一与无偿写于册首，指定辩护与实施形式分行，7日/3日时限与先行援助以刻度呈现。图形层主题；画面文字一律使用源笔记法考名词",
+  "palette": "册堂 aid #2E3833、深册 aidDeep #232B27、面板 panel #F0EBDA、暗面板 panelDim #E1DCC7、镶边 edge #5E7168、墨字 ink #22302A、淡墨 inkSoft #516260、援手金 aid #C0983E、终止红 terminate #B04834、救济青 remedy #4E7D74、纸白 paper #F6F1E0",
+  "typography": "标题用 var(--inkloom-animation-title)，正文用 var(--inkloom-animation-body)；册行加粗法考名词，时限用刻度印",
+  "composition": "特征六行 + 对象分行 + 实施形式与程序 + 终止救济",
+  "surface": "册堂墙纹 + 援手印纹 + 刻度线",
+  "motion": "册页展开、援手印落、刻度比对",
+  "transition": "硬切换幕",
+  "catalog": ["考点78 法律援助制度"]
+}

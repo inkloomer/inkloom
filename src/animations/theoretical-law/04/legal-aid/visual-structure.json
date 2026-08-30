@@ -1,0 +1,41 @@
+{
+  "animationId": "legal-aid",
+  "scenes": [
+    {
+      "id": "features-objects",
+      "export": "FeaturesObjectsScene",
+      "layout": "features-plus-objects",
+      "anchor": "main center",
+      "grammar": "六特征行（主体明确·四统一·无偿·对象广泛·形式丰富·主体多样）+经济困难情形概览+不受经济限制（第32条）与免核查（第42条）",
+      "textTreatments": ["feature chips", "scope rows"],
+      "focalChannels": ["six features", "no-economic-review"],
+      "tokens": ["Handshake", "Users", "FileCheck"],
+      "finalKnowledge": "aid-features-objects",
+      "statefulObjects": ["feature panel", "objects panel"]
+    },
+    {
+      "id": "appointment-implementation",
+      "export": "AppointmentImplementationScene",
+      "layout": "appointment-plus-forms",
+      "anchor": "main center",
+      "grammar": "指定辩护八类 + 实施形式四行（法律咨询不需审查经济条件/代理五种/刑事辩护/值班律师法律帮助）",
+      "textTreatments": ["appointment rows", "form chips"],
+      "focalChannels": ["appointed defense list", "duty lawyer help"],
+      "tokens": ["UserCheck", "ScrollText", "Clock"],
+      "finalKnowledge": "appointment-implementation",
+      "statefulObjects": ["appointment panel", "forms panel"]
+    },
+    {
+      "id": "procedure-remedy",
+      "export": "ProcedureRemedyScene",
+      "layout": "procedure-plus-terminate",
+      "anchor": "main center",
+      "grammar": "程序（7日审查·3日指派·先行援助）+指派要求（3年经历办无期死刑·熟悉未成年人）+终止八情形概览+救济（异议→司法行政部门5日→复议或行政诉讼），底带点睛",
+      "textTreatments": ["procedure rows", "terminate seals"],
+      "focalChannels": ["time limits", "remedy route"],
+      "tokens": ["Clock", "Ban", "Scale"],
+      "finalKnowledge": "procedure-remedy",
+      "statefulObjects": ["procedure panel", "remedy panel"]
+    }
+  ]
+}
