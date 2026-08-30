@@ -1,0 +1,70 @@
+{
+  "animationId": "legal-person-independence-hall",
+  "compositionId": "LegalPersonIndependenceHall",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-30T12:26:57.115Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 699,
+      "frameCount": 350,
+      "id": "independence-four-pillars",
+      "number": "01",
+      "startFrame": 0,
+      "title": "独立性四支柱",
+      "durationMs": 11667,
+      "file": "independence-four-pillars.avif",
+      "fileSize": 475281,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "10859c164de32e76d9336484da19a058718b03e7cf6ba6a6d1f47c8df10b47dc",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "5522fefe870a05d85796acdb6842560032c57ba73a4db75936e7060530b76808"
+    },
+    {
+      "endFrame": 1459,
+      "frameCount": 380,
+      "id": "classification-and-foundation",
+      "number": "02",
+      "startFrame": 700,
+      "title": "三翼分类与基金会",
+      "durationMs": 12667,
+      "file": "classification-and-foundation.avif",
+      "fileSize": 779918,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "bfe1dd866545afe1f152f5aa8ef1d7d85dbde7f0e28833cb846af69b4070617d",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "5522fefe870a05d85796acdb6842560032c57ba73a4db75936e7060530b76808"
+    },
+    {
+      "endFrame": 2219,
+      "frameCount": 380,
+      "id": "registration-and-incubation",
+      "number": "03",
+      "startFrame": 1460,
+      "title": "登记与设立中法人",
+      "durationMs": 12667,
+      "file": "registration-and-incubation.avif",
+      "fileSize": 568443,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "92ad826aa3d145f3938269f176b44e3dbaadd0ed3dde3576132c6030c5603cd8",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "5522fefe870a05d85796acdb6842560032c57ba73a4db75936e7060530b76808"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "5522fefe870a05d85796acdb6842560032c57ba73a4db75936e7060530b76808",
+  "targetFps": 30,
+  "totalFileSize": 1823642
+}
