@@ -1,0 +1,23 @@
+{
+  "directionId": "power-money-exchange",
+  "family": "power-money-exchange",
+  "palette": "账纸米黄 scroll + 靛青 indigo + 胭脂红 rouge + 铜绿 patina + 金铜 gold + 墨 night",
+  "typography": "heavy ledger headings, square official chips, indigo label blocks, double-frame wax stamps",
+  "composition": "an old yamen money-grain clerk hall: the embezzlement formula atlas with its verdict tables, the misuse fund lane, the bribery trade desk with its transaction structure, the crime-number boundary floor, and the three-influence comparison map",
+  "surface": "ledger paper grain, square official chips, dashed exclusion zones, double-frame wax stamps; no glossy panels",
+  "motion": "ledger panels enter in reasoning order, wax stamps land as verdicts; no idle loops",
+  "transition": "the clerk hall ground persists while each scene mounts a new board",
+  "conceptTokens": {
+    "贪污罪": "Hand",
+    "挪用公款罪": "Repeat",
+    "受贿罪": "Handshake",
+    "行贿罪": "User",
+    "斡旋受贿": "MessageCircle"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/criminal/23/power-money-exchange/",
+    "title": "钱粮师爷房"
+  }
+}

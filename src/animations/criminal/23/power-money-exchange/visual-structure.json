@@ -1,0 +1,79 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "playerControlSafeBottom": 168,
+  "scenes": [
+    {
+      "id": "embezzlement-elements",
+      "export": "EmbezzlementElementsScene",
+      "layout": "embezzlement-elements-atlas",
+      "anchor": "concept-icon",
+      "grammar": ["formula-strip", "subject-panel", "conduct-panel"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
+      "tokens": ["Scale", "Users", "Building2", "FileText", "Hand", "Eye", "Target"],
+      "finalKnowledge": ["formula-strip", "subject-panel", "conduct-panel"],
+      "statefulObjects": []
+    },
+    {
+      "id": "embezzlement-verdict",
+      "export": "EmbezzlementVerdictScene",
+      "layout": "embezzlement-verdict-table",
+      "anchor": "role-pair",
+      "grammar": ["completed-panel", "accomplice-panel"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
+      "tokens": ["Scale", "Eye", "Hand", "Gavel", "Users", "Building2"],
+      "finalKnowledge": ["completed-panel", "accomplice-panel", "boundary-floor"],
+      "statefulObjects": []
+    },
+    {
+      "id": "misuse-fund-lane",
+      "export": "MisuseFundLaneScene",
+      "layout": "misuse-fund-lane",
+      "anchor": "flow-path",
+      "grammar": ["conduct-strip", "privateuse-panel", "compare-floor"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
+      "tokens": ["Banknote", "Users", "Briefcase", "AlertTriangle", "Repeat", "Scale", "Landmark"],
+      "finalKnowledge": ["conduct-strip", "privateuse-panel", "compare-floor"],
+      "statefulObjects": []
+    },
+    {
+      "id": "bribery-trade-desk",
+      "export": "BriberyTradeDeskScene",
+      "layout": "bribery-trade-desk",
+      "anchor": "document-fork",
+      "grammar": ["interest-strip", "trade-panel", "method-panel"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "connector"],
+      "tokens": ["Handshake", "ArrowLeftRight", "Landmark", "Users", "Coins", "Scale", "RefreshCw"],
+      "finalKnowledge": ["interest-strip", "trade-panel", "method-panel"],
+      "statefulObjects": []
+    },
+    {
+      "id": "bribery-verdict-floor",
+      "export": "BriberyVerdictFloorScene",
+      "layout": "bribery-verdict-floor",
+      "anchor": "boundary",
+      "grammar": ["intent-panel", "number-floor"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
+      "tokens": ["Gavel", "Scale", "Coins", "Plus", "GitMerge"],
+      "finalKnowledge": ["intent-panel", "number-floor"],
+      "statefulObjects": []
+    },
+    {
+      "id": "influence-trio-map",
+      "export": "InfluenceTrioMapScene",
+      "layout": "influence-trio-map",
+      "anchor": "comparison-axis",
+      "grammar": ["offer-panel", "mediate-panel", "influence-panel"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
+      "tokens": ["User", "Target", "Repeat", "MessageCircle", "Users", "Scale"],
+      "finalKnowledge": ["offer-panel", "mediate-panel", "influence-panel"],
+      "statefulObjects": []
+    }
+  ]
+}
