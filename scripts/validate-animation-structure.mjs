@@ -8,6 +8,10 @@ const ALLOWED_CHANNELS = new Set(['annotation', 'connector', 'contrast', 'enclos
 const ALLOWED_ANCHORS = new Set(['boundary', 'comparison-axis', 'concept-icon', 'document-fork', 'flow-path', 'flow-target', 'role-pair', 'timeline-gate', 'typographic-sequence']);
 const ALLOWED_TEXT_TREATMENTS = new Set(['chip', 'external-negation', 'label-block', 'soft-highlight', 'stamp', 'thin-underline']);
 const MINIMUM_PLAYER_CONTROL_SAFE_BOTTOM = 160;
+const MIN_SCENE_ROW_ICONS = 4;
+const MIN_SCENE_DISTINCT_ICONS = 3;
+const MIN_SCENE_WATERMARK_TOTEMS = 1;
+const TOTEM_MIN_PIXELS = 90;
 
 const isFile = async (filePath) => {
   try {
@@ -50,6 +54,47 @@ const sceneSection = (source, exportName) => {
 
 const quote = (value) => `"${value}"`;
 
+const tagChunk = (section, at) => {
+  const end = section.indexOf('/>', at);
+  return end >= 0 && end - at < 400 ? section.slice(at, end) : section.slice(at, at + 260);
+};
+
+const countIcons = (section, names) => {
+  let rowIcons = 0;
+  let totems = 0;
+  const distinct = new Set();
+  for (const name of names) {
+    let cursor = 0;
+    for (;;) {
+      const at = section.indexOf(`<${name}`, cursor);
+      if (at < 0) break;
+      cursor = at + name.length + 1;
+      if (/[A-Za-z0-9_$]/.test(section.charAt(at + name.length + 1))) continue;
+      const chunk = tagChunk(section, at);
+      const dims = [...chunk.matchAll(/(?:size|width|height)=\{(\d+)\}/g)].map((match) => Number(match[1]));
+      if (dims.some((value) => value >= TOTEM_MIN_PIXELS)) totems += 1;
+      else {
+        rowIcons += 1;
+        distinct.add(name);
+      }
+    }
+  }
+  let cursor = 0;
+  for (;;) {
+    const at = section.indexOf('<svg', cursor);
+    if (at < 0) break;
+    cursor = at + 4;
+    const chunk = tagChunk(section, at);
+    const dims = [...chunk.matchAll(/(?:width|height)=\{(\d+)\}/g)].map((match) => Number(match[1]));
+    if (dims.length > 0 && dims.every((value) => value >= TOTEM_MIN_PIXELS)) totems += 1;
+    else {
+      rowIcons += 1;
+      distinct.add('inline-svg');
+    }
+  }
+  return {rowIcons, totems, distinct};
+};
+
 const main = async () => {
   const baseline = JSON.parse(await readFile(BASELINE_PATH, 'utf8'));
   const legacyIds = new Set(baseline.legacyStructureAuditIds ?? []);
@@ -88,6 +133,9 @@ const main = async () => {
 
     const sceneFiles = await collectFiles(path.join(animation.directory, 'remotion'), (file) => file.endsWith('.tsx'));
     const source = (await Promise.all(sceneFiles.map((file) => readFile(file, 'utf8')))).join('\n');
+    const lucideImports = new Set(
+      [...source.matchAll(/import\s*\{([^}]+)\}\s*from\s*'lucide-react'/g)].flatMap((match) => match[1].split(',').map((name) => name.trim())).filter(Boolean),
+    );
 
     if (!legacyPlayerControlSafeAreaIds.has(animation.id)) {
       if (!Number.isFinite(contract.playerControlSafeBottom) || contract.playerControlSafeBottom < MINIMUM_PLAYER_CONTROL_SAFE_BOTTOM) {
@@ -141,7 +189,6 @@ const main = async () => {
       }
 
       const tokens = Array.isArray(scene.tokens) ? scene.tokens : [];
-      if (scene.anchor === 'concept-icon' && new Set(tokens).size < 1) errors.push(`${prefix}: concept-icon anchors must render a semantic icon or pictogram`);
 
       const section = sceneSection(source, scene.export);
       if (!section) {
@@ -188,6 +235,19 @@ const main = async () => {
       if (section.includes('kind="circle"') || section.includes('kind="cross"')) errors.push(`${prefix}: text-overlay circles and strike-through marks are prohibited; use soft highlight, thin underline, or an external negation icon`);
       for (const token of tokens) {
         if (!section.includes(`<${token}`)) errors.push(`${prefix}: declared semantic token ${quote(token)} is not rendered in the scene`);
+      }
+
+      const iconNames = new Set([...lucideImports, ...tokens]);
+      const counted = countIcons(section, iconNames);
+      const totems = counted.totems + (section.match(/watermark=/g) ?? []).length;
+      if (counted.rowIcons < MIN_SCENE_ROW_ICONS) {
+        errors.push(`${prefix}: scene renders only ${counted.rowIcons} row-anchor icon(s); give every knowledge row or card a semantic icon anchor (minimum ${MIN_SCENE_ROW_ICONS})`);
+      }
+      if (counted.distinct.size < MIN_SCENE_DISTINCT_ICONS) {
+        errors.push(`${prefix}: scene uses only ${counted.distinct.size} distinct icon(s); vary the semantic pictograms (minimum ${MIN_SCENE_DISTINCT_ICONS})`);
+      }
+      if (totems < MIN_SCENE_WATERMARK_TOTEMS) {
+        errors.push(`${prefix}: no watermark totem; render one large translucent pictogram (>= ${TOTEM_MIN_PIXELS}px) behind a panel or corner for image-based recall`);
       }
     }
 
