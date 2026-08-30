@@ -1,0 +1,163 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "playerControlSafeBottom": 168,
+  "scenes": [
+    {
+      "id": "culpability-gate-line",
+      "export": "CulpabilityGateLineScene",
+      "layout": "culpability-gate-line-flow",
+      "anchor": "flow-path",
+      "grammar": ["culpability-gate-sequence", "blame-to-forgive-fork"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "enclosure", "spatial"],
+      "tokens": ["CircleDot", "Eye", "Hand", "Scale", "Mountain"],
+      "finalKnowledge": [
+        "principle-board",
+        "forgiveness-board",
+        "gate-age",
+        "gate-capacity",
+        "gate-legality",
+        "gate-expectation",
+        "verdict-board",
+        "focus-strip"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "age-ring-grades",
+      "export": "AgeRingGradesScene",
+      "layout": "age-ring-radial-scale",
+      "anchor": "timeline-gate",
+      "grammar": ["age-threshold-rings", "mitigation-outer-band"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "stamp"],
+      "focalChannels": ["icon", "locator", "contrast", "enclosure", "spatial"],
+      "tokens": ["GraduationCap", "Ruler"],
+      "finalKnowledge": [
+        "ring-none-band",
+        "ring-extreme-band",
+        "ring-eight-band",
+        "ring-full-band",
+        "birthday-board",
+        "bone-age-board",
+        "mitigation-strip"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "age-12-14-gates",
+      "export": "AgeTwelveFourteenScene",
+      "layout": "extreme-crime-gate-chain",
+      "anchor": "flow-path",
+      "grammar": ["gate-chain-and-or", "prosecution-approval-gate"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "enclosure"],
+      "tokens": ["Landmark", "GraduationCap"],
+      "finalKnowledge": [
+        "statute-head",
+        "gate-crime",
+        "gate-result",
+        "gate-circumstance",
+        "gate-prosecution",
+        "scope-board",
+        "result-note-board"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "age-14-16-eight-crimes",
+      "export": "AgeFourteenSixteenScene",
+      "layout": "eight-crime-sieve-rows",
+      "anchor": "typographic-sequence",
+      "grammar": ["eight-crime-token-band", "inclusion-exclusion-rows"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
+      "tokens": ["GraduationCap"],
+      "finalKnowledge": [
+        "eight-crime-band",
+        "exclusion-board",
+        "attached-case-board",
+        "help-row",
+        "conduct-scope-board",
+        "transformed-exception-board"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "capacity-core-grades",
+      "export": "CapacityCoreGradesScene",
+      "layout": "capacity-wood-grade-table",
+      "anchor": "comparison-axis",
+      "grammar": ["capacity-grade-contrast", "special-group-rows"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
+      "tokens": ["Eye", "Hand", "Brain", "Ear", "Wine", "Syringe"],
+      "finalKnowledge": [
+        "concept-board",
+        "grade-full",
+        "grade-limited",
+        "grade-none",
+        "special-intermittent",
+        "special-deaf-blind",
+        "special-drunk",
+        "special-drug"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "act-responsibility-simultaneity",
+      "export": "ActResponsibilitySimultaneityScene",
+      "layout": "simultaneity-ring-timeline",
+      "anchor": "timeline-gate",
+      "grammar": ["act-time-vs-result-time", "cause-freedom-exception"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation"],
+      "focalChannels": ["icon", "connector", "contrast", "locator"],
+      "tokens": ["Clock", "Hourglass"],
+      "finalKnowledge": [
+        "principle-board",
+        "act-time-board",
+        "causation-board",
+        "omission-rows",
+        "exception-board"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "mistake-fact-law-fork",
+      "export": "MistakeFactLawForkScene",
+      "layout": "mistake-fact-law-fork",
+      "anchor": "document-fork",
+      "grammar": ["two-layer-cognition-fork", "order-fact-then-law"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "enclosure"],
+      "tokens": ["Search", "Scale", "GraduationCap"],
+      "finalKnowledge": [
+        "fork-fact-board",
+        "fork-law-board",
+        "order-board",
+        "natural-crime-board",
+        "statutory-crime-board"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "expectation-possibility",
+      "export": "ExpectationPossibilityScene",
+      "layout": "expectation-cliff-slope",
+      "anchor": "boundary",
+      "grammar": ["expectation-boundary-slope", "near-kin-forgiveness"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "enclosure"],
+      "tokens": ["Mountain", "Users", "GraduationCap"],
+      "finalKnowledge": [
+        "concept-board",
+        "slope-diagram",
+        "son-harbor-case",
+        "corpse-case",
+        "common-cases-board",
+        "quiz-row"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

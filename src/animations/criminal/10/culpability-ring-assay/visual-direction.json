@@ -1,0 +1,25 @@
+{
+  "directionId": "tree-ring-assay-bench",
+  "family": "tree-ring-assay",
+  "palette": "边材米黄 sapwood + 心材琥珀 heartwood + 树皮深褐 bark + 检验朱砂 vermilion + 松青 pine + 锥钢蓝 steel + 蜡黄 wax",
+  "typography": "heavy assay headings, growth-ring discs, vermilion grade seals, wax soft highlights, steel sampling labels",
+  "composition": "a timber ring-assay bench: culpability gates in a row, age as concentric threshold rings, capacity as solid/half/hollow wood cores, act-time ring sampling timeline, fact/law mistake fork, cliff-slope expectation lanes",
+  "surface": "sapwood ground with faint ring-line texture, bark frames, wax highlight washes, vermilion seal stamps; no glossy panels",
+  "motion": "threshold rings settle outward, gate-chain arrows traverse band by band, seals stamp the verdict; no idle loops",
+  "transition": "the sapwood ground and bark header persist while each scene re-assays the specimen",
+  "conceptTokens": {
+    "责任年龄": "CircleDot",
+    "辨认能力": "Eye",
+    "控制能力": "Hand",
+    "法律评价": "Scale",
+    "期待可能性": "Mountain",
+    "最高检核准": "Landmark",
+    "案例": "GraduationCap"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/criminal/10/culpability-ring-assay/",
+    "title": "年轮检验所"
+  }
+}
