@@ -3,7 +3,7 @@
   "compositionId": "PeriodRelayStation",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-08-30T13:27:20.081Z",
+  "generatedAt": "2026-08-30T13:36:54.097Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -16,13 +16,13 @@
       "title": "重算的四个驿口，其余照走",
       "durationMs": 8833,
       "file": "recalc-four-vents.avif",
-      "fileSize": 365921,
+      "fileSize": 365532,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "0904b99c63a356ebdef2fde924d3f90df4d4730586d30df85caffd5345baa745",
+      "sha256": "82bb0ac579a75ff98f55cf6da7dc49b205fbdade1df097f7aa7dda755edc2b7e",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "1c4a6488ecb2c2e9d561c5924c49a3bd3a7fb1c263ea96affbe40c6ee6de44b1"
+      "sceneFingerprint": "744bb8b0ca6054554b09d212f2b5a8feb6bc46b53e07273bd48f05119367adfd"
     },
     {
       "endFrame": 549,
@@ -33,13 +33,13 @@
       "title": "卢某案时刻表：一条十里驿道",
       "durationMs": 9500,
       "file": "appeal-clock-timeline.avif",
-      "fileSize": 281852,
+      "fileSize": 282846,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "e5c6f48f4397b56d58f0774e26bbfce90ecbe157a4ee7faeb72ed6c2b66b3155",
+      "sha256": "e62b21e5d0e2559e51b2b235ac3412f797cc797ca882400a51d592c80ddff775",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "1c4a6488ecb2c2e9d561c5924c49a3bd3a7fb1c263ea96affbe40c6ee6de44b1"
+      "sceneFingerprint": "744bb8b0ca6054554b09d212f2b5a8feb6bc46b53e07273bd48f05119367adfd"
     },
     {
       "endFrame": 809,
@@ -50,13 +50,13 @@
       "title": "交邮不逾期；无耽误无恢复",
       "durationMs": 8667,
       "file": "mail-recovery-rules.avif",
-      "fileSize": 325085,
+      "fileSize": 322177,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "d6662d5c55ce2b646da1dd5f2fd3a8032fc78c4953f5ea34524ec6eddee364e5",
+      "sha256": "417c170a12096f363f8045ec522f38670977c8618e4ed89aa639ce9209bcf046",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "1c4a6488ecb2c2e9d561c5924c49a3bd3a7fb1c263ea96affbe40c6ee6de44b1"
+      "sceneFingerprint": "744bb8b0ca6054554b09d212f2b5a8feb6bc46b53e07273bd48f05119367adfd"
     }
   ],
   "size": {
@@ -64,7 +64,7 @@
     "width": 2560
   },
   "sourceFps": 30,
-  "sourceFingerprint": "1c4a6488ecb2c2e9d561c5924c49a3bd3a7fb1c263ea96affbe40c6ee6de44b1",
+  "sourceFingerprint": "744bb8b0ca6054554b09d212f2b5a8feb6bc46b53e07273bd48f05119367adfd",
   "targetFps": 30,
-  "totalFileSize": 972858
+  "totalFileSize": 970555
 }
