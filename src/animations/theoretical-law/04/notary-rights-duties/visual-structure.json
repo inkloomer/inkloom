@@ -1,0 +1,29 @@
+{
+  "animationId": "notary-rights-duties",
+  "scenes": [
+    {
+      "id": "rights",
+      "export": "RightsScene",
+      "layout": "rights-scale-rows",
+      "anchor": "main center",
+      "grammar": "权利天平四行：依法执业受法律保护任何单位和个人不得非法干预/获得劳动报酬享受保险福利/提出辞职申诉控告/非因法定事由非经法定程序不被免职处罚",
+      "textTreatments": ["rights rows", "scale icon"],
+      "focalChannels": ["rights rows"],
+      "tokens": ["Scale", "Shield", "UserCheck"],
+      "finalKnowledge": "notary-rights",
+      "statefulObjects": ["rights panel"]
+    },
+    {
+      "id": "duties",
+      "export": "DutiesScene",
+      "layout": "nine-forbid-grid",
+      "anchor": "main center",
+      "grammar": "禁止性义务九条碑格（两机构执业/有报酬其他职业/本人近亲属公证/私自出具公证书/不真实不合法出证/侵占挪用费盗窃物品/毁损篡改文书档案/泄密/其他禁止行为）",
+      "textTreatments": ["forbid grid", "number seals"],
+      "focalChannels": ["nine forbids"],
+      "tokens": ["Ban", "Lock", "FileX"],
+      "finalKnowledge": "notary-duties",
+      "statefulObjects": ["forbid grid x9"]
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "animationId": "notary-rights-duties",
+  "compositionId": "NotaryRightsDuties",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-30T19:31:11.126Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 179,
+      "frameCount": 180,
+      "id": "rights",
+      "number": "01",
+      "startFrame": 0,
+      "title": "公证员的权利",
+      "durationMs": 6000,
+      "file": "rights.avif",
+      "fileSize": 303918,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "adc12a0018e8cbf9c0b84f227587857aded2a8e838ea033d67a75706af344f0e",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "1302520bf7f5746fe061437ec94f4d66ff3c2dbcb56205694ed1d06b0d11b53d"
+    },
+    {
+      "endFrame": 431,
+      "frameCount": 252,
+      "id": "duties",
+      "number": "02",
+      "startFrame": 180,
+      "title": "公证员的禁止性义务",
+      "durationMs": 8400,
+      "file": "duties.avif",
+      "fileSize": 576159,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "8ee30b1250f81c62707b303d04dc40cc6ff7c63d518be4407c9dbab48f366d70",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "1302520bf7f5746fe061437ec94f4d66ff3c2dbcb56205694ed1d06b0d11b53d"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "1302520bf7f5746fe061437ec94f4d66ff3c2dbcb56205694ed1d06b0d11b53d",
+  "targetFps": 30,
+  "totalFileSize": 880077
+}

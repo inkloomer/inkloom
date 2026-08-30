@@ -1,0 +1,15 @@
+{
+  "directionId": "notary-rights-duties-scale",
+  "family": "rights-duties-scale-hall",
+  "title": "公权戒律堂",
+  "subject": "theoretical-law",
+  "chapter": "04",
+  "concept": "公权戒律堂：权利天平居左，九项禁止性义务刻于戒律碑。图形层主题；画面文字一律使用源笔记法考名词",
+  "palette": "律堂 rights #2F3237、深堂 rightsDeep #242729、面板 panel #F0EBDA、暗面板 panelDim #E1DCC7、镶边 edge #5F6A6E、墨字 ink #232830、淡墨 inkSoft #525C62、权金 rightsGold #C0983E、戒律红 forbid #B04834、保护青 protect #4E7D74、纸白 paper #F6F1E0",
+  "typography": "标题用 var(--inkloom-animation-title)，正文用 var(--inkloom-animation-body)；权利行加粗法考名词，戒律碑编号用朱签",
+  "composition": "权利天平四行 + 戒律碑九条 + 源名词口诀带",
+  "surface": "律堂墙纹 + 天平线 + 戒律碑纹",
+  "motion": "天平摆定、碑文錾显、口诀点亮",
+  "transition": "硬切换幕",
+  "catalog": ["考点83 公证员的权利和义务"]
+}
