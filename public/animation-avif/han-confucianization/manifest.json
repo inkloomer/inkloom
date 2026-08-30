@@ -1,0 +1,70 @@
+{
+  "animationId": "han-confucianization",
+  "compositionId": "HanConfucianization",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-30T02:33:38.672Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 251,
+      "frameCount": 252,
+      "id": "petition-mercy",
+      "number": "01",
+      "startFrame": 0,
+      "title": "上请与恤刑",
+      "durationMs": 8400,
+      "file": "petition-mercy.avif",
+      "fileSize": 372918,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "85742533c0f3e461048bbce54c411d46b69a1d67f98bf815af359b4133073b99",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "56d82dfdd895a25db5c935b0d8c12d28e10f8e9b98551cd568fccfab70f96bf2"
+    },
+    {
+      "endFrame": 515,
+      "frameCount": 264,
+      "id": "conceal-spring",
+      "number": "02",
+      "startFrame": 252,
+      "title": "亲亲相隐与春秋决狱",
+      "durationMs": 8800,
+      "file": "conceal-spring.avif",
+      "fileSize": 311295,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "09ac9a84926d1a013712623035162bdca32a919b04ea0b10e610a72cd4ae982c",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "56d82dfdd895a25db5c935b0d8c12d28e10f8e9b98551cd568fccfab70f96bf2"
+    },
+    {
+      "endFrame": 743,
+      "frameCount": 228,
+      "id": "autumn-winter",
+      "number": "03",
+      "startFrame": 516,
+      "title": "秋冬行刑",
+      "durationMs": 7600,
+      "file": "autumn-winter.avif",
+      "fileSize": 257191,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "e11f6e8a8a859cbfcb0df16792fa0413e1041220aa33e49841a64ba508d1c987",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "56d82dfdd895a25db5c935b0d8c12d28e10f8e9b98551cd568fccfab70f96bf2"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "56d82dfdd895a25db5c935b0d8c12d28e10f8e9b98551cd568fccfab70f96bf2",
+  "targetFps": 30,
+  "totalFileSize": 941404
+}

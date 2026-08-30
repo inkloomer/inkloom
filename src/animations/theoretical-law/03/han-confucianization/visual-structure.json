@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "playerControlSafeBottom": 176,
+  "scenes": [
+    {
+      "id": "petition-mercy",
+      "export": "PetitionMercyScene",
+      "layout": "twin-silk-petition-bench",
+      "anchor": "role-pair",
+      "grammar": ["petition-plaque", "mercy-plaque", "scope-note"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["Landmark", "Heart"],
+      "finalKnowledge": [
+        "petition-heading",
+        "petition-plaque",
+        "mercy-plaque",
+        "scope-note"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "conceal-spring",
+      "export": "ConcealSpringScene",
+      "layout": "conceal-spring-silk-pair",
+      "anchor": "comparison-axis",
+      "grammar": ["conceal-plaque", "spring-plaque", "core-principle-note"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["Heart"],
+      "finalKnowledge": [
+        "conceal-heading",
+        "conceal-plaque",
+        "spring-plaque",
+        "core-principle-note"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "autumn-winter",
+      "export": "AutumnWinterScene",
+      "layout": "seasonal-execution-verdict-panel",
+      "anchor": "boundary",
+      "grammar": ["timing-plaque", "inheritance-note"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["ScrollText"],
+      "finalKnowledge": [
+        "autumn-heading",
+        "timing-plaque",
+        "inheritance-note"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

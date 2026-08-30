@@ -1,0 +1,16 @@
+{
+  "directionId": "silk-scroll-confucian",
+  "family": "han-silk-scroll",
+  "palette": "silk-scroll deep red ground + pale silk panels + ink brush annotations + gold seal accents + dark writing ink",
+  "typography": "ink brush headings on silk panels, dark scroll label tabs with gold left bar, gold seal stamps for verdicts, pale silk insets for quotes, thin ink underline for terms",
+  "composition": "four institutional plaques arranged as a silk scroll spread with article tabs; the core principle gets its own large panel; the seasonal execution note anchors the bottom",
+  "surface": "flat deep red ground with faint silk-weave hairlines, pale silk panels with hairline weathered borders and corner seal dots, no gradients, no rounded cards, no drop shadows",
+  "motion": "silk panels unroll from right to left, brush annotations ink in, gold seal stamps land once per verdict",
+  "transition": "a silk roller sweeps and the scroll clears for the next passage",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/theoretical-law/03/han-confucianization/",
+    "title": "汉帛儒卷"
+  }
+}
