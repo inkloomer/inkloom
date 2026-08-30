@@ -1,0 +1,29 @@
+{
+  "directionId": "gilded-backstage-swap",
+  "family": "gilded-plaque-backstage",
+  "palette": "dark plum backstage + gilt plaques + moon-white + willow green + rouge negatives",
+  "typography": "backstage gilt headlines, moon and willow label blocks, double-rule swap stamps, thin ivory underlines",
+  "composition": "a backstage swap stage hanging applicant plaques, a reason-reroom contrast pair, and a decision-relay board with escalation and rebuttal strips",
+  "surface": "translucent ivory panels over deep plum with gilt focal plaques; no chart graticule or green shelving",
+  "motion": "plaques, contrast pairs and relay rows enter in reasoning order, dashes trace handoffs, stamps land with a slight rotation; no idle loops",
+  "transition": "the backstage stage persists while each scene re-hangs it for a new question cluster",
+  "conceptTokens": {
+    "回避": "ArrowLeftRight",
+    "申请": "Hand",
+    "当事人": "Drama",
+    "法定代理人": "FileSignature",
+    "证人": "MessageSquareText",
+    "决定": "ClipboardCheck",
+    "复议": "RotateCcw",
+    "发回重审": "Undo2",
+    "层报": "MoveUp",
+    "利害关系": "Link2",
+    "真题": "GraduationCap"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/criminal-procedure-gold/05/recusal-backstage-swap/",
+    "title": "鎏金换角台"
+  }
+}
