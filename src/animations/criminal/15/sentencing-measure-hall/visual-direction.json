@@ -1,0 +1,25 @@
+{
+  "directionId": "dye-house-color-bench",
+  "family": "dye-house-color-bench",
+  "palette": "坯布米 cloth + 靛蓝 indigo + 茜草红 madder + 姜黄 turmeric + 媒染灰 mordant",
+  "typography": "heavy vat headings, square swatch chips, mordant label blocks, double-frame swatch verdicts",
+  "composition": "a dye house where each sentence adjustment grades a cloth: four grade vats in a row, recidivist gates, a surrender desk with six ways, and the merge-probation yard",
+  "surface": "woven cloth grain, vat stains, square dye swatches, dashed rinse zones, double-frame stamps; no glossy panels",
+  "motion": "cloths enter vat by vat in severity order, gates stamp the four checks, swatches land as verdicts; no idle loops",
+  "transition": "the cloth grain persists while each scene re-dyes the bench",
+  "conceptTokens": {
+    "调整": "Droplet",
+    "累犯": "KeyRound",
+    "自首": "DoorOpen",
+    "立功": "Award",
+    "数罪并罚": "Scale",
+    "缓刑": "Hourglass",
+    "案例": "GraduationCap"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/criminal/15/sentencing-measure-hall/",
+    "title": "染坊配色间"
+  }
+}

@@ -1,0 +1,222 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "playerControlSafeBottom": 168,
+  "scenes": [
+    {
+      "id": "sentiment-grade-scale",
+      "export": "SentimentGradeScaleScene",
+      "layout": "four-grade-vat-row",
+      "anchor": "typographic-sequence",
+      "grammar": [
+        "grade-dye-spectrum",
+        "one-notch-rule"
+      ],
+      "textTreatments": [
+        "chip",
+        "label-block",
+        "soft-highlight",
+        "thin-underline",
+        "external-negation",
+        "stamp"
+      ],
+      "focalChannels": [
+        "icon",
+        "contrast",
+        "enclosure",
+        "spatial"
+      ],
+      "tokens": [
+        "Droplet",
+        "Gavel",
+        "GraduationCap",
+        "Ban"
+      ],
+      "finalKnowledge": [
+        "grade-heavy-light",
+        "grade-reduce",
+        "grade-exempt",
+        "grade-case",
+        "notch-rule-strip",
+        "case-floor-strip"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "recidivist-gate-quads",
+      "export": "RecidivistGateQuadsScene",
+      "layout": "recidivist-gate-quads",
+      "anchor": "boundary",
+      "grammar": [
+        "ordinary-four-gates",
+        "special-three-crimes"
+      ],
+      "textTreatments": [
+        "chip",
+        "label-block",
+        "soft-highlight",
+        "thin-underline",
+        "external-negation",
+        "stamp"
+      ],
+      "focalChannels": [
+        "icon",
+        "contrast",
+        "enclosure",
+        "connector"
+      ],
+      "tokens": [
+        "KeyRound",
+        "Ban",
+        "Users",
+        "ShieldCheck",
+        "Hourglass",
+        "DoorClosed",
+        "GraduationCap"
+      ],
+      "finalKnowledge": [
+        "gate-intent",
+        "gate-age",
+        "gate-grade",
+        "gate-time",
+        "front-crime-scope",
+        "special-board",
+        "consequence-board"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "surrender-fork-desk",
+      "export": "SurrenderForkDeskScene",
+      "layout": "surrender-window-desk",
+      "anchor": "document-fork",
+      "grammar": [
+        "voluntary-window-ways",
+        "plain-quasi-telly-trio"
+      ],
+      "textTreatments": [
+        "chip",
+        "label-block",
+        "soft-highlight",
+        "thin-underline",
+        "external-negation",
+        "stamp"
+      ],
+      "focalChannels": [
+        "icon",
+        "contrast",
+        "enclosure",
+        "connector"
+      ],
+      "tokens": [
+        "DoorOpen",
+        "Zap",
+        "PhoneCall",
+        "Search",
+        "Handshake",
+        "Scale"
+      ],
+      "finalKnowledge": [
+        "window-strip",
+        "ways-board",
+        "way-intercept",
+        "way-wait",
+        "way-suspicion",
+        "way-detention",
+        "way-deliver",
+        "way-target",
+        "truthful-quasi-board"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "merit-capture-desk",
+      "export": "MeritCaptureDeskScene",
+      "layout": "merit-boundary-desk",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "merit-five-ways",
+        "boundary-negation-rows"
+      ],
+      "textTreatments": [
+        "chip",
+        "label-block",
+        "soft-highlight",
+        "thin-underline",
+        "external-negation",
+        "stamp"
+      ],
+      "focalChannels": [
+        "icon",
+        "contrast",
+        "enclosure",
+        "spatial"
+      ],
+      "tokens": [
+        "Award",
+        "Zap",
+        "Search",
+        "Ban",
+        "Lightbulb",
+        "GraduationCap"
+      ],
+      "finalKnowledge": [
+        "five-ways-board",
+        "way-expose",
+        "way-capture",
+        "way-stop",
+        "way-clue",
+        "way-contribute",
+        "boundary-board",
+        "bound-noncrime",
+        "bound-comrade",
+        "bound-basic-info",
+        "bound-source",
+        "duality-board"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "merge-probation-track",
+      "export": "MergeProbationTrackScene",
+      "layout": "merge-probation-track-yard",
+      "anchor": "timeline-gate",
+      "grammar": [
+        "merge-three-principles",
+        "probation-success-fail-fork"
+      ],
+      "textTreatments": [
+        "chip",
+        "label-block",
+        "soft-highlight",
+        "thin-underline",
+        "external-negation",
+        "stamp"
+      ],
+      "focalChannels": [
+        "icon",
+        "contrast",
+        "enclosure",
+        "connector"
+      ],
+      "tokens": [
+        "Scale",
+        "Zap",
+        "Hourglass",
+        "BrickWall",
+        "Users",
+        "Clock",
+        "GraduationCap"
+      ],
+      "finalKnowledge": [
+        "merge-board",
+        "merge-absorb",
+        "merge-limit",
+        "merge-parallel",
+        "probation-board",
+        "revoke-floor"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}
