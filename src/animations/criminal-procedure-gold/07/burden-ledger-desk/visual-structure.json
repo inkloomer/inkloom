@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "playerControlSafeBottom": 168,
+  "scenes": [
+    {
+      "id": "subject-object-ledger",
+      "export": "SubjectObjectScene",
+      "layout": "subject-object-ledger",
+      "anchor": "concept-icon",
+      "grammar": ["triple-ledger-cells", "exempt-shelf-row"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
+      "tokens": ["Megaphone", "Target", "FileCheck2", "GraduationCap"],
+      "finalKnowledge": [
+        "subject-cell",
+        "object-cell",
+        "exempt-shelf-cell"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "burden-split-rules",
+      "export": "BurdenSplitScene",
+      "layout": "burden-split-rules",
+      "anchor": "role-pair",
+      "grammar": ["burden-assignment-ladder", "exception-negation-row"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["ListChecks", "BadgeX", "GraduationCap"],
+      "finalKnowledge": [
+        "burden-ladder-card",
+        "burden-exception-card"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "traps-recap-shelf",
+      "export": "TrapsRecapScene",
+      "layout": "traps-recap-shelf",
+      "anchor": "typographic-sequence",
+      "grammar": ["trap-sort-shelves", "recap-strip"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "annotation", "spatial"],
+      "tokens": ["Target", "BadgeX", "BookMarked", "Split", "GraduationCap"],
+      "finalKnowledge": [
+        "trap-relevance-shelf",
+        "trap-opinion-shelf",
+        "recap-strip"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}
