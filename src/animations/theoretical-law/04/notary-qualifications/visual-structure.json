@@ -1,0 +1,29 @@
+{
+  "animationId": "notary-qualifications",
+  "scenes": [
+    {
+      "id": "conditions",
+      "export": "ConditionsScene",
+      "layout": "conditions-plus-bans",
+      "anchor": "main center",
+      "grammar": "条件五条（国籍/25-65周岁/公道正派/法律职业资格/实习年限考核合格）+任职禁止四条（含职务过失犯罪比律师多一层）+免职四情形",
+      "textTreatments": ["condition rows", "ban seals"],
+      "focalChannels": ["age range", "duty-negligence ban"],
+      "tokens": ["IdCard", "Hourglass", "Ban"],
+      "finalKnowledge": "notary-conditions",
+      "statefulObjects": ["conditions panel", "bans panel"]
+    },
+    {
+      "id": "procedure",
+      "export": "ProcedureScene",
+      "layout": "seal-relay-chain",
+      "anchor": "main center",
+      "grammar": "申请程序四步公印传递链：公证机构推荐→所在地司法行政部门报省级审核→国务院司法行政部门任命→省级颁发公证员执业证书，底带点睛",
+      "textTreatments": ["relay chips", "chain arrows"],
+      "focalChannels": ["four relay steps", "closing strip"],
+      "tokens": ["Building2", "FileCheck", "Landmark"],
+      "finalKnowledge": "notary-procedure",
+      "statefulObjects": ["relay panel"]
+    }
+  ]
+}

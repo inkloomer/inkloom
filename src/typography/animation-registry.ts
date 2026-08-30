@@ -267,6 +267,7 @@ import {typography as typographyAutoExecutionExpiryStation} from '../animations/
 import {typography as typographyAutoClauseAtlasNoticeFiction} from '../animations/criminal/17/clause-atlas-notice-fiction/animation.meta';
 import {typography as typographyAutoBodyCrimePurposeMap} from '../animations/criminal/18/body-crime-purpose-map/animation.meta';
 import {typography as typographyAutoPropertyCrimeLedger} from '../animations/criminal/19/property-crime-ledger/animation.meta';
+import {typography as typographyAutoPublicSafetyAlertBoard} from '../animations/criminal/20/public-safety-alert-board/animation.meta';
 import {typography as typographyAutoDetentionClauseLadder} from '../animations/criminal/18/detention-clause-ladder/animation.meta';
 import {typography as typographyBel} from '../animations/commercial-economic-law/01/branch-wallet-ledger/animation.meta';
 import {typography as typographyVpf} from '../animations/commercial-economic-law/01/veil-piercing-forge/animation.meta';
@@ -308,6 +309,7 @@ import {typography as typographyLp} from '../animations/theoretical-law/04/lawye
 import {typography as typographyLf} from '../animations/theoretical-law/04/lawyer-fees/animation.meta';
 import {typography as typographyLpr} from '../animations/theoretical-law/04/lawyer-peer-relations/animation.meta';
 import {typography as typographyLa} from '../animations/theoretical-law/04/legal-aid/animation.meta';
+import {typography as typographyNq} from '../animations/theoretical-law/04/notary-qualifications/animation.meta';
 import {typography as typographyCc} from '../animations/theoretical-law/01/constitution-classification/animation.meta';
 import {typography as typographyCdv} from '../animations/theoretical-law/01/constitution-development/animation.meta';
 import {typography as typographyCp} from '../animations/theoretical-law/01/constitution-principles/animation.meta';
@@ -603,6 +605,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'clause-atlas-notice-fiction': {metadata: typographyAutoClauseAtlasNoticeFiction, scope: {animationId: 'clause-atlas-notice-fiction', subject: 'criminal', topic: '17'}},
   'body-crime-purpose-map': {metadata: typographyAutoBodyCrimePurposeMap, scope: {animationId: 'body-crime-purpose-map', subject: 'criminal', topic: '18'}},
   'property-crime-ledger': {metadata: typographyAutoPropertyCrimeLedger, scope: {animationId: 'property-crime-ledger', subject: 'criminal', topic: '19'}},
+  'public-safety-alert-board': {metadata: typographyAutoPublicSafetyAlertBoard, scope: {animationId: 'public-safety-alert-board', subject: 'criminal', topic: '20'}},
   'detention-clause-ladder': {metadata: typographyAutoDetentionClauseLadder, scope: {animationId: 'detention-clause-ladder', subject: 'criminal', topic: '18'}},
   'branch-wallet-ledger': {metadata: typographyBel, scope: {animationId: 'branch-wallet-ledger', subject: 'commercial-economic-law', topic: '01'}},
   'veil-piercing-forge': {metadata: typographyVpf, scope: {animationId: 'veil-piercing-forge', subject: 'commercial-economic-law', topic: '01'}},
@@ -662,6 +665,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'lawyer-fees': {metadata: typographyLf, scope: {animationId: 'lawyer-fees', subject: 'theoretical-law', topic: '04'}},
   'lawyer-peer-relations': {metadata: typographyLpr, scope: {animationId: 'lawyer-peer-relations', subject: 'theoretical-law', topic: '04'}},
   'legal-aid': {metadata: typographyLa, scope: {animationId: 'legal-aid', subject: 'theoretical-law', topic: '04'}},
+  'notary-qualifications': {metadata: typographyNq, scope: {animationId: 'notary-qualifications', subject: 'theoretical-law', topic: '04'}},
   'profit-reserve-granary': {metadata: typographyPrg, scope: {animationId: 'profit-reserve-granary', subject: 'commercial-economic-law', topic: '01'}},
   'promoter-liability-ropewalk': {metadata: typographyPlr, scope: {animationId: 'promoter-liability-ropewalk', subject: 'commercial-economic-law', topic: '01'}},
   'fight-defense-diagram': {metadata: typography44, scope: {animationId: 'fight-defense-diagram', subject: 'criminal', topic: '22'}},

@@ -1,0 +1,53 @@
+{
+  "animationId": "notary-qualifications",
+  "compositionId": "NotaryQualifications",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-30T19:00:38.823Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 239,
+      "frameCount": 240,
+      "id": "conditions",
+      "number": "01",
+      "startFrame": 0,
+      "title": "公证员的条件与免职",
+      "durationMs": 8000,
+      "file": "conditions.avif",
+      "fileSize": 599612,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "1cbfd825532fce9da8180c658ba9993dac9b3694237a334c6113b072d520746f",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "a4587a275fc2520c599275d81bc8ec65654b53395da9c0dcedd4aea623d46223"
+    },
+    {
+      "endFrame": 431,
+      "frameCount": 192,
+      "id": "procedure",
+      "number": "02",
+      "startFrame": 240,
+      "title": "公证员的申请程序",
+      "durationMs": 6400,
+      "file": "procedure.avif",
+      "fileSize": 354966,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "04ce191da3b55901a846f70b6238c1bf4dc15ca5efba0098e562145ef9bc477d",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "a4587a275fc2520c599275d81bc8ec65654b53395da9c0dcedd4aea623d46223"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "a4587a275fc2520c599275d81bc8ec65654b53395da9c0dcedd4aea623d46223",
+  "targetFps": 30,
+  "totalFileSize": 954578
+}

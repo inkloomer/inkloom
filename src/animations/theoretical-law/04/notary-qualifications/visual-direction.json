@@ -1,0 +1,15 @@
+{
+  "directionId": "notary-seal-bureau",
+  "family": "seal-bureau-notary",
+  "title": "公印铨叙局",
+  "subject": "theoretical-law",
+  "chapter": "04",
+  "concept": "公印铨叙局：公证员条件与禁止刻于局内册页，任免程序以公印传递链呈现（推荐→审核→任命→发证）。图形层主题；画面文字一律使用源笔记法考名词",
+  "palette": "局堂 notary #2F3340、深局 notaryDeep #242835、面板 panel #F0EBDA、暗面板 panelDim #E1DCC7、镶边 edge #5F6A7A、墨字 ink #232736、淡墨 inkSoft #525D6E、公印紫 notarySeal #8A5AA0? 、审核青 audit #4E7D74、免职红 remove #B04834、纸白 paper #F6F1E0",
+  "typography": "标题用 var(--inkloom-animation-title)，正文用 var(--inkloom-animation-body)；册页行加粗法考名词，年龄与年限用印",
+  "composition": "条件册页 + 禁止印栏 + 公印传递链 + 源名词点睛带",
+  "surface": "局堂墙纹 + 印泥紫纹 + 传递链线",
+  "motion": "册页展开、印钤落定、传递链点亮",
+  "transition": "硬切换幕",
+  "catalog": ["考点79 公证员的条件、任免及申请程序"]
+}
