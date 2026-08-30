@@ -1,25 +1,41 @@
 import React from 'react';
+import {AbsoluteFill, Easing, interpolate, useCurrentFrame} from 'remotion';
 import {
-  AbsoluteFill, interpolate, useCurrentFrame, Easing, Sequence,
-} from 'remotion';
-import {
-  Ban, BookOpen, CheckCircle2, CircleAlert, FileDigitale,
-  Gavel, Globe, HandMetal, HeartPulse, Hourglass, Landmark,
-  MessageSquareText, Plane, Scale, ScrollText, Send,
-  ShieldAlert, ShieldCheck, Siren, Stamp, Swords, UserRound,
-  UserRoundCheck, UserRoundX, Users, Workflow, XCircle,
+  Ban,
+  BookOpen,
+  CheckCircle2,
+  CircleAlert,
+  FileDigit,
+  Gavel,
+  Globe,
+  HandMetal,
+  HeartPulse,
+  Hourglass,
+  Landmark,
+  MessageSquareText,
+  Plane,
+  Scale,
+  ScrollText,
+  Send,
+  ShieldAlert,
+  ShieldCheck,
+  Siren,
+  Swords,
+  UserRoundCheck,
+  UserRoundX,
+  Users,
+  XCircle,
 } from 'lucide-react';
-import { TimelineSequence } from '../../../../shared/remotion-runtime';
+import {TimelineSequence} from '../../../../shared/remotion-runtime';
+import {SCENES} from './storyboard';
 
-/* ── Constants ── */
-const FPS = 60;
-const MAIN_WIDTH = 1800;
 const PLAYER_CONTROL_SAFE_BOTTOM = 160;
 
+// Theme: Onyx Courier — 缟玛瑙信使 · 缺席审判程序
 const C = {
   onyx: '#1A1A1D',
   onyxDeep: '#0F0F11',
-  onyxRidge: '#2D2D33',
+  ridge: '#2D2D33',
   silver: '#C8CED6',
   silverSoft: '#E8ECF2',
   silverInk: '#8A919E',
@@ -40,499 +56,752 @@ const C = {
   jadeSoft: '#D4EDE4',
 };
 
-/* ── Shared Primitives ── */
-function CourierShell({ title, subtitle, children }: { title: string; subtitle?: string; children: React.ReactNode }) {
-  const frame = useCurrentFrame();
-  const op = interpolate(frame, [0, 20], [0, 1], { extrapolateRight: 'clamp', easing: Easing.bezier(0.16, 1, 0.3, 1) });
-  return (
-    <AbsoluteFill style={{ backgroundColor: C.onyxDeep, fontFamily: "var(--inkloom-animation-title, 'Noto Serif SC', serif)" }}>
-      {/* Silver ridge lines */}
-      <div style={{ position: 'absolute', inset: 0, opacity: 0.07 }}>
-        {[...Array(12)].map((_, i) => (
-          <div key={`v${i}`} style={{ position: 'absolute', left: `${(i + 1) * 8}%`, top: 0, bottom: 0, width: 1, background: `linear-gradient(180deg,transparent,C.silver,transparent)` }} />
-        ))}
-        {[...Array(8)].map((_, i) => (
-          <div key={`h${i}`} style={{ position: 'absolute', top: `${(i + 1) * 11}%`, left: 0, right: 0, height: 1, background: `linear-gradient(90deg,transparent,C.silver,transparent)` }} />
-        ))}
+const MAIN_WIDTH = 1800;
+
+const clamp = {extrapolateLeft: 'clamp' as const, extrapolateRight: 'clamp' as const};
+const ease = Easing.bezier(0.16, 1, 0.3, 1);
+
+const enter = (frame: number, delay: number, dy = 24, dx = 0) => ({
+  opacity: interpolate(frame, [delay, delay + 18], [0, 1], {...clamp, easing: ease}),
+  translate: `${interpolate(frame, [delay, delay + 26], [dx, 0], {...clamp, easing: ease})}px ${interpolate(
+    frame,
+    [delay, delay + 26],
+    [dy, 0],
+    {...clamp, easing: ease},
+  )}px`,
+});
+
+// ---------------------------------------------------------------
+// Shared surface primitives
+// ---------------------------------------------------------------
+
+const rimBoxStyle = (color: string): React.CSSProperties => ({
+  width: 42,
+  height: 42,
+  borderRadius: 7,
+  backgroundColor: `${color}26`,
+  border: `2px solid ${color}`,
+  display: 'inline-flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  flexShrink: 0,
+});
+
+const CourierShell = ({
+  accent,
+  children,
+  code,
+  subtitle,
+  title,
+}: {
+  readonly accent: string;
+  readonly children: React.ReactNode;
+  readonly code: string;
+  readonly subtitle: string;
+  readonly title: string;
+}) => (
+  <AbsoluteFill
+    data-player-control-safe-bottom={PLAYER_CONTROL_SAFE_BOTTOM}
+    className="font-animation-body"
+    style={{
+      backgroundColor: C.onyxDeep,
+      backgroundImage:
+        'repeating-linear-gradient(90deg, rgba(200,206,214,0.05) 0 1px, transparent 1px 150px),' +
+        'repeating-linear-gradient(0deg, rgba(200,206,214,0.04) 0 1px, transparent 1px 132px),' +
+        'radial-gradient(ellipse at 50% 24%, rgba(46,107,138,0.2), transparent 62%)',
+      color: C.bone,
+      overflow: 'hidden',
+    }}
+  >
+    <header
+      style={{
+        position: 'absolute',
+        left: 60,
+        right: 60,
+        top: 34,
+        height: 104,
+        display: 'flex',
+        alignItems: 'center',
+        gap: 22,
+        borderBottom: `4px solid ${accent}`,
+      }}
+    >
+      <div
+        style={{
+          width: 172,
+          height: 74,
+          border: `4px solid ${accent}`,
+          backgroundColor: C.onyx,
+          display: 'grid',
+          placeItems: 'center',
+          fontSize: 18,
+          fontWeight: 950,
+          color: C.amber,
+          letterSpacing: 2,
+          fontFamily: 'var(--inkloom-animation-mono)',
+        }}
+      >
+        UNIT {code}
       </div>
-      {/* Radial glow */}
-      <div style={{ position: 'absolute', inset: 0, background: `radial-gradient(ellipse at 50% 30%, ${C.azureInk}22 0%, transparent 70%)` }} />
-      {/* Header */}
-      <div style={{
-        position: 'absolute', top: 28, left: 40, right: 40,
-        display: 'flex', alignItems: 'center', justifyContent: 'space-between', opacity: op,
-      }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
-          <Send size={24} color={C.amber} strokeWidth={2.2} />
-          <span style={{ fontSize: 18, color: C.silverInk, letterSpacing: 4 }}>信使</span>
-        </div>
-        <h1 style={{ fontSize: 30, color: C.bone, margin: 0, fontWeight: 700 }}>{title}</h1>
-        {subtitle && <span style={{ fontSize: 15, color: C.silverInk }}>{subtitle}</span>}
+      <h1 className="font-animation-title" style={{fontSize: 44, lineHeight: 1.08, margin: 0, fontWeight: 900, color: C.bone}}>
+        {title}
+      </h1>
+      <div
+        style={{
+          marginLeft: 'auto',
+          fontSize: 18,
+          fontWeight: 900,
+          letterSpacing: 2,
+          color: 'rgba(200,206,214,0.66)',
+          fontFamily: 'var(--inkloom-animation-label)',
+          textAlign: 'right',
+          maxWidth: 560,
+          lineHeight: 1.35,
+        }}
+      >
+        {subtitle}
       </div>
-      {/* Content area */}
-      <div style={{ position: 'absolute', top: 80, left: 40, right: 40, bottom: PLAYER_CONTROL_SAFE_BOTTOM }}>
-        {children}
-      </div>
-    </AbsoluteFill>
-  );
-}
+    </header>
+    <main style={{position: 'absolute', left: 60, right: 60, top: 158, bottom: PLAYER_CONTROL_SAFE_BOTTOM}}>
+      {children}
+    </main>
+  </AbsoluteFill>
+);
 
-function enter(frame: number, delay: number, dy = 16, dx = 0) {
-  return {
-    opacity: interpolate(frame, [delay, delay + 18], [0, 1], { extrapolateRight: 'clamp', easing: Easing.bezier(0.16, 1, 0.3, 1) }),
-    transform: `translate(${interpolate(frame, [delay, delay + 18], [dx, 0], { extrapolateRight: 'clamp', easing: Easing.bezier(0.16, 1, 0.3, 1) })}px, ${interpolate(frame, [delay, delay + 18], [dy, 0], { extrapolateRight: 'clamp', easing: Easing.bezier(0.16, 1, 0.3, 1) })}px)`,
-  };
-}
+const RimChip = ({
+  color,
+  label,
+  solid = false,
+  style,
+}: {
+  readonly color: string;
+  readonly label: string;
+  readonly solid?: boolean;
+  readonly style?: React.CSSProperties;
+}) => (
+  <span
+    style={{
+      display: 'inline-flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      padding: '3px 12px',
+      backgroundColor: solid ? color : `${color}26`,
+      border: `2px solid ${color}`,
+      borderRadius: 8,
+      color: solid ? '#FFFFFF' : color,
+      fontSize: 22,
+      fontWeight: 900,
+      fontFamily: 'var(--inkloom-animation-label)',
+      letterSpacing: 1,
+      whiteSpace: 'nowrap',
+      lineHeight: 1.3,
+      ...style,
+    }}
+  >
+    {label}
+  </span>
+);
 
-function Chip({ label, color = C.amber, delay = 0 }: { label: string; color?: string; delay?: number }) {
+const BoneHighlight = ({
+  children,
+  color,
+  style,
+}: {
+  readonly children: React.ReactNode;
+  readonly color: string;
+  readonly style?: React.CSSProperties;
+}) => (
+  <span
+    style={{
+      backgroundColor: `${color}33`,
+      borderRadius: 4,
+      padding: '2px 8px',
+      color: C.bone,
+      ...style,
+    }}
+  >
+    {children}
+  </span>
+);
+
+const SilverUnderline = ({children, color}: {readonly children: React.ReactNode; readonly color: string}) => (
+  <span style={{borderBottom: `2px solid ${color}`, paddingBottom: 2}}>{children}</span>
+);
+
+const ExternalNegation = ({
+  children,
+  color = C.cinnabar,
+  iconSize = 22,
+}: {
+  readonly children: React.ReactNode;
+  readonly color?: string;
+  readonly iconSize?: number;
+}) => (
+  <span
+    style={{
+      display: 'inline-flex',
+      alignItems: 'flex-start',
+      gap: 9,
+      color,
+      borderLeft: `3px solid ${color}`,
+      paddingLeft: 11,
+    }}
+  >
+    <Ban size={iconSize} strokeWidth={2.6} style={{flexShrink: 0, marginTop: 3}} />
+    <span>{children}</span>
+  </span>
+);
+
+const PlateCard = ({
+  children,
+  style,
+}: {
+  readonly children: React.ReactNode;
+  readonly style?: React.CSSProperties;
+}) => (
+  <div
+    data-audit-boundary="true"
+    style={{
+      backgroundColor: `${C.onyx}F2`,
+      border: `3px solid ${C.ridge}`,
+      borderRadius: 8,
+      color: C.bone,
+      boxShadow: '0 6px 16px rgba(4,5,7,0.55), inset 0 0 0 2px rgba(200,206,214,0.06)',
+      boxSizing: 'border-box',
+      ...style,
+    }}
+  >
+    {children}
+  </div>
+);
+
+const StampMark = ({text, delay = 0}: {readonly text: string; readonly delay?: number}) => {
   const frame = useCurrentFrame();
+  const rot = interpolate(frame, [delay, delay + 12], [-7, -3], {...clamp, easing: ease});
   return (
-    <span style={{
-      ...enter(frame, delay, 10, 0),
-      display: 'inline-flex', alignItems: 'center', gap: 5,
-      padding: '3px 11px', borderRadius: 10,
-      background: color + '22', border: `1px solid ${color}55`,
-      fontSize: 15, color, fontWeight: 600, lineHeight: 1.4,
-    }}>{label}</span>
-  );
-}
-
-function LabelBlock({ icon: Icon, label, desc, color = C.silver, delay = 0 }: { icon: React.ElementType; label: string; desc: string; color?: string; delay?: number }) {
-  const frame = useCurrentFrame();
-  return (
-    <div style={{ ...enter(frame, delay, 12, 0), display: 'flex', alignItems: 'flex-start', gap: 10, padding: '8px 0' }}>
-      <Icon size={20} color={color} strokeWidth={2} style={{ flexShrink: 0, marginTop: 1 }} />
-      <div>
-        <span style={{ fontSize: 17, color: C.bone, fontWeight: 600 }}>{label}</span>
-        <p style={{ fontSize: 14, color: C.silverInk, margin: '2px 0 0', lineHeight: 1.5 }}>{desc}</p>
-      </div>
-    </div>
-  );
-}
-
-function SoftHighlight({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) {
-  const frame = useCurrentFrame();
-  return (
-    <span style={{
-      ...enter(frame, delay, 8, 0),
-      padding: '1px 6px', borderRadius: 4,
-      background: C.azureSoft + '44',
-      fontSize: 15, color: C.bone,
-    }}>{children}</span>
-  );
-}
-
-function ThinUnderline({ children, color = C.amber, delay = 0 }: { children: React.ReactNode; color?: string; delay?: number }) {
-  const frame = useCurrentFrame();
-  return (
-    <span style={{
-      ...enter(frame, delay, 8, 0),
-      borderBottom: `2px solid ${color}`,
-      paddingBottom: 1, fontSize: 16, color: C.bone, fontWeight: 600,
-    }}>{children}</span>
-  );
-}
-
-function ExternalNegation({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) {
-  const frame = useCurrentFrame();
-  return (
-    <span style={{
-      ...enter(frame, delay, 8, 0),
-      display: 'inline-flex', alignItems: 'center', gap: 5,
-    }}>
-      <Ban size={15} color={C.cinnabar} strokeWidth={2.5} />
-      <span style={{ fontSize: 15, color: C.cinnabar }}>{children}</span>
+    <span
+      style={{
+        ...enter(frame, delay, 8),
+        rotate: `${rot}deg`,
+        display: 'inline-flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: '4px 14px',
+        borderRadius: 3,
+        border: `3px solid ${C.cinnabar}`,
+        color: C.cinnabar,
+        fontSize: 22,
+        fontWeight: 900,
+        letterSpacing: 3,
+        whiteSpace: 'nowrap',
+        opacity: 0.9,
+      }}
+    >
+      {text}
     </span>
   );
-}
+};
 
-function StampMark({ text, delay = 0 }: { text: string; delay?: number }) {
-  const frame = useCurrentFrame();
-  const rot = interpolate(frame, [delay, delay + 12], [-8, -4], { extrapolateRight: 'clamp', easing: Easing.out(Easing.cubic) });
-  return (
-    <div style={{
-      ...enter(frame, delay, 6, 0),
-      transform: `rotate(${rot}deg)`,
-      display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
-      padding: '4px 12px', borderRadius: 3,
-      border: `2px solid ${C.cinnabar}`, color: C.cinnabar,
-      fontSize: 13, fontWeight: 800, letterSpacing: 2,
-      opacity: 0.85,
-    }}>{text}</div>
-  );
-}
+// ---------------------------------------------------------------
+// Scene 01 — 适用对象全景
+// ---------------------------------------------------------------
 
-function PlateCard({ children, width, delay = 0, borderColor = C.onyxRidge }: { children: React.ReactNode; width: number; delay?: number; borderColor?: string }) {
-  const frame = useCurrentFrame();
-  return (
-    <div style={{
-      ...enter(frame, delay, 14, 0),
-      width, padding: '14px 18px', borderRadius: 6,
-      background: C.onyx + 'EE', border: `1px solid ${borderColor}`,
-      boxShadow: `0 2px 12px ${C.onyxDeep}44`,
-    }}>{children}</div>
-  );
-}
-
-function Watermark() {
-  return (
-    <div style={{ position: 'absolute', right: 30, bottom: PLAYER_CONTROL_SAFE_BOTTOM + 20, opacity: 0.08, pointerEvents: 'none' }}>
-      <Send size={120} color={C.silver} strokeWidth={0.8} />
-    </div>
-  );
-}
-
-/* ═════════════════════════════════
-   Scene 01 — 适用对象全景
-   ═════════════════════════════════ */
-export function EligibilityPanoramaScene() {
+export const EligibilityPanoramaScene: React.FC = () => {
   const frame = useCurrentFrame();
 
-  const categories = [
-    { icon: Siren, tag: '国恐贪', color: C.cinnabar, cond: '重国恐 · 在境外 · 及时审 · 高检核', note: '最高人民检察院核准（非最高法）', scope: '只限贪污贿赂，不含渎职', jur: '中院一审' },
-    { icon: HeartPulse, tag: '病半年', color: C.jade, cond: '因病无法出庭 ≥ 6个月', note: '审理中康复 → 终止缺席转普通程序', scope: '生效后康复提异议 → 撤销原判重新审理', jur: '基层也可审' },
-    { icon: UserRoundX, tag: '死无罪', color: C.azure, cond: '受理后死亡', note: '终止审理；有证据证明无罪 → 宣告无罪', scope: '', jur: '基层也可审' },
-    { icon: ScrollText, tag: '死再审', color: C.amber, cond: '按审判监督程序重新审判 + 死亡', note: '原审法院按再审程序审理', scope: '', jur: '基层也可审' },
-  ];
-
   return (
-    <div data-layout="eligibility-four-quadrant" data-anchor="boundary"
-         style={{ position: 'absolute', inset: 0, display: 'flex', flexDirection: 'column', gap: 14 }}>
-      <Watermark />
-
-      {/* Title row */}
-      <div style={{ ...enter(frame, 0, 10), fontSize: 22, color: C.bone, fontWeight: 700, marginBottom: 4 }}>
-        适用对象与管辖
-      </div>
-
-      {/* Four category cards — 2×2 grid */}
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14, flexShrink: 0 }}>
-        {categories.map((cat, i) => (
-          <PlateCard key={cat.tag} width={MAIN_WIDTH / 2 - 20} delay={30 + i * 22} borderColor={cat.color + '44'}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 8 }}>
-              <cat.icon size={22} color={cat.color} strokeWidth={2.2} />
-              <Chip label={cat.tag} color={cat.color} delay={40 + i * 22} />
-              <span style={{ ...enter(frame, 50 + i * 22, 6, 0), marginLeft: 'auto', fontSize: 13, color: cat.color, fontWeight: 700 }}>
-                {cat.jur}
-              </span>
+    <CourierShell accent={C.amber} code="22-1" subtitle="国恐贪 · 病半年 · 死无罪 · 死再审" title="适用对象全景">
+      <div
+        data-layout="four-case-quadrant-with-principle-and-mnemonic-bands"
+        data-visual-anchor="boundary"
+        data-text-treatments="chip,thin-underline,soft-highlight,external-negation"
+        data-visual-grammar="four-case-quadrant-splits-absence-eligibility,presence-at-trial-is-the-principle-absence-the-exception,mnemonic-guo-ke-bing-si-si-names-the-four,intermediate-court-for-gkt-basic-court-for-the-rest"
+        data-focal-channels="contrast,enclosure,icon,annotation"
+        style={{position: 'absolute', inset: 0}}
+      >
+        <div data-focal-rule="被告人到场受审是原则，缺席审判仅是四类例外" style={{position: 'absolute', inset: 0}}>
+          <Send
+            size={164}
+            strokeWidth={1.4}
+            style={{position: 'absolute', right: 26, top: 30, color: C.silver, opacity: 0.09}}
+          />
+          <div data-final-knowledge="case-quadrant" style={{position: 'absolute', inset: 0}}>
+            <div style={{position: 'absolute', left: 0, top: 6, width: MAIN_WIDTH, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14}}>
+              <PlateCard style={{height: 258, padding: '16px 22px', borderColor: `${C.cinnabar}66`, ...enter(frame, 0, 24)}}>
+                <div style={{display: 'flex', alignItems: 'center', gap: 10, marginBottom: 10}}>
+                  <span style={rimBoxStyle(C.cinnabar)}><Siren size={24} strokeWidth={2.5} color={C.cinnabar} /></span>
+                  <RimChip color={C.cinnabar} label="国恐贪" solid />
+                  <span style={{marginLeft: 'auto', fontSize: 22, fontWeight: 900, color: C.cinnabar}}>中院一审</span>
+                </div>
+                <div style={{fontSize: 22, lineHeight: 1.5, color: C.bone, fontWeight: 700, marginBottom: 6}}>
+                  <SilverUnderline color={C.cinnabar}>重国恐 · 在境外 · 及时审 · 高检核</SilverUnderline>
+                </div>
+                <div style={{fontSize: 22, lineHeight: 1.45, color: C.silverInk, fontWeight: 700, marginBottom: 6}}>
+                  最高人民检察院核准（非最高法）
+                </div>
+                <ExternalNegation iconSize={20}>只限贪污贿赂，不含渎职</ExternalNegation>
+              </PlateCard>
+              <PlateCard style={{height: 258, padding: '16px 22px', borderColor: `${C.jade}66`, ...enter(frame, 40, 24)}}>
+                <div style={{display: 'flex', alignItems: 'center', gap: 10, marginBottom: 10}}>
+                  <span style={rimBoxStyle(C.jade)}><HeartPulse size={24} strokeWidth={2.5} color={C.jade} /></span>
+                  <RimChip color={C.jade} label="病半年" solid />
+                  <span style={{marginLeft: 'auto', fontSize: 22, fontWeight: 900, color: C.jade}}>基层也可审</span>
+                </div>
+                <div style={{fontSize: 22, lineHeight: 1.5, color: C.bone, fontWeight: 700, marginBottom: 6}}>
+                  因病无法出庭 <SilverUnderline color={C.jade}>连续六个月以上</SilverUnderline>
+                </div>
+                <div style={{fontSize: 22, lineHeight: 1.45, color: C.silverInk, fontWeight: 700, marginBottom: 6}}>
+                  审理中康复 → 终止缺席，转普通程序
+                </div>
+                <div style={{fontSize: 22, lineHeight: 1.45, color: C.silverInk, fontWeight: 700}}>
+                  生效后康复提异议 → 撤销原判重新审理
+                </div>
+              </PlateCard>
+              <PlateCard style={{height: 258, padding: '16px 22px', borderColor: `${C.azure}66`, ...enter(frame, 80, 24)}}>
+                <div style={{display: 'flex', alignItems: 'center', gap: 10, marginBottom: 10}}>
+                  <span style={rimBoxStyle(C.azure)}><UserRoundX size={24} strokeWidth={2.5} color={C.azure} /></span>
+                  <RimChip color={C.azure} label="死无罪" solid />
+                  <span style={{marginLeft: 'auto', fontSize: 22, fontWeight: 900, color: C.azure}}>基层也可审</span>
+                </div>
+                <div style={{fontSize: 22, lineHeight: 1.5, color: C.bone, fontWeight: 700, marginBottom: 6}}>
+                  审理过程中被告人死亡，法院应当裁定终止审理
+                </div>
+                <div style={{fontSize: 22, lineHeight: 1.45, color: C.silverInk, fontWeight: 700}}>
+                  根据已查明的事实证据能确认无罪的，应当<BoneHighlight color={C.jade}>判决宣告无罪</BoneHighlight>
+                </div>
+              </PlateCard>
+              <PlateCard style={{height: 258, padding: '16px 22px', borderColor: `${C.amber}66`, ...enter(frame, 120, 24)}}>
+                <div style={{display: 'flex', alignItems: 'center', gap: 10, marginBottom: 10}}>
+                  <span style={rimBoxStyle(C.amber)}><ScrollText size={24} strokeWidth={2.5} color={C.amber} /></span>
+                  <RimChip color={C.amber} label="死再审" solid />
+                  <span style={{marginLeft: 'auto', fontSize: 22, fontWeight: 900, color: C.amber}}>基层也可审</span>
+                </div>
+                <div style={{fontSize: 22, lineHeight: 1.5, color: C.bone, fontWeight: 700, marginBottom: 6}}>
+                  审判监督程序重新审判 + 被告人死亡
+                </div>
+                <div style={{fontSize: 22, lineHeight: 1.45, color: C.silverInk, fontWeight: 700}}>
+                  由原审法院按再审程序缺席审理
+                </div>
+              </PlateCard>
             </div>
-            <p style={{ ...enter(frame, 55 + i * 22, 8, 0), fontSize: 15, color: C.bone, margin: '4px 0', lineHeight: 1.55 }}>
-              {cat.cond}
-            </p>
-            <p style={{ ...enter(frame, 65 + i * 22, 8, 0), fontSize: 13, color: C.silverInk, margin: 0, lineHeight: 1.5 }}>
-              {cat.note}
-            </p>
-            {cat.scope && (
-              <p style={{ ...enter(frame, 75 + i * 22, 8, 0), fontSize: 13, color: C.amberInk, marginTop: 4 }}>
-                <ExternalNegation delay={80 + i * 22}>{cat.scope}</ExternalNegation>
-              </p>
-            )}
-          </PlateCard>
-        ))}
-      </div>
-
-      {/* Principle banner */}
-      <div style={{
-        ...enter(frame, 160, 10, 0),
-        display: 'flex', alignItems: 'center', gap: 10,
-        padding: '10px 18px', borderRadius: 6,
-        background: C.onyxRidge + 'AA', borderLeft: `3px solid ${C.amber}`,
-        flexShrink: 0,
-      }}>
-        <CircleAlert size={18} color={C.amber} />
-        <span style={{ fontSize: 15, color: C.bone }}>
-          原则：<SoftHighlight>被告人到场受审</SoftHighlight>；缺席审判仅是<ExternalNegation delay={170}>例外</ExternalNegation>
-        </span>
-      </div>
-
-      {/* Mnemonic */}
-      <div style={{
-        ...enter(frame, 190, 12, 0),
-        display: 'flex', alignItems: 'center', gap: 16,
-        padding: '12px 20px', borderRadius: 6,
-        background: `linear-gradient(90deg, ${C.amber}11, ${C.azure}11)`,
-        borderTop: `1px solid ${C.silverInk}22`, borderBottom: `1px solid ${C.silverInk}22`,
-        flexShrink: 0,
-      }}>
-        <BookOpen size={18} color={C.amberInk} />
-        <span style={{ fontSize: 14, color: C.silverInk, fontWeight: 700 }}>口诀记忆</span>
-        <span style={{ fontSize: 16, color: C.bone }}>
-          <ThinUnderline color={C.cinnabar} delay={200}>国恐贪</ThinUnderline>
-          {' ；'}
-          <ThinUnderline color={C.jade} delay={210}>病半年</ThinUnderline>
-          {' ；'}
-          <ThinUnderline color={C.azure} delay={220}>死无罪</ThinUnderline>
-          {' ；'}
-          <ThinUnderline color={C.amber} delay={230}>死再审</ThinUnderline>
-        </span>
-      </div>
-    </div>
-  );
-}
-
-/* ═════════════════════════════════
-   Scene 02 — 国恐贪四条件详解
-   ═════════════════════════════════ */
-export function StateTerrorCorruptionScene() {
-  const frame = useCurrentFrame();
-
-  return (
-    <div data-layout="stc-deep-dive-quadrant" data-anchor="concept-icon"
-         style={{ position: 'absolute', inset: 0, display: 'flex', flexDirection: 'column', gap: 12 }}>
-      <Watermark />
-
-      <div style={{ ...enter(frame, 0, 10), fontSize: 22, color: C.bone, fontWeight: 700 }}>
-        国恐贪四条件详解
-      </div>
-
-      {/* Four conditions row */}
-      <div style={{ display: 'flex', gap: 12, flexShrink: 0 }}>
-        {[
-          { icon: ShieldAlert, label: '重国恐', desc: '重大国家安全/恐怖活动犯罪案件', color: C.cinnabar },
-          { icon: Globe, label: '在境外', desc: '犯罪嫌疑人/被告人在境外', color: C.azure },
-          { icon: Hourglass, label: '及时审', desc: '需要及时进行审判（追诉时效等）', color: C.amber },
-          { icon: Landmark, label: '高检核', desc: '最高人民检察院核准（≠最高人民法院）', color: C.jade },
-        ].map((c, i) => (
-          <PlateCard key={c.label} width={(MAIN_WIDTH - 48) / 4} delay={24 + i * 18} borderColor={c.color + '44'}>
-            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8, textAlign: 'center' }}>
-              <c.icon size={26} color={c.color} strokeWidth={2} />
-              <Chip label={c.label} color={c.color} delay={36 + i * 18} />
-              <span style={{ ...enter(frame, 44 + i * 18, 8, 0), fontSize: 13, color: C.silverInk, lineHeight: 1.45 }}>
-                {c.desc}
-              </span>
-            </div>
-          </PlateCard>
-        ))}
-      </div>
-
-      {/* Scope limits & partial rules */}
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14, flexShrink: 0 }}>
-        <PlateCard width={MAIN_WIDTH / 2 - 20} delay={110} borderColor={C.cinnabar + '33'}>
-          <div style={{ ...enter(frame, 110, 8, 0), fontSize: 16, color: C.cinnabar, fontWeight: 700, marginBottom: 8, display: 'flex', alignItems: 'center', gap: 8 }}>
-            <Ban size={17} color={C.cinnabar} /> 范围限制
           </div>
-          <LabelBlock icon={FileDigitale} label="贪污贿赂可缺席" desc="含刑法分则第八章及依照第八章定罪处罚的犯罪" color={C.jade} delay={126} />
-          <LabelBlock icon={XCircle} label="渎职不可缺席" desc="不属于贪污贿赂范畴，不得适用缺席审判程序" color={C.cinnabar} delay={142} />
-        </PlateCard>
 
-        <PlateCard width={MAIN_WIDTH / 2 - 20} delay={116} borderColor={C.azure + '33'}>
-          <div style={{ ...enter(frame, 116, 8, 0), fontSize: 16, color: C.azure, fontWeight: 700, marginBottom: 8, display: 'flex', alignItems: 'center', gap: 8 }}>
-            <Users size={17} color={C.azure} /> 数罪 / 共犯规则
+          <div data-final-knowledge="principle-banner" style={{position: 'absolute', inset: 0}}>
+            <PlateCard style={{position: 'absolute', left: 0, top: 540, width: MAIN_WIDTH, height: 92, padding: '14px 24px', borderLeft: `5px solid ${C.amber}`, ...enter(frame, 190, 20)}}>
+              <div style={{display: 'flex', alignItems: 'center', gap: 14}}>
+                <CircleAlert size={26} strokeWidth={2.5} color={C.amber} />
+                <span style={{fontSize: 22, lineHeight: 1.5, color: C.bone, fontWeight: 700}}>
+                  原则：<BoneHighlight color={C.amber}>被告人到场受审</BoneHighlight>；缺席审判仅是<ExternalNegation iconSize={20}>例外</ExternalNegation>
+                </span>
+              </div>
+            </PlateCard>
           </div>
-          <LabelBlock icon={ScrollText} label="数罪部分符合" desc="可就该部分犯罪适用缺席审判程序" color={C.jade} delay={132} />
-          <LabelBlock icon={Plane} label="共犯部分人在境外" desc="可对该部分人适用缺席审判程序（境内者不可）" color={C.amber} delay={148} />
-        </PlateCard>
-      </div>
 
-      {/* Key distinction stamp */}
-      <div style={{
-        ...enter(frame, 178, 10, 0),
-        display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 14,
-        padding: '10px 0', flexShrink: 0,
-      }}>
-        <StampMark text="高检核 ≠ 最高法" delay={186} />
-        <span style={{ ...enter(frame, 188, 8, 0), fontSize: 14, color: C.silverInk }}>
-          核准机关是<SoftHighlight>最高人民检察院</SoftHighlight>，不是最高人民法院
-        </span>
-      </div>
-
-      {/* Jurisdiction summary */}
-      <div style={{
-        ...enter(frame, 206, 10, 0),
-        display: 'flex', gap: 12, flexShrink: 0,
-      }}>
-        <div style={{ flex: 1, padding: '10px 16px', borderRadius: 6, background: C.cinnabar + '14', border: `1px solid ${C.cinnabar}33` }}>
-          <span style={{ ...enter(frame, 214, 6, 0), fontSize: 14, color: C.cinnabar, fontWeight: 700 }}>国恐贪</span>
-          <span style={{ ...enter(frame, 218, 6, 0), fontSize: 15, color: C.bone, marginLeft: 8 }}>→ 中院一审</span>
-        </div>
-        <div style={{ flex: 1, padding: '10px 16px', borderRadius: 6, background: C.jade + '14', border: `1px solid ${C.jade}33` }}>
-          <span style={{ ...enter(frame, 220, 6, 0), fontSize: 14, color: C.jade, fontWeight: 700 }}>病半年 / 死无罪 / 死再审</span>
-          <span style={{ ...enter(frame, 224, 6, 0), fontSize: 15, color: C.bone, marginLeft: 8 }}>→ 基层法院也可以审理</span>
+          <div data-final-knowledge="mnemonic-band" style={{position: 'absolute', inset: 0}}>
+            <PlateCard style={{position: 'absolute', left: 0, top: 652, width: MAIN_WIDTH, height: 92, padding: '14px 24px', ...enter(frame, 250, 20)}}>
+              <div style={{display: 'flex', alignItems: 'center', gap: 16}}>
+                <BookOpen size={26} strokeWidth={2.5} color={C.amberInk} />
+                <span style={{fontSize: 22, color: C.silverInk, fontWeight: 900}}>口诀记忆</span>
+                <span style={{fontSize: 23, color: C.bone, fontWeight: 700}}>
+                  <SilverUnderline color={C.cinnabar}>国恐贪</SilverUnderline> ；<SilverUnderline color={C.jade}>病半年</SilverUnderline> ；<SilverUnderline color={C.azure}>死无罪</SilverUnderline> ；<SilverUnderline color={C.amber}>死再审</SilverUnderline>
+                </span>
+              </div>
+            </PlateCard>
+          </div>
         </div>
       </div>
-    </div>
-  );
-}
-
-/* ═════════════════════════════════
-   Scene 03 — 程序保障链
-   ═════════════════════════════════ */
-export function ProceduralSafeguardsChainScene() {
-  const frame = useCurrentFrame();
-
-  const steps = [
-    { icon: Send, title: '送达', items: ['司法协助方式（国际条约/外交途径）', '或所在地法律允许的其他方式', '邮寄、公告、公示、电子送达'], color: C.azure },
-    { icon: ShieldCheck, title: '辩护权保障', items: ['检察院应当及时告知委托辩护权', '未委托 → 应当通知法律援助机构'], color: C.jade },
-    { icon: Users, title: '近亲属参加', items: ['收到起诉书副本后、一审开庭前提出', '推选一至二人，共同委托代理人一至二人', '开庭后无权参加'], color: C.amber },
-    { icon: Gavel, title: '一审程序', items: ['参照第一审普通程序', '有罪判决须证据确实充分', '罪名不符 → 终止审理；财产可一并处理'], color: C.silver },
-    { icon: Scale, title: '上诉抗诉', items: ['被告人、近亲属有权上诉（近亲属单独上诉资格）', '检察院应当抗诉', '辩护人经同意可提出上诉'], color: C.cinnabar },
-  ];
-
-  return (
-    <div data-layout="safeguards-horizontal-flow" data-anchor="flow-path"
-         style={{ position: 'absolute', inset: 0, display: 'flex', flexDirection: 'column', gap: 12 }}>
-      <Watermark />
-
-      <div style={{ ...enter(frame, 0, 10), fontSize: 22, color: C.bone, fontWeight: 700 }}>
-        程序流程与权利保障
-      </div>
-
-      {/* Flow chain — horizontal cards */}
-      <div style={{ display: 'flex', gap: 10, flexShrink: 0, overflow: 'hidden' }}>
-        {steps.map((step, i) => (
-          <PlateCard key={step.title} width={(MAIN_WIDTH - 50) / 5} delay={24 + i * 16} borderColor={step.color + '33'}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 8 }}>
-              <step.icon size={18} color={step.color} strokeWidth={2.2} />
-              <span style={{ ...enter(frame, 34 + i * 16, 6, 0), fontSize: 15, color: step.color, fontWeight: 700 }}>{step.title}</span>
-            </div>
-            {step.items.map((item, j) => (
-              <p key={j} style={{ ...enter(frame, 44 + i * 16 + j * 10, 8, 0), fontSize: 13, color: C.silverInk, margin: '3px 0', lineHeight: 1.45 }}>
-                · {item}
-              </p>
-            ))}
-            {i < steps.length - 1 && (
-              <Workflow size={14} color={C.onyxRidge} style={{ position: 'absolute', right: -10, top: '50%', transform: 'translateY(-50%)' }} />
-            )}
-          </PlateCard>
-        ))}
-      </div>
-
-      {/* Key restrictions panel */}
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14, flexShrink: 0 }}>
-        <PlateCard width={MAIN_WIDTH / 2 - 20} delay={130} borderColor={C.cinnabar + '33'}>
-          <div style={{ ...enter(frame, 130, 8, 0), fontSize: 15, color: C.cinnabar, fontWeight: 700, marginBottom: 8 }}>
-            近亲属权利边界
-          </div>
-          <LabelBlock icon={CheckCircle2} label="可以发表意见、出示证据" desc="申请通知证人鉴定人出庭，进行辩论" color={C.jade} delay={146} />
-          <LabelBlock icon={Ban} label="不是自行辩护" desc="只是代为维护被告人合法权益" color={C.cinnabar} delay={162} />
-          <LabelBlock icon={XCircle} label="无最后陈述环节" desc="最后陈述权专属于被告人本人；辩护人可发表最后辩护意见" color={C.cinnabar} delay={178} />
-        </PlateCard>
-
-        <PlateCard width={MAIN_WIDTH / 2 - 20} delay={136} borderColor={C.azure + '33'}>
-          <div style={{ ...enter(frame, 136, 8, 0), fontSize: 15, color: C.azure, fontWeight: 700, marginBottom: 8 }}>
-            不来也审原则
-          </div>
-          <p style={{ ...enter(frame, 150, 8, 0), fontSize: 14, color: C.bone, lineHeight: 1.55, margin: 0 }}>
-            传票和起诉书副本送达后，<SoftHighlight delay={158}>被告人未按要求到案</SoftHighlight>的，
-            人民法院<ThinUnderline color={C.jade} delay={166}>应当开庭审理</ThinUnderline>，
-            依法作出判决并对违法所得及其他涉案财产作出处理。
-          </p>
-        </PlateCard>
-      </div>
-    </div>
-  );
-}
-
-/* ═════════════════════════════════
-   Scene 04 — 到案后与没收衔接
-   ═════════════════════════════════ */
-export function AppearanceConfiscationLinkScene() {
-  const frame = useCurrentFrame();
-
-  return (
-    <div data-layout="appearance-confiscation-split" data-anchor="timeline-gate"
-         style={{ position: 'absolute', inset: 0, display: 'flex', flexDirection: 'column', gap: 12 }}>
-      <Watermark />
-
-      <div style={{ ...enter(frame, 0, 10), fontSize: 22, color: C.bone, fontWeight: 700 }}>
-        到案后处理 与 没收程序衔接
-      </div>
-
-      {/* Two appearance scenarios */}
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14, flexShrink: 0 }}>
-        <PlateCard width={MAIN_WIDTH / 2 - 20} delay={22} borderColor={C.jade + '33'}>
-          <div style={{ ...enter(frame, 22, 8, 0), fontSize: 16, color: C.jade, fontWeight: 700, marginBottom: 8, display: 'flex', alignItems: 'center', gap: 8 }}>
-            <UserRoundCheck size={18} color={C.jade} /> 审理中到案
-          </div>
-          <LabelBlock icon={Siren} label="公安立即通知" desc="" color={C.silver} delay={38} />
-          <LabelBlock icon={Landmark} label="裁定终止审理" desc="检察院依法提起公诉 → 法院应当重新审理" color={C.azure} delay={52} />
-          <LabelBlock icon={Gavel} label="管辖规则" desc="一般由同一人民法院审理；指定管辖的应重新指定" color={C.amber} delay={66} />
-        </PlateCard>
-
-        <PlateCard width={MAIN_WIDTH / 2 - 20} delay={28} borderColor={C.cinnabar + '33'}>
-          <div style={{ ...enter(frame, 28, 8, 0), fontSize: 16, color: C.cinnabar, fontWeight: 700, marginBottom: 8, display: 'flex', alignItems: 'center', gap: 8 }}>
-            <HandMetal size={18} color={C.cinnabar} /> 生效后到案
-          </div>
-          <LabelBlock icon={Gavel} label="交付执行刑罚" desc="" color={C.silver} delay={44} />
-          <LabelBlock icon={MessageSquareText} label="告知异议权" desc="收到异议告知后十日以内可提异议" color={C.azure} delay={58} />
-          <LabelBlock icon={ScrollText} label="异议后果" desc="撤销原判裁定 → 检察院公诉 → 重新审理；财产错误应返还赔偿" color={C.cinnabar} delay={72} />
-        </PlateCard>
-      </div>
-
-      {/* Confiscation program relationship */}
-      <PlateCard width={MAIN_WIDTH - 20} delay={100} borderColor={C.amber + '33'} style={{ flexShrink: 0 }}>
-        <div style={{ ...enter(frame, 100, 8, 0), fontSize: 16, color: C.amber, fontWeight: 700, marginBottom: 10, display: 'flex', alignItems: 'center', gap: 8 }}>
-          <Swords size={18} color={C.amber} /> 与没收程序的衔接
-        </div>
-
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 12 }}>
-          <div style={{ ...enter(frame, 114, 10, 0), padding: '10px 14px', borderRadius: 5, background: C.onyxRidge + '66' }}>
-            <div style={{ fontSize: 14, color: C.cinnabar, fontWeight: 700, marginBottom: 6, display: 'flex', alignItems: 'center', gap: 6 }}>
-              <Ban size={14} color={C.cinnabar} /> 不是前置程序
-            </div>
-            <p style={{ fontSize: 13, color: C.silverInk, margin: 0, lineHeight: 1.5 }}>
-              "没收"<ExternalNegation delay={126}>不是</ExternalNegation>"缺席"的前置程序。事实清楚证据充分的，可直接提起缺席公诉。
-            </p>
-          </div>
-
-          <div style={{ ...enter(frame, 120, 10, 0), padding: '10px 14px', borderRadius: 5, background: C.jade + '11' }}>
-            <div style={{ fontSize: 14, color: C.jade, fontWeight: 700, marginBottom: 6 }}>缺席 → 可启动没收</div>
-            <p style={{ fontSize: 13, color: C.silverInk, margin: 0, lineHeight: 1.5 }}>
-              缺席撤诉/死亡 → 检察院可<SoftHighlight delay={132}>另行提出没收违法所得申请</SoftHighlight>
-            </p>
-          </div>
-
-          <div style={{ ...enter(frame, 126, 10, 0), padding: '10px 14px', borderRadius: 5, background: C.azure + '11' }}>
-            <div style={{ fontSize: 14, color: C.azure, fontWeight: 700, marginBottom: 6 }}>没收 → 可启动缺席</div>
-            <p style={{ fontSize: 13, color: C.silverInk, margin: 0, lineHeight: 1.5 }}>
-              没收裁定后认为仍有必要的，可<SoftHighlight delay={138}>另行依照刑诉法提起公诉</SoftHighlight>进行缺席审判。
-            </p>
-          </div>
-        </div>
-      </PlateCard>
-
-      {/* Bottom terminus banner */}
-      <div style={{
-        ...enter(frame, 156, 10, 0),
-        display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 12,
-        padding: '10px 20px', borderRadius: 6,
-        background: `linear-gradient(90deg, ${C.onyxRidge}, ${C.onyx})`,
-        borderTop: `1px solid ${C.silverInk}22`,
-        flexShrink: 0,
-      }}>
-        <StampMark text="双向独立" delay={166} />
-        <span style={{ ...enter(frame, 168, 8, 0), fontSize: 14, color: C.silverInk }}>
-          缺席审判与违法所得没收程序是<ThinUnderline color={C.amber} delay={176}>两个独立的特别程序</ThinUnderline>，互不前置但可双向衔接
-        </span>
-      </div>
-    </div>
-  );
-}
-
-/* ── Main Composition ── */
-export function OnyxCourier(): React.ReactElement {
-  return (
-    <CourierShell title="缺席审判程序" subtitle="Absentia Trial Procedure">
-      <TimelineSequence
-        durationInFrames={570}
-        component={EligibilityPanoramaScene}
-        startFrom={0}
-      />
-      <TimelineSequence
-        durationInFrames={570}
-        component={StateTerrorCorruptionScene}
-        startFrom={570}
-      />
-      <TimelineSequence
-        durationInFrames={570}
-        component={ProceduralSafeguardsChainScene}
-        startFrom={1140}
-      />
-      <TimelineSequence
-        durationInFrames={630}
-        component={AppearanceConfiscationLinkScene}
-        startFrom={1710}
-      />
     </CourierShell>
   );
-}
+};
+
+// ---------------------------------------------------------------
+// Scene 02 — 国恐贪四条件详解
+// ---------------------------------------------------------------
+
+export const StateTerrorCorruptionScene: React.FC = () => {
+  const frame = useCurrentFrame();
+
+  return (
+    <CourierShell accent={C.cinnabar} code="22-2" subtitle="重国恐 · 在境外 · 及时审 · 高检核" title="国恐贪四条件详解">
+      <div
+        data-layout="four-condition-row-with-scope-panels-and-approval-stamp"
+        data-visual-anchor="concept-icon"
+        data-text-treatments="chip,label-block,external-negation,soft-highlight"
+        data-visual-grammar="four-conditions-need-grave-crime-abroad-timely-trial-and-procuratorate-approval,scope-limits-confession-cases-only-never-misconduct,partial-crimes-and-abroad-accomplices-may-still-apply,approval-rests-with-supreme-procuratorate-not-court"
+        data-focal-channels="contrast,icon,enclosure,annotation"
+        style={{position: 'absolute', inset: 0}}
+      >
+        <div data-focal-rule="国恐贪四条件缺一不可；核准机关是最高人民检察院，不是最高人民法院" style={{position: 'absolute', inset: 0}}>
+          <Landmark
+            size={162}
+            strokeWidth={1.4}
+            style={{position: 'absolute', right: 30, top: 26, color: C.silver, opacity: 0.09}}
+          />
+          <div data-final-knowledge="condition-row" style={{position: 'absolute', inset: 0}}>
+            <div style={{position: 'absolute', left: 0, top: 6, width: MAIN_WIDTH, display: 'flex', gap: 14}}>
+              {[
+                {icon: ShieldAlert, label: '重国恐', desc: '重大国家安全犯罪、恐怖活动犯罪案件', color: C.cinnabar, delay: 0},
+                {icon: Globe, label: '在境外', desc: '犯罪嫌疑人、被告人在境外', color: C.azure, delay: 40},
+                {icon: Hourglass, label: '及时审', desc: '需要及时进行审判', color: C.amber, delay: 80},
+                {icon: Landmark, label: '高检核', desc: '最高人民检察院核准', color: C.jade, delay: 120},
+              ].map((cond) => (
+                <PlateCard key={cond.label} style={{flex: 1, height: 208, padding: '16px 18px', borderColor: `${cond.color}55`, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', gap: 12, ...enter(frame, cond.delay, 22)}}>
+                  <span style={rimBoxStyle(cond.color)}><cond.icon size={26} strokeWidth={2.5} color={cond.color} /></span>
+                  <RimChip color={cond.color} label={cond.label} solid />
+                  <span style={{fontSize: 22, lineHeight: 1.45, color: C.silverInk, textAlign: 'center', fontWeight: 700}}>{cond.desc}</span>
+                </PlateCard>
+              ))}
+            </div>
+          </div>
+
+          <div data-final-knowledge="scope-panels" style={{position: 'absolute', inset: 0}}>
+            <div style={{position: 'absolute', left: 0, top: 236, width: MAIN_WIDTH, display: 'flex', gap: 20}}>
+              <PlateCard style={{flex: 1, height: 236, padding: '16px 24px', borderColor: `${C.cinnabar}44`, ...enter(frame, 180, 22)}}>
+                <div style={{display: 'flex', alignItems: 'center', gap: 10, marginBottom: 12}}>
+                  <Ban size={24} strokeWidth={2.5} color={C.cinnabar} />
+                  <span style={{fontSize: 24, fontWeight: 950, color: C.cinnabar}}>范围限制</span>
+                </div>
+                <div style={{display: 'flex', flexDirection: 'column', gap: 12}}>
+                  <div style={{display: 'flex', gap: 12, alignItems: 'flex-start'}}>
+                    <span style={rimBoxStyle(C.jade)}><FileDigit size={22} strokeWidth={2.5} color={C.jade} /></span>
+                    <span style={{fontSize: 22, lineHeight: 1.5, color: C.bone, fontWeight: 700, paddingTop: 5}}>
+                      <SilverUnderline color={C.jade}>贪污贿赂</SilverUnderline>可缺席——含刑法分则第八章及依照第八章定罪处罚的犯罪
+                    </span>
+                  </div>
+                  <div style={{display: 'flex', gap: 12, alignItems: 'flex-start'}}>
+                    <span style={rimBoxStyle(C.cinnabar)}><XCircle size={22} strokeWidth={2.5} color={C.cinnabar} /></span>
+                    <span style={{fontSize: 22, lineHeight: 1.5, color: C.bone, fontWeight: 700, paddingTop: 5}}>
+                      <ExternalNegation iconSize={20}>渎职不可缺席</ExternalNegation>——不得适用缺席审判程序
+                    </span>
+                  </div>
+                </div>
+              </PlateCard>
+              <PlateCard style={{flex: 1, height: 236, padding: '16px 24px', borderColor: `${C.azure}44`, ...enter(frame, 240, 22)}}>
+                <div style={{display: 'flex', alignItems: 'center', gap: 10, marginBottom: 12}}>
+                  <Users size={24} strokeWidth={2.5} color={C.azure} />
+                  <span style={{fontSize: 24, fontWeight: 950, color: C.azure}}>数罪 / 共犯规则</span>
+                </div>
+                <div style={{display: 'flex', flexDirection: 'column', gap: 12}}>
+                  <div style={{display: 'flex', gap: 12, alignItems: 'flex-start'}}>
+                    <span style={rimBoxStyle(C.jade)}><ScrollText size={22} strokeWidth={2.5} color={C.jade} /></span>
+                    <span style={{fontSize: 22, lineHeight: 1.5, color: C.bone, fontWeight: 700, paddingTop: 5}}>
+                      数罪部分符合 → 可<BoneHighlight color={C.jade}>就该部分</BoneHighlight>适用缺席审判
+                    </span>
+                  </div>
+                  <div style={{display: 'flex', gap: 12, alignItems: 'flex-start'}}>
+                    <span style={rimBoxStyle(C.amber)}><Plane size={22} strokeWidth={2.5} color={C.amber} /></span>
+                    <span style={{fontSize: 22, lineHeight: 1.5, color: C.bone, fontWeight: 700, paddingTop: 5}}>
+                      共犯部分人在境外 → 可对该部分人适用，<BoneHighlight color={C.cinnabar}>境内者不可</BoneHighlight>
+                    </span>
+                  </div>
+                </div>
+              </PlateCard>
+            </div>
+          </div>
+
+          <div data-final-knowledge="approval-stamp" style={{position: 'absolute', inset: 0}}>
+            <PlateCard style={{position: 'absolute', left: 0, top: 496, width: MAIN_WIDTH, height: 108, padding: '14px 24px', borderColor: `${C.jade}55`, ...enter(frame, 330, 20)}}>
+              <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 18}}>
+                <StampMark text="高检核 ≠ 最高法" delay={350} />
+                <span style={{fontSize: 22, lineHeight: 1.5, color: C.bone, fontWeight: 700}}>
+                  核准机关是<BoneHighlight color={C.jade}>最高人民检察院</BoneHighlight>，不是最高人民法院
+                </span>
+              </div>
+            </PlateCard>
+            <div style={{position: 'absolute', left: 0, top: 624, width: MAIN_WIDTH, display: 'flex', gap: 20, ...enter(frame, 420, 18)}}>
+              <PlateCard style={{flex: 1, height: 84, padding: '12px 22px', borderColor: `${C.cinnabar}55`, display: 'flex', alignItems: 'center', gap: 12}}>
+                <RimChip color={C.cinnabar} label="国恐贪" />
+                <span style={{fontSize: 22, color: C.bone, fontWeight: 700}}>→ 中级人民法院一审</span>
+              </PlateCard>
+              <PlateCard style={{flex: 1, height: 84, padding: '12px 22px', borderColor: `${C.jade}55`, display: 'flex', alignItems: 'center', gap: 12}}>
+                <RimChip color={C.jade} label="病半年 / 死无罪 / 死再审" />
+                <span style={{fontSize: 22, color: C.bone, fontWeight: 700}}>→ 基层法院也可以审理</span>
+              </PlateCard>
+            </div>
+          </div>
+        </div>
+      </div>
+    </CourierShell>
+  );
+};
+
+// ---------------------------------------------------------------
+// Scene 03 — 程序保障链
+// ---------------------------------------------------------------
+
+export const ProceduralSafeguardsChainScene: React.FC = () => {
+  const frame = useCurrentFrame();
+
+  return (
+    <CourierShell accent={C.azure} code="22-3" subtitle="送达 → 辩护 → 近亲属 → 一审 → 上诉" title="程序保障链">
+      <div
+        data-layout="five-step-flow-with-restriction-panels"
+        data-visual-anchor="flow-path"
+        data-text-treatments="chip,label-block,external-negation,thin-underline"
+        data-visual-grammar="service-reaches-the-defendant-abroad-before-the-hearing,defense-counsel-notice-and-legal-aid-protect-the-defense,close-kin-participate-without-becoming-defense-counsel,trial-and-appeal-follow-the-first-instance-pattern"
+        data-focal-channels="connector,contrast,enclosure,annotation"
+        style={{position: 'absolute', inset: 0}}
+      >
+        <div data-focal-rule="缺席不等于减损权利：送达、辩护、近亲属参加、上诉一样不少" style={{position: 'absolute', inset: 0}}>
+          <ScrollText
+            size={160}
+            strokeWidth={1.4}
+            style={{position: 'absolute', right: 28, top: 300, color: C.silver, opacity: 0.09}}
+          />
+          <div data-final-knowledge="flow-chain" style={{position: 'absolute', inset: 0}}>
+            <div style={{position: 'absolute', left: 0, top: 6, width: MAIN_WIDTH, display: 'flex', gap: 12}}>
+              <PlateCard style={{flex: 1, height: 330, padding: '14px 16px', borderColor: `${C.azure}55`, ...enter(frame, 0, 22)}}>
+                <div style={{display: 'flex', alignItems: 'center', gap: 9, marginBottom: 10}}>
+                  <Send size={22} strokeWidth={2.5} color={C.azure} />
+                  <span style={{fontSize: 22, fontWeight: 950, color: C.azure}}>送达</span>
+                </div>
+                <div style={{fontSize: 22, lineHeight: 1.5, color: C.bone, fontWeight: 700, marginBottom: 8}}>
+                  <SilverUnderline color={C.azure}>司法协助</SilverUnderline>或所在地法律允许方式
+                </div>
+                <div style={{fontSize: 22, lineHeight: 1.5, color: C.silverInk, fontWeight: 700}}>
+                  传票、起诉书副本未按要求到案 → 不来也审
+                </div>
+              </PlateCard>
+              <PlateCard style={{flex: 1, height: 330, padding: '14px 16px', borderColor: `${C.jade}55`, ...enter(frame, 40, 22)}}>
+                <div style={{display: 'flex', alignItems: 'center', gap: 9, marginBottom: 10}}>
+                  <ShieldCheck size={22} strokeWidth={2.5} color={C.jade} />
+                  <span style={{fontSize: 22, fontWeight: 950, color: C.jade}}>辩护权保障</span>
+                </div>
+                <div style={{fontSize: 22, lineHeight: 1.5, color: C.bone, fontWeight: 700, marginBottom: 8}}>
+                  检察院<BoneHighlight color={C.jade}>应当及时告知</BoneHighlight>委托辩护权
+                </div>
+                <div style={{fontSize: 22, lineHeight: 1.5, color: C.silverInk, fontWeight: 700}}>
+                  未委托 → 应当通知法律援助机构指派律师
+                </div>
+              </PlateCard>
+              <PlateCard style={{flex: 1, height: 330, padding: '14px 16px', borderColor: `${C.amber}55`, ...enter(frame, 80, 22)}}>
+                <div style={{display: 'flex', alignItems: 'center', gap: 9, marginBottom: 10}}>
+                  <Users size={22} strokeWidth={2.5} color={C.amber} />
+                  <span style={{fontSize: 22, fontWeight: 950, color: C.amber}}>近亲属参加</span>
+                </div>
+                <div style={{fontSize: 22, lineHeight: 1.5, color: C.bone, fontWeight: 700, marginBottom: 8}}>
+                  收到起诉书副本后、一审开庭前提出
+                </div>
+                <div style={{fontSize: 22, lineHeight: 1.5, color: C.silverInk, fontWeight: 700}}>
+                  推选一至二人参加；开庭后无权参加
+                </div>
+              </PlateCard>
+              <PlateCard style={{flex: 1, height: 330, padding: '14px 16px', borderColor: `${C.silver}55`, ...enter(frame, 120, 22)}}>
+                <div style={{display: 'flex', alignItems: 'center', gap: 9, marginBottom: 10}}>
+                  <Gavel size={22} strokeWidth={2.5} color={C.silver} />
+                  <span style={{fontSize: 22, fontWeight: 950, color: C.silver}}>一审程序</span>
+                </div>
+                <div style={{fontSize: 22, lineHeight: 1.5, color: C.bone, fontWeight: 700, marginBottom: 8}}>
+                  参照第一审普通程序；有罪判决须证据确实充分
+                </div>
+                <div style={{fontSize: 22, lineHeight: 1.5, color: C.silverInk, fontWeight: 700}}>
+                  罪名不符 → 终止审理；财产可一并处理
+                </div>
+              </PlateCard>
+              <PlateCard style={{flex: 1, height: 330, padding: '14px 16px', borderColor: `${C.cinnabar}55`, ...enter(frame, 160, 22)}}>
+                <div style={{display: 'flex', alignItems: 'center', gap: 9, marginBottom: 10}}>
+                  <Scale size={22} strokeWidth={2.5} color={C.cinnabar} />
+                  <span style={{fontSize: 22, fontWeight: 950, color: C.cinnabar}}>上诉抗诉</span>
+                </div>
+                <div style={{fontSize: 22, lineHeight: 1.5, color: C.bone, fontWeight: 700, marginBottom: 8}}>
+                  被告人、近亲属<BoneHighlight color={C.cinnabar}>有权上诉</BoneHighlight>；检察院应当抗诉
+                </div>
+                <div style={{fontSize: 22, lineHeight: 1.5, color: C.silverInk, fontWeight: 700}}>
+                  辩护人经被告人同意可以提出上诉
+                </div>
+              </PlateCard>
+            </div>
+          </div>
+
+          <div data-final-knowledge="kin-limits-panel" style={{position: 'absolute', inset: 0}}>
+            <PlateCard style={{position: 'absolute', left: 0, top: 360, width: 880, height: 300, padding: '16px 24px', borderColor: `${C.cinnabar}44`, ...enter(frame, 220, 22)}}>
+              <div style={{fontSize: 24, fontWeight: 950, color: C.cinnabar, marginBottom: 12}}>近亲属权利边界</div>
+              <div style={{display: 'flex', flexDirection: 'column', gap: 12}}>
+                <div style={{display: 'flex', gap: 12, alignItems: 'flex-start'}}>
+                  <span style={rimBoxStyle(C.jade)}><CheckCircle2 size={22} strokeWidth={2.5} color={C.jade} /></span>
+                  <span style={{fontSize: 22, lineHeight: 1.5, color: C.bone, fontWeight: 700, paddingTop: 4}}>
+                    可以发表意见、出示证据，申请通知证人鉴定人出庭
+                  </span>
+                </div>
+                <div style={{display: 'flex', gap: 12, alignItems: 'flex-start'}}>
+                  <span style={rimBoxStyle(C.cinnabar)}><Ban size={22} strokeWidth={2.5} color={C.cinnabar} /></span>
+                  <span style={{fontSize: 22, lineHeight: 1.5, color: C.bone, fontWeight: 700, paddingTop: 4}}>
+                    <ExternalNegation iconSize={20}>不是自行辩护</ExternalNegation>——只是代为维护被告人合法权益
+                  </span>
+                </div>
+                <div style={{display: 'flex', gap: 12, alignItems: 'flex-start'}}>
+                  <span style={rimBoxStyle(C.cinnabar)}><XCircle size={22} strokeWidth={2.5} color={C.cinnabar} /></span>
+                  <span style={{fontSize: 22, lineHeight: 1.5, color: C.bone, fontWeight: 700, paddingTop: 4}}>
+                    <ExternalNegation iconSize={20}>无最后陈述环节</ExternalNegation>——最后陈述权专属被告人本人
+                  </span>
+                </div>
+              </div>
+            </PlateCard>
+          </div>
+
+          <div data-final-knowledge="trial-anyway-panel" style={{position: 'absolute', inset: 0}}>
+            <PlateCard style={{position: 'absolute', left: 920, top: 360, width: 880, height: 300, padding: '16px 24px', borderColor: `${C.azure}44`, ...enter(frame, 290, 22)}}>
+              <div style={{fontSize: 24, fontWeight: 950, color: C.azure, marginBottom: 12}}>不来也审原则</div>
+              <div style={{fontSize: 22, lineHeight: 1.7, color: C.bone, fontWeight: 700}}>
+                传票和起诉书副本送达后，被告人<BoneHighlight color={C.azure}>未按要求到案</BoneHighlight>的，
+                人民法院<SilverUnderline color={C.jade}>应当开庭审理</SilverUnderline>，
+                依法作出判决，并对违法所得及其他涉案财产一并作出处理。
+              </div>
+            </PlateCard>
+          </div>
+        </div>
+      </div>
+    </CourierShell>
+  );
+};
+
+// ---------------------------------------------------------------
+// Scene 04 — 到案后与没收衔接
+// ---------------------------------------------------------------
+
+export const AppearanceConfiscationLinkScene: React.FC = () => {
+  const frame = useCurrentFrame();
+
+  return (
+    <CourierShell accent={C.jade} code="22-4" subtitle="审理中到案 · 生效后到案 · 没收程序衔接" title="到案后与没收衔接">
+      <div
+        data-layout="appearance-split-with-confiscation-bridge-and-terminus-banner"
+        data-visual-anchor="timeline-gate"
+        data-text-treatments="chip,soft-highlight,external-negation"
+        data-visual-grammar="mid-trial-appearance-terminates-and-retries,post-effective-appearance-executes-then-objection,confiscation-and-absence-are-independent-special-procedures,two-way-bridging-without-prerequisite"
+        data-focal-channels="contrast,connector,enclosure,annotation"
+        style={{position: 'absolute', inset: 0}}
+      >
+        <div data-focal-rule="两个独立特别程序：互不前置，但可双向衔接" style={{position: 'absolute', inset: 0}}>
+          <Swords
+            size={162}
+            strokeWidth={1.4}
+            style={{position: 'absolute', right: 28, top: 24, color: C.silver, opacity: 0.09}}
+          />
+          <div data-final-knowledge="appearance-split" style={{position: 'absolute', inset: 0}}>
+            <div style={{position: 'absolute', left: 0, top: 6, width: MAIN_WIDTH, display: 'flex', gap: 20}}>
+              <PlateCard style={{flex: 1, height: 302, padding: '16px 24px', borderColor: `${C.jade}66`, ...enter(frame, 0, 24)}}>
+                <div style={{display: 'flex', alignItems: 'center', gap: 10, marginBottom: 12}}>
+                  <span style={rimBoxStyle(C.jade)}><UserRoundCheck size={24} strokeWidth={2.5} color={C.jade} /></span>
+                  <RimChip color={C.jade} label="审理中到案" solid />
+                </div>
+                <div style={{display: 'flex', flexDirection: 'column', gap: 12}}>
+                  <div style={{display: 'flex', gap: 12, alignItems: 'flex-start'}}>
+                    <span style={rimBoxStyle(C.silver)}><Siren size={22} strokeWidth={2.5} color={C.silver} /></span>
+                    <span style={{fontSize: 22, lineHeight: 1.5, color: C.bone, fontWeight: 700, paddingTop: 4}}>
+                      <SilverUnderline color={C.jade}>公安机关</SilverUnderline>应当立即通知人民检察院、人民法院
+                    </span>
+                  </div>
+                  <div style={{display: 'flex', gap: 12, alignItems: 'flex-start'}}>
+                    <span style={rimBoxStyle(C.azure)}><Landmark size={22} strokeWidth={2.5} color={C.azure} /></span>
+                    <span style={{fontSize: 22, lineHeight: 1.5, color: C.bone, fontWeight: 700, paddingTop: 4}}>
+                      裁定<BoneHighlight color={C.cinnabar}>终止审理</BoneHighlight>——检察院依法提起公诉的，人民法院应当重新审理
+                    </span>
+                  </div>
+                  <div style={{display: 'flex', gap: 12, alignItems: 'flex-start'}}>
+                    <span style={rimBoxStyle(C.amber)}><Gavel size={22} strokeWidth={2.5} color={C.amber} /></span>
+                    <span style={{fontSize: 22, lineHeight: 1.5, color: C.bone, fontWeight: 700, paddingTop: 4}}>
+                      管辖：一般由同一人民法院审理；指定管辖的应重新指定
+                    </span>
+                  </div>
+                </div>
+              </PlateCard>
+              <PlateCard style={{flex: 1, height: 302, padding: '16px 24px', borderColor: `${C.cinnabar}66`, ...enter(frame, 60, 24)}}>
+                <div style={{display: 'flex', alignItems: 'center', gap: 10, marginBottom: 12}}>
+                  <span style={rimBoxStyle(C.cinnabar)}><HandMetal size={24} strokeWidth={2.5} color={C.cinnabar} /></span>
+                  <RimChip color={C.cinnabar} label="生效后到案" solid />
+                </div>
+                <div style={{display: 'flex', flexDirection: 'column', gap: 12}}>
+                  <div style={{display: 'flex', gap: 12, alignItems: 'flex-start'}}>
+                    <span style={rimBoxStyle(C.silver)}><Gavel size={22} strokeWidth={2.5} color={C.silver} /></span>
+                    <span style={{fontSize: 22, lineHeight: 1.5, color: C.bone, fontWeight: 700, paddingTop: 4}}>
+                      判决裁定生效后到案 → 先<BoneHighlight color={C.jade}>交付执行刑罚</BoneHighlight>
+                    </span>
+                  </div>
+                  <div style={{display: 'flex', gap: 12, alignItems: 'flex-start'}}>
+                    <span style={rimBoxStyle(C.azure)}><MessageSquareText size={22} strokeWidth={2.5} color={C.azure} /></span>
+                    <span style={{fontSize: 22, lineHeight: 1.5, color: C.bone, fontWeight: 700, paddingTop: 4}}>
+                      告知异议权：收到异议告知后<SilverUnderline color={C.azure}>十日以内</SilverUnderline>可提出异议
+                    </span>
+                  </div>
+                  <div style={{display: 'flex', gap: 12, alignItems: 'flex-start'}}>
+                    <span style={rimBoxStyle(C.cinnabar)}><ScrollText size={22} strokeWidth={2.5} color={C.cinnabar} /></span>
+                    <span style={{fontSize: 22, lineHeight: 1.5, color: C.bone, fontWeight: 700, paddingTop: 4}}>
+                      异议后果：撤销原判裁定 → 检察院公诉 → 重新审理；财产处理错误的应返还赔偿
+                    </span>
+                  </div>
+                </div>
+              </PlateCard>
+            </div>
+          </div>
+
+          <div data-final-knowledge="confiscation-bridge" style={{position: 'absolute', inset: 0}}>
+            <PlateCard style={{position: 'absolute', left: 0, top: 330, width: MAIN_WIDTH, height: 226, padding: '16px 24px', borderColor: `${C.amber}55`, ...enter(frame, 150, 22)}}>
+              <div style={{display: 'flex', alignItems: 'center', gap: 10, marginBottom: 12}}>
+                <Swords size={24} strokeWidth={2.5} color={C.amber} />
+                <span style={{fontSize: 24, fontWeight: 950, color: C.amber}}>与没收程序的衔接</span>
+              </div>
+              <div style={{display: 'flex', gap: 14}}>
+                <div style={{flex: 1, padding: '12px 16px', borderRadius: 6, background: `${C.ridge}88`, ...enter(frame, 190, 14)}}>
+                  <div style={{marginBottom: 6}}>
+                    <ExternalNegation iconSize={20}>不是前置程序</ExternalNegation>
+                  </div>
+                  <div style={{fontSize: 22, lineHeight: 1.55, color: C.silverInk, fontWeight: 700}}>
+                    没收不是缺席的前置程序——事实清楚、证据充分的，可直接提起缺席公诉
+                  </div>
+                </div>
+                <div style={{flex: 1, padding: '12px 16px', borderRadius: 6, background: `${C.jade}14`, ...enter(frame, 230, 14)}}>
+                  <div style={{fontSize: 22, fontWeight: 950, color: C.jade, marginBottom: 6}}>缺席 → 可启动没收</div>
+                  <div style={{fontSize: 22, lineHeight: 1.55, color: C.bone, fontWeight: 700}}>
+                    缺席撤诉或死亡 → 检察院可<BoneHighlight color={C.jade}>另行提出没收违法所得申请</BoneHighlight>
+                  </div>
+                </div>
+                <div style={{flex: 1, padding: '12px 16px', borderRadius: 6, background: `${C.azure}14`, ...enter(frame, 270, 14)}}>
+                  <div style={{fontSize: 22, fontWeight: 950, color: C.azure, marginBottom: 6}}>没收 → 可启动缺席</div>
+                  <div style={{fontSize: 22, lineHeight: 1.55, color: C.bone, fontWeight: 700}}>
+                    没收裁定后认为仍有必要的，可另行依照刑诉法提起公诉进行缺席审判
+                  </div>
+                </div>
+              </div>
+            </PlateCard>
+          </div>
+
+          <div data-final-knowledge="terminus-banner" style={{position: 'absolute', inset: 0}}>
+            <PlateCard style={{position: 'absolute', left: 0, top: 580, width: MAIN_WIDTH, height: 100, padding: '14px 24px', backgroundImage: `linear-gradient(90deg, ${C.ridge}, ${C.onyx})`, ...enter(frame, 340, 18)}}>
+              <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 18}}>
+                <StampMark text="双向独立" delay={370} />
+                <span style={{fontSize: 22, lineHeight: 1.5, color: C.bone, fontWeight: 700}}>
+                  缺席审判与违法所得没收程序是<BoneHighlight color={C.amber}>两个独立的特别程序</BoneHighlight>，互不前置但可双向衔接
+                </span>
+              </div>
+            </PlateCard>
+          </div>
+        </div>
+      </div>
+    </CourierShell>
+  );
+};
+
+// ---------------------------------------------------------------
+// MAIN COMPOSITION
+// ---------------------------------------------------------------
+
+export const OnyxCourier: React.FC = () => (
+  <AbsoluteFill
+    data-player-control-safe-bottom={PLAYER_CONTROL_SAFE_BOTTOM}
+    style={{backgroundColor: C.onyxDeep, width: 1920, height: 1080}}
+  >
+    <TimelineSequence name="01" start={SCENES['eligibility-panorama'].start} duration={SCENES['eligibility-panorama'].duration}>
+      <EligibilityPanoramaScene />
+    </TimelineSequence>
+    <TimelineSequence name="02" start={SCENES['state-terror-corruption-deep-dive'].start} duration={SCENES['state-terror-corruption-deep-dive'].duration}>
+      <StateTerrorCorruptionScene />
+    </TimelineSequence>
+    <TimelineSequence name="03" start={SCENES['procedural-safeguards-chain'].start} duration={SCENES['procedural-safeguards-chain'].duration}>
+      <ProceduralSafeguardsChainScene />
+    </TimelineSequence>
+    <TimelineSequence name="04" start={SCENES['appearance-confiscation-link'].start} duration={SCENES['appearance-confiscation-link'].duration}>
+      <AppearanceConfiscationLinkScene />
+    </TimelineSequence>
+  </AbsoluteFill>
+);

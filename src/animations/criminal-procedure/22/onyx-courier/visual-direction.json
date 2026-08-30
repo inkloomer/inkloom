@@ -1,1 +1,24 @@
-{"directionId": "onyx-courier", "family": "courier-family", "palette": {"primary": "#1A1A1D", "surface": "#0F0F11", "ridge": "#2D2D33", "accent": "#C8CED6", "accentSoft": "#E8ECF2", "accentInk": "#8A919E", "warm": "#D4A017", "warmInk": "#9A7309", "warmSoft": "#F5EDD3", "cool": "#2E6B8A", "coolInk": "#1E4A5E", "coolSoft": "#D4E8F2", "bone": "#F0EBE3", "ink": "#2A2524", "inkSoft": "#6B6370", "alert": "#B83B3B", "alertInk": "#8A2828", "alertSoft": "#F2D6D6", "ok": "#3A8F72", "okInk": "#26634D", "okSoft": "#D4EDE4"}, "conceptTokens": {"公安机关": "Siren", "人民检察院": "Landmark", "人民法院": "Gavel", "被告人": "UserRoundPen", "近亲属": "Users", "缺席审判": "Globe", "送达": "Send", "辩护权": "ShieldCheck", "上诉": "Scale", "没收程序": "Swords", "高检核": "Landmark"}, "catalog": {"status": "featured", "source": "original-node", "route": "/inkloom/objective/criminal-procedure/22/onyx-courier/", "title": "缟玛瑙信使"}}
+{
+  "directionId": "onyx-courier-absentia",
+  "family": "courier-family",
+  "palette": "onyx black ground, silver ridge lines, bone text, amber dispatch accents, azure safeguards, cinnabar prohibitions, jade approvals",
+  "typography": "WenKai courier headings with silver ridge grid and amber unit plates",
+  "composition": "a four-case quadrant over principle and mnemonic bands, a four-condition row above scope panels, a five-step flow chain beside restriction panels, and an appearance split bridged by a confiscation triptych",
+  "surface": "polished onyx wall with silver ridge lines, dark plate cards with colored rims, cinnabar stamps",
+  "motion": "case cards land quadrant by quadrant, condition plates light up in order, the flow chain advances step by step, and the confiscation bridge ties the two special procedures together",
+  "transition": "the onyx ground, silver ridge grid and courier header persist while the plate cards are replaced",
+  "conceptTokens": {
+    "公安机关": "Siren",
+    "人民检察院": "Landmark",
+    "人民法院": "Gavel",
+    "送达": "Send",
+    "辩护权": "ShieldCheck",
+    "没收程序": "Swords"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/criminal-procedure/22/onyx-courier/",
+    "title": "缟玛瑙信使"
+  }
+}

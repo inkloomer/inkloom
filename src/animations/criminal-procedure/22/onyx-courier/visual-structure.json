@@ -1,1 +1,75 @@
-{"version": 1, "playerControlSafeBottom": 160, "minimumDistinctLayouts": 4, "scenes": [{"id": "eligibility-panorama", "layout": "eligibility-four-quadrant", "anchor": "boundary", "grammar": ["四类适用对象以2×2网格呈现，每卡含图标+标签+条件说明+管辖标注", "原则横幅强调'被告人到场受审为原则，缺席为例外'", "口诀记忆带以渐变底色呈现四个关键词"], "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation"], "focalChannels": ["contrast", "enclosure", "spatial", "annotation"], "tokens": ["Siren", "HeartPulse", "UserRoundX", "ScrollText", "CircleAlert", "Ban", "BookOpen"], "finalKnowledge": "缺席审判适用于国恐贪/病半年/死无罪/死再审四类情形；国恐贪须中院一审，其余基层也可审", "statefulObjects": []}, {"id": "state-terror-corruption-deep-dive", "layout": "stc-deep-dive-quadrant", "anchor": "concept-icon", "grammar": ["四条件以等宽横向卡片排列（重国恐·在境外·及时审·高检核）", "范围限制与数罪共犯规则分左右两面板展示", "关键区分印章：高检核≠最高法"], "textTreatments": ["chip", "label-block", "external-negation", "stamp", "soft-highlight"], "focalChannels": ["contrast", "icon", "enclosure", "locator"], "tokens": ["ShieldAlert", "Globe", "Hourglass", "Landmark", "FileDigitale", "XCircle", "ScrollText", "Plane", "Users", "Ban"], "finalKnowledge": "国恐贪需同时满足四条件且由最高检核准；只限贪污贿赂不含渎职；数罪/共犯可部分适用", "statefulObjects": []}, {"id": "procedural-safeguards-chain", "layout": "safeguards-horizontal-flow", "anchor": "flow-path", "grammar": ["五步流程以横向等宽卡片链式排列（送达→辩护→近亲属→一审→上诉）", "近亲属权利边界与不来也审原则分左右两面板", "Workflow图标连接相邻步骤"], "textTreatments": ["chip", "label-block", "external-negation", "soft-highlight", "thin-underline"], "focalChannels": ["connector", "contrast", "enclosure", "annotation"], "tokens": ["Send", "ShieldCheck", "Users", "Gavel", "Scale", "CheckCircle2", "Ban", "XCircle", "Workflow"], "finalKnowledge": "送达可用司法协助或所在地法律允许的方式；近亲属可发表意见但非自行辩护、无最后陈述环节；不来也审应当开庭判决", "statefulObjects": []}, {"id": "appearance-confiscation-link", "layout": "appearance-confiscation-split", "anchor": "timeline-gate", "grammar": ["两种到案情形（审理中/生效后）分左右面板对比", "没收程序衔接以三栏卡片展示双向独立关系", "底部终结横幅强调两个特别程序互不前置但可衔接"], "textTreatments": ["chip", "label-block", "soft-highlight", "external-negation", "stamp", "thin-underline"], "focalChannels": ["contrast", "connector", "enclosure", "annotation"], "tokens": ["UserRoundCheck", "HandMetal", "Siren", "Landmark", "Gavel", "MessageSquareText", "ScrollText", "Swords", "Ban"], "finalKnowledge": "审理中到案终止审理重新审理；生效后先交付执行十日内可提异议；没收与缺席是独立特别程序可双向衔接", "statefulObjects": []}]}
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "eligibility-panorama",
+      "export": "EligibilityPanoramaScene",
+      "layout": "four-case-quadrant-with-principle-and-mnemonic-bands",
+      "anchor": "boundary",
+      "grammar": [
+        "four-case-quadrant-splits-absence-eligibility",
+        "presence-at-trial-is-the-principle-absence-the-exception",
+        "mnemonic-guo-ke-bing-si-si-names-the-four",
+        "intermediate-court-for-gkt-basic-court-for-the-rest"
+      ],
+      "textTreatments": ["chip", "thin-underline", "soft-highlight", "external-negation"],
+      "focalChannels": ["contrast", "enclosure", "icon", "annotation"],
+      "tokens": ["Send"],
+      "finalKnowledge": ["case-quadrant", "principle-banner", "mnemonic-band"],
+      "statefulObjects": []
+    },
+    {
+      "id": "state-terror-corruption-deep-dive",
+      "export": "StateTerrorCorruptionScene",
+      "layout": "four-condition-row-with-scope-panels-and-approval-stamp",
+      "anchor": "concept-icon",
+      "grammar": [
+        "four-conditions-need-grave-crime-abroad-timely-trial-and-procuratorate-approval",
+        "scope-limits-confession-cases-only-never-misconduct",
+        "partial-crimes-and-abroad-accomplices-may-still-apply",
+        "approval-rests-with-supreme-procuratorate-not-court"
+      ],
+      "textTreatments": ["chip", "label-block", "external-negation", "soft-highlight"],
+      "focalChannels": ["contrast", "icon", "enclosure", "annotation"],
+      "tokens": ["Landmark"],
+      "finalKnowledge": ["condition-row", "scope-panels", "approval-stamp"],
+      "statefulObjects": []
+    },
+    {
+      "id": "procedural-safeguards-chain",
+      "export": "ProceduralSafeguardsChainScene",
+      "layout": "five-step-flow-with-restriction-panels",
+      "anchor": "flow-path",
+      "grammar": [
+        "service-reaches-the-defendant-abroad-before-the-hearing",
+        "defense-counsel-notice-and-legal-aid-protect-the-defense",
+        "close-kin-participate-without-becoming-defense-counsel",
+        "trial-and-appeal-follow-the-first-instance-pattern"
+      ],
+      "textTreatments": ["chip", "label-block", "external-negation", "thin-underline"],
+      "focalChannels": ["connector", "contrast", "enclosure", "annotation"],
+      "tokens": ["ScrollText"],
+      "finalKnowledge": ["flow-chain", "kin-limits-panel", "trial-anyway-panel"],
+      "statefulObjects": []
+    },
+    {
+      "id": "appearance-confiscation-link",
+      "export": "AppearanceConfiscationLinkScene",
+      "layout": "appearance-split-with-confiscation-bridge-and-terminus-banner",
+      "anchor": "timeline-gate",
+      "grammar": [
+        "mid-trial-appearance-terminates-and-retries",
+        "post-effective-appearance-executes-then-objection",
+        "confiscation-and-absence-are-independent-special-procedures",
+        "two-way-bridging-without-prerequisite"
+      ],
+      "textTreatments": ["chip", "soft-highlight", "external-negation"],
+      "focalChannels": ["contrast", "connector", "enclosure", "annotation"],
+      "tokens": ["Swords"],
+      "finalKnowledge": ["appearance-split", "confiscation-bridge", "terminus-banner"],
+      "statefulObjects": []
+    }
+  ]
+}
