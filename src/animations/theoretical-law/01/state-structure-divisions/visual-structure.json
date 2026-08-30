@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "playerControlSafeBottom": 176,
+  "scenes": [
+    {
+      "id": "structure-form",
+      "export": "StructureFormScene",
+      "layout": "single-state-plate-with-institution-pair",
+      "anchor": "role-pair",
+      "grammar": ["unitary-form-plate", "autonomy-institution", "sar-institution"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "thin-underline"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["Flag", "Landmark", "Users"],
+      "finalKnowledge": [
+        "structure-heading",
+        "unitary-plate",
+        "institution-pair"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "division-ladder",
+      "export": "DivisionLadderScene",
+      "layout": "four-tier-block-ladder",
+      "anchor": "typographic-sequence",
+      "grammar": ["province-tier", "city-county-tiers", "township-tier"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "thin-underline"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["Map", "Building2", "Home"],
+      "finalKnowledge": [
+        "ladder-heading",
+        "tier-ladder",
+        "three-tier-note",
+        "local-kinds-note"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "change-approval",
+      "export": "ChangeApprovalScene",
+      "layout": "approval-fork-with-dispute-flow",
+      "anchor": "document-fork",
+      "grammar": ["congress-approval-lane", "council-approval-lane", "dispute-flow-strip"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "stamp"],
+      "focalChannels": ["icon", "contrast", "connector", "spatial", "annotation"],
+      "tokens": ["Landmark", "Building2", "GitBranch"],
+      "finalKnowledge": [
+        "approval-heading",
+        "approval-fork",
+        "dispute-flow-strip",
+        "rule-mnemonic"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

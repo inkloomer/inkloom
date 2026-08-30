@@ -1,0 +1,16 @@
+{
+  "directionId": "atlas-marker-board",
+  "family": "territory-atlas-survey",
+  "palette": "sepia atlas ground + province-block panels + vermilion boundary strokes + stone-marker gray + dark place-name ink + brass marker pins",
+  "typography": "place-name headings on province blocks, dark atlas label tabs with vermilion left bar, vermilion stamps reserved for approval verdicts, brass chips for tier names, thin ink underline for rules",
+  "composition": "the single-state form hangs as one atlas plate with two institutional insets; the divisions climb as a four-tier block ladder with a three-tier note; the approval scene forks the national congress and state council lanes over a dispute-flow strip",
+  "surface": "flat sepia atlas ground with faint contour hairlines, block panels with hairline weathered borders and corner marker pins, no gradients, no rounded cards, no drop shadows",
+  "motion": "province blocks settle onto the atlas, boundary strokes draw between tiers, the approval fork arms swing to their lanes, the dispute flow ticks step by step",
+  "transition": "a boundary stroke redraws and the atlas clears for the next survey",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/theoretical-law/01/state-structure-divisions/",
+    "title": "舆图界碑"
+  }
+}

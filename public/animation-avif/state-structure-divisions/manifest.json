@@ -1,0 +1,70 @@
+{
+  "animationId": "state-structure-divisions",
+  "compositionId": "StateStructureDivisions",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-30T00:48:50.693Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 263,
+      "frameCount": 264,
+      "id": "structure-form",
+      "number": "01",
+      "startFrame": 0,
+      "title": "单一制与两大制度",
+      "durationMs": 8800,
+      "file": "structure-form.avif",
+      "fileSize": 345920,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "3cf39b4c44c985e5a3e9c416239885096e4e3ef045b049c9102c8c10c6a67447",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "7c4b8857f567c549978d12db098632d0d21d3abc98554af826d9cec1ddc48f71"
+    },
+    {
+      "endFrame": 527,
+      "frameCount": 264,
+      "id": "division-ladder",
+      "number": "02",
+      "startFrame": 264,
+      "title": "行政区划四级",
+      "durationMs": 8800,
+      "file": "division-ladder.avif",
+      "fileSize": 300861,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "fc7401bb8f8c383774f9ddc8d894c85652ce002f9825014f060393b55d77271f",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "7c4b8857f567c549978d12db098632d0d21d3abc98554af826d9cec1ddc48f71"
+    },
+    {
+      "endFrame": 815,
+      "frameCount": 288,
+      "id": "change-approval",
+      "number": "03",
+      "startFrame": 528,
+      "title": "变更批准与争议处理",
+      "durationMs": 9600,
+      "file": "change-approval.avif",
+      "fileSize": 498896,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "0ed1d55b6c612f97f01d658f416cbb53c2f96b3ddee60c95ec90bf16cd2d51c4",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "7c4b8857f567c549978d12db098632d0d21d3abc98554af826d9cec1ddc48f71"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "7c4b8857f567c549978d12db098632d0d21d3abc98554af826d9cec1ddc48f71",
+  "targetFps": 30,
+  "totalFileSize": 1145677
+}
