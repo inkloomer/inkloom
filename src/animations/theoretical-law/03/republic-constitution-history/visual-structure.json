@@ -1,0 +1,111 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "playerControlSafeBottom": 176,
+  "scenes": [
+    {
+      "id": "linshi-yuefa",
+      "export": "LinshiYuefaScene",
+      "layout": "first-constitution-headline-panel",
+      "anchor": "concept-icon",
+      "grammar": [
+        "linshi-definition",
+        "anti-yuan-strategy",
+        "first-status-stamp"
+      ],
+      "textTreatments": [
+        "label-block",
+        "chip",
+        "soft-highlight",
+        "stamp"
+      ],
+      "focalChannels": [
+        "icon",
+        "contrast",
+        "enclosure",
+        "spatial",
+        "annotation"
+      ],
+      "tokens": [
+        "Landmark",
+        "Users"
+      ],
+      "finalKnowledge": [
+        "linshi-heading",
+        "linshi-panel",
+        "first-status-stamp"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "tiantan-yuanji",
+      "export": "TiantanYuanjiScene",
+      "layout": "dual-era-conflict-panel",
+      "anchor": "document-fork",
+      "grammar": [
+        "tiantan-panel",
+        "yuanji-panel",
+        "conflict-note"
+      ],
+      "textTreatments": [
+        "label-block",
+        "chip",
+        "soft-highlight",
+        "stamp"
+      ],
+      "focalChannels": [
+        "icon",
+        "contrast",
+        "enclosure",
+        "spatial",
+        "annotation"
+      ],
+      "tokens": [
+        "ScrollText",
+        "Landmark"
+      ],
+      "finalKnowledge": [
+        "conflict-heading",
+        "tiantan-panel",
+        "yuanji-panel",
+        "conflict-note"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "huixuan-1947",
+      "export": "Huixuan1947Scene",
+      "layout": "before-after-comparison-columns",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "huixuan-panel",
+        "constitution-1947-panel",
+        "era-summary-note"
+      ],
+      "textTreatments": [
+        "label-block",
+        "chip",
+        "soft-highlight",
+        "stamp"
+      ],
+      "focalChannels": [
+        "icon",
+        "contrast",
+        "enclosure",
+        "spatial",
+        "annotation"
+      ],
+      "tokens": [
+        "BookOpen",
+        "Scale"
+      ],
+      "finalKnowledge": [
+        "huixuan-heading",
+        "huixuan-panel",
+        "constitution-1947-panel",
+        "era-summary-note"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

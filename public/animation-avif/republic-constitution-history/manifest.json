@@ -1,0 +1,70 @@
+{
+  "animationId": "republic-constitution-history",
+  "compositionId": "RepublicConstitutionHistory",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-30T04:26:09.436Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 263,
+      "frameCount": 264,
+      "id": "linshi-yuefa",
+      "number": "01",
+      "startFrame": 0,
+      "title": "临时约法",
+      "durationMs": 8800,
+      "file": "linshi-yuefa.avif",
+      "fileSize": 235290,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "b43012f0a731a41c792263b10a215bf570b9cf6119e9f51486a0e222b7b193dc",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "d1cb1a1226213b4ce8593eac57986c70d122284662ebe0f1406eeec7c5e78038"
+    },
+    {
+      "endFrame": 527,
+      "frameCount": 264,
+      "id": "tiantan-yuanji",
+      "number": "02",
+      "startFrame": 264,
+      "title": "天坛宪草与袁记约法",
+      "durationMs": 8800,
+      "file": "tiantan-yuanji.avif",
+      "fileSize": 302177,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "01c5d9801ac2bd83500a579add9b1fbb3eb64a0d0061b4bbac042f3a0879bd5a",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "d1cb1a1226213b4ce8593eac57986c70d122284662ebe0f1406eeec7c5e78038"
+    },
+    {
+      "endFrame": 815,
+      "frameCount": 288,
+      "id": "huixuan-1947",
+      "number": "03",
+      "startFrame": 528,
+      "title": "贿选宪法与1947宪法",
+      "durationMs": 9600,
+      "file": "huixuan-1947.avif",
+      "fileSize": 414006,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "22211819019f4f7ca18cda0c8da73621aa12ab6bc4f58b2f4dea80c7a26b350a",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "d1cb1a1226213b4ce8593eac57986c70d122284662ebe0f1406eeec7c5e78038"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "d1cb1a1226213b4ce8593eac57986c70d122284662ebe0f1406eeec7c5e78038",
+  "targetFps": 30,
+  "totalFileSize": 951473
+}

@@ -1,0 +1,16 @@
+{
+  "directionId": "republic-newsprint-chronicle",
+  "family": "roc-newsprint-chronicle",
+  "palette": "aged newsprint sepia ground + cream article panels + ink brush annotations + vermillion date stamps + dark headline ink",
+  "typography": "headline ink on newsprint panels, dark chronicle label tabs with vermillion left bar, vermillion stamps reserved for era verdicts, ink chips for document names, thin ink underline for dates",
+  "composition": "the timeline unfolds as a newsprint chronicle with date-stamped article panels; the first and second scenes cover the early experimental period; the third scene contrasts the 1923 and 1947 constitutions as a before-after comparison",
+  "surface": "flat aged sepia ground with faint newsprint texture hairlines, cream panels with hairline weathered borders and corner date stamps, no gradients, no rounded cards, no drop shadows",
+  "motion": "newsprint panels unfold chronologically, date stamps land with a press, era verdicts stamp once, the comparison columns unfurl side by side",
+  "transition": "a newsprint page turns and the chronicle clears for the next era",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/theoretical-law/03/republic-constitution-history/",
+    "title": "民国宪政报"
+  }
+}

@@ -239,6 +239,7 @@ import {typography as typographyRea} from '../animations/theoretical-law/01/regi
 import {typography as typographySar} from '../animations/theoretical-law/01/special-administrative-regions/animation.meta';
 import {typography as typographyZhou} from '../animations/theoretical-law/03/zhou-legal-history/animation.meta';
 import {typography as typographySaw} from '../animations/theoretical-law/03/spring-autumn-warring-states/animation.meta';
+import {typography as typographyRch} from '../animations/theoretical-law/03/republic-constitution-history/animation.meta';
 import {typography as typographyHan} from '../animations/theoretical-law/03/han-confucianization/animation.meta';
 import {typography as typographyWjn} from '../animations/theoretical-law/03/wei-jin-nanbei-chaodai/animation.meta';
 import {typography as typographyTcl} from '../animations/theoretical-law/03/tang-code-liuzang-liusha/animation.meta';
@@ -497,6 +498,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'special-administrative-regions': {metadata: typographySar, scope: {animationId: 'special-administrative-regions', subject: 'theoretical-law', topic: '01'}},
   'zhou-legal-history': {metadata: typographyZhou, scope: {animationId: 'zhou-legal-history', subject: 'theoretical-law', topic: '03'}},
   'spring-autumn-warring-states': {metadata: typographySaw, scope: {animationId: 'spring-autumn-warring-states', subject: 'theoretical-law', topic: '03'}},
+  'republic-constitution-history': {metadata: typographyRch, scope: {animationId: 'republic-constitution-history', subject: 'theoretical-law', topic: '03'}},
   'han-confucianization': {metadata: typographyHan, scope: {animationId: 'han-confucianization', subject: 'theoretical-law', topic: '03'}},
   'wei-jin-nanbei-chaodai': {metadata: typographyWjn, scope: {animationId: 'wei-jin-nanbei-chaodai', subject: 'theoretical-law', topic: '03'}},
   'tang-code-liuzang-liusha': {metadata: typographyTcl, scope: {animationId: 'tang-code-liuzang-liusha', subject: 'theoretical-law', topic: '03'}},
