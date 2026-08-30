@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "playerControlSafeBottom": 168,
+  "scenes": [
+    {
+      "id": "harm-fact-ladder",
+      "export": "HarmFactLadderScene",
+      "layout": "mercury-tier-column-board",
+      "anchor": "flow-path",
+      "grammar": ["hazard-grade-ladder", "conduct-result-pairing"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
+      "tokens": ["Zap", "Compass", "Crosshair"],
+      "finalKnowledge": [
+        "tier-abstract",
+        "tier-concrete",
+        "tier-actual",
+        "pair-conduct-result",
+        "pair-conduct-side",
+        "pair-result-side",
+        "pair-floor-note"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "aggravated-structure",
+      "export": "AggravatedStructureScene",
+      "layout": "aggravated-structure-panels",
+      "anchor": "comparison-axis",
+      "grammar": ["base-upgrade-stack", "statute-list-split"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "connector"],
+      "tokens": ["GraduationCap", "Maximize2"],
+      "finalKnowledge": [
+        "struct-column",
+        "struct-luzhishen-case",
+        "struct-imaginery-pair",
+        "statute-negligent-list",
+        "statute-intent-list",
+        "statute-trap-floor"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "causation-source-dial",
+      "export": "CausationSourceDialScene",
+      "layout": "purpose-concurrence-source-row",
+      "anchor": "typographic-sequence",
+      "grammar": ["purpose-act-identity", "intervener-two-step"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "connector"],
+      "tokens": ["ArrowLeftRight"],
+      "finalKnowledge": [
+        "case-subdue-row",
+        "case-anger-row",
+        "case-bite-row",
+        "case-escape-row",
+        "case-corpse-note",
+        "intervener-board",
+        "intervener-floor"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

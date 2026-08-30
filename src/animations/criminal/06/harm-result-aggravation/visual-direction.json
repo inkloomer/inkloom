@@ -1,0 +1,23 @@
+{
+  "directionId": "mercury-grade-thermometer",
+  "family": "mercury-grade-thermometer",
+  "palette": "玻璃雾白 glass + 水银柱朱红 mercury + 黄铜刻度 brass + 石板深灰 scale + 冷青 cool + 暖橙 warm",
+  "typography": "heavy gauge headings, pill dial chips, tier label blocks, double-frame gauge verdicts",
+  "composition": "a thermometer column grades harm from presumed danger to actual injury; statute lists flank the column; the causation dial traces which heat source drove the mercury",
+  "surface": "frosted glass ground with fine scale lines, pill chips, tier boards, double-frame gauge stamps; no glossy panels",
+  "motion": "mercury tiers light bottom-up, statute panels split the lists, verdict gauges land on the dial; no idle loops",
+  "transition": "the scale ground persists while each scene mounts a new gauge board",
+  "conceptTokens": {
+    "危险": "Zap",
+    "实害": "Crosshair",
+    "升格": "Maximize2",
+    "因果": "ArrowLeftRight",
+    "案例": "GraduationCap"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/criminal/06/harm-result-aggravation/",
+    "title": "水银刻度房"
+  }
+}

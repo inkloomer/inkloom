@@ -1,0 +1,70 @@
+{
+  "animationId": "harm-result-aggravation",
+  "compositionId": "HarmResultAggravation",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-30T08:11:42.543Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 239,
+      "frameCount": 240,
+      "id": "harm-fact-ladder",
+      "number": "01",
+      "startFrame": 0,
+      "title": "法益侵害事实·三级刻度",
+      "durationMs": 8000,
+      "file": "harm-fact-ladder.avif",
+      "fileSize": 524664,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "df502f7cb2cfa2f116996f6e817146539c237fd813766f62b9c102b64842cb6e",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "db572133f383cdcae710bea8c6a5443b27eabea40d439bc7360f92c88831f343"
+    },
+    {
+      "endFrame": 489,
+      "frameCount": 250,
+      "id": "aggravated-structure",
+      "number": "02",
+      "startFrame": 240,
+      "title": "结果加重犯·结构·法定性",
+      "durationMs": 8333,
+      "file": "aggravated-structure.avif",
+      "fileSize": 547578,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "80ac3fc0b69203ae9def1b41846dee5a4a0073b959517ee1d036e4b56f0cddc0",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "2726138d58eeb809302926bddc179913d7251f879562fb89e17c6cfda06f9e96"
+    },
+    {
+      "endFrame": 739,
+      "frameCount": 250,
+      "id": "causation-source-dial",
+      "number": "03",
+      "startFrame": 490,
+      "title": "因果·因的辨认",
+      "durationMs": 8333,
+      "file": "causation-source-dial.avif",
+      "fileSize": 487851,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "d6a88c899a19581e0d3d218e41a4cdac19f18b65c6e42c16fd65903b0a964c9e",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "73cfac7236217ebd977874705114107da5e378669634d2a9e4168a65fb0e06d6"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "5ad5ba8e23df2778cd78850658e618a3443e00d13dc35fcd5ae178e25475bd38",
+  "targetFps": 30,
+  "totalFileSize": 1560093
+}

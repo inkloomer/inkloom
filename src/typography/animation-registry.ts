@@ -233,6 +233,7 @@ import {typography as typographyAutoCrimeConstitutionAtlas} from '../animations/
 import {typography as typographyAutoInterestRightsBalance} from '../animations/criminal/03/interest-rights-balance/animation.meta';
 import {typography as typographyAutoIdentityUnitSubject} from '../animations/criminal/04/identity-unit-subject/animation.meta';
 import {typography as typographyAutoConductOmissionGates} from '../animations/criminal/05/conduct-omission-gates/animation.meta';
+import {typography as typographyAutoHarmResultAggravation} from '../animations/criminal/06/harm-result-aggravation/animation.meta';
 import {typography as typographyBel} from '../animations/commercial-economic-law/01/branch-wallet-ledger/animation.meta';
 import {typography as typographyVpf} from '../animations/commercial-economic-law/01/veil-piercing-forge/animation.meta';
 import {typography as typographyOph} from '../animations/criminal-procedure-gold/01/overview-porcelain-hall/animation.meta';
@@ -505,6 +506,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'interest-rights-balance': {metadata: typographyAutoInterestRightsBalance, scope: {animationId: 'interest-rights-balance', subject: 'criminal', topic: '03'}},
   'identity-unit-subject': {metadata: typographyAutoIdentityUnitSubject, scope: {animationId: 'identity-unit-subject', subject: 'criminal', topic: '04'}},
   'conduct-omission-gates': {metadata: typographyAutoConductOmissionGates, scope: {animationId: 'conduct-omission-gates', subject: 'criminal', topic: '05'}},
+  'harm-result-aggravation': {metadata: typographyAutoHarmResultAggravation, scope: {animationId: 'harm-result-aggravation', subject: 'criminal', topic: '06'}},
   'branch-wallet-ledger': {metadata: typographyBel, scope: {animationId: 'branch-wallet-ledger', subject: 'commercial-economic-law', topic: '01'}},
   'veil-piercing-forge': {metadata: typographyVpf, scope: {animationId: 'veil-piercing-forge', subject: 'commercial-economic-law', topic: '01'}},
   'overview-porcelain-hall': {metadata: typographyOph, scope: {animationId: 'overview-porcelain-hall', subject: 'criminal-procedure-gold', topic: '01'}},
