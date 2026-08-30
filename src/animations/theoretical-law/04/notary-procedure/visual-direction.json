@@ -1,0 +1,15 @@
+{
+  "directionId": "dual-notary-stamp",
+  "family": "notary-stamp-desk",
+  "title": "双人协办章",
+  "subject": "theoretical-law",
+  "chapter": "04",
+  "concept": "双人协办章：须本人申办与不得代理以双印对照，二人共同办理的三类事项各盖双人章。图形层主题；画面文字一律使用源笔记法考名词",
+  "palette": "章台 procedure #2F3330、深章 procedureDeep #242826、面板 panel #F0EBDA、暗面板 panelDim #E1DCC7、镶边 edge #5E7168、墨字 ink #22302A、淡墨 inkSoft #516260、双章紫 dual #7C5AA6、亲办朱 personal #B04834、协办青 joint #4E7D74、纸白 paper #F6F1E0",
+  "typography": "标题用 var(--inkloom-animation-title)，正文用 var(--inkloom-animation-body)；章台行加粗法考名词，双人章用对章",
+  "composition": "代理双印对照 + 三类双人章行 + 源名词口诀带",
+  "surface": "章台木纹 + 双章对纹 + 口诀带纸纹",
+  "motion": "双印钤落、对章并盖、口诀点亮",
+  "transition": "硬切换幕",
+  "catalog": ["考点82 公证程序的特别规定"]
+}

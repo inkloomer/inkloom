@@ -1,0 +1,29 @@
+{
+  "animationId": "notary-procedure",
+  "scenes": [
+    {
+      "id": "agency",
+      "export": "AgencyScene",
+      "layout": "agency-dual-stamps",
+      "anchor": "main center",
+      "grammar": "公证代理对照：可以委托他人代理 对 不得委托代理（遗嘱·生存状况·收养关系等应当由本人申办的公证事项），现场监督类公证2人共同办理",
+      "textTreatments": ["stamp plaques", "dual seals"],
+      "focalChannels": ["no-agency list", "two-person note"],
+      "tokens": ["UserCheck", "Ban", "Users"],
+      "finalKnowledge": "agency-rules",
+      "statefulObjects": ["stamp panel x2"]
+    },
+    {
+      "id": "joint",
+      "export": "JointScene",
+      "layout": "three-joint-stamps",
+      "anchor": "main center",
+      "grammar": "三人行：现场监督类·遗嘱公证·保全证据公证均2人共同办理，遗嘱公证全程亲自办理+特殊情况1名公证员+1名见证人签名盖章，保全证据亲自外出+违法取证不予办理",
+      "textTreatments": ["joint chips", "witness seals"],
+      "focalChannels": ["three joint types", "witness rule"],
+      "tokens": ["Users", "UserCheck", "Ban"],
+      "finalKnowledge": "joint-handling",
+      "statefulObjects": ["joint panel x3"]
+    }
+  ]
+}

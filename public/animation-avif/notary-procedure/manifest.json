@@ -1,0 +1,53 @@
+{
+  "animationId": "notary-procedure",
+  "compositionId": "NotaryProcedure",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-30T19:23:53.002Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 215,
+      "frameCount": 216,
+      "id": "agency",
+      "number": "01",
+      "startFrame": 0,
+      "title": "公证代理与现场监督类公证",
+      "durationMs": 7200,
+      "file": "agency.avif",
+      "fileSize": 351944,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "6c74750799c07d3046b54b003fcfc3a2ba12b50270fb7413f08321508ddf1a67",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "41f0c0a53299ca52060803fba81a0358913ed13136b3f608e0000ba2683ca974"
+    },
+    {
+      "endFrame": 431,
+      "frameCount": 216,
+      "id": "joint",
+      "number": "02",
+      "startFrame": 216,
+      "title": "三类公证·二人共同办理",
+      "durationMs": 7200,
+      "file": "joint.avif",
+      "fileSize": 480543,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "26689a7fc8fce14c7d2b931c7bfffc2c1c1566494f2623e3a6f013988af95bb6",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "41f0c0a53299ca52060803fba81a0358913ed13136b3f608e0000ba2683ca974"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "41f0c0a53299ca52060803fba81a0358913ed13136b3f608e0000ba2683ca974",
+  "targetFps": 30,
+  "totalFileSize": 832487
+}
