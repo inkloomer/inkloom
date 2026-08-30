@@ -1,0 +1,65 @@
+{
+  "animationId": "npc-standing-committee",
+  "scenes": [
+    {
+      "id": "composition",
+      "export": "CompositionScene",
+      "layout": "twin-seat-hall",
+      "anchor": "main center",
+      "grammar": "双席对照：全国人大（≤3000人·任期5年·换届程序）与全人常（构成·专职·委员长会议），底部四个2/3金印",
+      "textTreatments": ["seat plaque", "icon-chip rows"],
+      "focalChannels": ["seat headings", "four two-thirds stamps"],
+      "tokens": ["Users", "Hourglass", "UserCog", "Crown"],
+      "finalKnowledge": ["npc-composition", "sc-composition-tenure"],
+      "statefulObjects": ["seat panel x2"]
+    },
+    {
+      "id": "supervision-legislation",
+      "export": "SupervisionLegislationScene",
+      "layout": "twin-seat-hall",
+      "anchor": "main center",
+      "grammar": "左席监督方式五法（听报告/提质询/做调查/搞检查/炒鱿鱼），右席立法权分工，底带监察委报告与执法检查专属",
+      "textTreatments": ["seat plaque", "icon-chip rows"],
+      "focalChannels": ["supervision verbs", "legislation split"],
+      "tokens": ["Ear", "MessageCircleQuestion", "Search", "ClipboardCheck", "Gavel", "FileSignature", "ScrollText", "PenLine"],
+      "finalKnowledge": ["supervision-methods", "legislation-powers"],
+      "statefulObjects": ["seat panel x2"]
+    },
+    {
+      "id": "personnel",
+      "export": "PersonnelScene",
+      "layout": "three-step-red-carpet",
+      "anchor": "main center",
+      "grammar": "红毯三步：选举（主席团提名）→决定（提名链）→任免（人常对两院一委副职），底带口诀金印",
+      "textTreatments": ["step plaque", "icon-chip rows"],
+      "focalChannels": ["three step headings", "recall-vs-dismiss"],
+      "tokens": ["Vote", "UserPlus", "UserMinus", "Landmark"],
+      "finalKnowledge": ["personnel-election-decision", "personnel-appointment"],
+      "statefulObjects": ["red carpet step x3"]
+    },
+    {
+      "id": "meetings-decisions",
+      "export": "MeetingsDecisionsScene",
+      "layout": "ledger-plus-two-lines",
+      "anchor": "main center",
+      "grammar": "会制四行簿（会期/召集/主持/人数），下半重大事项：人大四权与全人常友好/敌对两条线",
+      "textTreatments": ["ledger rows", "line chips"],
+      "focalChannels": ["ledger rows", "two-line mnemonics"],
+      "tokens": ["CalendarClock", "Bell", "Megaphone", "Medal", "Siren", "Landmark"],
+      "finalKnowledge": ["meeting-rules", "major-decision-powers"],
+      "statefulObjects": ["ledger rows", "two line panels"]
+    },
+    {
+      "id": "motions",
+      "export": "MotionsScene",
+      "layout": "memorial-stack",
+      "anchor": "main center",
+      "grammar": "奏章七行：机关提案/个人提案/质询/罢免/撤职/列入议程/公布，底带共通规律口诀",
+      "textTreatments": ["memorial rows", "stamp highlights"],
+      "focalChannels": ["motion rows", "closing mnemonic"],
+      "tokens": ["Landmark", "UserPlus", "MessageCircleQuestion", "Gavel", "ListChecks", "Megaphone"],
+      "finalKnowledge": ["motion-procedure", "recall-dismiss-procedure"],
+      "statefulObjects": ["memorial row x7"]
+    }
+  ]
+}
