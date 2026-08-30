@@ -1,0 +1,22 @@
+{
+  "directionId": "pendulum-activation-hall",
+  "family": "pendulum-activation-hall",
+  "palette": "deep iron grey-blue, gilt bronze, moon-white paper, teal accent, rust seal red, wine verdict, graphite ink",
+  "typography": "activation-hall headings on iron rail tabs, gilt condition chips and rust wax verdicts",
+  "composition": "an activation hall with a dual-lamp validity frame, an approval desk with culprit lanes, twin condition forks over a punish wall and dual term gates with a boundary lane",
+  "surface": "moon-white paper files, iron desk rails, gilt dials, rust wax seals",
+  "motion": "lamp sliders flip between valid and effective, approval files wait at the desk, condition forks swing on malicious hands and term gates slide open on the calendar",
+  "transition": "the hall floor, iron rails and gilt dial posts persist while frames, desks, forks and gates are re-dressed between scenes",
+  "conceptTokens": {
+    "生效": "Play",
+    "审批": "Stamp",
+    "条件": "GitFork",
+    "期限": "CalendarClock"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/civil-law/03/effectiveness-activation-hall/",
+    "title": "生效刻度堂"
+  }
+}

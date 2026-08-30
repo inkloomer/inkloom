@@ -1,0 +1,95 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "valid-effective-frame",
+      "export": "ValidEffectiveScene",
+      "layout": "dual-lamp-activation-frame",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "validity-means-lawful-and-effectiveness-means-claimable-and-performable",
+        "effective-acts-take-effect-at-formation-as-the-principle",
+        "four-situations-delay-effectiveness-conditions-initial-term-approval-and-will",
+        "unformed-acts-still-bind-and-forbid-arbitrary-retraction"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["contrast", "icon", "enclosure", "annotation"],
+      "tokens": ["Scale", "Play", "Hourglass", "Lock"],
+      "finalKnowledge": [
+        "validity-vs-effectiveness",
+        "formation-effect-rule",
+        "four-exceptions",
+        "unformed-binding-rule"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "approval-contract-desk",
+      "export": "ApprovalContractScene",
+      "layout": "approval-desk-with-culprit-lanes",
+      "anchor": "flow-path",
+      "grammar": [
+        "approval-pending-contracts-forbid-performance-and-arbitrary-exit",
+        "the-approval-clause-takes-effect-alone-with-its-own-liability",
+        "final-refusal-opens-rescission-or-culprit-contracting-claims",
+        "improper-approval-performance-lets-the-counterparty-elect-claims"
+      ],
+      "textTreatments": ["label-block", "stamp", "soft-highlight", "thin-underline"],
+      "focalChannels": ["connector", "contrast", "enclosure", "annotation"],
+      "tokens": ["Stamp", "Ban", "RefreshCw", "Scale"],
+      "finalKnowledge": [
+        "approval-pending-rule",
+        "standalone-approval-clause",
+        "final-refusal-forks",
+        "election-of-claims"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "condition-forks",
+      "export": "ConditionForkScene",
+      "layout": "twin-fork-formation-punish-wall",
+      "anchor": "role-pair",
+      "grammar": [
+        "conditions-are-lawful-facts-yet-unhappened-and-uncertain",
+        "suspensive-conditions-start-effect-while-resolutive-end-it",
+        "malicious-prevention-counts-as-fulfilment-and-facilitation-as-failure",
+        "unlawful-facts-as-conditions-void-the-act"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "external-negation"],
+      "focalChannels": ["contrast", "connector", "enclosure", "annotation"],
+      "tokens": ["GitFork", "Hourglass", "Ban", "Scale"],
+      "finalKnowledge": [
+        "condition-concept",
+        "suspensive-resolutive-fork",
+        "fabrication-rule",
+        "peacock-case-verdicts"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "term-gates",
+      "export": "TermGateScene",
+      "layout": "dual-term-gate-with-boundary-lane",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "terms-are-facts-certain-to-arrive-unlike-uncertain-conditions",
+        "initial-terms-open-effect-while-terminal-terms-close-it",
+        "initial-terms-bind-the-whole-act-and-due-terms-bind-single-duties",
+        "a-due-date-presumes-the-act-already-effective"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["contrast", "connector", "enclosure", "annotation"],
+      "tokens": ["CalendarClock", "Play", "Split", "Scale"],
+      "finalKnowledge": [
+        "term-concept",
+        "initial-terminal-fork",
+        "whole-vs-single-binding",
+        "due-date-verdicts"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}
