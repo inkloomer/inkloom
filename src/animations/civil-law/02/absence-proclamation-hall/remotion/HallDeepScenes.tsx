@@ -178,7 +178,7 @@ export const DeathEffectsScene = () => {
         </Enter>
         <Enter delay={230} from="up" style={{position: 'absolute', left: 40, top: 576, width: 1696, height: 90}}>
           <div style={{height: '100%', backgroundColor: C.ashMid, border: `2px solid ${C.fog}`, display: 'flex', alignItems: 'center', gap: 18, padding: '0 26px'}}>
-            <span style={{padding: '4px 13px', backgroundColor: C.fog, color: C.ash, fontSize: 21, fontWeight: 900, letterSpacing: 2}>活人口诀</span>
+            <span style={{padding: '4px 13px', backgroundColor: C.fog, color: C.ash, fontSize: 21, fontWeight: 900, letterSpacing: 2}}>活人口诀</span>
             <span style={{fontSize: 24, fontWeight: 900, color: C.bone}}>
               婚姻继承＝<Soft color={C.rustPale}>按死人</Soft> · 其他一切＝<Soft color={C.rustPale}>按活人</Soft> · 撤销之前＝<Soft color={C.rustPale}>判决有效</Soft>
             </span>
