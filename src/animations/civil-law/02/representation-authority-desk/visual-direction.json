@@ -1,0 +1,22 @@
+{
+  "directionId": "twin-nametag-authority-desk",
+  "family": "twin-nametag-authority-desk",
+  "palette": "deep aubergine plum, wisteria lilac, pearl paper cream, bronze seal gold, wine verdict red, sage green, graphite ink",
+  "typography": "authority-desk headings on aubergine name rails, bronze nametag chips and wine wax verdicts",
+  "composition": "an authority desk hall with a dual-liability see-saw, twin nametag forks, a signature-stamp matrix, an ultra-vires gate with an exemption shelf and a branch web over a split ledger",
+  "surface": "pearl paper files, aubergine felt desks, bronze name plates, wine wax seals",
+  "motion": "nametags flip between representative and agent, the representative chair slides between successors, guarantee files file onto the exemption shelf and split ledgers fan out jointly",
+  "transition": "the desk floor, name rails and bronze posts persist while forks, gates and ledgers are re-dressed between scenes",
+  "conceptTokens": {
+    "代表": "PenTool",
+    "席位": "User",
+    "越权": "ShieldAlert",
+    "分支": "Network"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/civil-law/02/representation-authority-desk/",
+    "title": "法人代表台"
+  }
+}

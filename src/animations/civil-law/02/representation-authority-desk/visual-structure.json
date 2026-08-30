@@ -1,0 +1,114 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "liability-duality",
+      "export": "LiabilityDualityScene",
+      "layout": "dual-liability-see-saw",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "legal-person-investors-bear-limited-liability-without-continuing-payment",
+        "non-legal-person-investors-bear-unlimited-liability-with-continuing-payment",
+        "liability-grades-belong-to-investors-not-to-the-investment-target",
+        "the-hinge-is-whether-investors-pay-when-assets-run-short"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["contrast", "icon", "enclosure", "annotation"],
+      "tokens": ["Landmark", "Users", "Scale", "Wallet"],
+      "finalKnowledge": [
+        "limited-side",
+        "unlimited-side",
+        "essence-rule",
+        "enterprise-case-verdicts"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "representation-vs-agency",
+      "export": "RepresentationAgencyScene",
+      "layout": "twin-nametag-signature-desk",
+      "anchor": "role-pair",
+      "grammar": [
+        "acts-in-the-persons-name-by-its-representative-are-representation",
+        "acts-by-anyone-else-are-agency-even-in-the-persons-name",
+        "signed-but-unstamped-contracts-are-valid-unless-formal",
+        "stamped-but-unsigned-contracts-stand-with-actual-performance-cure"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["contrast", "icon", "enclosure", "annotation"],
+      "tokens": ["PenTool", "Stamp", "FileSignature", "BadgeCheck"],
+      "finalKnowledge": [
+        "nametag-fork",
+        "signature-stamp-matrix",
+        "formal-contract-cure"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "representative-act-vs-personal",
+      "export": "RepresentativeActScene",
+      "layout": "nominal-fork-with-borrowing-verdicts",
+      "anchor": "role-pair",
+      "grammar": [
+        "acts-in-the-persons-name-bind-the-person-as-representation",
+        "acts-in-ones-own-name-bind-the-representative-personally",
+        "loan-commitments-by-the-representative-stay-with-the-company",
+        "personal-guarantees-bind-that-representative-alone"
+      ],
+      "textTreatments": ["label-block", "stamp", "external-negation", "thin-underline"],
+      "focalChannels": ["contrast", "connector", "enclosure", "annotation"],
+      "tokens": ["User", "Building2", "Split", "Gavel"],
+      "finalKnowledge": [
+        "nominal-fork",
+        "zhang-loan-verdicts"
+      ],
+      "statefulObjects": ["representative-chair-ticket"]
+    },
+    {
+      "id": "ultra-vires-representation",
+      "export": "UltraViresScene",
+      "layout": "ultra-vires-gate-with-exemption-shelf",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "bona-fide-counterparties-keep-ultra-vires-contracts-valid",
+        "bad-faith-counterparties-void-them-with-culpable-compensation",
+        "charter-breaches-presume-good-faith-while-statute-breaches-presume-bad",
+        "four-exempt-guarantees-need-no-resolution-and-stay-valid"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "external-negation"],
+      "focalChannels": ["contrast", "icon", "enclosure", "annotation"],
+      "tokens": ["ShieldAlert", "Scale", "FileCheck", "Lock"],
+      "finalKnowledge": [
+        "vi-principle-bench",
+        "charter-vs-statute-gate",
+        "exempt-guarantee-shelf",
+        "mortgage-case-verdicts"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "branch-and-split",
+      "export": "BranchSplitScene",
+      "layout": "branch-web-with-split-ledger",
+      "anchor": "flow-path",
+      "grammar": [
+        "branches-act-in-own-name-yet-owe-no-separate-personality",
+        "debts-flow-freely-between-head-office-and-branch-assets",
+        "split-successors-take-creditors-as-agreed-or-jointly",
+        "internal-split-agreements-bind-insiders-only-for-recourse"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["connector", "spatial", "contrast", "annotation"],
+      "tokens": ["Network", "Building2", "Scale", "ArrowLeftRight"],
+      "finalKnowledge": [
+        "branch-nature-rule",
+        "connected-liability-web",
+        "split-ledger-rules",
+        "bank-split-verdicts"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}
