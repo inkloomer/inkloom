@@ -168,6 +168,7 @@ import {typography as typographyAutoAbsenceProclamationHall} from '../animations
 import {typography as typographyAutoRepresentationAuthorityDesk} from '../animations/civil-law/02/representation-authority-desk/animation.meta';
 import {typography as typographyAutoLegalPersonIndependenceHall} from '../animations/civil-law/02/legal-person-independence-hall/animation.meta';
 import {typography as typographyAutoIntentionExpressionHall} from '../animations/civil-law/03/intention-expression-hall/animation.meta';
+import {typography as typographyAutoEffectivenessActivationHall} from '../animations/civil-law/03/effectiveness-activation-hall/animation.meta';
 import {typography as typographyAutoDividendRight} from '../animations/commercial-law/04/dividend-right/animation.meta';
 import {typography as typographyAutoShareholderQualification} from '../animations/commercial-law/03/shareholder-qualification/animation.meta';
 import {typography as typographyAutoNominalShareholder} from '../animations/commercial-law/03/nominal-shareholder/animation.meta';
@@ -213,6 +214,7 @@ import {typography as typographyAutoQuartzSproutGreenhouse} from '../animations/
 import {typography as typographyAutoAzureDraftHall} from '../animations/commercial-economic-law/06/azure-draft-hall/animation.meta';
 import {typography as typographyAutoYellowNoticeBureau} from '../animations/commercial-economic-law/06/yellow-notice-bureau/animation.meta';
 import {typography as typographyAutoOxbloodShieldWorkshop} from '../animations/commercial-economic-law/06/oxblood-shield-workshop/animation.meta';
+import {typography as typographyAutoLacquerSealBureau} from '../animations/commercial-economic-law/06/lacquer-seal-bureau/animation.meta';
 import {typography as typographyAutoReckoningAbacusDesk} from '../animations/administrative-law/24/reckoning-abacus-desk/animation.meta';
 import {typography as typographyAutoBambooScrollRestoration} from '../animations/administrative-law/23/bamboo-scroll-restoration/animation.meta';
 import {typography as typographyAutoLighthouseWatchNetwork} from '../animations/administrative-law/20/lighthouse-watch-network/animation.meta';
@@ -256,22 +258,9 @@ import {typography as typographyAutoComplicityPrinciplesJointPrincipal} from '..
 import {typography as typographyAutoIndirectPerpetratorDominion} from '../animations/criminal/12/indirect-perpetrator-dominion/animation.meta';
 import {typography as typographyAutoInstigatorAbettorRoles} from '../animations/criminal/12/instigator-abettor-roles/animation.meta';
 import {typography as typographyAutoExecutionExpiryStation} from '../animations/criminal/16/execution-expiry-station/animation.meta';
-import {typography as typographyAutoJurisdictionSeaChart} from '../animations/criminal-procedure-gold/04/jurisdiction-sea-chart/animation.meta';
-import {typography as typographyAutoRecusalBackstageSwap} from '../animations/criminal-procedure-gold/05/recusal-backstage-swap/animation.meta';
-import {typography as typographyAutoDefenseHeraldicHall} from '../animations/criminal-procedure-gold/06/defense-heraldic-hall/animation.meta';
-import {typography as typographyAutoEvidenceApothecaryCabinet} from '../animations/criminal-procedure-gold/07/evidence-apothecary-cabinet/animation.meta';
-import {typography as typographyAutoExclusionCustomsGate} from '../animations/criminal-procedure-gold/07/exclusion-customs-gate/animation.meta';
-import {typography as typographyAutoBurdenLedgerDesk} from '../animations/criminal-procedure-gold/07/burden-ledger-desk/animation.meta';
-import {typography as typographyAutoMeasuresNightTower} from '../animations/criminal-procedure-gold/08/measures-night-tower/animation.meta';
-import {typography as typographyAutoAttachedSuitCourtyard} from '../animations/criminal-procedure-gold/09/attached-suit-courtyard/animation.meta';
-import {typography as typographyAutoPeriodRelayStation} from '../animations/criminal-procedure-gold/10/period-relay-station/animation.meta';
-import {typography as typographyAutoFilingRegistryHall} from '../animations/criminal-procedure-gold/11/filing-registry-hall/animation.meta';
-import {typography as typographyAutoInvestigationFieldKit} from '../animations/criminal-procedure-gold/12/investigation-field-kit/animation.meta';
+import {typography as typographyAutoClauseAtlasNoticeFiction} from '../animations/criminal/17/clause-atlas-notice-fiction/animation.meta';
 import {typography as typographyBel} from '../animations/commercial-economic-law/01/branch-wallet-ledger/animation.meta';
 import {typography as typographyVpf} from '../animations/commercial-economic-law/01/veil-piercing-forge/animation.meta';
-import {typography as typographyOph} from '../animations/criminal-procedure-gold/01/overview-porcelain-hall/animation.meta';
-import {typography as typographyPch} from '../animations/criminal-procedure-gold/02/principles-chalkboard-hall/animation.meta';
-import {typography as typographyOab} from '../animations/criminal-procedure-gold/03/organs-archive-bureau/animation.meta';
 import {typography as typographyLl} from '../animations/theoretical-law/01/legislation-law/animation.meta';
 import {typography as typographyFc} from '../animations/theoretical-law/01/features-of-constitution/animation.meta';
 import {typography as typographyCo} from '../animations/theoretical-law/01/creation-of-constitution/animation.meta';
@@ -457,6 +446,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'representation-authority-desk': {metadata: typographyAutoRepresentationAuthorityDesk, scope: {animationId: 'representation-authority-desk', subject: 'civil-law', topic: '02'}},
   'legal-person-independence-hall': {metadata: typographyAutoLegalPersonIndependenceHall, scope: {animationId: 'legal-person-independence-hall', subject: 'civil-law', topic: '02'}},
   'intention-expression-hall': {metadata: typographyAutoIntentionExpressionHall, scope: {animationId: 'intention-expression-hall', subject: 'civil-law', topic: '03'}},
+  'effectiveness-activation-hall': {metadata: typographyAutoEffectivenessActivationHall, scope: {animationId: 'effectiveness-activation-hall', subject: 'civil-law', topic: '03'}},
   'dividend-right': {metadata: typographyAutoDividendRight, scope: {animationId: 'dividend-right', subject: 'commercial-law', topic: '04'}},
   'shareholder-qualification': {metadata: typographyAutoShareholderQualification, scope: {animationId: 'shareholder-qualification', subject: 'commercial-law', topic: '03'}},
   'nominal-shareholder': {metadata: typographyAutoNominalShareholder, scope: {animationId: 'nominal-shareholder', subject: 'commercial-law', topic: '03'}},
@@ -500,6 +490,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'azure-draft-hall': {metadata: typographyAutoAzureDraftHall, scope: {animationId: 'azure-draft-hall', subject: 'commercial-economic-law', topic: '06'}},
   'yellow-notice-bureau': {metadata: typographyAutoYellowNoticeBureau, scope: {animationId: 'yellow-notice-bureau', subject: 'commercial-economic-law', topic: '06'}},
   'oxblood-shield-workshop': {metadata: typographyAutoOxbloodShieldWorkshop, scope: {animationId: 'oxblood-shield-workshop', subject: 'commercial-economic-law', topic: '06'}},
+  'lacquer-seal-bureau': {metadata: typographyAutoLacquerSealBureau, scope: {animationId: 'lacquer-seal-bureau', subject: 'commercial-economic-law', topic: '06'}},
   'reckoning-abacus-desk': {metadata: typographyAutoReckoningAbacusDesk, scope: {animationId: 'reckoning-abacus-desk', subject: 'administrative-law', topic: '24'}},
   'bamboo-scroll-restoration': {metadata: typographyAutoBambooScrollRestoration, scope: {animationId: 'bamboo-scroll-restoration', subject: 'administrative-law', topic: '23'}},
   'lighthouse-watch-network': {metadata: typographyAutoLighthouseWatchNetwork, scope: {animationId: 'lighthouse-watch-network', subject: 'administrative-law', topic: '20'}},
@@ -586,22 +577,9 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'indirect-perpetrator-dominion': {metadata: typographyAutoIndirectPerpetratorDominion, scope: {animationId: 'indirect-perpetrator-dominion', subject: 'criminal', topic: '12'}},
   'instigator-abettor-roles': {metadata: typographyAutoInstigatorAbettorRoles, scope: {animationId: 'instigator-abettor-roles', subject: 'criminal', topic: '12'}},
   'execution-expiry-station': {metadata: typographyAutoExecutionExpiryStation, scope: {animationId: 'execution-expiry-station', subject: 'criminal', topic: '16'}},
-  'jurisdiction-sea-chart': {metadata: typographyAutoJurisdictionSeaChart, scope: {animationId: 'jurisdiction-sea-chart', subject: 'criminal-procedure-gold', topic: '04'}},
-  'recusal-backstage-swap': {metadata: typographyAutoRecusalBackstageSwap, scope: {animationId: 'recusal-backstage-swap', subject: 'criminal-procedure-gold', topic: '05'}},
-  'defense-heraldic-hall': {metadata: typographyAutoDefenseHeraldicHall, scope: {animationId: 'defense-heraldic-hall', subject: 'criminal-procedure-gold', topic: '06'}},
-  'evidence-apothecary-cabinet': {metadata: typographyAutoEvidenceApothecaryCabinet, scope: {animationId: 'evidence-apothecary-cabinet', subject: 'criminal-procedure-gold', topic: '07'}},
-  'exclusion-customs-gate': {metadata: typographyAutoExclusionCustomsGate, scope: {animationId: 'exclusion-customs-gate', subject: 'criminal-procedure-gold', topic: '07'}},
-  'burden-ledger-desk': {metadata: typographyAutoBurdenLedgerDesk, scope: {animationId: 'burden-ledger-desk', subject: 'criminal-procedure-gold', topic: '07'}},
-  'measures-night-tower': {metadata: typographyAutoMeasuresNightTower, scope: {animationId: 'measures-night-tower', subject: 'criminal-procedure-gold', topic: '08'}},
-  'attached-suit-courtyard': {metadata: typographyAutoAttachedSuitCourtyard, scope: {animationId: 'attached-suit-courtyard', subject: 'criminal-procedure-gold', topic: '09'}},
-  'period-relay-station': {metadata: typographyAutoPeriodRelayStation, scope: {animationId: 'period-relay-station', subject: 'criminal-procedure-gold', topic: '10'}},
-  'filing-registry-hall': {metadata: typographyAutoFilingRegistryHall, scope: {animationId: 'filing-registry-hall', subject: 'criminal-procedure-gold', topic: '11'}},
-  'investigation-field-kit': {metadata: typographyAutoInvestigationFieldKit, scope: {animationId: 'investigation-field-kit', subject: 'criminal-procedure-gold', topic: '12'}},
+  'clause-atlas-notice-fiction': {metadata: typographyAutoClauseAtlasNoticeFiction, scope: {animationId: 'clause-atlas-notice-fiction', subject: 'criminal', topic: '17'}},
   'branch-wallet-ledger': {metadata: typographyBel, scope: {animationId: 'branch-wallet-ledger', subject: 'commercial-economic-law', topic: '01'}},
   'veil-piercing-forge': {metadata: typographyVpf, scope: {animationId: 'veil-piercing-forge', subject: 'commercial-economic-law', topic: '01'}},
-  'overview-porcelain-hall': {metadata: typographyOph, scope: {animationId: 'overview-porcelain-hall', subject: 'criminal-procedure-gold', topic: '01'}},
-  'principles-chalkboard-hall': {metadata: typographyPch, scope: {animationId: 'principles-chalkboard-hall', subject: 'criminal-procedure-gold', topic: '02'}},
-  'organs-archive-bureau': {metadata: typographyOab, scope: {animationId: 'organs-archive-bureau', subject: 'criminal-procedure-gold', topic: '03'}},
   'legislation-law': {metadata: typographyLl, scope: {animationId: 'legislation-law', subject: 'theoretical-law', topic: '01'}},
   'features-of-constitution': {metadata: typographyFc, scope: {animationId: 'features-of-constitution', subject: 'theoretical-law', topic: '01'}},
   'creation-of-constitution': {metadata: typographyCo, scope: {animationId: 'creation-of-constitution', subject: 'theoretical-law', topic: '01'}},
