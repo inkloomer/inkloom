@@ -1,0 +1,29 @@
+{
+  "animationId": "procuratorate-leadership",
+  "scenes": [
+    {
+      "id": "dual-track",
+      "export": "DualTrackScene",
+      "layout": "twin-track-combination",
+      "anchor": "main center",
+      "grammar": "原则规定（检察长负责制与检察委员会集体领导相结合）+具体规定两行（检察长统一领导检察院工作·检委会民主集中制讨论决定重大案件和其他重大问题）",
+      "textTreatments": ["track plaques", "clause chips"],
+      "focalChannels": ["combination principle", "clause rows"],
+      "tokens": ["UserCheck", "Users", "Scale"],
+      "finalKnowledge": "leadership-principle",
+      "statefulObjects": ["track panel x2"]
+    },
+    {
+      "id": "disagreement",
+      "export": "DisagreementScene",
+      "layout": "escalation-fork",
+      "anchor": "main center",
+      "grammar": "分歧上行：检察长不同意检委会多数人的决定 → 报请上一级人民检察院 或 同级人大常委会决定，底带一句记",
+      "textTreatments": ["escalation arrows", "fork chips"],
+      "focalChannels": ["escalation fork", "closing strip"],
+      "tokens": ["ArrowUp", "Landmark", "UserCheck"],
+      "finalKnowledge": "disagreement-route",
+      "statefulObjects": ["escalation panel"]
+    }
+  ]
+}

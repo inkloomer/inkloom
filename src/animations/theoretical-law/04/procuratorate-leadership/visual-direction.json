@@ -1,0 +1,15 @@
+{
+  "directionId": "dual-track-procurator-seal",
+  "family": "procurator-seal-desk",
+  "title": "双轨检察印",
+  "subject": "theoretical-law",
+  "chapter": "04",
+  "concept": "双轨检察印案：检察长印与检委会圆桌两轨并行，分歧上行箭头指向上一级检察院与同级人大常委会。图形层主题；画面文字一律使用源笔记法考名词",
+  "palette": "案台 procurator #36302C、深台 procuratorDeep #2A2522、面板 panel #F1ECDA、暗面板 panelDim #E2DDC7、镶边 edge #6C6459、墨字 ink #292420、淡墨 inkSoft #5B5449、检察长印 seal #B04834、检委会圆桌青 committeeTeal #4E7D74、上行金 escalateGold #C0983E、纸白 paper #F6F1E0",
+  "typography": "标题用 var(--inkloom-animation-title)，正文用 var(--inkloom-animation-body)；两轨行加粗法考名词，分歧箭头用上行金",
+  "composition": "双轨并行 + 圆桌席位 + 分歧上行箭头 + 源名词点睛带",
+  "surface": "案台木纹 + 圆桌圈线 + 印泥朱纹",
+  "motion": "印章钤落、圆桌合拢、箭头上行",
+  "transition": "硬切换幕",
+  "catalog": ["考点68 人民检察院的领导体制"]
+}

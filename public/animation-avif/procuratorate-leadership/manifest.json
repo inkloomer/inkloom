@@ -1,0 +1,53 @@
+{
+  "animationId": "procuratorate-leadership",
+  "compositionId": "ProcuratorateLeadership",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-30T15:30:31.298Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 191,
+      "frameCount": 192,
+      "id": "dual-track",
+      "number": "01",
+      "startFrame": 0,
+      "title": "领导体制：原则与具体规定",
+      "durationMs": 6400,
+      "file": "dual-track.avif",
+      "fileSize": 279118,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "a73265da25e5371b9e0523ddb25586f60c3295c31de2513ded6031b2394aed73",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "2a3277f37d1069401c2beaa1b05a33a84add16d190500ffc75abf2a2ef9155f5"
+    },
+    {
+      "endFrame": 383,
+      "frameCount": 192,
+      "id": "disagreement",
+      "number": "02",
+      "startFrame": 192,
+      "title": "分歧处理",
+      "durationMs": 6400,
+      "file": "disagreement.avif",
+      "fileSize": 263859,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "b6e82ea288d24a6a96e7b786ea17ea784cef808144f2b2b634c9602f52e023fe",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "2a3277f37d1069401c2beaa1b05a33a84add16d190500ffc75abf2a2ef9155f5"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "2a3277f37d1069401c2beaa1b05a33a84add16d190500ffc75abf2a2ef9155f5",
+  "targetFps": 30,
+  "totalFileSize": 542977
+}
