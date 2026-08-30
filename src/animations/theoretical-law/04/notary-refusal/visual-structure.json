@@ -1,0 +1,29 @@
+{
+  "animationId": "notary-refusal",
+  "scenes": [
+    {
+      "id": "refusal",
+      "export": "RefusalScene",
+      "layout": "return-slip-nine",
+      "anchor": "main center",
+      "grammar": "不予办理公证九情形退件单两列排布",
+      "textTreatments": ["return slips", "number seals"],
+      "focalChannels": ["nine slips"],
+      "tokens": ["FileX", "Ban"],
+      "finalKnowledge": "refusal-cases",
+      "statefulObjects": ["return slip x9"]
+    },
+    {
+      "id": "stop-object",
+      "export": "StopObjectScene",
+      "layout": "stop-drawer-plus-object",
+      "anchor": "main center",
+      "grammar": "终止公证五情形抽屉 + 点睛（公证对象：无争议的民事法律行为·有法律意义的事实和文书；内容是真实性和合法性）",
+      "textTreatments": ["stop rows", "object seals"],
+      "focalChannels": ["stop causes", "object scope"],
+      "tokens": ["FileCheck", "Scale", "Ban"],
+      "finalKnowledge": "stop-object",
+      "statefulObjects": ["stop panel", "object panel"]
+    }
+  ]
+}

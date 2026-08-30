@@ -1,0 +1,53 @@
+{
+  "animationId": "notary-refusal",
+  "compositionId": "NotaryRefusal",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-30T19:16:08.670Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 239,
+      "frameCount": 240,
+      "id": "refusal",
+      "number": "01",
+      "startFrame": 0,
+      "title": "不予办理公证的情形",
+      "durationMs": 8000,
+      "file": "refusal.avif",
+      "fileSize": 620868,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "afbf146c92194104404204d2254a4b9bf10ba45feed8e288597e961b42d58ae0",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "4f29ea12325ab9b36a8d518438dc5264bab0c1c1f39a877d090c6218ae1500ae"
+    },
+    {
+      "endFrame": 443,
+      "frameCount": 204,
+      "id": "stop-object",
+      "number": "02",
+      "startFrame": 240,
+      "title": "终止公证的情形与公证对象",
+      "durationMs": 6800,
+      "file": "stop-object.avif",
+      "fileSize": 607901,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "7f16e002ece17383ac062925c46558670b5e608df711d7bf8a6f8a65df8b57b8",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "4f29ea12325ab9b36a8d518438dc5264bab0c1c1f39a877d090c6218ae1500ae"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "4f29ea12325ab9b36a8d518438dc5264bab0c1c1f39a877d090c6218ae1500ae",
+  "targetFps": 30,
+  "totalFileSize": 1228769
+}

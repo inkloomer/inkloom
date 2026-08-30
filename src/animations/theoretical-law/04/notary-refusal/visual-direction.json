@@ -1,0 +1,15 @@
+{
+  "directionId": "notary-return-desk",
+  "family": "return-desk-notary",
+  "title": "公证退件柜",
+  "subject": "theoretical-law",
+  "chapter": "04",
+  "concept": "公证退件柜：不予办理九情形如九张退件单挂在柜面，终止五情形另开抽屉。图形层主题；画面文字一律使用源笔记法考名词",
+  "palette": "柜面 refusal #33302C、深柜 refusalDeep #272421、面板 panel #F0EBDA、暗面板 panelDim #E1DCC7、镶边 edge #6B6459、墨字 ink #282421、淡墨 inkSoft #5B5449、退件朱 return #B04834、终止灰 stopGray #6E6A64、对象青 object #4E7D74、纸白 paper #F6F1E0",
+  "typography": "标题用 var(--inkloom-animation-title)，正文用 var(--inkloom-animation-body)；退件单行加粗法考名词，编号用朱签",
+  "composition": "退件单九联 + 终止抽屉 + 源名词点睛带",
+  "surface": "柜面木纹 + 退件单纸纹 + 抽屉框线",
+  "motion": "退件单挂签、抽屉拉开、点睛压栏",
+  "transition": "硬切换幕",
+  "catalog": ["考点81 不予办理公证与应当终止公证的情形"]
+}
