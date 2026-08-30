@@ -1,0 +1,22 @@
+{
+  "directionId": "cradle-seal-guardian-hall",
+  "family": "cradle-seal-guardian-hall",
+  "palette": "deep pine-ink green, verdigris bronze, rice-paper cream, cinnabar seal red, amber lamp gold, indigo slate, graphite ink",
+  "typography": "registry ledger headings on verdigris plate badges, brush-stroke condition lines and cinnabar wax verdicts",
+  "composition": "a civic registry hall where a life-timeline gate, a three-tier age bench, will-fork benches, dual order ladders and a duty verdict wall stand in sequence",
+  "surface": "aged rice-paper ledgers, verdigris bronze plates, cinnabar hand seals, amber lamp light",
+  "motion": "life tickets travel the birth-death gate, capacity tiers rise like stair treads, guardian pacts fly between benches and settle as sealed verdicts",
+  "transition": "the registry floor, lamp rail and bronze plate frames persist while benches and ladders are re-dressed between scenes",
+  "conceptTokens": {
+    "权利能力": "Hourglass",
+    "行为效力": "Scale",
+    "监护": "Hand",
+    "裁判": "Gavel"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/civil-law/02/capacity-guardianship-registry/",
+    "title": "摇篮印信堂"
+  }
+}

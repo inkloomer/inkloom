@@ -164,6 +164,7 @@ import {typography as typographyAutoDirectorDuties} from '../animations/commerci
 import {typography as typographyAutoInformationRight} from '../animations/commercial-law/04/information-right/animation.meta';
 import {typography as typographyAutoRightsShieldArmory} from '../animations/civil-law/01/rights-shield-armory/animation.meta';
 import {typography as typographyAutoCapacityGuardianshipRegistry} from '../animations/civil-law/02/capacity-guardianship-registry/animation.meta';
+import {typography as typographyAutoCapacityGuardianshipRegistry} from '../animations/civil-law/02/capacity-guardianship-registry/animation.meta';
 import {typography as typographyAutoDividendRight} from '../animations/commercial-law/04/dividend-right/animation.meta';
 import {typography as typographyAutoShareholderQualification} from '../animations/commercial-law/03/shareholder-qualification/animation.meta';
 import {typography as typographyAutoNominalShareholder} from '../animations/commercial-law/03/nominal-shareholder/animation.meta';
@@ -421,6 +422,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'director-duties': {metadata: typographyAutoDirectorDuties, scope: {animationId: 'director-duties', subject: 'commercial-law', topic: '05'}},
   'information-right': {metadata: typographyAutoInformationRight, scope: {animationId: 'information-right', subject: 'commercial-law', topic: '04'}},
   'rights-shield-armory': {metadata: typographyAutoRightsShieldArmory, scope: {animationId: 'rights-shield-armory', subject: 'civil-law', topic: '01'}},
+  'capacity-guardianship-registry': {metadata: typographyAutoCapacityGuardianshipRegistry, scope: {animationId: 'capacity-guardianship-registry', subject: 'civil-law', topic: '02'}},
   'capacity-guardianship-registry': {metadata: typographyAutoCapacityGuardianshipRegistry, scope: {animationId: 'capacity-guardianship-registry', subject: 'civil-law', topic: '02'}},
   'dividend-right': {metadata: typographyAutoDividendRight, scope: {animationId: 'dividend-right', subject: 'commercial-law', topic: '04'}},
   'shareholder-qualification': {metadata: typographyAutoShareholderQualification, scope: {animationId: 'shareholder-qualification', subject: 'commercial-law', topic: '03'}},

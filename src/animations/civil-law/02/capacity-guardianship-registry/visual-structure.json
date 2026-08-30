@@ -1,0 +1,118 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "capacity-birth-death-gate",
+      "export": "CapacityBirthDeathScene",
+      "layout": "life-timeline-trident-gate",
+      "anchor": "life-timeline",
+      "grammar": [
+        "capacity-is-the-qualification-to-hold-rights-and-duties",
+        "natural-person-capacity-runs-from-birth-to-death",
+        "unborn-fetus-gains-retroactive-capacity-when-born-alive",
+        "still-birth-erases-the-retroactive-effect-so-rights-never-arise"
+      ],
+      "textTreatments": ["label-block", "soft-highlight", "stamp", "thin-underline"],
+      "focalChannels": ["connector", "contrast", "enclosure", "annotation"],
+      "tokens": ["Baby", "Hourglass", "Skull", "ScrollText"],
+      "finalKnowledge": [
+        "capacity-gate",
+        "fetus-retroactive-rule",
+        "live-birth-fork",
+        "jade-case-verdicts"
+      ],
+      "statefulObjects": ["jade-gift-ticket"]
+    },
+    {
+      "id": "capacity-three-tier-bench",
+      "export": "CapacityThreeTierScene",
+      "layout": "triple-tier-age-bench",
+      "anchor": "age-axis",
+      "grammar": [
+        "legal-acts-need-capacity-while-factual-acts-do-not",
+        "full-capacity-starts-at-eighteen-or-sixteen-with-labour-income",
+        "limited-capacity-validates-understood-and-pure-benefit-acts",
+        "no-capacity-acts-are-void-including-pure-benefit-ones"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["contrast", "icon", "enclosure", "annotation"],
+      "tokens": ["UserCheck", "UserMinus", "UserX", "Scale"],
+      "finalKnowledge": [
+        "full-tier",
+        "limited-tier",
+        "void-tier",
+        "effect-table",
+        "watch-piano-verdicts"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "guardianship-will-forks",
+      "export": "GuardianshipWillScene",
+      "layout": "guardian-bench-with-will-forks",
+      "anchor": "role-pair",
+      "grammar": [
+        "guardians-owe-protection-restraint-and-representation",
+        "natural-parents-are-guardians-of-right-not-merit",
+        "testamentary-guardianship-needs-both-parent-and-guardian-status",
+        "intentional-guardianship-pacts-take-effect-on-losing-capacity"
+      ],
+      "textTreatments": ["label-block", "stamp", "soft-highlight", "thin-underline"],
+      "focalChannels": ["connector", "contrast", "enclosure", "annotation"],
+      "tokens": ["Hand", "Heart", "ScrollText", "Ban"],
+      "finalKnowledge": [
+        "guardian-bench",
+        "natural-guardian-rule",
+        "testamentary-double-gate",
+        "pact-guardian-rules"
+      ],
+      "statefulObjects": ["pact-agreement-ticket"]
+    },
+    {
+      "id": "guardianship-order-ladder",
+      "export": "GuardianshipOrderScene",
+      "layout": "dual-order-ladder-with-desk",
+      "anchor": "ladder-sequence",
+      "grammar": [
+        "minor-order-runs-grandparents-then-siblings-then-consenting-others",
+        "adult-order-runs-spouse-parents-children-then-kin",
+        "designation-needs-a-real-guardianship-dispute",
+        "registry-desk-organ-fills-in-when-nobody-qualifies"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["spatial", "connector", "contrast", "annotation"],
+      "tokens": ["Users", "ListOrdered", "Vote", "Landmark"],
+      "finalKnowledge": [
+        "minor-ladder",
+        "adult-ladder",
+        "designation-desk",
+        "organ-fallback"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "guardianship-duty-verdicts",
+      "export": "GuardianshipDutyScene",
+      "layout": "duty-pillars-with-verdict-wall",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "guardianship-duties-core-is-respecting-the-wards-autonomy",
+        "diligent-care-and-loyalty-guard-the-wards-property",
+        "removal-needs-fault-grounds-and-a-court-ruling",
+        "support-payments-survive-and-deliberate-crime-bars-restoration"
+      ],
+      "textTreatments": ["label-block", "stamp", "external-negation", "thin-underline"],
+      "focalChannels": ["icon", "contrast", "enclosure", "annotation"],
+      "tokens": ["Heart", "Coins", "Gavel", "Ban"],
+      "finalKnowledge": [
+        "duty-pillars",
+        "removal-grounds",
+        "removal-claimants",
+        "restoration-gate"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}
