@@ -1,0 +1,53 @@
+{
+  "animationId": "judicial-characteristics",
+  "compositionId": "JudicialCharacteristics",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-30T11:26:39.845Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 239,
+      "frameCount": 240,
+      "id": "six-features",
+      "number": "01",
+      "startFrame": 0,
+      "title": "六印司法墙：特征方阵",
+      "durationMs": 8000,
+      "file": "six-features.avif",
+      "fileSize": 527929,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "2eade4284b665eca862dca7ba736f3b9dc3e90d62990777f49b0b3be45820ebf",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "1fb7b16f842db3bd8eeb71ad8961455f1629e03245e6b9458545470d7895119f"
+    },
+    {
+      "endFrame": 479,
+      "frameCount": 240,
+      "id": "independence",
+      "number": "02",
+      "startFrame": 240,
+      "title": "单室三辨：独立性",
+      "durationMs": 8000,
+      "file": "independence.avif",
+      "fileSize": 493330,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "2ee759f034735058ddaecda1f6ace27c30cb7d427ab8e504d6026b7e8a9559e7",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "1fb7b16f842db3bd8eeb71ad8961455f1629e03245e6b9458545470d7895119f"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "1fb7b16f842db3bd8eeb71ad8961455f1629e03245e6b9458545470d7895119f",
+  "targetFps": 30,
+  "totalFileSize": 1021259
+}

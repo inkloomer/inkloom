@@ -1,0 +1,30 @@
+{
+  "directionId": "six-seal-justice-wall",
+  "family": "seal-justice-wall",
+  "title": "六印司法墙",
+  "subject": "theoretical-law",
+  "chapter": "04",
+  "concept": "司法六特征刻成六方朱印悬于石墙，每印一兽纽一图标；独立性单辟一室作三辨（政体·干涉边界·人大监督）",
+  "palette": {
+    "stone": "#33302C",
+    "stoneDeep": "#262320",
+    "panel": "#F1ECDA",
+    "panelDim": "#E2DDC8",
+    "edge": "#6B6458",
+    "ink": "#28241F",
+    "inkSoft": "#5B5548",
+    "sealRed": "#B0442E",
+    "bronze": "#C08840",
+    "pine": "#58785F",
+    "paper": "#F6F1E0"
+  },
+  "typography": {
+    "title": "var(--inkloom-animation-title)",
+    "body": "var(--inkloom-animation-body)"
+  },
+  "composition": "六印方阵 + 印钮图标 + 独立性单室三辨 + 朱底口诀",
+  "surface": "石墙斧凿纹 + 印泥朱纹 + 铜钉镶角",
+  "motion": "印章钤落、印文显影、单室门开",
+  "transition": "硬切换幕",
+  "catalog": ["考点57 我国的司法特征"]
+}

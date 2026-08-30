@@ -1,0 +1,29 @@
+{
+  "animationId": "judicial-characteristics",
+  "scenes": [
+    {
+      "id": "six-features",
+      "export": "SixFeaturesScene",
+      "layout": "six-seal-grid",
+      "anchor": "main center",
+      "grammar": "六印 3×2 方阵（独立/被动/交涉/程序/普遍/终极），每印章钮图标+印文要点，底带考查重点朱签",
+      "textTreatments": ["seal faces", "knob icons"],
+      "focalChannels": ["seal grid", "exam-weight strip"],
+      "tokens": ["Shield", "BellOff", "MessagesSquare", "ListOrdered", "Globe", "Gavel"],
+      "finalKnowledge": "six-features",
+      "statefulObjects": ["seal tile x6"]
+    },
+    {
+      "id": "independence",
+      "export": "IndependenceScene",
+      "layout": "single-room-three-notes",
+      "anchor": "main center",
+      "grammar": "独立性单室：政体辨（人大政体非三权分立）/边界辨（不受行政机关·社会团体·公民干涉）/监督辨（未排除人大监督和党的领导），底带一句记",
+      "textTreatments": ["note plaques", "boundary seals"],
+      "focalChannels": ["three notes", "closing strip"],
+      "tokens": ["Landmark", "Shield", "Eye"],
+      "finalKnowledge": "independence-notes",
+      "statefulObjects": ["note plaque x3"]
+    }
+  ]
+}
