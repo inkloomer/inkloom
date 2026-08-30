@@ -1,0 +1,24 @@
+{
+  "directionId": "vault-ledger-house",
+  "family": "vault-ledger-house",
+  "palette": "金库纸绿白 vault + 锁青 lock + 封条红 seal + 铜锁黄 brass + 账页灰蓝 slate + 金库墨 night",
+  "typography": "heavy vault headings, square ledger chips, lock label blocks, double-frame stamp verdicts",
+  "composition": "a bank vault ledger: three-model interest board, possession-purpose panel, theft transfer and peace views, robbery coercion steps, and the fraud-extortion split board",
+  "surface": "vault paper grain, ledger chips, seal marks, dashed comparison zones, double-frame stamps; no glossy panels",
+  "motion": "panels enter in reasoning order, stamps land as verdicts, comparison rows split by doctrine; no idle loops",
+  "transition": "the vault ground persists while each scene mounts a new ledger",
+  "conceptTokens": {
+    "非法占有目的": "Coins",
+    "盗窃罪": "Ban",
+    "抢劫罪": "Zap",
+    "诈骗罪": "Scale",
+    "敲诈勒索罪": "Gavel",
+    "处分": "Scale"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/criminal/19/property-crime-ledger/",
+    "title": "金库总账房"
+  }
+}

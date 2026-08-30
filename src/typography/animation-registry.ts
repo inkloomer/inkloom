@@ -307,6 +307,7 @@ import {typography as typographyCar} from '../animations/theoretical-law/04/clie
 import {typography as typographyLp} from '../animations/theoretical-law/04/lawyer-promotion/animation.meta';
 import {typography as typographyLf} from '../animations/theoretical-law/04/lawyer-fees/animation.meta';
 import {typography as typographyLpr} from '../animations/theoretical-law/04/lawyer-peer-relations/animation.meta';
+import {typography as typographyLa} from '../animations/theoretical-law/04/legal-aid/animation.meta';
 import {typography as typographyCc} from '../animations/theoretical-law/01/constitution-classification/animation.meta';
 import {typography as typographyCdv} from '../animations/theoretical-law/01/constitution-development/animation.meta';
 import {typography as typographyCp} from '../animations/theoretical-law/01/constitution-principles/animation.meta';
@@ -660,6 +661,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'lawyer-promotion': {metadata: typographyLp, scope: {animationId: 'lawyer-promotion', subject: 'theoretical-law', topic: '04'}},
   'lawyer-fees': {metadata: typographyLf, scope: {animationId: 'lawyer-fees', subject: 'theoretical-law', topic: '04'}},
   'lawyer-peer-relations': {metadata: typographyLpr, scope: {animationId: 'lawyer-peer-relations', subject: 'theoretical-law', topic: '04'}},
+  'legal-aid': {metadata: typographyLa, scope: {animationId: 'legal-aid', subject: 'theoretical-law', topic: '04'}},
   'profit-reserve-granary': {metadata: typographyPrg, scope: {animationId: 'profit-reserve-granary', subject: 'commercial-economic-law', topic: '01'}},
   'promoter-liability-ropewalk': {metadata: typographyPlr, scope: {animationId: 'promoter-liability-ropewalk', subject: 'commercial-economic-law', topic: '01'}},
   'fight-defense-diagram': {metadata: typography44, scope: {animationId: 'fight-defense-diagram', subject: 'criminal', topic: '22'}},

@@ -1,0 +1,194 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "playerControlSafeBottom": 168,
+  "scenes": [
+    {
+      "id": "interest-three-models",
+      "export": "InterestThreeModelsScene",
+      "layout": "three-model-vault-board",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "model-1",
+        "model-2",
+        "model-3"
+      ],
+      "textTreatments": [
+        "chip",
+        "label-block",
+        "soft-highlight",
+        "thin-underline",
+        "external-negation",
+        "stamp"
+      ],
+      "focalChannels": [
+        "icon",
+        "contrast",
+        "enclosure",
+        "spatial"
+      ],
+      "tokens": [
+        "Gavel",
+        "ShieldCheck",
+        "Scale",
+        "Ban",
+        "Users"
+      ],
+      "finalKnowledge": [
+        "models-panel",
+        "model-1",
+        "model-2",
+        "model-3",
+        "rank-floor"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "possession-purpose-ward",
+      "export": "PossessionPurposeWardScene",
+      "layout": "possession-purpose-quad-vault",
+      "anchor": "typographic-sequence",
+      "grammar": [
+        "purpose-panel",
+        "exclude-panel"
+      ],
+      "textTreatments": [
+        "chip",
+        "label-block",
+        "soft-highlight",
+        "thin-underline",
+        "external-negation",
+        "stamp"
+      ],
+      "focalChannels": [
+        "icon",
+        "contrast",
+        "enclosure",
+        "annotation"
+      ],
+      "tokens": [
+        "Coins",
+        "Ban",
+        "Scale",
+        "Zap"
+      ],
+      "finalKnowledge": [
+        "purpose-panel",
+        "exclude-panel",
+        "use-panel",
+        "object-panel"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "theft-transfer-peace",
+      "export": "TheftTransferPeaceScene",
+      "layout": "theft-transfer-peace-vault",
+      "anchor": "boundary",
+      "grammar": [
+        "transfer-panel",
+        "peace-panel"
+      ],
+      "textTreatments": [
+        "chip",
+        "label-block",
+        "soft-highlight",
+        "thin-underline",
+        "external-negation",
+        "stamp"
+      ],
+      "focalChannels": [
+        "icon",
+        "contrast",
+        "enclosure",
+        "connector"
+      ],
+      "tokens": [
+        "Ban",
+        "Scale",
+        "Zap",
+        "Gavel"
+      ],
+      "finalKnowledge": [
+        "transfer-panel",
+        "peace-panel",
+        "views-panel"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "robbery-coercion-steps",
+      "export": "RobberyCoercionStepsScene",
+      "layout": "robbery-coercion-tri-vault",
+      "anchor": "document-fork",
+      "grammar": [
+        "coercion-panel",
+        "transform-panel"
+      ],
+      "textTreatments": [
+        "chip",
+        "label-block",
+        "soft-highlight",
+        "thin-underline",
+        "external-negation",
+        "stamp"
+      ],
+      "focalChannels": [
+        "icon",
+        "contrast",
+        "enclosure",
+        "connector"
+      ],
+      "tokens": [
+        "Zap",
+        "Ban",
+        "Gavel",
+        "Scale"
+      ],
+      "finalKnowledge": [
+        "coercion-panel",
+        "transform-panel",
+        "onthespot-panel"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "fraud-extortion-split",
+      "export": "FraudExtortionSplitScene",
+      "layout": "fraud-extortion-split-vault",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "dispose-panel",
+        "triangle-panel"
+      ],
+      "textTreatments": [
+        "chip",
+        "label-block",
+        "soft-highlight",
+        "thin-underline",
+        "external-negation",
+        "stamp"
+      ],
+      "focalChannels": [
+        "icon",
+        "contrast",
+        "enclosure",
+        "spatial"
+      ],
+      "tokens": [
+        "Scale",
+        "Ban",
+        "Zap",
+        "Gavel",
+        "Users"
+      ],
+      "finalKnowledge": [
+        "dispose-panel",
+        "dispose-consciousness",
+        "triangle-panel",
+        "extortion-panel"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}
