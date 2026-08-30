@@ -1,0 +1,53 @@
+{
+  "animationId": "jade-check-counter",
+  "compositionId": "JadeCheckCounter",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-30T17:34:13.299Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 319,
+      "frameCount": 320,
+      "id": "entry-tiers",
+      "number": "01",
+      "startFrame": 0,
+      "title": "支票记载三层次",
+      "durationMs": 10667,
+      "file": "entry-tiers.avif",
+      "fileSize": 471770,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "def0611bd666530b0b3965eac1e29519a83fc353d4044ee7a7fc2963800811f1",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "e0cc03f2c101d66b85810b173bbf82c614941f7c9052bdc7c0a3002a31afe5c8"
+    },
+    {
+      "endFrame": 639,
+      "frameCount": 320,
+      "id": "supplement-forgery",
+      "number": "02",
+      "startFrame": 320,
+      "title": "补记有效与伪造签章",
+      "durationMs": 10667,
+      "file": "supplement-forgery.avif",
+      "fileSize": 436312,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "582050d1f549d5f468f1ff187664fc6c1b51d35a949eee98b8d15265aca5c593",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "e0cc03f2c101d66b85810b173bbf82c614941f7c9052bdc7c0a3002a31afe5c8"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "e0cc03f2c101d66b85810b173bbf82c614941f7c9052bdc7c0a3002a31afe5c8",
+  "targetFps": 30,
+  "totalFileSize": 908082
+}

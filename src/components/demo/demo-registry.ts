@@ -184,6 +184,7 @@ import {DURATION_FRAMES as EXECUTION_DISPATCH_DURATION_FRAMES, FPS as EXECUTION_
 import {DURATION_FRAMES as JUVENILE_GREENHOUSE_DURATION_FRAMES, FPS as JUVENILE_GREENHOUSE_FPS} from '../../animations/criminal-procedure/20/juvenile-observatory-greenhouse/remotion/storyboard';
 import {DURATION_FRAMES as DEATH_REVIEW_DURATION_FRAMES, FPS as DEATH_REVIEW_FPS} from '../../animations/criminal-procedure/17/death-review-summit/remotion/storyboard';
 import {DURATION_FRAMES as RECONCILIATION_PAVILION_DURATION_FRAMES, FPS as RECONCILIATION_PAVILION_FPS} from '../../animations/criminal-procedure/21/reconciliation-scale-pavilion/remotion/storyboard';
+import {DURATION_FRAMES as ONYX_COURIER_DURATION_FRAMES, FPS as ONYX_COURIER_FPS} from '../../animations/criminal-procedure/22/onyx-courier/remotion/storyboard';
 import {DURATION_FRAMES as SOURCES_INTERNATIONAL_LAW_DURATION_FRAMES, FPS as SOURCES_INTERNATIONAL_LAW_FPS} from '../../animations/international-law/01/sources-of-international-law/remotion/storyboard';
 import {DURATION_FRAMES as SUBJECTS_RESPONSIBILITY_DURATION_FRAMES, FPS as SUBJECTS_RESPONSIBILITY_FPS} from '../../animations/international-law/02/subjects-responsibility/remotion/storyboard';
 import {DURATION_FRAMES as SPATIAL_REGIMES_DURATION_FRAMES, FPS as SPATIAL_REGIMES_FPS} from '../../animations/international-law/03/spatial-regimes/remotion/storyboard';
@@ -330,6 +331,7 @@ export const STYLE_DEMOS = [
   {id: 'criminal-procedure-17-death-review-summit', slug: 'death-review-summit', title: '峰顶复审营', direction: 'Summit Camp Death Review', component: lazyDemo(() => import('../../animations/criminal-procedure/17/death-review-summit/remotion/DeathReviewSummit').then((m) => ({default: m.DeathReviewSummit}))), href: '/inkloom/objective/criminal-procedure/17/death-review-summit/', durationInFrames: DEATH_REVIEW_DURATION_FRAMES, fps: DEATH_REVIEW_FPS},
   {id: 'criminal-procedure-02-plea-leniency-caliper', slug: 'plea-leniency-caliper', title: '认罚量尺工坊', direction: 'Maple Caliper Workshop', component: lazyDemo(() => import('../../animations/criminal-procedure/02/plea-leniency-caliper/remotion/PleaLeniencyCaliper').then((m) => ({default: m.PleaLeniencyCaliper}))), href: '/inkloom/objective/criminal-procedure/02/plea-leniency-caliper/', durationInFrames: PLEA_LENIENTY_DURATION_FRAMES, fps: PLEA_LENIENTY_FPS},
   {id: 'criminal-procedure-21-reconciliation-scale-pavilion', slug: 'reconciliation-scale-pavilion', title: '黑漆描金秤亭', direction: 'Lacquer Scale Pavilion', component: lazyDemo(() => import('../../animations/criminal-procedure/21/reconciliation-scale-pavilion/remotion/ReconciliationScalePavilion').then((m) => ({default: m.ReconciliationScalePavilion}))), href: '/inkloom/objective/criminal-procedure/21/reconciliation-scale-pavilion/', durationInFrames: RECONCILIATION_PAVILION_DURATION_FRAMES, fps: RECONCILIATION_PAVILION_FPS},
+  {id: 'criminal-procedure-22-onyx-courier', slug: 'onyx-courier', title: '缟玛瑙信使', direction: 'Onyx Courier', component: lazyDemo(() => import('../../animations/criminal-procedure/22/onyx-courier/remotion/OnyxCourier').then((m) => ({default: withAnimationTypography(m.OnyxCourier, getAnimationTypographyConfiguration('onyx-courier'))}))), href: '/inkloom/objective/criminal-procedure/22/onyx-courier/', durationInFrames: ONYX_COURIER_DURATION_FRAMES, fps: ONYX_COURIER_FPS},
   {id: 'theoretical-law-01-concept-of-law-dispute', slug: 'concept-of-law-dispute', title: '漆屏对峙', direction: 'Lacquer Twin-Screen', component: lazyDemo(() => import('../../animations/theoretical-law/01/concept-of-law-dispute/remotion/ConceptOfLawDispute').then((m) => ({default: m.ConceptOfLawDispute}))), href: '/inkloom/objective/theoretical-law/01/concept-of-law-dispute/', durationInFrames: CONCEPT_OF_LAW_DURATION_FRAMES, fps: CONCEPT_OF_LAW_FPS},
   {id: 'international-law-01-sources-of-international-law', slug: 'sources-of-international-law', title: '外交条约卷册', direction: 'Diplomatic Treaty Folio', component: lazyDemo(() => import('../../animations/international-law/01/sources-of-international-law/remotion/SourcesOfInternationalLaw').then((m) => ({default: withAnimationTypography(m.SourcesOfInternationalLaw, getAnimationTypographyConfiguration('sources-of-international-law'))}))), href: '/inkloom/objective/international-law/01/sources-of-international-law/', durationInFrames: SOURCES_INTERNATIONAL_LAW_DURATION_FRAMES, fps: SOURCES_INTERNATIONAL_LAW_FPS},
   {id: 'international-law-02-subjects-responsibility', slug: 'subjects-responsibility', title: '外交议事厅', direction: 'Envoy Assembly Chamber', component: lazyDemo(() => import('../../animations/international-law/02/subjects-responsibility/remotion/SubjectsResponsibility').then((m) => ({default: withAnimationTypography(m.SubjectsResponsibility, getAnimationTypographyConfiguration('subjects-responsibility'))}))), href: '/inkloom/objective/international-law/02/subjects-responsibility/', durationInFrames: SUBJECTS_RESPONSIBILITY_DURATION_FRAMES, fps: SUBJECTS_RESPONSIBILITY_FPS},
@@ -559,6 +561,7 @@ const DEMO_ADDED_AT: Record<(typeof STYLE_DEMOS)[number]['id'], string> = {
   'criminal-procedure-17-death-review-summit': '2026-08-29T21:20:00+08:00',
   'criminal-procedure-02-plea-leniency-caliper': '2026-08-29T01:05:00+08:00',
   'criminal-procedure-21-reconciliation-scale-pavilion': '2026-08-31T01:30:00+08:00',
+  'criminal-procedure-22-onyx-courier': '2026-08-31T02:00:00+08:00',
   'theoretical-law-01-concept-of-law-dispute': '2026-08-28T23:30:00+08:00',
   'international-law-01-sources-of-international-law': '2026-08-29T10:00:00+08:00',
   'international-law-02-subjects-responsibility': '2026-08-29T11:00:00+08:00',
@@ -670,6 +673,7 @@ const DEMO_ADDED_AT: Record<(typeof STYLE_DEMOS)[number]['id'], string> = {
   'commercial-economic-law-06-yellow-notice-bureau': '2026-09-01T02:40:00+08:00',
   'commercial-economic-law-06-oxblood-shield-workshop': '2026-09-01T04:10:00+08:00',
   'commercial-economic-law-06-lacquer-seal-bureau': '2026-09-01T05:30:00+08:00',
+  'commercial-economic-law-06-jade-check-counter': '2026-09-01T07:00:00+08:00',
   'commercial-economic-law-02-lp-lounge-limited-partner': '2026-08-31T13:00:00+08:00',
   'commercial-economic-law-02-terminal-station-wind-down': '2026-08-31T13:50:00+08:00',
   'commercial-economic-law-02-boundary-stone-gate-hall': '2026-08-31T12:10:00+08:00',

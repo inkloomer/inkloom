@@ -1,0 +1,25 @@
+{
+  "directionId": "jade-check-counter",
+  "family": "jade-check-counter",
+  "palette": "pale mint counter + white slip cards + deep pine ink + copper completion accents + crimson refusals + gold stamps + ink strips",
+  "typography": "jade counter headlines, white slip labels, square copper verdict stamps, dashed completion rules",
+  "composition": "a three-tier entry counter separating absolute entries from authorizable completions and void entries, and a supplement-forgery counter pairing the completed-amount validity with the bank's formal-review discharge",
+  "surface": "mint counter walls with white slips and pine frames; no glossy panels",
+  "motion": "entries are sorted by tier, the amount slip is completed, the bank stamps its formal review; no idle loops",
+  "transition": "the jade check counter persists while each scene re-stages the same slip bench for a new question",
+  "conceptTokens": {
+    "出票日期": "CalendarDays",
+    "金额补记": "PenLine",
+    "收款人名称": "Users",
+    "记载无效": "FileX",
+    "形式审查": "Landmark",
+    "善意取得": "ShieldCheck",
+    "真题": "GraduationCap"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/commercial-economic-law/06/jade-check-counter/",
+    "title": "翠柜补记局"
+  }
+}
