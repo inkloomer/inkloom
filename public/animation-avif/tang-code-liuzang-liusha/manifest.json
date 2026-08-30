@@ -1,0 +1,70 @@
+{
+  "animationId": "tang-code-liuzang-liusha",
+  "compositionId": "TangCodeLiuzangLiusha",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-30T03:33:41.437Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 263,
+      "frameCount": 264,
+      "id": "liuzang",
+      "number": "01",
+      "startFrame": 0,
+      "title": "六赃：官吏与常人",
+      "durationMs": 8800,
+      "file": "liuzang.avif",
+      "fileSize": 323789,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "0dffb3dfa2022c89229fa6c4d23f44c83f3850fc6d1e43b6b33c861d0ac2063b",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "386aece2aa78ea282ebebe7bf3bc33520af7866b6fff7b260939c3a906d6bde9"
+    },
+    {
+      "endFrame": 527,
+      "frameCount": 264,
+      "id": "liusha",
+      "number": "02",
+      "startFrame": 264,
+      "title": "六杀：从故意到过失",
+      "durationMs": 8800,
+      "file": "liusha.avif",
+      "fileSize": 341288,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "ba97f40c5f98471795a8f060f1609c60cf538050a3895f3fae990cb15bb9c603",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "386aece2aa78ea282ebebe7bf3bc33520af7866b6fff7b260939c3a906d6bde9"
+    },
+    {
+      "endFrame": 767,
+      "frameCount": 240,
+      "id": "evolution",
+      "number": "03",
+      "startFrame": 528,
+      "title": "谋杀与故杀的演变",
+      "durationMs": 8000,
+      "file": "evolution.avif",
+      "fileSize": 337423,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "6998f57ede2a8bc8bd15b9c9b02d74f02d3b03051abea88704596a8b7a585eda",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "386aece2aa78ea282ebebe7bf3bc33520af7866b6fff7b260939c3a906d6bde9"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "386aece2aa78ea282ebebe7bf3bc33520af7866b6fff7b260939c3a906d6bde9",
+  "targetFps": 30,
+  "totalFileSize": 1002500
+}

@@ -240,6 +240,7 @@ import {typography as typographyZhou} from '../animations/theoretical-law/03/zho
 import {typography as typographySaw} from '../animations/theoretical-law/03/spring-autumn-warring-states/animation.meta';
 import {typography as typographyHan} from '../animations/theoretical-law/03/han-confucianization/animation.meta';
 import {typography as typographyWjn} from '../animations/theoretical-law/03/wei-jin-nanbei-chaodai/animation.meta';
+import {typography as typographyTcl} from '../animations/theoretical-law/03/tang-code-liuzang-liusha/animation.meta';
 import {typography as typographyEs} from '../animations/theoretical-law/01/economic-system/animation.meta';
 import {typography as typographyPrg} from '../animations/commercial-economic-law/01/profit-reserve-granary/animation.meta';
 import {typography as typographyPlr} from '../animations/commercial-economic-law/01/promoter-liability-ropewalk/animation.meta';
@@ -495,6 +496,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'spring-autumn-warring-states': {metadata: typographySaw, scope: {animationId: 'spring-autumn-warring-states', subject: 'theoretical-law', topic: '03'}},
   'han-confucianization': {metadata: typographyHan, scope: {animationId: 'han-confucianization', subject: 'theoretical-law', topic: '03'}},
   'wei-jin-nanbei-chaodai': {metadata: typographyWjn, scope: {animationId: 'wei-jin-nanbei-chaodai', subject: 'theoretical-law', topic: '03'}},
+  'tang-code-liuzang-liusha': {metadata: typographyTcl, scope: {animationId: 'tang-code-liuzang-liusha', subject: 'theoretical-law', topic: '03'}},
   'economic-system': {metadata: typographyEs, scope: {animationId: 'economic-system', subject: 'theoretical-law', topic: '01'}},
   'profit-reserve-granary': {metadata: typographyPrg, scope: {animationId: 'profit-reserve-granary', subject: 'commercial-economic-law', topic: '01'}},
   'promoter-liability-ropewalk': {metadata: typographyPlr, scope: {animationId: 'promoter-liability-ropewalk', subject: 'commercial-economic-law', topic: '01'}},

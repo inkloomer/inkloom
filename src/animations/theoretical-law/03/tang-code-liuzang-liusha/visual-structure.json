@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "playerControlSafeBottom": 176,
+  "scenes": [
+    {
+      "id": "liuzang",
+      "export": "LiuzangScene",
+      "layout": "six-zang-two-group-bench",
+      "anchor": "comparison-axis",
+      "grammar": ["official-group", "common-group", "split-criterion-note"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["Landmark", "Users"],
+      "finalKnowledge": [
+        "zang-heading",
+        "official-group",
+        "common-group",
+        "split-criterion-note"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "liusha",
+      "export": "LiushaScene",
+      "layout": "six-kill-severity-pair-scroll",
+      "anchor": "typographic-sequence",
+      "grammar": ["intent-pair", "fight-play-pair", "error-negligence-pair"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["Gavel", "Users", "BookOpen"],
+      "finalKnowledge": [
+        "sha-heading",
+        "intent-pair",
+        "fight-play-pair",
+        "error-negligence-pair"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "evolution",
+      "export": "EvolutionScene",
+      "layout": "murder-evolution-lineage-strip",
+      "anchor": "boundary",
+      "grammar": ["bei-wei-origin", "jin-interpretation", "tang-qing-development"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "thin-underline"],
+      "focalChannels": ["icon", "contrast", "connector", "spatial", "annotation"],
+      "tokens": ["History", "BookOpen"],
+      "finalKnowledge": [
+        "evolution-heading",
+        "lineage-strip"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

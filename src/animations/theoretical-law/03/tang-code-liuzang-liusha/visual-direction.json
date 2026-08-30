@@ -1,0 +1,16 @@
+{
+  "directionId": "tang-code-scroll-verdict",
+  "family": "tang-dynasty-legal-scroll",
+  "palette": "tang-dynasty deep vermillion ground + pale scroll panels + gold imperial seal accents + ink brush annotations + dark writing ink",
+  "typography": "brush ink headings on scroll panels, dark scroll label tabs with gold left bar, gold seal stamps for verdicts, vermillion chips for crime categories, thin ink underline for definitions",
+  "composition": "the six赃 appear as a two-group three-column bench split by official vs common; the six杀 sit as a three-pair scroll with severity gradient; the evolution note anchors the bottom as a lineage strip",
+  "surface": "flat vermillion ground with faint scroll-weave hairlines, pale scroll panels with hairline weathered borders and corner seal dots, no gradients, no rounded cards, no drop shadows",
+  "motion": "scroll panels unroll left to right, crime chips tick in with brush strokes, the severity gradient darkens, the evolution strip underlines itself",
+  "transition": "a scroll roller sweeps and the court clears for the next passage",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/theoretical-law/03/tang-code-liuzang-liusha/",
+    "title": "唐律判牍"
+  }
+}
