@@ -1,0 +1,41 @@
+{
+  "animationId": "judge-procurator-discipline",
+  "scenes": [
+    {
+      "id": "setup-members",
+      "export": "SetupMembersScene",
+      "layout": "twin-register-panels",
+      "anchor": "main center",
+      "grammar": "设置（最高和省级法检设立·法官惩戒办公室设在高院·检察官惩戒办公室设在省级检察院）+组成（人大代表·政协委员·法学专家·律师代表及法官检察官代表不低于50%·主任推选经省级党委把关）",
+      "textTreatments": ["register rows", "ratio seals"],
+      "focalChannels": ["office placement", "fifty percent"],
+      "tokens": ["Landmark", "Users", "UserCheck"],
+      "finalKnowledge": "setup-members",
+      "statefulObjects": ["register panel x2"]
+    },
+    {
+      "id": "duties-source",
+      "export": "DutiesSourceScene",
+      "layout": "duties-plus-source",
+      "anchor": "main center",
+      "grammar": "职责四项（章程/审查认定提出意见/受理异议/审议其他事项）+不直接受理举报投诉（转交有关部门）+案件来源（法检内部发现提请审议）",
+      "textTreatments": ["duty rows", "transfer seals"],
+      "focalChannels": ["no direct complaints", "internal transfer"],
+      "tokens": ["ScrollText", "Ban", "FileCheck"],
+      "finalKnowledge": "duties-source",
+      "statefulObjects": ["duty panel", "source panel"]
+    },
+    {
+      "id": "decide-remedy",
+      "export": "DecideRemedyScene",
+      "layout": "verdict-remedy-rows",
+      "anchor": "main center",
+      "grammar": "审议（提供事实证据·法检举证·当事法官检察官陈述举证辩解）+表决（全体委员2/3以上通过）+惩戒决定四项（法检作出）+救济（复核·向上一级申诉）+口诀",
+      "textTreatments": ["verdict rows", "ratio seals"],
+      "focalChannels": ["two-thirds passage", "remedy row"],
+      "tokens": ["Scale", "Gavel", "Shield"],
+      "finalKnowledge": "decide-remedy",
+      "statefulObjects": ["verdict panel", "remedy panel"]
+    }
+  ]
+}

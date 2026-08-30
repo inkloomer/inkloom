@@ -1,0 +1,70 @@
+{
+  "animationId": "judge-procurator-discipline",
+  "compositionId": "JudgeProcuratorDiscipline",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-30T16:03:06.497Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 263,
+      "frameCount": 264,
+      "id": "setup-members",
+      "number": "01",
+      "startFrame": 0,
+      "title": "设置与组成",
+      "durationMs": 8800,
+      "file": "setup-members.avif",
+      "fileSize": 510781,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "134ff3a8e14569f59ad0d26a2a4a33a9c8fb945938fc8e4996fb5cc251f9ee2f",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "0b45951e5de9540af66fef29a893fa278f8af65554b75d659111c098895c41c4"
+    },
+    {
+      "endFrame": 503,
+      "frameCount": 240,
+      "id": "duties-source",
+      "number": "02",
+      "startFrame": 264,
+      "title": "职责与案件来源",
+      "durationMs": 8000,
+      "file": "duties-source.avif",
+      "fileSize": 627718,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "2f048fd809cc5f47bbee4e07a81f20b628e20eba24ad257e3756c42b6944fdee",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "0b45951e5de9540af66fef29a893fa278f8af65554b75d659111c098895c41c4"
+    },
+    {
+      "endFrame": 791,
+      "frameCount": 288,
+      "id": "decide-remedy",
+      "number": "03",
+      "startFrame": 504,
+      "title": "审议·决定·救济",
+      "durationMs": 9600,
+      "file": "decide-remedy.avif",
+      "fileSize": 801012,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "ddb49a86b1a6fe5c3bcabd4b5e27f303872452fe8edd030aaa48212db634fbed",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "0b45951e5de9540af66fef29a893fa278f8af65554b75d659111c098895c41c4"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "0b45951e5de9540af66fef29a893fa278f8af65554b75d659111c098895c41c4",
+  "targetFps": 30,
+  "totalFileSize": 1939511
+}

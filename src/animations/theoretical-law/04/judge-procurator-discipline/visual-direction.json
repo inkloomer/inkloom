@@ -1,0 +1,15 @@
+{
+  "directionId": "discipline-ruler-scale",
+  "family": "ruler-discipline-desk",
+  "title": "戒尺衡责台",
+  "subject": "theoretical-law",
+  "chapter": "04",
+  "concept": "戒尺衡责台：惩戒委员会的设置·组成·职责依次入册，审议表决以戒尺刻度呈现（50%·2/3），决定权归法检为图形重点。图形层主题；画面文字一律使用源笔记法考名词",
+  "palette": "责台 discipline #35312C、深台 disciplineDeep #292521、面板 panel #F1ECDA、暗面板 panelDim #E2DDC7、镶边 edge #6C6459、墨字 ink #292420、淡墨 inkSoft #5B5449、戒尺金 ruler #C0983E、惩戒红 punish #B04834、复济青 remedyTeal #4E7D74、纸白 paper #F6F1E0",
+  "typography": "标题用 var(--inkloom-animation-title)，正文用 var(--inkloom-animation-body)；册行加粗法考名词，比例数字用刻度印",
+  "composition": "设置组成册 + 职责来源册 + 审议表决刻度 + 决定救济行",
+  "surface": "责台木纹 + 戒尺刻度线 + 朱印",
+  "motion": "册页翻开、刻度比对、印章落定",
+  "transition": "硬切换幕",
+  "catalog": ["考点70 检察官惩戒委员会(与法官惩戒相同)"]
+}
