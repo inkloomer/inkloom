@@ -7,6 +7,7 @@ import {C, Chip, Dash, Enter, LabelBlock, Neg, Shell, SoftHi, Stamp, ThinU} from
 export const TwinValueScene = () => (
   <Shell code="01" title="程序对实体：一把工具，也是一缕独立的光">
     <div data-layout="twin-vase-value-screen" data-visual-anchor="comparison-axis" data-text-treatments="chip,label-block,soft-highlight,thin-underline,external-negation,stamp" data-visual-grammar="twin-vase-contrast,example-chip-flow" data-focal-rule="procedural-institutions-carry-both-instrumental-value-helping-substantive-law-and-independent-value-of-procedural-justice-itself" data-focal-channels="icon,contrast,connector,spatial" style={{position: 'absolute', inset: 0}}>
+      <div style={{position: 'absolute', right: 30, bottom: 16, opacity: 0.06, pointerEvents: 'none'}}><Feather size={230} color={C.cobalt} strokeWidth={1.1} /></div>
       <div data-final-knowledge="value-twin-rule" style={{position: 'absolute', left: 0, right: 0, top: 0, height: 104, backgroundColor: C.paper, border: `3px solid ${C.cobalt}`, borderRadius: 14, padding: '12px 24px', boxShadow: `0 8px 22px ${C.shadow}`}}>
         <Enter delay={6} style={{display: 'flex', alignItems: 'center', gap: 14}}>
           <Wrench size={32} color={C.cobalt} style={{flexShrink: 0}} />
@@ -94,6 +95,7 @@ export const TwinValueScene = () => (
 export const ValueTriadScene = () => (
   <Shell code="02" title="理念与价值：公正居核心，效率看提速省资源">
     <div data-layout="porcelain-triad-cabinet" data-visual-anchor="concept-icon" data-text-treatments="chip,label-block,soft-highlight,thin-underline,external-negation,stamp" data-visual-grammar="concept-cabinet-set,verdict-lane-contrast" data-focal-rule="justice-sits-at-the-core-of-the-three-values-and-efficiency-means-speeding-up-and-saving-resources-not-every-simplified-procedure" data-focal-channels="icon,contrast,annotation,spatial" style={{position: 'absolute', inset: 0}}>
+      <div style={{position: 'absolute', right: 30, bottom: 16, opacity: 0.06, pointerEvents: 'none'}}><Scale size={230} color={C.cobalt} strokeWidth={1.1} /></div>
       <div data-final-knowledge="triad-cabinet-head" style={{position: 'absolute', left: 0, right: 0, top: 0, height: 96, backgroundColor: C.paper, border: `3px solid ${C.gilt}`, borderRadius: 14, padding: '12px 24px', display: 'flex', alignItems: 'center', gap: 14, boxShadow: `0 8px 22px ${C.shadow}`}}>
         <Enter delay={6} style={{display: 'flex', alignItems: 'center', gap: 14}}>
           <Scale size={32} color={C.gilt} style={{flexShrink: 0}} />
@@ -183,6 +185,7 @@ export const ValueTriadScene = () => (
 export const FunctionStructureScene = () => (
   <Shell code="03" title="职能三分与控辩式构造：三方只在审判">
     <div data-layout="function-structure-stage-hall" data-visual-anchor="role-pair" data-text-treatments="chip,label-block,soft-highlight,thin-underline,external-negation,stamp" data-visual-grammar="role-assignment-stage,chain-progression,separation-map" data-focal-rule="three-functions-belong-to-their-roles-and-a-complete-three-party-structure-exists-only-at-trial-while-prosecution-and-adjudication-stay-separated" data-focal-channels="icon,connector,contrast,spatial" style={{position: 'absolute', inset: 0}}>
+      <div style={{position: 'absolute', right: 30, bottom: 16, opacity: 0.06, pointerEvents: 'none'}}><Gavel size={230} color={C.cobalt} strokeWidth={1.1} /></div>
       <div data-final-knowledge="function-triad-stage" style={{position: 'absolute', left: 0, top: 0, width: 900, height: 744, backgroundColor: C.paper, border: `3px solid ${C.cobalt}`, borderRadius: 16, padding: '18px 22px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', boxShadow: `0 8px 22px ${C.shadow}`}}>
         <div style={{display: 'flex', alignItems: 'center', gap: 14}}>
           <Enter delay={6} style={{display: 'flex', alignItems: 'center', gap: 12}}>

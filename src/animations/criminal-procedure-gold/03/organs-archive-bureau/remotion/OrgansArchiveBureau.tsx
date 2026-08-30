@@ -7,6 +7,7 @@ import {C, Chip, Dash, Enter, LabelBlock, Neg, Shell, SoftHi, Stamp, ThinU} from
 export const OrganHierarchyScene = () => (
   <Shell code="01" title="专门机关：两样上下级，一张职权单">
     <div data-layout="organ-hierarchy-lattice" data-visual-anchor="role-pair" data-text-treatments="chip,label-block,soft-highlight,thin-underline,external-negation,stamp" data-visual-grammar="hierarchy-contrast-pair,duty-chip-cluster" data-focal-rule="courts-supervise-their-lower-levels-while-procuratorates-lead-theirs-and-police-powers-are-all-statutory" data-focal-channels="icon,contrast,connector,spatial" style={{position: 'absolute', inset: 0}}>
+      <div style={{position: 'absolute', right: 30, bottom: 16, opacity: 0.07, pointerEvents: 'none'}}><Landmark size={230} color={C.cream} strokeWidth={1.1} /></div>
       <div data-final-knowledge="organ-court-procuratorate-contrast" style={{position: 'absolute', left: 0, top: 0, width: 866, height: 380, backgroundColor: C.panel, border: `3px solid ${C.panelLine}`, borderRadius: 14, padding: '16px 22px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between'}}>
         <Enter delay={6} style={{display: 'flex', alignItems: 'center', gap: 12}}>
           <Landmark size={30} color={C.steel} style={{flexShrink: 0}} />
@@ -109,6 +110,7 @@ export const OrganHierarchyScene = () => (
 export const ParticipantSortingScene = () => (
   <Shell code="02" title="诉讼参与人：进围栏，再看交集">
     <div data-layout="participant-sorting-desk" data-visual-anchor="boundary" data-text-treatments="chip,label-block,soft-highlight,thin-underline,external-negation,stamp" data-visual-grammar="in-out-sorting-fence,role-intersection-pair" data-focal-rule="participants-are-the-enumerated-roles-and-only-the-prosecutorial-function-inside-participants-is-the-agent-ad-litem" data-focal-channels="icon,enclosure,contrast,spatial" style={{position: 'absolute', inset: 0}}>
+      <div style={{position: 'absolute', left: 30, bottom: 16, opacity: 0.07, pointerEvents: 'none'}}><Users size={230} color={C.cream} strokeWidth={1.1} /></div>
       <div data-final-knowledge="participant-range-fence" style={{position: 'absolute', left: 0, top: 0, width: 880, height: 744, backgroundColor: C.panel, border: `3px solid ${C.panelLine}`, borderRadius: 14, padding: '16px 22px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between'}}>
         <div style={{display: 'flex', alignItems: 'center', gap: 14}}>
           <Enter delay={6} style={{display: 'flex', alignItems: 'center', gap: 12}}>
@@ -212,6 +214,7 @@ export const ParticipantSortingScene = () => (
 export const UnitDefendantScene = () => (
   <Shell code="03" title="单位被告人：人格照自然人，代表人有讲究">
     <div data-layout="unit-defendant-ledger" data-visual-anchor="document-fork" data-text-treatments="chip,label-block,soft-highlight,thin-underline,external-negation,stamp" data-visual-grammar="rule-row-stack,representation-fork" data-focal-rule="the-unit-defendant-enjoys-natural-person-rights-and-its-representative-is-designated-by-the-procuratorate-never-a-directly-responsible-person" data-focal-channels="icon,contrast,annotation,spatial" style={{position: 'absolute', inset: 0}}>
+      <div style={{position: 'absolute', right: 30, bottom: 16, opacity: 0.07, pointerEvents: 'none'}}><Contact size={230} color={C.cream} strokeWidth={1.1} /></div>
       <div data-final-knowledge="unit-personality-card" style={{position: 'absolute', left: 0, top: 0, width: 900, height: 744, backgroundColor: C.panel, border: `3px solid ${C.panelLine}`, borderRadius: 14, padding: '16px 22px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between'}}>
         <div style={{display: 'flex', alignItems: 'center', gap: 14}}>
           <Enter delay={6} style={{display: 'flex', alignItems: 'center', gap: 12}}>
@@ -223,6 +226,7 @@ export const UnitDefendantScene = () => (
         </div>
         <div style={{border: `2px solid ${C.panelLine}`, borderRadius: 10, padding: '12px 16px', display: 'flex', flexDirection: 'column', gap: 9}}>
           <Enter delay={30} style={{display: 'flex', alignItems: 'center', gap: 12}}>
+            <LifeBuoy size={22} color={C.steel} style={{flexShrink: 0}} />
             <Chip tone="steel" style={{fontSize: 22}}>权利同自然人</Chip>
             <span style={{fontSize: 22, fontWeight: 800, color: C.cream}}>辩护权 · 上诉权一项不少</span>
           </Enter>

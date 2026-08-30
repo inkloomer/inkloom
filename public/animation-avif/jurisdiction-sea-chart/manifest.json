@@ -3,7 +3,7 @@
   "compositionId": "JurisdictionSeaChart",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-08-30T09:25:54.622Z",
+  "generatedAt": "2026-08-30T10:31:48.872Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -16,13 +16,13 @@
       "title": "立案三分流：谁家孩子谁家抱",
       "durationMs": 9333,
       "file": "filing-authority-split.avif",
-      "fileSize": 473566,
+      "fileSize": 472943,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "cdb54fac16a7d95873769a061d7b7a7597ad4b36c0fc95c4bdbc125367cf07ab",
+      "sha256": "26d1c08b80e7cc54105b57381c5e201352984f2846c517510c671126fab1679e",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "5eac358f7581c00710c98fe0cbb20f070ed19f845a5f24af45b2600937c5f56d"
+      "sceneFingerprint": "dbc6ca1cea628157495097b620c10ac3622191ccdeb38ca16c4ceae7da4e6992"
     },
     {
       "endFrame": 564,
@@ -33,13 +33,13 @@
       "title": "审判管辖：先纵后横两把尺",
       "durationMs": 9500,
       "file": "trial-jurisdiction-ladder.avif",
-      "fileSize": 417758,
+      "fileSize": 419127,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "fc078aa938a6af2436fb5463b64be88523fb949494f512d38a7d922e339e8b45",
+      "sha256": "4ab91e5438df23f106af36b8adeb0d5b1257810d3588a92ec2f520d25a6fa663",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "5eac358f7581c00710c98fe0cbb20f070ed19f845a5f24af45b2600937c5f56d"
+      "sceneFingerprint": "dbc6ca1cea628157495097b620c10ac3622191ccdeb38ca16c4ceae7da4e6992"
     },
     {
       "endFrame": 864,
@@ -50,13 +50,13 @@
       "title": "特殊地段与并案：航线各记各的锚点",
       "durationMs": 10000,
       "file": "special-venue-ledger.avif",
-      "fileSize": 484317,
+      "fileSize": 485415,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "401fcaa88e29eaf7eb3be8f506a1e0d71286ae997843230d1588e7b05435211a",
+      "sha256": "dfdc5ff15ff697026dd0767bca70b5f47106f6d7702f84f22d7822555671cba3",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "5eac358f7581c00710c98fe0cbb20f070ed19f845a5f24af45b2600937c5f56d"
+      "sceneFingerprint": "dbc6ca1cea628157495097b620c10ac3622191ccdeb38ca16c4ceae7da4e6992"
     }
   ],
   "size": {
@@ -64,7 +64,7 @@
     "width": 2560
   },
   "sourceFps": 30,
-  "sourceFingerprint": "5eac358f7581c00710c98fe0cbb20f070ed19f845a5f24af45b2600937c5f56d",
+  "sourceFingerprint": "dbc6ca1cea628157495097b620c10ac3622191ccdeb38ca16c4ceae7da4e6992",
   "targetFps": 30,
-  "totalFileSize": 1375641
+  "totalFileSize": 1377485
 }

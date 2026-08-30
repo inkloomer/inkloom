@@ -7,6 +7,7 @@ import {C, Chip, Dash, Enter, LabelBlock, Neg, Shell, SoftHi, Stamp, ThinU} from
 export const FilingAuthorityScene = () => (
   <Shell code="01" title="立案三分流：谁家孩子谁家抱">
     <div data-layout="filing-authority-split" data-visual-anchor="boundary" data-text-treatments="chip,label-block,soft-highlight,thin-underline,external-negation,stamp" data-visual-grammar="three-way-filing-split,proxy-teller-fork" data-focal-rule="smuggling-belongs-to-police-with-procuratorial-intake-above-provincial-level-while-graft-goes-to-supervision-and-limited-suits-may-be-filed-by-proxy" data-focal-channels="icon,contrast,connector,spatial" style={{position: 'absolute', inset: 0}}>
+      <div style={{position: 'absolute', right: 30, bottom: 16, opacity: 0.06, pointerEvents: 'none'}}><Siren size={230} color={C.navy} strokeWidth={1.1} /></div>
       <div data-final-knowledge="filing-three-way-split" style={{position: 'absolute', left: 0, top: 0, width: 880, height: 744, backgroundColor: C.panel, border: `3px solid ${C.panelLine}`, borderRadius: 14, padding: '16px 22px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between'}}>
         <Enter delay={6} style={{display: 'flex', alignItems: 'center', gap: 12}}>
           <LabelBlock size={28}>立案三分流</LabelBlock>
@@ -95,6 +96,7 @@ export const FilingAuthorityScene = () => (
 export const TrialJurisdictionScene = () => (
   <Shell code="02" title="审判管辖：先纵后横两把尺">
     <div data-layout="trial-jurisdiction-ladder" data-visual-anchor="flow-path" data-text-treatments="chip,label-block,soft-highlight,thin-underline,external-negation,stamp" data-visual-grammar="two-key-sequence,escalation-rules" data-focal-rule="vertical-first-then-horizontal-level-before-territory-with-whole-case-escalation-and-net-crimes-nearly-anywhere" data-focal-channels="icon,connector,contrast,spatial" style={{position: 'absolute', inset: 0}}>
+      <div style={{position: 'absolute', right: 30, bottom: 16, opacity: 0.06, pointerEvents: 'none'}}><MapPin size={230} color={C.navy} strokeWidth={1.1} /></div>
       <div data-final-knowledge="trial-two-keys-head" style={{position: 'absolute', left: 0, right: 0, top: 0, height: 108, backgroundColor: '#FBF7EC', border: `3px solid ${C.navy}`, borderRadius: 14, padding: '12px 24px', display: 'flex', alignItems: 'center', gap: 16, boxShadow: `0 8px 22px ${C.shadow}`}}>
         <Enter delay={6} style={{display: 'flex', alignItems: 'center', gap: 14}}>
           <LabelBlock size={30}>先纵后横</LabelBlock>
@@ -176,6 +178,7 @@ export const TrialJurisdictionScene = () => (
 export const SpecialVenueScene = () => (
   <Shell code="03" title="特殊地段与并案：航线各记各的锚点">
     <div data-layout="special-venue-ledger" data-visual-anchor="comparison-axis" data-text-treatments="chip,label-block,soft-highlight,thin-underline,external-negation,stamp" data-visual-grammar="special-venue-grid,merge-remand-rule" data-focal-rule="special-venues-anchor-on-vessel-territory-train-and-escape-while-second-instance-must-remand-to-merge-revealed-crimes" data-focal-channels="icon,contrast,annotation,spatial" style={{position: 'absolute', inset: 0}}>
+      <div style={{position: 'absolute', left: 30, bottom: 16, opacity: 0.06, pointerEvents: 'none'}}><Ship size={230} color={C.navy} strokeWidth={1.1} /></div>
       <div data-final-knowledge="venue-special-grid" style={{position: 'absolute', left: 0, top: 0, width: 940, height: 744, backgroundColor: C.panel, border: `3px solid ${C.panelLine}`, borderRadius: 14, padding: '16px 22px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between'}}>
         <Enter delay={6} style={{display: 'flex', alignItems: 'center', gap: 12}}>
           <LabelBlock size={28}>特殊地域 · 四张锚点卡</LabelBlock>

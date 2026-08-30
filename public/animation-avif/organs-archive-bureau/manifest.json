@@ -3,7 +3,7 @@
   "compositionId": "OrgansArchiveBureau",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-08-30T08:51:50.729Z",
+  "generatedAt": "2026-08-30T10:27:37.951Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -16,13 +16,13 @@
       "title": "专门机关：两样上下级，一张职权单",
       "durationMs": 9167,
       "file": "organ-hierarchy-lattice.avif",
-      "fileSize": 488645,
+      "fileSize": 490129,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "81e93a79663dedde5f3453cc91ff8e5954a384d0e0a9c3c057009b74863e7ee3",
+      "sha256": "e2205bf2afc4b6d48010e0f692353400632cbe18e0fd2c15ddcfe5a1b425a192",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "1c4cfed4364ef11a38e8a10304e71f82a889cc9c405d22a502c3d0337a45df7a"
+      "sceneFingerprint": "59dd49e134da461aa855e007d121bbf2aa6c975ef363eab8f4313ee7173f943a"
     },
     {
       "endFrame": 569,
@@ -33,13 +33,13 @@
       "title": "诉讼参与人：进围栏，再看交集",
       "durationMs": 9833,
       "file": "participant-sorting-desk.avif",
-      "fileSize": 472114,
+      "fileSize": 473965,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "61ef00fa8dc2fa12119aded7f557f03131da83cbd137f2f7615dc4be06d190f1",
+      "sha256": "7d0368be2edcff97239ed6e78d6207006211de541dd193c444d52d7c76c0f5c4",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "1c4cfed4364ef11a38e8a10304e71f82a889cc9c405d22a502c3d0337a45df7a"
+      "sceneFingerprint": "59dd49e134da461aa855e007d121bbf2aa6c975ef363eab8f4313ee7173f943a"
     },
     {
       "endFrame": 854,
@@ -50,13 +50,13 @@
       "title": "单位被告人：人格照自然人，代表人有讲究",
       "durationMs": 9500,
       "file": "unit-defendant-ledger.avif",
-      "fileSize": 396085,
+      "fileSize": 399869,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "84bf62c19a3f641a24cf1bcb63dba65a383b0db40d3cec3b1c07b7758565a752",
+      "sha256": "ea817211fd1981fc4c8989f073ad591c367e68ba965285a291aff5fb749dc064",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "1c4cfed4364ef11a38e8a10304e71f82a889cc9c405d22a502c3d0337a45df7a"
+      "sceneFingerprint": "59dd49e134da461aa855e007d121bbf2aa6c975ef363eab8f4313ee7173f943a"
     }
   ],
   "size": {
@@ -64,7 +64,7 @@
     "width": 2560
   },
   "sourceFps": 30,
-  "sourceFingerprint": "1c4cfed4364ef11a38e8a10304e71f82a889cc9c405d22a502c3d0337a45df7a",
+  "sourceFingerprint": "59dd49e134da461aa855e007d121bbf2aa6c975ef363eab8f4313ee7173f943a",
   "targetFps": 30,
-  "totalFileSize": 1356844
+  "totalFileSize": 1363963
 }

@@ -7,6 +7,7 @@ import {C, Chip, Dash, Enter, LabelBlock, Neg, Shell, SoftHi, Stamp, ThinU} from
 export const PrinciplePillarsScene = () => (
   <Shell code="01" title="原则三柱：程序法定 · 权利保障 · 专属定罪">
     <div data-layout="chalk-principle-pillars" data-visual-anchor="concept-icon" data-text-treatments="chip,label-block,soft-highlight,thin-underline,external-negation,stamp" data-visual-grammar="pillar-triad-set,identity-timeline" data-focal-rule="statutory-procedure-has-legislative-and-judicial-faces-defense-rights-center-on-counsel-and-only-the-court-convicts" data-focal-channels="icon,contrast,spatial,annotation" style={{position: 'absolute', inset: 0}}>
+      <div style={{position: 'absolute', right: 30, bottom: 16, opacity: 0.08, pointerEvents: 'none'}}><ScrollText size={230} color={C.chalk} strokeWidth={1.1} /></div>
       <div data-final-knowledge="pillar-statutory-procedure" style={{position: 'absolute', left: 0, top: 0, width: 576, height: 556, backgroundColor: C.panel, border: `3px solid ${C.panelLine}`, borderRadius: 14, padding: '16px 20px', display: 'flex', flexDirection: 'column', gap: 13}}>
         <Enter delay={6} style={{display: 'flex', alignItems: 'center', gap: 12}}>
           <ScrollText size={30} color={C.butter} style={{flexShrink: 0}} />
@@ -111,6 +112,7 @@ export const PrinciplePillarsScene = () => (
 export const SupervisionLeniencyScene = () => (
   <Shell code="02" title="监督有边界，从宽有闸门">
     <div data-layout="supervision-leniency-board" data-visual-anchor="flow-path" data-text-treatments="chip,label-block,soft-highlight,thin-underline,external-negation,stamp" data-visual-grammar="boundary-gate-rows,condition-action-pairs" data-focal-rule="prosecutorial-supervision-watches-without-replacing-and-leniency-requires-voluntary-guilt-admission-while-proof-standard-never-drops" data-focal-channels="icon,connector,contrast,annotation" style={{position: 'absolute', inset: 0}}>
+      <div style={{position: 'absolute', left: 30, bottom: 16, opacity: 0.08, pointerEvents: 'none'}}><PenLine size={230} color={C.chalk} strokeWidth={1.1} /></div>
       <div data-final-knowledge="supervision-boundary-column" style={{position: 'absolute', left: 0, top: 0, width: 660, height: 744, backgroundColor: C.panel, border: `3px solid ${C.panelLine}`, borderRadius: 14, padding: '16px 20px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between'}}>
         <Enter delay={6} style={{display: 'flex', alignItems: 'center', gap: 12}}>
           <Eye size={30} color={C.butter} style={{flexShrink: 0}} />
@@ -215,6 +217,7 @@ export const SupervisionLeniencyScene = () => (
 export const StatuteBarBorderNotesScene = () => (
   <Shell code="03" title="第16条的边界与涉外的四条规矩">
     <div data-layout="statute-bar-border-notes" data-visual-anchor="boundary" data-text-treatments="chip,label-block,soft-highlight,thin-underline,external-negation,stamp" data-visual-grammar="statute-bar-fork,rule-note-stack" data-focal-rule="statutory-non-prosecution-bar-is-a-closed-list-and-foreign-procedure-follows-counsel-translation-and-document-rules" data-focal-channels="icon,enclosure,contrast,spatial" style={{position: 'absolute', inset: 0}}>
+      <div style={{position: 'absolute', right: 30, bottom: 16, opacity: 0.08, pointerEvents: 'none'}}><Ban size={230} color={C.chalk} strokeWidth={1.1} /></div>
       <div data-final-knowledge="statute-bar-column" style={{position: 'absolute', left: 0, top: 0, width: 900, height: 744, backgroundColor: C.panel, border: `3px solid ${C.panelLine}`, borderRadius: 14, padding: '16px 22px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between'}}>
         <div style={{display: 'flex', alignItems: 'center', gap: 14}}>
           <Enter delay={6} style={{display: 'flex', alignItems: 'center', gap: 12}}>
