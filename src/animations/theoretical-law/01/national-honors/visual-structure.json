@@ -1,0 +1,29 @@
+{
+  "animationId": "national-honors",
+  "scenes": [
+    {
+      "id": "motions",
+      "export": "MotionsScene",
+      "layout": "bronze-plaque-rows",
+      "anchor": "main center",
+      "grammar": "铜牌数字行：一般议案/质询案/鱿鱼案三组对照（301·10·103团），主席团四能一行，底带共有权力辨析",
+      "textTreatments": ["engraved numbers", "icon-chip rows"],
+      "focalChannels": ["engraved number stamps", "presidium row"],
+      "tokens": ["Landmark", "MessageCircleQuestion", "Gavel", "Crown"],
+      "finalKnowledge": ["motion-numbers", "presidium-powers"],
+      "statefulObjects": ["bronze plaque row x4"]
+    },
+    {
+      "id": "honoring",
+      "export": "HonoringScene",
+      "layout": "three-step-gold-thread",
+      "anchor": "main center",
+      "grammar": "授予金线三步：提请（两央+委员长会议）→决定（全人常）→颁发（国家主席），主席自主权三件旁挂，底带口诀金印",
+      "textTreatments": ["step plaques", "medal stamps"],
+      "focalChannels": ["three step headings", "mnemonic strip"],
+      "tokens": ["Handshake", "ScrollText", "Medal", "Sparkles"],
+      "finalKnowledge": ["honor-process", "president-discretion"],
+      "statefulObjects": ["gold thread step x3"]
+    }
+  ]
+}

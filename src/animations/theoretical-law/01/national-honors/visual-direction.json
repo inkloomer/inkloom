@@ -1,0 +1,30 @@
+{
+  "directionId": "gilded-medal-vault",
+  "family": "medal-honor-vault",
+  "title": "鎏金勋章阁",
+  "subject": "theoretical-law",
+  "chapter": "01",
+  "concept": "绛色丝绒勋章陈列阁：议案数字如勋章编号錾刻在铜牌上，授予流程沿金线三步走（提请→决定→颁发），友谊勋章由主席亲授",
+  "palette": {
+    "velvet": "#45242E",
+    "velvetDeep": "#331A22",
+    "panel": "#F3ECDB",
+    "panelDim": "#E5DCC5",
+    "edge": "#7A6258",
+    "ink": "#2A1E22",
+    "inkSoft": "#5E4C4E",
+    "gold": "#C9A23F",
+    "ribbon": "#3E5C8A",
+    "jade": "#4E7D6B",
+    "paper": "#F7F2E4"
+  },
+  "typography": {
+    "title": "var(--inkloom-animation-title)",
+    "body": "var(--inkloom-animation-body)"
+  },
+  "composition": "铜牌数字行 + 三步授予金线 + 勋章水印图腾",
+  "surface": "丝绒暗纹 + 金线镶边 + 勋章绶带斜纹",
+  "motion": "铜牌錾刻入场、金线点亮、勋章盖印",
+  "transition": "硬切换幕",
+  "catalog": ["考点40 国家勋章与国家荣誉称号"]
+}

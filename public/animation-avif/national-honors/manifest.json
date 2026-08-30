@@ -1,0 +1,53 @@
+{
+  "animationId": "national-honors",
+  "compositionId": "NationalHonors",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-30T08:18:45.173Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 251,
+      "frameCount": 252,
+      "id": "motions",
+      "number": "01",
+      "startFrame": 0,
+      "title": "铜牌数字门：301·10·103团",
+      "durationMs": 8400,
+      "file": "motions.avif",
+      "fileSize": 799652,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "ba92c2fc83d509fc4a9c65bf6223cb4d1cd48aab29f9e859605be9b83a4c8ae9",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "49649008bf5fa4691e650be4c0de603116716d2dd8afdde797b0dbba0bf51878"
+    },
+    {
+      "endFrame": 503,
+      "frameCount": 252,
+      "id": "honoring",
+      "number": "02",
+      "startFrame": 252,
+      "title": "勋章授予金线三步",
+      "durationMs": 8400,
+      "file": "honoring.avif",
+      "fileSize": 439010,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "063eef7ca236c001b008b370b96a5f282e4e44c843e725662cd3cde15011c17a",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "49649008bf5fa4691e650be4c0de603116716d2dd8afdde797b0dbba0bf51878"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "49649008bf5fa4691e650be4c0de603116716d2dd8afdde797b0dbba0bf51878",
+  "targetFps": 30,
+  "totalFileSize": 1238662
+}
