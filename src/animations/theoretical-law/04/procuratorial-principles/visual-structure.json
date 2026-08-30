@@ -1,0 +1,29 @@
+{
+  "animationId": "procuratorial-principles",
+  "scenes": [
+    {
+      "id": "three-principles",
+      "export": "ThreePrinciplesScene",
+      "layout": "principle-pillars",
+      "anchor": "main center",
+      "grammar": "三原则立柱：检察权统一行使（检察一体化·上命下从）/依法独立行使检察权（不受行政机关社会团体个人干涉）/对诉讼活动实行法律监督（法律监督机关）",
+      "textTreatments": ["pillar plaques", "principle chips"],
+      "focalChannels": ["pillar headings", "integration emphasis"],
+      "tokens": ["Link", "Shield", "Eye"],
+      "finalKnowledge": "three-principles",
+      "statefulObjects": ["pillar panel x3"]
+    },
+    {
+      "id": "integration",
+      "export": "IntegrationScene",
+      "layout": "chain-link-triad",
+      "anchor": "main center",
+      "grammar": "检察一体化三连环：上命下从（领导关系）/职能协助义务/职务上相互承继移转代理，底带点睛（绝对重点）",
+      "textTreatments": ["link chips", "emphasis seals"],
+      "focalChannels": ["three links", "emphasis strip"],
+      "tokens": ["Link", "Handshake", "RefreshCw"],
+      "finalKnowledge": "integration-links",
+      "statefulObjects": ["chain link x3"]
+    }
+  ]
+}

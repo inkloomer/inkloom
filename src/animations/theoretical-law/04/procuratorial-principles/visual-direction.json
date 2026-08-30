@@ -1,0 +1,15 @@
+{
+  "directionId": "procurate-emblem-hall",
+  "family": "emblem-hall-principles",
+  "title": "朱徽检察堂",
+  "subject": "theoretical-law",
+  "chapter": "04",
+  "concept": "朱徽检察堂：三原则立柱，检察一体化以链条连环为图形意象（上命下从·职能协助·承继移转代理）。图形层主题；画面文字一律使用源笔记法考名词",
+  "palette": "堂深 procurate #332F2A、深堂 procurateDeep #272320、面板 panel #F1ECDA、暗面板 panelDim #E2DDC7、镶边 edge #6C6459、墨字 ink #292420、淡墨 inkSoft #5B5449、徽朱 emblem #B04834、链金 chainGold #C0983E、监督青 superviseTeal #4E7D74、纸白 paper #F6F1E0",
+  "typography": "标题用 var(--inkloom-animation-title)，正文用 var(--inkloom-animation-body)；原则柱加粗法考名词，要素用链环标签",
+  "composition": "三原则立柱 + 链环三连环 + 源名词点睛带",
+  "surface": "堂柱纹 + 链环金属光 + 朱徽印",
+  "motion": "立柱顿立、链环扣合、点睛点亮",
+  "transition": "硬切换幕",
+  "catalog": ["考点67 检察制度的基本原则"]
+}

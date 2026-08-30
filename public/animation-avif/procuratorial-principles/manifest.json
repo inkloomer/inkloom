@@ -1,0 +1,53 @@
+{
+  "animationId": "procuratorial-principles",
+  "compositionId": "ProcuratorialPrinciples",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-30T15:18:35.432Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 215,
+      "frameCount": 216,
+      "id": "three-principles",
+      "number": "01",
+      "startFrame": 0,
+      "title": "检察制度的基本原则",
+      "durationMs": 7200,
+      "file": "three-principles.avif",
+      "fileSize": 538285,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "63f54b123ee646c6bf070394b075f88cf394c8638d12ccbc600d87735c9bf54d",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "7d5a30a25ab326fac771e92f0e42294c61f3c039c2bdb67618d2b3967abcf71f"
+    },
+    {
+      "endFrame": 431,
+      "frameCount": 216,
+      "id": "integration",
+      "number": "02",
+      "startFrame": 216,
+      "title": "检察一体化",
+      "durationMs": 7200,
+      "file": "integration.avif",
+      "fileSize": 361480,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "e60fc8a6143930f758637fe4b58c505b95341e673595839ef1366fd49572e07f",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "7d5a30a25ab326fac771e92f0e42294c61f3c039c2bdb67618d2b3967abcf71f"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "7d5a30a25ab326fac771e92f0e42294c61f3c039c2bdb67618d2b3967abcf71f",
+  "targetFps": 30,
+  "totalFileSize": 899765
+}

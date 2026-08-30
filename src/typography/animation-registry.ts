@@ -212,6 +212,7 @@ import {typography as typographyAutoPlumAppealsClockhouse} from '../animations/c
 import {typography as typographyAutoQuartzSproutGreenhouse} from '../animations/commercial-economic-law/05/quartz-sprout-greenhouse/animation.meta';
 import {typography as typographyAutoAzureDraftHall} from '../animations/commercial-economic-law/06/azure-draft-hall/animation.meta';
 import {typography as typographyAutoYellowNoticeBureau} from '../animations/commercial-economic-law/06/yellow-notice-bureau/animation.meta';
+import {typography as typographyAutoOxbloodShieldWorkshop} from '../animations/commercial-economic-law/06/oxblood-shield-workshop/animation.meta';
 import {typography as typographyAutoReckoningAbacusDesk} from '../animations/administrative-law/24/reckoning-abacus-desk/animation.meta';
 import {typography as typographyAutoBambooScrollRestoration} from '../animations/administrative-law/23/bamboo-scroll-restoration/animation.meta';
 import {typography as typographyAutoLighthouseWatchNetwork} from '../animations/administrative-law/20/lighthouse-watch-network/animation.meta';
@@ -266,7 +267,6 @@ import {typography as typographyAutoAttachedSuitCourtyard} from '../animations/c
 import {typography as typographyAutoPeriodRelayStation} from '../animations/criminal-procedure-gold/10/period-relay-station/animation.meta';
 import {typography as typographyAutoFilingRegistryHall} from '../animations/criminal-procedure-gold/11/filing-registry-hall/animation.meta';
 import {typography as typographyAutoInvestigationFieldKit} from '../animations/criminal-procedure-gold/12/investigation-field-kit/animation.meta';
-import {typography as typographyAutoInvestigationFieldKit} from '../animations/criminal-procedure-gold/12/investigation-field-kit/animation.meta';
 import {typography as typographyBel} from '../animations/commercial-economic-law/01/branch-wallet-ledger/animation.meta';
 import {typography as typographyVpf} from '../animations/commercial-economic-law/01/veil-piercing-forge/animation.meta';
 import {typography as typographyOph} from '../animations/criminal-procedure-gold/01/overview-porcelain-hall/animation.meta';
@@ -298,6 +298,7 @@ import {typography as typographyJm} from '../animations/theoretical-law/04/judge
 import {typography as typographyJe} from '../animations/theoretical-law/04/judge-ethics/animation.meta';
 import {typography as typographyJl} from '../animations/theoretical-law/04/judge-liability/animation.meta';
 import {typography as typographyPa} from '../animations/theoretical-law/04/people-assessors/animation.meta';
+import {typography as typographyPp} from '../animations/theoretical-law/04/procuratorial-principles/animation.meta';
 import {typography as typographyCc} from '../animations/theoretical-law/01/constitution-classification/animation.meta';
 import {typography as typographyCdv} from '../animations/theoretical-law/01/constitution-development/animation.meta';
 import {typography as typographyCp} from '../animations/theoretical-law/01/constitution-principles/animation.meta';
@@ -495,6 +496,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'quartz-sprout-greenhouse': {metadata: typographyAutoQuartzSproutGreenhouse, scope: {animationId: 'quartz-sprout-greenhouse', subject: 'commercial-economic-law', topic: '05'}},
   'azure-draft-hall': {metadata: typographyAutoAzureDraftHall, scope: {animationId: 'azure-draft-hall', subject: 'commercial-economic-law', topic: '06'}},
   'yellow-notice-bureau': {metadata: typographyAutoYellowNoticeBureau, scope: {animationId: 'yellow-notice-bureau', subject: 'commercial-economic-law', topic: '06'}},
+  'oxblood-shield-workshop': {metadata: typographyAutoOxbloodShieldWorkshop, scope: {animationId: 'oxblood-shield-workshop', subject: 'commercial-economic-law', topic: '06'}},
   'reckoning-abacus-desk': {metadata: typographyAutoReckoningAbacusDesk, scope: {animationId: 'reckoning-abacus-desk', subject: 'administrative-law', topic: '24'}},
   'bamboo-scroll-restoration': {metadata: typographyAutoBambooScrollRestoration, scope: {animationId: 'bamboo-scroll-restoration', subject: 'administrative-law', topic: '23'}},
   'lighthouse-watch-network': {metadata: typographyAutoLighthouseWatchNetwork, scope: {animationId: 'lighthouse-watch-network', subject: 'administrative-law', topic: '20'}},
@@ -592,7 +594,6 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'period-relay-station': {metadata: typographyAutoPeriodRelayStation, scope: {animationId: 'period-relay-station', subject: 'criminal-procedure-gold', topic: '10'}},
   'filing-registry-hall': {metadata: typographyAutoFilingRegistryHall, scope: {animationId: 'filing-registry-hall', subject: 'criminal-procedure-gold', topic: '11'}},
   'investigation-field-kit': {metadata: typographyAutoInvestigationFieldKit, scope: {animationId: 'investigation-field-kit', subject: 'criminal-procedure-gold', topic: '12'}},
-  'investigation-field-kit': {metadata: typographyAutoInvestigationFieldKit, scope: {animationId: 'investigation-field-kit', subject: 'criminal-procedure-gold', topic: '12'}},
   'branch-wallet-ledger': {metadata: typographyBel, scope: {animationId: 'branch-wallet-ledger', subject: 'commercial-economic-law', topic: '01'}},
   'veil-piercing-forge': {metadata: typographyVpf, scope: {animationId: 'veil-piercing-forge', subject: 'commercial-economic-law', topic: '01'}},
   'overview-porcelain-hall': {metadata: typographyOph, scope: {animationId: 'overview-porcelain-hall', subject: 'criminal-procedure-gold', topic: '01'}},
@@ -642,6 +643,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'judge-ethics': {metadata: typographyJe, scope: {animationId: 'judge-ethics', subject: 'theoretical-law', topic: '04'}},
   'judge-liability': {metadata: typographyJl, scope: {animationId: 'judge-liability', subject: 'theoretical-law', topic: '04'}},
   'people-assessors': {metadata: typographyPa, scope: {animationId: 'people-assessors', subject: 'theoretical-law', topic: '04'}},
+  'procuratorial-principles': {metadata: typographyPp, scope: {animationId: 'procuratorial-principles', subject: 'theoretical-law', topic: '04'}},
   'profit-reserve-granary': {metadata: typographyPrg, scope: {animationId: 'profit-reserve-granary', subject: 'commercial-economic-law', topic: '01'}},
   'promoter-liability-ropewalk': {metadata: typographyPlr, scope: {animationId: 'promoter-liability-ropewalk', subject: 'commercial-economic-law', topic: '01'}},
   'fight-defense-diagram': {metadata: typography44, scope: {animationId: 'fight-defense-diagram', subject: 'criminal', topic: '22'}},
