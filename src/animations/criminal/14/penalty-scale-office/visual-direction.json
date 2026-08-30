@@ -1,0 +1,26 @@
+{
+  "directionId": "penalty-staff-score",
+  "family": "penalty-staff-score",
+  "palette": "五线谱纸白 score + 墨线五线 + 音符黑 note + 谱号金 clef + 强调红 accent + 静绿 calm + 谱行靛蓝 indigo",
+  "typography": "heavy stave headings, round note chips, clef label blocks, double-frame note verdicts",
+  "composition": "a musical stave where five main penalties climb as notes from limited freedom to life, add-on penalties stack like chords, and the conductor's order sheet ranks civil claims first",
+  "surface": "score paper grain, staff line rows, pill note chips, dashed rest zones, double-frame note stamps; no glossy panels",
+  "motion": "notes enter up the stave in severity order, chord stacks layer beside them, note stamps land as verdicts; no idle loops",
+  "transition": "the stave paper and line grid persist while each scene re-writes the score",
+  "conceptTokens": {
+    "刑期": "Hourglass",
+    "折抵": "ArrowLeftRight",
+    "案例": "GraduationCap",
+    "递重": "Maximize2",
+    "剥夺政治权利": "ScrollText",
+    "驱逐出境": "Plane",
+    "从业禁止": "Ban",
+    "追缴": "FileText"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/criminal/14/penalty-scale-office/",
+    "title": "五线量刑谱"
+  }
+}

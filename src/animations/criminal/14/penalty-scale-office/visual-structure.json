@@ -1,0 +1,219 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "playerControlSafeBottom": 168,
+  "scenes": [
+    {
+      "id": "main-penalty-ladder",
+      "export": "MainPenaltyLadderScene",
+      "layout": "five-stave-ladder-board",
+      "anchor": "flow-path",
+      "grammar": [
+        "penalty-grade-stave",
+        "duo-rule-strip"
+      ],
+      "textTreatments": [
+        "chip",
+        "label-block",
+        "soft-highlight",
+        "thin-underline",
+        "external-negation",
+        "stamp"
+      ],
+      "focalChannels": [
+        "icon",
+        "contrast",
+        "enclosure",
+        "spatial"
+      ],
+      "tokens": [
+        "Maximize2",
+        "Landmark",
+        "Users",
+        "DoorClosed",
+        "BrickWall",
+        "Hourglass",
+        "Gavel"
+      ],
+      "finalKnowledge": [
+        "stave-rules",
+        "stave-step-control",
+        "stave-step-detention",
+        "stave-step-fixed",
+        "stave-step-life",
+        "stave-step-death",
+        "stave-duo-strip"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "credit-offset-dial",
+      "export": "CreditOffsetDialScene",
+      "layout": "offset-limit-dual-dial",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "offset-ratio-tables",
+        "death-ban-trio"
+      ],
+      "textTreatments": [
+        "chip",
+        "label-block",
+        "soft-highlight",
+        "thin-underline",
+        "external-negation",
+        "stamp"
+      ],
+      "focalChannels": [
+        "icon",
+        "contrast",
+        "enclosure",
+        "spatial"
+      ],
+      "tokens": [
+        "ArrowLeftRight",
+        "Hourglass",
+        "Ban",
+        "GraduationCap"
+      ],
+      "finalKnowledge": [
+        "offset-board",
+        "offset-row-arrest",
+        "offset-row-surveillance",
+        "offset-row-admin",
+        "offset-negatives",
+        "death-ban-board",
+        "ban-minor",
+        "ban-pregnant",
+        "ban-elderly",
+        "torture-case"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "death-review-track",
+      "export": "DeathReviewTrackScene",
+      "layout": "death-suspend-four-track",
+      "anchor": "timeline-gate",
+      "grammar": [
+        "suspend-four-branch",
+        "restrict-reduce-gate"
+      ],
+      "textTreatments": [
+        "chip",
+        "label-block",
+        "soft-highlight",
+        "thin-underline",
+        "external-negation",
+        "stamp"
+      ],
+      "focalChannels": [
+        "icon",
+        "connector",
+        "contrast",
+        "spatial"
+      ],
+      "tokens": [
+        "Hourglass",
+        "Gavel",
+        "Milestone",
+        "Scale",
+        "Flag"
+      ],
+      "finalKnowledge": [
+        "suspend-start-strip",
+        "track-no-crime",
+        "track-merit",
+        "track-executed",
+        "track-restart",
+        "restrict-reduce-board",
+        "procedure-board"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "fine-order-merge",
+      "export": "FineOrderMergeScene",
+      "layout": "fine-order-merge-board",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "fine-four-modes",
+        "civil-first-order"
+      ],
+      "textTreatments": [
+        "chip",
+        "label-block",
+        "soft-highlight",
+        "thin-underline",
+        "external-negation",
+        "stamp"
+      ],
+      "focalChannels": [
+        "icon",
+        "contrast",
+        "enclosure",
+        "connector"
+      ],
+      "tokens": [
+        "Landmark",
+        "Scale",
+        "Zap",
+        "GraduationCap"
+      ],
+      "finalKnowledge": [
+        "addon-rule-strip",
+        "fine-modes-board",
+        "mode-single",
+        "mode-select",
+        "mode-add",
+        "mode-mixed",
+        "confiscate-order-board",
+        "order-victim",
+        "order-debt",
+        "order-penalty",
+        "merge-case-floor"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "rights-deport-nonpenal",
+      "export": "RightsDeportNonpenalScene",
+      "layout": "rights-deport-nonpenal-triptych",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "rights-start-four-ways",
+        "dirty-vs-clean-split"
+      ],
+      "textTreatments": [
+        "chip",
+        "label-block",
+        "soft-highlight",
+        "thin-underline",
+        "external-negation",
+        "stamp"
+      ],
+      "focalChannels": [
+        "icon",
+        "contrast",
+        "enclosure",
+        "spatial"
+      ],
+      "tokens": [
+        "ScrollText",
+        "Plane",
+        "Ban",
+        "FileText",
+        "Users"
+      ],
+      "finalKnowledge": [
+        "rights-board",
+        "rights-start-control",
+        "rights-start-detention",
+        "rights-start-death",
+        "deport-board",
+        "nonpenal-board",
+        "dirty-clean-floor"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}
