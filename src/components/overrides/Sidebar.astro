@@ -1,0 +1,30 @@
+---
+import Default from '@astrojs/starlight/components/Sidebar.astro';
+---
+
+<Default {...Astro.props} />
+
+<script is:inline aria-hidden="true">
+	(() => {
+		try {
+			const scroller = document.getElementById('starlight__sidebar');
+			const current = scroller?.querySelector('a[aria-current="page"]');
+			if (!scroller || !(current instanceof HTMLElement)) return;
+			// The scroll-state restore may re-collapse the group holding the active page;
+			// reveal it so the entry can be located at all.
+			for (
+				let details = current.closest('details');
+				details;
+				details = details.parentElement?.closest('details') ?? null
+			) {
+				if (!details.open) details.open = true;
+			}
+			// Leave the pane alone while the entry is fully visible; otherwise center it.
+			// scrollTop is assigned directly so only the sidebar pane moves, never the page.
+			const pane = scroller.getBoundingClientRect();
+			const item = current.getBoundingClientRect();
+			if (item.top >= pane.top && item.bottom <= pane.bottom) return;
+			scroller.scrollTop += item.top - pane.top - scroller.clientHeight / 2 + item.height / 2;
+		} catch {}
+	})();
+</script>

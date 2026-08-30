@@ -63,6 +63,7 @@ export default defineConfig({
 				Head: './src/components/overrides/TypographyHead.astro',
 				PageTitle: './src/components/overrides/PageTitle.astro',
 				ThemeSelect: './src/components/overrides/ThemeSelect.astro',
+				Sidebar: './src/components/overrides/Sidebar.astro',
 			},
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/inkloomer/inkloom' }],
 			editLink: {
