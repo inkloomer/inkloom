@@ -1,0 +1,17 @@
+{
+  "directionId": "robe-talent-bureau",
+  "family": "talent-robe-bureau",
+  "title": "玄袍量才局",
+  "subject": "theoretical-law",
+  "chapter": "04",
+  "concept": "玄青法袍的量才局：任职条件以量才尺刻度呈现（学历×年限），回避四禁与律师隔离写成界碑，任免奖惩入册归档（图形层主题；画面文字一律使用源笔记法考名词）",
+  "palette": "玄青袍色 robe #2E3440、深袍 robeDeep #232935、面板 panel #F0EBDA、暗面板 panelDim #E1DCC7、镶边 edge #5F6B7A、墨字 ink #242B36、淡墨 inkSoft #556070、金穗 tasselGold #C7A24B、量尺红 measureRed #B04834、档青 archiveTeal #4F7D74、纸白 paper #F6F1E0",
+  "typography": "标题用 var(--inkloom-animation-title)，正文用 var(--inkloom-animation-body)；刻度行加粗法考名词，界碑用碑刻式标题，档册用纸纹底",
+  "composition": "量才尺刻度 + 界碑四禁 + 任免归档册 + 金印口诀",
+  "surface": "玄青袍纹 + 金穗流苏 + 档册纸纹",
+  "motion": "刻度滑定、界碑钉立、档册翻页",
+  "transition": "硬切换幕",
+  "catalog": [
+    "考点62 法官的条件和任免"
+  ]
+}

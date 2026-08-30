@@ -5,26 +5,13 @@
   "subject": "theoretical-law",
   "chapter": "01",
   "concept": "辕门虎符令：军令分级挂签（战争/动员/紧急状态），每支令签写决定机关与公布方式；帅帐内陈军委组织铭牌与两届之限名录",
-  "palette": {
-    "iron": "#33383B",
-    "ironDeep": "#24282B",
-    "panel": "#EFE8D2",
-    "panelDim": "#E0D9C0",
-    "edge": "#687076",
-    "ink": "#262B2E",
-    "inkSoft": "#576066",
-    "tally": "#C69A3C",
-    "cinnabar": "#AE3B2B",
-    "army": "#5F6F4E",
-    "paper": "#F5F0DE"
-  },
-  "typography": {
-    "title": "var(--inkloom-animation-title)",
-    "body": "var(--inkloom-animation-body)"
-  },
+  "palette": "#33383B 铁灰、#24282B 深铁、#EFE8D2 面板、#E0D9C0 暗面板、#687076 镶边、#262B2E 墨字、#576066 淡墨、#C69A3C 虎符金、#AE3B2B 朱砂、#5F6F4E army、#F5F0DE 纸白",
+  "typography": "标题字体 var(--inkloom-animation-title)，正文字体 var(--inkloom-animation-body)",
   "composition": "令签分级行 + 决定/公布双章 + 帅帐铭牌 + 名录卷轴",
   "surface": "铁幕暗纹 + 虎符错金线 + 辕门旗影",
   "motion": "令签钉挂、双章盖印、名录展开",
   "transition": "硬切换幕",
-  "catalog": ["考点43 中央军委"]
+  "catalog": [
+    "考点43 中央军委"
+  ]
 }

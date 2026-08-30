@@ -5,27 +5,13 @@
   "subject": "theoretical-law",
   "chapter": "04",
   "concept": "堂上明镜高悬：公正七要素如镜缘七钉，公开与廉洁细则作镜面铭带，效率与公正的天平悬于正堂，『公正优先，兼顾效率』为堂训",
-  "palette": {
-    "hall": "#333A40",
-    "hallDeep": "#262C31",
-    "panel": "#EFEAD9",
-    "panelDim": "#E0DBC6",
-    "edge": "#647079",
-    "ink": "#242B30",
-    "inkSoft": "#56636B",
-    "mirrorSilver": "#9FB4C4",
-    "justiceGold": "#C9A24A",
-    "sealRed": "#AE452F",
-    "pine": "#557A6C",
-    "paper": "#F6F2E2"
-  },
-  "typography": {
-    "title": "var(--inkloom-animation-title)",
-    "body": "var(--inkloom-animation-body)"
-  },
+  "palette": "#333A40 堂灰、#262C31 深堂、#EFEAD9 面板、#E0DBC6 暗面板、#647079 镶边、#242B30 墨字、#56636B 淡墨、#9FB4C4 镜银、#C9A24A 正义金、#AE452F 印朱、#557A6C 松绿、#F6F2E2 纸白",
+  "typography": "标题字体 var(--inkloom-animation-title)，正文字体 var(--inkloom-animation-body)",
   "composition": "明镜圆心 + 七钉要素环 + 镜面铭带 + 天平堂训",
   "surface": "堂柱暗纹 + 镜面冷光 + 朱印",
   "motion": "明镜悬升、七钉钉入、天平摆定",
   "transition": "硬切换幕",
-  "catalog": ["考点59 司法公正与司法效率"]
+  "catalog": [
+    "考点59 司法公正与司法效率"
+  ]
 }

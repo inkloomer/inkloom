@@ -5,27 +5,13 @@
   "subject": "theoretical-law",
   "chapter": "01",
   "concept": "长城烽燧夜台：警讯分级点亮（战争/动员/紧急状态），烽火台是人大，信号旗归人常与国务院；政务侧以石台铭牌记录国务院组织与总理负责制",
-  "palette": {
-    "stone": "#2E333B",
-    "stoneDeep": "#22262C",
-    "panel": "#EFE9D6",
-    "panelDim": "#E0DAC5",
-    "edge": "#667080",
-    "ink": "#242932",
-    "inkSoft": "#55606E",
-    "beacon": "#D06428",
-    "signal": "#B03A2A",
-    "watchGold": "#C99B3F",
-    "mist": "#5A7A99",
-    "paper": "#F6F1E1"
-  },
-  "typography": {
-    "title": "var(--inkloom-animation-title)",
-    "body": "var(--inkloom-animation-body)"
-  },
+  "palette": "#2E333B 石色、#22262C 深石、#EFE9D6 面板、#E0DAC5 暗面板、#667080 镶边、#242932 墨字、#55606E 淡墨、#D06428 烽火橙、#B03A2A 警讯红、#C99B3F 烽燧金、#5A7A99 雾蓝、#F6F1E1 纸白",
+  "typography": "标题字体 var(--inkloom-animation-title)，正文字体 var(--inkloom-animation-body)",
   "composition": "烽燧分级警讯行 + 石台铭牌 + 数字戳 + 警讯一句记",
   "surface": "夜空渐变 + 城砖暗纹 + 烽火微光",
   "motion": "烽火点亮、令旗展开、铭牌顿显",
   "transition": "硬切换幕",
-  "catalog": ["考点42 战争宣战动员紧急状态决定权分配"]
+  "catalog": [
+    "考点42 战争宣战动员紧急状态决定权分配"
+  ]
 }

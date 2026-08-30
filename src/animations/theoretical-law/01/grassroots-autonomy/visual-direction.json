@@ -5,26 +5,13 @@
   "subject": "theoretical-law",
   "chapter": "01",
   "concept": "江南青砖院落里的乡井议事堂：村民与居民两套自治班子如东西两厢，四场议事会依期开锣，青砖墙上贴柿红告示，石井圈定自治边界",
-  "palette": {
-    "wall": "#33453E",
-    "wallDeep": "#26332E",
-    "panel": "#EAE6D4",
-    "panelDim": "#DBD8C2",
-    "edge": "#5F6E60",
-    "ink": "#1F2A24",
-    "jade": "#3E7C6B",
-    "bamboo": "#7FA05C",
-    "persimmon": "#C25E33",
-    "gold": "#C9A24B",
-    "paper": "#F5F2E4"
-  },
-  "typography": {
-    "title": "var(--inkloom-animation-title)",
-    "body": "var(--inkloom-animation-body)"
-  },
+  "palette": "#33453E 墙色、#26332E 深墙、#EAE6D4 面板、#DBD8C2 暗面板、#5F6E60 镶边、#1F2A24 墨字、#3E7C6B 玉青、#7FA05C 竹青、#C25E33 柿红、#C9A24B 金色、#F5F2E4 纸白",
+  "typography": "标题字体 var(--inkloom-animation-title)，正文字体 var(--inkloom-animation-body)",
   "composition": "门楼题额 + 东西两厢对照 + 石鼓立柱 + 柿红告示条",
   "surface": "青砖墙纹理 + 井栏双圈 + 瓦檐压顶",
   "motion": " door-slate 入场、石鼓顿显、告示盖戳",
   "transition": "硬切换幕",
-  "catalog": ["考点37 基层群众自治"]
+  "catalog": [
+    "考点37 基层群众自治"
+  ]
 }

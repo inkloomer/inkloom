@@ -5,26 +5,13 @@
   "subject": "theoretical-law",
   "chapter": "04",
   "concept": "碑廊三碑鼎立：干预司法记录通报追责碑、司法权威碑、履职保护碑；廊尾一室对照「不当干预四相」与「正常履职书面道」",
-  "palette": {
-    "slate": "#363B3E",
-    "slateDeep": "#282D30",
-    "panel": "#F0EBDA",
-    "panelDim": "#E1DCC7",
-    "edge": "#666E70",
-    "ink": "#252A2D",
-    "inkSoft": "#565F62",
-    "steleBronze": "#C0913E",
-    "rebuffRed": "#B0432C",
-    "guardPine": "#567960",
-    "paper": "#F6F1E0"
-  },
-  "typography": {
-    "title": "var(--inkloom-animation-title)",
-    "body": "var(--inkloom-animation-body)"
-  },
+  "palette": "#363B3E slate、#282D30 slateDeep、#F0EBDA 面板、#E1DCC7 暗面板、#666E70 镶边、#252A2D 墨字、#565F62 淡墨、#C0913E 碑铜、#B0432C 拒朱、#567960 护松、#F6F1E0 纸白",
+  "typography": "标题字体 var(--inkloom-animation-title)，正文字体 var(--inkloom-animation-body)",
   "composition": "三碑鼎立 + 碑额图标 + 对照室双栏 + 朱印口诀",
   "surface": "碑石凿纹 + 铭文錾金 + 朱漆印",
   "motion": "碑身顿立、铭文錾显、对照室开闸",
   "transition": "硬切换幕",
-  "catalog": ["考点60 独立行使审判权与独立行使检察权"]
+  "catalog": [
+    "考点60 独立行使审判权与独立行使检察权"
+  ]
 }

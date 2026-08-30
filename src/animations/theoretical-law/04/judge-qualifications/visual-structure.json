@@ -1,0 +1,41 @@
+{
+  "animationId": "judge-qualifications",
+  "scenes": [
+    {
+      "id": "conditions",
+      "export": "ConditionsScene",
+      "layout": "measure-scale-columns",
+      "anchor": "main center",
+      "grammar": "量才尺双刻度（学历条件×年限条件5/4/3年）+禁止条件四印+兼职禁令与离任限制行，底带口诀",
+      "textTreatments": ["scale rows", "forbid seals"],
+      "focalChannels": ["scale rows", "departure limits"],
+      "tokens": ["GraduationCap", "Hourglass", "Ban", "UserX"],
+      "finalKnowledge": "qualification-conditions",
+      "statefulObjects": ["scale row x2", "forbid seal x4"]
+    },
+    {
+      "id": "avoidance",
+      "export": "AvoidanceScene",
+      "layout": "four-boundary-steles",
+      "anchor": "main center",
+      "grammar": "回避四界碑（同院领导层/同院正副院长与审判员/同庭任职/上下相邻两级正副院长）+亲属律师隔离栏，底带口诀",
+      "textTreatments": ["boundary steles", "family seals"],
+      "focalChannels": ["four boundaries", "family bar"],
+      "tokens": ["Users", "Home", "Scale", "Ban"],
+      "finalKnowledge": "recusal-rules",
+      "statefulObjects": ["boundary stele x4"]
+    },
+    {
+      "id": "appointment",
+      "export": "AppointmentScene",
+      "layout": "archive-ledger-tiers",
+      "anchor": "main center",
+      "grammar": "任免归档册分层（最高/地方/地区中院/兵团专门法院）+初任考试考核+免职八情形+奖惩与保障三件",
+      "textTreatments": ["ledger tiers", "archive stamps"],
+      "focalChannels": ["appointment tiers", "guarantees"],
+      "tokens": ["Landmark", "Building2", "FileCheck", "Award"],
+      "finalKnowledge": "appointment-punishment",
+      "statefulObjects": ["ledger tier x4"]
+    }
+  ]
+}

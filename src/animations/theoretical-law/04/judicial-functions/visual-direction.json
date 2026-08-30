@@ -5,26 +5,13 @@
   "subject": "theoretical-law",
   "chapter": "04",
   "concept": "司法功能如钟楼五音：解决纠纷为主钟居中，人权保障·调整社会关系·解释补充法律·形成公共政策四钟分列；钟下铭牌写要点，辨析室陈三组对照",
-  "palette": {
-    "tower": "#3A3440",
-    "towerDeep": "#2B2732",
-    "panel": "#F1ECDB",
-    "panelDim": "#E2DDCB",
-    "edge": "#6C6472",
-    "ink": "#282330",
-    "inkSoft": "#5B5462",
-    "bellBrass": "#C2913C",
-    "mainBell": "#B04A32",
-    "skyBlue": "#5B7E96",
-    "paper": "#F6F1E1"
-  },
-  "typography": {
-    "title": "var(--inkloom-animation-title)",
-    "body": "var(--inkloom-animation-body)"
-  },
+  "palette": "#3A3440 钟楼灰、#2B2732 深楼、#F1ECDB 面板、#E2DDCB 暗面板、#6C6472 镶边、#282330 墨字、#5B5462 淡墨、#C2913C 钟铜、#B04A32 主钟红、#5B7E96 天蓝、#F6F1E1 纸白",
+  "typography": "标题字体 var(--inkloom-animation-title)，正文字体 var(--inkloom-animation-body)",
   "composition": "五钟横列 + 钟舌图标 + 钟下铭牌 + 辨析三室",
   "surface": "钟楼砖纹 + 铜钟光晕 + 钟绳垂纹",
   "motion": "钟摆入场、主钟鸣响、辨析室点灯",
   "transition": "硬切换幕",
-  "catalog": ["考点58 司法的功能"]
+  "catalog": [
+    "考点58 司法的功能"
+  ]
 }

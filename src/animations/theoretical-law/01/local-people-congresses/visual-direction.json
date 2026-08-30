@@ -5,26 +5,13 @@
   "subject": "theoretical-law",
   "chapter": "01",
   "concept": "郡县舆图议事堂：墙上挂舆图，议事木牍分四层（任期任免/特殊任免/会议制度/议案撤职），提名链条以舆图引线相连，县乡差异以柳绿批注",
-  "palette": {
-    "atlas": "#2F5560",
-    "atlasDeep": "#224049",
-    "panel": "#F0E9D2",
-    "panelDim": "#E1DABF",
-    "edge": "#5F7480",
-    "ink": "#22323A",
-    "inkSoft": "#51626C",
-    "county": "#BC4A2E",
-    "mapGold": "#C7A23C",
-    "willow": "#7A9457",
-    "paper": "#F6F0DE"
-  },
-  "typography": {
-    "title": "var(--inkloom-animation-title)",
-    "body": "var(--inkloom-animation-body)"
-  },
+  "palette": "#2F5560 舆图青、#224049 深舆图、#F0E9D2 面板、#E1DABF 暗面板、#5F7480 镶边、#22323A 墨字、#51626C 淡墨、#BC4A2E 县印朱、#C7A23C 舆图金、#7A9457 柳绿、#F6F0DE 纸白",
+  "typography": "标题字体 var(--inkloom-animation-title)，正文字体 var(--inkloom-animation-body)",
   "composition": "木牍分层 + 舆图引线 + 县乡差异柳批 + 金印口诀",
   "surface": "舆图青底 + 山水暗纹 + 木牍镶边",
   "motion": "木牍嵌入、引线延展、柳批点染",
   "transition": "硬切换幕",
-  "catalog": ["考点45 地方各级人大及其常委会"]
+  "catalog": [
+    "考点45 地方各级人大及其常委会"
+  ]
 }

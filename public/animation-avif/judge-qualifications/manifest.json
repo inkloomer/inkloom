@@ -1,0 +1,70 @@
+{
+  "animationId": "judge-qualifications",
+  "compositionId": "JudgeQualifications",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-30T13:39:45.792Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 299,
+      "frameCount": 300,
+      "id": "conditions",
+      "number": "01",
+      "startFrame": 0,
+      "title": "任职条件",
+      "durationMs": 10000,
+      "file": "conditions.avif",
+      "fileSize": 631886,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "353a64e2207ccc9fa379c6bef8260dddf61998d63b4eae782dabcedaa406d2c4",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "83e82e1f01b5df45b029af74ec44ffd317284f860913612cae6ec609c2858f9f"
+    },
+    {
+      "endFrame": 575,
+      "frameCount": 276,
+      "id": "avoidance",
+      "number": "02",
+      "startFrame": 300,
+      "title": "任职回避",
+      "durationMs": 9200,
+      "file": "avoidance.avif",
+      "fileSize": 614858,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "13426937fc7ddcf40c2a7b4ecaecb40e9513c68312f23d735e6b97ed2489d74e",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "83e82e1f01b5df45b029af74ec44ffd317284f860913612cae6ec609c2858f9f"
+    },
+    {
+      "endFrame": 887,
+      "frameCount": 312,
+      "id": "appointment",
+      "number": "03",
+      "startFrame": 576,
+      "title": "任免与奖惩保障",
+      "durationMs": 10400,
+      "file": "appointment.avif",
+      "fileSize": 1048235,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "069541fff99cb8901ae9f539c55d61c1080ec446a1f51d42071e580134d6cf43",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "83e82e1f01b5df45b029af74ec44ffd317284f860913612cae6ec609c2858f9f"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "83e82e1f01b5df45b029af74ec44ffd317284f860913612cae6ec609c2858f9f",
+  "targetFps": 30,
+  "totalFileSize": 2294979
+}

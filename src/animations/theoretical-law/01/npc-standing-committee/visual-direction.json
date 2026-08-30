@@ -5,26 +5,13 @@
   "subject": "theoretical-law",
   "chapter": "01",
   "concept": "人民大会堂式的石青议政长厅：华表分立、丹陛红毯引向两席（全国人大与全人常），议案如奏章沿红毯上行，重大事项以琉璃金印钤发",
-  "palette": {
-    "granite": "#3A4750",
-    "graniteDeep": "#2B353C",
-    "panel": "#F2EEE0",
-    "panelDim": "#E3DFCD",
-    "edge": "#6A7680",
-    "ink": "#242E34",
-    "inkSoft": "#55616B",
-    "vermilion": "#B5442E",
-    "liuli": "#D9A514",
-    "jade": "#40766A",
-    "paper": "#F7F4E8"
-  },
-  "typography": {
-    "title": "var(--inkloom-animation-title)",
-    "body": "var(--inkloom-animation-body)"
-  },
+  "palette": "#3A4750 石青、#2B353C 深石青、#F2EEE0 面板、#E3DFCD 暗面板、#6A7680 镶边、#242E34 墨字、#55616B 淡墨、#B5442E 朱红、#D9A514 琉璃金、#40766A 玉青、#F7F4E8 纸白",
+  "typography": "标题字体 var(--inkloom-animation-title)，正文字体 var(--inkloom-animation-body)",
   "composition": "双席对照 + 图标奏章行 + 红毯数字戳 + 金印一句记",
   "surface": "石青墙纹 + 华表暗纹 + 丹陛红毯条",
   "motion": "奏章滑入、金印盖戳、红毯延展",
   "transition": "硬切换幕",
-  "catalog": ["考点39 全国人大与全国人大常委会"]
+  "catalog": [
+    "考点39 全国人大与全国人大常委会"
+  ]
 }
