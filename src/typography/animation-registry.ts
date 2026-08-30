@@ -271,6 +271,7 @@ import {typography as typographyAutoPropertyCrimeLedger} from '../animations/cri
 import {typography as typographyAutoPublicSafetyAlertBoard} from '../animations/criminal/20/public-safety-alert-board/animation.meta';
 import {typography as typographyAutoEconCrimeFiling} from '../animations/criminal/21/econ-crime-filing/animation.meta';
 import {typography as typographyAutoDetentionClauseLadder} from '../animations/criminal/18/detention-clause-ladder/animation.meta';
+import {typography as typographyAutoDerelictionDutyDesk} from '../animations/criminal/24/dereliction-duty-desk/animation.meta';
 import {typography as typographyBel} from '../animations/commercial-economic-law/01/branch-wallet-ledger/animation.meta';
 import {typography as typographyVpf} from '../animations/commercial-economic-law/01/veil-piercing-forge/animation.meta';
 import {typography as typographyLl} from '../animations/theoretical-law/01/legislation-law/animation.meta';
@@ -319,6 +320,7 @@ import {typography as typographyNrd} from '../animations/theoretical-law/04/nota
 import {typography as typographyNre} from '../animations/theoretical-law/04/notary-remedies/animation.meta';
 import {typography as typographyNel} from '../animations/theoretical-law/04/notary-ethics-liability/animation.meta';
 import {typography as typographyXrf} from '../animations/theoretical-law/05/xi-rule-of-law-formation/animation.meta';
+import {typography as typographyXrc} from '../animations/theoretical-law/05/xi-rule-of-law-core/animation.meta';
 import {typography as typographyCc} from '../animations/theoretical-law/01/constitution-classification/animation.meta';
 import {typography as typographyCdv} from '../animations/theoretical-law/01/constitution-development/animation.meta';
 import {typography as typographyCp} from '../animations/theoretical-law/01/constitution-principles/animation.meta';
@@ -618,6 +620,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'public-safety-alert-board': {metadata: typographyAutoPublicSafetyAlertBoard, scope: {animationId: 'public-safety-alert-board', subject: 'criminal', topic: '20'}},
   'econ-crime-filing': {metadata: typographyAutoEconCrimeFiling, scope: {animationId: 'econ-crime-filing', subject: 'criminal', topic: '21'}},
   'detention-clause-ladder': {metadata: typographyAutoDetentionClauseLadder, scope: {animationId: 'detention-clause-ladder', subject: 'criminal', topic: '18'}},
+  'dereliction-duty-desk': {metadata: typographyAutoDerelictionDutyDesk, scope: {animationId: 'dereliction-duty-desk', subject: 'criminal', topic: '24'}},
   'branch-wallet-ledger': {metadata: typographyBel, scope: {animationId: 'branch-wallet-ledger', subject: 'commercial-economic-law', topic: '01'}},
   'veil-piercing-forge': {metadata: typographyVpf, scope: {animationId: 'veil-piercing-forge', subject: 'commercial-economic-law', topic: '01'}},
   'legislation-law': {metadata: typographyLl, scope: {animationId: 'legislation-law', subject: 'theoretical-law', topic: '01'}},
@@ -684,6 +687,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'notary-remedies': {metadata: typographyNre, scope: {animationId: 'notary-remedies', subject: 'theoretical-law', topic: '04'}},
   'notary-ethics-liability': {metadata: typographyNel, scope: {animationId: 'notary-ethics-liability', subject: 'theoretical-law', topic: '04'}},
   'xi-rule-of-law-formation': {metadata: typographyXrf, scope: {animationId: 'xi-rule-of-law-formation', subject: 'theoretical-law', topic: '05'}},
+  'xi-rule-of-law-core': {metadata: typographyXrc, scope: {animationId: 'xi-rule-of-law-core', subject: 'theoretical-law', topic: '05'}},
   'profit-reserve-granary': {metadata: typographyPrg, scope: {animationId: 'profit-reserve-granary', subject: 'commercial-economic-law', topic: '01'}},
   'promoter-liability-ropewalk': {metadata: typographyPlr, scope: {animationId: 'promoter-liability-ropewalk', subject: 'commercial-economic-law', topic: '01'}},
   'fight-defense-diagram': {metadata: typography44, scope: {animationId: 'fight-defense-diagram', subject: 'criminal', topic: '22'}},

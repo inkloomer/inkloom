@@ -1,0 +1,65 @@
+{
+  "animationId": "xi-rule-of-law-core",
+  "scenes": [
+    {
+      "id": "persist-1-3",
+      "export": "Persist13Scene",
+      "layout": "three-banner-rows",
+      "anchor": "main center",
+      "grammar": "坚持一党的领导（法治之魂·加强改善·三者统一·四成语·制度机制）+坚持二以人民为中心（根本立场·主体源泉·生命线·根本目的三感）+坚持三法治道路（唯一正确道路·三个核心要义·两个不能·以我为主）",
+      "textTreatments": ["banner rows", "position chips"],
+      "focalChannels": ["three banners", "soul of rule of law"],
+      "tokens": ["Flag", "Users", "Scale"],
+      "finalKnowledge": "persist-1-3",
+      "statefulObjects": ["banner row x3"]
+    },
+    {
+      "id": "persist-4-5",
+      "export": "Persist45Scene",
+      "layout": "twin-banner-columns",
+      "anchor": "main center",
+      "grammar": "坚持四依宪治国依宪执政（首要任务·总章程·生存权发展权·宪法日宣誓·合宪性审查·关键少数）+坚持五法治轨道现代化（深刻革命·重要依托·固根本稳预期利长远·依法治军·一国两制·依法治网）",
+      "textTreatments": ["banner columns", "timeline chips"],
+      "focalChannels": ["constitution dates", "three guarantees"],
+      "tokens": ["ScrollText", "Landmark", "Globe"],
+      "finalKnowledge": "persist-4-5",
+      "statefulObjects": ["banner panel x2"]
+    },
+    {
+      "id": "persist-6-7",
+      "export": "Persist67Scene",
+      "layout": "system-plus-layout",
+      "anchor": "main center",
+      "grammar": "坚持六法治体系（总目标总抓手·五大体系：法律规范前提/实施重点/监督保障/保障支撑/党内法规关键）+坚持七工作布局（三个共同推进·三个一体建设·国家目标/政府主体/社会基础）",
+      "textTreatments": ["system rows", "layout chips"],
+      "focalChannels": ["five systems", "three-one layout"],
+      "tokens": ["BookOpen", "Building2", "Users"],
+      "finalKnowledge": "persist-6-7",
+      "statefulObjects": ["system panel", "layout panel"]
+    },
+    {
+      "id": "persist-8-9",
+      "export": "Persist89Scene",
+      "layout": "links-plus-domestic",
+      "anchor": "main center",
+      "grammar": "坚持八重要环节（科学立法前提/严格执法关键/公正司法最后防线/全民守法基础工程·谁执法谁普法）+坚持九国内涉外法治（迫切任务·反制裁反干涉反长臂管辖·仲裁机构律所·人类命运共同体）",
+      "textTreatments": ["link rows", "domestic chips"],
+      "focalChannels": ["four links", "anti-sanctions"],
+      "tokens": ["PenLine", "Gavel", "Globe"],
+      "finalKnowledge": "persist-8-9",
+      "statefulObjects": ["links panel", "domestic panel"]
+    },
+    {
+      "id": "persist-10-12",
+      "export": "Persist1012Scene",
+      "layout": "triple-banner-columns",
+      "anchor": "main center",
+      "grammar": "坚持十法治队伍（基础性保障·专门队伍政治标准·金钱案权力案人情案·职前培训员额/法律服务队伍两拥护/高校第一阵地三进）+坚持十一关键少数（尊法学法守法用法·终身责任·记录通报追责·法定职责必须为法无授权不可为·第一责任人五同）+坚持十二依法治国依规治党（相辅相成·党章总章程·纪严于法纪在法前·破法始于破纪）",
+      "textTreatments": ["banner columns", "quote chips"],
+      "focalChannels": ["three banners", "key minority rules"],
+      "tokens": ["Users", "Crown", "Link"],
+      "finalKnowledge": "persist-10-12",
+      "statefulObjects": ["banner panel x3"]
+    }
+  ]
+}

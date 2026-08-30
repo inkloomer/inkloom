@@ -1,0 +1,15 @@
+{
+  "directionId": "eleven-star-banner-score",
+  "family": "star-banner-score-hall",
+  "title": "十一星旗谱",
+  "subject": "theoretical-law",
+  "chapter": "05",
+  "concept": "十一星旗谱：十一个坚持如十一面星旗列阵，每面旗配定位定语（根本保证·根本立场·唯一正确道路等），坚持一~十二分五幕展开。图形层主题；画面文字一律使用源笔记法考名词",
+  "palette": "旗谱 hall #33302E、深谱 hallDeep #262422、面板 panel #F0EBDA、暗面板 panelDim #E1DCC7、镶边 edge #6B6459、墨字 ink #282421、淡墨 inkSoft #5B5449、旗红 banner #B04834、星金 star #C0983E、定位青 position #4E7D74、纸白 paper #F6F1E0",
+  "typography": "标题用 var(--inkloom-animation-title)，正文用 var(--inkloom-animation-body)；坚持行加粗法考名词，定位定语用青牌",
+  "composition": "星旗五幕列阵 + 定位青牌 + 口诀带",
+  "surface": "旗谱墙纹 + 旗杆线 + 星徽纹",
+  "motion": "星旗列阵、定位牌点亮、口诀压轴",
+  "transition": "硬切换幕",
+  "catalog": ["考点87 习近平法治思想的核心要义"]
+}
