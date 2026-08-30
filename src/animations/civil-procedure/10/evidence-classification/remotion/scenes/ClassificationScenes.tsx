@@ -1,7 +1,130 @@
-import {Check, CircleDot, FileCheck2, FileQuestion, Puzzle, ScanSearch, ShieldCheck, UserRoundCheck, UserRoundMinus, X} from 'lucide-react';
+import {Blend, Box, Boxes, Check, CircleDot, Copy, Ear, Eye, FileCheck2, FileQuestion, FileText, Files, Fingerprint, Gem, Puzzle, ScanSearch, ShieldCheck, UserRoundCheck, UserRoundMinus, X} from 'lucide-react';
 import {interpolate, useCurrentFrame} from 'remotion';
 import {CLAMP} from '../../../../../shared/remotion-runtime';
 import {ArrowHead, Highlight, LAB, Label, LabCanvas, Reveal, Stamp, Trace, Underline} from '../visual-system';
+
+const relayChip = {display: 'inline-flex', alignItems: 'center', gap: 8, padding: '7px 14px 8px', fontSize: 24, fontWeight: 850, lineHeight: 1} as const;
+
+export const OriginDerivedScene = () => {
+  return (
+    <LabCanvas code="01" title="原始证据与传来证据" cue="唯一标尺：证据来源">
+      <div data-layout="provenance-relay-line" data-visual-anchor="flow-path" data-text-treatments="label-block,soft-highlight,thin-underline,chip,stamp" data-visual-grammar="sequence,fork,relay-chain,comparison" data-focal-rule="source-origin-decides-original-vs-derived" data-focal-channels="icon,connector,contrast,spatial,annotation" style={{position: 'absolute', left: 66, right: 66, top: 198, bottom: 72}}>
+        <Reveal delay={4} from="none" style={{position: 'absolute', left: 0, top: 0, width: 1788, height: 112, backgroundColor: LAB.ink, display: 'flex', alignItems: 'center', gap: 22, padding: '0 36px'}}>
+          <Label tone="cyan">分类依据</Label>
+          <div style={{fontSize: 33, fontWeight: 850, color: LAB.white}}>
+            证据的<Highlight delay={16}>来源</Highlight>，是否<Highlight color={LAB.cyan} delay={24}>直接来源于案件事实</Highlight>
+          </div>
+          <div style={{flex: 1}} />
+          <div style={{width: 400}}>
+            <div style={{fontSize: 17, fontWeight: 800, color: LAB.mist, letterSpacing: 2, textAlign: 'right', marginBottom: 8}}>PROVENANCE RULER</div>
+            <div style={{position: 'relative', height: 18}}>
+              <div style={{position: 'absolute', left: 0, right: 0, bottom: 0, height: 3, backgroundColor: LAB.amber}} />
+              {Array.from({length: 9}, (_, index) => (
+                <div key={index} style={{position: 'absolute', left: index * 50, bottom: 0, width: 2, height: index % 4 === 0 ? 16 : 9, backgroundColor: LAB.amber}} />
+              ))}
+            </div>
+          </div>
+        </Reveal>
+
+        <Reveal delay={14} from="none" style={{position: 'absolute', left: 0, top: 300, width: 316, height: 200, backgroundColor: LAB.ink, padding: '26px 30px'}}>
+          <Fingerprint size={44} color={LAB.amber} strokeWidth={2.4} />
+          <div style={{marginTop: 10, fontSize: 34, fontWeight: 900, color: LAB.white}}>案件事实</div>
+          <div style={{marginTop: 6, fontSize: 22, fontWeight: 750, color: LAB.mist}}>证据来源的原点</div>
+        </Reveal>
+        <Reveal delay={20} from="none" style={{position: 'absolute', left: 0, top: 520, width: 340, fontSize: 23, fontWeight: 780, lineHeight: 1.4, color: LAB.steel}}>
+          同一事实的两种流传路径
+        </Reveal>
+
+        <Trace left={316} top={388} width={36} color={LAB.ink} delay={26} />
+        <Reveal delay={26} from="none" style={{position: 'absolute', left: 346, top: 384}}><div style={{width: 12, height: 12, backgroundColor: LAB.ink}} /></Reveal>
+        <Trace left={352} top={255} width={135} vertical delay={32} />
+        <Trace left={352} top={253} width={332} delay={40} />
+        <Reveal delay={42} from="none" style={{position: 'absolute', left: 419, top: 214, fontSize: 22, fontWeight: 900, color: LAB.cyan}}>
+          直接来源于案件事实
+        </Reveal>
+        <ArrowHead left={684} top={245} delay={50} />
+
+        <Reveal delay={54} from="none" style={{position: 'absolute', left: 700, top: 150, width: 1088, height: 210, border: `4px solid ${LAB.cyan}`, backgroundColor: 'rgba(255,255,255,0.94)', padding: '24px 34px'}}>
+          <div style={{display: 'flex', alignItems: 'center', gap: 14}}>
+            <Gem size={40} color={LAB.cyan} strokeWidth={2.4} />
+            <span style={{fontSize: 34, fontWeight: 900}}>原始证据</span>
+            <span style={{fontSize: 22, fontWeight: 800, color: LAB.steel, marginLeft: 8}}>ORIGINAL SPECIMEN</span>
+          </div>
+          <div style={{marginTop: 12, display: 'flex', gap: 12}}>
+            <Reveal delay={70} from="none" style={{...relayChip, border: `2px solid ${LAB.cyan}`, color: LAB.ink, backgroundColor: LAB.glass}}><FileText size={22} color={LAB.cyan} strokeWidth={2.4} />原件</Reveal>
+            <Reveal delay={78} from="none" style={{...relayChip, border: `2px solid ${LAB.cyan}`, color: LAB.ink, backgroundColor: LAB.glass}}><Box size={22} color={LAB.cyan} strokeWidth={2.4} />原物</Reveal>
+            <Reveal delay={86} from="none" style={{...relayChip, border: `2px solid ${LAB.cyan}`, color: LAB.ink, backgroundColor: LAB.glass}}><Eye size={22} color={LAB.cyan} strokeWidth={2.4} />证人亲身见闻所作的证言</Reveal>
+          </div>
+          <div style={{marginTop: 12, fontSize: 24, fontWeight: 800, color: LAB.steel}}>
+            <Highlight delay={96}>未经复制、转述</Highlight>等中间传播环节
+          </div>
+        </Reveal>
+
+        <Trace left={352} top={390} width={135} vertical color={LAB.amber} delay={60} />
+        <Reveal delay={64} from="none" style={{position: 'absolute', left: 416, top: 445}}><Label tone="amber">中间传播环节</Label></Reveal>
+        <Trace left={352} top={523} width={40} color={LAB.amber} dashed delay={70} />
+        <Reveal delay={76} from="none" style={{position: 'absolute', left: 392, top: 493, width: 72, height: 64, backgroundColor: LAB.ink, display: 'grid', placeItems: 'center', fontSize: 22, fontWeight: 900, color: LAB.amber}}>传抄</Reveal>
+        <Trace left={464} top={523} width={22} color={LAB.amber} dashed delay={82} />
+        <Reveal delay={88} from="none" style={{position: 'absolute', left: 486, top: 493, width: 72, height: 64, backgroundColor: LAB.ink, display: 'grid', placeItems: 'center', fontSize: 22, fontWeight: 900, color: LAB.amber}}>复制</Reveal>
+        <Trace left={558} top={523} width={22} color={LAB.amber} dashed delay={94} />
+        <Reveal delay={100} from="none" style={{position: 'absolute', left: 580, top: 493, width: 72, height: 64, backgroundColor: LAB.ink, display: 'grid', placeItems: 'center', fontSize: 22, fontWeight: 900, color: LAB.amber}}>转述</Reveal>
+        <Trace left={652} top={523} width={32} color={LAB.amber} dashed delay={104} />
+        <ArrowHead left={684} top={515} color={LAB.amber} delay={112} />
+
+        <Reveal delay={108} from="none" style={{position: 'absolute', left: 700, top: 420, width: 1088, height: 210, border: `4px solid ${LAB.amber}`, backgroundColor: LAB.ink, padding: '24px 34px'}}>
+          <div style={{display: 'flex', alignItems: 'center', gap: 14}}>
+            <Copy size={40} color={LAB.amber} strokeWidth={2.4} />
+            <span style={{fontSize: 34, fontWeight: 900, color: LAB.white}}>传来证据</span>
+            <Reveal delay={124} from="none" style={{marginLeft: 8, padding: '5px 12px 6px', border: `2px solid ${LAB.amber}`, fontSize: 22, fontWeight: 850, color: LAB.amber, lineHeight: 1, display: 'inline-flex', alignItems: 'center'}}>又称 派生证据</Reveal>
+          </div>
+          <div style={{marginTop: 12, display: 'flex', gap: 12}}>
+            <Reveal delay={132} from="none" style={{...relayChip, border: `2px solid ${LAB.amber}`, color: LAB.white}}><Files size={22} color={LAB.amber} strokeWidth={2.4} />复印件</Reveal>
+            <Reveal delay={140} from="none" style={{...relayChip, border: `2px solid ${LAB.amber}`, color: LAB.white}}><Boxes size={22} color={LAB.amber} strokeWidth={2.4} />复制品</Reveal>
+            <Reveal delay={148} from="none" style={{...relayChip, border: `2px solid ${LAB.amber}`, color: LAB.white}}><Ear size={22} color={LAB.amber} strokeWidth={2.4} />证人转述他人所见所闻</Reveal>
+          </div>
+          <div style={{marginTop: 12, fontSize: 24, fontWeight: 800, color: LAB.mist}}>
+            <Underline color={LAB.amber} delay={158}>不直接来源于案件事实</Underline>，而是经过中间环节获得
+          </div>
+        </Reveal>
+
+        <Reveal delay={152} from="up" style={{position: 'absolute', left: 0, top: 648, width: 1788, height: 162, border: `3px solid ${LAB.ink}`, backgroundColor: LAB.glass, padding: '20px 30px', display: 'flex', gap: 24}}>
+          <div style={{width: 560}}>
+            <div style={{display: 'flex', alignItems: 'center', gap: 10}}>
+              <Blend size={30} color={LAB.amber} strokeWidth={2.4} />
+              <span style={{fontSize: 30, fontWeight: 900}}>同一份证据，不止一把尺</span>
+            </div>
+            <div style={{marginTop: 12, display: 'flex', gap: 10}}>
+              <Reveal delay={160} from="none" style={{padding: '5px 12px 6px', border: `2px solid ${LAB.amber}`, fontSize: 24, fontWeight: 850, lineHeight: 1, display: 'inline-flex', alignItems: 'center'}}>来源 → 原始 / 传来</Reveal>
+              <Reveal delay={166} from="none" style={{padding: '5px 12px 6px', border: `2px solid ${LAB.ink}`, fontSize: 24, fontWeight: 850, lineHeight: 1, display: 'inline-flex', alignItems: 'center'}}>直接 / 间接</Reveal>
+              <Reveal delay={172} from="none" style={{padding: '5px 12px 6px', border: `2px solid ${LAB.ink}`, fontSize: 24, fontWeight: 850, lineHeight: 1, display: 'inline-flex', alignItems: 'center'}}>本证 / 反证</Reveal>
+            </div>
+          </div>
+          <div style={{position: 'relative', width: 620, borderLeft: `2px solid ${LAB.mist}`, paddingLeft: 24}}>
+            <Reveal delay={164} from="none" style={{position: 'absolute', left: 24, top: 6, width: 196, height: 66, border: `3px solid ${LAB.amber}`, backgroundColor: LAB.white, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8}}>
+              <Files size={26} color={LAB.amber} strokeWidth={2.4} />
+              <span style={{fontSize: 26, fontWeight: 900}}>借条复印件</span>
+            </Reveal>
+            <Trace left={224} top={39} width={54} color={LAB.amber} delay={170} />
+            <ArrowHead left={278} top={29} color={LAB.amber} delay={176} />
+            <div style={{position: 'absolute', left: 302, top: 0}}>
+              <Reveal delay={180} from="none" style={{padding: '6px 12px 7px', border: `2px solid ${LAB.amber}`, fontSize: 24, fontWeight: 850, lineHeight: 1, display: 'inline-flex', alignItems: 'center'}}>来源上 → 传来证据</Reveal>
+              <div style={{marginTop: 6}}>
+                <Reveal delay={186} from="none" style={{padding: '6px 12px 7px', border: `2px solid ${LAB.cyan}`, fontSize: 24, fontWeight: 850, lineHeight: 1, display: 'inline-flex', alignItems: 'center'}}>内容上 → 直接证据</Reveal>
+              </div>
+            </div>
+            <div style={{position: 'absolute', left: 24, bottom: 2, fontSize: 24, fontWeight: 800, lineHeight: 1.2, color: LAB.steel}}>
+              它能<Highlight delay={186}>单独直接</Highlight>证明借款事实
+            </div>
+          </div>
+          <div style={{flex: 1, fontSize: 26}}>
+            <Stamp color={LAB.ink} delay={190}>分类依据不同</Stamp>
+            <div style={{marginTop: 10, fontSize: 30, fontWeight: 900, lineHeight: 1.3}}>同一份证据，可以同时落入多个分类</div>
+          </div>
+        </Reveal>
+      </div>
+    </LabCanvas>
+  );
+};
 
 const FACT_CELLS = [
   {left: 0, top: 0}, {left: 114, top: 0},
@@ -11,7 +134,7 @@ const FACT_CELLS = [
 export const DirectIndirectScene = () => {
   const frame = useCurrentFrame();
   return (
-    <LabCanvas code="01" title="直接证据与间接证据" cue="唯一标尺：内容完整性">
+    <LabCanvas code="02" title="直接证据与间接证据" cue="唯一标尺：内容完整性">
       <div data-layout="forensic-dual-aperture" data-visual-anchor="comparison-axis" data-text-treatments="label-block,soft-highlight,thin-underline" data-visual-grammar="comparison,coverage,connector" data-focal-rule="content-completeness-determines-directness" data-focal-channels="icon,contrast,connector,spatial" style={{position: 'absolute', left: 66, right: 66, top: 198, bottom: 72}}>
         <Reveal delay={4} style={{position: 'absolute', left: 0, top: 0, width: 824, height: 646, border: `2px solid ${LAB.mist}`, backgroundColor: 'rgba(255,255,255,0.92)', padding: '34px 42px'}}>
           <div style={{display: 'flex', alignItems: 'center', gap: 16}}><ScanSearch size={50} color={LAB.cyan} strokeWidth={2.4} /><Label tone="cyan">直接证据</Label><span style={{fontSize: 30, fontWeight: 800}}>完整命中</span></div>
@@ -64,7 +187,7 @@ export const DirectIndirectScene = () => {
 
 export const BurdenEvidenceScene = () => {
   return (
-    <LabCanvas code="02" title="本证与反证：先找责任，再看提出者" cue="原告/被告不是判断标准">
+    <LabCanvas code="03" title="本证与反证：先找责任，再看提出者" cue="原告/被告不是判断标准">
       <div data-layout="burden-routing-console" data-visual-anchor="flow-path" data-text-treatments="label-block,thin-underline,stamp" data-visual-grammar="sequence,attribution,fork" data-focal-rule="burden-holder-and-producer-determine-evidence-role" data-focal-channels="icon,connector,spatial,annotation" style={{position: 'absolute', left: 66, right: 66, top: 198, bottom: 72}}>
         <Reveal delay={4} style={{position: 'absolute', left: 0, top: 0, width: 480, height: 570, backgroundColor: LAB.ink, color: LAB.white, padding: '38px 42px'}}>
           <CircleDot size={58} color={LAB.amber} strokeWidth={2.5} />
@@ -109,7 +232,7 @@ export const BurdenEvidenceScene = () => {
 
 export const SingleCaseTrapScene = () => {
   return (
-    <LabCanvas code="03" title="不能单独定案，不等于间接证据" cue="识别单向命题">
+    <LabCanvas code="04" title="不能单独定案，不等于间接证据" cue="识别单向命题">
       <div data-layout="one-way-inference-gate" data-visual-anchor="typographic-sequence" data-text-treatments="soft-highlight,external-negation,stamp" data-visual-grammar="implication,exclusion,alternative-cause" data-focal-rule="inability-to-decide-alone-does-not-prove-indirectness" data-focal-channels="icon,connector,annotation,contrast" style={{position: 'absolute', left: 66, right: 66, top: 198, bottom: 72}}>
         <Reveal delay={4} style={{position: 'absolute', left: 0, top: 18, width: 520, height: 224, backgroundColor: LAB.ink, color: LAB.white, display: 'grid', placeItems: 'center', textAlign: 'center'}}>
           <Puzzle size={58} color={LAB.amber} strokeWidth={2.4} />
@@ -149,7 +272,7 @@ export const SingleCaseTrapScene = () => {
 
 export const ProofThresholdScene = () => {
   return (
-    <LabCanvas code="04" title="本证要过门槛，反证只需动摇心证" cue="证明责任决定证明标准">
+    <LabCanvas code="05" title="本证要过门槛，反证只需动摇心证" cue="证明责任决定证明标准">
       <div data-layout="proof-standard-dual-lanes" data-visual-anchor="comparison-axis" data-text-treatments="label-block,soft-highlight,thin-underline,stamp" data-visual-grammar="comparison,threshold,consequence" data-focal-rule="proof-burden-sets-threshold" data-focal-channels="icon,contrast,connector,annotation" style={{position: 'absolute', left: 66, right: 66, top: 198, bottom: 72}}>
         <Reveal delay={4} style={{position: 'absolute', left: 0, top: 0, width: 850, height: 532, backgroundColor: LAB.ink, color: LAB.white, padding: '34px 40px'}}>
           <div style={{display: 'flex', alignItems: 'center', gap: 16}}><UserRoundCheck size={52} color={LAB.amber} strokeWidth={2.6} /><Label tone="amber">承担证明责任</Label></div>
@@ -198,7 +321,7 @@ export const ProofThresholdScene = () => {
 
 export const OutOfScopeEvidenceScene = () => {
   return (
-    <LabCanvas code="05" title="先找证明对象：无关事实不进本案证据场" cue="关联性是第一道门">
+    <LabCanvas code="06" title="先找证明对象：无关事实不进本案证据场" cue="关联性是第一道门">
       <div data-layout="proof-object-scope-gate" data-visual-anchor="boundary" data-text-treatments="label-block,soft-highlight,external-negation,stamp" data-visual-grammar="scope-gate,fork,exclusion" data-focal-rule="irrelevant-fact-is-not-evidence" data-focal-channels="icon,connector,enclosure,contrast" style={{position: 'absolute', left: 66, right: 66, top: 198, bottom: 72}}>
         <Reveal delay={4} style={{position: 'absolute', left: 0, top: 58, width: 390, height: 520, backgroundColor: LAB.ink, color: LAB.white, padding: '36px 34px'}}>
           <FileQuestion size={64} color={LAB.amber} strokeWidth={2.6} />

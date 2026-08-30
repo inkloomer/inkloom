@@ -3,6 +3,16 @@
   "minimumDistinctLayouts": 5,
   "scenes": [
     {
+      "id": "origin-derived",
+      "export": "OriginDerivedScene",
+      "layout": "provenance-relay-line",
+      "anchor": "flow-path",
+      "grammar": ["sequence", "fork", "relay-chain", "comparison"],
+      "textTreatments": ["label-block", "soft-highlight", "thin-underline", "chip", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial", "annotation"],
+      "tokens": ["Fingerprint", "Gem", "Copy", "FileText", "Box", "Eye", "Files", "Boxes", "Ear", "Blend"]
+    },
+    {
       "id": "direct-indirect",
       "export": "DirectIndirectScene",
       "layout": "forensic-dual-aperture",
