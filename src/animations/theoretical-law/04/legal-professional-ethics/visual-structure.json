@@ -7,11 +7,26 @@
       "layout": "master-slip-five-jades",
       "anchor": "main center",
       "grammar": "主简镌概念（法官·检察官·律师·公证员等职业活动中心理意识·行为准则与规范的总和），五玉章横列（政治性/职业性/实践性/正式性/更高性），底带教育五途径串简",
-      "textTreatments": ["slip engraving", "jade chips"],
-      "focalChannels": ["master slip", "five jades"],
-      "tokens": ["Flag", "Briefcase", "Hammer", "ScrollText", "TrendingUp"],
+      "textTreatments": [
+        "slip engraving",
+        "jade chips"
+      ],
+      "focalChannels": [
+        "master slip",
+        "five jades"
+      ],
+      "tokens": [
+        "Flag",
+        "Briefcase",
+        "Hammer",
+        "ScrollText",
+        "TrendingUp"
+      ],
       "finalKnowledge": "concept-features",
-      "statefulObjects": ["master slip", "jade chip x5"]
+      "statefulObjects": [
+        "master-slip",
+        "jade-chip"
+      ]
     },
     {
       "id": "annotations",
@@ -19,11 +34,23 @@
       "layout": "triplet-annotated-hall",
       "anchor": "main center",
       "grammar": "点睛三批注：道德属性（本质道德规范·不具国家强制力·法律明示认可除外）/违反职业道德不等于违法/培育靠道德教化；更高性补注终身禁业",
-      "textTreatments": ["annotated plaques", "red notes"],
-      "focalChannels": ["three annotations", "closing strip"],
-      "tokens": ["Scale", "CircleAlert", "HeartHandshake"],
+      "textTreatments": [
+        "annotated plaques",
+        "red notes"
+      ],
+      "focalChannels": [
+        "three annotations",
+        "closing strip"
+      ],
+      "tokens": [
+        "Scale",
+        "CircleAlert",
+        "HeartHandshake"
+      ],
       "finalKnowledge": "ethics-annotations",
-      "statefulObjects": ["annotation plaque x3"]
+      "statefulObjects": [
+        "annotation-plaque"
+      ]
     }
   ]
 }

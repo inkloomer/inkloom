@@ -7,11 +7,24 @@
       "layout": "twin-tablet-hall",
       "anchor": "main center",
       "grammar": "左牍任期与职权（5年·立法权任免权两级同权），右牍代理正职与备案，底带中央地方两个不同",
-      "textTreatments": ["tablet plaques", "icon-chip rows"],
-      "focalChannels": ["tablet headings", "acting-slot rule"],
-      "tokens": ["Hourglass", "PenLine", "UserCheck", "FileCheck"],
+      "textTreatments": [
+        "tablet plaques",
+        "icon-chip rows"
+      ],
+      "focalChannels": [
+        "tablet headings",
+        "acting-slot rule"
+      ],
+      "tokens": [
+        "Hourglass",
+        "PenLine",
+        "UserCheck",
+        "FileCheck"
+      ],
       "finalKnowledge": "tenure-powers",
-      "statefulObjects": ["tablet panel x2"]
+      "statefulObjects": [
+        "tablet-panel"
+      ]
     },
     {
       "id": "special-appointment",
@@ -19,11 +32,24 @@
       "layout": "tri-slot-appointment",
       "anchor": "main center",
       "grammar": "三牍对照：人大专属（正职+副乡长）/均可（政府副职）/人常专属（部门首长·法检监委其他），提名链舆图引线，底带口诀",
-      "textTreatments": ["slot plaques", "nomination threads"],
-      "focalChannels": ["three slots", "special-courts mnemonic"],
-      "tokens": ["Landmark", "Users", "Building2", "Scale"],
+      "textTreatments": [
+        "slot plaques",
+        "nomination threads"
+      ],
+      "focalChannels": [
+        "three slots",
+        "special-courts mnemonic"
+      ],
+      "tokens": [
+        "Landmark",
+        "Users",
+        "Building2",
+        "Scale"
+      ],
       "finalKnowledge": "special-appointment",
-      "statefulObjects": ["slot panel x3"]
+      "statefulObjects": [
+        "slot-panel"
+      ]
     },
     {
       "id": "meetings",
@@ -31,11 +57,24 @@
       "layout": "four-cell-ledger",
       "anchor": "main center",
       "grammar": "会制四格（会期/召集/主持/主任会议）配县乡差异柳批，底带提名人数 30/20/10",
-      "textTreatments": ["ledger cells", "willow notes"],
-      "focalChannels": ["ledger cells", "nomination numbers"],
-      "tokens": ["CalendarClock", "Bell", "Users", "ScrollText"],
+      "textTreatments": [
+        "ledger cells",
+        "willow notes"
+      ],
+      "focalChannels": [
+        "ledger cells",
+        "nomination numbers"
+      ],
+      "tokens": [
+        "CalendarClock",
+        "Bell",
+        "Users",
+        "ScrollText"
+      ],
       "finalKnowledge": "meeting-system",
-      "statefulObjects": ["ledger cell x4"]
+      "statefulObjects": [
+        "ledger-cell"
+      ]
     },
     {
       "id": "motions-removal",
@@ -43,11 +82,24 @@
       "layout": "dual-track-memorial",
       "anchor": "main center",
       "grammar": "双轨奏章：人大轨（提案/质询/罢免/特调委）与人常轨对照，撤职案横板，底带点睛口诀",
-      "textTreatments": ["memorial rows", "threshold stamps"],
-      "focalChannels": ["dual tracks", "removal board"],
-      "tokens": ["Gavel", "MessageCircleQuestion", "UserMinus", "SearchCheck"],
+      "textTreatments": [
+        "memorial rows",
+        "threshold stamps"
+      ],
+      "focalChannels": [
+        "dual tracks",
+        "removal board"
+      ],
+      "tokens": [
+        "Gavel",
+        "MessageCircleQuestion",
+        "UserMinus",
+        "SearchCheck"
+      ],
       "finalKnowledge": "motion-removal",
-      "statefulObjects": ["memorial track x2"]
+      "statefulObjects": [
+        "memorial-track"
+      ]
     }
   ]
 }

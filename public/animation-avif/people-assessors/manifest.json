@@ -1,0 +1,70 @@
+{
+  "animationId": "people-assessors",
+  "compositionId": "PeopleAssessors",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-30T14:57:41.623Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 275,
+      "frameCount": 276,
+      "id": "quota",
+      "number": "01",
+      "startFrame": 0,
+      "title": "资格与名额",
+      "durationMs": 9200,
+      "file": "quota.avif",
+      "fileSize": 678299,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "a17c8b0090489c8a8d95ee63dc73a7bab81baea2f2141a53cef33aaae22a35f8",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "fa94cdbc8053dbbe1597261b73c2da15773c90f027599cbcd22a9e7120fbbe84"
+    },
+    {
+      "endFrame": 563,
+      "frameCount": 288,
+      "id": "bench",
+      "number": "02",
+      "startFrame": 276,
+      "title": "参审案件与合议庭",
+      "durationMs": 9600,
+      "file": "bench.avif",
+      "fileSize": 711568,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "3f548356b41a83c73f62a3f1b4e1114dd98a90b8cb80d819fa0f3d3d4303076b",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "fa94cdbc8053dbbe1597261b73c2da15773c90f027599cbcd22a9e7120fbbe84"
+    },
+    {
+      "endFrame": 779,
+      "frameCount": 216,
+      "id": "duty-safety",
+      "number": "03",
+      "startFrame": 564,
+      "title": "免职与履职保障",
+      "durationMs": 7200,
+      "file": "duty-safety.avif",
+      "fileSize": 582005,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "624040229780ea33630c049aad965d939ef37ac728fb62956297c0628f740da3",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "fa94cdbc8053dbbe1597261b73c2da15773c90f027599cbcd22a9e7120fbbe84"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "fa94cdbc8053dbbe1597261b73c2da15773c90f027599cbcd22a9e7120fbbe84",
+  "targetFps": 30,
+  "totalFileSize": 1971872
+}

@@ -7,11 +7,28 @@
       "layout": "trio-medal-shelf",
       "anchor": "main center",
       "grammar": "三枚勋章并列陈列（共和国勋章/友谊勋章/国家荣誉称号）各配授予对象铭牌，底带决定主体与提案主体朱批行",
-      "textTreatments": ["medal plaques", "cinnabar stamps"],
-      "focalChannels": ["medal headings", "subject strip"],
-      "tokens": ["Medal", "Globe", "Award", "ScrollText", "Handshake"],
-      "finalKnowledge": ["three-honor-types", "honor-subjects"],
-      "statefulObjects": ["medal plaque x3"]
+      "textTreatments": [
+        "medal plaques",
+        "cinnabar stamps"
+      ],
+      "focalChannels": [
+        "medal headings",
+        "subject strip"
+      ],
+      "tokens": [
+        "Medal",
+        "Globe",
+        "Award",
+        "ScrollText",
+        "Handshake"
+      ],
+      "finalKnowledge": [
+        "three-honor-types",
+        "honor-subjects"
+      ],
+      "statefulObjects": [
+        "medal-plaque"
+      ]
     },
     {
       "id": "organization",
@@ -19,11 +36,29 @@
       "layout": "ledger-plus-dual-track",
       "anchor": "main center",
       "grammar": "上半首长负责制对集体负责制双席，下半 2024 组织法 brass 铭牌三块 + 部门调整双轨线，底带双重负责口诀",
-      "textTreatments": ["seat plaques", "brass nameplates"],
-      "focalChannels": ["responsibility seats", "dual-track rows"],
-      "tokens": ["UserCheck", "Users", "BookOpen", "Building2", "GitBranch"],
-      "finalKnowledge": ["chief-responsibility", "org-law-2024"],
-      "statefulObjects": ["seat panel x2", "track rows"]
+      "textTreatments": [
+        "seat plaques",
+        "brass nameplates"
+      ],
+      "focalChannels": [
+        "responsibility seats",
+        "dual-track rows"
+      ],
+      "tokens": [
+        "UserCheck",
+        "Users",
+        "BookOpen",
+        "Building2",
+        "GitBranch"
+      ],
+      "finalKnowledge": [
+        "chief-responsibility",
+        "org-law-2024"
+      ],
+      "statefulObjects": [
+        "seat-panel",
+        "track-rows"
+      ]
     }
   ]
 }

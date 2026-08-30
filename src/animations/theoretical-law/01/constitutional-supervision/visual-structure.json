@@ -7,11 +7,24 @@
       "layout": "tripod-three-legs",
       "anchor": "main center",
       "grammar": "三足鼎：立法机关解释（英国·我国）/司法机关解释（美国·马伯里案）/专门机关解释（法国宪法委员会·德俄宪法法院·凯尔森），底带监督对象两类",
-      "textTreatments": ["leg plaques", "origin stamps"],
-      "focalChannels": ["three legs", "objects strip"],
-      "tokens": ["Landmark", "Gavel", "Building2", "Scale"],
+      "textTreatments": [
+        "leg plaques",
+        "origin stamps"
+      ],
+      "focalChannels": [
+        "three legs",
+        "objects strip"
+      ],
+      "tokens": [
+        "Landmark",
+        "Gavel",
+        "Building2",
+        "Scale"
+      ],
       "finalKnowledge": "interpretation-systems",
-      "statefulObjects": ["tripod leg x3"]
+      "statefulObjects": [
+        "tripod-leg"
+      ]
     },
     {
       "id": "procedure",
@@ -19,11 +32,24 @@
       "layout": "inscription-flow",
       "anchor": "main center",
       "grammar": "鼎腹铭文四行：机关（全人大+全人常）/范围（法律以下除规章）/程序（主动·被动·联动·处理）/结果（终止·提案撤销·反馈公开），朱印批注我国无附带性审查",
-      "textTreatments": ["inscription rows", "red seals"],
-      "focalChannels": ["inscription rows", "no-incidental note"],
-      "tokens": ["SearchCheck", "ScrollText", "FileSignature", "Ban"],
+      "textTreatments": [
+        "inscription rows",
+        "red seals"
+      ],
+      "focalChannels": [
+        "inscription rows",
+        "no-incidental note"
+      ],
+      "tokens": [
+        "SearchCheck",
+        "ScrollText",
+        "FileSignature",
+        "Ban"
+      ],
       "finalKnowledge": "review-procedure",
-      "statefulObjects": ["inscription row x4"]
+      "statefulObjects": [
+        "inscription-row"
+      ]
     },
     {
       "id": "oath",
@@ -31,11 +57,24 @@
       "layout": "gilded-oath-tablet",
       "anchor": "main center",
       "grammar": "鎏金誓版：谁宣誓两行·谁组织五牍·仪式两种·誓词要点，底带一句记",
-      "textTreatments": ["oath plaques", "organizer tablets"],
-      "focalChannels": ["organizer tablets", "closing strip"],
-      "tokens": ["Handshake", "Landmark", "Globe", "ScrollText"],
+      "textTreatments": [
+        "oath plaques",
+        "organizer tablets"
+      ],
+      "focalChannels": [
+        "organizer tablets",
+        "closing strip"
+      ],
+      "tokens": [
+        "Handshake",
+        "Landmark",
+        "Globe",
+        "ScrollText"
+      ],
       "finalKnowledge": "oath-system",
-      "statefulObjects": ["oath tablet x5"]
+      "statefulObjects": [
+        "oath-tablet"
+      ]
     }
   ]
 }

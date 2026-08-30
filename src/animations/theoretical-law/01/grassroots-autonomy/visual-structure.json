@@ -7,11 +7,27 @@
       "layout": "triple-stone-drum",
       "anchor": "main center",
       "grammar": "三面石鼓并立于院落中央，各自镌刻一性，鼓下铭牌写要点，底部贴柿红告示条总结口诀",
-      "textTreatments": ["stone-carved heading", "engraved list body"],
-      "focalChannels": ["drum heading", "mnemonic strip"],
-      "tokens": ["Users", "RefreshCw", "MapPin"],
-      "finalKnowledge": ["feature-mass", "feature-self", "feature-grassroots"],
-      "statefulObjects": ["stone drum x3"]
+      "textTreatments": [
+        "stone-carved heading",
+        "engraved list body"
+      ],
+      "focalChannels": [
+        "drum heading",
+        "mnemonic strip"
+      ],
+      "tokens": [
+        "Users",
+        "RefreshCw",
+        "MapPin"
+      ],
+      "finalKnowledge": [
+        "feature-mass",
+        "feature-self",
+        "feature-grassroots"
+      ],
+      "statefulObjects": [
+        "stone-drum"
+      ]
     },
     {
       "id": "assemblies",
@@ -19,11 +35,27 @@
       "layout": "four-column-ledger",
       "anchor": "main center",
       "grammar": "四列议事簿并排（村民会/村代会/居民会/居代会），行按 开会有效/决议/会期/临时召集/通知列席 分层，竹青行带与柿红重点标注",
-      "textTreatments": ["ledger row labels", "cell body"],
-      "focalChannels": ["column heads", "临时召集 row"],
-      "tokens": ["Vote", "CalendarClock", "Megaphone"],
-      "finalKnowledge": ["assembly-quorum", "assembly-term", "assembly-notice"],
-      "statefulObjects": ["ledger column x4"]
+      "textTreatments": [
+        "ledger row labels",
+        "cell body"
+      ],
+      "focalChannels": [
+        "column heads",
+        "临时召集 row"
+      ],
+      "tokens": [
+        "Vote",
+        "CalendarClock",
+        "Megaphone"
+      ],
+      "finalKnowledge": [
+        "assembly-quorum",
+        "assembly-term",
+        "assembly-notice"
+      ],
+      "statefulObjects": [
+        "ledger-column"
+      ]
     },
     {
       "id": "committees",
@@ -31,11 +63,27 @@
       "layout": "east-west-wing-pair",
       "anchor": "main center",
       "grammar": "东西两厢对照：西厢村委会、东厢居委会，各写设立/组成/任期/罢免；中央横梁架法人资格警示；底部一句记盖戳",
-      "textTreatments": ["wing heading plaque", "paired rows"],
-      "focalChannels": ["wing headings", "罢免双过半 row"],
-      "tokens": ["Home", "Building2", "FileBadge"],
-      "finalKnowledge": ["committee-setup", "committee-recall", "committee-legal-person"],
-      "statefulObjects": ["wing panel x2"]
+      "textTreatments": [
+        "wing heading plaque",
+        "paired rows"
+      ],
+      "focalChannels": [
+        "wing headings",
+        "罢免双过半 row"
+      ],
+      "tokens": [
+        "Home",
+        "Building2",
+        "FileBadge"
+      ],
+      "finalKnowledge": [
+        "committee-setup",
+        "committee-recall",
+        "committee-legal-person"
+      ],
+      "statefulObjects": [
+        "wing-panel"
+      ]
     }
   ]
 }

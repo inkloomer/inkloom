@@ -33,7 +33,7 @@
         "political-freedoms"
       ],
       "statefulObjects": [
-        "twin lantern panel x2"
+        "twin-lantern-panel"
       ]
     },
     {
@@ -67,7 +67,7 @@
         "religion-freedom"
       ],
       "statefulObjects": [
-        "twin lantern panel x2"
+        "twin-lantern-panel"
       ]
     },
     {
@@ -96,7 +96,7 @@
         "dignity-home-mail"
       ],
       "statefulObjects": [
-        "lantern cell x4"
+        "lantern-cell"
       ]
     },
     {
@@ -131,7 +131,7 @@
         "rights-boundary"
       ],
       "statefulObjects": [
-        "twin lantern panel x2"
+        "twin-lantern-panel"
       ]
     }
   ]

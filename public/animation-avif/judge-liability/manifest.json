@@ -1,0 +1,53 @@
+{
+  "animationId": "judge-liability",
+  "compositionId": "JudgeLiability",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-30T14:54:36.830Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 239,
+      "frameCount": 240,
+      "id": "no-punish",
+      "number": "01",
+      "startFrame": 0,
+      "title": "不予与免予纪律处分",
+      "durationMs": 8000,
+      "file": "no-punish.avif",
+      "fileSize": 480548,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "2fd1f617dd989e3665d0aedab996befe53b8214af1746cd4c2bfb7561f5e8107",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "91a798adc92c98e10dcfb65314e43d20aa658ec5e234c6f3115f5877628c7ecb"
+    },
+    {
+      "endFrame": 491,
+      "frameCount": 252,
+      "id": "relieve-revoke",
+      "number": "02",
+      "startFrame": 240,
+      "title": "处分的解除、变更和撤销",
+      "durationMs": 8400,
+      "file": "relieve-revoke.avif",
+      "fileSize": 644750,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "5f56addfbc0cc11477053384e1b0d0c446a9fb590aab5ba30ab653e33f752599",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "91a798adc92c98e10dcfb65314e43d20aa658ec5e234c6f3115f5877628c7ecb"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "91a798adc92c98e10dcfb65314e43d20aa658ec5e234c6f3115f5877628c7ecb",
+  "targetFps": 30,
+  "totalFileSize": 1125298
+}

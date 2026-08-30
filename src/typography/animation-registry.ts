@@ -165,6 +165,7 @@ import {typography as typographyAutoInformationRight} from '../animations/commer
 import {typography as typographyAutoRightsShieldArmory} from '../animations/civil-law/01/rights-shield-armory/animation.meta';
 import {typography as typographyAutoCapacityGuardianshipRegistry} from '../animations/civil-law/02/capacity-guardianship-registry/animation.meta';
 import {typography as typographyAutoAbsenceProclamationHall} from '../animations/civil-law/02/absence-proclamation-hall/animation.meta';
+import {typography as typographyAutoRepresentationAuthorityDesk} from '../animations/civil-law/02/representation-authority-desk/animation.meta';
 import {typography as typographyAutoLegalPersonIndependenceHall} from '../animations/civil-law/02/legal-person-independence-hall/animation.meta';
 import {typography as typographyAutoIntentionExpressionHall} from '../animations/civil-law/03/intention-expression-hall/animation.meta';
 import {typography as typographyAutoDividendRight} from '../animations/commercial-law/04/dividend-right/animation.meta';
@@ -252,6 +253,7 @@ import {typography as typographyAutoPenaltyScaleOffice} from '../animations/crim
 import {typography as typographyAutoSentencingMeasureHall} from '../animations/criminal/15/sentencing-measure-hall/animation.meta';
 import {typography as typographyAutoComplicityPrinciplesJointPrincipal} from '../animations/criminal/12/complicity-principles-joint-principal/animation.meta';
 import {typography as typographyAutoIndirectPerpetratorDominion} from '../animations/criminal/12/indirect-perpetrator-dominion/animation.meta';
+import {typography as typographyAutoInstigatorAbettorRoles} from '../animations/criminal/12/instigator-abettor-roles/animation.meta';
 import {typography as typographyAutoExecutionExpiryStation} from '../animations/criminal/16/execution-expiry-station/animation.meta';
 import {typography as typographyAutoJurisdictionSeaChart} from '../animations/criminal-procedure-gold/04/jurisdiction-sea-chart/animation.meta';
 import {typography as typographyAutoRecusalBackstageSwap} from '../animations/criminal-procedure-gold/05/recusal-backstage-swap/animation.meta';
@@ -263,6 +265,7 @@ import {typography as typographyAutoMeasuresNightTower} from '../animations/crim
 import {typography as typographyAutoAttachedSuitCourtyard} from '../animations/criminal-procedure-gold/09/attached-suit-courtyard/animation.meta';
 import {typography as typographyAutoPeriodRelayStation} from '../animations/criminal-procedure-gold/10/period-relay-station/animation.meta';
 import {typography as typographyAutoFilingRegistryHall} from '../animations/criminal-procedure-gold/11/filing-registry-hall/animation.meta';
+import {typography as typographyAutoInvestigationFieldKit} from '../animations/criminal-procedure-gold/12/investigation-field-kit/animation.meta';
 import {typography as typographyBel} from '../animations/commercial-economic-law/01/branch-wallet-ledger/animation.meta';
 import {typography as typographyVpf} from '../animations/commercial-economic-law/01/veil-piercing-forge/animation.meta';
 import {typography as typographyOph} from '../animations/criminal-procedure-gold/01/overview-porcelain-hall/animation.meta';
@@ -293,6 +296,7 @@ import {typography as typographyJq} from '../animations/theoretical-law/04/judge
 import {typography as typographyJm} from '../animations/theoretical-law/04/judge-management/animation.meta';
 import {typography as typographyJe} from '../animations/theoretical-law/04/judge-ethics/animation.meta';
 import {typography as typographyJl} from '../animations/theoretical-law/04/judge-liability/animation.meta';
+import {typography as typographyPa} from '../animations/theoretical-law/04/people-assessors/animation.meta';
 import {typography as typographyCc} from '../animations/theoretical-law/01/constitution-classification/animation.meta';
 import {typography as typographyCdv} from '../animations/theoretical-law/01/constitution-development/animation.meta';
 import {typography as typographyCp} from '../animations/theoretical-law/01/constitution-principles/animation.meta';
@@ -445,6 +449,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'rights-shield-armory': {metadata: typographyAutoRightsShieldArmory, scope: {animationId: 'rights-shield-armory', subject: 'civil-law', topic: '01'}},
   'capacity-guardianship-registry': {metadata: typographyAutoCapacityGuardianshipRegistry, scope: {animationId: 'capacity-guardianship-registry', subject: 'civil-law', topic: '02'}},
   'absence-proclamation-hall': {metadata: typographyAutoAbsenceProclamationHall, scope: {animationId: 'absence-proclamation-hall', subject: 'civil-law', topic: '02'}},
+  'representation-authority-desk': {metadata: typographyAutoRepresentationAuthorityDesk, scope: {animationId: 'representation-authority-desk', subject: 'civil-law', topic: '02'}},
   'legal-person-independence-hall': {metadata: typographyAutoLegalPersonIndependenceHall, scope: {animationId: 'legal-person-independence-hall', subject: 'civil-law', topic: '02'}},
   'intention-expression-hall': {metadata: typographyAutoIntentionExpressionHall, scope: {animationId: 'intention-expression-hall', subject: 'civil-law', topic: '03'}},
   'dividend-right': {metadata: typographyAutoDividendRight, scope: {animationId: 'dividend-right', subject: 'commercial-law', topic: '04'}},
@@ -573,6 +578,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'sentencing-measure-hall': {metadata: typographyAutoSentencingMeasureHall, scope: {animationId: 'sentencing-measure-hall', subject: 'criminal', topic: '15'}},
   'complicity-principles-joint-principal': {metadata: typographyAutoComplicityPrinciplesJointPrincipal, scope: {animationId: 'complicity-principles-joint-principal', subject: 'criminal', topic: '12'}},
   'indirect-perpetrator-dominion': {metadata: typographyAutoIndirectPerpetratorDominion, scope: {animationId: 'indirect-perpetrator-dominion', subject: 'criminal', topic: '12'}},
+  'instigator-abettor-roles': {metadata: typographyAutoInstigatorAbettorRoles, scope: {animationId: 'instigator-abettor-roles', subject: 'criminal', topic: '12'}},
   'execution-expiry-station': {metadata: typographyAutoExecutionExpiryStation, scope: {animationId: 'execution-expiry-station', subject: 'criminal', topic: '16'}},
   'jurisdiction-sea-chart': {metadata: typographyAutoJurisdictionSeaChart, scope: {animationId: 'jurisdiction-sea-chart', subject: 'criminal-procedure-gold', topic: '04'}},
   'recusal-backstage-swap': {metadata: typographyAutoRecusalBackstageSwap, scope: {animationId: 'recusal-backstage-swap', subject: 'criminal-procedure-gold', topic: '05'}},
@@ -584,6 +590,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'attached-suit-courtyard': {metadata: typographyAutoAttachedSuitCourtyard, scope: {animationId: 'attached-suit-courtyard', subject: 'criminal-procedure-gold', topic: '09'}},
   'period-relay-station': {metadata: typographyAutoPeriodRelayStation, scope: {animationId: 'period-relay-station', subject: 'criminal-procedure-gold', topic: '10'}},
   'filing-registry-hall': {metadata: typographyAutoFilingRegistryHall, scope: {animationId: 'filing-registry-hall', subject: 'criminal-procedure-gold', topic: '11'}},
+  'investigation-field-kit': {metadata: typographyAutoInvestigationFieldKit, scope: {animationId: 'investigation-field-kit', subject: 'criminal-procedure-gold', topic: '12'}},
   'branch-wallet-ledger': {metadata: typographyBel, scope: {animationId: 'branch-wallet-ledger', subject: 'commercial-economic-law', topic: '01'}},
   'veil-piercing-forge': {metadata: typographyVpf, scope: {animationId: 'veil-piercing-forge', subject: 'commercial-economic-law', topic: '01'}},
   'overview-porcelain-hall': {metadata: typographyOph, scope: {animationId: 'overview-porcelain-hall', subject: 'criminal-procedure-gold', topic: '01'}},
@@ -632,6 +639,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'judge-management': {metadata: typographyJm, scope: {animationId: 'judge-management', subject: 'theoretical-law', topic: '04'}},
   'judge-ethics': {metadata: typographyJe, scope: {animationId: 'judge-ethics', subject: 'theoretical-law', topic: '04'}},
   'judge-liability': {metadata: typographyJl, scope: {animationId: 'judge-liability', subject: 'theoretical-law', topic: '04'}},
+  'people-assessors': {metadata: typographyPa, scope: {animationId: 'people-assessors', subject: 'theoretical-law', topic: '04'}},
   'profit-reserve-granary': {metadata: typographyPrg, scope: {animationId: 'profit-reserve-granary', subject: 'commercial-economic-law', topic: '01'}},
   'promoter-liability-ropewalk': {metadata: typographyPlr, scope: {animationId: 'promoter-liability-ropewalk', subject: 'commercial-economic-law', topic: '01'}},
   'fight-defense-diagram': {metadata: typography44, scope: {animationId: 'fight-defense-diagram', subject: 'criminal', topic: '22'}},

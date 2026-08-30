@@ -7,11 +7,24 @@
       "layout": "core-triad-loyalty-rows",
       "anchor": "main center",
       "grammar": "核心三衡（公正·廉洁·为民）+忠诚司法事业四行（法治理念四忠于·尊崇信仰法律·职业操守·不从事损害活动）",
-      "textTreatments": ["core seals", "loyalty chips"],
-      "focalChannels": ["core triad", "loyalty rows"],
-      "tokens": ["Scale", "Shield", "HeartHandshake"],
+      "textTreatments": [
+        "core seals",
+        "loyalty chips"
+      ],
+      "focalChannels": [
+        "core triad",
+        "loyalty rows"
+      ],
+      "tokens": [
+        "Scale",
+        "Shield",
+        "HeartHandshake"
+      ],
       "finalKnowledge": "core-loyalty",
-      "statefulObjects": ["core seal x3", "loyalty row x4"]
+      "statefulObjects": [
+        "core-seal",
+        "loyalty-row"
+      ]
     },
     {
       "id": "justice",
@@ -19,11 +32,24 @@
       "layout": "seven-clause-scale",
       "anchor": "main center",
       "grammar": "保证司法公正七行（独立审判权/裁判公平公正/实体程序并重/提高司法效率三条/公开审判/回避中立/不办关系案人情案）配《基本准则》条文号铜牌",
-      "textTreatments": ["clause rows", "article tags"],
-      "focalChannels": ["seven clauses", "relation-money cases"],
-      "tokens": ["Scale", "Clock", "Eye", "Ban"],
+      "textTreatments": [
+        "clause rows",
+        "article tags"
+      ],
+      "focalChannels": [
+        "seven clauses",
+        "relation-money cases"
+      ],
+      "tokens": [
+        "Scale",
+        "Clock",
+        "Eye",
+        "Ban"
+      ],
       "finalKnowledge": "justice-clauses",
-      "statefulObjects": ["clause row x7"]
+      "statefulObjects": [
+        "clause-row"
+      ]
     },
     {
       "id": "clean-people-image",
@@ -31,11 +57,23 @@
       "layout": "tri-column-charter",
       "anchor": "main center",
       "grammar": "三柱：确保司法廉洁四不得/坚持司法为民四条/维护司法形象四条，底带点睛（约束范围广泛·核心）",
-      "textTreatments": ["column chips", "article tags"],
-      "focalChannels": ["three columns", "scope note"],
-      "tokens": ["Ban", "HeartHandshake", "UserCheck"],
+      "textTreatments": [
+        "column chips",
+        "article tags"
+      ],
+      "focalChannels": [
+        "three columns",
+        "scope note"
+      ],
+      "tokens": [
+        "Ban",
+        "HeartHandshake",
+        "UserCheck"
+      ],
       "finalKnowledge": "clean-people-image",
-      "statefulObjects": ["charter column x3"]
+      "statefulObjects": [
+        "charter-column"
+      ]
     }
   ]
 }

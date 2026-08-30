@@ -7,11 +7,24 @@
       "layout": "jade-medallion-rows",
       "anchor": "main center",
       "grammar": "玉璧居中镌司法定义，下接三行铜绿铭牌（近代源流·社会主义体制·点睛两法系预告），底带一句记",
-      "textTreatments": ["medallion engraving", "bronze plaques"],
-      "focalChannels": ["definition medallion", "bronze plaques"],
-      "tokens": ["Landmark", "BookOpen", "Scale"],
+      "textTreatments": [
+        "medallion engraving",
+        "bronze plaques"
+      ],
+      "focalChannels": [
+        "definition medallion",
+        "bronze plaques"
+      ],
+      "tokens": [
+        "Landmark",
+        "BookOpen",
+        "Scale"
+      ],
       "finalKnowledge": "judicial-concept",
-      "statefulObjects": ["jade medallion", "bronze plaque x3"]
+      "statefulObjects": [
+        "jade-medallion",
+        "bronze-plaque"
+      ]
     },
     {
       "id": "comparison",
@@ -19,11 +32,23 @@
       "layout": "east-west-jade-screens",
       "anchor": "main center",
       "grammar": "东西玉屏：英美法系（司法权=审判权·司法机关=法院·检察权归政府职能部门）对我国的司法机关二成员（审判+检察），底带口诀",
-      "textTreatments": ["screen plaques", "contrast chips"],
-      "focalChannels": ["screen headings", "contrast chips"],
-      "tokens": ["Gavel", "Landmark", "Users"],
+      "textTreatments": [
+        "screen plaques",
+        "contrast chips"
+      ],
+      "focalChannels": [
+        "screen headings",
+        "contrast chips"
+      ],
+      "tokens": [
+        "Gavel",
+        "Landmark",
+        "Users"
+      ],
       "finalKnowledge": "common-law-vs-china",
-      "statefulObjects": ["jade screen x2"]
+      "statefulObjects": [
+        "jade-screen"
+      ]
     }
   ]
 }

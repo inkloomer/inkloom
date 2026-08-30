@@ -7,11 +7,27 @@
       "layout": "beacon-grade-rows",
       "anchor": "main center",
       "grammar": "警讯三级行：人大（战争与和平）/全人常（闭会宣战·动员·省级紧急状态）/国务院（省内部分地区紧急状态），宣布方式两行，底带口诀",
-      "textTreatments": ["beacon plaques", "flame stamps"],
-      "focalChannels": ["grade headings", "mnemonic strip"],
-      "tokens": ["Flame", "Siren", "Bell", "Megaphone"],
-      "finalKnowledge": ["power-allocation", "announcement-route"],
-      "statefulObjects": ["beacon row x3"]
+      "textTreatments": [
+        "beacon plaques",
+        "flame stamps"
+      ],
+      "focalChannels": [
+        "grade headings",
+        "mnemonic strip"
+      ],
+      "tokens": [
+        "Flame",
+        "Siren",
+        "Bell",
+        "Megaphone"
+      ],
+      "finalKnowledge": [
+        "power-allocation",
+        "announcement-route"
+      ],
+      "statefulObjects": [
+        "beacon-row"
+      ]
     },
     {
       "id": "premier",
@@ -19,11 +35,27 @@
       "layout": "seat-plus-four-clauses",
       "anchor": "main center",
       "grammar": "上席组成与任期铭牌（含央行行长·无国资委·三长连任限），下席总理负责制四体现行",
-      "textTreatments": ["seat plaques", "clause chips"],
-      "focalChannels": ["composition chips", "four clauses"],
-      "tokens": ["Users", "Hourglass", "UserCheck", "FileSignature"],
-      "finalKnowledge": ["council-composition", "premier-responsibility"],
-      "statefulObjects": ["stone seat x2"]
+      "textTreatments": [
+        "seat plaques",
+        "clause chips"
+      ],
+      "focalChannels": [
+        "composition chips",
+        "four clauses"
+      ],
+      "tokens": [
+        "Users",
+        "Hourglass",
+        "UserCheck",
+        "FileSignature"
+      ],
+      "finalKnowledge": [
+        "council-composition",
+        "premier-responsibility"
+      ],
+      "statefulObjects": [
+        "stone-seat"
+      ]
     },
     {
       "id": "meetings-orgs",
@@ -31,11 +63,28 @@
       "layout": "twin-column-terrace",
       "anchor": "main center",
       "grammar": "左列两会对比（全体/常务），右列组织机构（组成部门/直属办事机构）与审计署，底带一句记",
-      "textTreatments": ["column plaques", "icon-chip rows"],
-      "focalChannels": ["meeting contrast", "audit independence"],
-      "tokens": ["CalendarClock", "CalendarDays", "Building2", "Landmark", "SearchCheck"],
-      "finalKnowledge": ["meeting-system", "org-audit"],
-      "statefulObjects": ["terrace column x2"]
+      "textTreatments": [
+        "column plaques",
+        "icon-chip rows"
+      ],
+      "focalChannels": [
+        "meeting contrast",
+        "audit independence"
+      ],
+      "tokens": [
+        "CalendarClock",
+        "CalendarDays",
+        "Building2",
+        "Landmark",
+        "SearchCheck"
+      ],
+      "finalKnowledge": [
+        "meeting-system",
+        "org-audit"
+      ],
+      "statefulObjects": [
+        "terrace-column"
+      ]
     }
   ]
 }

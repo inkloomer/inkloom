@@ -7,11 +7,23 @@
       "layout": "twin-fold-disposition",
       "anchor": "main center",
       "grammar": "左折不予纪律处分（认识偏差三情形），右折免予纪律处分（情节较轻·未造成不良后果·认错态度好能积极改正），底带口诀",
-      "textTreatments": ["fold plaques", "cognition chips"],
-      "focalChannels": ["cognition deviations", "mnemonic strip"],
-      "tokens": ["BookOpen", "CircleAlert", "HeartHandshake"],
+      "textTreatments": [
+        "fold plaques",
+        "cognition chips"
+      ],
+      "focalChannels": [
+        "cognition deviations",
+        "mnemonic strip"
+      ],
+      "tokens": [
+        "BookOpen",
+        "CircleAlert",
+        "HeartHandshake"
+      ],
       "finalKnowledge": "no-exempt-punishment",
-      "statefulObjects": ["fold plaque x2"]
+      "statefulObjects": [
+        "fold-plaque"
+      ]
     },
     {
       "id": "relieve-revoke",
@@ -19,11 +31,24 @@
       "layout": "relieve-plus-six-seals",
       "anchor": "main center",
       "grammar": "解除栏（开除以外处分期满+悔改+无再违纪→解除·晋升不再受影响·解除降级撤职不视为恢复原级别原职务）+变更撤销六情形印阵，底带口诀后半",
-      "textTreatments": ["relieve rows", "seal grid"],
-      "focalChannels": ["relieve effects", "six grounds"],
-      "tokens": ["RefreshCw", "FileX", "Scale"],
+      "textTreatments": [
+        "relieve rows",
+        "seal grid"
+      ],
+      "focalChannels": [
+        "relieve effects",
+        "six grounds"
+      ],
+      "tokens": [
+        "RefreshCw",
+        "FileX",
+        "Scale"
+      ],
       "finalKnowledge": "relieve-revoke",
-      "statefulObjects": ["relieve panel", "seal grid x6"]
+      "statefulObjects": [
+        "relieve-panel",
+        "seal-grid"
+      ]
     }
   ]
 }
