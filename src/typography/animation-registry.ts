@@ -289,6 +289,9 @@ import {typography as typographyJfe} from '../animations/theoretical-law/04/judi
 import {typography as typographyJi} from '../animations/theoretical-law/04/judicial-independence/animation.meta';
 import {typography as typographyLpe} from '../animations/theoretical-law/04/legal-professional-ethics/animation.meta';
 import {typography as typographyJq} from '../animations/theoretical-law/04/judge-qualifications/animation.meta';
+import {typography as typographyJm} from '../animations/theoretical-law/04/judge-management/animation.meta';
+import {typography as typographyJe} from '../animations/theoretical-law/04/judge-ethics/animation.meta';
+import {typography as typographyJl} from '../animations/theoretical-law/04/judge-liability/animation.meta';
 import {typography as typographyCc} from '../animations/theoretical-law/01/constitution-classification/animation.meta';
 import {typography as typographyCdv} from '../animations/theoretical-law/01/constitution-development/animation.meta';
 import {typography as typographyCp} from '../animations/theoretical-law/01/constitution-principles/animation.meta';
@@ -624,6 +627,9 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'judicial-independence': {metadata: typographyJi, scope: {animationId: 'judicial-independence', subject: 'theoretical-law', topic: '04'}},
   'legal-professional-ethics': {metadata: typographyLpe, scope: {animationId: 'legal-professional-ethics', subject: 'theoretical-law', topic: '04'}},
   'judge-qualifications': {metadata: typographyJq, scope: {animationId: 'judge-qualifications', subject: 'theoretical-law', topic: '04'}},
+  'judge-management': {metadata: typographyJm, scope: {animationId: 'judge-management', subject: 'theoretical-law', topic: '04'}},
+  'judge-ethics': {metadata: typographyJe, scope: {animationId: 'judge-ethics', subject: 'theoretical-law', topic: '04'}},
+  'judge-liability': {metadata: typographyJl, scope: {animationId: 'judge-liability', subject: 'theoretical-law', topic: '04'}},
   'profit-reserve-granary': {metadata: typographyPrg, scope: {animationId: 'profit-reserve-granary', subject: 'commercial-economic-law', topic: '01'}},
   'promoter-liability-ropewalk': {metadata: typographyPlr, scope: {animationId: 'promoter-liability-ropewalk', subject: 'commercial-economic-law', topic: '01'}},
   'fight-defense-diagram': {metadata: typography44, scope: {animationId: 'fight-defense-diagram', subject: 'criminal', topic: '22'}},
