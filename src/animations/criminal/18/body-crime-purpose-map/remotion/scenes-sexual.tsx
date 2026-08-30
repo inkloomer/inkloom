@@ -7,11 +7,11 @@ export const SexualAutonomyWardScene = () => {
     <Shell code="02" kicker="第二节 · 侵犯性权利的犯罪" title="强奸罪·负有照护职责人员性侵罪·猥亵类犯罪">
       <div
         data-layout="sexual-autonomy-quad-ward"
-        data-visual-anchor="main center"
+        data-visual-anchor="typographic-sequence"
         data-text-treatments="chip,label-block,soft-highlight,thin-underline,external-negation,stamp"
         data-visual-grammar="autonomy-panel,means-panel"
         data-focal-rule="coercion-equals-robbery-plus-blackmail-scope-and-consent-rules-by-age"
-        data-focal-channels="panel-headings,age-table"
+        data-focal-channels="icon,contrast,enclosure,annotation"
         style={{position: 'absolute', inset: 0}}
       >
         <Enter delay={6} marker="autonomy-panel" style={{position: 'absolute', left: 0, top: 0, width: 566, height: 400}}>

@@ -1,0 +1,203 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "playerControlSafeBottom": 168,
+  "scenes": [
+    {
+      "id": "life-body-ward",
+      "export": "LifeBodyWardScene",
+      "layout": "life-body-triple-ward",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "euthanasia-panel",
+        "suicide-table",
+        "hurt-elements"
+      ],
+      "textTreatments": [
+        "chip",
+        "label-block",
+        "soft-highlight",
+        "thin-underline",
+        "external-negation",
+        "stamp"
+      ],
+      "focalChannels": [
+        "icon",
+        "contrast",
+        "enclosure",
+        "spatial"
+      ],
+      "tokens": [
+        "Skull",
+        "Gavel",
+        "Ban",
+        "Users",
+        "HeartPulse",
+        "Scale",
+        "Zap"
+      ],
+      "finalKnowledge": [
+        "euthanasia-panel",
+        "suicide-table",
+        "hurt-elements",
+        "three-crime-split"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "sexual-autonomy-ward",
+      "export": "SexualAutonomyWardScene",
+      "layout": "sexual-autonomy-quad-ward",
+      "anchor": "typographic-sequence",
+      "grammar": [
+        "autonomy-panel",
+        "means-panel"
+      ],
+      "textTreatments": [
+        "chip",
+        "label-block",
+        "soft-highlight",
+        "thin-underline",
+        "external-negation",
+        "stamp"
+      ],
+      "focalChannels": [
+        "icon",
+        "contrast",
+        "enclosure",
+        "annotation"
+      ],
+      "tokens": [
+        "ShieldAlert",
+        "HeartPulse",
+        "Users",
+        "Ban",
+        "Zap"
+      ],
+      "finalKnowledge": [
+        "autonomy-panel",
+        "means-panel",
+        "minors-panel",
+        "aggravate-panel"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "unlawful-detention-ward",
+      "export": "UnlawfulDetentionWardScene",
+      "layout": "detention-quad-ward",
+      "anchor": "boundary",
+      "grammar": [
+        "detain-panel",
+        "deceive-panel"
+      ],
+      "textTreatments": [
+        "chip",
+        "label-block",
+        "soft-highlight",
+        "thin-underline",
+        "external-negation",
+        "stamp"
+      ],
+      "focalChannels": [
+        "icon",
+        "contrast",
+        "enclosure",
+        "connector"
+      ],
+      "tokens": [
+        "LockOpen",
+        "Zap",
+        "Ban",
+        "Scale",
+        "Gavel"
+      ],
+      "finalKnowledge": [
+        "detain-panel",
+        "deceive-panel",
+        "aggravate-panel",
+        "fiction-panel"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "kidnapping-purpose-ward",
+      "export": "KidnappingPurposeWardScene",
+      "layout": "kidnapping-purpose-quad-ward",
+      "anchor": "document-fork",
+      "grammar": [
+        "purpose-panel",
+        "hostage-panel"
+      ],
+      "textTreatments": [
+        "chip",
+        "label-block",
+        "soft-highlight",
+        "thin-underline",
+        "external-negation",
+        "stamp"
+      ],
+      "focalChannels": [
+        "icon",
+        "contrast",
+        "enclosure",
+        "connector"
+      ],
+      "tokens": [
+        "KeyRound",
+        "Scale",
+        "Compass",
+        "Castle",
+        "Ban",
+        "Gavel",
+        "Users"
+      ],
+      "finalKnowledge": [
+        "purpose-panel",
+        "hostage-panel",
+        "combine-panel"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "traffic-sell-purpose-ward",
+      "export": "TrafficSellPurposeWardScene",
+      "layout": "traffic-sell-grid-ward",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "four-acts-panel",
+        "summary-grid"
+      ],
+      "textTreatments": [
+        "chip",
+        "label-block",
+        "soft-highlight",
+        "thin-underline",
+        "external-negation",
+        "stamp"
+      ],
+      "focalChannels": [
+        "icon",
+        "contrast",
+        "enclosure",
+        "spatial"
+      ],
+      "tokens": [
+        "Users",
+        "Castle",
+        "Scale",
+        "KeyRound",
+        "Compass",
+        "Gavel",
+        "Ban"
+      ],
+      "finalKnowledge": [
+        "four-acts-panel",
+        "combine-panel2",
+        "buy-panel",
+        "summary-grid"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

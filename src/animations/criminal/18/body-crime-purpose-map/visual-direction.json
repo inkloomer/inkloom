@@ -1,0 +1,26 @@
+{
+  "directionId": "ward-round-chart",
+  "family": "ward-round-chart",
+  "palette": "病历纸绿白 chart + 病区青 ward + 心电红 pulse + 会诊蓝 chart2 + 病历签黄 amber + 病房墨 night",
+  "typography": "heavy chart headings, square bed-tag chips, ward label blocks, double-frame stamp verdicts",
+  "composition": "a hospital chart wall: life-and-body triple ward, sexual-autonomy quad, detention and kidnapping boards, and the control-purpose naming grid",
+  "surface": "chart paper grain, bed-tag chips, dashed dividers, double-frame stamps; no glossy panels",
+  "motion": "chart panels enter in reasoning order, stamps land as verdicts, the purpose grid lights row by row; no idle loops",
+  "transition": "the chart wall ground persists while each scene mounts a new board",
+  "conceptTokens": {
+    "故意杀人罪": "Skull",
+    "故意伤害罪": "HeartPulse",
+    "非法拘禁罪": "LockOpen",
+    "绑架罪": "KeyRound",
+    "拐卖妇女、儿童罪": "Users",
+    "承诺": "Ban",
+    "目的": "Compass",
+    "结果加重": "Scale"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/criminal/18/body-crime-purpose-map/",
+    "title": "查房记录板"
+  }
+}

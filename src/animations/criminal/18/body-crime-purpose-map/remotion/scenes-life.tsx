@@ -1,4 +1,4 @@
-import {Ban, Gavel, GraduationCap, HeartPulse, Scale, Skull, Users} from 'lucide-react';
+import {Ban, Gavel, GraduationCap, HeartPulse, Scale, Skull, Users, Zap} from 'lucide-react';
 import {C, Enter, IconChip, Mark, Neg, Panel, Shell, SoftHi, TabChip, ThinU} from './kit';
 
 export const LifeBodyWardScene = () => {
@@ -7,11 +7,11 @@ export const LifeBodyWardScene = () => {
     <Shell code="01" kicker="第一节 · 侵犯生命、身体的犯罪" title="故意杀人罪与故意伤害罪">
       <div
         data-layout="life-body-triple-ward"
-        data-visual-anchor="main center"
+        data-visual-anchor="comparison-axis"
         data-text-treatments="chip,label-block,soft-highlight,thin-underline,external-negation,stamp"
         data-visual-grammar="euthanasia-panel,suicide-table,hurt-elements"
         data-focal-rule="life-consent-is-void-and-harm-requires-light-injury-intent-and-possibility"
-        data-focal-channels="panel-headings,table-verdicts"
+        data-focal-channels="icon,contrast,enclosure,spatial"
         style={{position: 'absolute', inset: 0}}
       >
         <Enter delay={6} marker="euthanasia-panel" style={{position: 'absolute', left: 0, top: 0, width: 566, height: 380}}>
