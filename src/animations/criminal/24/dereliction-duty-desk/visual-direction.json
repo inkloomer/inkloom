@@ -1,0 +1,23 @@
+{
+  "directionId": "dereliction-duty-desk",
+  "family": "dereliction-duty-desk",
+  "palette": "办公桌灰白 desk + 印章红 seal + 钢蓝 steel + 铜章黄 bronze + 墨夜 night",
+  "typography": "heavy desk headings, square official chips, steel label blocks, double-frame stamp verdicts",
+  "composition": "a government office desk: abuse-negligence dual comparison, perversion of justice board with the bribery relationship, and ordinary crimes dual panel",
+  "surface": "desk paper grain, square official chips, dashed exclusion zones, double-frame stamps; no glossy panels",
+  "motion": "official panels enter in reasoning order, stamps land as verdicts; no idle loops",
+  "transition": "the desk ground persists while each scene mounts a new board",
+  "conceptTokens": {
+    "滥用职权罪": "Zap",
+    "玩忽职守罪": "Scale",
+    "徇私枉法罪": "Gavel",
+    "受贿": "Ban",
+    "司法工作人员": "Users"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/criminal/24/dereliction-duty-desk/",
+    "title": "渎职办公桌"
+  }
+}

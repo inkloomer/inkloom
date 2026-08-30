@@ -1,0 +1,70 @@
+{
+  "animationId": "dereliction-duty-desk",
+  "compositionId": "DerelictionDutyDesk",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-30T20:30:15.369Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 259,
+      "frameCount": 260,
+      "id": "abuse-negligence-split",
+      "number": "01",
+      "startFrame": 0,
+      "title": "滥用职权罪与玩忽职守罪",
+      "durationMs": 8667,
+      "file": "abuse-negligence-split.avif",
+      "fileSize": 658788,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "c53dfc030f5c507b5aae9aebd8b64a62367879886ab4ae72ae5f37cdda9f631e",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "02a405f54863f20cf22c26ff23faa7d56e575ba062aa36f6bf058c0ab2deb2b8"
+    },
+    {
+      "endFrame": 519,
+      "frameCount": 260,
+      "id": "perversion-justice",
+      "number": "02",
+      "startFrame": 260,
+      "title": "徇私枉法罪·受贿关系",
+      "durationMs": 8667,
+      "file": "perversion-justice.avif",
+      "fileSize": 640496,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "a8ffcb88c735463013926ed9fa28f3cd5a0c1affa56af5a57b661e23fac64274",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "e0988fd3bca4d7b0ef8663f9945021f9e92471916e271d7b86357bf62bcf49ef"
+    },
+    {
+      "endFrame": 769,
+      "frameCount": 250,
+      "id": "ordinary-crimes",
+      "number": "03",
+      "startFrame": 520,
+      "title": "私放在押人员罪·徇私舞弊不移交刑事案件罪",
+      "durationMs": 8333,
+      "file": "ordinary-crimes.avif",
+      "fileSize": 642891,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "9d2a924f1daf87d2a685b7ef4c8cf32f650c7a0ffc2ae9d8dc06d75d408dfa56",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "56c32dd24bc99ea7cda3ff549b2ed25e2985a89834dc79d2703a9d43de8672bd"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "f05c13303cc4fecc169c8cd19809272a753fce3bc376f678caa179bffb0e8407",
+  "targetFps": 30,
+  "totalFileSize": 1942175
+}

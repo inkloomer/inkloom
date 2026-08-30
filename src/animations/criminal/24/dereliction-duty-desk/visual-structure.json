@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "playerControlSafeBottom": 168,
+  "scenes": [
+    {
+      "id": "abuse-negligence-split",
+      "export": "AbuseNegligenceSplitScene",
+      "layout": "abuse-negligence-dual-desk",
+      "anchor": "comparison-axis",
+      "grammar": ["abuse-panel", "negligence-panel"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
+      "tokens": ["Gavel", "Scale", "Ban", "Zap", "Users"],
+      "finalKnowledge": ["abuse-panel", "negligence-panel", "compare-floor"],
+      "statefulObjects": []
+    },
+    {
+      "id": "perversion-justice",
+      "export": "PerversionJusticeScene",
+      "layout": "perversion-bribe-dual-desk",
+      "anchor": "document-fork",
+      "grammar": ["perversion-panel", "bribe-panel"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "connector"],
+      "tokens": ["Gavel", "Scale", "Ban", "Users"],
+      "finalKnowledge": ["perversion-panel", "bribe-panel"],
+      "statefulObjects": []
+    },
+    {
+      "id": "ordinary-crimes",
+      "export": "OrdinaryCrimesScene",
+      "layout": "ordinary-crimes-dual-desk",
+      "anchor": "role-pair",
+      "grammar": ["release-panel", "nonttransfer-panel"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
+      "tokens": ["Ban", "Gavel", "Scale", "Users"],
+      "finalKnowledge": ["release-panel", "nonttransfer-panel"],
+      "statefulObjects": []
+    }
+  ]
+}
