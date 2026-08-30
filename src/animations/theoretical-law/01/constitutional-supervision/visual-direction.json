@@ -1,0 +1,30 @@
+{
+  "directionId": "ding-supervision-altar",
+  "family": "bronze-ding-supervision",
+  "title": "青鼎监宪台",
+  "subject": "theoretical-law",
+  "chapter": "01",
+  "concept": "青铜鼎监宪台：三足鼎立喻三种宪法解释体制，合宪性审查流程沿鼎腹铭文展开（机关·范围·程序·结果），宣誓以鎏金誓版呈现",
+  "palette": {
+    "bronze": "#4A4238",
+    "bronzeDeep": "#35302A",
+    "panel": "#F1EAD5",
+    "panelDim": "#E2DAC1",
+    "edge": "#6E6552",
+    "ink": "#2A251E",
+    "inkSoft": "#5C5344",
+    "gilded": "#C49A3A",
+    "verdigris": "#5E8577",
+    "sealRed": "#AE4530",
+    "paper": "#F6F0DE"
+  },
+  "typography": {
+    "title": "var(--inkloom-animation-title)",
+    "body": "var(--inkloom-animation-body)"
+  },
+  "composition": "三足鼎式对照 + 鼎腹铭文流程行 + 誓版鎏金 + 朱印批注",
+  "surface": "青铜器纹 + 錾金铭带 + 朱砂印泥纹",
+  "motion": "鼎足顿立、铭文錾显、誓版展开",
+  "transition": "硬切换幕",
+  "catalog": ["考点46 宪法监督"]
+}

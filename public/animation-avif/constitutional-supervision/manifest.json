@@ -1,0 +1,70 @@
+{
+  "animationId": "constitutional-supervision",
+  "compositionId": "ConstitutionalSupervision",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-30T10:30:39.804Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 275,
+      "frameCount": 276,
+      "id": "interpretation",
+      "number": "01",
+      "startFrame": 0,
+      "title": "三足鼎立：宪法解释与保障",
+      "durationMs": 9200,
+      "file": "interpretation.avif",
+      "fileSize": 599563,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "d22204c7e787f88eb9ad1647cd9247a400d006a1c686ee750b6122cd70eae0f4",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "f7232856936d96e9848cefb0c53983c7f19b4988a2f6b46a3e254523b37a4c14"
+    },
+    {
+      "endFrame": 587,
+      "frameCount": 312,
+      "id": "procedure",
+      "number": "02",
+      "startFrame": 276,
+      "title": "鼎腹铭文：审查流程",
+      "durationMs": 10400,
+      "file": "procedure.avif",
+      "fileSize": 765393,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "253e567fb48701583c9708bfd5fcc47907adc6cb08a820ce7b5dcf24abd39473",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "f7232856936d96e9848cefb0c53983c7f19b4988a2f6b46a3e254523b37a4c14"
+    },
+    {
+      "endFrame": 851,
+      "frameCount": 264,
+      "id": "oath",
+      "number": "03",
+      "startFrame": 588,
+      "title": "鎏金誓版：宪法宣誓",
+      "durationMs": 8800,
+      "file": "oath.avif",
+      "fileSize": 703911,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "4ef68491cad7db42359f4e228976384b211e0eceaa7caab9fd3b645e2f1407ad",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "f7232856936d96e9848cefb0c53983c7f19b4988a2f6b46a3e254523b37a4c14"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "f7232856936d96e9848cefb0c53983c7f19b4988a2f6b46a3e254523b37a4c14",
+  "targetFps": 30,
+  "totalFileSize": 2068867
+}

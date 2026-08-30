@@ -163,6 +163,7 @@ import {typography as typographyAutoShareholderRepresentativeAction} from '../an
 import {typography as typographyAutoDirectorDuties} from '../animations/commercial-law/05/director-duties/animation.meta';
 import {typography as typographyAutoInformationRight} from '../animations/commercial-law/04/information-right/animation.meta';
 import {typography as typographyAutoRightsShieldArmory} from '../animations/civil-law/01/rights-shield-armory/animation.meta';
+import {typography as typographyAutoCapacityGuardianshipRegistry} from '../animations/civil-law/02/capacity-guardianship-registry/animation.meta';
 import {typography as typographyAutoDividendRight} from '../animations/commercial-law/04/dividend-right/animation.meta';
 import {typography as typographyAutoShareholderQualification} from '../animations/commercial-law/03/shareholder-qualification/animation.meta';
 import {typography as typographyAutoNominalShareholder} from '../animations/commercial-law/03/nominal-shareholder/animation.meta';
@@ -242,6 +243,7 @@ import {typography as typographyAutoIntentMensReaMap} from '../animations/crimin
 import {typography as typographyAutoJustificationDefenseNecessity} from '../animations/criminal/09/justification-defense-necessity/animation.meta';
 import {typography as typographyAutoCulpabilityRingAssay} from '../animations/criminal/10/culpability-ring-assay/animation.meta';
 import {typography as typographyAutoCrimeNumberReckoning} from '../animations/criminal/13/crime-number-reckoning/animation.meta';
+import {typography as typographyAutoPenaltyScaleOffice} from '../animations/criminal/14/penalty-scale-office/animation.meta';
 import {typography as typographyAutoJurisdictionSeaChart} from '../animations/criminal-procedure-gold/04/jurisdiction-sea-chart/animation.meta';
 import {typography as typographyAutoRecusalBackstageSwap} from '../animations/criminal-procedure-gold/05/recusal-backstage-swap/animation.meta';
 import {typography as typographyBel} from '../animations/commercial-economic-law/01/branch-wallet-ledger/animation.meta';
@@ -414,6 +416,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'director-duties': {metadata: typographyAutoDirectorDuties, scope: {animationId: 'director-duties', subject: 'commercial-law', topic: '05'}},
   'information-right': {metadata: typographyAutoInformationRight, scope: {animationId: 'information-right', subject: 'commercial-law', topic: '04'}},
   'rights-shield-armory': {metadata: typographyAutoRightsShieldArmory, scope: {animationId: 'rights-shield-armory', subject: 'civil-law', topic: '01'}},
+  'capacity-guardianship-registry': {metadata: typographyAutoCapacityGuardianshipRegistry, scope: {animationId: 'capacity-guardianship-registry', subject: 'civil-law', topic: '02'}},
   'dividend-right': {metadata: typographyAutoDividendRight, scope: {animationId: 'dividend-right', subject: 'commercial-law', topic: '04'}},
   'shareholder-qualification': {metadata: typographyAutoShareholderQualification, scope: {animationId: 'shareholder-qualification', subject: 'commercial-law', topic: '03'}},
   'nominal-shareholder': {metadata: typographyAutoNominalShareholder, scope: {animationId: 'nominal-shareholder', subject: 'commercial-law', topic: '03'}},
@@ -534,6 +537,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'justification-defense-necessity': {metadata: typographyAutoJustificationDefenseNecessity, scope: {animationId: 'justification-defense-necessity', subject: 'criminal', topic: '09'}},
   'culpability-ring-assay': {metadata: typographyAutoCulpabilityRingAssay, scope: {animationId: 'culpability-ring-assay', subject: 'criminal', topic: '10'}},
   'crime-number-reckoning': {metadata: typographyAutoCrimeNumberReckoning, scope: {animationId: 'crime-number-reckoning', subject: 'criminal', topic: '13'}},
+  'penalty-scale-office': {metadata: typographyAutoPenaltyScaleOffice, scope: {animationId: 'penalty-scale-office', subject: 'criminal', topic: '14'}},
   'jurisdiction-sea-chart': {metadata: typographyAutoJurisdictionSeaChart, scope: {animationId: 'jurisdiction-sea-chart', subject: 'criminal-procedure-gold', topic: '04'}},
   'recusal-backstage-swap': {metadata: typographyAutoRecusalBackstageSwap, scope: {animationId: 'recusal-backstage-swap', subject: 'criminal-procedure-gold', topic: '05'}},
   'branch-wallet-ledger': {metadata: typographyBel, scope: {animationId: 'branch-wallet-ledger', subject: 'commercial-economic-law', topic: '01'}},
