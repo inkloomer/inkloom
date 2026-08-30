@@ -1,0 +1,24 @@
+{
+  "directionId": "dike-patrol-section",
+  "family": "dike-patrol-section",
+  "palette": "土堤黄褐 levee + 洪水青灰 water + 沙袋金 sand + 救生橙 rescue + 警戒朱红 warn + 闸木棕 wood",
+  "typography": "heavy patrol-log headings, sandbag chips, water-shore label blocks, double-frame warning flags",
+  "composition": "a levee section where the danger stream threatens the interests shore: feature berms, a dominator fork, omission family boards, and two duty shores beside the flow",
+  "surface": "paper levee grain, sandbag strips, water-edge boards, dashed warning zones, double-frame flags; no glossy panels",
+  "motion": "the danger stream enters first, gates and duty shores stage in review order, warning flags land as verdicts; no idle loops",
+  "transition": "the levee ground and water edge persist while each scene mounts a new patrol board",
+  "conceptTokens": {
+    "危险": "Zap",
+    "作为义务": "ScrollText",
+    "真题": "GraduationCap",
+    "认识能力": "Compass",
+    "控制能力": "LockOpen",
+    "法益": "Crosshair"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/criminal/05/conduct-omission-gates/",
+    "title": "堤防巡查段"
+  }
+}

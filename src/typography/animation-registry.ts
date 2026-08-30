@@ -232,8 +232,10 @@ import {typography as typographyAutoPenalFrontierRange} from '../animations/crim
 import {typography as typographyAutoCrimeConstitutionAtlas} from '../animations/criminal/02/crime-constitution-atlas/animation.meta';
 import {typography as typographyAutoInterestRightsBalance} from '../animations/criminal/03/interest-rights-balance/animation.meta';
 import {typography as typographyAutoIdentityUnitSubject} from '../animations/criminal/04/identity-unit-subject/animation.meta';
+import {typography as typographyAutoConductOmissionGates} from '../animations/criminal/05/conduct-omission-gates/animation.meta';
 import {typography as typographyBel} from '../animations/commercial-economic-law/01/branch-wallet-ledger/animation.meta';
 import {typography as typographyVpf} from '../animations/commercial-economic-law/01/veil-piercing-forge/animation.meta';
+import {typography as typographyOph} from '../animations/criminal-procedure-gold/01/overview-porcelain-hall/animation.meta';
 import {typography as typographyLl} from '../animations/theoretical-law/01/legislation-law/animation.meta';
 import {typography as typographyFc} from '../animations/theoretical-law/01/features-of-constitution/animation.meta';
 import {typography as typographyCo} from '../animations/theoretical-law/01/creation-of-constitution/animation.meta';
@@ -241,6 +243,7 @@ import {typography as typographyNdl} from '../animations/theoretical-law/03/new-
 import {typography as typographyLhf} from '../animations/theoretical-law/03/legal-history-firsts/animation.meta';
 import {typography as typographyGa} from '../animations/theoretical-law/01/grassroots-autonomy/animation.meta';
 import {typography as typographyCfr} from '../animations/theoretical-law/01/citizen-fundamental-rights/animation.meta';
+import {typography as typographyNsc} from '../animations/theoretical-law/01/npc-standing-committee/animation.meta';
 import {typography as typographyCc} from '../animations/theoretical-law/01/constitution-classification/animation.meta';
 import {typography as typographyCdv} from '../animations/theoretical-law/01/constitution-development/animation.meta';
 import {typography as typographyCp} from '../animations/theoretical-law/01/constitution-principles/animation.meta';
@@ -501,8 +504,10 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'crime-constitution-atlas': {metadata: typographyAutoCrimeConstitutionAtlas, scope: {animationId: 'crime-constitution-atlas', subject: 'criminal', topic: '02'}},
   'interest-rights-balance': {metadata: typographyAutoInterestRightsBalance, scope: {animationId: 'interest-rights-balance', subject: 'criminal', topic: '03'}},
   'identity-unit-subject': {metadata: typographyAutoIdentityUnitSubject, scope: {animationId: 'identity-unit-subject', subject: 'criminal', topic: '04'}},
+  'conduct-omission-gates': {metadata: typographyAutoConductOmissionGates, scope: {animationId: 'conduct-omission-gates', subject: 'criminal', topic: '05'}},
   'branch-wallet-ledger': {metadata: typographyBel, scope: {animationId: 'branch-wallet-ledger', subject: 'commercial-economic-law', topic: '01'}},
   'veil-piercing-forge': {metadata: typographyVpf, scope: {animationId: 'veil-piercing-forge', subject: 'commercial-economic-law', topic: '01'}},
+  'overview-porcelain-hall': {metadata: typographyOph, scope: {animationId: 'overview-porcelain-hall', subject: 'criminal-procedure-gold', topic: '01'}},
   'legislation-law': {metadata: typographyLl, scope: {animationId: 'legislation-law', subject: 'theoretical-law', topic: '01'}},
   'features-of-constitution': {metadata: typographyFc, scope: {animationId: 'features-of-constitution', subject: 'theoretical-law', topic: '01'}},
   'creation-of-constitution': {metadata: typographyCo, scope: {animationId: 'creation-of-constitution', subject: 'theoretical-law', topic: '01'}},
@@ -528,6 +533,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'legal-history-firsts': {metadata: typographyLhf, scope: {animationId: 'legal-history-firsts', subject: 'theoretical-law', topic: '03'}},
   'grassroots-autonomy': {metadata: typographyGa, scope: {animationId: 'grassroots-autonomy', subject: 'theoretical-law', topic: '01'}},
   'citizen-fundamental-rights': {metadata: typographyCfr, scope: {animationId: 'citizen-fundamental-rights', subject: 'theoretical-law', topic: '01'}},
+  'npc-standing-committee': {metadata: typographyNsc, scope: {animationId: 'npc-standing-committee', subject: 'theoretical-law', topic: '01'}},
   'profit-reserve-granary': {metadata: typographyPrg, scope: {animationId: 'profit-reserve-granary', subject: 'commercial-economic-law', topic: '01'}},
   'promoter-liability-ropewalk': {metadata: typographyPlr, scope: {animationId: 'promoter-liability-ropewalk', subject: 'commercial-economic-law', topic: '01'}},
   'fight-defense-diagram': {metadata: typography44, scope: {animationId: 'fight-defense-diagram', subject: 'criminal', topic: '22'}},

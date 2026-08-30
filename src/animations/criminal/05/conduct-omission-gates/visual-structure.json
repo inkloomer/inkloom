@@ -1,0 +1,109 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "playerControlSafeBottom": 168,
+  "scenes": [
+    {
+      "id": "act-features-tri-test",
+      "export": "ActFeaturesTriTestScene",
+      "layout": "tri-feature-judgement-berm",
+      "anchor": "typographic-sequence",
+      "grammar": ["feature-trio-review", "danger-grade-slope"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
+      "tokens": ["Zap", "Crosshair", "GraduationCap"],
+      "finalKnowledge": [
+        "feature-body",
+        "feature-intent",
+        "feature-harm",
+        "danger-slope",
+        "danger-trap-note",
+        "danger-replace-pair",
+        "risk-case-floor"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "victim-self-risk-fork",
+      "export": "VictimSelfRiskForkScene",
+      "layout": "dominator-fork-board",
+      "anchor": "document-fork",
+      "grammar": ["dominator-responsibility-fork", "dual-capacity-test"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["Compass", "LockOpen", "Users", "Zap"],
+      "finalKnowledge": [
+        "fork-victim-dominates",
+        "fork-victim-self-row",
+        "fork-victim-actor-row",
+        "fork-victim-scare-row",
+        "fork-actor-dominates",
+        "fork-actor-drunk-row",
+        "fork-actor-ferry-row",
+        "fork-actor-police-row",
+        "fork-fire-rescue-rule"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "omission-family-map",
+      "export": "OmissionFamilyMapScene",
+      "layout": "omission-family-classify-map",
+      "anchor": "comparison-axis",
+      "grammar": ["act-omission-pairing", "possession-act-branch"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
+      "tokens": ["Zap", "ScrollText"],
+      "finalKnowledge": [
+        "pair-act-omission",
+        "pair-omission-side",
+        "pair-possession-branch",
+        "pure-omission-board",
+        "pure-manner-trap",
+        "impure-omission-board",
+        "impure-usual-danger",
+        "impure-concurrence"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "duty-stream-sources",
+      "export": "DutyStreamSourcesScene",
+      "layout": "duty-source-two-shores",
+      "anchor": "flow-path",
+      "grammar": ["danger-stream-blocking", "two-shore-duty-split"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["Zap", "Users"],
+      "finalKnowledge": [
+        "shore-guard-source",
+        "shore-danger-things",
+        "shore-others-acts",
+        "shore-own-prior-act",
+        "shore-protect-object",
+        "shore-specific-relation",
+        "shore-specific-domain",
+        "shore-priority-note"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "ability-error-gate",
+      "export": "AbilityErrorGateScene",
+      "layout": "ability-error-gate-strip",
+      "anchor": "timeline-gate",
+      "grammar": ["should-can-not-chain", "error-type-fork"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "connector"],
+      "tokens": ["ScrollText", "GraduationCap"],
+      "finalKnowledge": [
+        "gate-ability",
+        "gate-avoid-possibility",
+        "gate-error-fork",
+        "gate-equivalence",
+        "gate-exam-floor"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}
