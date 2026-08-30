@@ -1,0 +1,103 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "playerControlSafeBottom": 168,
+  "scenes": [
+    {
+      "id": "official-duty-board",
+      "export": "OfficialDutyBoardScene",
+      "layout": "official-duty-board",
+      "anchor": "role-pair",
+      "grammar": ["duty-panel", "police-panel"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
+      "tokens": ["Shield", "Scale", "Link", "Siren", "Hand", "Gavel"],
+      "finalKnowledge": ["duty-panel", "police-panel"],
+      "statefulObjects": []
+    },
+    {
+      "id": "credential-forge-bench",
+      "export": "CredentialForgeBenchScene",
+      "layout": "credential-forge-bench",
+      "anchor": "concept-icon",
+      "grammar": ["credential-panel", "imposter-panel"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
+      "tokens": ["FileText", "Building2", "Fingerprint", "FileX", "UserX", "Drama", "Gavel", "Ban"],
+      "finalKnowledge": ["credential-panel", "imposter-panel"],
+      "statefulObjects": []
+    },
+    {
+      "id": "street-squat-stage",
+      "export": "StreetSquatStageScene",
+      "layout": "street-squat-stage",
+      "anchor": "comparison-axis",
+      "grammar": ["brawl-panel", "provocation-panel", "throwing-panel"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
+      "tokens": ["Users", "Gavel", "AlertTriangle", "Hand", "Scale", "ArrowDown", "GitMerge"],
+      "finalKnowledge": ["brawl-panel", "provocation-panel", "throwing-panel"],
+      "statefulObjects": []
+    },
+    {
+      "id": "boss-den-counter",
+      "export": "BossDenCounterScene",
+      "layout": "boss-den-counter",
+      "anchor": "typographic-sequence",
+      "grammar": ["mafia-panel", "gambling-panel", "info-cheat-panel"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
+      "tokens": ["Crown", "Users", "Megaphone", "Dice5", "Landmark", "PenTool", "Monitor"],
+      "finalKnowledge": ["mafia-panel", "gambling-panel", "info-cheat-panel"],
+      "statefulObjects": []
+    },
+    {
+      "id": "justice-testimony-hall",
+      "export": "JusticeTestimonyHallScene",
+      "layout": "justice-testimony-hall",
+      "anchor": "document-fork",
+      "grammar": ["perjury-panel", "tamper-panel"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "connector"],
+      "tokens": ["FileWarning", "Clock", "CheckCircle2", "GitMerge", "Hand", "Trash2", "Scale"],
+      "finalKnowledge": ["perjury-panel", "tamper-panel"],
+      "statefulObjects": []
+    },
+    {
+      "id": "justice-harbor-quay",
+      "export": "JusticeHarborQuayScene",
+      "layout": "justice-harbor-quay",
+      "anchor": "flow-target",
+      "grammar": ["harbor-panel", "conceal-panel", "escape-panel"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
+      "tokens": ["Home", "FileText", "Ban", "Package", "Coins", "Scale", "DoorOpen", "Flag"],
+      "finalKnowledge": ["harbor-panel", "conceal-panel", "escape-panel"],
+      "statefulObjects": []
+    },
+    {
+      "id": "drug-dispatch-lane",
+      "export": "DrugDispatchLaneScene",
+      "layout": "drug-dispatch-lane",
+      "anchor": "flow-path",
+      "grammar": ["traffic-panel", "holding-panel"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "connector"],
+      "tokens": ["Pill", "Handshake", "PackageCheck", "Brain", "Stethoscope", "Boxes", "Home"],
+      "finalKnowledge": ["traffic-panel", "holding-panel"],
+      "statefulObjects": []
+    },
+    {
+      "id": "vice-brocade-room",
+      "export": "ViceBrocadeRoomScene",
+      "layout": "vice-brocade-room",
+      "anchor": "boundary",
+      "grammar": ["prostitution-panel", "obscenity-panel"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
+      "tokens": ["Users", "Hand", "UserPlus", "MessageCircle", "Film", "Send", "Scale"],
+      "finalKnowledge": ["prostitution-panel", "obscenity-panel"],
+      "statefulObjects": []
+    }
+  ]
+}

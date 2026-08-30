@@ -175,6 +175,7 @@ import {typography as typographyAutoLegalPersonIndependenceHall} from '../animat
 import {typography as typographyAutoIntentionExpressionHall} from '../animations/civil-law/03/intention-expression-hall/animation.meta';
 import {typography as typographyAutoEffectivenessActivationHall} from '../animations/civil-law/03/effectiveness-activation-hall/animation.meta';
 import {typography as typographyAutoDefectRemedyVerdictHall} from '../animations/civil-law/03/defect-remedy-verdict-hall/animation.meta';
+import {typography as typographyAutoAgencyAuthorityHall} from '../animations/civil-law/04/agency-authority-hall/animation.meta';
 import {typography as typographyAutoDividendRight} from '../animations/commercial-law/04/dividend-right/animation.meta';
 import {typography as typographyAutoShareholderQualification} from '../animations/commercial-law/03/shareholder-qualification/animation.meta';
 import {typography as typographyAutoNominalShareholder} from '../animations/commercial-law/03/nominal-shareholder/animation.meta';
@@ -276,6 +277,7 @@ import {typography as typographyAutoDetentionClauseLadder} from '../animations/c
 import {typography as typographyAutoDerelictionDutyDesk} from '../animations/criminal/24/dereliction-duty-desk/animation.meta';
 import {typography as typographyAutoStateSecurityWireRoom} from '../animations/criminal/25/state-security-wire-room/animation.meta';
 import {typography as typographyAutoPowerMoneyExchange} from '../animations/criminal/23/power-money-exchange/animation.meta';
+import {typography as typographyAutoPublicOrderWatchTower} from '../animations/criminal/22/public-order-watch-tower/animation.meta';
 import {typography as typographyBel} from '../animations/commercial-economic-law/01/branch-wallet-ledger/animation.meta';
 import {typography as typographyVpf} from '../animations/commercial-economic-law/01/veil-piercing-forge/animation.meta';
 import {typography as typographyLl} from '../animations/theoretical-law/01/legislation-law/animation.meta';
@@ -483,6 +485,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'intention-expression-hall': {metadata: typographyAutoIntentionExpressionHall, scope: {animationId: 'intention-expression-hall', subject: 'civil-law', topic: '03'}},
   'effectiveness-activation-hall': {metadata: typographyAutoEffectivenessActivationHall, scope: {animationId: 'effectiveness-activation-hall', subject: 'civil-law', topic: '03'}},
   'defect-remedy-verdict-hall': {metadata: typographyAutoDefectRemedyVerdictHall, scope: {animationId: 'defect-remedy-verdict-hall', subject: 'civil-law', topic: '03'}},
+  'agency-authority-hall': {metadata: typographyAutoAgencyAuthorityHall, scope: {animationId: 'agency-authority-hall', subject: 'civil-law', topic: '04'}},
   'dividend-right': {metadata: typographyAutoDividendRight, scope: {animationId: 'dividend-right', subject: 'commercial-law', topic: '04'}},
   'shareholder-qualification': {metadata: typographyAutoShareholderQualification, scope: {animationId: 'shareholder-qualification', subject: 'commercial-law', topic: '03'}},
   'nominal-shareholder': {metadata: typographyAutoNominalShareholder, scope: {animationId: 'nominal-shareholder', subject: 'commercial-law', topic: '03'}},
@@ -630,6 +633,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'dereliction-duty-desk': {metadata: typographyAutoDerelictionDutyDesk, scope: {animationId: 'dereliction-duty-desk', subject: 'criminal', topic: '24'}},
   'state-security-wire-room': {metadata: typographyAutoStateSecurityWireRoom, scope: {animationId: 'state-security-wire-room', subject: 'criminal', topic: '25'}},
   'power-money-exchange': {metadata: typographyAutoPowerMoneyExchange, scope: {animationId: 'power-money-exchange', subject: 'criminal', topic: '23'}},
+  'public-order-watch-tower': {metadata: typographyAutoPublicOrderWatchTower, scope: {animationId: 'public-order-watch-tower', subject: 'criminal', topic: '22'}},
   'branch-wallet-ledger': {metadata: typographyBel, scope: {animationId: 'branch-wallet-ledger', subject: 'commercial-economic-law', topic: '01'}},
   'veil-piercing-forge': {metadata: typographyVpf, scope: {animationId: 'veil-piercing-forge', subject: 'commercial-economic-law', topic: '01'}},
   'legislation-law': {metadata: typographyLl, scope: {animationId: 'legislation-law', subject: 'theoretical-law', topic: '01'}},

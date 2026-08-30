@@ -1,0 +1,23 @@
+{
+  "directionId": "public-order-watch-tower",
+  "family": "public-order-watch-tower",
+  "palette": "灰绿白 mist + 藏蓝 navy + 松绿 pine + 火把橙 torch + 绯红 crimson + 金铜 gold",
+  "typography": "heavy patrol headings, square official chips, navy label blocks, double-frame patrol stamps",
+  "composition": "a night-watch drum tower bulletin hall: the official-duty board, credential forge bench, street squat stage, boss den counter, justice testimony hall, harbor quay, drug dispatch lane, and vice brocade room",
+  "surface": "patrol bulletin grain, square official chips, dashed exclusion zones, double-frame stamps; no glossy panels",
+  "motion": "bulletin panels enter in reasoning order, stamps land as verdicts; no idle loops",
+  "transition": "the watch tower ground persists while each scene mounts a new board",
+  "conceptTokens": {
+    "妨害公务罪": "Shield",
+    "袭警罪": "Siren",
+    "招摇撞骗罪": "Drama",
+    "毒品犯罪": "Pill",
+    "组织卖淫罪": "Users"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/criminal/22/public-order-watch-tower/",
+    "title": "治安更鼓楼"
+  }
+}
