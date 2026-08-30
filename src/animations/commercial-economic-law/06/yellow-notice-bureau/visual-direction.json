@@ -1,0 +1,24 @@
+{
+  "directionId": "yellow-notice-bureau",
+  "family": "yellow-notice-bureau",
+  "palette": "imperial yellow notice boards + cream paper cards + vermilion bureau seals + moss approvals + indigo gate frames + gold stamps + ink strips",
+  "typography": "notice bureau headlines, cream card labels, square vermilion verdict stamps, dashed posting rules",
+  "composition": "a public-notice freeze gate holding the bill valid but paused, a void-verdict desk turning the bill into waste paper with all parties freed of bill liability, and a scrap-payment desk charging the forger with a civil payment duty",
+  "surface": "yellow bureau walls with cream notices and vermilion frames; no glossy panels",
+  "motion": "notices are posted at the gate, the verdict gavel voids the bill, the forger pays through the civil desk; no idle loops",
+  "transition": "the yellow notice bureau persists while each scene re-stages the same posting board for a new question",
+  "conceptTokens": {
+    "公示催告": "Megaphone",
+    "除权判决": "Gavel",
+    "票据无效": "FileX",
+    "伪造签章": "Fingerprint",
+    "民事付款义务": "HandCoins",
+    "真题": "GraduationCap"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/commercial-economic-law/06/yellow-notice-bureau/",
+    "title": "黄榜招领局"
+  }
+}

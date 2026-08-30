@@ -1,0 +1,70 @@
+{
+  "animationId": "yellow-notice-bureau",
+  "compositionId": "YellowNoticeBureau",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-30T12:57:45.932Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 289,
+      "frameCount": 290,
+      "id": "freeze-gate",
+      "number": "01",
+      "startFrame": 0,
+      "title": "公示催告：冻结但不作废",
+      "durationMs": 9667,
+      "file": "freeze-gate.avif",
+      "fileSize": 449287,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "3be76f8628af0870f96c9ebcc9047184a1e7295738647c8805f26f06eabac607",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "230c0ce45b8bced9014b526357606f91d07fd28bfe7c34e2816227f1e8024047"
+    },
+    {
+      "endFrame": 579,
+      "frameCount": 290,
+      "id": "void-verdict",
+      "number": "02",
+      "startFrame": 290,
+      "title": "除权判决：一张废纸的诞生",
+      "durationMs": 9667,
+      "file": "void-verdict.avif",
+      "fileSize": 426646,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "80ba7b91f8ec91744a6e80250cdead5b62bfde3916c19481238d574a0e55c428",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "230c0ce45b8bced9014b526357606f91d07fd28bfe7c34e2816227f1e8024047"
+    },
+    {
+      "endFrame": 869,
+      "frameCount": 290,
+      "id": "scrap-payment",
+      "number": "03",
+      "startFrame": 580,
+      "title": "废纸上的付款责任：找丁",
+      "durationMs": 9667,
+      "file": "scrap-payment.avif",
+      "fileSize": 484759,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "ceab428bb8700e8b2590b8d03fb29285f8a0dd0cc3b6789379dd1391e35a2294",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "230c0ce45b8bced9014b526357606f91d07fd28bfe7c34e2816227f1e8024047"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "230c0ce45b8bced9014b526357606f91d07fd28bfe7c34e2816227f1e8024047",
+  "targetFps": 30,
+  "totalFileSize": 1360692
+}
