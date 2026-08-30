@@ -1,0 +1,70 @@
+{
+  "animationId": "lawyer-fees",
+  "compositionId": "LawyerFees",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-30T18:25:38.431Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 251,
+      "frameCount": 252,
+      "id": "principles-standard",
+      "number": "01",
+      "startFrame": 0,
+      "title": "收费的原则与标准",
+      "durationMs": 8400,
+      "file": "principles-standard.avif",
+      "fileSize": 741109,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "1871d6ca0b6f9ae1013e1cc664810df2e3b377d50f64a2e060f038e6212c275d",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "baf6c2467cf4ffacf92a36537a3430d626503462cc029dfa965321cca1cd0662"
+    },
+    {
+      "endFrame": 515,
+      "frameCount": 264,
+      "id": "risk-mode",
+      "number": "02",
+      "startFrame": 252,
+      "title": "风险代理与收费方式",
+      "durationMs": 8800,
+      "file": "risk-mode.avif",
+      "fileSize": 631058,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "198fb68033598f47cc89ca7935037c89f958db6c867beba6e6e3ffbf429a937c",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "baf6c2467cf4ffacf92a36537a3430d626503462cc029dfa965321cca1cd0662"
+    },
+    {
+      "endFrame": 767,
+      "frameCount": 252,
+      "id": "collect-supervise",
+      "number": "03",
+      "startFrame": 516,
+      "title": "收费的确定收取与监督",
+      "durationMs": 8400,
+      "file": "collect-supervise.avif",
+      "fileSize": 847588,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "7f2d34c98a284910b78b8d607591f5ca6c1515ea899a9bffe7eaff601901cfd8",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "baf6c2467cf4ffacf92a36537a3430d626503462cc029dfa965321cca1cd0662"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "baf6c2467cf4ffacf92a36537a3430d626503462cc029dfa965321cca1cd0662",
+  "targetFps": 30,
+  "totalFileSize": 2219755
+}

@@ -1,0 +1,41 @@
+{
+  "animationId": "lawyer-fees",
+  "scenes": [
+    {
+      "id": "principles-standard",
+      "export": "PrinciplesStandardScene",
+      "layout": "principles-plus-dual-price",
+      "anchor": "main center",
+      "grammar": "收费原则五条（公开公平·自愿有偿·诚实信用·统一收费·接受监督）+收费标准（政府指导价三案件对市场调节价）",
+      "textTreatments": ["principle chips", "price columns"],
+      "focalChannels": ["five principles", "guidance price cases"],
+      "tokens": ["Scale", "Landmark", "Users"],
+      "finalKnowledge": "principles-standard",
+      "statefulObjects": ["principle row x5"]
+    },
+    {
+      "id": "risk-mode",
+      "export": "RiskModeScene",
+      "layout": "risk-forbid-plus-modes",
+      "anchor": "main center",
+      "grammar": "风险代理（财产民事案件告知指导价后仍要求·禁止情形：婚姻继承/社保低保/赡养抚养扶养抚恤救济工伤/劳动报酬·刑事行政国家赔偿群体性禁止·最高不高于标的额18%）+收费方式三种（计件/按标的额比例/计时）",
+      "textTreatments": ["forbid seals", "mode chips"],
+      "focalChannels": ["risk forbids", "eighteen percent cap"],
+      "tokens": ["Ban", "Percent", "Clock"],
+      "finalKnowledge": "risk-mode-rules",
+      "statefulObjects": ["risk panel", "mode panel"]
+    },
+    {
+      "id": "collect-supervise",
+      "export": "CollectSuperviseScene",
+      "layout": "collect-plus-supervision",
+      "anchor": "main center",
+      "grammar": "确定与收取（签收费合同·不得私自收案收费·费用直交律所·代交及时上交·不得开非正式凭证·不得额外报酬）+减免（法援不收费·经济困难酌减免）+价格主管部门监督检查六违法行为",
+      "textTreatments": ["collect rows", "supervision chips"],
+      "focalChannels": ["collect rules", "six violations"],
+      "tokens": ["FileSignature", "Coins", "Eye"],
+      "finalKnowledge": "collect-supervise",
+      "statefulObjects": ["collect panel", "supervision panel"]
+    }
+  ]
+}

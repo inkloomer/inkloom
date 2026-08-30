@@ -1,0 +1,15 @@
+{
+  "directionId": "abacus-fee-counter",
+  "family": "fee-counter-hall",
+  "title": "算盘收费柜",
+  "subject": "theoretical-law",
+  "chapter": "04",
+  "concept": "算盘收费柜：收费原则与指导价写于柜面，风险代理禁令以封条算珠呈现，18%为封顶刻度。图形层主题；画面文字一律使用源笔记法考名词",
+  "palette": "柜堂 fee #33302A、深柜 feeDeep #272520、面板 panel #F0EBDA、暗面板 panelDim #E1DCC7、镶边 edge #6B6459、墨字 ink #282420、淡墨 inkSoft #5B5449、算珠金 abacus #C0983E、禁代红 risk #B04834、指导青 guidance #4E7D74、纸白 paper #F6F1E0",
+  "typography": "标题用 var(--inkloom-animation-title)，正文用 var(--inkloom-animation-body)；柜面行加粗法考名词，金额比例用刻度印",
+  "composition": "原则五珠行 + 指导价/市场价双栏 + 风险代理封条 + 监督检查行",
+  "surface": "柜堂木纹 + 算珠框线 + 封条印",
+  "motion": "算珠拨定、封条横贴、刻度封顶",
+  "transition": "硬切换幕",
+  "catalog": ["考点76 律师收费制度"]
+}
