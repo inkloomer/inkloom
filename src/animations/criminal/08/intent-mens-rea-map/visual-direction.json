@@ -1,0 +1,25 @@
+{
+  "directionId": "radio-dial-crosstalk",
+  "family": "radio-dial-crosstalk",
+  "palette": "胡桃木机箱 cabinet + 刻度玻璃盘 dial-glass + 电子管橙 tube + 松石绿 teal + 漆红 red + 夜布蓝 night",
+  "typography": "heavy dial headings, tube-glow chips, needle label blocks, double-frame tuner verdicts",
+  "composition": "a valve radio console: intent factors as twin dials, six fault bands across the tuning scale, mistake classification as a two-step fork, theory duels as paired speaker boards",
+  "surface": "glass dial ground with fine scale lines, wood-tone frames, glow strips, dashed crosstalk zones; no glossy panels",
+  "motion": "the tuning needle sweeps band by band, forks split the signal path, tuner verdicts land on the dial; no idle loops",
+  "transition": "the dial glass and wood frame persist while each scene re-tunes the console",
+  "conceptTokens": {
+    "故意": "Zap",
+    "过失": "CircleDashed",
+    "认识错误": "Compass",
+    "对象错误": "MapPin",
+    "狭义因果错误": "ArrowLeftRight",
+    "学说": "Scale",
+    "案例": "GraduationCap"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/criminal/08/intent-mens-rea-map/",
+    "title": "电子管调频台"
+  }
+}

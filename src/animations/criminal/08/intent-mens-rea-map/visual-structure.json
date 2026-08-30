@@ -1,0 +1,98 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "playerControlSafeBottom": 168,
+  "scenes": [
+    {
+      "id": "intent-consistency",
+      "export": "IntentConsistencyScene",
+      "layout": "dual-factor-consistency-board",
+      "anchor": "comparison-axis",
+      "grammar": ["factor-pairing", "object-determines-mind"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
+      "tokens": ["Compass", "Zap", "GraduationCap"],
+      "finalKnowledge": [
+        "factor-know",
+        "factor-will",
+        "factor-trap",
+        "consistency-content",
+        "consistency-time",
+        "intent-kind-strip"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "fault-spectrum",
+      "export": "FaultSpectrumScene",
+      "layout": "six-band-fault-dial",
+      "anchor": "typographic-sequence",
+      "grammar": ["fault-spectrum-grades", "boundary-fork-pairs"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
+      "tokens": [],
+      "finalKnowledge": [
+        "band-direct-intent",
+        "band-indirect-intent",
+        "band-confident-negligence",
+        "band-careless-negligence",
+        "band-accident",
+        "band-force-majeure",
+        "fork-boundary-rows",
+        "spectrum-case-board"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "mistake-two-step",
+      "export": "MistakeTwoStepScene",
+      "layout": "mistake-two-step-quadrant",
+      "anchor": "document-fork",
+      "grammar": ["mind-then-identity-steps", "isolated-models-row"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["CircleDashed", "Zap", "MapPin"],
+      "finalKnowledge": [
+        "step-mind-board",
+        "step-one-three-cases",
+        "step-identity-board",
+        "step-method-negatives",
+        "isolated-models-board"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "hit-error-two-theories",
+      "export": "HitErrorTwoTheoriesScene",
+      "layout": "theory-duel-narrow-cause-rows",
+      "anchor": "comparison-axis",
+      "grammar": ["theory-pair-verdicts", "cause-flow-mismatch-rows"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
+      "tokens": ["Scale", "ArrowLeftRight"],
+      "finalKnowledge": [
+        "theory-concrete-board",
+        "theory-legal-board",
+        "narrow-cause-board"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "defer-advance-absorb",
+      "export": "DeferAdvanceAbsorbScene",
+      "layout": "defer-advance-absorb-triptych",
+      "anchor": "timeline-gate",
+      "grammar": ["defer-crossroad-steps", "absorb-inclusion-pairs"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "connector"],
+      "tokens": ["GraduationCap"],
+      "finalKnowledge": [
+        "defer-board",
+        "advance-board",
+        "absorb-board",
+        "tri-floor"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}
