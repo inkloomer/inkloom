@@ -1,0 +1,70 @@
+{
+  "animationId": "plum-appeals-clockhouse",
+  "compositionId": "PlumAppealsClockhouse",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-30T09:12:14.397Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 289,
+      "frameCount": 290,
+      "id": "guarantor-triptych",
+      "number": "01",
+      "startFrame": 0,
+      "title": "保证人的三条出路：不免责",
+      "durationMs": 9667,
+      "file": "guarantor-triptych.avif",
+      "fileSize": 313779,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "97a63e2c922d76800aead4cd82682042f263ed2b163f54ebf64559acbc2a7d32",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "63c145667f63d3aa4cf6e36ccfc81dcae55a16ba358535f32adc7a0ba96e0ae0"
+    },
+    {
+      "endFrame": 579,
+      "frameCount": 290,
+      "id": "defendant-compass",
+      "number": "02",
+      "startFrame": 290,
+      "title": "确认之诉：被告永远是债务人",
+      "durationMs": 9667,
+      "file": "defendant-compass.avif",
+      "fileSize": 299774,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "585cec51e910277040abb66e71e5b837a740e80eacb3dc17134c7f3a0d412c5c",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "63c145667f63d3aa4cf6e36ccfc81dcae55a16ba358535f32adc7a0ba96e0ae0"
+    },
+    {
+      "endFrame": 869,
+      "frameCount": 290,
+      "id": "clepsydra-deadline",
+      "number": "03",
+      "startFrame": 580,
+      "title": "15 日漏刻：除斥期间不开闸",
+      "durationMs": 9667,
+      "file": "clepsydra-deadline.avif",
+      "fileSize": 221217,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "2cd3a50a2be9e7e07effe884ae80a69a19c907b80cc3ac2d420bc08fc84ee57d",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "63c145667f63d3aa4cf6e36ccfc81dcae55a16ba358535f32adc7a0ba96e0ae0"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "63c145667f63d3aa4cf6e36ccfc81dcae55a16ba358535f32adc7a0ba96e0ae0",
+  "targetFps": 30,
+  "totalFileSize": 834770
+}

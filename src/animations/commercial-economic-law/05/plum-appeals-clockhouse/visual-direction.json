@@ -1,0 +1,25 @@
+{
+  "directionId": "plum-appeals-clockhouse",
+  "family": "plum-appeals-clockhouse",
+  "palette": "deep plum clockhouse + blush petition paper + rose claim seals + sage approvals + rust dismissals + sand clepsydra brass + ink strips",
+  "typography": "plum clockhouse headlines, blush petition labels, square sand deadline stamps, dashed appeal rules",
+  "composition": "a guarantor triptych wall sorting three exits from non-discharge, a defendant compass desk pointing every claim suit at the debtor, and a clepsydra deadline desk timing the fifteen-day peremptory appeal",
+  "surface": "midnight plum walls with blush petitions and sand frames; no glossy panels",
+  "motion": "guarantor exits fan out at the fork, the compass swings to the debtor, the clepsydra drains toward the deadline; no idle loops",
+  "transition": "the plum appeals clockhouse persists while each scene re-stages the same petition bench for a new question",
+  "conceptTokens": {
+    "保证人": "Handshake",
+    "申报债权": "ClipboardList",
+    "代位求偿": "ArrowLeftRight",
+    "另行起诉": "Gavel",
+    "债务人被告": "Users",
+    "除斥期间": "Hourglass",
+    "真题": "GraduationCap"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/commercial-economic-law/05/plum-appeals-clockhouse/",
+    "title": "漏刻申诉堂"
+  }
+}

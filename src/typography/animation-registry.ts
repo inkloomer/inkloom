@@ -203,6 +203,7 @@ import {typography as typographyAutoRepublicConstitutionHistory} from '../animat
 import {typography as typographyAutoFrostTribunalDocket} from '../animations/commercial-economic-law/05/frost-tribunal-docket/animation.meta';
 import {typography as typographyAutoAmberTwinScale} from '../animations/commercial-economic-law/05/amber-twin-scale/animation.meta';
 import {typography as typographyAutoIndigoEstateVault} from '../animations/commercial-economic-law/05/indigo-estate-vault/animation.meta';
+import {typography as typographyAutoPlumAppealsClockhouse} from '../animations/commercial-economic-law/05/plum-appeals-clockhouse/animation.meta';
 import {typography as typographyAutoReckoningAbacusDesk} from '../animations/administrative-law/24/reckoning-abacus-desk/animation.meta';
 import {typography as typographyAutoBambooScrollRestoration} from '../animations/administrative-law/23/bamboo-scroll-restoration/animation.meta';
 import {typography as typographyAutoLighthouseWatchNetwork} from '../animations/administrative-law/20/lighthouse-watch-network/animation.meta';
@@ -237,12 +238,12 @@ import {typography as typographyAutoConductOmissionGates} from '../animations/cr
 import {typography as typographyAutoHarmResultAggravation} from '../animations/criminal/06/harm-result-aggravation/animation.meta';
 import {typography as typographyAutoCausationAttributionFlow} from '../animations/criminal/07/causation-attribution-flow/animation.meta';
 import {typography as typographyAutoIntentMensReaMap} from '../animations/criminal/08/intent-mens-rea-map/animation.meta';
+import {typography as typographyAutoJustificationDefenseNecessity} from '../animations/criminal/09/justification-defense-necessity/animation.meta';
 import {typography as typographyBel} from '../animations/commercial-economic-law/01/branch-wallet-ledger/animation.meta';
 import {typography as typographyVpf} from '../animations/commercial-economic-law/01/veil-piercing-forge/animation.meta';
 import {typography as typographyOph} from '../animations/criminal-procedure-gold/01/overview-porcelain-hall/animation.meta';
 import {typography as typographyPch} from '../animations/criminal-procedure-gold/02/principles-chalkboard-hall/animation.meta';
 import {typography as typographyOab} from '../animations/criminal-procedure-gold/03/organs-archive-bureau/animation.meta';
-import {typography as typographyJsc} from '../animations/criminal-procedure-gold/04/jurisdiction-sea-chart/animation.meta';
 import {typography as typographyLl} from '../animations/theoretical-law/01/legislation-law/animation.meta';
 import {typography as typographyFc} from '../animations/theoretical-law/01/features-of-constitution/animation.meta';
 import {typography as typographyCo} from '../animations/theoretical-law/01/creation-of-constitution/animation.meta';
@@ -254,6 +255,7 @@ import {typography as typographyNsc} from '../animations/theoretical-law/01/npc-
 import {typography as typographyNh} from '../animations/theoretical-law/01/national-honors/animation.meta';
 import {typography as typographyScouncil} from '../animations/theoretical-law/01/state-council/animation.meta';
 import {typography as typographyEmd} from '../animations/theoretical-law/01/emergency-decisions/animation.meta';
+import {typography as typographyCmc} from '../animations/theoretical-law/01/central-military-commission/animation.meta';
 import {typography as typographyCc} from '../animations/theoretical-law/01/constitution-classification/animation.meta';
 import {typography as typographyCdv} from '../animations/theoretical-law/01/constitution-development/animation.meta';
 import {typography as typographyCp} from '../animations/theoretical-law/01/constitution-principles/animation.meta';
@@ -442,6 +444,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'frost-tribunal-docket': {metadata: typographyAutoFrostTribunalDocket, scope: {animationId: 'frost-tribunal-docket', subject: 'commercial-economic-law', topic: '05'}},
   'amber-twin-scale': {metadata: typographyAutoAmberTwinScale, scope: {animationId: 'amber-twin-scale', subject: 'commercial-economic-law', topic: '05'}},
   'indigo-estate-vault': {metadata: typographyAutoIndigoEstateVault, scope: {animationId: 'indigo-estate-vault', subject: 'commercial-economic-law', topic: '05'}},
+  'plum-appeals-clockhouse': {metadata: typographyAutoPlumAppealsClockhouse, scope: {animationId: 'plum-appeals-clockhouse', subject: 'commercial-economic-law', topic: '05'}},
   'reckoning-abacus-desk': {metadata: typographyAutoReckoningAbacusDesk, scope: {animationId: 'reckoning-abacus-desk', subject: 'administrative-law', topic: '24'}},
   'bamboo-scroll-restoration': {metadata: typographyAutoBambooScrollRestoration, scope: {animationId: 'bamboo-scroll-restoration', subject: 'administrative-law', topic: '23'}},
   'lighthouse-watch-network': {metadata: typographyAutoLighthouseWatchNetwork, scope: {animationId: 'lighthouse-watch-network', subject: 'administrative-law', topic: '20'}},
@@ -519,12 +522,12 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'harm-result-aggravation': {metadata: typographyAutoHarmResultAggravation, scope: {animationId: 'harm-result-aggravation', subject: 'criminal', topic: '06'}},
   'causation-attribution-flow': {metadata: typographyAutoCausationAttributionFlow, scope: {animationId: 'causation-attribution-flow', subject: 'criminal', topic: '07'}},
   'intent-mens-rea-map': {metadata: typographyAutoIntentMensReaMap, scope: {animationId: 'intent-mens-rea-map', subject: 'criminal', topic: '08'}},
+  'justification-defense-necessity': {metadata: typographyAutoJustificationDefenseNecessity, scope: {animationId: 'justification-defense-necessity', subject: 'criminal', topic: '09'}},
   'branch-wallet-ledger': {metadata: typographyBel, scope: {animationId: 'branch-wallet-ledger', subject: 'commercial-economic-law', topic: '01'}},
   'veil-piercing-forge': {metadata: typographyVpf, scope: {animationId: 'veil-piercing-forge', subject: 'commercial-economic-law', topic: '01'}},
   'overview-porcelain-hall': {metadata: typographyOph, scope: {animationId: 'overview-porcelain-hall', subject: 'criminal-procedure-gold', topic: '01'}},
   'principles-chalkboard-hall': {metadata: typographyPch, scope: {animationId: 'principles-chalkboard-hall', subject: 'criminal-procedure-gold', topic: '02'}},
   'organs-archive-bureau': {metadata: typographyOab, scope: {animationId: 'organs-archive-bureau', subject: 'criminal-procedure-gold', topic: '03'}},
-  'jurisdiction-sea-chart': {metadata: typographyJsc, scope: {animationId: 'jurisdiction-sea-chart', subject: 'criminal-procedure-gold', topic: '04'}},
   'legislation-law': {metadata: typographyLl, scope: {animationId: 'legislation-law', subject: 'theoretical-law', topic: '01'}},
   'features-of-constitution': {metadata: typographyFc, scope: {animationId: 'features-of-constitution', subject: 'theoretical-law', topic: '01'}},
   'creation-of-constitution': {metadata: typographyCo, scope: {animationId: 'creation-of-constitution', subject: 'theoretical-law', topic: '01'}},
@@ -554,6 +557,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'national-honors': {metadata: typographyNh, scope: {animationId: 'national-honors', subject: 'theoretical-law', topic: '01'}},
   'state-council': {metadata: typographyScouncil, scope: {animationId: 'state-council', subject: 'theoretical-law', topic: '01'}},
   'emergency-decisions': {metadata: typographyEmd, scope: {animationId: 'emergency-decisions', subject: 'theoretical-law', topic: '01'}},
+  'central-military-commission': {metadata: typographyCmc, scope: {animationId: 'central-military-commission', subject: 'theoretical-law', topic: '01'}},
   'profit-reserve-granary': {metadata: typographyPrg, scope: {animationId: 'profit-reserve-granary', subject: 'commercial-economic-law', topic: '01'}},
   'promoter-liability-ropewalk': {metadata: typographyPlr, scope: {animationId: 'promoter-liability-ropewalk', subject: 'commercial-economic-law', topic: '01'}},
   'fight-defense-diagram': {metadata: typography44, scope: {animationId: 'fight-defense-diagram', subject: 'criminal', topic: '22'}},
