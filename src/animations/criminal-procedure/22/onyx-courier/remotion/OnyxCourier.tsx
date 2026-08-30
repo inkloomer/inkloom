@@ -408,7 +408,7 @@ export function ProceduralSafeguardsChainScene() {
           <LabelBlock icon={XCircle} label="无最后陈述环节" desc="最后陈述权专属于被告人本人；辩护人可发表最后辩护意见" color={C.cinnabar} delay={178} />
         </PlateCard>
 
-        <PlateCard width={MAIN_WIDTH / 2 - 20} delay={136} borderColor={C.azure + '33'}}>
+        <PlateCard width={MAIN_WIDTH / 2 - 20} delay={136} borderColor={C.azure + '33'}>
           <div style={{ ...enter(frame, 136, 8, 0), fontSize: 15, color: C.azure, fontWeight: 700, marginBottom: 8 }}>
             不来也审原则
           </div>
