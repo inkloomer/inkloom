@@ -1,0 +1,70 @@
+{
+  "animationId": "filing-registry-hall",
+  "compositionId": "FilingRegistryHall",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-30T14:14:35.978Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 264,
+      "frameCount": 265,
+      "id": "intake-condition-desk",
+      "number": "01",
+      "startFrame": 0,
+      "title": "挂号台：初查温和，立案三验",
+      "durationMs": 8833,
+      "file": "intake-condition-desk.avif",
+      "fileSize": 279435,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "0e834d9a9467ab416a4ef6fb12edea05415826ee9db5016eb80a7337ef552719",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "5d1316e2cf9b3e83327af965aeb7b9da0284fc87af36efe70558c5f33e1491bb"
+    },
+    {
+      "endFrame": 544,
+      "frameCount": 280,
+      "id": "relief-three-doors",
+      "number": "02",
+      "startFrame": 265,
+      "title": "救济三扇门：控告人独享，举报人止步",
+      "durationMs": 9333,
+      "file": "relief-three-doors.avif",
+      "fileSize": 284735,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "5d627af260212a5ac2a88f8d7c994ef4214a690be6a2b0707655747097858bd3",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "5d1316e2cf9b3e83327af965aeb7b9da0284fc87af36efe70558c5f33e1491bb"
+    },
+    {
+      "endFrame": 834,
+      "frameCount": 290,
+      "id": "supervision-four-steps",
+      "number": "03",
+      "startFrame": 545,
+      "title": "立案监督：四步走，不许跳",
+      "durationMs": 9667,
+      "file": "supervision-four-steps.avif",
+      "fileSize": 308892,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "ee6824b6b5906f60f88a4cff725621f3484cfc798721537ad3808d8c1a7d08e5",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "5d1316e2cf9b3e83327af965aeb7b9da0284fc87af36efe70558c5f33e1491bb"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "5d1316e2cf9b3e83327af965aeb7b9da0284fc87af36efe70558c5f33e1491bb",
+  "targetFps": 30,
+  "totalFileSize": 873062
+}

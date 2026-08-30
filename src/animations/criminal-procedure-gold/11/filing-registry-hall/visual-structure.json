@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "playerControlSafeBottom": 168,
+  "scenes": [
+    {
+      "id": "intake-condition-desk",
+      "export": "IntakeConditionScene",
+      "layout": "intake-condition-desk",
+      "anchor": "boundary",
+      "grammar": ["intake-probe-rule", "triple-condition-checklist"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
+      "tokens": ["Search", "MessageSquareQuote", "ListChecks", "GraduationCap"],
+      "finalKnowledge": [
+        "intake-probe-card",
+        "condition-checklist-card"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "relief-three-doors",
+      "export": "ReliefDoorsScene",
+      "layout": "relief-three-doors",
+      "anchor": "role-pair",
+      "grammar": ["three-door-relief-row", "role-barred-contrast"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "connector", "spatial"],
+      "tokens": ["KeyRound", "UserRound", "GraduationCap"],
+      "finalKnowledge": [
+        "three-doors-card",
+        "role-barred-card"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "supervision-four-steps",
+      "export": "SupervisionStepsScene",
+      "layout": "supervision-four-steps",
+      "anchor": "flow-path",
+      "grammar": ["four-step-relay", "dead-end-contrast"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["Eye", "Route", "GraduationCap"],
+      "finalKnowledge": [
+        "four-steps-relay-card",
+        "dead-end-card"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}
