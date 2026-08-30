@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "playerControlSafeBottom": 168,
+  "scenes": [
+    {
+      "id": "two-slips",
+      "export": "TwoSlipsScene",
+      "layout": "two-slip-compare",
+      "anchor": "comparison-axis",
+      "grammar": ["identity-property-split", "inheritation-condition-rule"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["Users", "ShieldCheck", "GraduationCap"],
+      "finalKnowledge": [
+        "slip-general-desk",
+        "slip-limited-desk",
+        "slip-exam-strip"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "limited-tracks",
+      "export": "LimitedTracksScene",
+      "layout": "limited-tracks-board",
+      "anchor": "flow-path",
+      "grammar": ["free-transfer-tracks", "notice-only-rule"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["UserCheck", "Bell", "Stamp", "GraduationCap"],
+      "finalKnowledge": [
+        "lim-track-inside",
+        "lim-track-outside",
+        "lim-track-pledge",
+        "lim-exam-strip"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "general-tracks",
+      "export": "GeneralTracksScene",
+      "layout": "general-tracks-desk",
+      "anchor": "document-fork",
+      "grammar": ["inside-notice-outside-consent", "execution-preemption-line"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["Users", "Scale", "GraduationCap"],
+      "finalKnowledge": [
+        "gen-tracks-desk",
+        "gen-execution-desk",
+        "gen-recap-desk"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

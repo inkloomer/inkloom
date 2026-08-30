@@ -192,6 +192,7 @@ import {typography as typographyAutoSpecialPartnershipTriage} from '../animation
 import {typography as typographyAutoPartnershipContributionManifest} from '../animations/commercial-economic-law/02/partnership-contribution-manifest/animation.meta';
 import {typography as typographyAutoKitchenPassAuthorityWall} from '../animations/commercial-economic-law/02/kitchen-pass-authority-wall/animation.meta';
 import {typography as typographyAutoTellerWindowPersonalDebt} from '../animations/commercial-economic-law/02/teller-window-personal-debt/animation.meta';
+import {typography as typographyAutoShareSlipTransitVault} from '../animations/commercial-economic-law/02/share-slip-transit-vault/animation.meta';
 import {typography as typographyAutoReckoningAbacusDesk} from '../animations/administrative-law/24/reckoning-abacus-desk/animation.meta';
 import {typography as typographyAutoBambooScrollRestoration} from '../animations/administrative-law/23/bamboo-scroll-restoration/animation.meta';
 import {typography as typographyAutoLighthouseWatchNetwork} from '../animations/administrative-law/20/lighthouse-watch-network/animation.meta';
@@ -224,14 +225,14 @@ import {typography as typographyLl} from '../animations/theoretical-law/01/legis
 import {typography as typographyFc} from '../animations/theoretical-law/01/features-of-constitution/animation.meta';
 import {typography as typographyCo} from '../animations/theoretical-law/01/creation-of-constitution/animation.meta';
 import {typography as typographyCc} from '../animations/theoretical-law/01/constitution-classification/animation.meta';
-import {typography as typographySar} from '../animations/theoretical-law/01/special-administrative-regions/animation.meta';
-import {typography as typographyRea} from '../animations/theoretical-law/01/regional-ethnic-autonomy/animation.meta';
 import {typography as typographyCdv} from '../animations/theoretical-law/01/constitution-development/animation.meta';
 import {typography as typographyCp} from '../animations/theoretical-law/01/constitution-principles/animation.meta';
 import {typography as typographyCss} from '../animations/theoretical-law/01/constitution-sources-structure/animation.meta';
 import {typography as typographySs} from '../animations/theoretical-law/01/state-system/animation.meta';
 import {typography as typographyEl} from '../animations/theoretical-law/01/election-law/animation.meta';
 import {typography as typographySsd} from '../animations/theoretical-law/01/state-structure-divisions/animation.meta';
+import {typography as typographyRea} from '../animations/theoretical-law/01/regional-ethnic-autonomy/animation.meta';
+import {typography as typographySar} from '../animations/theoretical-law/01/special-administrative-regions/animation.meta';
 import {typography as typographyEs} from '../animations/theoretical-law/01/economic-system/animation.meta';
 import {typography as typographyPrg} from '../animations/commercial-economic-law/01/profit-reserve-granary/animation.meta';
 import {typography as typographyPlr} from '../animations/commercial-economic-law/01/promoter-liability-ropewalk/animation.meta';
@@ -396,6 +397,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'partnership-contribution-manifest': {metadata: typographyAutoPartnershipContributionManifest, scope: {animationId: 'partnership-contribution-manifest', subject: 'commercial-economic-law', topic: '02'}},
   'kitchen-pass-authority-wall': {metadata: typographyAutoKitchenPassAuthorityWall, scope: {animationId: 'kitchen-pass-authority-wall', subject: 'commercial-economic-law', topic: '02'}},
   'teller-window-personal-debt': {metadata: typographyAutoTellerWindowPersonalDebt, scope: {animationId: 'teller-window-personal-debt', subject: 'commercial-economic-law', topic: '02'}},
+  'share-slip-transit-vault': {metadata: typographyAutoShareSlipTransitVault, scope: {animationId: 'share-slip-transit-vault', subject: 'commercial-economic-law', topic: '02'}},
   'reckoning-abacus-desk': {metadata: typographyAutoReckoningAbacusDesk, scope: {animationId: 'reckoning-abacus-desk', subject: 'administrative-law', topic: '24'}},
   'bamboo-scroll-restoration': {metadata: typographyAutoBambooScrollRestoration, scope: {animationId: 'bamboo-scroll-restoration', subject: 'administrative-law', topic: '23'}},
   'lighthouse-watch-network': {metadata: typographyAutoLighthouseWatchNetwork, scope: {animationId: 'lighthouse-watch-network', subject: 'administrative-law', topic: '20'}},
@@ -471,14 +473,14 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'features-of-constitution': {metadata: typographyFc, scope: {animationId: 'features-of-constitution', subject: 'theoretical-law', topic: '01'}},
   'creation-of-constitution': {metadata: typographyCo, scope: {animationId: 'creation-of-constitution', subject: 'theoretical-law', topic: '01'}},
   'constitution-classification': {metadata: typographyCc, scope: {animationId: 'constitution-classification', subject: 'theoretical-law', topic: '01'}},
-  'special-administrative-regions': {metadata: typographySar, scope: {animationId: 'special-administrative-regions', subject: 'theoretical-law', topic: '01'}},
-  'regional-ethnic-autonomy': {metadata: typographyRea, scope: {animationId: 'regional-ethnic-autonomy', subject: 'theoretical-law', topic: '01'}},
   'constitution-development': {metadata: typographyCdv, scope: {animationId: 'constitution-development', subject: 'theoretical-law', topic: '01'}},
   'constitution-principles': {metadata: typographyCp, scope: {animationId: 'constitution-principles', subject: 'theoretical-law', topic: '01'}},
   'constitution-sources-structure': {metadata: typographyCss, scope: {animationId: 'constitution-sources-structure', subject: 'theoretical-law', topic: '01'}},
   'state-system': {metadata: typographySs, scope: {animationId: 'state-system', subject: 'theoretical-law', topic: '01'}},
   'election-law': {metadata: typographyEl, scope: {animationId: 'election-law', subject: 'theoretical-law', topic: '01'}},
   'state-structure-divisions': {metadata: typographySsd, scope: {animationId: 'state-structure-divisions', subject: 'theoretical-law', topic: '01'}},
+  'regional-ethnic-autonomy': {metadata: typographyRea, scope: {animationId: 'regional-ethnic-autonomy', subject: 'theoretical-law', topic: '01'}},
+  'special-administrative-regions': {metadata: typographySar, scope: {animationId: 'special-administrative-regions', subject: 'theoretical-law', topic: '01'}},
   'economic-system': {metadata: typographyEs, scope: {animationId: 'economic-system', subject: 'theoretical-law', topic: '01'}},
   'profit-reserve-granary': {metadata: typographyPrg, scope: {animationId: 'profit-reserve-granary', subject: 'commercial-economic-law', topic: '01'}},
   'promoter-liability-ropewalk': {metadata: typographyPlr, scope: {animationId: 'promoter-liability-ropewalk', subject: 'commercial-economic-law', topic: '01'}},
