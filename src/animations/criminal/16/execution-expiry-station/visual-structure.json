@@ -1,0 +1,232 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "playerControlSafeBottom": 168,
+  "scenes": [
+    {
+      "id": "commutation-grade-ruler",
+      "export": "CommutationGradeRulerScene",
+      "layout": "commutation-ruler-board",
+      "anchor": "flow-path",
+      "grammar": [
+        "cut-floor-ruler",
+        "court-tier-lane"
+      ],
+      "textTreatments": [
+        "chip",
+        "label-block",
+        "soft-highlight",
+        "thin-underline",
+        "external-negation",
+        "stamp"
+      ],
+      "focalChannels": [
+        "icon",
+        "contrast",
+        "enclosure",
+        "connector"
+      ],
+      "tokens": [
+        "Scissors",
+        "Gavel",
+        "Landmark",
+        "Ban",
+        "GraduationCap"
+      ],
+      "finalKnowledge": [
+        "cut-object",
+        "cut-ruler",
+        "cut-floor-half",
+        "cut-floor-life",
+        "cut-floor-ordinary-death",
+        "cut-floor-restricted-death",
+        "cut-procedure-board",
+        "proc-mid",
+        "proc-high",
+        "cut-note-floor"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "parole-gate-quads",
+      "export": "ParoleGateQuadsScene",
+      "layout": "parole-gate-quads",
+      "anchor": "boundary",
+      "grammar": [
+        "gate-ban-pairs",
+        "grade-time-table"
+      ],
+      "textTreatments": [
+        "chip",
+        "label-block",
+        "soft-highlight",
+        "thin-underline",
+        "external-negation",
+        "stamp"
+      ],
+      "focalChannels": [
+        "icon",
+        "contrast",
+        "enclosure",
+        "connector"
+      ],
+      "tokens": [
+        "DoorClosed",
+        "ShieldCheck",
+        "Ban",
+        "Zap",
+        "Users",
+        "GraduationCap"
+      ],
+      "finalKnowledge": [
+        "gate-object",
+        "gate-banned",
+        "gate-combo-table",
+        "substance-board",
+        "substance-three-crimes",
+        "substance-property",
+        "substance-appeal",
+        "grade-time-board"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "parole-probation-compare",
+      "export": "ParoleProbationCompareScene",
+      "layout": "parole-probation-compare-table",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "success-effect-split",
+        "revocation-matrix-rows"
+      ],
+      "textTreatments": [
+        "chip",
+        "label-block",
+        "soft-highlight",
+        "thin-underline",
+        "external-negation",
+        "stamp"
+      ],
+      "focalChannels": [
+        "icon",
+        "contrast",
+        "enclosure",
+        "connector"
+      ],
+      "tokens": [
+        "Scale",
+        "Users",
+        "DoorClosed",
+        "Search",
+        "Hourglass",
+        "Zap",
+        "Ban",
+        "GraduationCap"
+      ],
+      "finalKnowledge": [
+        "success-effect-strip",
+        "compare-matrix",
+        "row-missed",
+        "row-missed-late",
+        "row-new",
+        "row-new-late",
+        "row-violation",
+        "reapply-floor"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "limitation-period-ladder",
+      "export": "LimitationPeriodLadderScene",
+      "layout": "limitation-period-ladder",
+      "anchor": "flow-path",
+      "grammar": [
+        "term-grade-ladder",
+        "layer-max-rule"
+      ],
+      "textTreatments": [
+        "chip",
+        "label-block",
+        "soft-highlight",
+        "thin-underline",
+        "external-negation",
+        "stamp"
+      ],
+      "focalChannels": [
+        "icon",
+        "contrast",
+        "enclosure",
+        "connector"
+      ],
+      "tokens": [
+        "Hourglass",
+        "Clock",
+        "Landmark",
+        "Users",
+        "Scale",
+        "Zap",
+        "GraduationCap"
+      ],
+      "finalKnowledge": [
+        "term-ladder",
+        "term-5",
+        "term-10",
+        "term-15",
+        "term-20",
+        "theft-tiers",
+        "special-prosecute-board",
+        "special-cases-board",
+        "compute-board"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "extension-interruption-track",
+      "export": "ExtensionInterruptionTrackScene",
+      "layout": "extension-interruption-track",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "pause-vs-restart-track",
+        "supreme-powers-table"
+      ],
+      "textTreatments": [
+        "chip",
+        "label-block",
+        "soft-highlight",
+        "thin-underline",
+        "external-negation",
+        "stamp"
+      ],
+      "focalChannels": [
+        "icon",
+        "contrast",
+        "enclosure",
+        "connector"
+      ],
+      "tokens": [
+        "Pause",
+        "RotateCcw",
+        "Ban",
+        "ShieldCheck",
+        "Clock",
+        "Scale"
+      ],
+      "finalKnowledge": [
+        "extend-board",
+        "extend-escape",
+        "extend-complaint",
+        "extend-new-crime",
+        "interrupt-board",
+        "interrupt-rule",
+        "interrupt-notes",
+        "example-floor",
+        "supreme-powers-board",
+        "power-reduce",
+        "power-parole",
+        "power-prosecute",
+        "power-minor"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

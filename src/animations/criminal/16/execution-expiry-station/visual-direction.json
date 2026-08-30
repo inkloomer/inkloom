@@ -1,0 +1,23 @@
+{
+  "directionId": "timber-ring-mill",
+  "family": "timber-ring-mill",
+  "palette": "原木横截面 log + 年轮棕环 ring + 树皮深褐 bark + 检验烙印红 brand + 锯末金 saw + 青苔绿 moss",
+  "typography": "heavy mill headings, ring-section chips, bark label blocks, double-frame brand verdicts",
+  "composition": "a timber mill where each sentence is a log cross-section: the commutation ruler saws rings above a minimum radius, parole gates inspect the grain, and the expiry bay stamps aged logs",
+  "surface": "log cross-section grain, saw marks, bark-edged boards, dashed saw-line zones, double-frame brand stamps; no glossy panels",
+  "motion": "rings light from the bark inward, saw lines traverse at cut points, brands land as verdicts; no idle loops",
+  "transition": "the mill floor grain persists while each scene re-stages a new log",
+  "conceptTokens": {
+    "减刑": "Scissors",
+    "假释": "DoorClosed",
+    "时效": "Hourglass",
+    "核准": "Landmark",
+    "案例": "GraduationCap"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/criminal/16/execution-expiry-station/",
+    "title": "年轮锯木场"
+  }
+}
