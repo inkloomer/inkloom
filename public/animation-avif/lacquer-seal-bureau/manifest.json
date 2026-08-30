@@ -1,0 +1,53 @@
+{
+  "animationId": "lacquer-seal-bureau",
+  "compositionId": "LacquerSealBureau",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-30T16:55:45.918Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 319,
+      "frameCount": 320,
+      "id": "guaranty-features",
+      "number": "01",
+      "startFrame": 0,
+      "title": "票据保证三特征",
+      "durationMs": 10667,
+      "file": "guaranty-features.avif",
+      "fileSize": 370611,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "15ffebcabbb20261cad2f32323adae3fe802deb6ce18e3cd242d12a11c1a88cf",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "ea82f5a0b1ae84c672cb5a67c494295e519f0941e6b5e873cf52bcda43e8984e"
+    },
+    {
+      "endFrame": 639,
+      "frameCount": 320,
+      "id": "agency-nontransfer",
+      "number": "02",
+      "startFrame": 320,
+      "title": "越权代理与记载不得转让",
+      "durationMs": 10667,
+      "file": "agency-nontransfer.avif",
+      "fileSize": 357787,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "c37d2f9fd7d6e8208c9a6764f04dbf6a44350d94dde2e063cd5747ed5f6a4cbc",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "ea82f5a0b1ae84c672cb5a67c494295e519f0941e6b5e873cf52bcda43e8984e"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "ea82f5a0b1ae84c672cb5a67c494295e519f0941e6b5e873cf52bcda43e8984e",
+  "targetFps": 30,
+  "totalFileSize": 728398
+}
