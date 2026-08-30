@@ -1,0 +1,117 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "concept-scope-gate",
+      "export": "ConceptScopeScene",
+      "layout": "claim-scope-gate-with-exception-wall",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "limitation-gives-defences-after-statutory-idleness",
+        "ordinary-limitation-runs-three-years-and-is-mandatory-law",
+        "limitation-fits-claims-while-formation-rights-take-exclusion-periods",
+        "registered-and-personal-claims-never-age"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["contrast", "icon", "enclosure", "annotation"],
+      "tokens": ["Hourglass", "Scale", "Home", "Coins"],
+      "finalKnowledge": [
+        "limitation-concept",
+        "mandatory-nature",
+        "claim-scope-rule",
+        "exception-wall"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "expiry-effect-desk",
+      "export": "ExpiryEffectScene",
+      "layout": "passive-court-desk-with-waiver-strip",
+      "anchor": "flow-path",
+      "grammar": [
+        "courts-apply-limitation-only-on-the-debtors-plea",
+        "late-pleas-in-appeal-and-retrial-are-rejected-sans-new-evidence",
+        "performance-or-promise-after-expiry-bars-retraction",
+        "partial-performance-partially-bars-retraction"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "external-negation"],
+      "focalChannels": ["contrast", "icon", "connector", "annotation"],
+      "tokens": ["Gavel", "Ban", "Scale", "Handshake"],
+      "finalKnowledge": [
+        "passive-apply-rule",
+        "late-plea-forks",
+        "no-retraction-rule",
+        "partial-performance-rule"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "start-points-ladder",
+      "export": "StartPointsScene",
+      "layout": "dual-key-ladder-with-five-dials",
+      "anchor": "ladder-sequence",
+      "grammar": [
+        "the-clock-starts-only-when-the-claim-exists",
+        "knowing-person-and-fact-both-sets-the-dial",
+        "fixed-instalments-and-open-terms-each-dial-differently",
+        "wards-and-minor-victims-dial-from-special-days"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["contrast", "connector", "enclosure", "annotation"],
+      "tokens": ["Play", "Search", "CalendarClock", "Baby"],
+      "finalKnowledge": [
+        "premise-rule",
+        "cognition-rule",
+        "five-dial-rules",
+        "divorce-case-verdicts"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "suspension-window",
+      "export": "SuspensionScene",
+      "layout": "six-month-window-pause-bench",
+      "anchor": "flow-path",
+      "grammar": [
+        "objective-obstacles-pause-the-clock-until-cleared",
+        "force-majeure-and-other-obstacles-pause-the-clock",
+        "busy-work-is-never-an-obstacle",
+        "only-the-last-six-months-open-the-pause-and-six-months-refill"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["contrast", "connector", "enclosure", "annotation"],
+      "tokens": ["PauseCircle", "CloudRain", "Ban", "Timer"],
+      "finalKnowledge": [
+        "suspension-concept",
+        "cause-catalogue",
+        "busy-work-verdict",
+        "window-and-refill-rule"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "interruption-ledger",
+      "export": "InterruptionScene",
+      "layout": "three-causes-ledger-with-special-lane",
+      "anchor": "flow-path",
+      "grammar": [
+        "breaking-the-idle-state-voids-elapsed-time-and-restarts",
+        "suing-means-seeking-any-authority-and-filing-stops-the-clock",
+        "demand-and-consent-restart-from-the-next-day",
+        "assignment-notice-subrogation-and-joint-holders-extend-the-break"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["connector", "contrast", "enclosure", "annotation"],
+      "tokens": ["Gavel", "Megaphone", "Handshake", "Split"],
+      "finalKnowledge": [
+        "interruption-concept",
+        "sue-cause-ledger",
+        "demand-consent-ledger",
+        "special-three-lane"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

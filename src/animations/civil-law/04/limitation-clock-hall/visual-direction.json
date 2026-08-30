@@ -1,0 +1,22 @@
+{
+  "directionId": "gilt-dial-limitation-hall",
+  "family": "gilt-dial-limitation-hall",
+  "palette": "deep oak brown, brass dial gold, cream paper, oxblood verdict red, pine green, slate blue, graphite ink",
+  "typography": "limitation-hall headings on oak rail tabs, brass dial chips and oxblood wax verdicts",
+  "composition": "a limitation hall with a claim-scope gate and exception wall, a passive court desk with waiver strip, a dual-key ladder of five dials, a six-month pause bench and a three-causes interruption ledger with a special lane",
+  "surface": "cream paper files, oak desk rails, brass dials, oxblood wax seals",
+  "motion": "claim dials wind up at the gate, exception files sort onto the wall, the pause bench halts in the last six months and interruption levers restart the dials day by day",
+  "transition": "the hall floor, oak rails and brass dial posts persist while gates, desks, ladders and ledgers are re-dressed between scenes",
+  "conceptTokens": {
+    "诉讼时效": "Hourglass",
+    "抗辩": "Ban",
+    "中止": "PauseCircle",
+    "中断": "Gavel"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/civil-law/04/limitation-clock-hall/",
+    "title": "诉讼时效刻度馆"
+  }
+}
