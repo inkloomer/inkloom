@@ -1,0 +1,70 @@
+{
+  "animationId": "emergency-decisions",
+  "compositionId": "EmergencyDecisions",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-30T08:56:18.202Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 287,
+      "frameCount": 288,
+      "id": "allocation",
+      "number": "01",
+      "startFrame": 0,
+      "title": "警讯三级：谁来点烽火",
+      "durationMs": 9600,
+      "file": "allocation.avif",
+      "fileSize": 496394,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "6678c06acb4305a0e4d4cf6190c6280e5ab798a8bd4a43059f931e18032a8a74",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "192aa99f5d07f3d8e251a8c3d10f9c01d139754e57fe42c51457d70d28c6beb5"
+    },
+    {
+      "endFrame": 551,
+      "frameCount": 264,
+      "id": "premier",
+      "number": "02",
+      "startFrame": 288,
+      "title": "国务院席次与总理负责制",
+      "durationMs": 8800,
+      "file": "premier.avif",
+      "fileSize": 668031,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "4e6164ba626d3821b273fa6ae704390384e2720bd1943eb930d83ff372ced470",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "192aa99f5d07f3d8e251a8c3d10f9c01d139754e57fe42c51457d70d28c6beb5"
+    },
+    {
+      "endFrame": 851,
+      "frameCount": 300,
+      "id": "meetings-orgs",
+      "number": "03",
+      "startFrame": 552,
+      "title": "两会与部门线·审计署",
+      "durationMs": 10000,
+      "file": "meetings-orgs.avif",
+      "fileSize": 787254,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "190da6630bcb43cb645776e34aecdd5372f3897eb766dcc50f8c5c509186d2c5",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "192aa99f5d07f3d8e251a8c3d10f9c01d139754e57fe42c51457d70d28c6beb5"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "192aa99f5d07f3d8e251a8c3d10f9c01d139754e57fe42c51457d70d28c6beb5",
+  "targetFps": 30,
+  "totalFileSize": 1951679
+}
