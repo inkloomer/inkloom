@@ -1,0 +1,22 @@
+{
+  "directionId": "crow-feather-agency-hall",
+  "family": "crow-feather-agency-hall",
+  "palette": "deep crow petrol, wave teal, oat paper cream, coral seal rust, grape violet, graphite ink",
+  "typography": "agency-hall headings on petrol rail tabs, coral授权 stamps and grape wax verdicts",
+  "composition": "an agency hall with a tri-party structure bench, delegation step stairs, a collusion desk with double-kill verdict, a four-rights hanging desk and an apparent-cause true gauge wall",
+  "surface": "oat paper files, petrol desk rails, coral wax seals, grape name slips",
+  "motion": "授权 slips fly from principal to agent across the tri-party triangle, collusion coins roll back with joint damages, hanging rights sway until ratified or refused and the true gauge weighs forged seals to zero",
+  "transition": "the hall floor, petrol rails and coral seal posts persist while benches, stairs, desks and gauges are re-dressed between scenes",
+  "conceptTokens": {
+    "代理": "Users",
+    "授权行为": "PenLine",
+    "恶意串通": "Handshake",
+    "表见代理": "BadgeCheck"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/civil-law/04/agency-authority-hall/",
+    "title": "代理权授受堂"
+  }
+}

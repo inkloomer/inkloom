@@ -1,0 +1,95 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "agency-power-origin",
+      "export": "AgencyPowerOriginScene",
+      "layout": "tri-party-structure-with-delegation-steps",
+      "anchor": "role-pair",
+      "grammar": [
+        "agency-acts-in-the-principals-name-with-consequences-borne-by-principal",
+        "statutory-powers-come-from-guardian-and-spouse-status",
+        "delegation-runs-from-bilateral-basis-to-unilateral-authorization",
+        "coerced-basis-contracts-are-rescindable-but-unilateral-authorizations-are-not"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["contrast", "icon", "connector", "annotation"],
+      "tokens": ["Users", "Crown", "FileSignature", "PenLine"],
+      "finalKnowledge": [
+        "agency-structure",
+        "statutory-origins",
+        "delegation-steps",
+        "tailors-case-verdicts"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "collusion-agency",
+      "export": "CollusionAgencyScene",
+      "layout": "collusion-desk-with-double-kill-verdict",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "colluding-agency-presumes-authorised-agency",
+        "recognition-reads-obvious-detriment-plus-agent-gain",
+        "agent-and-counterparty-bear-joint-damages",
+        "the-colluded-contract-is-void"
+      ],
+      "textTreatments": ["label-block", "stamp", "soft-highlight", "thin-underline"],
+      "focalChannels": ["contrast", "icon", "enclosure", "annotation"],
+      "tokens": ["Handshake", "Coins", "Gavel", "Ban"],
+      "finalKnowledge": [
+        "collusion-premise",
+        "recognition-forks",
+        "joint-liability-rule",
+        "void-contract-rule"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "narrow-unauthorized",
+      "export": "NarrowUnauthorizedScene",
+      "layout": "four-rights-hanging-desk",
+      "anchor": "role-pair",
+      "grammar": [
+        "unauthorized-agency-runs-without-over-or-expired-power",
+        "the-act-hangs-on-whether-it-binds-the-principal",
+        "principal-holds-ratify-refuse-and-counterparty-holds-urge-revoke",
+        "counterparty-revocation-rides-on-good-faith-and-one-notice"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "external-negation"],
+      "focalChannels": ["contrast", "connector", "enclosure", "annotation"],
+      "tokens": ["Hourglass", "UserCheck", "UserX", "Megaphone"],
+      "finalKnowledge": [
+        "unauthorized-scope",
+        "principal-fork",
+        "counterparty-fork",
+        "double-revocation-verdicts"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "apparent-agency",
+      "export": "ApparentAgencyScene",
+      "layout": "apparent-cause-true-gauge-wall",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "apparent-agency-needs-apparent-cause-plus-unwary-counterparty",
+        "causes-include-seals-offices-usage-and-authorisation-letters",
+        "forged-instruments-never-count-while-forged-resolutions-may-spare",
+        "the-principal-must-bear-it-and-then-chase-the-agent"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["contrast", "icon", "enclosure", "annotation"],
+      "tokens": ["BadgeCheck", "FileWarning", "ScrollText", "Undo2"],
+      "finalKnowledge": [
+        "apparent-formula",
+        "cause-catalogue",
+        "forgery-contrast-rule",
+        "bear-and-chase-rule"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}
