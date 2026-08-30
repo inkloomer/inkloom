@@ -9,7 +9,7 @@ import {
   ShieldAlert, ShieldCheck, Siren, Stamp, Swords, UserRound,
   UserRoundCheck, UserRoundX, Users, Workflow, XCircle,
 } from 'lucide-react';
-import { TimelineSequence } from '../../../../components/timeline';
+import { TimelineSequence } from '../../../../shared/remotion-runtime';
 
 /* ── Constants ── */
 const FPS = 60;
