@@ -1,0 +1,15 @@
+{
+  "directionId": "gentleman-pavilion-peer",
+  "family": "pavilion-peer-hall",
+  "title": "君子同行亭",
+  "subject": "theoretical-law",
+  "chapter": "04",
+  "concept": "君子同行亭：同行如友的拱手礼为图形意象，典型不正当竞争各情形刻于亭柱。图形层主题；画面文字一律使用源笔记法考名词",
+  "palette": "亭堂 peer #33362E、深堂 peerDeep #272A23、面板 panel #F0EBDA、暗面板 panelDim #E1DCC7、镶边 edge #646B5E、墨字 ink #262923、淡墨 inkSoft #565D51、拱手金 courtesy #C0983E、竞争红 unfair #B04834、友青 friend #4E7D74、纸白 paper #F6F1E0",
+  "typography": "标题用 var(--inkloom-animation-title)，正文用 var(--inkloom-animation-body)；亭柱行加粗法考名词，口诀用源笔记原文",
+  "composition": "朋友关系主册 + 不正当竞争柱列 + 源名词口诀带",
+  "surface": "亭堂墙纹 + 柱身木纹 + 拱手礼纹",
+  "motion": "拱手行礼、柱列展开、口诀点亮",
+  "transition": "硬切换幕",
+  "catalog": ["考点77 同行关系"]
+}

@@ -67,7 +67,7 @@ import {typography as typographyCpPavilion} from '../animations/criminal-procedu
 import {typography as typographyCpCourier} from '../animations/criminal-procedure/22/onyx-courier/animation.meta';
 import {typography as typographyCpVault} from '../animations/criminal-procedure/23/asset-seal-vault/animation.meta';
 import {typography as typographyCpCareGate} from '../animations/criminal-procedure/24/mandatory-care-gate/animation.meta';
-import {typography as typographyCpCareGate} from '../animations/criminal-procedure/24/mandatory-care-gate/animation.meta';
+import {typography as typographyCpRelay} from '../animations/criminal-procedure/25/dual-track-relay/animation.meta';
 import {typography as typography0} from '../animations/civil-procedure/01/dispute-resolution/animation.meta';
 import {typography as typography1} from '../animations/civil-procedure/01/law-attributes/animation.meta';
 import {typography as typography2} from '../animations/civil-procedure/01/trial-procedure/animation.meta';
@@ -266,6 +266,7 @@ import {typography as typographyAutoInstigatorAbettorRoles} from '../animations/
 import {typography as typographyAutoExecutionExpiryStation} from '../animations/criminal/16/execution-expiry-station/animation.meta';
 import {typography as typographyAutoClauseAtlasNoticeFiction} from '../animations/criminal/17/clause-atlas-notice-fiction/animation.meta';
 import {typography as typographyAutoBodyCrimePurposeMap} from '../animations/criminal/18/body-crime-purpose-map/animation.meta';
+import {typography as typographyAutoPropertyCrimeLedger} from '../animations/criminal/19/property-crime-ledger/animation.meta';
 import {typography as typographyAutoDetentionClauseLadder} from '../animations/criminal/18/detention-clause-ladder/animation.meta';
 import {typography as typographyBel} from '../animations/commercial-economic-law/01/branch-wallet-ledger/animation.meta';
 import {typography as typographyVpf} from '../animations/commercial-economic-law/01/veil-piercing-forge/animation.meta';
@@ -305,6 +306,7 @@ import {typography as typographyLft} from '../animations/theoretical-law/04/law-
 import {typography as typographyCar} from '../animations/theoretical-law/04/client-attorney-relations/animation.meta';
 import {typography as typographyLp} from '../animations/theoretical-law/04/lawyer-promotion/animation.meta';
 import {typography as typographyLf} from '../animations/theoretical-law/04/lawyer-fees/animation.meta';
+import {typography as typographyLpr} from '../animations/theoretical-law/04/lawyer-peer-relations/animation.meta';
 import {typography as typographyCc} from '../animations/theoretical-law/01/constitution-classification/animation.meta';
 import {typography as typographyCdv} from '../animations/theoretical-law/01/constitution-development/animation.meta';
 import {typography as typographyCp} from '../animations/theoretical-law/01/constitution-principles/animation.meta';
@@ -574,7 +576,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'onyx-courier': {metadata: typographyCpCourier, scope: {animationId: 'onyx-courier', subject: 'criminal-procedure', topic: '22'}},
   'asset-seal-vault': {metadata: typographyCpVault, scope: {animationId: 'asset-seal-vault', subject: 'criminal-procedure', topic: '23'}},
   'mandatory-care-gate': {metadata: typographyCpCareGate, scope: {animationId: 'mandatory-care-gate', subject: 'criminal-procedure', topic: '24'}},
-  'mandatory-care-gate': {metadata: typographyCpCareGate, scope: {animationId: 'mandatory-care-gate', subject: 'criminal-procedure', topic: '24'}},
+  'dual-track-relay': {metadata: typographyCpRelay, scope: {animationId: 'dual-track-relay', subject: 'criminal-procedure', topic: '25'}},
   'card-selling-funds-viewpoint': {metadata: typography40, scope: {animationId: 'card-selling-funds-viewpoint', subject: 'criminal', topic: '19'}},
   'occupational-embezzlement-flowchart': {metadata: typography41, scope: {animationId: 'occupational-embezzlement-flowchart', subject: 'criminal', topic: '19'}},
   'property-interests-keypoints': {metadata: typography42, scope: {animationId: 'property-interests-keypoints', subject: 'criminal', topic: '19'}},
@@ -599,6 +601,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'execution-expiry-station': {metadata: typographyAutoExecutionExpiryStation, scope: {animationId: 'execution-expiry-station', subject: 'criminal', topic: '16'}},
   'clause-atlas-notice-fiction': {metadata: typographyAutoClauseAtlasNoticeFiction, scope: {animationId: 'clause-atlas-notice-fiction', subject: 'criminal', topic: '17'}},
   'body-crime-purpose-map': {metadata: typographyAutoBodyCrimePurposeMap, scope: {animationId: 'body-crime-purpose-map', subject: 'criminal', topic: '18'}},
+  'property-crime-ledger': {metadata: typographyAutoPropertyCrimeLedger, scope: {animationId: 'property-crime-ledger', subject: 'criminal', topic: '19'}},
   'detention-clause-ladder': {metadata: typographyAutoDetentionClauseLadder, scope: {animationId: 'detention-clause-ladder', subject: 'criminal', topic: '18'}},
   'branch-wallet-ledger': {metadata: typographyBel, scope: {animationId: 'branch-wallet-ledger', subject: 'commercial-economic-law', topic: '01'}},
   'veil-piercing-forge': {metadata: typographyVpf, scope: {animationId: 'veil-piercing-forge', subject: 'commercial-economic-law', topic: '01'}},
@@ -656,6 +659,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'client-attorney-relations': {metadata: typographyCar, scope: {animationId: 'client-attorney-relations', subject: 'theoretical-law', topic: '04'}},
   'lawyer-promotion': {metadata: typographyLp, scope: {animationId: 'lawyer-promotion', subject: 'theoretical-law', topic: '04'}},
   'lawyer-fees': {metadata: typographyLf, scope: {animationId: 'lawyer-fees', subject: 'theoretical-law', topic: '04'}},
+  'lawyer-peer-relations': {metadata: typographyLpr, scope: {animationId: 'lawyer-peer-relations', subject: 'theoretical-law', topic: '04'}},
   'profit-reserve-granary': {metadata: typographyPrg, scope: {animationId: 'profit-reserve-granary', subject: 'commercial-economic-law', topic: '01'}},
   'promoter-liability-ropewalk': {metadata: typographyPlr, scope: {animationId: 'promoter-liability-ropewalk', subject: 'commercial-economic-law', topic: '01'}},
   'fight-defense-diagram': {metadata: typography44, scope: {animationId: 'fight-defense-diagram', subject: 'criminal', topic: '22'}},

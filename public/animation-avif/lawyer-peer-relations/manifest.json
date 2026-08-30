@@ -1,0 +1,53 @@
+{
+  "animationId": "lawyer-peer-relations",
+  "compositionId": "LawyerPeerRelations",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-30T18:36:26.771Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 179,
+      "frameCount": 180,
+      "id": "friendship",
+      "number": "01",
+      "startFrame": 0,
+      "title": "同行之间的朋友关系",
+      "durationMs": 6000,
+      "file": "friendship.avif",
+      "fileSize": 203981,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "c2fcc72c8a9b1e56cbb2abc3efc69e0f8d530b9fd7e0c8c1fa2768ab1c96ccba",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "46dca10b3ebf0b1b587094219168e4297318891885fb89dd4d622c78d2f56eec"
+    },
+    {
+      "endFrame": 395,
+      "frameCount": 216,
+      "id": "unfair",
+      "number": "02",
+      "startFrame": 180,
+      "title": "典型不正当竞争",
+      "durationMs": 7200,
+      "file": "unfair.avif",
+      "fileSize": 336281,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "a85062f4da928d2c770756ac5793831c90e343f6ad469e385722cbe27accd7ea",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "46dca10b3ebf0b1b587094219168e4297318891885fb89dd4d622c78d2f56eec"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "46dca10b3ebf0b1b587094219168e4297318891885fb89dd4d622c78d2f56eec",
+  "targetFps": 30,
+  "totalFileSize": 540262
+}

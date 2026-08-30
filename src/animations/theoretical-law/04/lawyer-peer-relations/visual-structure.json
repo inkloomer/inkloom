@@ -1,0 +1,29 @@
+{
+  "animationId": "lawyer-peer-relations",
+  "scenes": [
+    {
+      "id": "friendship",
+      "export": "FriendshipScene",
+      "layout": "friendship-plaque",
+      "anchor": "main center",
+      "grammar": "朋友关系主册：律所和律师与同行之间是朋友关系；影响君子友谊的竞争手段均构成不正当竞争",
+      "textTreatments": ["friendship plaque", "courtesy icon"],
+      "focalChannels": ["friendship plaque", "unfair note"],
+      "tokens": ["Handshake"],
+      "finalKnowledge": "friendship-principle",
+      "statefulObjects": ["friendship plaque"]
+    },
+    {
+      "id": "unfair",
+      "export": "UnfairScene",
+      "layout": "unfair-pillar-column",
+      "anchor": "main center",
+      "grammar": "典型不正当竞争柱列：诋毁诽谤同行/给介绍费回扣/低于同地区同行业标准争揽业务/故意制造委托人与代理律师纠纷/虚假承诺法律服务结果/垄断限定委托人接受指定律师，底带口诀",
+      "textTreatments": ["pillar chips", "mnemonic strip"],
+      "focalChannels": ["pillar chips", "mnemonic strip"],
+      "tokens": ["Ban", "Coins", "MessageSquareWarning"],
+      "finalKnowledge": "typical-unfair-competition",
+      "statefulObjects": ["pillar chip x6"]
+    }
+  ]
+}
