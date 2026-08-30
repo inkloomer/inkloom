@@ -1,0 +1,23 @@
+{
+  "directionId": "seal-carving-dual-bench",
+  "family": "seal-carving-dual-bench",
+  "palette": "印石灰 stone + 朱砂印泥 cinnabar + 青田石青 qingtian + 黄铜刻刀 brass + 墨夜 night",
+  "typography": "heavy bench headings, square seal chips, stone label blocks, double-frame impression verdicts",
+  "composition": "a seal carver's bench: crime-name shelves, four-carve quartet, the cancel-the-clause test fork, and a nine-clause fiction wall beside the two counting ledgers",
+  "surface": "stone grain, seal-stone chips, cinnabar edge marks, dashed repeat zones, double-frame impressions; no glossy panels",
+  "motion": "seal chips enter shelf by shelf in reasoning order, impressions land as verdicts, the cancel test splits the fork; no idle loops",
+  "transition": "the bench stone ground persists while each scene re-carves a seal",
+  "conceptTokens": {
+    "注意规定": "Repeat",
+    "法律拟制": "Ban",
+    "罪名": "Milestone",
+    "罪状": "ScrollText",
+    "案例": "GraduationCap"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/criminal/17/clause-atlas-notice-fiction/",
+    "title": "刻章双面铺"
+  }
+}

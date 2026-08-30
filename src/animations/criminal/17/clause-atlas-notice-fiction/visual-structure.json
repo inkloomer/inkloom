@@ -1,0 +1,182 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "playerControlSafeBottom": 168,
+  "scenes": [
+    {
+      "id": "crime-name-three-forms",
+      "export": "CrimeNameThreeFormsScene",
+      "layout": "three-form-seal-shelf",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "form-trio-shelf",
+        "misrecognition-by-objective"
+      ],
+      "textTreatments": [
+        "chip",
+        "label-block",
+        "soft-highlight",
+        "thin-underline",
+        "external-negation",
+        "stamp"
+      ],
+      "focalChannels": [
+        "icon",
+        "contrast",
+        "enclosure",
+        "spatial"
+      ],
+      "tokens": [
+        "Milestone",
+        "Copy",
+        "Layers",
+        "Users",
+        "Zap",
+        "Bookmark",
+        "Ban",
+        "GraduationCap"
+      ],
+      "finalKnowledge": [
+        "form-single",
+        "form-selective",
+        "form-general",
+        "selective-no-merge",
+        "misrecognition-board"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "crime-description-four",
+      "export": "CrimeDescriptionFourScene",
+      "layout": "four-carve-quartet",
+      "anchor": "typographic-sequence",
+      "grammar": [
+        "carve-quartet",
+        "self-vs-admin-fork"
+      ],
+      "textTreatments": [
+        "chip",
+        "label-block",
+        "soft-highlight",
+        "thin-underline",
+        "external-negation",
+        "stamp"
+      ],
+      "focalChannels": [
+        "icon",
+        "contrast",
+        "enclosure",
+        "annotation"
+      ],
+      "tokens": [
+        "ScrollText",
+        "BookOpen",
+        "Link2",
+        "Landmark"
+      ],
+      "finalKnowledge": [
+        "carve-simple",
+        "carve-detailed",
+        "carve-cite",
+        "carve-blank",
+        "self-admin-fork",
+        "method-floor"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "notice-fiction-fork",
+      "export": "NoticeFictionForkScene",
+      "layout": "notice-fiction-cancel-test",
+      "anchor": "document-fork",
+      "grammar": [
+        "cancel-test-fork",
+        "four-notice-examples"
+      ],
+      "textTreatments": [
+        "chip",
+        "label-block",
+        "soft-highlight",
+        "thin-underline",
+        "external-negation",
+        "stamp"
+      ],
+      "focalChannels": [
+        "icon",
+        "contrast",
+        "enclosure",
+        "connector"
+      ],
+      "tokens": [
+        "Stamp",
+        "Zap",
+        "Repeat",
+        "CheckCircle2",
+        "GraduationCap",
+        "Ban",
+        "CircleX"
+      ],
+      "finalKnowledge": [
+        "test-strip",
+        "notice-board",
+        "notice-computer",
+        "notice-embezzle",
+        "notice-accomplice",
+        "notice-harbor",
+        "fiction-sample-board",
+        "fiction-injury-intent",
+        "fiction-injury-negligent",
+        "fiction-property",
+        "motto-floor"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "fiction-nine-atlas",
+      "export": "FictionNineAtlasScene",
+      "layout": "fiction-nine-atlas-wall",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "fiction-wall-nine",
+        "exam-verdict-quads"
+      ],
+      "textTreatments": [
+        "chip",
+        "label-block",
+        "soft-highlight",
+        "thin-underline",
+        "external-negation",
+        "stamp"
+      ],
+      "focalChannels": [
+        "icon",
+        "contrast",
+        "enclosure",
+        "spatial"
+      ],
+      "tokens": [
+        "Landmark",
+        "Scissors",
+        "Swords",
+        "Zap",
+        "Repeat",
+        "GraduationCap"
+      ],
+      "finalKnowledge": [
+        "fiction-wall",
+        "wall-238",
+        "wall-247",
+        "wall-248",
+        "wall-292",
+        "wall-267",
+        "wall-269",
+        "wall-196",
+        "wall-362",
+        "murmur-murder-count",
+        "murmur-robbery-count",
+        "exam-2011-floor"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

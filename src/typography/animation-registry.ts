@@ -291,6 +291,7 @@ import {typography as typographyPp} from '../animations/theoretical-law/04/procu
 import {typography as typographyPl} from '../animations/theoretical-law/04/procuratorate-leadership/animation.meta';
 import {typography as typographyPe} from '../animations/theoretical-law/04/procurator-ethics/animation.meta';
 import {typography as typographyJpd} from '../animations/theoretical-law/04/judge-procurator-discipline/animation.meta';
+import {typography as typographyLs} from '../animations/theoretical-law/04/lawyer-system/animation.meta';
 import {typography as typographyCc} from '../animations/theoretical-law/01/constitution-classification/animation.meta';
 import {typography as typographyCdv} from '../animations/theoretical-law/01/constitution-development/animation.meta';
 import {typography as typographyCp} from '../animations/theoretical-law/01/constitution-principles/animation.meta';
@@ -628,6 +629,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'procuratorate-leadership': {metadata: typographyPl, scope: {animationId: 'procuratorate-leadership', subject: 'theoretical-law', topic: '04'}},
   'procurator-ethics': {metadata: typographyPe, scope: {animationId: 'procurator-ethics', subject: 'theoretical-law', topic: '04'}},
   'judge-procurator-discipline': {metadata: typographyJpd, scope: {animationId: 'judge-procurator-discipline', subject: 'theoretical-law', topic: '04'}},
+  'lawyer-system': {metadata: typographyLs, scope: {animationId: 'lawyer-system', subject: 'theoretical-law', topic: '04'}},
   'profit-reserve-granary': {metadata: typographyPrg, scope: {animationId: 'profit-reserve-granary', subject: 'commercial-economic-law', topic: '01'}},
   'promoter-liability-ropewalk': {metadata: typographyPlr, scope: {animationId: 'promoter-liability-ropewalk', subject: 'commercial-economic-law', topic: '01'}},
   'fight-defense-diagram': {metadata: typography44, scope: {animationId: 'fight-defense-diagram', subject: 'criminal', topic: '22'}},
