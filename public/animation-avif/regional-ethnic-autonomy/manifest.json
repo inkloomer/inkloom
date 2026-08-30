@@ -1,0 +1,70 @@
+{
+  "animationId": "regional-ethnic-autonomy",
+  "compositionId": "RegionalEthnicAutonomy",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-30T01:09:22.224Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 263,
+      "frameCount": 264,
+      "id": "concept",
+      "number": "01",
+      "startFrame": 0,
+      "title": "制度内涵与自治地方",
+      "durationMs": 8800,
+      "file": "concept.avif",
+      "fileSize": 330935,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "b4fa6ab5287b8ccf316cffbea3da5d864299be83487facc6194a0c3d6dd1c8ce",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "3086e69860d0cf07dc7e46236fe908d37bb6e6d9501496dac640a8bb8baa851a"
+    },
+    {
+      "endFrame": 503,
+      "frameCount": 240,
+      "id": "organs",
+      "number": "02",
+      "startFrame": 264,
+      "title": "自治机关辨析",
+      "durationMs": 8000,
+      "file": "organs.avif",
+      "fileSize": 396432,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "a809f763923c68e8bd85819ab9be9e7d389590f5cd2a244fb5184f43aee9534e",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "3086e69860d0cf07dc7e46236fe908d37bb6e6d9501496dac640a8bb8baa851a"
+    },
+    {
+      "endFrame": 767,
+      "frameCount": 264,
+      "id": "mnemonics",
+      "number": "03",
+      "startFrame": 504,
+      "title": "口诀幡阵",
+      "durationMs": 8800,
+      "file": "mnemonics.avif",
+      "fileSize": 406119,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "928a9dab84630a69dd3db1764fee68122ac5a02202dd49aa9952fa8783fb3d49",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "3086e69860d0cf07dc7e46236fe908d37bb6e6d9501496dac640a8bb8baa851a"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "3086e69860d0cf07dc7e46236fe908d37bb6e6d9501496dac640a8bb8baa851a",
+  "targetFps": 30,
+  "totalFileSize": 1133486
+}

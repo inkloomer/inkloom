@@ -1,0 +1,16 @@
+{
+  "directionId": "ethnic-flag-meadow",
+  "family": "flag-string-meadow",
+  "palette": "meadow green ground + five-color flag panels (muted blue white red green yellow) + white script lines + wind-line silver + dark ink notes",
+  "typography": "ink headings on flag panels, dark meadow label tabs with wind-silver left bar, muted-red stamps reserved for prohibitions, five-color chips for autonomy items, thin ink underline for tests",
+  "composition": "the concept hangs as a central flag with scope flags beside; the organs scene sets two flag plates with a negation strip; the mnemonic wall strings five-color rhyme flags",
+  "surface": "flat meadow ground with faint wind hairlines, flag panels with hairline weathered borders and corner ties, no gradients, no rounded cards, no drop shadows",
+  "motion": "flags unfurl with a settle, rhyme flags string across one by one, the negation strip crosses once and holds",
+  "transition": "a wind gust lifts the flags and the meadow clears for the next string",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/theoretical-law/01/regional-ethnic-autonomy/",
+    "title": "五色幡阵"
+  }
+}

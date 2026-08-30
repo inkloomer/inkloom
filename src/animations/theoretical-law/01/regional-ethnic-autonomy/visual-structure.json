@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "playerControlSafeBottom": 176,
+  "scenes": [
+    {
+      "id": "concept",
+      "export": "ConceptScene",
+      "layout": "central-flag-with-scope-flags",
+      "anchor": "concept-icon",
+      "grammar": ["concept-flag", "scope-flags", "township-negation"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["Users", "Map"],
+      "finalKnowledge": [
+        "concept-heading",
+        "concept-flag",
+        "scope-flags",
+        "township-negation"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "organs",
+      "export": "OrgansScene",
+      "layout": "organs-flag-pair-with-negation",
+      "anchor": "role-pair",
+      "grammar": ["congress-flag", "government-flag", "court-negation"],
+      "textTreatments": ["label-block", "chip", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["Landmark", "Building2", "Ban"],
+      "finalKnowledge": [
+        "organs-heading",
+        "organ-flags",
+        "court-negation"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "mnemonics",
+      "export": "MnemonicsScene",
+      "layout": "five-color-rhyme-wall",
+      "anchor": "boundary",
+      "grammar": ["variation-rhyme-flags", "approval-rhyme-flags", "schedule-change-strip"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["ScrollText", "Lock"],
+      "finalKnowledge": [
+        "mnemonics-heading",
+        "rhyme-wall",
+        "schedule-change-strip"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}
