@@ -236,6 +236,7 @@ import {typography as typographyFc} from '../animations/theoretical-law/01/featu
 import {typography as typographyCo} from '../animations/theoretical-law/01/creation-of-constitution/animation.meta';
 import {typography as typographyNdl} from '../animations/theoretical-law/03/new-democratic-legal-system/animation.meta';
 import {typography as typographyLhf} from '../animations/theoretical-law/03/legal-history-firsts/animation.meta';
+import {typography as typographyGa} from '../animations/theoretical-law/01/grassroots-autonomy/animation.meta';
 import {typography as typographyCc} from '../animations/theoretical-law/01/constitution-classification/animation.meta';
 import {typography as typographyCdv} from '../animations/theoretical-law/01/constitution-development/animation.meta';
 import {typography as typographyCp} from '../animations/theoretical-law/01/constitution-principles/animation.meta';
@@ -518,6 +519,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'republic-constitution-history': {metadata: typographyAutoRepublicConstitutionHistory, scope: {animationId: 'republic-constitution-history', subject: 'theoretical-law', topic: '03'}},
   'new-democratic-legal-system': {metadata: typographyNdl, scope: {animationId: 'new-democratic-legal-system', subject: 'theoretical-law', topic: '03'}},
   'legal-history-firsts': {metadata: typographyLhf, scope: {animationId: 'legal-history-firsts', subject: 'theoretical-law', topic: '03'}},
+  'grassroots-autonomy': {metadata: typographyGa, scope: {animationId: 'grassroots-autonomy', subject: 'theoretical-law', topic: '01'}},
   'profit-reserve-granary': {metadata: typographyPrg, scope: {animationId: 'profit-reserve-granary', subject: 'commercial-economic-law', topic: '01'}},
   'promoter-liability-ropewalk': {metadata: typographyPlr, scope: {animationId: 'promoter-liability-ropewalk', subject: 'commercial-economic-law', topic: '01'}},
   'fight-defense-diagram': {metadata: typography44, scope: {animationId: 'fight-defense-diagram', subject: 'criminal', topic: '22'}},

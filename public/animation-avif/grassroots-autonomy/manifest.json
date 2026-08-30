@@ -1,0 +1,70 @@
+{
+  "animationId": "grassroots-autonomy",
+  "compositionId": "GrassrootsAutonomy",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-30T07:04:25.057Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 263,
+      "frameCount": 264,
+      "id": "features",
+      "number": "01",
+      "startFrame": 0,
+      "title": "三性根基：群众性·自治性·基层性",
+      "durationMs": 8800,
+      "file": "features.avif",
+      "fileSize": 548696,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "9171ae73d0288cd7d8cdeda012c3cadf37f553b864a101ae0cd0de777016f3f4",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "8285fc47bc4f2d5961ea58a9fecd5f9915924cfa1ee2615a8967568aea6202ac"
+    },
+    {
+      "endFrame": 575,
+      "frameCount": 312,
+      "id": "assemblies",
+      "number": "02",
+      "startFrame": 264,
+      "title": "四会对照：村民会·村代会·居民会·居代会",
+      "durationMs": 10400,
+      "file": "assemblies.avif",
+      "fileSize": 806796,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "a2f67857fbf4dc3dbb543a677fdfd3914c9b9ea3a9a321a42251b9a3507e509d",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "8285fc47bc4f2d5961ea58a9fecd5f9915924cfa1ee2615a8967568aea6202ac"
+    },
+    {
+      "endFrame": 911,
+      "frameCount": 336,
+      "id": "committees",
+      "number": "03",
+      "startFrame": 576,
+      "title": "村委会 VS 居委会",
+      "durationMs": 11200,
+      "file": "committees.avif",
+      "fileSize": 1081358,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "8dd39250b2d4e8c8b80b74b23cf66e08183c7aa3f48080904a1a6b146f05f062",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "8285fc47bc4f2d5961ea58a9fecd5f9915924cfa1ee2615a8967568aea6202ac"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "8285fc47bc4f2d5961ea58a9fecd5f9915924cfa1ee2615a8967568aea6202ac",
+  "targetFps": 30,
+  "totalFileSize": 2436850
+}
