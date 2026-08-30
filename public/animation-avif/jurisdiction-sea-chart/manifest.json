@@ -1,0 +1,70 @@
+{
+  "animationId": "jurisdiction-sea-chart",
+  "compositionId": "JurisdictionSeaChart",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-30T09:25:54.622Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 279,
+      "frameCount": 280,
+      "id": "filing-authority-split",
+      "number": "01",
+      "startFrame": 0,
+      "title": "立案三分流：谁家孩子谁家抱",
+      "durationMs": 9333,
+      "file": "filing-authority-split.avif",
+      "fileSize": 473566,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "cdb54fac16a7d95873769a061d7b7a7597ad4b36c0fc95c4bdbc125367cf07ab",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "5eac358f7581c00710c98fe0cbb20f070ed19f845a5f24af45b2600937c5f56d"
+    },
+    {
+      "endFrame": 564,
+      "frameCount": 285,
+      "id": "trial-jurisdiction-ladder",
+      "number": "02",
+      "startFrame": 280,
+      "title": "审判管辖：先纵后横两把尺",
+      "durationMs": 9500,
+      "file": "trial-jurisdiction-ladder.avif",
+      "fileSize": 417758,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "fc078aa938a6af2436fb5463b64be88523fb949494f512d38a7d922e339e8b45",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "5eac358f7581c00710c98fe0cbb20f070ed19f845a5f24af45b2600937c5f56d"
+    },
+    {
+      "endFrame": 864,
+      "frameCount": 300,
+      "id": "special-venue-ledger",
+      "number": "03",
+      "startFrame": 565,
+      "title": "特殊地段与并案：航线各记各的锚点",
+      "durationMs": 10000,
+      "file": "special-venue-ledger.avif",
+      "fileSize": 484317,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "401fcaa88e29eaf7eb3be8f506a1e0d71286ae997843230d1588e7b05435211a",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "5eac358f7581c00710c98fe0cbb20f070ed19f845a5f24af45b2600937c5f56d"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "5eac358f7581c00710c98fe0cbb20f070ed19f845a5f24af45b2600937c5f56d",
+  "targetFps": 30,
+  "totalFileSize": 1375641
+}

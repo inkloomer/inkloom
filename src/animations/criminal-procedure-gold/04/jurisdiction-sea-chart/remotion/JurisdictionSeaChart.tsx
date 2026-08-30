@@ -72,7 +72,7 @@ export const FilingAuthorityScene = () => (
         </Enter>
         <div style={{display: 'flex', flexDirection: 'column', gap: 10}}>
           <Enter delay={118} style={{display: 'flex', alignItems: 'center', gap: 12, flexWrap: 'wrap'}}>
-            <Chip tone="teal" style={{fontSize: 22}>未逃避侦查</Chip>
+            <Chip tone="teal" style={{fontSize: 22}}>未逃避侦查</Chip>
             <span style={{fontSize: 22, fontWeight: 800, color: C.ink}}>照常计算时效 → 已过 =</span>
             <Stamp delay={128} tone="coral">法定不起诉</Stamp>
           </Enter>
@@ -182,8 +182,8 @@ export const SpecialVenueScene = () => (
           <span style={{flex: 1}} />
           <Chip tone="panel" style={{fontSize: 22}}>对卡入座</Chip>
         </Enter>
-        <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12}}>
-          <Enter delay={24} style={{border: `2px solid ${C.panelLine}`, borderRadius: 10, padding: '10px 14px', display: 'flex', flexDirection: 'column', gap: 8}}>
+        <div style={{flex: 1, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16, alignContent: 'center'}}>
+          <Enter delay={24} style={{border: `2px solid ${C.panelLine}`, borderRadius: 10, padding: '14px 18px', display: 'flex', flexDirection: 'column', gap: 8}}>
             <div style={{display: 'flex', alignItems: 'center', gap: 10}}>
               <Ship size={24} color={C.navy} style={{flexShrink: 0}} />
               <span style={{fontSize: 23, fontWeight: 900, color: C.ink}}>公海中国船舶</span>
@@ -194,7 +194,7 @@ export const SpecialVenueScene = () => (
             </div>
             <span style={{fontSize: 22, fontWeight: 750, color: C.mist }}>另有犯罪地 · 登船地 · 居住地</span>
           </Enter>
-          <Enter delay={38} style={{border: `2px solid ${C.panelLine}`, borderRadius: 10, padding: '10px 14px', display: 'flex', flexDirection: 'column', gap: 8}}>
+          <Enter delay={38} style={{border: `2px solid ${C.panelLine}`, borderRadius: 10, padding: '14px 18px', display: 'flex', flexDirection: 'column', gap: 8}}>
             <div style={{display: 'flex', alignItems: 'center', gap: 10}}>
               <Compass size={24} color={C.teal} style={{flexShrink: 0}} />
               <span style={{fontSize: 23, fontWeight: 900, color: C.ink}}>公民域外犯罪</span>
@@ -205,7 +205,7 @@ export const SpecialVenueScene = () => (
             </div>
             <span style={{fontSize: 22, fontWeight: 750, color: C.mist }}>离境前居住地 · 现居住地亦可</span>
           </Enter>
-          <Enter delay={52} style={{border: `2px solid ${C.panelLine}`, borderRadius: 10, padding: '10px 14px', display: 'flex', flexDirection: 'column', gap: 8}}>
+          <Enter delay={52} style={{border: `2px solid ${C.panelLine}`, borderRadius: 10, padding: '14px 18px', display: 'flex', flexDirection: 'column', gap: 8}}>
             <div style={{display: 'flex', alignItems: 'center', gap: 10}}>
               <Train size={24} color={C.navy} style={{flexShrink: 0}} />
               <span style={{fontSize: 23, fontWeight: 900, color: C.ink }}>国内列车</span>
@@ -213,7 +213,7 @@ export const SpecialVenueScene = () => (
             <span style={{fontSize: 22, fontWeight: 800, color: C.ink }}>非运行中被抓 →</span>
             <span style={{fontSize: 22, fontWeight: 750, color: C.mist }}>乘务公安对应的法院管辖</span>
           </Enter>
-          <Enter delay={66} style={{border: `2px solid ${C.panelLine}`, borderRadius: 10, padding: '10px 14px', display: 'flex', flexDirection: 'column', gap: 8}}>
+          <Enter delay={66} style={{border: `2px solid ${C.panelLine}`, borderRadius: 10, padding: '14px 18px', display: 'flex', flexDirection: 'column', gap: 8}}>
             <div style={{display: 'flex', alignItems: 'center', gap: 10}}>
               <Footprints size={24} color={C.coral} style={{flexShrink: 0}} />
               <span style={{fontSize: 23, fontWeight: 900, color: C.ink }}>脱逃又犯新罪</span>
