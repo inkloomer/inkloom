@@ -1,0 +1,15 @@
+{
+  "directionId": "banner-rule-of-law-camp",
+  "family": "camp-banner-rule",
+  "title": "旗展法治营",
+  "subject": "theoretical-law",
+  "chapter": "05",
+  "concept": "旗展法治营：2020年11月确立指导地位为升旗，三逻辑·五特色·四意义沿旗列展开。图形层主题；画面文字一律使用源笔记法考名词",
+  "palette": "营旗 camp #33302E、深营 campDeep #262422、面板 panel #F0EBDA、暗面板 panelDim #E1DCC7、镶边 edge #6B6459、墨字 ink #282421、淡墨 inkSoft #5B5449、旗红 banner #B04834、星金 star #C0983E、思想青 thought #4E7D74、纸白 paper #F6F1E0",
+  "typography": "标题用 var(--inkloom-animation-title)，正文用 var(--inkloom-animation-body)；旗列行加粗法考名词，口诀用源笔记原文",
+  "composition": "升旗确立行 + 三逻辑三柱 + 五特色旗列 + 四意义册页",
+  "surface": "营旗墙纹 + 旗杆线 + 星徽纹",
+  "motion": "升旗入场、旗列展开、册页翻开",
+  "transition": "硬切换幕",
+  "catalog": ["考点86 习近平法治思想的形成发展及重大意义"]
+}

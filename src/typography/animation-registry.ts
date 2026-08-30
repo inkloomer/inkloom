@@ -318,6 +318,7 @@ import {typography as typographyNpr} from '../animations/theoretical-law/04/nota
 import {typography as typographyNrd} from '../animations/theoretical-law/04/notary-rights-duties/animation.meta';
 import {typography as typographyNre} from '../animations/theoretical-law/04/notary-remedies/animation.meta';
 import {typography as typographyNel} from '../animations/theoretical-law/04/notary-ethics-liability/animation.meta';
+import {typography as typographyXrf} from '../animations/theoretical-law/05/xi-rule-of-law-formation/animation.meta';
 import {typography as typographyCc} from '../animations/theoretical-law/01/constitution-classification/animation.meta';
 import {typography as typographyCdv} from '../animations/theoretical-law/01/constitution-development/animation.meta';
 import {typography as typographyCp} from '../animations/theoretical-law/01/constitution-principles/animation.meta';
@@ -682,6 +683,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'notary-rights-duties': {metadata: typographyNrd, scope: {animationId: 'notary-rights-duties', subject: 'theoretical-law', topic: '04'}},
   'notary-remedies': {metadata: typographyNre, scope: {animationId: 'notary-remedies', subject: 'theoretical-law', topic: '04'}},
   'notary-ethics-liability': {metadata: typographyNel, scope: {animationId: 'notary-ethics-liability', subject: 'theoretical-law', topic: '04'}},
+  'xi-rule-of-law-formation': {metadata: typographyXrf, scope: {animationId: 'xi-rule-of-law-formation', subject: 'theoretical-law', topic: '05'}},
   'profit-reserve-granary': {metadata: typographyPrg, scope: {animationId: 'profit-reserve-granary', subject: 'commercial-economic-law', topic: '01'}},
   'promoter-liability-ropewalk': {metadata: typographyPlr, scope: {animationId: 'promoter-liability-ropewalk', subject: 'commercial-economic-law', topic: '01'}},
   'fight-defense-diagram': {metadata: typography44, scope: {animationId: 'fight-defense-diagram', subject: 'criminal', topic: '22'}},

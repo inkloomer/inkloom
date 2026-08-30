@@ -1,0 +1,53 @@
+{
+  "animationId": "xi-rule-of-law-formation",
+  "compositionId": "XiRuleOfLawFormation",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-30T19:59:04.253Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 263,
+      "frameCount": 264,
+      "id": "formation-logic",
+      "number": "01",
+      "startFrame": 0,
+      "title": "形成发展与三逻辑",
+      "durationMs": 8800,
+      "file": "formation-logic.avif",
+      "fileSize": 633599,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "bfc80a1432abdf76c348363414acf29436b3a816fc25753ce25a4e1792d1127f",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "fd574bce0ed434c3e2ebc7b712e9bd4ffe83f361a1d9a2a4f1657d664a2c0022"
+    },
+    {
+      "endFrame": 503,
+      "frameCount": 240,
+      "id": "features-significance",
+      "number": "02",
+      "startFrame": 264,
+      "title": "鲜明特色与重大意义",
+      "durationMs": 8000,
+      "file": "features-significance.avif",
+      "fileSize": 770024,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "ac63902bea22d7b2754d911a5e2f3ede04b655b1c646f2606e601b98511bf341",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "fd574bce0ed434c3e2ebc7b712e9bd4ffe83f361a1d9a2a4f1657d664a2c0022"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "fd574bce0ed434c3e2ebc7b712e9bd4ffe83f361a1d9a2a4f1657d664a2c0022",
+  "targetFps": 30,
+  "totalFileSize": 1403623
+}

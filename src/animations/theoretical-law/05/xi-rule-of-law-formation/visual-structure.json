@@ -1,0 +1,29 @@
+{
+  "animationId": "xi-rule-of-law-formation",
+  "scenes": [
+    {
+      "id": "formation-logic",
+      "export": "FormationLogicScene",
+      "layout": "banner-plus-three-logic",
+      "anchor": "main center",
+      "grammar": "2020年11月中央全面依法治国工作会议确立（第一次以党中央工作会议形式）+三个地位（最新成果/重要组成部分/指导思想）+三逻辑（历史·理论·实践）",
+      "textTreatments": ["banner plaque", "logic columns"],
+      "focalChannels": ["banner date", "three logics"],
+      "tokens": ["Flag", "BookOpen", "Lightbulb"],
+      "finalKnowledge": "formation-logic",
+      "statefulObjects": ["banner panel", "logic panel x3"]
+    },
+    {
+      "id": "features-significance",
+      "export": "FeaturesSignificanceScene",
+      "layout": "five-flags-plus-significance",
+      "anchor": "main center",
+      "grammar": "五特色旗列（原创性·系统性·时代性·人民性·实践性·原系时民实）+四意义册页（最新成果/科学总结/根本遵循/思想旗帜）",
+      "textTreatments": ["flag chips", "significance rows"],
+      "focalChannels": ["five flags", "four significances"],
+      "tokens": ["Star", "Users", "Scale"],
+      "finalKnowledge": "features-significance",
+      "statefulObjects": ["flag chip x5", "significance panel"]
+    }
+  ]
+}
