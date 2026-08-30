@@ -242,6 +242,7 @@ import {typography as typographyVpf} from '../animations/commercial-economic-law
 import {typography as typographyOph} from '../animations/criminal-procedure-gold/01/overview-porcelain-hall/animation.meta';
 import {typography as typographyPch} from '../animations/criminal-procedure-gold/02/principles-chalkboard-hall/animation.meta';
 import {typography as typographyOab} from '../animations/criminal-procedure-gold/03/organs-archive-bureau/animation.meta';
+import {typography as typographyJsc} from '../animations/criminal-procedure-gold/04/jurisdiction-sea-chart/animation.meta';
 import {typography as typographyLl} from '../animations/theoretical-law/01/legislation-law/animation.meta';
 import {typography as typographyFc} from '../animations/theoretical-law/01/features-of-constitution/animation.meta';
 import {typography as typographyCo} from '../animations/theoretical-law/01/creation-of-constitution/animation.meta';
@@ -523,6 +524,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'overview-porcelain-hall': {metadata: typographyOph, scope: {animationId: 'overview-porcelain-hall', subject: 'criminal-procedure-gold', topic: '01'}},
   'principles-chalkboard-hall': {metadata: typographyPch, scope: {animationId: 'principles-chalkboard-hall', subject: 'criminal-procedure-gold', topic: '02'}},
   'organs-archive-bureau': {metadata: typographyOab, scope: {animationId: 'organs-archive-bureau', subject: 'criminal-procedure-gold', topic: '03'}},
+  'jurisdiction-sea-chart': {metadata: typographyJsc, scope: {animationId: 'jurisdiction-sea-chart', subject: 'criminal-procedure-gold', topic: '04'}},
   'legislation-law': {metadata: typographyLl, scope: {animationId: 'legislation-law', subject: 'theoretical-law', topic: '01'}},
   'features-of-constitution': {metadata: typographyFc, scope: {animationId: 'features-of-constitution', subject: 'theoretical-law', topic: '01'}},
   'creation-of-constitution': {metadata: typographyCo, scope: {animationId: 'creation-of-constitution', subject: 'theoretical-law', topic: '01'}},
