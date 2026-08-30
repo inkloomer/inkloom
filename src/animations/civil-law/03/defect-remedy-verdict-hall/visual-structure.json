@@ -1,0 +1,139 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "void-core-wall",
+      "export": "VoidCoreScene",
+      "layout": "void-grounds-verdict-wall",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "void-acts-never-take-effect-from-the-start-certainly-and-automatically",
+        "partial-invalidity-keeps-the-lawful-part-alive",
+        "collusion-with-malice-and-immoral-acts-are-void",
+        "improper-exemption-clauses-are-void"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "external-negation"],
+      "focalChannels": ["contrast", "icon", "enclosure", "annotation"],
+      "tokens": ["Gavel", "Split", "Handshake", "ScrollText"],
+      "finalKnowledge": [
+        "void-definition",
+        "partial-invalidity-rule",
+        "collusion-rule",
+        "immoral-and-exemption-rules"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "mandatory-rules-desk",
+      "export": "MandatoryRulesScene",
+      "layout": "dual-mode-rule-desk-with-case",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "validity-rules-ban-the-deal-itself-and-void-it",
+        "managerial-rules-ban-its-preconditions-and-spare-the-deal",
+        "three-refined-cases-mostly-validate-management-breaches",
+        "uncorrected-pre-sale-licensing-voids-unless-self-inflicted"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["contrast", "icon", "enclosure", "annotation"],
+      "tokens": ["Scale", "ShieldCheck", "FileWarning", "Gavel"],
+      "finalKnowledge": [
+        "validity-mode-rule",
+        "managerial-mode-rule",
+        "three-refined-cases",
+        "presale-verdicts"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "voidable-rights-desk",
+      "export": "VoidableRightsScene",
+      "layout": "retractable-lever-period-panel",
+      "anchor": "flow-path",
+      "grammar": [
+        "voidable-acts-bind-until-rescinded-then-void-from-the-start",
+        "only-the-party-with-untrue-intent-holds-the-formative-right",
+        "rescission-needs-litigation-or-arbitration-notice-counts-as-none",
+        "short-clocks-run-one-year-ninety-days-and-the-cap-is-five-years"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["contrast", "connector", "enclosure", "annotation"],
+      "tokens": ["Undo2", "Gavel", "Timer", "Scale"],
+      "finalKnowledge": [
+        "voidable-meaning",
+        "holder-and-nature",
+        "exercise-mode-rule",
+        "rescission-periods"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "fraud-mistake-forks",
+      "export": "FraudMistakeScene",
+      "layout": "twin-fraud-mistake-forks",
+      "anchor": "role-pair",
+      "grammar": [
+        "fraud-needs-intentional-lies-or-concealment-on-trade-matters",
+        "mistake-covers-errors-of-price-terms-object-and-nature",
+        "qualification-concealment-and-error-are-never-fraud-nor-mistake",
+        "surrounding-environment-lies-outside-the-mistake-catalogue"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "external-negation"],
+      "focalChannels": ["contrast", "icon", "enclosure", "annotation"],
+      "tokens": ["EyeOff", "Search", "Ban", "Scale"],
+      "finalKnowledge": [
+        "fraud-meaning",
+        "mistake-meaning",
+        "trade-matter-forks",
+        "qualification-exclusion-rule"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "duress-fairness-forks",
+      "export": "DuressFairnessScene",
+      "layout": "threat-advantage-dual-bench",
+      "anchor": "role-pair",
+      "grammar": [
+        "duress-forces-deal-by-threatening-life-honour-or-property",
+        "duress-presupposes-the-freedom-not-to-deal",
+        "third-party-fraud-asks-the-counterparty-but-third-party-duress-never-asks",
+        "unconscionability-needs-exploiting-advantage-or-distress-not-just-bad-terms"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["contrast", "icon", "connector", "annotation"],
+      "tokens": ["Flame", "Scale", "Users", "Ban"],
+      "finalKnowledge": [
+        "duress-meaning",
+        "freedom-not-to-deal",
+        "third-party-forks",
+        "unconscionability-rule"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "pending-final-ledger",
+      "export": "PendingFinalScene",
+      "layout": "pending-ledger-with-restitution-lane",
+      "anchor": "flow-path",
+      "grammar": [
+        "insufficient-right-pending-covers-limited-capacity-disposal-agency-and-debt-transfer",
+        "pending-acts-hang-undecided-until-recognised-or-refused",
+        "rescinded-and-void-acts-both-end-void-with-restitution",
+        "cash-return-pays-lpr-with-fault-and-deposit-rate-without"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["connector", "contrast", "enclosure", "annotation"],
+      "tokens": ["KeyRound", "Hourglass", "Undo2", "Coins"],
+      "finalKnowledge": [
+        "pending-cause-rule",
+        "four-pending-types",
+        "final-void-rule",
+        "restitution-interest-ledger"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

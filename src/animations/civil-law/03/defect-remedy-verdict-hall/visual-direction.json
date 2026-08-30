@@ -1,0 +1,22 @@
+{
+  "directionId": "tri-wax-defect-verdict-hall",
+  "family": "tri-wax-defect-verdict-hall",
+  "palette": "deep charcoal grey, vermilion seal red, honey amber, jade green, plum violet, paper cream, graphite ink",
+  "typography": "defect-hall headings on charcoal rail tabs, vermilion void stamps and honey period dials",
+  "composition": "a defect hall with a void grounds wall, a dual-mode rule desk, a retractable lever period panel, twin fraud-mistake forks, a threat-advantage bench and a pending ledger over a restitution lane",
+  "surface": "paper files, charcoal desk rails, vermilion wax seals, honey dials",
+  "motion": "void stamps slam on unlawful grounds, mode dials flip between validity and management, rescission levers snap to litigation-only, forks sort fraud from mistake and restitution coins roll back with interest",
+  "transition": "the hall floor, charcoal rails and wax seal posts persist while walls, desks, forks and ledgers are re-dressed between scenes",
+  "conceptTokens": {
+    "无效": "Gavel",
+    "撤销": "Undo2",
+    "欺诈": "EyeOff",
+    "效力待定": "KeyRound"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/civil-law/03/defect-remedy-verdict-hall/",
+    "title": "效力瑕疵判决馆"
+  }
+}
