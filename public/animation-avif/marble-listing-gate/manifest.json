@@ -1,0 +1,53 @@
+{
+  "animationId": "marble-listing-gate",
+  "compositionId": "MarbleListingGate",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-30T21:02:23.178Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 319,
+      "frameCount": 320,
+      "id": "delisting-decision",
+      "number": "01",
+      "startFrame": 0,
+      "title": "终止上市由交易所决定",
+      "durationMs": 10667,
+      "file": "delisting-decision.avif",
+      "fileSize": 423086,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "ec61abd157646d7b3df6cecb8deaadc80d44329bfe6d111f56e4801a91772a15",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "402bd9244f2c6e092bcb62e7c9ee2a9f898b954be3cfe94c6cc0d50301051891"
+    },
+    {
+      "endFrame": 639,
+      "frameCount": 320,
+      "id": "review-remedy",
+      "number": "02",
+      "startFrame": 320,
+      "title": "不服终止上市：复核救济",
+      "durationMs": 10667,
+      "file": "review-remedy.avif",
+      "fileSize": 390591,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "1ae496e485ebc1ff93cb192835d728b8a2028096b6a48c4023c18fa1cbed104f",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "402bd9244f2c6e092bcb62e7c9ee2a9f898b954be3cfe94c6cc0d50301051891"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "402bd9244f2c6e092bcb62e7c9ee2a9f898b954be3cfe94c6cc0d50301051891",
+  "targetFps": 30,
+  "totalFileSize": 813677
+}

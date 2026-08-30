@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 2,
+  "playerControlSafeBottom": 168,
+  "scenes": [
+    {
+      "id": "delisting-decision",
+      "export": "DelistingDecisionScene",
+      "layout": "delisting-decision-desk",
+      "anchor": "comparison-axis",
+      "grammar": ["exchange-decision-filing-rule"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["University", "Building2", "Stamp", "Landmark", "FileX", "Gavel", "GraduationCap"],
+      "finalKnowledge": [
+        "dd-exchange-desk",
+        "dd-trap-desk",
+        "dd-exam-strip"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "review-remedy",
+      "export": "ReviewRemedyScene",
+      "layout": "review-remedy-desk",
+      "anchor": "document-fork",
+      "grammar": ["internal-review-remedy-rule"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["Stamp", "University", "Gavel", "Building2", "FileX", "Landmark", "GraduationCap"],
+      "finalKnowledge": [
+        "rr-review-desk",
+        "rr-appeal-desk",
+        "rr-exam-strip"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}
