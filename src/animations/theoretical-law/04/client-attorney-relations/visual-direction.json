@@ -1,0 +1,15 @@
+{
+  "directionId": "covenant-conflict-bureau",
+  "family": "conflict-bureau-hall",
+  "title": "缔约利冲署",
+  "subject": "theoretical-law",
+  "chapter": "04",
+  "concept": "缔约利冲署：委托代理要求与利冲审查双锁对照，回避两档（不得建立·告知可豁免）以锁链分级，知情同意书为豁免印。图形层主题；画面文字一律使用源笔记法考名词",
+  "palette": "署堂 bureau #30343A、深署 bureauDeep #252930、面板 panel #F0EBDA、暗面板 panelDim #E1DCC7、镶边 edge #5F6A72、墨字 ink #232930、淡墨 inkSoft #535F68、缔约金 covenant #C0983E、冲突红 conflict #B04834、豁免青 waive #4E7D74、纸白 paper #F6F1E0",
+  "typography": "标题用 var(--inkloom-animation-title)，正文用 var(--inkloom-animation-body)；双锁行加粗法考名词，条文号用小铜牌",
+  "composition": "基本要求行 + 利冲双锁分级 + 终止概括 + 源名词点睛带",
+  "surface": "署堂墙纹 + 锁链纹 + 同意书纸纹",
+  "motion": "双锁扣合、豁免印钤落、终止翻牌",
+  "transition": "硬切换幕",
+  "catalog": ["考点74 委托代理关系的规范要求"]
+}

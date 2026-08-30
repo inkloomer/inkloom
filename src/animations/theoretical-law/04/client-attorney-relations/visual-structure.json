@@ -1,0 +1,41 @@
+{
+  "animationId": "client-attorney-relations",
+  "scenes": [
+    {
+      "id": "requirements",
+      "export": "RequirementsScene",
+      "layout": "twin-requirement-columns",
+      "anchor": "main center",
+      "grammar": "基本要求四条（授权范围·特别授权书面确认/期间时效约定时间/业务档案完整记录/不泄露商业秘密个人隐私）+接受委托权限四条（权限内/明确权限/不得同时接受利益冲突他方/无正当理由不得拒绝）",
+      "textTreatments": ["requirement rows", "authority chips"],
+      "focalChannels": ["requirement columns", "authority rows"],
+      "tokens": ["FileSignature", "Clock", "Archive", "Ban"],
+      "finalKnowledge": "basic-requirements",
+      "statefulObjects": ["requirement panel x2"]
+    },
+    {
+      "id": "conflict",
+      "export": "ConflictScene",
+      "layout": "two-lock-conflict-review",
+      "anchor": "main center",
+      "grammar": "利冲审查（接受委托前审查·利害关系回避）+第一锁不得建立或维持（第51条概括）+第二锁告知并主动提出回避但委托人同意除外（第52条概括）+知情同意书豁免并各自保密",
+      "textTreatments": ["lock rows", "waiver seals"],
+      "focalChannels": ["two locks", "waiver consent"],
+      "tokens": ["Lock", "UserCheck", "FileSignature"],
+      "finalKnowledge": "conflict-review",
+      "statefulObjects": ["lock panel x2"]
+    },
+    {
+      "id": "misc-termination",
+      "export": "MiscTerminationScene",
+      "layout": "quad-misc-termination",
+      "anchor": "main center",
+      "grammar": "禁止虚假承诺（未采纳属正常诉讼风险）+保管委托人财产四义务+转委托三规则+终止（律所应终止五情形·可解除五情形），底带终止情形概括口诀",
+      "textTreatments": ["misc chips", "termination rows"],
+      "focalChannels": ["no false promises", "termination summary"],
+      "tokens": ["MessageSquareWarning", "Archive", "RefreshCw", "FileX"],
+      "finalKnowledge": "misc-termination",
+      "statefulObjects": ["misc panel x3", "termination panel"]
+    }
+  ]
+}

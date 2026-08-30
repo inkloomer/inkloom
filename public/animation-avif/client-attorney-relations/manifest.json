@@ -1,0 +1,70 @@
+{
+  "animationId": "client-attorney-relations",
+  "compositionId": "ClientAttorneyRelations",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-30T17:58:13.768Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 263,
+      "frameCount": 264,
+      "id": "requirements",
+      "number": "01",
+      "startFrame": 0,
+      "title": "基本要求与接受委托的权限",
+      "durationMs": 8800,
+      "file": "requirements.avif",
+      "fileSize": 578416,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "18a3d02119cbeeb33b6b8e4b53fae2d67888ff0fc054761f4e91b6a99aff881b",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "d9f7a810968b965c592e324467d1d1d6d672c74158879856556bbebcd4b4c45b"
+    },
+    {
+      "endFrame": 563,
+      "frameCount": 300,
+      "id": "conflict",
+      "number": "02",
+      "startFrame": 264,
+      "title": "利益冲突审查",
+      "durationMs": 10000,
+      "file": "conflict.avif",
+      "fileSize": 1068207,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "eae8e75dceaf5e0af3f1f33ba7384405722ca496dda5ca3f66fb5f20979e77d2",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "d9f7a810968b965c592e324467d1d1d6d672c74158879856556bbebcd4b4c45b"
+    },
+    {
+      "endFrame": 851,
+      "frameCount": 288,
+      "id": "misc-termination",
+      "number": "03",
+      "startFrame": 564,
+      "title": "其他规范与终止",
+      "durationMs": 9600,
+      "file": "misc-termination.avif",
+      "fileSize": 913031,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "1ba47104ff2b74c44030b9f15d18588504af5bf174196827f603c70c14ca1aa0",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "d9f7a810968b965c592e324467d1d1d6d672c74158879856556bbebcd4b4c45b"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "d9f7a810968b965c592e324467d1d1d6d672c74158879856556bbebcd4b4c45b",
+  "targetFps": 30,
+  "totalFileSize": 2559654
+}
