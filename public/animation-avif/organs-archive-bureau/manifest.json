@@ -1,0 +1,70 @@
+{
+  "animationId": "organs-archive-bureau",
+  "compositionId": "OrgansArchiveBureau",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-30T08:51:50.729Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 274,
+      "frameCount": 275,
+      "id": "organ-hierarchy-lattice",
+      "number": "01",
+      "startFrame": 0,
+      "title": "专门机关：两样上下级，一张职权单",
+      "durationMs": 9167,
+      "file": "organ-hierarchy-lattice.avif",
+      "fileSize": 488645,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "81e93a79663dedde5f3453cc91ff8e5954a384d0e0a9c3c057009b74863e7ee3",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "1c4cfed4364ef11a38e8a10304e71f82a889cc9c405d22a502c3d0337a45df7a"
+    },
+    {
+      "endFrame": 569,
+      "frameCount": 295,
+      "id": "participant-sorting-desk",
+      "number": "02",
+      "startFrame": 275,
+      "title": "诉讼参与人：进围栏，再看交集",
+      "durationMs": 9833,
+      "file": "participant-sorting-desk.avif",
+      "fileSize": 472114,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "61ef00fa8dc2fa12119aded7f557f03131da83cbd137f2f7615dc4be06d190f1",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "1c4cfed4364ef11a38e8a10304e71f82a889cc9c405d22a502c3d0337a45df7a"
+    },
+    {
+      "endFrame": 854,
+      "frameCount": 285,
+      "id": "unit-defendant-ledger",
+      "number": "03",
+      "startFrame": 570,
+      "title": "单位被告人：人格照自然人，代表人有讲究",
+      "durationMs": 9500,
+      "file": "unit-defendant-ledger.avif",
+      "fileSize": 396085,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "84bf62c19a3f641a24cf1bcb63dba65a383b0db40d3cec3b1c07b7758565a752",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "1c4cfed4364ef11a38e8a10304e71f82a889cc9c405d22a502c3d0337a45df7a"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "1c4cfed4364ef11a38e8a10304e71f82a889cc9c405d22a502c3d0337a45df7a",
+  "targetFps": 30,
+  "totalFileSize": 1356844
+}

@@ -1,0 +1,29 @@
+{
+  "directionId": "dark-green-archive-bureau",
+  "family": "dark-green-manila-archive",
+  "palette": "deep green bureau field + manila folders + brass clips + oxblood seals + steel blue + moss stamps",
+  "typography": "archive-bureau cream headlines, manila label cards, double-rule oxblood and moss stamps, thin brass underlines",
+  "composition": "a dark archive bureau with a hierarchy contrast pair, a participant sorting fence with an intersection card, and a unit-defendant ledger beside a representative fork",
+  "surface": "translucent cream panels on dark green shelving; manila chips carry ink text; no porcelain or chalkboard textures",
+  "motion": "folders, fence chips and fork rows enter in reasoning order, dashes trace rule sequences, stamps land with a slight rotation; no idle loops",
+  "transition": "the archive bureau persists while each scene re-files it for a new question cluster",
+  "conceptTokens": {
+    "监督": "SearchCheck",
+    "领导": "Crown",
+    "公安": "Siren",
+    "法院": "Landmark",
+    "检院": "FileCheck",
+    "参与人": "Users",
+    "被害人": "UserRound",
+    "辩护": "LifeBuoy",
+    "单位": "Factory",
+    "代表人": "Contact",
+    "真题": "GraduationCap"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/criminal-procedure-gold/03/organs-archive-bureau/",
+    "title": "墨绿档案科"
+  }
+}

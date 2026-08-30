@@ -240,6 +240,7 @@ import {typography as typographyBel} from '../animations/commercial-economic-law
 import {typography as typographyVpf} from '../animations/commercial-economic-law/01/veil-piercing-forge/animation.meta';
 import {typography as typographyOph} from '../animations/criminal-procedure-gold/01/overview-porcelain-hall/animation.meta';
 import {typography as typographyPch} from '../animations/criminal-procedure-gold/02/principles-chalkboard-hall/animation.meta';
+import {typography as typographyOab} from '../animations/criminal-procedure-gold/03/organs-archive-bureau/animation.meta';
 import {typography as typographyLl} from '../animations/theoretical-law/01/legislation-law/animation.meta';
 import {typography as typographyFc} from '../animations/theoretical-law/01/features-of-constitution/animation.meta';
 import {typography as typographyCo} from '../animations/theoretical-law/01/creation-of-constitution/animation.meta';
@@ -518,6 +519,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'veil-piercing-forge': {metadata: typographyVpf, scope: {animationId: 'veil-piercing-forge', subject: 'commercial-economic-law', topic: '01'}},
   'overview-porcelain-hall': {metadata: typographyOph, scope: {animationId: 'overview-porcelain-hall', subject: 'criminal-procedure-gold', topic: '01'}},
   'principles-chalkboard-hall': {metadata: typographyPch, scope: {animationId: 'principles-chalkboard-hall', subject: 'criminal-procedure-gold', topic: '02'}},
+  'organs-archive-bureau': {metadata: typographyOab, scope: {animationId: 'organs-archive-bureau', subject: 'criminal-procedure-gold', topic: '03'}},
   'legislation-law': {metadata: typographyLl, scope: {animationId: 'legislation-law', subject: 'theoretical-law', topic: '01'}},
   'features-of-constitution': {metadata: typographyFc, scope: {animationId: 'features-of-constitution', subject: 'theoretical-law', topic: '01'}},
   'creation-of-constitution': {metadata: typographyCo, scope: {animationId: 'creation-of-constitution', subject: 'theoretical-law', topic: '01'}},
