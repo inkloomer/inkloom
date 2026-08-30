@@ -1,0 +1,70 @@
+{
+  "animationId": "zhou-legal-history",
+  "compositionId": "ZhouLegalHistory",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-30T01:44:42.243Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 263,
+      "frameCount": 264,
+      "id": "ideology",
+      "number": "01",
+      "startFrame": 0,
+      "title": "以德配天明德慎罚",
+      "durationMs": 8800,
+      "file": "ideology.avif",
+      "fileSize": 451779,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "dd5143c3e17c3b7f062a9340d1976ae4d012ba313b1dd63cded44484141170a1",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "5c6c848d5e9339fb1f8286a0707cb093e5edec90e6f4938cb0101987a0511a85"
+    },
+    {
+      "endFrame": 551,
+      "frameCount": 288,
+      "id": "marriage",
+      "number": "02",
+      "startFrame": 264,
+      "title": "婚姻三原则六礼七出",
+      "durationMs": 9600,
+      "file": "marriage.avif",
+      "fileSize": 410242,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "e5b2d3fa8dc27d4dd7a5167581173ed2a963af94d09c8467fcbfe0f450d2028e",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "5c6c848d5e9339fb1f8286a0707cb093e5edec90e6f4938cb0101987a0511a85"
+    },
+    {
+      "endFrame": 791,
+      "frameCount": 240,
+      "id": "judicature",
+      "number": "03",
+      "startFrame": 552,
+      "title": "狱讼两分五听三刺",
+      "durationMs": 8000,
+      "file": "judicature.avif",
+      "fileSize": 320592,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "6793fed30af7950922f7bfde3c42e9ddcf99336152374cba0934b01297795798",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "5c6c848d5e9339fb1f8286a0707cb093e5edec90e6f4938cb0101987a0511a85"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "5c6c848d5e9339fb1f8286a0707cb093e5edec90e6f4938cb0101987a0511a85",
+  "targetFps": 30,
+  "totalFileSize": 1182613
+}
