@@ -1,0 +1,103 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "playerControlSafeBottom": 168,
+  "scenes": [
+    {
+      "id": "role-taxonomy",
+      "export": "RoleTaxonomyScene",
+      "layout": "four-role-quadrant-board",
+      "anchor": "role-pair",
+      "grammar": ["role-pair-quadrant", "direct-indirect-contrast"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
+      "tokens": ["Users", "UserCog", "Megaphone", "Handshake", "User", "Target", "Weight", "Route"],
+      "finalKnowledge": ["roles-quadrant", "division-standard", "review-order", "simplicity-strip"],
+      "statefulObjects": []
+    },
+    {
+      "id": "perpetrator-variants",
+      "export": "PerpetratorVariantsScene",
+      "layout": "perpetrator-variant-columns",
+      "anchor": "comparison-axis",
+      "grammar": ["count-versus-mode-axes", "facing-pair-exception-rows"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
+      "tokens": ["User", "Users", "Hand", "UserCog", "Crown", "ShieldAlert", "ArrowLeftRight", "Ban", "Weight", "Handshake"],
+      "finalKnowledge": ["count-mode-strip", "indirect-analysis", "role-effect-strip", "structure-board", "facing-pair-board"],
+      "statefulObjects": []
+    },
+    {
+      "id": "joint-meaning-principle",
+      "export": "JointMeaningPrincipleScene",
+      "layout": "word-meaning-split-board",
+      "anchor": "document-fork",
+      "grammar": ["word-fork-meanings", "stage-model-rows"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "enclosure"],
+      "tokens": ["Link", "ShieldAlert", "Unlink", "Ban", "ClipboardCheck", "Weight"],
+      "finalKnowledge": ["word-fork-board", "standard-board", "three-elements-board", "slogan-model-strip"],
+      "statefulObjects": []
+    },
+    {
+      "id": "child-lookout-case",
+      "export": "ChildLookoutCaseScene",
+      "layout": "case-verdict-split-rows",
+      "anchor": "role-pair",
+      "grammar": ["case-pair-verdicts", "system-flaw-contrast"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
+      "tokens": ["Baby", "BookOpen", "Eye", "Gavel", "BadgeCheck"],
+      "finalKnowledge": ["case-head-board", "child-verdict-card", "elder-verdict-card", "soviet-flaw-board"],
+      "statefulObjects": []
+    },
+    {
+      "id": "co-principal-requirements",
+      "export": "CoPrincipalRequirementsScene",
+      "layout": "requirement-case-pair",
+      "anchor": "flow-path",
+      "grammar": ["requirement-formula-strip", "linked-versus-unlinked-cases"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation"],
+      "focalChannels": ["icon", "connector", "contrast", "enclosure"],
+      "tokens": ["Users", "Link", "Unlink", "Coins", "BookOpen"],
+      "finalKnowledge": ["requirement-strip", "unlinked-case-card", "bank-case-card", "test-core-strip"],
+      "statefulObjects": []
+    },
+    {
+      "id": "joint-liability-rule",
+      "export": "JointLiabilityRuleScene",
+      "layout": "liability-ledger-rows",
+      "anchor": "timeline-gate",
+      "grammar": ["all-liable-tally-rows", "completed-two-ways"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "locator"],
+      "tokens": ["Users", "Flag", "Unlink", "UserX", "Link"],
+      "finalKnowledge": ["liability-head-strip", "unshot-board", "completed-meanings-board", "unlinked-fallback-strip"],
+      "statefulObjects": []
+    },
+    {
+      "id": "negligence-three-theories",
+      "export": "NegligenceThreeTheoriesScene",
+      "layout": "theory-triptych-quiz-strip",
+      "anchor": "comparison-axis",
+      "grammar": ["three-theory-duel", "quiz-verdict-strip"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
+      "tokens": ["Target", "Ban", "Link", "Scale", "GraduationCap"],
+      "finalKnowledge": ["boar-case-strip", "theory-minority-innocent", "theory-minority-liable", "theory-majority", "exam-quiz-strip"],
+      "statefulObjects": []
+    },
+    {
+      "id": "co-principal-variants",
+      "export": "CoPrincipalVariantsScene",
+      "layout": "variant-boards-duo",
+      "anchor": "concept-icon",
+      "grammar": ["physical-versus-psychic-variants", "boss-power-boundary"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
+      "tokens": ["Users", "Handshake", "ClipboardCheck", "FileSearch", "UserX", "Crown", "BookOpen"],
+      "finalKnowledge": ["variants-head-strip", "physical-variant-board", "conspiracy-board", "limit-strip"],
+      "statefulObjects": []
+    }
+  ]
+}

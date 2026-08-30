@@ -1,0 +1,24 @@
+{
+  "directionId": "palanquin-crew-line",
+  "family": "palanquin-crew-line",
+  "palette": "月白场纸 moon-white + 朱漆轿杆 crimson-lacquer + 藤黄轿帷 gamboge + 石青 azurite + 黛蓝 indigo + 玄墨 ink",
+  "typography": "heavy waystation headings, crimson pole rules, gamboge fare tags, azurite role chips, rotated tally stamps",
+  "composition": "a palanquin crew yard: four-role quadrant boards, perpetrator variant columns, linked-versus-unlinked case pairs, all-liable tally rows, a three-theory duel and variant boards",
+  "surface": "moon-white ground with fine weave lines and a crimson pole header bar, cloth curtain panels, paper boards; no glossy panels",
+  "motion": "the pole header persists while role cards lift scene by scene, chant-link arrows traverse case pairs, tally stamps land on verdicts; no idle loops",
+  "transition": "the yard ground and crimson pole bar persist while each scene re-crews the lift",
+  "conceptTokens": {
+    "意思联络": "Link",
+    "同时犯": "Unlink",
+    "既遂": "Flag",
+    "全部负责": "Users",
+    "主犯": "Crown",
+    "例案": "BookOpen"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/criminal/12/complicity-principles-joint-principal/",
+    "title": "四人轿行"
+  }
+}
