@@ -1,0 +1,70 @@
+{
+  "animationId": "defense-heraldic-hall",
+  "compositionId": "DefenseHeraldicHall",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-30T10:55:54.219Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 284,
+      "frameCount": 285,
+      "id": "duty-counsel-lantern",
+      "number": "01",
+      "startFrame": 0,
+      "title": "值班律师：提灯引路，但不持盾上阵",
+      "durationMs": 9500,
+      "file": "duty-counsel-lantern.avif",
+      "fileSize": 435088,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "1c7338e657283bdf068e0e51301ded47e3f3b0e739fdb4e2b57fad5fa30b6cdc",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "b60c826a8329ba8e29ef310e7a883b629deede13f990a1af108f4663be2364d7"
+    },
+    {
+      "endFrame": 569,
+      "frameCount": 285,
+      "id": "defender-roster-wall",
+      "number": "02",
+      "startFrame": 285,
+      "title": "辩护人名册：看指控定身份，近亲属可破例",
+      "durationMs": 9500,
+      "file": "defender-roster-wall.avif",
+      "fileSize": 479811,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "e620b2dd668c60fdd9b297f5a7595bfe038ee3ebba4a8c05c0601235350056bc",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "b60c826a8329ba8e29ef310e7a883b629deede13f990a1af108f4663be2364d7"
+    },
+    {
+      "endFrame": 869,
+      "frameCount": 300,
+      "id": "rights-duties-desk",
+      "number": "03",
+      "startFrame": 570,
+      "title": "权利义务台：会见·阅卷·告知·拒辩",
+      "durationMs": 10000,
+      "file": "rights-duties-desk.avif",
+      "fileSize": 493210,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "b8443c40ebbdfc8ece467204b1989a9dc3a56e76053f45732a2f2bf75334144b",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "b60c826a8329ba8e29ef310e7a883b629deede13f990a1af108f4663be2364d7"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "b60c826a8329ba8e29ef310e7a883b629deede13f990a1af108f4663be2364d7",
+  "targetFps": 30,
+  "totalFileSize": 1408109
+}
