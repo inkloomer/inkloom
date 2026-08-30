@@ -1,0 +1,32 @@
+{
+  "directionId": "blue-white-porcelain-hall",
+  "family": "blue-white-porcelain-vases",
+  "palette": "pale porcelain hall + cobalt ink lines + celadon wash + cinnabar seal stamps + gilt trim",
+  "typography": "porcelain-hall cobalt headlines, celadon and cobalt label blocks, square cinnabar verdict stamps, thin cobalt rules",
+  "composition": "a light porcelain hall staging twin value vases, a triad display cabinet with an efficiency lane, and a three-role function stage beside a separation map",
+  "surface": "light porcelain panels with cobalt and celadon borders; deep cobalt verdict desks; no walnut or amber cards",
+  "motion": "vases, cabinet cells and stage roles enter in reasoning order, dashes trace in judgement sequence, seals stamp verdicts; no idle loops",
+  "transition": "the porcelain hall persists while each scene re-stages it for a new question",
+  "conceptTokens": {
+    "工具价值": "Wrench",
+    "独立价值": "Feather",
+    "公正": "Scale",
+    "秩序": "Landmark",
+    "效益": "Coins",
+    "效率": "Gauge",
+    "监督": "Eye",
+    "控诉": "Megaphone",
+    "辩护": "Shield",
+    "审判": "Gavel",
+    "证人": "UserCheck",
+    "控审分离": "Unlink",
+    "构造": "DraftingCompass",
+    "真题": "GraduationCap"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/criminal-procedure-gold/01/overview-porcelain-hall/",
+    "title": "青花瓷坊"
+  }
+}

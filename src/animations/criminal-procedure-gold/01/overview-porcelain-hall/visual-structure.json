@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "playerControlSafeBottom": 168,
+  "scenes": [
+    {
+      "id": "twin-value-screen",
+      "export": "TwinValueScene",
+      "layout": "twin-vase-value-screen",
+      "anchor": "comparison-axis",
+      "grammar": ["twin-vase-contrast", "example-chip-flow"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "connector", "spatial"],
+      "tokens": ["Wrench", "Feather", "GraduationCap"],
+      "finalKnowledge": [
+        "value-twin-rule",
+        "value-tool-vase",
+        "value-independent-vase",
+        "value-verdict-desk",
+        "value-standard-note"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "value-triad-cabinet",
+      "export": "ValueTriadScene",
+      "layout": "porcelain-triad-cabinet",
+      "anchor": "concept-icon",
+      "grammar": ["concept-cabinet-set", "verdict-lane-contrast"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "annotation", "spatial"],
+      "tokens": ["Scale", "Landmark", "Coins", "Gauge", "Eye", "Wrench", "Feather"],
+      "finalKnowledge": [
+        "triad-cabinet-head",
+        "triad-order-cell",
+        "triad-justice-cell",
+        "triad-benefit-cell",
+        "triad-efficiency-lane",
+        "triad-openness-verdict"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "function-structure-stage",
+      "export": "FunctionStructureScene",
+      "layout": "function-structure-stage-hall",
+      "anchor": "role-pair",
+      "grammar": ["role-assignment-stage", "chain-progression", "separation-map"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["Gavel", "Megaphone", "Shield", "Eye", "UserCheck", "DraftingCompass", "Unlink", "GraduationCap"],
+      "finalKnowledge": [
+        "function-triad-stage",
+        "structure-chain-ladder",
+        "structure-separation-map"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

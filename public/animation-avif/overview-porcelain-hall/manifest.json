@@ -1,0 +1,70 @@
+{
+  "animationId": "overview-porcelain-hall",
+  "compositionId": "OverviewPorcelainHall",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-30T08:01:35.269Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 264,
+      "frameCount": 265,
+      "id": "twin-value-screen",
+      "number": "01",
+      "startFrame": 0,
+      "title": "程序对实体：工具价值与独立价值",
+      "durationMs": 8833,
+      "file": "twin-value-screen.avif",
+      "fileSize": 776048,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "9acab89a34690d7aa96938b94a23bbef259ae9ea8f0f97ece3b282197400b421",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "3feeeaa81a5030b0594b563c5da1fba97fa4221c0d4bd247c6aa3a506ebc214d"
+    },
+    {
+      "endFrame": 549,
+      "frameCount": 285,
+      "id": "value-triad-cabinet",
+      "number": "02",
+      "startFrame": 265,
+      "title": "三大价值与效率理念",
+      "durationMs": 9500,
+      "file": "value-triad-cabinet.avif",
+      "fileSize": 534358,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "59ac91b2e6e9cd49d4182e50e5cf10caacdfb9c225994d6bfc510aeeb3648ee2",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "3feeeaa81a5030b0594b563c5da1fba97fa4221c0d4bd247c6aa3a506ebc214d"
+    },
+    {
+      "endFrame": 859,
+      "frameCount": 310,
+      "id": "function-structure-stage",
+      "number": "03",
+      "startFrame": 550,
+      "title": "职能三分与控辩式构造",
+      "durationMs": 10333,
+      "file": "function-structure-stage.avif",
+      "fileSize": 937305,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "04b2d6c37f0f511f93f893247ff7b4043fce54994cc5d5f4bd92cba35363a009",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "3feeeaa81a5030b0594b563c5da1fba97fa4221c0d4bd247c6aa3a506ebc214d"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "3feeeaa81a5030b0594b563c5da1fba97fa4221c0d4bd247c6aa3a506ebc214d",
+  "targetFps": 30,
+  "totalFileSize": 2247711
+}
