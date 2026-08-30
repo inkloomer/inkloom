@@ -1,0 +1,23 @@
+{
+  "directionId": "state-security-wire-room",
+  "family": "state-security-wire-room",
+  "palette": "军绿 wire + 黄铜 brass + 纸白 paper + 朱红 alert + 钢青 steel + 墨 ink",
+  "typography": "heavy wire headings, square official chips, steel label blocks, double-frame stamps",
+  "composition": "a wartime wire dispatch room: espionage conduct types with defection board, the narrowed intelligence definition with the knowing-or-not fork, and the four-corner state secrets comparison bench",
+  "surface": "dispatch paper grain, square official chips, dashed exclusion zones, double-frame stamps; no glossy panels",
+  "motion": "dispatch panels enter in reasoning order, stamps land as verdicts; no idle loops",
+  "transition": "the dispatch ground persists while each scene mounts a new board",
+  "conceptTokens": {
+    "间谍罪": "Users",
+    "叛逃罪": "PlaneTakeoff",
+    "国家秘密": "Lock",
+    "情报": "FileText",
+    "数罪并罚": "Scale"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/criminal/25/state-security-wire-room/",
+    "title": "密电收发室"
+  }
+}

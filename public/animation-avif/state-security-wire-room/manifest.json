@@ -1,0 +1,70 @@
+{
+  "animationId": "state-security-wire-room",
+  "compositionId": "StateSecurityWireRoom",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-30T20:41:08.298Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 239,
+      "frameCount": 240,
+      "id": "spy-wire-trio",
+      "number": "01",
+      "startFrame": 0,
+      "title": "间谍罪·叛逃罪",
+      "durationMs": 8000,
+      "file": "spy-wire-trio.avif",
+      "fileSize": 616775,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "6bfd4d7f5a67f9cb02e2670f4cdd1725bbd2e23962c9dcb273dad8e5ffa71d4e",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "8e2b2e1cfdf0beddf15eb0ff6385021cffa11014e8be4c53d29e26b435fac70e"
+    },
+    {
+      "endFrame": 479,
+      "frameCount": 240,
+      "id": "secrets-define-bench",
+      "number": "02",
+      "startFrame": 240,
+      "title": "国家秘密类犯罪·缩小解释",
+      "durationMs": 8000,
+      "file": "secrets-define-bench.avif",
+      "fileSize": 689315,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "09e7781f502ba0055671cc9c91e802c9e2f957f62f333c2781de50e970d1e2af",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "e80770af12296ad6f3987fb982cf77cfcf3243b6002703f995c2505ecf0bc8cf"
+    },
+    {
+      "endFrame": 719,
+      "frameCount": 240,
+      "id": "secrets-crimes-compare",
+      "number": "03",
+      "startFrame": 480,
+      "title": "国家秘密类犯罪·罪名比较",
+      "durationMs": 8000,
+      "file": "secrets-crimes-compare.avif",
+      "fileSize": 1007290,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "4d217164f1b7474a17a1100e88b352e033a4f0726d3c3bb0d5860c7e4728d86d",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "1f9d9265cfcba7d945fbcc6ce07b853850920a2cd0cfe1b59714940f8310faea"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "c78b41180d9fc9e0e5ee433eea93fbaf83adda094bca8f986a5bd90dbebe5ac1",
+  "targetFps": 30,
+  "totalFileSize": 2313380
+}

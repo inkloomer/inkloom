@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "playerControlSafeBottom": 168,
+  "scenes": [
+    {
+      "id": "spy-wire-trio",
+      "export": "SpyWireTrioScene",
+      "layout": "spy-trio-wireboard",
+      "anchor": "typographic-sequence",
+      "grammar": ["spy-panel", "defection-panel"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
+      "tokens": ["Users", "ScrollText", "Crosshair", "PlaneTakeoff", "Lock", "Scale"],
+      "finalKnowledge": ["spy-panel", "defection-panel", "tally-floor"],
+      "statefulObjects": []
+    },
+    {
+      "id": "secrets-define-bench",
+      "export": "SecretsDefineBenchScene",
+      "layout": "secrets-define-bench",
+      "anchor": "document-fork",
+      "grammar": ["define-strip", "fork-panel"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "connector"],
+      "tokens": ["Lock", "FileText", "Users", "Scale", "Ban"],
+      "finalKnowledge": ["define-strip", "fork-panel"],
+      "statefulObjects": []
+    },
+    {
+      "id": "secrets-crimes-compare",
+      "export": "SecretsCrimesCompareScene",
+      "layout": "secrets-compare-quad",
+      "anchor": "comparison-axis",
+      "grammar": ["leak-panel", "obtain-panel"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
+      "tokens": ["Globe", "Mail", "Scale", "Ban", "FileText", "Lock", "Eye"],
+      "finalKnowledge": ["leak-panel", "obtain-panel", "tally-floor"],
+      "statefulObjects": []
+    }
+  ]
+}
