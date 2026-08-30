@@ -1,0 +1,133 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "playerControlSafeBottom": 168,
+  "scenes": [
+    {
+      "id": "technique-range",
+      "export": "TechniqueRangeScene",
+      "layout": "crossbow-range-lane",
+      "anchor": "flow-path",
+      "grammar": ["shot-landing-map", "range-width-dial"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["Crosshair", "Minimize2", "Milestone", "Maximize2", "Ban", "ShieldCheck", "ArrowLeftRight"],
+      "finalKnowledge": [
+        "range-wall",
+        "range-beyond",
+        "tech-narrow",
+        "tech-plain",
+        "tech-expand",
+        "tech-analogy",
+        "tech-analogy-exception",
+        "tech-reverse"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "analogy-exam-strip",
+      "export": "AnalogyExamStripScene",
+      "layout": "boundary-fork-exam-strip",
+      "anchor": "boundary",
+      "grammar": ["two-bound-limit", "exam-stamp-sequence"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "enclosure", "contrast", "spatial"],
+      "tokens": ["Crosshair", "Maximize2", "Ban", "Compass", "GraduationCap", "ShieldCheck"],
+      "finalKnowledge": [
+        "limit-scope",
+        "limit-scope-rows",
+        "limit-forecast-rows",
+        "limit-verdict",
+        "exam-item-1",
+        "exam-item-2",
+        "exam-item-3",
+        "exam-item-4",
+        "exam-item-5",
+        "exam-item-6",
+        "exam-floor"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "reasons-relationship-bench",
+      "export": "ReasonsRelationshipBenchScene",
+      "layout": "reason-quartet-bench",
+      "anchor": "comparison-axis",
+      "grammar": ["reason-quartet", "produce-justify-pairing"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "enclosure", "contrast", "spatial"],
+      "tokens": ["BookOpen", "BrickWall", "Gavel", "Flag", "Crosshair", "Ban"],
+      "finalKnowledge": [
+        "reason-grammatical",
+        "reason-systemic",
+        "reason-natural",
+        "reason-teleological",
+        "engine-technique",
+        "engine-reason",
+        "engine-floor"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "nulla-poena-gate",
+      "export": "NullaPoenaGateScene",
+      "layout": "twin-gate-wall",
+      "anchor": "boundary",
+      "grammar": ["clause-gate-pair", "exception-gold-thread"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "enclosure", "locator", "contrast"],
+      "tokens": ["Landmark", "DoorClosed", "Users", "Compass", "ShieldCheck", "FileText", "Hourglass", "Ban", "ScrollText", "Scale"],
+      "finalKnowledge": [
+        "gate-wall-band",
+        "gate-positive",
+        "gate-negative",
+        "pillar-democracy",
+        "pillar-liberty",
+        "content-written",
+        "content-prior",
+        "content-strict",
+        "content-certain"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "space-jurisdiction-map",
+      "export": "SpaceJurisdictionMapScene",
+      "layout": "frontier-map-quadrant",
+      "anchor": "flow-path",
+      "grammar": ["jurisdiction-routes", "territory-core-anchor"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["MapPin", "Ship", "Plane", "Users", "ShieldCheck", "Globe", "Scale"],
+      "finalKnowledge": [
+        "domain-core",
+        "domain-flag-state",
+        "domain-act-result",
+        "route-territorial",
+        "route-personal",
+        "route-protective",
+        "route-universal",
+        "map-summary"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "time-effect-dial",
+      "export": "TimeEffectDialScene",
+      "layout": "old-new-currency-dial",
+      "anchor": "timeline-gate",
+      "grammar": ["old-new-currency-rule", "pending-scope-gate"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["Hourglass", "FileText", "Ban", "ScrollText", "Scale", "ShieldCheck"],
+      "finalKnowledge": [
+        "dial-main-rule",
+        "dial-pending-scope",
+        "dial-retrial-exception",
+        "dial-judicial-table",
+        "dial-floor"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

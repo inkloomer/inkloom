@@ -1,0 +1,29 @@
+{
+  "directionId": "garrison-ballista-range",
+  "family": "garrison-ballista-range",
+  "palette": "宣纸米 field + 青砖灰绿 wall + 朱砂禁红 + 暮金 + 石青",
+  "typography": "heavy ink-black headings, chalk label blocks on brick, vermilion seal stamps",
+  "composition": "a horizontal fortress wall anchors each scene: crossbow range lanes beneath it, twin gates and garrison pillars on it, frontier route boards radiating beside it",
+  "surface": "brick coursing, paper plaques with ink borders, dashed gold exception threads, vermilion seal stamps; no glossy panels",
+  "motion": "staged reveals in legal-reasoning order, seals land as verdicts, dashed connectors traverse the wall line; no idle loops",
+  "transition": "the wall line persists as the carrier while each scene re-stages the same fortress plane",
+  "conceptTokens": {
+    "文义射程": "Crosshair",
+    "扩大解释": "Maximize2",
+    "类推解释": "Ban",
+    "有利于被告人": "ShieldCheck",
+    "预测可能性": "Compass",
+    "真题": "GraduationCap",
+    "罪刑法定": "Landmark",
+    "体系解释": "BrickWall",
+    "从旧兼从轻": "Hourglass",
+    "属地管辖": "MapPin",
+    "属人管辖": "Users"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/criminal/01/penal-frontier-range/",
+    "title": "城垣弩界"
+  }
+}

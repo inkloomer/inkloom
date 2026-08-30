@@ -80,9 +80,11 @@ export const TechniqueRangeScene = () => (
         </Enter>
       </div>
 
-      <div style={{position: 'absolute', left: 0, top: 536, width: 1340, height: 96, backgroundColor: C.goldSoft, border: `3px solid ${C.gold}`, borderRadius: 10, display: 'flex', alignItems: 'center', gap: 18, padding: '0 24px'}}>
+      <div style={{position: 'absolute', left: 0, right: 0, top: 536, height: 96, backgroundColor: C.goldSoft, border: `3px solid ${C.gold}`, borderRadius: 10, display: 'flex', alignItems: 'center', gap: 18, padding: '0 24px'}}>
         <Enter delay={168}><LabelBlock ink size={26}>五支箭 · 一堵墙</LabelBlock></Enter>
         <Enter delay={178} style={{fontSize: 24, fontWeight: 800}}>解释技巧＝<SoftHi style={{fontSize: 23}}>生产结论</SoftHi>的手法——落点在墙内还是墙外，结论已经不同</Enter>
+        <span style={{flex: 1}} />
+        <Enter delay={188} style={{fontSize: 21, fontWeight: 800, color: C.inkSoft}}>技巧相互排斥 · 理由相互并存（见 03）</Enter>
       </div>
     </div>
   </Shell>
