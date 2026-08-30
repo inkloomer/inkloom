@@ -1,0 +1,29 @@
+{
+  "animationId": "notary-remedies",
+  "scenes": [
+    {
+      "id": "review",
+      "export": "ReviewScene",
+      "layout": "review-scale-branches",
+      "anchor": "main center",
+      "grammar": "复查申请期限（知道或应当知道1年内·出具起最长20年）+处理结果五分支（维持/收回更正重发或补正/撤销/部分补正或删除更正/程序欠缺补办否则撤销·撤销收回公告自始无效·报协会备案录系统）",
+      "textTreatments": ["scale rows", "branch chips"],
+      "focalChannels": ["time scale", "five branches"],
+      "tokens": ["Clock", "Scale", "FileX"],
+      "finalKnowledge": "review-branches",
+      "statefulObjects": ["scale panel", "branch panel"]
+    },
+    {
+      "id": "refund-litigation",
+      "export": "RefundLitigationScene",
+      "layout": "refund-tri-plus-litigation",
+      "anchor": "main center",
+      "grammar": "费用返还三分（机构过错全退/当事人过错不退/双方酌情退）+内容争议诉讼（民事诉讼·强制执行债权文书裁定不予执行）",
+      "textTreatments": ["refund chips", "litigation rows"],
+      "focalChannels": ["refund split", "litigation route"],
+      "tokens": ["Coins", "Gavel", "Scale"],
+      "finalKnowledge": "refund-litigation",
+      "statefulObjects": ["refund panel x3", "litigation panel"]
+    }
+  ]
+}

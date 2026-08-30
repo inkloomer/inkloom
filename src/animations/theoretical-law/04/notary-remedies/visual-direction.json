@@ -1,0 +1,15 @@
+{
+  "directionId": "review-scale-hall",
+  "family": "scale-review-hall",
+  "title": "衡错复查堂",
+  "subject": "theoretical-law",
+  "chapter": "04",
+  "concept": "衡错复查堂：公证书复查五种处理结果挂在秤杆，1年/20年时限为刻度，费用返还三分与诉讼救济分列堂侧。图形层主题；画面文字一律使用源笔记法考名词",
+  "palette": "复查堂 remedies #2F3330、深堂 remediesDeep #242826、面板 panel #F0EBDA、暗面板 panelDim #E1DCC7、镶边 edge #5E7168、墨字 ink #22302A、淡墨 inkSoft #516260、复查金 review #C0983E、撤销红 cancel #B04834、救济青 remedy #4E7D74、纸白 paper #F6F1E0",
+  "typography": "标题用 var(--inkloom-animation-title)，正文用 var(--inkloom-animation-body)；秤杆行加粗法考名词，年限用刻度印",
+  "composition": "复查期限刻度 + 处理五分支 + 费用返还三分 + 诉讼行",
+  "surface": "复查堂墙纹 + 秤杆线 + 分支签纹",
+  "motion": "刻度比对、分支展开、费用分账",
+  "transition": "硬切换幕",
+  "catalog": ["考点84 公证救济"]
+}

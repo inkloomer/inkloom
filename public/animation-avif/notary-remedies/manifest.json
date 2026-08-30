@@ -1,0 +1,53 @@
+{
+  "animationId": "notary-remedies",
+  "compositionId": "NotaryRemedies",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-30T19:39:50.706Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 263,
+      "frameCount": 264,
+      "id": "review",
+      "number": "01",
+      "startFrame": 0,
+      "title": "公证书的复查",
+      "durationMs": 8800,
+      "file": "review.avif",
+      "fileSize": 717264,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "556da56a99ac828dfb14225cbc1f671d08f2f4e5c7a5cff82931cf0f1179e4a7",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "6c05953b4ab392485a59a8964545524c52176ce077b8eac3d53fff75d289b62e"
+    },
+    {
+      "endFrame": 491,
+      "frameCount": 228,
+      "id": "refund-litigation",
+      "number": "02",
+      "startFrame": 264,
+      "title": "费用返还与内容争议诉讼",
+      "durationMs": 7600,
+      "file": "refund-litigation.avif",
+      "fileSize": 484955,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "00f9ebc930a36499fad19e3eddd3dc66dfb02ef75b02ba01fc45d1c876ed6a7c",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "6c05953b4ab392485a59a8964545524c52176ce077b8eac3d53fff75d289b62e"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "6c05953b4ab392485a59a8964545524c52176ce077b8eac3d53fff75d289b62e",
+  "targetFps": 30,
+  "totalFileSize": 1202219
+}
