@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "filing-leniency-desk",
+      "export": "FilingLeniencyScene",
+      "layout": "filing-desk-with-leniency-and-handover-bands",
+      "anchor": "flow-path",
+      "grammar": [
+        "preliminary-verification-leads-to-filing-without-upper-approval",
+        "serious-duty-crime-announces-to-family-and-public",
+        "confession-leniency-needs-collective-study-and-upper-approval",
+        "detention-converts-to-custody-while-supplement-investigation-runs-twice"
+      ],
+      "textTreatments": ["chip", "label-block", "soft-highlight"],
+      "focalChannels": ["connector", "spatial", "contrast", "annotation"],
+      "tokens": ["Network"],
+      "finalKnowledge": ["filing-card", "leniency-card", "handover-card"],
+      "statefulObjects": []
+    },
+    {
+      "id": "four-measures-panel",
+      "export": "FourMeasuresScene",
+      "layout": "four-measure-cards-with-approval-spine",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "compulsory-appearance-caps-twelve-or-twenty-four-hours",
+        "ordered-awaiting-investigation-lasts-up-to-twelve-months",
+        "custody-care-decides-within-seven-days-plus-three",
+        "liuzhi-detention-requires-collective-study-and-upper-approval"
+      ],
+      "textTreatments": ["chip", "thin-underline", "soft-highlight"],
+      "focalChannels": ["contrast", "enclosure", "icon", "annotation"],
+      "tokens": ["LockKeyhole"],
+      "finalKnowledge": ["measure-cards", "approval-spine"],
+      "statefulObjects": []
+    },
+    {
+      "id": "detention-depth-gauge",
+      "export": "DetentionDepthScene",
+      "layout": "detention-timeline-with-approval-gate-and-notice-note",
+      "anchor": "timeline-gate",
+      "grammar": [
+        "grave-duty-crime-with-evidence-and-aggravating-circumstance",
+        "collective-study-then-upper-approval-or-provincial-filing",
+        "three-plus-three-plus-two-months-caps-city-level-at-eight",
+        "recidivist-new-crime-restarts-once-reaching-fourteen-months"
+      ],
+      "textTreatments": ["chip", "label-block", "thin-underline"],
+      "focalChannels": ["connector", "contrast", "enclosure", "annotation"],
+      "tokens": ["Timer"],
+      "finalKnowledge": ["scope-rows", "approval-gate", "duration-timeline", "notice-offset-note"],
+      "statefulObjects": []
+    },
+    {
+      "id": "measure-execution-tracks",
+      "export": "ExecutionTracksScene",
+      "layout": "dual-track-dispatch-board-with-jurisdiction-note",
+      "anchor": "role-pair",
+      "grammar": [
+        "search-and-assets-stay-on-the-supervision-track",
+        "technical-investigation-warrants-three-month-terms-executed-by-police",
+        "manhunt-and-exit-ban-need-provincial-approval-via-police",
+        "supervision-organ-cannot-confiscate-courts-decide-after-transfer"
+      ],
+      "textTreatments": ["chip", "soft-highlight", "external-negation"],
+      "focalChannels": ["contrast", "enclosure", "connector", "annotation"],
+      "tokens": ["Route"],
+      "finalKnowledge": ["supervision-track", "police-track", "jurisdiction-note"],
+      "statefulObjects": []
+    }
+  ]
+}

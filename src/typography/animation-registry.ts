@@ -68,6 +68,7 @@ import {typography as typographyCpCourier} from '../animations/criminal-procedur
 import {typography as typographyCpVault} from '../animations/criminal-procedure/23/asset-seal-vault/animation.meta';
 import {typography as typographyCpCareGate} from '../animations/criminal-procedure/24/mandatory-care-gate/animation.meta';
 import {typography as typographyCpRelay} from '../animations/criminal-procedure/25/dual-track-relay/animation.meta';
+import {typography as typographyCpRelay} from '../animations/criminal-procedure/25/dual-track-relay/animation.meta';
 import {typography as typography0} from '../animations/civil-procedure/01/dispute-resolution/animation.meta';
 import {typography as typography1} from '../animations/civil-procedure/01/law-attributes/animation.meta';
 import {typography as typography2} from '../animations/civil-procedure/01/trial-procedure/animation.meta';
@@ -577,6 +578,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'onyx-courier': {metadata: typographyCpCourier, scope: {animationId: 'onyx-courier', subject: 'criminal-procedure', topic: '22'}},
   'asset-seal-vault': {metadata: typographyCpVault, scope: {animationId: 'asset-seal-vault', subject: 'criminal-procedure', topic: '23'}},
   'mandatory-care-gate': {metadata: typographyCpCareGate, scope: {animationId: 'mandatory-care-gate', subject: 'criminal-procedure', topic: '24'}},
+  'dual-track-relay': {metadata: typographyCpRelay, scope: {animationId: 'dual-track-relay', subject: 'criminal-procedure', topic: '25'}},
   'dual-track-relay': {metadata: typographyCpRelay, scope: {animationId: 'dual-track-relay', subject: 'criminal-procedure', topic: '25'}},
   'card-selling-funds-viewpoint': {metadata: typography40, scope: {animationId: 'card-selling-funds-viewpoint', subject: 'criminal', topic: '19'}},
   'occupational-embezzlement-flowchart': {metadata: typography41, scope: {animationId: 'occupational-embezzlement-flowchart', subject: 'criminal', topic: '19'}},

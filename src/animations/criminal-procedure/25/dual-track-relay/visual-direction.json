@@ -1,0 +1,22 @@
+{
+  "directionId": "dual-track-relay-supervision",
+  "family": "dual-track-relay-family",
+  "palette": "relay-station rail slate, telegraph brass mainline, signal-lamp red, dispatch cyan branchline, waybill cream, junction moss",
+  "typography": "WenKai relay headings with waybill plates and stamped measure chips",
+  "composition": "a filing desk beside leniency and handover bands, a four-measure card panel over an approval spine, a detention timeline behind an approval gate, and a dual-track dispatch board splitting supervision from police execution",
+  "surface": "rail-slate wall with track lines, waybill cards with punched notches, brass mainline borders and signal-lamp seals",
+  "motion": "filing rows telegraph in from the desk, four measure cards couple onto the panel, the detention timeline advances gate by gate, and the two execution tracks split apart before the jurisdiction note closes the loop",
+  "transition": "the rail-slate backdrop and track lines persist while the waybill cards are replaced",
+  "conceptTokens": {
+    "监察机关": "Building2",
+    "公安机关": "Shield",
+    "留置": "Lock",
+    "检察院": "Landmark"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/criminal-procedure/25/dual-track-relay/",
+    "title": "双轨联络站"
+  }
+}
