@@ -177,6 +177,7 @@ import {typography as typographyAutoEffectivenessActivationHall} from '../animat
 import {typography as typographyAutoDefectRemedyVerdictHall} from '../animations/civil-law/03/defect-remedy-verdict-hall/animation.meta';
 import {typography as typographyAutoAgencyAuthorityHall} from '../animations/civil-law/04/agency-authority-hall/animation.meta';
 import {typography as typographyAutoLimitationClockHall} from '../animations/civil-law/04/limitation-clock-hall/animation.meta';
+import {typography as typographyAutoNegotiorumManagementHall} from '../animations/civil-law/05/negotiorum-management-hall/animation.meta';
 import {typography as typographyAutoDividendRight} from '../animations/commercial-law/04/dividend-right/animation.meta';
 import {typography as typographyAutoShareholderQualification} from '../animations/commercial-law/03/shareholder-qualification/animation.meta';
 import {typography as typographyAutoNominalShareholder} from '../animations/commercial-law/03/nominal-shareholder/animation.meta';
