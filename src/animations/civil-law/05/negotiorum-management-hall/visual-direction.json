@@ -1,0 +1,22 @@
+{
+  "directionId": "rescue-vest-negotiorum-hall",
+  "family": "rescue-vest-negotiorum-hall",
+  "palette": "deep sea teal, rescue-vest orange, sand paper cream, grape violet verdicts, moss green, graphite ink",
+  "typography": "management-hall headings on sea-teal rail tabs, rescue-vest stamps and grape wax verdicts",
+  "composition": "a management hall with a definition dais and no-duty gate, a mind-matter bench with sheep forks, a triple special case hall and a duty ledger opening into a good-samaritan lane",
+  "surface": "sand paper files, sea-teal desk rails, rescue-vest seals, grape name slips",
+  "motion": "management hands reach across the tri-party bench, sheep tokens wander between forks, special case dials flip on public recognition and reimbursement coins roll down the samaritan lane",
+  "transition": "the hall floor, sea-teal rails and rescue-vest seal posts persist while daises, benches, halls and ledgers are re-dressed between scenes",
+  "conceptTokens": {
+    "无因管理": "HeartHandshake",
+    "管理人": "Users",
+    "拾得遗失物": "Phone",
+    "见义勇为": "Shield"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/civil-law/05/negotiorum-management-hall/",
+    "title": "无因管理堂"
+  }
+}

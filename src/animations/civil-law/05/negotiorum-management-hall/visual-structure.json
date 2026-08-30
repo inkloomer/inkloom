@@ -1,0 +1,95 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "concept-legal-element",
+      "export": "ConceptLegalScene",
+      "layout": "definition-dais-with-no-duty-gate",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "negotiorum-manages-anothers-affairs-for-his-benefit-without-duty",
+        "the-deed-is-a-legal-fact-breeding-a-debt-relation",
+        "no-legal-duty-covers-statutory-and-agreed-duties",
+        "prior-consent-turns-management-into-mandate"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["contrast", "icon", "enclosure", "annotation"],
+      "tokens": ["HeartHandshake", "Scale", "FileSignature", "Repeat"],
+      "finalKnowledge": [
+        "negotiorum-definition",
+        "legal-fact-nature",
+        "no-duty-gate",
+        "consent-mandate-switch"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "subjective-objective-bench",
+      "export": "SubjectiveObjectiveScene",
+      "layout": "mind-matter-bench-with-sheep-forks",
+      "anchor": "role-pair",
+      "grammar": [
+        "the-mind-must-carry-management-for-another",
+        "mistaken-self-belief-and-borrowed-duty-both-fail",
+        "mixed-motive-still-counts-and-contrary-wishes-have-three-exceptions",
+        "mistaking-own-affair-for-another-fails-the-object-limb"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "external-negation"],
+      "focalChannels": ["contrast", "icon", "enclosure", "annotation"],
+      "tokens": ["Brain", "Baby", "Flame", "RotateCcw"],
+      "finalKnowledge": [
+        "mind-limb-rules",
+        "contrary-wish-exceptions",
+        "object-limb-rule",
+        "sheep-triptych-verdicts"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "special-three-scenes",
+      "export": "SpecialThreeScene",
+      "layout": "triple-special-case-hall",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "lost-property-keeper-needs-a-return-intent-in-the-best-way",
+        "unauthorised-agency-turns-management-only-with-public-recognition",
+        "life-and-health-urgency-is-recognised-while-taste-is-not",
+        "compound-interests-look-to-mind-then-to-appearance"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["contrast", "icon", "enclosure", "annotation"],
+      "tokens": ["Phone", "Snowflake", "Pill", "Flame"],
+      "finalKnowledge": [
+        "lost-property-rule",
+        "agency-conversion-rule",
+        "compound-interest-rule",
+        "fire-compound-verdicts"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "effects-samaritan",
+      "export": "EffectsSamaritanScene",
+      "layout": "duty-ledger-with-samaritan-lane",
+      "anchor": "flow-path",
+      "grammar": [
+        "managers-answer-for-intent-gross-negligence-and-may-pause",
+        "the-managed-owes-reimbursement-compensation-and-no-fee",
+        "ratification-applies-mandate-rules-from-the-start",
+        "good-samaritans-ride-management-plus-third-layer-compensation"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["contrast", "icon", "enclosure", "annotation"],
+      "tokens": ["Coins", "HeartHandshake", "FileSignature", "Shield"],
+      "finalKnowledge": [
+        "manager-duties",
+        "managed-ledger",
+        "ratification-rule",
+        "samaritan-paths"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}
