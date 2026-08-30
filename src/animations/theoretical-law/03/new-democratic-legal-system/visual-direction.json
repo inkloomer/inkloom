@@ -1,0 +1,16 @@
+{
+  "directionId": "red-flag-revolution-chronicle",
+  "family": "revolution-red-banner",
+  "palette": "deep revolutionary red ground + pale parchment panels + gold star accents + dark ink annotations + warm amber highlights",
+  "typography": "ink headings on parchment panels, dark chronicle label tabs with gold left bar, gold star stamps for milestones, red chips for period names, thin ink underline for dates",
+  "composition": "the four constitutional documents unfold as a chronological banner row; the judicial scene highlights the Ma Xiwu trial method and people's mediation as twin pillars",
+  "surface": "flat deep red ground with faint banner hairlines, parchment panels with hairline weathered borders and corner star pins, no gradients, no rounded cards, no drop shadows",
+  "motion": "parchment panels rise chronologically, date stamps land once, star accents light up, the twin pillars settle side by side",
+  "transition": "a banner unfurls and the chronicle clears for the next document",
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/theoretical-law/03/new-democratic-legal-system/",
+    "title": "赤旗法程"
+  }
+}

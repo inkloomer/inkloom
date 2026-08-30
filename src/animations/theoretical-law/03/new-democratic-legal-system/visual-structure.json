@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 2,
+  "playerControlSafeBottom": 176,
+  "scenes": [
+    {
+      "id": "constitutional-docs",
+      "export": "ConstitutionalDocsScene",
+      "layout": "four-document-chronological-banner-row",
+      "anchor": "timeline-gate",
+      "grammar": ["suweiai-document", "shaangan-document-pair", "huabei-abolish-document"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["Landmark", "ScrollText"],
+      "finalKnowledge": [
+        "docs-heading",
+        "docs-row",
+        "abolish-note"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "judicial-system",
+      "export": "JudicialSystemScene",
+      "layout": "twin-pillar-judicial-bench",
+      "anchor": "role-pair",
+      "grammar": ["maxiwu-pillar", "mediation-pillar", "mediation-principle-note"],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["Gavel", "Users"],
+      "finalKnowledge": [
+        "judicial-heading",
+        "maxiwu-pillar",
+        "mediation-pillar",
+        "mediation-principle-note"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

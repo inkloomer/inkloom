@@ -1,0 +1,53 @@
+{
+  "animationId": "new-democratic-legal-system",
+  "compositionId": "NewDemocraticLegalSystem",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-30T04:45:25.247Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 287,
+      "frameCount": 288,
+      "id": "constitutional-docs",
+      "number": "01",
+      "startFrame": 0,
+      "title": "宪法性文件",
+      "durationMs": 9600,
+      "file": "constitutional-docs.avif",
+      "fileSize": 497930,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "0c2bd4e07e8e2785bc4d1b58c3fe6e93a5dd758f46a6cf6df2818860b49c0e30",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "452e3b7e1c0119d9dd760ac19b96b8745568ff2928d312c413cd756d9b410ce7"
+    },
+    {
+      "endFrame": 551,
+      "frameCount": 264,
+      "id": "judicial-system",
+      "number": "02",
+      "startFrame": 288,
+      "title": "马锡五审判与人民调解",
+      "durationMs": 8800,
+      "file": "judicial-system.avif",
+      "fileSize": 432613,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "c5465120cdae376fd0ade8de6da680e24d56f25ac724fd9a7529613d0ba5d441",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "452e3b7e1c0119d9dd760ac19b96b8745568ff2928d312c413cd756d9b410ce7"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "452e3b7e1c0119d9dd760ac19b96b8745568ff2928d312c413cd756d9b410ce7",
+  "targetFps": 30,
+  "totalFileSize": 930543
+}
