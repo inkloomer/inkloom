@@ -1,0 +1,29 @@
+{
+  "animationId": "notary-ethics-liability",
+  "scenes": [
+    {
+      "id": "ethics-penalties",
+      "export": "EthicsPenaltiesScene",
+      "layout": "motto-plus-penalty-columns",
+      "anchor": "main center",
+      "grammar": "职业道德四句堂额 + 三栏处罚（对公证员纪律处分六种/对公证机构行政处罚四种无吊销执业证书/对公证员行政处罚五种同律师）",
+      "textTreatments": ["motto plaques", "penalty columns"],
+      "focalChannels": ["motto row", "no-revocation note"],
+      "tokens": ["Scale", "Gavel", "Ban"],
+      "finalKnowledge": "ethics-penalties",
+      "statefulObjects": ["motto row", "penalty panel x3"]
+    },
+    {
+      "id": "civil-criminal",
+      "export": "CivilCriminalScene",
+      "layout": "civil-elements-plus-criminal",
+      "anchor": "main center",
+      "grammar": "民事法律责任四要素（主体/条件/方式仅赔偿损失/顺序机构在先公证员在后）+刑事责任行，底带点睛",
+      "textTreatments": ["element rows", "order seals"],
+      "focalChannels": ["compensation-only", "firm-first-notary-later"],
+      "tokens": ["Scale", "Gavel", "FileX"],
+      "finalKnowledge": "civil-criminal",
+      "statefulObjects": ["civil panel", "criminal panel"]
+    }
+  ]
+}

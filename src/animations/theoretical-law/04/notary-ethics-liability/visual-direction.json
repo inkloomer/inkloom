@@ -1,0 +1,15 @@
+{
+  "directionId": "ethics-liability-hall",
+  "family": "liability-hall-ethics",
+  "title": "德责戒律堂",
+  "subject": "theoretical-law",
+  "chapter": "04",
+  "concept": "德责戒律堂：职业道德四句悬于堂额，纪律处分·行政处罚·民事责任·刑事责任依次入堂，机构处罚无吊销以缺角印呈现。图形层主题；画面文字一律使用源笔记法考名词",
+  "palette": "戒堂 ethics #2F3234、深堂 ethicsDeep #24272A、面板 panel #F0EBDA、暗面板 panelDim #E1DCC7、镶边 edge #5F6A6E、墨字 ink #232830、淡墨 inkSoft #525C62、德金 ethicsGold #C0983E、责红 liability #B04834、缺角青 missing #4E7D74、纸白 paper #F6F1E0",
+  "typography": "标题用 var(--inkloom-animation-title)，正文用 var(--inkloom-animation-body)；堂额行加粗法考名词，处罚种类用朱签",
+  "composition": "四句堂额 + 三栏处罚 + 民事责任四要素 + 源名词点睛带",
+  "surface": "戒堂墙纹 + 堂额横匾 + 缺角印",
+  "motion": "堂额悬升、三栏展开、缺角印示意",
+  "transition": "硬切换幕",
+  "catalog": ["考点85 公证员职业道德与职业责任"]
+}

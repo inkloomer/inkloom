@@ -174,6 +174,7 @@ import {typography as typographyAutoRepresentationAuthorityDesk} from '../animat
 import {typography as typographyAutoLegalPersonIndependenceHall} from '../animations/civil-law/02/legal-person-independence-hall/animation.meta';
 import {typography as typographyAutoIntentionExpressionHall} from '../animations/civil-law/03/intention-expression-hall/animation.meta';
 import {typography as typographyAutoEffectivenessActivationHall} from '../animations/civil-law/03/effectiveness-activation-hall/animation.meta';
+import {typography as typographyAutoDefectRemedyVerdictHall} from '../animations/civil-law/03/defect-remedy-verdict-hall/animation.meta';
 import {typography as typographyAutoDividendRight} from '../animations/commercial-law/04/dividend-right/animation.meta';
 import {typography as typographyAutoShareholderQualification} from '../animations/commercial-law/03/shareholder-qualification/animation.meta';
 import {typography as typographyAutoNominalShareholder} from '../animations/commercial-law/03/nominal-shareholder/animation.meta';
@@ -316,6 +317,7 @@ import {typography as typographyNr} from '../animations/theoretical-law/04/notar
 import {typography as typographyNpr} from '../animations/theoretical-law/04/notary-procedure/animation.meta';
 import {typography as typographyNrd} from '../animations/theoretical-law/04/notary-rights-duties/animation.meta';
 import {typography as typographyNre} from '../animations/theoretical-law/04/notary-remedies/animation.meta';
+import {typography as typographyNel} from '../animations/theoretical-law/04/notary-ethics-liability/animation.meta';
 import {typography as typographyCc} from '../animations/theoretical-law/01/constitution-classification/animation.meta';
 import {typography as typographyCdv} from '../animations/theoretical-law/01/constitution-development/animation.meta';
 import {typography as typographyCp} from '../animations/theoretical-law/01/constitution-principles/animation.meta';
@@ -472,6 +474,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'legal-person-independence-hall': {metadata: typographyAutoLegalPersonIndependenceHall, scope: {animationId: 'legal-person-independence-hall', subject: 'civil-law', topic: '02'}},
   'intention-expression-hall': {metadata: typographyAutoIntentionExpressionHall, scope: {animationId: 'intention-expression-hall', subject: 'civil-law', topic: '03'}},
   'effectiveness-activation-hall': {metadata: typographyAutoEffectivenessActivationHall, scope: {animationId: 'effectiveness-activation-hall', subject: 'civil-law', topic: '03'}},
+  'defect-remedy-verdict-hall': {metadata: typographyAutoDefectRemedyVerdictHall, scope: {animationId: 'defect-remedy-verdict-hall', subject: 'civil-law', topic: '03'}},
   'dividend-right': {metadata: typographyAutoDividendRight, scope: {animationId: 'dividend-right', subject: 'commercial-law', topic: '04'}},
   'shareholder-qualification': {metadata: typographyAutoShareholderQualification, scope: {animationId: 'shareholder-qualification', subject: 'commercial-law', topic: '03'}},
   'nominal-shareholder': {metadata: typographyAutoNominalShareholder, scope: {animationId: 'nominal-shareholder', subject: 'commercial-law', topic: '03'}},
@@ -678,6 +681,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'notary-procedure': {metadata: typographyNpr, scope: {animationId: 'notary-procedure', subject: 'theoretical-law', topic: '04'}},
   'notary-rights-duties': {metadata: typographyNrd, scope: {animationId: 'notary-rights-duties', subject: 'theoretical-law', topic: '04'}},
   'notary-remedies': {metadata: typographyNre, scope: {animationId: 'notary-remedies', subject: 'theoretical-law', topic: '04'}},
+  'notary-ethics-liability': {metadata: typographyNel, scope: {animationId: 'notary-ethics-liability', subject: 'theoretical-law', topic: '04'}},
   'profit-reserve-granary': {metadata: typographyPrg, scope: {animationId: 'profit-reserve-granary', subject: 'commercial-economic-law', topic: '01'}},
   'promoter-liability-ropewalk': {metadata: typographyPlr, scope: {animationId: 'promoter-liability-ropewalk', subject: 'commercial-economic-law', topic: '01'}},
   'fight-defense-diagram': {metadata: typography44, scope: {animationId: 'fight-defense-diagram', subject: 'criminal', topic: '22'}},

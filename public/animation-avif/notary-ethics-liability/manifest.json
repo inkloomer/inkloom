@@ -1,0 +1,53 @@
+{
+  "animationId": "notary-ethics-liability",
+  "compositionId": "NotaryEthicsLiability",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-30T19:49:47.785Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 239,
+      "frameCount": 240,
+      "id": "ethics-penalties",
+      "number": "01",
+      "startFrame": 0,
+      "title": "职业道德与职业责任",
+      "durationMs": 8000,
+      "file": "ethics-penalties.avif",
+      "fileSize": 471446,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "4ab03574f5c01ddf7a6f85a2427fd651d562f02da86d38c25fdd978249922bc0",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "df1cc22088c5013966a35862d96c582c74e716ec5c8a4463b108102f37a2098b"
+    },
+    {
+      "endFrame": 467,
+      "frameCount": 228,
+      "id": "civil-criminal",
+      "number": "02",
+      "startFrame": 240,
+      "title": "民事·刑事责任",
+      "durationMs": 7600,
+      "file": "civil-criminal.avif",
+      "fileSize": 517493,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "7674da746941909dc045a6fcd9b6b24d77438ff75ce6b8737d2c997a86be2fd3",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "df1cc22088c5013966a35862d96c582c74e716ec5c8a4463b108102f37a2098b"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "df1cc22088c5013966a35862d96c582c74e716ec5c8a4463b108102f37a2098b",
+  "targetFps": 30,
+  "totalFileSize": 988939
+}
