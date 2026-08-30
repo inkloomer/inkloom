@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "playerControlSafeBottom": 168,
+  "scenes": [
+    {
+      "id": "filing",
+      "export": "FilingScene",
+      "layout": "filing-roles-desk",
+      "anchor": "document-fork",
+      "grammar": ["four-roles-cast", "debtor-only-insolvency-test"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["Building2", "Scale", "ScrollText", "GraduationCap"],
+      "finalKnowledge": [
+        "ft-roles-desk",
+        "ft-cause-desk",
+        "ft-receipt-desk",
+        "ft-exam-strip"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "ruling-remedy",
+      "export": "RulingRemedyScene",
+      "layout": "remedy-ladder-wall",
+      "anchor": "comparison-axis",
+      "grammar": ["ruling-vs-judgment-split", "remedy-ladder-rule"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["Gavel", "Landmark", "GraduationCap"],
+      "finalKnowledge": [
+        "rr-ruling-desk",
+        "rr-ladder-desk",
+        "rr-exam-strip"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "executory-lease",
+      "export": "ExecutoryLeaseScene",
+      "layout": "lease-severing-bench",
+      "anchor": "timeline-gate",
+      "grammar": ["executory-contract-unilateral-rule", "unjust-enrichment-priority-rule"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["Scissors", "Coins", "Banknote"],
+      "finalKnowledge": [
+        "el-right-desk",
+        "el-rent-desk",
+        "el-exam-strip"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

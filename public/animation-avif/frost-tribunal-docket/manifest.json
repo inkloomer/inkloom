@@ -1,0 +1,70 @@
+{
+  "animationId": "frost-tribunal-docket",
+  "compositionId": "FrostTribunalDocket",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-30T04:56:09.250Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 299,
+      "frameCount": 300,
+      "id": "filing",
+      "number": "01",
+      "startFrame": 0,
+      "title": "破产申请进门：四方角色与书面凭证",
+      "durationMs": 10000,
+      "file": "filing.avif",
+      "fileSize": 330351,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "d1c1e3ab4cb936527223f4d5504db8ca6c21224d3cae892ba3765e1f9b4c11e8",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "b540388884a4d5c4313d063717736ee372781673a75aedf36fb2094aeff4b78a"
+    },
+    {
+      "endFrame": 579,
+      "frameCount": 280,
+      "id": "ruling-remedy",
+      "number": "02",
+      "startFrame": 300,
+      "title": "驳回与救济：裁定不是判决",
+      "durationMs": 9333,
+      "file": "ruling-remedy.avif",
+      "fileSize": 301705,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "4b45470a52bfbfdcdbe95da5f4a4041178d8630ddf5d5dd01b725f77bb34969f",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "b540388884a4d5c4313d063717736ee372781673a75aedf36fb2094aeff4b78a"
+    },
+    {
+      "endFrame": 869,
+      "frameCount": 290,
+      "id": "executory-lease",
+      "number": "03",
+      "startFrame": 580,
+      "title": "待履行合同：管理人的一支笔",
+      "durationMs": 9667,
+      "file": "executory-lease.avif",
+      "fileSize": 336735,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "abc3bf686c642fbd3017d31fcf1cef1af59568b1bdda21c93dfcbe56f4b1ff33",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "b540388884a4d5c4313d063717736ee372781673a75aedf36fb2094aeff4b78a"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "b540388884a4d5c4313d063717736ee372781673a75aedf36fb2094aeff4b78a",
+  "targetFps": 30,
+  "totalFileSize": 968791
+}

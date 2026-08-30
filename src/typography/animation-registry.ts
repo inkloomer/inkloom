@@ -200,6 +200,7 @@ import {typography as typographyAutoSoleProprietorKitchenLegacy} from '../animat
 import {typography as typographyAutoHarborConsulateProtocol} from '../animations/commercial-economic-law/04/harbor-consulate-protocol/animation.meta';
 import {typography as typographyAutoSocialSystem} from '../animations/theoretical-law/01/social-system/animation.meta';
 import {typography as typographyAutoRepublicConstitutionHistory} from '../animations/theoretical-law/03/republic-constitution-history/animation.meta';
+import {typography as typographyAutoFrostTribunalDocket} from '../animations/commercial-economic-law/05/frost-tribunal-docket/animation.meta';
 import {typography as typographyAutoReckoningAbacusDesk} from '../animations/administrative-law/24/reckoning-abacus-desk/animation.meta';
 import {typography as typographyAutoBambooScrollRestoration} from '../animations/administrative-law/23/bamboo-scroll-restoration/animation.meta';
 import {typography as typographyAutoLighthouseWatchNetwork} from '../animations/administrative-law/20/lighthouse-watch-network/animation.meta';
@@ -417,6 +418,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'terminal-station-wind-down': {metadata: typographyAutoTerminalStationWindDown, scope: {animationId: 'terminal-station-wind-down', subject: 'commercial-economic-law', topic: '02'}},
   'sole-proprietor-kitchen-legacy': {metadata: typographyAutoSoleProprietorKitchenLegacy, scope: {animationId: 'sole-proprietor-kitchen-legacy', subject: 'commercial-economic-law', topic: '03'}},
   'harbor-consulate-protocol': {metadata: typographyAutoHarborConsulateProtocol, scope: {animationId: 'harbor-consulate-protocol', subject: 'commercial-economic-law', topic: '04'}},
+  'frost-tribunal-docket': {metadata: typographyAutoFrostTribunalDocket, scope: {animationId: 'frost-tribunal-docket', subject: 'commercial-economic-law', topic: '05'}},
   'reckoning-abacus-desk': {metadata: typographyAutoReckoningAbacusDesk, scope: {animationId: 'reckoning-abacus-desk', subject: 'administrative-law', topic: '24'}},
   'bamboo-scroll-restoration': {metadata: typographyAutoBambooScrollRestoration, scope: {animationId: 'bamboo-scroll-restoration', subject: 'administrative-law', topic: '23'}},
   'lighthouse-watch-network': {metadata: typographyAutoLighthouseWatchNetwork, scope: {animationId: 'lighthouse-watch-network', subject: 'administrative-law', topic: '20'}},
