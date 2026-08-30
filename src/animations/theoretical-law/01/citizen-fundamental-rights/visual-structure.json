@@ -1,0 +1,138 @@
+{
+  "animationId": "citizen-fundamental-rights",
+  "scenes": [
+    {
+      "id": "equality-political",
+      "export": "EqualityPoliticalScene",
+      "layout": "twin-panel-rights",
+      "anchor": "main center",
+      "grammar": "左灯平等权（权利能力平等+合理差别三型），右灯政治权利和自由五目，灯下数字门槛盖柿红戳",
+      "textTreatments": [
+        "plaque heading",
+        "numbered list body"
+      ],
+      "focalChannels": [
+        "panel headings",
+        "deadline numbers"
+      ],
+      "tokens": [
+        "Scale",
+        "Vote",
+        "BookOpen",
+        "Hourglass",
+        "HeartPulse",
+        "Users",
+        "Megaphone",
+        "Handshake",
+        "Flag",
+        "Lamp",
+        "Timer"
+      ],
+      "finalKnowledge": [
+        "equality-scope",
+        "political-freedoms"
+      ],
+      "statefulObjects": [
+        "twin lantern panel x2"
+      ]
+    },
+    {
+      "id": "supervision-religion",
+      "export": "SupervisionReligionScene",
+      "layout": "twin-panel-rights",
+      "anchor": "main center",
+      "grammar": "左灯监督权与国家赔偿（批评建议/申诉控告检举对比+行赔刑赔），右灯宗教信仰自由五层内涵与禁令",
+      "textTreatments": [
+        "plaque heading",
+        "contrast rows"
+      ],
+      "focalChannels": [
+        "contrast rows",
+        "taboo list"
+      ],
+      "tokens": [
+        "Gavel",
+        "HandHeart",
+        "MessageSquarePlus",
+        "ShieldAlert",
+        "HandCoins",
+        "Building2",
+        "Ban",
+        "Landmark",
+        "Globe",
+        "Lamp"
+      ],
+      "finalKnowledge": [
+        "supervision-rights",
+        "religion-freedom"
+      ],
+      "statefulObjects": [
+        "twin lantern panel x2"
+      ]
+    },
+    {
+      "id": "personal-freedom",
+      "export": "PersonalFreedomScene",
+      "layout": "four-cell-lantern-grid",
+      "anchor": "main center",
+      "grammar": "四格灯牌：狭义人身自由（逮捕三主体）/人格尊严/住宅权/通信自由与秘密，顶注生命权，底廊逮捕与通信检查口诀",
+      "textTreatments": [
+        "cell heading",
+        "taboo highlights"
+      ],
+      "focalChannels": [
+        "four cell headings",
+        "arrest subjects"
+      ],
+      "tokens": [
+        "Lock",
+        "Fingerprint",
+        "Home",
+        "Mail",
+        "Lamp"
+      ],
+      "finalKnowledge": [
+        "personal-liberty-core",
+        "dignity-home-mail"
+      ],
+      "statefulObjects": [
+        "lantern cell x4"
+      ]
+    },
+    {
+      "id": "social-economic",
+      "export": "SocialEconomicScene",
+      "layout": "twin-panel-rights",
+      "anchor": "main center",
+      "grammar": "左灯物质经济性权利（财产/劳动/休息/物质帮助），右灯教育文化权利；底廊点睛：51条双重限制与主体范围",
+      "textTreatments": [
+        "plaque heading",
+        "amendment stamps"
+      ],
+      "focalChannels": [
+        "property amendment stamp",
+        "boundary strip"
+      ],
+      "tokens": [
+        "Coins",
+        "Briefcase",
+        "Coffee",
+        "HeartHandshake",
+        "GraduationCap",
+        "Feather",
+        "Lightbulb",
+        "ShieldAlert",
+        "Users",
+        "ScrollText",
+        "Lamp"
+      ],
+      "finalKnowledge": [
+        "social-economic-rights",
+        "rights-boundary"
+      ],
+      "statefulObjects": [
+        "twin lantern panel x2"
+      ]
+    }
+  ]
+}

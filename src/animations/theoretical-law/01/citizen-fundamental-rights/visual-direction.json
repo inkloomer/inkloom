@@ -1,0 +1,30 @@
+{
+  "directionId": "six-lantern-rights-hall",
+  "family": "lantern-rights-gallery",
+  "title": "六灯权利廊",
+  "subject": "theoretical-law",
+  "chapter": "01",
+  "concept": "夜色长廊里悬起六盏宫灯，每盏灯照出一类基本权利：平等权、政治自由、监督赔偿、宗教信仰、人身自由、社会经济文化教育；灯下展牌写细目，柿红穗子标注数字门槛",
+  "palette": {
+    "night": "#232B3A",
+    "nightDeep": "#1A2130",
+    "panel": "#EFEAD8",
+    "panelDim": "#E0DCC6",
+    "edge": "#5C6478",
+    "ink": "#22283A",
+    "inkSoft": "#545C72",
+    "lantern": "#C9502F",
+    "amber": "#D9A441",
+    "pine": "#4E7D6B",
+    "paper": "#F6F2E3"
+  },
+  "typography": {
+    "title": "var(--inkloom-animation-title)",
+    "body": "var(--inkloom-animation-body)"
+  },
+  "composition": "宫灯横廊 + 灯下展牌 + 数字门槛柿红戳 + 夜廊一句记",
+  "surface": "夜空渐变 + 灯穗流苏 + 廊柱暗纹",
+  "motion": "宫灯摇曳点亮、展牌滑入、门槛数字盖戳",
+  "transition": "硬切换幕",
+  "catalog": ["考点38 公民的基本权利"]
+}

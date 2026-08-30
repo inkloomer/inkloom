@@ -231,6 +231,7 @@ import {typography as typographyCt11} from '../animations/criminal/11/commenceme
 import {typography as typographyAutoPenalFrontierRange} from '../animations/criminal/01/penal-frontier-range/animation.meta';
 import {typography as typographyAutoCrimeConstitutionAtlas} from '../animations/criminal/02/crime-constitution-atlas/animation.meta';
 import {typography as typographyAutoInterestRightsBalance} from '../animations/criminal/03/interest-rights-balance/animation.meta';
+import {typography as typographyAutoIdentityUnitSubject} from '../animations/criminal/04/identity-unit-subject/animation.meta';
 import {typography as typographyBel} from '../animations/commercial-economic-law/01/branch-wallet-ledger/animation.meta';
 import {typography as typographyVpf} from '../animations/commercial-economic-law/01/veil-piercing-forge/animation.meta';
 import {typography as typographyLl} from '../animations/theoretical-law/01/legislation-law/animation.meta';
@@ -499,6 +500,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'penal-frontier-range': {metadata: typographyAutoPenalFrontierRange, scope: {animationId: 'penal-frontier-range', subject: 'criminal', topic: '01'}},
   'crime-constitution-atlas': {metadata: typographyAutoCrimeConstitutionAtlas, scope: {animationId: 'crime-constitution-atlas', subject: 'criminal', topic: '02'}},
   'interest-rights-balance': {metadata: typographyAutoInterestRightsBalance, scope: {animationId: 'interest-rights-balance', subject: 'criminal', topic: '03'}},
+  'identity-unit-subject': {metadata: typographyAutoIdentityUnitSubject, scope: {animationId: 'identity-unit-subject', subject: 'criminal', topic: '04'}},
   'branch-wallet-ledger': {metadata: typographyBel, scope: {animationId: 'branch-wallet-ledger', subject: 'commercial-economic-law', topic: '01'}},
   'veil-piercing-forge': {metadata: typographyVpf, scope: {animationId: 'veil-piercing-forge', subject: 'commercial-economic-law', topic: '01'}},
   'legislation-law': {metadata: typographyLl, scope: {animationId: 'legislation-law', subject: 'theoretical-law', topic: '01'}},
