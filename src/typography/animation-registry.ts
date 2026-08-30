@@ -256,6 +256,7 @@ import {typography as typographyAutoEvidenceApothecaryCabinet} from '../animatio
 import {typography as typographyAutoExclusionCustomsGate} from '../animations/criminal-procedure-gold/07/exclusion-customs-gate/animation.meta';
 import {typography as typographyAutoBurdenLedgerDesk} from '../animations/criminal-procedure-gold/07/burden-ledger-desk/animation.meta';
 import {typography as typographyAutoMeasuresNightTower} from '../animations/criminal-procedure-gold/08/measures-night-tower/animation.meta';
+import {typography as typographyAutoMeasuresNightTower} from '../animations/criminal-procedure-gold/08/measures-night-tower/animation.meta';
 import {typography as typographyBel} from '../animations/commercial-economic-law/01/branch-wallet-ledger/animation.meta';
 import {typography as typographyVpf} from '../animations/commercial-economic-law/01/veil-piercing-forge/animation.meta';
 import {typography as typographyOph} from '../animations/criminal-procedure-gold/01/overview-porcelain-hall/animation.meta';
@@ -565,6 +566,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'evidence-apothecary-cabinet': {metadata: typographyAutoEvidenceApothecaryCabinet, scope: {animationId: 'evidence-apothecary-cabinet', subject: 'criminal-procedure-gold', topic: '07'}},
   'exclusion-customs-gate': {metadata: typographyAutoExclusionCustomsGate, scope: {animationId: 'exclusion-customs-gate', subject: 'criminal-procedure-gold', topic: '07'}},
   'burden-ledger-desk': {metadata: typographyAutoBurdenLedgerDesk, scope: {animationId: 'burden-ledger-desk', subject: 'criminal-procedure-gold', topic: '07'}},
+  'measures-night-tower': {metadata: typographyAutoMeasuresNightTower, scope: {animationId: 'measures-night-tower', subject: 'criminal-procedure-gold', topic: '08'}},
   'measures-night-tower': {metadata: typographyAutoMeasuresNightTower, scope: {animationId: 'measures-night-tower', subject: 'criminal-procedure-gold', topic: '08'}},
   'branch-wallet-ledger': {metadata: typographyBel, scope: {animationId: 'branch-wallet-ledger', subject: 'commercial-economic-law', topic: '01'}},
   'veil-piercing-forge': {metadata: typographyVpf, scope: {animationId: 'veil-piercing-forge', subject: 'commercial-economic-law', topic: '01'}},
