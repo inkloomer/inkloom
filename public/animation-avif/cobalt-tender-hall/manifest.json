@@ -1,0 +1,70 @@
+{
+  "animationId": "cobalt-tender-hall",
+  "compositionId": "CobaltTenderHall",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-30T20:44:59.795Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 289,
+      "frameCount": 290,
+      "id": "tender-rule",
+      "number": "01",
+      "startFrame": 0,
+      "title": "30%临界值与强制要约",
+      "durationMs": 9667,
+      "file": "tender-rule.avif",
+      "fileSize": 368325,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "6217e752376fa2957d1a885b36ffa2b1d525da955d8cf889bdc07e81dfdc79c3",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "81ddf75f4eddc00ea548dd9354b61c50a08f7a9194af46cb3812f9d4e89bd696"
+    },
+    {
+      "endFrame": 579,
+      "frameCount": 290,
+      "id": "early-warning",
+      "number": "02",
+      "startFrame": 290,
+      "title": "预警制度：举牌＋慢走",
+      "durationMs": 9667,
+      "file": "early-warning.avif",
+      "fileSize": 353052,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "e50709e79486eb31dd123fa2d961a0931fc58e9a988647b8318957f6ea9433ec",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "81ddf75f4eddc00ea548dd9354b61c50a08f7a9194af46cb3812f9d4e89bd696"
+    },
+    {
+      "endFrame": 869,
+      "frameCount": 290,
+      "id": "concert-party",
+      "number": "03",
+      "startFrame": 580,
+      "title": "一致行动人合并计算",
+      "durationMs": 9667,
+      "file": "concert-party.avif",
+      "fileSize": 384199,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "ecce982ee2d13bfe09daa7c3c594a3f403fa1156b1a4f02b3a507501a7d06792",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "81ddf75f4eddc00ea548dd9354b61c50a08f7a9194af46cb3812f9d4e89bd696"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "81ddf75f4eddc00ea548dd9354b61c50a08f7a9194af46cb3812f9d4e89bd696",
+  "targetFps": 30,
+  "totalFileSize": 1105576
+}
