@@ -1,0 +1,53 @@
+{
+  "animationId": "procurator-ethics",
+  "compositionId": "ProcuratorEthics",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-30T15:46:33.354Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 239,
+      "frameCount": 240,
+      "id": "loyalty-people",
+      "number": "01",
+      "startFrame": 0,
+      "title": "忠诚·为民",
+      "durationMs": 8000,
+      "file": "loyalty-people.avif",
+      "fileSize": 327261,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "e4bf2aaad29c1a71407c593fad74ef7446db0c756506aaa74f88a64355534de7",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "093681ccecfdb20aef5ff3c8f8eba25207df9f90a438dfc0bbed9ceee97d8ff5"
+    },
+    {
+      "endFrame": 515,
+      "frameCount": 276,
+      "id": "duty-fair-clean",
+      "number": "02",
+      "startFrame": 240,
+      "title": "担当·公正·廉洁",
+      "durationMs": 9200,
+      "file": "duty-fair-clean.avif",
+      "fileSize": 597532,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "5e8dbf192604b6178c40f6483018d40b2acccdad0ce4dc2b6b07cfb5f412dfce",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "093681ccecfdb20aef5ff3c8f8eba25207df9f90a438dfc0bbed9ceee97d8ff5"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "093681ccecfdb20aef5ff3c8f8eba25207df9f90a438dfc0bbed9ceee97d8ff5",
+  "targetFps": 30,
+  "totalFileSize": 924793
+}

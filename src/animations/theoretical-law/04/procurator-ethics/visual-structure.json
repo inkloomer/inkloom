@@ -1,0 +1,29 @@
+{
+  "animationId": "procurator-ethics",
+  "scenes": [
+    {
+      "id": "loyalty-people",
+      "export": "LoyaltyPeopleScene",
+      "layout": "twin-emblem-panels",
+      "anchor": "main center",
+      "grammar": "忠诚徽（四忠于）+为民徽（以人民为中心·严格规范公正文明司法·融入群众）",
+      "textTreatments": ["emblem plaques", "row chips"],
+      "focalChannels": ["emblem headings", "four loyalties"],
+      "tokens": ["Shield", "HeartHandshake"],
+      "finalKnowledge": "loyalty-people",
+      "statefulObjects": ["emblem panel x2"]
+    },
+    {
+      "id": "duty-fair-clean",
+      "export": "DutyFairCleanScene",
+      "layout": "crown-plus-columns",
+      "anchor": "main center",
+      "grammar": "担当徽加冕（三个敢于担当）+公正徽九条与廉洁徽三条并栏，底带点睛（重点注意担当）",
+      "textTreatments": ["crown plaque", "column chips"],
+      "focalChannels": ["duty crown", "fair column"],
+      "tokens": ["Crown", "Scale", "Ban"],
+      "finalKnowledge": "duty-fair-clean",
+      "statefulObjects": ["crown panel", "column panel x2"]
+    }
+  ]
+}

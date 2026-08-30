@@ -1,0 +1,15 @@
+{
+  "directionId": "five-emblem-supervision",
+  "family": "emblem-supervision-hall",
+  "title": "五徽监督局",
+  "subject": "theoretical-law",
+  "chapter": "04",
+  "concept": "五徽监督局：忠诚·为民·担当·公正·廉洁五徽并列，担当徽加冕为图形重点。图形层主题；画面文字一律使用源笔记法考名词",
+  "palette": "局堂 supervision #322F38、深堂 supervisionDeep #26232B、面板 panel #F1ECDA、暗面板 panelDim #E2DDC7、镶边 edge #655F6B、墨字 ink #272330、淡墨 inkSoft #585264、徽金 emblemGold #C0983E、担当朱 duty #B04834、廉青 cleanTeal #4E7D74、纸白 paper #F6F1E0",
+  "typography": "标题用 var(--inkloom-animation-title)，正文用 var(--inkloom-animation-body)；五徽行加粗法考名词，担当徽加大加冕",
+  "composition": "五徽行 + 担当加冕 + 分栏细目 + 源名词点睛带",
+  "surface": "局堂墙纹 + 徽章金属光 + 加冕缎带",
+  "motion": "五徽钤落、担当加冕、分栏展开",
+  "transition": "硬切换幕",
+  "catalog": ["考点69 检察官职业道德的主要内容"]
+}
