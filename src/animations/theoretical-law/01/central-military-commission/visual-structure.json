@@ -1,0 +1,29 @@
+{
+  "animationId": "central-military-commission",
+  "scenes": [
+    {
+      "id": "tallies",
+      "export": "TalliesScene",
+      "layout": "tally-sign-rows",
+      "anchor": "main center",
+      "grammar": "令签三组：战争类/动员类/紧急状态类，每支令签右端盖决定机关与公布方式双章，底带口诀",
+      "textTreatments": ["tally plaques", "dual seals"],
+      "focalChannels": ["group headings", "dual seals"],
+      "tokens": ["Flame", "Siren", "Bell", "Landmark", "Crown"],
+      "finalKnowledge": "tally-allocation",
+      "statefulObjects": ["tally row x3"]
+    },
+    {
+      "id": "cmc",
+      "export": "CmcScene",
+      "layout": "command-tent-plaques",
+      "anchor": "main center",
+      "grammar": "帅帐铭牌：性质/组成/任期三行 + 只负责不报告警戒行 + 两届之限名录卷轴",
+      "textTreatments": ["tent plaques", "roster scroll"],
+      "focalChannels": ["only-responsible highlight", "term-limit roster"],
+      "tokens": ["Shield", "Users", "Hourglass", "ScrollText"],
+      "finalKnowledge": "cmc-organization",
+      "statefulObjects": ["tent plaque x3"]
+    }
+  ]
+}

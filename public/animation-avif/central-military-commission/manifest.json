@@ -1,0 +1,53 @@
+{
+  "animationId": "central-military-commission",
+  "compositionId": "CentralMilitaryCommission",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-30T09:15:15.839Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 263,
+      "frameCount": 264,
+      "id": "tallies",
+      "number": "01",
+      "startFrame": 0,
+      "title": "虎符令签：决定与公布对照",
+      "durationMs": 8800,
+      "file": "tallies.avif",
+      "fileSize": 627923,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "612cb7dd2490c193592607e4353e7f38c1809acf615be0207143473ca8050db4",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "fbe025d87bbb5a718e2ccd202463843c4485e60ca05cae314011fa2eaac63034"
+    },
+    {
+      "endFrame": 491,
+      "frameCount": 228,
+      "id": "cmc",
+      "number": "02",
+      "startFrame": 264,
+      "title": "帅帐铭牌：中央军事委员会",
+      "durationMs": 7600,
+      "file": "cmc.avif",
+      "fileSize": 545820,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "d4abe687176c14b6c4fa0bcee132dfc61d664e071c2ad51fd46c6026923ae1a4",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "fbe025d87bbb5a718e2ccd202463843c4485e60ca05cae314011fa2eaac63034"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "fbe025d87bbb5a718e2ccd202463843c4485e60ca05cae314011fa2eaac63034",
+  "targetFps": 30,
+  "totalFileSize": 1173743
+}
