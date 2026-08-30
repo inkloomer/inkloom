@@ -1,0 +1,30 @@
+{
+  "directionId": "jade-slip-virtue-corridor",
+  "family": "virtue-slip-corridor",
+  "title": "玉简德廊",
+  "subject": "theoretical-law",
+  "chapter": "04",
+  "concept": "青玉简册悬廊：职业道德概念镌于主简，五特征各成一枚玉章，教育五途径作串简连线，点睛朱批缀于廊尾",
+  "palette": {
+    "celadon": "#3C5A52",
+    "celadonDeep": "#2D4540",
+    "panel": "#F0EBD9",
+    "panelDim": "#E1DCC6",
+    "edge": "#5F7370",
+    "ink": "#243030",
+    "inkSoft": "#526260",
+    "slipGreen": "#6F9484",
+    "virtueGold": "#C6A04C",
+    "annotRed": "#B04834",
+    "paper": "#F6F1E0"
+  },
+  "typography": {
+    "title": "var(--inkloom-animation-title)",
+    "body": "var(--inkloom-animation-body)"
+  },
+  "composition": "主简居中 + 五玉章横列 + 串简五联 + 朱批",
+  "surface": "玉简纹理 + 绳联编纹 + 朱批印",
+  "motion": "主简展开、玉章顿立、串简点亮",
+  "transition": "硬切换幕",
+  "catalog": ["考点61 法律职业道德"]
+}

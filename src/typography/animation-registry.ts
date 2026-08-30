@@ -255,6 +255,7 @@ import {typography as typographyAutoDefenseHeraldicHall} from '../animations/cri
 import {typography as typographyAutoEvidenceApothecaryCabinet} from '../animations/criminal-procedure-gold/07/evidence-apothecary-cabinet/animation.meta';
 import {typography as typographyAutoExclusionCustomsGate} from '../animations/criminal-procedure-gold/07/exclusion-customs-gate/animation.meta';
 import {typography as typographyAutoBurdenLedgerDesk} from '../animations/criminal-procedure-gold/07/burden-ledger-desk/animation.meta';
+import {typography as typographyAutoMeasuresNightTower} from '../animations/criminal-procedure-gold/08/measures-night-tower/animation.meta';
 import {typography as typographyBel} from '../animations/commercial-economic-law/01/branch-wallet-ledger/animation.meta';
 import {typography as typographyVpf} from '../animations/commercial-economic-law/01/veil-piercing-forge/animation.meta';
 import {typography as typographyOph} from '../animations/criminal-procedure-gold/01/overview-porcelain-hall/animation.meta';
@@ -280,6 +281,7 @@ import {typography as typographyJc} from '../animations/theoretical-law/04/judic
 import {typography as typographyJf} from '../animations/theoretical-law/04/judicial-functions/animation.meta';
 import {typography as typographyJfe} from '../animations/theoretical-law/04/judicial-fairness-efficiency/animation.meta';
 import {typography as typographyJi} from '../animations/theoretical-law/04/judicial-independence/animation.meta';
+import {typography as typographyLpe} from '../animations/theoretical-law/04/legal-professional-ethics/animation.meta';
 import {typography as typographyCc} from '../animations/theoretical-law/01/constitution-classification/animation.meta';
 import {typography as typographyCdv} from '../animations/theoretical-law/01/constitution-development/animation.meta';
 import {typography as typographyCp} from '../animations/theoretical-law/01/constitution-principles/animation.meta';
@@ -563,6 +565,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'evidence-apothecary-cabinet': {metadata: typographyAutoEvidenceApothecaryCabinet, scope: {animationId: 'evidence-apothecary-cabinet', subject: 'criminal-procedure-gold', topic: '07'}},
   'exclusion-customs-gate': {metadata: typographyAutoExclusionCustomsGate, scope: {animationId: 'exclusion-customs-gate', subject: 'criminal-procedure-gold', topic: '07'}},
   'burden-ledger-desk': {metadata: typographyAutoBurdenLedgerDesk, scope: {animationId: 'burden-ledger-desk', subject: 'criminal-procedure-gold', topic: '07'}},
+  'measures-night-tower': {metadata: typographyAutoMeasuresNightTower, scope: {animationId: 'measures-night-tower', subject: 'criminal-procedure-gold', topic: '08'}},
   'branch-wallet-ledger': {metadata: typographyBel, scope: {animationId: 'branch-wallet-ledger', subject: 'commercial-economic-law', topic: '01'}},
   'veil-piercing-forge': {metadata: typographyVpf, scope: {animationId: 'veil-piercing-forge', subject: 'commercial-economic-law', topic: '01'}},
   'overview-porcelain-hall': {metadata: typographyOph, scope: {animationId: 'overview-porcelain-hall', subject: 'criminal-procedure-gold', topic: '01'}},
@@ -606,6 +609,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'judicial-functions': {metadata: typographyJf, scope: {animationId: 'judicial-functions', subject: 'theoretical-law', topic: '04'}},
   'judicial-fairness-efficiency': {metadata: typographyJfe, scope: {animationId: 'judicial-fairness-efficiency', subject: 'theoretical-law', topic: '04'}},
   'judicial-independence': {metadata: typographyJi, scope: {animationId: 'judicial-independence', subject: 'theoretical-law', topic: '04'}},
+  'legal-professional-ethics': {metadata: typographyLpe, scope: {animationId: 'legal-professional-ethics', subject: 'theoretical-law', topic: '04'}},
   'profit-reserve-granary': {metadata: typographyPrg, scope: {animationId: 'profit-reserve-granary', subject: 'commercial-economic-law', topic: '01'}},
   'promoter-liability-ropewalk': {metadata: typographyPlr, scope: {animationId: 'promoter-liability-ropewalk', subject: 'commercial-economic-law', topic: '01'}},
   'fight-defense-diagram': {metadata: typography44, scope: {animationId: 'fight-defense-diagram', subject: 'criminal', topic: '22'}},
