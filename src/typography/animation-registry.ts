@@ -222,6 +222,7 @@ import {typography as typographyAutoYellowNoticeBureau} from '../animations/comm
 import {typography as typographyAutoOxbloodShieldWorkshop} from '../animations/commercial-economic-law/06/oxblood-shield-workshop/animation.meta';
 import {typography as typographyAutoLacquerSealBureau} from '../animations/commercial-economic-law/06/lacquer-seal-bureau/animation.meta';
 import {typography as typographyAutoJadeCheckCounter} from '../animations/commercial-economic-law/06/jade-check-counter/animation.meta';
+import {typography as typographyAutoCobaltTenderHall} from '../animations/commercial-economic-law/07/cobalt-tender-hall/animation.meta';
 import {typography as typographyAutoReckoningAbacusDesk} from '../animations/administrative-law/24/reckoning-abacus-desk/animation.meta';
 import {typography as typographyAutoBambooScrollRestoration} from '../animations/administrative-law/23/bamboo-scroll-restoration/animation.meta';
 import {typography as typographyAutoLighthouseWatchNetwork} from '../animations/administrative-law/20/lighthouse-watch-network/animation.meta';
@@ -272,6 +273,7 @@ import {typography as typographyAutoPublicSafetyAlertBoard} from '../animations/
 import {typography as typographyAutoEconCrimeFiling} from '../animations/criminal/21/econ-crime-filing/animation.meta';
 import {typography as typographyAutoDetentionClauseLadder} from '../animations/criminal/18/detention-clause-ladder/animation.meta';
 import {typography as typographyAutoDerelictionDutyDesk} from '../animations/criminal/24/dereliction-duty-desk/animation.meta';
+import {typography as typographyAutoStateSecurityWireRoom} from '../animations/criminal/25/state-security-wire-room/animation.meta';
 import {typography as typographyBel} from '../animations/commercial-economic-law/01/branch-wallet-ledger/animation.meta';
 import {typography as typographyVpf} from '../animations/commercial-economic-law/01/veil-piercing-forge/animation.meta';
 import {typography as typographyLl} from '../animations/theoretical-law/01/legislation-law/animation.meta';
@@ -524,6 +526,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'oxblood-shield-workshop': {metadata: typographyAutoOxbloodShieldWorkshop, scope: {animationId: 'oxblood-shield-workshop', subject: 'commercial-economic-law', topic: '06'}},
   'lacquer-seal-bureau': {metadata: typographyAutoLacquerSealBureau, scope: {animationId: 'lacquer-seal-bureau', subject: 'commercial-economic-law', topic: '06'}},
   'jade-check-counter': {metadata: typographyAutoJadeCheckCounter, scope: {animationId: 'jade-check-counter', subject: 'commercial-economic-law', topic: '06'}},
+  'cobalt-tender-hall': {metadata: typographyAutoCobaltTenderHall, scope: {animationId: 'cobalt-tender-hall', subject: 'commercial-economic-law', topic: '07'}},
   'reckoning-abacus-desk': {metadata: typographyAutoReckoningAbacusDesk, scope: {animationId: 'reckoning-abacus-desk', subject: 'administrative-law', topic: '24'}},
   'bamboo-scroll-restoration': {metadata: typographyAutoBambooScrollRestoration, scope: {animationId: 'bamboo-scroll-restoration', subject: 'administrative-law', topic: '23'}},
   'lighthouse-watch-network': {metadata: typographyAutoLighthouseWatchNetwork, scope: {animationId: 'lighthouse-watch-network', subject: 'administrative-law', topic: '20'}},
@@ -622,6 +625,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'econ-crime-filing': {metadata: typographyAutoEconCrimeFiling, scope: {animationId: 'econ-crime-filing', subject: 'criminal', topic: '21'}},
   'detention-clause-ladder': {metadata: typographyAutoDetentionClauseLadder, scope: {animationId: 'detention-clause-ladder', subject: 'criminal', topic: '18'}},
   'dereliction-duty-desk': {metadata: typographyAutoDerelictionDutyDesk, scope: {animationId: 'dereliction-duty-desk', subject: 'criminal', topic: '24'}},
+  'state-security-wire-room': {metadata: typographyAutoStateSecurityWireRoom, scope: {animationId: 'state-security-wire-room', subject: 'criminal', topic: '25'}},
   'branch-wallet-ledger': {metadata: typographyBel, scope: {animationId: 'branch-wallet-ledger', subject: 'commercial-economic-law', topic: '01'}},
   'veil-piercing-forge': {metadata: typographyVpf, scope: {animationId: 'veil-piercing-forge', subject: 'commercial-economic-law', topic: '01'}},
   'legislation-law': {metadata: typographyLl, scope: {animationId: 'legislation-law', subject: 'theoretical-law', topic: '01'}},

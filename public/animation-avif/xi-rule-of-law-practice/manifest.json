@@ -1,0 +1,53 @@
+{
+  "animationId": "xi-rule-of-law-practice",
+  "compositionId": "XiRuleOfLawPractice",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-30T20:41:12.496Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 263,
+      "frameCount": 264,
+      "id": "five-guarantees",
+      "number": "01",
+      "startFrame": 0,
+      "title": "充分发挥法治的保障作用",
+      "durationMs": 8800,
+      "file": "five-guarantees.avif",
+      "fileSize": 797837,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "2f7184d2a92f338e079560d1a7aec6c0793a7c9614e6f64c0485a45d968298aa",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "e5c8e4d15a64cab684082663d0ed2cd94e88ddb813ca95f7d72b1bc3baaeb128"
+    },
+    {
+      "endFrame": 503,
+      "frameCount": 240,
+      "id": "relations",
+      "number": "02",
+      "startFrame": 264,
+      "title": "若干重大关系",
+      "durationMs": 8000,
+      "file": "relations.avif",
+      "fileSize": 764456,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "3428e104c6b95c89c9ae73d21e6557d55de84617a6bf4af2d6eb4b28d24605fa",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "e5c8e4d15a64cab684082663d0ed2cd94e88ddb813ca95f7d72b1bc3baaeb128"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "e5c8e4d15a64cab684082663d0ed2cd94e88ddb813ca95f7d72b1bc3baaeb128",
+  "targetFps": 30,
+  "totalFileSize": 1562293
+}

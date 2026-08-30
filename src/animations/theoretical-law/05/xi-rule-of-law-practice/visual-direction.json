@@ -1,0 +1,15 @@
+{
+  "directionId": "harvest-practice-field",
+  "family": "practice-field-harvest",
+  "title": "实践五谷田",
+  "subject": "theoretical-law",
+  "chapter": "05",
+  "concept": "实践五谷田：五类保障如五谷列田垄，三组重大关系作田埂分界。图形层主题；画面文字一律使用源笔记法考名词",
+  "palette": "田亩 field #33352C、深田 fieldDeep #262820、面板 panel #F0EBDA、暗面板 panelDim #E1DCC7、镶边 edge #666B5B、墨字 ink #262921、淡墨 inkSoft #575C4E、谷金 harvest #C0983E、关系红 relation #B04834、保障青 guard #4E7D74、纸白 paper #F6F1E0",
+  "typography": "标题用 var(--inkloom-animation-title)，正文用 var(--inkloom-animation-body)；田垄行加粗法考名词，关系用对签",
+  "composition": "五谷田垄 + 关系三组田埂 + 源名词点睛带",
+  "surface": "田亩垄线 + 谷穗纹 + 田埂分界线",
+  "motion": "垄列展开、谷穗点染、田埂划线",
+  "transition": "硬切换幕",
+  "catalog": ["考点88 习近平法治思想的实践要求"]
+}

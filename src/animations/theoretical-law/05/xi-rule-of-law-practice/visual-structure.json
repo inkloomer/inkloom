@@ -1,0 +1,29 @@
+{
+  "animationId": "xi-rule-of-law-practice",
+  "scenes": [
+    {
+      "id": "five-guarantees",
+      "export": "FiveGuaranteesScene",
+      "layout": "five-furrow-columns",
+      "anchor": "main center",
+      "grammar": "五谷田垄：以法治保障经济发展（法治最好营商环境·市场经济法治经济·统一大市场·产权制度涉企冤错·民营经济促进法）/政治稳定（政治安全·路线方针有效实施·执政地位）/文化繁荣（民族血脉精神家园·核心价值观引领立法·公文化设施所有权使用权分置）/社会和谐（法律制度·安全网稳定器·社会治理体制）/生态良好（最严格制度最严密法治·生态环境法典·提高违法成本）",
+      "textTreatments": ["furrow columns", "guarantee chips"],
+      "focalChannels": ["five furrows"],
+      "tokens": ["Coins", "Landmark", "BookOpen", "Users", "Leaf"],
+      "finalKnowledge": "five-guarantees",
+      "statefulObjects": ["furrow column x5"]
+    },
+    {
+      "id": "relations",
+      "export": "RelationsScene",
+      "layout": "three-relation-ridges",
+      "anchor": "main center",
+      "grammar": "三组重大关系田埂：政治和法治（法治当中有政治·党大法大伪命题·权大法大真命题·统一）/改革和法治（鸟之两翼车之两轮·重大改革于法有据·成果上升为法律·纠正发展要上法治要让·不能对标西方）/依法治国和以德治国（法律成文道德道德内心法律·法安天下德润人心·相互强化·核心价值观融入）",
+      "textTreatments": ["relation rows", "couplet seals"],
+      "focalChannels": ["three relations", "couplet phrases"],
+      "tokens": ["Scale", "RefreshCw", "HeartHandshake"],
+      "finalKnowledge": "major-relations",
+      "statefulObjects": ["relation panel x3"]
+    }
+  ]
+}
