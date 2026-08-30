@@ -1,0 +1,25 @@
+{
+  "directionId": "spark-kindling-camp",
+  "family": "spark-kindling-camp",
+  "palette": "夜青营地 night-teal + 火种橙 ember + 松青 pine + 暮灰 dusk + 赭红 alert + 米纸 paper",
+  "typography": "heavy night-ground headings, ember kindling bars, pine chip tags, icon-chip fact rows, rotated verdict stamps",
+  "composition": "a kindling camp desk: causation lane, six-row intent matrix, dual-object case fork, statute clause lane, aid eligibility boundary, five-model stage ladder, dual-channel help boards, neutrality two-axis bay",
+  "surface": "night ground with faint horizontal grain, paper panels with ember top bars and watermark pictograms; no glossy panels",
+  "motion": "panels settle scene by scene, clause lanes stack in statute order, stage ladder climbs model by model; no idle loops",
+  "transition": "the night ground and ember header bar persist while each scene lays new kindling",
+  "conceptTokens": {
+    "教唆犯": "Megaphone",
+    "帮助犯": "Wrench",
+    "既遂": "Flag",
+    "想象竞合": "Split",
+    "法条": "BookOpen",
+    "案例": "GraduationCap",
+    "故意": "Brain"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/criminal/12/instigator-abettor-roles/",
+    "title": "火种薪柴营"
+  }
+}

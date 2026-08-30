@@ -1,0 +1,103 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "playerControlSafeBottom": 168,
+  "scenes": [
+    {
+      "id": "instigator-essence",
+      "export": "InstigatorEssenceScene",
+      "layout": "instigator-causation-lane",
+      "anchor": "flow-path",
+      "grammar": ["cause-two-stage-lane", "subjective-intent-gate"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "enclosure"],
+      "tokens": ["Megaphone", "GitBranch", "Brain", "Ban", "Hourglass", "GraduationCap"],
+      "finalKnowledge": ["essence-board", "two-stage-lane", "subjective-board", "attempt-fork-board"],
+      "statefulObjects": []
+    },
+    {
+      "id": "instigation-target-matrix",
+      "export": "InstigationTargetMatrixScene",
+      "layout": "target-intent-six-row-grid",
+      "anchor": "comparison-axis",
+      "grammar": ["preexisting-intent-rows", "quality-quantity-fork"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
+      "tokens": ["Megaphone", "Ban", "TrendingUp", "Siren", "Coins", "ShieldAlert", "Route"],
+      "finalKnowledge": ["row-same-intent", "row-light-to-heavy", "row-circumstance-aggravated", "row-amount-aggravated", "row-homogeneous-lighter", "row-heterogeneous-lighter"],
+      "statefulObjects": []
+    },
+    {
+      "id": "instigator-completion-case",
+      "export": "InstigatorCompletionCaseScene",
+      "layout": "dual-object-case-fork",
+      "anchor": "document-fork",
+      "grammar": ["target-versus-accident-fork", "concurrency-verdict"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "connector"],
+      "tokens": ["BookOpen", "Split", "Flag", "Hourglass", "Ban", "GraduationCap"],
+      "finalKnowledge": ["case-head-strip", "principal-lens-board", "instigator-lens-board", "conclusion-strip", "milk-quiz-strip"],
+      "statefulObjects": []
+    },
+    {
+      "id": "instigator-punishment",
+      "export": "InstigatorPunishmentScene",
+      "layout": "statute-three-clause-lane",
+      "anchor": "typographic-sequence",
+      "grammar": ["clause-sequence-lane", "minor-age-escalation"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "locator"],
+      "tokens": ["BookOpen", "Crown", "User", "ShieldAlert", "Users", "Megaphone", "Baby", "Ban"],
+      "finalKnowledge": ["statute-head-strip", "role-clause-board", "minor-clause-board", "second-clause-board"],
+      "statefulObjects": []
+    },
+    {
+      "id": "abettor-essence",
+      "export": "AbettorEssenceScene",
+      "layout": "aid-eligibility-boundary",
+      "anchor": "boundary",
+      "grammar": ["boost-connect-two-gates", "no-risk-rows"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
+      "tokens": ["Wrench", "HeartPulse", "KeyRound", "DoorOpen", "Ban"],
+      "finalKnowledge": ["concept-board", "two-gates-board", "no-risk-rows-board", "unlinked-model-board"],
+      "statefulObjects": []
+    },
+    {
+      "id": "abettor-completion-models",
+      "export": "AbettorCompletionModelsScene",
+      "layout": "five-model-stage-ladder",
+      "anchor": "timeline-gate",
+      "grammar": ["contribution-stage-ladder", "naming-pairs"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "locator"],
+      "tokens": ["KeyRound", "Hourglass", "DoorOpen", "Flag", "Ban"],
+      "finalKnowledge": ["completion-head-strip", "model-three-board", "model-four-board", "model-five-board", "naming-board"],
+      "statefulObjects": []
+    },
+    {
+      "id": "psychological-help",
+      "export": "PsychologicalHelpScene",
+      "layout": "dual-channel-help-boards",
+      "anchor": "role-pair",
+      "grammar": ["physical-versus-psychic-channel", "intent-redline-rows"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
+      "tokens": ["Wrench", "Handshake", "Coins", "Eye", "Brain", "Ban", "Car", "GraduationCap", "Scale", "Users", "BookOpen"],
+      "finalKnowledge": ["channel-board", "stakes-board", "redline-board", "quiz-strip"],
+      "statefulObjects": []
+    },
+    {
+      "id": "neutral-help-conduct",
+      "export": "NeutralHelpConductScene",
+      "layout": "neutrality-two-axis-bay",
+      "anchor": "comparison-axis",
+      "grammar": ["knowing-plus-urgent-axes", "trade-exception-rows"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
+      "tokens": ["Eye", "Car", "Store", "Coins", "Wrench", "GraduationCap", "Ban"],
+      "finalKnowledge": ["neutrality-gates-board", "example-rows-board", "quiz-rows-board"],
+      "statefulObjects": []
+    }
+  ]
+}
