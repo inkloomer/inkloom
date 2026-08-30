@@ -1,5 +1,5 @@
 import type {CSSProperties, ReactNode} from 'react';
-import {Ban, Coins, Crown, Hand, Handshake, Home} from 'lucide-react';
+import {Ban, Coins, Crown, Hand, Handshake, Home, Sword} from 'lucide-react';
 import {AbsoluteFill, interpolate, useCurrentFrame} from 'remotion';
 import {CLAMP} from '../../../../shared/remotion-runtime';
 
@@ -205,6 +205,7 @@ export const DominionRequestScene = () => {
         </Enter>
         <Enter delay={16} from="down" marker="request-tower" style={{position: 'absolute', left: 916, top: 0, width: 820, height: 64}}>
           <div style={{height: '100%', backgroundColor: C.crimson, border: `2px solid ${C.brass}`, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 14}}>
+            <Sword size={28} color={C.parchment} strokeWidth={2.4} />
             <Handshake size={30} color={C.parchment} strokeWidth={2.4} />
             <span style={{fontSize: 26, fontWeight: 950, color: C.parchment}}>请求权</span>
             <Chip tone={C.crimson} toneBg={C.crimsonPale} ink={C.crimson}>相对权 · 对人权</Chip>
@@ -341,7 +342,7 @@ export const ThreeRequestLanesScene = () => {
             </div>
           </Enter>
         ))}
-        <div data-stateful-source="sheep-claim-ticket" style={{position: 'absolute', left: ticketX, top: ticketY, opacity: prog(frame, 150, 14) * (1 - prog(frame, 214, 14))}}>
+        <div data-stateful-source="sheep-claim-ticket" style={{position: 'absolute', left: ticketX, top: ticketY, opacity: prog(frame, 150, 14) * (1 - prog(frame, 214, 14)), visibility: frame >= 230 ? 'hidden' : 'visible'}}>
           <Chip tone={C.brass} toneBg={C.parchment}>案例票 · 甲捡到乙的羊</Chip>
         </div>
         <Enter delay={90} from="up" marker="consumable-trap" style={{position: 'absolute', left: 40, top: 576, width: 1696, height: 92}}>
