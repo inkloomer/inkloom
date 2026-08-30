@@ -38,6 +38,7 @@ import {DURATION_FRAMES as PENALTY_ADJUSTMENT_DURATION_FRAMES, FPS as PENALTY_AD
 import {DURATION_FRAMES as CONTRACT_BOOK_DURATION_FRAMES, FPS as CONTRACT_BOOK_FPS} from '../../animations/civil-law/contracts/contract-book-atlas/remotion/storyboard';
 import {DURATION_FRAMES as SECURITY_PUBLICITY_DURATION_FRAMES, FPS as SECURITY_PUBLICITY_FPS} from '../../animations/civil-law/14/security-publicity-fate/remotion/storyboard';
 import {DURATION_FRAMES as SIX_PRINCIPLES_DURATION_FRAMES, FPS as SIX_PRINCIPLES_FPS} from '../../animations/civil-law/01/six-principles-pillars/remotion/storyboard';
+import {DURATION_FRAMES as TANG_CODE_LIUZANG_LIUSHA_DURATION_FRAMES, FPS as TANG_CODE_LIUZANG_LIUSHA_FPS} from '../../animations/theoretical-law/03/tang-code-liuzang-liusha/remotion/storyboard';
 import {DURATION_FRAMES as LEGAL_INTERPRETATION_DURATION_FRAMES, FPS as LEGAL_INTERPRETATION_FPS} from '../../animations/theoretical-law/17/legal-interpretation/remotion/storyboard';
 import {DURATION_FRAMES as MARXIST_LAW_DURATION_FRAMES, FPS as MARXIST_LAW_FPS} from '../../animations/theoretical-law/01/marxist-law-essence/remotion/storyboard';
 import {DURATION_FRAMES as FEATURES_OF_LAW_DURATION_FRAMES, FPS as FEATURES_OF_LAW_FPS} from '../../animations/theoretical-law/01/features-of-law/remotion/storyboard';
@@ -374,6 +375,7 @@ const DEMO_ADDED_AT: Record<(typeof STYLE_DEMOS)[number]['id'], string> = {
   'civil-law-01-six-principles-pillars': '2026-08-30T02:30:00+08:00',
   'civil-procedure-32-penalty-adjustment-procedure': '2026-08-08T18:17:31+08:00',
   'theoretical-law-17-legal-interpretation': '2026-08-28T19:56:14+08:00',
+  'theoretical-law-03-tang-code-liuzang-liusha': '2026-08-30T14:40:00+08:00',
   'criminal-procedure-07-evidence-exclusion-lattice': '2026-08-28T20:10:00+08:00',
   'criminal-procedure-01-procedure-structure-orrery': '2026-08-28T22:30:00+08:00',
   'criminal-procedure-03-organs-relay-map': '2026-08-29T01:30:00+08:00',
