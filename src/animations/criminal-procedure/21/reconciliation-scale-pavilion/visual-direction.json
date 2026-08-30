@@ -1,0 +1,28 @@
+{
+  "directionId": "conciliation-scale-pavilion",
+  "family": "scale-pavilion-family",
+  "palette": "black lacquer ground, gold-leaf engraved rules, bone porcelain scale plates, cinnabar refusal seals, jade admission marks, indigo scope tags",
+  "typography": "WenKai pavilion headings with gold-leaf rules, bone plate cards and cinnabar stamp marks",
+  "composition": "a weighing beam across the frame with bone scale-plate panels, four prerequisite weights on the pan, two substantive notch cards, and a refusal strip beneath",
+  "surface": "black lacquer with gold-leaf engraving grid, bone porcelain plates with gold rims, cinnabar seal stamps",
+  "motion": "weights land on the pan one by one, the beam levels when the four prerequisites agree, refusal chips are stamped off the scale, and the terminus banner settles last",
+  "transition": "the lacquer ground, gold engraving grid and weighing beam persist while the plate panels are replaced",
+  "conceptTokens": {
+    "公安机关": "Siren",
+    "人民检察院": "Landmark",
+    "人民法院": "Gavel",
+    "被害人": "UserRound",
+    "被告人": "UserRoundPen",
+    "和解协议": "Handshake",
+    "不起诉": "FileX",
+    "从宽处理": "TrendingDown",
+    "赔偿": "HandCoins",
+    "自愿性、合法性": "ShieldCheck"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/criminal-procedure/21/reconciliation-scale-pavilion/",
+    "title": "黑漆描金秤亭"
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 4,
+  "scenes": [
+    {
+      "id": "admission-conditions-scales",
+      "export": "AdmissionScalesScene",
+      "layout": "admission-weight-pan-with-prohibition-strip",
+      "anchor": "boundary",
+      "grammar": [
+        "four-preconditions-must-all-sit-on-the-pan",
+        "two-substantive-tracks-open-the-gate",
+        "seven-excluded-cases-never-weighed",
+        "public-prosecution-only-scope-marker"
+      ],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline"],
+      "focalChannels": ["contrast", "enclosure", "spatial", "annotation"],
+      "tokens": ["Scale", "Gavel", "HeartHandshake", "HandCoins", "UserRound", "ShieldCheck", "Users", "Hourglass", "Swords", "Network", "Megaphone", "Landmark", "UsersRound", "HeartPulse", "History", "Stamp"],
+      "finalKnowledge": [
+        "prerequisite-pan",
+        "scope-band",
+        "substantive-tracks",
+        "prohibition-strip",
+        "memory-band"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "three-stage-leniency-chain",
+      "export": "ThreeStageChainScene",
+      "layout": "three-stage-leniency-chain-with-terminus-banner",
+      "anchor": "timeline-gate",
+      "grammar": [
+        "police-may-only-recommend-never-withdraw",
+        "procuratorate-alone-can-end-the-prosecution",
+        "court-must-mitigate-never-acquit",
+        "partial-settlement-benefits-only-those-defendants"
+      ],
+      "textTreatments": ["chip", "external-negation", "soft-highlight", "stamp"],
+      "focalChannels": ["connector", "contrast", "enclosure", "locator"],
+      "tokens": ["Siren", "Landmark", "Gavel", "CheckCircle2", "UsersRound", "FileX"],
+      "finalKnowledge": [
+        "stage-columns",
+        "joint-crime-band",
+        "terminus-banner"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "negotiable-boundary-performance",
+      "export": "NegotiableBoundaryScene",
+      "layout": "negotiable-boundary-pair-with-performance-fork",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "civil-liability-and-leniency-are-negotiable",
+        "fact-finding-and-sentencing-stay-off-the-pan",
+        "voluntary-legality-review-precedes-the-agreement",
+        "immediate-performance-or-mediation-installments"
+      ],
+      "textTreatments": ["chip", "label-block", "external-negation", "thin-underline"],
+      "focalChannels": ["enclosure", "contrast", "connector", "annotation"],
+      "tokens": ["Handshake", "HandCoins", "MessageSquareCheck", "Search", "FolderSearch", "BookOpen", "Scale", "Ban", "ClipboardCheck", "Wallet", "ScrollText", "Signature"],
+      "finalKnowledge": [
+        "negotiable-pan",
+        "off-limits-pan",
+        "review-band",
+        "performance-fork"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "substitute-settlement-withdrawal",
+      "export": "SubstituteRevocationScene",
+      "layout": "substitution-role-pair-with-revocation-stamps",
+      "anchor": "role-pair",
+      "grammar": [
+        "victim-death-shifts-settlement-to-close-relatives",
+        "defendant-side-substitution-needs-consent",
+        "apology-remains-personal-to-the-defendant",
+        "performed-agreement-blocks-reversal-with-one-exception"
+      ],
+      "textTreatments": ["chip", "label-block", "external-negation", "stamp", "soft-highlight"],
+      "focalChannels": ["contrast", "enclosure", "icon", "annotation"],
+      "tokens": ["UserRound", "ShieldCheck", "UserRoundPen", "MessageSquareCheck", "Handshake", "CircleAlert", "Ban", "XCircle", "TrendingDown"],
+      "finalKnowledge": [
+        "victim-side",
+        "defendant-side",
+        "revocation-stamps"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}
