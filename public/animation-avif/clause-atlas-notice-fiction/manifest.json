@@ -3,7 +3,7 @@
   "compositionId": "ClauseAtlasNoticeFiction",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-08-30T16:55:47.872Z",
+  "generatedAt": "2026-08-30T17:57:45.212Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -81,7 +81,7 @@
     "width": 2560
   },
   "sourceFps": 30,
-  "sourceFingerprint": "263997b5f78afccc6108d24ac2e62182b772020498cc776c6ff37955ade733ef",
+  "sourceFingerprint": "2c0e1b55193a2e6e3bfbd3b3a46f7ef2202d848f0acaa2d1ebf6a02ce5579315",
   "targetFps": 30,
   "totalFileSize": 3598381
 }

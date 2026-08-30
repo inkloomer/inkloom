@@ -10,10 +10,6 @@ export const animationMeta = {
 };
 
 export const typography = defineAnimationTypography({
-  fontFamily: {
-    primary: "'Noto Serif SC','Source Han Serif SC','SimSun',serif",
-    fallback: "system-ui,-apple-system,'Segoe UI',Roboto,sans-serif",
-  },
   headingWeight: 700,
   bodyWeight: 400,
   sizes: { display: 32, h1: 28, h2: 22, body: 16, caption: 13, micro: 11 },
