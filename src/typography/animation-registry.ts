@@ -229,6 +229,7 @@ import {typography as typography46} from '../animations/criminal/23/influence-in
 import {typography as typography47} from '../animations/criminal/23/official-intermediary/animation.meta';
 import {typography as typographyCt11} from '../animations/criminal/11/commencement-threshold-map/animation.meta';
 import {typography as typographyAutoPenalFrontierRange} from '../animations/criminal/01/penal-frontier-range/animation.meta';
+import {typography as typographyAutoCrimeConstitutionAtlas} from '../animations/criminal/02/crime-constitution-atlas/animation.meta';
 import {typography as typographyBel} from '../animations/commercial-economic-law/01/branch-wallet-ledger/animation.meta';
 import {typography as typographyVpf} from '../animations/commercial-economic-law/01/veil-piercing-forge/animation.meta';
 import {typography as typographyLl} from '../animations/theoretical-law/01/legislation-law/animation.meta';
@@ -494,6 +495,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'theft-mistake-analysis': {metadata: typography43, scope: {animationId: 'theft-mistake-analysis', subject: 'criminal', topic: '19'}},
   'commencement-threshold-map': {metadata: typographyCt11, scope: {animationId: 'commencement-threshold-map', subject: 'criminal', topic: '11'}},
   'penal-frontier-range': {metadata: typographyAutoPenalFrontierRange, scope: {animationId: 'penal-frontier-range', subject: 'criminal', topic: '01'}},
+  'crime-constitution-atlas': {metadata: typographyAutoCrimeConstitutionAtlas, scope: {animationId: 'crime-constitution-atlas', subject: 'criminal', topic: '02'}},
   'branch-wallet-ledger': {metadata: typographyBel, scope: {animationId: 'branch-wallet-ledger', subject: 'commercial-economic-law', topic: '01'}},
   'veil-piercing-forge': {metadata: typographyVpf, scope: {animationId: 'veil-piercing-forge', subject: 'commercial-economic-law', topic: '01'}},
   'legislation-law': {metadata: typographyLl, scope: {animationId: 'legislation-law', subject: 'theoretical-law', topic: '01'}},

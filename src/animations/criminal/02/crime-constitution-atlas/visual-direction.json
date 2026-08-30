@@ -1,0 +1,28 @@
+{
+  "directionId": "anatomy-plate-atlas",
+  "family": "anatomy-plate-atlas",
+  "palette": "陈旧纸黄 plate + 铜版褐墨 ink + 动脉朱红 + 静脉深蓝 + 黄铜标线",
+  "typography": "heavy engraved headings, double-rule plate frames, double-border seal stamps, leader-style label blocks",
+  "composition": "each scene is one numbered atlas plate: labeled anatomical regions of a crime connected by review routes, premise stacks, and paired contrast lanes",
+  "surface": "aged paper plates with faint engraving hatching, double ink rules, dashed review gates, double-bordered seals; no glossy panels",
+  "motion": "regions enter in review order, seals land as verdicts, connector stubs trace the reasoning route; no idle loops",
+  "transition": "the plate frame and engraving ground persist while each scene mounts a new plate",
+  "conceptTokens": {
+    "法益": "Crosshair",
+    "危害行为": "Zap",
+    "违法事实": "Scroll",
+    "有责性": "Gavel",
+    "正当化": "ShieldCheck",
+    "宽恕事由": "KeyRound",
+    "存疑有利于被告": "Scale",
+    "真题": "GraduationCap",
+    "大前提": "ScrollText",
+    "小前提": "FileText"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/criminal/02/crime-constitution-atlas/",
+    "title": "罪体解剖图版"
+  }
+}

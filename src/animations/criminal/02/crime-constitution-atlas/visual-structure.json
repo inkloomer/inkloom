@@ -1,0 +1,107 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "playerControlSafeBottom": 168,
+  "scenes": [
+    {
+      "id": "elements-pipeline",
+      "export": "ElementsPipelineScene",
+      "layout": "review-pipeline-plate",
+      "anchor": "flow-path",
+      "grammar": ["station-sequence-review", "dual-appeal-gates"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["Crosshair", "Users", "Zap", "Compass", "Scroll", "ShieldCheck", "KeyRound"],
+      "finalKnowledge": [
+        "st-object",
+        "st-subject",
+        "st-objective",
+        "st-subjective",
+        "result-unlawful-fact",
+        "gate-justification",
+        "gate-exculpation"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "staged-crime-ladder",
+      "export": "StagedCrimeLadderScene",
+      "layout": "stage-ladder-exam-board",
+      "anchor": "timeline-gate",
+      "grammar": ["stage-ladder-progression", "exam-verdict-columns"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["Scroll", "Gavel", "KeyRound", "GraduationCap", "Ban"],
+      "finalKnowledge": [
+        "stage-one-unlawful",
+        "stage-two-responsible",
+        "stage-no-duty-consequence",
+        "exam-case-board",
+        "exam-co-conclusion",
+        "exam-duty-conclusion",
+        "exam-soviet-flaw"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "objective-first-syllogism",
+      "export": "ObjectiveFirstSyllogismScene",
+      "layout": "dual-doctrine-boards",
+      "anchor": "comparison-axis",
+      "grammar": ["objective-first-review", "premise-conclusion-stack"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "enclosure", "contrast", "spatial"],
+      "tokens": ["Zap", "Crosshair", "Ban", "ScrollText", "FileText", "Gavel"],
+      "finalKnowledge": [
+        "doctrine-objective-first",
+        "doctrine-harm-essence",
+        "doctrine-desert-case",
+        "doctrine-thought-bar",
+        "syll-major-premise",
+        "syll-minor-premise",
+        "syll-conclusion",
+        "syll-two-tasks"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "element-type-matrix",
+      "export": "ElementTypeMatrixScene",
+      "layout": "four-contrast-lane-grid",
+      "anchor": "typographic-sequence",
+      "grammar": ["paired-term-contrast", "exam-verdict-strip"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "annotation"],
+      "tokens": ["ScrollText", "LockOpen", "Ban", "Zap", "Compass", "GraduationCap"],
+      "finalKnowledge": [
+        "pair-descriptive-normative",
+        "pair-written-unwritten",
+        "pair-positive-negative",
+        "pair-objective-subjective",
+        "exam-element-verdict"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "doubt-concurrence-fork",
+      "export": "DoubtConcurrenceForkScene",
+      "layout": "doubt-fork-concurrence-split",
+      "anchor": "document-fork",
+      "grammar": ["in-doubt-favor-accused", "one-act-many-names"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["Scale", "FileText", "Zap", "Gavel", "Crosshair"],
+      "finalKnowledge": [
+        "doubt-rule",
+        "doubt-case-innocent",
+        "doubt-case-lighter",
+        "doubt-case-three",
+        "doubt-scope-note",
+        "concurrence-act",
+        "concurrence-disclosure",
+        "concurrence-floor"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}
