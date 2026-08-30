@@ -1,0 +1,70 @@
+{
+  "animationId": "interest-rights-balance",
+  "compositionId": "InterestRightsBalance",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-30T07:23:05.604Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 239,
+      "frameCount": 240,
+      "id": "object-interest-rows",
+      "number": "01",
+      "startFrame": 0,
+      "title": "对象与客体·一盘两层",
+      "durationMs": 8000,
+      "file": "object-interest-rows.avif",
+      "fileSize": 425031,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "2aea253d232bfedeb38c4addc5b3e38ddcc45722ec34778e35821122d1fa7bad",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "f39becb330bd4c3499e74c07cc5aaef76ca610caf9f54e9278d74dfc5ed951a1"
+    },
+    {
+      "endFrame": 479,
+      "frameCount": 240,
+      "id": "doctrine-fork-empty-house",
+      "number": "02",
+      "startFrame": 240,
+      "title": "法益的解释功能·空房案",
+      "durationMs": 8000,
+      "file": "doctrine-fork-empty-house.avif",
+      "fileSize": 395513,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "ad048fa6a062a0b0da8b9a348191191b7ac2f022434f480cdec2178ee3d26b38",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "081d4a1d8f17636ccd6294b02eaffe9fbd8aa3def26d562f8b5d21ffb4a29082"
+    },
+    {
+      "endFrame": 739,
+      "frameCount": 260,
+      "id": "dual-charter-balance",
+      "number": "03",
+      "startFrame": 480,
+      "title": "双重任务·冲突时优先人权",
+      "durationMs": 8667,
+      "file": "dual-charter-balance.avif",
+      "fileSize": 415869,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "70324b9b30f1f2fdfe4b4a99e1b10618cf19f08cb8151d4e88ef4fe77e011a5c",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "b1688df0663093a455321f29e202324ef58b62a02220176ba1e787b4ad5b7a4f"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "7d528028b619812bb418c42e0b40430326622e2596be139d75029c950d3c1e26",
+  "targetFps": 30,
+  "totalFileSize": 1236413
+}

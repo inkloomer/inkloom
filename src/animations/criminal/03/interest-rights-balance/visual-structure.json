@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "playerControlSafeBottom": 168,
+  "scenes": [
+    {
+      "id": "object-interest-rows",
+      "export": "ObjectInterestRowsScene",
+      "layout": "two-beam-counter-board",
+      "anchor": "role-pair",
+      "grammar": ["surface-depth-split", "theft-case-pairing"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "spatial", "enclosure"],
+      "tokens": ["Crosshair", "Milestone", "Anchor"],
+      "finalKnowledge": [
+        "concept-legal-interest",
+        "concept-essence",
+        "counter-surface-row",
+        "counter-beam",
+        "counter-interest-row"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "doctrine-fork-empty-house",
+      "export": "DoctrineForkEmptyHouseScene",
+      "layout": "doctrine-fork-case",
+      "anchor": "document-fork",
+      "grammar": ["interest-defines-elements", "doctrine-fork-verdicts"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["GraduationCap", "Compass"],
+      "finalKnowledge": [
+        "purpose-function-strip",
+        "fork-majority-room",
+        "fork-minority-room"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "dual-charter-balance",
+      "export": "DualCharterBalanceScene",
+      "layout": "dual-charter-balance",
+      "anchor": "comparison-axis",
+      "grammar": ["twin-charter-pairing", "conflict-tilt-rule"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "spatial", "connector"],
+      "tokens": ["ScrollText", "KeyRound", "Gavel", "GraduationCap"],
+      "finalKnowledge": [
+        "charter-benefit-stele",
+        "charter-rights-stele",
+        "charter-tilt-board",
+        "charter-conflict-rule",
+        "charter-prison-case"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

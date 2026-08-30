@@ -1,0 +1,26 @@
+{
+  "directionId": "twin-beam-abacus",
+  "family": "twin-beam-abacus",
+  "palette": "宣纸底 + 栗木框 + 乌木珠 + 黄铜珠 + 朱红档线 + 靛蓝",
+  "typography": "heavy woodblock headings, rounded bead chips, counter-style label blocks, double-frame verdict seals",
+  "composition": "an abacus counter splits each scene into surface and depth: beads above the beam are visible objects, beads below the beam are protected interests; doctrine rooms and charter steles flank the frame",
+  "surface": "paper grain, wooden beam bands, pill-shaped bead chips, round-dash review routes, double-frame seals; no glossy panels",
+  "motion": "facts push beads into rows, routes fork into doctrine rooms, seals land as verdicts; no idle loops",
+  "transition": "the wooden beam persists as the surface/depth boundary across scenes",
+  "conceptTokens": {
+    "法益": "Crosshair",
+    "对象": "Milestone",
+    "客体": "Anchor",
+    "人权": "KeyRound",
+    "定罪": "Gavel",
+    "真题": "GraduationCap",
+    "学说": "Compass",
+    "宪章": "ScrollText"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/criminal/03/interest-rights-balance/",
+    "title": "双梁算盘房"
+  }
+}
