@@ -1,0 +1,117 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "missing-person-bench",
+      "export": "MissingPersonScene",
+      "layout": "missing-person-proclamation-bench",
+      "anchor": "flow-path",
+      "grammar": [
+        "declaration-needs-two-years-absence-and-an-interested-applicant",
+        "identity-and-property-interested-parties-may-petition-the-local-court",
+        "three-month-public-notice-precedes-the-missing-verdict",
+        "missing-declaration-only-appoints-a-custodian-without-changing-relations"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["connector", "motion", "contrast", "annotation"],
+      "tokens": ["FileSearch", "Megaphone", "Clock", "Gavel"],
+      "finalKnowledge": [
+        "missing-definition",
+        "petitioner-scope",
+        "notice-flow",
+        "verdict-rule"
+      ],
+      "statefulObjects": ["missing-poster-ticket"]
+    },
+    {
+      "id": "property-custodian-desk",
+      "export": "PropertyCustodianScene",
+      "layout": "custodian-desk-with-dual-boundary",
+      "anchor": "role-pair",
+      "grammar": [
+        "custodian-exercises-claims-and-performs-debts-as-a-party",
+        "custodian-may-dispose-only-for-custody-duties",
+        "custodian-liability-requires-intent-or-gross-negligence",
+        "missing-declaration-changes-neither-property-nor-status-relations"
+      ],
+      "textTreatments": ["label-block", "stamp", "soft-highlight", "thin-underline"],
+      "focalChannels": ["contrast", "icon", "enclosure", "annotation"],
+      "tokens": ["Key", "Briefcase", "Scale", "Home"],
+      "finalKnowledge": [
+        "custodian-role",
+        "disposal-boundary",
+        "liability-rule",
+        "house-case-verdicts"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "death-declaration-gate",
+      "export": "DeathDeclarationScene",
+      "layout": "dual-period-gate-with-petition-ladder",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "four-years-or-two-years-or-proven-impossible-opens-the-gate",
+        "death-petitioners-face-stricter-tiers-than-missing-petitioners",
+        "subrogated-heirs-need-a-fallback-condition-to-petition",
+        "property-creditors-are-default-barred-unless-protection-fails"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["contrast", "connector", "enclosure", "annotation"],
+      "tokens": ["Timer", "Users", "UserX", "Landmark"],
+      "finalKnowledge": [
+        "period-gate",
+        "petitioner-ladder",
+        "scope-contrast",
+        "old-jia-verdicts"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "death-effects-fork",
+      "export": "DeathEffectsScene",
+      "layout": "dead-or-alive-fork-bench",
+      "anchor": "role-pair",
+      "grammar": [
+        "declaration-terminates-marriage-and-opens-succession",
+        "before-rescission-the-verdict-stays-effective",
+        "inheritance-and-marriage-count-the-person-dead",
+        "other-acts-count-the-person-alive-and-still-protected"
+      ],
+      "textTreatments": ["label-block", "stamp", "external-negation", "thin-underline"],
+      "focalChannels": ["contrast", "icon", "enclosure", "annotation"],
+      "tokens": ["Heart", "ScrollText", "UserCheck", "Ghost"],
+      "finalKnowledge": [
+        "primary-effects",
+        "pre-rescission-rule",
+        "dead-side-rule",
+        "alive-side-rule"
+      ],
+      "statefulObjects": ["homecoming-ticket"]
+    },
+    {
+      "id": "rescission-verdict-wall",
+      "export": "RescissionVerdictScene",
+      "layout": "rescission-wall-with-restitution-lanes",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "rescission-needs-survival-and-an-interested-application",
+        "restitution-runs-against-those-who-took-under-succession-law",
+        "original-thing-back-or-proper-compensation-when-gone",
+        "malicious-concealment-pays-interest-full-damages-and-no-marriage-return"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "external-negation"],
+      "focalChannels": ["icon", "contrast", "enclosure", "annotation"],
+      "tokens": ["Gavel", "Car", "Scale", "Ban"],
+      "finalKnowledge": [
+        "rescission-gate",
+        "restitution-lanes",
+        "marriage-restore-rule",
+        "malicious-concealment-verdicts"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

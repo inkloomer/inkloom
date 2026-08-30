@@ -164,6 +164,7 @@ import {typography as typographyAutoDirectorDuties} from '../animations/commerci
 import {typography as typographyAutoInformationRight} from '../animations/commercial-law/04/information-right/animation.meta';
 import {typography as typographyAutoRightsShieldArmory} from '../animations/civil-law/01/rights-shield-armory/animation.meta';
 import {typography as typographyAutoCapacityGuardianshipRegistry} from '../animations/civil-law/02/capacity-guardianship-registry/animation.meta';
+import {typography as typographyAutoAbsenceProclamationHall} from '../animations/civil-law/02/absence-proclamation-hall/animation.meta';
 import {typography as typographyAutoDividendRight} from '../animations/commercial-law/04/dividend-right/animation.meta';
 import {typography as typographyAutoShareholderQualification} from '../animations/commercial-law/03/shareholder-qualification/animation.meta';
 import {typography as typographyAutoNominalShareholder} from '../animations/commercial-law/03/nominal-shareholder/animation.meta';
@@ -206,6 +207,7 @@ import {typography as typographyAutoAmberTwinScale} from '../animations/commerci
 import {typography as typographyAutoIndigoEstateVault} from '../animations/commercial-economic-law/05/indigo-estate-vault/animation.meta';
 import {typography as typographyAutoPlumAppealsClockhouse} from '../animations/commercial-economic-law/05/plum-appeals-clockhouse/animation.meta';
 import {typography as typographyAutoQuartzSproutGreenhouse} from '../animations/commercial-economic-law/05/quartz-sprout-greenhouse/animation.meta';
+import {typography as typographyAutoAzureDraftHall} from '../animations/commercial-economic-law/06/azure-draft-hall/animation.meta';
 import {typography as typographyAutoReckoningAbacusDesk} from '../animations/administrative-law/24/reckoning-abacus-desk/animation.meta';
 import {typography as typographyAutoBambooScrollRestoration} from '../animations/administrative-law/23/bamboo-scroll-restoration/animation.meta';
 import {typography as typographyAutoLighthouseWatchNetwork} from '../animations/administrative-law/20/lighthouse-watch-network/animation.meta';
@@ -250,7 +252,6 @@ import {typography as typographyAutoJurisdictionSeaChart} from '../animations/cr
 import {typography as typographyAutoRecusalBackstageSwap} from '../animations/criminal-procedure-gold/05/recusal-backstage-swap/animation.meta';
 import {typography as typographyAutoDefenseHeraldicHall} from '../animations/criminal-procedure-gold/06/defense-heraldic-hall/animation.meta';
 import {typography as typographyAutoEvidenceApothecaryCabinet} from '../animations/criminal-procedure-gold/07/evidence-apothecary-cabinet/animation.meta';
-import {typography as typographyAutoExclusionCustomsGate} from '../animations/criminal-procedure-gold/07/exclusion-customs-gate/animation.meta';
 import {typography as typographyAutoExclusionCustomsGate} from '../animations/criminal-procedure-gold/07/exclusion-customs-gate/animation.meta';
 import {typography as typographyBel} from '../animations/commercial-economic-law/01/branch-wallet-ledger/animation.meta';
 import {typography as typographyVpf} from '../animations/commercial-economic-law/01/veil-piercing-forge/animation.meta';
@@ -426,6 +427,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'information-right': {metadata: typographyAutoInformationRight, scope: {animationId: 'information-right', subject: 'commercial-law', topic: '04'}},
   'rights-shield-armory': {metadata: typographyAutoRightsShieldArmory, scope: {animationId: 'rights-shield-armory', subject: 'civil-law', topic: '01'}},
   'capacity-guardianship-registry': {metadata: typographyAutoCapacityGuardianshipRegistry, scope: {animationId: 'capacity-guardianship-registry', subject: 'civil-law', topic: '02'}},
+  'absence-proclamation-hall': {metadata: typographyAutoAbsenceProclamationHall, scope: {animationId: 'absence-proclamation-hall', subject: 'civil-law', topic: '02'}},
   'dividend-right': {metadata: typographyAutoDividendRight, scope: {animationId: 'dividend-right', subject: 'commercial-law', topic: '04'}},
   'shareholder-qualification': {metadata: typographyAutoShareholderQualification, scope: {animationId: 'shareholder-qualification', subject: 'commercial-law', topic: '03'}},
   'nominal-shareholder': {metadata: typographyAutoNominalShareholder, scope: {animationId: 'nominal-shareholder', subject: 'commercial-law', topic: '03'}},
@@ -466,6 +468,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'indigo-estate-vault': {metadata: typographyAutoIndigoEstateVault, scope: {animationId: 'indigo-estate-vault', subject: 'commercial-economic-law', topic: '05'}},
   'plum-appeals-clockhouse': {metadata: typographyAutoPlumAppealsClockhouse, scope: {animationId: 'plum-appeals-clockhouse', subject: 'commercial-economic-law', topic: '05'}},
   'quartz-sprout-greenhouse': {metadata: typographyAutoQuartzSproutGreenhouse, scope: {animationId: 'quartz-sprout-greenhouse', subject: 'commercial-economic-law', topic: '05'}},
+  'azure-draft-hall': {metadata: typographyAutoAzureDraftHall, scope: {animationId: 'azure-draft-hall', subject: 'commercial-economic-law', topic: '06'}},
   'reckoning-abacus-desk': {metadata: typographyAutoReckoningAbacusDesk, scope: {animationId: 'reckoning-abacus-desk', subject: 'administrative-law', topic: '24'}},
   'bamboo-scroll-restoration': {metadata: typographyAutoBambooScrollRestoration, scope: {animationId: 'bamboo-scroll-restoration', subject: 'administrative-law', topic: '23'}},
   'lighthouse-watch-network': {metadata: typographyAutoLighthouseWatchNetwork, scope: {animationId: 'lighthouse-watch-network', subject: 'administrative-law', topic: '20'}},
@@ -553,7 +556,6 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'recusal-backstage-swap': {metadata: typographyAutoRecusalBackstageSwap, scope: {animationId: 'recusal-backstage-swap', subject: 'criminal-procedure-gold', topic: '05'}},
   'defense-heraldic-hall': {metadata: typographyAutoDefenseHeraldicHall, scope: {animationId: 'defense-heraldic-hall', subject: 'criminal-procedure-gold', topic: '06'}},
   'evidence-apothecary-cabinet': {metadata: typographyAutoEvidenceApothecaryCabinet, scope: {animationId: 'evidence-apothecary-cabinet', subject: 'criminal-procedure-gold', topic: '07'}},
-  'exclusion-customs-gate': {metadata: typographyAutoExclusionCustomsGate, scope: {animationId: 'exclusion-customs-gate', subject: 'criminal-procedure-gold', topic: '07'}},
   'exclusion-customs-gate': {metadata: typographyAutoExclusionCustomsGate, scope: {animationId: 'exclusion-customs-gate', subject: 'criminal-procedure-gold', topic: '07'}},
   'branch-wallet-ledger': {metadata: typographyBel, scope: {animationId: 'branch-wallet-ledger', subject: 'commercial-economic-law', topic: '01'}},
   'veil-piercing-forge': {metadata: typographyVpf, scope: {animationId: 'veil-piercing-forge', subject: 'commercial-economic-law', topic: '01'}},

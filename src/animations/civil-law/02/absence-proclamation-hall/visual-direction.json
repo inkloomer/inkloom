@@ -1,0 +1,22 @@
+{
+  "directionId": "empty-chair-proclamation-hall",
+  "family": "empty-chair-proclamation-hall",
+  "palette": "warm ash dusk, fog grey, bone paper cream, rust seal orange, moss green, plum violet, graphite ink",
+  "typography": "proclamation broadside headings on ash timber boards, chalked period lines and rust wax verdicts",
+  "composition": "a proclamation hall with an empty chair on the dais, a missing-person bench, a custodian desk, a dual-period gate, a dead-or-alive fork and a rescission verdict wall",
+  "surface": "weathered notice boards, bone paper broadsides, rust wax seals, moss verdict stamps",
+  "motion": "search posters travel from the petition bench through the notice board to the verdict desk, period dials wind up at the gate, homecoming tickets fly back to the fork",
+  "transition": "the hall dais, empty chair and notice board persist while benches, gates and walls are re-dressed between scenes",
+  "conceptTokens": {
+    "寻人公告": "FileSearch",
+    "财产代管": "Key",
+    "法定期间": "Timer",
+    "裁判": "Gavel"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/civil-law/02/absence-proclamation-hall/",
+    "title": "空椅公告堂"
+  }
+}
