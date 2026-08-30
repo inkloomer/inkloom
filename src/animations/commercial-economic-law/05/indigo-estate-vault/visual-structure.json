@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 4,
+  "playerControlSafeBottom": 168,
+  "scenes": [
+    {
+      "id": "four-fork",
+      "export": "FourForkScene",
+      "layout": "four-fork-intersection",
+      "anchor": "document-fork",
+      "grammar": ["security-claim-deferred-rule", "possessor-owns-money-rule", "bad-faith-offset-ban-rule"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["Landmark", "FileSignature", "Coins", "Ban", "GraduationCap"],
+      "finalKnowledge": [
+        "fq-mortgage-desk",
+        "fq-contract-desk",
+        "fq-money-desk",
+        "fq-offset-desk",
+        "fq-exam-strip"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "worker-claims",
+      "export": "WorkerClaimsScene",
+      "layout": "worker-claims-noticeboard",
+      "anchor": "comparison-axis",
+      "grammar": ["staff-claim-no-declaration-rule", "human-injury-payment-protected-rule"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["HardHat", "Gavel", "GraduationCap"],
+      "finalKnowledge": [
+        "wc-noscript-desk",
+        "wc-humanedesk",
+        "wc-lawsuit-desk",
+        "wc-exam-strip"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "transit-gate",
+      "export": "TransitGateScene",
+      "layout": "transit-gate-inspection",
+      "anchor": "timeline-gate",
+      "grammar": ["transit-retrieval-two-gates-rule", "restore-original-state-rule"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["Truck", "PackageOpen", "Coins", "GraduationCap"],
+      "finalKnowledge": [
+        "tg-gate-desk",
+        "tg-recover-desk",
+        "tg-exam-strip"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "clawback",
+      "export": "ClawbackScene",
+      "layout": "clawback-twin-desk",
+      "anchor": "comparison-axis",
+      "grammar": ["abnormal-income-clawback-rule", "capital-withdrawal-no-limitation-rule"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["Award", "Ban", "Undo2", "GraduationCap"],
+      "finalKnowledge": [
+        "cb-bonus-desk",
+        "cb-offset-desk",
+        "cb-shares-desk",
+        "cb-exam-strip"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}
