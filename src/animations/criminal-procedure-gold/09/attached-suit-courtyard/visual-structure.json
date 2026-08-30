@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "playerControlSafeBottom": 168,
+  "scenes": [
+    {
+      "id": "plaintiff-eligibility-hall",
+      "export": "PlaintiffHallScene",
+      "layout": "plaintiff-eligibility-hall",
+      "anchor": "role-pair",
+      "grammar": ["eligibility-role-pair", "divergent-path-contrast"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "connector", "spatial"],
+      "tokens": ["HandCoins", "UserRound", "Users", "Landmark", "GraduationCap"],
+      "finalKnowledge": [
+        "plaintiff-eligibility-card",
+        "divergent-path-card"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "loss-scope-gate",
+      "export": "LossScopeScene",
+      "layout": "loss-scope-gate",
+      "anchor": "boundary",
+      "grammar": ["scope-gate-fork", "rejected-lane-contrast"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
+      "tokens": ["CircleDollarSign", "Gavel", "GraduationCap"],
+      "finalKnowledge": [
+        "scope-gate-card",
+        "rejected-lane-card"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "public-interest-track",
+      "export": "PublicInterestScene",
+      "layout": "public-interest-track",
+      "anchor": "flow-path",
+      "grammar": ["merge-track-rule", "escort-chain-steps"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["Globe", "Gavel", "PackageOpen", "GraduationCap"],
+      "finalKnowledge": [
+        "merge-track-card",
+        "escort-chain-card"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}
