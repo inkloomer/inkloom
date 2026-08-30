@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "playerControlSafeBottom": 168,
+  "scenes": [
+    {
+      "id": "triage-board",
+      "export": "TriageBoardScene",
+      "layout": "triage-sorting-board",
+      "anchor": "comparison-axis",
+      "grammar": ["debt-type-triage", "liability-tier-split"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["TrendingDown", "ShieldCheck", "GraduationCap"],
+      "finalKnowledge": [
+        "tri-special-desk",
+        "tri-ordinary-desk",
+        "tri-exam-strip"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "verdict-ward",
+      "export": "VerdictWardScene",
+      "layout": "verdict-ward-pair",
+      "anchor": "role-pair",
+      "grammar": ["fault-joinder-rule", "audit-connate-liability"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["Users", "ShieldCheck", "GraduationCap"],
+      "finalKnowledge": [
+        "ver-surgeons-desk",
+        "ver-nurses-desk",
+        "ver-exam-strip"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "tenure-timeline",
+      "export": "TenureTimelineScene",
+      "layout": "tenure-timeline-table",
+      "anchor": "timeline-gate",
+      "grammar": ["pre-exit-continuity", "liability-matrix-recap"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["Landmark", "Users", "GraduationCap"],
+      "finalKnowledge": [
+        "ten-timeline-desk",
+        "ten-matrix-board",
+        "ten-exam-verdict"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

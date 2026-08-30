@@ -1,0 +1,23 @@
+{
+  "directionId": "scrub-clinic-triage-board",
+  "family": "clinic-triage-liability-ward",
+  "palette": "ward white field + scrub green gowns + triage red charts + case-file cream + ink black + bamboo jade passes",
+  "typography": "triage ward headlines, case chart labels, square scrub-jade verdict stamps, dashed triage rules",
+  "composition": "a debt triage board splitting special from ordinary liabilities, a verdict ward pairing the faulting surgeon with the capped nurses station, and a tenure timeline with a liability matrix",
+  "surface": "white ward walls with case charts and triage ribbons; no glossy panels",
+  "motion": "cases are triaged to desks in legal order, the faulting surgeon is named, the exit timeline walks year by year; no idle loops",
+  "transition": "the ward persists while each scene re-stages the same triage board for a new question",
+  "conceptTokens": {
+    "债务分诊": "TrendingDown",
+    "责任矩阵": "Users",
+    "连带": "ShieldCheck",
+    "时间线": "Landmark",
+    "真题": "GraduationCap"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/commercial-economic-law/02/special-partnership-triage/",
+    "title": "分诊责任台"
+  }
+}

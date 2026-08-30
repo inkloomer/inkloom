@@ -1,0 +1,70 @@
+{
+  "animationId": "special-partnership-triage",
+  "compositionId": "SpecialPartnershipTriage",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-30T00:01:29.282Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 279,
+      "frameCount": 280,
+      "id": "triage-board",
+      "number": "01",
+      "startFrame": 0,
+      "title": "分诊台：先看债务，再找人",
+      "durationMs": 9333,
+      "file": "triage-board.avif",
+      "fileSize": 438709,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "d949a3618c6d7e27768baff92050416c909bc1f2f1cebead825b86d0210451a4",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "d84d089f2e04d569d43c0f92d634e10bc4e4e3cae08bdfc81ad1d9ef56ad937f"
+    },
+    {
+      "endFrame": 559,
+      "frameCount": 280,
+      "id": "verdict-ward",
+      "number": "02",
+      "startFrame": 280,
+      "title": "本案分诊结果：四方定责",
+      "durationMs": 9333,
+      "file": "verdict-ward.avif",
+      "fileSize": 381137,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "7755d49cc1b9fd404ff804174625a25dd841af867711e9f27636bc4817cda01d",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "d84d089f2e04d569d43c0f92d634e10bc4e4e3cae08bdfc81ad1d9ef56ad937f"
+    },
+    {
+      "endFrame": 849,
+      "frameCount": 290,
+      "id": "tenure-timeline",
+      "number": "03",
+      "startFrame": 560,
+      "title": "离院不免责：退伙时间线与责任矩阵",
+      "durationMs": 9667,
+      "file": "tenure-timeline.avif",
+      "fileSize": 546832,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "c60341a795f280147cd91150afc8465a9c6b9eb5eb3c57a277e71f706e6034d0",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "d84d089f2e04d569d43c0f92d634e10bc4e4e3cae08bdfc81ad1d9ef56ad937f"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "d84d089f2e04d569d43c0f92d634e10bc4e4e3cae08bdfc81ad1d9ef56ad937f",
+  "targetFps": 30,
+  "totalFileSize": 1366678
+}
