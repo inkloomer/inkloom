@@ -1,0 +1,15 @@
+{
+  "directionId": "promotion-board-hall",
+  "family": "board-hall-promotion",
+  "title": "广宣公告栏",
+  "subject": "theoretical-law",
+  "chapter": "04",
+  "concept": "广宣公告栏：可以推广与不得推广分两栏公告，广告禁止三情形贴封条，宣传三不能作压栏批注。图形层主题；画面文字一律使用源笔记法考名词",
+  "palette": "公告厅 promotion #33362F、深厅 promotionDeep #272A24、面板 panel #F0EBDA、暗面板 panelDim #E1DCC7、镶边 edge #646B5E、墨字 ink #262923、淡墨 inkSoft #565D51、公告金 board #C0983E、禁止红 forbid #B04834、宣传青 publicity #4E7D74、纸白 paper #F6F1E0",
+  "typography": "标题用 var(--inkloom-animation-title)，正文用 var(--inkloom-animation-body)；公告行加粗法考名词，禁止情形贴封条",
+  "composition": "可以/不得双栏 + 广告封条三情形 + 宣传三不能批注",
+  "surface": "公告厅墙纹 + 公告框线 + 封条纹",
+  "motion": "公告钉挂、封条横贴、批注压栏",
+  "transition": "硬切换幕",
+  "catalog": ["考点75 律师执业推广规范"]
+}

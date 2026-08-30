@@ -1,0 +1,29 @@
+{
+  "animationId": "lawyer-promotion",
+  "scenes": [
+    {
+      "id": "principles",
+      "export": "PrinciplesScene",
+      "layout": "may-versus-must-not-columns",
+      "anchor": "main center",
+      "grammar": "可以推广四条（简介介绍业务领域专业特长/学术论文案例分析专题解答授课/举办参加研讨会推荐特长/公益活动社团组织）对不得七条（中介推荐人利益许诺/虚假信息夸大能力/明示暗示关联机关特殊关系/贬低同行/回扣承揽/低于同行收费）",
+      "textTreatments": ["board columns", "forbid seals"],
+      "focalChannels": ["may column", "must-not column"],
+      "tokens": ["Megaphone", "Ban", "Users"],
+      "finalKnowledge": "promotion-principles",
+      "statefulObjects": ["board panel x2"]
+    },
+    {
+      "id": "ad-publicity",
+      "export": "AdPublicityScene",
+      "layout": "ad-seals-plus-notes",
+      "anchor": "main center",
+      "grammar": "广告主体与内容（律师和律所均可·个人名义注明执业机构和执业证号）+广告禁止三情形封条（未过年度考核/停止执业停业整顿期间/通报批评公开谴责未满1年）+宣传三不能批注",
+      "textTreatments": ["ad rows", "seal strips"],
+      "focalChannels": ["three forbid seals", "three cannot notes"],
+      "tokens": ["ScrollText", "Ban", "Eye"],
+      "finalKnowledge": "ad-publicity-rules",
+      "statefulObjects": ["ad panel", "seal strip x3"]
+    }
+  ]
+}

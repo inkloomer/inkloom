@@ -1,0 +1,53 @@
+{
+  "animationId": "lawyer-promotion",
+  "compositionId": "LawyerPromotion",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-30T18:10:03.345Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 251,
+      "frameCount": 252,
+      "id": "principles",
+      "number": "01",
+      "startFrame": 0,
+      "title": "律师执业推广的原则",
+      "durationMs": 8400,
+      "file": "principles.avif",
+      "fileSize": 610939,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "a5689009e25c804c522ed0b4c3a30e63176b7a52d0ae8463236b795baef7c8d6",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "3899a45f3a9376e0206cca0a0867fa1725f527c7f84d153463458469add48245"
+    },
+    {
+      "endFrame": 491,
+      "frameCount": 240,
+      "id": "ad-publicity",
+      "number": "02",
+      "startFrame": 252,
+      "title": "律师广告与宣传规范",
+      "durationMs": 8000,
+      "file": "ad-publicity.avif",
+      "fileSize": 615872,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "03659df0d4db779d76c07cbd95632b8921a022bcef6ab27d7e9115f6baa62c86",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "3899a45f3a9376e0206cca0a0867fa1725f527c7f84d153463458469add48245"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "3899a45f3a9376e0206cca0a0867fa1725f527c7f84d153463458469add48245",
+  "targetFps": 30,
+  "totalFileSize": 1226811
+}
