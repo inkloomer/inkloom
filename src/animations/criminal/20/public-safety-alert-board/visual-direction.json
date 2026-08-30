@@ -1,0 +1,24 @@
+{
+  "directionId": "siren-alert-board",
+  "family": "siren-alert-board",
+  "palette": "警报板米白 board + 警灯红 siren + 夜空蓝 night + 警戒黄 yellow + 安全区绿 green",
+  "typography": "heavy alert headings, square alarm chips, night label blocks, double-frame siren verdicts",
+  "composition": "a public-safety alert board: dual-ruler meaning board, danger-methods floor, destruction and traffic wards, and the driving-guns-safety panel",
+  "surface": "board paper grain, alarm chips, dashed exclusion zones, double-frame siren stamps; no glossy panels",
+  "motion": "alert boards enter in reasoning order, sirens land as verdicts, exclusion zones light up; no idle loops",
+  "transition": "the board ground persists while each scene mounts a new alert panel",
+  "conceptTokens": {
+    "公共安全": "Scale",
+    "放火罪": "Flame",
+    "危险驾驶罪": "Zap",
+    "交通肇事罪": "Gavel",
+    "破坏交通工具罪": "Ban",
+    "逃逸": "Hourglass"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/criminal/20/public-safety-alert-board/",
+    "title": "警铃警报板"
+  }
+}

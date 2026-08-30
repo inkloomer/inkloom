@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "playerControlSafeBottom": 168,
+  "scenes": [
+    {
+      "id": "meaning-fire-rulers",
+      "export": "MeaningFireRulersScene",
+      "layout": "meaning-fire-dual-board",
+      "anchor": "comparison-axis",
+      "grammar": ["rulers-panel", "fire-relations-panel"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
+      "tokens": ["Flame", "Scale", "Ban", "Zap", "Gavel"],
+      "finalKnowledge": ["rulers-panel", "fire-relations-panel", "poison-vs-fake"],
+      "statefulObjects": []
+    },
+    {
+      "id": "danger-methods-floor",
+      "export": "DangerMethodsFloorScene",
+      "layout": "danger-methods-tri-vault",
+      "anchor": "boundary",
+      "grammar": ["five-points-panel", "seven-ways-panel"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "connector"],
+      "tokens": ["Zap", "Scale", "Ban", "Users", "Gavel"],
+      "finalKnowledge": ["five-points-panel", "seven-ways-panel", "destruction-panel"],
+      "statefulObjects": []
+    },
+    {
+      "id": "traffic-accident-ward",
+      "export": "TrafficAccidentWardScene",
+      "layout": "traffic-accident-tri-ward",
+      "anchor": "timeline-gate",
+      "grammar": ["elements-panel", "escape-panel"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "connector"],
+      "tokens": ["Zap", "Scale", "Ban", "Users", "Gavel"],
+      "finalKnowledge": ["elements-panel", "escape-panel", "death-escape-panel"],
+      "statefulObjects": []
+    },
+    {
+      "id": "driving-guns-safety",
+      "export": "DrivingGunsSafetyScene",
+      "layout": "driving-guns-safety-tri-ward",
+      "anchor": "flow-path",
+      "grammar": ["driving-panel", "guns-panel"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "connector"],
+      "tokens": ["Zap", "Ban", "Scale", "Gavel"],
+      "finalKnowledge": ["driving-panel", "guns-panel", "safety-panel"],
+      "statefulObjects": []
+    }
+  ]
+}

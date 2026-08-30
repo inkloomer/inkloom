@@ -312,6 +312,7 @@ import {typography as typographyLa} from '../animations/theoretical-law/04/legal
 import {typography as typographyNq} from '../animations/theoretical-law/04/notary-qualifications/animation.meta';
 import {typography as typographyNo} from '../animations/theoretical-law/04/notary-organs/animation.meta';
 import {typography as typographyNr} from '../animations/theoretical-law/04/notary-refusal/animation.meta';
+import {typography as typographyNpr} from '../animations/theoretical-law/04/notary-procedure/animation.meta';
 import {typography as typographyCc} from '../animations/theoretical-law/01/constitution-classification/animation.meta';
 import {typography as typographyCdv} from '../animations/theoretical-law/01/constitution-development/animation.meta';
 import {typography as typographyCp} from '../animations/theoretical-law/01/constitution-principles/animation.meta';
@@ -670,6 +671,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'notary-qualifications': {metadata: typographyNq, scope: {animationId: 'notary-qualifications', subject: 'theoretical-law', topic: '04'}},
   'notary-organs': {metadata: typographyNo, scope: {animationId: 'notary-organs', subject: 'theoretical-law', topic: '04'}},
   'notary-refusal': {metadata: typographyNr, scope: {animationId: 'notary-refusal', subject: 'theoretical-law', topic: '04'}},
+  'notary-procedure': {metadata: typographyNpr, scope: {animationId: 'notary-procedure', subject: 'theoretical-law', topic: '04'}},
   'profit-reserve-granary': {metadata: typographyPrg, scope: {animationId: 'profit-reserve-granary', subject: 'commercial-economic-law', topic: '01'}},
   'promoter-liability-ropewalk': {metadata: typographyPlr, scope: {animationId: 'promoter-liability-ropewalk', subject: 'commercial-economic-law', topic: '01'}},
   'fight-defense-diagram': {metadata: typography44, scope: {animationId: 'fight-defense-diagram', subject: 'criminal', topic: '22'}},
