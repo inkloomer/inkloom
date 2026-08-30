@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 4,
+  "playerControlSafeBottom": 168,
+  "scenes": [
+    {
+      "id": "freeze-gate",
+      "export": "FreezeGateScene",
+      "layout": "undeclared-freeze-gate",
+      "anchor": "timeline-gate",
+      "grammar": ["undeclared-claim-freeze-rule", "same-class-settlement-rule"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["BellOff", "Sprout", "GraduationCap"],
+      "finalKnowledge": [
+        "ud-freeze-desk",
+        "ud-after-desk",
+        "ud-exam-strip"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "investor-group",
+      "export": "InvestorGroupScene",
+      "layout": "investor-group-vote-desk",
+      "anchor": "comparison-axis",
+      "grammar": ["investor-group-vote-rule", "shareholder-meeting-replaced-rule"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["Users", "Vote", "GraduationCap"],
+      "finalKnowledge": [
+        "ig-setup-desk",
+        "ig-rule-desk",
+        "ig-exam-strip"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "workbench",
+      "export": "WorkbenchScene",
+      "layout": "restructuring-workbench",
+      "anchor": "document-fork",
+      "grammar": ["new-loan-common-benefit-limited-rule", "pledge-retrieval-market-cap-rule"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["HandCoins", "PackageCheck", "GraduationCap"],
+      "finalKnowledge": [
+        "rw-loan-desk",
+        "rw-pledge-desk",
+        "rw-exam-strip"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "equity-gate",
+      "export": "EquityGateScene",
+      "layout": "cramdown-equity-gate",
+      "anchor": "timeline-gate",
+      "grammar": ["cramdown-negotiate-first-rule", "fair-value-conversion-rule"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["Stamp", "Users", "ArrowRightLeft", "GraduationCap"],
+      "finalKnowledge": [
+        "ce-ladder-desk",
+        "ce-conditions-desk",
+        "ce-swap-desk"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

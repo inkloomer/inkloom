@@ -1,0 +1,27 @@
+{
+  "directionId": "quartz-sprout-greenhouse",
+  "family": "quartz-sprout-greenhouse",
+  "palette": "pale quartz shell + warm paper cards + moss revival greens + terracotta dismissals + berry greenhouse frames + gold seals + ink strips",
+  "typography": "greenhouse headlines, shell paper labels, square moss revival stamps, dashed potting rules",
+  "composition": "a freeze gate locking undeclared claims during execution, an investor-group vote desk weighing headcount and equity keys, a restructuring workbench pairing new loans with pledge retrieval, and an equity gate stacking cramdown conditions over debt-for-equity conversion",
+  "surface": "soft quartz greenhouse walls with paper cards and berry frames; no glossy panels",
+  "motion": "claims freeze at the gate, votes clear the double-key desk, loans and pledges move across the workbench, the cramdown ladder seals the plan; no idle loops",
+  "transition": "the quartz sprout greenhouse persists while each scene re-stages the same revival bench for a new question",
+  "conceptTokens": {
+    "未申报债权": "BellOff",
+    "重整计划": "Sprout",
+    "出资人组": "Users",
+    "表决": "Vote",
+    "新借款": "HandCoins",
+    "取回质物": "PackageCheck",
+    "强制批准": "Stamp",
+    "债转股": "ArrowRightLeft",
+    "真题": "GraduationCap"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/commercial-economic-law/05/quartz-sprout-greenhouse/",
+    "title": "春芽暖房"
+  }
+}
