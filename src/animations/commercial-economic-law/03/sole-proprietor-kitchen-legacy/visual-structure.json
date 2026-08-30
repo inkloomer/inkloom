@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "playerControlSafeBottom": 168,
+  "scenes": [
+    {
+      "id": "identity",
+      "export": "IdentityScene",
+      "layout": "identity-family-desk",
+      "anchor": "comparison-axis",
+      "grammar": ["identity-invariance-rule", "management-mode-neutral-rule"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["Coins", "Users", "GraduationCap"],
+      "finalKnowledge": [
+        "idn-family-desk",
+        "idn-management-desk",
+        "idn-exam-strip"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "five-year",
+      "export": "FiveYearScene",
+      "layout": "five-year-timeline-desk",
+      "anchor": "timeline-gate",
+      "grammar": ["five-year-tail-rule", "claim-extinction-rule"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["TrendingDown", "Scale", "GraduationCap"],
+      "finalKnowledge": [
+        "fy-timeline-desk",
+        "fy-compare-desk",
+        "fy-exam-strip"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "inheritance",
+      "export": "InheritanceScene",
+      "layout": "inheritance-roads-desk",
+      "anchor": "document-fork",
+      "grammar": ["inheritance-multiroad-rule", "absolute-word-trap"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["FileText", "Stamp", "GraduationCap"],
+      "finalKnowledge": [
+        "inh-roads-desk",
+        "inh-trap-desk",
+        "inh-recap-desk"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

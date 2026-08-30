@@ -1,0 +1,70 @@
+{
+  "animationId": "sole-proprietor-kitchen-legacy",
+  "compositionId": "SoleProprietorKitchenLegacy",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-30T03:43:57.919Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 279,
+      "frameCount": 280,
+      "id": "identity",
+      "number": "01",
+      "startFrame": 0,
+      "title": "一个灶主：家庭出资不改招牌",
+      "durationMs": 9333,
+      "file": "identity.avif",
+      "fileSize": 333697,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "6bd32c1f1a82d711589848d84e5c08ea127298d1f24ea4cf7f42c87f6bb752e7",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "4ed0cb4bd3348bf3603459431284f3d65846cf706d6bfa729d85ef968fec8f5e"
+    },
+    {
+      "endFrame": 579,
+      "frameCount": 300,
+      "id": "five-year",
+      "number": "02",
+      "startFrame": 280,
+      "title": "熄灶五年：责任的尾巴",
+      "durationMs": 10000,
+      "file": "five-year.avif",
+      "fileSize": 397391,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "2f3a43d88dc8778473a581f3aab22619a540486ba00125a87db5b5143e6c6d23",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "4ed0cb4bd3348bf3603459431284f3d65846cf706d6bfa729d85ef968fec8f5e"
+    },
+    {
+      "endFrame": 869,
+      "frameCount": 290,
+      "id": "inheritance",
+      "number": "03",
+      "startFrame": 580,
+      "title": "传家灶：继承的三条路",
+      "durationMs": 9667,
+      "file": "inheritance.avif",
+      "fileSize": 400669,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "bb54ab6238a54d29892140d1eeacc9be7976a2c7e387f906bae6cb9988042d85",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "4ed0cb4bd3348bf3603459431284f3d65846cf706d6bfa729d85ef968fec8f5e"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "4ed0cb4bd3348bf3603459431284f3d65846cf706d6bfa729d85ef968fec8f5e",
+  "targetFps": 30,
+  "totalFileSize": 1131757
+}
