@@ -279,6 +279,7 @@ import {typography as typographyJso} from '../animations/theoretical-law/04/judi
 import {typography as typographyJc} from '../animations/theoretical-law/04/judicial-characteristics/animation.meta';
 import {typography as typographyJf} from '../animations/theoretical-law/04/judicial-functions/animation.meta';
 import {typography as typographyJfe} from '../animations/theoretical-law/04/judicial-fairness-efficiency/animation.meta';
+import {typography as typographyJi} from '../animations/theoretical-law/04/judicial-independence/animation.meta';
 import {typography as typographyCc} from '../animations/theoretical-law/01/constitution-classification/animation.meta';
 import {typography as typographyCdv} from '../animations/theoretical-law/01/constitution-development/animation.meta';
 import {typography as typographyCp} from '../animations/theoretical-law/01/constitution-principles/animation.meta';
@@ -604,6 +605,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'judicial-characteristics': {metadata: typographyJc, scope: {animationId: 'judicial-characteristics', subject: 'theoretical-law', topic: '04'}},
   'judicial-functions': {metadata: typographyJf, scope: {animationId: 'judicial-functions', subject: 'theoretical-law', topic: '04'}},
   'judicial-fairness-efficiency': {metadata: typographyJfe, scope: {animationId: 'judicial-fairness-efficiency', subject: 'theoretical-law', topic: '04'}},
+  'judicial-independence': {metadata: typographyJi, scope: {animationId: 'judicial-independence', subject: 'theoretical-law', topic: '04'}},
   'profit-reserve-granary': {metadata: typographyPrg, scope: {animationId: 'profit-reserve-granary', subject: 'commercial-economic-law', topic: '01'}},
   'promoter-liability-ropewalk': {metadata: typographyPlr, scope: {animationId: 'promoter-liability-ropewalk', subject: 'commercial-economic-law', topic: '01'}},
   'fight-defense-diagram': {metadata: typography44, scope: {animationId: 'fight-defense-diagram', subject: 'criminal', topic: '22'}},

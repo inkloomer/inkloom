@@ -1,0 +1,70 @@
+{
+  "animationId": "azure-draft-hall",
+  "compositionId": "AzureDraftHall",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-30T12:03:02.147Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 289,
+      "frameCount": 290,
+      "id": "post-honour",
+      "number": "01",
+      "startFrame": 0,
+      "title": "拒付之后：期后背书变了味",
+      "durationMs": 9667,
+      "file": "post-honour.avif",
+      "fileSize": 344515,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "07171139801f390f4155e90eaae016f95adf20107d494b080f8fb7edd76eaf3c",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "dbf2c3212bed16772e640da2e194162c74ebeafe8516a3d3b8b2658afe4a60e9"
+    },
+    {
+      "endFrame": 579,
+      "frameCount": 290,
+      "id": "discount-counter",
+      "number": "02",
+      "startFrame": 290,
+      "title": "贴现被拒：票还是好票",
+      "durationMs": 9667,
+      "file": "discount-counter.avif",
+      "fileSize": 385375,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "43d075d85a899001a23405d6d5a7bf7f903b37ec3764583a575fbc79bbeada01",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "dbf2c3212bed16772e640da2e194162c74ebeafe8516a3d3b8b2658afe4a60e9"
+    },
+    {
+      "endFrame": 869,
+      "frameCount": 290,
+      "id": "forged-seal",
+      "number": "03",
+      "startFrame": 580,
+      "title": "伪造的章，有效的票",
+      "durationMs": 9667,
+      "file": "forged-seal.avif",
+      "fileSize": 341659,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "90bc5ba3f9f9bcb61643a8cb32ccfc257f92ffd03a1926d70ae69b445950bd9f",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "dbf2c3212bed16772e640da2e194162c74ebeafe8516a3d3b8b2658afe4a60e9"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "dbf2c3212bed16772e640da2e194162c74ebeafe8516a3d3b8b2658afe4a60e9",
+  "targetFps": 30,
+  "totalFileSize": 1071549
+}

@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "playerControlSafeBottom": 168,
+  "scenes": [
+    {
+      "id": "post-honour",
+      "export": "PostHonourScene",
+      "layout": "post-honour-endorsement-desk",
+      "anchor": "document-fork",
+      "grammar": ["first-payer-unconditional-rule", "post-honour-endorsement-ban-rule"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["University", "FileX", "PenLine", "GraduationCap"],
+      "finalKnowledge": [
+        "pe-refuse-desk",
+        "pe-endorse-desk",
+        "pe-exam-strip"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "discount-counter",
+      "export": "DiscountCounterScene",
+      "layout": "discount-vs-honour-counter",
+      "anchor": "comparison-axis",
+      "grammar": ["discount-is-endorsement-rule", "early-recourse-three-cases-rule"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["Percent", "HandCoins", "GraduationCap"],
+      "finalKnowledge": [
+        "dv-essence-desk",
+        "dv-early-desk",
+        "dv-exam-strip"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "forged-seal",
+      "export": "ForgedSealScene",
+      "layout": "forged-seal-verdict-desk",
+      "anchor": "timeline-gate",
+      "grammar": ["forgery-voids-seal-only-rule", "forged-party-no-liability-rule"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["Fingerprint", "ShieldOff", "University", "GraduationCap"],
+      "finalKnowledge": [
+        "fs-valid-desk",
+        "fs-who-desk",
+        "fs-exam-strip"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}
