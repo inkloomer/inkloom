@@ -1,0 +1,15 @@
+{
+  "directionId": "firm-plate-registry",
+  "family": "plate-registry-hall",
+  "title": "所门牌注册厅",
+  "subject": "theoretical-law",
+  "chapter": "04",
+  "concept": "所门牌注册厅：设立条件与分所规则挂上门牌，变更批准与备案分两窗，终止注销盖灰章。图形层主题；画面文字一律使用源笔记法考名词",
+  "palette": "注册厅 registry #313A34、深厅 registryDeep #252C28、面板 panel #F0EBDA、暗面板 panelDim #E1DCC7、镶边 edge #5E7064、墨字 ink #222E27、淡墨 inkSoft #51625A、门牌金 plate #C0983E、变更青 changeTeal #4E7D74、终止灰 terminateGray #6E6A64、纸白 paper #F6F1E0",
+  "typography": "标题用 var(--inkloom-animation-title)，正文用 var(--inkloom-animation-body)；门牌行加粗法考名词，数字门槛用印",
+  "composition": "设立条件门牌 + 分所行 + 变更双窗 + 终止灰章",
+  "surface": "注册厅墙纹 + 门牌框线 + 灰章纹",
+  "motion": "门牌钉挂、双窗分流、灰章钤落",
+  "transition": "硬切换幕",
+  "catalog": ["考点72 律师事务所的设立、变更、终止"]
+}

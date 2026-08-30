@@ -1,0 +1,77 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 5,
+  "playerControlSafeBottom": 168,
+  "scenes": [
+    {
+      "id": "conduct-deception-gate",
+      "export": "ConductDeceptionGateScene",
+      "layout": "deprivation-conduct-gate",
+      "anchor": "boundary",
+      "grammar": ["conduct-form-triad", "deception-cognition-fork"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation"],
+      "focalChannels": ["icon", "enclosure", "contrast", "annotation"],
+      "tokens": ["ScrollText", "Unlock", "ShieldQuestion", "Footprints", "DoorOpen", "Lock", "ScanEye", "Ban"],
+      "finalKnowledge": ["statute-strip", "conduct-form-board", "deception-fork-board", "verdict-establish-board", "verdict-none-board"],
+      "statefulObjects": []
+    },
+    {
+      "id": "aggravated-result-chain",
+      "export": "AggravatedResultChainScene",
+      "layout": "causation-chain-lane",
+      "anchor": "flow-path",
+      "grammar": ["conduct-cause-requirement", "intervention-abnormality-fork"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "enclosure"],
+      "tokens": ["ScrollText", "Hand", "Lock", "Zap", "EyeOff", "TrendingUp", "Crosshair", "Split"],
+      "finalKnowledge": ["clause-strip", "cause-board", "intervention-board", "negligence-board", "intent-board"],
+      "statefulObjects": []
+    },
+    {
+      "id": "fiction-conversion-gate",
+      "export": "FictionConversionGateScene",
+      "layout": "second-act-conversion-gate",
+      "anchor": "timeline-gate",
+      "grammar": ["second-act-outside-conduct", "fiction-versus-notice-split"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "enclosure", "contrast", "spatial"],
+      "tokens": ["ScrollText", "Hand", "Layers", "Lock", "Wand2", "Skull", "BookmarkCheck", "Ban"],
+      "finalKnowledge": ["clause-two-strip", "one-versus-two-board", "fiction-formula-board", "doctrine-split-board", "joinder-board"],
+      "statefulObjects": []
+    },
+    {
+      "id": "four-branch-loom",
+      "export": "FourBranchLoomScene",
+      "layout": "warp-weft-verdict-loom",
+      "anchor": "comparison-axis",
+      "grammar": ["conduct-axis-versus-subjective-axis", "single-versus-concurrent-offences"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
+      "tokens": ["Hand", "Layers", "Split", "EyeOff", "Crosshair", "TrendingUp", "Wand2", "Ban", "Skull", "Bandage"],
+      "finalKnowledge": [
+        "loom-head-strip",
+        "axis-label-board",
+        "weft-head-board",
+        "warp-one-head",
+        "verdict-warp-one-negligence",
+        "verdict-warp-one-intent",
+        "warp-two-head",
+        "verdict-warp-two-negligence",
+        "verdict-warp-two-intent"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "debt-detention-notice",
+      "export": "DebtDetentionNoticeScene",
+      "layout": "debt-purpose-fork",
+      "anchor": "document-fork",
+      "grammar": ["notice-versus-fiction-distinction", "debt-scope-boundary"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "annotation"],
+      "tokens": ["ScrollText", "BookmarkCheck", "Lock", "Coins", "Users", "Ban", "Wallet", "Link2"],
+      "finalKnowledge": ["debt-clause-strip", "notice-board", "conduct-mode-board", "debt-scope-board"],
+      "statefulObjects": []
+    }
+  ]
+}

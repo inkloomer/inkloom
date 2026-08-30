@@ -1,0 +1,29 @@
+{
+  "animationId": "law-firm-establishment",
+  "scenes": [
+    {
+      "id": "establishment",
+      "export": "EstablishmentScene",
+      "layout": "plate-rows-branch",
+      "anchor": "main center",
+      "grammar": "设立四条件门牌 + 合伙形式行（普通合伙·特殊的普通合伙·按形式担责）+分所行（成立3年以上20名以上律师·所在地省级司法行政部门审核·总所担分所债务）",
+      "textTreatments": ["plate rows", "branch seals"],
+      "focalChannels": ["four conditions", "branch rules"],
+      "tokens": ["Building2", "Scale", "Network"],
+      "finalKnowledge": "establishment-rules",
+      "statefulObjects": ["plate row x4"]
+    },
+    {
+      "id": "change-terminate",
+      "export": "ChangeTerminateScene",
+      "layout": "twin-window-plus-gray",
+      "anchor": "main center",
+      "grammar": "变更双窗（名称·负责人·章程·合伙协议→批准；住所·合伙人→15日内备案）+终止四情形与注销执业证书，底带点睛",
+      "textTreatments": ["window chips", "gray seals"],
+      "focalChannels": ["approve vs file", "termination causes"],
+      "tokens": ["ArrowLeftRight", "FileCheck", "Ban"],
+      "finalKnowledge": "change-terminate",
+      "statefulObjects": ["window panel x2", "terminate panel"]
+    }
+  ]
+}

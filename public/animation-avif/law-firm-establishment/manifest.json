@@ -1,0 +1,53 @@
+{
+  "animationId": "law-firm-establishment",
+  "compositionId": "LawFirmEstablishment",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-30T17:15:33.720Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 239,
+      "frameCount": 240,
+      "id": "establishment",
+      "number": "01",
+      "startFrame": 0,
+      "title": "律师事务所的设立",
+      "durationMs": 8000,
+      "file": "establishment.avif",
+      "fileSize": 546799,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "2d221bcc9d3a116a4229f11f83683a109559a041e53a499dc25bcf3cb0df4a59",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "bdd7b84ba3a8f8e8af10dd8a7df71e4dc10b742eea23ca269d9f01c5833365fa"
+    },
+    {
+      "endFrame": 479,
+      "frameCount": 240,
+      "id": "change-terminate",
+      "number": "02",
+      "startFrame": 240,
+      "title": "变更与终止",
+      "durationMs": 8000,
+      "file": "change-terminate.avif",
+      "fileSize": 489833,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "9f8ce65d9d3347e2fc5ec013b27863102f6c6932d7f52d2ac2430cb8637a6cf1",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "bdd7b84ba3a8f8e8af10dd8a7df71e4dc10b742eea23ca269d9f01c5833365fa"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "bdd7b84ba3a8f8e8af10dd8a7df71e4dc10b742eea23ca269d9f01c5833365fa",
+  "targetFps": 30,
+  "totalFileSize": 1036632
+}

@@ -1,0 +1,32 @@
+{
+  "directionId": "drawloom-warp-weft",
+  "family": "pattern-loom",
+  "palette": "蚕丝米白 silk + 靛蓝经 warp-indigo + 茜草红纬 weft-madder + 织机褐木 loom-wood + 综片铜 gold-heddle + 艾绿 moss + 松烟墨 ink",
+  "typography": "木梁上悬条文牌，经线竖列命名行为类型，纬线横穿命名主观心理，交点织出结论纹样；条文用重字号黑体感，结论用铜色印章与色块标签",
+  "composition": "一整台提花织机木框：顶梁条文牌悬于上方，经轴竖列承载行为类型，梭道横纬承载主观心理，织面格承载结论与罪数；四格织面按经纬交点展开",
+  "surface": "麻布底纹配木质粗边框，蚕丝米白面板，铜色细线分隔，顶部八像素木色压条；无光泽面板、无圆角卡片、无玻璃拟态",
+  "motion": "综片逐片提起，梭子沿横纬推进，纹样一行行织出；每场只织入新的一段纬线与纹样，入场按先条文后要件、先规则后例子的顺序推进，落定后保持静止",
+  "transition": "织机顶梁、立柱与麻布底持续存在，切场时替换织面段落而不换机架，保持同一台织机的空间连续性",
+  "conceptTokens": {
+    "非法拘禁罪": "Lock",
+    "实行行为": "Hand",
+    "结果加重犯": "TrendingUp",
+    "法律拟制": "Wand2",
+    "注意规定": "BookmarkCheck",
+    "故意杀人罪": "Skull",
+    "故意伤害罪": "Bandage",
+    "过失": "EyeOff",
+    "故意": "Crosshair",
+    "数罪并罚": "Layers",
+    "想象竞合": "Split",
+    "介入因素": "Zap",
+    "债务": "Coins",
+    "人身自由": "Unlock"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/criminal/18/detention-clause-ladder/",
+    "title": "提花经纬机房"
+  }
+}
