@@ -1,0 +1,30 @@
+{
+  "directionId": "embroidered-censor-bureau",
+  "family": "censor-insignia-hall",
+  "title": "绣衣按察署",
+  "subject": "theoretical-law",
+  "chapter": "01",
+  "concept": "玄青按察署堂：军委帅令五章悬于左，监察绣衣双线（双领导·双负责）织于右，对象边界以獬豸绯批注",
+  "palette": {
+    "azure": "#33566B",
+    "azureDeep": "#26414F",
+    "panel": "#EFE9D6",
+    "panelDim": "#DFD9C2",
+    "edge": "#5E7080",
+    "ink": "#233038",
+    "inkSoft": "#52616D",
+    "censor": "#B0475A",
+    "gold": "#C79A3E",
+    "pine": "#51796B",
+    "paper": "#F6F1E1"
+  },
+  "typography": {
+    "title": "var(--inkloom-animation-title)",
+    "body": "var(--inkloom-animation-body)"
+  },
+  "composition": "帅令五行 + 监察双线对照 + 獬豸绯批注 + 金印口诀",
+  "surface": "玄青墙纹 + 绣金回纹 + 绯印纹",
+  "motion": "帅令钉挂、双线绣展、绯批盖印",
+  "transition": "硬切换幕",
+  "catalog": ["考点44 监察机关"]
+}

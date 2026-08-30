@@ -1,0 +1,29 @@
+{
+  "animationId": "supervisory-organs",
+  "scenes": [
+    {
+      "id": "chair",
+      "export": "ChairScene",
+      "layout": "command-clause-stack",
+      "anchor": "main center",
+      "grammar": "军委主席负责制五条帅令自上而下钉挂，每条配图标章，底带一句记",
+      "textTreatments": ["clause chips", "numbered seals"],
+      "focalChannels": ["five clauses", "closing strip"],
+      "tokens": ["UserCheck", "Users", "FileSignature", "Shield"],
+      "finalKnowledge": "chair-responsibility",
+      "statefulObjects": ["command clause x5"]
+    },
+    {
+      "id": "censor",
+      "export": "CensorScene",
+      "layout": "dual-line-weave",
+      "anchor": "main center",
+      "grammar": "左席双领导双负责双线绣，右席监察对象边界三批注（人非机关·工作人员非政府·人大代表可·人大不可），底带金印口诀",
+      "textTreatments": ["weave plaques", "cinnabar notes"],
+      "focalChannels": ["dual lines", "object boundary"],
+      "tokens": ["Network", "Landmark", "UserCheck", "Ban"],
+      "finalKnowledge": "dual-line-censorship",
+      "statefulObjects": ["weave panel x2"]
+    }
+  ]
+}

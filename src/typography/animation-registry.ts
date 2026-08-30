@@ -257,6 +257,7 @@ import {typography as typographyNh} from '../animations/theoretical-law/01/natio
 import {typography as typographyScouncil} from '../animations/theoretical-law/01/state-council/animation.meta';
 import {typography as typographyEmd} from '../animations/theoretical-law/01/emergency-decisions/animation.meta';
 import {typography as typographyCmc} from '../animations/theoretical-law/01/central-military-commission/animation.meta';
+import {typography as typographySup} from '../animations/theoretical-law/01/supervisory-organs/animation.meta';
 import {typography as typographyCc} from '../animations/theoretical-law/01/constitution-classification/animation.meta';
 import {typography as typographyCdv} from '../animations/theoretical-law/01/constitution-development/animation.meta';
 import {typography as typographyCp} from '../animations/theoretical-law/01/constitution-principles/animation.meta';
@@ -560,6 +561,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'state-council': {metadata: typographyScouncil, scope: {animationId: 'state-council', subject: 'theoretical-law', topic: '01'}},
   'emergency-decisions': {metadata: typographyEmd, scope: {animationId: 'emergency-decisions', subject: 'theoretical-law', topic: '01'}},
   'central-military-commission': {metadata: typographyCmc, scope: {animationId: 'central-military-commission', subject: 'theoretical-law', topic: '01'}},
+  'supervisory-organs': {metadata: typographySup, scope: {animationId: 'supervisory-organs', subject: 'theoretical-law', topic: '01'}},
   'profit-reserve-granary': {metadata: typographyPrg, scope: {animationId: 'profit-reserve-granary', subject: 'commercial-economic-law', topic: '01'}},
   'promoter-liability-ropewalk': {metadata: typographyPlr, scope: {animationId: 'promoter-liability-ropewalk', subject: 'commercial-economic-law', topic: '01'}},
   'fight-defense-diagram': {metadata: typography44, scope: {animationId: 'fight-defense-diagram', subject: 'criminal', topic: '22'}},

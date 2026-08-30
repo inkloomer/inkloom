@@ -1,0 +1,53 @@
+{
+  "animationId": "supervisory-organs",
+  "compositionId": "SupervisoryOrgans",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-30T09:28:19.851Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 263,
+      "frameCount": 264,
+      "id": "chair",
+      "number": "01",
+      "startFrame": 0,
+      "title": "帅令五章：军委主席负责制",
+      "durationMs": 8800,
+      "file": "chair.avif",
+      "fileSize": 475799,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "03fd685c7b487c6ef3225a71e297b619fc5afab999293fe0831965b43cb5b348",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "77d9922767d524f1c5c310fe01e4d85245d83adc40a6b23b6e54a4a0852d2eb4"
+    },
+    {
+      "endFrame": 551,
+      "frameCount": 288,
+      "id": "censor",
+      "number": "02",
+      "startFrame": 264,
+      "title": "绣衣双线：双领导·双负责",
+      "durationMs": 9600,
+      "file": "censor.avif",
+      "fileSize": 642311,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "ce18a3f11c3ded6a3d30e8a94034320dabdeedad06371037865bc604bfb386d6",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "77d9922767d524f1c5c310fe01e4d85245d83adc40a6b23b6e54a4a0852d2eb4"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 30,
+  "sourceFingerprint": "77d9922767d524f1c5c310fe01e4d85245d83adc40a6b23b6e54a4a0852d2eb4",
+  "targetFps": 30,
+  "totalFileSize": 1118110
+}
