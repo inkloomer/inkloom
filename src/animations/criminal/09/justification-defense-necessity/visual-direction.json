@@ -1,0 +1,24 @@
+{
+  "directionId": "taiji-push-hall",
+  "family": "taiji-push-hall",
+  "palette": "宣纸白 paper + 太极墨黑 night + 朱砂印 vermilion + 青瓷绿 celadon + 鎏金 gold",
+  "typography": "heavy hall headings, pill stake chips, ink-circle label blocks, double-frame seal verdicts",
+  "composition": "each scene is a push-hall mat: attacker and defender arcs circle the five stake posts, yin-yang boards split casual vs imagined defense, and the counter matrix rows read like push-hands sequences",
+  "surface": "paper grain, ink stake rings, pill chips, dashed retreat routes, double-frame seals; no glossy panels",
+  "motion": "arcs enter with the attack, stake posts light in checklist order, seals land as verdicts; no idle loops",
+  "transition": "the paper mat persists while each scene re-stages the push",
+  "conceptTokens": {
+    "不法侵害": "Zap",
+    "正当防卫": "ShieldCheck",
+    "紧急避险": "Anchor",
+    "承诺": "ScrollText",
+    "案例": "GraduationCap",
+    "学说": "Scale"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/criminal/09/justification-defense-necessity/",
+    "title": "太极推手堂"
+  }
+}

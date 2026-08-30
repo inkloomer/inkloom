@@ -1,0 +1,182 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "playerControlSafeBottom": 168,
+  "scenes": [
+    {
+      "id": "defense-gate-checklist",
+      "export": "DefenseGateChecklistScene",
+      "layout": "five-stake-checklist-ring",
+      "anchor": "flow-path",
+      "grammar": [
+        "five-stake-checklist",
+        "animal-four-cases"
+      ],
+      "textTreatments": [
+        "chip",
+        "label-block",
+        "soft-highlight",
+        "thin-underline",
+        "external-negation",
+        "stamp"
+      ],
+      "focalChannels": [
+        "icon",
+        "connector",
+        "contrast",
+        "spatial"
+      ],
+      "tokens": [
+        "ShieldCheck"
+      ],
+      "finalKnowledge": [
+        "system-position-strip",
+        "stake-cause",
+        "stake-time",
+        "stake-mind",
+        "stake-object",
+        "stake-limit",
+        "animal-four-cases",
+        "imagined-defense-board"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "timing-intent-cases",
+      "export": "TimingIntentCasesScene",
+      "layout": "timing-casual-duel-boards",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "timing-device-rules",
+        "casual-vs-imagined-pair"
+      ],
+      "textTreatments": [
+        "chip",
+        "label-block",
+        "soft-highlight",
+        "thin-underline",
+        "external-negation",
+        "stamp"
+      ],
+      "focalChannels": [
+        "icon",
+        "contrast",
+        "enclosure",
+        "spatial"
+      ],
+      "tokens": [
+        "GraduationCap"
+      ],
+      "finalKnowledge": [
+        "timing-board",
+        "casual-defense-board",
+        "duel-pickprov-board",
+        "pig-teammate-case"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "defense-limits-special",
+      "export": "DefenseLimitsSpecialScene",
+      "layout": "limit-special-chase-triptych",
+      "anchor": "boundary",
+      "grammar": [
+        "necessity-first-order",
+        "special-defense-boundary"
+      ],
+      "textTreatments": [
+        "chip",
+        "label-block",
+        "soft-highlight",
+        "thin-underline",
+        "external-negation",
+        "stamp"
+      ],
+      "focalChannels": [
+        "icon",
+        "contrast",
+        "enclosure",
+        "spatial"
+      ],
+      "tokens": [
+        "Zap",
+        "ShieldCheck"
+      ],
+      "finalKnowledge": [
+        "limit-board",
+        "excess-conditions",
+        "special-defense-board",
+        "chase-board"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "necessity-escape-side",
+      "export": "NecessityEscapeSideScene",
+      "layout": "necessity-shore-balance-board",
+      "anchor": "flow-path",
+      "grammar": [
+        "retreat-supplement-rule",
+        "interest-weighing-scale"
+      ],
+      "textTreatments": [
+        "chip",
+        "label-block",
+        "soft-highlight",
+        "thin-underline",
+        "external-negation",
+        "stamp"
+      ],
+      "focalChannels": [
+        "icon",
+        "contrast",
+        "enclosure",
+        "connector"
+      ],
+      "tokens": [
+        "Anchor",
+        "Scale"
+      ],
+      "finalKnowledge": [
+        "plank-case-banner",
+        "danger-source-board",
+        "retreat-supplement-board",
+        "interest-scale-board"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "matrix-consent-row",
+      "export": "MatrixConsentRowScene",
+      "layout": "matrix-consent-split-board",
+      "anchor": "document-fork",
+      "grammar": [
+        "counterattack-matrix-rows",
+        "consent-validity-fork"
+      ],
+      "textTreatments": [
+        "chip",
+        "label-block",
+        "soft-highlight",
+        "thin-underline",
+        "external-negation",
+        "stamp"
+      ],
+      "focalChannels": [
+        "icon",
+        "contrast",
+        "enclosure",
+        "spatial"
+      ],
+      "tokens": [
+        "ScrollText",
+        "ShieldCheck"
+      ],
+      "finalKnowledge": [
+        "counter-matrix-board",
+        "consent-board"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}
