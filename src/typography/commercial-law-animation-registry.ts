@@ -35,6 +35,7 @@ import {typography as typography33} from '../animations/commercial-law/15/partne
 import {typography as typography34} from '../animations/commercial-law/16/partnership-third-parties/animation.meta';
 import {typography as typography35} from '../animations/commercial-law/17/partnership-admission-withdrawal/animation.meta';
 import {typography as typography36} from '../animations/commercial-law/18/sole-proprietorship/animation.meta';
+import {typography as typography37} from '../animations/commercial-law/19/foreign-investment/animation.meta';
 
 export const COMMERCIAL_LAW_TYPOGRAPHY_CONFIGURATIONS = {
   'company-personality': {metadata: typography0, scope: {animationId: 'company-personality', subject: 'commercial-law', topic: '01'}},
@@ -74,4 +75,5 @@ export const COMMERCIAL_LAW_TYPOGRAPHY_CONFIGURATIONS = {
   'partnership-third-parties': {metadata: typography34, scope: {animationId: 'partnership-third-parties', subject: 'commercial-law', topic: '16'}},
   'partnership-admission-withdrawal': {metadata: typography35, scope: {animationId: 'partnership-admission-withdrawal', subject: 'commercial-law', topic: '17'}},
   'sole-proprietorship': {metadata: typography36, scope: {animationId: 'sole-proprietorship', subject: 'commercial-law', topic: '18'}},
+  'foreign-investment': {metadata: typography37, scope: {animationId: 'foreign-investment', subject: 'commercial-law', topic: '19'}},
 } as const;

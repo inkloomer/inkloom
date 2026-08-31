@@ -1,0 +1,91 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "foreign-investment-scene-01",
+      "export": "ForeignInvestment01Scene",
+      "layout": "negative-list-sorter-1",
+      "anchor": "flow-path",
+      "grammar": [
+        "list-sorter-fork",
+        "ban-limit-split"
+      ],
+      "textTreatments": [
+        "chip",
+        "stamp",
+        "external-negation"
+      ],
+      "focalChannels": [
+        "motion",
+        "connector",
+        "contrast"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "foreign-investment-knowledge-1",
+        "foreign-investment-scene-01-list",
+        "foreign-investment-scene-01-outside"
+      ],
+      "statefulObjects": [
+        "investment-listing-travel"
+      ]
+    },
+    {
+      "id": "foreign-investment-scene-02",
+      "export": "ForeignInvestment02Scene",
+      "layout": "national-treatment-band-2",
+      "anchor": "boundary",
+      "grammar": [
+        "treatment-expansion-band",
+        "equal-inclusion-list"
+      ],
+      "textTreatments": [
+        "chip",
+        "soft-highlight",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "contrast",
+        "motion",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "foreign-investment-knowledge-2",
+        "foreign-investment-scene-02-definition",
+        "foreign-investment-scene-02-includes"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "foreign-investment-scene-03",
+      "export": "ForeignInvestment03Scene",
+      "layout": "protection-review-split-3",
+      "anchor": "role-pair",
+      "grammar": [
+        "protection-redline-list",
+        "final-review-lock"
+      ],
+      "textTreatments": [
+        "chip",
+        "external-negation",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "icon",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "foreign-investment-knowledge-3",
+        "foreign-investment-scene-03-protection",
+        "foreign-investment-scene-03-concentration",
+        "foreign-investment-scene-03-security"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

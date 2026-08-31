@@ -1,0 +1,16 @@
+{
+  "directionId": "customs-listing-gatehouse",
+  "derivedFrom": "demo-clerk-desk",
+  "variation": "外商投资关卡: 投资活动徽章在负面清单闸口分诊, 国民待遇红色横带从准入后延伸到准入前, 投资保护红线与安全审查终局锁并排把守",
+  "family": "customs-listing-gatehouse",
+  "palette": "#EFECE3 + #2B2B33 + #2C4A6E + #8A4B2F + #15725F + #B23A30 + #B98A2F",
+  "typography": "WenKai 关卡栏标 + 活动徽章 + 红线禁令",
+  "composition": "负面清单分诊闸 + 国民待遇扩展横带 + 保护五件套与两道审查",
+  "surface": "关卡纸卡、活动徽章、清单红章与终局锁, 无圆角",
+  "motion": "投资徽章滑入清单闸口分流, 待遇横带自准入后向准入前拉开, 保护条目与审查卡分层入列",
+  "transition": "藏青关卡贯穿三场, 青色保护与红色禁止双线呼应",
+  "catalog": {
+    "status": "variant",
+    "sourceDirectionId": "customs-listing-gatehouse"
+  }
+}
