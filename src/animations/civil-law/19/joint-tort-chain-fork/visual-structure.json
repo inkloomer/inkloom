@@ -1,0 +1,74 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "joint-tort-three-types",
+      "export": "JointTortThreeTypesScene",
+      "layout": "three-type-rack-with-guardian-split",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "joint-harm-requires-intentional-contact-of-two-or-more-tortfeasors-causing-one-harm",
+        "instigators-and-helpers-jointly-owe-with-capacitous-actors-while-guardians-join-within-their-fault",
+        "non-capacitous-instigation-requalifies-as-joint-harm",
+        "dangerous-acts-with-untraceable-causation-bind-everyone-who-cannot-exclude-himself"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["icon", "contrast", "enclosure", "annotation"],
+      "tokens": ["Users", "Megaphone", "Link", "Ban", "Gavel", "Handshake"],
+      "finalKnowledge": [
+        "joint-harm-definition",
+        "instigation-helper-rules",
+        "dangerous-act-rules",
+        "capacity-requalification"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "combination-axis-split",
+      "export": "CombinationAxisScene",
+      "layout": "direct-indirect-combination-axis",
+      "anchor": "boundary",
+      "grammar": [
+        "combination-without-intentional-contact-still-points-many-actors-at-one-harm",
+        "direct-combination-lets-each-act-alone-cause-the-whole-harm-and-chains-everyone",
+        "indirect-combination-needs-the-acts-to-merge-before-any-harm-and-splits-by-fault",
+        "removing-one-act-decides-the-test-unavoidable-harm-is-direct-and-avoidable-is-indirect"
+      ],
+      "textTreatments": ["label-block", "chip", "thin-underline", "soft-highlight"],
+      "focalChannels": ["contrast", "connector", "icon", "annotation"],
+      "tokens": ["Link", "Split", "TrendingUp", "Ban", "Scale", "ArrowRightLeft"],
+      "finalKnowledge": [
+        "combination-concept",
+        "direct-combination-rule",
+        "indirect-combination-rule",
+        "removal-test"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "five-case-decision-tree",
+      "export": "FiveCaseTreeScene",
+      "layout": "five-case-fork-with-verdict-stops",
+      "anchor": "flow-path",
+      "grammar": [
+        "a-planned-lure-and-shot-lands-on-joint-harm-with-joint-liability",
+        "a-handed-gun-with-incitement-lands-on-instigation-and-liability-rules",
+        "one-untraceable-bullet-lands-on-dangerous-acts-with-joint-liability",
+        "strangers-both-hitting-vitals-land-on-direct-combination-and-joint-liability-while-a-wound-then-infection-lands-on-indirect-combination-with-shares"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["connector", "contrast", "icon", "annotation"],
+      "tokens": ["Handshake", "Megaphone", "Link", "ArrowRightLeft"],
+      "finalKnowledge": [
+        "case-planned-lure",
+        "case-handed-gun",
+        "case-untraceable-bullet",
+        "case-strangers-vitals",
+        "case-hunt-then-hospital"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

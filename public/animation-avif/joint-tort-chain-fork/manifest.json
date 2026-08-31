@@ -1,0 +1,70 @@
+{
+  "animationId": "joint-tort-chain-fork",
+  "compositionId": "JointTortChainFork",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-31T12:35:01.014Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 759,
+      "frameCount": 380,
+      "id": "joint-tort-three-types",
+      "number": "01",
+      "startFrame": 0,
+      "title": "共同侵权的三种类型",
+      "durationMs": 12667,
+      "file": "joint-tort-three-types.avif",
+      "fileSize": 876909,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "88cdd05e48a93dd9a27c45e9607951a424836fd912afdd17ff50ef8f9ef27c82",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "ff5c81c4dbc6c363b1a4c574c3584612e22f225efc66dcffa67c21dcc41f43b7"
+    },
+    {
+      "endFrame": 1459,
+      "frameCount": 350,
+      "id": "combination-axis-split",
+      "number": "02",
+      "startFrame": 760,
+      "title": "无意思联络的行为结合",
+      "durationMs": 11667,
+      "file": "combination-axis-split.avif",
+      "fileSize": 678779,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "3d96d373825016f8de28c13b8453a6e6681dea099add095d61481707b11177b8",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "ff5c81c4dbc6c363b1a4c574c3584612e22f225efc66dcffa67c21dcc41f43b7"
+    },
+    {
+      "endFrame": 2279,
+      "frameCount": 410,
+      "id": "five-case-decision-tree",
+      "number": "03",
+      "startFrame": 1460,
+      "title": "五情形判定",
+      "durationMs": 13667,
+      "file": "five-case-decision-tree.avif",
+      "fileSize": 546822,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "619985919143e949bfca222ffd63b9efdfefa4fdd4ed8aac7144d5a5263b7efd",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "ff5c81c4dbc6c363b1a4c574c3584612e22f225efc66dcffa67c21dcc41f43b7"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "ff5c81c4dbc6c363b1a4c574c3584612e22f225efc66dcffa67c21dcc41f43b7",
+  "targetFps": 30,
+  "totalFileSize": 2102510
+}

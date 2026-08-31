@@ -1,0 +1,22 @@
+{
+  "directionId": "iron-chain-joint-liability-fork",
+  "family": "iron-chain-liability",
+  "palette": "cold iron blue-gray field, chain-silver steel, rust orange, warning amber, deep teal, slate ink",
+  "typography": "chain-link headings on iron rail tabs, rust-orange verdicts and amber condition plates",
+  "composition": "a three-type joint tort rack, a direct-versus-indirect combination axis with cause-force arrows, and a five-case decision tree fanning into liability verdicts",
+  "surface": "steel link plates riveted on a cold iron field with amber hazard stripes",
+  "motion": "tort chains link tortfeasor plates into one liability ring, combination arrows merge or stay parallel, and five case tokens travel the fork rails to their verdict stops",
+  "transition": "the iron field, chain rails and hazard stripes persist while racks, axes and forks are re-dressed between scenes",
+  "conceptTokens": {
+    "连带责任": "Link",
+    "共同侵权": "Users",
+    "教唆帮助": "Megaphone",
+    "意思联络": "Handshake"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/civil-law/19/joint-tort-chain-fork/",
+    "title": "冷铁连责链"
+  }
+}
