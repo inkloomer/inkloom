@@ -382,7 +382,7 @@ export const AccessionForkScene = () => {
               <Mover delay={136} span={22} fromX={0} toX={180} fadeAt={200} style={{position: 'absolute', left: 20, top: 16, zIndex: 2}}>
                 <Chip tone={C.goldpan} toneBg={C.goldpanPale}><span style={{fontSize: 22, fontWeight: 950, color: C.goldpan }}>附合于不动产</span></Chip>
               </Mover>
-              <span style={{position: 'absolute', left: 300, top: 16, fontSize: 24, fontWeight: 950, color: C.ink }}>→</span>
+              
               <span style={{position: 'absolute', left: 340, top: 16}}><Seal delay={200} size={20} tone={C.goldpan}>归不动产权利人</Seal></span>
               <span style={{position: 'absolute', left: 640, top: 22, fontSize: 21, fontWeight: 900, color: C.inkSoft }}>例：戒指镶进他人木板 → 归木板（不动产）权利人</span>
             </div>
@@ -394,7 +394,7 @@ export const AccessionForkScene = () => {
               <Mover delay={176} span={22} fromX={0} toX={160} fadeAt={240} style={{position: 'absolute', left: 20, top: 16, zIndex: 2}}>
                 <Chip tone={C.indigo} toneBg={C.indigoPale}><span style={{fontSize: 22, fontWeight: 950, color: C.indigo }}>混合物所有权</span></Chip>
               </Mover>
-              <span style={{position: 'absolute', left: 300, top: 16, fontSize: 24, fontWeight: 950, color: C.ink }}>→</span>
+              
               <span style={{position: 'absolute', left: 340, top: 16}}><Seal delay={240} size={20} tone={C.indigo}>归价值较大的一方</Seal></span>
               <span style={{position: 'absolute', left: 640, top: 22, fontSize: 21, fontWeight: 900, color: C.inkSoft }}>前提：达到「难以识别」的程度方为混合</span>
             </div>
@@ -406,7 +406,7 @@ export const AccessionForkScene = () => {
               <Mover delay={216} span={22} fromX={0} toX={160} fadeAt={280} style={{position: 'absolute', left: 20, top: 16, zIndex: 2}}>
                 <Chip tone={C.rust} toneBg={C.rustPale}><span style={{fontSize: 22, fontWeight: 950, color: C.rust }}>加工物所有权</span></Chip>
               </Mover>
-              <span style={{position: 'absolute', left: 300, top: 16, fontSize: 24, fontWeight: 950, color: C.ink }}>→</span>
+              
               <span style={{position: 'absolute', left: 340, top: 16}}><Seal delay={280} size={20}>原则归原材料所有人</Seal></span>
               <span style={{position: 'absolute', left: 640, top: 22, fontSize: 21, fontWeight: 900, color: C.inkSoft }}>例外：加工的价值<Under color={C.rust} delay={300}>远大于</Under>原材料价值的除外</span>
             </div>
@@ -457,14 +457,14 @@ export const AccessionVerdictsScene = () => {
               <div style={{position: 'absolute', left: 0, top: 24}}>
                 <Chip tone={C.goldpan} toneBg={C.goldpanPale}><span style={{fontSize: 22, fontWeight: 950, color: C.goldpan }}>玉石（甲·2 万）</span></Chip>
               </div>
-              <Path color={C.rust} delay={110} span={20} style={{position: 'absolute', left: 230, top: 54, width: 300, height: 4}} />
-              <Mover delay={116} span={24} fromX={0} toX={300} fadeAt={190} style={{position: 'absolute', left: 236, top: 24, zIndex: 2}}>
+              <Path color={C.rust} delay={110} span={20} style={{position: 'absolute', left: 230, top: 54, width: 220, height: 4}} />
+              <Mover delay={116} span={24} fromX={0} toX={215} fadeAt={190} style={{position: 'absolute', left: 236, top: 24, zIndex: 2}}>
                 <Chip tone={C.goldpan} toneBg={C.goldpanPale}><Hammer size={20} color={C.goldpan} strokeWidth={2.4} /><span style={{fontSize: 22, fontWeight: 950, color: C.goldpan }}>乙的加工劳务</span></Chip>
               </Mover>
-              <div style={{position: 'absolute', left: 540, top: 14}}>
+              <div style={{position: 'absolute', left: 700, top: 14}}>
                 <Chip tone={C.rust} toneBg={C.rustPale}><span style={{fontSize: 23, fontWeight: 950, color: C.rust }}>玉白菜（20 万·新物）</span></Chip>
               </div>
-              <div style={{position: 'absolute', left: 880, top: 14}}><Seal delay={190} size={20} tone={C.rust}>归乙——加工价值远大于原材料</Seal></div>
+              <div style={{position: 'absolute', left: 1050, top: 14}}><Seal delay={190} size={20} tone={C.rust}>归乙——加工价值远大于原材料</Seal></div>
             </div>
             <div style={{display: 'flex', gap: 14}}>
               <IconChip icon={<Coins size={24} color={C.sand} strokeWidth={2.2} />} tone={C.goldpan} title="衡平① 不当得利返还：">

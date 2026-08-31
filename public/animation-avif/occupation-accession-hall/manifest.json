@@ -1,0 +1,70 @@
+{
+  "animationId": "occupation-accession-hall",
+  "compositionId": "OccupationAccessionHall",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-31T08:52:51.898Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 659,
+      "frameCount": 330,
+      "id": "occupation-lane",
+      "number": "01",
+      "startFrame": 0,
+      "title": "先占",
+      "durationMs": 11000,
+      "file": "occupation-lane.avif",
+      "fileSize": 681476,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "b35833391511880a0721230d159801d5fdf6565e0002f09dc65e0999b3560b27",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "46c9b9f2366e45b51ec939c6392da159bcc1c0a5d06411e1ba40541a84ff0827"
+    },
+    {
+      "endFrame": 1199,
+      "frameCount": 270,
+      "id": "accession-fork",
+      "number": "02",
+      "startFrame": 660,
+      "title": "添附的三种情形",
+      "durationMs": 9000,
+      "file": "accession-fork.avif",
+      "fileSize": 537123,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "6f19fc2cfa78924a91ecc5fc3182af08decc9572deb316a3360eec17b680b43d",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "46c9b9f2366e45b51ec939c6392da159bcc1c0a5d06411e1ba40541a84ff0827"
+    },
+    {
+      "endFrame": 1679,
+      "frameCount": 240,
+      "id": "accession-verdicts",
+      "number": "03",
+      "startFrame": 1200,
+      "title": "添附的双案与衡平",
+      "durationMs": 8000,
+      "file": "accession-verdicts.avif",
+      "fileSize": 549652,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "767a6008904ecf1f0e9c1ce386de2ce440a72d0f811d792d197d6d133f26a924",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "46c9b9f2366e45b51ec939c6392da159bcc1c0a5d06411e1ba40541a84ff0827"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "46c9b9f2366e45b51ec939c6392da159bcc1c0a5d06411e1ba40541a84ff0827",
+  "targetFps": 30,
+  "totalFileSize": 1768251
+}
