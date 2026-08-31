@@ -1,0 +1,70 @@
+{
+  "animationId": "partnership-admission-withdrawal",
+  "compositionId": "PartnershipAdmissionWithdrawal",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-31T16:36:34.038Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 299,
+      "frameCount": 150,
+      "id": "partnership-admission-withdrawal-scene-01",
+      "number": "01",
+      "startFrame": 0,
+      "title": "入伙",
+      "durationMs": 5000,
+      "file": "partnership-admission-withdrawal-scene-01.avif",
+      "fileSize": 477429,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "174e7c601a900abc88cbf94a03b3520b79629551a6783bfb6ace374330a16c6b",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "9949096389e8ec79270bf8f071432d89ccee269403299b06959743de68362519"
+    },
+    {
+      "endFrame": 629,
+      "frameCount": 165,
+      "id": "partnership-admission-withdrawal-scene-02",
+      "number": "02",
+      "startFrame": 300,
+      "title": "自愿与除名退伙",
+      "durationMs": 5500,
+      "file": "partnership-admission-withdrawal-scene-02.avif",
+      "fileSize": 497161,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "d6f76f6271c759db92a91123eeed8b8c5d9646e4175758750cbd37ccff4edcc3",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "9949096389e8ec79270bf8f071432d89ccee269403299b06959743de68362519"
+    },
+    {
+      "endFrame": 949,
+      "frameCount": 160,
+      "id": "partnership-admission-withdrawal-scene-03",
+      "number": "03",
+      "startFrame": 630,
+      "title": "当然退伙与效力",
+      "durationMs": 5333,
+      "file": "partnership-admission-withdrawal-scene-03.avif",
+      "fileSize": 666455,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "d08f8a3ebedd8136e376162fa12c57cb0452f72022bbd429418942d30a49b6ba",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "9949096389e8ec79270bf8f071432d89ccee269403299b06959743de68362519"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "9949096389e8ec79270bf8f071432d89ccee269403299b06959743de68362519",
+  "targetFps": 30,
+  "totalFileSize": 1641045
+}
