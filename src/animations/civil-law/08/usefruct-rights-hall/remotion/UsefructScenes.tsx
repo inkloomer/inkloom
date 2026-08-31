@@ -1,5 +1,5 @@
 import type {CSSProperties, ReactNode} from 'react';
-import {Ban, Building2, Coins, Gavel, Hammer, Home, Landmark, Link2, Scale, ScrollText, Tractor, Users, Vote, Waypoints} from 'lucide-react';
+import {ArrowDown, Ban, Building2, Coins, FileSignature, Gavel, Hammer, Home, Landmark, Link2, Scale, ScrollText, Tractor, Users, Vote, Waypoints} from 'lucide-react';
 import {AbsoluteFill, interpolate, useCurrentFrame} from 'remotion';
 import {CLAMP} from '../../../../shared/remotion-runtime';
 
@@ -121,7 +121,7 @@ export const Shell = ({children, code, kicker, title}: {readonly children: React
       <div style={{position: 'absolute', left: 0, top: 0, right: 0, height: 12, background: `linear-gradient(90deg, ${C.cinnabar}, ${C.jade}, ${C.indigo})`, opacity: 0.92}} />
       <div style={{position: 'absolute', left: 28, top: 28, right: 28, bottom: 28, border: `2px solid rgba(143, 132, 104, 0.55)`}} />
       <div style={{position: 'absolute', left: 60, top: 44, padding: '10px 16px', backgroundColor: C.ink, borderLeft: `8px solid ${C.cinnabar}`}}>
-        <span style={{fontSize: 21, fontWeight: 950, color: C.panel, letterSpacing: 2}}>民法 · 第8讲 · {code}</span>
+        <span style={{fontSize: 23, fontWeight: 950, color: C.panel, letterSpacing: 2}}>民法 · 第8讲 · {code}</span>
       </div>
       <header
         style={{
@@ -138,7 +138,7 @@ export const Shell = ({children, code, kicker, title}: {readonly children: React
         }}
       >
         <h1 style={{fontFamily: 'var(--inkloom-animation-title)', margin: 0, fontSize: 44, lineHeight: 1.08, fontWeight: 950, color: C.ink}}>{title}</h1>
-        <span style={{fontSize: 22, fontWeight: 850, color: C.indigo, textAlign: 'right'}}>{kicker}</span>
+        <span style={{fontSize: 24, fontWeight: 850, color: C.indigo, textAlign: 'right'}}>{kicker}</span>
       </header>
       <div style={{position: 'absolute', right: 64, bottom: 44, display: 'flex', alignItems: 'center', gap: 10, opacity: 0.85}}>
         {[0, 1, 2, 3].map((dot) => (
@@ -162,7 +162,7 @@ export const Shell = ({children, code, kicker, title}: {readonly children: React
 export const Panel = ({children, marker, tone = C.indigo, watermark, style}: {readonly children: ReactNode; readonly marker?: string; readonly tone?: string; readonly watermark?: ReactNode; readonly style?: CSSProperties}) => (
   <div
     data-final-knowledge={marker}
-    style={{backgroundColor: C.panel, border: `2px solid ${C.edge}`, borderLeft: `10px solid ${tone}`, color: C.ink, position: 'relative', overflow: 'hidden', boxShadow: '0 3px 0 rgba(43, 42, 36, 0.25)', ...style}}
+    style={{backgroundColor: C.panel, border: `2px solid ${C.edge}`, borderLeft: `10px solid ${tone}`, borderTop: `8px solid ${tone}`, color: C.ink, position: 'relative', overflow: 'hidden', boxShadow: '0 3px 0 rgba(43, 42, 36, 0.25)', ...style}}
   >
     <span style={{position: 'absolute', right: 10, top: 10, width: 26, height: 26, borderTop: `3px solid ${tone}`, borderRight: `3px solid ${tone}`, opacity: 0.5}} />
     <span style={{position: 'absolute', left: 14, bottom: 10, width: 26, height: 26, borderBottom: `3px solid ${tone}`, borderLeft: `3px solid ${tone}`, opacity: 0.5}} />
@@ -172,13 +172,13 @@ export const Panel = ({children, marker, tone = C.indigo, watermark, style}: {re
 );
 
 export const PanelTab = ({children, tone = C.indigo, icon}: {readonly children: ReactNode; readonly tone?: string; readonly icon?: ReactNode}) => (
-  <span style={{display: 'inline-flex', alignItems: 'center', gap: 9, padding: '4px 14px', backgroundColor: C.ink, borderLeft: `6px solid ${tone}`, color: C.panel, fontSize: 22, fontWeight: 900, letterSpacing: 2}}>{icon}{children}</span>
+  <span style={{display: 'inline-flex', alignItems: 'center', gap: 9, padding: '4px 14px', backgroundColor: C.ink, borderLeft: `6px solid ${tone}`, color: C.panel, fontSize: 24, fontWeight: 900, letterSpacing: 2}}>{icon}{children}</span>
 );
 
 export const IconChip = ({icon, tone, title, children}: {readonly icon: ReactNode; readonly tone: string; readonly title: string; readonly children: ReactNode}) => (
   <div style={{display: 'flex', alignItems: 'center', gap: 12, backgroundColor: C.panelDim, borderLeft: `5px solid ${tone}`, padding: '5px 12px'}}>
     <span style={{flexShrink: 0, width: 44, height: 44, borderRadius: 10, backgroundColor: tone, border: `2px solid ${C.panel}`, boxShadow: `0 0 0 2px rgba(47, 93, 138, 0.4)`, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>{icon}</span>
-    <span style={{fontSize: 22, fontWeight: 880, color: C.ink, lineHeight: 1.42}}>
+    <span style={{fontSize: 24, fontWeight: 880, color: C.ink, lineHeight: 1.42}}>
       <span style={{fontWeight: 950, color: tone}}>{title}</span>
       {children}
     </span>
@@ -235,7 +235,7 @@ export const Soft = ({children, color}: {readonly children: ReactNode; readonly 
 );
 
 export const Chip = ({children, tone = C.edge, toneBg = C.panelDim, ink = C.ink}: {readonly children: ReactNode; readonly tone?: string; readonly toneBg?: string; readonly ink?: string}) => (
-  <span style={{display: 'inline-flex', alignItems: 'center', gap: 8, border: `2px solid ${tone}`, backgroundColor: toneBg, padding: '5px 12px', fontSize: 22, fontWeight: 900, color: ink, whiteSpace: 'nowrap'}}>{children}</span>
+  <span style={{display: 'inline-flex', alignItems: 'center', gap: 8, border: `2px solid ${tone}`, backgroundColor: toneBg, padding: '5px 12px', fontSize: 24, fontWeight: 900, color: ink, whiteSpace: 'nowrap'}}>{children}</span>
 );
 
 export const LandContractScene = () => {
@@ -254,7 +254,7 @@ export const LandContractScene = () => {
         <Enter delay={4} from="down" marker="establishment-limb" style={{position: 'absolute', left: 0, top: 0, width: 1776, height: 100}}>
           <Panel tone={C.jade} watermark={<Tractor size={110} color={C.jade} strokeWidth={1.6} />} style={{height: '100%', display: 'flex', alignItems: 'center', gap: 16, padding: '9px 18px'}}>
             <PanelTab tone={C.jade} icon={<Tractor size={24} color={C.panel} strokeWidth={2.2} />}>土地承包经营权 · 用益物权</PanelTab>
-            <span style={{fontSize: 22, fontWeight: 900, color: C.ink }}>客体：耕地·林地·草地及其他农用地；设立依据＝<Soft color={C.jade}>承包合同</Soft>（发包人集体经济组织 · 承包人农户）</span>
+            <span style={{fontSize: 24, fontWeight: 900, color: C.ink }}>客体：耕地·林地·草地及其他农用地；设立依据＝<Soft color={C.jade}>承包合同</Soft>（发包人集体经济组织 · 承包人农户）</span>
           </Panel>
         </Enter>
         <div data-final-knowledge="three-mode-table" style={{position: 'absolute', left: 0, top: 116, width: 1776, height: 306}}>
@@ -267,12 +267,12 @@ export const LandContractScene = () => {
         ).map((lane) => (
           <Enter key={lane.name} delay={lane.delay} from="left" style={{position: 'absolute', left: 0, top: lane.top, width: 1776, height: 94}}>
             <Panel tone={lane.tone} style={{height: '100%', display: 'flex', alignItems: 'center', gap: 14, padding: '0 16px', position: 'relative', overflow: 'hidden'}}>
-              <Chip tone={lane.tone} toneBg={C.panelDim}><Tractor size={22} color={lane.tone} strokeWidth={2.4} /><span style={{fontSize: 21, fontWeight: 950, color: lane.tone }}>{lane.name}</span></Chip>
-              <Path color={lane.tone} delay={lane.delay + 30} span={20} style={{position: 'absolute', left: 480, top: 45, width: 240, height: 4}} />
-              <Mover delay={lane.delay + 36} span={22} fromX={0} toX={240} fadeAt={lane.delay + 96} style={{position: 'absolute', left: 486, top: 22, zIndex: 2}}>
-                <Chip tone={lane.tone} toneBg={C.panelDim}><span style={{fontSize: 21, fontWeight: 950, color: lane.tone }}>{lane.tag}</span></Chip>
+              <Chip tone={lane.tone} toneBg={C.panelDim}><Tractor size={22} color={lane.tone} strokeWidth={2.4} /><span style={{fontSize: 23, fontWeight: 950, color: lane.tone }}>{lane.name}</span></Chip>
+              <Path color={lane.tone} delay={lane.delay + 30} span={20} style={{position: 'absolute', left: 480, top: 45, width: 180, height: 4}} />
+              <Mover delay={lane.delay + 36} span={22} fromX={0} toX={180} fadeAt={lane.delay + 96} style={{position: 'absolute', left: 486, top: 22, zIndex: 2}}>
+                <Chip tone={lane.tone} toneBg={C.panelDim}><span style={{fontSize: 23, fontWeight: 950, color: lane.tone }}>{lane.tag}</span></Chip>
               </Mover>
-              <span style={{position: 'absolute', left: 740, top: 26, width: 560, fontSize: 21, fontWeight: 900, color: C.ink }}>{lane.mid}</span>
+              <span style={{position: 'absolute', left: 900, top: 20, width: 360, fontSize: 23, fontWeight: 900, color: C.ink, lineHeight: 1.35 }}>{lane.mid}</span>
               <span style={{position: 'absolute', right: 16, top: 28}}><Seal delay={lane.delay + 70} size={18} tone={lane.tone}>{lane.gate}</Seal></span>
             </Panel>
           </Enter>
@@ -296,8 +296,8 @@ export const LandContractScene = () => {
         <Enter delay={150} from="up" marker="flow-limits" style={{position: 'absolute', left: 0, top: 650, width: 1776, height: 118}}>
           <Panel tone={C.cinnabar} watermark={<Ban size={110} color={C.cinnabar} strokeWidth={1.6} />} style={{height: '100%', display: 'flex', alignItems: 'center', gap: 16, padding: '9px 18px'}}>
             <PanelTab tone={C.cinnabar} icon={<Ban size={24} color={C.panel} strokeWidth={2.2} />}>流转两大核心限制</PanelTab>
-            <Chip tone={C.cinnabar} toneBg={C.cinnabarPale}><span style={{fontSize: 22, fontWeight: 950, color: C.cinnabar }}>① 期限：不得超过承包期的剩余期限</span></Chip>
-            <Chip tone={C.cinnabar} toneBg={C.cinnabarPale}><span style={{fontSize: 22, fontWeight: 950, color: C.cinnabar }}>② 用途：未经批准不得用于非农建设</span></Chip>
+            <Chip tone={C.cinnabar} toneBg={C.cinnabarPale}><span style={{fontSize: 24, fontWeight: 950, color: C.cinnabar }}>① 期限：不得超过承包期的剩余期限</span></Chip>
+            <Chip tone={C.cinnabar} toneBg={C.cinnabarPale}><span style={{fontSize: 24, fontWeight: 950, color: C.cinnabar }}>② 用途：未经批准不得用于非农建设</span></Chip>
           </Panel>
         </Enter>
       </div>
@@ -321,36 +321,49 @@ export const ConstructionUseScene = () => {
         <Enter delay={4} from="down" marker="layered-limb" style={{position: 'absolute', left: 0, top: 0, width: 1776, height: 236}}>
           <Panel tone={C.jade} watermark={<Building2 size={130} color={C.jade} strokeWidth={1.6} />} style={{height: '100%', display: 'flex', flexDirection: 'column', gap: 8, padding: '11px 18px'}}>
             <PanelTab tone={C.jade} icon={<Building2 size={24} color={C.panel} strokeWidth={2.2} />}>分层设立 · 同一地块三层国有之物</PanelTab>
-            <div style={{display: 'flex', flexDirection: 'column', gap: 6}}>
-              <Chip tone={C.indigo} toneBg={C.indigoPale}><span style={{fontSize: 21, fontWeight: 950, color: C.indigo }}>地上层 · 空中利用</span></Chip>
-              <Chip tone={C.jade} toneBg={C.jadePale}><span style={{fontSize: 21, fontWeight: 950, color: C.jade }}>地表层 · 建造建筑物构筑物</span></Chip>
-              <Chip tone={C.cinnabar} toneBg={C.cinnabarPale}><span style={{fontSize: 21, fontWeight: 950, color: C.cinnabar }}>地下层 · 地下利用</span></Chip>
+            <div style={{fontSize: 24, fontWeight: 900, color: C.ink }}>权利性质＝<Soft color={C.jade}>用益物权</Soft>：对<Soft color={C.indigo}>国家所有</Soft>的土地<Soft color={C.indigo}>占有·使用·收益</Soft>，并利用其建造建筑物或构筑物</div>
+            <div style={{display: 'flex', gap: 12}}>
+              <div style={{flex: 1}}><IconChip icon={<Building2 size={24} color={C.panel} strokeWidth={2.2} />} tone={C.indigo} title="地上层：">
+                空中利用（如架设高架·空中连廊）
+              </IconChip></div>
+              <div style={{flex: 1}}><IconChip icon={<Home size={24} color={C.panel} strokeWidth={2.2} />} tone={C.jade} title="地表层：">
+                建造建筑物·构筑物及其附属设施
+              </IconChip></div>
+              <div style={{flex: 1}}><IconChip icon={<ArrowDown size={24} color={C.panel} strokeWidth={2.2} />} tone={C.cinnabar} title="地下层：">
+                地下利用（如修建地下车库·隧道）
+              </IconChip></div>
             </div>
-            <div data-final-knowledge="no-harm-rule" style={{marginTop: 'auto', fontSize: 22, fontWeight: 900, color: C.ink }}>可为不同主体<Soft color={C.jade}>分层设立</Soft>——新设立的建设用地使用权，<Under color={C.cinnabar} delay={130}>不得损害</Under>已设立的用地使用权</div>
+            <div data-final-knowledge="no-harm-rule" style={{marginTop: 'auto', fontSize: 24, fontWeight: 900, color: C.ink }}>可为不同主体<Soft color={C.jade}>分层设立</Soft>——新设立的建设用地使用权，<Under color={C.cinnabar} delay={130}>不得损害</Under>已设立的用地使用权</div>
           </Panel>
         </Enter>
         <Enter delay={40} from="left" marker="allocation-limb" style={{position: 'absolute', left: 0, top: 252, width: 866, height: 516}}>
           <Panel tone={C.slateLike} watermark={<Landmark size={150} color={C.slateLike} strokeWidth={1.6} />} style={{height: '100%', display: 'flex', flexDirection: 'column', gap: 9, padding: '13px 20px'}}>
             <PanelTab tone={C.slateLike} icon={<Landmark size={24} color={C.panel} strokeWidth={2.2} />}>划拨 · 行政审批取得</PanelTab>
-            <IconChip icon={<Landmark size={24} color={C.panel} strokeWidth={2.2} />} tone={C.slateLike} title="行为性质：">
+            <IconChip icon={<Landmark size={24} color={C.panel} strokeWidth={2.2} />} tone={C.slateLike} title="① 行为性质：">
               通过<Soft color={C.slateLike}>行政审批</Soft>设立——「优惠取得」方式
             </IconChip>
-            <IconChip icon={<Scale size={24} color={C.panel} strokeWidth={2.2} />} tone={C.indigo} title="适用条件：">
-              必须为<Soft color={C.indigo}>公共利益</Soft>的用地需要，经<Soft color={C.indigo}>县级以上</Soft>政府依法批准
+            <IconChip icon={<Scale size={24} color={C.panel} strokeWidth={2.2} />} tone={C.indigo} title="② 适用条件：">
+              必须为<Soft color={C.indigo}>公共利益</Soft>的用地需要
             </IconChip>
-            <div style={{marginTop: 'auto', fontSize: 22, fontWeight: 900, color: C.inkSoft }}>权利取得标志：办理<Under color={C.slateLike} delay={160}>使用权登记</Under></div>
+            <IconChip icon={<ScrollText size={24} color={C.panel} strokeWidth={2.2} />} tone={C.jade} title="③ 程序与标志：">
+              经<Soft color={C.jade}>县级以上</Soft>政府依法批准；办理<Under color={C.jade} delay={160}>使用权登记</Under>为取得标志
+            </IconChip>
+            <div style={{marginTop: 'auto', fontSize: 24, fontWeight: 900, color: C.inkSoft }}>划拨＋出让共同构成建设用地使用权的<Soft color={C.indigo}>一级市场</Soft>取得</div>
           </Panel>
         </Enter>
         <Enter delay={70} from="right" marker="grant-limb" style={{position: 'absolute', left: 910, top: 252, width: 866, height: 516}}>
           <Panel tone={C.cinnabar} watermark={<Coins size={150} color={C.cinnabar} strokeWidth={1.6} />} style={{height: '100%', display: 'flex', flexDirection: 'column', gap: 9, padding: '13px 20px'}}>
             <PanelTab tone={C.cinnabar} icon={<Coins size={24} color={C.panel} strokeWidth={2.2} />}>出让 · 民事合同取得</PanelTab>
-            <IconChip icon={<FileSignature size={24} color={C.panel} strokeWidth={2.2} />} tone={C.cinnabar} title="行为性质：">
+            <IconChip icon={<FileSignature size={24} color={C.panel} strokeWidth={2.2} />} tone={C.cinnabar} title="① 行为性质：">
               通过<Soft color={C.cinnabar}>民事合同</Soft>设立建设用地使用权
             </IconChip>
-            <IconChip icon={<Coins size={24} color={C.panel} strokeWidth={2.2} />} tone={C.jade} title="核心对价：">
+            <IconChip icon={<Coins size={24} color={C.panel} strokeWidth={2.2} />} tone={C.jade} title="② 核心对价：">
               使用权人向国家支付<Soft color={C.jade}>土地出让金</Soft>
             </IconChip>
-            <div style={{marginTop: 'auto', fontSize: 22, fontWeight: 900, color: C.inkSoft }}>划拨与出让共同构成建设用地使用权的<Soft color={C.indigo}>一级市场</Soft>取得</div>
+            <IconChip icon={<Building2 size={24} color={C.panel} strokeWidth={2.2} />} tone={C.slateLike} title="③ 用途功能：">
+              利用土地<Soft color={C.slateLike}>建造建筑物·构筑物</Soft>及其附属设施
+            </IconChip>
+            <div style={{marginTop: 'auto', fontSize: 24, fontWeight: 900, color: C.inkSoft }}>与划拨并行——共同构成<Soft color={C.indigo}>一级市场</Soft>取得的两种方式</div>
           </Panel>
         </Enter>
       </div>
@@ -382,22 +395,23 @@ export const ResidenceRightScene = () => {
             <PanelTab tone={C.indigo} icon={<ScrollText size={24} color={C.panel} strokeWidth={2.2} />}>设立 · 公示成立（依合同·依遗嘱）</PanelTab>
             <div style={{position: 'relative', height: 104}}>
               <div style={{position: 'absolute', left: 0, top: 26}}>
-                <Chip tone={C.indigo} toneBg={C.indigoPale}><span style={{fontSize: 22, fontWeight: 950, color: C.indigo }}>居住权合同生效</span></Chip>
+                <Chip tone={C.indigo} toneBg={C.indigoPale}><span style={{fontSize: 24, fontWeight: 950, color: C.indigo }}>居住权合同生效</span></Chip>
               </div>
-              <span style={{position: 'absolute', left: 230, top: 10, width: 330, fontSize: 20, fontWeight: 900, color: C.inkSoft }}>仅生债权效力：请求交付住宅＋办理登记手续</span>
+              <span style={{position: 'absolute', left: 950, top: 24, width: 420, fontSize: 20, fontWeight: 900, color: C.inkSoft }}>合同仅生债权效力：请求交付住宅＋办理登记手续</span>
               <Path color={C.indigo} delay={110} span={20} style={{position: 'absolute', left: 240, top: 58, width: 240, height: 4}} />
               <Mover delay={116} span={22} fromX={0} toX={240} fadeAt={182} style={{position: 'absolute', left: 20, top: 26, zIndex: 2}}>
-                <Chip tone={C.indigo} toneBg={C.indigoPale}><span style={{fontSize: 22, fontWeight: 950, color: C.indigo }}>居住权合同生效</span></Chip>
+                <Chip tone={C.indigo} toneBg={C.indigoPale}><span style={{fontSize: 24, fontWeight: 950, color: C.indigo }}>居住权合同生效</span></Chip>
               </Mover>
               <div style={{position: 'absolute', left: 490, top: 12, border: `3px solid ${C.jade}`, borderRadius: 12, padding: '9px 16px', backgroundColor: C.panel, boxShadow: '0 0 16px rgba(62, 122, 100, 0.35)'}}>
-                <span style={{fontSize: 22, fontWeight: 950, color: C.jade }}>登记完成 → 居住权正式设立</span>
+                <span style={{fontSize: 24, fontWeight: 950, color: C.jade }}>登记完成 → 居住权正式设立</span>
               </div>
-              <div style={{position: 'absolute', left: 940, top: 16}}><Seal delay={180} size={20} tone={C.jade}>物权变动 ✓</Seal></div>
-              <div style={{position: 'absolute', right: 0, top: 6, width: 360}}>
-                <IconChip icon={<ScrollText size={24} color={C.panel} strokeWidth={2.2} />} tone={C.slateLike} title="遗嘱设立：">
-                  <Soft color={C.slateLike}>参照适用</Soft>合同设立规则
-                </IconChip>
-              </div>
+              <div style={{position: 'absolute', left: 1430, top: 16}}><Seal delay={180} size={20} tone={C.jade}>物权变动 ✓</Seal></div>
+
+            </div>
+            <div style={{marginTop: 'auto'}}>
+              <IconChip icon={<ScrollText size={24} color={C.panel} strokeWidth={2.2} />} tone={C.slateLike} title="遗嘱设立居住权：">
+                法律规则上应<Soft color={C.slateLike}>参照适用</Soft>通过合同设立居住权的规则
+              </IconChip>
             </div>
           </Panel>
         </Enter>
@@ -406,15 +420,23 @@ export const ResidenceRightScene = () => {
             <PanelTab tone={C.cinnabar} icon={<Ban size={24} color={C.panel} strokeWidth={2.2} />}>处分限制 · 三堵墙（人役权）</PanelTab>
             <div style={{display: 'flex', gap: 14}}>
               <div style={{flex: 1, display: 'flex', flexDirection: 'column', gap: 8, backgroundColor: C.panelDim, borderLeft: `6px solid ${C.cinnabar}`, padding: '10px 14px'}}>
-                <span style={{fontSize: 22, fontWeight: 950, color: C.cinnabar }}>墙① 转让 · 墙② 继承</span>
-                <span style={{fontSize: 21, fontWeight: 900, color: C.ink }}>居住权<Soft color={C.cinnabar}>不得转让·不得继承</Soft>；擅自转让·继承的 → <Seal delay={180} size={17}>无效</Seal></span>
+                <span style={{fontSize: 24, fontWeight: 950, color: C.cinnabar }}>墙① 转让 · 墙② 继承</span>
+                <span style={{fontSize: 23, fontWeight: 900, color: C.ink }}>居住权<Soft color={C.cinnabar}>不得转让·不得继承</Soft>；擅自转让·继承的 → <Seal delay={180} size={17}>无效</Seal></span>
               </div>
               <div style={{flex: 1, display: 'flex', flexDirection: 'column', gap: 8, backgroundColor: C.panelDim, borderLeft: `6px solid ${C.indigo}`, padding: '10px 14px'}}>
-                <span style={{fontSize: 22, fontWeight: 950, color: C.indigo }}>墙③ 出租（原则禁止）</span>
-                <span style={{fontSize: 21, fontWeight: 900, color: C.ink }}>设立居住权的住宅<Soft color={C.cinnabar}>不得出租</Soft>，否则租赁<Seal delay={210} size={17}>无效</Seal>；<Soft color={C.jade}>当事人另有约定</Soft>的除外</span>
+                <span style={{fontSize: 24, fontWeight: 950, color: C.indigo }}>墙③ 出租（原则禁止）</span>
+                <span style={{fontSize: 23, fontWeight: 900, color: C.ink }}>设立居住权的住宅<Soft color={C.cinnabar}>不得出租</Soft>，否则租赁<Seal delay={210} size={17}>无效</Seal>；<Soft color={C.jade}>当事人另有约定</Soft>的除外</span>
               </div>
             </div>
-            <div style={{marginTop: 'auto', fontSize: 22, fontWeight: 900, color: C.inkSoft }}>口诀：登记<Soft color={C.jade}>才出生</Soft>·转让继承<Soft color={C.cinnabar}>必无效</Soft>·出租原则上<Soft color={C.cinnabar}>关门</Soft>——约定可开门</div>
+            <div style={{display: 'flex', gap: 14}}>
+              <IconChip icon={<Home size={24} color={C.panel} strokeWidth={2.2} />} tone={C.jade} title="权利定位：">
+                居住权属于<Soft color={C.jade}>人役权</Soft>——为满足权利人<Soft color={C.indigo}>生活居住</Soft>而设
+              </IconChip>
+              <IconChip icon={<Ban size={24} color={C.panel} strokeWidth={2.2} />} tone={C.cinnabar} title="权能边界：">
+                仅<Soft color={C.jade}>占有·使用</Soft>住宅——不得转让继承、原则上不得出租
+              </IconChip>
+            </div>
+            <div style={{marginTop: 'auto', fontSize: 24, fontWeight: 900, color: C.inkSoft }}>口诀：登记<Soft color={C.jade}>才出生</Soft>·转让继承<Soft color={C.cinnabar}>必无效</Soft>·出租原则上<Soft color={C.cinnabar}>关门</Soft>——约定可开门</div>
           </Panel>
         </Enter>
       </div>
@@ -438,7 +460,7 @@ export const ServitudeForkScene = () => {
         <Enter delay={4} from="down" marker="servitude-meaning" style={{position: 'absolute', left: 0, top: 0, width: 1776, height: 108}}>
           <Panel tone={C.jade} watermark={<Waypoints size={110} color={C.jade} strokeWidth={1.6} />} style={{height: '100%', display: 'flex', alignItems: 'center', gap: 16, padding: '9px 18px'}}>
             <PanelTab tone={C.jade} icon={<Waypoints size={24} color={C.panel} strokeWidth={2.2} />}>地役权 · 概念（双重身份）</PanelTab>
-            <span style={{fontSize: 22, fontWeight: 900, color: C.ink }}>一方为土地支配之<Soft color={C.jade}>便利</Soft>而支配对方土地的<Under color={C.jade} delay={110}>用益物权</Under>——自己的地＝<Soft color={C.indigo}>需役地</Soft>·对方的地＝<Soft color={C.cinnabar}>供役地</Soft></span>
+            <span style={{fontSize: 24, fontWeight: 900, color: C.ink }}>一方为土地支配之<Soft color={C.jade}>便利</Soft>而支配对方土地的<Under color={C.jade} delay={110}>用益物权</Under>——自己的地＝<Soft color={C.indigo}>需役地</Soft>·对方的地＝<Soft color={C.cinnabar}>供役地</Soft></span>
           </Panel>
         </Enter>
         <Enter delay={36} from="left" marker="opposition-formation" style={{position: 'absolute', left: 0, top: 124, width: 866, height: 196}}>
@@ -474,13 +496,13 @@ export const ServitudeForkScene = () => {
                 已<Soft color={C.jade}>登记</Soft>→ 义务<Soft color={C.jade}>随之转让</Soft>，甲可继续通车；<Soft color={C.cinnabar}>未登记</Soft>→ 善意受让人丁<Seal delay={210} size={17}>无需承受</Seal>
               </IconChip>
             </div>
-            <div style={{marginTop: 'auto', fontSize: 21, fontWeight: 900, color: C.inkSoft }}>对照：需役地走「从权利随主」·供役地看「登记对抗善意第三人」</div>
+            <div style={{marginTop: 'auto', fontSize: 23, fontWeight: 900, color: C.inkSoft }}>对照：需役地走「从权利随主」·供役地看「登记对抗善意第三人」</div>
           </Panel>
         </Enter>
         <Enter delay={140} from="up" marker="neighbouring-distinction" style={{position: 'absolute', left: 0, top: 572, width: 1776, height: 196}}>
           <Panel tone={C.slateLike} watermark={<Scale size={120} color={C.slateLike} strokeWidth={1.6} />} style={{height: '100%', display: 'flex', alignItems: 'center', gap: 14, padding: '9px 18px'}}>
             <PanelTab tone={C.slateLike} icon={<Scale size={24} color={C.panel} strokeWidth={2.2} />}>与相邻关系的区别 · 三问定性地</PanelTab>
-            <div style={{display: 'flex', flexDirection: 'column', gap: 5, fontSize: 21, fontWeight: 900, color: C.ink }}>
+            <div style={{display: 'flex', flexDirection: 'column', gap: 5, fontSize: 23, fontWeight: 900, color: C.ink }}>
               <span>① 不过 B 地就<Soft color={C.jade}>无法进出</Soft> A 地 → <Soft color={C.jade}>相邻关系</Soft>直接通行，但须对乙<Soft color={C.jade}>影响最小</Soft></span>
               <span>② 只是<Soft color={C.cinnabar}>不方便</Soft> → 高级需求，需与乙订立<Soft color={C.indigo}>地役权合同</Soft>　③ 在 B 地<Soft color={C.cinnabar}>修路</Soft>修固定设施 → 认定为<Soft color={C.indigo}>地役权</Soft></span>
               <span style={{color: C.inkSoft }}>定性：地役权＝「<Soft color={C.indigo}>他人土地上的用益物权</Soft>」（合意·高级需求）·相邻关系＝「<Soft color={C.jade}>自己土地上权利的适当扩张</Soft>」（法定·基本需求）</span>
