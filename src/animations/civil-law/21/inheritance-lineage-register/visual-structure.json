@@ -1,0 +1,122 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "heir-order-kinship",
+      "export": "HeirOrderKinshipScene",
+      "layout": "two-order-columns-over-kin-effect-pair",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "first-order-heirs-are-parents-spouse-children-plus-devoted-widowed-in-laws",
+        "second-order-heirs-inherit-only-when-no-first-order-heir-exists",
+        "adoption-extinguishes-birth-family-inheritance-and-grants-adoptive-kin-inheritance",
+        "step-kin-with-support-bonds-inherit-while-birth-kin-bonds-persist-and-divorce-releases-unless-adopted-or-living-together"
+      ],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "thin-underline"],
+      "focalChannels": ["icon", "contrast", "enclosure", "annotation"],
+      "tokens": ["Key", "Users", "UserPlus", "HeartHandshake", "Link2", "Unlink"],
+      "finalKnowledge": [
+        "inheritance-right-definition",
+        "first-order-heirs",
+        "second-order-heirs",
+        "adoptive-kin-effect",
+        "step-kin-effect"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "loss-waiver-rights",
+      "export": "LossWaiverRightsScene",
+      "layout": "loss-fork-with-consequence-strip-and-waiver-ledger",
+      "anchor": "document-fork",
+      "grammar": [
+        "intentional-killing-grounds-absolutely-void-inheritance-regardless-of-attempt-or-motive",
+        "relative-grounds-require-severe-circumstances-and-allow-remorse-forgiveness-recovery",
+        "absolute-grounds-never-regain-despite-forgiveness-or-later-will-designation",
+        "devisees-lose-absolutely-for-any-of-the-five-acts",
+        "waiver-needs-writing-to-the-estate-manager-or-coheirs-before-division"
+      ],
+      "textTreatments": ["label-block", "stamp", "external-negation", "soft-highlight"],
+      "focalChannels": ["contrast", "icon", "enclosure", "annotation"],
+      "tokens": ["UserX", "HeartHandshake", "FileWarning", "FileX", "Key"],
+      "finalKnowledge": [
+        "absolute-grounds",
+        "relative-grounds",
+        "heir-consequence",
+        "devisee-loss",
+        "waiver-rules"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "representation-transmission",
+      "export": "RepresentationTransmissionScene",
+      "layout": "succession-timeline-with-representation-seats-and-transmission-chain",
+      "anchor": "timeline-gate",
+      "grammar": [
+        "simultaneous-deaths-presume-no-heir-first-then-elder-then-equal-simultaneity",
+        "descendant-representation-sits-into-the-empty-seat-without-generation-limit",
+        "sibling-representation-only-admits-the-siblings-children",
+        "transmission-passes-the-inheritance-right-to-the-heirs-heir-before-division"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "thin-underline"],
+      "focalChannels": ["icon", "connector", "spatial", "annotation"],
+      "tokens": ["Skull", "Armchair", "Repeat", "Key", "UserX", "GitBranch"],
+      "finalKnowledge": [
+        "death-presumption",
+        "descendant-representation",
+        "sibling-representation",
+        "transmission-succession"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "will-forms-validity",
+      "export": "WillFormsValidityScene",
+      "layout": "six-form-typographic-row-with-validity-triptych",
+      "anchor": "typographic-sequence",
+      "grammar": [
+        "six-statutory-will-forms-carry-witness-and-signature-requirements",
+        "disqualified-witnesses-include-heirs-devisees-and-interested-persons",
+        "missing-form-requirements-make-the-will-nonexistent-while-defects-make-it-invalid",
+        "reserved-share-for-heirs-lacking-labor-and-income-makes-part-of-the-will-invalid",
+        "conflicting-wills-take-the-latest-one"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["icon", "contrast", "enclosure", "annotation"],
+      "tokens": ["PenLine", "PenTool", "Printer", "Video", "Mic", "UserX"],
+      "finalKnowledge": [
+        "will-forms",
+        "witness-disqualification",
+        "nonexistent-vs-invalid",
+        "part-invalid-reserve",
+        "last-will-prevails"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "bequest-agreement-debts",
+      "export": "BequestAgreementDebtsScene",
+      "layout": "bequest-mirror-over-agreement-priority-and-debt-lanes",
+      "anchor": "flow-path",
+      "grammar": [
+        "wills-naming-statutory-heirs-cause-will-inheritance-while-others-cause-bequest",
+        "inheritance-accepts-by-silence-while-bequest-needs-explicit-acceptance-within-60-days",
+        "support-agreement-creditor-ranks-ahead-of-will-inheritance-and-bequest",
+        "debts-are-repaid-first-by-statutory-heirs-then-by-will-heirs-and-devisees-pro-rata"
+      ],
+      "textTreatments": ["label-block", "chip", "thin-underline", "external-negation"],
+      "focalChannels": ["icon", "contrast", "connector", "annotation"],
+      "tokens": ["ScrollText", "HeartHandshake", "Hourglass", "Package", "Scale", "Key"],
+      "finalKnowledge": [
+        "will-inheritance-vs-bequest",
+        "acceptance-waiver-mirror",
+        "agreement-priority",
+        "debt-repayment-order"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "directionId": "lineage-genealogy-register",
+  "family": "genealogy-register",
+  "palette": "rice-paper register ground, ink black brush rules, vermilion generation seals, indigo lineage accents, olive kinship accents, brass markers",
+  "typography": "ink WenKai headings on ruled register columns, vermilion seal stamps and indigo condition underlines",
+  "composition": "two-order heir columns over kin-effect pair, a loss fork with consequence strip and waiver ledger, a succession timeline with representation seats and transmission chain, a six-form will typographic row with validity triptych, and a bequest mirror over agreement priority and debt lanes",
+  "surface": "ruled rice-paper leaves, ink double-rule card frames, vermilion corner ticks, brush column guides",
+  "motion": "heir columns fill order by order, loss grounds split absolute from relative with forgiveness return, the inheritance token hops the transmission chain, will form chips file in and the latest will stamps over earlier ones, and the agreement outranks the bequest chips",
+  "transition": "the rice-paper ground, ink rules and vermilion seal language persist while columns, forks, timelines and mirrors are re-dressed between scenes",
+  "conceptTokens": {
+    "继承权": "Key",
+    "遗嘱": "ScrollText",
+    "代位继承": "Armchair",
+    "转继承": "Repeat",
+    "遗产": "Package",
+    "遗赠扶养协议": "HeartHandshake"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/civil-law/21/inheritance-lineage-register/",
+    "title": "世系墨谱"
+  }
+}
