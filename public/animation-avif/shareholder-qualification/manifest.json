@@ -1,0 +1,70 @@
+{
+  "animationId": "shareholder-qualification",
+  "compositionId": "ShareholderQualification",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-31T07:53:22.795Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 347,
+      "frameCount": 174,
+      "id": "shareholder-qualification-scene-01",
+      "number": "01",
+      "startFrame": 0,
+      "title": "名册对内与登记对外",
+      "durationMs": 5800,
+      "file": "shareholder-qualification-scene-01.avif",
+      "fileSize": 539521,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "efb3f33ec28c3106a8c986b62cdf0208f6e422921add7c35effff870ab4ec73b",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "61ac70124dd73629f82a669d4c0dd3a2b19b0488ea57a4c4aee00cee9c3bc509"
+    },
+    {
+      "endFrame": 719,
+      "frameCount": 186,
+      "id": "shareholder-qualification-scene-02",
+      "number": "02",
+      "startFrame": 348,
+      "title": "身份冲突的处理",
+      "durationMs": 6200,
+      "file": "shareholder-qualification-scene-02.avif",
+      "fileSize": 469382,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "25c5cefef302198771e43fe3c47ddf4555514883f5cdd1f47ee21019434389b2",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "61ac70124dd73629f82a669d4c0dd3a2b19b0488ea57a4c4aee00cee9c3bc509"
+    },
+    {
+      "endFrame": 1091,
+      "frameCount": 186,
+      "id": "shareholder-qualification-scene-03",
+      "number": "03",
+      "startFrame": 720,
+      "title": "受让人的权利起点",
+      "durationMs": 6200,
+      "file": "shareholder-qualification-scene-03.avif",
+      "fileSize": 439963,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "cd31c95a76c008cc84a694451ecf835d1c985d260659c0fb87c813de5cec1d15",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "61ac70124dd73629f82a669d4c0dd3a2b19b0488ea57a4c4aee00cee9c3bc509"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "61ac70124dd73629f82a669d4c0dd3a2b19b0488ea57a4c4aee00cee9c3bc509",
+  "targetFps": 30,
+  "totalFileSize": 1448866
+}
