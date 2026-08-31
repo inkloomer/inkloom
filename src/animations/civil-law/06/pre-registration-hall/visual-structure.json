@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "non-contract-shifts",
+      "export": "NonContractShiftsScene",
+      "layout": "three-bypass-lanes-under-publicity-gate",
+      "anchor": "flow-path",
+      "grammar": [
+        "non-contract-changes-skip-registration-and-delivery-as-an-exception",
+        "inheritance-shifts-property-when-succession-opens",
+        "legal-instruments-shift-property-when-they-take-effect",
+        "lawful-completion-creates-property-and-demolition-ends-it-without-filings"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["connector", "contrast", "enclosure", "motion"],
+      "tokens": ["RefreshCw", "Users", "ScrollText", "Hammer"],
+      "finalKnowledge": ["exception-premise", "three-triggers", "demolition-rule", "unregistered-disposition"],
+      "statefulObjects": []
+    },
+    {
+      "id": "document-forks",
+      "export": "DocumentForksScene",
+      "layout": "fertile-barren-document-lanes",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "formation-litigation-documents-change-property-upon-effect",
+        "auction-and-debt-for-asset-rulings-transfer-on-service",
+        "confirmation-and-payment-documents-never-change-property",
+        "the-real-owner-cannot-transfer-but-the-nominal-owner-may-good-faith"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "external-negation"],
+      "focalChannels": ["contrast", "connector", "enclosure", "motion"],
+      "tokens": ["ScrollText", "Gavel", "Ban", "Users"],
+      "finalKnowledge": ["fertile-documents", "barren-documents", "divorce-verdicts", "confirmation-limits"],
+      "statefulObjects": []
+    },
+    {
+      "id": "notice-registration",
+      "export": "NoticeRegistrationScene",
+      "layout": "blocked-disposition-gate-with-expiry-strip",
+      "anchor": "flow-path",
+      "grammar": [
+        "notice-registration-records-the-buyer-credit-claim",
+        "it-blocks-the-seller-from-disposing-again-to-secure-the-claim",
+        "a-blocked-disposition-still-leaves-the-contract-binding",
+        "extinguished-claim-or-ninety-idle-days-ends-the-notice"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["connector", "contrast", "enclosure", "motion"],
+      "tokens": ["BellRing", "Ban", "FileSignature", "Users"],
+      "finalKnowledge": ["notice-meaning", "blocked-effect", "developer-verdicts", "notice-expiry"],
+      "statefulObjects": []
+    },
+    {
+      "id": "objection-registration",
+      "export": "ObjectionRegistrationScene",
+      "layout": "correction-objection-chain-with-verdict-fork",
+      "anchor": "document-fork",
+      "grammar": [
+        "objection-registration-publicises-a-dispute-over-the-record",
+        "correction-first-objection-second-is-the-filing-order",
+        "upheld-objection-makes-disposition-unauthorised-and-blocks-good-faith",
+        "rejected-objection-restores-authority-and-exposes-to-damages"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "external-negation"],
+      "focalChannels": ["connector", "contrast", "enclosure", "motion"],
+      "tokens": ["CircleAlert", "FileSignature", "Gavel", "Users"],
+      "finalKnowledge": ["objection-meaning", "filing-order", "verdict-fork", "objection-expiry"],
+      "statefulObjects": []
+    }
+  ]
+}

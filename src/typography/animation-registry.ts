@@ -182,6 +182,8 @@ import {typography as typographyAutoUnjustEnrichmentHall} from '../animations/ci
 import {typography as typographyAutoPropertySystemHall} from '../animations/civil-law/06/property-system-hall/animation.meta';
 import {typography as typographyAutoTransferModeHall} from '../animations/civil-law/06/transfer-mode-hall/animation.meta';
 import {typography as typographyAutoDeliveryRegistryHall} from '../animations/civil-law/06/delivery-registry-hall/animation.meta';
+import {typography as typographyAutoPreRegistrationHall} from '../animations/civil-law/06/pre-registration-hall/animation.meta';
+import {typography as typographyAutoAdoptionDossierRegistry} from '../animations/civil-law/21/adoption-dossier-registry/animation.meta';
 import {typography as typographyAutoDividendRight} from '../animations/commercial-law/04/dividend-right/animation.meta';
 import {typography as typographyAutoShareholderQualification} from '../animations/commercial-law/03/shareholder-qualification/animation.meta';
 import {typography as typographyAutoNominalShareholder} from '../animations/commercial-law/03/nominal-shareholder/animation.meta';
@@ -460,7 +462,9 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'unjust-enrichment-hall': {metadata: typographyAutoUnjustEnrichmentHall, scope: {animationId: 'unjust-enrichment-hall', subject: 'civil-law', topic: '05'}},
   'property-system-hall': {metadata: typographyAutoPropertySystemHall, scope: {animationId: 'property-system-hall', subject: 'civil-law', topic: '06'}},
   'transfer-mode-hall': {metadata: typographyAutoTransferModeHall, scope: {animationId: 'transfer-mode-hall', subject: 'civil-law', topic: '06'}},
+  'adoption-dossier-registry': {metadata: typographyAutoAdoptionDossierRegistry, scope: {animationId: 'adoption-dossier-registry', subject: 'civil-law', topic: '21'}},
   'delivery-registry-hall': {metadata: typographyAutoDeliveryRegistryHall, scope: {animationId: 'delivery-registry-hall', subject: 'civil-law', topic: '06'}},
+  'pre-registration-hall': {metadata: typographyAutoPreRegistrationHall, scope: {animationId: 'pre-registration-hall', subject: 'civil-law', topic: '06'}},
   'dividend-right': {metadata: typographyAutoDividendRight, scope: {animationId: 'dividend-right', subject: 'commercial-law', topic: '04'}},
   'shareholder-qualification': {metadata: typographyAutoShareholderQualification, scope: {animationId: 'shareholder-qualification', subject: 'commercial-law', topic: '03'}},
   'nominal-shareholder': {metadata: typographyAutoNominalShareholder, scope: {animationId: 'nominal-shareholder', subject: 'commercial-law', topic: '03'}},

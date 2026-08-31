@@ -1,0 +1,21 @@
+{
+  "directionId": "wine-dossier-pre-registration-hall",
+  "family": "wine-dossier-pre-registration-hall",
+  "palette": "deep wine red, dossier rose, cream paper, teal ribbon, ochre seal, brick stamp, umber ink",
+  "typography": "dossier-hall headings on wine rail tabs, cream chips and brick wax verdicts",
+  "composition": "a dossier hall where three non-contract lanes bypass the publicity gates, fertile and barren document lanes split at a delivery barrier, a notice-registration wall blocks a disposition flow, and a correction-then-objection chain forks into two verdict lanes",
+  "surface": "cream dossier files, wine desk rails, teal ribbon tags, brick wax seals",
+  "motion": "ownership chips jump to their holders as inheritance judgment and construction complete while the publicity gate stands bypassed, document chips ride the delivery path or bounce off the barren barrier, a buyer disposition token is stopped by the notice wall, and the objection chain splits into win and lose verdicts",
+  "transition": "the wine hall floor, wine rails and teal ribbon posts persist while lanes, walls and forks are re-dressed between scenes",
+  "conceptTokens": {
+    "物权变动": "RefreshCw",
+    "预告登记": "BellRing",
+    "异议登记": "CircleAlert"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/civil-law/06/pre-registration-hall/",
+    "title": "绛红卷宗馆"
+  }
+}
