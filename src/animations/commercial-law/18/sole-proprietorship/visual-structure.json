@@ -1,0 +1,93 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "sole-proprietorship-scene-01",
+      "export": "SoleProprietorship01Scene",
+      "layout": "three-element-assembly-1",
+      "anchor": "concept-icon",
+      "grammar": [
+        "element-assembly",
+        "entity-crown"
+      ],
+      "textTreatments": [
+        "chip",
+        "stamp",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "icon",
+        "spatial",
+        "contrast"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "sole-proprietorship-knowledge-1",
+        "sole-proprietorship-scene-01-concept",
+        "sole-proprietorship-scene-01-element-user",
+        "sole-proprietorship-scene-01-element-property",
+        "sole-proprietorship-scene-01-element-liability"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "sole-proprietorship-scene-02",
+      "export": "SoleProprietorship02Scene",
+      "layout": "liability-gate-timeline-2",
+      "anchor": "timeline-gate",
+      "grammar": [
+        "family-property-gate",
+        "dissolve-decay-timeline"
+      ],
+      "textTreatments": [
+        "chip",
+        "stamp",
+        "external-negation"
+      ],
+      "focalChannels": [
+        "motion",
+        "connector",
+        "contrast"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "sole-proprietorship-knowledge-2",
+        "sole-proprietorship-scene-02-family-gate",
+        "sole-proprietorship-scene-02-dissolve"
+      ],
+      "statefulObjects": [
+        "dissolve-liability-travel"
+      ]
+    },
+    {
+      "id": "sole-proprietorship-scene-03",
+      "export": "SoleProprietorship03Scene",
+      "layout": "triple-entity-compare-3",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "entity-matrix-columns",
+        "conversion-fork"
+      ],
+      "textTreatments": [
+        "chip",
+        "soft-highlight",
+        "stamp"
+      ],
+      "focalChannels": [
+        "contrast",
+        "spatial",
+        "icon"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "sole-proprietorship-knowledge-3",
+        "sole-proprietorship-scene-03-col-sole",
+        "sole-proprietorship-scene-03-col-company",
+        "sole-proprietorship-scene-03-col-partnership"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

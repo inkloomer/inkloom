@@ -1,0 +1,16 @@
+{
+  "directionId": "sole-workshop-signboard",
+  "derivedFrom": "demo-clerk-desk",
+  "variation": "独资作坊招牌: 三要素铜牌拼出经营实体, 解散旧债沿五年刻度滑向除斥终点, 三体立柱并排比出责任与税负",
+  "family": "sole-workshop-signboard",
+  "palette": "#F0EBE0 + #2B2B33 + #7A3B5E + #2F6B5E + #B23A30 + #B98A2F",
+  "typography": "WenKai 作坊招牌 + 要件铜牌 + 除斥刻度",
+  "composition": "三要素拼装 + 责任闸门与五年时间线 + 三体对比立柱与转换分叉",
+  "surface": "作坊招牌纸卡、三色立柱、金口诀条, 无圆角",
+  "motion": "三块要素牌自两侧与下方拼拢, 旧债徽章沿时间线下滑至除斥终点消散, 三立柱依次立起, 转换线双向伸展",
+  "transition": "梅紫招牌贯穿三场, 青色个人与红色无限责任双线呼应",
+  "catalog": {
+    "status": "variant",
+    "sourceDirectionId": "sole-workshop-signboard"
+  }
+}
