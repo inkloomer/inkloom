@@ -27,7 +27,7 @@ export const CompanyCapacity01Scene=()=>{
         <div style={{fontSize:32,fontWeight:900}}>权利能力与行为能力<span style={{background:COLORS.gold+'42',padding:'2px 12px',marginLeft:14,fontSize:26}}>同时产生 · 同时终止</span></div>
       </div>
       <div style={{position:'absolute',left:120,right:120,top:150,height:8,background:COLORS.ink}}/>
-      <div data-final-knowledge="company-capacity-scene-01-gate-birth" style={{position:'absolute',left:150,top:196,width:520,padding:'20px 26px',border:'4px solid '+COLORS.ink,background:COLORS.paper,opacity:enter(40,66)}}>
+      <div data-final-knowledge="company-capacity-scene-01-gate-birth" style={{position:'absolute',left:150,top:196,width:520,padding:'20px 26px',border:'4px solid '+COLORS.ink,background:COLORS.paper,opacity:enter(40,66),translate:interpolate(frame,[40,66],['0px 22px','0px 0px'],CLAMP)}}>
         <div style={{display:'flex',alignItems:'center',gap:14,marginBottom:12}}>
           <div style={{width:52,height:52,border:'4px solid '+COLORS.green,background:COLORS.green,color:COLORS.paper,display:'grid',placeItems:'center',fontSize:26,fontWeight:900}}>始</div>
           <CalendarCheck size={34} color={COLORS.green}/>
@@ -35,7 +35,7 @@ export const CompanyCapacity01Scene=()=>{
         </div>
         <div style={{fontSize:24,fontWeight:800,lineHeight:1.4}}>即<span style={{background:COLORS.green+'30',padding:'2px 8px'}}>营业执照签发之日</span>，两能力同时产生</div>
       </div>
-      <div data-final-knowledge="company-capacity-scene-01-gate-death" style={{position:'absolute',right:150,top:196,width:520,padding:'20px 26px',border:'4px solid '+COLORS.ink,background:COLORS.paper,opacity:enter(64,90)}}>
+      <div data-final-knowledge="company-capacity-scene-01-gate-death" style={{position:'absolute',right:150,top:196,width:520,padding:'20px 26px',border:'4px solid '+COLORS.ink,background:COLORS.paper,opacity:enter(64,90),translate:interpolate(frame,[64,90],['0px 22px','0px 0px'],CLAMP)}}>
         <div style={{display:'flex',alignItems:'center',gap:14,marginBottom:12}}>
           <div style={{width:52,height:52,border:'4px solid '+COLORS.purple,background:COLORS.purple,color:COLORS.paper,display:'grid',placeItems:'center',fontSize:26,fontWeight:900}}>终</div>
           <CalendarX size={34} color={COLORS.purple}/>
@@ -71,7 +71,7 @@ export const CompanyCapacity02Scene=()=>{
         <div style={{display:'flex',alignItems:'center',gap:14,marginBottom:16}}>
           <Users size={44} color={COLORS.purple}/>
           <div style={{padding:'8px 18px',background:COLORS.purple,color:COLORS.paper,fontSize:28,fontWeight:900}}>关联担保</div>
-          <div style={{fontSize:24,fontWeight:800,color:'#5A4A6E'}}>为股东或实际控制人提供担保</div>
+          <div style={{fontSize:24,fontWeight:800,color:'#5A4A6E',background:COLORS.purple+'16',padding:'4px 12px'}}>为<span style={{fontWeight:900,color:COLORS.purple}}>股东或实际控制人</span>提供担保</div>
         </div>
         <div style={{display:'grid',gap:12}}>
           <div style={{fontSize:25,fontWeight:800,lineHeight:1.4,padding:'12px 16px',background:COLORS.purple+'16'}}>① 只能<span style={{fontWeight:900,borderBottom:'4px solid '+COLORS.purple,paddingBottom:2}}>股东会</span>决议</div>
@@ -83,7 +83,7 @@ export const CompanyCapacity02Scene=()=>{
         <div style={{display:'flex',alignItems:'center',gap:14,marginBottom:16}}>
           <UserCheck size={44} color={COLORS.green}/>
           <div style={{padding:'8px 18px',background:COLORS.green,color:COLORS.paper,fontSize:28,fontWeight:900}}>非关联担保</div>
-          <div style={{fontSize:24,fontWeight:800,color:'#3F5A4C'}}>为股东、实际控制人以外的人担保</div>
+          <div style={{fontSize:24,fontWeight:800,color:'#3F5A4C',background:COLORS.green+'14',padding:'4px 12px'}}>为<span style={{fontWeight:900,color:COLORS.green}}>股东、实际控制人以外的人</span>担保</div>
         </div>
         <div style={{display:'grid',gap:12}}>
           <div style={{fontSize:25,fontWeight:800,lineHeight:1.4,padding:'12px 16px',background:COLORS.green+'14'}}>① <span style={{fontWeight:900,borderBottom:'4px solid '+COLORS.green,paddingBottom:2}}>股东会</span>或<span style={{fontWeight:900,borderBottom:'4px solid '+COLORS.green,paddingBottom:2}}>董事会</span>决议</div>
@@ -93,7 +93,7 @@ export const CompanyCapacity02Scene=()=>{
       <div data-final-knowledge="company-capacity-scene-02-rule" style={{position:'absolute',left:0,right:0,bottom:0,display:'flex',alignItems:'center',gap:20,border:'4px solid '+COLORS.ink,background:COLORS.gold+'30',padding:'16px 26px',opacity:enter(84,112)}}>
         <Scale size={40} color={COLORS.purple}/>
         <div style={{padding:'8px 20px',border:'4px solid '+COLORS.purple,color:COLORS.purple,fontSize:26,fontWeight:900,transform:'rotate(-2deg)',background:COLORS.paper}}>关联方回避</div>
-        <div style={{fontSize:27,fontWeight:900,lineHeight:1.4}}>关键：表决权过半数 / 人数过半数——不是"人头表决"</div>
+        <div style={{fontSize:27,fontWeight:900,lineHeight:1.4}}>关键：<span style={{fontWeight:900,background:COLORS.gold+'46',padding:'2px 8px'}}>表决权过半数 / 人数过半数</span>——<span style={{fontWeight:900,color:COLORS.red,borderBottom:'4px solid '+COLORS.red,paddingBottom:2}}>不是"人头表决"</span></div>
       </div>
     </div>
   </Shell>;
@@ -107,21 +107,21 @@ export const CompanyCapacity03Scene=()=>{
       <FileSignature size={120} color={COLORS.green} strokeWidth={1.2} style={{position:'absolute',right:40,top:524,opacity:0.08,pointerEvents:'none'}}/>
       <div data-final-knowledge="company-capacity-knowledge-3" style={{position:'absolute',left:0,right:0,top:0,fontSize:26,fontWeight:900,letterSpacing:4,color:'#5A4A6E',opacity:enter(12,36)}}>三种豁免 · 无须机关决议，担保有效</div>
       <div style={{position:'absolute',left:0,right:0,top:64,display:'grid',gridTemplateColumns:'repeat(3,minmax(0,1fr))',gap:22}}>
-        <div data-final-knowledge="company-capacity-scene-03-waiver-0" style={{padding:'20px 24px',border:'4px solid '+COLORS.ink,borderTop:'12px solid '+COLORS.green,background:COLORS.paper,minHeight:240,opacity:enter(26,52)}}>
+        <div data-final-knowledge="company-capacity-scene-03-waiver-0" style={{padding:'20px 24px',border:'4px solid '+COLORS.ink,borderTop:'12px solid '+COLORS.green,background:COLORS.paper,minHeight:240,opacity:enter(26,52),translate:interpolate(frame,[26,52],['0px 22px','0px 0px'],CLAMP)}}>
           <div style={{display:'flex',alignItems:'center',gap:12,marginBottom:14}}>
             <FileSignature size={40} color={COLORS.green}/>
             <div style={{fontSize:29,fontWeight:900}}>本业</div>
           </div>
           <div style={{fontSize:23,fontWeight:700,lineHeight:1.5}}>金融机构开立保函，或担保公司提供担保——担保属其<span style={{background:COLORS.green+'2C',padding:'2px 6px',fontWeight:900}}>日常经营业务</span></div>
         </div>
-        <div data-final-knowledge="company-capacity-scene-03-waiver-1" style={{padding:'20px 24px',border:'4px solid '+COLORS.ink,borderTop:'12px solid '+COLORS.gold,background:COLORS.paper,minHeight:240,opacity:enter(44,70)}}>
+        <div data-final-knowledge="company-capacity-scene-03-waiver-1" style={{padding:'20px 24px',border:'4px solid '+COLORS.ink,borderTop:'12px solid '+COLORS.gold,background:COLORS.paper,minHeight:240,opacity:enter(44,70),translate:interpolate(frame,[44,70],['0px 22px','0px 0px'],CLAMP)}}>
           <div style={{display:'flex',alignItems:'center',gap:12,marginBottom:14}}>
             <Building size={40} color={COLORS.gold}/>
             <div style={{fontSize:29,fontWeight:900}}>全资</div>
           </div>
           <div style={{fontSize:23,fontWeight:700,lineHeight:1.5}}>公司为其<span style={{background:COLORS.gold+'40',padding:'2px 6px',fontWeight:900}}>全资子公司</span>经营活动担保（爹给儿子）；<span style={{fontWeight:900}}>一人公司</span>为其股东担保（儿子给爹）亦无须决议</div>
         </div>
-        <div data-final-knowledge="company-capacity-scene-03-waiver-2" style={{padding:'20px 24px',border:'4px solid '+COLORS.ink,borderTop:'12px solid '+COLORS.purple,background:COLORS.paper,minHeight:240,opacity:enter(62,88)}}>
+        <div data-final-knowledge="company-capacity-scene-03-waiver-2" style={{padding:'20px 24px',border:'4px solid '+COLORS.ink,borderTop:'12px solid '+COLORS.purple,background:COLORS.paper,minHeight:240,opacity:enter(62,88),translate:interpolate(frame,[62,88],['0px 22px','0px 0px'],CLAMP)}}>
           <div style={{display:'flex',alignItems:'center',gap:12,marginBottom:14}}>
             <FileSignature size={40} color={COLORS.purple}/>
             <div style={{fontSize:29,fontWeight:900}}>签字</div>

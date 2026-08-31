@@ -1,0 +1,70 @@
+{
+  "animationId": "company-classification",
+  "compositionId": "CompanyClassification",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-31T05:35:53.802Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 347,
+      "frameCount": 174,
+      "id": "company-classification-scene-01",
+      "number": "01",
+      "startFrame": 0,
+      "title": "概念与责任能力",
+      "durationMs": 5800,
+      "file": "company-classification-scene-01.avif",
+      "fileSize": 362032,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "bdbc704d59a3efd4474e04286b414f174fe28054bb3988835fb26bf357b99346",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "8bd3d9402d25381c672f94b9d37c42a98df44764849e3e884c92f5043dcbee88"
+    },
+    {
+      "endFrame": 719,
+      "frameCount": 186,
+      "id": "company-classification-scene-02",
+      "number": "02",
+      "startFrame": 348,
+      "title": "营业执照与诉讼地位",
+      "durationMs": 6200,
+      "file": "company-classification-scene-02.avif",
+      "fileSize": 433947,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "0b1a352d15a500ae478d42e40e79a06e884deac3243322befdda2a6f1f5bc265",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "8bd3d9402d25381c672f94b9d37c42a98df44764849e3e884c92f5043dcbee88"
+    },
+    {
+      "endFrame": 1067,
+      "frameCount": 174,
+      "id": "company-classification-scene-03",
+      "number": "03",
+      "startFrame": 720,
+      "title": "分公司的执行顺序",
+      "durationMs": 5800,
+      "file": "company-classification-scene-03.avif",
+      "fileSize": 373743,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "63e2140fca15f986e1dc3f0f9c29a5677b9b0f032946597a28993c5a877c09cd",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "8bd3d9402d25381c672f94b9d37c42a98df44764849e3e884c92f5043dcbee88"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "8bd3d9402d25381c672f94b9d37c42a98df44764849e3e884c92f5043dcbee88",
+  "targetFps": 30,
+  "totalFileSize": 1169722
+}
