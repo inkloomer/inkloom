@@ -3,7 +3,7 @@
   "compositionId": "PowerMoneyExchange",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-08-30T20:56:39.234Z",
+  "generatedAt": "2026-08-31T06:36:29.008Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -22,7 +22,7 @@
       "sha256": "85be68e64dad35327c1bfde328585e1a8c38e04bd4a86c04024376cf0f375af6",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "89b0b373a8b0c7b35b869dd9dc37320a0ca36f3afef3c1cefb7d8856efb77b9b"
+      "sceneFingerprint": "e1872c8242830e09313b354cf4fa967eeadc989acc98036d3f66399184d163e3"
     },
     {
       "endFrame": 479,
@@ -39,7 +39,7 @@
       "sha256": "c1a6b352397b7bba99de29b6c5c5a1755c91b6916f27db226781c3d68a6290d5",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "e40b40c1c1925c0c71ca62e429a4687b691f628154cece46564f3170410177c7"
+      "sceneFingerprint": "87e549bd15aab253d2cd928a07d95d40e1ca30cc8be26d74c01c9fdcd603bc54"
     },
     {
       "endFrame": 719,
@@ -50,13 +50,13 @@
       "title": "挪用公款罪",
       "durationMs": 8000,
       "file": "misuse-fund-lane.avif",
-      "fileSize": 825073,
+      "fileSize": 825066,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "fc4a7c173ad05299b4a1cdfadb56a244060a26fcfd9ae613bb9fe04e22bd21da",
+      "sha256": "6ba6833af7a49f9e49e0b31cf5a43ec5f8988eef2fbaf2901e4811c6bccc915b",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "c86a8bbad2812e056cd77f83f170c83c26c4778a5d568c02225e5b5c890fd23c"
+      "sceneFingerprint": "27b37bb2cfa78407b399e1cc4985af48567caea9aee9b13480cd4447149ff973"
     },
     {
       "endFrame": 959,
@@ -73,7 +73,7 @@
       "sha256": "a60f21024382c844b81535362ce8bbcfa61ca93b495f393b1d4d2b3c189f16e8",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "40103221fba473d9c060039aecffa5a101dab2df5a6e725b2b6957ce10144b23"
+      "sceneFingerprint": "7e2c786b960dfb404fa6b835488be1937df6e5077419a8d89dcf7b6dab7282f9"
     },
     {
       "endFrame": 1199,
@@ -90,7 +90,7 @@
       "sha256": "0481502983a4d33f38fe8153e82a27184eb634d8863a40868e7cb1eb539e5eee",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "20825242fccbb3ffc46d2c88c3ace667ee54eb9c217faae9a1631b593a685093"
+      "sceneFingerprint": "078ad86c67b595d0489a5f6ab85938cfec5c2fb31100924232abe247c6b56fe4"
     },
     {
       "endFrame": 1439,
@@ -107,7 +107,24 @@
       "sha256": "e95139044b7d1410188378672b9c856504678bf308f91a1f3fd3210f9578473c",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "1761fbe1d77a6e70b64e120dedc6e3d611b24b6532102e1fd17fc0c2f9542ba3"
+      "sceneFingerprint": "4451e253bbfe4b1af0d6a83fc13dab6cc7441539619f3dcdebd5bb344fcedf33"
+    },
+    {
+      "endFrame": 1699,
+      "frameCount": 260,
+      "id": "unexplained-asset-ledger",
+      "number": "07",
+      "startFrame": 1440,
+      "title": "巨额财产来源不明罪",
+      "durationMs": 8667,
+      "file": "unexplained-asset-ledger.avif",
+      "fileSize": 833726,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "167682ebdd67d6c91d52ea81c8db89ba7a3582e604b2725be83b1441539b5e26",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "eda5eedee55b0ec6746ff8c13c1276916885cb24949d7a94a690f935784def7c"
     }
   ],
   "size": {
@@ -115,7 +132,7 @@
     "width": 2560
   },
   "sourceFps": 30,
-  "sourceFingerprint": "c5f65b8b4eda3d4f1d68774ef3e72cc997277bef4ce7788dba6b994f194e2167",
+  "sourceFingerprint": "3691224a1a44fcc98c7a55623b25f2e896493b33393376fe1953eb655dff69e1",
   "targetFps": 30,
-  "totalFileSize": 5691619
+  "totalFileSize": 6525338
 }

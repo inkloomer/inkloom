@@ -9,6 +9,7 @@ const scenes: readonly RemotionScene[] = [
   {id: 'bribery-trade-desk', number: '04', title: '受贿罪·交易结构', ...SCENES.briberyTradeDesk},
   {id: 'bribery-verdict-floor', number: '05', title: '受贿罪·罪数问题', ...SCENES.briberyVerdictFloor},
   {id: 'influence-trio-map', number: '06', title: '行贿罪·斡旋受贿·利用影响力受贿罪', ...SCENES.influenceTrioMap},
+  {id: 'unexplained-asset-ledger', number: '07', title: '巨额财产来源不明罪', ...SCENES.unexplainedAssetLedger},
 ];
 
 export const PowerMoneyExchangePlayer = () => <RemotionDeck animationId="power-money-exchange" component={PowerMoneyExchange} scenes={scenes} durationInFrames={DURATION_FRAMES} fps={FPS} title="贪污贿赂罪：贪污·挪用公款·受贿·行贿" />;

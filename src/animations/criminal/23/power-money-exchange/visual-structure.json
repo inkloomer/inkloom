@@ -74,6 +74,18 @@
       "tokens": ["User", "Target", "Repeat", "MessageCircle", "Users", "Scale"],
       "finalKnowledge": ["offer-panel", "mediate-panel", "influence-panel"],
       "statefulObjects": []
+    },
+    {
+      "id": "unexplained-asset-ledger",
+      "export": "UnexplainedAssetLedgerScene",
+      "layout": "unexplained-asset-flow",
+      "anchor": "flow-path",
+      "grammar": ["statute-plaque", "explanation-fork", "postverdict-fork", "motto-plaque"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "enclosure"],
+      "tokens": ["Wallet", "Users", "Coins", "SearchCheck", "Scale", "Landmark", "FileText", "Gavel"],
+      "finalKnowledge": ["statute-plaque", "explanation-fork", "postverdict-fork", "motto-plaque"],
+      "statefulObjects": []
     }
   ]
 }

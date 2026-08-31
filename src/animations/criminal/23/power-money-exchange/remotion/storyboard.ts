@@ -8,8 +8,9 @@ export const SCENES = {
   briberyTradeDesk: scene(720, 240),
   briberyVerdictFloor: scene(960, 240),
   influenceTrioMap: scene(1200, 240),
+  unexplainedAssetLedger: scene(1440, 260),
 } as const;
 
-export const DURATION_FRAMES = 1440;
+export const DURATION_FRAMES = 1700;
 export const DURATION_SECONDS = DURATION_FRAMES / FPS;
 export const toSourceFrame = (frame: number) => frame;
