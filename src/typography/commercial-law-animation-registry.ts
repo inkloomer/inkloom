@@ -31,6 +31,7 @@ import {typography as typography29} from '../animations/commercial-law/12/bankru
 import {typography as typography30} from '../animations/commercial-law/12/bankruptcy-liquidation/animation.meta';
 import {typography as typography31} from '../animations/commercial-law/13/partnership-establishment/animation.meta';
 import {typography as typography32} from '../animations/commercial-law/14/partnership-property-distribution/animation.meta';
+import {typography as typography33} from '../animations/commercial-law/15/partnership-resolution-execution/animation.meta';
 
 export const COMMERCIAL_LAW_TYPOGRAPHY_CONFIGURATIONS = {
   'company-personality': {metadata: typography0, scope: {animationId: 'company-personality', subject: 'commercial-law', topic: '01'}},
@@ -66,4 +67,5 @@ export const COMMERCIAL_LAW_TYPOGRAPHY_CONFIGURATIONS = {
   'bankruptcy-liquidation': {metadata: typography30, scope: {animationId: 'bankruptcy-liquidation', subject: 'commercial-law', topic: '12'}},
   'partnership-establishment': {metadata: typography31, scope: {animationId: 'partnership-establishment', subject: 'commercial-law', topic: '13'}},
   'partnership-property-distribution': {metadata: typography32, scope: {animationId: 'partnership-property-distribution', subject: 'commercial-law', topic: '14'}},
+  'partnership-resolution-execution': {metadata: typography33, scope: {animationId: 'partnership-resolution-execution', subject: 'commercial-law', topic: '15'}},
 } as const;

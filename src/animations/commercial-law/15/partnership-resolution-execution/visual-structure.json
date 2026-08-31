@@ -1,0 +1,126 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "partnership-resolution-execution-scene-01",
+      "export": "PartnershipResolutionExecution01Scene",
+      "layout": "resolution-sorter-1",
+      "anchor": "flow-path",
+      "grammar": [
+        "item-sort-split",
+        "consent-tray"
+      ],
+      "textTreatments": [
+        "chip",
+        "soft-highlight",
+        "stamp"
+      ],
+      "focalChannels": [
+        "motion",
+        "connector",
+        "contrast"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "partnership-resolution-execution-knowledge-1",
+        "partnership-resolution-execution-scene-01-general",
+        "partnership-resolution-execution-scene-01-special",
+        "partnership-resolution-execution-scene-01-mnemonic"
+      ],
+      "statefulObjects": [
+        "resolution-item-sort"
+      ]
+    },
+    {
+      "id": "partnership-resolution-execution-scene-02",
+      "export": "PartnershipResolutionExecution02Scene",
+      "layout": "execution-dual-column-2",
+      "anchor": "role-pair",
+      "grammar": [
+        "delegation-rights-arrows",
+        "forbidden-permitted-contrast"
+      ],
+      "textTreatments": [
+        "label-block",
+        "chip",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "contrast",
+        "connector",
+        "icon"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "partnership-resolution-execution-knowledge-2",
+        "partnership-resolution-execution-scene-02-gp-common",
+        "partnership-resolution-execution-scene-02-gp-rights",
+        "partnership-resolution-execution-scene-02-lp-no-execute",
+        "partnership-resolution-execution-scene-02-lp-permitted"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "partnership-resolution-execution-scene-03",
+      "export": "PartnershipResolutionExecution03Scene",
+      "layout": "liability-chain-pair-3",
+      "anchor": "boundary",
+      "grammar": [
+        "liability-chain",
+        "apparent-partner-rule"
+      ],
+      "textTreatments": [
+        "stamp",
+        "external-negation",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "connector",
+        "motion",
+        "contrast"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "partnership-resolution-execution-knowledge-3",
+        "partnership-resolution-execution-scene-03-gp-unauthorized",
+        "partnership-resolution-execution-scene-03-gp-third-person",
+        "partnership-resolution-execution-scene-03-lp-apparent"
+      ],
+      "statefulObjects": [
+        "unauthorized-deal-shield"
+      ]
+    },
+    {
+      "id": "partnership-resolution-execution-scene-04",
+      "export": "PartnershipResolutionExecution04Scene",
+      "layout": "restriction-hire-split-4",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "restriction-split",
+        "hire-approval-chain"
+      ],
+      "textTreatments": [
+        "chip",
+        "stamp",
+        "external-negation"
+      ],
+      "focalChannels": [
+        "contrast",
+        "icon",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "partnership-resolution-execution-knowledge-4",
+        "partnership-resolution-execution-scene-04-gp-restrict",
+        "partnership-resolution-execution-scene-04-lp-restrict",
+        "partnership-resolution-execution-scene-04-hire"
+      ],
+      "statefulObjects": [
+        "hire-approval-travel"
+      ]
+    }
+  ]
+}

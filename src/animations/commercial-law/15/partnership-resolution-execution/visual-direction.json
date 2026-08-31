@@ -1,0 +1,16 @@
+{
+  "directionId": "resolution-sorting-counter",
+  "derivedFrom": "demo-clerk-desk",
+  "variation": "合伙事务分诊台: 待决事项被分流到过半数与一致同意两盘, 三权大招按主体方向拉箭头, 越权交易撞上善意第三人挡板, 竞业与自我交易按合伙人类型双标放量",
+  "family": "resolution-sorting-counter",
+  "palette": "#EFEAE0 + #2B2B33 + #5B4A8A + #8A4B2F + #15725F + #B23A30 + #B98A2F",
+  "typography": "WenKai 分诊台标 + 徽章请求 + 印章判词",
+  "composition": "决议分拣台 + 执行双列 + 责任链对撞 + 限制与外聘分栏",
+  "surface": "紫标分诊台、铜青双列纸卡、金色口诀条, 无圆角",
+  "motion": "事项徽章滑入分流口落盘, 三权箭头沿主体方向拉开, 越权交易徽章穿过限制线抵达第三人, 聘任申请停在授权栏内",
+  "transition": "紫色决议台贯穿首场, 铜色普通合伙与青色有限合伙双列贯穿后三场",
+  "catalog": {
+    "status": "variant",
+    "sourceDirectionId": "resolution-sorting-counter"
+  }
+}
