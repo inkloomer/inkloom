@@ -1,0 +1,21 @@
+{
+  "directionId": "mauve-silk-contract-overview-hall",
+  "family": "mauve-silk-contract-overview-hall",
+  "palette": "mauve plum grey, silk rose, gilt coin, jade ribbon, seal red wax, plum ink",
+  "typography": "silk-hall headings on mauve rail tabs, cream chips and gilt coin seals",
+  "composition": "a silk negotiation hall where the reward dais splits promise from acceptance, the nameless and kindness pair weigh validity against courtesy across a ride lane, and seven interpretation looms thread one case each",
+  "surface": "cream paper files, mauve desk rails, silk rose tags, gilt coin seals",
+  "motion": "the reward coin flies to any finisher regardless of capacity or knowledge, the courtesy ride drives through four verdict gates while a tort wall stands beside them, and each interpretation loom threads its own case cloth",
+  "transition": "the mauve hall floor, mauve rails and gilt coin posts persist while dais, lanes and looms are re-dressed between scenes",
+  "conceptTokens": {
+    "悬赏广告": "Megaphone",
+    "无名合同": "CircleHelp",
+    "好意施惠": "HeartHandshake"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/civil-law/11/contract-overview-hall/",
+    "title": "绢纱合议馆"
+  }
+}

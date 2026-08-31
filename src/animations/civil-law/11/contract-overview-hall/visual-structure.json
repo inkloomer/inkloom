@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "reward-notice-dais",
+      "export": "RewardNoticeScene",
+      "layout": "reward-dais-with-twin-nature-splits",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "the-reward-notice-is-a-unilateral-promise-never-an-offer",
+        "completing-the-act-is-a-fact-act-never-an-acceptance",
+        "the-coin-flies-regardless-of-capacity-or-prior-knowledge",
+        "the-finished-act-itself-earns-the-claimed-reward"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["contrast", "icon", "enclosure", "motion"],
+      "tokens": ["Megaphone", "Gavel", "Coins"],
+      "finalKnowledge": ["reward-definition", "nature-splits", "claim-conditions", "table-recap"],
+      "statefulObjects": []
+    },
+    {
+      "id": "nameless-kindness-pair",
+      "export": "NamelessKindnessScene",
+      "layout": "kindness-ride-lane-with-tort-wall",
+      "anchor": "flow-path",
+      "grammar": [
+        "nameless-contracts-stay-valid-under-freedom-and-borrow-nearest-rules",
+        "courtesy-promises-bear-no-contract-liability-at-all",
+        "the-free-ride-still-meets-third-party-contracts-on-the-road",
+        "gross-negligence-removes-the-good-samaritan-reduction"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "external-negation"],
+      "focalChannels": ["connector", "contrast", "enclosure", "motion"],
+      "tokens": ["CircleHelp", "HeartHandshake", "Scale"],
+      "finalKnowledge": ["nameless-limb", "kindness-limb", "ride-four-verdicts", "reduction-rule"],
+      "statefulObjects": []
+    },
+    {
+      "id": "interpretation-seven-loom",
+      "export": "InterpretationLoomScene",
+      "layout": "seven-loom-sequence-with-precedence",
+      "anchor": "typographic-sequence",
+      "grammar": [
+        "literal-meaning-reads-the-usual-social-understanding-first",
+        "system-purpose-and-usage-loom-undrafted-terms-from-context-aim-and-trade",
+        "good-faith-excuses-trivial-breach-from-agreed-penalties",
+        "contrary-and-valid-interpretations-rescue-format-portrait-and-gratuitous-terms"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["contrast", "connector", "enclosure", "annotation"],
+      "tokens": ["ScanSearch", "ScrollText", "Ban"],
+      "finalKnowledge": ["literal-loom", "system-purpose-usage-loom", "good-faith-loom", "contrary-valid-loom"],
+      "statefulObjects": []
+    }
+  ]
+}
