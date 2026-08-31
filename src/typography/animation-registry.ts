@@ -198,6 +198,7 @@ import {typography as typographyAutoJointTortChainFork} from '../animations/civi
 import {typography as typographyAutoSpecialTortWarningMap} from '../animations/civil-law/19/special-tort-warning-map/animation.meta';
 import {typography as typographyAutoTortLiabilityScaleHall} from '../animations/civil-law/18/tort-liability-scale-hall/animation.meta';
 import {typography as typographyAutoPersonalityShieldHall} from '../animations/civil-law/17/personality-shield-hall/animation.meta';
+import {typography as typographyAutoPersonalityReinsHall} from '../animations/civil-law/16/personality-reins-hall/animation.meta';
 import {typography as typographyAutoSuccessionLineageRegister} from '../animations/civil-law/21/succession-lineage-register/animation.meta';
 import {typography as typographyAutoInheritanceLineageRegister} from '../animations/civil-law/21/inheritance-lineage-register/animation.meta';
 import {typography as typographyAutoDividendRight} from '../animations/commercial-law/04/dividend-right/animation.meta';
@@ -485,6 +486,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'special-tort-warning-map': {metadata: typographyAutoSpecialTortWarningMap, scope: {animationId: 'special-tort-warning-map', subject: 'civil-law', topic: '19'}},
   'tort-liability-scale-hall': {metadata: typographyAutoTortLiabilityScaleHall, scope: {animationId: 'tort-liability-scale-hall', subject: 'civil-law', topic: '18'}},
   'personality-shield-hall': {metadata: typographyAutoPersonalityShieldHall, scope: {animationId: 'personality-shield-hall', subject: 'civil-law', topic: '17'}},
+  'personality-reins-hall': {metadata: typographyAutoPersonalityReinsHall, scope: {animationId: 'personality-reins-hall', subject: 'civil-law', topic: '16'}},
   'succession-lineage-register': {metadata: typographyAutoSuccessionLineageRegister, scope: {animationId: 'succession-lineage-register', subject: 'civil-law', topic: '21'}},
   'inheritance-lineage-register': {metadata: typographyAutoInheritanceLineageRegister, scope: {animationId: 'inheritance-lineage-register', subject: 'civil-law', topic: '21'}},
   'delivery-registry-hall': {metadata: typographyAutoDeliveryRegistryHall, scope: {animationId: 'delivery-registry-hall', subject: 'civil-law', topic: '06'}},

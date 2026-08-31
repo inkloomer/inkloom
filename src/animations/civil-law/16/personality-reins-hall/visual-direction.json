@@ -1,0 +1,22 @@
+{
+  "directionId": "amber-reins-personality-hall",
+  "family": "amber-reins-hall",
+  "palette": "deep amber field, cream parchment slips, honey gold, saddle brown, verdigris green, plum gray, dark roast ink",
+  "typography": "reins-hall headings on amber rail tabs, saddle-brown verdicts and honey condition plates",
+  "composition": "a portrait license lane with termination forks and an organ donation lane with consent gates and a trial bench",
+  "surface": "cream parchment plaques on a deep amber field with honey rail posts",
+  "motion": "license tokens travel the lane through interpretation and termination gates, and consent slips open donation and trial gates with recourse arrows",
+  "transition": "the amber field, honey posts and parchment stock persist while lanes and gates are re-dressed between scenes",
+  "conceptTokens": {
+    "肖像许可": "Image",
+    "解除": "Scissors",
+    "捐献": "HeartHandshake",
+    "书面形式": "FileSignature"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/civil-law/16/personality-reins-hall/",
+    "title": "蜜蜡缰绳堂"
+  }
+}

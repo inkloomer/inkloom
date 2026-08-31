@@ -1,0 +1,70 @@
+{
+  "animationId": "personality-reins-hall",
+  "compositionId": "PersonalityReinsHall",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-31T15:08:14.856Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 639,
+      "frameCount": 320,
+      "id": "portrait-license-lane",
+      "number": "01",
+      "startFrame": 0,
+      "title": "肖像使用许可合同",
+      "durationMs": 10667,
+      "file": "portrait-license-lane.avif",
+      "fileSize": 645243,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "65f68e92afc970bd1b356febf9b866f4274e986496d660e4634a933604debc82",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "f42f04aa265fa3566b26faad59d8c79fcb01dd7039ca3e87fa2181930906a4da"
+    },
+    {
+      "endFrame": 1259,
+      "frameCount": 310,
+      "id": "body-donation-lane",
+      "number": "02",
+      "startFrame": 640,
+      "title": "器官捐献的自主决定",
+      "durationMs": 10333,
+      "file": "body-donation-lane.avif",
+      "fileSize": 569922,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "b206cae5913de4e9c519f4edf2acb20293bc59ee771207e9c1ce3d3409b64f0d",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "f42f04aa265fa3566b26faad59d8c79fcb01dd7039ca3e87fa2181930906a4da"
+    },
+    {
+      "endFrame": 1879,
+      "frameCount": 310,
+      "id": "clinical-trial-gates",
+      "number": "03",
+      "startFrame": 1260,
+      "title": "临床试验的四道闸",
+      "durationMs": 10333,
+      "file": "clinical-trial-gates.avif",
+      "fileSize": 386803,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "b539cc49fb1bdd824d69669a928872cf1e50a0d46a1cfc7a430016037e4c45cc",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "f42f04aa265fa3566b26faad59d8c79fcb01dd7039ca3e87fa2181930906a4da"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "f42f04aa265fa3566b26faad59d8c79fcb01dd7039ca3e87fa2181930906a4da",
+  "targetFps": 30,
+  "totalFileSize": 1601968
+}

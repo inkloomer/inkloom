@@ -1,0 +1,68 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 2,
+  "scenes": [
+    {
+      "id": "portrait-license-lane",
+      "export": "PortraitLicenseScene",
+      "layout": "license-lane-with-termination-forks",
+      "anchor": "flow-path",
+      "grammar": [
+        "ambiguous-portrait-terms-are-read-against-the-user",
+        "no-or-unclear-term-lets-either-side-terminate-anytime-with-reasonable-notice",
+        "a-fixed-term-needs-just-cause-to-terminate-and-damages-unless-not-attributable-to-the-portrait-holder",
+        "name-and-likewise-licenses-follow-the-portrait-rules-by-reference"
+      ],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "thin-underline"],
+      "focalChannels": ["connector", "contrast", "icon", "annotation"],
+      "tokens": ["Image", "Scissors", "FileSignature", "Undo2", "Coins", "Users"],
+      "finalKnowledge": [
+        "adverse-interpretation",
+        "no-term-termination",
+        "fixed-term-termination",
+        "name-reference-rule"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "body-donation-lane",
+      "export": "BodyDonationScene",
+      "layout": "donation-lane-with-consent-asymmetry-gates",
+      "anchor": "boundary",
+      "grammar": [
+        "capacitous-persons-decide-organ-donation-freely-with-writing-or-will",
+        "a-refusal-needs-no-writing-while-consent-demands-form",
+        "after-death-spouse-adult-children-and-parents-jointly-decide-only-in-written-form",
+        "donation-covers-cells-tissues-organs-and-cadavers-without-payment"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["icon", "contrast", "connector", "annotation"],
+      "tokens": ["HeartHandshake", "FileSignature", "Users", "Ban"],
+      "finalKnowledge": [
+        "organ-donation-autonomy",
+        "posthumous-joint-decision"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "clinical-trial-gates",
+      "export": "ClinicalTrialScene",
+      "layout": "trial-gate-sequence-with-fee-ban-strip",
+      "anchor": "timeline-gate",
+      "grammar": [
+        "trials-pass-approval-ethics-and-written-consent-gates-in-order",
+        "disclosure-covers-purpose-use-and-risks-to-subjects-or-guardians",
+        "trial-fees-are-banned-for-subjects",
+        "consent-asymmetry-runs-through-donation-and-trial-gates-alike"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["connector", "icon", "contrast", "annotation"],
+      "tokens": ["Gavel", "Users", "FileSignature", "Ban"],
+      "finalKnowledge": [
+        "clinical-trial-rules"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}
