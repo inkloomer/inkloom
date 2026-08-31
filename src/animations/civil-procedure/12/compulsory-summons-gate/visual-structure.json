@@ -4,7 +4,7 @@
   "minimumDistinctLayouts": 3,
   "scenes": [
     {
-      "id": "summons-gate-decision",
+      "id": "summons-gate-checkline",
       "export": "SummonsGateDecisionScene",
       "layout": "courtroom-entrance-checkline",
       "anchor": "flow-path",

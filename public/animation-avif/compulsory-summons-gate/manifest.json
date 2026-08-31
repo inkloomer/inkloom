@@ -3,26 +3,26 @@
   "compositionId": "CompulsorySummonsGate",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-08-31T14:08:46.450Z",
+  "generatedAt": "2026-08-31T14:28:06.611Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
     {
       "endFrame": 459,
       "frameCount": 230,
-      "id": "summons-gate-decision",
+      "id": "summons-gate-checkline",
       "number": "01",
       "startFrame": 0,
       "title": "拘传三要件",
       "durationMs": 7667,
-      "file": "summons-gate-decision.avif",
-      "fileSize": 469090,
+      "file": "summons-gate-checkline.avif",
+      "fileSize": 469042,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "307e16cc45adf189e220ef43d664efdf78bb683358784bc5b1f81867ae46b1ef",
+      "sha256": "adf0ea45193167d82e11ce1ce1e8a9417fdfa8745329a7f98699acf254aaa504",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "e334d473ab526bf934c66b6be4b45667292708fc3dccf8ae56e0f930789c0eea"
+      "sceneFingerprint": "b15f224009d35750d41b6bf11a94ef82b734478d5f77dc19be81b376c3104e9a"
     },
     {
       "endFrame": 899,
@@ -39,7 +39,7 @@
       "sha256": "601a08cb3f73fb2cd9f8bc6db8cc528ae079d164153feb2e0b07691dfe311b9e",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "e334d473ab526bf934c66b6be4b45667292708fc3dccf8ae56e0f930789c0eea"
+      "sceneFingerprint": "b15f224009d35750d41b6bf11a94ef82b734478d5f77dc19be81b376c3104e9a"
     },
     {
       "endFrame": 1329,
@@ -50,13 +50,13 @@
       "title": "对单位的措施",
       "durationMs": 7167,
       "file": "unit-measures-fork.avif",
-      "fileSize": 407643,
+      "fileSize": 406983,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "548d6c2112378edfeaae1d06aa69ecad0afc10733dc152256aba7ac189cd99d3",
+      "sha256": "512a1dd25e085e642b24ea4385e321ab219d20e6efecdbf6940b56f855731c93",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "e334d473ab526bf934c66b6be4b45667292708fc3dccf8ae56e0f930789c0eea"
+      "sceneFingerprint": "b15f224009d35750d41b6bf11a94ef82b734478d5f77dc19be81b376c3104e9a"
     }
   ],
   "size": {
@@ -64,7 +64,7 @@
     "width": 2560
   },
   "sourceFps": 60,
-  "sourceFingerprint": "e334d473ab526bf934c66b6be4b45667292708fc3dccf8ae56e0f930789c0eea",
+  "sourceFingerprint": "b15f224009d35750d41b6bf11a94ef82b734478d5f77dc19be81b376c3104e9a",
   "targetFps": 30,
-  "totalFileSize": 1298308
+  "totalFileSize": 1297600
 }

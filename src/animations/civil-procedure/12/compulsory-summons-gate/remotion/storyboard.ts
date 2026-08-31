@@ -1,6 +1,6 @@
 export const FPS = 60;
 export const SCENES = {
-  "summons-gate-decision": { start: 0, duration: 460, previewEndTrimFrames: 0 },
+  "summons-gate-checkline": { start: 0, duration: 460, previewEndTrimFrames: 0 },
   "fine-detention-desk": { start: 460, duration: 440, previewEndTrimFrames: 0 },
   "unit-measures-fork": { start: 900, duration: 430, previewEndTrimFrames: 0 },
 } as const;

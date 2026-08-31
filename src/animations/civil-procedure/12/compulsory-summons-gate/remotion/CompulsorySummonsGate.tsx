@@ -7,7 +7,7 @@ import { FineDetentionDeskScene } from "./scene-02-fine-detention";
 import { UnitMeasuresForkScene } from "./scene-03-unit-fork";
 
 const SCENE_COMPONENTS = {
-  "summons-gate-decision": SummonsGateDecisionScene,
+  "summons-gate-checkline": SummonsGateDecisionScene,
   "fine-detention-desk": FineDetentionDeskScene,
   "unit-measures-fork": UnitMeasuresForkScene,
 } as const;

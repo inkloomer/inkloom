@@ -10,7 +10,7 @@ import {
 } from "../../../remotion/RemotionDeck";
 
 const scenes: readonly RemotionScene[] = [
-  { id: "summons-gate-decision", number: "01", title: "拘传三要件", ...SCENES["summons-gate-decision"] },
+  { id: "summons-gate-checkline", number: "01", title: "拘传三要件", ...SCENES["summons-gate-checkline"] },
   { id: "fine-detention-desk", number: "02", title: "罚款和拘留", ...SCENES["fine-detention-desk"] },
   { id: "unit-measures-fork", number: "03", title: "对单位的措施", ...SCENES["unit-measures-fork"] },
 ];

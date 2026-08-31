@@ -28,7 +28,7 @@ export const SummonsGateDecisionScene: React.FC = () => {
         data-visual-anchor="flow-path"
         data-visual-grammar="object-dock-feeds-the-condition-checkline,justified-reason-chip-bounces-off-the-third-check,approval-counter-issues-the-summons-warrant"
         data-text-treatments="label-block,stamp,soft-highlight"
-        data-focal-rule="summons-gate-decision-rule"
+        data-focal-rule="summons-gate-checkline-rule"
         data-focal-channels="motion,connector,contrast"
         style={{ position: "absolute", inset: 0 }}
       >
