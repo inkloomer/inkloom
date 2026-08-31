@@ -1,0 +1,70 @@
+{
+  "animationId": "delivery-registry-hall",
+  "compositionId": "DeliveryRegistryHall",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-31T07:10:46.744Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 539,
+      "frameCount": 270,
+      "id": "registry-rules",
+      "number": "01",
+      "startFrame": 0,
+      "title": "不动产登记规则",
+      "durationMs": 9000,
+      "file": "registry-rules.avif",
+      "fileSize": 629821,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "e3ca48ea52889477e640f24f75ad434cf50aa14b467fa7c7a353acb6cff4368f",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "c9afa2bd082f609519216993daeee629852a276c808f6fe7851c8109ba244825"
+    },
+    {
+      "endFrame": 1199,
+      "frameCount": 330,
+      "id": "actual-delivery",
+      "number": "02",
+      "startFrame": 540,
+      "title": "现实交付与拟制交付",
+      "durationMs": 11000,
+      "file": "actual-delivery.avif",
+      "fileSize": 570937,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "c118bc30626dbb03909a642f2cbac21028c2f5ac7a0a18849c8a71ea90c2743a",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "c9afa2bd082f609519216993daeee629852a276c808f6fe7851c8109ba244825"
+    },
+    {
+      "endFrame": 1979,
+      "frameCount": 390,
+      "id": "constructive-delivery",
+      "number": "03",
+      "startFrame": 1200,
+      "title": "观念交付的三种类型",
+      "durationMs": 13000,
+      "file": "constructive-delivery.avif",
+      "fileSize": 788425,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "c4c9fd9a5a94bd28768eb2f18090084a8336cc4f8259dca87c2777d477617c2e",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "c9afa2bd082f609519216993daeee629852a276c808f6fe7851c8109ba244825"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "c9afa2bd082f609519216993daeee629852a276c808f6fe7851c8109ba244825",
+  "targetFps": 30,
+  "totalFileSize": 1989183
+}

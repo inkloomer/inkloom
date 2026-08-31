@@ -382,7 +382,7 @@ export const ActualDeliveryScene = () => {
             <span style={{fontSize: 22, fontWeight: 900, color: C.inkSoft}}>现实交付＝基于<Soft color={C.copperMid}>物权变动的意思</Soft>·完成<Soft color={C.copperMid}>直接占有</Soft>的转移</span>
           </Panel>
         </Enter>
-        <div data-final-knowledge="subjective-limb" style={{position: 'absolute', left: 0, top: 124, width: 866, height: 200}}>
+        <div data-final-knowledge="subjective-limb" style={{position: 'absolute', left: 0, top: 124, width: 866, height: 240}}>
           <Gate delay={100} tone={C.patina} style={{position: 'absolute', left: 300, top: 44, width: 250, height: 112, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 4, borderRadius: 12}}>
             <Brain size={30} color={C.patina} strokeWidth={2.2} />
             <span style={{fontSize: 25, fontWeight: 950, color: C.patina}}>付 · 物权变动的意思</span>
@@ -398,13 +398,13 @@ export const ActualDeliveryScene = () => {
           <div style={{position: 'absolute', left: 570, top: 60, display: 'flex', alignItems: 'center', gap: 10}}>
             <Seal delay={150} size={21} tone={C.patina}>意思通过 ✓</Seal>
           </div>
-          <div style={{position: 'absolute', left: 16, top: 176, right: 16}}>
+          <div style={{position: 'absolute', left: 16, top: 172, right: 16}}>
             <IconChip icon={<Ban size={24} color={C.patinaPale} strokeWidth={2.2} />} tone={C.brick} title="诱使 8 岁孩子取出电脑：">
               甲并无<Soft color={C.brick}>交付意思</Soft>→ 不构成交付 → <Seal delay={210} size={18}>乙未取得所有权 ✗</Seal>
             </IconChip>
           </div>
         </div>
-        <div data-final-knowledge="objective-limb" style={{position: 'absolute', left: 910, top: 124, width: 866, height: 200}}>
+        <div data-final-knowledge="objective-limb" style={{position: 'absolute', left: 910, top: 124, width: 866, height: 240}}>
           <Gate delay={170} tone={C.key} style={{position: 'absolute', left: 300, top: 44, width: 250, height: 112, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 4, borderRadius: 12}}>
             <Hand size={30} color={C.key} strokeWidth={2.2} />
             <span style={{fontSize: 25, fontWeight: 950, color: C.key}}>交 · 直接占有转移</span>
@@ -420,19 +420,19 @@ export const ActualDeliveryScene = () => {
           <div style={{position: 'absolute', left: 570, top: 60, display: 'flex', alignItems: 'center', gap: 10}}>
             <Seal delay={220} size={21} tone={C.key}>占有到手 ✓</Seal>
           </div>
-          <div style={{position: 'absolute', left: 16, top: 176, right: 16}}>
+          <div style={{position: 'absolute', left: 16, top: 172, right: 16}}>
             <IconChip icon={<Ban size={24} color={C.patinaPale} strokeWidth={2.2} />} tone={C.brick} title="鸡蛋尚未拿稳即放手·摔碎：">
               乙未取得<Soft color={C.brick}>直接占有</Soft>→ 甲未完成交付 → <Seal delay={260} size={18}>碎蛋是甲的 ✗</Seal>
             </IconChip>
           </div>
         </div>
-        <Enter delay={90} from="up" style={{position: 'absolute', left: 0, top: 340, width: 1776, height: 128}}>
+        <Enter delay={90} from="up" style={{position: 'absolute', left: 0, top: 380, width: 1776, height: 120}}>
           <Panel tone={C.patina} watermark={<Truck size={120} color={C.patina} strokeWidth={1.6} />} style={{height: '100%', display: 'flex', alignItems: 'center', gap: 18, padding: '10px 18px'}}>
             <Chip tone={C.patina} toneBg={C.patinaPale}><span style={{fontSize: 24, fontWeight: 950, color: C.patina}}>物权变动</span></Chip>
             <span style={{fontSize: 23, fontWeight: 900, color: C.ink}}>＝ 两关皆过：<Seal delay={170} size={20} tone={C.patina}>动产所有权转移 ✓</Seal><Seal delay={200} size={20} tone={C.brick}><Lock size={18} color={C.brick} strokeWidth={2.4} /> 动产质权设立 ✓</Seal></span>
           </Panel>
         </Enter>
-        <div data-final-knowledge="symbolic-delivery" style={{position: 'absolute', left: 0, top: 484, width: 1776, height: 284}}>
+        <div data-final-knowledge="symbolic-delivery" style={{position: 'absolute', left: 0, top: 516, width: 1776, height: 252}}>
           <Enter delay={120} from="up" style={{position: 'absolute', inset: 0}}>
             <Panel tone={C.key} watermark={<Car size={150} color={C.key} strokeWidth={1.6} />} style={{height: '100%', display: 'flex', flexDirection: 'column', gap: 8, padding: '11px 18px'}}>
               <PanelTab tone={C.key} icon={<Key size={24} color={C.patinaPale} strokeWidth={2.2} />}>拟制交付 · 象征物的现实交付视为本身的现实交付</PanelTab>
