@@ -1,0 +1,70 @@
+{
+  "animationId": "draft",
+  "compositionId": "Draft",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-31T17:12:03.010Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 339,
+      "frameCount": 170,
+      "id": "draft-scene-01",
+      "number": "01",
+      "startFrame": 0,
+      "title": "出票",
+      "durationMs": 5667,
+      "file": "draft-scene-01.avif",
+      "fileSize": 543186,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "966bd413b2038a47ff3952aa0657af015deb08ad3b55e41c496e1a4235cfa334",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "8586aa5f2d3745a4b4316797127af54246f61663df4cb7af94eef9aa98c5506e"
+    },
+    {
+      "endFrame": 699,
+      "frameCount": 180,
+      "id": "draft-scene-02",
+      "number": "02",
+      "startFrame": 340,
+      "title": "背书",
+      "durationMs": 6000,
+      "file": "draft-scene-02.avif",
+      "fileSize": 706533,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "5a8bd0bb0650c3f5a5271ab7dabf6f2a5fd3c44e0c8df2948fbecfe783a9d5df",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "8586aa5f2d3745a4b4316797127af54246f61663df4cb7af94eef9aa98c5506e"
+    },
+    {
+      "endFrame": 1039,
+      "frameCount": 170,
+      "id": "draft-scene-03",
+      "number": "03",
+      "startFrame": 700,
+      "title": "承兑与保证",
+      "durationMs": 5667,
+      "file": "draft-scene-03.avif",
+      "fileSize": 742099,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "8aee1ff23ec4ff5d09e32461702a52f6261b3cd3689bb9b873ea842fb3997501",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "8586aa5f2d3745a4b4316797127af54246f61663df4cb7af94eef9aa98c5506e"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "8586aa5f2d3745a4b4316797127af54246f61663df4cb7af94eef9aa98c5506e",
+  "targetFps": 30,
+  "totalFileSize": 1991818
+}
