@@ -1,7 +1,8 @@
 import React from "react";
-import { AbsoluteFill, Easing, interpolate, useCurrentFrame } from "remotion";
+import { AbsoluteFill, interpolate, useCurrentFrame } from "remotion";
+import { CLAMP } from "../../../../shared/remotion-runtime";
 
-// Enamel gate-sign: deep green ground, cream enamel plates, red/green state marks, steel posts
+// 法庭珐琅警示牌：深绿底、奶黄珐琅牌、钢架、红绿状态
 export const E = {
   ground: "linear-gradient(180deg, #16342a 0%, #0f241d 100%)",
   plate: "#f4efdd",
@@ -15,23 +16,22 @@ export const E = {
 };
 export const PLAYER_CONTROL_SAFE_BOTTOM = 160;
 
-export const enter = (f: number, d = 0, x = 0, y = 24) => ({
-  opacity: interpolate(f, [d, d + 16], [0, 1], {
-    extrapolateLeft: "clamp",
-    extrapolateRight: "clamp",
-  }),
-  transform: `translate(${interpolate(f, [d, d + 24], [x, 0], {
-    extrapolateLeft: "clamp",
-    extrapolateRight: "clamp",
-    easing: Easing.out(Easing.cubic),
-  })}px, ${interpolate(f, [d, d + 24], [y, 0], {
-    extrapolateLeft: "clamp",
-    extrapolateRight: "clamp",
-    easing: Easing.out(Easing.cubic),
-  })}px)`,
+// 时序原语：透明度/位移一步到位，属性沿因果链依次点亮
+export const fadeIn = (f: number, at: number, dur = 20) =>
+  interpolate(f, [at, at + dur], [0, 1], CLAMP);
+export const riseIn = (f: number, at: number, from = 26, dur = 24) => ({
+  opacity: fadeIn(f, at, dur),
+  transform: `translateY(${interpolate(f, [at, at + dur], [from, 0], CLAMP)}px)`,
+});
+export const slideX = (f: number, at: number, from: number, dur = 24) => ({
+  opacity: fadeIn(f, at, dur),
+  transform: `translateX(${interpolate(f, [at, at + dur], [from, 0], CLAMP)}px)`,
+});
+export const drawLine = (f: number, at: number, len: number, dur = 22) => ({
+  width: interpolate(f, [at, at + dur], [0, len], CLAMP),
 });
 
-export const GateShell: React.FC<{
+export const Shell: React.FC<{
   code: string;
   title: string;
   subtitle: string;
@@ -66,20 +66,20 @@ export const GateShell: React.FC<{
       >
         <div
           style={{
-            width: 156,
+            width: 110,
             height: 72,
             background: E.gold,
             color: "#3a3226",
             display: "grid",
             placeItems: "center",
-            fontSize: 21,
+            fontSize: 30,
             fontWeight: 950,
             letterSpacing: 2,
             borderRadius: 6,
             fontFamily: "var(--inkloom-animation-mono, monospace)",
           }}
         >
-          信号闸 {code}
+          {code}
         </div>
         <div>
           <h1
@@ -108,10 +108,10 @@ export const GateShell: React.FC<{
             letterSpacing: 3,
             color: E.soft,
             fontFamily: "var(--inkloom-animation-label, sans-serif)",
-            opacity: interpolate(f, [0, 24], [0.4, 1], { extrapolateRight: "clamp" }),
+            opacity: interpolate(f, [0, 24], [0.4, 1], CLAMP),
           }}
         >
-          CIVIL PROCEDURE · ENAMEL GATE SIGN
+          CIVIL PROCEDURE
         </div>
       </header>
       <main
@@ -167,14 +167,8 @@ export const GateStamp: React.FC<{
 }> = ({ label, pass = true, delay = 0, rotation = -3 }) => {
   const f = useCurrentFrame();
   const tone = pass ? E.pass : E.warn;
-  const press = interpolate(f, [delay, delay + 10], [1.5, 1], {
-    extrapolateLeft: "clamp",
-    extrapolateRight: "clamp",
-  });
-  const opacity = interpolate(f, [delay, delay + 5], [0, 1], {
-    extrapolateLeft: "clamp",
-    extrapolateRight: "clamp",
-  });
+  const press = interpolate(f, [delay, delay + 10], [1.5, 1], CLAMP);
+  const opacity = interpolate(f, [delay, delay + 5], [0, 1], CLAMP);
   return (
     <span
       style={{

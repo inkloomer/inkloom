@@ -6,11 +6,12 @@
     {
       "id": "summons-gate-decision",
       "export": "SummonsGateDecisionScene",
-      "layout": "three-condition-enamel-gate",
+      "layout": "courtroom-entrance-checkline",
       "anchor": "flow-path",
       "grammar": [
-        "three-condition-plates-gate-the-summons-decision",
-        "all-pass-unlocks-the-presidential-approval-counter"
+        "object-dock-feeds-the-condition-checkline",
+        "justified-reason-chip-bounces-off-the-third-check",
+        "approval-counter-issues-the-summons-warrant"
       ],
       "textTreatments": [
         "label-block",
@@ -18,9 +19,9 @@
         "soft-highlight"
       ],
       "focalChannels": [
+        "motion",
         "connector",
-        "contrast",
-        "locator"
+        "contrast"
       ],
       "tokens": [],
       "finalKnowledge": [
@@ -29,61 +30,75 @@
         "summons-no-justified-reason",
         "summons-approval-warrant"
       ],
-      "statefulObjects": []
+      "statefulObjects": [
+        "summons-case-file"
+      ]
     },
     {
-      "id": "measures-comparison-ledger",
-      "export": "MeasuresComparisonLedgerScene",
-      "layout": "three-sign-comparison-ledger",
-      "anchor": "comparison-axis",
+      "id": "fine-detention-desk",
+      "export": "FineDetentionDeskScene",
+      "layout": "measure-dispatch-desk",
+      "anchor": "document-fork",
       "grammar": [
-        "three-measure-signs-compare-object-procedure-and-document",
-        "reconsideration-once-never-stays-execution"
+        "president-approval-gates-both-measures",
+        "fines-and-detention-split-into-two-amount-lanes",
+        "reconsideration-climbs-while-execution-keeps-running"
       ],
       "textTreatments": [
-        "label-block",
         "chip",
-        "thin-underline"
+        "soft-highlight",
+        "stamp"
       ],
       "focalChannels": [
-        "contrast",
-        "enclosure",
-        "locator"
+        "motion",
+        "connector",
+        "enclosure"
       ],
       "tokens": [],
       "finalKnowledge": [
-        "measures-scope-trio",
         "measures-document-approval",
-        "measures-unit-rules"
+        "fines-amount-rules",
+        "detention-day-rules",
+        "detention-family-notice",
+        "reconsideration-once-rule"
       ],
-      "statefulObjects": []
+      "statefulObjects": [
+        "reconsideration-petition"
+      ]
     },
     {
-      "id": "fines-detention-scale",
-      "export": "FinesDetentionScaleScene",
-      "layout": "fine-detention-scale-gate",
-      "anchor": "boundary",
+      "id": "unit-measures-fork",
+      "export": "UnitMeasuresForkScene",
+      "layout": "unit-responsibility-fork",
+      "anchor": "role-pair",
       "grammar": [
-        "fine-and-detention-amounts-hang-on-one-warning-scale",
-        "reconsideration-once-never-stays-execution"
+        "obstruction-behaviors-trigger-the-unit-fine",
+        "liability-escalates-to-responsible-persons",
+        "crime-fork-opens-criminal-liability",
+        "documents-and-approval-close-the-trio"
       ],
       "textTreatments": [
         "label-block",
-        "stamp",
+        "external-negation",
         "chip"
       ],
       "focalChannels": [
+        "motion",
         "contrast",
-        "enclosure",
-        "locator"
+        "enclosure"
       ],
       "tokens": [],
       "finalKnowledge": [
-        "fines-amount-rules",
-        "detention-day-rules",
-        "reconsideration-once-rule"
+        "unit-violation-scope",
+        "unit-penalty-rules",
+        "unit-person-escalation",
+        "unit-crime-liability",
+        "documents-approval-comparison"
       ],
-      "statefulObjects": []
+      "statefulObjects": [
+        "unit-penalty-order",
+        "person-liability-token"
+      ]
     }
   ]
 }

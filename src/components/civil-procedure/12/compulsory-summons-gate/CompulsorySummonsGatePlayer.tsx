@@ -10,9 +10,9 @@ import {
 } from "../../../remotion/RemotionDeck";
 
 const scenes: readonly RemotionScene[] = [
-  { id: "summons-gate-decision", number: "01", title: "拘传判断门", ...SCENES["summons-gate-decision"] },
-  { id: "measures-comparison-ledger", number: "02", title: "措施对比", ...SCENES["measures-comparison-ledger"] },
-  { id: "fines-detention-scale", number: "03", title: "罚款拘留", ...SCENES["fines-detention-scale"] },
+  { id: "summons-gate-decision", number: "01", title: "拘传三要件", ...SCENES["summons-gate-decision"] },
+  { id: "fine-detention-desk", number: "02", title: "罚款和拘留", ...SCENES["fine-detention-desk"] },
+  { id: "unit-measures-fork", number: "03", title: "对单位的措施", ...SCENES["unit-measures-fork"] },
 ];
 
 export const CompulsorySummonsGatePlayer = () => (

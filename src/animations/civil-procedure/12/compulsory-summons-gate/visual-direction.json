@@ -3,10 +3,10 @@
   "family": "gate-sign-enamel",
   "palette": "deep gate-green ground, enamel warning plates in cream with red/green state marks, steel posts, brushed sign edges",
   "typography": "title-face sign legends, ink body text on enamel plates, mono gate codes",
-  "composition": "decision gate with three condition plates and an approval counter, comparison ledger wall of three measure signs",
+  "composition": "court-entrance checkline of condition plates feeding a presidential approval counter, measure dispatch desk splitting fines and detention amount lanes, unit responsibility fork escalating from the unit to responsible persons and criminal liability",
   "surface": "enamel plates riveted to steel frames, subtle reflective sheen",
-  "motion": "condition plates light up in check order, the gate unlocks, verdict stamps press last",
-  "transition": "the gate swings to reveal the comparison ledger",
+  "motion": "the defendant's case file travels the condition checkline while a justified-reason chip bounces off the third check, penalty orders fork through the approval gate into amount lanes while a reconsideration chip climbs to the higher court over a running execution belt, unit fines land and escalate to responsible persons before the crime fork opens",
+  "transition": "the approval counter hands the case file to the measure dispatch desk, then the unit fork takes over the counter",
   "catalog": {
     "status": "featured",
     "source": "original-node",

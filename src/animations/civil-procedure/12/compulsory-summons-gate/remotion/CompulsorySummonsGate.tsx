@@ -3,13 +3,13 @@ import { AbsoluteFill } from "remotion";
 import { TimelineSequence } from "../../../../shared/remotion-runtime";
 import { SCENES } from "./storyboard";
 import { SummonsGateDecisionScene } from "./scene-01-gate";
-import { MeasuresComparisonLedgerScene } from "./scene-02-ledger";
-import { FinesDetentionScaleScene } from "./scene-03-scale";
+import { FineDetentionDeskScene } from "./scene-02-fine-detention";
+import { UnitMeasuresForkScene } from "./scene-03-unit-fork";
 
 const SCENE_COMPONENTS = {
   "summons-gate-decision": SummonsGateDecisionScene,
-  "measures-comparison-ledger": MeasuresComparisonLedgerScene,
-  "fines-detention-scale": FinesDetentionScaleScene,
+  "fine-detention-desk": FineDetentionDeskScene,
+  "unit-measures-fork": UnitMeasuresForkScene,
 } as const;
 
 export const CompulsorySummonsGate: React.FC = () => (
@@ -20,7 +20,7 @@ export const CompulsorySummonsGate: React.FC = () => (
       return (
         <TimelineSequence
           key={key}
-          name={String(index + 1).padStart(2, "0")}
+          name={`${String(index + 1).padStart(2, "0")}-${key}`}
           start={scene.start}
           duration={scene.duration}
         >
