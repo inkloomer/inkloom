@@ -1,0 +1,124 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "trust-scene-01",
+      "export": "Trust01Scene",
+      "layout": "establishment-confirmation-board-1",
+      "anchor": "flow-path",
+      "grammar": [
+        "three-confirmations",
+        "formation-form-split"
+      ],
+      "textTreatments": [
+        "chip",
+        "stamp",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "motion",
+        "connector",
+        "contrast"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "trust-knowledge-1",
+        "trust-scene-01-concept",
+        "trust-scene-01-confirmations",
+        "trust-scene-01-formation",
+        "trust-scene-01-void"
+      ],
+      "statefulObjects": [
+        "trust-formation-confirmation"
+      ]
+    },
+    {
+      "id": "trust-scene-02",
+      "export": "Trust02Scene",
+      "layout": "independence-vault-walls-2",
+      "anchor": "boundary",
+      "grammar": [
+        "independence-walls",
+        "enforcement-exception-gate"
+      ],
+      "textTreatments": [
+        "chip",
+        "soft-highlight",
+        "external-negation"
+      ],
+      "focalChannels": [
+        "contrast",
+        "connector",
+        "icon"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "trust-knowledge-2",
+        "trust-scene-02-core",
+        "trust-scene-02-walls"
+      ],
+      "statefulObjects": [
+        "trust-partition-wall"
+      ]
+    },
+    {
+      "id": "trust-scene-03",
+      "export": "Trust03Scene",
+      "layout": "tripartite-duty-columns-3",
+      "anchor": "role-pair",
+      "grammar": [
+        "duty-column-triad",
+        "revocation-clock"
+      ],
+      "textTreatments": [
+        "chip",
+        "external-negation",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "contrast",
+        "icon",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "trust-knowledge-3",
+        "trust-scene-03-settlor",
+        "trust-scene-03-trustee",
+        "trust-scene-03-beneficiary"
+      ],
+      "statefulObjects": [
+        "duty-boundary-travel"
+      ]
+    },
+    {
+      "id": "trust-scene-04",
+      "export": "Trust04Scene",
+      "layout": "change-termination-board-4",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "change-condition-list",
+        "nontermination-contrast"
+      ],
+      "textTreatments": [
+        "chip",
+        "stamp",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "icon",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "trust-knowledge-4",
+        "trust-scene-04-change",
+        "trust-scene-04-termination"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

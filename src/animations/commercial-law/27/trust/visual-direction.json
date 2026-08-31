@@ -1,0 +1,16 @@
+{
+  "directionId": "trust-partition-vault",
+  "derivedFrom": "demo-clerk-desk",
+  "variation": "信托隔离金库: 书面文件滑过三确定闸口落成信托, 隔离墙在信托财产与三方债务之间升起, 三方权责立柱并排, 死亡辞任不终止的活口与终止五情形对照",
+  "family": "trust-partition-vault",
+  "palette": "#ECE9E0 + #2B2B33 + #3B4A6B + #8A4B2F + #15725F + #B23A30 + #B98A2F",
+  "typography": "WenKai 金库栏标 + 文件徽章 + 隔离墙刻度",
+  "composition": "三确定与成立形式 + 独立隔离墙与强执例外 + 三方权责立柱 + 变更终止对照",
+  "surface": "金库纸卡、文件徽章、隔离墙与金归属链, 无圆角",
+  "motion": "文件徽章沿设立闸口落定, 隔离墙自左向右砌起, 权责立柱依次立起, 归属顺序链逐级点亮",
+  "transition": "靛蓝金库贯穿四场, 铜色委托与金色受益权双线呼应",
+  "catalog": {
+    "status": "variant",
+    "sourceDirectionId": "trust-partition-vault"
+  }
+}
