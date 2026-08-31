@@ -1,0 +1,16 @@
+{
+  "directionId": "bill-claim-tollgate",
+  "derivedFrom": "demo-clerk-desk",
+  "variation": "票据权利收费站: 付款请求与追索两顺序分道, 污染票据沿善意对价两原则关卡贬值, 伪造变造更改三关分验签章, 抗辩界碑隔开隔山打牛",
+  "family": "bill-claim-tollgate",
+  "palette": "#ECE7DE + #2B2B33 + #3B4A6B + #8A4B2F + #15725F + #B23A30 + #B98A2F",
+  "typography": "WenKai 收费站牌 + 请求徽章 + 界碑禁令",
+  "composition": "两顺序权利分道 + 取得原则双关 + 效力三变对格 + 抗辩补救分栏",
+  "surface": "收费站纸卡、追索红徽章、界碑与金口诀条, 无圆角",
+  "motion": "追索请求徽章飞向对象带, 污染票据沿例链滑行失效, 抗辩界碑在直接与隔山之间立起",
+  "transition": "靛蓝收费站贯穿四场, 青色允许与红色禁止双线呼应",
+  "catalog": {
+    "status": "variant",
+    "sourceDirectionId": "bill-claim-tollgate"
+  }
+}

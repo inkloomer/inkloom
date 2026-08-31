@@ -1,0 +1,122 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "bill-rights-scene-01",
+      "export": "BillRights01Scene",
+      "layout": "two-order-rights-1",
+      "anchor": "flow-path",
+      "grammar": [
+        "order-arrow-chain",
+        "recourse-target-band"
+      ],
+      "textTreatments": [
+        "chip",
+        "stamp",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "motion",
+        "connector",
+        "contrast"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "bill-rights-knowledge-1",
+        "bill-rights-scene-01-first",
+        "bill-rights-scene-01-second",
+        "bill-rights-scene-01-targets",
+        "bill-rights-scene-01-return"
+      ],
+      "statefulObjects": [
+        "recourse-claim-travel"
+      ]
+    },
+    {
+      "id": "bill-rights-scene-02",
+      "export": "BillRights02Scene",
+      "layout": "acquisition-principle-pair-2",
+      "anchor": "role-pair",
+      "grammar": [
+        "principle-pair-rows",
+        "theft-gift-chain"
+      ],
+      "textTreatments": [
+        "chip",
+        "external-negation",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "connector",
+        "motion"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "bill-rights-knowledge-2",
+        "bill-rights-scene-02-goodfaith",
+        "bill-rights-scene-02-consideration",
+        "bill-rights-scene-02-chain"
+      ],
+      "statefulObjects": [
+        "tainted-bill-travel"
+      ]
+    },
+    {
+      "id": "bill-rights-scene-03",
+      "export": "BillRights03Scene",
+      "layout": "forgery-alteration-triad-3",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "forgery-chain",
+        "alteration-cutline"
+      ],
+      "textTreatments": [
+        "chip",
+        "external-negation",
+        "stamp"
+      ],
+      "focalChannels": [
+        "contrast",
+        "connector",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "bill-rights-knowledge-3",
+        "bill-rights-scene-03-forgery",
+        "bill-rights-scene-03-alteration"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "bill-rights-scene-04",
+      "export": "BillRights04Scene",
+      "layout": "defense-remedy-split-4",
+      "anchor": "boundary",
+      "grammar": [
+        "defense-boundary-line",
+        "remedy-fork"
+      ],
+      "textTreatments": [
+        "chip",
+        "external-negation",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "contrast",
+        "connector",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "bill-rights-knowledge-4",
+        "bill-rights-scene-04-defense",
+        "bill-rights-scene-04-remedies"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}
