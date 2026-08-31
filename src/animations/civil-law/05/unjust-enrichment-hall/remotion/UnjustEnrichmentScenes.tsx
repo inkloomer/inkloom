@@ -1,5 +1,5 @@
 import type {CSSProperties, ReactNode} from 'react';
-import {ArrowRight, BadgeCheck, Ban, CircleDollarSign, Coins, Eye, EyeClosed, EyeOff, Flame, Gavel, Gift, HandCoins, Heart, HeartHandshake, Hourglass, Landmark, Replace, Scale, TrendingDown, Undo2, Unlink, Users} from 'lucide-react';
+import {ArrowRight, BadgeCheck, Ban, CircleDollarSign, Coins, Eye, EyeClosed, EyeOff, Flame, Gavel, Gift, HandCoins, Heart, HeartHandshake, Hourglass, Landmark, Replace, Scale, Split, TrendingDown, Undo2, Unlink, Users} from 'lucide-react';
 import {AbsoluteFill, interpolate, useCurrentFrame} from 'remotion';
 import {CLAMP} from '../../../../shared/remotion-runtime';
 
@@ -217,13 +217,16 @@ export const ElementsGateScene = () => {
         <Enter delay={4} from="down" marker="enrichment-definition" style={{position: 'absolute', left: 0, top: 0, width: 1776, height: 132}}>
           <Panel tone={C.violet} watermark={<Coins size={130} color={C.violet} strokeWidth={1.6} />} style={{height: '100%', display: 'flex', flexDirection: 'column', gap: 8, padding: '12px 18px'}}>
             <PanelTab tone={C.violet} icon={<Coins size={24} color={C.lilacPale} strokeWidth={2.2} />}>核心定义</PanelTab>
-            <div style={{fontSize: 24, fontWeight: 880, lineHeight: 1.5}}>
-              <Chip tone={C.violet} toneBg={C.lilacPale} ink={C.violet}>不当得利</Chip>
-              ＝ 得利人在<Soft color={C.rose}>没有法律依据</Soft>的情况下，以<Soft color={C.rose}>他人遭受损失</Soft>为代价，获得利益的<Under color={C.violet} delay={90}>法律事实</Under>
+            <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 24, paddingRight: 12}}>
+              <div style={{fontSize: 24, fontWeight: 880, lineHeight: 1.5}}>
+                <Chip tone={C.violet} toneBg={C.lilacPale} ink={C.violet}>不当得利</Chip>
+                ＝ 得利人在<Soft color={C.rose}>没有法律依据</Soft>的情况下，以<Soft color={C.rose}>他人遭受损失</Soft>为代价，获得利益的<Under color={C.violet} delay={90}>法律事实</Under>
+              </div>
+              <Chip tone={C.pine} toneBg={C.pinePale}>债之关系的发生根据</Chip>
             </div>
           </Panel>
         </Enter>
-        <Enter delay={30} from="left" marker="positive-four-gate" style={{position: 'absolute', left: 0, top: 148, width: 866, height: 352}}>
+        <Enter delay={30} from="left" marker="positive-four-gate" style={{position: 'absolute', left: 0, top: 148, width: 866, height: 368}}>
           <Panel tone={C.pine} watermark={<CircleDollarSign size={130} color={C.pine} strokeWidth={1.6} />} style={{height: '100%', display: 'flex', flexDirection: 'column', gap: 8, padding: '12px 18px'}}>
             <PanelTab tone={C.pine} icon={<CircleDollarSign size={24} color={C.paper} strokeWidth={2.2} />}>积极要件 · 四项</PanelTab>
             <IconChip icon={<Unlink size={24} color={C.paper} strokeWidth={2.2} />} tone={C.rose} title="① 均无法律依据：">
@@ -241,7 +244,7 @@ export const ElementsGateScene = () => {
             </IconChip>
           </Panel>
         </Enter>
-        <Enter delay={60} from="right" marker="negative-three-gate" style={{position: 'absolute', left: 910, top: 148, width: 866, height: 352}}>
+        <Enter delay={60} from="right" marker="negative-three-gate" style={{position: 'absolute', left: 910, top: 148, width: 866, height: 368}}>
           <Panel tone={C.rose} watermark={<Ban size={130} color={C.rose} strokeWidth={1.6} />} style={{height: '100%', display: 'flex', flexDirection: 'column', gap: 10, padding: '12px 18px'}}>
             <PanelTab tone={C.rose} icon={<Ban size={24} color={C.paper} strokeWidth={2.2} />}>消极要件 · 三项否决</PanelTab>
             <IconChip icon={<HeartHandshake size={24} color={C.paper} strokeWidth={2.2} />} tone={C.pine} title="① 道德义务给付：">
@@ -255,7 +258,7 @@ export const ElementsGateScene = () => {
             </IconChip>
           </Panel>
         </Enter>
-        <Enter delay={110} from="up" marker="personal-claim-nature" style={{position: 'absolute', left: 0, top: 516, width: 1776, height: 252}}>
+        <Enter delay={110} from="up" marker="personal-claim-nature" style={{position: 'absolute', left: 0, top: 532, width: 1776, height: 236}}>
           <Panel tone={C.brass} watermark={<Gavel size={140} color={C.brass} strokeWidth={1.6} />} style={{height: '100%', display: 'flex', flexDirection: 'column', gap: 8, padding: '12px 18px'}}>
             <PanelTab tone={C.brass} icon={<Gavel size={24} color={C.paper} strokeWidth={2.2} />}>返还请求权的性质 · 债权请求权</PanelTab>
             <div style={{display: 'flex', gap: 14}}>
@@ -364,15 +367,18 @@ export const ReturnTargetScene = () => {
         data-focal-channels="contrast,connector,enclosure,annotation"
         style={{position: 'absolute', inset: 0}}
       >
-        <Enter delay={4} from="down" marker="default-target-rule" style={{position: 'absolute', left: 0, top: 0, width: 1776, height: 116}}>
-          <Panel tone={C.violet} watermark={<Users size={120} color={C.violet} strokeWidth={1.6} />} style={{height: '100%', display: 'flex', flexDirection: 'column', gap: 6, padding: '10px 18px'}}>
+        <Enter delay={4} from="down" marker="default-target-rule" style={{position: 'absolute', left: 0, top: 0, width: 1776, height: 96}}>
+          <Panel tone={C.violet} watermark={<Users size={120} color={C.violet} strokeWidth={1.6} />} style={{height: '100%', display: 'flex', flexDirection: 'column', gap: 6, padding: '8px 18px'}}>
             <PanelTab tone={C.violet} icon={<Users size={22} color={C.paper} strokeWidth={2.2} />}>原则</PanelTab>
-            <IconChip icon={<Users size={24} color={C.paper} strokeWidth={2.2} />} tone={C.violet} title="原则：">
-              受损人有权请求<Soft color={C.violet}>得利人</Soft>返还利益
-            </IconChip>
+            <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 24, paddingRight: 12}}>
+              <IconChip icon={<Users size={24} color={C.paper} strokeWidth={2.2} />} tone={C.violet} title="原则：">
+                受损人有权请求<Soft color={C.violet}>得利人</Soft>返还利益
+              </IconChip>
+              <Chip tone={C.rose} toneBg={C.rosePale}>例外 ↓ 利益已无偿转让给第三人</Chip>
+            </div>
           </Panel>
         </Enter>
-        <Enter delay={40} from="up" marker="gratuitous-shift-rule" style={{position: 'absolute', left: 0, top: 132, width: 1776, height: 252}}>
+        <Enter delay={40} from="up" marker="gratuitous-shift-rule" style={{position: 'absolute', left: 0, top: 112, width: 1776, height: 252}}>
           <Panel tone={C.brass} watermark={<Gift size={140} color={C.brass} strokeWidth={1.6} />} style={{height: '100%', display: 'flex', flexDirection: 'column', gap: 10, padding: '12px 18px'}}>
             <PanelTab tone={C.brass} icon={<Gift size={24} color={C.paper} strokeWidth={2.2} />}>特殊例外 · 得利人已将利益无偿转让给第三人</PanelTab>
             <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 26, padding: '6px 0'}}>
@@ -388,8 +394,8 @@ export const ReturnTargetScene = () => {
             </IconChip>
           </Panel>
         </Enter>
-        <Enter delay={90} from="up" marker="painting-case-verdicts" style={{position: 'absolute', left: 0, top: 400, width: 1776, height: 368}}>
-          <Panel tone={C.pine} watermark={<Gavel size={150} color={C.pine} strokeWidth={1.6} />} style={{height: '100%', display: 'flex', flexDirection: 'column', gap: 9, padding: '13px 20px'}}>
+        <Enter delay={90} from="up" marker="painting-case-verdicts" style={{position: 'absolute', left: 0, top: 380, width: 1776, height: 388}}>
+          <Panel tone={C.pine} watermark={<Gavel size={150} color={C.pine} strokeWidth={1.6} />} style={{height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', gap: 9, padding: '13px 20px'}}>
             <PanelTab tone={C.pine} icon={<Gavel size={22} color={C.paper} strokeWidth={2.2} />}>名画案 · 老赵托老刘保管名画</PanelTab>
             <IconChip icon={<Coins size={24} color={C.paper} strokeWidth={2.2} />} tone={C.brass} title="案情：">
               老刘死后小刘继承，以 100 万卖予王贵；小刘将 100 万交<Soft color={C.brass}>李香香</Soft>，1 周后小刘<Soft color={C.violet}>得知真相</Soft>（善意）
@@ -402,7 +408,7 @@ export const ReturnTargetScene = () => {
                 李香香<Soft color={C.rose}>无偿受让</Soft>，应负<Soft color={C.rose}>返还义务</Soft> → <Seal delay={220} size={19}>李香香承担</Seal>
               </IconChip>
             </div>
-            <div data-final-knowledge="gift-spares-giver" style={{marginTop: 'auto', fontSize: 22, fontWeight: 900, color: C.inkSoft}}>让与人小刘：原得利已<Soft color={C.pine}>消灭</Soft>且为<Soft color={C.pine}>善意</Soft> → <Seal delay={250} size={19} tone={C.pine}>不承担赔偿责任</Seal>——无偿受让让赠与人免责</div>
+            <div data-final-knowledge="gift-spares-giver" style={{fontSize: 22, fontWeight: 900, color: C.inkSoft}}>让与人小刘：原得利已<Soft color={C.pine}>消灭</Soft>且为<Soft color={C.pine}>善意</Soft> → <Seal delay={250} size={19} tone={C.pine}>不承担赔偿责任</Seal>——无偿受让让赠与人免责</div>
           </Panel>
         </Enter>
       </div>
@@ -456,19 +462,19 @@ export const CumulationScene = () => {
           </Panel>
         </Enter>
         <Enter delay={110} from="up" marker="offset-strips" style={{position: 'absolute', left: 0, top: 428, width: 1776, height: 340}}>
-          <Panel tone={C.rose} watermark={<Scale size={150} color={C.rose} strokeWidth={1.6} />} style={{height: '100%', display: 'flex', flexDirection: 'column', gap: 10, padding: '13px 20px'}}>
+          <Panel tone={C.rose} watermark={<Scale size={150} color={C.rose} strokeWidth={1.6} />} style={{height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', gap: 10, padding: '13px 20px'}}>
             <PanelTab tone={C.rose} icon={<Scale size={22} color={C.paper} strokeWidth={2.2} />}>最终处理 · 两相冲抵</PanelTab>
-            <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 24, padding: '4px 0'}}>
-              <Chip tone={C.pine} toneBg={C.pinePale}>乙 → 甲　偿付 10000 元</Chip>
-              <span style={{fontSize: 34, fontWeight: 950, color: C.rose}}>－</span>
-              <Chip tone={C.violet} toneBg={C.lilacPale} ink={C.violet}>甲 → 乙　返还 2000 元</Chip>
-              <span style={{fontSize: 34, fontWeight: 950, color: C.rose}}>＝</span>
-              <Chip tone={C.rose} toneBg={C.rosePale}><span style={{fontSize: 30, fontWeight: 950, color: C.rose}}>8000 元</span></Chip>
+            <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 30, padding: '6px 0'}}>
+              <Chip tone={C.pine} toneBg={C.pinePale}><span style={{fontSize: 24, fontWeight: 900, color: C.pine}}>乙 → 甲　偿付 10000 元</span></Chip>
+              <span style={{fontSize: 40, fontWeight: 950, color: C.rose}}>－</span>
+              <Chip tone={C.violet} toneBg={C.lilacPale} ink={C.violet}><span style={{fontSize: 24, fontWeight: 900}}>甲 → 乙　返还 2000 元</span></Chip>
+              <span style={{fontSize: 40, fontWeight: 950, color: C.rose}}>＝</span>
+              <Chip tone={C.rose} toneBg={C.rosePale}><span style={{fontSize: 34, fontWeight: 950, color: C.rose}}>8000 元</span></Chip>
             </div>
             <IconChip icon={<Gavel size={24} color={C.paper} strokeWidth={2.2} />} tone={C.rose} title="结论：">
               甲可请求乙返还 <Chip tone={C.rose} toneBg={C.rosePale}><span style={{fontSize: 26, fontWeight: 950, color: C.rose}}>8000 元</span></Chip>
             </IconChip>
-            <div style={{marginTop: 'auto', fontSize: 22, fontWeight: 900, color: C.inkSoft}}>口诀：一条<Soft color={C.violet}>不当得利账</Soft>＋一条<Soft color={C.pine}>无因管理账</Soft>——各自算清、<Soft color={C.rose}>两相冲抵</Soft>、只付差额</div>
+            <div style={{fontSize: 22, fontWeight: 900, color: C.inkSoft}}>口诀：一条<Soft color={C.violet}>不当得利账</Soft>＋一条<Soft color={C.pine}>无因管理账</Soft>——各自算清、<Soft color={C.rose}>两相冲抵</Soft>、只付差额</div>
           </Panel>
         </Enter>
       </div>
