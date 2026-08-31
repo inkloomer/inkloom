@@ -1,0 +1,16 @@
+{
+  "directionId": "securities-registry-hall",
+  "derivedFrom": "demo-clerk-desk",
+  "variation": "证券登记大厅: 公开发行申请走向证监会注册闸口, 代销包销双柜台对照发行失败线, 增持徽章沿披露阶梯逐级暂停, 追责阶梯按归责原则排座",
+  "family": "securities-registry-hall",
+  "palette": "#EDEAE2 + #2B2B33 + #3B4A6B + #8A4B2F + #15725F + #B23A30 + #B98A2F",
+  "typography": "WenKai 大厅栏标 + 申请徽章 + 归责座次",
+  "composition": "发行注册闸 + 承销双柜台 + 交易禁令横带 + 收购披露阶梯 + 归责阶梯 + 保护三件套",
+  "surface": "大厅纸卡、申请徽章、披露刻度与金口诀条, 无圆角",
+  "motion": "申请徽章滑入注册闸口, 短线收益徽章飞向公司账上, 增持徽章沿披露阶梯逐级停顿, 归责条目按座次入列",
+  "transition": "铜色大厅贯穿六场, 青色允许与红色禁止双线呼应",
+  "catalog": {
+    "status": "variant",
+    "sourceDirectionId": "securities-registry-hall"
+  }
+}

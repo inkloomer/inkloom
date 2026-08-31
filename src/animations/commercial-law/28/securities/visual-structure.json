@@ -1,0 +1,174 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "securities-scene-01",
+      "export": "Securities01Scene",
+      "layout": "issuance-register-gate-1",
+      "anchor": "flow-path",
+      "grammar": [
+        "price-band",
+        "register-gate"
+      ],
+      "textTreatments": [
+        "chip",
+        "stamp",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "motion",
+        "connector",
+        "contrast"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "securities-knowledge-1",
+        "securities-scene-01-price",
+        "securities-scene-01-public"
+      ],
+      "statefulObjects": [
+        "issue-registration-travel"
+      ]
+    },
+    {
+      "id": "securities-scene-02",
+      "export": "Securities02Scene",
+      "layout": "underwriting-twin-column-2",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "agency-firm-contrast",
+        "failure-line"
+      ],
+      "textTreatments": [
+        "chip",
+        "stamp",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "icon",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "securities-knowledge-2",
+        "securities-scene-02-agency",
+        "securities-scene-02-firm"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "securities-scene-03",
+      "export": "Securities03Scene",
+      "layout": "trading-restriction-band-3",
+      "anchor": "boundary",
+      "grammar": [
+        "holder-ban-band",
+        "shortswing-lane"
+      ],
+      "textTreatments": [
+        "chip",
+        "external-negation",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "connector",
+        "motion"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "securities-knowledge-3",
+        "securities-scene-03-ban"
+      ],
+      "statefulObjects": [
+        "shortswing-profit-travel"
+      ]
+    },
+    {
+      "id": "securities-scene-04",
+      "export": "Securities04Scene",
+      "layout": "takeover-disclosure-stairs-4",
+      "anchor": "flow-path",
+      "grammar": [
+        "disclosure-stairs",
+        "mandatory-tender-gate"
+      ],
+      "textTreatments": [
+        "chip",
+        "stamp",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "motion",
+        "connector",
+        "contrast"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "securities-knowledge-4",
+        "securities-scene-04-disclosure",
+        "securities-scene-04-tender"
+      ],
+      "statefulObjects": [
+        "takeover-stake-travel"
+      ]
+    },
+    {
+      "id": "securities-scene-05",
+      "export": "Securities05Scene",
+      "layout": "misrepresentation-liability-ladder-5",
+      "anchor": "typographic-sequence",
+      "grammar": [
+        "liability-ladder",
+        "culpa-contrast-band"
+      ],
+      "textTreatments": [
+        "chip",
+        "soft-highlight",
+        "stamp"
+      ],
+      "focalChannels": [
+        "contrast",
+        "icon",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "securities-knowledge-5",
+        "securities-scene-05-scenario",
+        "securities-scene-05-liability"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "securities-scene-06",
+      "export": "Securities06Scene",
+      "layout": "investor-protection-triad-6",
+      "anchor": "role-pair",
+      "grammar": [
+        "solicit-scope-split",
+        "mediation-litigation-pair"
+      ],
+      "textTreatments": [
+        "chip",
+        "external-negation",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "icon",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "securities-knowledge-6",
+        "securities-scene-06-solicit",
+        "securities-scene-06-mediation"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}
