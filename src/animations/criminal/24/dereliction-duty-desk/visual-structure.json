@@ -42,25 +42,25 @@
     {
       "id": "aid-escape-classification",
       "export": "AidEscapeClassificationScene",
-      "layout": "aid-escape-classification-board",
-      "anchor": "role-pair",
-      "grammar": ["aid-escape-panel", "subject-scope-panel", "classification-ledger"],
+      "layout": "aid-escape-jurisdiction-matrix",
+      "anchor": "comparison-axis",
+      "grammar": ["aid-escape-plaque", "jurisdiction-matrix", "subject-expansion", "counterpart-crimes"],
       "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
-      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
-      "tokens": ["Siren", "Megaphone", "Footprints", "Layers", "Users", "Gavel", "Landmark", "ShieldCheck", "Building2"],
-      "finalKnowledge": ["aid-escape-panel", "subject-scope-panel", "classification-ledger"],
+      "focalChannels": ["icon", "contrast", "enclosure", "motion"],
+      "tokens": ["Siren", "Megaphone", "Footprints", "Layers", "Users", "Gavel", "Landmark", "Building2"],
+      "finalKnowledge": ["aid-escape-plaque", "jurisdiction-matrix", "subject-expansion", "counterpart-crimes"],
       "statefulObjects": []
     },
     {
       "id": "rescue-fooddrug-tail",
       "export": "RescueFooddrugTailScene",
-      "layout": "rescue-fooddrug-triptych",
-      "anchor": "boundary",
-      "grammar": ["rescue-panel", "fooddrug-panel", "recap-panel"],
+      "layout": "rescue-fork-graph",
+      "anchor": "flow-path",
+      "grammar": ["rescue-fork", "rescue-crime", "intent-chain"],
       "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
-      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
-      "tokens": ["LifeBuoy", "Pill", "Users", "Zap", "TriangleAlert", "Gavel", "Ban", "Siren", "BookOpen"],
-      "finalKnowledge": ["rescue-panel", "fooddrug-panel", "recap-panel"],
+      "focalChannels": ["icon", "connector", "contrast", "enclosure"],
+      "tokens": ["Users", "LifeBuoy", "Baby", "Zap", "TriangleAlert", "Pill"],
+      "finalKnowledge": ["rescue-fork", "rescue-crime", "fooddrug-tail"],
       "statefulObjects": []
     }
   ]

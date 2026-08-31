@@ -1,9 +1,10 @@
 import type {CSSProperties, ReactNode} from 'react';
-import {AbsoluteFill, interpolate, useCurrentFrame} from 'remotion';
+import {AbsoluteFill, Easing, interpolate, useCurrentFrame} from 'remotion';
 import {CLAMP} from '../../../../shared/remotion-runtime';
 
 export const C = {
   desk: '#EDEBE4',
+  panel: '#E7DABB',
   deskDeep: '#DFDCD1',
   ink: '#24221C',
   inkSoft: 'rgba(36,34,28,0.76)',
@@ -24,6 +25,76 @@ export const C = {
 export const PLAYER_CONTROL_SAFE_BOTTOM = 168;
 
 export const reveal = (frame: number, delay: number, span = 16) => interpolate(frame, [delay, delay + span], [0, 1], CLAMP);
+
+export const easeRide = Easing.bezier(0.16, 1, 0.3, 1);
+
+/** Token that slides along a connector and rests at its terminal (or fades into the node it merges with). */
+export const Mover = ({children, delay = 0, span = 28, fromX = 0, toX = 0, fromY = 0, toY = 0, fadeAt, style}: {
+  children: ReactNode;
+  delay?: number;
+  fadeAt?: number;
+  fromX?: number;
+  fromY?: number;
+  span?: number;
+  toX?: number;
+  toY?: number;
+  style?: CSSProperties;
+}) => {
+  const frame = useCurrentFrame();
+  const p = interpolate(frame, [delay, delay + span], [0, 1], {easing: easeRide, ...CLAMP});
+  return (
+    <div
+      style={{
+        ...style,
+        opacity: fadeAt === undefined ? p : interpolate(frame, [delay, delay + 6, fadeAt, fadeAt + 10], [0, 1, 1, 0], CLAMP),
+        translate: `${interpolate(frame, [delay, delay + span], [fromX, toX], {easing: easeRide, ...CLAMP})}px ${interpolate(frame, [delay, delay + span], [fromY, toY], {easing: easeRide, ...CLAMP})}px`,
+      }}
+    >
+      {children}
+    </div>
+  );
+};
+
+/** Connector line that draws itself in the wake of the token. */
+export const Path = ({color, delay = 0, span = 20, thickness = 4, vertical = false, style}: {
+  color: string;
+  delay?: number;
+  span?: number;
+  style?: CSSProperties;
+  thickness?: number;
+  vertical?: boolean;
+}) => {
+  const frame = useCurrentFrame();
+  const p = interpolate(frame, [delay, delay + span], [0, 1], CLAMP);
+  return (
+    <div
+      style={{
+        ...style,
+        backgroundColor: color,
+        opacity: 0.55,
+        ...(vertical ? {width: thickness, height: '100%', scale: `1 ${p}`, transformOrigin: 'center top'} : {height: thickness, scale: `${p} 1`, transformOrigin: 'left center'}),
+      }}
+    />
+  );
+};
+
+/** Gate box: lights up (border + glow flash) when the token passes through. */
+export const GateFlash = ({children, delay = 0, tone, style}: {children: ReactNode; delay?: number; tone: string; style?: CSSProperties}) => {
+  const frame = useCurrentFrame();
+  const lit = interpolate(frame, [delay, delay + 12], [0, 1], CLAMP);
+  const glow = lit * (1 - Math.max(0, Math.min(1, (frame - delay - 12) / 18)) * 0.35);
+  return (
+    <div
+      style={{
+        ...style,
+        borderColor: tone,
+        boxShadow: `0 0 ${glow * 26}px ${tone}${glow > 0.5 ? '55' : '00'}, inset 0 0 ${glow * 16}px ${tone}22`,
+      }}
+    >
+      {children}
+    </div>
+  );
+};
 
 export const Enter = ({children, delay = 0, y = 22, marker, style}: {children: ReactNode; delay?: number; y?: number; marker?: string; style?: CSSProperties}) => {
   const frame = useCurrentFrame();
@@ -69,7 +140,7 @@ export const DeskTitle = ({children}: {children: ReactNode}) => (
 );
 
 export const Panel = ({children, marker, tone, watermark, style}: {children: ReactNode; marker?: string; tone?: string; watermark?: ReactNode; style?: CSSProperties}) => (
-  <div data-final-knowledge={marker} style={{backgroundColor: C.white, border: `3px solid ${C.night}`, position: 'relative', overflow: 'hidden', borderTop: tone ? `8px solid ${tone}` : undefined, ...style}}>
+  <div data-final-knowledge={marker} style={{backgroundColor: C.panel, border: `5px solid ${C.night}`, position: 'relative', overflow: 'hidden', borderTop: tone ? `14px solid ${tone}` : undefined, ...style}}>
     {watermark ? <span style={{position: 'absolute', right: -14, bottom: -18, opacity: 0.09, pointerEvents: 'none'}}>{watermark}</span> : null}
     {children}
   </div>
@@ -84,7 +155,7 @@ export const Mark = ({children, color = C.steel}: {children: ReactNode; color?: 
 );
 
 export const IconChip = ({icon, tone, title, children}: {icon: ReactNode; tone: string; title: string; children: ReactNode}) => (
-  <div style={{display: 'flex', alignItems: 'center', gap: 12, backgroundColor: C.deskDeep, borderLeft: `6px solid ${tone}`, padding: '8px 12px'}}>
+  <div style={{display: 'flex', alignItems: 'center', gap: 12, backgroundColor: C.deskDeep, borderLeft: `10px solid ${tone}`, padding: '9px 12px'}}>
     <span style={{flexShrink: 0, width: 48, height: 48, borderRadius: 10, backgroundColor: tone, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>{icon}</span>
     <span style={{fontSize: 21, fontWeight: 870, color: C.ink, lineHeight: 1.45}}>
       <span style={{fontWeight: 950, color: tone}}>{title}</span>
