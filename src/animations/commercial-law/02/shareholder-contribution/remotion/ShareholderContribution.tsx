@@ -1,5 +1,5 @@
 import type {ReactNode} from 'react';
-import {Banknote, Package, XCircle, Briefcase, FileText, Timer, Zap, Lock} from 'lucide-react';
+import {Banknote, Package, XCircle, Briefcase, FileText, Timer, Zap, Lock, Hammer, User, CreditCard, Award, Heart, KeyRound, PieChart, Ban, CircleDollarSign, ShieldCheck} from 'lucide-react';
 import {AbsoluteFill, interpolate, useCurrentFrame} from 'remotion';
 import {CLAMP, TimelineSequence} from '../../../../shared/remotion-runtime';
 import {SCENES} from './storyboard';
@@ -21,13 +21,14 @@ export const ShareholderContribution01Scene=()=>{
   const slide=(a:number,b:number,from:string)=>interpolate(frame,[a,b],[from,'0px 0px'],CLAMP);
   return <Shell code="02.3" title="出资形式：货币 与 非货币">
     <div data-layout="contribution-docks-1" data-visual-anchor="comparison-axis" data-visual-grammar="money-dock,in-kind-dock" data-text-treatments="label-block,thin-underline,soft-highlight" data-focal-rule="shareholder-contribution-scene-01-rule" data-focal-channels="contrast,icon,spatial" style={{position:'absolute',inset:0}}>
+      <Package size={260} color={COLORS.orange} strokeWidth={1.2} style={{position:'absolute',left:'50%',top:460,translate:'-50% 0',opacity:0.07,pointerEvents:'none'}}/>
       <div data-final-knowledge="shareholder-contribution-knowledge-1" style={{position:'absolute',left:0,right:0,top:0,textAlign:'center',fontSize:26,fontWeight:800,letterSpacing:6,color:'#5C6B64',opacity:enter(12,36)}}>两个泊位 · 要件不同</div>
       <div data-final-knowledge="shareholder-contribution-scene-01-dock-0" style={{position:'absolute',left:24,top:70,width:840,padding:26,border:'5px solid '+COLORS.green,background:COLORS.paper,opacity:enter(28,54),translate:slide(28,54,'-26px 0px')}}>
         <div style={{display:'flex',alignItems:'center',gap:14,marginBottom:14}}>
           <Banknote size={46} color={COLORS.green}/>
           <div style={{padding:'8px 18px',background:COLORS.ink,color:COLORS.paper,fontSize:28,fontWeight:900}}>货币出资</div>
         </div>
-        <div style={{fontSize:24,fontWeight:800,lineHeight:1.5,padding:'12px 16px',background:COLORS.green+'12',marginBottom:10}}>同时满足：<span style={{fontWeight:900}}>按时</span>＋<span style={{fontWeight:900}}>足额</span>＋存入公司账户</div>
+        <div style={{fontSize:24,fontWeight:800,lineHeight:1.5,padding:'12px 16px',background:COLORS.green+'12',marginBottom:10,display:'flex',alignItems:'center',gap:12}}><CircleDollarSign size={28} color={COLORS.green} style={{flexShrink:0}}/><span>同时满足：<span style={{fontWeight:900}}>按时</span>＋<span style={{fontWeight:900}}>足额</span>＋存入公司账户</span></div>
         <div style={{fontSize:24,fontWeight:800,lineHeight:1.5,padding:'12px 16px',background:COLORS.green+'12'}}>以违法犯罪所得货币出资的，出资<span style={{background:COLORS.green+'30',padding:'2px 6px',fontWeight:900}}>有效</span>，股东可获得股权；追缴、处罚时拍卖或变卖其股权</div>
       </div>
       <div data-final-knowledge="shareholder-contribution-scene-01-dock-1" style={{position:'absolute',right:24,top:70,width:840,padding:26,border:'5px solid '+COLORS.orange,background:COLORS.paper,opacity:enter(46,72),translate:slide(46,72,'26px 0px')}}>
@@ -58,60 +59,44 @@ export const ShareholderContribution02Scene=()=>{
         <div style={{fontSize:28,fontWeight:900}}>六项禁入——记忆口诀：<span style={{background:COLORS.gold+'4A',padding:'2px 12px'}}>劳自信商名特</span></div>
       </div>
       <div style={{position:'absolute',left:0,right:0,top:84,display:'grid',gridTemplateColumns:'repeat(6,minmax(0,1fr))',gap:16}}>
-        <div data-final-knowledge="shareholder-contribution-scene-02-ban-0" style={{padding:'18px 8px',border:'4px solid '+COLORS.ink,borderTop:'12px solid '+COLORS.orange,background:COLORS.paper,textAlign:'center',opacity:enter(30,56)}}>
-          <div style={{width:44,height:44,border:'3px solid '+COLORS.orange,margin:'0 auto 14px',position:'relative'}}>
-            <div style={{position:'absolute',left:19,top:7,width:4,height:24,background:COLORS.orange,transform:'rotate(45deg)'}}/>
-            <div style={{position:'absolute',left:19,top:7,width:4,height:24,background:COLORS.orange,transform:'rotate(-45deg)'}}/>
-          </div>
+        <div data-final-knowledge="shareholder-contribution-scene-02-ban-0" style={{padding:'18px 8px',border:'4px solid '+COLORS.ink,borderTop:'12px solid '+COLORS.orange,background:COLORS.paper,textAlign:'center',opacity:enter(30,56),translate:interpolate(frame,[30,56],['0px 24px','0px 0px'],CLAMP)}}>
+          <div style={{width:48,height:48,border:'3px solid '+COLORS.orange,margin:'0 auto 14px',display:'grid',placeItems:'center'}}><Hammer size={30} color={COLORS.orange}/></div>
           <div style={{fontSize:27,fontWeight:900}}>劳务</div>
         </div>
-        <div data-final-knowledge="shareholder-contribution-scene-02-ban-1" style={{padding:'18px 8px',border:'4px solid '+COLORS.ink,borderTop:'12px solid '+COLORS.orange,background:COLORS.paper,textAlign:'center',opacity:enter(42,68)}}>
-          <div style={{width:44,height:44,border:'3px solid '+COLORS.orange,margin:'0 auto 14px',position:'relative'}}>
-            <div style={{position:'absolute',left:19,top:7,width:4,height:24,background:COLORS.orange,transform:'rotate(45deg)'}}/>
-            <div style={{position:'absolute',left:19,top:7,width:4,height:24,background:COLORS.orange,transform:'rotate(-45deg)'}}/>
-          </div>
+        <div data-final-knowledge="shareholder-contribution-scene-02-ban-1" style={{padding:'18px 8px',border:'4px solid '+COLORS.ink,borderTop:'12px solid '+COLORS.orange,background:COLORS.paper,textAlign:'center',opacity:enter(42,68),translate:interpolate(frame,[42,68],['0px 24px','0px 0px'],CLAMP)}}>
+          <div style={{width:48,height:48,border:'3px solid '+COLORS.orange,margin:'0 auto 14px',display:'grid',placeItems:'center'}}><User size={30} color={COLORS.orange}/></div>
           <div style={{fontSize:27,fontWeight:900}}>自然人姓名</div>
         </div>
-        <div data-final-knowledge="shareholder-contribution-scene-02-ban-2" style={{padding:'18px 8px',border:'4px solid '+COLORS.ink,borderTop:'12px solid '+COLORS.orange,background:COLORS.paper,textAlign:'center',opacity:enter(54,80)}}>
-          <div style={{width:44,height:44,border:'3px solid '+COLORS.orange,margin:'0 auto 14px',position:'relative'}}>
-            <div style={{position:'absolute',left:19,top:7,width:4,height:24,background:COLORS.orange,transform:'rotate(45deg)'}}/>
-            <div style={{position:'absolute',left:19,top:7,width:4,height:24,background:COLORS.orange,transform:'rotate(-45deg)'}}/>
-          </div>
+        <div data-final-knowledge="shareholder-contribution-scene-02-ban-2" style={{padding:'18px 8px',border:'4px solid '+COLORS.ink,borderTop:'12px solid '+COLORS.orange,background:COLORS.paper,textAlign:'center',opacity:enter(54,80),translate:interpolate(frame,[54,80],['0px 24px','0px 0px'],CLAMP)}}>
+          <div style={{width:48,height:48,border:'3px solid '+COLORS.orange,margin:'0 auto 14px',display:'grid',placeItems:'center'}}><CreditCard size={30} color={COLORS.orange}/></div>
           <div style={{fontSize:27,fontWeight:900}}>信用</div>
         </div>
-        <div data-final-knowledge="shareholder-contribution-scene-02-ban-3" style={{padding:'18px 8px',border:'4px solid '+COLORS.ink,borderTop:'12px solid '+COLORS.orange,background:COLORS.paper,textAlign:'center',opacity:enter(66,92)}}>
-          <div style={{width:44,height:44,border:'3px solid '+COLORS.orange,margin:'0 auto 14px',position:'relative'}}>
-            <div style={{position:'absolute',left:19,top:7,width:4,height:24,background:COLORS.orange,transform:'rotate(45deg)'}}/>
-            <div style={{position:'absolute',left:19,top:7,width:4,height:24,background:COLORS.orange,transform:'rotate(-45deg)'}}/>
-          </div>
+        <div data-final-knowledge="shareholder-contribution-scene-02-ban-3" style={{padding:'18px 8px',border:'4px solid '+COLORS.ink,borderTop:'12px solid '+COLORS.orange,background:COLORS.paper,textAlign:'center',opacity:enter(66,92),translate:interpolate(frame,[66,92],['0px 24px','0px 0px'],CLAMP)}}>
+          <div style={{width:48,height:48,border:'3px solid '+COLORS.orange,margin:'0 auto 14px',display:'grid',placeItems:'center'}}><Award size={30} color={COLORS.orange}/></div>
           <div style={{fontSize:27,fontWeight:900}}>商誉</div>
         </div>
-        <div data-final-knowledge="shareholder-contribution-scene-02-ban-4" style={{padding:'18px 8px',border:'4px solid '+COLORS.ink,borderTop:'12px solid '+COLORS.orange,background:COLORS.paper,textAlign:'center',opacity:enter(78,104)}}>
-          <div style={{width:44,height:44,border:'3px solid '+COLORS.orange,margin:'0 auto 14px',position:'relative'}}>
-            <div style={{position:'absolute',left:19,top:7,width:4,height:24,background:COLORS.orange,transform:'rotate(45deg)'}}/>
-            <div style={{position:'absolute',left:19,top:7,width:4,height:24,background:COLORS.orange,transform:'rotate(-45deg)'}}/>
-          </div>
+        <div data-final-knowledge="shareholder-contribution-scene-02-ban-4" style={{padding:'18px 8px',border:'4px solid '+COLORS.ink,borderTop:'12px solid '+COLORS.orange,background:COLORS.paper,textAlign:'center',opacity:enter(78,104),translate:interpolate(frame,[78,104],['0px 24px','0px 0px'],CLAMP)}}>
+          <div style={{width:48,height:48,border:'3px solid '+COLORS.orange,margin:'0 auto 14px',display:'grid',placeItems:'center'}}><Heart size={30} color={COLORS.orange}/></div>
           <div style={{fontSize:27,fontWeight:900}}>名誉</div>
         </div>
-        <div data-final-knowledge="shareholder-contribution-scene-02-ban-5" style={{padding:'18px 8px',border:'4px solid '+COLORS.ink,borderTop:'12px solid '+COLORS.orange,background:COLORS.paper,textAlign:'center',opacity:enter(90,116)}}>
-          <div style={{width:44,height:44,border:'3px solid '+COLORS.orange,margin:'0 auto 14px',position:'relative'}}>
-            <div style={{position:'absolute',left:19,top:7,width:4,height:24,background:COLORS.orange,transform:'rotate(45deg)'}}/>
-            <div style={{position:'absolute',left:19,top:7,width:4,height:24,background:COLORS.orange,transform:'rotate(-45deg)'}}/>
-          </div>
+        <div data-final-knowledge="shareholder-contribution-scene-02-ban-5" style={{padding:'18px 8px',border:'4px solid '+COLORS.ink,borderTop:'12px solid '+COLORS.orange,background:COLORS.paper,textAlign:'center',opacity:enter(90,116),translate:interpolate(frame,[90,116],['0px 24px','0px 0px'],CLAMP)}}>
+          <div style={{width:48,height:48,border:'3px solid '+COLORS.orange,margin:'0 auto 14px',display:'grid',placeItems:'center'}}><KeyRound size={30} color={COLORS.orange}/></div>
           <div style={{fontSize:27,fontWeight:900}}>特许经营权</div>
         </div>
       </div>
-      <div data-final-knowledge="shareholder-contribution-scene-02-equity" style={{position:'absolute',left:0,width:860,top:320,padding:'18px 24px',border:'4px solid '+COLORS.ink,background:COLORS.paper,opacity:enter(116,142)}}>
-        <div style={{fontSize:26,fontWeight:900,marginBottom:10}}>股权出资四要件</div>
-        <div style={{fontSize:22,fontWeight:700,lineHeight:1.5}}>已进行价值评估；合法持有并可依法转让；无权利瑕疵或权利负担；已履行股权转让手续</div>
+      <Ban size={230} color={COLORS.orange} strokeWidth={1.2} style={{position:'absolute',left:'50%',top:470,translate:'-50% 0',opacity:0.07,pointerEvents:'none'}}/>
+      <div data-final-knowledge="shareholder-contribution-scene-02-equity" style={{position:'absolute',left:0,width:860,top:320,padding:'18px 24px',border:'4px solid '+COLORS.ink,background:COLORS.paper,opacity:enter(116,142),translate:interpolate(frame,[116,142],['0px 22px','0px 0px'],CLAMP)}}>
+        <div style={{display:'flex',alignItems:'center',gap:12,fontSize:26,fontWeight:900,marginBottom:10}}><PieChart size={30} color={COLORS.green}/>股权出资四要件</div>
+        <div style={{fontSize:22,fontWeight:700,lineHeight:1.5}}><span style={{fontWeight:900,color:COLORS.green,background:COLORS.green+'12',padding:'1px 6px'}}>已进行价值评估</span>；<span style={{fontWeight:900}}>合法持有并可依法转让</span>；无<span style={{fontWeight:900,color:COLORS.orange,borderBottom:'3px solid '+COLORS.orange,paddingBottom:1}}>权利瑕疵或权利负担</span>；<span style={{fontWeight:900}}>已履行股权转让手续</span></div>
       </div>
-      <div data-final-knowledge="shareholder-contribution-scene-02-credit" style={{position:'absolute',right:0,width:860,top:320,padding:'18px 24px',border:'4px solid '+COLORS.ink,background:COLORS.paper,opacity:enter(134,160)}}>
-        <div style={{fontSize:26,fontWeight:900,marginBottom:10}}>债权出资（债权让与）</div>
-        <div style={{fontSize:22,fontWeight:700,lineHeight:1.5}}>无须征得债务人同意，但应通知；约定不得转让的债权——金钱债权不得对抗第三人，非金钱债权不得对抗善意第三人</div>
+      <div data-final-knowledge="shareholder-contribution-scene-02-credit" style={{position:'absolute',right:0,width:860,top:320,padding:'18px 24px',border:'4px solid '+COLORS.ink,background:COLORS.paper,opacity:enter(134,160),translate:interpolate(frame,[134,160],['0px 22px','0px 0px'],CLAMP)}}>
+        <div style={{display:'flex',alignItems:'center',gap:12,fontSize:26,fontWeight:900,marginBottom:10}}><FileText size={30} color={COLORS.green}/>债权出资（债权让与）</div>
+        <div style={{fontSize:22,fontWeight:700,lineHeight:1.5}}>无须征得债务人同意，但<span style={{fontWeight:900}}>应通知</span>；约定不得转让的债权——金钱债权<span style={{fontWeight:900,color:COLORS.orange,background:COLORS.orange+'14',padding:'1px 6px'}}>不得对抗第三人</span>，非金钱债权<span style={{fontWeight:900,color:COLORS.orange,background:COLORS.orange+'14',padding:'1px 6px'}}>不得对抗善意第三人</span></div>
       </div>
       <div style={{position:'absolute',left:0,right:0,bottom:0,display:'flex',alignItems:'center',gap:16,border:'3px dashed '+COLORS.orange,background:COLORS.paper,padding:'14px 24px',opacity:enter(150,176)}}>
+        <Ban size={32} color={COLORS.orange}/>
         <div style={{padding:'6px 16px',border:'3px solid '+COLORS.orange,color:COLORS.orange,fontSize:21,fontWeight:900,transform:'rotate(-2deg)'}}>禁入</div>
-        <div style={{fontSize:22,fontWeight:800,lineHeight:1.4}}>六项均不可作价出资——不能估价或不能转让的财产不得出资</div>
+        <div style={{fontSize:22,fontWeight:800,lineHeight:1.4}}>六项均<span style={{fontWeight:900,background:COLORS.orange+'1E',padding:'2px 8px'}}>不可作价出资</span>——不能估价或不能转让的财产不得出资</div>
       </div>
     </div>
   </Shell>;
@@ -135,9 +120,9 @@ export const ShareholderContribution03Scene=()=>{
           <div style={{position:'absolute',right:8,top:3,fontSize:18,fontWeight:900}}>5年</div>
         </div>
       </div>
-      <div data-final-knowledge="shareholder-contribution-scene-03-interest" style={{position:'absolute',left:0,top:280,width:860,padding:'18px 26px',border:'4px solid '+COLORS.green,background:COLORS.paper,opacity:enter(46,72)}}>
-        <div style={{fontSize:26,fontWeight:900,marginBottom:8}}>出资期限未届满的，股东享有<span style={{borderBottom:'4px solid '+COLORS.green,paddingBottom:2}}>出资期限利益</span></div>
-        <div style={{fontSize:22,fontWeight:700,lineHeight:1.45}}>期限届满前，无须提前缴纳</div>
+      <div data-final-knowledge="shareholder-contribution-scene-03-interest" style={{position:'absolute',left:0,top:280,width:860,padding:'18px 26px',border:'4px solid '+COLORS.green,background:COLORS.paper,opacity:enter(46,72),translate:interpolate(frame,[46,72],['0px 20px','0px 0px'],CLAMP)}}>
+        <div style={{display:'flex',alignItems:'center',gap:12,fontSize:26,fontWeight:900,marginBottom:8}}><CircleDollarSign size={30} color={COLORS.green}/><span>出资期限未届满的，股东享有<span style={{borderBottom:'4px solid '+COLORS.green,paddingBottom:2}}>出资期限利益</span></span></div>
+        <div style={{fontSize:22,fontWeight:700,lineHeight:1.45}}>期限届满前，<span style={{fontWeight:900,color:COLORS.green,background:COLORS.green+'12',padding:'1px 6px'}}>无须提前缴纳</span></div>
       </div>
       <div data-final-knowledge="shareholder-contribution-scene-03-accelerate" style={{position:'absolute',left:0,top:470,width:860,padding:'18px 26px',border:'5px solid '+COLORS.orange,background:COLORS.paper,opacity:enter(108,134)}}>
         <div style={{display:'flex',alignItems:'center',gap:14,marginBottom:8}}>
@@ -148,14 +133,15 @@ export const ShareholderContribution03Scene=()=>{
         <div style={{fontSize:23,fontWeight:800,lineHeight:1.5}}>公司不能清偿到期债务时，公司或已到期债权的债权人有权要求未届出资期限的股东<span style={{background:COLORS.orange+'2C',padding:'2px 6px',fontWeight:900}}>提前缴纳出资</span></div>
       </div>
       <div data-stateful-source="shareholder-contribution-acceleration" style={{position:'absolute',left:96,top:interpolate(clockProgress,[0,1],[120,486],CLAMP),padding:'8px 18px',border:'4px solid '+COLORS.orange,background:COLORS.paper,color:COLORS.orange,fontSize:22,fontWeight:900,opacity:clockProgress>0.9?0:1,zIndex:4}}>到期</div>
-      <div data-final-knowledge="shareholder-contribution-scene-03-execution" style={{position:'absolute',right:0,top:76,width:850,padding:'18px 26px',border:'3px dashed '+COLORS.orange,background:COLORS.paper,opacity:enter(64,90)}}>
-        <div style={{fontSize:25,fontWeight:900,marginBottom:8,color:COLORS.orange}}>执行程序限制</div>
+      <div data-final-knowledge="shareholder-contribution-scene-03-execution" style={{position:'absolute',right:0,top:76,width:850,padding:'18px 26px',border:'3px dashed '+COLORS.orange,background:COLORS.paper,opacity:enter(64,90),translate:interpolate(frame,[64,90],['0px 20px','0px 0px'],CLAMP)}}>
+        <div style={{display:'flex',alignItems:'center',gap:12,fontSize:25,fontWeight:900,marginBottom:8,color:COLORS.orange}}><Ban size={28} color={COLORS.orange}/>执行程序限制</div>
         <div style={{fontSize:22,fontWeight:700,lineHeight:1.5}}>针对公司的执行程序中，<span style={{fontWeight:900}}>不能直接追加</span>未届出资期限的股东为被执行人</div>
       </div>
-      <div data-final-knowledge="shareholder-contribution-scene-03-paidup" style={{position:'absolute',right:0,top:300,width:850,padding:'18px 26px',border:'4px solid '+COLORS.ink,background:COLORS.gold+'2A',opacity:enter(80,106)}}>
-        <div style={{fontSize:25,fontWeight:900,marginBottom:8,color:'#7A5B12'}}>股份公司：实缴资本制</div>
+      <div data-final-knowledge="shareholder-contribution-scene-03-paidup" style={{position:'absolute',right:0,top:300,width:850,padding:'18px 26px',border:'4px solid '+COLORS.ink,background:COLORS.gold+'2A',opacity:enter(80,106),translate:interpolate(frame,[80,106],['0px 20px','0px 0px'],CLAMP)}}>
+        <div style={{display:'flex',alignItems:'center',gap:12,fontSize:25,fontWeight:900,marginBottom:8,color:'#7A5B12'}}><Lock size={28} color="#7A5B12"/>股份公司：实缴资本制</div>
         <div style={{fontSize:22,fontWeight:700,lineHeight:1.5}}>注册资本应当在<span style={{fontWeight:900}}>设立时一次性缴足</span></div>
       </div>
+      <Timer size={220} color={COLORS.green} strokeWidth={1.2} style={{position:'absolute',right:60,top:460,opacity:0.06,pointerEvents:'none'}}/>
     </div>
   </Shell>;
 };

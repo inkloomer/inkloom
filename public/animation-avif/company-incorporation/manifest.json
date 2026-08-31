@@ -1,0 +1,70 @@
+{
+  "animationId": "company-incorporation",
+  "compositionId": "CompanyIncorporation",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-31T05:50:06.387Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 347,
+      "frameCount": 174,
+      "id": "company-incorporation-scene-01",
+      "number": "01",
+      "startFrame": 0,
+      "title": "发起设立与募集设立",
+      "durationMs": 5800,
+      "file": "company-incorporation-scene-01.avif",
+      "fileSize": 504091,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "b1c8e13cf457f2979a85692c0d63903f86eb45d9244270e663b4d989e1e428de",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "bbb14f6f197663e417d955d9a8bef23f017038f64dbf9aacf4044bd146955c60"
+    },
+    {
+      "endFrame": 755,
+      "frameCount": 204,
+      "id": "company-incorporation-scene-02",
+      "number": "02",
+      "startFrame": 348,
+      "title": "募集流程与成立大会",
+      "durationMs": 6800,
+      "file": "company-incorporation-scene-02.avif",
+      "fileSize": 523057,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "e55a9413ad46704b139975da7664a5769f1f9d2ee01bc0a6472f2c79db2ec68b",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "bbb14f6f197663e417d955d9a8bef23f017038f64dbf9aacf4044bd146955c60"
+    },
+    {
+      "endFrame": 1151,
+      "frameCount": 198,
+      "id": "company-incorporation-scene-03",
+      "number": "03",
+      "startFrame": 756,
+      "title": "设立条件与章程效力",
+      "durationMs": 6600,
+      "file": "company-incorporation-scene-03.avif",
+      "fileSize": 527634,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "5bc2662777585cebfe49a5623c7383fbb8960baaee4a56e6605c843426ad6e34",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "bbb14f6f197663e417d955d9a8bef23f017038f64dbf9aacf4044bd146955c60"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "bbb14f6f197663e417d955d9a8bef23f017038f64dbf9aacf4044bd146955c60",
+  "targetFps": 30,
+  "totalFileSize": 1554782
+}

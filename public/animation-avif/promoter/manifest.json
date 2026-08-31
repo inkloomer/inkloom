@@ -1,0 +1,70 @@
+{
+  "animationId": "promoter",
+  "compositionId": "Promoter",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-31T05:50:13.029Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 359,
+      "frameCount": 180,
+      "id": "promoter-scene-01",
+      "number": "01",
+      "startFrame": 0,
+      "title": "设立中的民事活动责任",
+      "durationMs": 6000,
+      "file": "promoter-scene-01.avif",
+      "fileSize": 655638,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "c6abb001d5723ca5216af3ed1c8a8ba4ccc537fca3fbf276f774127c9cbe46d6",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "ce1a5ed87e7ab22d50be0352a9ba4fda6473688bb921b80b60c4ec9c71226dad"
+    },
+    {
+      "endFrame": 743,
+      "frameCount": 192,
+      "id": "promoter-scene-02",
+      "number": "02",
+      "startFrame": 360,
+      "title": "出资瑕疵与抽逃出资",
+      "durationMs": 6400,
+      "file": "promoter-scene-02.avif",
+      "fileSize": 694676,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "eeafe676c240bb3d770e53496556bd6d9a5c02be23e4a86b37448fa6cffb218e",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "ce1a5ed87e7ab22d50be0352a9ba4fda6473688bb921b80b60c4ec9c71226dad"
+    },
+    {
+      "endFrame": 1139,
+      "frameCount": 198,
+      "id": "promoter-scene-03",
+      "number": "03",
+      "startFrame": 744,
+      "title": "股东失权流程",
+      "durationMs": 6600,
+      "file": "promoter-scene-03.avif",
+      "fileSize": 606345,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "d1d0e8544116cd4eef5ebfe282a81fd05d8aff4d13f204e9d582de8ae5f79c55",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "ce1a5ed87e7ab22d50be0352a9ba4fda6473688bb921b80b60c4ec9c71226dad"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "ce1a5ed87e7ab22d50be0352a9ba4fda6473688bb921b80b60c4ec9c71226dad",
+  "targetFps": 30,
+  "totalFileSize": 1956659
+}
