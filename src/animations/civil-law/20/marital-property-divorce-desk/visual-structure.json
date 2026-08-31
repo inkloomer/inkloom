@@ -1,0 +1,117 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "property-ownership-gates",
+      "export": "PropertyOwnershipGatesScene",
+      "layout": "ownership-gates-with-inheritance-lanes",
+      "anchor": "boundary",
+      "grammar": [
+        "premarital-acquisitions-stay-personal-and-postmarital-acquisitions-become-common",
+        "bodily-injury-awards-dedicated-items-and-agreements-stay-personal-despite-marriage",
+        "premarital-inheritance-is-personal-unless-both-are-named-while-postmarital-is-common-unless-one-is-named",
+        "cohabitation-property-follows-agreements-else-personal-ownership-with-proportional-co-purchase"
+      ],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "thin-underline"],
+      "focalChannels": ["icon", "contrast", "connector", "annotation"],
+      "tokens": ["UserRound", "Users", "FileSignature", "Coins", "Heart", "ScrollText"],
+      "finalKnowledge": [
+        "ownership-principle",
+        "ownership-exceptions",
+        "inheritance-property-rules",
+        "cohabitation-property"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "house-and-fruit-sorter",
+      "export": "HouseAndFruitScene",
+      "layout": "house-lanes-with-fruit-arrows-and-timing-rule",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "the-premarital-house-stays-with-its-buyer-who-compensates-joint-repayments-and-value-growth",
+        "common-fund-purchases-are-common-even-in-one-name-while-parent-titled-reform-flats-stay-with-parents",
+        "operating-gains-are-common-while-fruits-and-appreciation-stay-with-the-principal-owner",
+        "any-of-obtainable-or-actual-acquisition-falling-in-marriage-makes-the-benefit-common"
+      ],
+      "textTreatments": ["label-block", "chip", "thin-underline", "soft-highlight"],
+      "focalChannels": ["contrast", "connector", "icon", "annotation"],
+      "tokens": ["Home", "TrendingUp", "Sprout", "Coins", "Hourglass", "Users"],
+      "finalKnowledge": [
+        "premarital-house-rule",
+        "common-house-rules",
+        "fruit-classification",
+        "obtainable-vs-actual"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "debt-and-gift-lane",
+      "export": "DebtAndGiftScene",
+      "layout": "signature-gate-with-gift-lanes",
+      "anchor": "flow-path",
+      "grammar": [
+        "premarital-debts-stay-personal-unless-used-for-common-life",
+        "co-signature-ratification-and-known-internal-agreements-shape-postmarital-debts-else-household-agency-applies",
+        "unregistered-spousal-gifts-are-weighed-while-registered-gifts-belong-to-the-donee-unwrap-short-marriages",
+        "full-parent-funding-benefits-their-child-and-partial-funding-creates-proportional-co-ownership"
+      ],
+      "textTreatments": ["label-block", "stamp", "chip", "soft-highlight"],
+      "focalChannels": ["connector", "contrast", "icon", "annotation"],
+      "tokens": ["FileSignature", "Ban", "Home", "HandCoins", "Users", "Coins"],
+      "finalKnowledge": [
+        "marital-debt-rules",
+        "household-agency-rule",
+        "spousal-gift-registration",
+        "child-gift-and-parent-funding"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "divorce-paths-lane",
+      "export": "DivorcePathsScene",
+      "layout": "cooling-clock-with-ground-forks-and-protection-gates",
+      "anchor": "timeline-gate",
+      "grammar": [
+        "the-registered-divorce-runs-a-30-day-withdrawal-window-and-a-30-day-certificate-window",
+        "court-divorce-requires-broken-affection-after-mediation-through-five-statutory-grounds",
+        "men-cannot-sue-during-pregnancy-within-one-year-of-birth-and-six-months-after-termination",
+        "servicemen-spouses-cannot-obtain-divorce-without-consent-unless-major-fault-exists"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["connector", "icon", "contrast", "annotation"],
+      "tokens": ["Hourglass", "Split", "Gavel", "Shield", "Heart", "Ban"],
+      "finalKnowledge": [
+        "agreement-divorce-cooling",
+        "litigation-grounds",
+        "women-protection",
+        "soldier-protection"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "divorce-aftermath-bench",
+      "export": "DivorceAftermathScene",
+      "layout": "custody-bench-with-division-and-damages-rows",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "children-under-two-follow-the-mother-while-older-children-follow-the-best-interest-and-eight-year-wishes",
+        "the-non-custodial-parent-owes-support-and-cannot-withhold-it-over-surname-changes",
+        "courts-divide-favoring-children-women-and-the-innocent-and-hiders-receive-less-or-nothing",
+        "housework-compensation-hardship-help-and-fault-damages-require-the-divorce-itself"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "external-negation"],
+      "focalChannels": ["contrast", "icon", "enclosure", "annotation"],
+      "tokens": ["Baby", "Coins", "Split", "HeartHandshake", "Scale", "Ban"],
+      "finalKnowledge": [
+        "child-custody-rules",
+        "support-fee-rules",
+        "division-principles",
+        "compensation-help-damages"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "directionId": "walnut-dowry-ledger-desk",
+  "family": "dowry-chest-ledger",
+  "palette": "deep walnut wood field, silk-linen paper slips, persimmon orange, moss green, ink sepia, plum red, aged brass",
+  "typography": "ledger headings on walnut rail tabs, persimmon verdicts and brass condition labels",
+  "composition": "ownership gates splitting personal and common lanes, a house-and-fruit sorter with growth arrows, a debt gate feeding gift lanes, twin divorce paths with a cooling clock, and an aftermath bench with custody, division and damages rows",
+  "surface": "silk-linen slips on a walnut wood field with brass corner guards",
+  "motion": "property slips sort through ownership gates, fruit arrows grow from the principal, debt chips pass the signature gate into gift lanes, the cooling clock drains two 30-day chambers and divorce consequences settle onto the bench",
+  "transition": "the walnut field, brass guards and paper slip stock persist while gates, sorters, paths and benches are re-dressed between scenes",
+  "conceptTokens": {
+    "个人财产": "UserRound",
+    "共同财产": "Users",
+    "离婚": "Split",
+    "抚养费": "Coins",
+    "冷静期": "Hourglass"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/civil-law/20/marital-property-divorce-desk/",
+    "title": "妆匣账台"
+  }
+}
