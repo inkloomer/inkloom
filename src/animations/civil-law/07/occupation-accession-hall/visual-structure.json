@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 2,
+  "scenes": [
+    {
+      "id": "occupation-lane",
+      "export": "OccupationLaneScene",
+      "layout": "two-pan-flow-with-verdicts",
+      "anchor": "flow-path",
+      "grammar": [
+        "pre-occupation-first-taker-takes-title-of-an-ownerless-movable",
+        "abandonment-needs-capacity-detachment-and-intent-to-make-it-ownerless",
+        "possession-needs-control-fact-and-appropriation-mind",
+        "pre-occupation-is-a-fact-act-needing-no-civil-capacity"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["connector", "contrast", "enclosure", "motion"],
+      "tokens": ["Hand", "Trash2", "Baby"],
+      "finalKnowledge": ["preoccupation-definition", "abandonment-elements", "possession-elements", "fact-act-rule"],
+      "statefulObjects": []
+    },
+    {
+      "id": "accession-fork",
+      "export": "AccessionForkScene",
+      "layout": "three-accession-lanes-with-ownership-rules",
+      "anchor": "document-fork",
+      "grammar": [
+        "accession-forks-into-attachment-mixture-and-workmanship",
+        "movable-attached-to-land-belongs-to-the-land-owner",
+        "mixture-belongs-to-the-side-of-greater-value-unless-indistinguishability-fails",
+        "workmanship-follows-the-material-unless-work-value-far-exceeds-it"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["connector", "contrast", "enclosure", "motion"],
+      "tokens": ["Blend", "Hammer"],
+      "finalKnowledge": ["three-accession-types", "ownership-rules"],
+      "statefulObjects": []
+    },
+    {
+      "id": "accession-verdicts",
+      "export": "AccessionVerdictsScene",
+      "layout": "twin-verdict-lanes-with-equity-strip",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "indistinguishable-identicals-mix-and-the-request-becomes-a-claim",
+        "distinguishable-models-stay-separate-and-the-request-is-propertied",
+        "equity-works-through-unjust-enrichment-return-and-damages",
+        "jade-workmanship-settles-to-the-worker-when-value-far-exceeds-material"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["contrast", "connector", "enclosure", "motion"],
+      "tokens": ["Coins", "Scale", "Gavel"],
+      "finalKnowledge": ["computer-verdicts", "equity-principles"],
+      "statefulObjects": []
+    }
+  ]
+}

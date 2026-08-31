@@ -1,0 +1,21 @@
+{
+  "directionId": "goldpan-olive-occupation-accession-hall",
+  "family": "goldpan-olive-occupation-accession-hall",
+  "palette": "deep olive drab, panside gold, indigo ribbon, rust wax, sand cream, umber ink",
+  "typography": "pan-hall headings on olive rail tabs, sand chips and rust wax verdicts",
+  "composition": "a gold-panning hall where an ownerless-goods token passes the abandonment and possession pans, and an accession fork splits into attachment mixture and workmanship lanes with ownership chips settling",
+  "surface": "sand cream files, olive desk rails, indigo ribbon tags, rust wax seals",
+  "motion": "the ownerless token is shaken through the abandonment pan then the possession pan before settling in the first occupier's pan, and accession chips fork into three lanes where ownership settles to the heavier side",
+  "transition": "the olive hall floor, olive rails and goldpan posts persist while pans and fork lanes are re-dressed between scenes",
+  "conceptTokens": {
+    "先占": "Hand",
+    "添附": "Blend",
+    "抛弃": "Trash2"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/civil-law/07/occupation-accession-hall/",
+    "title": "淘金盘馆"
+  }
+}
