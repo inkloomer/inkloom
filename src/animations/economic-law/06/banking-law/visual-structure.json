@@ -1,0 +1,90 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "banking-law-scene-01",
+      "export": "BankingLaw01Scene",
+      "layout": "lending-interbank-lane-1",
+      "anchor": "flow-path",
+      "grammar": [
+        "establishment-gate",
+        "interbank-two-lane"
+      ],
+      "textTreatments": [
+        "chip",
+        "stamp",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "motion",
+        "connector",
+        "contrast"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "banking-law-knowledge-1",
+        "banking-law-scene-01-setup",
+        "banking-law-scene-01-loan"
+      ],
+      "statefulObjects": [
+        "interbank-fund-travel"
+      ]
+    },
+    {
+      "id": "banking-law-scene-02",
+      "export": "BankingLaw02Scene",
+      "layout": "prohibition-supervision-split-2",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "prohibition-band",
+        "supervision-duo"
+      ],
+      "textTreatments": [
+        "chip",
+        "external-negation",
+        "stamp"
+      ],
+      "focalChannels": [
+        "contrast",
+        "icon",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "banking-law-knowledge-2",
+        "banking-law-scene-02-prohibition"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "banking-law-scene-03",
+      "export": "BankingLaw03Scene",
+      "layout": "takeover-clock-lane-3",
+      "anchor": "flow-path",
+      "grammar": [
+        "measures-band",
+        "takeover-track"
+      ],
+      "textTreatments": [
+        "chip",
+        "stamp",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "connector",
+        "motion"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "banking-law-knowledge-3",
+        "banking-law-scene-03-measures"
+      ],
+      "statefulObjects": [
+        "takeover-decision-travel"
+      ]
+    }
+  ]
+}

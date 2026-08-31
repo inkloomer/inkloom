@@ -1,0 +1,16 @@
+{
+  "directionId": "bank-supervision-ledger",
+  "derivedFrom": "demo-clerk-desk",
+  "variation": "银行监管账房: 拆借资金在闲置拆出与应急拆入两条道间分派, 四禁横幅上墙, 接管决定章沿信用危机轨道落定两周年限刻度",
+  "family": "bank-supervision-ledger",
+  "palette": "#EFECE4 + #2B2B33 + #2C4A6E + #8A4B2F + #15725F + #B23A30 + #B98A2F",
+  "typography": "WenKai 账房栏标 + 资金徽章 + 决定印章",
+  "composition": "设立与贷款拆借 + 四禁横幅与监管分工 + 两停两限两责令与接管刻度",
+  "surface": "账房纸卡、资金徽章、接管印章与两年刻度, 无圆角",
+  "motion": "拆借资金徽章在两车道间分派, 接管决定章沿轨道落定期限刻度",
+  "transition": "藏蓝账房贯穿三场, 铜色拆借与青色接管双线呼应",
+  "catalog": {
+    "status": "variant",
+    "sourceDirectionId": "bank-supervision-ledger"
+  }
+}
