@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "publicity-appearance",
+      "export": "PublicityAppearanceScene",
+      "layout": "appearance-reality-split-with-method-gate",
+      "anchor": "boundary",
+      "grammar": [
+        "property-change-covers-creation-alteration-and-extinction",
+        "contract-based-changes-demand-publicity-by-delivery-or-registration",
+        "delivery-and-registration-show-appearance-not-real-ownership",
+        "the-third-party-sees-that-it-looks-like-his-not-that-it-is-his"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "external-negation"],
+      "focalChannels": ["contrast", "icon", "enclosure", "annotation"],
+      "tokens": ["Stamp", "Truck", "ScrollText", "Eye"],
+      "finalKnowledge": ["property-change-meaning", "publicity-methods", "appearance-limit", "looks-like-verdicts"],
+      "statefulObjects": []
+    },
+    {
+      "id": "formation-opposition",
+      "export": "FormationOppositionScene",
+      "layout": "twin-formation-opposition-lanes",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "formation-makes-publicity-a-precondition-of-property-change",
+        "opposition-makes-the-contract-itself-change-the-property",
+        "formation-rule-defaults-while-opposition-covers-three-exceptions",
+        "mortgage-chattel-contract-grants-the-right-but-not-the-defence"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["contrast", "connector", "enclosure", "annotation"],
+      "tokens": ["Stamp", "ScrollText", "Shield", "Scale"],
+      "finalKnowledge": ["formation-limb", "opposition-limb", "default-and-exceptions", "chattel-mortgage-verdict"],
+      "statefulObjects": []
+    },
+    {
+      "id": "two-special-lanes",
+      "export": "TwoSpecialLanesScene",
+      "layout": "two-special-lanes-with-car-verdicts",
+      "anchor": "flow-path",
+      "grammar": [
+        "the-mnemonic-is-one-principle-three-exceptions-two-specials",
+        "contract-effective-establishes-the-contract-management-right-with-defence",
+        "government-certification-is-pure-administration-not-a-requirement",
+        "vehicle-ownership-statically-reads-registration-and-dynamically-reads-delivery"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["connector", "contrast", "enclosure", "annotation"],
+      "tokens": ["Car", "ScrollText", "Truck", "FileSignature"],
+      "finalKnowledge": ["mnemonic-band", "contract-management-special", "vehicle-special", "car-three-verdicts"],
+      "statefulObjects": []
+    },
+    {
+      "id": "third-party-contexts",
+      "export": "ThirdPartyContextsScene",
+      "layout": "transaction-execution-role-pair",
+      "anchor": "role-pair",
+      "grammar": [
+        "transaction-mode-reads-appearance-and-grants-good-faith-acquisition",
+        "execution-mode-reads-substance-and-limits-seizure-to-debtor-assets",
+        "without-possession-or-registration-the-owner-cannot-beat-a-transaction-party",
+        "the-owner-can-still-beat-an-executing-creditor-of-the-bailee"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "external-negation"],
+      "focalChannels": ["contrast", "icon", "enclosure", "annotation"],
+      "tokens": ["Eye", "Shield", "Gavel", "Users"],
+      "finalKnowledge": ["transaction-mode-limb", "execution-mode-limb", "computer-four-verdicts", "context-mnemonic"],
+      "statefulObjects": []
+    }
+  ]
+}

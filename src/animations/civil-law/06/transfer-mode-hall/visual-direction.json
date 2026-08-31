@@ -1,0 +1,22 @@
+{
+  "directionId": "ink-gate-transfer-mode-hall",
+  "family": "ink-gate-transfer-mode-hall",
+  "palette": "ink navy, steel blue, sandstone paper, vermilion wax, olive gold, powder mist, graphite ink",
+  "typography": "gate-hall headings on navy rail tabs, sandstone chips and vermilion wax verdicts",
+  "composition": "an inspection gate with an appearance-versus-reality split, twin formation and opposition lanes, two special vehicle lanes, and a transaction versus execution role pair",
+  "surface": "sandstone files, navy desk rails, powder mist tags, vermilion wax seals",
+  "motion": "goods pass the publicity gate where appearance and reality split, formation and opposition lanes run side by side, the two special lanes merge into a car verdict strip, and transaction and execution third parties face off",
+  "transition": "the ink-navy gate floor, navy rails and vermilion seal posts persist while splits, lanes and role pairs are re-dressed between scenes",
+  "conceptTokens": {
+    "公示": "Stamp",
+    "交付": "Truck",
+    "登记": "ScrollText",
+    "对抗": "Shield"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/civil-law/06/transfer-mode-hall/",
+    "title": "墨蓝闸口"
+  }
+}
