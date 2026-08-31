@@ -1,0 +1,21 @@
+{
+  "directionId": "stone-rubbing-light-usefruct-rights-hall",
+  "family": "stone-rubbing-light-usefruct-rights-hall",
+  "palette": "light rice-paper ground, deep ink text, cinnabar seals, indigo ribbon, jade accents, warm beige margins",
+  "typography": "rubbing-hall headings in deep ink with cinnabar rail tabs and indigo chips",
+  "composition": "a light rubbing hall where contract-conveyance tokens pass or stall at registration gates, layered land bands stack surface-sky-underground, a residence chip crosses the registration gate while transfer chips bounce, and servitude paths fork across need and serving land",
+  "surface": "rice paper sheets, ink rails, cinnabar wax, indigo ribbon tags",
+  "motion": "conveyance chips take three different gate routes per change mode, layered use rights stack without harming earlier layers, the residence chip passes the registration gate to be born while transfer lease chips bounce off its wall, and servitude claims follow need-land transfers but only registered ones bind serving-land buyers",
+  "transition": "the light paper hall floor, ink rails and cinnabar seal posts persist while lanes, layers, gates and forks are re-dressed between scenes",
+  "conceptTokens": {
+    "土地承包经营权": "Tractor",
+    "居住权": "Home",
+    "地役权": "Waypoints"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/civil-law/08/usefruct-rights-hall/",
+    "title": "石印拓片馆"
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "land-contract-rights",
+      "export": "LandContractScene",
+      "layout": "three-mode-gate-lanes-with-limits-strip",
+      "anchor": "flow-path",
+      "grammar": [
+        "establishment-takes-effect-on-contract-with-defence-and-no-certificate-needed",
+        "exchange-transfer-and-five-year-operation-run-registration-opposition",
+        "mortgage-runs-registration-formation-contract-only-binds",
+        "flow-limits-cap-remaining-term-and-forbid-non-farm-use"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["connector", "contrast", "enclosure", "motion"],
+      "tokens": ["Tractor", "Ban", "Scale"],
+      "finalKnowledge": ["establishment-limb", "three-mode-table", "adjust-recover-rules", "flow-limits"],
+      "statefulObjects": []
+    },
+    {
+      "id": "construction-use-right",
+      "export": "ConstructionUseScene",
+      "layout": "layered-bands-with-allocation-split",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "surface-sky-and-underground-are-separate-state-lands",
+        "new-layers-must-not-harm-established-use-rights",
+        "allocation-is-administrative-approval-for-public-interest",
+        "grant-is-a-civil-contract-paid-by-transfer-fee"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["contrast", "icon", "enclosure", "annotation"],
+      "tokens": ["Building2", "Landmark", "Coins"],
+      "finalKnowledge": ["layered-limb", "no-harm-rule", "allocation-limb", "grant-limb"],
+      "statefulObjects": []
+    },
+    {
+      "id": "residence-right",
+      "export": "ResidenceRightScene",
+      "layout": "birth-gate-with-bounce-wall",
+      "anchor": "flow-path",
+      "grammar": [
+        "residence-right-is-possession-and-use-for-living-needs",
+        "contract-gives-claim-while-registration-establishes-the-right",
+        "will-based-establishment-follows-the-contract-rules",
+        "transfer-inheritance-and-letting-are-void-unless-agreed"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "external-negation"],
+      "focalChannels": ["connector", "contrast", "enclosure", "motion"],
+      "tokens": ["Home", "ScrollText", "Ban"],
+      "finalKnowledge": ["residence-definition", "formation-gate", "will-reference", "disposal-walls"],
+      "statefulObjects": []
+    },
+    {
+      "id": "servitude-fork",
+      "export": "ServitudeForkScene",
+      "layout": "need-serving-fork-with-distinction-strip",
+      "anchor": "document-fork",
+      "grammar": [
+        "servitude-is-a-use-right-on-anothers-land-for-ones-land-convenience",
+        "contract-effect-moves-the-right-while-registration-defends-it",
+        "need-land-transfer-carries-servitude-registered-or-not",
+        "basic-needs-are-neighbouring-while-high-needs-need-a-servitude"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["connector", "contrast", "enclosure", "motion"],
+      "tokens": ["Waypoints", "Link2", "Scale"],
+      "finalKnowledge": ["servitude-meaning", "opposition-formation", "transfer-rules", "neighbouring-distinction"],
+      "statefulObjects": []
+    }
+  ]
+}
