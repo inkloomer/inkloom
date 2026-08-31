@@ -1,0 +1,21 @@
+{
+  "directionId": "iron-scale-good-faith-acquisition-hall",
+  "family": "iron-scale-good-faith-acquisition-hall",
+  "palette": "charcoal iron blue-grey, slate steel, fog mist, paper cream, amber seal gold, plum ribbon, graphite ink",
+  "typography": "scale-hall headings on slate rail tabs, paper chips and amber wax verdicts",
+  "composition": "a public scale hall where a goods token passes four acquisition gates, a two-year window governs the lost-property lane, and three remedy lanes carry money chips from the disposer to the owner",
+  "surface": "paper files, slate desk rails, fog mist tags, amber wax seals",
+  "motion": "the disposal token is weighed at each gate and bounces off failed conditions, the lost-property claim arrow stretches inside the two-year window then the acquisition stamp falls after expiry, and remedy chips travel three lanes with their amounts before the owner picks one",
+  "transition": "the charcoal hall floor, slate rails and amber seal posts persist while gates, window and lanes are re-dressed between scenes",
+  "conceptTokens": {
+    "善意取得": "BadgeCheck",
+    "权利外观": "Fingerprint",
+    "遗失物": "Search"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/civil-law/07/good-faith-acquisition-hall/",
+    "title": "玄铁公平秤"
+  }
+}

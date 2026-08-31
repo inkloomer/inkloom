@@ -1,0 +1,92 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "original-vs-derivative",
+      "export": "OriginalVsDerivativeScene",
+      "layout": "twin-acquisition-cards-with-definition-dais",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "original-acquisition-never-depends-on-the-previous-holders-will",
+        "derivative-acquisition-follows-the-previous-holders-will",
+        "transfer-and-inheritance-are-derivative-while-other-ways-are-original",
+        "good-faith-acquisition-lets-an-innocent-buyer-take-from-an-unauthorised-disposer"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["contrast", "icon", "enclosure", "annotation"],
+      "tokens": ["BadgeCheck", "Users", "Scale"],
+      "finalKnowledge": ["original-meaning", "derivative-meaning", "sorting-rule", "acquisition-definition"],
+      "statefulObjects": []
+    },
+    {
+      "id": "conditions-appearance-disposal",
+      "export": "ConditionsAppearanceScene",
+      "layout": "gate-flow-with-bounce-lane",
+      "anchor": "flow-path",
+      "grammar": [
+        "the-disposer-needs-the-owners-appearance-by-registration-or-possession",
+        "unauthorised-disposal-by-contract-is-the-basic-precondition",
+        "pick-up-and-inheritance-never-trigger-good-faith-acquisition",
+        "gratuitous-or-void-or-rescinded-contracts-block-acquisition"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "external-negation"],
+      "focalChannels": ["connector", "contrast", "enclosure", "motion"],
+      "tokens": ["Fingerprint", "FileSignature", "Ban"],
+      "finalKnowledge": ["appearance-limb", "unauthorised-limb", "abnormal-contracts", "authorised-case"],
+      "statefulObjects": []
+    },
+    {
+      "id": "conditions-good-faith-delivery",
+      "export": "ConditionsGoodFaithScene",
+      "layout": "twin-condition-panels-with-computer-lane",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "good-faith-means-trusting-the-registration-or-possession-appearance",
+        "direct-and-indirect-possession-are-both-trustworthy",
+        "knowing-the-truth-or-the-co-ownership-defeats-good-faith",
+        "possession-assignment-is-absolutely-barred-while-other-deliveries-work"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "external-negation"],
+      "focalChannels": ["contrast", "connector", "enclosure", "motion"],
+      "tokens": ["BadgeCheck", "Truck", "Ban"],
+      "finalKnowledge": ["good-faith-limb", "possession-trust-rule", "delivery-limb", "computer-verdicts"],
+      "statefulObjects": []
+    },
+    {
+      "id": "lost-property-window",
+      "export": "LostPropertyScene",
+      "layout": "two-year-window-timeline-with-payment-strip",
+      "anchor": "timeline-gate",
+      "grammar": [
+        "the-owner-may-claim-return-within-two-years-of-knowing-the-transferee",
+        "during-the-window-title-stays-with-the-owner",
+        "auction-or-registered-trader-purchases-force-the-owner-to-pay",
+        "after-the-window-the-transferee-acquires-and-the-claim-dies"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["connector", "contrast", "enclosure", "motion"],
+      "tokens": ["Search", "Coins", "Hourglass"],
+      "finalKnowledge": ["two-year-claim", "payment-exceptions", "expiry-consequence", "special-property-notes"],
+      "statefulObjects": []
+    },
+    {
+      "id": "consequences-remedies",
+      "export": "ConsequencesScene",
+      "layout": "two-outcome-cards-with-remedy-lanes",
+      "anchor": "flow-path",
+      "grammar": [
+        "good-faith-acquisition-of-ownership-extinguishes-the-original-title",
+        "acquisition-of-a-security-right-leaves-the-title-with-a-burden",
+        "the-owner-charges-the-disposer-along-tort-breach-or-unjust-enrichment",
+        "the-three-claims-compete-and-the-owner-picks-exactly-one"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["connector", "contrast", "enclosure", "motion"],
+      "tokens": ["BadgeCheck", "Scale", "Coins"],
+      "finalKnowledge": ["ownership-outcome", "security-outcome", "three-remedy-lanes", "pick-one-rule"],
+      "statefulObjects": []
+    }
+  ]
+}
