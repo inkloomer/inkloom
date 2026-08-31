@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "offer-acceptance-chain",
+      "export": "OfferAcceptanceScene",
+      "layout": "invitation-offer-acceptance-chain-with-lapse",
+      "anchor": "flow-path",
+      "grammar": [
+        "invitation-lures-offers-while-offer-proposes-and-acceptance-consents",
+        "content-specificity-and-no-disclaimer-sort-offer-from-invitation",
+        "four-statutory-invitations-are-price-list-auction-tender-and-prospectus",
+        "rejection-revocation-lapse-and-material-change-kill-the-offer"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "external-negation"],
+      "focalChannels": ["connector", "contrast", "enclosure", "motion"],
+      "tokens": ["ScrollText", "Stamp", "Ban"],
+      "finalKnowledge": ["three-step-chain", "sort-rules", "statutory-invitations", "lapse-causes"],
+      "statefulObjects": []
+    },
+    {
+      "id": "bid-auction-ads",
+      "export": "BidAuctionAdsScene",
+      "layout": "parallel-bid-auction-lanes-with-ad-road",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "tender-deals-close-when-the-award-notice-reaches-the-winner",
+        "auction-deals-close-at-the-gavel-or-system-confirmation",
+        "commercial-ads-become-offers-when-specific-and-binding",
+        "offer-ads-act-as-standard-clauses-breach-fraud-and-rescission"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["connector", "contrast", "enclosure", "motion"],
+      "tokens": ["Gavel", "Coins", "Home"],
+      "finalKnowledge": ["tender-auction-lanes", "contract-book-rule", "ad-offer-road", "big-tree-two-roads"],
+      "statefulObjects": []
+    },
+    {
+      "id": "standard-clauses-court",
+      "export": "StandardClauseScene",
+      "layout": "clause-court-of-validity-cards",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "unilateral-drafting-plus-reuse-intent-forms-standard-clauses",
+        "public-disclosure-alone-merges-them-into-the-contract",
+        "improper-exemption-clauses-bind-the-provider-but-not-the-consumer",
+        "proper-exemption-needs-real-notice-beyond-ticks-and-popups"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "external-negation"],
+      "focalChannels": ["contrast", "icon", "enclosure", "annotation"],
+      "tokens": ["FileStack", "Scale", "Gavel"],
+      "finalKnowledge": ["clause-formula", "public-merger-rule", "improper-proper-split", "interpretation-order"],
+      "statefulObjects": []
+    },
+    {
+      "id": "future-contract-split",
+      "export": "FutureContractScene",
+      "layout": "reservation-form-fork-with-comparison-strip",
+      "anchor": "document-fork",
+      "grammar": [
+        "reservation-pairs-a-skeleton-agreement-with-a-future-main-contract",
+        "blame-for-failing-the-main-contract-triggers-reservation-liability",
+        "form-pairs-a-complete-agreement-with-a-mere-formal-requirement",
+        "performance-accepted-cures-the-missing-form-and-closes-the-deal"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["connector", "contrast", "enclosure", "motion"],
+      "tokens": ["FileStack", "ScrollText", "Scale"],
+      "finalKnowledge": ["reservation-limb", "blame-liability-rule", "form-limb", "comparison-strip"],
+      "statefulObjects": []
+    }
+  ]
+}

@@ -195,6 +195,7 @@ import {typography as typographyAutoDebtTransferHall} from '../animations/civil-
 import {typography as typographyAutoClaimPreservationHall} from '../animations/civil-law/10/claim-preservation-hall/animation.meta';
 import {typography as typographyAutoObligationExtinctionHall} from '../animations/civil-law/10/obligation-extinction-hall/animation.meta';
 import {typography as typographyAutoContractOverviewHall} from '../animations/civil-law/11/contract-overview-hall/animation.meta';
+import {typography as typographyAutoContractConclusionHall} from '../animations/civil-law/11/contract-conclusion-hall/animation.meta';
 import {typography as typographyAutoAdoptionDossierRegistry} from '../animations/civil-law/21/adoption-dossier-registry/animation.meta';
 import {typography as typographyAutoMarriageValidityChain} from '../animations/civil-law/20/marriage-validity-chain/animation.meta';
 import {typography as typographyAutoMaritalPropertyDivorceDesk} from '../animations/civil-law/20/marital-property-divorce-desk/animation.meta';
@@ -211,6 +212,7 @@ import {typography as typographyAutoDividendRight} from '../animations/commercia
 import {typography as typographyAutoShareholderQualification} from '../animations/commercial-law/03/shareholder-qualification/animation.meta';
 import {typography as typographyAutoNominalShareholder} from '../animations/commercial-law/03/nominal-shareholder/animation.meta';
 import {typography as typographyAutoAntiMonopolyLaw} from '../animations/economic-law/01/anti-monopoly-law/animation.meta';
+import {typography as typographyAutoAntiUnfairCompetitionLaw} from '../animations/economic-law/02/anti-unfair-competition-law/animation.meta';
 import {typography as typographyAutoShareholderContribution} from '../animations/commercial-law/02/shareholder-contribution/animation.meta';
 import {typography as typographyAutoPromoter} from '../animations/commercial-law/02/promoter/animation.meta';
 import {typography as typographyAutoCompanyIncorporation} from '../animations/commercial-law/02/company-incorporation/animation.meta';
@@ -512,6 +514,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'claim-preservation-hall': {metadata: typographyAutoClaimPreservationHall, scope: {animationId: 'claim-preservation-hall', subject: 'civil-law', topic: '10'}},
   'obligation-extinction-hall': {metadata: typographyAutoObligationExtinctionHall, scope: {animationId: 'obligation-extinction-hall', subject: 'civil-law', topic: '10'}},
   'contract-overview-hall': {metadata: typographyAutoContractOverviewHall, scope: {animationId: 'contract-overview-hall', subject: 'civil-law', topic: '11'}},
+  'contract-conclusion-hall': {metadata: typographyAutoContractConclusionHall, scope: {animationId: 'contract-conclusion-hall', subject: 'civil-law', topic: '11'}},
   'dividend-right': {metadata: typographyAutoDividendRight, scope: {animationId: 'dividend-right', subject: 'commercial-law', topic: '04'}},
   'shareholder-qualification': {metadata: typographyAutoShareholderQualification, scope: {animationId: 'shareholder-qualification', subject: 'commercial-law', topic: '03'}},
   'nominal-shareholder': {metadata: typographyAutoNominalShareholder, scope: {animationId: 'nominal-shareholder', subject: 'commercial-law', topic: '03'}},
@@ -712,6 +715,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'demo-timeline-chronicle': {metadata: typography60, scope: {animationId: 'demo-timeline-chronicle', subject: 'demo', topic: 'styles'}},
   'demo-transit-map': {metadata: typography61, scope: {animationId: 'demo-transit-map', subject: 'demo', topic: 'styles'}},
   'anti-monopoly-law': {metadata: typographyAutoAntiMonopolyLaw, scope: {animationId: 'anti-monopoly-law', subject: 'economic-law', topic: '01'}},
+  'anti-unfair-competition-law': {metadata: typographyAutoAntiUnfairCompetitionLaw, scope: {animationId: 'anti-unfair-competition-law', subject: 'economic-law', topic: '02'}},
   ...COMMERCIAL_LAW_TYPOGRAPHY_CONFIGURATIONS,
 };
 

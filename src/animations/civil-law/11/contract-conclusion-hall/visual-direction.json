@@ -1,0 +1,21 @@
+{
+  "directionId": "indigo-signing-contract-conclusion-hall",
+  "family": "indigo-signing-contract-conclusion-hall",
+  "palette": "deep indigo navy, signing sky, brass wax, coral stamp, cream paper, graphite ink",
+  "typography": "signing-hall headings on indigo rail tabs, cream chips and coral stamp verdicts",
+  "composition": "a signing hall where the offer-acceptance chain runs invitation-offer-acceptance gates, bid and auction lanes run parallel to the ad dual road, standard-clause cards sit in a court of validity, and future-contract papers fork into reservation and form paths",
+  "surface": "cream paper files, indigo desk rails, signing sky tags, coral stamps",
+  "motion": "a proposal chip slides through invitation-offer-acceptance gates with rejection bouncing it back as a new offer, bid and auction chips race parallel lanes to their gavel moments, clause cards flip valid-invalid by whom they bind, and future papers fork reservation versus form",
+  "transition": "the indigo hall floor, indigo rails and coral stamp posts persist while chains, lanes, courts and forks are re-dressed between scenes",
+  "conceptTokens": {
+    "要约": "ScrollText",
+    "承诺": "Stamp",
+    "格式条款": "FileStack"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/civil-law/11/contract-conclusion-hall/",
+    "title": "靛青约签馆"
+  }
+}
