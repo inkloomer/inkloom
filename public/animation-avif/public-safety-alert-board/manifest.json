@@ -3,7 +3,7 @@
   "compositionId": "PublicSafetyAlertBoard",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-08-31T08:14:24.388Z",
+  "generatedAt": "2026-08-31T09:01:06.657Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -16,13 +16,13 @@
       "title": "公共安全·两把尺·放火罪",
       "durationMs": 8667,
       "file": "meaning-fire-rulers.avif",
-      "fileSize": 849174,
+      "fileSize": 1424239,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "cb767356eb2d642c56c80c58750a34ce1da4210bd839424b62da39ed7c0a5be8",
+      "sha256": "3581315bed497b5a5db9a70f6378f58c3b3fa45628c0b48fb18c89806667063f",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "da958862d064cc764c7186b4e00863b89dd6adc80b40b6b3aab976d6ffb32784"
+      "sceneFingerprint": "fcb8f5c72de4da28ed74848fe44eb681285689621c895c6a6947da67261aee22"
     },
     {
       "endFrame": 559,
@@ -84,13 +84,13 @@
       "title": "恐怖型犯罪：组织·帮助·准备",
       "durationMs": 9667,
       "file": "terror-alert-ward.avif",
-      "fileSize": 1118994,
+      "fileSize": 1087706,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "e8c7287f7af32b32fc689bd42fc9d87a34bf6bb9726871eb49313a5565bfffab",
+      "sha256": "08fc89f137315407306977ed72be2d973e01d937173a4bb785bbc885841b2cad",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "30056bb214a6e3ea770d43d452284b44d22e743ef3da93d6b096181fd86193ae"
+      "sceneFingerprint": "98d9b278dbee7c757d5009a1288a820997c4f048df8e7c1b357d8e0a349c9b18"
     },
     {
       "endFrame": 1749,
@@ -101,13 +101,13 @@
       "title": "妨害安全驾驶罪：抢方向盘·互殴",
       "durationMs": 10000,
       "file": "interfere-driving-panel.avif",
-      "fileSize": 837862,
+      "fileSize": 962561,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "271719f0d2fb1039e220b91fd4f45864565e97cac2c1dd7b3b2edd941643b568",
+      "sha256": "d43d43c3ed25655e887f2f3973f2e4a8f60d5bf32f5a4b406ff9c3ed012f67f6",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "d4aa881e0c405ba3e0f4ab8bdadba36006c2bf59b8ee2b20ba9aa2d1b23ae285"
+      "sceneFingerprint": "39d8fc457dffb0b4a9fe126ac5b86bb3ec6f9a114d6f9888c86b570dc03b6609"
     },
     {
       "endFrame": 2049,
@@ -132,7 +132,7 @@
     "width": 2560
   },
   "sourceFps": 30,
-  "sourceFingerprint": "266a264419f2a7f3158641927110ddfb03d58c09212aa968b9a90af322cd6a61",
+  "sourceFingerprint": "71b8ad3e8fe2b3101b763b3cc3db38583d4c178e1868bccfe842599318ba57c1",
   "targetFps": 30,
-  "totalFileSize": 6670417
+  "totalFileSize": 7338893
 }

@@ -6,13 +6,13 @@
     {
       "id": "meaning-fire-rulers",
       "export": "MeaningFireRulersScene",
-      "layout": "meaning-fire-dual-board",
+      "layout": "meaning-fork-triple-rail",
       "anchor": "comparison-axis",
-      "grammar": ["rulers-panel", "fire-relations-panel"],
+      "grammar": ["ruler-fork-board", "fire-relations-panel"],
       "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
-      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
-      "tokens": ["Flame", "Scale", "Ban", "Zap", "Gavel"],
-      "finalKnowledge": ["rulers-panel", "fire-relations-panel", "poison-vs-fake"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["Scale", "Siren", "Users", "Ban", "Zap", "Flame", "Dog", "Gavel"],
+      "finalKnowledge": ["ruler-fork-board", "fire-tier-board", "fire-relations-panel", "poison-vs-fake"],
       "statefulObjects": []
     },
     {

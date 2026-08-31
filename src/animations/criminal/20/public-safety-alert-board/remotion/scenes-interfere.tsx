@@ -25,7 +25,7 @@ export const InterfereDrivingPanelScene = () => {
         <Enter delay={3} marker="bus-duel-board" style={{position: 'absolute', left: 0, top: 0, width: 880, height: 520}}>
           <Panel tone={C.siren} watermark={<Bus size={190} color={C.siren} strokeWidth={1.6} />} style={{height: '100%', padding: '12px 16px'}}>
             <TabChip tone={C.siren} icon={<Bus size={24} color={C.white} strokeWidth={2.2} />}>第133条之二 · 行驶中的公共交通工具</TabChip>
-            <div style={{position: 'relative', height: 400, marginTop: 12}}>
+            <div style={{position: 'relative', height: 436, marginTop: 12}}>
               <div style={{position: 'absolute', left: 0, top: 10, width: 820, height: 260, border: `5px solid ${C.night}`, borderRadius: 26, backgroundColor: C.boardDeep, boxShadow: `0 0 ${duelGlow * 26}px ${C.siren}${duelGlow > 0.5 ? '44' : '00'}`}}>
                 <div style={{position: 'absolute', left: 24, top: 70, width: 220, height: 120, border: `4px solid ${C.green}`, borderRadius: 12, backgroundColor: C.white, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 4}}>
                   <Users size={34} color={C.green} strokeWidth={2.4} />
@@ -43,7 +43,10 @@ export const InterfereDrivingPanelScene = () => {
                 <div style={{position: 'absolute', left: 274, top: 186, fontSize: 20, fontWeight: 900, color: C.green, width: 272, textAlign: 'center'}}>司机：擅离职守·互殴殴打（2022）</div>
               </div>
               <div style={{position: 'absolute', left: 0, top: 296, fontSize: 21, fontWeight: 880, color: C.ink, width: 820, lineHeight: 1.55}}>
-                双向对峙任一方 → 干扰正常行驶·危及公共安全 → 基本刑仅<Mark color={C.siren}>1年以下</Mark>＝<ThinU color={C.siren}>轻罪</ThinU>
+                双向对峙任一方 → 干扰正常行驶·危及公共安全 → 基本刑仅<Mark color={C.siren}>1年以下拘役或管制，并处或单处罚金</Mark>＝<ThinU color={C.siren}>轻罪</ThinU>
+              </div>
+              <div style={{position: 'absolute', left: 0, top: 352, width: 820, border: `3px solid ${C.night}`, backgroundColor: C.white, padding: '8px 12px', fontSize: 20, fontWeight: 870, lineHeight: 1.45}}>
+                <b style={{color: C.night}}>第3款·处理依据：</b>有前两款行为，同时构成其他犯罪的，依照<Mark color={C.night}>处罚较重的</Mark>规定定罪处罚——这就是右侧竞合扇出的法条根源
               </div>
             </div>
           </Panel>
