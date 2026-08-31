@@ -1,0 +1,22 @@
+{
+  "directionId": "seal-paste-guarantee-desk",
+  "family": "seal-paste-guarantee-desk",
+  "palette": "tea-paper tan field, xuan-paper cream slips, seal-paste vermilion, bronze patina green, indigo navy, gilded ochre, dark roast ink",
+  "typography": "guarantee-desk headings on tea-paper rail tabs, vermilion verdicts and gilded condition plates",
+  "composition": "a guarantee concept fork, liability lanes with a presumption-presumption pair, a guarantee-period clock bank, and a deposit penalty counter",
+  "surface": "xuan-paper slips stamped with seal-paste verdicts on a tea-paper tan field",
+  "motion": "guarantee tokens fork at concept gates, liability lanes split parallel versus sequential clocks, period dials wind down six-month springs, and deposit counters double or forfeit",
+  "transition": "the tea-paper field, vermilion stamps and cream slips persist while forks, lanes, clocks and counters are re-dressed between scenes",
+  "conceptTokens": {
+    "保证": "ShieldCheck",
+    "连带责任保证": "Link",
+    "一般保证": "Shield",
+    "定金罚则": "Coins"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/civil-law/15/guarantee-deposit-seal-desk/",
+    "title": "茶纸印泥台"
+  }
+}

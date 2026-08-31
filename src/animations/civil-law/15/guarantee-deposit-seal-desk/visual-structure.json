@@ -1,0 +1,94 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "guarantee-concept-fork",
+      "export": "GuaranteeConceptScene",
+      "layout": "concept-fork-with-three-way-distinction",
+      "anchor": "document-fork",
+      "grammar": [
+        "guarantee-is-a-third-party-promising-performance-when-the-principal-debtor-defaults",
+        "he-will-pay-if-he-defaults-joins-the-guarantee-while-we-both-owe-joins-the-debt-and-doubt-resolves-to-guarantee",
+        "debt-transfer-needs-creditor-consent-and-extinguishes-the-debt-while-guarantee-keeps-it-alive",
+        "specific-property-makes-a-property-guarantee-and-nonspecific-property-makes-a-personal-guarantee"
+      ],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "thin-underline"],
+      "focalChannels": ["connector", "contrast", "icon", "annotation"],
+      "tokens": ["ShieldCheck", "Link", "Shield", "Coins", "Users", "Gavel"],
+      "finalKnowledge": [
+        "guarantee-structure",
+        "guarantee-versus-join-and-transfer",
+        "personal-versus-property-guarantee"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "guarantee-liability-lanes",
+      "export": "GuaranteeLiabilityScene",
+      "layout": "liability-lanes-with-pair-presumptions",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "full-amount-is-presumed-when-silence-covers-the-sum-while-limited-guarantees-cover-the-unpaid-rest",
+        "joint-guarantee-runs-parallel-and-general-guarantee-runs-sequential-with-silence-presuming-general",
+        "the-first-suit-defense-yields-to-missing-debtor-bankruptcy-insolvency-proof-and-written-waiver",
+        "lazy-creditors-free-the-general-guarantor-within-the-value-of-the-neglected-lead"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["contrast", "icon", "connector", "annotation"],
+      "tokens": ["Link", "Shield", "Coins", "Undo2"],
+      "finalKnowledge": [
+        "full-versus-limited-sum",
+        "joint-versus-general-lanes",
+        "first-suit-defense-exceptions",
+        "neglected-asset-relief"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "guarantee-period-clock-bank",
+      "export": "GuaranteePeriodScene",
+      "layout": "period-clock-bank-with-exercise-methods",
+      "anchor": "timeline-gate",
+      "grammar": [
+        "guarantee-periods-start-at-principal-maturity-and-highest-amount-starts-at-the-later-date",
+        "silence-or-nonsense-terms-settle-into-the-statutory-six-months-and-changed-terms-need-written-consent",
+        "joint-guarantee-needs-a-demand-on-the-guarantor-while-general-guarantee-needs-suit-on-the-debtor",
+        "expired-guarantees-revive-only-into-a-new-contract-when-the-guarantor-agrees-in-writing"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["connector", "contrast", "icon", "annotation"],
+      "tokens": ["ShieldCheck", "Link", "Shield", "Undo2", "Coins", "Gavel"],
+      "finalKnowledge": [
+        "period-start-and-length",
+        "exercise-method-split",
+        "expired-signature-rule",
+        "limitation-start-split"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "deposit-penalty-counter",
+      "export": "DepositPenaltyScene",
+      "layout": "deposit-counter-with-penalty-ratio-lanes",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "deposit-contracts-form-on-delivery-and-only-deposit-words-or-the-earnest-rule-name-it",
+        "delivery-controls-the-sum-which-caps-at-twenty-percent-of-the-principal-debt",
+        "breach-deposits-default-to-punishment-while-escape-deposits-buy-termination-and-forming-deposits-build-the-contract",
+        "the-penalty-doubles-or-forfeits-by-default-breaches-split-ratio-wise-and-mutual-breaches-mute-it"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["contrast", "icon", "connector", "annotation"],
+      "tokens": ["Coins", "ShieldCheck", "Gavel", "Ban"],
+      "finalKnowledge": [
+        "deposit-formation-and-identification",
+        "deposit-sum-rules",
+        "deposit-types-triple",
+        "penalty-application-rules"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}
