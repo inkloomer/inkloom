@@ -1,0 +1,70 @@
+{
+  "animationId": "co-ownership-hall",
+  "compositionId": "CoOwnershipHall",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-31T11:43:53.246Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 659,
+      "frameCount": 330,
+      "id": "twin-ownership-types",
+      "number": "01",
+      "startFrame": 0,
+      "title": "按份共有与共同共有",
+      "durationMs": 11000,
+      "file": "twin-ownership-types.avif",
+      "fileSize": 504747,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "17bfbe210f70cdca9cfceadd319b9c8cad937f73ed6a800d0ea248308e5c0d6a",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "40fc19f97f0b2f9cbb2befb61707ff36059ad98ebbfb3a8a624ef4f1950e3c69"
+    },
+    {
+      "endFrame": 1379,
+      "frameCount": 360,
+      "id": "internal-relations-chains",
+      "number": "02",
+      "startFrame": 660,
+      "title": "共有的内部关系",
+      "durationMs": 12000,
+      "file": "internal-relations-chains.avif",
+      "fileSize": 545371,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "3fbb771d83957bcc478d08563f1113b782ea2fa73fe92c769ba038f361007e5f",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "40fc19f97f0b2f9cbb2befb61707ff36059ad98ebbfb3a8a624ef4f1950e3c69"
+    },
+    {
+      "endFrame": 2039,
+      "frameCount": 330,
+      "id": "case-fork-and-external",
+      "number": "03",
+      "startFrame": 1380,
+      "title": "案例分叉与外部关系",
+      "durationMs": 11000,
+      "file": "case-fork-and-external.avif",
+      "fileSize": 627708,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "0a8cacc9e5de08074f2e0165b5b5d8b979a0c697659a0a0d59baeffe23a796e4",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "40fc19f97f0b2f9cbb2befb61707ff36059ad98ebbfb3a8a624ef4f1950e3c69"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "40fc19f97f0b2f9cbb2befb61707ff36059ad98ebbfb3a8a624ef4f1950e3c69",
+  "targetFps": 30,
+  "totalFileSize": 1677826
+}

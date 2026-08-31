@@ -367,7 +367,7 @@ export const InternalRelationsScene = () => {
               <div style={{position: 'absolute', left: 0, top: 30}}>
                 <Chip tone={C.indigo} toneBg={C.indigoPale}><PieChart size={22} color={C.indigo} strokeWidth={2.4} /><span style={{fontSize: 22, fontWeight: 950, color: C.indigo }}>30% 份额</span></Chip>
               </div>
-              <span style={{position: 'absolute', left: 170, top: 34, fontSize: 21, fontWeight: 900, color: C.inkSoft }}>转让<Under color={C.indigo} delay={110}>无需</Under>其他共有人同意＝<Soft color={C.indigo}>有权处分</Soft></span>
+              <span style={{position: 'absolute', left: 20, top: 86, fontSize: 21, fontWeight: 900, color: C.inkSoft }}>转让<Under color={C.indigo} delay={110}>无需</Under>其他共有人同意＝<Soft color={C.indigo}>有权处分</Soft></span>
               <Path color={C.indigo} delay={150} span={22} style={{position: 'absolute', left: 660, top: 62, width: 420, height: 4}} />
               <Mover delay={156} span={24} fromX={0} toX={420} fadeAt={226} style={{position: 'absolute', left: 20, top: 30, zIndex: 2}}>
                 <Chip tone={C.indigo} toneBg={C.indigoPale}><PieChart size={22} color={C.indigo} strokeWidth={2.4} /><span style={{fontSize: 22, fontWeight: 950, color: C.indigo }}>30% 份额</span></Chip>
