@@ -3,7 +3,7 @@
   "compositionId": "GuaranteeDepositSealDesk",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-08-31T15:36:56.079Z",
+  "generatedAt": "2026-08-31T17:34:05.433Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -16,13 +16,13 @@
       "title": "保证的概念与三分辨",
       "durationMs": 11667,
       "file": "guarantee-concept-fork.avif",
-      "fileSize": 652206,
+      "fileSize": 654096,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "c2925123ef278029f7c85e0d8f09dff88f4d20eadae312055a270e2cce494905",
+      "sha256": "9ee85531e45e393853de603013c0c7f627d73ae2923d1dd10ed16e785674609e",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "7fe496f1a2e8ff997e8b951abe0261031ac388280968251fc6387d9770cd74c1"
+      "sceneFingerprint": "361e9c7ad8cfe0b7f030122d58e5cf1cb6a2fd75ac95f329966fb5e68abf1844"
     },
     {
       "endFrame": 1399,
@@ -33,13 +33,13 @@
       "title": "保证责任的承担方式",
       "durationMs": 11667,
       "file": "guarantee-liability-lanes.avif",
-      "fileSize": 857972,
+      "fileSize": 860576,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "bf22755d8a65315e9370d7484576281478e3433504c1a7290e138255df5871e0",
+      "sha256": "f2505356577b901e4d693183b5a5b8590545fbc20b6ad5ddd9894e1993b45b2b",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "7fe496f1a2e8ff997e8b951abe0261031ac388280968251fc6387d9770cd74c1"
+      "sceneFingerprint": "361e9c7ad8cfe0b7f030122d58e5cf1cb6a2fd75ac95f329966fb5e68abf1844"
     },
     {
       "endFrame": 2219,
@@ -53,10 +53,10 @@
       "fileSize": 977232,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "16a5ed73f0d53f8046895281f6ba609deeb3ea32baefaf5264bec32525a8a8a4",
+      "sha256": "b4b979f822c794d58ccfd43bf763a1e268b148be4eaf4fe6024b3286e3b2c42a",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "7fe496f1a2e8ff997e8b951abe0261031ac388280968251fc6387d9770cd74c1"
+      "sceneFingerprint": "361e9c7ad8cfe0b7f030122d58e5cf1cb6a2fd75ac95f329966fb5e68abf1844"
     },
     {
       "endFrame": 2999,
@@ -67,13 +67,13 @@
       "title": "定金与定金罚则",
       "durationMs": 13000,
       "file": "deposit-penalty-counter.avif",
-      "fileSize": 894312,
+      "fileSize": 894309,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "c4531fe86c809b51f53c3819fdb3a53ee86f6055277c2c97fb8d08b975ff064a",
+      "sha256": "51b1eb3578be10cf5b5f1356a6dbb40da4c4c4a9f734ecefc7fb2eefa1944f6f",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "7fe496f1a2e8ff997e8b951abe0261031ac388280968251fc6387d9770cd74c1"
+      "sceneFingerprint": "361e9c7ad8cfe0b7f030122d58e5cf1cb6a2fd75ac95f329966fb5e68abf1844"
     }
   ],
   "size": {
@@ -81,7 +81,7 @@
     "width": 2560
   },
   "sourceFps": 60,
-  "sourceFingerprint": "7fe496f1a2e8ff997e8b951abe0261031ac388280968251fc6387d9770cd74c1",
+  "sourceFingerprint": "361e9c7ad8cfe0b7f030122d58e5cf1cb6a2fd75ac95f329966fb5e68abf1844",
   "targetFps": 30,
-  "totalFileSize": 3381722
+  "totalFileSize": 3386213
 }

@@ -3,7 +3,7 @@
   "compositionId": "MarriageValidityChain",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-08-31T11:03:09.853Z",
+  "generatedAt": "2026-08-31T17:18:43.326Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -16,13 +16,13 @@
       "title": "亲属间的抚养、赡养与扶养义务",
       "durationMs": 11667,
       "file": "kinship-support-ladder.avif",
-      "fileSize": 669017,
+      "fileSize": 673658,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "6f4400653a04253cd1c1ab49315b987204e220f859787dcc8d790d89aa4c9615",
+      "sha256": "824b35ebe9ee25f9c38873620a75a5d307f31754dc57e6b488e8117c859486bd",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "030a3a5518442188bfb8778df82594675fedfb76850f31f089e2853313daa086"
+      "sceneFingerprint": "935fc2a70c73d98f364daf20060fe129e71002682454013ba66f8f3db3ace8ea"
     },
     {
       "endFrame": 1419,
@@ -33,13 +33,13 @@
       "title": "婚姻的成立与无效",
       "durationMs": 12000,
       "file": "marriage-formation-gate.avif",
-      "fileSize": 748429,
+      "fileSize": 749797,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "787fe75bbd42ba9868a691d39a204b95ae9bc8cb9f451d34a09bd095d9a9e8cf",
+      "sha256": "8f9a781ef6109e9e3bd1681a7bbb38f5d69c64e257ddea619f17f386fe5c2e1b",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "030a3a5518442188bfb8778df82594675fedfb76850f31f089e2853313daa086"
+      "sceneFingerprint": "935fc2a70c73d98f364daf20060fe129e71002682454013ba66f8f3db3ace8ea"
     },
     {
       "endFrame": 2099,
@@ -50,13 +50,13 @@
       "title": "婚姻无效之诉的程序",
       "durationMs": 11333,
       "file": "invalidity-procedure-fork.avif",
-      "fileSize": 718562,
+      "fileSize": 717927,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "fdcf77f76f7bd1ea3834f4fa278a7ab96bfc10d0ce412fc65c0600463d82ab38",
+      "sha256": "e1d6e147b55b6042d7f838854cf0f595b5c8c9c532fe93e0ce6385daa1230cab",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "030a3a5518442188bfb8778df82594675fedfb76850f31f089e2853313daa086"
+      "sceneFingerprint": "935fc2a70c73d98f364daf20060fe129e71002682454013ba66f8f3db3ace8ea"
     },
     {
       "endFrame": 2879,
@@ -67,13 +67,13 @@
       "title": "可撤销婚姻与无效后果",
       "durationMs": 13000,
       "file": "revocable-marriage-lane.avif",
-      "fileSize": 779342,
+      "fileSize": 779341,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "b24371047dd5ead5a2eb5c3877968a77b0e4d4be2f72893f8a5832e9b745c805",
+      "sha256": "456f3d21dba3963d528024e9802a233aabb49baada3716d9031921968265871d",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "030a3a5518442188bfb8778df82594675fedfb76850f31f089e2853313daa086"
+      "sceneFingerprint": "935fc2a70c73d98f364daf20060fe129e71002682454013ba66f8f3db3ace8ea"
     }
   ],
   "size": {
@@ -81,7 +81,7 @@
     "width": 2560
   },
   "sourceFps": 60,
-  "sourceFingerprint": "030a3a5518442188bfb8778df82594675fedfb76850f31f089e2853313daa086",
+  "sourceFingerprint": "935fc2a70c73d98f364daf20060fe129e71002682454013ba66f8f3db3ace8ea",
   "targetFps": 30,
-  "totalFileSize": 2915350
+  "totalFileSize": 2920723
 }

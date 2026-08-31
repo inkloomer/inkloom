@@ -3,7 +3,7 @@
   "compositionId": "PersonalityReinsHall",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-08-31T15:08:14.856Z",
+  "generatedAt": "2026-08-31T17:28:01.920Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -19,10 +19,10 @@
       "fileSize": 645243,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "65f68e92afc970bd1b356febf9b866f4274e986496d660e4634a933604debc82",
+      "sha256": "a5d88ad610078749e3b502d1bc2699657f5645ae027bdf74f09612d1c0b65ba9",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "f42f04aa265fa3566b26faad59d8c79fcb01dd7039ca3e87fa2181930906a4da"
+      "sceneFingerprint": "c1367fb2b0cb41641c447c3657c440e702104aed909e096ebe9a937ad7cb124a"
     },
     {
       "endFrame": 1259,
@@ -33,13 +33,13 @@
       "title": "器官捐献的自主决定",
       "durationMs": 10333,
       "file": "body-donation-lane.avif",
-      "fileSize": 569922,
+      "fileSize": 570312,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "b206cae5913de4e9c519f4edf2acb20293bc59ee771207e9c1ce3d3409b64f0d",
+      "sha256": "c4298a57487b78aa9c3a5e7209a00fb78f548810d37a629fbcec4327ab6127e1",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "f42f04aa265fa3566b26faad59d8c79fcb01dd7039ca3e87fa2181930906a4da"
+      "sceneFingerprint": "c1367fb2b0cb41641c447c3657c440e702104aed909e096ebe9a937ad7cb124a"
     },
     {
       "endFrame": 1879,
@@ -53,10 +53,10 @@
       "fileSize": 386803,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "b539cc49fb1bdd824d69669a928872cf1e50a0d46a1cfc7a430016037e4c45cc",
+      "sha256": "075f8c74bfbc14ec693df7bbac34c2c6a8a14aed7608cf2ac22438caf41f592f",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "f42f04aa265fa3566b26faad59d8c79fcb01dd7039ca3e87fa2181930906a4da"
+      "sceneFingerprint": "c1367fb2b0cb41641c447c3657c440e702104aed909e096ebe9a937ad7cb124a"
     }
   ],
   "size": {
@@ -64,7 +64,7 @@
     "width": 2560
   },
   "sourceFps": 60,
-  "sourceFingerprint": "f42f04aa265fa3566b26faad59d8c79fcb01dd7039ca3e87fa2181930906a4da",
+  "sourceFingerprint": "c1367fb2b0cb41641c447c3657c440e702104aed909e096ebe9a937ad7cb124a",
   "targetFps": 30,
-  "totalFileSize": 1601968
+  "totalFileSize": 1602358
 }

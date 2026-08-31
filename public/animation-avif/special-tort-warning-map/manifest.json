@@ -3,7 +3,7 @@
   "compositionId": "SpecialTortWarningMap",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-08-31T13:21:04.461Z",
+  "generatedAt": "2026-08-31T17:57:53.622Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -16,13 +16,13 @@
       "title": "用工责任谱系：雇主·派遣·帮工·定作",
       "durationMs": 13000,
       "file": "employment-liability-lane.avif",
-      "fileSize": 898664,
+      "fileSize": 898663,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "f72a5f0171dc5d6dadcce0d66dc3e65fdafd4a91b8e5f8a729b65e2e2afe3568",
+      "sha256": "8bfc9d1c701266b040981e0d3afd3edbdcc51aa0a92eeec50965478d36e5a3da",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "8e0502f2b56bb096d7630d593a1f864ac668bfebbd1525f011741d5421b0cb7b"
+      "sceneFingerprint": "1d91d9ef1ed6c6e5941f3ee4bd64aebd15eb0a42f9c0b38c865320933b01e23b"
     },
     {
       "endFrame": 1479,
@@ -33,13 +33,13 @@
       "title": "环境污染责任",
       "durationMs": 11667,
       "file": "pollution-presumption-causeway.avif",
-      "fileSize": 730805,
+      "fileSize": 730804,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "b0b33add2c5866bc65fa911b0dc0c3a08c9d2e466906cade093ad06237fad886",
+      "sha256": "3bb5af6ffff8b17ac2871a7df472d6374044b77851bf49051585e0fec3ee83a5",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "8e0502f2b56bb096d7630d593a1f864ac668bfebbd1525f011741d5421b0cb7b"
+      "sceneFingerprint": "1d91d9ef1ed6c6e5941f3ee4bd64aebd15eb0a42f9c0b38c865320933b01e23b"
     },
     {
       "endFrame": 2219,
@@ -50,13 +50,13 @@
       "title": "物品掉落与物件致损",
       "durationMs": 12333,
       "file": "falling-object-hazard-ladder.avif",
-      "fileSize": 738853,
+      "fileSize": 741076,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "a9babb36a875f3645485c16fbad1f16dc74e8444dd1ff6459923896db49c2f36",
+      "sha256": "141c553c2a7e2488bdd27265c5b2b5ed46973a97459a523a49998e67eb8d6f68",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "8e0502f2b56bb096d7630d593a1f864ac668bfebbd1525f011741d5421b0cb7b"
+      "sceneFingerprint": "1d91d9ef1ed6c6e5941f3ee4bd64aebd15eb0a42f9c0b38c865320933b01e23b"
     },
     {
       "endFrame": 3019,
@@ -70,10 +70,10 @@
       "fileSize": 984452,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "8b84c61bcb43655cdf78fb2a66bb976a8a94f64adf718236ed45cef5187b4820",
+      "sha256": "31537b6765b88b0f1ef859625ccb1c2996ec44f6efe21f4a41704f3d39738705",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "8e0502f2b56bb096d7630d593a1f864ac668bfebbd1525f011741d5421b0cb7b"
+      "sceneFingerprint": "1d91d9ef1ed6c6e5941f3ee4bd64aebd15eb0a42f9c0b38c865320933b01e23b"
     },
     {
       "endFrame": 3859,
@@ -87,10 +87,10 @@
       "fileSize": 1243876,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "88086542c0dd65d6d763b79f0a708af68a85e53c948bcd6725d2cf52f3bcc122",
+      "sha256": "aa751c7b26c3885242fdaf6ab43b0519845fcfb48f70ef7ed66dc0fafcf4650f",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "8e0502f2b56bb096d7630d593a1f864ac668bfebbd1525f011741d5421b0cb7b"
+      "sceneFingerprint": "1d91d9ef1ed6c6e5941f3ee4bd64aebd15eb0a42f9c0b38c865320933b01e23b"
     }
   ],
   "size": {
@@ -98,7 +98,7 @@
     "width": 2560
   },
   "sourceFps": 60,
-  "sourceFingerprint": "8e0502f2b56bb096d7630d593a1f864ac668bfebbd1525f011741d5421b0cb7b",
+  "sourceFingerprint": "1d91d9ef1ed6c6e5941f3ee4bd64aebd15eb0a42f9c0b38c865320933b01e23b",
   "targetFps": 30,
-  "totalFileSize": 4596650
+  "totalFileSize": 4598871
 }
