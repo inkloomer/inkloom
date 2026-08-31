@@ -3,7 +3,7 @@
   "compositionId": "DerelictionDutyDesk",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-08-30T20:30:15.369Z",
+  "generatedAt": "2026-08-31T06:06:52.618Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -22,7 +22,7 @@
       "sha256": "c53dfc030f5c507b5aae9aebd8b64a62367879886ab4ae72ae5f37cdda9f631e",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "02a405f54863f20cf22c26ff23faa7d56e575ba062aa36f6bf058c0ab2deb2b8"
+      "sceneFingerprint": "6c88e626525fe91dec686749db194c88f177fa73495b9c59441ae2aff757d34b"
     },
     {
       "endFrame": 519,
@@ -33,13 +33,13 @@
       "title": "徇私枉法罪·受贿关系",
       "durationMs": 8667,
       "file": "perversion-justice.avif",
-      "fileSize": 640496,
+      "fileSize": 639930,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "a8ffcb88c735463013926ed9fa28f3cd5a0c1affa56af5a57b661e23fac64274",
+      "sha256": "96ff9ad259153b61ba2865e79c08546cb253cbe998dd309a5cb4932bd2da837a",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "e0988fd3bca4d7b0ef8663f9945021f9e92471916e271d7b86357bf62bcf49ef"
+      "sceneFingerprint": "ac24ea1bf490ec5110c842edfda196d52412108964489eef14e593bffb215531"
     },
     {
       "endFrame": 769,
@@ -56,7 +56,41 @@
       "sha256": "9d2a924f1daf87d2a685b7ef4c8cf32f650c7a0ffc2ae9d8dc06d75d408dfa56",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "56c32dd24bc99ea7cda3ff549b2ed25e2985a89834dc79d2703a9d43de8672bd"
+      "sceneFingerprint": "d7b9a5fa183e5973c857fa6ac92fdd4d543d9b6166cbc19a403e873c042d1d56"
+    },
+    {
+      "endFrame": 1049,
+      "frameCount": 280,
+      "id": "aid-escape-classification",
+      "number": "04",
+      "startFrame": 770,
+      "title": "帮助犯罪分子逃避处罚罪·主体分类",
+      "durationMs": 9333,
+      "file": "aid-escape-classification.avif",
+      "fileSize": 1278856,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "eec561807e59f55604fdea0b905322da8c17c51146a7c6d18a224cf6a7c4e52a",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "2cad528502739004a00d1aa8b7d698e1ce10694a06274ea4cb9110a27702987c"
+    },
+    {
+      "endFrame": 1349,
+      "frameCount": 300,
+      "id": "rescue-fooddrug-tail",
+      "number": "05",
+      "startFrame": 1050,
+      "title": "不解救被拐卖、绑架妇女、儿童罪·食品、药品监管渎职罪",
+      "durationMs": 10000,
+      "file": "rescue-fooddrug-tail.avif",
+      "fileSize": 1107938,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "c952524c93cb0bf9d791f8e0b6782b82333838b24ffc6aefbea72c10cc161f5a",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "62b8f9d3677ed007ce63419a346586bca21a46080172fc99a224d10626e3d240"
     }
   ],
   "size": {
@@ -64,7 +98,7 @@
     "width": 2560
   },
   "sourceFps": 30,
-  "sourceFingerprint": "f05c13303cc4fecc169c8cd19809272a753fce3bc376f678caa179bffb0e8407",
+  "sourceFingerprint": "bb12d4de45750a34dd6e99597d144d81d4133939c279c23ed005b22c5c8d9322",
   "targetFps": 30,
-  "totalFileSize": 1942175
+  "totalFileSize": 4328403
 }

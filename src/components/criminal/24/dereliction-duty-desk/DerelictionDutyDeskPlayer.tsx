@@ -6,6 +6,8 @@ const scenes: readonly RemotionScene[] = [
   {id: 'abuse-negligence-split', number: '01', title: '滥用职权罪与玩忽职守罪', ...SCENES.abuseNegligenceSplit},
   {id: 'perversion-justice', number: '02', title: '徇私枉法罪·受贿关系', ...SCENES.perversionJustice},
   {id: 'ordinary-crimes', number: '03', title: '私放在押人员罪·徇私舞弊不移交刑事案件罪', ...SCENES.ordinaryCrimes},
+  {id: 'aid-escape-classification', number: '04', title: '帮助犯罪分子逃避处罚罪·主体分类', ...SCENES.aidEscapeClassification},
+  {id: 'rescue-fooddrug-tail', number: '05', title: '不解救被拐卖、绑架妇女、儿童罪·食品、药品监管渎职罪', ...SCENES.rescueFooddrugTail},
 ];
 
 export const DerelictionDutyDeskPlayer = () => <RemotionDeck animationId="dereliction-duty-desk" component={DerelictionDutyDesk} scenes={scenes} durationInFrames={DURATION_FRAMES} fps={FPS} title="渎职罪：滥用职权·玩忽职守·徇私枉法" />;

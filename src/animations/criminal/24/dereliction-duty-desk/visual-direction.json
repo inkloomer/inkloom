@@ -12,7 +12,14 @@
     "玩忽职守罪": "Scale",
     "徇私枉法罪": "Gavel",
     "受贿": "Ban",
-    "司法工作人员": "Users"
+    "司法工作人员": "Users",
+    "帮助犯罪分子逃避处罚罪": "Siren",
+    "通风报信": "Megaphone",
+    "想象竞合": "Layers",
+    "国家机关工作人员": "Landmark",
+    "国有公司、企业、事业单位人员": "Building2",
+    "不解救被拐卖、绑架妇女、儿童罪": "LifeBuoy",
+    "食品、药品监管渎职罪": "Pill"
   },
   "catalog": {
     "status": "featured",

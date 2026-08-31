@@ -38,6 +38,30 @@
       "tokens": ["Ban", "Gavel", "Scale", "Users"],
       "finalKnowledge": ["release-panel", "nonttransfer-panel"],
       "statefulObjects": []
+    },
+    {
+      "id": "aid-escape-classification",
+      "export": "AidEscapeClassificationScene",
+      "layout": "aid-escape-classification-board",
+      "anchor": "role-pair",
+      "grammar": ["aid-escape-panel", "subject-scope-panel", "classification-ledger"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
+      "tokens": ["Siren", "Megaphone", "Footprints", "Layers", "Users", "Gavel", "Landmark", "ShieldCheck", "Building2"],
+      "finalKnowledge": ["aid-escape-panel", "subject-scope-panel", "classification-ledger"],
+      "statefulObjects": []
+    },
+    {
+      "id": "rescue-fooddrug-tail",
+      "export": "RescueFooddrugTailScene",
+      "layout": "rescue-fooddrug-triptych",
+      "anchor": "boundary",
+      "grammar": ["rescue-panel", "fooddrug-panel", "recap-panel"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
+      "tokens": ["LifeBuoy", "Pill", "Users", "Zap", "TriangleAlert", "Gavel", "Ban", "Siren", "BookOpen"],
+      "finalKnowledge": ["rescue-panel", "fooddrug-panel", "recap-panel"],
+      "statefulObjects": []
     }
   ]
 }
