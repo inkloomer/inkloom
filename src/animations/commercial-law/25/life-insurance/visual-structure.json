@@ -1,0 +1,153 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "life-insurance-scene-01",
+      "export": "LifeInsurance01Scene",
+      "layout": "designation-approval-board-1",
+      "anchor": "role-pair",
+      "grammar": [
+        "designation-approval-wires",
+        "change-notice-chain"
+      ],
+      "textTreatments": [
+        "chip",
+        "stamp",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "contrast",
+        "connector",
+        "motion"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "life-insurance-knowledge-1",
+        "life-insurance-scene-01-designation",
+        "life-insurance-scene-01-change"
+      ],
+      "statefulObjects": [
+        "designation-approval-travel"
+      ]
+    },
+    {
+      "id": "life-insurance-scene-02",
+      "export": "LifeInsurance02Scene",
+      "layout": "identity-determination-split-2",
+      "anchor": "boundary",
+      "grammar": [
+        "self-other-timefork",
+        "nameplus-nullify"
+      ],
+      "textTreatments": [
+        "chip",
+        "stamp",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "motion",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "life-insurance-knowledge-2",
+        "life-insurance-scene-02-identity",
+        "life-insurance-scene-02-self",
+        "life-insurance-scene-02-other"
+      ],
+      "statefulObjects": [
+        "identity-timing-travel"
+      ]
+    },
+    {
+      "id": "life-insurance-scene-03",
+      "export": "LifeInsurance03Scene",
+      "layout": "suspension-revival-track-3",
+      "anchor": "flow-path",
+      "grammar": [
+        "premium-lapse-track",
+        "revival-gate"
+      ],
+      "textTreatments": [
+        "chip",
+        "soft-highlight",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "motion",
+        "connector",
+        "contrast"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "life-insurance-knowledge-3",
+        "life-insurance-scene-03-lapse",
+        "life-insurance-scene-03-accident",
+        "life-insurance-scene-03-revival",
+        "life-insurance-scene-03-terminate"
+      ],
+      "statefulObjects": [
+        "revival-request-travel"
+      ]
+    },
+    {
+      "id": "life-insurance-scene-04",
+      "export": "LifeInsurance04Scene",
+      "layout": "death-cover-consent-gate-4",
+      "anchor": "flow-path",
+      "grammar": [
+        "consent-gate-line",
+        "minor-exception-branch"
+      ],
+      "textTreatments": [
+        "chip",
+        "external-negation",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "motion",
+        "connector",
+        "contrast"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "life-insurance-knowledge-4",
+        "life-insurance-scene-04-apply",
+        "life-insurance-scene-04-consent"
+      ],
+      "statefulObjects": [
+        "death-cover-consent-travel"
+      ]
+    },
+    {
+      "id": "life-insurance-scene-05",
+      "export": "LifeInsurance05Scene",
+      "layout": "payout-special-events-5",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "payout-split-rules",
+        "dual-recovery-band"
+      ],
+      "textTreatments": [
+        "chip",
+        "stamp",
+        "external-negation"
+      ],
+      "focalChannels": [
+        "contrast",
+        "icon",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "life-insurance-knowledge-5",
+        "life-insurance-scene-05-payout",
+        "life-insurance-scene-05-thirdparty"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "directionId": "beneficiary-designation-board",
+  "derivedFrom": "demo-clerk-desk",
+  "variation": "受益人指定看板: 同意钥匙沿指定线送到受益人落定, 身份徽章在保自己看发生与保他人看成立之间分界, 保费断缴沿轨道滑向中止再申请复效",
+  "family": "beneficiary-designation-board",
+  "palette": "#EFEAE1 + #2B2B33 + #3B4A6B + #8A4B2F + #15725F + #B23A30 + #B98A2F",
+  "typography": "WenKai 看板栏标 + 同意徽章 + 轨道站牌",
+  "composition": "指定变更双卡 + 身份确定分界 + 中止复效轨道 + 死亡险同意闸 + 支付与特殊事故对栏",
+  "surface": "看板纸卡、身份铜牌、轨道站牌与金口诀条, 无圆角",
+  "motion": "同意徽章沿指定链落定受益人, 身份徽章在发生与成立两界间滑行, 复效申请沿轨道逐站推进",
+  "transition": "靛蓝看板贯穿五场, 铜色身份与青色人身双线呼应",
+  "catalog": {
+    "status": "variant",
+    "sourceDirectionId": "beneficiary-designation-board"
+  }
+}
