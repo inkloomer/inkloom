@@ -1,0 +1,123 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "tax-law-scene-01",
+      "export": "TaxLaw01Scene",
+      "layout": "vat-consumption-board-1",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "vat-deemed-lane",
+        "tax-object-band"
+      ],
+      "textTreatments": [
+        "chip",
+        "stamp",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "icon",
+        "motion"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "tax-law-knowledge-1",
+        "tax-law-scene-01-vat",
+        "tax-law-scene-01-consumption"
+      ],
+      "statefulObjects": [
+        "deemed-transaction-travel"
+      ]
+    },
+    {
+      "id": "tax-law-scene-02",
+      "export": "TaxLaw02Scene",
+      "layout": "income-tax-resident-gate-2",
+      "anchor": "timeline-gate",
+      "grammar": [
+        "resident-gate",
+        "comprehensive-band"
+      ],
+      "textTreatments": [
+        "chip",
+        "soft-highlight",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "contrast",
+        "motion",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "tax-law-knowledge-2",
+        "tax-law-scene-02-resident",
+        "tax-law-scene-02-income"
+      ],
+      "statefulObjects": [
+        "resident-status-travel"
+      ]
+    },
+    {
+      "id": "tax-law-scene-03",
+      "export": "TaxLaw03Scene",
+      "layout": "corporate-preservation-split-3",
+      "anchor": "boundary",
+      "grammar": [
+        "corporate-formula-band",
+        "preservation-track"
+      ],
+      "textTreatments": [
+        "chip",
+        "soft-highlight",
+        "external-negation"
+      ],
+      "focalChannels": [
+        "contrast",
+        "motion",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "tax-law-knowledge-3",
+        "tax-law-scene-03-corporate",
+        "tax-law-scene-03-preservation"
+      ],
+      "statefulObjects": [
+        "preservation-freeze-travel"
+      ]
+    },
+    {
+      "id": "tax-law-scene-04",
+      "export": "TaxLaw04Scene",
+      "layout": "priority-audit-columns-4",
+      "anchor": "role-pair",
+      "grammar": [
+        "priority-rank-lane",
+        "audit-process-track"
+      ],
+      "textTreatments": [
+        "chip",
+        "stamp",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "connector",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "tax-law-knowledge-4",
+        "tax-law-scene-04-priority",
+        "tax-law-knowledge-5"
+      ],
+      "statefulObjects": [
+        "priority-rank-travel"
+      ]
+    }
+  ]
+}
