@@ -1,0 +1,22 @@
+{
+  "directionId": "plum-scale-tort-hall",
+  "family": "plum-scale-atrium",
+  "palette": "deep plum field, ivory silk slips, bronze gold, rose mauve, slate blue, moss green, dark aubergine ink",
+  "typography": "scale-atrium headings on plum rail tabs, rose verdicts and bronze condition plates",
+  "composition": "a tort definition bench with eight remedy tags, a four-lane liability principle switchboard, a damages twin bench with restitution dials, and a claim-nature fork with immunity gates",
+  "surface": "ivory silk slips on a deep plum field with bronze rail posts",
+  "motion": "remedy tags pin onto the bench, principle lanes light as burden arrows flip, damages dials settle onto amounts and claim tokens fork into inherit-versus-own trays",
+  "transition": "the plum field, bronze posts and silk slips persist while benches, switchboards, dials and forks are re-dressed between scenes",
+  "conceptTokens": {
+    "过错": "Eye",
+    "归责原则": "Scale",
+    "精神损害赔偿": "Heart",
+    "因果关系": "ArrowRightLeft"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/civil-law/18/tort-liability-scale-hall/",
+    "title": "绛紫天平堂"
+  }
+}

@@ -193,6 +193,7 @@ import {typography as typographyAutoMarriageValidityChain} from '../animations/c
 import {typography as typographyAutoMaritalPropertyDivorceDesk} from '../animations/civil-law/20/marital-property-divorce-desk/animation.meta';
 import {typography as typographyAutoJointTortChainFork} from '../animations/civil-law/19/joint-tort-chain-fork/animation.meta';
 import {typography as typographyAutoSpecialTortWarningMap} from '../animations/civil-law/19/special-tort-warning-map/animation.meta';
+import {typography as typographyAutoTortLiabilityScaleHall} from '../animations/civil-law/18/tort-liability-scale-hall/animation.meta';
 import {typography as typographyAutoSuccessionLineageRegister} from '../animations/civil-law/21/succession-lineage-register/animation.meta';
 import {typography as typographyAutoInheritanceLineageRegister} from '../animations/civil-law/21/inheritance-lineage-register/animation.meta';
 import {typography as typographyAutoDividendRight} from '../animations/commercial-law/04/dividend-right/animation.meta';
@@ -478,6 +479,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'marital-property-divorce-desk': {metadata: typographyAutoMaritalPropertyDivorceDesk, scope: {animationId: 'marital-property-divorce-desk', subject: 'civil-law', topic: '20'}},
   'joint-tort-chain-fork': {metadata: typographyAutoJointTortChainFork, scope: {animationId: 'joint-tort-chain-fork', subject: 'civil-law', topic: '19'}},
   'special-tort-warning-map': {metadata: typographyAutoSpecialTortWarningMap, scope: {animationId: 'special-tort-warning-map', subject: 'civil-law', topic: '19'}},
+  'tort-liability-scale-hall': {metadata: typographyAutoTortLiabilityScaleHall, scope: {animationId: 'tort-liability-scale-hall', subject: 'civil-law', topic: '18'}},
   'succession-lineage-register': {metadata: typographyAutoSuccessionLineageRegister, scope: {animationId: 'succession-lineage-register', subject: 'civil-law', topic: '21'}},
   'inheritance-lineage-register': {metadata: typographyAutoInheritanceLineageRegister, scope: {animationId: 'inheritance-lineage-register', subject: 'civil-law', topic: '21'}},
   'delivery-registry-hall': {metadata: typographyAutoDeliveryRegistryHall, scope: {animationId: 'delivery-registry-hall', subject: 'civil-law', topic: '06'}},

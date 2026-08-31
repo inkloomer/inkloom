@@ -1,0 +1,95 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "tort-definition-bench",
+      "export": "TortDefinitionScene",
+      "layout": "definition-bench-with-remedy-tags",
+      "anchor": "concept-icon",
+      "grammar": [
+        "torts-violate-legal-duties-against-absolute-rights-or-protected-interests-as-factual-acts",
+        "justified-acts-like-defense-necessity-self-help-and-official-duty-are-no-torts",
+        "eight-remedy-forms-reach-far-beyond-damages-alone",
+        "four-elements-build-the-damages-claim-act-harm-causation-and-fault"
+      ],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "thin-underline"],
+      "focalChannels": ["icon", "contrast", "enclosure", "annotation"],
+      "tokens": ["Eye", "Scale", "ArrowRightLeft", "Gavel", "Ban"],
+      "finalKnowledge": [
+        "tort-concept",
+        "justified-acts-strip",
+        "eight-remedies",
+        "four-elements"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "principle-switchboard",
+      "export": "PrincipleSwitchboardScene",
+      "layout": "four-lane-principle-switchboard",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "foreseeability-splits-fault-from-accident",
+        "fault-liability-lets-the-victim-prove-while-presumption-lets-the-defendant-rebut",
+        "no-fault-liability-ignores-fault-and-answers-only-statutory-defenses",
+        "equity-liability-splits-losses-when-both-sides-are-blameless-but-causation-exists"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["contrast", "icon", "connector", "annotation"],
+      "tokens": ["Eye", "Scale", "Search", "Ban", "ArrowRightLeft", "Users"],
+      "finalKnowledge": [
+        "foreseeability-standard",
+        "fault-and-presumption-lanes",
+        "no-fault-lane",
+        "equity-lane"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "damages-twin-bench",
+      "export": "DamagesTwinScene",
+      "layout": "property-spirit-bench-with-dials",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "property-loss-follows-market-price-while-personal-harm-with-gain-follows-the-gain",
+        "punitive-damages-need-intent-plus-severity-across-products-ip-and-environment",
+        "fatal-compensation-runs-twenty-years-aging-down-to-five-and-equal-sums-for-same-acts",
+        "spiritual-damages-belong-to-natural-persons-and-generally-to-intentional-harm-to-personal-objects"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["contrast", "icon", "enclosure", "annotation"],
+      "tokens": ["Coins", "Heart", "Users", "Ban"],
+      "finalKnowledge": [
+        "property-loss-methods",
+        "punitive-damages-gates",
+        "fatal-compensation-rule",
+        "spiritual-damages-rule"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "claim-fork-immunity-gates",
+      "export": "ClaimForkScene",
+      "layout": "claim-nature-fork-with-immunity-gates",
+      "anchor": "document-fork",
+      "grammar": [
+        "own-claims-like-fatal-compensation-and-spiritual-damages-are-not-estate",
+        "inherited-claims-follow-succession-rules-inside-the-estate",
+        "criminal-or-administrative-liability-piles-on-and-civil-damages-come-first",
+        "comparative-fault-special-physique-victim-intent-third-party-cause-and-assumed-risk-open-the-immunity-gates"
+      ],
+      "textTreatments": ["label-block", "stamp", "chip", "soft-highlight"],
+      "focalChannels": ["connector", "contrast", "icon", "annotation"],
+      "tokens": ["Users", "Coins", "Scale", "Ban", "Undo2", "Gavel"],
+      "finalKnowledge": [
+        "own-versus-inherited-claims",
+        "liability-piling",
+        "civil-priority-rule",
+        "immunity-gates"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}
