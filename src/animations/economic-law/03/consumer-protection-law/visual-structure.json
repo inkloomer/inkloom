@@ -1,0 +1,118 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "consumer-protection-law-scene-01",
+      "export": "ConsumerProtectionLaw01Scene",
+      "layout": "rights-duty-ledger-1",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "rights-group-band",
+        "duty-pipeline"
+      ],
+      "textTreatments": [
+        "chip",
+        "stamp",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "icon",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "consumer-protection-law-knowledge-1",
+        "consumer-protection-law-scene-01-rights",
+        "consumer-protection-law-scene-01-duties"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "consumer-protection-law-scene-02",
+      "export": "ConsumerProtectionLaw02Scene",
+      "layout": "noreason-return-lane-2",
+      "anchor": "flow-path",
+      "grammar": [
+        "return-gate-lane",
+        "clause-void-band"
+      ],
+      "textTreatments": [
+        "chip",
+        "stamp",
+        "external-negation"
+      ],
+      "focalChannels": [
+        "motion",
+        "connector",
+        "contrast"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "consumer-protection-law-knowledge-2",
+        "consumer-protection-law-scene-02-return"
+      ],
+      "statefulObjects": [
+        "return-request-travel"
+      ]
+    },
+    {
+      "id": "consumer-protection-law-scene-03",
+      "export": "ConsumerProtectionLaw03Scene",
+      "layout": "dispute-routing-desk-3",
+      "anchor": "flow-target",
+      "grammar": [
+        "defect-flaw-split",
+        "platform-liability-band"
+      ],
+      "textTreatments": [
+        "chip",
+        "soft-highlight",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "motion",
+        "connector",
+        "contrast"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "consumer-protection-law-knowledge-3",
+        "consumer-protection-law-scene-03-split",
+        "consumer-protection-law-scene-03-expo"
+      ],
+      "statefulObjects": [
+        "consumer-claim-travel"
+      ]
+    },
+    {
+      "id": "consumer-protection-law-scene-04",
+      "export": "ConsumerProtectionLaw04Scene",
+      "layout": "liability-multiplier-band-4",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "multiplier-duo",
+        "punish-gate"
+      ],
+      "textTreatments": [
+        "chip",
+        "stamp",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "motion",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "consumer-protection-law-knowledge-4",
+        "consumer-protection-law-scene-04-body",
+        "consumer-protection-law-scene-04-property"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

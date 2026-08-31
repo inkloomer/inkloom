@@ -213,6 +213,7 @@ import {typography as typographyAutoShareholderQualification} from '../animation
 import {typography as typographyAutoNominalShareholder} from '../animations/commercial-law/03/nominal-shareholder/animation.meta';
 import {typography as typographyAutoAntiMonopolyLaw} from '../animations/economic-law/01/anti-monopoly-law/animation.meta';
 import {typography as typographyAutoAntiUnfairCompetitionLaw} from '../animations/economic-law/02/anti-unfair-competition-law/animation.meta';
+import {typography as typographyAutoConsumerProtectionLaw} from '../animations/economic-law/03/consumer-protection-law/animation.meta';
 import {typography as typographyAutoShareholderContribution} from '../animations/commercial-law/02/shareholder-contribution/animation.meta';
 import {typography as typographyAutoPromoter} from '../animations/commercial-law/02/promoter/animation.meta';
 import {typography as typographyAutoCompanyIncorporation} from '../animations/commercial-law/02/company-incorporation/animation.meta';
@@ -716,6 +717,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'demo-transit-map': {metadata: typography61, scope: {animationId: 'demo-transit-map', subject: 'demo', topic: 'styles'}},
   'anti-monopoly-law': {metadata: typographyAutoAntiMonopolyLaw, scope: {animationId: 'anti-monopoly-law', subject: 'economic-law', topic: '01'}},
   'anti-unfair-competition-law': {metadata: typographyAutoAntiUnfairCompetitionLaw, scope: {animationId: 'anti-unfair-competition-law', subject: 'economic-law', topic: '02'}},
+  'consumer-protection-law': {metadata: typographyAutoConsumerProtectionLaw, scope: {animationId: 'consumer-protection-law', subject: 'economic-law', topic: '03'}},
   ...COMMERCIAL_LAW_TYPOGRAPHY_CONFIGURATIONS,
 };
 
