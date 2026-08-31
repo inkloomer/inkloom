@@ -1,5 +1,5 @@
 import type {ReactNode} from 'react';
-import {Stamp, Users, UserCheck, FileSignature, Building, Handshake, Eye} from 'lucide-react';
+import {Stamp, Users, UserCheck, FileSignature, Building, Handshake, Eye, CalendarCheck, CalendarX, Scale} from 'lucide-react';
 import {AbsoluteFill, interpolate, useCurrentFrame} from 'remotion';
 import {CLAMP, TimelineSequence} from '../../../../shared/remotion-runtime';
 import {SCENES} from './storyboard';
@@ -21,6 +21,7 @@ export const CompanyCapacity01Scene=()=>{
   const twinProgress=interpolate(frame,[40,140],[0,1],CLAMP);
   return <Shell code="01.3" title="权利能力与行为能力">
     <div data-layout="capacity-timeline-1" data-visual-anchor="timeline-gate" data-visual-grammar="capacity-twin-arc,scope-validity-note" data-text-treatments="label-block,thin-underline,soft-highlight" data-focal-rule="company-capacity-scene-01-rule" data-focal-channels="spatial,locator,icon" style={{position:'absolute',inset:0}}>
+      <Building size={280} color={COLORS.purple} strokeWidth={1.2} style={{position:'absolute',left:'50%',top:430,translate:'-50% 0',opacity:0.07,pointerEvents:'none'}}/>
       <div data-final-knowledge="company-capacity-knowledge-1" style={{position:'absolute',left:0,right:0,top:0,display:'flex',alignItems:'center',gap:18,opacity:enter(14,38)}}>
         <Building size={46} color={COLORS.purple}/>
         <div style={{fontSize:32,fontWeight:900}}>权利能力与行为能力<span style={{background:COLORS.gold+'42',padding:'2px 12px',marginLeft:14,fontSize:26}}>同时产生 · 同时终止</span></div>
@@ -29,6 +30,7 @@ export const CompanyCapacity01Scene=()=>{
       <div data-final-knowledge="company-capacity-scene-01-gate-birth" style={{position:'absolute',left:150,top:196,width:520,padding:'20px 26px',border:'4px solid '+COLORS.ink,background:COLORS.paper,opacity:enter(40,66)}}>
         <div style={{display:'flex',alignItems:'center',gap:14,marginBottom:12}}>
           <div style={{width:52,height:52,border:'4px solid '+COLORS.green,background:COLORS.green,color:COLORS.paper,display:'grid',placeItems:'center',fontSize:26,fontWeight:900}}>始</div>
+          <CalendarCheck size={34} color={COLORS.green}/>
           <div style={{fontSize:28,fontWeight:900}}>成立之日</div>
         </div>
         <div style={{fontSize:24,fontWeight:800,lineHeight:1.4}}>即<span style={{background:COLORS.green+'30',padding:'2px 8px'}}>营业执照签发之日</span>，两能力同时产生</div>
@@ -36,6 +38,7 @@ export const CompanyCapacity01Scene=()=>{
       <div data-final-knowledge="company-capacity-scene-01-gate-death" style={{position:'absolute',right:150,top:196,width:520,padding:'20px 26px',border:'4px solid '+COLORS.ink,background:COLORS.paper,opacity:enter(64,90)}}>
         <div style={{display:'flex',alignItems:'center',gap:14,marginBottom:12}}>
           <div style={{width:52,height:52,border:'4px solid '+COLORS.purple,background:COLORS.purple,color:COLORS.paper,display:'grid',placeItems:'center',fontSize:26,fontWeight:900}}>终</div>
+          <CalendarX size={34} color={COLORS.purple}/>
           <div style={{fontSize:28,fontWeight:900}}>注销登记之日</div>
         </div>
         <div style={{fontSize:24,fontWeight:800,lineHeight:1.4}}>两能力<span style={{background:COLORS.purple+'26',padding:'2px 8px'}}>同时终止</span></div>
@@ -59,6 +62,7 @@ export const CompanyCapacity02Scene=()=>{
   const slide=(a:number,b:number,from:string)=>interpolate(frame,[a,b],[from,'0px 0px'],CLAMP);
   return <Shell code="01.3" title="公司对外担保的决议规则">
     <div data-layout="guarantee-dual-gate-2" data-visual-anchor="comparison-axis" data-visual-grammar="related-party-gate,non-related-gate" data-text-treatments="label-block,soft-highlight,stamp" data-focal-rule="company-capacity-scene-02-rule" data-focal-channels="contrast,enclosure,connector" style={{position:'absolute',inset:0}}>
+      <Handshake size={300} color={COLORS.purple} strokeWidth={1.2} style={{position:'absolute',left:'50%',top:430,translate:'-50% 0',opacity:0.07,pointerEvents:'none'}}/>
       <div data-final-knowledge="company-capacity-knowledge-2" style={{position:'absolute',left:0,right:0,top:0,display:'flex',alignItems:'center',gap:16,opacity:enter(14,38)}}>
         <Handshake size={44} color={COLORS.purple}/>
         <div style={{fontSize:30,fontWeight:900}}>一般规则：对外担保须经<span style={{background:COLORS.gold+'42',padding:'2px 12px'}}>股东会或董事会决议</span></div>
@@ -87,6 +91,7 @@ export const CompanyCapacity02Scene=()=>{
         </div>
       </div>
       <div data-final-knowledge="company-capacity-scene-02-rule" style={{position:'absolute',left:0,right:0,bottom:0,display:'flex',alignItems:'center',gap:20,border:'4px solid '+COLORS.ink,background:COLORS.gold+'30',padding:'16px 26px',opacity:enter(84,112)}}>
+        <Scale size={40} color={COLORS.purple}/>
         <div style={{padding:'8px 20px',border:'4px solid '+COLORS.purple,color:COLORS.purple,fontSize:26,fontWeight:900,transform:'rotate(-2deg)',background:COLORS.paper}}>关联方回避</div>
         <div style={{fontSize:27,fontWeight:900,lineHeight:1.4}}>关键：表决权过半数 / 人数过半数——不是"人头表决"</div>
       </div>
@@ -99,6 +104,7 @@ export const CompanyCapacity03Scene=()=>{
   const enter=(a:number,b:number)=>interpolate(frame,[a,b],[0,1],CLAMP);
   return <Shell code="01.3" title="无须机关决议的担保">
     <div data-layout="waiver-triad-3" data-visual-anchor="flow-target" data-visual-grammar="waiver-converge,listed-carveout" data-text-treatments="soft-highlight,external-negation,stamp" data-focal-rule="company-capacity-scene-03-rule" data-focal-channels="connector,motion,annotation" style={{position:'absolute',inset:0}}>
+      <FileSignature size={120} color={COLORS.green} strokeWidth={1.2} style={{position:'absolute',right:40,top:524,opacity:0.08,pointerEvents:'none'}}/>
       <div data-final-knowledge="company-capacity-knowledge-3" style={{position:'absolute',left:0,right:0,top:0,fontSize:26,fontWeight:900,letterSpacing:4,color:'#5A4A6E',opacity:enter(12,36)}}>三种豁免 · 无须机关决议，担保有效</div>
       <div style={{position:'absolute',left:0,right:0,top:64,display:'grid',gridTemplateColumns:'repeat(3,minmax(0,1fr))',gap:22}}>
         <div data-final-knowledge="company-capacity-scene-03-waiver-0" style={{padding:'20px 24px',border:'4px solid '+COLORS.ink,borderTop:'12px solid '+COLORS.green,background:COLORS.paper,minHeight:240,opacity:enter(26,52)}}>

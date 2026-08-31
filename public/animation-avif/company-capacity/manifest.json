@@ -1,0 +1,70 @@
+{
+  "animationId": "company-capacity",
+  "compositionId": "CompanyCapacity",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-31T05:20:32.520Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 347,
+      "frameCount": 174,
+      "id": "company-capacity-scene-01",
+      "number": "01",
+      "startFrame": 0,
+      "title": "能力起止与经营范围",
+      "durationMs": 5800,
+      "file": "company-capacity-scene-01.avif",
+      "fileSize": 367966,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "3471b226933ac968e24a32f7ebee56c4670ff9a8af5eb8b6c4eb770b18b1c8b2",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "2c9bacdcd543f385a0a55cbfa36951236cf331f04fddd598cf9079bde78b12fc"
+    },
+    {
+      "endFrame": 731,
+      "frameCount": 192,
+      "id": "company-capacity-scene-02",
+      "number": "02",
+      "startFrame": 348,
+      "title": "关联与非关联担保决议",
+      "durationMs": 6400,
+      "file": "company-capacity-scene-02.avif",
+      "fileSize": 522671,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "286411c4cd6887bf1e97231a385bebcd16a0b5de084ce257f626a03f4681be20",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "2c9bacdcd543f385a0a55cbfa36951236cf331f04fddd598cf9079bde78b12fc"
+    },
+    {
+      "endFrame": 1127,
+      "frameCount": 198,
+      "id": "company-capacity-scene-03",
+      "number": "03",
+      "startFrame": 732,
+      "title": "无须机关决议的担保",
+      "durationMs": 6600,
+      "file": "company-capacity-scene-03.avif",
+      "fileSize": 699557,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "6b55b5b567cd3206e2206d8a3b9639a1cd71b2dc18409d65465911b73aa1cb05",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "2c9bacdcd543f385a0a55cbfa36951236cf331f04fddd598cf9079bde78b12fc"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "2c9bacdcd543f385a0a55cbfa36951236cf331f04fddd598cf9079bde78b12fc",
+  "targetFps": 30,
+  "totalFileSize": 1590194
+}
