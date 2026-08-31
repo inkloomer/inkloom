@@ -1,0 +1,70 @@
+{
+  "animationId": "sole-proprietorship",
+  "compositionId": "SoleProprietorship",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-31T16:46:16.494Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 299,
+      "frameCount": 150,
+      "id": "sole-proprietorship-scene-01",
+      "number": "01",
+      "startFrame": 0,
+      "title": "三要素",
+      "durationMs": 5000,
+      "file": "sole-proprietorship-scene-01.avif",
+      "fileSize": 432374,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "5e07877874f3ec740b4396db2b9a187f6fa92921cfe8f03254d836a37e8fbd47",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "9ace466a03722d17749507e123a856e25b80877825c41e1b62e30b1b6cace6fc"
+    },
+    {
+      "endFrame": 629,
+      "frameCount": 165,
+      "id": "sole-proprietorship-scene-02",
+      "number": "02",
+      "startFrame": 300,
+      "title": "责任与除斥期",
+      "durationMs": 5500,
+      "file": "sole-proprietorship-scene-02.avif",
+      "fileSize": 501593,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "8a8e8d50dc8956faea42179e068c5f0e52f33c6d2bb7192a6ccac85e43361616",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "9ace466a03722d17749507e123a856e25b80877825c41e1b62e30b1b6cace6fc"
+    },
+    {
+      "endFrame": 969,
+      "frameCount": 170,
+      "id": "sole-proprietorship-scene-03",
+      "number": "03",
+      "startFrame": 630,
+      "title": "三体对比与转换",
+      "durationMs": 5667,
+      "file": "sole-proprietorship-scene-03.avif",
+      "fileSize": 735324,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "863d236e7ce3e31fc798c74d6a2c4fcc8615bcc531fc077d6d346609b6a14e09",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "9ace466a03722d17749507e123a856e25b80877825c41e1b62e30b1b6cace6fc"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "9ace466a03722d17749507e123a856e25b80877825c41e1b62e30b1b6cace6fc",
+  "targetFps": 30,
+  "totalFileSize": 1669291
+}
