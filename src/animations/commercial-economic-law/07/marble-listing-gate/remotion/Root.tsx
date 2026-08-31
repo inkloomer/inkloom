@@ -1,7 +1,0 @@
-import {getAnimationTypographyConfiguration} from '../../../../../typography/animation-registry';
-import {withAnimationTypography} from '../../../../../typography/animation-provider';
-import {Composition} from 'remotion';
-import {MarbleListingGate} from './MarbleListingGate';
-import {DURATION_FRAMES, FPS} from './storyboard';
-
-export const RemotionRoot = () => <Composition id="MarbleListingGate" component={withAnimationTypography(MarbleListingGate, getAnimationTypographyConfiguration('marble-listing-gate'))} durationInFrames={DURATION_FRAMES} fps={FPS} width={1920} height={1080} />;

@@ -192,42 +192,8 @@ import {typography as typographyAutoApplicationSilkLoom} from '../animations/adm
 import {typography as typographyAutoJudgmentExecutionClockwork} from '../animations/administrative-law/18/judgment-execution-clockwork/animation.meta';
 import {typography as typographyAutoReviewRelayNetwork} from '../animations/administrative-law/19/review-relay-network/animation.meta';
 import {typography as typographyAutoContractTwinMastHarbor} from '../animations/administrative-law/22/contract-twin-mast-harbor/animation.meta';
-import {typography as typographyAutoShareholderRegisterPigeonhole} from '../animations/commercial-economic-law/01/shareholder-register-pigeonhole/animation.meta';
-import {typography as typographyAutoNomineeImpersonationMasks} from '../animations/commercial-economic-law/01/nominee-impersonation-masks/animation.meta';
-import {typography as typographyAutoCapitalRegimeVoteHall} from '../animations/commercial-economic-law/01/capital-regime-vote-hall/animation.meta';
-import {typography as typographyAutoContributionDefectAudit} from '../animations/commercial-economic-law/01/contribution-defect-audit/animation.meta';
-import {typography as typographyAutoCompanyGuarantySealDesk} from '../animations/commercial-economic-law/01/company-guaranty-seal-desk/animation.meta';
-import {typography as typographyAutoDirectorsDeskRuleHall} from '../animations/commercial-economic-law/01/directors-desk-rule-hall/animation.meta';
-import {typography as typographyAutoCanyonConfluenceMerger} from '../animations/commercial-economic-law/01/canyon-confluence-merger/animation.meta';
-import {typography as typographyAutoEscortBannerTransferHall} from '../animations/commercial-economic-law/01/escort-banner-transfer-hall/animation.meta';
-import {typography as typographyAutoCapitalAdjustClepsydra} from '../animations/commercial-economic-law/01/capital-adjust-clepsydra/animation.meta';
-import {typography as typographyAutoLanternShopClosingHall} from '../animations/commercial-economic-law/01/lantern-shop-closing-hall/animation.meta';
-import {typography as typographyAutoShareholderRightsVault} from '../animations/commercial-economic-law/01/shareholder-rights-vault/animation.meta';
-import {typography as typographyAutoSpecialPartnershipTriage} from '../animations/commercial-economic-law/02/special-partnership-triage/animation.meta';
-import {typography as typographyAutoPartnershipContributionManifest} from '../animations/commercial-economic-law/02/partnership-contribution-manifest/animation.meta';
-import {typography as typographyAutoKitchenPassAuthorityWall} from '../animations/commercial-economic-law/02/kitchen-pass-authority-wall/animation.meta';
-import {typography as typographyAutoTellerWindowPersonalDebt} from '../animations/commercial-economic-law/02/teller-window-personal-debt/animation.meta';
-import {typography as typographyAutoShareSlipTransitVault} from '../animations/commercial-economic-law/02/share-slip-transit-vault/animation.meta';
-import {typography as typographyAutoBoundaryStoneGateHall} from '../animations/commercial-economic-law/02/boundary-stone-gate-hall/animation.meta';
-import {typography as typographyAutoLpLoungeLimitedPartner} from '../animations/commercial-economic-law/02/lp-lounge-limited-partner/animation.meta';
-import {typography as typographyAutoTerminalStationWindDown} from '../animations/commercial-economic-law/02/terminal-station-wind-down/animation.meta';
-import {typography as typographyAutoSoleProprietorKitchenLegacy} from '../animations/commercial-economic-law/03/sole-proprietor-kitchen-legacy/animation.meta';
-import {typography as typographyAutoHarborConsulateProtocol} from '../animations/commercial-economic-law/04/harbor-consulate-protocol/animation.meta';
 import {typography as typographyAutoSocialSystem} from '../animations/theoretical-law/01/social-system/animation.meta';
 import {typography as typographyAutoRepublicConstitutionHistory} from '../animations/theoretical-law/03/republic-constitution-history/animation.meta';
-import {typography as typographyAutoFrostTribunalDocket} from '../animations/commercial-economic-law/05/frost-tribunal-docket/animation.meta';
-import {typography as typographyAutoAmberTwinScale} from '../animations/commercial-economic-law/05/amber-twin-scale/animation.meta';
-import {typography as typographyAutoIndigoEstateVault} from '../animations/commercial-economic-law/05/indigo-estate-vault/animation.meta';
-import {typography as typographyAutoPlumAppealsClockhouse} from '../animations/commercial-economic-law/05/plum-appeals-clockhouse/animation.meta';
-import {typography as typographyAutoQuartzSproutGreenhouse} from '../animations/commercial-economic-law/05/quartz-sprout-greenhouse/animation.meta';
-import {typography as typographyAutoAzureDraftHall} from '../animations/commercial-economic-law/06/azure-draft-hall/animation.meta';
-import {typography as typographyAutoYellowNoticeBureau} from '../animations/commercial-economic-law/06/yellow-notice-bureau/animation.meta';
-import {typography as typographyAutoOxbloodShieldWorkshop} from '../animations/commercial-economic-law/06/oxblood-shield-workshop/animation.meta';
-import {typography as typographyAutoLacquerSealBureau} from '../animations/commercial-economic-law/06/lacquer-seal-bureau/animation.meta';
-import {typography as typographyAutoJadeCheckCounter} from '../animations/commercial-economic-law/06/jade-check-counter/animation.meta';
-import {typography as typographyAutoCobaltTenderHall} from '../animations/commercial-economic-law/07/cobalt-tender-hall/animation.meta';
-import {typography as typographyAutoMarbleListingGate} from '../animations/commercial-economic-law/07/marble-listing-gate/animation.meta';
-import {typography as typographyAutoGraphiteLimeGuardpost} from '../animations/commercial-economic-law/07/graphite-lime-guardpost/animation.meta';
 import {typography as typographyAutoReckoningAbacusDesk} from '../animations/administrative-law/24/reckoning-abacus-desk/animation.meta';
 import {typography as typographyAutoBambooScrollRestoration} from '../animations/administrative-law/23/bamboo-scroll-restoration/animation.meta';
 import {typography as typographyAutoLighthouseWatchNetwork} from '../animations/administrative-law/20/lighthouse-watch-network/animation.meta';
@@ -281,8 +247,6 @@ import {typography as typographyAutoDerelictionDutyDesk} from '../animations/cri
 import {typography as typographyAutoStateSecurityWireRoom} from '../animations/criminal/25/state-security-wire-room/animation.meta';
 import {typography as typographyAutoPowerMoneyExchange} from '../animations/criminal/23/power-money-exchange/animation.meta';
 import {typography as typographyAutoPublicOrderWatchTower} from '../animations/criminal/22/public-order-watch-tower/animation.meta';
-import {typography as typographyBel} from '../animations/commercial-economic-law/01/branch-wallet-ledger/animation.meta';
-import {typography as typographyVpf} from '../animations/commercial-economic-law/01/veil-piercing-forge/animation.meta';
 import {typography as typographyLl} from '../animations/theoretical-law/01/legislation-law/animation.meta';
 import {typography as typographyFc} from '../animations/theoretical-law/01/features-of-constitution/animation.meta';
 import {typography as typographyCo} from '../animations/theoretical-law/01/creation-of-constitution/animation.meta';
@@ -347,8 +311,6 @@ import {typography as typographyWjn} from '../animations/theoretical-law/03/wei-
 import {typography as typographyTcl} from '../animations/theoretical-law/03/tang-code-liuzang-liusha/animation.meta';
 import {typography as typographyQde} from '../animations/theoretical-law/03/qing-dynasty-examples/animation.meta';
 import {typography as typographyEs} from '../animations/theoretical-law/01/economic-system/animation.meta';
-import {typography as typographyPrg} from '../animations/commercial-economic-law/01/profit-reserve-granary/animation.meta';
-import {typography as typographyPlr} from '../animations/commercial-economic-law/01/promoter-liability-ropewalk/animation.meta';
 import {typography as typography48} from '../animations/demo/demo-archival-dossier/animation.meta';
 import {typography as typography49} from '../animations/demo/demo-constructivist-geometry/animation.meta';
 import {typography as typography50} from '../animations/demo/demo-courtroom-blueprint/animation.meta';
@@ -504,40 +466,6 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'judgment-execution-clockwork': {metadata: typographyAutoJudgmentExecutionClockwork, scope: {animationId: 'judgment-execution-clockwork', subject: 'administrative-law', topic: '18'}},
   'review-relay-network': {metadata: typographyAutoReviewRelayNetwork, scope: {animationId: 'review-relay-network', subject: 'administrative-law', topic: '19'}},
   'contract-twin-mast-harbor': {metadata: typographyAutoContractTwinMastHarbor, scope: {animationId: 'contract-twin-mast-harbor', subject: 'administrative-law', topic: '22'}},
-  'shareholder-register-pigeonhole': {metadata: typographyAutoShareholderRegisterPigeonhole, scope: {animationId: 'shareholder-register-pigeonhole', subject: 'commercial-economic-law', topic: '01'}},
-  'nominee-impersonation-masks': {metadata: typographyAutoNomineeImpersonationMasks, scope: {animationId: 'nominee-impersonation-masks', subject: 'commercial-economic-law', topic: '01'}},
-  'capital-regime-vote-hall': {metadata: typographyAutoCapitalRegimeVoteHall, scope: {animationId: 'capital-regime-vote-hall', subject: 'commercial-economic-law', topic: '01'}},
-  'contribution-defect-audit': {metadata: typographyAutoContributionDefectAudit, scope: {animationId: 'contribution-defect-audit', subject: 'commercial-economic-law', topic: '01'}},
-  'company-guaranty-seal-desk': {metadata: typographyAutoCompanyGuarantySealDesk, scope: {animationId: 'company-guaranty-seal-desk', subject: 'commercial-economic-law', topic: '01'}},
-  'directors-desk-rule-hall': {metadata: typographyAutoDirectorsDeskRuleHall, scope: {animationId: 'directors-desk-rule-hall', subject: 'commercial-economic-law', topic: '01'}},
-  'canyon-confluence-merger': {metadata: typographyAutoCanyonConfluenceMerger, scope: {animationId: 'canyon-confluence-merger', subject: 'commercial-economic-law', topic: '01'}},
-  'escort-banner-transfer-hall': {metadata: typographyAutoEscortBannerTransferHall, scope: {animationId: 'escort-banner-transfer-hall', subject: 'commercial-economic-law', topic: '01'}},
-  'capital-adjust-clepsydra': {metadata: typographyAutoCapitalAdjustClepsydra, scope: {animationId: 'capital-adjust-clepsydra', subject: 'commercial-economic-law', topic: '01'}},
-  'lantern-shop-closing-hall': {metadata: typographyAutoLanternShopClosingHall, scope: {animationId: 'lantern-shop-closing-hall', subject: 'commercial-economic-law', topic: '01'}},
-  'shareholder-rights-vault': {metadata: typographyAutoShareholderRightsVault, scope: {animationId: 'shareholder-rights-vault', subject: 'commercial-economic-law', topic: '01'}},
-  'special-partnership-triage': {metadata: typographyAutoSpecialPartnershipTriage, scope: {animationId: 'special-partnership-triage', subject: 'commercial-economic-law', topic: '02'}},
-  'partnership-contribution-manifest': {metadata: typographyAutoPartnershipContributionManifest, scope: {animationId: 'partnership-contribution-manifest', subject: 'commercial-economic-law', topic: '02'}},
-  'kitchen-pass-authority-wall': {metadata: typographyAutoKitchenPassAuthorityWall, scope: {animationId: 'kitchen-pass-authority-wall', subject: 'commercial-economic-law', topic: '02'}},
-  'teller-window-personal-debt': {metadata: typographyAutoTellerWindowPersonalDebt, scope: {animationId: 'teller-window-personal-debt', subject: 'commercial-economic-law', topic: '02'}},
-  'share-slip-transit-vault': {metadata: typographyAutoShareSlipTransitVault, scope: {animationId: 'share-slip-transit-vault', subject: 'commercial-economic-law', topic: '02'}},
-  'boundary-stone-gate-hall': {metadata: typographyAutoBoundaryStoneGateHall, scope: {animationId: 'boundary-stone-gate-hall', subject: 'commercial-economic-law', topic: '02'}},
-  'lp-lounge-limited-partner': {metadata: typographyAutoLpLoungeLimitedPartner, scope: {animationId: 'lp-lounge-limited-partner', subject: 'commercial-economic-law', topic: '02'}},
-  'terminal-station-wind-down': {metadata: typographyAutoTerminalStationWindDown, scope: {animationId: 'terminal-station-wind-down', subject: 'commercial-economic-law', topic: '02'}},
-  'sole-proprietor-kitchen-legacy': {metadata: typographyAutoSoleProprietorKitchenLegacy, scope: {animationId: 'sole-proprietor-kitchen-legacy', subject: 'commercial-economic-law', topic: '03'}},
-  'harbor-consulate-protocol': {metadata: typographyAutoHarborConsulateProtocol, scope: {animationId: 'harbor-consulate-protocol', subject: 'commercial-economic-law', topic: '04'}},
-  'frost-tribunal-docket': {metadata: typographyAutoFrostTribunalDocket, scope: {animationId: 'frost-tribunal-docket', subject: 'commercial-economic-law', topic: '05'}},
-  'amber-twin-scale': {metadata: typographyAutoAmberTwinScale, scope: {animationId: 'amber-twin-scale', subject: 'commercial-economic-law', topic: '05'}},
-  'indigo-estate-vault': {metadata: typographyAutoIndigoEstateVault, scope: {animationId: 'indigo-estate-vault', subject: 'commercial-economic-law', topic: '05'}},
-  'plum-appeals-clockhouse': {metadata: typographyAutoPlumAppealsClockhouse, scope: {animationId: 'plum-appeals-clockhouse', subject: 'commercial-economic-law', topic: '05'}},
-  'quartz-sprout-greenhouse': {metadata: typographyAutoQuartzSproutGreenhouse, scope: {animationId: 'quartz-sprout-greenhouse', subject: 'commercial-economic-law', topic: '05'}},
-  'azure-draft-hall': {metadata: typographyAutoAzureDraftHall, scope: {animationId: 'azure-draft-hall', subject: 'commercial-economic-law', topic: '06'}},
-  'yellow-notice-bureau': {metadata: typographyAutoYellowNoticeBureau, scope: {animationId: 'yellow-notice-bureau', subject: 'commercial-economic-law', topic: '06'}},
-  'oxblood-shield-workshop': {metadata: typographyAutoOxbloodShieldWorkshop, scope: {animationId: 'oxblood-shield-workshop', subject: 'commercial-economic-law', topic: '06'}},
-  'lacquer-seal-bureau': {metadata: typographyAutoLacquerSealBureau, scope: {animationId: 'lacquer-seal-bureau', subject: 'commercial-economic-law', topic: '06'}},
-  'jade-check-counter': {metadata: typographyAutoJadeCheckCounter, scope: {animationId: 'jade-check-counter', subject: 'commercial-economic-law', topic: '06'}},
-  'cobalt-tender-hall': {metadata: typographyAutoCobaltTenderHall, scope: {animationId: 'cobalt-tender-hall', subject: 'commercial-economic-law', topic: '07'}},
-  'marble-listing-gate': {metadata: typographyAutoMarbleListingGate, scope: {animationId: 'marble-listing-gate', subject: 'commercial-economic-law', topic: '07'}},
-  'graphite-lime-guardpost': {metadata: typographyAutoGraphiteLimeGuardpost, scope: {animationId: 'graphite-lime-guardpost', subject: 'commercial-economic-law', topic: '07'}},
   'reckoning-abacus-desk': {metadata: typographyAutoReckoningAbacusDesk, scope: {animationId: 'reckoning-abacus-desk', subject: 'administrative-law', topic: '24'}},
   'bamboo-scroll-restoration': {metadata: typographyAutoBambooScrollRestoration, scope: {animationId: 'bamboo-scroll-restoration', subject: 'administrative-law', topic: '23'}},
   'lighthouse-watch-network': {metadata: typographyAutoLighthouseWatchNetwork, scope: {animationId: 'lighthouse-watch-network', subject: 'administrative-law', topic: '20'}},
@@ -639,8 +567,6 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'state-security-wire-room': {metadata: typographyAutoStateSecurityWireRoom, scope: {animationId: 'state-security-wire-room', subject: 'criminal', topic: '25'}},
   'power-money-exchange': {metadata: typographyAutoPowerMoneyExchange, scope: {animationId: 'power-money-exchange', subject: 'criminal', topic: '23'}},
   'public-order-watch-tower': {metadata: typographyAutoPublicOrderWatchTower, scope: {animationId: 'public-order-watch-tower', subject: 'criminal', topic: '22'}},
-  'branch-wallet-ledger': {metadata: typographyBel, scope: {animationId: 'branch-wallet-ledger', subject: 'commercial-economic-law', topic: '01'}},
-  'veil-piercing-forge': {metadata: typographyVpf, scope: {animationId: 'veil-piercing-forge', subject: 'commercial-economic-law', topic: '01'}},
   'legislation-law': {metadata: typographyLl, scope: {animationId: 'legislation-law', subject: 'theoretical-law', topic: '01'}},
   'features-of-constitution': {metadata: typographyFc, scope: {animationId: 'features-of-constitution', subject: 'theoretical-law', topic: '01'}},
   'creation-of-constitution': {metadata: typographyCo, scope: {animationId: 'creation-of-constitution', subject: 'theoretical-law', topic: '01'}},
@@ -707,8 +633,6 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'xi-rule-of-law-formation': {metadata: typographyXrf, scope: {animationId: 'xi-rule-of-law-formation', subject: 'theoretical-law', topic: '05'}},
   'xi-rule-of-law-core': {metadata: typographyXrc, scope: {animationId: 'xi-rule-of-law-core', subject: 'theoretical-law', topic: '05'}},
   'xi-rule-of-law-practice': {metadata: typographyXrp, scope: {animationId: 'xi-rule-of-law-practice', subject: 'theoretical-law', topic: '05'}},
-  'profit-reserve-granary': {metadata: typographyPrg, scope: {animationId: 'profit-reserve-granary', subject: 'commercial-economic-law', topic: '01'}},
-  'promoter-liability-ropewalk': {metadata: typographyPlr, scope: {animationId: 'promoter-liability-ropewalk', subject: 'commercial-economic-law', topic: '01'}},
   'fight-defense-diagram': {metadata: typography44, scope: {animationId: 'fight-defense-diagram', subject: 'criminal', topic: '22'}},
   'high-altitude-throwing-diagram': {metadata: typography45, scope: {animationId: 'high-altitude-throwing-diagram', subject: 'criminal', topic: '22'}},
   'influence-intermediary': {metadata: typography46, scope: {animationId: 'influence-intermediary', subject: 'criminal', topic: '23'}},
