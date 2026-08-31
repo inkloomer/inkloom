@@ -1,0 +1,119 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "anti-unfair-competition-law-scene-01",
+      "export": "AntiUnfairCompetitionLaw01Scene",
+      "layout": "confusion-copylane-1",
+      "anchor": "flow-path",
+      "grammar": [
+        "mark-copy-lane",
+        "three-actor-band"
+      ],
+      "textTreatments": [
+        "chip",
+        "stamp",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "motion",
+        "connector",
+        "contrast"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "anti-unfair-competition-law-knowledge-1",
+        "anti-unfair-competition-law-scene-01-marks",
+        "anti-unfair-competition-law-scene-01-effect"
+      ],
+      "statefulObjects": [
+        "confusion-actor-travel"
+      ]
+    },
+    {
+      "id": "anti-unfair-competition-law-scene-02",
+      "export": "AntiUnfairCompetitionLaw02Scene",
+      "layout": "hype-bribe-split-2",
+      "anchor": "role-pair",
+      "grammar": [
+        "hype-band",
+        "bribe-gate"
+      ],
+      "textTreatments": [
+        "chip",
+        "external-negation",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "motion",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "anti-unfair-competition-law-knowledge-2",
+        "anti-unfair-competition-law-scene-02-hype",
+        "anti-unfair-competition-law-scene-02-bribe"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "anti-unfair-competition-law-scene-03",
+      "export": "AntiUnfairCompetitionLaw03Scene",
+      "layout": "secret-defame-split-3",
+      "anchor": "boundary",
+      "grammar": [
+        "secret-definition-gate",
+        "reverse-engineering-branch"
+      ],
+      "textTreatments": [
+        "chip",
+        "external-negation",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "connector",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "anti-unfair-competition-law-knowledge-3",
+        "anti-unfair-competition-law-scene-03-secret",
+        "anti-unfair-competition-law-scene-03-defame"
+      ],
+      "statefulObjects": [
+        "secret-key-travel"
+      ]
+    },
+    {
+      "id": "anti-unfair-competition-law-scene-04",
+      "export": "AntiUnfairCompetitionLaw04Scene",
+      "layout": "lottery-network-liability-4",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "lottery-rule-band",
+        "network-difference-band"
+      ],
+      "textTreatments": [
+        "chip",
+        "external-negation",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "icon",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "anti-unfair-competition-law-knowledge-4",
+        "anti-unfair-competition-law-scene-04-lottery",
+        "anti-unfair-competition-law-scene-04-network"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "directionId": "fairplay-inspection-desk",
+  "derivedFrom": "demo-clerk-desk",
+  "variation": "公平竞争检查台: 混淆徽章沿标识抄用线滑向三主体落定, 贿赂金币在明示入账闸口前被拦回, 商业密钥停在反向工程分支上, 大小的天平在网络 band 上失衡",
+  "family": "fairplay-inspection-desk",
+  "palette": "#EFECE4 + #2B2B33 + #2C4A6E + #8A4B2F + #15725F + #B23A30 + #B98A2F",
+  "typography": "WenKai 检查台标 + 抄用徽章 + 大招分辨线",
+  "composition": "商业混淆三路 + 虚假宣传贿赂对栏 + 商业秘密诋毁分界 + 有奖销售网络与责任",
+  "surface": "检查台纸卡、抄用徽章、分辨金线, 无圆角",
+  "motion": "混淆徽章沿抄用线滑落三主体, 贿赂金币被入账闸口弹回, 密钥徽章停在反向工程分支",
+  "transition": "藏蓝检查台贯穿四场, 铜色宣传与红色诋毁双线呼应",
+  "catalog": {
+    "status": "variant",
+    "sourceDirectionId": "fairplay-inspection-desk"
+  }
+}
