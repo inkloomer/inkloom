@@ -1,0 +1,70 @@
+{
+  "animationId": "product-quality-law",
+  "compositionId": "ProductQualityLaw",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-31T19:31:04.859Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 309,
+      "frameCount": 155,
+      "id": "product-quality-law-scene-01",
+      "number": "01",
+      "startFrame": 0,
+      "title": "监督与瑕疵",
+      "durationMs": 5167,
+      "file": "product-quality-law-scene-01.avif",
+      "fileSize": 478746,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "fa7568cec9466e1f7d57423737e15f2f1e5bf0be4779bdbf27864e47d9ce99c5",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "94a4cd807ea347bacdbc924dbdf3fb9ff2f91269e7018a02d05000fb94fb375b"
+    },
+    {
+      "endFrame": 619,
+      "frameCount": 155,
+      "id": "product-quality-law-scene-02",
+      "number": "02",
+      "startFrame": 310,
+      "title": "缺陷责任",
+      "durationMs": 5167,
+      "file": "product-quality-law-scene-02.avif",
+      "fileSize": 413129,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "015786badcca420043ec527d074d7c9e10fd8e2f3b32399cb23e58a510a727c1",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "94a4cd807ea347bacdbc924dbdf3fb9ff2f91269e7018a02d05000fb94fb375b"
+    },
+    {
+      "endFrame": 929,
+      "frameCount": 155,
+      "id": "product-quality-law-scene-03",
+      "number": "03",
+      "startFrame": 620,
+      "title": "免责与时效",
+      "durationMs": 5167,
+      "file": "product-quality-law-scene-03.avif",
+      "fileSize": 519037,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "20ca70da3fdc13e70f168cd6a26a1ab9514d6160dd8bedc4b50fb527d48d4504",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "94a4cd807ea347bacdbc924dbdf3fb9ff2f91269e7018a02d05000fb94fb375b"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "94a4cd807ea347bacdbc924dbdf3fb9ff2f91269e7018a02d05000fb94fb375b",
+  "targetFps": 30,
+  "totalFileSize": 1410912
+}
