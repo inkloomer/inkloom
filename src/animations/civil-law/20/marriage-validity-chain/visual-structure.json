@@ -1,0 +1,95 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "kinship-support-ladder",
+      "export": "KinshipSupportLadderScene",
+      "layout": "four-rung-kinship-duty-ladder",
+      "anchor": "timeline-gate",
+      "grammar": [
+        "parents-support-minors-and-adult-children-unable-to-live-independently",
+        "grandparents-support-minor-grandchildren-only-when-the-middle-generation-fails",
+        "elder-siblings-support-minor-younger-siblings-only-when-parents-fail",
+        "younger-siblings-support-elder-siblings-they-were-raised-by-when-those-lack-capacity"
+      ],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "thin-underline"],
+      "focalChannels": ["icon", "connector", "contrast", "annotation"],
+      "tokens": ["Baby", "Users", "Heart", "HandHeart", "Landmark", "Coins"],
+      "finalKnowledge": [
+        "parent-child-support",
+        "grandparent-support",
+        "elder-sibling-support",
+        "younger-sibling-support"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "marriage-formation-gate",
+      "export": "MarriageFormationGateScene",
+      "layout": "formation-gate-with-three-invalidity-seals",
+      "anchor": "boundary",
+      "grammar": [
+        "marriage-forms-through-registration-and-backdating-covers-both-substantive-requirements",
+        "bigamy-voids-only-the-second-marriage-and-stays-void-after-divorce-or-death",
+        "direct-line-and-three-generation-collateral-kin-marry-void",
+        "underage-marriage-heals-when-both-reach-marriage-age-by-application-time"
+      ],
+      "textTreatments": ["label-block", "stamp", "chip", "soft-highlight"],
+      "focalChannels": ["icon", "contrast", "enclosure", "annotation"],
+      "tokens": ["Heart", "Ban", "Stamp", "Users", "Hourglass", "Landmark"],
+      "finalKnowledge": [
+        "formation-and-backdating",
+        "bigamy-void-seal",
+        "forbidden-kin-seal",
+        "underage-healable-seal"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "invalidity-procedure-fork",
+      "export": "InvalidityProcedureScene",
+      "layout": "applicant-lane-with-hearing-rule-fork",
+      "anchor": "document-fork",
+      "grammar": [
+        "only-the-court-hears-nullity-claims-from-parties-or-statutory-interested-persons",
+        "nullity-hearing-bars-mediation-and-withdrawal-while-property-and-child-care-may-mediate",
+        "the-nullity-case-is-heard-first-and-suspends-the-divorce-case",
+        "a-valid-finding-resumes-divorce-while-a-void-finding-ends-it-but-property-and-child-care-continue"
+      ],
+      "textTreatments": ["label-block", "chip", "thin-underline", "soft-highlight"],
+      "focalChannels": ["connector", "contrast", "icon", "annotation"],
+      "tokens": ["Landmark", "Users", "Gavel", "Ban", "Hourglass", "Split"],
+      "finalKnowledge": [
+        "nullity-applicants",
+        "hearing-rules",
+        "nullity-versus-divorce-order",
+        "party-arrangement"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "revocable-marriage-lane",
+      "export": "RevocableMarriageScene",
+      "layout": "twin-revocation-columns-with-aftermath-strip",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "duress-and-concealed-serious-illness-are-the-only-revocable-defects",
+        "the-duressed-year-runs-from-coercion-end-and-escapes-the-five-year-cap",
+        "the-concealed-illness-year-runs-from-knowledge-and-dies-after-five-years",
+        "void-or-revoked-marriages-divide-property-favoring-the-innocent-spouse-with-damages"
+      ],
+      "textTreatments": ["label-block", "stamp", "chip", "soft-highlight"],
+      "focalChannels": ["contrast", "icon", "enclosure", "annotation"],
+      "tokens": ["Undo2", "Hourglass", "Ban", "Heart", "Landmark", "Coins"],
+      "finalKnowledge": [
+        "revocation-grounds-and-holder",
+        "duress-countdown",
+        "concealment-countdown",
+        "invalidity-aftermath"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

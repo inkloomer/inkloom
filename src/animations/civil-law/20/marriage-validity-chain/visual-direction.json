@@ -1,0 +1,23 @@
+{
+  "directionId": "cobalt-porcelain-marriage-chain",
+  "family": "porcelain-cobalt",
+  "palette": "deep cobalt glaze field, porcelain white slips, cobalt blue, iron-brown ink, underglaze vermilion, celadon green, gilded gold",
+  "typography": "porcelain headings on cobalt rail tabs, underglaze-vermilion verdicts and gilded condition labels",
+  "composition": "a four-rung kinship support ladder, a formation gate with three invalidity seals, a procedure fork with hearing rules, and twin revocation columns with an aftermath strip",
+  "surface": "white porcelain slips with gilded rims on a deep cobalt glaze field",
+  "motion": "support rungs light generation by generation, marriage slips pass the formation gate where invalidity seals strike or heal, procedure cards fork into hearing lanes, and revocation columns invert their countdown dials",
+  "transition": "the celadon field, cobalt rims and gilded rails persist while ladders, gates, forks and columns are re-dressed between scenes",
+  "conceptTokens": {
+    "结婚": "Heart",
+    "无效": "Ban",
+    "撤销": "Undo2",
+    "亲子": "Baby",
+    "法院": "Landmark"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/civil-law/20/marriage-validity-chain/",
+    "title": "青花婚书案"
+  }
+}
