@@ -1,0 +1,70 @@
+{
+  "animationId": "foreign-investment",
+  "compositionId": "ForeignInvestment",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-31T16:55:02.646Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 309,
+      "frameCount": 155,
+      "id": "foreign-investment-scene-01",
+      "number": "01",
+      "startFrame": 0,
+      "title": "负面清单",
+      "durationMs": 5167,
+      "file": "foreign-investment-scene-01.avif",
+      "fileSize": 531918,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "ab53d8d799874507dc6bec298d91c5faa5c0252a14b177fba5d44727af7bd54b",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "205cc9c01c7ff75de579a5533c0cc823aa3f2d7adaa27a030cdf9db5804581c3"
+    },
+    {
+      "endFrame": 609,
+      "frameCount": 150,
+      "id": "foreign-investment-scene-02",
+      "number": "02",
+      "startFrame": 310,
+      "title": "国民待遇",
+      "durationMs": 5000,
+      "file": "foreign-investment-scene-02.avif",
+      "fileSize": 550415,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "bbc9f7491958985acd8cadde05a2def112d06514509d66835fb2f2b7540f54a9",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "205cc9c01c7ff75de579a5533c0cc823aa3f2d7adaa27a030cdf9db5804581c3"
+    },
+    {
+      "endFrame": 939,
+      "frameCount": 165,
+      "id": "foreign-investment-scene-03",
+      "number": "03",
+      "startFrame": 610,
+      "title": "保护与审查",
+      "durationMs": 5500,
+      "file": "foreign-investment-scene-03.avif",
+      "fileSize": 736400,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "f3691810d38ed760cb68e6bd5053587970ad42c73f01f6dbdbfd26734da6441c",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "205cc9c01c7ff75de579a5533c0cc823aa3f2d7adaa27a030cdf9db5804581c3"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "205cc9c01c7ff75de579a5533c0cc823aa3f2d7adaa27a030cdf9db5804581c3",
+  "targetFps": 30,
+  "totalFileSize": 1818733
+}
