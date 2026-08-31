@@ -1,0 +1,21 @@
+{
+  "directionId": "frost-cut-contract-rescission-hall",
+  "family": "frost-cut-contract-rescission-hall",
+  "palette": "frost blue-grey, cut crimson, sever teal, cream paper, graphite ink",
+  "typography": "cut-hall headings on frost rail tabs, cream chips and crimson cut stamps",
+  "composition": "a tailoring hall where the rescission family forks five ways, situation versus force scales face off, the breach trio marches in time order past warning gates, and the exercise chain runs notice-to-consequence with a cut-line snapping",
+  "surface": "cream paper files, frost blue-grey desk rails, crimson cut stamps",
+  "motion": "five family threads fork from one cloth, situation and force scale pans tip differently, the breach trio marches left to right past warning gates where delay must stop for cure, and the cut line snaps the contract at the notice moment",
+  "transition": "the frost hall floor, frost rails and crimson cut posts persist while forks, scales, marches and chains are re-dressed between scenes",
+  "conceptTokens": {
+    "解除通知": "MailCheck",
+    "约定解除权": "Gavel",
+    "法定解除": "Scale"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/civil-law/11/contract-rescission-hall/",
+    "title": "霜蓝剪裁馆"
+  }
+}

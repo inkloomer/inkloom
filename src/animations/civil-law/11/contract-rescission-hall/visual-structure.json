@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "rescission-family-fork",
+      "export": "RescissionFamilyScene",
+      "layout": "five-family-fork-with-auto-split",
+      "anchor": "document-fork",
+      "grammar": [
+        "rescission-only-applies-to-valid-contracts-and-ends-their-force",
+        "agreed-conditions-and-deadlines-dissolve-the-contract-automatically",
+        "mutual-agreement-dissolves-by-both-parties",
+        "agreed-rights-and-statutory-rights-dissolve-by-single-exercise"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["connector", "contrast", "enclosure", "annotation"],
+      "tokens": ["Gavel", "Scale", "ScrollText"],
+      "finalKnowledge": ["rescission-concept", "five-family-fork", "auto-split", "single-exercise-split"],
+      "statefulObjects": []
+    },
+    {
+      "id": "situation-force-compare",
+      "export": "SituationForceScene",
+      "layout": "situation-force-scales-with-risk-ledger",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "changed-circumstances-make-performance-unfair-and-need-court",
+        "force-majeure-makes-performance-impossible-and-needs-notice-only",
+        "foreseeable-market-swings-are-normal-risk-and-never-rescind",
+        "court-mediates-when-one-sues-change-and-the-other-rescission"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["contrast", "connector", "enclosure", "annotation"],
+      "tokens": ["Scale", "Gavel", "Ban"],
+      "finalKnowledge": ["rights-vs-conditions", "situation-force-scales", "normal-risk-ledger", "raw-material-cases"],
+      "statefulObjects": []
+    },
+    {
+      "id": "breach-trio-march",
+      "export": "BreachTrioScene",
+      "layout": "breach-trio-march-past-cure-gates",
+      "anchor": "timeline-gate",
+      "grammar": [
+        "early-refusal-lets-the-creditor-rescue-at-once-with-expected-breach",
+        "delayed-main-debt-needs-cure-and-reasonable-time-unless-fatal",
+        "fundamental-breach-empties-the-purpose-and-needs-no-cure",
+        "non-money-duties-with-four-blocks-let-both-sides-rescue"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "external-negation"],
+      "focalChannels": ["connector", "contrast", "enclosure", "motion"],
+      "tokens": ["Ban", "Gavel", "Hourglass"],
+      "finalKnowledge": ["early-refusal-march", "delay-cure-march", "fundamental-march", "non-money-blocks"],
+      "statefulObjects": []
+    },
+    {
+      "id": "exercise-time-consequence",
+      "export": "ExerciseTimeScene",
+      "layout": "notice-chain-with-time-snap-and-consequence",
+      "anchor": "flow-path",
+      "grammar": [
+        "rescission-is-formative-and-usually-a-single-notice",
+        "objection-windows-run-three-months-from-the-notice",
+        "litigated-rescissions-snap-back-to-the-copy-service-date",
+        "guarantees-survive-rescission-and-courts-must-remind-on-penalties"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["connector", "contrast", "enclosure", "motion"],
+      "tokens": ["MailCheck", "Gavel", "Coins"],
+      "finalKnowledge": ["exercise-mode", "objection-window", "snap-time-rules", "consequence-rules"],
+      "statefulObjects": []
+    }
+  ]
+}
