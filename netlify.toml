@@ -1,0 +1,15 @@
+# Netlify 免费档静态托管：纯静态站，不启用 Functions / Identity / Analytics 等任何付费特性
+[build]
+  # 与 .github/workflows/deploy.yml 相同的安装链（Node 22 + corepack 激活 pnpm），已在该链路验证可行
+  command = "corepack enable && corepack prepare pnpm@11.20.0 --activate && pnpm install --frozen-lockfile && pnpm build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+  ENABLE_COREPACK = "1"
+
+# 站点 base 与 GitHub Pages 保持一致（/inkloom，大量路由与 iframe 嵌入写死了该前缀），根路径 301 到入口
+[[redirects]]
+  from = "/"
+  to = "/inkloom/"
+  status = 301
