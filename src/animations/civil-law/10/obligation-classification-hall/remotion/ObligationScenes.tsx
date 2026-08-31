@@ -1,5 +1,5 @@
 import type {CSSProperties, ReactNode} from 'react';
-import {Ban, Coins, Gavel, GitFork, Handshake, Link, PieChart, Scale} from 'lucide-react';
+import {Ban, Coins, Gavel, GitFork, Handshake, Link, PieChart, Scale, ScrollText} from 'lucide-react';
 import {AbsoluteFill, interpolate, useCurrentFrame} from 'remotion';
 import {CLAMP} from '../../../../shared/remotion-runtime';
 

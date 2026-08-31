@@ -1,0 +1,70 @@
+{
+  "animationId": "obligation-classification-hall",
+  "compositionId": "ObligationClassificationHall",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-31T14:44:22.326Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 659,
+      "frameCount": 330,
+      "id": "basis-object-pairs",
+      "number": "01",
+      "startFrame": 0,
+      "title": "债的分类：依据与标的",
+      "durationMs": 11000,
+      "file": "basis-object-pairs.avif",
+      "fileSize": 632340,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "7f8605554268327f52c81f9b6ec7d47194865c9de603822f0f1867bcb0dfde9d",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "c1ce083a23aef252d13aed7e177f0ec4d5270c269f2c8470af53682f2ba50ffa"
+    },
+    {
+      "endFrame": 1379,
+      "frameCount": 360,
+      "id": "joint-share-fork",
+      "number": "02",
+      "startFrame": 660,
+      "title": "连带之债与按份之债",
+      "durationMs": 12000,
+      "file": "joint-share-fork.avif",
+      "fileSize": 793792,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "03f3be8ba4bd62b41b20fc0a0ebdd81add7851640da597dc8fad3141edf3cb65",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "c1ce083a23aef252d13aed7e177f0ec4d5270c269f2c8470af53682f2ba50ffa"
+    },
+    {
+      "endFrame": 2039,
+      "frameCount": 330,
+      "id": "simple-choice-loom",
+      "number": "03",
+      "startFrame": 1380,
+      "title": "简单之债与选择之债",
+      "durationMs": 11000,
+      "file": "simple-choice-loom.avif",
+      "fileSize": 663164,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "84634c955a6ecf115e4d50e12abbf9049eff8a457ff6bdf6d5261e658ca5fea5",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "c1ce083a23aef252d13aed7e177f0ec4d5270c269f2c8470af53682f2ba50ffa"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "c1ce083a23aef252d13aed7e177f0ec4d5270c269f2c8470af53682f2ba50ffa",
+  "targetFps": 30,
+  "totalFileSize": 2089296
+}
