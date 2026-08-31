@@ -1,0 +1,73 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "condition-triptych",
+      "export": "ConditionTriptychScene",
+      "layout": "three-folder-condition-triptych-with-exemption-strip",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "adoption-is-an-identity-act-formed-through-an-adoption-agreement",
+        "the-adoptee-must-be-a-minor-and-placers-need-hardship-consent-or-an-institution",
+        "adopters-need-health-and-conduct-standards-child-count-age-30-and-gender-gap-40",
+        "kin-adoption-orphan-disability-and-step-parent-adoption-waive-condition-limits"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["icon", "contrast", "enclosure", "annotation"],
+      "tokens": ["Baby", "HandHeart", "UserCheck", "CircleSlash", "Landmark", "HeartHandshake"],
+      "finalKnowledge": [
+        "adoption-essence",
+        "adoptee-placer-conditions",
+        "adopter-conditions",
+        "exemption-strips"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "formation-consent-gate",
+      "export": "FormationConsentGateScene",
+      "layout": "consent-registration-gate-with-effect-lanes",
+      "anchor": "boundary",
+      "grammar": [
+        "joint-placement-joint-adoption-and-consent-of-children-over-8-form-the-agreement",
+        "registration-with-county-or-higher-civil-affairs-creates-the-relation-on-registration-day",
+        "pre-registration-publication-and-adoption-assessment-guard-children-with-untraceable-parents",
+        "formation-confers-parent-child-effects-and-extinguishes-birth-family-rights"
+      ],
+      "textTreatments": ["label-block", "chip", "thin-underline", "stamp"],
+      "focalChannels": ["icon", "connector", "enclosure", "annotation"],
+      "tokens": ["HandHeart", "Users", "MessageSquareText", "Stamp", "Landmark", "Home"],
+      "finalKnowledge": [
+        "consent-three-decisions",
+        "registration-gate",
+        "formation-effects",
+        "care-vs-adoption"
+      ],
+      "statefulObjects": ["adoption-consent"]
+    },
+    {
+      "id": "termination-fork",
+      "export": "TerminationForkScene",
+      "layout": "termination-fork-with-twin-aftermath-lanes",
+      "anchor": "document-fork",
+      "grammar": [
+        "agreement-termination-needs-consent-of-children-over-8-and-a-court-on-failure",
+        "abuse-or-abandonment-gives-the-placer-a-unilateral-termination-right",
+        "termination-ends-adoptive-kin-rights-and-restores-or-renegotiates-birth-family-ties",
+        "property-aftermath-compensates-raising-costs-except-abuse-and-owes-living-expenses"
+      ],
+      "textTreatments": ["label-block", "stamp", "external-negation", "soft-highlight"],
+      "focalChannels": ["contrast", "connector", "enclosure", "annotation"],
+      "tokens": ["Handshake", "ShieldAlert", "Stamp", "Unlink", "Undo2", "Coins", "Ban"],
+      "finalKnowledge": [
+        "agreement-termination",
+        "termination-right",
+        "kinship-aftermath",
+        "property-aftermath"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

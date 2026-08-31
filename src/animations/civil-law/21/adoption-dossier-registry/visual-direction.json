@@ -1,0 +1,22 @@
+{
+  "directionId": "adoption-dossier-registry",
+  "family": "archival-dossier",
+  "palette": "tea-green cover cloth, manila folder paper, carbon ink, cinnabar seal red, wheat amber, sage margin green, ledger cream",
+  "typography": "dossier WenKai headings on carbon tab rails, cinnabar registry stamps and wheat condition underlines",
+  "composition": "a condition triptych of manila folders, a consent-and-registration gate feeding formation effect lanes, and a termination fork with twin kinship-property aftermath lanes",
+  "surface": "manila folder cards with punch-hole spines, carbon tab rails, cinnabar double-rule seals, tea-green cover cloth",
+  "motion": "condition folders open one by one, consent chips stack into the registration gate, and termination reasons split the kinship lanes into restore, negotiate or compensate outcomes",
+  "transition": "the tea-green cover cloth, carbon rail and manila folder stock persist while folders, gates and forks are re-dressed between scenes",
+  "conceptTokens": {
+    "收养": "FileHeart",
+    "送养": "HandHeart",
+    "登记": "Stamp",
+    "解除": "Scissors"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/civil-law/21/adoption-dossier-registry/",
+    "title": "茶青卷宗房"
+  }
+}
