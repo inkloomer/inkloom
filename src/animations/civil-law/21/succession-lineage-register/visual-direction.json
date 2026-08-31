@@ -1,0 +1,24 @@
+{
+  "directionId": "indigo-lineage-succession-register",
+  "family": "lineage-register",
+  "palette": "indigo night cloth, rice-paper cream, sepia ink, indigo blue, carmine red, bronze amber, jade teal",
+  "typography": "register headings on indigo rail tabs, carmine verdict slips and bronze generation labels",
+  "composition": "two heir-order lanes over a kinship effect strip, an absolute-relative forfeiture split with a renunciation strip, empty-chair slots feeding a transfer chain, a five-form will rack with a void fork, a legacy fork with mirror acceptance columns and a priority stack, and a settlement ladder with debt order",
+  "surface": "rice-paper slips on indigo night cloth with thread-bound spine rails and bronze generation rings",
+  "motion": "heir slips fill order lanes, forfeiture vetoes strike from the outer margin, chair seats slide to the empty stool while the inheritance token passes down the transfer chain, will cards rack into validity gates, the legacy fork splits heirs from legatees and the agreement creditor rises to the priority head, then the estate ladder settles debts in order",
+  "transition": "the indigo cloth, thread-bound spine and bronze generation rings persist while slips, chairs, racks and ladders are re-dressed between scenes",
+  "conceptTokens": {
+    "继承权": "ScrollText",
+    "被继承人": "UserRound",
+    "遗嘱": "FileText",
+    "代位继承": "Armchair",
+    "遗产": "Boxes",
+    "遗赠扶养协议": "HeartHandshake"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/civil-law/21/succession-lineage-register/",
+    "title": "世系谱牒房"
+  }
+}

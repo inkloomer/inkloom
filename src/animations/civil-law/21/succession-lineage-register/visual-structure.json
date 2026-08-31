@@ -1,0 +1,140 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "heir-sequence-lanes",
+      "export": "HeirSequenceLanesScene",
+      "layout": "two-order-lanes-with-kinship-effect-strip",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "first-order-heirs-are-parents-spouse-children-and-devoted-widowed-in-laws",
+        "second-order-heirs-inherit-only-when-no-first-order-heir-exists",
+        "established-adoption-grants-mutual-succession-and-extinguishes-birth-family-succession",
+        "step-relations-with-support-bonds-succeed-mutually-while-birth-succession-persists"
+      ],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "annotation"],
+      "tokens": ["Users", "Baby", "HeartHandshake", "ScrollText", "UserRound", "Unlink"],
+      "finalKnowledge": [
+        "first-order-heirs",
+        "second-order-heirs",
+        "adoption-succession-effect",
+        "step-succession-effect"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "forfeiture-renunciation-split",
+      "export": "ForfeitureRenunciationScene",
+      "layout": "absolute-relative-forfeiture-columns-with-renunciation-strip",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "intentional-killing-of-the-decedent-and-killing-fellow-heirs-for-the-estate-absolutely-forfeit",
+        "severe-abandonment-mistreatment-will-fraud-and-coercion-relatively-forfeit",
+        "absolute-forfeiture-survives-forgiveness-while-remorse-with-forgiveness-saves-relative-cases",
+        "renunciation-needs-written-statement-to-the-estate-manager-or-fellow-heirs-before-division"
+      ],
+      "textTreatments": ["label-block", "stamp", "external-negation", "chip"],
+      "focalChannels": ["contrast", "icon", "connector", "annotation"],
+      "tokens": ["ShieldAlert", "Ban", "HeartHandshake", "FileSignature", "Hourglass", "Gavel"],
+      "finalKnowledge": [
+        "absolute-forfeiture",
+        "relative-forfeiture",
+        "forfeiture-consequences",
+        "renunciation-rules"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "representation-transfer-chain",
+      "export": "RepresentationTransferScene",
+      "layout": "chair-slots-fork-with-transfer-chain-lane",
+      "anchor": "flow-path",
+      "grammar": [
+        "empty-chair-representation-sits-the-lineal-descendants-of-the-predeceased-child",
+        "sibling-children-represent-only-through-children-of-the-deceased-sibling",
+        "stepchildren-and-remarried-descendants-never-represent-the-widowed-in-law-seat",
+        "transfer-succession-passes-the-inheritance-right-to-the-heirs-heir-before-division"
+      ],
+      "textTreatments": ["label-block", "chip", "thin-underline", "soft-highlight"],
+      "focalChannels": ["connector", "icon", "contrast", "annotation"],
+      "tokens": ["Armchair", "UserRound", "Users", "ArrowRightLeft", "ScrollText", "Baby"],
+      "finalKnowledge": [
+        "representation-structure",
+        "direct-line-representation",
+        "sibling-children-representation",
+        "succession-transfer"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "will-forms-validity-gate",
+      "export": "WillFormsValidityScene",
+      "layout": "five-form-rack-with-void-fork-lanes",
+      "anchor": "document-fork",
+      "grammar": [
+        "five-will-forms-carry-distinct-signature-witness-and-recording-requirements",
+        "heirs-legatees-and-interested-persons-cannot-witness-a-will",
+        "missing-form-requirements-leave-the-will-unformed-while-defects-render-it-void",
+        "a-later-will-or-contrary-lifetime-disposition-revokes-the-earlier-will"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "thin-underline"],
+      "focalChannels": ["icon", "contrast", "enclosure", "annotation"],
+      "tokens": ["FileText", "PenLine", "Users", "Ban", "Stamp", "FileSignature"],
+      "finalKnowledge": [
+        "will-forms",
+        "witness-disqualification",
+        "will-void-rules",
+        "will-revocation"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "legacy-agreement-priority",
+      "export": "LegacyAgreementScene",
+      "layout": "legacy-fork-with-mirror-acceptance-and-priority-stack",
+      "anchor": "boundary",
+      "grammar": [
+        "a-will-naming-statutory-heirs-causes-testamentary-succession-and-others-take-by-legacy",
+        "heirs-accept-by-silence-and-renounce-explicitly-while-legatees-accept-explicitly-within-60-days",
+        "the-support-and-legacy-agreement-creditor-takes-after-death-priority-over-succession",
+        "statutory-support-obligors-cannot-conclude-a-support-and-legacy-agreement"
+      ],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "stamp"],
+      "focalChannels": ["contrast", "icon", "enclosure", "annotation"],
+      "tokens": ["FileText", "Users", "Hourglass", "HeartHandshake", "ScrollText", "HandCoins"],
+      "finalKnowledge": [
+        "will-versus-legacy",
+        "acceptance-renunciation-mirror",
+        "legacy-agreement-priority",
+        "agreement-eligibility"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "estate-settlement-lane",
+      "export": "EstateSettlementScene",
+      "layout": "presumption-fork-with-settlement-ladder-and-debt-order",
+      "anchor": "flow-path",
+      "grammar": [
+        "death-order-presumes-the-childless-first-then-elders-then-simultaneous-peers",
+        "compensation-for-destroyed-estate-substitutes-its-value-while-death-compensation-never-inherits",
+        "estate-managers-run-from-executor-to-election-to-joint-holding-to-civil-affairs-backstop",
+        "debts-are-paid-within-the-estate-value-first-by-statutory-heirs-then-will-and-legacy-takers"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "thin-underline"],
+      "focalChannels": ["connector", "icon", "contrast", "annotation"],
+      "tokens": ["Hourglass", "Boxes", "Coins", "Landmark", "UserCheck", "Gavel"],
+      "finalKnowledge": [
+        "death-presumption",
+        "estate-determination",
+        "estate-manager-ladder",
+        "debt-payment-order",
+        "no-heir-estate"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

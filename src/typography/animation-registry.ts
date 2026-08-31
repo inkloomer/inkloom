@@ -186,6 +186,7 @@ import {typography as typographyAutoPreRegistrationHall} from '../animations/civ
 import {typography as typographyAutoGoodFaithAcquisitionHall} from '../animations/civil-law/07/good-faith-acquisition-hall/animation.meta';
 import {typography as typographyAutoOccupationAccessionHall} from '../animations/civil-law/07/occupation-accession-hall/animation.meta';
 import {typography as typographyAutoAdoptionDossierRegistry} from '../animations/civil-law/21/adoption-dossier-registry/animation.meta';
+import {typography as typographyAutoSuccessionLineageRegister} from '../animations/civil-law/21/succession-lineage-register/animation.meta';
 import {typography as typographyAutoDividendRight} from '../animations/commercial-law/04/dividend-right/animation.meta';
 import {typography as typographyAutoShareholderQualification} from '../animations/commercial-law/03/shareholder-qualification/animation.meta';
 import {typography as typographyAutoNominalShareholder} from '../animations/commercial-law/03/nominal-shareholder/animation.meta';
@@ -465,6 +466,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'property-system-hall': {metadata: typographyAutoPropertySystemHall, scope: {animationId: 'property-system-hall', subject: 'civil-law', topic: '06'}},
   'transfer-mode-hall': {metadata: typographyAutoTransferModeHall, scope: {animationId: 'transfer-mode-hall', subject: 'civil-law', topic: '06'}},
   'adoption-dossier-registry': {metadata: typographyAutoAdoptionDossierRegistry, scope: {animationId: 'adoption-dossier-registry', subject: 'civil-law', topic: '21'}},
+  'succession-lineage-register': {metadata: typographyAutoSuccessionLineageRegister, scope: {animationId: 'succession-lineage-register', subject: 'civil-law', topic: '21'}},
   'delivery-registry-hall': {metadata: typographyAutoDeliveryRegistryHall, scope: {animationId: 'delivery-registry-hall', subject: 'civil-law', topic: '06'}},
   'pre-registration-hall': {metadata: typographyAutoPreRegistrationHall, scope: {animationId: 'pre-registration-hall', subject: 'civil-law', topic: '06'}},
   'good-faith-acquisition-hall': {metadata: typographyAutoGoodFaithAcquisitionHall, scope: {animationId: 'good-faith-acquisition-hall', subject: 'civil-law', topic: '07'}},
