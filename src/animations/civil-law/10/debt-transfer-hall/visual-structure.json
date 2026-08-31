@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "credit-assignment-flow",
+      "export": "CreditAssignmentScene",
+      "layout": "one-sign-one-notice-gate-with-verdicts",
+      "anchor": "flow-path",
+      "grammar": [
+        "the-assignment-contract-moves-the-credit-at-its-own-formation",
+        "notice-gates-the-contract-against-the-debtor-not-the-contract-itself",
+        "unrevoked-notice-keeps-payment-to-the-assignee-correct",
+        "partial-assignment-forms-quota-claims-and-debt-stays-put"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["connector", "contrast", "enclosure", "motion"],
+      "tokens": ["ArrowRightLeft", "ScrollText", "Ban"],
+      "finalKnowledge": ["assignment-definition", "notice-gate-rule", "fabricated-credit-rule", "partial-consequence"],
+      "statefulObjects": []
+    },
+    {
+      "id": "join-release-fork",
+      "export": "JoinReleaseForkScene",
+      "layout": "join-release-fork-with-consent-gate",
+      "anchor": "document-fork",
+      "grammar": [
+        "joining-walks-in-beside-the-debtor-and-shares-the-debt-jointly",
+        "release-replaces-the-debtor-only-after-the-creditor-consents",
+        "silence-after-cure-counts-as-refusal-on-the-release-fork",
+        "unclear-intent-defaults-to-suretyship-not-joining"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["connector", "contrast", "enclosure", "motion"],
+      "tokens": ["UserPlus", "Replace", "Scale"],
+      "finalKnowledge": ["join-limb", "release-limb", "wording-distinction", "three-party-nature"],
+      "statefulObjects": []
+    },
+    {
+      "id": "defence-offset-continuity",
+      "export": "ContinuityScene",
+      "layout": "continuity-rails-with-offset-block",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "defence-claims-ride-across-both-assignment-and-release",
+        "offset-claims-ride-assignment-only-and-die-on-release",
+        "assignment-offset-needs-maturity-before-notice-or-earlier-due",
+        "same-contract-offsets-survive-even-late-maturity"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["connector", "contrast", "enclosure", "motion"],
+      "tokens": ["ArrowRightLeft", "Replace", "Scale"],
+      "finalKnowledge": ["defence-rails", "offset-precondition", "offset-time-rules", "continuity-table"],
+      "statefulObjects": []
+    },
+    {
+      "id": "non-transferable-series",
+      "export": "NonTransferableScene",
+      "layout": "sealed-stack-series-with-agreement-split",
+      "anchor": "typographic-sequence",
+      "grammar": [
+        "nature-seals-personal-and-waged-claims-to-their-holders",
+        "agreement-binds-internally-as-breach-and-guards-only-bona-fide-outsiders",
+        "money-claims-are-so-liquid-that-no-agreement-binds-anyone",
+        "statute-forbids-lone-security-assignment-and-unapproved-contracts"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "external-negation"],
+      "focalChannels": ["contrast", "icon", "enclosure", "annotation"],
+      "tokens": ["Ban", "Coins", "Gavel"],
+      "finalKnowledge": ["nature-seal", "agreement-split", "money-liquidity-rule", "statute-seal"],
+      "statefulObjects": []
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "directionId": "lapis-draft-debt-transfer-hall",
+  "family": "lapis-draft-debt-transfer-hall",
+  "palette": "lapis deep blue, billow sky, gold wire, seal red, cream paper, slate ink",
+  "typography": "draft-hall headings on lapis rail tabs, cream chips and seal red wax verdicts",
+  "composition": "a remittance hall where a credit draft travels one-sign-one-notice through the debtor gate, a join versus release fork splits coexisting and free extinguishment, continuity rails carry defence and offset claims across transfers, and non-transferable papers stack in a sealed series",
+  "surface": "cream drafts, lapis desk rails, billow sky tags, seal red wax",
+  "motion": "the credit chip rides the draft to the notice gate before it can touch the debtor, the join chip walks in beside the debtor while the release chip replaces him behind the creditor consent gate, continuity rails carry defence and offset claims across transfers with offset blocked on debtor swaps, and non-transferable papers stack sealed by nature agreement and statute",
+  "transition": "the lapis hall floor, lapis rails and seal red posts persist while drafts, forks, rails and stacks are re-dressed between scenes",
+  "conceptTokens": {
+    "债权转让": "ArrowRightLeft",
+    "债务加入": "UserPlus",
+    "债务转让": "Replace"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/civil-law/10/debt-transfer-hall/",
+    "title": "青金汇票馆"
+  }
+}
