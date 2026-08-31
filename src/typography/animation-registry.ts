@@ -216,6 +216,7 @@ import {typography as typographyAutoAntiMonopolyLaw} from '../animations/economi
 import {typography as typographyAutoAntiUnfairCompetitionLaw} from '../animations/economic-law/02/anti-unfair-competition-law/animation.meta';
 import {typography as typographyAutoConsumerProtectionLaw} from '../animations/economic-law/03/consumer-protection-law/animation.meta';
 import {typography as typographyAutoProductQualityLaw} from '../animations/economic-law/04/product-quality-law/animation.meta';
+import {typography as typographyAutoFoodSafetyLaw} from '../animations/economic-law/05/food-safety-law/animation.meta';
 import {typography as typographyAutoShareholderContribution} from '../animations/commercial-law/02/shareholder-contribution/animation.meta';
 import {typography as typographyAutoPromoter} from '../animations/commercial-law/02/promoter/animation.meta';
 import {typography as typographyAutoCompanyIncorporation} from '../animations/commercial-law/02/company-incorporation/animation.meta';
@@ -722,6 +723,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'anti-unfair-competition-law': {metadata: typographyAutoAntiUnfairCompetitionLaw, scope: {animationId: 'anti-unfair-competition-law', subject: 'economic-law', topic: '02'}},
   'consumer-protection-law': {metadata: typographyAutoConsumerProtectionLaw, scope: {animationId: 'consumer-protection-law', subject: 'economic-law', topic: '03'}},
   'product-quality-law': {metadata: typographyAutoProductQualityLaw, scope: {animationId: 'product-quality-law', subject: 'economic-law', topic: '04'}},
+  'food-safety-law': {metadata: typographyAutoFoodSafetyLaw, scope: {animationId: 'food-safety-law', subject: 'economic-law', topic: '05'}},
   ...COMMERCIAL_LAW_TYPOGRAPHY_CONFIGURATIONS,
 };
 

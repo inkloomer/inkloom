@@ -1,0 +1,123 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "food-safety-law-scene-01",
+      "export": "FoodSafetyLaw01Scene",
+      "layout": "scope-monitoring-split-1",
+      "anchor": "role-pair",
+      "grammar": [
+        "scope-split-band",
+        "monitoring-evaluate-pair"
+      ],
+      "textTreatments": [
+        "chip",
+        "stamp",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "icon",
+        "motion"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "food-safety-law-knowledge-1",
+        "food-safety-law-scene-01-scope",
+        "food-safety-law-scene-01-monitoring"
+      ],
+      "statefulObjects": [
+        "sample-fee-travel"
+      ]
+    },
+    {
+      "id": "food-safety-law-scene-02",
+      "export": "FoodSafetyLaw02Scene",
+      "layout": "standard-hierarchy-gate-2",
+      "anchor": "typographic-sequence",
+      "grammar": [
+        "standard-hierarchy",
+        "supersede-line"
+      ],
+      "textTreatments": [
+        "chip",
+        "stamp",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "contrast",
+        "icon",
+        "motion"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "food-safety-law-knowledge-2",
+        "food-safety-law-scene-02-hierarchy",
+        "food-safety-law-scene-02-local"
+      ],
+      "statefulObjects": [
+        "local-standard-supersede"
+      ]
+    },
+    {
+      "id": "food-safety-law-scene-03",
+      "export": "FoodSafetyLaw03Scene",
+      "layout": "recall-dual-lane-3",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "recall-dual-lane",
+        "force-recall-gate"
+      ],
+      "textTreatments": [
+        "chip",
+        "stamp",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "motion",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "food-safety-law-knowledge-3",
+        "food-safety-law-scene-03-producer",
+        "food-safety-law-scene-03-seller"
+      ],
+      "statefulObjects": [
+        "recall-order-travel"
+      ]
+    },
+    {
+      "id": "food-safety-law-scene-04",
+      "export": "FoodSafetyLaw04Scene",
+      "layout": "firstpay-punish-band-4",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "firstpay-lane",
+        "punish-multiplier-band"
+      ],
+      "textTreatments": [
+        "chip",
+        "stamp",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "motion",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "food-safety-law-knowledge-4",
+        "food-safety-law-scene-04-firstpay",
+        "food-safety-law-scene-04-punish"
+      ],
+      "statefulObjects": [
+        "punish-claim-travel"
+      ]
+    }
+  ]
+}
