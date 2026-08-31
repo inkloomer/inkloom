@@ -503,14 +503,14 @@ export const LostPropertyScene = () => {
                 <Chip tone={C.plum} toneBg={C.plumPale}><span style={{fontSize: 22, fontWeight: 950, color: C.plum }}>失主</span></Chip>
               </div>
               <Path color={C.amber} delay={80} span={30} style={{position: 'absolute', left: 110, top: 74, width: 900, height: 6}} />
-              <span style={{position: 'absolute', left: 420, top: 40, fontSize: 22, fontWeight: 950, color: C.amber }}>← 2 年期间 · 可请求返还 →</span>
+              <span style={{position: 'absolute', left: 420, top: 0, fontSize: 22, fontWeight: 950, color: C.amber }}>← 2 年期间 · 可请求返还 →</span>
               <Mover delay={86} span={28} fromX={0} toX={900} fadeAt={160} style={{position: 'absolute', left: 116, top: 46, zIndex: 2}}>
                 <Chip tone={C.amber} toneBg={C.amberPale}><Search size={22} color={C.amber} strokeWidth={2.4} /><span style={{fontSize: 22, fontWeight: 950, color: C.amber }}>返还请求权</span></Chip>
               </Mover>
-              <div style={{position: 'absolute', right: 220, top: 30, border: `3px solid ${C.brick}`, borderRadius: 12, padding: '8px 16px', backgroundColor: C.paper}}>
+              <div style={{position: 'absolute', right: 330, top: 2, border: `3px solid ${C.brick}`, borderRadius: 12, padding: '8px 16px', backgroundColor: C.paper}}>
                 <span style={{fontSize: 22, fontWeight: 950, color: C.brick }}>2年期满</span>
               </div>
-              <div style={{position: 'absolute', right: 0, top: 22, display: 'flex', flexDirection: 'column', gap: 6, alignItems: 'flex-end'}}>
+              <div style={{position: 'absolute', right: 0, top: 40, display: 'flex', flexDirection: 'column', gap: 8, alignItems: 'flex-end'}}>
                 <Seal delay={170} size={19} tone={C.brick}>期满未请求 → 受让人善意取得</Seal>
                 <Seal delay={200} size={19}>失主返还原物请求权消灭</Seal>
               </div>
