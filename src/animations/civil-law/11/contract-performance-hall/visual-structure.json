@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "defence-triad-court",
+      "export": "DefenceTriadScene",
+      "layout": "three-defence-court-with-equivalence-scales",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "one-genuine-bilateral-pair-of-duties-is-required-for-any-defence",
+        "divisible-debts-defend-in-proportion-while-indivisible-defend-wholly",
+        "simultaneous-defenders-owe-no-breach-late-defenders-sue-breach",
+        "anxious-first-performers-may-rescue-by-proving-insecurity"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["contrast", "icon", "enclosure", "annotation"],
+      "tokens": ["Scale", "ArrowRight", "ShieldAlert"],
+      "finalKnowledge": ["pair-requirement", "equivalence-rule", "triad-table", "combined-case"],
+      "statefulObjects": []
+    },
+    {
+      "id": "third-party-lanes",
+      "export": "ThirdPartyLanesScene",
+      "layout": "receiver-beneficiary-lanes-with-tort-wall",
+      "anchor": "flow-path",
+      "grammar": [
+        "mere-receivers-hold-no-claim-so-only-parties-sue-and-rescind",
+        "beneficiaries-claim-and-sue-directly-against-the-debtor",
+        "formative-powers-stay-with-the-original-creditor",
+        "refusal-flips-the-beneficiary-contract-back-to-own-contract"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["connector", "contrast", "enclosure", "motion"],
+      "tokens": ["Users", "Handshake", "Ban"],
+      "finalKnowledge": ["receiver-lane", "beneficiary-lane", "formative-power-rule", "cake-verdicts"],
+      "statefulObjects": []
+    },
+    {
+      "id": "surrogate-performance-rails",
+      "export": "SurrogateScene",
+      "layout": "surrogate-rails-with-security-priority",
+      "anchor": "document-fork",
+      "grammar": [
+        "lawful-interest-third-parties-may-perform-and-creditors-cannot-refuse",
+        "surrogates-gain-creditor-rights-without-harming-the-creditor",
+        "creditor-security-always-ranks-ahead-of-surrogate-security",
+        "guarantor-surrogates-follow-securing-liability-instead"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["connector", "contrast", "enclosure", "motion"],
+      "tokens": ["Coins", "Gavel", "Handshake"],
+      "finalKnowledge": ["lawful-interest-fork", "surrogate-rights", "security-priority", "guarantor-exception"],
+      "statefulObjects": []
+    }
+  ]
+}

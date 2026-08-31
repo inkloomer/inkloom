@@ -1,0 +1,21 @@
+{
+  "directionId": "mist-teal-standoff-contract-performance-hall",
+  "family": "mist-teal-standoff-contract-performance-hall",
+  "palette": "mist teal grey, apricot stamp, coral red, bone paper, graphite ink",
+  "typography": "standoff-hall headings on mist-teal rail tabs, bone chips and apricot wax verdicts",
+  "composition": "a standoff hall where the three-defence court faces pairs across a table, third-party lanes split receivers from beneficiaries, and surrogate performance rails carry repayment claims back through security priority",
+  "surface": "bone paper files, mist-teal desk rails, apricot wax seals",
+  "motion": "defence shields rise from the table in three ranks with equivalence scales tipping on divisible debts, third-party chips travel down the ride lane to bounce off the tort wall, and surrogate coins roll back to the payer through gold rails that always lose to the creditor's own security",
+  "transition": "the mist-teal hall floor, mist-teal rails and apricot stamp posts persist while courts, lanes and rails are re-dressed between scenes",
+  "conceptTokens": {
+    "同时履行抗辩权": "Scale",
+    "先履行抗辩权": "ArrowRight",
+    "不安抗辩权": "ShieldAlert"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/civil-law/11/contract-performance-hall/",
+    "title": "烟青对峙馆"
+  }
+}
