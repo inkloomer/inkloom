@@ -62,7 +62,7 @@
       "id": "banking-law-scene-03",
       "export": "BankingLaw03Scene",
       "layout": "takeover-clock-lane-3",
-      "anchor": "flow-path",
+      "anchor": "flow-target",
       "grammar": [
         "measures-band",
         "takeover-track"

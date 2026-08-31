@@ -3,7 +3,7 @@
   "compositionId": "BankingLaw",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-08-31T19:48:38.758Z",
+  "generatedAt": "2026-08-31T19:50:45.623Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -22,7 +22,7 @@
       "sha256": "5eba0584e229436606bbbc1a4c60e34556f35025be8319da0820dca090df9be8",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "c2b8a6e00d6d248fe7f7fb77dc10f7871107716715b6292dd405f9bb76c1d1f5"
+      "sceneFingerprint": "c184772f64b4da47028dbe2d35173fe6423c09a1e42412ff155fb1292fdee30d"
     },
     {
       "endFrame": 619,
@@ -33,13 +33,13 @@
       "title": "业务禁止",
       "durationMs": 5000,
       "file": "banking-law-scene-02.avif",
-      "fileSize": 389114,
+      "fileSize": 389824,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "9e6df010e8d545f67156d1a75b8b5f9d66050b6c73522eb072cfa55c5a598d74",
+      "sha256": "91c8abd7dd68bd90e1f10142768ee4549a5e1fff78054d218ef0df577e02a3c4",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "c2b8a6e00d6d248fe7f7fb77dc10f7871107716715b6292dd405f9bb76c1d1f5"
+      "sceneFingerprint": "c184772f64b4da47028dbe2d35173fe6423c09a1e42412ff155fb1292fdee30d"
     },
     {
       "endFrame": 949,
@@ -56,7 +56,7 @@
       "sha256": "39ec3b6d08e482e2173c4a0b389595060f85a61819188559683389c7990788cd",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "c2b8a6e00d6d248fe7f7fb77dc10f7871107716715b6292dd405f9bb76c1d1f5"
+      "sceneFingerprint": "c184772f64b4da47028dbe2d35173fe6423c09a1e42412ff155fb1292fdee30d"
     }
   ],
   "size": {
@@ -64,7 +64,7 @@
     "width": 2560
   },
   "sourceFps": 60,
-  "sourceFingerprint": "c2b8a6e00d6d248fe7f7fb77dc10f7871107716715b6292dd405f9bb76c1d1f5",
+  "sourceFingerprint": "c184772f64b4da47028dbe2d35173fe6423c09a1e42412ff155fb1292fdee30d",
   "targetFps": 30,
-  "totalFileSize": 1646369
+  "totalFileSize": 1647079
 }

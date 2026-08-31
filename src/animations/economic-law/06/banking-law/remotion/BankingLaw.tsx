@@ -94,7 +94,7 @@ export const BankingLaw03Scene=()=>{
   const enter=(a:number,b:number)=>interpolate(frame,[a,b],[0,1],CLAMP);
   const takeX=interpolate(frame,[52,116],[280,1180],CLAMP);
   return <Shell code="经6.3" title="强制披露 与 接管">
-    <div data-layout="takeover-clock-lane-3" data-visual-anchor="flow-path" data-visual-grammar="measures-band,takeover-track" data-text-treatments="chip,stamp,soft-highlight" data-focal-rule="banking-law-scene-03-rule" data-focal-channels="contrast,connector,motion" style={{position:'absolute',inset:0}}>
+    <div data-layout="takeover-clock-lane-3" data-visual-anchor="flow-target" data-visual-grammar="measures-band,takeover-track" data-text-treatments="chip,stamp,soft-highlight" data-focal-rule="banking-law-scene-03-rule" data-focal-channels="contrast,connector,motion" style={{position:'absolute',inset:0}}>
       <div data-final-knowledge="banking-law-scene-03-measures" style={{position:'absolute',left:0,top:0,width:864,height:560,padding:'14px 20px',border:'5px solid '+COLORS.copper,background:COLORS.copper+'59',display:'flex',flexDirection:'column',justifyContent:'center',gap:8,opacity:enter(12,38),translate:interpolate(frame,[12,38],['-200px 0px','0px 0px'],CLAMP)}}>
         <Megaphone size={120} color={COLORS.copper} strokeWidth={1.2} style={{position:'absolute',right:4,top:2,opacity:0.1,pointerEvents:'none'}}/>
         <div style={{fontSize:24,fontWeight:900,color:COLORS.copper}}><Megaphone size={30} color={COLORS.copper}/>强制信息披露</div>
