@@ -1,0 +1,21 @@
+{
+  "directionId": "malachite-loom-obligation-classification-hall",
+  "family": "malachite-loom-obligation-classification-hall",
+  "palette": "deep malachite green, thread crimson, thread gold, ice blue silk, cream cloth, graphite ink",
+  "typography": "loom-hall headings on malachite rail tabs, cream cloth chips and crimson thread stamps",
+  "composition": "a weaving hall where debt pairs hang as cloth columns, a joint-share fork splits two thread lanes with recovery loops, and a choice loom lets option threads be picked with the pick permission sliding between parties",
+  "surface": "cream cloth sheets, malachite desk rails, crimson thread stamps, gold thread seals",
+  "motion": "paired debt cloths rise from opposite sides of the axis, joint threads loop recovery claims back through the fork with priority gold stopping first, and the choice pick slides from debtor to creditor before option threads snap or bind",
+  "transition": "the malachite hall floor, malachite rails and crimson thread posts persist while columns, forks and looms are re-dressed between scenes",
+  "conceptTokens": {
+    "连带之债": "Link",
+    "按份之债": "PieChart",
+    "选择之债": "GitFork"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/civil-law/10/obligation-classification-hall/",
+    "title": "黛绿织机馆"
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "basis-object-pairs",
+      "export": "BasisObjectPairsScene",
+      "layout": "three-cloth-column-pairs",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "intended-debts-come-from-contracts-and-unilateral-promises",
+        "property-debts-may-be-enforced-while-labour-debts-never-are",
+        "specific-debts-fail-when-the-thing-perishes-before-performance",
+        "generic-debts-never-fail-and-money-is-always-generic"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["contrast", "icon", "enclosure", "annotation"],
+      "tokens": ["Coins", "Gavel", "Scale"],
+      "finalKnowledge": ["intended-legal-pair", "property-labour-pair", "specific-generic-pair", "failure-divide"],
+      "statefulObjects": []
+    },
+    {
+      "id": "joint-share-fork",
+      "export": "JointShareForkScene",
+      "layout": "joint-share-fork-with-recovery-loops",
+      "anchor": "document-fork",
+      "grammar": [
+        "joint-creditors-split-actual-recovery-by-internal-shares",
+        "over-performing-joint-debtors-take-the-creditors-rights-and-recourse",
+        "creditor-security-ranks-ahead-of-recourse-security-when-they-coexist",
+        "release-of-one-joint-debtor-lifts-his-share-from-the-others"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["connector", "contrast", "enclosure", "motion"],
+      "tokens": ["Link", "PieChart", "Coins"],
+      "finalKnowledge": ["single-majority-rule", "joint-ledger", "release-rule", "share-rule"],
+      "statefulObjects": []
+    },
+    {
+      "id": "simple-choice-loom",
+      "export": "SimpleChoiceLoomScene",
+      "layout": "choice-loom-with-sliding-pick",
+      "anchor": "flow-path",
+      "grammar": [
+        "simple-debts-have-one-target-while-choice-debts-have-quality-different-targets",
+        "the-pick-defaults-to-the-debtor-and-slides-to-the-other-after-cure",
+        "notice-fixes-the-target-and-it-cannot-change-without-consent",
+        "impossible-options-are-unpickable-unless-the-other-party-caused-it"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["connector", "contrast", "enclosure", "motion"],
+      "tokens": ["GitFork", "Coins", "Ban"],
+      "finalKnowledge": ["simple-choice-divide", "pick-ladder", "notice-fix-rule", "impossibility-rule"],
+      "statefulObjects": []
+    }
+  ]
+}
