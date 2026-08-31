@@ -1,0 +1,95 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "guarantee-system-bench",
+      "export": "GuaranteeSystemScene",
+      "layout": "system-bench-with-five-type-racks",
+      "anchor": "concept-icon",
+      "grammar": [
+        "security-rights-serve-debt-realization-and-follow-the-secured-claim-as-accessory",
+        "five-typical-forms-run-from-mortgage-pledge-lien-to-guarantee-and-earnest",
+        "four-contract-types-split-by-who-signs-with-the-creditor",
+        "for-profit-institutions-may-guarantee-validly-while-some-entities-cannot"
+      ],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "thin-underline"],
+      "focalChannels": ["icon", "contrast", "enclosure", "annotation"],
+      "tokens": ["Shield", "Coins", "Users", "Landmark"],
+      "finalKnowledge": [
+        "security-right-nature",
+        "five-typical-forms",
+        "four-contract-types",
+        "guarantor-validity-rule"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "counter-guarantee-invalidity",
+      "export": "CounterGuaranteeScene",
+      "layout": "counter-gate-with-compensation-dials",
+      "anchor": "boundary",
+      "grammar": [
+        "counter-guarantees-secure-the-recourse-claim-of-the-original-third-guarantor",
+        "third-party-counter-guarantees-may-promise-while-debtor-counter-guarantees-exclude-guarantee",
+        "void-guarantee-contracts-shift-to-precontractual-fault-liability-for-third-party-guarantors",
+        "valid-main-with-void-guarantee-dials-half-while-void-main-dials-third-and-the-blameless-stand-free"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["contrast", "icon", "connector", "annotation"],
+      "tokens": ["Undo2", "Ban", "Scale", "Gavel"],
+      "finalKnowledge": [
+        "counter-guarantee-structure",
+        "invalidity-consequence",
+        "valid-main-dials",
+        "void-main-dials"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "subordinate-liability-changes",
+      "export": "SubordinationScene",
+      "layout": "change-board-with-debt-tag-gates",
+      "anchor": "flow-path",
+      "grammar": [
+        "guarantee-liability-stays-inside-the-principal-debt-with-bankruptcy-interest-stop-and-excess-return",
+        "new-loans-repaying-old-loans-free-unaware-guarantors-and-old-security-needs-renewal-to-survive",
+        "assigned-claims-carry-security-unless-unnoticed-or-locked-by-ban-while-transferred-debts-need-written-consent",
+        "raised-debts-exceed-consent-into-freedom-and-reduced-debts-keep-the-rest-liable"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["connector", "contrast", "icon", "annotation"],
+      "tokens": ["Undo2", "Ban", "Users", "Coins"],
+      "finalKnowledge": [
+        "subordination-limits",
+        "new-old-loan-rules",
+        "assignment-and-transfer-gates",
+        "amount-change-rule"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "joint-guarantee-hall",
+      "export": "JointGuaranteeScene",
+      "layout": "joint-hall-with-concurrence-and-recourse-lanes",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "joint-guarantors-grant-the-creditor-one-claim-and-two-or-more-security-rights",
+        "ordered-calls-run-agreement-first-then-free-choice-then-debtor-property-first-in-mixed-guarantees",
+        "waiving-the-debtors-property-frees-third-guarantors-within-the-lost-priority",
+        "paying-third-guarantors-step-into-creditor-rights-and-share-with-fellows-only-under-agreement-or-one-document"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["contrast", "connector", "icon", "annotation"],
+      "tokens": ["Users", "Ban", "Undo2", "Gavel"],
+      "finalKnowledge": [
+        "joint-guarantee-basics",
+        "call-order-rules",
+        "waiver-freedom-rule",
+        "third-guarantor-aftermath"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

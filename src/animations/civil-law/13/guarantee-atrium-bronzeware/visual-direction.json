@@ -1,0 +1,22 @@
+{
+  "directionId": "bronze-guarantee-atrium",
+  "family": "bronze-guarantee-atrium",
+  "palette": "deep bronze-green field, ivory ding-tablet slips, aged brass, patina teal, seal red, ink charcoal",
+  "typography": "atrium headings on bronze rail tabs, seal-red verdicts and brass condition plates",
+  "composition": "a guarantee-system bench with five-type racks, a counter-guarantee invalidity gate with compensation dials, a subordination change board, and a joint-guarantee hall with concurrence lanes",
+  "surface": "ivory ding-tablet slips on a deep bronze-green field with brass rail posts",
+  "motion": "type racks post onto the bench, invalidity dials settle at one-half and one-third marks, change boards slide debt tags across gates and joint lanes fork into concurrence and recourse trays",
+  "transition": "the bronze-green field, brass posts and tablet slips persist while benches, gates, boards and halls are re-dressed between scenes",
+  "conceptTokens": {
+    "担保权": "Shield",
+    "反担保": "Undo2",
+    "共同担保": "Users",
+    "无效": "Ban"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/civil-law/13/guarantee-atrium-bronzeware/",
+    "title": "青铜鼎廊"
+  }
+}
