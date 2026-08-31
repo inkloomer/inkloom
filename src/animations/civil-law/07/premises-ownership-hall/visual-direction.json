@@ -1,0 +1,21 @@
+{
+  "directionId": "slate-tower-premises-ownership-hall",
+  "family": "slate-tower-premises-ownership-hall",
+  "palette": "slate blue-grey tower, coral seal, pine ribbon, mist silver, paper cream, graphite ink",
+  "typography": "tower-hall headings on slate rail tabs, paper chips and coral wax verdicts",
+  "composition": "a tower hall where land and house chips travel in lockstep, a condominium board splits three rights with a dependent ribbon, community lanes sort roads greens and parking, a voting ladder climbs double-two-thirds to double-three-quarters, and neighbouring relations fork into three modes",
+  "surface": "paper files, slate desk rails, mist tags, coral wax seals",
+  "motion": "land and house chips move as one bound pair through transfer and mortgage gates, the shared-rights ribbon drags behind its exclusive chip wherever it goes, voting chips climb each threshold rung and lock, and blocking walls rise or fall across the three neighbouring modes",
+  "transition": "the slate hall floor, slate rails and coral seal posts persist while bound pairs, boards, lanes, ladders and forks are re-dressed between scenes",
+  "conceptTokens": {
+    "房地一体化": "Link2",
+    "区分所有权": "Building2",
+    "表决": "Vote"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/civil-law/07/premises-ownership-hall/",
+    "title": "黛青楼景馆"
+  }
+}

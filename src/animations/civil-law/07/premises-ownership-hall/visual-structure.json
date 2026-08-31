@@ -1,0 +1,92 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "land-house-integration",
+      "export": "LandHouseScene",
+      "layout": "bound-pair-gates-with-exception-panel",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "land-use-right-and-house-title-belong-to-the-same-holder",
+        "statically-house-title-presupposes-land-title",
+        "dynamically-house-title-follows-land-transfer-and-mortgage-and-vice-versa",
+        "building-with-consent-on-shared-land-keeps-house-with-the-builder"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["connector", "contrast", "enclosure", "motion"],
+      "tokens": ["Link2", "Home", "ScrollText"],
+      "finalKnowledge": ["integration-meaning", "static-dynamic-limbs", "exception-conditions", "coop-verdict"],
+      "statefulObjects": []
+    },
+    {
+      "id": "condominium-dependence",
+      "export": "CondominiumScene",
+      "layout": "three-right-board-with-dependence-chain",
+      "anchor": "flow-path",
+      "grammar": [
+        "the-condominium-right-combines-unit-title-shared-part-ownership-and-management",
+        "shared-parts-are-the-shell-like-roof-and-wall-and-the-passage-like-corridor-and-lift",
+        "the-shared-right-rides-its-unit-title-and-never-stands-alone",
+        "transfer-carries-it-while-independent-waiver-and-priority-claims-fail"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "external-negation"],
+      "focalChannels": ["connector", "contrast", "enclosure", "motion"],
+      "tokens": ["Building2", "Home", "Users"],
+      "finalKnowledge": ["three-rights-board", "shared-parts-scope", "dependence-chain", "unit-1808-verdicts"],
+      "statefulObjects": []
+    },
+    {
+      "id": "community-parking-rules",
+      "export": "CommunityParkingScene",
+      "layout": "community-lanes-with-parking-split",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "roads-and-greens-belong-to-owners-unless-public-or-personal",
+        "other-facilities-and-property-rooms-absolutely-belong-to-owners",
+        "planned-parking-is-negotiated-separately-and-may-be-let-outward",
+        "occupying-shared-land-for-parking-returns-benefit-to-owner-welfare"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["contrast", "connector", "enclosure", "annotation"],
+      "tokens": ["Building2", "Car", "Coins"],
+      "finalKnowledge": ["road-green-lanes", "parking-split", "rezoning-consent", "property-room-verdict"],
+      "statefulObjects": []
+    },
+    {
+      "id": "voting-threshold-ladder",
+      "export": "VotingLadderScene",
+      "layout": "voting-ladder-with-special-rung",
+      "anchor": "timeline-gate",
+      "grammar": [
+        "participation-needs-double-two-thirds-of-area-and-headcount",
+        "ordinary-matters-pass-by-double-half-of-the-participants",
+        "special-matters-funding-rebuilding-repurposing-pass-by-double-three-quarters",
+        "aggrieved-owners-may-sue-to-revoke-within-one-year"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["connector", "contrast", "enclosure", "motion"],
+      "tokens": ["Vote", "Users", "Hourglass"],
+      "finalKnowledge": ["participation-rung", "ordinary-rung", "special-rung", "revoke-window"],
+      "statefulObjects": []
+    },
+    {
+      "id": "neighboring-relations-fork",
+      "export": "NeighboringForkScene",
+      "layout": "three-mode-fork-with-flowerpot-verdict",
+      "anchor": "document-fork",
+      "grammar": [
+        "neighbouring-relations-are-statutory-extension-and-tolerance-of-land-domination",
+        "reasonable-use-passes-without-consent-but-by-the-least-impact",
+        "status-quo-is-respected-unless-a-more-reasonable-plan-appears",
+        "nuisance-modes-demand-removal-of-hindrance-and-danger"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "external-negation"],
+      "focalChannels": ["connector", "contrast", "enclosure", "annotation"],
+      "tokens": ["House", "Ban", "Gavel"],
+      "finalKnowledge": ["neighbouring-definition", "reasonable-use-mode", "status-quo-mode", "nuisance-mode"],
+      "statefulObjects": []
+    }
+  ]
+}
