@@ -1,0 +1,117 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "employment-liability-lane",
+      "export": "EmploymentLiabilityScene",
+      "layout": "employment-lane-with-recourse-splits",
+      "anchor": "flow-path",
+      "grammar": [
+        "employers-substitute-for-employees-and-recourse-only-for-intent-or-gross-negligence",
+        "dispatched-workers-harm-the-user-bears-all-while-a-faulty-dispatcher-joins-within-its-fault",
+        "helpers-harm-others-through-the-aided-host-unless-help-was-refused-and-recourse-follows-fault",
+        "independent-contractors-bear-the-harm-while-a-faulty-ordering-party-joins-within-its-fault"
+      ],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "thin-underline"],
+      "focalChannels": ["connector", "contrast", "icon", "annotation"],
+      "tokens": ["UserRound", "Users", "Link", "Undo2", "Coins", "Gavel"],
+      "finalKnowledge": [
+        "employer-substitute",
+        "dispatch-liability",
+        "helper-damage-rules",
+        "contractor-ordering-rule"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "pollution-presumption-causeway",
+      "export": "PollutionPresumptionScene",
+      "layout": "pollution-causeway-with-burden-gates",
+      "anchor": "boundary",
+      "grammar": [
+        "pollution-liability-is-no-fault-and-only-broken-causation-excuses",
+        "victims-prove-act-and-harm-while-polluters-must-disprove-causation",
+        "multiple-polluters-split-into-direct-indirect-partial-interactive-and-sequential-cases",
+        "third-party-causation-keeps-the-polluter-liable-with-final-recourse-against-the-third-party"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["contrast", "icon", "connector", "annotation"],
+      "tokens": ["Scale", "Search", "Link", "Split", "Ban", "Coins"],
+      "finalKnowledge": [
+        "no-fault-causation-shift",
+        "multi-polluter-cases",
+        "third-party-ultimate-liability",
+        "ecological-repair-claims"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "falling-object-hazard-ladder",
+      "export": "FallingObjectScene",
+      "layout": "hazard-ladder-with-presumption-rungs",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "unknowable-thrown-objects-spread-proportional-compensation-over-possible-owners-with-recourse",
+        "dangerous-acts-that-drop-objects-untraceably-chain-everyone-who-cannot-exclude-himself",
+        "detached-fittings-bind-owners-managers-and-users-under-presumed-fault-with-supplementary-property-service",
+        "collapse-binds-builder-and-contractor-while-stacks-trees-pits-and-road-spills-run-presumed-fault-ladders"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["contrast", "icon", "connector", "annotation"],
+      "tokens": ["Home", "Search", "Link", "Layers", "Ban", "Coins"],
+      "finalKnowledge": [
+        "thrown-object-nested-shares",
+        "dangerous-drop-chain",
+        "detachment-presumption",
+        "collapse-and-obstruction-ladder"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "animal-guardian-paddock",
+      "export": "AnimalGuardianScene",
+      "layout": "animal-ladder-with-custody-lanes",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "animal-harm-is-no-fault-with-a-victim-ladder-from-exoneration-to-absolute-liability",
+        "guardians-answer-for-wards-with-reduction-for-care-and-payment-first-from-the-wards-property",
+        "entrusted-custodians-join-within-their-fault-and-recourse-runs-differently-for-paid-and-free-care",
+        "schools-presume-fault-for-the-incapable-require-proof-for-the-capable-and-supplement-against-third-parties"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["contrast", "icon", "enclosure", "annotation"],
+      "tokens": ["Scale", "Baby", "Users", "Split", "Search", "Layers"],
+      "finalKnowledge": [
+        "animal-victim-ladder",
+        "guardian-liability",
+        "entrusted-custodian-split",
+        "education-institution-ladder"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "crossroads-traffic-medical-product",
+      "export": "CrossroadsScene",
+      "layout": "four-way-crossroads-with-verdict-boards",
+      "anchor": "document-fork",
+      "grammar": [
+        "traffic-harm-pays-insurance-first-and-assigns-the-driver-with-preserved-owner-fault",
+        "medical-liability-needs-proven-fault-with-statutory-presumptions-and-defense-lanes",
+        "product-defects-bind-producer-and-seller-jointly-to-victims-who-may-claim-without-contract",
+        "network-providers-who-knew-or-should-have-known-and-did-nothing-answer-jointly"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["icon", "contrast", "connector", "annotation"],
+      "tokens": ["Gavel", "Scale", "Ban", "Split", "Users"],
+      "finalKnowledge": [
+        "traffic-driver-principle",
+        "medical-fault-lanes",
+        "product-joint-claims",
+        "network-provider-duty"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

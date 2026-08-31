@@ -1,0 +1,22 @@
+{
+  "directionId": "sand-signal-special-tort-map",
+  "family": "signal-road-registry",
+  "palette": "sand-tan field, cream paper slips, signal yellow, warning red, pine green, indigo blue, coffee ink",
+  "typography": "wayfinding headings on sand rail tabs, warning-red verdicts and signal-yellow condition plates",
+  "composition": "an employment liability lane, a pollution causeway with presumption gates, a falling-object hazard ladder, an animal-and-guardian paddock with custody lanes, and a traffic-medial-product crossroads",
+  "surface": "cream paper road signs riveted on a sand-tan field with signal-yellow rails",
+  "motion": "liability signs post along the lanes, presumption gates flip their burden arrows, hazard ladders light rung by rung and crossroad tokens stop at their verdict boards",
+  "transition": "the sand field, cream sign stock and signal rails persist while lanes, causeways, ladders, paddocks and crossroads are re-dressed between scenes",
+  "conceptTokens": {
+    "连带责任": "Link",
+    "过错推定": "Search",
+    "无过错责任": "Scale",
+    "补充责任": "Layers"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/civil-law/19/special-tort-warning-map/",
+    "title": "警示路牌阵"
+  }
+}
