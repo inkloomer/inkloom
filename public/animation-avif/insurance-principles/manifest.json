@@ -1,0 +1,70 @@
+{
+  "animationId": "insurance-principles",
+  "compositionId": "InsurancePrinciples",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-31T17:31:19.535Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 329,
+      "frameCount": 165,
+      "id": "insurance-principles-scene-01",
+      "number": "01",
+      "startFrame": 0,
+      "title": "保险利益",
+      "durationMs": 5500,
+      "file": "insurance-principles-scene-01.avif",
+      "fileSize": 586116,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "2bd8cca7c9476cc6fe40afbf3c08cd096a2b7b80273b62557feebb48c8663414",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "fdb2569a8fbc4a470d4924bbce19f5f25dfe17b63794a6ccdf56c19a5730fdb2"
+    },
+    {
+      "endFrame": 629,
+      "frameCount": 150,
+      "id": "insurance-principles-scene-02",
+      "number": "02",
+      "startFrame": 330,
+      "title": "可为谁投保",
+      "durationMs": 5000,
+      "file": "insurance-principles-scene-02.avif",
+      "fileSize": 543153,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "833078d57a9e278df98918424103de522913f038e7a950c63da6d5b20e2a7d31",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "fdb2569a8fbc4a470d4924bbce19f5f25dfe17b63794a6ccdf56c19a5730fdb2"
+    },
+    {
+      "endFrame": 979,
+      "frameCount": 175,
+      "id": "insurance-principles-scene-03",
+      "number": "03",
+      "startFrame": 630,
+      "title": "最大诚信",
+      "durationMs": 5833,
+      "file": "insurance-principles-scene-03.avif",
+      "fileSize": 772154,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "f20a4d801e4e7770babc5ca44b101bd247380f5b66ffd9c5ff7ec561e025f85c",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "fdb2569a8fbc4a470d4924bbce19f5f25dfe17b63794a6ccdf56c19a5730fdb2"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "fdb2569a8fbc4a470d4924bbce19f5f25dfe17b63794a6ccdf56c19a5730fdb2",
+  "targetFps": 30,
+  "totalFileSize": 1901423
+}
