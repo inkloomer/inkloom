@@ -1,0 +1,70 @@
+{
+  "animationId": "adoption-dossier-registry",
+  "compositionId": "AdoptionDossierRegistry",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-31T08:30:04.093Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 559,
+      "frameCount": 280,
+      "id": "condition-triptych",
+      "number": "01",
+      "startFrame": 0,
+      "title": "收养的条件",
+      "durationMs": 9333,
+      "file": "condition-triptych.avif",
+      "fileSize": 907524,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "46c116424d9c4ed7fd95a7a4daa55426d7f1d3a5fec0718768215ac6dd0b683c",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "b7a01d3e710b624b217b71bcd33bbd83403f31cad12096332b27b4c981dd68ed"
+    },
+    {
+      "endFrame": 1179,
+      "frameCount": 310,
+      "id": "formation-consent-gate",
+      "number": "02",
+      "startFrame": 560,
+      "title": "收养的成立",
+      "durationMs": 10333,
+      "file": "formation-consent-gate.avif",
+      "fileSize": 862336,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "a2f58088369ea2eb833d21ca57a4c97fd566afa49b1773448f6194a8d5c1626b",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "b7a01d3e710b624b217b71bcd33bbd83403f31cad12096332b27b4c981dd68ed"
+    },
+    {
+      "endFrame": 1779,
+      "frameCount": 300,
+      "id": "termination-fork",
+      "number": "03",
+      "startFrame": 1180,
+      "title": "收养的解除",
+      "durationMs": 10000,
+      "file": "termination-fork.avif",
+      "fileSize": 931665,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "9eac2760ba4179eb1d29a53e5f21c49a900e6c4c021ca8e854187a9039d352fc",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "b7a01d3e710b624b217b71bcd33bbd83403f31cad12096332b27b4c981dd68ed"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "b7a01d3e710b624b217b71bcd33bbd83403f31cad12096332b27b4c981dd68ed",
+  "targetFps": 30,
+  "totalFileSize": 2701525
+}
