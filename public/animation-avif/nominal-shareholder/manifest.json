@@ -1,0 +1,70 @@
+{
+  "animationId": "nominal-shareholder",
+  "compositionId": "NominalShareholder",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-31T07:31:44.356Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 359,
+      "frameCount": 180,
+      "id": "nominal-shareholder-scene-01",
+      "number": "01",
+      "startFrame": 0,
+      "title": "代持股的四角关系",
+      "durationMs": 6000,
+      "file": "nominal-shareholder-scene-01.avif",
+      "fileSize": 485404,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "a5e9652f43c61b2f84d33233931f5665d3f21df01cf36dcd80dd82884bbf2db1",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "832dc37bde8001d486d03c57ffcc075c94c96aba180be0eb166bcf94e8893310"
+    },
+    {
+      "endFrame": 737,
+      "frameCount": 189,
+      "id": "nominal-shareholder-scene-02",
+      "number": "02",
+      "startFrame": 360,
+      "title": "名义股东处分股权",
+      "durationMs": 6300,
+      "file": "nominal-shareholder-scene-02.avif",
+      "fileSize": 553980,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "89304c8e5a600b104dbb41d0f65ac54ba81b0d2bd52dc1a0ee246f0626a81cf8",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "832dc37bde8001d486d03c57ffcc075c94c96aba180be0eb166bcf94e8893310"
+    },
+    {
+      "endFrame": 1097,
+      "frameCount": 180,
+      "id": "nominal-shareholder-scene-03",
+      "number": "03",
+      "startFrame": 738,
+      "title": "代持与冒名的边界",
+      "durationMs": 6000,
+      "file": "nominal-shareholder-scene-03.avif",
+      "fileSize": 555219,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "4e229b8c67a53f15ce2bfe0c8ed6935291f03570da73d85bdaacb12e8d3088e9",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "832dc37bde8001d486d03c57ffcc075c94c96aba180be0eb166bcf94e8893310"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "832dc37bde8001d486d03c57ffcc075c94c96aba180be0eb166bcf94e8893310",
+  "targetFps": 30,
+  "totalFileSize": 1594603
+}
