@@ -1,44 +1,72 @@
 ---
 title: InkLoom 法考知识库
-description: 刑法与各科目主客观题核心考点交互式学案与记忆消隐系统
+description: 全科目法考核心考点交互式学案与记忆消隐系统
 ---
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
 
-欢迎使用 **InkLoom 交互式法考笔记**。你可以在左侧边栏中浏览完整的科目目录树，或通过下方索引快速进入已整理的各科目考点。
+欢迎使用 **InkLoom 交互式法考笔记**。全部 **8 个科目 · 325 篇**考点学案均已上线：左侧边栏可浏览各科目的完整目录树，右上角可开启背诵消隐模式，下方索引可直达每个科目的入口页面。
 
-## 📘 客观题阶段 (Objective Stage)
+## 📚 科目导航
 
-### ⚖️ 刑法 (Criminal Law)
+<CardGrid stagger>
+  <Card title="⚖️ 刑法（35 篇）" icon="open-book">
+    总则与分论全考点：犯罪构成、犯罪形态、共同犯罪、财产犯罪、贪污贿赂罪等图形化学案。
+    [从第01讲 刑法论进入 →](/inkloom/objective/criminal/01/penal-frontier-range/)
+  </Card>
 
-* **第23讲：贪污贿赂罪**
-  * 🔗 [刑法第23讲·中介受贿模型整合](/inkloom/objective/criminal/23/joint-crime/) —— 斡旋受贿与利用影响力受贿的身份闸门、三类模型及 2023 陷阱
-  * 🔗 [贪污贿赂罪核心考点](/inkloom/objective/criminal/23/corruption/) —— 贪污与贿赂类犯罪综合整理
+  <Card title="🏛️ 民法（34 篇）" icon="document">
+    民法总则、物权、合同、侵权、婚姻继承全专题，按专题拆分的逐考点交互图解。
+    [进入专题导航 →](/inkloom/objective/civil-law/01/rights-shield-armory/)
+  </Card>
 
-### 📝 民法 (Civil Law)
-*（内容待补充，支持随时在 `src/content/docs/objective/civil/` 目录下添加新文档）*
+  <Card title="📋 民事诉讼法（68 篇）" icon="setting">
+    覆盖诉的基本理论、证据证明、保全执行、二审再审与仲裁，全科目篇目最多的一科。
+    [从多元纠纷解决机制进入 →](/inkloom/objective/civil-procedure/01/dispute-resolution/)
+  </Card>
 
-### 💼 行政法 (Administrative Law)
-*（内容待补充）*
+  <Card title="🚓 刑事诉讼法（25 篇）" icon="magnifier">
+    管辖、证据排除、强制措施、不起诉、审判程序与特别程序，专题一一对应。
+    [从刑事诉讼构造进入 →](/inkloom/objective/criminal-procedure/01/procedure-structure-orrery/)
+  </Card>
 
----
+  <Card title="💼 行政法（25 篇）" icon="document">
+    行政主体、行政处罚、诉讼复议衔接、国家赔偿与行政复议制度全景。
+    [从行政法的基本原则进入 →](/inkloom/objective/administrative-law/01/administrative-principles-compass/)
+  </Card>
+
+  <Card title="🏢 商法（31 篇）" icon="open-book">
+    公司法全考点、破产法程序与债务人财产规则，按考点逐个成篇。
+    [从公司的分类进入 →](/inkloom/objective/commercial-law/01/company-capacity/)
+  </Card>
+
+  <Card title="📖 理论法（88 篇）" icon="setting">
+    法理学、宪法学、法制史、司法制度与法律职业伦理、习近平法治思想五大板块。
+    [从法理学进入 →](/inkloom/objective/theoretical-law/01/application-of-law/)
+  </Card>
+
+  <Card title="🌏 三国法（19 篇）" icon="magnifier">
+    国际公法、国际私法、国际经济法三大分支，专题覆盖渊源、条约、买卖与支付。
+    [从国际法的渊源进入 →](/inkloom/objective/international-law/01/sources-of-international-law/)
+  </Card>
+</CardGrid>
 
 ## 🚀 核心交互功能
 
 <CardGrid stagger>
   <Card title="🧠 记忆背诵消隐模式" icon="open-book">
-    在页面右上角一键开启消隐遮罩，模糊关键犯罪定性、数额等结论词，鼠标悬停即可显现，专为法考背诵记忆设计。
+    在页面右上角一键开启消隐遮罩，模糊关键定性、数额等结论词，鼠标悬停即可显现，专为法考背诵记忆设计。
   </Card>
-  
+
   <Card title="🔍 交互式行为流向图" icon="magnifier">
-    图形化行为流向图支持关联高亮，鼠标悬停于“行为胶囊”上即可自动点亮资金流向并加速流动，直观解析复杂多方共犯关系。
+    图形化行为流向图支持关联高亮，鼠标悬停于节点上即可自动点亮关联要素并加速流动，直观解析复杂多方关系。
   </Card>
-  
+
   <Card title="📋 一键无缝复用" icon="document">
     支持一键生成带有完全交互效果的纯净 HTML 源码，或生成自动防止 Obsidian/Notion 强缓存的 iframe 嵌入代码。
   </Card>
-  
+
   <Card title="⚖️ 考点对比记忆矩阵" icon="setting">
-    整合司法解释多重截留、代收、隐瞒、猜出等演变模型，通过对比矩阵列出主体罪名差异与罪数处断，杜绝考点混淆。
+    以对比矩阵、分流仪、控制台等图形语法并列呈现易混考点，标注主体差异与处断规则，杜绝考点混淆。
   </Card>
 </CardGrid>
