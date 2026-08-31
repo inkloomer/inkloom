@@ -1,0 +1,95 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "bill-overview-scene-01",
+      "export": "BillOverview01Scene",
+      "layout": "trio-bill-wires-1",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "delegation-promise-wires",
+        "tenor-split"
+      ],
+      "textTreatments": [
+        "chip",
+        "soft-highlight",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "contrast",
+        "connector",
+        "icon"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "bill-overview-knowledge-1",
+        "bill-overview-scene-01-check",
+        "bill-overview-scene-01-promissory",
+        "bill-overview-scene-01-draft"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "bill-overview-scene-02",
+      "export": "BillOverview02Scene",
+      "layout": "bill-journey-spine-2",
+      "anchor": "flow-path",
+      "grammar": [
+        "endorsement-spine-travel",
+        "recourse-forkback"
+      ],
+      "textTreatments": [
+        "chip",
+        "stamp",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "motion",
+        "connector",
+        "contrast"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "bill-overview-knowledge-2",
+        "bill-overview-scene-02-spine",
+        "bill-overview-scene-02-person-a",
+        "bill-overview-scene-02-person-b",
+        "bill-overview-scene-02-person-c",
+        "bill-overview-scene-02-person-d",
+        "bill-overview-scene-02-payer",
+        "bill-overview-scene-02-rights"
+      ],
+      "statefulObjects": [
+        "bill-holding-travel"
+      ]
+    },
+    {
+      "id": "bill-overview-scene-03",
+      "export": "BillOverview03Scene",
+      "layout": "six-feature-matrix-3",
+      "anchor": "typographic-sequence",
+      "grammar": [
+        "feature-grid",
+        "example-contrast-rows"
+      ],
+      "textTreatments": [
+        "chip",
+        "soft-highlight",
+        "external-negation"
+      ],
+      "focalChannels": [
+        "contrast",
+        "icon",
+        "spatial"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "bill-overview-knowledge-3",
+        "bill-overview-scene-03-grid"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

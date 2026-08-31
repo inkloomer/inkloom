@@ -1,0 +1,16 @@
+{
+  "directionId": "bill-circulation-desk",
+  "derivedFrom": "demo-clerk-desk",
+  "variation": "票据流转柜台: 一张票据沿出票-背书-背书-持票干线逐站行进, 追索权红箭头从持票人回头指向前手, 六大特征六格账板并排",
+  "family": "bill-circulation-desk",
+  "palette": "#EFEAE2 + #2B2B33 + #0F6B5C + #8A4B2F + #B23A30 + #B98A2F + #2C4A6E",
+  "typography": "WenKai 柜台站牌 + 票据徽章 + 特征格",
+  "composition": "三票委托承诺对照 + 票据旅程干线与追索回指 + 六特征矩阵与判例",
+  "surface": "柜台纸卡、票据金徽章、签章站牌, 无圆角",
+  "motion": "票据徽章沿干线逐站移交, 追索红箭头回溯前手, 三票卡自两翼滑入, 六特征格逐格点亮",
+  "transition": "青色柜台贯穿三场, 铜色出票链与红色追索呼应",
+  "catalog": {
+    "status": "variant",
+    "sourceDirectionId": "bill-circulation-desk"
+  }
+}
