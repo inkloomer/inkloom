@@ -1,0 +1,16 @@
+{
+  "directionId": "subrogation-tollgate",
+  "derivedFrom": "demo-clerk-desk",
+  "variation": "财产险收费站: 保险标的沿转让轨道过通知继受两站, 第三者索赔徽章按请求路由直奔出站口, 代位追偿车以保险人自己名义驶出收费站, 家庭共同体闸口落下禁行",
+  "family": "subrogation-tollgate",
+  "palette": "#EDE8DF + #2B2B33 + #3B4A6B + #8A4B2F + #15725F + #B23A30 + #B98A2F",
+  "typography": "WenKai 收费站牌 + 索赔徽章 + 禁行杆",
+  "composition": "标的转让轨道 + 责任保险路由 + 代位求偿车道 + 家庭除外大厅",
+  "surface": "收费站纸卡、索赔徽章、禁行红杆与金口诀条, 无圆角",
+  "motion": "标的徽章沿转让轨道逐站移交, 第三者索赔徽章直奔赔付路由, 代位追偿徽章驶离车道, 禁行杆在家庭共同体前落下",
+  "transition": "铜色收费站贯穿四场, 青色允许与红色禁止双线呼应",
+  "catalog": {
+    "status": "variant",
+    "sourceDirectionId": "subrogation-tollgate"
+  }
+}

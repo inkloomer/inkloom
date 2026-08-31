@@ -1,0 +1,121 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "property-insurance-scene-01",
+      "export": "PropertyInsurance01Scene",
+      "layout": "subject-transfer-track-1",
+      "anchor": "flow-path",
+      "grammar": [
+        "transfer-track",
+        "notice-gate"
+      ],
+      "textTreatments": [
+        "chip",
+        "stamp",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "motion",
+        "connector",
+        "contrast"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "property-insurance-knowledge-1",
+        "property-insurance-scene-01-notice",
+        "property-insurance-scene-01-succession",
+        "property-insurance-scene-01-risk"
+      ],
+      "statefulObjects": [
+        "insured-subject-transfer"
+      ]
+    },
+    {
+      "id": "property-insurance-scene-02",
+      "export": "PropertyInsurance02Scene",
+      "layout": "liability-payout-routing-2",
+      "anchor": "flow-target",
+      "grammar": [
+        "thirdparty-routing",
+        "joinguilt-priority"
+      ],
+      "textTreatments": [
+        "chip",
+        "external-negation",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "motion",
+        "connector",
+        "contrast"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "property-insurance-knowledge-2",
+        "property-insurance-scene-02-concept",
+        "property-insurance-scene-02-joinguilt"
+      ],
+      "statefulObjects": [
+        "thirdparty-claim-routing"
+      ]
+    },
+    {
+      "id": "property-insurance-scene-03",
+      "export": "PropertyInsurance03Scene",
+      "layout": "subrogation-lane-3",
+      "anchor": "flow-path",
+      "grammar": [
+        "subrogation-lane",
+        "waive-window-split"
+      ],
+      "textTreatments": [
+        "chip",
+        "stamp",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "motion",
+        "connector",
+        "contrast"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "property-insurance-knowledge-3",
+        "property-insurance-scene-03-concept",
+        "property-insurance-scene-03-requirements"
+      ],
+      "statefulObjects": [
+        "subrogation-claim-travel"
+      ]
+    },
+    {
+      "id": "property-insurance-scene-04",
+      "export": "PropertyInsurance04Scene",
+      "layout": "family-exclusion-hall-4",
+      "anchor": "concept-icon",
+      "grammar": [
+        "exclusion-gate",
+        "principle-anchor"
+      ],
+      "textTreatments": [
+        "chip",
+        "stamp",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "icon",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "insurance-property-knowledge-4",
+        "property-insurance-scene-04-exclusion"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}
