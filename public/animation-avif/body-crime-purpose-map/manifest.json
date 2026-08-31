@@ -3,7 +3,7 @@
   "compositionId": "BodyCrimePurposeMap",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-08-30T18:16:03.447Z",
+  "generatedAt": "2026-08-31T06:14:04.770Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -84,13 +84,13 @@
       "title": "拐卖·收买·拐骗：目的定罪名",
       "durationMs": 8667,
       "file": "traffic-sell-purpose-ward.avif",
-      "fileSize": 1310386,
+      "fileSize": 1309702,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "3c4cfbd5765d46b4d0ff66b2a4161216f78bca29beb23fe3585c295d6ea84524",
+      "sha256": "84386134eb91832aa96e16c95411a37c79bab28c54fa0f712aa30c53bb7f112d",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "6d24eb388abd3df6dedac98d43230c201e42cfa281f986138ebef465ae4a133a"
+      "sceneFingerprint": "9d3602f0c28eae629598a0c2ecd097d058ffa2cf83407b51ba40b010687c5088"
     }
   ],
   "size": {
@@ -98,7 +98,7 @@
     "width": 2560
   },
   "sourceFps": 30,
-  "sourceFingerprint": "f8cf5283e04a11897d8e8dfe0838107694cbd36c51e62dc347603a74fd4a370f",
+  "sourceFingerprint": "fe60c3af70a2259db5a40ca57610f8a17aac3a26b421b7e1e15bbd9ee07b3a5d",
   "targetFps": 30,
-  "totalFileSize": 5871727
+  "totalFileSize": 5871043
 }

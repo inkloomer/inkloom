@@ -13,7 +13,9 @@
     "抢劫罪": "Zap",
     "诈骗罪": "Scale",
     "敲诈勒索罪": "Gavel",
-    "处分": "Scale"
+    "处分": "Scale",
+    "侵占罪": "Package",
+    "抢夺罪": "Grab"
   },
   "catalog": {
     "status": "featured",

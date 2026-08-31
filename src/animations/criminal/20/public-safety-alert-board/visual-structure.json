@@ -50,6 +50,42 @@
       "tokens": ["Zap", "Ban", "Scale", "Gavel"],
       "finalKnowledge": ["driving-panel", "guns-panel", "safety-panel"],
       "statefulObjects": []
+    },
+    {
+      "id": "terror-alert-ward",
+      "export": "TerrorAlertWardScene",
+      "layout": "terror-alert-tri-ward",
+      "anchor": "boundary",
+      "grammar": ["org-crime-board", "aid-crime-board"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "annotation"],
+      "tokens": ["Siren", "Scale", "Users", "Ban", "Swords", "Coins", "ShieldCheck", "Bomb", "Radio", "Zap"],
+      "finalKnowledge": ["org-crime-board", "aid-crime-board", "prepare-crime-board"],
+      "statefulObjects": []
+    },
+    {
+      "id": "interfere-driving-panel",
+      "export": "InterfereDrivingPanelScene",
+      "layout": "interfere-driving-split-ward",
+      "anchor": "comparison-axis",
+      "grammar": ["interfere-structure-board", "competing-crimes-board"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "connector"],
+      "tokens": ["Bus", "Ban", "Hand", "Users", "Scale", "Zap", "Siren", "CarFront"],
+      "finalKnowledge": ["interfere-structure-board", "competing-crimes-board", "driving-map-board"],
+      "statefulObjects": []
+    },
+    {
+      "id": "gun-factory-safety",
+      "export": "GunFactorySafetyScene",
+      "layout": "gun-factory-safety-quad-ward",
+      "anchor": "flow-path",
+      "grammar": ["theft-snatch-guns-board", "manufacture-trade-board"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "connector"],
+      "tokens": ["Target", "Bomb", "ShieldAlert", "Ban", "Scale", "Factory", "PackageCheck", "Siren", "Pickaxe"],
+      "finalKnowledge": ["gun-identify-board", "theft-snatch-guns-board", "manufacture-trade-board", "factory-report-board"],
+      "statefulObjects": []
     }
   ]
 }

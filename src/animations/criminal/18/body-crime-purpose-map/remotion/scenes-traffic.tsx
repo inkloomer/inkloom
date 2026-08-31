@@ -43,7 +43,7 @@ export const TrafficSellPurposeWardScene = () => {
             <IconChip icon={<Scale size={24} color={C.white} strokeWidth={2.2} />} tone={C.ward} title="结果加重：">
               被害妇女儿童及其亲属重伤死亡——直接因果·泄愤报复致重伤单独定故意伤害并罚
             </IconChip>
-            <IconChip icon={<Users size={24} color={C.white} strokeWidth={2.2} />} tone={C.brass} title="成年妇女同意：">
+            <IconChip icon={<Users size={24} color={C.white} strokeWidth={2.2} />} tone={C.amber} title="成年妇女同意：">
               放弃人身自由法益 → 行为人不构成拐卖妇女罪（多数说）
             </IconChip>
           </Panel>

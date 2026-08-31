@@ -41,8 +41,8 @@ export const PossessionPurposeWardScene = () => {
           </Panel>
         </Enter>
         <Enter delay={42} marker="object-panel" style={{position: 'absolute', left: 0, right: 0, top: 428, bottom: 0}}>
-          <Panel tone={C.chart2} watermark={<Scale size={160} color={C.chart2} strokeWidth={1.6} />} style={{height: '100%', padding: '14px 22px', display: 'flex', flexDirection: 'column', gap: 8}}>
-            <TabChip tone={C.chart2} icon={<Coins size={24} color={C.white} strokeWidth={2.2} />}>行为对象 · 财物的范围</TabChip>
+          <Panel tone={C.slate} watermark={<Scale size={160} color={C.slate} strokeWidth={1.6} />} style={{height: '100%', padding: '14px 22px', display: 'flex', flexDirection: 'column', gap: 8}}>
+            <TabChip tone={C.slate} icon={<Coins size={24} color={C.white} strokeWidth={2.2} />}>行为对象 · 财物的范围</TabChip>
             <div style={{display: 'flex', gap: 10, flexWrap: 'wrap'}}>
               <Enter delay={54}><SoftHi style={{fontSize: 20 }}>无体物（电·网络信号）</SoftHi></Enter>
               <Enter delay={62}><SoftHi style={{fontSize: 20 }}>虚拟财产（Q币·游戏点卡）</SoftHi></Enter>

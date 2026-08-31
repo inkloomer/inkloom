@@ -20,10 +20,10 @@ export const RobberyCoercionStepsScene = () => {
             <IconChip icon={<Zap size={26} color={C.white} strokeWidth={2.2} />} tone={C.seal} title="暴力：">
               足以压制对方反抗
             </IconChip>
-            <IconChip icon={<Ban size={26} color={C.white} strokeWidth={2.2} />} tone={C.chart2} title="胁迫：">
+            <IconChip icon={<Ban size={26} color={C.white} strokeWidth={2.2} />} tone={C.slate} title="胁迫：">
               必须以暴力相胁迫（当场实现恶害）；揭发隐私→敲诈勒索罪；假炸弹也属暴力胁迫∈
             </IconChip>
-            <IconChip icon={<Gavel size={26} color={C.white} strokeWidth={2.2} />} tone={C.amber} title="其他方法：">
+            <IconChip icon={<Gavel size={26} color={C.white} strokeWidth={2.2} />} tone={C.brass} title="其他方法：">
               昏醉型抢劫（麻醉后取财）；拘禁型抢劫（反锁阳台取财）——自己昏醉被利用→仅盗窃
             </IconChip>
           </Panel>
@@ -34,7 +34,7 @@ export const RobberyCoercionStepsScene = () => {
             <IconChip icon={<Scale size={26} color={C.white} strokeWidth={2.2} />} tone={C.lock} title="三轻罪：">
               犯盗窃 · 诈骗 · 抢夺罪
             </IconChip>
-            <IconChip icon={<Zap size={26} color={C.white} strokeWidth={2.2} />} tone={C.amber} title="三目的：">
+            <IconChip icon={<Zap size={26} color={C.white} strokeWidth={2.2} />} tone={C.brass} title="三目的：">
               窝藏赃物 · 抗拒抓捕 · 毁灭罪证
             </IconChip>
             <IconChip icon={<Gavel size={26} color={C.white} strokeWidth={2.2} />} tone={C.seal} title="实行行为：">
@@ -50,7 +50,7 @@ export const RobberyCoercionStepsScene = () => {
                 <Enter delay={44}><IconChip icon={<Ban size={24} color={C.white} strokeWidth={2.2} />} tone={C.seal} title="抢劫＝完全剥夺：">
                   压制反抗·没得选只好给——暴力胁迫与取财具有当场性
                 </IconChip></Enter>
-                <Enter delay={54}><IconChip icon={<Scale size={24} color={C.white} strokeWidth={2.2} />} tone={C.chart2} title="敲诈勒索＝部分剥夺：">
+                <Enter delay={54}><IconChip icon={<Scale size={24} color={C.white} strokeWidth={2.2} />} tone={C.slate} title="敲诈勒索＝部分剥夺：">
                   没压制反抗·有的选最好给——可当场也可事后交付
                 </IconChip></Enter>
               </div>

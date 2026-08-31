@@ -31,21 +31,21 @@ export const FraudExtortionSplitScene = () => {
             <IconChip icon={<Ban size={26} color={C.white} strokeWidth={2.2} />} tone={C.seal} title="无处分意识 → 盗窃：">
               案例书中夹带案·调包零钱案
             </IconChip>
-            <IconChip icon={<Scale size={26} color={C.white} strokeWidth={2.2} />} tone={C.ward} title="处分数额认识错误：">
+            <IconChip icon={<Scale size={26} color={C.white} strokeWidth={2.2} />} tone={C.lock} title="处分数额认识错误：">
               不影响处分意识成立（不影响诈骗既遂）
             </IconChip>
           </Panel>
         </Enter>
         <Enter delay={30} marker="triangle-panel" style={{position: 'absolute', left: 0, top: 344, width: 1050, height: 400}}>
-          <Panel tone={C.chart2} watermark={<Scale size={160} color={C.chart2} strokeWidth={1.6} />} style={{height: '100%', padding: '12px 16px', display: 'flex', flexDirection: 'column', gap: 8}}>
-            <TabChip tone={C.chart2} icon={<Scale size={24} color={C.white} strokeWidth={2.2} />}>三角关系（诈骗与盗窃的区分Ⅱ）</TabChip>
-            <IconChip icon={<Users size={26} color={C.white} strokeWidth={2.2} />} tone={C.chart2} title="三角诈骗：">
+          <Panel tone={C.slate} watermark={<Scale size={160} color={C.slate} strokeWidth={1.6} />} style={{height: '100%', padding: '12px 16px', display: 'flex', flexDirection: 'column', gap: 8}}>
+            <TabChip tone={C.slate} icon={<Scale size={24} color={C.white} strokeWidth={2.2} />}>三角关系（诈骗与盗窃的区分Ⅱ）</TabChip>
+            <IconChip icon={<Users size={26} color={C.white} strokeWidth={2.2} />} tone={C.slate} title="三角诈骗：">
               受骗人（处分人）≠被害人——如诉讼诈骗：法官受骗处分被告财产
             </IconChip>
             <IconChip icon={<Gavel size={26} color={C.white} strokeWidth={2.2} />} tone={C.lock} title="新型三角诈骗：">
               受骗人处分自己占有的被害人财产
             </IconChip>
-            <IconChip icon={<Scale size={26} color={C.white} strokeWidth={2.2} />} tone={C.ward} title="与侵占罪的区分：">
+            <IconChip icon={<Scale size={26} color={C.white} strokeWidth={2.2} />} tone={C.lock} title="与侵占罪的区分：">
               侵占＝事先已占有（无转移占有）· 盗窃＝破坏他人占有
             </IconChip>
           </Panel>
@@ -53,7 +53,7 @@ export const FraudExtortionSplitScene = () => {
         <Enter delay={42} marker="extortion-panel" style={{position: 'absolute', left: 1074, top: 344, width: 702, height: 400}}>
           <Panel tone={C.seal} watermark={<Ban size={160} color={C.seal} strokeWidth={1.6} />} style={{height: '100%', padding: '12px 16px', display: 'flex', flexDirection: 'column', gap: 8}}>
             <TabChip tone={C.seal} icon={<Ban size={24} color={C.white} strokeWidth={2.2} />}>敲诈勒索 · 与诈骗的关系</TabChip>
-            <IconChip icon={<Scale size={26} color={C.white} strokeWidth={2.2} />} tone={C.amber} title="竞合：">
+            <IconChip icon={<Scale size={26} color={C.white} strokeWidth={2.2} />} tone={C.brass} title="竞合：">
               恐惧心理＋认识错误并存 → 敲诈勒索与诈骗的想象竞合
             </IconChip>
             <IconChip icon={<Ban size={26} color={C.white} strokeWidth={2.2} />} tone={C.seal} title="编造恐吓信息型：">

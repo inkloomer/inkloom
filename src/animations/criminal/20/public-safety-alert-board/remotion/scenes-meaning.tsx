@@ -26,12 +26,12 @@ export const MeaningFireRulersScene = () => {
           </Panel>
         </Enter>
         <Enter delay={18} marker="fire-relations-panel" style={{position: 'absolute', left: 900, top: 0, width: 876, height: 356}}>
-          <Panel tone={C.amber} watermark={<Gavel size={160} color={C.amber} strokeWidth={1.6} />} style={{height: '100%', padding: '12px 16px', display: 'flex', flexDirection: 'column', gap: 8}}>
-            <TabChip tone={C.amber} icon={<Gavel size={24} color={C.white} strokeWidth={2.2} />}>放火等四罪 vs 故意杀人罪（2023）</TabChip>
+          <Panel tone={C.yellow} watermark={<Gavel size={160} color={C.yellow} strokeWidth={1.6} />} style={{height: '100%', padding: '12px 16px', display: 'flex', flexDirection: 'column', gap: 8}}>
+            <TabChip tone={C.yellow} icon={<Gavel size={24} color={C.white} strokeWidth={2.2} />}>放火等四罪 vs 故意杀人罪（2023）</TabChip>
             <IconChip icon={<Flame size={26} color={C.white} strokeWidth={2.2} />} tone={C.siren} title="危害公共安全＋过失死亡：">
               结果加重犯——放火罪（过失）致人死亡（烧仓库案）
             </IconChip>
-            <IconChip icon={<Flame size={26} color={C.white} strokeWidth={2.2} />} tone={C.amber} title="危害公共安全＋故意死亡：">
+            <IconChip icon={<Flame size={26} color={C.white} strokeWidth={2.2} />} tone={C.yellow} title="危害公共安全＋故意死亡：">
               结果加重犯——放火罪（故意）致人死亡（公交车放火案）
             </IconChip>
             <IconChip icon={<Ban size={26} color={C.white} strokeWidth={2.2} />} tone={C.night} title="未危害公共安全＋故意死亡：">
@@ -45,7 +45,7 @@ export const MeaningFireRulersScene = () => {
             <div style={{fontSize: 22, fontWeight: 880, color: C.ink, lineHeight: 1.55}}>
               投危险物质罪→保护<Mark color={C.siren}>公共安全</Mark>（投真货·实际危险：狂犬病狗扔垃圾站∈）
               <br />
-              投虚假危险物质罪→保护<Mark color={C.ward}>社会管理秩序</Mark>（投假货·心理恐慌∉公共安全）
+              投虚假危险物质罪→保护<Mark color={C.green}>社会管理秩序</Mark>（投假货·心理恐慌∉公共安全）
             </div>
           </Panel>
         </Enter>

@@ -189,6 +189,267 @@
         "extortion-panel"
       ],
       "statefulObjects": []
+    },
+    {
+      "id": "embezzlement-trust-ledger",
+      "export": "EmbezzlementTrustLedgerScene",
+      "layout": "embezzlement-trust-quad-ledger",
+      "anchor": "document-fork",
+      "grammar": [
+        "object-ledger",
+        "possession-cases-board"
+      ],
+      "textTreatments": [
+        "chip",
+        "label-block",
+        "soft-highlight",
+        "thin-underline",
+        "external-negation",
+        "stamp"
+      ],
+      "focalChannels": [
+        "icon",
+        "contrast",
+        "enclosure",
+        "annotation"
+      ],
+      "tokens": [
+        "ScrollText",
+        "Package",
+        "Hand",
+        "KeyRound",
+        "Users",
+        "Coins",
+        "Ban",
+        "BookOpen",
+        "Scale"
+      ],
+      "finalKnowledge": [
+        "statute-270-strip",
+        "object-ledger",
+        "possession-cases-board",
+        "illicit-trust-board",
+        "conduct-mode-board"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "snatch-violence-lane",
+      "export": "SnatchViolenceLaneScene",
+      "layout": "snatch-violence-lane",
+      "anchor": "flow-path",
+      "grammar": [
+        "snatch-structure-board",
+        "weapon-clause-board"
+      ],
+      "textTreatments": [
+        "chip",
+        "label-block",
+        "soft-highlight",
+        "thin-underline",
+        "external-negation",
+        "stamp"
+      ],
+      "focalChannels": [
+        "icon",
+        "contrast",
+        "enclosure",
+        "connector"
+      ],
+      "tokens": [
+        "Grab",
+        "Zap",
+        "Scale",
+        "Ban",
+        "ShieldAlert",
+        "Dog",
+        "Bike",
+        "Timer",
+        "ScrollText"
+      ],
+      "finalKnowledge": [
+        "snatch-structure-board",
+        "myth-split-board",
+        "weapon-clause-board",
+        "carry-gate-board",
+        "judicial-interpret-board"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "robbery-aggravation-board",
+      "export": "RobberyAggravationBoardScene",
+      "layout": "robbery-aggravation-octo-board",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "home-board",
+        "injury-board"
+      ],
+      "textTreatments": [
+        "chip",
+        "label-block",
+        "soft-highlight",
+        "thin-underline",
+        "external-negation",
+        "stamp"
+      ],
+      "focalChannels": [
+        "icon",
+        "contrast",
+        "enclosure",
+        "spatial"
+      ],
+      "tokens": [
+        "Zap",
+        "Home",
+        "Train",
+        "Landmark",
+        "Repeat",
+        "Skull",
+        "ShieldAlert",
+        "Crosshair",
+        "Scale",
+        "Ban",
+        "Coins",
+        "Users"
+      ],
+      "finalKnowledge": [
+        "aggravation-header",
+        "home-board",
+        "transit-board",
+        "bank-board",
+        "repeat-board",
+        "injury-board",
+        "impersonate-board",
+        "gun-board",
+        "military-board"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "extortion-will-freedom",
+      "export": "ExtortionWillFreedomScene",
+      "layout": "extortion-will-freedom-split",
+      "anchor": "boundary",
+      "grammar": [
+        "extortion-model-board",
+        "will-freedom-board"
+      ],
+      "textTreatments": [
+        "chip",
+        "label-block",
+        "soft-highlight",
+        "thin-underline",
+        "external-negation",
+        "stamp"
+      ],
+      "focalChannels": [
+        "icon",
+        "contrast",
+        "enclosure",
+        "annotation"
+      ],
+      "tokens": [
+        "Megaphone",
+        "EyeOff",
+        "Ban",
+        "Scale",
+        "Coins",
+        "Zap",
+        "Gavel",
+        "Handshake"
+      ],
+      "finalKnowledge": [
+        "extortion-model-board",
+        "completion-causation-board",
+        "will-freedom-board",
+        "exercise-right-board"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "minor-crimes-completion",
+      "export": "MinorCrimesCompletionScene",
+      "layout": "minor-crimes-completion-quad",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "damage-board",
+        "misuse-funds-board"
+      ],
+      "textTreatments": [
+        "chip",
+        "label-block",
+        "soft-highlight",
+        "thin-underline",
+        "external-negation",
+        "stamp"
+      ],
+      "focalChannels": [
+        "icon",
+        "contrast",
+        "enclosure",
+        "spatial"
+      ],
+      "tokens": [
+        "Skull",
+        "Ban",
+        "Bird",
+        "Coins",
+        "Timer",
+        "Scale",
+        "Landmark",
+        "Hand",
+        "HardHat",
+        "Wallet"
+      ],
+      "finalKnowledge": [
+        "damage-board",
+        "misuse-funds-board",
+        "special-funds-board",
+        "wages-board"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "completion-control-lattice",
+      "export": "CompletionControlLatticeScene",
+      "layout": "completion-control-lattice",
+      "anchor": "typographic-sequence",
+      "grammar": [
+        "control-standard-board",
+        "small-items-board"
+      ],
+      "textTreatments": [
+        "chip",
+        "label-block",
+        "soft-highlight",
+        "thin-underline",
+        "external-negation",
+        "stamp"
+      ],
+      "focalChannels": [
+        "icon",
+        "contrast",
+        "enclosure",
+        "spatial"
+      ],
+      "tokens": [
+        "Scale",
+        "ShoppingBag",
+        "Home",
+        "Users",
+        "Ban",
+        "Package",
+        "Car",
+        "EyeOff"
+      ],
+      "finalKnowledge": [
+        "control-standard-board",
+        "small-items-board",
+        "large-items-board",
+        "hidden-spot-board"
+      ],
+      "statefulObjects": []
     }
   ]
 }

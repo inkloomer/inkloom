@@ -17,21 +17,21 @@ export const TrafficAccidentWardScene = () => {
         <Enter delay={6} marker="elements-panel" style={{position: 'absolute', left: 0, top: 0, width: 876, height: 356}}>
           <Panel tone={C.siren} watermark={<Zap size={160} color={C.siren} strokeWidth={1.6} />} style={{height: '100%', padding: '12px 16px', display: 'flex', flexDirection: 'column', gap: 8}}>
             <TabChip tone={C.siren} icon={<Zap size={24} color={C.white} strokeWidth={2.2} />}>成立条件（基础刑3年以下）</TabChip>
-            <IconChip icon={<Users size={26} color={C.white} strokeWidth={2.2} />} tone={C.ward} title="主体不限于驾驶者：">
+            <IconChip icon={<Users size={26} color={C.white} strokeWidth={2.2} />} tone={C.green} title="主体不限于驾驶者：">
               乘车人指使司机违章→同罪；公共交通领域含公路·水上（铁路·飞行另有罪）
             </IconChip>
-            <IconChip icon={<Scale size={26} color={C.white} strokeWidth={2.2} />} tone={C.amber} title="实害结果：">
+            <IconChip icon={<Scale size={26} color={C.white} strokeWidth={2.2} />} tone={C.yellow} title="实害结果：">
               死1人 / 重伤3人 / 重伤1人＋严重情节（酒驾·毒驾·无照·超载·逃逸）
             </IconChip>
-            <IconChip icon={<Ban size={26} color={C.white} strokeWidth={2.2} />} tone={C.pulse} title="规范保护范围：">
+            <IconChip icon={<Ban size={26} color={C.white} strokeWidth={2.2} />} tone={C.siren} title="规范保护范围：">
               未年检车无故障撞死横穿者 → 死亡∉规范保护结果 → 不构成
             </IconChip>
           </Panel>
         </Enter>
         <Enter delay={18} marker="escape-panel" style={{position: 'absolute', left: 900, top: 0, width: 876, height: 356}}>
-          <Panel tone={C.amber} watermark={<Scale size={160} color={C.amber} strokeWidth={1.6} />} style={{height: '100%', padding: '12px 16px', display: 'flex', flexDirection: 'column', gap: 8}}>
-            <TabChip tone={C.amber} icon={<Hourglass size={24} color={C.white} strokeWidth={2.2} />}>肇事后逃逸（升格3-7年）</TabChip>
-            <IconChip icon={<Scale size={26} color={C.white} strokeWidth={2.2} />} tone={C.amber} title="逃逸＝为逃避法律追究而逃跑：">
+          <Panel tone={C.yellow} watermark={<Scale size={160} color={C.yellow} strokeWidth={1.6} />} style={{height: '100%', padding: '12px 16px', display: 'flex', flexDirection: 'column', gap: 8}}>
+            <TabChip tone={C.yellow} icon={<Hourglass size={24} color={C.white} strokeWidth={2.2} />}>肇事后逃逸（升格3-7年）</TabChip>
+            <IconChip icon={<Scale size={26} color={C.white} strokeWidth={2.2} />} tone={C.yellow} title="逃逸＝为逃避法律追究而逃跑：">
               前提＝明知发生事故；不知撞人继续开 → 不构成逃逸
             </IconChip>
             <Enter delay={44}><Neg size={19}>逃逸已作成立条件后不能再作升格条件（禁止重复评价）</Neg></Enter>

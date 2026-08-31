@@ -13,7 +13,9 @@
     "危险驾驶罪": "Zap",
     "交通肇事罪": "Gavel",
     "破坏交通工具罪": "Ban",
-    "逃逸": "Hourglass"
+    "逃逸": "Hourglass",
+    "妨害安全驾驶罪": "Bus",
+    "恐怖组织": "Siren"
   },
   "catalog": {
     "status": "featured",

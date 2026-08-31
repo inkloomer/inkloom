@@ -17,24 +17,24 @@ export const TheftTransferPeaceScene = () => {
         <Enter delay={6} marker="transfer-panel" style={{position: 'absolute', left: 0, top: 0, width: 876, height: 320}}>
           <Panel tone={C.lock} watermark={<Scale size={160} color={C.lock} strokeWidth={1.6} />} style={{height: '100%', padding: '12px 16px', display: 'flex', flexDirection: 'column', gap: 8}}>
             <TabChip tone={C.lock} icon={<Scale size={24} color={C.white} strokeWidth={2.2} />}>转移占有 · 两个环节</TabChip>
-            <IconChip icon={<Ban size={26} color={C.white} strokeWidth={2.2} />} tone={C.pulse} title="环节一 破坏他人占有：">
+            <IconChip icon={<Ban size={26} color={C.white} strokeWidth={2.2} />} tone={C.seal} title="环节一 破坏他人占有：">
               有该行为 → <Mark color={C.lock}>成立</Mark>盗窃罪
             </IconChip>
             <IconChip icon={<Scale size={26} color={C.white} strokeWidth={2.2} />} tone={C.lock} title="环节二 建立自己占有：">
               有该行为 → <Mark color={C.lock}>既遂</Mark>
             </IconChip>
-            <IconChip icon={<Gavel size={26} color={C.white} strokeWidth={2.2} />} tone={C.amber} title="与侵占罪的区分：">
+            <IconChip icon={<Gavel size={26} color={C.white} strokeWidth={2.2} />} tone={C.brass} title="与侵占罪的区分：">
               盗窃＝破坏他人占有 · 侵占＝事先已在占有·无破坏
             </IconChip>
           </Panel>
         </Enter>
         <Enter delay={18} marker="peace-panel" style={{position: 'absolute', left: 900, top: 0, width: 876, height: 320}}>
-          <Panel tone={C.chart2} watermark={<Zap size={160} color={C.chart2} strokeWidth={1.6} />} style={{height: '100%', padding: '12px 16px', display: 'flex', flexDirection: 'column', gap: 8}}>
-            <TabChip tone={C.chart2} icon={<Zap size={24} color={C.white} strokeWidth={2.2} />}>平和手段 · 暴力程度三阶</TabChip>
+          <Panel tone={C.slate} watermark={<Zap size={160} color={C.slate} strokeWidth={1.6} />} style={{height: '100%', padding: '12px 16px', display: 'flex', flexDirection: 'column', gap: 8}}>
+            <TabChip tone={C.slate} icon={<Zap size={24} color={C.white} strokeWidth={2.2} />}>平和手段 · 暴力程度三阶</TabChip>
             <IconChip icon={<Scale size={24} color={C.white} strokeWidth={2.2} />} tone={C.lock} title="盗窃罪：">
               对物平和手段·对人没有危险
             </IconChip>
-            <IconChip icon={<Zap size={24} color={C.white} strokeWidth={2.2} />} tone={C.chart2} title="抢夺罪：">
+            <IconChip icon={<Zap size={24} color={C.white} strokeWidth={2.2} />} tone={C.slate} title="抢夺罪：">
               对物暴力·夺取财物·对人有危险
             </IconChip>
             <IconChip icon={<Ban size={24} color={C.white} strokeWidth={2.2} />} tone={C.seal} title="抢劫罪：">
