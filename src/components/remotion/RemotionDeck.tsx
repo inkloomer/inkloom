@@ -353,13 +353,29 @@ export const RemotionDeck = ({
   typographyScope,
 }: Props) => {
   const [currentScene, setCurrentScene] = useState(0);
-  const [mediaMode, setMediaMode] = useState<MediaMode>('avif');
+  const [mediaMode, setMediaMode] = useState<MediaMode>(() => {
+    // 首帧即从存储恢复（懒加载挂起期 React 会回退显示上次提交画面，
+    // 若首帧默认 avif，视频模式下会先闪 AVIF 数秒）；try/catch 兜底沙箱 iframe 无 storage
+    try {
+      const savedMode = window.localStorage.getItem(MEDIA_MODE_STORAGE_KEY);
+      if (savedMode === 'video' || isAnimatedMediaFormat(savedMode)) return savedMode;
+    } catch {
+      // localStorage 不可用（隐私模式/沙箱 iframe）时用默认值
+    }
+    return 'avif';
+  });
   const [copyFeedback, setCopyFeedback] = useState('');
   const [mode, setMode] = useState<PreviewMode>('single');
   const [autoPage, setAutoPage] = useState(false);
   const [reducedMotion, setReducedMotion] = useState(false);
   const [speedScope, setSpeedScope] = useState<PlaybackScope>('global');
-  const [playbackPreferences, setPlaybackPreferences] = useState<PlaybackPreferences>(DEFAULT_PLAYBACK_PREFERENCES);
+  const [playbackPreferences, setPlaybackPreferences] = useState<PlaybackPreferences>(() => {
+    try {
+      return parsePlaybackPreferences(window.localStorage.getItem(PLAYBACK_PREFERENCE_STORAGE_KEY));
+    } catch {
+      return DEFAULT_PLAYBACK_PREFERENCES;
+    }
+  });
   const [playbackScopeKeys, setPlaybackScopeKeys] = useState<ReturnType<typeof playbackScopeKeysFromPathname>>({});
   const effectivePlaybackSpeed = resolvedPlaybackSpeed(playbackPreferences, playbackScopeKeys);
   const scopedPlaybackSpeed = configuredPlaybackSpeed(playbackPreferences, speedScope, playbackScopeKeys);
