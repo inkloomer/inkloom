@@ -29,7 +29,9 @@
         "company-capacity-scene-01-gate-death",
         "company-capacity-scene-01-scope"
       ],
-      "statefulObjects": []
+      "statefulObjects": [
+        "company-capacity-twin-lifespan"
+      ]
     },
     {
       "id": "company-capacity-scene-02",

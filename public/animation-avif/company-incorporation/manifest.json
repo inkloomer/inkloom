@@ -3,7 +3,7 @@
   "compositionId": "CompanyIncorporation",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-08-31T05:50:06.387Z",
+  "generatedAt": "2026-08-31T09:47:20.710Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -16,13 +16,13 @@
       "title": "发起设立与募集设立",
       "durationMs": 5800,
       "file": "company-incorporation-scene-01.avif",
-      "fileSize": 504091,
+      "fileSize": 516305,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "b1c8e13cf457f2979a85692c0d63903f86eb45d9244270e663b4d989e1e428de",
+      "sha256": "3f3ea89658730242c0a2eb49af9c8b755588cf56fb03b39385a30d804896b62d",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "bbb14f6f197663e417d955d9a8bef23f017038f64dbf9aacf4044bd146955c60"
+      "sceneFingerprint": "734194630187d48a6aa27dabd91e2c6a7f242679a7a78eef8516c2a4c726a3fb"
     },
     {
       "endFrame": 755,
@@ -33,13 +33,13 @@
       "title": "募集流程与成立大会",
       "durationMs": 6800,
       "file": "company-incorporation-scene-02.avif",
-      "fileSize": 523057,
+      "fileSize": 522932,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "e55a9413ad46704b139975da7664a5769f1f9d2ee01bc0a6472f2c79db2ec68b",
+      "sha256": "ef963fa93046156f09e2d1c2f8fa81e46ecd2cce8464ceea6d1eec27035dc4ca",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "bbb14f6f197663e417d955d9a8bef23f017038f64dbf9aacf4044bd146955c60"
+      "sceneFingerprint": "734194630187d48a6aa27dabd91e2c6a7f242679a7a78eef8516c2a4c726a3fb"
     },
     {
       "endFrame": 1151,
@@ -50,13 +50,13 @@
       "title": "设立条件与章程效力",
       "durationMs": 6600,
       "file": "company-incorporation-scene-03.avif",
-      "fileSize": 527634,
+      "fileSize": 514583,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "5bc2662777585cebfe49a5623c7383fbb8960baaee4a56e6605c843426ad6e34",
+      "sha256": "7919859c02007b547c1c7094042642c0b5c8919d32b191c3c43ef61c24ce2d6d",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "bbb14f6f197663e417d955d9a8bef23f017038f64dbf9aacf4044bd146955c60"
+      "sceneFingerprint": "734194630187d48a6aa27dabd91e2c6a7f242679a7a78eef8516c2a4c726a3fb"
     }
   ],
   "size": {
@@ -64,7 +64,7 @@
     "width": 2560
   },
   "sourceFps": 60,
-  "sourceFingerprint": "bbb14f6f197663e417d955d9a8bef23f017038f64dbf9aacf4044bd146955c60",
+  "sourceFingerprint": "734194630187d48a6aa27dabd91e2c6a7f242679a7a78eef8516c2a4c726a3fb",
   "targetFps": 30,
-  "totalFileSize": 1554782
+  "totalFileSize": 1553820
 }

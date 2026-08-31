@@ -3,7 +3,7 @@
   "compositionId": "CompanyPersonality",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-08-31T05:37:54.413Z",
+  "generatedAt": "2026-08-31T09:46:56.654Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -16,13 +16,13 @@
       "title": "独立人格三独立与责任分配",
       "durationMs": 5700,
       "file": "company-personality-scene-01.avif",
-      "fileSize": 469726,
+      "fileSize": 444909,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "c2808eae233aa1036340f798d5044ccfa539308f306d4b0c94e09520d6928edd",
+      "sha256": "e07957293dcf35c4411201599bf66eb66d5c0a2d7ef110af4467224911fa0010",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "893035d8dee3842a71bb4463943a6a3a54f3dc43aa66b546a46c5e74bd98b0dd"
+      "sceneFingerprint": "b423fba715b4e01c23d0ea43055a32c82a1e032199e0f7a24aa521f5d33cce80"
     },
     {
       "endFrame": 719,
@@ -33,13 +33,13 @@
       "title": "滥用股东权利与连带责任",
       "durationMs": 6300,
       "file": "company-personality-scene-02.avif",
-      "fileSize": 660768,
+      "fileSize": 679407,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "087f4fda7152b50955f4388e343faf37e3b54b682252b342614d29028e975acf",
+      "sha256": "08aac8354bf4f8b2fe92cd5b51f8b18ead32d99481ff220671a59cdeda9cfcbd",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "893035d8dee3842a71bb4463943a6a3a54f3dc43aa66b546a46c5e74bd98b0dd"
+      "sceneFingerprint": "b423fba715b4e01c23d0ea43055a32c82a1e032199e0f7a24aa521f5d33cce80"
     },
     {
       "endFrame": 1133,
@@ -50,13 +50,13 @@
       "title": "例外规则与起诉路径",
       "durationMs": 6900,
       "file": "company-personality-scene-03.avif",
-      "fileSize": 557679,
+      "fileSize": 527121,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "0c3e27d9d9764fa6752398aa9fb52a8d6b6a4ec34e07d93dcd3af1af485c1244",
+      "sha256": "93d389c225140574c46bb05a9caa14c4e078471173e711797231850389b65122",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "893035d8dee3842a71bb4463943a6a3a54f3dc43aa66b546a46c5e74bd98b0dd"
+      "sceneFingerprint": "b423fba715b4e01c23d0ea43055a32c82a1e032199e0f7a24aa521f5d33cce80"
     }
   ],
   "size": {
@@ -64,7 +64,7 @@
     "width": 2560
   },
   "sourceFps": 60,
-  "sourceFingerprint": "893035d8dee3842a71bb4463943a6a3a54f3dc43aa66b546a46c5e74bd98b0dd",
+  "sourceFingerprint": "b423fba715b4e01c23d0ea43055a32c82a1e032199e0f7a24aa521f5d33cce80",
   "targetFps": 30,
-  "totalFileSize": 1688173
+  "totalFileSize": 1651437
 }

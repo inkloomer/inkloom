@@ -3,7 +3,7 @@
   "compositionId": "Promoter",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-08-31T05:50:13.029Z",
+  "generatedAt": "2026-08-31T10:00:34.001Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -16,13 +16,13 @@
       "title": "设立中的民事活动责任",
       "durationMs": 6000,
       "file": "promoter-scene-01.avif",
-      "fileSize": 655638,
+      "fileSize": 719014,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "c6abb001d5723ca5216af3ed1c8a8ba4ccc537fca3fbf276f774127c9cbe46d6",
+      "sha256": "8fab7b13aab719dac61dbd168fab69816c4cdfd9344d4bc82db0ea2b7c9a5078",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "ce1a5ed87e7ab22d50be0352a9ba4fda6473688bb921b80b60c4ec9c71226dad"
+      "sceneFingerprint": "6cfeaef174a6e6eadfc3fb6a42b2f95af840879c73937a17b87af246a3af903d"
     },
     {
       "endFrame": 743,
@@ -33,13 +33,13 @@
       "title": "出资瑕疵与抽逃出资",
       "durationMs": 6400,
       "file": "promoter-scene-02.avif",
-      "fileSize": 694676,
+      "fileSize": 611563,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "eeafe676c240bb3d770e53496556bd6d9a5c02be23e4a86b37448fa6cffb218e",
+      "sha256": "350430e98d3e8aba1a702d21ccb970188a9feea9f8b905499bdbd3489a91b825",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "ce1a5ed87e7ab22d50be0352a9ba4fda6473688bb921b80b60c4ec9c71226dad"
+      "sceneFingerprint": "6cfeaef174a6e6eadfc3fb6a42b2f95af840879c73937a17b87af246a3af903d"
     },
     {
       "endFrame": 1139,
@@ -50,13 +50,13 @@
       "title": "股东失权流程",
       "durationMs": 6600,
       "file": "promoter-scene-03.avif",
-      "fileSize": 606345,
+      "fileSize": 596168,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "d1d0e8544116cd4eef5ebfe282a81fd05d8aff4d13f204e9d582de8ae5f79c55",
+      "sha256": "cb9d6ee5d369dd2cdf3e4fe81cbccdf54a5a6b43697cccc589cc09dc565e3383",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "ce1a5ed87e7ab22d50be0352a9ba4fda6473688bb921b80b60c4ec9c71226dad"
+      "sceneFingerprint": "6cfeaef174a6e6eadfc3fb6a42b2f95af840879c73937a17b87af246a3af903d"
     }
   ],
   "size": {
@@ -64,7 +64,7 @@
     "width": 2560
   },
   "sourceFps": 60,
-  "sourceFingerprint": "ce1a5ed87e7ab22d50be0352a9ba4fda6473688bb921b80b60c4ec9c71226dad",
+  "sourceFingerprint": "6cfeaef174a6e6eadfc3fb6a42b2f95af840879c73937a17b87af246a3af903d",
   "targetFps": 30,
-  "totalFileSize": 1956659
+  "totalFileSize": 1926745
 }

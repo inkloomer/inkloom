@@ -29,7 +29,9 @@
         "promoter-scene-01-duty-1",
         "promoter-scene-01-duty-2"
       ],
-      "statefulObjects": []
+      "statefulObjects": [
+        "promoter-duty-chain-travel"
+      ]
     },
     {
       "id": "promoter-scene-02",

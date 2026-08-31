@@ -3,7 +3,7 @@
   "compositionId": "CompanyCapacity",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-08-31T05:36:23.425Z",
+  "generatedAt": "2026-08-31T09:45:27.087Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -16,13 +16,13 @@
       "title": "能力起止与经营范围",
       "durationMs": 5800,
       "file": "company-capacity-scene-01.avif",
-      "fileSize": 353076,
+      "fileSize": 420846,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "1d66e94b98e6530ff34783bde4d50b7600502dd87514032556e66c032a2be8e3",
+      "sha256": "538113036cc15480d026400351d6758b824fdeab519762d24019da2b829c96fe",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "bb414e1fc590c58881bac4fe2092652e789ba05134f7dd356e473db21b8355d2"
+      "sceneFingerprint": "937b12b0e3e75d999f654c205cdc6efe30987510b0ea68156372629ac809a606"
     },
     {
       "endFrame": 731,
@@ -33,13 +33,13 @@
       "title": "关联与非关联担保决议",
       "durationMs": 6400,
       "file": "company-capacity-scene-02.avif",
-      "fileSize": 517568,
+      "fileSize": 492688,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "8c32f475f92168329a1a96b5d3a2c67617b2f591d264b91fc408d9d966b6c9ab",
+      "sha256": "b3fcd02b014688045056cf83faa970f130edf111f556d0dca0dc33c354c81045",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "bb414e1fc590c58881bac4fe2092652e789ba05134f7dd356e473db21b8355d2"
+      "sceneFingerprint": "937b12b0e3e75d999f654c205cdc6efe30987510b0ea68156372629ac809a606"
     },
     {
       "endFrame": 1127,
@@ -50,13 +50,13 @@
       "title": "无须机关决议的担保",
       "durationMs": 6600,
       "file": "company-capacity-scene-03.avif",
-      "fileSize": 685487,
+      "fileSize": 687809,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "dd68a0d21642a7b4280be42adfd9f25a4d6d479b721b3800808f85836b1f9b70",
+      "sha256": "4066c6ec4bda14de68c96b83d5e9df7606d620baa99e088ad6cbfbd5f6e128af",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "bb414e1fc590c58881bac4fe2092652e789ba05134f7dd356e473db21b8355d2"
+      "sceneFingerprint": "937b12b0e3e75d999f654c205cdc6efe30987510b0ea68156372629ac809a606"
     }
   ],
   "size": {
@@ -64,7 +64,7 @@
     "width": 2560
   },
   "sourceFps": 60,
-  "sourceFingerprint": "bb414e1fc590c58881bac4fe2092652e789ba05134f7dd356e473db21b8355d2",
+  "sourceFingerprint": "937b12b0e3e75d999f654c205cdc6efe30987510b0ea68156372629ac809a606",
   "targetFps": 30,
-  "totalFileSize": 1556131
+  "totalFileSize": 1601343
 }
