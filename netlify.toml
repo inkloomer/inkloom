@@ -10,15 +10,11 @@
 
 # Astro 以 base='/inkloom' 构建时 dist 是扁平的（index.html/_astro/ 均在根），
 # HTML 内的绝对引用带 /inkloom/ 前缀；GitHub Pages 靠仓库名子路径隐式提供该前缀，
-# Netlify 服务在域名根，须用重写模拟同一行为：/inkloom/* → /*（内部 200 重写，不改浏览器地址）
+# Netlify 服务在域名根，须用重写模拟同一行为。
+# 注意：Netlify 匹配前会去掉尾斜杠，且空 splat 会自我 301——因此禁用一切 301，
+# 仅用两条内部 200 重写（无 3xx 即无循环）；/ 由 dist/index.html 原生服务。
 [[redirects]]
   from = "/inkloom"
-  to = "/inkloom/"
-  status = 301
-
-# /inkloom/ 本身 splat 为空会自我重定向死循环，须在其前显式内部重写到首页
-[[redirects]]
-  from = "/inkloom/"
   to = "/index.html"
   status = 200
 
@@ -26,10 +22,3 @@
   from = "/inkloom/*"
   to = "/:splat"
   status = 200
-
-# 根路径归一到带前缀的入口（force 越过 index.html 的静态优先）
-[[redirects]]
-  from = "/"
-  to = "/inkloom/"
-  status = 301
-  force = true
