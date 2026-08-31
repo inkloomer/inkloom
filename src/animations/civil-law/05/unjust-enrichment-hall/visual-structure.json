@@ -1,0 +1,95 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "elements-gate",
+      "export": "ElementsGateScene",
+      "layout": "positive-negative-gate-with-nature-lane",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "enrichment-is-gain-without-legal-basis-at-anothers-loss",
+        "gain-covers-legal-ownership-and-factual-benefit",
+        "moral-due-early-and-knowing-payments-are-never-enrichment",
+        "claiming-his-gain-is-a-personal-claim-claiming-own-thing-is-property"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "external-negation"],
+      "focalChannels": ["contrast", "icon", "enclosure", "annotation"],
+      "tokens": ["Scale", "Coins", "HeartHandshake", "Gavel"],
+      "finalKnowledge": [
+        "enrichment-definition",
+        "positive-four-gate",
+        "negative-three-gate",
+        "personal-claim-nature"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "return-scope-lane",
+      "export": "ReturnScopeScene",
+      "layout": "new-thing-lane-with-good-evil-split",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "original-and-new-things-are-returned-together",
+        "only-the-enrichers-benefit-counts-never-the-victims-loss",
+        "the-good-faith-enricher-refunds-what-still-exists",
+        "the-bad-faith-enricher-refunds-what-he-received"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["contrast", "icon", "connector", "annotation"],
+      "tokens": ["Undo2", "Scale", "Heart", "Flame"],
+      "finalKnowledge": [
+        "new-thing-rule",
+        "benefit-count-rule",
+        "good-faith-limb",
+        "bad-faith-limb"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "return-target-fork",
+      "export": "ReturnTargetScene",
+      "layout": "target-fork-with-gratuitous-lane",
+      "anchor": "role-pair",
+      "grammar": [
+        "the-enricher-is-the-default-target-of-restitution",
+        "gratuitous-transfers-shift-the-duty-to-the-third-donee",
+        "debt-repayment-gains-count-but-creditor-takes-nothing",
+        "the-gift-scenario-marks-the-donee-and-spares-the-giver"
+      ],
+      "textTreatments": ["label-block", "stamp", "soft-highlight", "thin-underline"],
+      "focalChannels": ["contrast", "connector", "enclosure", "annotation"],
+      "tokens": ["Users", "Gift", "Coins", "Undo2"],
+      "finalKnowledge": [
+        "default-target-rule",
+        "gratuitous-shift-rule",
+        "painting-case-verdicts",
+        "gift-spares-giver"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "cumulation-ledger",
+      "export": "CumulationScene",
+      "layout": "two-way-ledger-with-offset-strip",
+      "anchor": "flow-path",
+      "grammar": [
+        "one-party-can-owe-enrichment-and-hold-management-at-once",
+        "enrichment-orders-the-managed-claim-back",
+        "management-orders-the-manager-fees-and-compensation",
+        "the-two-accounts-offset-into-one-net-payment"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["connector", "contrast", "enclosure", "annotation"],
+      "tokens": ["Split", "Undo2", "Coins", "Scale"],
+      "finalKnowledge": [
+        "cumulation-premise",
+        "enrichment-leg",
+        "management-leg",
+        "offset-strips"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

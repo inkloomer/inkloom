@@ -1,0 +1,22 @@
+{
+  "directionId": "silk-ledger-unjust-enrichment-hall",
+  "family": "silk-ledger-unjust-enrichment-hall",
+  "palette": "deep ink violet, silk silver-lilac, rose blush, brass gold, pine green, paper cream, graphite ink",
+  "typography": "enrichment-hall headings on ink-violet rail tabs, brass return chips and rose wax verdicts",
+  "composition": "an enrichment hall with a positive-negative gate, a new-thing lane splitting good and bad faith, a return-target fork with a gratuitous lane and a two-way ledger closing on an offset strip",
+  "surface": "cream paper files, ink-violet desk rails, brass coins, rose wax seals",
+  "motion": "gained coins roll across the gate, good and bad faith lanes split at the return fork, the gift lane diverts restitution to the donee and two ledgers offset into one strip",
+  "transition": "the hall floor, ink-violet rails and brass coin posts persist while gates, lanes, forks and ledgers are re-dressed between scenes",
+  "conceptTokens": {
+    "不当得利": "Coins",
+    "返还": "Undo2",
+    "善意": "Heart",
+    "竞合": "Split"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/civil-law/05/unjust-enrichment-hall/",
+    "title": "不当得利馆"
+  }
+}

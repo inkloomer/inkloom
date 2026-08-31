@@ -1,5 +1,5 @@
 import type {CSSProperties, ReactNode} from 'react';
-import {ArrowRight, BadgeCheck, Ban, CircleDollarSign, Coins, Eye, EyeClosed, EyeOff, Flame, Gavel, Heart, HeartHandshake, Hourglass, Landmark, Replace, Scale, TrendingDown, Undo2, Unlink, Users} from 'lucide-react';
+import {ArrowRight, BadgeCheck, Ban, CircleDollarSign, Coins, Eye, EyeClosed, EyeOff, Flame, Gavel, Gift, HandCoins, Heart, HeartHandshake, Hourglass, Landmark, Replace, Scale, TrendingDown, Undo2, Unlink, Users} from 'lucide-react';
 import {AbsoluteFill, interpolate, useCurrentFrame} from 'remotion';
 import {CLAMP} from '../../../../shared/remotion-runtime';
 
@@ -344,6 +344,131 @@ export const ReturnScopeScene = () => {
               <Seal delay={230} size={21}>应负赔偿责任</Seal>——不得以毁损灭失推诿
             </IconChip>
             <div style={{marginTop: 'auto', fontSize: 22, fontWeight: 900, color: C.inkSoft}}>口诀：恶意看「<Soft color={C.rose}>得利时</Soft>」——拿多少、还多少</div>
+          </Panel>
+        </Enter>
+      </div>
+    </Shell>
+  );
+};
+
+export const ReturnTargetScene = () => {
+  /* data-final-knowledge="default-target-rule" data-final-knowledge="gratuitous-shift-rule" data-final-knowledge="painting-case-verdicts" data-final-knowledge="gift-spares-giver" */
+  return (
+    <Shell code="03" kicker="返还对象 · 无偿转让例外" title="不当得利返还请求权的对象">
+      <div
+        data-layout="target-fork-with-gratuitous-lane"
+        data-visual-anchor="role-pair"
+        data-text-treatments="label-block,stamp,soft-highlight,thin-underline"
+        data-visual-grammar="the-enricher-is-the-default-target-of-restitution,gratuitous-transfers-shift-the-duty-to-the-third-donee,debt-repayment-gains-count-but-creditor-takes-nothing,the-gift-scenario-marks-the-donee-and-spares-the-giver"
+        data-focal-rule="gratuitous-transfer-to-a-third-donee-shifts-the-restitution-duty-in-the-corresponding-scope"
+        data-focal-channels="contrast,connector,enclosure,annotation"
+        style={{position: 'absolute', inset: 0}}
+      >
+        <Enter delay={4} from="down" marker="default-target-rule" style={{position: 'absolute', left: 0, top: 0, width: 1776, height: 116}}>
+          <Panel tone={C.violet} watermark={<Users size={120} color={C.violet} strokeWidth={1.6} />} style={{height: '100%', display: 'flex', flexDirection: 'column', gap: 6, padding: '10px 18px'}}>
+            <PanelTab tone={C.violet} icon={<Users size={22} color={C.paper} strokeWidth={2.2} />}>原则</PanelTab>
+            <IconChip icon={<Users size={24} color={C.paper} strokeWidth={2.2} />} tone={C.violet} title="原则：">
+              受损人有权请求<Soft color={C.violet}>得利人</Soft>返还利益
+            </IconChip>
+          </Panel>
+        </Enter>
+        <Enter delay={40} from="up" marker="gratuitous-shift-rule" style={{position: 'absolute', left: 0, top: 132, width: 1776, height: 252}}>
+          <Panel tone={C.brass} watermark={<Gift size={140} color={C.brass} strokeWidth={1.6} />} style={{height: '100%', display: 'flex', flexDirection: 'column', gap: 10, padding: '12px 18px'}}>
+            <PanelTab tone={C.brass} icon={<Gift size={24} color={C.paper} strokeWidth={2.2} />}>特殊例外 · 得利人已将利益无偿转让给第三人</PanelTab>
+            <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 26, padding: '6px 0'}}>
+              <Chip tone={C.violet} toneBg={C.lilacPale}>得利人（让与人）</Chip>
+              <span style={{display: 'inline-flex', flexDirection: 'column', alignItems: 'center', gap: 4}}>
+                <span style={{fontSize: 22, fontWeight: 950, color: C.brass}}>无偿转让</span>
+                <ArrowRight size={30} color={C.brass} strokeWidth={2.6} />
+              </span>
+              <Chip tone={C.brass} toneBg={C.brassPale}>第三人（受赠人）</Chip>
+            </div>
+            <IconChip icon={<Undo2 size={24} color={C.paper} strokeWidth={2.2} />} tone={C.rose} title="后果：">
+              受损人可以请求<Soft color={C.rose}>第三人</Soft>在<Under color={C.rose} delay={150}>相应范围内</Under>承担<Seal delay={170} size={20} tone={C.rose}>返还义务</Seal>
+            </IconChip>
+          </Panel>
+        </Enter>
+        <Enter delay={90} from="up" marker="painting-case-verdicts" style={{position: 'absolute', left: 0, top: 400, width: 1776, height: 368}}>
+          <Panel tone={C.pine} watermark={<Gavel size={150} color={C.pine} strokeWidth={1.6} />} style={{height: '100%', display: 'flex', flexDirection: 'column', gap: 9, padding: '13px 20px'}}>
+            <PanelTab tone={C.pine} icon={<Gavel size={22} color={C.paper} strokeWidth={2.2} />}>名画案 · 老赵托老刘保管名画</PanelTab>
+            <IconChip icon={<Coins size={24} color={C.paper} strokeWidth={2.2} />} tone={C.brass} title="案情：">
+              老刘死后小刘继承，以 100 万卖予王贵；小刘将 100 万交<Soft color={C.brass}>李香香</Soft>，1 周后小刘<Soft color={C.violet}>得知真相</Soft>（善意）
+            </IconChip>
+            <div style={{display: 'flex', gap: 14}}>
+              <IconChip icon={<Coins size={24} color={C.paper} strokeWidth={2.2} />} tone={C.violet} title="问① 100 万向李香香还债 → 请求小刘：">
+                李香香基于<Soft color={C.violet}>债权</Soft>受让，不构成不当得利；小刘获得「<Soft color={C.violet}>债务清偿</Soft>」利益 → <Seal delay={190} size={19} tone={C.violet}>小刘承担</Seal>
+              </IconChip>
+              <IconChip icon={<Gift size={24} color={C.paper} strokeWidth={2.2} />} tone={C.rose} title="问② 作为生日礼物赠送 → 请求李香香：">
+                李香香<Soft color={C.rose}>无偿受让</Soft>，应负<Soft color={C.rose}>返还义务</Soft> → <Seal delay={220} size={19}>李香香承担</Seal>
+              </IconChip>
+            </div>
+            <div data-final-knowledge="gift-spares-giver" style={{marginTop: 'auto', fontSize: 22, fontWeight: 900, color: C.inkSoft}}>让与人小刘：原得利已<Soft color={C.pine}>消灭</Soft>且为<Soft color={C.pine}>善意</Soft> → <Seal delay={250} size={19} tone={C.pine}>不承担赔偿责任</Seal>——无偿受让让赠与人免责</div>
+          </Panel>
+        </Enter>
+      </div>
+    </Shell>
+  );
+};
+
+export const CumulationScene = () => {
+  /* data-final-knowledge="cumulation-premise" data-final-knowledge="enrichment-leg" data-final-knowledge="management-leg" data-final-knowledge="offset-strips" */
+  return (
+    <Shell code="04" kicker="竞合 · 两相冲抵" title="既构成不当得利又构成无因管理">
+      <div
+        data-layout="two-way-ledger-with-offset-strip"
+        data-visual-anchor="flow-path"
+        data-text-treatments="label-block,chip,stamp,soft-highlight"
+        data-visual-grammar="one-party-can-owe-enrichment-and-hold-management-at-once,enrichment-orders-the-managed-claim-back,management-orders-the-manager-fees-and-compensation,the-two-accounts-offset-into-one-net-payment"
+        data-focal-rule="the-enrichment-claim-and-the-management-claim-offset-into-one-net-payment"
+        data-focal-channels="connector,contrast,enclosure,annotation"
+        style={{position: 'absolute', inset: 0}}
+      >
+        <Enter delay={4} from="down" marker="cumulation-premise" style={{position: 'absolute', left: 0, top: 0, width: 1776, height: 104}}>
+          <Panel tone={C.violet} watermark={<Split size={120} color={C.violet} strokeWidth={1.6} />} style={{height: '100%', display: 'flex', flexDirection: 'column', gap: 6, padding: '10px 18px'}}>
+            <PanelTab tone={C.violet} icon={<Split size={22} color={C.paper} strokeWidth={2.2} />}>竞合处理原则</PanelTab>
+            <div style={{fontSize: 23, fontWeight: 900}}>
+              当<Chip tone={C.violet} toneBg={C.lilacPale} ink={C.violet}>一方（甲）</Chip>对<Chip tone={C.pine} toneBg={C.pinePale} ink={C.pine}>另一方（乙）</Chip>既构成不当得利、又构成无因管理 → 按两条规则各自算账，最终<Soft color={C.rose}>两相冲抵</Soft>
+            </div>
+          </Panel>
+        </Enter>
+        <Enter delay={40} from="left" marker="enrichment-leg" style={{position: 'absolute', left: 0, top: 120, width: 866, height: 292}}>
+          <Panel tone={C.violet} watermark={<Undo2 size={130} color={C.violet} strokeWidth={1.6} />} style={{height: '100%', display: 'flex', flexDirection: 'column', gap: 10, padding: '12px 18px'}}>
+            <PanelTab tone={C.violet} icon={<Undo2 size={24} color={C.paper} strokeWidth={2.2} />}>不当得利之账 · 甲的返还义务</PanelTab>
+            <IconChip icon={<Coins size={24} color={C.paper} strokeWidth={2.2} />} tone={C.violet} title="规则：">
+              甲应向<Soft color={C.violet}>乙</Soft><Under color={C.violet} delay={120}>返还利益</Under>
+            </IconChip>
+            <IconChip icon={<Coins size={24} color={C.paper} strokeWidth={2.2} />} tone={C.brass} title="台风案对应：">
+              甲将乙的<Soft color={C.brass}>置换建材</Soft>出卖，获得 <Chip tone={C.brass} toneBg={C.brassPale}>2000 元</Chip> → 甲对乙构成不当得利
+            </IconChip>
+            <div style={{marginTop: 'auto', fontSize: 22, fontWeight: 900, color: C.inkSoft}}>账向：<Chip tone={C.violet} toneBg={C.lilacPale} ink={C.violet}>甲 → 乙 返还 2000 元</Chip></div>
+          </Panel>
+        </Enter>
+        <Enter delay={70} from="right" marker="management-leg" style={{position: 'absolute', left: 910, top: 120, width: 866, height: 292}}>
+          <Panel tone={C.pine} watermark={<HandCoins size={130} color={C.pine} strokeWidth={1.6} />} style={{height: '100%', display: 'flex', flexDirection: 'column', gap: 10, padding: '12px 18px'}}>
+            <PanelTab tone={C.pine} icon={<HandCoins size={24} color={C.paper} strokeWidth={2.2} />}>无因管理之账 · 乙的偿付义务</PanelTab>
+            <IconChip icon={<HandCoins size={24} color={C.paper} strokeWidth={2.2} />} tone={C.pine} title="规则：">
+              乙应向<Soft color={C.pine}>甲</Soft>偿付<Soft color={C.pine}>必要费用</Soft>、<Soft color={C.pine}>债务</Soft>，或适当<Soft color={C.pine}>补偿损失</Soft>
+            </IconChip>
+            <IconChip icon={<Coins size={24} color={C.paper} strokeWidth={2.2} />} tone={C.brass} title="台风案对应：">
+              台风将至，甲加固乙的房屋，花费 <Chip tone={C.brass} toneBg={C.brassPale}>1 万元</Chip> → 乙应偿付必要费用
+            </IconChip>
+            <div style={{marginTop: 'auto', fontSize: 22, fontWeight: 900, color: C.inkSoft}}>账向：<Chip tone={C.pine} toneBg={C.pinePale} ink={C.pine}>乙 → 甲 偿付 1 万元</Chip></div>
+          </Panel>
+        </Enter>
+        <Enter delay={110} from="up" marker="offset-strips" style={{position: 'absolute', left: 0, top: 428, width: 1776, height: 340}}>
+          <Panel tone={C.rose} watermark={<Scale size={150} color={C.rose} strokeWidth={1.6} />} style={{height: '100%', display: 'flex', flexDirection: 'column', gap: 10, padding: '13px 20px'}}>
+            <PanelTab tone={C.rose} icon={<Scale size={22} color={C.paper} strokeWidth={2.2} />}>最终处理 · 两相冲抵</PanelTab>
+            <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 24, padding: '4px 0'}}>
+              <Chip tone={C.pine} toneBg={C.pinePale}>乙 → 甲　偿付 10000 元</Chip>
+              <span style={{fontSize: 34, fontWeight: 950, color: C.rose}}>－</span>
+              <Chip tone={C.violet} toneBg={C.lilacPale} ink={C.violet}>甲 → 乙　返还 2000 元</Chip>
+              <span style={{fontSize: 34, fontWeight: 950, color: C.rose}}>＝</span>
+              <Chip tone={C.rose} toneBg={C.rosePale}><span style={{fontSize: 30, fontWeight: 950, color: C.rose}}>8000 元</span></Chip>
+            </div>
+            <IconChip icon={<Gavel size={24} color={C.paper} strokeWidth={2.2} />} tone={C.rose} title="结论：">
+              甲可请求乙返还 <Chip tone={C.rose} toneBg={C.rosePale}><span style={{fontSize: 26, fontWeight: 950, color: C.rose}}>8000 元</span></Chip>
+            </IconChip>
+            <div style={{marginTop: 'auto', fontSize: 22, fontWeight: 900, color: C.inkSoft}}>口诀：一条<Soft color={C.violet}>不当得利账</Soft>＋一条<Soft color={C.pine}>无因管理账</Soft>——各自算清、<Soft color={C.rose}>两相冲抵</Soft>、只付差额</div>
           </Panel>
         </Enter>
       </div>
