@@ -1,0 +1,70 @@
+{
+  "animationId": "contract-performance-hall",
+  "compositionId": "ContractPerformanceHall",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-31T19:31:33.918Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 719,
+      "frameCount": 360,
+      "id": "defence-triad-court",
+      "number": "01",
+      "startFrame": 0,
+      "title": "双务合同履行抗辩权",
+      "durationMs": 12000,
+      "file": "defence-triad-court.avif",
+      "fileSize": 637019,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "638bc40c18d94711dd56c771187dbe93eb83ac845511857acf27ee5f25f66c94",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "663320d9d10c4a45b2e1609618abb5b72ce17f60aade1de9c5df20d7c06681d6"
+    },
+    {
+      "endFrame": 1439,
+      "frameCount": 360,
+      "id": "third-party-lanes",
+      "number": "02",
+      "startFrame": 720,
+      "title": "向第三人履行的合同",
+      "durationMs": 12000,
+      "file": "third-party-lanes.avif",
+      "fileSize": 586146,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "243726d9cfd40d9a38e9d14827af4f2f4b78291fc0fa266daea3f03f61de5fc7",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "663320d9d10c4a45b2e1609618abb5b72ce17f60aade1de9c5df20d7c06681d6"
+    },
+    {
+      "endFrame": 2039,
+      "frameCount": 300,
+      "id": "surrogate-performance-rails",
+      "number": "03",
+      "startFrame": 1440,
+      "title": "第三人代为履行",
+      "durationMs": 10000,
+      "file": "surrogate-performance-rails.avif",
+      "fileSize": 615592,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "3dfb381c5d68fe0f98f7df4da118d25f72a04f16100314c692e5e0206880da0a",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "663320d9d10c4a45b2e1609618abb5b72ce17f60aade1de9c5df20d7c06681d6"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "663320d9d10c4a45b2e1609618abb5b72ce17f60aade1de9c5df20d7c06681d6",
+  "targetFps": 30,
+  "totalFileSize": 1838757
+}
