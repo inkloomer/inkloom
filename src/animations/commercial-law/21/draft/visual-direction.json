@@ -1,0 +1,16 @@
+{
+  "directionId": "draft-issuance-ledger",
+  "derivedFrom": "demo-clerk-desk",
+  "variation": "汇票出票账房: 出票票据撞四人今日无恙四道记载闸, 五种特殊背书在账板上对格而坐, 承兑印章与保证三件套并排把守附条件大招",
+  "family": "draft-issuance-ledger",
+  "palette": "#EDE8DF + #2B2B33 + #3B4A6B + #8A4B2F + #15725F + #B23A30 + #B98A2F",
+  "typography": "WenKai 账房栏标 + 票据徽章 + 印章判词",
+  "composition": "绝对记载四闸 + 背书五变体对格板 + 承兑保证双卡与附条件三分",
+  "surface": "账房纸卡、票据铜徽章、红章与金口诀条, 无圆角",
+  "motion": "票据徽章沿四道记载闸逐格过关, 变体格依次点亮, 承兑保证双卡自两翼合拢, 大招三分线同步拉开",
+  "transition": "铜色账房贯穿三场, 青色可补救与红色无效线呼应",
+  "catalog": {
+    "status": "variant",
+    "sourceDirectionId": "draft-issuance-ledger"
+  }
+}

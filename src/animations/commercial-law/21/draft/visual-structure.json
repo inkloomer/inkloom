@@ -1,0 +1,92 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "draft-scene-01",
+      "export": "Draft01Scene",
+      "layout": "issuance-gate-row-1",
+      "anchor": "flow-path",
+      "grammar": [
+        "requirement-gate-row",
+        "record-fallback-rule"
+      ],
+      "textTreatments": [
+        "chip",
+        "stamp",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "motion",
+        "connector",
+        "contrast"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "draft-knowledge-1",
+        "draft-scene-01-gates",
+        "draft-scene-01-invalid",
+        "draft-scene-01-fallback"
+      ],
+      "statefulObjects": [
+        "issuance-check-travel"
+      ]
+    },
+    {
+      "id": "draft-scene-02",
+      "export": "Draft02Scene",
+      "layout": "endorsement-variant-board-2",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "variant-grid",
+        "who-records-who-frees"
+      ],
+      "textTreatments": [
+        "chip",
+        "external-negation",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "icon",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "draft-knowledge-2",
+        "draft-scene-02-base",
+        "draft-scene-02-variants"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "draft-scene-03",
+      "export": "Draft03Scene",
+      "layout": "accept-guarantee-pair-3",
+      "anchor": "role-pair",
+      "grammar": [
+        "accept-strict-rule",
+        "guarantee-checklist"
+      ],
+      "textTreatments": [
+        "chip",
+        "stamp",
+        "external-negation"
+      ],
+      "focalChannels": [
+        "contrast",
+        "icon",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "draft-knowledge-3",
+        "draft-scene-03-accept",
+        "draft-scene-03-guarantee",
+        "draft-scene-03-case"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}
