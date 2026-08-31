@@ -1,0 +1,16 @@
+{
+  "directionId": "debt-ledger-settlement",
+  "derivedFrom": "demo-clerk-desk",
+  "variation": "清偿账房: 债务徽章沿企业财产到合伙人两级台阶下落, 个人债权在禁与可四闸口分流, 双重优先两池各归各线",
+  "family": "debt-ledger-settlement",
+  "palette": "#ECE9E2 + #2B2B33 + #3B4A6B + #8A4B2F + #15725F + #B23A30 + #B98A2F",
+  "typography": "WenKai 账房栏标 + 债务徽章 + 判例行",
+  "composition": "清偿链两级台阶 + 四手段闸口与强执程序 + 双重优先双池与判例",
+  "surface": "蓝账页、铜青池卡、红章判词, 无圆角",
+  "motion": "债务徽章逐级下落, 个人债权徽章沿三级路径行进, 双池箭头相向而指, 判例卡分层滑入",
+  "transition": "靛蓝账房贯穿三场, 铜色合伙与青色个人双线呼应",
+  "catalog": {
+    "status": "variant",
+    "sourceDirectionId": "debt-ledger-settlement"
+  }
+}
