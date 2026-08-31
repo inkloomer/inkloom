@@ -1,0 +1,147 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "anti-monopoly-law-scene-01",
+      "export": "AntiMonopolyLaw01Scene",
+      "layout": "scope-review-board-1",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "scope-inout-split",
+        "review-pipeline"
+      ],
+      "textTreatments": [
+        "chip",
+        "stamp",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "icon",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "anti-monopoly-law-knowledge-1",
+        "anti-monopoly-law-scene-01-scope",
+        "anti-monopoly-law-scene-01-review"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "anti-monopoly-law-scene-02",
+      "export": "AntiMonopolyLaw02Scene",
+      "layout": "agreement-exemption-board-2",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "agreement-type-triad",
+        "exemption-gate"
+      ],
+      "textTreatments": [
+        "chip",
+        "stamp",
+        "external-negation"
+      ],
+      "focalChannels": [
+        "contrast",
+        "connector",
+        "motion"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "anti-monopoly-law-knowledge-2",
+        "anti-monopoly-law-scene-02-types",
+        "anti-monopoly-law-scene-02-exempt"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "anti-monopoly-law-scene-03",
+      "export": "AntiMonopolyLaw03Scene",
+      "layout": "dominance-presumption-stairs-3",
+      "anchor": "flow-path",
+      "grammar": [
+        "presumption-stairs",
+        "abuse-band"
+      ],
+      "textTreatments": [
+        "chip",
+        "stamp",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "motion",
+        "connector",
+        "contrast"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "anti-monopoly-law-knowledge-3",
+        "anti-monopoly-law-scene-03-stairs",
+        "anti-monopoly-law-scene-03-abuse"
+      ],
+      "statefulObjects": [
+        "dominance-share-travel"
+      ]
+    },
+    {
+      "id": "anti-monopoly-law-scene-04",
+      "export": "AntiMonopolyLaw04Scene",
+      "layout": "concentration-adminism-split-4",
+      "anchor": "role-pair",
+      "grammar": [
+        "concentration-review-fork",
+        "adminism-difference-band"
+      ],
+      "textTreatments": [
+        "chip",
+        "stamp",
+        "external-negation"
+      ],
+      "focalChannels": [
+        "contrast",
+        "motion",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "anti-monopoly-law-knowledge-4",
+        "anti-monopoly-law-scene-04-concentration",
+        "anti-monopoly-law-scene-04-adminism"
+      ],
+      "statefulObjects": [
+        "concentration-filing-travel"
+      ]
+    },
+    {
+      "id": "anti-monopoly-law-scene-05",
+      "export": "AntiMonopolyLaw05Scene",
+      "layout": "investigation-relief-track-5",
+      "anchor": "flow-path",
+      "grammar": [
+        "probe-state-track",
+        "relief-channel-pair"
+      ],
+      "textTreatments": [
+        "chip",
+        "soft-highlight",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "motion",
+        "connector",
+        "contrast"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "anti-monopoly-law-knowledge-5",
+        "anti-monopoly-law-scene-05-track"
+      ],
+      "statefulObjects": [
+        "investigation-state-travel"
+      ]
+    }
+  ]
+}

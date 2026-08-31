@@ -1,0 +1,16 @@
+{
+  "directionId": "monopoly-enforcement-desk",
+  "derivedFrom": "demo-clerk-desk",
+  "variation": "反垄断执法台: 垄断协议在豁免闸口前验目的, 市场份额金币沿推定阶梯逐级称重, 集中申报文件走向审查三分叉, 调查状态徽章沿中止终止恢复轨道行进",
+  "family": "monopoly-enforcement-desk",
+  "palette": "#EFECE4 + #2B2B33 + #2C4A6E + #8A4B2F + #15725F + #B23A30 + #B98A2F",
+  "typography": "WenKai 执法台标 + 徽章请求 + 推定刻度",
+  "composition": "适用范围与公平竞争审查 + 协议类型豁免责任 + 推定阶梯与滥用 + 集中与行政垄断 + 调查轨道与救济",
+  "surface": "执法台纸卡、申请徽章、推定刻度与金口诀条, 无圆角",
+  "motion": "份额徽章沿推定阶梯逐级称重, 申报文件滑向审查三分叉, 调查状态徽章沿中止终止恢复轨道行进",
+  "transition": "藏蓝执法台贯穿五场, 青色豁免与红色禁止双线呼应",
+  "catalog": {
+    "status": "variant",
+    "sourceDirectionId": "monopoly-enforcement-desk"
+  }
+}

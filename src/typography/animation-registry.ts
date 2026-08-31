@@ -210,6 +210,7 @@ import {typography as typographyAutoInheritanceLineageRegister} from '../animati
 import {typography as typographyAutoDividendRight} from '../animations/commercial-law/04/dividend-right/animation.meta';
 import {typography as typographyAutoShareholderQualification} from '../animations/commercial-law/03/shareholder-qualification/animation.meta';
 import {typography as typographyAutoNominalShareholder} from '../animations/commercial-law/03/nominal-shareholder/animation.meta';
+import {typography as typographyAutoAntiMonopolyLaw} from '../animations/economic-law/01/anti-monopoly-law/animation.meta';
 import {typography as typographyAutoShareholderContribution} from '../animations/commercial-law/02/shareholder-contribution/animation.meta';
 import {typography as typographyAutoPromoter} from '../animations/commercial-law/02/promoter/animation.meta';
 import {typography as typographyAutoCompanyIncorporation} from '../animations/commercial-law/02/company-incorporation/animation.meta';
@@ -710,6 +711,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'demo-statute-commentary': {metadata: typography59, scope: {animationId: 'demo-statute-commentary', subject: 'demo', topic: 'styles'}},
   'demo-timeline-chronicle': {metadata: typography60, scope: {animationId: 'demo-timeline-chronicle', subject: 'demo', topic: 'styles'}},
   'demo-transit-map': {metadata: typography61, scope: {animationId: 'demo-transit-map', subject: 'demo', topic: 'styles'}},
+  'anti-monopoly-law': {metadata: typographyAutoAntiMonopolyLaw, scope: {animationId: 'anti-monopoly-law', subject: 'economic-law', topic: '01'}},
   ...COMMERCIAL_LAW_TYPOGRAPHY_CONFIGURATIONS,
 };
 
