@@ -5,10 +5,21 @@
   "family": "constructivist-mediation-draft",
   "palette": "warm paper + carbon black + voluntary cyan + lawful green + refusal vermilion + judgment violet",
   "typography": "large geometric headings, compact legal labels, thin retrieval rules, and operative square stamps",
-  "composition": "eligibility boundary, confirmation press, dual-signature threshold, and two-way settlement exit",
+  "composition": "eligibility boundary, confirmation press, dual-signature threshold, two-way settlement exit, and a no-document exception fork where four case rows route the agreement past the mediation order into the signed record",
   "surface": "flat paper planes, square document tabs, diagonal separators, and no card grid",
   "motion": "the same agreement sheet crosses only legally authorized boundaries and remains visible in its resulting state",
   "transition": "a cyan agreement strip persists left-to-right while each procedural boundary replaces the previous one",
+  "conceptTokens": {
+    "调解协议": "FileSignature",
+    "调解书": "FileCheck2",
+    "拒签与免除制作": "FileX2",
+    "笔录": "NotebookPen",
+    "签字盖章": "PenLine",
+    "离婚": "HeartHandshake",
+    "收养": "Baby",
+    "即时履行": "Zap",
+    "生效": "BadgeCheck"
+  },
   "catalog": {
     "status": "variant",
     "sourceDirectionId": "constructivist-proof-field"

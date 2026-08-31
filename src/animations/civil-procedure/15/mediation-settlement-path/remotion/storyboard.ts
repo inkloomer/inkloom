@@ -6,8 +6,9 @@ export const SCENES = {
   agreementReview: scene(210, 225),
   signatureEffect: scene(435, 210),
   settlementExits: scene(645, 195),
+  noDocumentCases: scene(840, 280),
 } as const;
 
-export const DURATION_FRAMES = 840;
+export const DURATION_FRAMES = 1120;
 export const DURATION_SECONDS = DURATION_FRAMES / FPS;
 export const toSourceFrame = (frame: number) => frame;
