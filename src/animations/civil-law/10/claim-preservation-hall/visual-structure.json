@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "subrogation-gate",
+      "export": "SubrogationScene",
+      "layout": "creditor-debtor-subdebtor-chain-with-court-gates",
+      "anchor": "flow-path",
+      "grammar": [
+        "two-mature-debts-a-lazy-debtor-and-harmed-credit-open-the-gate",
+        "laziness-means-never-suing-or-arbitrating-the-subdebtor",
+        "the-creditor-sues-in-own-name-with-the-subdebtor-as-defendant",
+        "the-subdebtor-pays-the-creditor-directly-in-one-step"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["connector", "contrast", "enclosure", "motion"],
+      "tokens": ["HandCoins", "Scale", "Users"],
+      "finalKnowledge": ["subrogation-definition", "formation-mnemonic", "exercise-rules", "outcome-rules"],
+      "statefulObjects": []
+    },
+    {
+      "id": "revocation-conditions",
+      "export": "RevocationConditionsScene",
+      "layout": "minus-one-plus-zero-ledgers-with-type-cards",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "only-acts-reducing-the-reserve-may-be-revoked",
+        "waiving-inheritance-merely-fails-to-add-and-never-flips",
+        "gratuitous-acts-revoke-regardless-of-recipient-malice",
+        "undervalued-trades-and-guarantees-need-a-malicious-counterparty"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "external-negation"],
+      "focalChannels": ["contrast", "connector", "enclosure", "motion"],
+      "tokens": ["Undo2", "Shield", "Ban"],
+      "finalKnowledge": ["revocation-definition", "minus-one-plus-zero-rule", "act-type-cards", "debt-period-rule"],
+      "statefulObjects": []
+    },
+    {
+      "id": "revocation-exercise-ladder",
+      "export": "RevocationLadderScene",
+      "layout": "exercise-ladder-with-two-power-strip",
+      "anchor": "timeline-gate",
+      "grammar": [
+        "revocation-sues-creditor-against-debtor-and-third-party-together",
+        "one-year-from-knowing-and-five-years-from-the-act-caps-the-window",
+        "revoked-dispositions-are-void-from-the-start-with-costs-on-the-debtor",
+        "subrogation-trims-the-lazy-debtor-while-revocation-trims-the-spender"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["connector", "contrast", "enclosure", "motion"],
+      "tokens": ["Undo2", "Gavel", "HandCoins"],
+      "finalKnowledge": ["exercise-rules-limb", "window-ladder", "void-consequence", "two-power-comparison"],
+      "statefulObjects": []
+    }
+  ]
+}

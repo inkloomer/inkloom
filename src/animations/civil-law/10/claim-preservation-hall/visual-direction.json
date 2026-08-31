@@ -1,0 +1,21 @@
+{
+  "directionId": "sakura-vault-claim-preservation-hall",
+  "family": "sakura-vault-claim-preservation-hall",
+  "palette": "dark sakura plum, blossom pink, teal ribbon, gold wire, seal red wax, cream paper",
+  "typography": "vault-hall headings on sakura rail tabs, cream chips and seal red wax verdicts",
+  "composition": "a shield vault where the subrogation chain runs creditor-debtor-subdebtor through litigation gates, revocation condition cards split minus-one and plus-zero ledgers, and an exercise ladder climbs the one-year and five-year windows before the two-power comparison strip",
+  "surface": "cream paper files, sakura desk rails, teal ribbon tags, seal red wax",
+  "motion": "the lazy-debtor arrow stalls before the subdebtor gate until the creditor chip leaps over it into court, revocation ledgers flip minus-one pages while plus-zero pages refuse to flip, and revocation chips climb the one-year and five-year window rungs",
+  "transition": "the sakura hall floor, sakura rails and teal ribbon posts persist while chains, ledgers, ladders and strips are re-dressed between scenes",
+  "conceptTokens": {
+    "代位权": "HandCoins",
+    "撤销权": "Undo2",
+    "责任财产": "Shield"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/civil-law/10/claim-preservation-hall/",
+    "title": "暗樱盾库"
+  }
+}
