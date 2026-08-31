@@ -193,262 +193,109 @@
     {
       "id": "embezzlement-trust-ledger",
       "export": "EmbezzlementTrustLedgerScene",
-      "layout": "embezzlement-trust-quad-ledger",
-      "anchor": "document-fork",
-      "grammar": [
-        "object-ledger",
-        "possession-cases-board"
-      ],
-      "textTreatments": [
-        "chip",
-        "label-block",
-        "soft-highlight",
-        "thin-underline",
-        "external-negation",
-        "stamp"
-      ],
-      "focalChannels": [
-        "icon",
-        "contrast",
-        "enclosure",
-        "annotation"
-      ],
-      "tokens": [
-        "ScrollText",
-        "Package",
-        "Hand",
-        "KeyRound",
-        "Users",
-        "Coins",
-        "Ban",
-        "BookOpen",
-        "Scale"
-      ],
-      "finalKnowledge": [
-        "statute-270-strip",
-        "object-ledger",
-        "possession-cases-board",
-        "illicit-trust-board",
-        "conduct-mode-board"
-      ],
+      "layout": "embezzlement-pipeline-flow",
+      "anchor": "flow-path",
+      "grammar": ["pipeline-strip", "source-fork-board"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "enclosure"],
+      "tokens": ["ScrollText", "Package", "Hand", "KeyRound", "Users", "Coins", "Ban", "Scale", "Wrench"],
+      "finalKnowledge": ["pipeline-strip", "source-fork-board", "possession-gate-board", "illicit-fork-board"],
       "statefulObjects": []
     },
     {
       "id": "snatch-violence-lane",
       "export": "SnatchViolenceLaneScene",
-      "layout": "snatch-violence-lane",
+      "layout": "snatch-stair-gate-flow",
       "anchor": "flow-path",
-      "grammar": [
-        "snatch-structure-board",
-        "weapon-clause-board"
-      ],
-      "textTreatments": [
-        "chip",
-        "label-block",
-        "soft-highlight",
-        "thin-underline",
-        "external-negation",
-        "stamp"
-      ],
-      "focalChannels": [
-        "icon",
-        "contrast",
-        "enclosure",
-        "connector"
-      ],
-      "tokens": [
-        "Grab",
-        "Zap",
-        "Scale",
-        "Ban",
-        "ShieldAlert",
-        "Dog",
-        "Bike",
-        "Timer",
-        "ScrollText"
-      ],
-      "finalKnowledge": [
-        "snatch-structure-board",
-        "myth-split-board",
-        "weapon-clause-board",
-        "carry-gate-board",
-        "judicial-interpret-board"
-      ],
+      "grammar": ["violence-stair-board", "weapon-gate-board"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "enclosure"],
+      "tokens": ["Grab", "Ban", "Zap", "Bike", "ScrollText", "ShieldAlert", "Dog", "KeyRound"],
+      "finalKnowledge": ["violence-stair-board", "case-pin-board", "weapon-gate-board"],
       "statefulObjects": []
     },
     {
       "id": "robbery-aggravation-board",
       "export": "RobberyAggravationBoardScene",
-      "layout": "robbery-aggravation-octo-board",
-      "anchor": "comparison-axis",
-      "grammar": [
-        "home-board",
-        "injury-board"
-      ],
-      "textTreatments": [
-        "chip",
-        "label-block",
-        "soft-highlight",
-        "thin-underline",
-        "external-negation",
-        "stamp"
-      ],
-      "focalChannels": [
-        "icon",
-        "contrast",
-        "enclosure",
-        "spatial"
-      ],
-      "tokens": [
-        "Zap",
-        "Home",
-        "Train",
-        "Landmark",
-        "Repeat",
-        "Skull",
-        "ShieldAlert",
-        "Crosshair",
-        "Scale",
-        "Ban",
-        "Coins",
-        "Users"
-      ],
-      "finalKnowledge": [
-        "aggravation-header",
-        "home-board",
-        "transit-board",
-        "bank-board",
-        "repeat-board",
-        "injury-board",
-        "impersonate-board",
-        "gun-board",
-        "military-board"
-      ],
+      "layout": "robbery-aggravation-ladder",
+      "anchor": "timeline-gate",
+      "grammar": ["ladder-base", "ladder-rungs"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["Zap", "Home", "Train", "Landmark", "Repeat", "Skull", "ShieldAlert", "Crosshair", "Scale", "ShieldQuestion"],
+      "finalKnowledge": ["ladder-base", "ladder-rungs", "ladder-top"],
       "statefulObjects": []
     },
     {
-      "id": "extortion-will-freedom",
-      "export": "ExtortionWillFreedomScene",
-      "layout": "extortion-will-freedom-split",
+      "id": "extortion-notice-flow",
+      "export": "ExtortionNoticeFlowScene",
+      "layout": "extortion-notice-flow",
+      "anchor": "flow-path",
+      "grammar": ["flow-chain-board", "branch-fail-board"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["Megaphone", "EyeOff", "Coins", "Scale", "Ban", "Zap"],
+      "finalKnowledge": ["flow-chain-board", "branch-fail-board", "attempt-drop-board"],
+      "statefulObjects": []
+    },
+    {
+      "id": "extortion-freedom-spectrum",
+      "export": "ExtortionFreedomSpectrumScene",
+      "layout": "extortion-freedom-spectrum",
+      "anchor": "comparison-axis",
+      "grammar": ["spectrum-axis-board", "case-pins-board"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["Scale", "Megaphone", "Zap"],
+      "finalKnowledge": ["spectrum-axis-board", "case-pins-board", "onspot-verdict-board"],
+      "statefulObjects": []
+    },
+    {
+      "id": "exercise-right-gate",
+      "export": "ExerciseRightGateScene",
+      "layout": "exercise-right-gate-flow",
+      "anchor": "timeline-gate",
+      "grammar": ["gate-two-board", "pass-case-board"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "enclosure"],
+      "tokens": ["Handshake", "Scale", "Megaphone", "Ban"],
+      "finalKnowledge": ["gate-two-board", "pass-case-board", "fail-case-board"],
+      "statefulObjects": []
+    },
+    {
+      "id": "minor-damage-misuse",
+      "export": "MinorDamageMisuseScene",
+      "layout": "minor-damage-rings-misuse-fork",
       "anchor": "boundary",
-      "grammar": [
-        "extortion-model-board",
-        "will-freedom-board"
-      ],
-      "textTreatments": [
-        "chip",
-        "label-block",
-        "soft-highlight",
-        "thin-underline",
-        "external-negation",
-        "stamp"
-      ],
-      "focalChannels": [
-        "icon",
-        "contrast",
-        "enclosure",
-        "annotation"
-      ],
-      "tokens": [
-        "Megaphone",
-        "EyeOff",
-        "Ban",
-        "Scale",
-        "Coins",
-        "Zap",
-        "Gavel",
-        "Handshake"
-      ],
-      "finalKnowledge": [
-        "extortion-model-board",
-        "completion-causation-board",
-        "will-freedom-board",
-        "exercise-right-board"
-      ],
+      "grammar": ["damage-rings-board", "misuse-fork-board"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "enclosure", "contrast", "spatial"],
+      "tokens": ["Skull", "Bird", "Fish", "Coins"],
+      "finalKnowledge": ["damage-rings-board", "misuse-fork-board"],
       "statefulObjects": []
     },
     {
-      "id": "minor-crimes-completion",
-      "export": "MinorCrimesCompletionScene",
-      "layout": "minor-crimes-completion-quad",
-      "anchor": "comparison-axis",
-      "grammar": [
-        "damage-board",
-        "misuse-funds-board"
-      ],
-      "textTreatments": [
-        "chip",
-        "label-block",
-        "soft-highlight",
-        "thin-underline",
-        "external-negation",
-        "stamp"
-      ],
-      "focalChannels": [
-        "icon",
-        "contrast",
-        "enclosure",
-        "spatial"
-      ],
-      "tokens": [
-        "Skull",
-        "Ban",
-        "Bird",
-        "Coins",
-        "Timer",
-        "Scale",
-        "Landmark",
-        "Hand",
-        "HardHat",
-        "Wallet"
-      ],
-      "finalKnowledge": [
-        "damage-board",
-        "misuse-funds-board",
-        "special-funds-board",
-        "wages-board"
-      ],
+      "id": "minor-funds-wages",
+      "export": "MinorFundsWagesScene",
+      "layout": "minor-funds-belt-wages-gate",
+      "anchor": "flow-path",
+      "grammar": ["special-funds-belt-board", "wages-gate-board"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "enclosure"],
+      "tokens": ["Landmark", "Ban", "KeyRound", "Scale", "Hand", "Coins", "Wallet"],
+      "finalKnowledge": ["special-funds-belt-board", "wages-gate-board"],
       "statefulObjects": []
     },
     {
       "id": "completion-control-lattice",
       "export": "CompletionControlLatticeScene",
-      "layout": "completion-control-lattice",
-      "anchor": "typographic-sequence",
-      "grammar": [
-        "control-standard-board",
-        "small-items-board"
-      ],
-      "textTreatments": [
-        "chip",
-        "label-block",
-        "soft-highlight",
-        "thin-underline",
-        "external-negation",
-        "stamp"
-      ],
-      "focalChannels": [
-        "icon",
-        "contrast",
-        "enclosure",
-        "spatial"
-      ],
-      "tokens": [
-        "Scale",
-        "ShoppingBag",
-        "Home",
-        "Users",
-        "Ban",
-        "Package",
-        "Car",
-        "EyeOff"
-      ],
-      "finalKnowledge": [
-        "control-standard-board",
-        "small-items-board",
-        "large-items-board",
-        "hidden-spot-board"
-      ],
+      "layout": "completion-control-zones",
+      "anchor": "boundary",
+      "grammar": ["control-zones-board", "bigitem-path-board"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "enclosure", "contrast", "spatial"],
+      "tokens": ["Scale", "ShoppingBag", "Users", "Package", "EyeOff"],
+      "finalKnowledge": ["control-zones-board", "ring-case-board", "bigitem-path-board"],
       "statefulObjects": []
     }
   ]

@@ -3,7 +3,7 @@
   "compositionId": "PropertyCrimeLedger",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-08-31T06:06:45.106Z",
+  "generatedAt": "2026-08-31T08:08:47.263Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -22,7 +22,7 @@
       "sha256": "87ecdf99ebf4878fe6a9c4dad34230dd43cb02369e81f91f3f78de19884a21fb",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "07b1a624325841f07ab9435b13960c7eb6ee9a47a5b06332fbf7c0e904568bd3"
+      "sceneFingerprint": "45bfe5ee7c1f63601192189395cac937a204ab0418cdb5b8e7904a7aa5544b60"
     },
     {
       "endFrame": 509,
@@ -39,7 +39,7 @@
       "sha256": "83aa40a9d552a5958916fa49412d07c87d4c0ae5def19048e9502768ef5df5dc",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "5e7dfb9768d82aff8419c81109bf27d123bfbbda045119c750ed488afda5400c"
+      "sceneFingerprint": "261f48276734736158e3676087884b41d20ca466927ea0a636a8461f28c3e409"
     },
     {
       "endFrame": 769,
@@ -56,7 +56,7 @@
       "sha256": "a262b2710c43c3840677c214c3833bebce9c811a915b774efb266891c983910e",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "4d3661646aa1b48d19ccb85ef3bfea1b460f5f84a2ba819b60675d24454ef6b1"
+      "sceneFingerprint": "3623a8abbd7262b24c474f69765458e661f8279259361c268fd4961d62c7dda5"
     },
     {
       "endFrame": 1029,
@@ -67,13 +67,13 @@
       "title": "抢劫罪：强制手段·事后转化·当场性",
       "durationMs": 8667,
       "file": "robbery-coercion-steps.avif",
-      "fileSize": 853372,
+      "fileSize": 857796,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "471399c9e816a7941d589b46b754c70035c6a456e5241b2fe56a02a9c45e03b7",
+      "sha256": "6865afab52e95865679b624310cf4b7ee26a4d94cc27bd435c5e90d4c062ebe1",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "8a65df4408b25e295af5ea74b50f9eb0e83ffe8f6f9bb4e2d2dd3598deae8eee"
+      "sceneFingerprint": "0ab0b2b827036d436e75fd1f5c39c1afc95435a956f93f0711e3612c6b7f8af9"
     },
     {
       "endFrame": 1289,
@@ -90,7 +90,7 @@
       "sha256": "63eb4bb33372b63a2744567aed8c0e9c0991187d49019ea519408cf910a1e632",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "2c13de080af0536db1f5a70dd9343ab8b2f20fbe44dca40611dc4f595ba3f604"
+      "sceneFingerprint": "fd1cf95d0b792c8990f8545546303e9206c4a3be776a0bb5083c933987a9e8ee"
     },
     {
       "endFrame": 1579,
@@ -98,16 +98,16 @@
       "id": "embezzlement-trust-ledger",
       "number": "06",
       "startFrame": 1290,
-      "title": "侵占罪：他人所有·自己占有",
+      "title": "侵占罪：变占有为所有的转捩线",
       "durationMs": 9667,
       "file": "embezzlement-trust-ledger.avif",
-      "fileSize": 1019039,
+      "fileSize": 1124105,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "58dbd1f5c27a1ef614ff6fd77d9ecdfda929ead6326e84ee855f3572fb8e27e3",
+      "sha256": "fa5d9bf649c65e931aae1faeb0dc0e0534ed2f1f27476f1bb708f55b4569677d",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "fbd444f8e0e5ec286e85c8bf28a98b2b7d7779b6ad764eecb5f81519e5696e5c"
+      "sceneFingerprint": "1ed5c1d6060b5dc59fcc198ab962be4f631244337a4bb7e8d42520cd5706f079"
     },
     {
       "endFrame": 1879,
@@ -115,84 +115,135 @@
       "id": "snatch-violence-lane",
       "number": "07",
       "startFrame": 1580,
-      "title": "抢夺罪：对物暴力·对人有危险",
+      "title": "抢夺罪：暴力三阶与凶器拟制闸",
       "durationMs": 10000,
       "file": "snatch-violence-lane.avif",
-      "fileSize": 1257245,
+      "fileSize": 1166643,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "d0c6431a00a748640f1532fcd5493d714d5d7fee8b2a9f2485ed31a1f4ceb47c",
+      "sha256": "c961bc49027b8e83f460e668d83701746383d1835c5491411eb15a02c773e16e",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "777ef19fc4d4313b94092c0cce1ea5b68bb3e4bcb4eba40cd76705240d3ebdee"
+      "sceneFingerprint": "9359b312531f268ed996bccfc1d0ca9b00427ebe9891abdca46ebe88e5832ec2"
     },
     {
-      "endFrame": 2179,
-      "frameCount": 300,
+      "endFrame": 2189,
+      "frameCount": 310,
       "id": "robbery-aggravation-board",
       "number": "08",
       "startFrame": 1880,
-      "title": "抢劫罪：八个法定刑升格条件",
-      "durationMs": 10000,
+      "title": "八个升格条件：通往加重法定刑的阶梯",
+      "durationMs": 10333,
       "file": "robbery-aggravation-board.avif",
-      "fileSize": 1439012,
+      "fileSize": 1295018,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "eba4621ae7b84c7254706a1d31e2fba6ec787ed7832ff952a76f0faae27b6cbf",
+      "sha256": "6367f24107f3d1fb0c49f124ad868a56dc7c8e18562f82f0a5444363be010127",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "11916b97e591126995792da9c95009fc32ff29b79b80fb02fd8721f993ecf1b0"
+      "sceneFingerprint": "b8ba51fa91f255b355772957076c57ca8b0ef73ac9ee6ce00b978525139ea135"
     },
     {
-      "endFrame": 2469,
+      "endFrame": 2479,
       "frameCount": 290,
-      "id": "extortion-will-freedom",
+      "id": "extortion-notice-flow",
       "number": "09",
-      "startFrame": 2180,
-      "title": "敲诈勒索：恐惧心理·意志自由",
+      "startFrame": 2190,
+      "title": "敲诈勒索：恐吓的四步流程",
       "durationMs": 9667,
-      "file": "extortion-will-freedom.avif",
-      "fileSize": 1194722,
+      "file": "extortion-notice-flow.avif",
+      "fileSize": 829102,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "82c6b2b07f54dbaa4eac3f491c28fef02e554ef4d9a65a78501e24d835a58c10",
+      "sha256": "58ff1a6f216eb79a6457f4ebc42ac65a3a1d962f1e03a346c3606fab2bfe24e7",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "61a398115e2447e94bd94194172e13ca91c7360097995d0b53ec511e2fd6aacf"
+      "sceneFingerprint": "63094c255e110c172cf3d85ed1c22d219c5a03ff4a88719ea3d887baa84cee5f"
     },
     {
-      "endFrame": 2759,
-      "frameCount": 290,
-      "id": "minor-crimes-completion",
+      "endFrame": 2779,
+      "frameCount": 300,
+      "id": "extortion-freedom-spectrum",
       "number": "10",
-      "startFrame": 2470,
-      "title": "普通罪名：毁坏·挪用·欠薪",
-      "durationMs": 9667,
-      "file": "minor-crimes-completion.avif",
-      "fileSize": 1212473,
+      "startFrame": 2480,
+      "title": "与抢劫罪的区分：意志自由光谱",
+      "durationMs": 10000,
+      "file": "extortion-freedom-spectrum.avif",
+      "fileSize": 749027,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "452be29ddf8fb596380694f049113ebfea0d978423eea577d936797b323ce671",
+      "sha256": "852c82c760b5c030a5d63442447a82a3c7db9d593ad6315c7fe3f3b1691e3009",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "6b38494cbefa83ca8c34a12b72b98fca9fba8645fb3d0a5e1b514efcf143e1f9"
+      "sceneFingerprint": "d9d01bf5ba5874c998e2b31a953db775c50a36a0ce92e8d13ef1e0029628cb30"
     },
     {
-      "endFrame": 3039,
-      "frameCount": 280,
-      "id": "completion-control-lattice",
+      "endFrame": 3069,
+      "frameCount": 290,
+      "id": "exercise-right-gate",
       "number": "11",
-      "startFrame": 2760,
-      "title": "既遂标准：取得控制说",
-      "durationMs": 9333,
-      "file": "completion-control-lattice.avif",
-      "fileSize": 1060318,
+      "startFrame": 2780,
+      "title": "与行使权利的区分：两道闸门",
+      "durationMs": 9667,
+      "file": "exercise-right-gate.avif",
+      "fileSize": 958033,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "13bf0b7eb5ab6458083eecaed5c231821d9b761b70f2005e92cfd86d6a20390f",
+      "sha256": "19dcc88ce6950d033fd608e07ac77051247e0b94fbc845faedd7bb847b9cc5e5",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "60e2d9abe9cf3a24beb780685cf1cdda62d023db8aa390cd548c9351386da4a5"
+      "sceneFingerprint": "b7a38c22dacc58cbf3845492213c997459980f192d0c4603f675c799a9abf1c6"
+    },
+    {
+      "endFrame": 3369,
+      "frameCount": 300,
+      "id": "minor-damage-misuse",
+      "number": "12",
+      "startFrame": 3070,
+      "title": "故意毁坏财物罪：毁坏的三层环",
+      "durationMs": 10000,
+      "file": "minor-damage-misuse.avif",
+      "fileSize": 954772,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "2142489d2bb29c53a5867cee9a9bfaa98f2437d6a46f612a2ad93bdba45ca484",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "8cb21e97fe083357776ac733a802efb7b4c93dcd0c2c49290ea16117e28e2aba"
+    },
+    {
+      "endFrame": 3659,
+      "frameCount": 290,
+      "id": "minor-funds-wages",
+      "number": "13",
+      "startFrame": 3370,
+      "title": "特定款物传送带与欠薪红线闸",
+      "durationMs": 9667,
+      "file": "minor-funds-wages.avif",
+      "fileSize": 891966,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "cb67a48e4699428398ffbc61b82e9182e23260fde07286a7fbb993cc38b99b0b",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "7707e28d8c4208d0493c37c64c4f3c65ba595304ba5551479ebb238b2bf5c976"
+    },
+    {
+      "endFrame": 3949,
+      "frameCount": 290,
+      "id": "completion-control-lattice",
+      "number": "14",
+      "startFrame": 3660,
+      "title": "既遂标准：取得控制·三层控制圈",
+      "durationMs": 9667,
+      "file": "completion-control-lattice.avif",
+      "fileSize": 1025571,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "2d4c010be1a97be5b80a732f30dc5849782ce9746c1db57960db6b22930a5da6",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "a9ac02e27834629c7fee8f1748d0c8f3bbbb3af3ab40b7c2e514a45c4d6b7a07"
     }
   ],
   "size": {
@@ -200,7 +251,7 @@
     "width": 2560
   },
   "sourceFps": 30,
-  "sourceFingerprint": "00adb3f278f9a83c8f5e859baee0476dc936d35b494c00e8363d86d21391b69e",
+  "sourceFingerprint": "690ec64f64d21860e3663c76ca5bc7a3ec472acc88a4d52c3c8440765d7babc0",
   "targetFps": 30,
-  "totalFileSize": 11327505
+  "totalFileSize": 13143357
 }

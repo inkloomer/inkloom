@@ -4,6 +4,7 @@ import {CLAMP} from '../../../../shared/remotion-runtime';
 
 export const C = {
   board: '#EDEAE0',
+  panel: '#E7DABB',
   boardDeep: '#DFDACC',
   ink: '#25231C',
   inkSoft: 'rgba(37,35,28,0.76)',
@@ -67,14 +68,14 @@ export const AlertTitle = ({children}: {children: ReactNode}) => (
 );
 
 export const Panel = ({children, marker, tone, watermark, style}: {children: ReactNode; marker?: string; tone?: string; watermark?: ReactNode; style?: CSSProperties}) => (
-  <div data-final-knowledge={marker} style={{backgroundColor: C.white, border: `3px solid ${C.night}`, position: 'relative', overflow: 'hidden', borderTop: tone ? `8px solid ${tone}` : undefined, ...style}}>
+  <div data-final-knowledge={marker} style={{backgroundColor: C.panel, border: `5px solid ${C.night}`, position: 'relative', overflow: 'hidden', borderTop: tone ? `14px solid ${tone}` : undefined, ...style}}>
     {watermark ? <span style={{position: 'absolute', right: -14, bottom: -18, opacity: 0.09, pointerEvents: 'none'}}>{watermark}</span> : null}
     {children}
   </div>
 );
 
 export const TabChip = ({children, tone, icon}: {children: ReactNode; tone: string; icon?: ReactNode}) => (
-  <span style={{display: 'inline-flex', alignItems: 'center', gap: 8, padding: '5px 14px', backgroundColor: C.night, borderLeft: `6px solid ${tone}`, color: C.white, fontSize: 22, fontWeight: 900, letterSpacing: 1}}>{icon}{children}</span>
+  <span style={{display: 'inline-flex', alignItems: 'center', gap: 8, padding: '8px 18px', backgroundColor: C.night, borderLeft: `8px solid ${tone}`, color: C.white, fontSize: 24, fontWeight: 900, letterSpacing: 1}}>{icon}{children}</span>
 );
 
 export const Mark = ({children, color = C.siren}: {children: ReactNode; color?: string}) => (
@@ -83,8 +84,8 @@ export const Mark = ({children, color = C.siren}: {children: ReactNode; color?: 
 
 export const IconChip = ({icon, tone, title, children}: {icon: ReactNode; tone: string; title: string; children: ReactNode}) => (
   <div style={{display: 'flex', alignItems: 'center', gap: 12, backgroundColor: C.boardDeep, borderLeft: `6px solid ${tone}`, padding: '8px 12px'}}>
-    <span style={{flexShrink: 0, width: 48, height: 48, borderRadius: 10, backgroundColor: tone, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>{icon}</span>
-    <span style={{fontSize: 21, fontWeight: 870, color: C.ink, lineHeight: 1.45}}>
+    <span style={{flexShrink: 0, width: 58, height: 58, borderRadius: 12, backgroundColor: tone, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>{icon}</span>
+    <span style={{fontSize: 22, fontWeight: 880, color: C.ink, lineHeight: 1.45}}>
       <span style={{fontWeight: 950, color: tone}}>{title}</span>
       {children}
     </span>

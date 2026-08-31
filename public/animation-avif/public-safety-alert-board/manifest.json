@@ -3,7 +3,7 @@
   "compositionId": "PublicSafetyAlertBoard",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-08-31T06:12:07.129Z",
+  "generatedAt": "2026-08-31T08:14:24.388Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -16,13 +16,13 @@
       "title": "公共安全·两把尺·放火罪",
       "durationMs": 8667,
       "file": "meaning-fire-rulers.avif",
-      "fileSize": 812196,
+      "fileSize": 849174,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "c58d1a1ad9702d8b09220da1ef0bf01feb77d89efa868565cbb73a709ec0ae25",
+      "sha256": "cb767356eb2d642c56c80c58750a34ce1da4210bd839424b62da39ed7c0a5be8",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "91b56a42201357bb84cd0e35cfec359c309a71026c13aa191ef942db38394bf0"
+      "sceneFingerprint": "da958862d064cc764c7186b4e00863b89dd6adc80b40b6b3aab976d6ffb32784"
     },
     {
       "endFrame": 559,
@@ -33,13 +33,13 @@
       "title": "以危险方法危害公共安全罪·破坏型犯罪",
       "durationMs": 10000,
       "file": "danger-methods-floor.avif",
-      "fileSize": 1007954,
+      "fileSize": 1035252,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "f9a81f54ad493069064bc02d9b28555340f28023602d50734cb6ad7c8866e7df",
+      "sha256": "f596c844eec8c45489dd8cc8f5ca01b0cb9d8539d8ac591feff1e68c3cac92fc",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "3c51cb3bf655d1f8628539c5054228bdcc0cbd591b684282788440a188fa2421"
+      "sceneFingerprint": "f52f8de00b475f49354c7325c347001868ed6e40a2fd9faf7ec73edc38156ba3"
     },
     {
       "endFrame": 859,
@@ -50,13 +50,13 @@
       "title": "交通肇事罪：成立·逃逸·因逃逸致人死亡",
       "durationMs": 10000,
       "file": "traffic-accident-ward.avif",
-      "fileSize": 795192,
+      "fileSize": 843691,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "b7f37dc0f40dd379e7aea2907f60d996510d5711de7c47ebd521d5884151942c",
+      "sha256": "7c4a98bd68abd5cf5d7a16239323c7c0ad8647579b47dd6b02109af36a95cd8c",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "d8c01cc9fec8cf76d2bb241d4fea4a1d2f96ca595257718049521ae0f8e0d5a8"
+      "sceneFingerprint": "48c01bf7d9c7f7588eaf8fdc2799a8a4a2933a26a8bd90ea2ae16c1de4201cf4"
     },
     {
       "endFrame": 1159,
@@ -67,13 +67,13 @@
       "title": "危险驾驶·枪支犯罪·安全生产犯罪",
       "durationMs": 10000,
       "file": "driving-guns-safety.avif",
-      "fileSize": 960048,
+      "fileSize": 993413,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "0ecc84396ddcefdd0d5d0b57e6027895402fc44df1c77c0b980acd4bb4f66f33",
+      "sha256": "ba08a4e200aa25a93088b9aa56e55bdbb95807255e848b7b57c2c84181ab9d7d",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "93b89aa1c8526ad3a974dd78c4477e23ce1e4d5cf08a98cf930af2d0b89da76e"
+      "sceneFingerprint": "1c4e0d59ca050719e67653ddf7e5376b8c74d002d35713fc4cc4ef1d9b209d11"
     },
     {
       "endFrame": 1449,
@@ -84,13 +84,13 @@
       "title": "恐怖型犯罪：组织·帮助·准备",
       "durationMs": 9667,
       "file": "terror-alert-ward.avif",
-      "fileSize": 829666,
+      "fileSize": 1118994,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "296de4e5495978adac79c6edca693e99eb9b2d5505c15f6565bfcc091dcf5169",
+      "sha256": "e8c7287f7af32b32fc689bd42fc9d87a34bf6bb9726871eb49313a5565bfffab",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "1b07a9d20860da969a8c0ebbc387f350a75a20e362a31419c5cf22be24c0c175"
+      "sceneFingerprint": "30056bb214a6e3ea770d43d452284b44d22e743ef3da93d6b096181fd86193ae"
     },
     {
       "endFrame": 1749,
@@ -101,13 +101,13 @@
       "title": "妨害安全驾驶罪：抢方向盘·互殴",
       "durationMs": 10000,
       "file": "interfere-driving-panel.avif",
-      "fileSize": 895488,
+      "fileSize": 837862,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "d27f9f60b79d2938df80d0a827c871334146d9a8cbdc285acf81da2e18327022",
+      "sha256": "271719f0d2fb1039e220b91fd4f45864565e97cac2c1dd7b3b2edd941643b568",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "2603b669586d9bda1c5c9eef5f61eacf5ab551b408f35a4b9f15e1ffb77346e3"
+      "sceneFingerprint": "d4aa881e0c405ba3e0f4ab8bdadba36006c2bf59b8ee2b20ba9aa2d1b23ae285"
     },
     {
       "endFrame": 2049,
@@ -118,13 +118,13 @@
       "title": "枪支犯罪补充·安全生产犯罪收尾",
       "durationMs": 10000,
       "file": "gun-factory-safety.avif",
-      "fileSize": 1127508,
+      "fileSize": 992031,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "0f149e2b4e6a79348f37fedd12b7ffd57e90711b978b2fb3b9c4efcbadfa8544",
+      "sha256": "f9a650c784e18c292e2f4022e72186a4c13bfa16ebc75bc6e57c7da767575596",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "b57e4488ca1f00e72dbd7a9ced87e88298cbec6c79327f32c0a21c2990332dd7"
+      "sceneFingerprint": "de558b482d5bd2e8070b93d592bd7faf6ab0928ff373be59d89c0a42cd739971"
     }
   ],
   "size": {
@@ -132,7 +132,7 @@
     "width": 2560
   },
   "sourceFps": 30,
-  "sourceFingerprint": "edb0a17712afc90278bc647e31d3d78a380448a1e882fd15eef1444e48efa292",
+  "sourceFingerprint": "266a264419f2a7f3158641927110ddfb03d58c09212aa968b9a90af322cd6a61",
   "targetFps": 30,
-  "totalFileSize": 6428052
+  "totalFileSize": 6670417
 }

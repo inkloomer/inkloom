@@ -9,8 +9,8 @@ import {FraudExtortionSplitScene} from './scenes-fraud';
 import {EmbezzlementTrustLedgerScene} from './scenes-embezzlement';
 import {SnatchViolenceLaneScene} from './scenes-snatch';
 import {RobberyAggravationBoardScene} from './scenes-aggravation';
-import {ExtortionWillFreedomScene} from './scenes-extortion';
-import {MinorCrimesCompletionScene} from './scenes-minor';
+import {ExtortionFreedomSpectrumScene, ExerciseRightGateScene, ExtortionNoticeFlowScene} from './scenes-extortion';
+import {MinorDamageMisuseScene, MinorFundsWagesScene} from './scenes-minor';
 import {CompletionControlLatticeScene} from './scenes-completion';
 
 export const PropertyCrimeLedger = () => (
@@ -23,8 +23,11 @@ export const PropertyCrimeLedger = () => (
     <TimelineSequence name="06-embezzlement-trust-ledger" {...SCENES.embezzlementTrustLedger}><EmbezzlementTrustLedgerScene /></TimelineSequence>
     <TimelineSequence name="07-snatch-violence-lane" {...SCENES.snatchViolenceLane}><SnatchViolenceLaneScene /></TimelineSequence>
     <TimelineSequence name="08-robbery-aggravation-board" {...SCENES.robberyAggravationBoard}><RobberyAggravationBoardScene /></TimelineSequence>
-    <TimelineSequence name="09-extortion-will-freedom" {...SCENES.extortionWillFreedom}><ExtortionWillFreedomScene /></TimelineSequence>
-    <TimelineSequence name="10-minor-crimes-completion" {...SCENES.minorCrimesCompletion}><MinorCrimesCompletionScene /></TimelineSequence>
-    <TimelineSequence name="11-completion-control-lattice" {...SCENES.completionControlLattice}><CompletionControlLatticeScene /></TimelineSequence>
+    <TimelineSequence name="09-extortion-notice-flow" {...SCENES.extortionNoticeFlow}><ExtortionNoticeFlowScene /></TimelineSequence>
+    <TimelineSequence name="10-extortion-freedom-spectrum" {...SCENES.extortionFreedomSpectrum}><ExtortionFreedomSpectrumScene /></TimelineSequence>
+    <TimelineSequence name="11-exercise-right-gate" {...SCENES.exerciseRightGate}><ExerciseRightGateScene /></TimelineSequence>
+    <TimelineSequence name="12-minor-damage-misuse" {...SCENES.minorDamageMisuse}><MinorDamageMisuseScene /></TimelineSequence>
+    <TimelineSequence name="13-minor-funds-wages" {...SCENES.minorFundsWages}><MinorFundsWagesScene /></TimelineSequence>
+    <TimelineSequence name="14-completion-control-lattice" {...SCENES.completionControlLattice}><CompletionControlLatticeScene /></TimelineSequence>
   </AbsoluteFill>
 );
