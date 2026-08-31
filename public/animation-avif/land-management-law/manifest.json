@@ -1,0 +1,70 @@
+{
+  "animationId": "land-management-law",
+  "compositionId": "LandManagementLaw",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-31T20:07:11.405Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 319,
+      "frameCount": 160,
+      "id": "land-management-law-scene-01",
+      "number": "01",
+      "startFrame": 0,
+      "title": "建设用地",
+      "durationMs": 5333,
+      "file": "land-management-law-scene-01.avif",
+      "fileSize": 722044,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "bf244f9db642edef8b9d67457be261dd6482fce1a5a0defad234090605fb6690",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "652e294b142e108a7a46aa87d6d7024481a5e327578570b01027024af08f972c"
+    },
+    {
+      "endFrame": 639,
+      "frameCount": 160,
+      "id": "land-management-law-scene-02",
+      "number": "02",
+      "startFrame": 320,
+      "title": "永久基本农田",
+      "durationMs": 5333,
+      "file": "land-management-law-scene-02.avif",
+      "fileSize": 432612,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "e315df7aa31f468ebdc0853972255980a1e294ffa02145963fb3eb31617d376e",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "652e294b142e108a7a46aa87d6d7024481a5e327578570b01027024af08f972c"
+    },
+    {
+      "endFrame": 959,
+      "frameCount": 160,
+      "id": "land-management-law-scene-03",
+      "number": "03",
+      "startFrame": 640,
+      "title": "征收与争议",
+      "durationMs": 5333,
+      "file": "land-management-law-scene-03.avif",
+      "fileSize": 716164,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "4f46601026b9198e44a8acab7bc3b7ed9fb7734582a01e8c1df8d35864391e9b",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "652e294b142e108a7a46aa87d6d7024481a5e327578570b01027024af08f972c"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "652e294b142e108a7a46aa87d6d7024481a5e327578570b01027024af08f972c",
+  "targetFps": 30,
+  "totalFileSize": 1870820
+}
