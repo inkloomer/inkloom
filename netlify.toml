@@ -16,6 +16,12 @@
   to = "/inkloom/"
   status = 301
 
+# /inkloom/ 本身 splat 为空会自我重定向死循环，须在其前显式内部重写到首页
+[[redirects]]
+  from = "/inkloom/"
+  to = "/index.html"
+  status = 200
+
 [[redirects]]
   from = "/inkloom/*"
   to = "/:splat"
