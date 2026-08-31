@@ -1,0 +1,70 @@
+{
+  "animationId": "property-system-hall",
+  "compositionId": "PropertySystemHall",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-31T06:07:45.253Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 659,
+      "frameCount": 330,
+      "id": "system-tree",
+      "number": "01",
+      "startFrame": 0,
+      "title": "物权的概念和体系",
+      "durationMs": 11000,
+      "file": "system-tree.avif",
+      "fileSize": 480815,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "ea7d0e27648b2c19e19ce2ff6e0eaa4edc2d856bb55333f27afd6a9f2df65834",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "356b9912707d0e79681cfc971c2b6fafb7012d2bcb909a9160f5df20392356df"
+    },
+    {
+      "endFrame": 1259,
+      "frameCount": 300,
+      "id": "principal-accessory",
+      "number": "02",
+      "startFrame": 660,
+      "title": "主物与从物",
+      "durationMs": 10000,
+      "file": "principal-accessory.avif",
+      "fileSize": 463403,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "2dbb892af4e99b1dbf2a987415f323ab5bd156cedc5e397b23a2e47769f5cb40",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "356b9912707d0e79681cfc971c2b6fafb7012d2bcb909a9160f5df20392356df"
+    },
+    {
+      "endFrame": 1979,
+      "frameCount": 360,
+      "id": "original-fruit",
+      "number": "03",
+      "startFrame": 1260,
+      "title": "原物与孳息",
+      "durationMs": 12000,
+      "file": "original-fruit.avif",
+      "fileSize": 607337,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "8340402278a0c69c1c4fdb2c50d6263fbaa7095f292a5b0103ed4aeaee0d278b",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "356b9912707d0e79681cfc971c2b6fafb7012d2bcb909a9160f5df20392356df"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "356b9912707d0e79681cfc971c2b6fafb7012d2bcb909a9160f5df20392356df",
+  "targetFps": 30,
+  "totalFileSize": 1551555
+}
