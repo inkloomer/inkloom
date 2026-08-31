@@ -1,0 +1,16 @@
+{
+  "directionId": "principle-vault-twinscale",
+  "derivedFrom": "demo-clerk-desk",
+  "variation": "保险原则天平库: 保险利益沿财险人险分叉按时间刻度判位, 可投保人群沿身份阶梯点亮, 诚信天平两端分置告知义务与提示说明义务",
+  "family": "insurance-principle-vault",
+  "palette": "#F0ECE4 + #2B2B33 + #2C4A6E + #8A4B2F + #15725F + #B23A30 + #B98A2F",
+  "typography": "WenKai 天平库标 + 身份徽章 + 严重度色阶",
+  "composition": "保险利益概念横幅 + 财人分叉双卡 + 可投保人阶梯 + 双向诚信义务对栏",
+  "surface": "库房纸卡、三性徽章、身份铜牌与金记忆锚, 无圆角",
+  "motion": "利益判位沿分叉线滑入对应险种卡, 身份阶梯逐级点亮, 诚信两栏各自按严重度变色",
+  "transition": "靛蓝库房贯穿三场, 铜色财产与青色人身双线呼应",
+  "catalog": {
+    "status": "variant",
+    "sourceDirectionId": "principle-vault-twinscale"
+  }
+}

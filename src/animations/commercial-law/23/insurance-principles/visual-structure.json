@@ -1,0 +1,89 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "insurance-principles-scene-01",
+      "export": "InsurancePrinciples01Scene",
+      "layout": "interest-time-fork-1",
+      "anchor": "document-fork",
+      "grammar": [
+        "time-fork-split",
+        "three-quality-badges"
+      ],
+      "textTreatments": [
+        "chip",
+        "stamp",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "connector",
+        "icon"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "insurance-principles-knowledge-1",
+        "insurance-principles-scene-01-concept",
+        "insurance-principles-scene-01-fork",
+        "insurance-principles-scene-01-property",
+        "insurance-principles-scene-01-personal"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "insurance-principles-scene-02",
+      "export": "InsurancePrinciples02Scene",
+      "layout": "insurable-persons-ladder-2",
+      "anchor": "typographic-sequence",
+      "grammar": [
+        "person-ladder",
+        "consent-seal"
+      ],
+      "textTreatments": [
+        "chip",
+        "stamp",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "icon",
+        "spatial",
+        "contrast"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "insurance-principles-knowledge-2",
+        "insurance-principles-scene-02-list"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "insurance-principles-scene-03",
+      "export": "InsurancePrinciples03Scene",
+      "layout": "goodfaith-dual-duty-3",
+      "anchor": "role-pair",
+      "grammar": [
+        "disclosure-severity-ladder",
+        "warning-duty-band"
+      ],
+      "textTreatments": [
+        "chip",
+        "external-negation",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "icon",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "insurance-principles-knowledge-3",
+        "insurance-principles-scene-03-disclosure",
+        "insurance-principles-scene-03-warning"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}
