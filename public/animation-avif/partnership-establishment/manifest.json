@@ -1,0 +1,70 @@
+{
+  "animationId": "partnership-establishment",
+  "compositionId": "PartnershipEstablishment",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-31T15:11:52.635Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 359,
+      "frameCount": 180,
+      "id": "partnership-establishment-scene-01",
+      "number": "01",
+      "startFrame": 0,
+      "title": "普通合伙与有限合伙",
+      "durationMs": 6000,
+      "file": "partnership-establishment-scene-01.avif",
+      "fileSize": 649927,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "129900f249e14ebe4cee38f61fe78649516c6cbc5aa9b56389676824b854b557",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "26f4fea39db896974c2c04540890566205b2149641c66a08edb402d2659673d6"
+    },
+    {
+      "endFrame": 759,
+      "frameCount": 200,
+      "id": "partnership-establishment-scene-02",
+      "number": "02",
+      "startFrame": 360,
+      "title": "合伙人资格",
+      "durationMs": 6667,
+      "file": "partnership-establishment-scene-02.avif",
+      "fileSize": 713691,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "ee1a582760eb0dcd062a3612f9a478d026062af052a8ba9c6affa2dfaf92abca",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "26f4fea39db896974c2c04540890566205b2149641c66a08edb402d2659673d6"
+    },
+    {
+      "endFrame": 1155,
+      "frameCount": 198,
+      "id": "partnership-establishment-scene-03",
+      "number": "03",
+      "startFrame": 760,
+      "title": "设立：协议·名称·登记",
+      "durationMs": 6600,
+      "file": "partnership-establishment-scene-03.avif",
+      "fileSize": 672083,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "68e2dec4346794dcc21471ff55aac4eba4f24dd7403eac99fbc2731d7563b9a4",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "26f4fea39db896974c2c04540890566205b2149641c66a08edb402d2659673d6"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "26f4fea39db896974c2c04540890566205b2149641c66a08edb402d2659673d6",
+  "targetFps": 30,
+  "totalFileSize": 2035701
+}
