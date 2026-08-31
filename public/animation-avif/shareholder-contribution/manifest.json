@@ -3,7 +3,7 @@
   "compositionId": "ShareholderContribution",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-08-31T05:52:31.012Z",
+  "generatedAt": "2026-08-31T06:06:48.380Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -16,13 +16,13 @@
       "title": "货币与非货币出资",
       "durationMs": 6200,
       "file": "shareholder-contribution-scene-01.avif",
-      "fileSize": 683379,
+      "fileSize": 736497,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "a2afad2de54db81978a7ddf2bc1f6823d03f11857b208219f09a55da70da1a8d",
+      "sha256": "3a5ead672bc90c6d50ab582565866a776930d42de75d82cf66d5d383a2069de9",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "7ca89d0ddc76ebc9280c8ad2eb68192651f6d96c2925b835ac344787bbf0ae22"
+      "sceneFingerprint": "3505948bfdf16a9df093ec8efca824731afbba9c9c8079eeaa3f271d2ba18936"
     },
     {
       "endFrame": 779,
@@ -33,13 +33,13 @@
       "title": "禁止出资的六项",
       "durationMs": 6800,
       "file": "shareholder-contribution-scene-02.avif",
-      "fileSize": 575385,
+      "fileSize": 606790,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "a10f063fa14cbef9ec885cf79454e6951b4aa67c23cf4a368000c410217f737c",
+      "sha256": "54f382db3111f18bcbdfd962c755d5af13810540336d8504c27bf01156139ca9",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "7ca89d0ddc76ebc9280c8ad2eb68192651f6d96c2925b835ac344787bbf0ae22"
+      "sceneFingerprint": "3505948bfdf16a9df093ec8efca824731afbba9c9c8079eeaa3f271d2ba18936"
     },
     {
       "endFrame": 1175,
@@ -50,13 +50,13 @@
       "title": "认缴制与实缴制",
       "durationMs": 6600,
       "file": "shareholder-contribution-scene-03.avif",
-      "fileSize": 589821,
+      "fileSize": 701346,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "da3a24e375dd7cca79457fa8bc73caefbeb4b3c8db6b10962d1f2e60f5bc2140",
+      "sha256": "873f0d8f2ab6edca2698fdaa18783635c9e6e80010ce9e951572a259d2a40bd3",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "7ca89d0ddc76ebc9280c8ad2eb68192651f6d96c2925b835ac344787bbf0ae22"
+      "sceneFingerprint": "3505948bfdf16a9df093ec8efca824731afbba9c9c8079eeaa3f271d2ba18936"
     }
   ],
   "size": {
@@ -64,7 +64,7 @@
     "width": 2560
   },
   "sourceFps": 60,
-  "sourceFingerprint": "7ca89d0ddc76ebc9280c8ad2eb68192651f6d96c2925b835ac344787bbf0ae22",
+  "sourceFingerprint": "3505948bfdf16a9df093ec8efca824731afbba9c9c8079eeaa3f271d2ba18936",
   "targetFps": 30,
-  "totalFileSize": 1848585
+  "totalFileSize": 2044633
 }
