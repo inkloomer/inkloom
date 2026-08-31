@@ -33,6 +33,7 @@ import {typography as typography31} from '../animations/commercial-law/13/partne
 import {typography as typography32} from '../animations/commercial-law/14/partnership-property-distribution/animation.meta';
 import {typography as typography33} from '../animations/commercial-law/15/partnership-resolution-execution/animation.meta';
 import {typography as typography34} from '../animations/commercial-law/16/partnership-third-parties/animation.meta';
+import {typography as typography35} from '../animations/commercial-law/17/partnership-admission-withdrawal/animation.meta';
 
 export const COMMERCIAL_LAW_TYPOGRAPHY_CONFIGURATIONS = {
   'company-personality': {metadata: typography0, scope: {animationId: 'company-personality', subject: 'commercial-law', topic: '01'}},
@@ -70,4 +71,5 @@ export const COMMERCIAL_LAW_TYPOGRAPHY_CONFIGURATIONS = {
   'partnership-property-distribution': {metadata: typography32, scope: {animationId: 'partnership-property-distribution', subject: 'commercial-law', topic: '14'}},
   'partnership-resolution-execution': {metadata: typography33, scope: {animationId: 'partnership-resolution-execution', subject: 'commercial-law', topic: '15'}},
   'partnership-third-parties': {metadata: typography34, scope: {animationId: 'partnership-third-parties', subject: 'commercial-law', topic: '16'}},
+  'partnership-admission-withdrawal': {metadata: typography35, scope: {animationId: 'partnership-admission-withdrawal', subject: 'commercial-law', topic: '17'}},
 } as const;

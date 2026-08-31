@@ -1,0 +1,16 @@
+{
+  "directionId": "membership-gate-registry",
+  "derivedFrom": "demo-clerk-desk",
+  "variation": "入退伙登记处: 新合伙人徽章走过全体同意与书面协议两道门, 退伙干道分出自愿与除名两支, 身死财灭无资格三闸自动触发",
+  "family": "membership-gate-registry",
+  "palette": "#EDEAE1 + #2B2B33 + #3B4A6B + #8A4B2F + #15725F + #B23A30 + #B98A2F",
+  "typography": "WenKai 登记栏标 + 申请人徽章 + 除名红章",
+  "composition": "入伙两道门 + 退伙三类型分叉 + 当然退伙事件闸与效力结算",
+  "surface": "登记处纸卡、申请人徽章、除名红章与金口诀条, 无圆角",
+  "motion": "申请人徽章沿程序链行进至认缴额封顶, 退伙干道横向劈叉分送两支, 事件章逐枚敲下触发当然退伙",
+  "transition": "靛蓝登记处贯穿三场, 铜色普通合伙与青色有限合伙双线呼应",
+  "catalog": {
+    "status": "variant",
+    "sourceDirectionId": "membership-gate-registry"
+  }
+}

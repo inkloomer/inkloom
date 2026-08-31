@@ -1,0 +1,92 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "partnership-admission-withdrawal-scene-01",
+      "export": "PartnershipAdmissionWithdrawal01Scene",
+      "layout": "admission-gate-chain-1",
+      "anchor": "flow-path",
+      "grammar": [
+        "admission-gate-chain",
+        "prior-debt-contrast"
+      ],
+      "textTreatments": [
+        "chip",
+        "stamp",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "motion",
+        "connector",
+        "contrast"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "partnership-admission-withdrawal-knowledge-1",
+        "partnership-admission-withdrawal-scene-01-procedure",
+        "partnership-admission-withdrawal-scene-01-prior-debt"
+      ],
+      "statefulObjects": [
+        "admission-request-travel"
+      ]
+    },
+    {
+      "id": "partnership-admission-withdrawal-scene-02",
+      "export": "PartnershipAdmissionWithdrawal02Scene",
+      "layout": "withdrawal-fork-two-2",
+      "anchor": "document-fork",
+      "grammar": [
+        "withdrawal-fork",
+        "expulsion-procedure"
+      ],
+      "textTreatments": [
+        "chip",
+        "external-negation",
+        "stamp"
+      ],
+      "focalChannels": [
+        "contrast",
+        "connector",
+        "icon"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "partnership-admission-withdrawal-knowledge-2",
+        "partnership-admission-withdrawal-scene-02-root",
+        "partnership-admission-withdrawal-scene-02-voluntary",
+        "partnership-admission-withdrawal-scene-02-expulsion"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "partnership-admission-withdrawal-scene-03",
+      "export": "PartnershipAdmissionWithdrawal03Scene",
+      "layout": "automatic-withdrawal-events-3",
+      "anchor": "timeline-gate",
+      "grammar": [
+        "event-gate-row",
+        "capacity-conversion"
+      ],
+      "textTreatments": [
+        "chip",
+        "soft-highlight",
+        "stamp"
+      ],
+      "focalChannels": [
+        "icon",
+        "contrast",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "partnership-admission-withdrawal-knowledge-3",
+        "partnership-admission-withdrawal-scene-03-events",
+        "partnership-admission-withdrawal-scene-03-conversion",
+        "partnership-admission-withdrawal-scene-03-effect"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}
