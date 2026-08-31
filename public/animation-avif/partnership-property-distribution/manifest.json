@@ -1,0 +1,70 @@
+{
+  "animationId": "partnership-property-distribution",
+  "compositionId": "PartnershipPropertyDistribution",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-31T15:31:39.445Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 339,
+      "frameCount": 170,
+      "id": "partnership-property-distribution-scene-01",
+      "number": "01",
+      "startFrame": 0,
+      "title": "财产与份额转让",
+      "durationMs": 5667,
+      "file": "partnership-property-distribution-scene-01.avif",
+      "fileSize": 637630,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "efb0619f9d9c9e54be4a9a1f894f25983d44842309cb03a3f82c4f0ebc045e85",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "a7cb800cbf96ca8f135390e3f004d5632df190548bd0a801fd1106fb86b70a2e"
+    },
+    {
+      "endFrame": 719,
+      "frameCount": 190,
+      "id": "partnership-property-distribution-scene-02",
+      "number": "02",
+      "startFrame": 340,
+      "title": "出质与继承",
+      "durationMs": 6333,
+      "file": "partnership-property-distribution-scene-02.avif",
+      "fileSize": 565964,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "03bc31ab78197f99a80840a40a8c8905579731d6915a7ec0a76cffb1a364d1b8",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "a7cb800cbf96ca8f135390e3f004d5632df190548bd0a801fd1106fb86b70a2e"
+    },
+    {
+      "endFrame": 1099,
+      "frameCount": 190,
+      "id": "partnership-property-distribution-scene-03",
+      "number": "03",
+      "startFrame": 720,
+      "title": "损益分配",
+      "durationMs": 6333,
+      "file": "partnership-property-distribution-scene-03.avif",
+      "fileSize": 549686,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "7227faa60a5d0a296f34170e194c28fd72758239f20a9717799576ff71eba593",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "a7cb800cbf96ca8f135390e3f004d5632df190548bd0a801fd1106fb86b70a2e"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "a7cb800cbf96ca8f135390e3f004d5632df190548bd0a801fd1106fb86b70a2e",
+  "targetFps": 30,
+  "totalFileSize": 1753280
+}
