@@ -1,0 +1,22 @@
+{
+  "directionId": "copper-key-delivery-registry-hall",
+  "family": "copper-key-delivery-registry-hall",
+  "palette": "deep copper sepia, burnished copper, parchment cream, patina green, key gold, brick red, umber ink",
+  "typography": "delivery-hall headings on copper rail tabs, parchment chips and brick wax verdicts",
+  "composition": "a registry counter with a certificate-versus-ledger pair, a dual requirement split for actual delivery, and three constructive delivery lanes closing on a date strip",
+  "surface": "parchment files, copper desk rails, patina tags, key brass tokens, brick wax seals",
+  "motion": "a false-material chip travels into the applicant liability slot and morphs into damages while an error chip reaches the agency and a recovery arrow carries the claim back; a goods token passes the intent gate then the possession gate to reach the change terminal with failing tokens bouncing off each gate; three constructive lanes move ownership chips while goods stay put, a pledge chip is blocked by the assignment barrier and completes only on the real-delivery date",
+  "transition": "the copper hall floor, copper rails and key token posts persist while counter, gate and lanes are re-dressed between scenes",
+  "conceptTokens": {
+    "交付": "Key",
+    "登记": "BookCheck",
+    "质权": "Lock",
+    "观念交付": "Lightbulb"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/civil-law/06/delivery-registry-hall/",
+    "title": "铜钥交付馆"
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "registry-rules",
+      "export": "RegistryRulesScene",
+      "layout": "certificate-ledger-pair-with-liability-lanes",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "the-registration-office-review-documents-and-may-inspect-on-site",
+        "when-certificate-and-ledger-disagree-the-ledger-prevails",
+        "false-materials-make-the-applicant-pay-damages",
+        "registration-errors-make-the-agency-pay-then-recover-from-the-wrongdoer"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["contrast", "icon", "enclosure", "motion"],
+      "tokens": ["BookCheck", "ScanSearch", "FileWarning", "Landmark"],
+      "finalKnowledge": ["review-rule", "ledger-precedence", "applicant-liability", "agency-liability"],
+      "statefulObjects": []
+    },
+    {
+      "id": "actual-delivery",
+      "export": "ActualDeliveryScene",
+      "layout": "dual-requirement-split-with-symbol-lane",
+      "anchor": "flow-path",
+      "grammar": [
+        "delivery-changes-mobile-ownership-and-creates-pledge-rights",
+        "actual-delivery-needs-intent-of-change-and-direct-possession",
+        "seizing-it-through-a-child-lacks-the-intent-so-nothing-passes",
+        "handing-over-a-symbol-like-a-key-counts-as-delivery-of-the-thing"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "external-negation"],
+      "focalChannels": ["connector", "contrast", "enclosure", "motion"],
+      "tokens": ["Key", "Truck", "Hand", "Brain"],
+      "finalKnowledge": ["delivery-types", "subjective-limb", "objective-limb", "symbolic-delivery"],
+      "statefulObjects": []
+    },
+    {
+      "id": "constructive-delivery",
+      "export": "ConstructiveDeliveryScene",
+      "layout": "three-constructive-lanes-with-date-strip",
+      "anchor": "document-fork",
+      "grammar": [
+        "constructive-delivery-changes-property-by-consent-alone",
+        "simple-delivery-agrees-over-the-thing-already-held-for-me",
+        "possession-assignment-keeps-direct-possession-and-must-say-it-is-yours",
+        "instructed-delivery-transfers-the-return-claim-against-the-third-party"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["contrast", "connector", "enclosure", "motion"],
+      "tokens": ["Lightbulb", "Key", "Lock", "Send"],
+      "finalKnowledge": ["constructive-meaning", "simple-lane", "assignment-lane", "instructed-lane"],
+      "statefulObjects": []
+    }
+  ]
+}
