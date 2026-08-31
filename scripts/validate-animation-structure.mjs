@@ -12,6 +12,7 @@ const MIN_SCENE_ROW_ICONS = 4;
 const MIN_SCENE_DISTINCT_ICONS = 3;
 const MIN_SCENE_WATERMARK_TOTEMS = 1;
 const TOTEM_MIN_PIXELS = 90;
+const MAX_SCENE_KNOWLEDGE_POINTS = 8;
 
 const isFile = async (filePath) => {
   try {
@@ -209,6 +210,9 @@ const main = async () => {
         const finalKnowledge = Array.isArray(scene.finalKnowledge) ? scene.finalKnowledge : [];
         const statefulObjects = Array.isArray(scene.statefulObjects) ? scene.statefulObjects : undefined;
         if (finalKnowledge.length < 1) errors.push(`${prefix}: declare at least one finalKnowledge id for stable-final-frame audit`);
+        if (finalKnowledge.length > MAX_SCENE_KNOWLEDGE_POINTS) {
+          errors.push(`${prefix}: ${finalKnowledge.length} finalKnowledge ids in one scene exceeds ${MAX_SCENE_KNOWLEDGE_POINTS}; do not cram a stacked-list frame — paginate actively, splitting the content into more focused scenes`);
+        }
         if (!statefulObjects) errors.push(`${prefix}: statefulObjects must be an array, empty only when no knowledge object moves`);
         for (const knowledgeId of finalKnowledge) {
           if (typeof knowledgeId !== 'string' || !/^[a-z0-9][a-z0-9-]*$/.test(knowledgeId)) {

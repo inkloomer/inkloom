@@ -5,6 +5,7 @@ import {pathToFileURL} from 'node:url';
 import {bundle} from '@remotion/bundler';
 import {getCompositions, openBrowser, renderStill} from '@remotion/renderer';
 import sharp from 'sharp';
+import {auditStableFrames} from './audit-canvas-utilization.mjs';
 import {withInkLoomTailwind} from './remotion-webpack.mjs';
 
 const PROJECT_ROOT = path.resolve(import.meta.dirname, '..');
@@ -365,8 +366,17 @@ const captureAnimation = async ({
     };
     await writeFile(path.join(runDirectory, 'manifest.json'), `${JSON.stringify(manifest, null, 2)}\n`, 'utf8');
 
+    const contractPath = path.join(getAnimationDirectory(animationId), 'visual-structure.json');
+    let controlSafeBottom;
+    if (await fileExists(contractPath)) {
+      const contract = JSON.parse(await readFile(contractPath, 'utf8'));
+      if (Number.isFinite(contract.playerControlSafeBottom)) controlSafeBottom = contract.playerControlSafeBottom;
+    }
+    const utilization = await auditStableFrames(runDirectory, controlSafeBottom);
+    for (const line of utilization.lines) console.log(`[${animationId}] ${line}`);
+
     console.log(`[${animationId}] Complete: ${runDirectory}`);
-    return runDirectory;
+    return {runDirectory, utilization};
   } finally {
     await rm(bundleDirectory, {recursive: true, force: true});
   }
@@ -402,12 +412,23 @@ const main = async () => {
 
   try {
     const outputDirectories = [];
+    const canvasFailures = [];
     for (const animationId of animationIds) {
-      outputDirectories.push(await captureAnimation({...options, animationId, browser}));
+      const {runDirectory, utilization} = await captureAnimation({...options, animationId, browser});
+      outputDirectories.push(runDirectory);
+      canvasFailures.push(...utilization.failures);
     }
 
     console.log('\nCaptured animation pages:');
     for (const outputDirectory of outputDirectories) console.log(`- ${outputDirectory}`);
+
+    if (canvasFailures.length > 0) {
+      for (const failure of canvasFailures) {
+        console.error(`CANVAS ${failure.animationId}/${failure.key}: ${failure.violations.join('; ')}`);
+      }
+      console.error('\nCanvas utilization audit failed: fill the dead space with real teaching content — add knowledge rows and enlarge information units; do not just rescale or pad the sparse layout.');
+      process.exitCode = 1;
+    }
   } finally {
     await browser.close({silent: true});
   }
