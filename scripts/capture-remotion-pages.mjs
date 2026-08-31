@@ -6,6 +6,7 @@ import {bundle} from '@remotion/bundler';
 import {getCompositions, openBrowser, renderStill} from '@remotion/renderer';
 import sharp from 'sharp';
 import {auditStableFrames} from './audit-canvas-utilization.mjs';
+import {auditSceneOverlaps, buildFrameTargets} from './qa-dom-overlap.mjs';
 import {withInkLoomTailwind} from './remotion-webpack.mjs';
 
 const PROJECT_ROOT = path.resolve(import.meta.dirname, '..');
@@ -375,8 +376,16 @@ const captureAnimation = async ({
     const utilization = await auditStableFrames(runDirectory, controlSafeBottom);
     for (const line of utilization.lines) console.log(`[${animationId}] ${line}`);
 
+    const occlusion = await auditSceneOverlaps({
+      browser,
+      composition,
+      frameTargets: buildFrameTargets(scenes, composition.durationInFrames),
+      serveUrl: bundleDirectory,
+    });
+    for (const line of occlusion.lines) console.log(`[${animationId}] ${line}`);
+
     console.log(`[${animationId}] Complete: ${runDirectory}`);
-    return {runDirectory, utilization};
+    return {occlusion, runDirectory, utilization};
   } finally {
     await rm(bundleDirectory, {recursive: true, force: true});
   }
@@ -413,10 +422,12 @@ const main = async () => {
   try {
     const outputDirectories = [];
     const canvasFailures = [];
+    const occlusionFailures = [];
     for (const animationId of animationIds) {
-      const {runDirectory, utilization} = await captureAnimation({...options, animationId, browser});
+      const {occlusion, runDirectory, utilization} = await captureAnimation({...options, animationId, browser});
       outputDirectories.push(runDirectory);
       canvasFailures.push(...utilization.failures);
+      occlusionFailures.push(...occlusion.failures.map((failure) => ({animationId, ...failure})));
     }
 
     console.log('\nCaptured animation pages:');
@@ -427,8 +438,15 @@ const main = async () => {
         console.error(`CANVAS ${failure.animationId}/${failure.key}: ${failure.violations.join('; ')}`);
       }
       console.error('\nCanvas utilization audit failed: fill the dead space with real teaching content — add knowledge rows and enlarge information units; do not just rescale or pad the sparse layout.');
+    }
+    if (occlusionFailures.length > 0) {
+      for (const failure of occlusionFailures) {
+        console.error(`OCCLUSION ${failure.animationId}/${failure.label}: ${failure.overlaps.map((overlap) => `${overlap.pair} (${overlap.ratio}%)`).join('; ')}`);
+      }
+      console.error('\nOcclusion audit failed: an element covers text or icons while entering or at rest — rework the entry motion or the layout so nothing travels over or rests on other content.');
       process.exitCode = 1;
     }
+    if (canvasFailures.length > 0) process.exitCode = 1;
   } finally {
     await browser.close({silent: true});
   }

@@ -1,3 +1,4 @@
+import {execFileSync} from 'node:child_process';
 import {readFile, readdir, stat} from 'node:fs/promises';
 import path from 'node:path';
 
@@ -13,6 +14,7 @@ const MIN_SCENE_DISTINCT_ICONS = 3;
 const MIN_SCENE_WATERMARK_TOTEMS = 1;
 const TOTEM_MIN_PIXELS = 90;
 const MAX_SCENE_KNOWLEDGE_POINTS = 8;
+const PUBLISH_GRACE_MS = 60000;
 
 const isFile = async (filePath) => {
   try {
@@ -276,6 +278,21 @@ const main = async () => {
     if (grammarVocabulary.size < 4) errors.push(`${animation.id}: relationship grammar is too repetitive across scenes`);
     if (anchorVocabulary.size < 3) errors.push(`${animation.id}: visual anchors are too repetitive across scenes`);
     if (textTreatmentVocabulary.size < 3) errors.push(`${animation.id}: text styling is too repetitive; use at least three semantic treatment types across the node`);
+
+    const avifManifestPath = path.join(PROJECT_ROOT, 'public', 'animation-avif', animation.id, 'manifest.json');
+    if (await isFile(avifManifestPath)) {
+      try {
+        const avifManifest = JSON.parse(await readFile(avifManifestPath, 'utf8'));
+        const generatedAt = Date.parse(avifManifest.generatedAt ?? '');
+        const lastSourceCommit = execFileSync('git', ['log', '-1', '--format=%cI', '--', path.relative(PROJECT_ROOT, animation.directory)], {cwd: PROJECT_ROOT}).toString().trim();
+        const committedAt = Date.parse(lastSourceCommit);
+        if (Number.isFinite(generatedAt) && Number.isFinite(committedAt) && committedAt > generatedAt + PUBLISH_GRACE_MS) {
+          errors.push(`${animation.id}: published AVIF manifest (${avifManifest.generatedAt}) predates the latest source commit (${lastSourceCommit}); the site may serve a stale render — verify the source and republish with pnpm animation:publish-avif ${animation.id}`);
+        }
+      } catch {
+        // unreadable manifest or git is reported by the other audits
+      }
+    }
   }
 
   console.log(`Animation structure audit: ${auditedScenes} scene(s) checked; ${skippedNodes} legacy node(s) explicitly grandfathered.`);
