@@ -1,7 +1,7 @@
 import {Ban, Gavel, Scale, Zap} from 'lucide-react';
 import {C, Enter, IconChip, Mark, Neg, Panel, Shell, SoftHi, TabChip} from './kit';
 
-/* data-visual-anchor="boundary" data-focal-channels="icon,contrast,enclosure,connector" */
+/* data-visual-anchor="comparison-axis" data-focal-channels="icon,contrast,enclosure,spatial" */
 export const MoneyLaunderingTaxScene = () => {
   /* data-final-knowledge="launder-panel" data-final-knowledge="tax-panel" */
   return (
@@ -9,8 +9,8 @@ export const MoneyLaunderingTaxScene = () => {
       <div
         data-layout="launder-tax-dual-filing"
         data-text-treatments="chip,label-block,soft-highlight,thin-underline,external-negation,stamp"
-        data-visual-anchor="boundary"  data-visual-grammar="launder-panel,tax-panel"
-        data-focal-channels="icon,contrast,enclosure,connector" data-focal-rule="laundering-needs-seven-upstream-crimes-and-tax-evasion-has-administrative-relief"
+        data-visual-anchor="comparison-axis"  data-visual-grammar="launder-panel,tax-panel"
+        data-focal-channels="icon,contrast,enclosure,spatial" data-focal-rule="laundering-needs-seven-upstream-crimes-and-tax-evasion-has-administrative-relief"
         
         style={{position: 'absolute', inset: 0}}
       >

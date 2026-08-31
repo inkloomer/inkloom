@@ -1,7 +1,7 @@
 import {Ban, CreditCard, Scale, Zap} from 'lucide-react';
 import {C, Enter, IconChip, Mark, Neg, Panel, Shell, SoftHi, TabChip, ThinU} from './kit';
 
-/* data-visual-anchor="typographic-sequence" data-focal-channels="icon,contrast,enclosure,annotation" */
+/* data-visual-anchor="typographic-sequence" data-focal-channels="icon,contrast,enclosure,connector" */
 export const CreditCardFraudScene = () => {
   /* data-final-knowledge="cc-basics-panel" data-final-knowledge="cc-types-panel" data-final-knowledge="cc-machine-panel" */
   return (
@@ -10,7 +10,7 @@ export const CreditCardFraudScene = () => {
         data-layout="credit-card-tri-filing"
         data-text-treatments="chip,label-block,soft-highlight,thin-underline,external-negation,stamp"
         data-visual-anchor="typographic-sequence"  data-visual-grammar="cc-basics-panel,cc-types-panel"
-        data-focal-channels="icon,contrast,enclosure,annotation" data-focal-rule="credit-card-fraud-is-a-flat-rule-regardless-of-machine-or-human-usage"
+        data-focal-channels="icon,contrast,enclosure,connector" data-focal-rule="credit-card-fraud-is-a-flat-rule-regardless-of-machine-or-human-usage"
         
         style={{position: 'absolute', inset: 0}}
       >

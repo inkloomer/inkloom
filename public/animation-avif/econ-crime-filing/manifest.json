@@ -3,7 +3,7 @@
   "compositionId": "EconCrimeFiling",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-08-30T20:06:30.130Z",
+  "generatedAt": "2026-08-31T11:58:47.542Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -16,13 +16,13 @@
       "title": "生产销售伪劣·走私犯罪",
       "durationMs": 8667,
       "file": "production-smuggling.avif",
-      "fileSize": 777104,
+      "fileSize": 774734,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "93c96668b88d331349a98a44f5d0877449c9ec22249b01070937b4b461c95da3",
+      "sha256": "01ed7091ffcb061baa5d00ab61503c92482b053646f8383d9c996085388a3035",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "b0931fe09c7b2b766976379eccf9c611330cf784e1042f743378f51e3a1e41c4"
+      "sceneFingerprint": "e5e4a09f90bf074800f1b0610a152ed2ab547be2a9da7d709b43ba5b9a3c92e3"
     },
     {
       "endFrame": 539,
@@ -33,13 +33,13 @@
       "title": "信用卡诈骗罪（五星级罪名）",
       "durationMs": 9333,
       "file": "credit-card-fraud.avif",
-      "fileSize": 777234,
+      "fileSize": 760157,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "130d90f8ae9ab60777486dc4b339db891cf263b0406ad13536937bf5e4173109",
+      "sha256": "111b89e7ffc215f950f9841ba45b11ee6080ed5f4d102e3b03e98732c09e7867",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "91503f70dce6d181219254c1583a04f913d24a715fb311501de7b634a8c5914d"
+      "sceneFingerprint": "3745ee546b3c9890af4fbefecc73f619e7a3a27a3f88ee15489326e76e47195e"
     },
     {
       "endFrame": 799,
@@ -50,13 +50,13 @@
       "title": "洗钱罪·逃税罪",
       "durationMs": 8667,
       "file": "money-laundering-tax.avif",
-      "fileSize": 661208,
+      "fileSize": 657018,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "703ca342d10477d52186c04399b427302e5431cd06575d3264f0b42402aaf5ec",
+      "sha256": "860f02a7ee42babcbe9f5fe0ebb5a06eb8e1c3bcac4674caef41ed2c13727e95",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "8994ab3482831fd1eae539f13fe4861f7afc4aa3fb03c78f73f1f4a1c3dfef9e"
+      "sceneFingerprint": "9d87d28bcdc1dca4dab57813f3a3254d167ffea5b1ecd3cf73ddc6c0f769bd38"
     },
     {
       "endFrame": 1059,
@@ -67,13 +67,98 @@
       "title": "贷款诈骗罪·保险诈骗罪",
       "durationMs": 8667,
       "file": "insurance-loan-fraud.avif",
-      "fileSize": 709130,
+      "fileSize": 695020,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "8d78dea2b440c7fc1b4fbafc89564f5e8a4be477a802a3192bd84a019995986b",
+      "sha256": "416f0818aedff025c673355a8eada49afa74df07cd45c8f0b26f6c3e483079ec",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "d1b61e7a6cab271d38ee9b5b35768e91e9af9d0eb16faaf25af314873f8f992e"
+      "sceneFingerprint": "378dd1dd636d777312cf349f619b5ec3d9305c4396871d464b2a04c25bdcc00b"
+    },
+    {
+      "endFrame": 1319,
+      "frameCount": 260,
+      "id": "company-order",
+      "number": "05",
+      "startFrame": 1060,
+      "title": "妨害对公司、企业的管理秩序罪",
+      "durationMs": 8667,
+      "file": "company-order.avif",
+      "fileSize": 1535249,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "8442d9a38256bebdcf1138a058b1e84f719cff71ece699477713f5cf181803bd",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "0a75eef84150062a75af1c5a59d296235ffd766d143b1d7b22ffa061a0a7a6df"
+    },
+    {
+      "endFrame": 1579,
+      "frameCount": 260,
+      "id": "currency-notes",
+      "number": "06",
+      "startFrame": 1320,
+      "title": "货币犯罪·金融票证·妨害信用卡管理",
+      "durationMs": 8667,
+      "file": "currency-notes.avif",
+      "fileSize": 1600133,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "20974287c07ebe7c7ac7b174f7770dd0948bdd9748f06cdc4571d980ad7a67be",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "1ca7ecd318e3774a0b7ce943343188c9bc7b038abfb2a18dfb30f0e83e1c87fb"
+    },
+    {
+      "endFrame": 1839,
+      "frameCount": 260,
+      "id": "tax-rebate-fund",
+      "number": "07",
+      "startFrame": 1580,
+      "title": "骗取出口退税·虚开发票·集资类犯罪",
+      "durationMs": 8667,
+      "file": "tax-rebate-fund.avif",
+      "fileSize": 1493821,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "62d2a32303fd80d0bdb3e67652b8059a376fadf034ab915813b7912b93e8294d",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "3313e8e37dfbf77b32b52b12d204ae02079325dda7d947e85c872f92284c61d4"
+    },
+    {
+      "endFrame": 2099,
+      "frameCount": 260,
+      "id": "ip-crimes",
+      "number": "08",
+      "startFrame": 1840,
+      "title": "侵犯知识产权罪",
+      "durationMs": 8667,
+      "file": "ip-crimes.avif",
+      "fileSize": 1522815,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "03446cfff56e12588c3b4fe8b52b00243c6c091e6e3cb098e253884842543ffd",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "ae1b53202a2c2d8cf34f65e92643f7eb13fab091cc1d460c59fa9cc4bc78aa53"
+    },
+    {
+      "endFrame": 2359,
+      "frameCount": 260,
+      "id": "market-order",
+      "number": "09",
+      "startFrame": 2100,
+      "title": "扰乱市场秩序罪",
+      "durationMs": 8667,
+      "file": "market-order.avif",
+      "fileSize": 1872875,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "f25c7da090c6865748cf6c762f48108c7be4cac29d4316414fa72aee739cb7ae",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "50646860e82ff13c4bbe2308485ab9ec2b13754e4b88349ff20d51de4dbcd65f"
     }
   ],
   "size": {
@@ -81,7 +166,7 @@
     "width": 2560
   },
   "sourceFps": 30,
-  "sourceFingerprint": "1f0306d64df85aa38222bc3f2032996ea1e1eae4749625c3f69058bf3b87ff73",
+  "sourceFingerprint": "f2b4e3355b4b0ae9359fd151f621728b124767e6a838d90e146fdbe307b4b960",
   "targetFps": 30,
-  "totalFileSize": 2924676
+  "totalFileSize": 10911822
 }

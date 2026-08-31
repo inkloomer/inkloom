@@ -8,11 +8,33 @@
       "export": "ProductionSmugglingScene",
       "layout": "production-smuggling-dual-filing",
       "anchor": "comparison-axis",
-      "grammar": ["product-panel", "smuggling-panel"],
-      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
-      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
-      "tokens": ["Scale", "Gavel", "Zap"],
-      "finalKnowledge": ["product-panel", "smuggling-panel"],
+      "grammar": [
+        "product-panel",
+        "smuggling-panel"
+      ],
+      "textTreatments": [
+        "chip",
+        "label-block",
+        "soft-highlight",
+        "thin-underline",
+        "external-negation",
+        "stamp"
+      ],
+      "focalChannels": [
+        "icon",
+        "contrast",
+        "enclosure",
+        "spatial"
+      ],
+      "tokens": [
+        "Scale",
+        "Gavel",
+        "Zap"
+      ],
+      "finalKnowledge": [
+        "product-panel",
+        "smuggling-panel"
+      ],
       "statefulObjects": []
     },
     {
@@ -20,11 +42,34 @@
       "export": "CreditCardFraudScene",
       "layout": "credit-card-tri-filing",
       "anchor": "typographic-sequence",
-      "grammar": ["cc-basics-panel", "cc-types-panel"],
-      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
-      "focalChannels": ["icon", "contrast", "enclosure", "connector"],
-      "tokens": ["CreditCard", "Ban", "Zap"],
-      "finalKnowledge": ["cc-basics-panel", "cc-types-panel", "cc-machine-panel"],
+      "grammar": [
+        "cc-basics-panel",
+        "cc-types-panel"
+      ],
+      "textTreatments": [
+        "chip",
+        "label-block",
+        "soft-highlight",
+        "thin-underline",
+        "external-negation",
+        "stamp"
+      ],
+      "focalChannels": [
+        "icon",
+        "contrast",
+        "enclosure",
+        "connector"
+      ],
+      "tokens": [
+        "CreditCard",
+        "Ban",
+        "Zap"
+      ],
+      "finalKnowledge": [
+        "cc-basics-panel",
+        "cc-types-panel",
+        "cc-machine-panel"
+      ],
       "statefulObjects": []
     },
     {
@@ -32,11 +77,34 @@
       "export": "MoneyLaunderingTaxScene",
       "layout": "launder-tax-dual-filing",
       "anchor": "comparison-axis",
-      "grammar": ["launder-panel", "tax-panel"],
-      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
-      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
-      "tokens": ["Scale", "Zap", "Ban", "Gavel"],
-      "finalKnowledge": ["launder-panel", "tax-panel"],
+      "grammar": [
+        "launder-panel",
+        "tax-panel"
+      ],
+      "textTreatments": [
+        "chip",
+        "label-block",
+        "soft-highlight",
+        "thin-underline",
+        "external-negation",
+        "stamp"
+      ],
+      "focalChannels": [
+        "icon",
+        "contrast",
+        "enclosure",
+        "spatial"
+      ],
+      "tokens": [
+        "Scale",
+        "Zap",
+        "Ban",
+        "Gavel"
+      ],
+      "finalKnowledge": [
+        "launder-panel",
+        "tax-panel"
+      ],
       "statefulObjects": []
     },
     {
@@ -44,12 +112,253 @@
       "export": "InsuranceLoanFraudScene",
       "layout": "insurance-loan-dual-filing",
       "anchor": "comparison-axis",
-      "grammar": ["loan-panel", "insurance-panel"],
-      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
-      "focalChannels": ["icon", "contrast", "enclosure", "connector"],
-      "tokens": ["Ban", "Scale", "Gavel", "Zap"],
-      "finalKnowledge": ["loan-panel", "insurance-panel"],
+      "grammar": [
+        "loan-panel",
+        "insurance-panel"
+      ],
+      "textTreatments": [
+        "chip",
+        "label-block",
+        "soft-highlight",
+        "thin-underline",
+        "external-negation",
+        "stamp"
+      ],
+      "focalChannels": [
+        "icon",
+        "contrast",
+        "enclosure",
+        "spatial"
+      ],
+      "tokens": [
+        "Ban",
+        "Scale",
+        "Gavel",
+        "Zap"
+      ],
+      "finalKnowledge": [
+        "loan-panel",
+        "insurance-panel"
+      ],
       "statefulObjects": []
+    },
+    {
+      "id": "company-order",
+      "export": "CompanyOrderScene",
+      "layout": "company-order-bribe-flow",
+      "anchor": "flow-path",
+      "grammar": [
+        "bribe-contrast",
+        "bribe-giving-lane",
+        "friend-profit-chain",
+        "same-business-plaque"
+      ],
+      "textTreatments": [
+        "chip",
+        "label-block",
+        "soft-highlight",
+        "thin-underline",
+        "external-negation",
+        "stamp"
+      ],
+      "focalChannels": [
+        "icon",
+        "connector",
+        "contrast",
+        "motion"
+      ],
+      "tokens": [
+        "HandCoins",
+        "Coins",
+        "Users",
+        "Building2",
+        "Landmark",
+        "Briefcase",
+        "Scale",
+        "Split"
+      ],
+      "finalKnowledge": [
+        "bribe-contrast",
+        "bribe-giving-lane",
+        "friend-profit-chain",
+        "same-business-plaque"
+      ],
+      "statefulObjects": [
+        "bribe-token"
+      ]
+    },
+    {
+      "id": "currency-notes",
+      "export": "CurrencyNotesScene",
+      "layout": "currency-notes-chain",
+      "anchor": "flow-path",
+      "grammar": [
+        "forge-alter-gate",
+        "fake-money-chain",
+        "note-forgery-link",
+        "card-management-fork"
+      ],
+      "textTreatments": [
+        "chip",
+        "label-block",
+        "soft-highlight",
+        "thin-underline",
+        "external-negation",
+        "stamp"
+      ],
+      "focalChannels": [
+        "icon",
+        "connector",
+        "contrast",
+        "motion"
+      ],
+      "tokens": [
+        "Banknote",
+        "Factory",
+        "Truck",
+        "Wallet",
+        "UserCheck",
+        "CreditCard"
+      ],
+      "finalKnowledge": [
+        "forge-alter-gate",
+        "fake-money-chain",
+        "note-forgery-link",
+        "card-management-fork"
+      ],
+      "statefulObjects": [
+        "fake-money-token"
+      ]
+    },
+    {
+      "id": "tax-rebate-fund",
+      "export": "TaxRebateFundScene",
+      "layout": "tax-rebate-split-fork",
+      "anchor": "document-fork",
+      "grammar": [
+        "rebate-fork",
+        "invoice-pair",
+        "fundraising-axis"
+      ],
+      "textTreatments": [
+        "chip",
+        "label-block",
+        "soft-highlight",
+        "thin-underline",
+        "external-negation",
+        "stamp"
+      ],
+      "focalChannels": [
+        "icon",
+        "connector",
+        "contrast",
+        "motion"
+      ],
+      "tokens": [
+        "Plane",
+        "Coins",
+        "FileWarning",
+        "Percent",
+        "TrendingUp",
+        "Landmark"
+      ],
+      "finalKnowledge": [
+        "rebate-fork",
+        "invoice-pair",
+        "fundraising-axis"
+      ],
+      "statefulObjects": [
+        "rebate-token"
+      ]
+    },
+    {
+      "id": "ip-crimes",
+      "export": "IpCrimesScene",
+      "layout": "ip-quadrant-matrix",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "copyright-quadrant",
+        "copyright-count-floor",
+        "trademark-mirror",
+        "trade-secret-lane"
+      ],
+      "textTreatments": [
+        "chip",
+        "label-block",
+        "soft-highlight",
+        "thin-underline",
+        "external-negation",
+        "stamp"
+      ],
+      "focalChannels": [
+        "icon",
+        "contrast",
+        "enclosure",
+        "motion"
+      ],
+      "tokens": [
+        "Film",
+        "Globe",
+        "Store",
+        "MonitorPlay",
+        "ShieldCheck",
+        "Ban"
+      ],
+      "finalKnowledge": [
+        "copyright-quadrant",
+        "copyright-count-floor",
+        "trademark-mirror",
+        "trade-secret-lane"
+      ],
+      "statefulObjects": [
+        "pirated-copy-token"
+      ]
+    },
+    {
+      "id": "market-order",
+      "export": "MarketOrderScene",
+      "layout": "market-order-gate-lane",
+      "anchor": "timeline-gate",
+      "grammar": [
+        "illegal-operation-lane",
+        "forced-trade-gate",
+        "false-statement-lane",
+        "contract-fraud-mirror",
+        "pyramid-formula"
+      ],
+      "textTreatments": [
+        "chip",
+        "label-block",
+        "soft-highlight",
+        "thin-underline",
+        "external-negation",
+        "stamp"
+      ],
+      "focalChannels": [
+        "icon",
+        "connector",
+        "contrast",
+        "motion"
+      ],
+      "tokens": [
+        "ListOrdered",
+        "Swords",
+        "Hand",
+        "ShieldX",
+        "FileX",
+        "Scale",
+        "Network"
+      ],
+      "finalKnowledge": [
+        "illegal-operation-lane",
+        "forced-trade-gate",
+        "false-statement-lane",
+        "contract-fraud-mirror",
+        "pyramid-formula"
+      ],
+      "statefulObjects": [
+        "coercion-token"
+      ]
     }
   ]
 }

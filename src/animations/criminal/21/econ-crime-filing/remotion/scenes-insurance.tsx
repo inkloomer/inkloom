@@ -1,7 +1,7 @@
 import {Ban, Gavel, Scale, Zap} from 'lucide-react';
 import {C, Enter, IconChip, Mark, Neg, Panel, Shell, TabChip} from './kit';
 
-/* data-visual-anchor="document-fork" data-focal-channels="icon,contrast,enclosure,spatial" */
+/* data-visual-anchor="comparison-axis" data-focal-channels="icon,contrast,enclosure,spatial" */
 export const InsuranceLoanFraudScene = () => {
   /* data-final-knowledge="loan-panel" data-final-knowledge="insurance-panel" */
   return (
@@ -9,7 +9,7 @@ export const InsuranceLoanFraudScene = () => {
       <div
         data-layout="insurance-loan-dual-filing"
         data-text-treatments="chip,label-block,soft-highlight,thin-underline,external-negation,stamp"
-        data-visual-anchor="document-fork"  data-visual-grammar="loan-panel,insurance-panel"
+        data-visual-anchor="comparison-axis"  data-visual-grammar="loan-panel,insurance-panel"
         data-focal-channels="icon,contrast,enclosure,spatial" data-focal-rule="loan-fraud-needs-illegal-possession-purpose-and-insurance-fraud-needs-special-subject"
         
         style={{position: 'absolute', inset: 0}}
