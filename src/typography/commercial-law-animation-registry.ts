@@ -40,6 +40,7 @@ import {typography as typography38} from '../animations/commercial-law/20/bill-o
 import {typography as typography39} from '../animations/commercial-law/21/draft/animation.meta';
 import {typography as typography40} from '../animations/commercial-law/22/bill-rights/animation.meta';
 import {typography as typography41} from '../animations/commercial-law/23/insurance-principles/animation.meta';
+import {typography as typography42} from '../animations/commercial-law/24/insurance-contract/animation.meta';
 
 export const COMMERCIAL_LAW_TYPOGRAPHY_CONFIGURATIONS = {
   'company-personality': {metadata: typography0, scope: {animationId: 'company-personality', subject: 'commercial-law', topic: '01'}},
@@ -84,4 +85,5 @@ export const COMMERCIAL_LAW_TYPOGRAPHY_CONFIGURATIONS = {
   'draft': {metadata: typography39, scope: {animationId: 'draft', subject: 'commercial-law', topic: '21'}},
   'bill-rights': {metadata: typography40, scope: {animationId: 'bill-rights', subject: 'commercial-law', topic: '22'}},
   'insurance-principles': {metadata: typography41, scope: {animationId: 'insurance-principles', subject: 'commercial-law', topic: '23'}},
+  'insurance-contract': {metadata: typography42, scope: {animationId: 'insurance-contract', subject: 'commercial-law', topic: '24'}},
 } as const;

@@ -1,0 +1,146 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "insurance-contract-scene-01",
+      "export": "InsuranceContract01Scene",
+      "layout": "formation-signing-board-1",
+      "anchor": "concept-icon",
+      "grammar": [
+        "signing-principle-exception",
+        "review-period-split"
+      ],
+      "textTreatments": [
+        "chip",
+        "stamp",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "icon",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "insurance-contract-knowledge-1",
+        "insurance-contract-scene-01-formation",
+        "insurance-contract-scene-01-signing",
+        "insurance-contract-scene-01-formfilling"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "insurance-contract-scene-02",
+      "export": "InsuranceContract02Scene",
+      "layout": "conflict-rules-ladder-2",
+      "anchor": "typographic-sequence",
+      "grammar": [
+        "conflict-rule-ladder",
+        "exception-branch"
+      ],
+      "textTreatments": [
+        "chip",
+        "soft-highlight",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "icon",
+        "spatial",
+        "contrast"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "insurance-contract-knowledge-2",
+        "insurance-contract-scene-02-rules"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "insurance-contract-scene-03",
+      "export": "InsuranceContract03Scene",
+      "layout": "policyholder-free-rescission-3",
+      "anchor": "flow-path",
+      "grammar": [
+        "free-rescission-line",
+        "cashvalue-refund-chain"
+      ],
+      "textTreatments": [
+        "chip",
+        "stamp",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "motion",
+        "connector",
+        "contrast"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "insurance-contract-knowledge-3",
+        "insurance-contract-scene-03-free",
+        "insurance-contract-scene-03-buyout"
+      ],
+      "statefulObjects": [
+        "cashvalue-refund-travel"
+      ]
+    },
+    {
+      "id": "insurance-contract-scene-04",
+      "export": "InsuranceContract04Scene",
+      "layout": "insurer-rescission-personal-4",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "fraud-severity-ladder",
+        "suicide-timeline-split"
+      ],
+      "textTreatments": [
+        "chip",
+        "external-negation",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "icon",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "insurance-contract-knowledge-4",
+        "insurance-contract-scene-04-fraud",
+        "insurance-contract-scene-04-age-suicide"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "insurance-contract-scene-05",
+      "export": "InsuranceContract05Scene",
+      "layout": "property-risk-window-5",
+      "anchor": "flow-path",
+      "grammar": [
+        "risk-notice-chain",
+        "expiration-lock"
+      ],
+      "textTreatments": [
+        "chip",
+        "external-negation",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "motion",
+        "connector",
+        "contrast"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "insurance-contract-knowledge-5",
+        "insurance-contract-scene-05-property",
+        "insurance-contract-scene-05-window"
+      ],
+      "statefulObjects": [
+        "rescission-clock-travel"
+      ]
+    }
+  ]
+}

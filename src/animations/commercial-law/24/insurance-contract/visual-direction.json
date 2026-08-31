@@ -1,0 +1,16 @@
+{
+  "directionId": "policy-rescission-desk",
+  "derivedFrom": "demo-clerk-desk",
+  "variation": "保单解除柜台: 代签章追认与凭证冲突四规则上账, 投保人任意解除线直通现金价值退款, 保险人法定解除按骗保严重度与自杀两年分水岭排布",
+  "family": "policy-rescission-desk",
+  "palette": "#EFE9E0 + #2B2B33 + #3B4A6B + #8A4B2F + #15725F + #B23A30 + #B98A2F",
+  "typography": "WenKai 柜台栏标 + 解除徽章 + 分水岭刻度",
+  "composition": "成立与代签章 + 冲突规则阶梯 + 任意解除退款链 + 法定解除双栏",
+  "surface": "柜台纸卡、解除徽章、现金价值金条, 无圆角",
+  "motion": "现金价值徽章沿解除链滑向退款终点, 解除时钟穿过双期限闸口, 严重度条目按色阶入列",
+  "transition": "青色柜台贯穿五场, 铜色财产与靛蓝人身双线呼应",
+  "catalog": {
+    "status": "variant",
+    "sourceDirectionId": "policy-rescission-desk"
+  }
+}
