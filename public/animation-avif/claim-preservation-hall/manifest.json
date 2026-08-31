@@ -1,0 +1,70 @@
+{
+  "animationId": "claim-preservation-hall",
+  "compositionId": "ClaimPreservationHall",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-31T15:19:07.358Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 719,
+      "frameCount": 360,
+      "id": "subrogation-gate",
+      "number": "01",
+      "startFrame": 0,
+      "title": "代位权",
+      "durationMs": 12000,
+      "file": "subrogation-gate.avif",
+      "fileSize": 792413,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "8a0624a9f570dd32e9957b3ba73c840a07acce848c0afc710782360fbf1295ec",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "2a26f46cea3bcf3294ddb8bc0859371c5b057a4de4915d61cb3a6323091ed312"
+    },
+    {
+      "endFrame": 1439,
+      "frameCount": 360,
+      "id": "revocation-conditions",
+      "number": "02",
+      "startFrame": 720,
+      "title": "撤销权的成立条件",
+      "durationMs": 12000,
+      "file": "revocation-conditions.avif",
+      "fileSize": 558777,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "3903c80263112ca27afa2fce41ff8a8c7478fee650903c53598daf54ed028723",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "2a26f46cea3bcf3294ddb8bc0859371c5b057a4de4915d61cb3a6323091ed312"
+    },
+    {
+      "endFrame": 2099,
+      "frameCount": 330,
+      "id": "revocation-exercise-ladder",
+      "number": "03",
+      "startFrame": 1440,
+      "title": "撤销权的行使与双权对照",
+      "durationMs": 11000,
+      "file": "revocation-exercise-ladder.avif",
+      "fileSize": 644483,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "157b4b01bd1b1bccc57637033185d640de5ba92b689919e4545d8bdec938c1ca",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "2a26f46cea3bcf3294ddb8bc0859371c5b057a4de4915d61cb3a6323091ed312"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "2a26f46cea3bcf3294ddb8bc0859371c5b057a4de4915d61cb3a6323091ed312",
+  "targetFps": 30,
+  "totalFileSize": 1995673
+}
