@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "system-tree",
+      "export": "SystemTreeScene",
+      "layout": "property-root-tree-with-twin-branches",
+      "anchor": "document-fork",
+      "grammar": [
+        "property-is-direct-dominion-over-a-thing-excluding-unlawful-interference",
+        "self-property-is-ownership-on-ones-own-thing",
+        "other-property-splits-into-use-franchises-and-security-interests",
+        "five-use-franchises-and-three-security-interests-complete-the-system"
+      ],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "thin-underline"],
+      "focalChannels": ["contrast", "icon", "connector", "annotation"],
+      "tokens": ["Network", "Home", "Key", "Shield"],
+      "finalKnowledge": ["property-definition", "self-property-limb", "use-franchise-limb", "security-limb"],
+      "statefulObjects": []
+    },
+    {
+      "id": "principal-accessory",
+      "export": "PrincipalAccessoryScene",
+      "layout": "twin-specimen-cards-with-effect-extension",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "principal-and-accessory-serve-together-for-maximum-benefit",
+        "the-principal-plays-the-main-role-while-the-accessory-assists",
+        "disposition-of-the-principal-extends-to-the-accessory",
+        "parties-may-agree-otherwise-and-defeat-the-extension"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "external-negation"],
+      "focalChannels": ["contrast", "connector", "enclosure", "annotation"],
+      "tokens": ["Home", "Link", "FileSignature"],
+      "finalKnowledge": ["principal-meaning", "accessory-meaning", "disposition-extension", "agreement-exception"],
+      "statefulObjects": []
+    },
+    {
+      "id": "original-fruit",
+      "export": "OriginalFruitScene",
+      "layout": "original-fruit-flow-with-attribution-rules",
+      "anchor": "flow-path",
+      "grammar": [
+        "the-original-creates-the-fruit-as-a-new-thing",
+        "natural-fruits-follow-nature-and-must-first-separate",
+        "legal-fruits-follow-legal-relations-like-interest-rent-and-prize",
+        "fruits-belong-to-the-original-owner-unless-law-or-agreement-says-otherwise"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["connector", "contrast", "enclosure", "annotation"],
+      "tokens": ["Sprout", "Coins", "Users", "Ban"],
+      "finalKnowledge": ["original-fruit-meaning", "natural-fruit-separation", "legal-fruit-relations", "fruit-attribution-rules"],
+      "statefulObjects": []
+    }
+  ]
+}

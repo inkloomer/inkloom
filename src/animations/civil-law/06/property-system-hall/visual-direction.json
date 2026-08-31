@@ -1,0 +1,21 @@
+{
+  "directionId": "bamboo-specimen-property-system-hall",
+  "family": "bamboo-specimen-property-system-hall",
+  "palette": "bamboo deep green, celadon sage, walnut rail brown, ivory paper, rust wax, soft gold, graphite ink",
+  "typography": "specimen-hall headings on walnut rail tabs, celadon tag chips and rust wax verdicts",
+  "composition": "a specimen gallery with a property system tree on a walnut rail, twin principal-accessory specimen cards, and an original-fruit flow with attribution rule rows",
+  "surface": "ivory specimen cards, walnut desk rails, celadon tags, rust wax seals",
+  "motion": "the system tree branches outward from the property root, the accessory tag trails its principal card, and fruits separate from the original before attribution rules sort the owners",
+  "transition": "the bamboo hall floor, walnut rails and celadon tag posts persist while tree, cards and flow lanes are re-dressed between scenes",
+  "conceptTokens": {
+    "物权": "Network",
+    "所有权": "Home",
+    "孳息": "Sprout"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/civil-law/06/property-system-hall/",
+    "title": "竹青标本馆"
+  }
+}
