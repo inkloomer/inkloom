@@ -1,0 +1,91 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "product-quality-law-scene-01",
+      "export": "ProductQualityLaw01Scene",
+      "layout": "supervision-flaw-lane-1",
+      "anchor": "flow-path",
+      "grammar": [
+        "spotcheck-rule-band",
+        "flaw-claim-lane"
+      ],
+      "textTreatments": [
+        "chip",
+        "stamp",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "motion",
+        "connector",
+        "contrast"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "product-quality-law-knowledge-1",
+        "product-quality-law-scene-01-supervision",
+        "product-quality-law-scene-01-flaw"
+      ],
+      "statefulObjects": [
+        "flaw-claim-travel"
+      ]
+    },
+    {
+      "id": "product-quality-law-scene-02",
+      "export": "ProductQualityLaw02Scene",
+      "layout": "defect-double-track-2",
+      "anchor": "boundary",
+      "grammar": [
+        "strict-fault-double-track",
+        "victim-lane"
+      ],
+      "textTreatments": [
+        "chip",
+        "stamp",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "motion",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "product-quality-law-knowledge-2",
+        "product-quality-law-scene-02-external"
+      ],
+      "statefulObjects": [
+        "victim-claim-travel"
+      ]
+    },
+    {
+      "id": "product-quality-law-scene-03",
+      "export": "ProductQualityLaw03Scene",
+      "layout": "exemption-clock-board-3",
+      "anchor": "timeline-gate",
+      "grammar": [
+        "exemption-trio",
+        "tenyear-clock"
+      ],
+      "textTreatments": [
+        "chip",
+        "stamp",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "icon",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "product-quality-law-knowledge-3",
+        "product-quality-law-scene-03-exemption",
+        "product-quality-law-knowledge-4"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

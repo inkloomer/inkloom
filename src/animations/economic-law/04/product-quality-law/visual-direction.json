@@ -1,0 +1,16 @@
+{
+  "directionId": "quality-inspection-bench",
+  "derivedFrom": "demo-clerk-desk",
+  "variation": "质检工作台: 瑕疵索赔徽章沿违约车道找销售者, 受害人徽章在缺陷双轨上两边都可走, 生产者免责三事由与十年时钟并列挂账",
+  "family": "quality-inspection-bench",
+  "palette": "#EFECE4 + #2B2B33 + #2C4A6E + #8A4B2F + #15725F + #B23A30 + #B98A2F",
+  "typography": "WenKai 工作台标 + 索赔徽章 + 时钟刻度",
+  "composition": "监督抽查横幅 + 瑕疵违约车道 + 缺陷双轨 + 免责与时钟对栏",
+  "surface": "工作台纸卡、索赔徽章、十年时钟刻度, 无圆角",
+  "motion": "索赔徽章沿车道找责任主体, 受害人徽章在双轨间行驶, 时钟指针走过三年十年两道刻度",
+  "transition": "藏蓝工作台贯穿三场, 铜色瑕疵与红色缺陷双线呼应",
+  "catalog": {
+    "status": "variant",
+    "sourceDirectionId": "quality-inspection-bench"
+  }
+}
