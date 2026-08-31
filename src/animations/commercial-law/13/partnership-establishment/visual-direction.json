@@ -1,0 +1,16 @@
+{
+  "directionId": "founding-clerk-desk",
+  "derivedFrom": "demo-clerk-desk",
+  "variation": "合伙设立办事台: 双形态责任天平并排, 国市公社四主体在两道门前通过与否, 协议-名称-登记沿干线盖章推进",
+  "family": "founding-clerk-desk",
+  "palette": "#F0EAE0 + #2B2B33 + #8A4B2F + #2F6B5E + #B23A30 + #B98A2F",
+  "typography": "WenKai 形态名牌 + 站点短标签 + 责任印章",
+  "composition": "双形态责任对比 + 主体资格双门 + 设立三站干线与劳务出资分叉",
+  "surface": "纸卡站点、门形闸口、红章与金标签, 无圆角",
+  "motion": "形态卡自两翼滑入, 责任线随箭头向下延伸, 主体徽章被普通合伙门弹回后改入有限合伙门, 签名章沿干线依次到站, 劳务出资分叉双向滑出",
+  "transition": "普通合伙人铜色与有限合伙人青色贯穿三场, 无限连带红章跨场呼应",
+  "catalog": {
+    "status": "variant",
+    "sourceDirectionId": "founding-clerk-desk"
+  }
+}

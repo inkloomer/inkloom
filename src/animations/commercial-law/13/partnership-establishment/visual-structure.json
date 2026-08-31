@@ -1,0 +1,104 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "partnership-establishment-scene-01",
+      "export": "PartnershipEstablishment01Scene",
+      "layout": "dual-form-liability-1",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "liability-fork",
+        "form-definition-cards"
+      ],
+      "textTreatments": [
+        "chip",
+        "stamp",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "connector",
+        "motion"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "partnership-establishment-knowledge-1",
+        "partnership-establishment-scene-01-gp-def",
+        "partnership-establishment-scene-01-lp-def",
+        "partnership-establishment-scene-01-gp-liability",
+        "partnership-establishment-scene-01-lp-liability",
+        "partnership-establishment-scene-01-recap"
+      ],
+      "statefulObjects": [
+        "unlimited-liability-carry"
+      ]
+    },
+    {
+      "id": "partnership-establishment-scene-02",
+      "export": "PartnershipEstablishment02Scene",
+      "layout": "subject-gate-pair-2",
+      "anchor": "timeline-gate",
+      "grammar": [
+        "gate-pass-reject",
+        "restricted-subject-travel"
+      ],
+      "textTreatments": [
+        "label-block",
+        "chip",
+        "external-negation"
+      ],
+      "focalChannels": [
+        "motion",
+        "connector",
+        "icon"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "partnership-establishment-knowledge-2",
+        "partnership-establishment-scene-02-gp-gate",
+        "partnership-establishment-scene-02-lp-gate",
+        "partnership-establishment-scene-02-gp-facts",
+        "partnership-establishment-scene-02-lp-facts"
+      ],
+      "statefulObjects": [
+        "restricted-subject-gate-travel"
+      ]
+    },
+    {
+      "id": "partnership-establishment-scene-03",
+      "export": "PartnershipEstablishment03Scene",
+      "layout": "founding-chain-fork-3",
+      "anchor": "flow-path",
+      "grammar": [
+        "founding-spine-travel",
+        "labor-contribution-fork"
+      ],
+      "textTreatments": [
+        "soft-highlight",
+        "thin-underline",
+        "stamp"
+      ],
+      "focalChannels": [
+        "connector",
+        "motion",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "partnership-establishment-knowledge-3",
+        "partnership-establishment-scene-03-station-agreement",
+        "partnership-establishment-scene-03-station-name",
+        "partnership-establishment-scene-03-station-register",
+        "partnership-establishment-scene-03-labor-gp",
+        "partnership-establishment-scene-03-labor-lp",
+        "partnership-establishment-scene-03-agreement-rules",
+        "partnership-establishment-scene-03-warning"
+      ],
+      "statefulObjects": [
+        "founding-spine-travel"
+      ]
+    }
+  ]
+}
