@@ -1,0 +1,21 @@
+{
+  "directionId": "ember-candle-obligation-extinction-hall",
+  "family": "ember-candle-obligation-extinction-hall",
+  "palette": "charred umber black, candle-flame orange, wax white, smoke grey, teal glint, graphite ink",
+  "typography": "candle-hall headings on ember rail tabs, wax chips and flame-orange verdicts",
+  "composition": "a candle hall where offset rungs climb a priority ladder, a deposit tally burns ownership risk and claim onto the creditor, offset scales weigh two legal relations, and confusion-waiver forks merge or release the debt",
+  "surface": "wax white sheets, ember desk rails, smoke grey tags, flame orange seals",
+  "motion": "offset rungs light in priority order and the composite candle burns fee-interest-principal from outside in, the deposit tally transfers three flames to the creditor then dims at five years, offset scale pans settle by whose claim matured first, and confusion forks merge two wicks into one unless a third party holds the flame",
+  "transition": "the ember hall floor, ember rails and flame-orange posts persist while ladders, tallies, scales and forks are re-dressed between scenes",
+  "conceptTokens": {
+    "提存": "Archive",
+    "抵销": "CircleEqual",
+    "混同": "Merge"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/civil-law/10/obligation-extinction-hall/",
+    "title": "烬火烛台馆"
+  }
+}

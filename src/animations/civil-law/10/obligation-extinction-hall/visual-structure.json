@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "offset-fulfilment-ladder",
+      "export": "OffsetFulfilmentScene",
+      "layout": "priority-ladder-with-thing-for-owed-split",
+      "anchor": "timeline-gate",
+      "grammar": [
+        "offset-rungs-clip-agreement-maturity-security-weight-order-and-ratio",
+        "composite-debts-burn-fee-interest-principal-from-outside-in",
+        "pre-deadline-thing-for-owed-acts-as-security-for-the-debt",
+        "post-deadline-agreements-offer-the-choice-between-thing-and-money"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["connector", "contrast", "enclosure", "motion"],
+      "tokens": ["Coins", "Archive", "Scale"],
+      "finalKnowledge": ["offset-rung-ladder", "composite-burn-order", "pre-deadline-rule", "post-deadline-rule"],
+      "statefulObjects": []
+    },
+    {
+      "id": "deposit-tally",
+      "export": "DepositTallyScene",
+      "layout": "deposit-tally-with-five-year-fuse",
+      "anchor": "flow-path",
+      "grammar": [
+        "delayed-acceptance-lets-the-debtor-deposit-with-the-notary-office",
+        "ownership-fruit-and-risk-transfer-to-the-creditor-once-deposited",
+        "five-years-of-claim-then-state-ownership-unless-the-creditor-owes",
+        "written-waiver-returns-the-deposit-to-the-debtor-within-five-years"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["connector", "contrast", "enclosure", "motion"],
+      "tokens": ["Archive", "Coins", "Ban"],
+      "finalKnowledge": ["deposit-definition", "three-transfer-rule", "five-year-fuse", "debtor-takeback"],
+      "statefulObjects": []
+    },
+    {
+      "id": "offset-pair",
+      "export": "OffsetPairScene",
+      "layout": "statutory-setoff-scales-with-limits",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "setoff-needs-two-relations-same-kind-and-matured-claim",
+        "whoever-acts-weighs-by-their-own-matured-claim-only",
+        "defence-holders-and-tortfeasors-cannot-lead-the-setoff",
+        "notice-arrives-settles-both-debts-at-once-into-any-balance"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "external-negation"],
+      "focalChannels": ["contrast", "connector", "enclosure", "motion"],
+      "tokens": ["CircleEqual", "Scale", "Ban"],
+      "finalKnowledge": ["setoff-conditions", "who-acts-rule", "limit-cards", "notice-consequence"],
+      "statefulObjects": []
+    },
+    {
+      "id": "confusion-waiver-fork",
+      "export": "ConfusionWaiverScene",
+      "layout": "confusion-waiver-fork-with-joint-share-strip",
+      "anchor": "document-fork",
+      "grammar": [
+        "confusion-merges-creditor-and-debtor-into-one-person",
+        "third-party-interests-keep-the-merged-claim-alive",
+        "joint-share-confusion-deducts-the-share-and-others-continue",
+        "waiver-is-a-unilateral-act-aimed-at-the-debtor-who-may-refuse"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["contrast", "connector", "enclosure", "annotation"],
+      "tokens": ["Merge", "Coins", "Handshake"],
+      "finalKnowledge": ["confusion-facts", "third-party-exception", "joint-share-confusion", "waiver-layers"],
+      "statefulObjects": []
+    }
+  ]
+}
