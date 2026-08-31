@@ -1,0 +1,21 @@
+{
+  "directionId": "turmeric-chessboard-co-ownership-hall",
+  "family": "turmeric-chessboard-co-ownership-hall",
+  "palette": "deep turmeric gold, saffron rail, cream paper, indigo ribbon, seal red wax, umber ink",
+  "typography": "chess-hall headings on turmeric rail tabs, cream chips and seal red wax verdicts",
+  "composition": "a chess hall where pie-share and joint-ownership players sit across the board, internal chains run disposal and share-transfer lanes, and the 3:3:4 case forks into house and share verdicts before the joint liability strip",
+  "surface": "cream paper files, turmeric desk rails, indigo ribbon tags, seal red wax",
+  "motion": "consent chips travel to a 2/3 or unanimous gate before a disposal may pass, a share chip slides out freely while a priority crown intercepts it at the outward gate, and the case board forks house and share questions into separate verdict lanes",
+  "transition": "the turmeric hall floor, saffron rails and seal posts persist while the board, chains and forks are re-dressed between scenes",
+  "conceptTokens": {
+    "按份共有": "PieChart",
+    "共同共有": "UsersRound",
+    "优先购买权": "Crown"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/civil-law/07/co-ownership-hall/",
+    "title": "姜黄棋秤馆"
+  }
+}

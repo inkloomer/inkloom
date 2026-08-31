@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "twin-ownership-types",
+      "export": "TwinOwnershipTypesScene",
+      "layout": "twin-ownership-cards-with-sorting-strip",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "co-ownership-shares-one-ownership-of-one-thing-among-two-or-more",
+        "share-co-ownership-rests-on-quotas-without-identity-requirements",
+        "joint-ownership-rests-on-a-common-relationsuch-as-spouse-or-family",
+        "without-agreement-a-common-relation-means-joint-otherwise-by-share"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["contrast", "icon", "enclosure", "annotation"],
+      "tokens": ["PieChart", "UsersRound", "Scale"],
+      "finalKnowledge": ["co-ownership-definition", "share-type-limb", "joint-type-limb", "sorting-rules"],
+      "statefulObjects": []
+    },
+    {
+      "id": "internal-relations-chains",
+      "export": "InternalRelationsScene",
+      "layout": "disposal-and-share-transfer-chains",
+      "anchor": "flow-path",
+      "grammar": [
+        "disposal-needs-two-thirds-consent-by-share-or-unanimous-consent-jointly",
+        "unauthorised-disposal-is-unauthorised-with-a-valid-contract",
+        "share-transfer-needs-no-consent-yet-triggers-the-outward-priority-right",
+        "priority-fails-inward-or-on-inheritance-and-exercise-follows-quotas"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "external-negation"],
+      "focalChannels": ["connector", "contrast", "enclosure", "motion"],
+      "tokens": ["PieChart", "UsersRound", "Crown", "FileSignature"],
+      "finalKnowledge": ["disposal-chain", "unauthorised-chain", "share-transfer-chain", "priority-limits"],
+      "statefulObjects": []
+    },
+    {
+      "id": "case-fork-and-external",
+      "export": "CaseForkExternalScene",
+      "layout": "case-fork-with-joint-liability-strip",
+      "anchor": "document-fork",
+      "grammar": [
+        "the-house-question-forks-into-unauthorised-disposal-and-good-faith",
+        "the-share-question-forks-into-free-transfer-and-priority-right",
+        "creditors-and-debtors-of-the-owned-thing-are-joint",
+        "the-external-relation-binds-every-co-owner-together"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["connector", "contrast", "enclosure", "annotation"],
+      "tokens": ["PieChart", "UsersRound", "Crown", "Users"],
+      "finalKnowledge": ["house-verdicts", "share-verdicts", "external-joint-rule", "comparison-strip"],
+      "statefulObjects": []
+    }
+  ]
+}
