@@ -1,0 +1,70 @@
+{
+  "animationId": "personality-shield-hall",
+  "compositionId": "PersonalityShieldHall",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-31T14:26:07.983Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 779,
+      "frameCount": 390,
+      "id": "vitality-rights-rack",
+      "number": "01",
+      "startFrame": 0,
+      "title": "生命、健康、身体与性骚扰侵权",
+      "durationMs": 13000,
+      "file": "vitality-rights-rack.avif",
+      "fileSize": 725023,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "81f71b9823fd3f1e43071160f3ac970d763e2bf11df67326c134035e733fce04",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "f132f4a67c57261723dd6c09765d4787c23f6313f45a01ff78b9d7ff62e1b31b"
+    },
+    {
+      "endFrame": 1619,
+      "frameCount": 420,
+      "id": "name-portrait-gallery",
+      "number": "02",
+      "startFrame": 780,
+      "title": "姓名侵权与肖像侵权",
+      "durationMs": 14000,
+      "file": "name-portrait-gallery.avif",
+      "fileSize": 959096,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "4b58c39fa9c944667a17503b7bb309d890d57783f47b2257c5b686b91bd0d9e9",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "f132f4a67c57261723dd6c09765d4787c23f6313f45a01ff78b9d7ff62e1b31b"
+    },
+    {
+      "endFrame": 2499,
+      "frameCount": 440,
+      "id": "reputation-privacy-bench",
+      "number": "03",
+      "startFrame": 1620,
+      "title": "名誉、隐私、个人信息与执行手段",
+      "durationMs": 14667,
+      "file": "reputation-privacy-bench.avif",
+      "fileSize": 953854,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "ea80e11d3b8527245b92260c0edd4da1086bcc2d3a2f73c17545aa153dcbb768",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "f132f4a67c57261723dd6c09765d4787c23f6313f45a01ff78b9d7ff62e1b31b"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "f132f4a67c57261723dd6c09765d4787c23f6313f45a01ff78b9d7ff62e1b31b",
+  "targetFps": 30,
+  "totalFileSize": 2637973
+}

@@ -1,0 +1,73 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "vitality-rights-rack",
+      "export": "VitalityRightsScene",
+      "layout": "four-vitality-rack-with-unit-duty-strip",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "life-harm-needs-fault-cause-death-while-health-harm-breaks-normal-function-of-body-and-mind",
+        "body-harm-breaks-bodily-integrity-or-restricts-movement-and-unremovable-prosthetics-count-as-body",
+        "harassment-is-unwanted-verbal-or-conduct-based-and-employers-must-prevent-and-stop-abuse-of-power",
+        "each-vitality-right-carries-its-own-fault-object-and-special-problem-on-one-rack"
+      ],
+      "textTreatments": ["label-block", "chip", "soft-highlight", "thin-underline"],
+      "focalChannels": ["icon", "contrast", "enclosure", "annotation"],
+      "tokens": ["Shield", "Heart", "UserRound", "Ban", "Users", "Gavel"],
+      "finalKnowledge": [
+        "life-and-health-harm",
+        "body-harm-scope",
+        "harassment-rules",
+        "vitality-rack-summary"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "name-portrait-gallery",
+      "export": "NamePortraitScene",
+      "layout": "name-portrait-gallery-with-fair-use-lanes",
+      "anchor": "document-fork",
+      "grammar": [
+        "protected-names-cover-current-former-and-famous-alternate-names-that-confuse-the-public",
+        "name-harm-needs-interference-impersonation-or-theft-of-seals-and-signatures",
+        "portraits-are-reproductions-linking-viewers-to-the-person-and-voice-follows-portrait-rules",
+        "photo-ownership-turns-on-delivery-while-unauthorized-sale-stays-authorised-disposition-yet-torts-the-portrait"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["contrast", "icon", "connector", "annotation"],
+      "tokens": ["Shield", "Image", "Ban", "UserRound", "Coins", "Gavel"],
+      "finalKnowledge": [
+        "name-scope-and-elements",
+        "portrait-definition-and-forms",
+        "portrait-fair-use-lanes",
+        "photo-three-rights-triangle"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "reputation-privacy-bench",
+      "export": "ReputationPrivacyScene",
+      "layout": "reputation-privacy-bench-with-concurrence-and-enforcement",
+      "anchor": "boundary",
+      "grammar": [
+        "reputation-harm-needs-insult-or-defamation-that-lowers-social-appraisal-while-honor-covers-forfeit-or-slight",
+        "privacy-covers-tranquility-and-private-spaces-acts-information-against-peeping-disclosure-and-disturbance",
+        "portrait-and-reputation-claims-concur-with-privacy-only-when-private-information-or-defamation-joins",
+        "personal-information-must-identify-and-anonymized-data-exits-while-consent-rules-demand-quiet-withdrawal-and-fresh-consent"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["contrast", "icon", "enclosure", "annotation"],
+      "tokens": ["Shield", "EyeOff", "Fingerprint", "Users", "Ban", "Gavel"],
+      "finalKnowledge": [
+        "reputation-honor-rules",
+        "privacy-acts-and-concurrence",
+        "personal-information-rules",
+        "enforcement-means"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}

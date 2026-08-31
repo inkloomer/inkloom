@@ -1,0 +1,22 @@
+{
+  "directionId": "turquoise-shield-personality-hall",
+  "family": "turquoise-shield-hall",
+  "palette": "deep turquoise field, linen parchment slips, coral clay, brass gold, sage green, violet slate, dark pine ink",
+  "typography": "shield-hall headings on turquoise rail tabs, coral verdicts and brass condition plates",
+  "composition": "a four-vitality rack, a name-portrait gallery with fair-use lanes and a photo rights triangle, and a reputation-privacy bench with concurrence rules and an enforcement strip",
+  "surface": "linen parchment plaques on a deep turquoise field with brass corner studs",
+  "motion": "vitality plaques light rank by rank, portrait tokens travel fair-use lanes, photo rights rotate their triangle, and concurrence chips merge or split at the bench",
+  "transition": "the turquoise field, brass studs and parchment stock persist while racks, galleries and benches are re-dressed between scenes",
+  "conceptTokens": {
+    "人格权": "Shield",
+    "肖像": "Image",
+    "隐私": "EyeOff",
+    "个人信息": "Fingerprint"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/civil-law/17/personality-shield-hall/",
+    "title": "松石盾厅"
+  }
+}
