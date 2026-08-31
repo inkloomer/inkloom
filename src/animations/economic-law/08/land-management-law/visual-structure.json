@@ -1,0 +1,93 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "land-management-law-scene-01",
+      "export": "LandManagementLaw01Scene",
+      "layout": "land-use-dual-deed-1",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "state-collective-deeds",
+        "reuse-band"
+      ],
+      "textTreatments": [
+        "chip",
+        "stamp",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "icon",
+        "motion"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "land-management-law-knowledge-1",
+        "land-management-law-scene-01-state",
+        "land-management-law-scene-01-collective"
+      ],
+      "statefulObjects": [
+        "collective-deed-travel"
+      ]
+    },
+    {
+      "id": "land-management-law-scene-02",
+      "export": "LandManagementLaw02Scene",
+      "layout": "farmland-plan-lane-2",
+      "anchor": "flow-path",
+      "grammar": [
+        "farmland-lane",
+        "plan-band"
+      ],
+      "textTreatments": [
+        "chip",
+        "stamp",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "motion",
+        "icon"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "land-management-law-knowledge-2",
+        "land-management-law-scene-02-farmland"
+      ],
+      "statefulObjects": [
+        "farmland-approval-travel"
+      ]
+    },
+    {
+      "id": "land-management-law-scene-03",
+      "export": "LandManagementLaw03Scene",
+      "layout": "expropriation-decree-lane-3",
+      "anchor": "timeline-gate",
+      "grammar": [
+        "expropriation-gate",
+        "dispute-first-track"
+      ],
+      "textTreatments": [
+        "chip",
+        "stamp",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "motion",
+        "connector",
+        "contrast"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "land-management-law-knowledge-3",
+        "land-management-law-scene-03-expropriation",
+        "land-management-law-knowledge-4"
+      ],
+      "statefulObjects": [
+        "expropriation-decree-travel"
+      ]
+    }
+  ]
+}
