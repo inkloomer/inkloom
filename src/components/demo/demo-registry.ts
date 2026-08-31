@@ -44,6 +44,7 @@ import {DURATION_FRAMES as POWER_MONEY_EXCHANGE_DURATION_FRAMES, FPS as POWER_MO
 import {DURATION_FRAMES as PUBLIC_ORDER_WATCH_TOWER_DURATION_FRAMES, FPS as PUBLIC_ORDER_WATCH_TOWER_FPS} from '../../animations/criminal/22/public-order-watch-tower/remotion/storyboard';
 import {DURATION_FRAMES as INFLUENCE_INTERMEDIARY_DURATION_FRAMES, FPS as INFLUENCE_INTERMEDIARY_FPS} from '../../animations/criminal/23/influence-intermediary/remotion/storyboard';
 import {DURATION_FRAMES as PRESERVATION_DURATION_FRAMES, FPS as PRESERVATION_FPS} from '../../animations/civil-procedure/11/evidence-preservation/remotion/storyboard';
+import {DURATION_FRAMES as MEDIATION_CORE_RECAP_DURATION_FRAMES, FPS as MEDIATION_CORE_RECAP_FPS} from '../../animations/civil-procedure/15/mediation-core-recap/remotion/storyboard';
 import {DURATION_FRAMES as REVIEW_DURATION_FRAMES, FPS as REVIEW_FPS} from '../../animations/civil-procedure/11/evidence-review/remotion/storyboard';
 import {DURATION_FRAMES as FILING_DURATION_FRAMES, FPS as FILING_FPS} from '../../animations/civil-procedure/11/proof-filing-investigation/remotion/storyboard';
 import {DURATION_FRAMES as FOCUS_DURATION_FRAMES, FPS as FOCUS_FPS} from '../../animations/civil-procedure/11/surprise-judgment-focus/remotion/storyboard';
@@ -496,10 +497,12 @@ export const STYLE_DEMOS = [
   {id: 'theoretical-law-05-xi-rule-of-law-core', slug: 'xi-rule-of-law-core', title: '习近平法治思想的核心要义', direction: 'Eleven Star Banner Score', component: lazyDemo(() => import('../../animations/theoretical-law/05/xi-rule-of-law-core/remotion/XiRuleOfLawCore').then((m) => ({default: m.XiRuleOfLawCore}))), href: '/inkloom/objective/theoretical-law/05/xi-rule-of-law-core/', durationInFrames: XI_RULE_OF_LAW_CORE_DURATION_FRAMES, fps: XI_RULE_OF_LAW_CORE_FPS},
   {id: 'theoretical-law-05-xi-rule-of-law-practice', slug: 'xi-rule-of-law-practice', title: '习近平法治思想的实践要求', direction: 'Harvest Practice Field', component: lazyDemo(() => import('../../animations/theoretical-law/05/xi-rule-of-law-practice/remotion/XiRuleOfLawPractice').then((m) => ({default: m.XiRuleOfLawPractice}))), href: '/inkloom/objective/theoretical-law/05/xi-rule-of-law-practice/', durationInFrames: XI_RULE_OF_LAW_PRACTICE_DURATION_FRAMES, fps: XI_RULE_OF_LAW_PRACTICE_FPS},
   ...COMMERCIAL_LAW_STYLE_DEMOS,
+  {id: 'civil-procedure-15-mediation-core-recap', slug: 'mediation-core-recap', title: '朱印台账总结', direction: 'Seal Ledger Recap', component: lazyDemo(() => import('../../animations/civil-procedure/15/mediation-core-recap/remotion/MediationCoreRecap').then((m) => ({default: m.MediationCoreRecap}))), href: '/inkloom/objective/civil-procedure/15/mediation-core-recap/', durationInFrames: MEDIATION_CORE_RECAP_DURATION_FRAMES, fps: MEDIATION_CORE_RECAP_FPS},
 ] as const satisfies readonly DemoDefinition[];
 
 const DEMO_ADDED_AT: Record<(typeof STYLE_DEMOS)[number]['id'], string> = {
   ...ADMINISTRATIVE_LAW_DEMO_ADDED_AT,
+  'civil-procedure-15-mediation-core-recap': '2026-09-01T00:30:00+08:00',
   'demo-courtroom-blueprint': '2026-08-01T21:16:23+08:00',
   'demo-archival-dossier': '2026-08-01T21:16:23+08:00',
   'demo-newspaper-editorial': '2026-08-01T21:16:23+08:00',

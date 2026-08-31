@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 4,
+  "scenes": [
+    {"id":"core-map","export":"CoreMapScene","layout":"recap-register-rows","anchor":"typographic-sequence","grammar":["scope","agreement","document","guarantee","settlement"],"textTreatments":["label-block","chip"],"focalChannels":["icon","spatial","motion"],"tokens":["Landmark","FileSignature","FileCheck2","Gavel","UsersRound","Scale","Handshake"],"finalKnowledge":["principles-scope","agreement-rules","document-effect","judgment-document","third-party","guarantee","settlement"],"statefulObjects":[]},
+    {"id":"judgment-document-rules","export":"JudgmentDocumentRulesScene","layout":"verdict-exception-split","anchor":"document-fork","grammar":["refusal","exception","document"],"textTreatments":["stamp","external-negation","label-block"],"focalChannels":["icon","connector","contrast","motion"],"tokens":["FileSignature","Gavel","Ban","HeartHandshake","Globe"],"finalKnowledge":["judgment-refused","exception-incompetent-divorce","exception-foreign"],"statefulObjects":["agreement-sheet"]},
+    {"id":"third-party-signature","export":"ThirdPartySignatureScene","layout":"obligation-fork-lanes","anchor":"role-pair","grammar":["consent","delivery","refusal","effect"],"textTreatments":["chip","stamp","label-block"],"focalChannels":["icon","connector","contrast","motion"],"tokens":["UsersRound","FileCheck2","PenLine","Gavel","BadgeCheck"],"finalKnowledge":["liable-consent-delivery","liable-refusal-ineffective","prompt-judgment","non-liable-no-effect"],"statefulObjects":["mediation-document"]},
+    {"id":"guarantee-rules","export":"GuaranteeRulesScene","layout":"guarantee-condition-gauge","anchor":"flow-path","grammar":["permission","listing","refusal","condition"],"textTreatments":["stamp","chip","thin-underline"],"focalChannels":["icon","connector","enclosure","motion"],"tokens":["Scale","PenLine","BadgeCheck","FileCheck2"],"finalKnowledge":["guarantee-permitted","guarantor-listed","guarantor-refusal-no-effect","guarantee-civil-code-condition","effect-contrast"],"statefulObjects":["guarantee-sheet"]}
+  ]
+}

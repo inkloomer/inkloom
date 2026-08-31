@@ -1,0 +1,32 @@
+{
+  "directionId": "seal-ledger-recap",
+  "derivedFrom": "new",
+  "variation": "a midnight case register where seven recap entries are stamped onto parchment rows, then three verdict stations rehearse the judgment-document, third-party, and guarantee rules",
+  "family": "seal-ledger-recap",
+  "palette": "midnight indigo board + parchment entry rows + seal vermilion verdicts + brass confirmations + teal permissions",
+  "typography": "parchment rows with dark pen ink, square vermilion verdict seals, brass number chips and rule rails",
+  "composition": "seven-row recap register, then a verdict-exception split, an obligation fork pair, and a four-station guarantee gauge",
+  "surface": "flat ledger boards, parchment entry cards, square seal blocks, brass connector rails; no card grid",
+  "motion": "each recap entry or rule chip is stamped in reading order and its verdict seal stays visible in the stable frame",
+  "transition": "a brass rail persists top-down while each recap station replaces the previous one",
+  "conceptTokens": {
+    "调解协议": "FileSignature",
+    "调解书": "FileCheck2",
+    "判决书": "Gavel",
+    "签字盖章": "PenLine",
+    "担保": "Scale",
+    "无独三": "UsersRound",
+    "和解": "Handshake",
+    "禁止": "Ban",
+    "离婚": "HeartHandshake",
+    "涉外": "Globe",
+    "生效": "BadgeCheck",
+    "法院": "Landmark"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/civil-procedure/15/mediation-core-recap/",
+    "title": "朱印台账总结"
+  }
+}
