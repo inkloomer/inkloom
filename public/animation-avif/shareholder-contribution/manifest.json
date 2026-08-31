@@ -3,7 +3,7 @@
   "compositionId": "ShareholderContribution",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-08-31T06:06:48.380Z",
+  "generatedAt": "2026-08-31T10:49:36.872Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -16,47 +16,64 @@
       "title": "货币与非货币出资",
       "durationMs": 6200,
       "file": "shareholder-contribution-scene-01.avif",
-      "fileSize": 736497,
+      "fileSize": 691544,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "3a5ead672bc90c6d50ab582565866a776930d42de75d82cf66d5d383a2069de9",
+      "sha256": "4cf22d5dcd57b600fd27eab0678a2ffcc9b31fdbadeac162d45e3449cac46ea4",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "3505948bfdf16a9df093ec8efca824731afbba9c9c8079eeaa3f271d2ba18936"
+      "sceneFingerprint": "c80b6426ad364793d5bc1ce27c9902869383c53109d8d3d2e783816d802e6091"
     },
     {
-      "endFrame": 779,
-      "frameCount": 204,
+      "endFrame": 561,
+      "frameCount": 95,
       "id": "shareholder-contribution-scene-02",
       "number": "02",
       "startFrame": 372,
       "title": "禁止出资的六项",
-      "durationMs": 6800,
+      "durationMs": 3167,
       "file": "shareholder-contribution-scene-02.avif",
-      "fileSize": 606790,
+      "fileSize": 292908,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "54f382db3111f18bcbdfd962c755d5af13810540336d8504c27bf01156139ca9",
+      "sha256": "fcdb3e4a76335745b7036b47ca3d1dfd75c9f436a4558d7bf5b3febb4ebdcc8d",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "3505948bfdf16a9df093ec8efca824731afbba9c9c8079eeaa3f271d2ba18936"
+      "sceneFingerprint": "c80b6426ad364793d5bc1ce27c9902869383c53109d8d3d2e783816d802e6091"
+    },
+    {
+      "endFrame": 779,
+      "frameCount": 109,
+      "id": "shareholder-contribution-scene-04",
+      "number": "03",
+      "startFrame": 562,
+      "title": "股权出资与债权出资",
+      "durationMs": 3633,
+      "file": "shareholder-contribution-scene-04.avif",
+      "fileSize": 505132,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "52b6c3d920bb97bd008ba45139961072fe34b6aee49277933900c1a3a12cefaf",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "c80b6426ad364793d5bc1ce27c9902869383c53109d8d3d2e783816d802e6091"
     },
     {
       "endFrame": 1175,
       "frameCount": 198,
       "id": "shareholder-contribution-scene-03",
-      "number": "03",
+      "number": "04",
       "startFrame": 780,
       "title": "认缴制与实缴制",
       "durationMs": 6600,
       "file": "shareholder-contribution-scene-03.avif",
-      "fileSize": 701346,
+      "fileSize": 630596,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "873f0d8f2ab6edca2698fdaa18783635c9e6e80010ce9e951572a259d2a40bd3",
+      "sha256": "4637e6381e46d08c03109e7c2d57e76849934faaaec6ad26fcbc3ade5f5176b8",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "3505948bfdf16a9df093ec8efca824731afbba9c9c8079eeaa3f271d2ba18936"
+      "sceneFingerprint": "c80b6426ad364793d5bc1ce27c9902869383c53109d8d3d2e783816d802e6091"
     }
   ],
   "size": {
@@ -64,7 +81,7 @@
     "width": 2560
   },
   "sourceFps": 60,
-  "sourceFingerprint": "3505948bfdf16a9df093ec8efca824731afbba9c9c8079eeaa3f271d2ba18936",
+  "sourceFingerprint": "c80b6426ad364793d5bc1ce27c9902869383c53109d8d3d2e783816d802e6091",
   "targetFps": 30,
-  "totalFileSize": 2044633
+  "totalFileSize": 2120180
 }

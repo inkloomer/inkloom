@@ -37,7 +37,7 @@
       "anchor": "typographic-sequence",
       "grammar": [
         "banned-registry",
-        "credit-debt-notes"
+        "ban-converge"
       ],
       "textTreatments": [
         "stamp",
@@ -57,9 +57,34 @@
         "shareholder-contribution-scene-02-ban-2",
         "shareholder-contribution-scene-02-ban-3",
         "shareholder-contribution-scene-02-ban-4",
-        "shareholder-contribution-scene-02-ban-5",
-        "shareholder-contribution-scene-02-equity",
-        "shareholder-contribution-scene-02-credit"
+        "shareholder-contribution-scene-02-ban-5"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "shareholder-contribution-scene-04",
+      "export": "ShareholderContribution04Scene",
+      "layout": "equity-credit-dual-4",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "equity-four-test",
+        "credit-assignment-rule"
+      ],
+      "textTreatments": [
+        "chip",
+        "soft-highlight",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "contrast",
+        "enclosure",
+        "icon"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "shareholder-contribution-knowledge-4",
+        "shareholder-contribution-scene-04-equity",
+        "shareholder-contribution-scene-04-credit"
       ],
       "statefulObjects": []
     },
