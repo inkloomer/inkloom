@@ -8,11 +8,36 @@
       "export": "OfficialDutyBoardScene",
       "layout": "official-duty-board",
       "anchor": "role-pair",
-      "grammar": ["duty-panel", "police-panel"],
-      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
-      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
-      "tokens": ["Shield", "Scale", "Link", "Siren", "Hand", "Gavel"],
-      "finalKnowledge": ["duty-panel", "police-panel"],
+      "grammar": [
+        "duty-panel",
+        "police-panel"
+      ],
+      "textTreatments": [
+        "chip",
+        "label-block",
+        "soft-highlight",
+        "thin-underline",
+        "external-negation",
+        "stamp"
+      ],
+      "focalChannels": [
+        "icon",
+        "contrast",
+        "enclosure",
+        "spatial"
+      ],
+      "tokens": [
+        "Shield",
+        "Scale",
+        "Link",
+        "Siren",
+        "Hand",
+        "Gavel"
+      ],
+      "finalKnowledge": [
+        "duty-panel",
+        "police-panel"
+      ],
       "statefulObjects": []
     },
     {
@@ -20,11 +45,38 @@
       "export": "CredentialForgeBenchScene",
       "layout": "credential-forge-bench",
       "anchor": "concept-icon",
-      "grammar": ["credential-panel", "imposter-panel"],
-      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
-      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
-      "tokens": ["FileText", "Building2", "Fingerprint", "FileX", "UserX", "Drama", "Gavel", "Ban"],
-      "finalKnowledge": ["credential-panel", "imposter-panel"],
+      "grammar": [
+        "credential-panel",
+        "imposter-panel"
+      ],
+      "textTreatments": [
+        "chip",
+        "label-block",
+        "soft-highlight",
+        "thin-underline",
+        "external-negation",
+        "stamp"
+      ],
+      "focalChannels": [
+        "icon",
+        "contrast",
+        "enclosure",
+        "spatial"
+      ],
+      "tokens": [
+        "FileText",
+        "Building2",
+        "Fingerprint",
+        "FileX",
+        "UserX",
+        "Drama",
+        "Gavel",
+        "Ban"
+      ],
+      "finalKnowledge": [
+        "credential-panel",
+        "imposter-panel"
+      ],
       "statefulObjects": []
     },
     {
@@ -32,11 +84,39 @@
       "export": "StreetSquatStageScene",
       "layout": "street-squat-stage",
       "anchor": "comparison-axis",
-      "grammar": ["brawl-panel", "provocation-panel", "throwing-panel"],
-      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
-      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
-      "tokens": ["Users", "Gavel", "AlertTriangle", "Hand", "Scale", "ArrowDown", "GitMerge"],
-      "finalKnowledge": ["brawl-panel", "provocation-panel", "throwing-panel"],
+      "grammar": [
+        "brawl-panel",
+        "provocation-panel",
+        "throwing-panel"
+      ],
+      "textTreatments": [
+        "chip",
+        "label-block",
+        "soft-highlight",
+        "thin-underline",
+        "external-negation",
+        "stamp"
+      ],
+      "focalChannels": [
+        "icon",
+        "contrast",
+        "enclosure",
+        "spatial"
+      ],
+      "tokens": [
+        "Users",
+        "Gavel",
+        "AlertTriangle",
+        "Hand",
+        "Scale",
+        "ArrowDown",
+        "GitMerge"
+      ],
+      "finalKnowledge": [
+        "brawl-panel",
+        "provocation-panel",
+        "throwing-panel"
+      ],
       "statefulObjects": []
     },
     {
@@ -44,11 +124,39 @@
       "export": "BossDenCounterScene",
       "layout": "boss-den-counter",
       "anchor": "typographic-sequence",
-      "grammar": ["mafia-panel", "gambling-panel", "info-cheat-panel"],
-      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
-      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
-      "tokens": ["Crown", "Users", "Megaphone", "Dice5", "Landmark", "PenTool", "Monitor"],
-      "finalKnowledge": ["mafia-panel", "gambling-panel", "info-cheat-panel"],
+      "grammar": [
+        "mafia-panel",
+        "gambling-panel",
+        "info-cheat-panel"
+      ],
+      "textTreatments": [
+        "chip",
+        "label-block",
+        "soft-highlight",
+        "thin-underline",
+        "external-negation",
+        "stamp"
+      ],
+      "focalChannels": [
+        "icon",
+        "contrast",
+        "enclosure",
+        "spatial"
+      ],
+      "tokens": [
+        "Crown",
+        "Users",
+        "Megaphone",
+        "Dice5",
+        "Landmark",
+        "PenTool",
+        "Monitor"
+      ],
+      "finalKnowledge": [
+        "mafia-panel",
+        "gambling-panel",
+        "info-cheat-panel"
+      ],
       "statefulObjects": []
     },
     {
@@ -56,11 +164,37 @@
       "export": "JusticeTestimonyHallScene",
       "layout": "justice-testimony-hall",
       "anchor": "document-fork",
-      "grammar": ["perjury-panel", "tamper-panel"],
-      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
-      "focalChannels": ["icon", "contrast", "enclosure", "connector"],
-      "tokens": ["FileWarning", "Clock", "CheckCircle2", "GitMerge", "Hand", "Trash2", "Scale"],
-      "finalKnowledge": ["perjury-panel", "tamper-panel"],
+      "grammar": [
+        "perjury-panel",
+        "tamper-panel"
+      ],
+      "textTreatments": [
+        "chip",
+        "label-block",
+        "soft-highlight",
+        "thin-underline",
+        "external-negation",
+        "stamp"
+      ],
+      "focalChannels": [
+        "icon",
+        "contrast",
+        "enclosure",
+        "connector"
+      ],
+      "tokens": [
+        "FileWarning",
+        "Clock",
+        "CheckCircle2",
+        "GitMerge",
+        "Hand",
+        "Trash2",
+        "Scale"
+      ],
+      "finalKnowledge": [
+        "perjury-panel",
+        "tamper-panel"
+      ],
       "statefulObjects": []
     },
     {
@@ -68,11 +202,40 @@
       "export": "JusticeHarborQuayScene",
       "layout": "justice-harbor-quay",
       "anchor": "flow-target",
-      "grammar": ["harbor-panel", "conceal-panel", "escape-panel"],
-      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
-      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
-      "tokens": ["Home", "FileText", "Ban", "Package", "Coins", "Scale", "DoorOpen", "Flag"],
-      "finalKnowledge": ["harbor-panel", "conceal-panel", "escape-panel"],
+      "grammar": [
+        "harbor-panel",
+        "conceal-panel",
+        "escape-panel"
+      ],
+      "textTreatments": [
+        "chip",
+        "label-block",
+        "soft-highlight",
+        "thin-underline",
+        "external-negation",
+        "stamp"
+      ],
+      "focalChannels": [
+        "icon",
+        "contrast",
+        "enclosure",
+        "spatial"
+      ],
+      "tokens": [
+        "Home",
+        "FileText",
+        "Ban",
+        "Package",
+        "Coins",
+        "Scale",
+        "DoorOpen",
+        "Flag"
+      ],
+      "finalKnowledge": [
+        "harbor-panel",
+        "conceal-panel",
+        "escape-panel"
+      ],
       "statefulObjects": []
     },
     {
@@ -80,11 +243,37 @@
       "export": "DrugDispatchLaneScene",
       "layout": "drug-dispatch-lane",
       "anchor": "flow-path",
-      "grammar": ["traffic-panel", "holding-panel"],
-      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
-      "focalChannels": ["icon", "contrast", "enclosure", "connector"],
-      "tokens": ["Pill", "Handshake", "PackageCheck", "Brain", "Stethoscope", "Boxes", "Home"],
-      "finalKnowledge": ["traffic-panel", "holding-panel"],
+      "grammar": [
+        "traffic-panel",
+        "holding-panel"
+      ],
+      "textTreatments": [
+        "chip",
+        "label-block",
+        "soft-highlight",
+        "thin-underline",
+        "external-negation",
+        "stamp"
+      ],
+      "focalChannels": [
+        "icon",
+        "contrast",
+        "enclosure",
+        "connector"
+      ],
+      "tokens": [
+        "Pill",
+        "Handshake",
+        "PackageCheck",
+        "Brain",
+        "Stethoscope",
+        "Boxes",
+        "Home"
+      ],
+      "finalKnowledge": [
+        "traffic-panel",
+        "holding-panel"
+      ],
       "statefulObjects": []
     },
     {
@@ -92,12 +281,214 @@
       "export": "ViceBrocadeRoomScene",
       "layout": "vice-brocade-room",
       "anchor": "boundary",
-      "grammar": ["prostitution-panel", "obscenity-panel"],
-      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
-      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
-      "tokens": ["Users", "Hand", "UserPlus", "MessageCircle", "Film", "Send", "Scale"],
-      "finalKnowledge": ["prostitution-panel", "obscenity-panel"],
+      "grammar": [
+        "prostitution-panel",
+        "obscenity-panel"
+      ],
+      "textTreatments": [
+        "chip",
+        "label-block",
+        "soft-highlight",
+        "thin-underline",
+        "external-negation",
+        "stamp"
+      ],
+      "focalChannels": [
+        "icon",
+        "contrast",
+        "enclosure",
+        "spatial"
+      ],
+      "tokens": [
+        "Users",
+        "Hand",
+        "UserPlus",
+        "MessageCircle",
+        "Film",
+        "Send",
+        "Scale"
+      ],
+      "finalKnowledge": [
+        "prostitution-panel",
+        "obscenity-panel"
+      ],
       "statefulObjects": []
+    },
+    {
+      "id": "lawsuit-execution",
+      "export": "LawsuitExecutionScene",
+      "layout": "lawsuit-execution-flow",
+      "anchor": "flow-path",
+      "grammar": [
+        "fake-suit-flow",
+        "suit-completion-gate",
+        "suit-count-floor",
+        "refuse-execution-lane"
+      ],
+      "textTreatments": [
+        "chip",
+        "label-block",
+        "soft-highlight",
+        "thin-underline",
+        "external-negation",
+        "stamp"
+      ],
+      "focalChannels": [
+        "icon",
+        "connector",
+        "contrast",
+        "motion"
+      ],
+      "tokens": [
+        "FileWarning",
+        "Stamp",
+        "Gavel",
+        "Scale",
+        "Users",
+        "ShieldX",
+        "Landmark"
+      ],
+      "finalKnowledge": [
+        "fake-suit-flow",
+        "suit-completion-gate",
+        "suit-count-floor",
+        "refuse-execution-lane"
+      ],
+      "statefulObjects": [
+        "suit-token",
+        "execution-token"
+      ]
+    },
+    {
+      "id": "heritage-border-health",
+      "export": "HeritageBorderHealthScene",
+      "layout": "heritage-border-health-lanes",
+      "anchor": "flow-path",
+      "grammar": [
+        "relic-trade-lane",
+        "tomb-dig-rule",
+        "border-line-gate",
+        "health-care-lane"
+      ],
+      "textTreatments": [
+        "chip",
+        "label-block",
+        "soft-highlight",
+        "thin-underline",
+        "external-negation",
+        "stamp"
+      ],
+      "focalChannels": [
+        "icon",
+        "connector",
+        "contrast",
+        "motion"
+      ],
+      "tokens": [
+        "Landmark",
+        "Mountain",
+        "Ship",
+        "Stethoscope",
+        "Users",
+        "HardHat"
+      ],
+      "finalKnowledge": [
+        "relic-trade-lane",
+        "tomb-dig-rule",
+        "border-line-gate",
+        "health-care-lane"
+      ],
+      "statefulObjects": [
+        "relic-token",
+        "migrant-token"
+      ]
+    },
+    {
+      "id": "environment-crimes",
+      "export": "EnvironmentCrimesScene",
+      "layout": "environment-crime-lanes",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "forest-formula",
+        "forest-boundary",
+        "wildlife-lane",
+        "pollution-gate"
+      ],
+      "textTreatments": [
+        "chip",
+        "label-block",
+        "soft-highlight",
+        "thin-underline",
+        "external-negation",
+        "stamp"
+      ],
+      "focalChannels": [
+        "icon",
+        "contrast",
+        "connector",
+        "motion"
+      ],
+      "tokens": [
+        "TreePine",
+        "Axe",
+        "Bird",
+        "Flame",
+        "Zap"
+      ],
+      "finalKnowledge": [
+        "forest-formula",
+        "forest-boundary",
+        "wildlife-lane",
+        "pollution-gate"
+      ],
+      "statefulObjects": [
+        "logger-token",
+        "effluent-token"
+      ]
+    },
+    {
+      "id": "contraband-wording",
+      "export": "ContrabandWordingScene",
+      "layout": "contraband-wording-boards",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "theft-sale-table",
+        "smuggle-sale-table",
+        "wording-common-rule",
+        "buy-sell-split",
+        "completion-types"
+      ],
+      "textTreatments": [
+        "chip",
+        "label-block",
+        "soft-highlight",
+        "thin-underline",
+        "external-negation",
+        "stamp"
+      ],
+      "focalChannels": [
+        "icon",
+        "contrast",
+        "connector",
+        "motion"
+      ],
+      "tokens": [
+        "Coins",
+        "Scale",
+        "BookCheck",
+        "Repeat",
+        "Swords"
+      ],
+      "finalKnowledge": [
+        "theft-sale-table",
+        "smuggle-sale-table",
+        "wording-common-rule",
+        "buy-sell-split",
+        "completion-types"
+      ],
+      "statefulObjects": [
+        "contraband-token"
+      ]
     }
   ]
 }
