@@ -1,0 +1,105 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "partnership-property-distribution-scene-01",
+      "export": "PartnershipPropertyDistribution01Scene",
+      "layout": "shared-pool-transfer-matrix-1",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "transfer-fork",
+        "consent-gate"
+      ],
+      "textTreatments": [
+        "chip",
+        "soft-highlight",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "contrast",
+        "connector",
+        "icon"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "partnership-property-distribution-knowledge-1",
+        "partnership-property-distribution-scene-01-axis",
+        "partnership-property-distribution-scene-01-gp-col",
+        "partnership-property-distribution-scene-01-gp-out",
+        "partnership-property-distribution-scene-01-lp-col",
+        "partnership-property-distribution-scene-01-lp-out",
+        "partnership-property-distribution-scene-01-rule"
+      ],
+      "statefulObjects": [
+        "external-transfer-request"
+      ]
+    },
+    {
+      "id": "partnership-property-distribution-scene-02",
+      "export": "PartnershipPropertyDistribution02Scene",
+      "layout": "pledge-inherit-gate-2",
+      "anchor": "boundary",
+      "grammar": [
+        "pledge-invalid-chain",
+        "inherit-fork"
+      ],
+      "textTreatments": [
+        "external-negation",
+        "stamp",
+        "label-block"
+      ],
+      "focalChannels": [
+        "contrast",
+        "motion",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "partnership-property-distribution-knowledge-2",
+        "partnership-property-distribution-scene-02-pledge-gp",
+        "partnership-property-distribution-scene-02-pledge-lp",
+        "partnership-property-distribution-scene-02-inherit-gp",
+        "partnership-property-distribution-scene-02-inherit-lp"
+      ],
+      "statefulObjects": [
+        "pledge-consent-request"
+      ]
+    },
+    {
+      "id": "partnership-property-distribution-scene-03",
+      "export": "PartnershipPropertyDistribution03Scene",
+      "layout": "profit-ladder-stairs-3",
+      "anchor": "flow-path",
+      "grammar": [
+        "order-ladder-descent",
+        "distribution-split"
+      ],
+      "textTreatments": [
+        "chip",
+        "stamp",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "spatial",
+        "connector",
+        "motion"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "partnership-property-distribution-knowledge-3",
+        "partnership-property-distribution-scene-03-order-0",
+        "partnership-property-distribution-scene-03-order-1",
+        "partnership-property-distribution-scene-03-order-2",
+        "partnership-property-distribution-scene-03-order-3",
+        "partnership-property-distribution-scene-03-gp-rule",
+        "partnership-property-distribution-scene-03-lp-rule",
+        "partnership-property-distribution-scene-03-recap"
+      ],
+      "statefulObjects": [
+        "profit-distribution-travel"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "directionId": "share-transfer-clerk-board",
+  "derivedFrom": "demo-clerk-desk",
+  "variation": "份额流转办事板: 对内外转让矩阵双列分诊, 出质请求被一致同意闸门拦下, 利润金币沿四级阶梯下落找归属",
+  "family": "share-transfer-clerk-board",
+  "palette": "#EDE7DB + #26262E + #8A4B2F + #15725F + #B23A30 + #B98A2F + #3E5F8A",
+  "typography": "WenKai 矩阵栏标 + 请求徽章 + 口诀金条",
+  "composition": "财产共有横幅 + 对内对外转让矩阵 + 出质继承双门 + 分配顺序阶梯",
+  "surface": "纸卡矩阵、蓝底账页、金口诀条与请求徽章, 无圆角",
+  "motion": "矩阵卡自下行入, 对外转让申请先撞一致同意再飞向30日通知, 出质请求撞闸弹回, 金币沿顺序阶梯逐级下落",
+  "transition": "铜色普通合伙与青色有限合伙双列贯穿, 红色禁止章跨场呼应",
+  "catalog": {
+    "status": "variant",
+    "sourceDirectionId": "share-transfer-clerk-board"
+  }
+}
