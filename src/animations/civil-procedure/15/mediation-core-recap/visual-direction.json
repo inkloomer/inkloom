@@ -14,14 +14,14 @@
     "调解书": "FileCheck2",
     "判决书": "Gavel",
     "签字盖章": "PenLine",
+    "笔录": "NotebookPen",
     "担保": "Scale",
     "无独三": "UsersRound",
     "和解": "Handshake",
     "禁止": "Ban",
     "离婚": "HeartHandshake",
     "涉外": "Globe",
-    "生效": "BadgeCheck",
-    "法院": "Landmark"
+    "生效": "BadgeCheck"
   },
   "catalog": {
     "status": "featured",

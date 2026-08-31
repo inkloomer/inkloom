@@ -120,6 +120,7 @@ import {typography as typography71} from '../animations/civil-procedure/12/behav
 import {typography as typography69} from '../animations/civil-procedure/14/period-calculation/animation.meta';
 import {typography as typography70} from '../animations/civil-procedure/14/service-delivery-network/animation.meta';
 import {typography as typography72} from '../animations/civil-procedure/15/mediation-settlement-path/animation.meta';
+import {typography as typography338} from '../animations/civil-procedure/15/mediation-core-recap/animation.meta';
 import {typography as typography74} from '../animations/civil-procedure/16/ordinary-procedure-control-map/animation.meta';
 import {typography as typography79} from '../animations/civil-procedure/16/party-death-procedure-effects/animation.meta';
 import {typography as typography75} from '../animations/civil-procedure/17/summary-procedure-switchyard/animation.meta';
@@ -422,6 +423,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'period-calculation': {metadata: typography69, scope: {animationId: 'period-calculation', subject: 'civil-procedure', topic: '14'}},
   'service-delivery-network': {metadata: typography70, scope: {animationId: 'service-delivery-network', subject: 'civil-procedure', topic: '14'}},
   'mediation-settlement-path': {metadata: typography72, scope: {animationId: 'mediation-settlement-path', subject: 'civil-procedure', topic: '15'}},
+  'mediation-core-recap': {metadata: typography338, scope: {animationId: 'mediation-core-recap', subject: 'civil-procedure', topic: '15'}},
   'ordinary-procedure-control-map': {metadata: typography74, scope: {animationId: 'ordinary-procedure-control-map', subject: 'civil-procedure', topic: '16'}},
   'party-death-procedure-effects': {metadata: typography79, scope: {animationId: 'party-death-procedure-effects', subject: 'civil-procedure', topic: '16'}},
   'summary-procedure-switchyard': {metadata: typography75, scope: {animationId: 'summary-procedure-switchyard', subject: 'civil-procedure', topic: '17'}},

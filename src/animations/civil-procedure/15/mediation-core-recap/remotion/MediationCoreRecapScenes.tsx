@@ -7,7 +7,7 @@ import {
   Globe,
   Handshake,
   HeartHandshake,
-  Landmark,
+  NotebookPen,
   PenLine,
   Scale,
   UsersRound,
@@ -67,32 +67,101 @@ const Rail = ({color, left, top, width, progress}: {color: string; left: number;
 
 export const CoreMapScene = () => {
   const frame = toSourceFrame(useCurrentFrame());
-  const railGrow = interpolate(frame, [26, 66], [0, 1], CLAMP);
-  const rowShell = (num: string, icon: ReactNode, accent: string, label: string, tail: ReactNode) => (
-    <Entry accent={accent} style={{display: 'flex', alignItems: 'center', gap: 18, height: 86, padding: '0 22'}}>
-      <span style={{display: 'grid', placeItems: 'center', width: 52, height: 52, backgroundColor: C.brass, color: C.ink, fontSize: 28, fontWeight: 950}}>{num}</span>
-      {icon}
-      <b style={{fontSize: 30, fontWeight: 950}}>{label}</b>
-      <span style={{fontSize: 23, marginLeft: 'auto', textAlign: 'right'}}>{tail}</span>
+  const flyStamp = (label: string, left: number, fromX: number, fromY: number, window: [number, number]) => {
+    const appear = interpolate(frame, [window[0] - 8, window[0]], [0, 1], CLAMP);
+    const flyX = interpolate(frame, window, [fromX, 0], CLAMP);
+    const flyY = interpolate(frame, window, [fromY, 0], CLAMP);
+    return (
+      <span style={{position: 'absolute', left, top: 258, opacity: appear, translate: `${flyX}px ${flyY}px`, rotate: '-2deg', display: 'inline-flex', border: `4px solid ${C.teal}`, color: C.teal, backgroundColor: C.cream, padding: '5px 12px', fontSize: 24, lineHeight: 1, fontWeight: 950}}>{label}</span>
+    );
+  };
+  const routeMain = interpolate(frame, [90, 116], [0, 1], CLAMP);
+  const chipRise = interpolate(frame, [104, 124], [20, 0], CLAMP);
+  const chipFly = interpolate(frame, [124, 156], [0, -158], CLAMP);
+  const sealPop = interpolate(frame, [156, 170], [0.6, 1], CLAMP);
+  const forkDrop = interpolate(frame, [150, 180], [0, 1], CLAMP);
+  const forkArms = interpolate(frame, [176, 196], [0, 1], CLAMP);
+  const railDraw = interpolate(frame, [232, 262], [0, 1], CLAMP);
+  const sideCard = (icon: ReactNode, title: string, accent: string, tail: ReactNode) => (
+    <Entry accent={accent} style={{width: 412, height: 190, padding: '18px 22px'}}>
+      <div style={{display: 'flex', alignItems: 'center', gap: 14}}>{icon}<b style={{fontSize: 28, fontWeight: 950}}>{title}</b></div>
+      <div style={{fontSize: 23, lineHeight: 1.55, marginTop: 14}}>{tail}</div>
     </Entry>
   );
   return (
     <Canvas code="01" title="调解核心要点总览">
-      <div data-layout="recap-register-rows" data-visual-anchor="typographic-sequence" data-visual-grammar="scope,agreement,document,guarantee,settlement" data-text-treatments="label-block,chip" data-focal-rule="seven-recap-stations-cover-the-whole-mediation-topic-in-reading-order" data-focal-channels="icon,spatial,motion" style={{position: 'absolute', inset: 0}}>
-        <Gavel size={220} color={C.cream} style={{position: 'absolute', left: 1648, top: 396, opacity: 0.07}}/>
-        <div style={{position: 'absolute', left: 1620, top: 190, width: 10, height: 662, backgroundColor: C.brass, scale: `1 ${railGrow}`, transformOrigin: 'top center'}}/>
-        <StaggerEnter baseDelay={20} step={12} style={{position: 'absolute', left: 104, top: 190, width: 1456, display: 'grid', gap: 10}}>
-          <div data-final-knowledge="principles-scope">{rowShell('①', <Landmark size={44} color={C.teal}/>, C.teal, '原则与范围', <><b style={{color: C.teal, fontWeight: 950}}>{'自愿 · 合法'}</b>{'；一审、二审、再审可以调解，非讼与身份确认不能'}</>)}</div>
-          <div data-final-knowledge="agreement-rules">{rowShell('②', <FileSignature size={44} color={C.teal}/>, C.teal, '调解协议', <>{'超出诉请'}<b style={{color: C.teal, fontWeight: 950}}>{'可以准许'}</b>{'；可约定民责；请求再裁判'}<b style={{color: C.seal, fontWeight: 950}}>{'不予准许'}</b></>)}</div>
-          <div data-final-knowledge="document-effect">{rowShell('③', <FileCheck2 size={44} color={C.brass}/>, C.brass, '调解书的制作与生效', <>{'经'}<b style={{color: C.brass, fontWeight: 950}}>{'签收'}</b>{'生效；拒不签收不生效、及时判决'}</>)}</div>
-          <div data-final-knowledge="judgment-document">{rowShell('④', <Gavel size={44} color={C.seal}/>, C.seal, '制作判决书', <>{'原则上'}<b style={{color: C.seal, fontWeight: 950}}>{'不予支持'}</b>{'；两种例外'}</>)}</div>
-          <div data-final-knowledge="third-party">{rowShell('⑤', <UsersRound size={44} color={C.seal}/>, C.seal, '无独三', <>{'需担义务：经'}<b style={{color: C.seal, fontWeight: 950}}>{'同意'}</b>{'并送达；拒签不生效'}</>)}</div>
-          <div data-final-knowledge="guarantee">{rowShell('⑥', <Scale size={44} color={C.brass}/>, C.brass, '担保', <>{'应当'}<b style={{color: C.brass, fontWeight: 950}}>{'准许'}</b>{'；列明担保人；拒签不影响'}</>)}</div>
-          <div data-final-knowledge="settlement">{rowShell('⑦', <Handshake size={44} color={C.teal}/>, C.teal, '和解', <>{'依协议制作调解书可'}<b style={{color: C.teal, fontWeight: 950}}>{'强制执行'}</b>{'；撤诉可再诉'}</>)}</div>
-        </StaggerEnter>
-        <Enter delay={130} style={{position: 'absolute', left: 1636, top: 766}}>
-          <Verdict size={32}>核心要点</Verdict>
+      <div data-layout="mediation-journey-fork" data-visual-anchor="flow-path" data-visual-grammar="principles,review,document,record,exit" data-text-treatments="stamp,chip,label-block,external-negation" data-focal-rule="one-agreement-passes-principles-and-review-then-exits-as-document-or-record-with-side-rules" data-focal-channels="icon,motion,connector,contrast" style={{position: 'absolute', inset: 0}}>
+        <Gavel size={170} color={C.cream} style={{position: 'absolute', left: 130, top: 470, opacity: 0.07}}/>
+        <Enter delay={8} style={{position: 'absolute', left: 104, top: 240}}>
+          <Entry accent={C.teal} style={{width: 340, height: 190, display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', paddingBottom: 22}}>
+            <div data-stateful-source="agreement-sheet" style={{display: 'flex', alignItems: 'center', gap: 16}}><FileSignature size={48} color={C.teal}/><b style={{fontSize: 32, fontWeight: 950}}>调解协议</b></div>
+          </Entry>
         </Enter>
+        <div data-final-knowledge="principles-scope" style={{position: 'absolute', left: 520, top: 240, width: 220, height: 190, border: `6px solid ${C.brass}`}}>
+          <div style={{textAlign: 'center', fontSize: 26, fontWeight: 950, color: C.brass, paddingTop: 12}}>自愿 · 合法</div>
+          <div style={{position: 'absolute', bottom: 12, left: 0, right: 0, textAlign: 'center', fontSize: 20, color: C.muted}}>原则之门</div>
+        </div>
+        {flyStamp('自愿', 160, 392, 54, [44, 82])}
+        {flyStamp('合法', 292, 302, 54, [58, 96])}
+        <Rail color={C.brass} left={444} top={330} width={356} progress={routeMain}/>
+        <div data-final-knowledge="agreement-rules" style={{position: 'absolute', left: 800, top: 240}}>
+          <Enter delay={90}>
+            <Entry accent={C.seal} style={{width: 320, height: 190}}>
+              <div style={{display: 'flex', alignItems: 'center', gap: 12}}><Gavel size={36} color={C.seal}/><b style={{fontSize: 26, fontWeight: 950}}>调解协议审查</b></div>
+              <div style={{marginTop: 12, fontSize: 21, color: C.tail}}>超出诉请、约定民责随协议通过</div>
+            </Entry>
+          </Enter>
+        </div>
+        <div style={{position: 'absolute', left: 820, top: 308, opacity: interpolate(frame, [104, 114], [0, 1], CLAMP), translate: `${interpolate(frame, [124, 156], [0, -305], CLAMP)}px ${chipRise + chipFly}px`, rotate: '-3deg', zIndex: 3}}>
+          <span style={{display: 'inline-flex', alignItems: 'center', border: `4px solid ${C.seal}`, backgroundColor: C.parchment, color: C.ink, padding: '8px 14px', fontSize: 22, fontWeight: 900}}>「不履行则请求裁判」条款</span>
+        </div>
+        <div style={{position: 'absolute', left: 830, top: 150, opacity: interpolate(frame, [156, 168], [0, 1], CLAMP), scale: `${sealPop}`, rotate: '-6deg', zIndex: 3}}>
+          <Verdict size={30}>不予准许</Verdict>
+        </div>
+        <Enter delay={140} style={{position: 'absolute', left: 800, top: 470}}>
+          <Entry accent={C.teal} style={{width: 320}}>
+            <div style={{fontSize: 22, lineHeight: 1.6, color: C.ink}}><b style={{color: C.teal, fontWeight: 950}}>超出诉请</b> → 可准许</div>
+            <div style={{fontSize: 22, lineHeight: 1.6, marginTop: 8, color: C.ink}}>可约定<b style={{color: C.teal, fontWeight: 950}}>不履行的民事责任</b></div>
+          </Entry>
+        </Enter>
+        <div style={{position: 'absolute', left: 1180, top: 200, width: 10, height: 300, backgroundColor: C.brass, scale: `1 ${forkDrop}`, transformOrigin: 'top center'}}/>
+        <div style={{position: 'absolute', left: 1180, top: 200, width: 44, height: 10, backgroundColor: C.brass, scale: `${forkArms} 1`, transformOrigin: 'left center'}}/>
+        <div style={{position: 'absolute', left: 1180, top: 490, width: 44, height: 10, backgroundColor: C.brass, scale: `${forkArms} 1`, transformOrigin: 'left center'}}/>
+        <div data-final-knowledge="document-effect" style={{position: 'absolute', left: 1220, top: 130}}>
+          <Enter delay={176}>
+            <Entry accent={C.brass} style={{width: 600, height: 170}}>
+              <b style={{fontSize: 26, fontWeight: 950}}>制作调解书</b>
+              <div style={{display: 'flex', alignItems: 'center', gap: 14, marginTop: 16}}>
+                <span data-stateful-terminal="agreement-sheet" style={{display: 'flex', alignItems: 'center', gap: 10}}><FileCheck2 size={36} color={C.brass}/><span style={{fontSize: 24, fontWeight: 900}}>调解书</span></span>
+                <span style={{color: C.brass, fontSize: 24, fontWeight: 950}}>→</span>
+                <span style={{display: 'flex', alignItems: 'center', gap: 10}}><PenLine size={36} color={C.seal}/><span style={{fontSize: 24, fontWeight: 900}}>双方签收</span></span>
+                <span style={{color: C.brass, fontSize: 24, fontWeight: 950}}>→</span>
+                <Verdict color={C.brass} size={28}>调解书生效</Verdict>
+              </div>
+            </Entry>
+          </Enter>
+        </div>
+        <div data-final-knowledge="record-effective" style={{position: 'absolute', left: 1220, top: 420}}>
+          <Enter delay={196}>
+            <Entry accent={C.teal} style={{width: 600, height: 190}}>
+              <div style={{fontSize: 26, fontWeight: 950}}><b style={{color: C.seal, fontWeight: 950}}>四类案件</b> → 不制作调解书</div>
+              <div style={{display: 'flex', alignItems: 'center', gap: 14, marginTop: 16}}>
+                <span style={{display: 'flex', alignItems: 'center', gap: 10}}><NotebookPen size={36} color={C.teal}/><span style={{fontSize: 24, fontWeight: 900}}>记入笔录</span></span>
+                <span style={{color: C.brass, fontSize: 24, fontWeight: 950}}>→</span>
+                <span style={{display: 'flex', alignItems: 'center', gap: 10}}><PenLine size={36} color={C.seal}/><span style={{fontSize: 24, fontWeight: 900}}>签字或盖章</span></span>
+                <span style={{color: C.brass, fontSize: 24, fontWeight: 950}}>→</span>
+                <Verdict color={C.teal} size={28}>即生效</Verdict>
+              </div>
+            </Entry>
+          </Enter>
+        </div>
+        <div style={{position: 'absolute', left: 104, top: 662, width: 1716, height: 8, backgroundColor: C.brass, scale: `${railDraw} 1`, transformOrigin: 'left center'}}/>
+        <StaggerEnter baseDelay={246} step={10} style={{position: 'absolute', left: 104, top: 690, width: 1716, display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 12}}>
+          <div data-final-knowledge="judgment-document">{sideCard(<Gavel size={40} color={C.seal}/>, '制作判决书', C.seal, <>{'依协议请求发判决书'}<b style={{color: C.seal, fontWeight: 950}}>{'不予支持'}</b>{'；两种例外可发'}</>)}</div>
+          <div data-final-knowledge="third-party">{sideCard(<UsersRound size={40} color={C.seal}/>, '无独三', C.seal, <>{'需担义务：拒签'}<b style={{color: C.seal, fontWeight: 950}}>{'不生效'}</b>{'、及时判决；不担责：'}<b style={{color: C.teal, fontWeight: 950}}>{'不影响'}</b></>)}</div>
+          <div data-final-knowledge="guarantee">{sideCard(<Scale size={40} color={C.brass}/>, '担保', C.brass, <>{'应当'}<b style={{color: C.brass, fontWeight: 950}}>{'准许'}</b>{' · 列明担保人；符合《民法典》条件时生效'}</>)}</div>
+          <div data-final-knowledge="settlement">{sideCard(<Handshake size={40} color={C.teal}/>, '和解', C.teal, <>{'请求制作调解书'}<b style={{color: C.teal, fontWeight: 950}}>{'可强制执行'}</b>{'；撤诉'}<b style={{color: C.teal, fontWeight: 950}}>{'可再诉'}</b></>)}</div>
+        </StaggerEnter>
       </div>
     </Canvas>
   );
