@@ -1,0 +1,70 @@
+{
+  "animationId": "bill-overview",
+  "compositionId": "BillOverview",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-31T17:03:02.232Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 319,
+      "frameCount": 160,
+      "id": "bill-overview-scene-01",
+      "number": "01",
+      "startFrame": 0,
+      "title": "三种票据",
+      "durationMs": 5333,
+      "file": "bill-overview-scene-01.avif",
+      "fileSize": 570675,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "881f11769b7e17c9897ce753be9ad58aee7a2bed2776cf9732622a2e2f45b356",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "72c7bfd0758dfba51a8ce373f2c8b700aad50322dbb5577e0976734cdfba62ad"
+    },
+    {
+      "endFrame": 649,
+      "frameCount": 165,
+      "id": "bill-overview-scene-02",
+      "number": "02",
+      "startFrame": 320,
+      "title": "票据关系",
+      "durationMs": 5500,
+      "file": "bill-overview-scene-02.avif",
+      "fileSize": 595223,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "7bc47f398359a445059322bf2cc1a7b5c91e86bfd29bef00e1daf46085afe6d6",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "72c7bfd0758dfba51a8ce373f2c8b700aad50322dbb5577e0976734cdfba62ad"
+    },
+    {
+      "endFrame": 979,
+      "frameCount": 165,
+      "id": "bill-overview-scene-03",
+      "number": "03",
+      "startFrame": 650,
+      "title": "六大特征",
+      "durationMs": 5500,
+      "file": "bill-overview-scene-03.avif",
+      "fileSize": 611202,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "cc4bba30c2004a43a312d97e4abda445afa7646eac11d77f3b8b5da086e85a51",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "72c7bfd0758dfba51a8ce373f2c8b700aad50322dbb5577e0976734cdfba62ad"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "72c7bfd0758dfba51a8ce373f2c8b700aad50322dbb5577e0976734cdfba62ad",
+  "targetFps": 30,
+  "totalFileSize": 1777100
+}
