@@ -1,0 +1,70 @@
+{
+  "animationId": "banking-law",
+  "compositionId": "BankingLaw",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-08-31T19:48:38.758Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 319,
+      "frameCount": 160,
+      "id": "banking-law-scene-01",
+      "number": "01",
+      "startFrame": 0,
+      "title": "设立与拆借",
+      "durationMs": 5333,
+      "file": "banking-law-scene-01.avif",
+      "fileSize": 649100,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "5eba0584e229436606bbbc1a4c60e34556f35025be8319da0820dca090df9be8",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "c2b8a6e00d6d248fe7f7fb77dc10f7871107716715b6292dd405f9bb76c1d1f5"
+    },
+    {
+      "endFrame": 619,
+      "frameCount": 150,
+      "id": "banking-law-scene-02",
+      "number": "02",
+      "startFrame": 320,
+      "title": "业务禁止",
+      "durationMs": 5000,
+      "file": "banking-law-scene-02.avif",
+      "fileSize": 389114,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "9e6df010e8d545f67156d1a75b8b5f9d66050b6c73522eb072cfa55c5a598d74",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "c2b8a6e00d6d248fe7f7fb77dc10f7871107716715b6292dd405f9bb76c1d1f5"
+    },
+    {
+      "endFrame": 949,
+      "frameCount": 165,
+      "id": "banking-law-scene-03",
+      "number": "03",
+      "startFrame": 620,
+      "title": "披露与接管",
+      "durationMs": 5500,
+      "file": "banking-law-scene-03.avif",
+      "fileSize": 608155,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "39ec3b6d08e482e2173c4a0b389595060f85a61819188559683389c7990788cd",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "c2b8a6e00d6d248fe7f7fb77dc10f7871107716715b6292dd405f9bb76c1d1f5"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "c2b8a6e00d6d248fe7f7fb77dc10f7871107716715b6292dd405f9bb76c1d1f5",
+  "targetFps": 30,
+  "totalFileSize": 1646369
+}
