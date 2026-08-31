@@ -1,5 +1,5 @@
 import type {CSSProperties, ReactNode} from 'react';
-import {Ban, Building2, Car, Coins, Crown, Gavel, Hammer, Home, Link2, ScrollText, Users, Vote} from 'lucide-react';
+import {Ban, Building2, Car, Coins, Crown, Gavel, Hammer, Home, Hourglass, House, Link2, ScrollText, Users, Vote} from 'lucide-react';
 import {AbsoluteFill, interpolate, useCurrentFrame} from 'remotion';
 import {CLAMP} from '../../../../shared/remotion-runtime';
 
