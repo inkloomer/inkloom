@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "possession-basics",
+      "export": "PossessionBasicsScene",
+      "layout": "definition-strip-with-four-pair-axes",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "possession-is-the-fact-of-controlling-a-thing-regardless-of-right",
+        "possession-dies-when-the-thing-leaves-control-with-or-without-intent",
+        "direct-holders-hold-media-free-while-indirect-holders-keep-return-claims",
+        "auxiliary-holders-never-break-the-boss-direct-possession"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["contrast", "icon", "enclosure", "annotation"],
+      "tokens": ["Hand", "Users", "Key"],
+      "finalKnowledge": ["possession-definition", "extinction-point", "direct-indirect-pairs", "auxiliary-rule"],
+      "statefulObjects": []
+    },
+    {
+      "id": "entitled-vs-unentitled",
+      "export": "EntitledForkScene",
+      "layout": "entitlement-fork-with-defence-verdicts",
+      "anchor": "document-fork",
+      "grammar": [
+        "entitled-possession-needs-a-derivative-right-plus-assertability",
+        "the-derivative-right-spans-property-rights-and-contract-claims",
+        "only-entitled-holders-may-defend-against-return-claims",
+        "unentitled-holders-split-into-innocent-and-bad-faith-by-awareness"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "external-negation"],
+      "focalChannels": ["contrast", "connector", "enclosure", "annotation"],
+      "tokens": ["ShieldCheck", "Gavel", "Scale"],
+      "finalKnowledge": ["entitlement-fork", "derivative-right-scope", "defence-verdicts", "innocent-malicious-split"],
+      "statefulObjects": []
+    },
+    {
+      "id": "possession-protection",
+      "export": "PossessionProtectionScene",
+      "layout": "protection-flows-split-by-claimant",
+      "anchor": "flow-path",
+      "grammar": [
+        "protection-presumes-title-for-the-current-holder-unless-proven-otherwise",
+        "the-return-claimant-striking-unentitled-possession-still-disturbs-it",
+        "the-unentitled-holder-cannot-answer-a-real-return-claimant",
+        "black-eats-black-may-claim-while-entitled-holders-always-claim"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "external-negation"],
+      "focalChannels": ["connector", "contrast", "enclosure", "motion"],
+      "tokens": ["Skull", "ShieldCheck", "Gavel"],
+      "finalKnowledge": ["presumption-rules", "claimant-strike-rule", "black-eats-black-rule", "return-table"],
+      "statefulObjects": []
+    },
+    {
+      "id": "unentitled-return",
+      "export": "UnentitledReturnScene",
+      "layout": "return-ledgers-with-cross-comparison",
+      "anchor": "timeline-gate",
+      "grammar": [
+        "new-things-born-during-unentitled-possession-return-with-the-original",
+        "innocent-holders-return-what-remains-malicious-return-in-full",
+        "necessary-fee-claims-belong-to-innocent-holders-only",
+        "unjust-enrichment-and-unentitled-possession-split-by-right-acquired"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["connector", "contrast", "enclosure", "motion"],
+      "tokens": ["ShieldCheck", "Skull", "Coins"],
+      "finalKnowledge": ["new-thing-ledger", "damage-ledger", "fee-ledger", "cross-comparison"],
+      "statefulObjects": []
+    }
+  ]
+}

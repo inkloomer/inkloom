@@ -1,0 +1,21 @@
+{
+  "directionId": "obsidian-ice-possession-hall",
+  "family": "obsidian-ice-possession-hall",
+  "palette": "obsidian black-green, glacial mint, amber seal, wine ribbon, frost silver, bone paper",
+  "typography": "obsidian-hall headings on glacial rail tabs, bone chips and amber wax verdicts",
+  "composition": "an obsidian hall where classification pairs sit across an axis, the entitled-unentitled fork carries defence claims, protection flows split by claimant identity, and return lanes run A A-plus-a and A-minus-a ledgers",
+  "surface": "bone paper files, glacial desk rails, wine ribbon tags, amber wax seals",
+  "motion": "possession chips snap into controlling hands then vanish when the hand lets go, a claim ribbon ties the shared right to its unit as it travels, protection arrows change colour by who strikes whom, and return ledgers weigh善意 against恶意 before settling amounts",
+  "transition": "the obsidian hall floor, glacial rails and amber seal posts persist while axes, forks, flows and ledgers are re-dressed between scenes",
+  "conceptTokens": {
+    "占有": "Hand",
+    "善意占有": "ShieldCheck",
+    "恶意占有": "Skull"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/civil-law/09/possession-hall/",
+    "title": "黑曜石馆"
+  }
+}
