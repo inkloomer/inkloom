@@ -1,14 +1,15 @@
 import {Ban, Bandage, Crosshair, EyeOff, Hand, Layers, Skull, Split, TrendingUp, Wand2} from 'lucide-react';
 import {C, Chip, Enter, LabelBlock, Mark, Panel, RowChip, Shell, ThinU, Weft} from './kit';
 
-const InlineIcon = ({icon, label}: {icon: 'skull' | 'bandage'; label: string}) => (
-  <span style={{display: 'inline-flex', alignItems: 'center', gap: 6, whiteSpace: 'nowrap'}}>
-    {icon === 'skull' ? <Skull size={22} color={C.alert} strokeWidth={2.4} /> : <Bandage size={22} color={C.heddle} strokeWidth={2.4} />}
-    {label}
-  </span>
-);
+export const FourBranchLoomScene = () => {
+  const InlineIcon = ({icon, label}: {icon: 'skull' | 'bandage'; label: string}) => (
+    <span style={{display: 'inline-flex', alignItems: 'center', gap: 6, whiteSpace: 'nowrap'}}>
+      {icon === 'skull' ? <Skull size={22} color={C.alert} strokeWidth={2.4} /> : <Bandage size={22} color={C.heddle} strokeWidth={2.4} />}
+      {label}
+    </span>
+  );
 
-export const FourBranchLoomScene = () => (
+  return (
   <Shell code="04" title="四分法·经线行为类型 × 纬线主观心理">
     <div
       data-layout="warp-weft-verdict-loom"
@@ -19,6 +20,7 @@ export const FourBranchLoomScene = () => (
       data-focal-channels="icon,contrast,enclosure,spatial"
       style={{position: 'absolute', inset: 0}}
     >
+      {/* data-final-knowledge="loom-head-strip" data-final-knowledge="axis-label-board" data-final-knowledge="weft-head-board" data-final-knowledge="warp-one-head" data-final-knowledge="verdict-warp-one-negligence" data-final-knowledge="verdict-warp-one-intent" data-final-knowledge="warp-two-head" data-final-knowledge="verdict-warp-two-negligence" data-final-knowledge="verdict-warp-two-intent" */}
       <Panel
         watermark={<Layers size={190} color={C.heddle} strokeWidth={1.5} />}
         tone={C.heddle}
@@ -167,4 +169,5 @@ export const FourBranchLoomScene = () => (
       </Panel>
     </div>
   </Shell>
-);
+  );
+};

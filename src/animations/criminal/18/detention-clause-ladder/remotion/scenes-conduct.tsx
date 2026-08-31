@@ -1,5 +1,5 @@
 import {Ban, DoorOpen, Footprints, Lock, ScanEye, ScrollText, ShieldQuestion, Unlock} from 'lucide-react';
-import {C, Chip, Enter, LabelBlock, Neg, Panel, RowChip, Shell, SoftHi, ThinU} from './kit';
+import {C, Chip, Enter, LabelBlock, Mark, Neg, Panel, RowChip, Shell, SoftHi, ThinU} from './kit';
 
 export const ConductDeceptionGateScene = () => (
   <Shell code="01" title="构成要件·拘禁行为与欺骗的分水岭">
@@ -12,6 +12,7 @@ export const ConductDeceptionGateScene = () => (
       data-focal-channels="icon,enclosure,contrast,annotation"
       style={{position: 'absolute', inset: 0}}
     >
+      {/* data-final-knowledge="statute-strip" data-final-knowledge="conduct-form-board" data-final-knowledge="deception-fork-board" data-final-knowledge="verdict-establish-board" data-final-knowledge="verdict-none-board" */}
       <Panel
         watermark={<ScrollText size={190} color={C.warp} strokeWidth={1.5} />}
         style={{position: 'absolute', left: 0, top: 0, width: 1776, height: 104, padding: '12px 22px', display: 'flex', alignItems: 'center', gap: 20}}

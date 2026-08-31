@@ -12,6 +12,7 @@ export const FictionConversionGateScene = () => (
       data-focal-channels="icon,enclosure,contrast,spatial"
       style={{position: 'absolute', inset: 0}}
     >
+      {/* data-final-knowledge="clause-two-strip" data-final-knowledge="one-versus-two-board" data-final-knowledge="fiction-formula-board" data-final-knowledge="doctrine-split-board" data-final-knowledge="joinder-board" */}
       <Panel
         watermark={<ScrollText size={190} color={C.weft} strokeWidth={1.5} />}
         tone={C.weft}

@@ -12,6 +12,7 @@ export const DebtDetentionNoticeScene = () => (
       data-focal-channels="icon,contrast,enclosure,annotation"
       style={{position: 'absolute', inset: 0}}
     >
+      {/* data-final-knowledge="debt-clause-strip" data-final-knowledge="notice-board" data-final-knowledge="conduct-mode-board" data-final-knowledge="debt-scope-board" */}
       <Panel
         watermark={<ScrollText size={190} color={C.warp} strokeWidth={1.5} />}
         style={{position: 'absolute', left: 0, top: 0, width: 1776, height: 96, padding: '10px 22px', display: 'flex', alignItems: 'center', gap: 18}}

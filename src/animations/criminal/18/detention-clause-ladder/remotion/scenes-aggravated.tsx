@@ -12,6 +12,7 @@ export const AggravatedResultChainScene = () => (
       data-focal-channels="icon,connector,contrast,enclosure"
       style={{position: 'absolute', inset: 0}}
     >
+      {/* data-final-knowledge="clause-strip" data-final-knowledge="cause-board" data-final-knowledge="intervention-board" data-final-knowledge="negligence-board" data-final-knowledge="intent-board" */}
       <Panel
         watermark={<ScrollText size={190} color={C.warp} strokeWidth={1.5} />}
         style={{position: 'absolute', left: 0, top: 0, width: 1776, height: 104, padding: '12px 22px', display: 'flex', alignItems: 'center', gap: 18}}
