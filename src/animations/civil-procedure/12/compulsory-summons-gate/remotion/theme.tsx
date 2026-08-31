@@ -43,12 +43,13 @@ export const Shell: React.FC<{
       data-player-control-safe-bottom={PLAYER_CONTROL_SAFE_BOTTOM}
       className="font-animation-body"
       style={{
-        background: E.ground,
+        backgroundColor: "#0f241d",
         color: E.ink,
         overflow: "hidden",
         backgroundImage:
-          "repeating-linear-gradient(0deg, rgba(244,239,221,.04) 0 2px, transparent 2px 46px)," +
-          "radial-gradient(circle at 88% 12%, rgba(217,161,59,.10), transparent 26%)",
+          "repeating-linear-gradient(0deg, rgba(244,239,221,.05) 0 2px, transparent 2px 46px)," +
+          "radial-gradient(circle at 88% 12%, rgba(217,161,59,.07), transparent 32%)," +
+          "linear-gradient(180deg, #16342a 0%, #0f241d 100%)",
       }}
     >
       <header

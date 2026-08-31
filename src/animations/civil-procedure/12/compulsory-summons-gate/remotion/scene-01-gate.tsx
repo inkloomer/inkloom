@@ -17,10 +17,9 @@ export const SummonsGateDecisionScene: React.FC = () => {
     CLAMP,
   );
   const chipFade = interpolate(f, [160, 176], [1, 0], CLAMP);
-  // 正当理由芯片：从下方升向第三站，被弹回
-  const pushY = interpolate(f, [188, 210, 230, 252], [588, 470, 470, 592], CLAMP);
-  const pushTilt = interpolate(f, [230, 252], [0, -7], CLAMP);
-  const pushShow = interpolate(f, [150, 172], [0, 1], CLAMP);
+  // 正当理由芯片：自左滑入第三站下方，撞检后被弹回抖动定格
+  const pushX = interpolate(f, [150, 172, 230, 240, 252], [-64, 0, 0, -10, 0], CLAMP);
+  const pushTilt = interpolate(f, [230, 240, 252], [0, -6, 0], CLAMP);
 
   return (
     <Shell code="12.1" title="对妨碍诉讼的强制措施" subtitle="拘传：三要件与程序">
@@ -67,7 +66,7 @@ export const SummonsGateDecisionScene: React.FC = () => {
               <div>
                 <UserCheck size={34} color={E.pass} style={{ margin: "0 auto 6px" }} />
                 <div style={{ fontSize: 21, fontWeight: 950 }}>当事人</div>
-                <div style={{ fontSize: 16, fontWeight: 800, color: "#4a4030" }}>传唤到庭</div>
+                <div style={{ fontSize: 16, fontWeight: 800, color: "#4a4030" }}>必须到庭</div>
               </div>
             </EnamelPlate>
           </div>
@@ -174,8 +173,9 @@ export const SummonsGateDecisionScene: React.FC = () => {
                 padding: "6px 16px",
                 fontSize: 19,
                 fontWeight: 950,
-                opacity: pushShow,
-                transform: `translateY(${pushY - 470}px) rotate(${pushTilt}deg)`,
+                opacity: fadeIn(f, 150, 20),
+                transform: `translateX(${pushX}px) rotate(${pushTilt}deg)`,
+                flexShrink: 0,
               }}
             >
               有正当理由
