@@ -1,0 +1,94 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "environmental-protection-law-scene-01",
+      "export": "EnvironmentalProtectionLaw01Scene",
+      "layout": "evaluation-classify-gate-1",
+      "anchor": "timeline-gate",
+      "grammar": [
+        "planning-eval-pair",
+        "classify-gate"
+      ],
+      "textTreatments": [
+        "chip",
+        "stamp",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "motion",
+        "connector",
+        "contrast"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "environmental-protection-law-knowledge-1",
+        "environmental-protection-law-scene-01-planning",
+        "environmental-protection-law-scene-01-classify"
+      ],
+      "statefulObjects": [
+        "evaluation-report-travel"
+      ]
+    },
+    {
+      "id": "environmental-protection-law-scene-02",
+      "export": "EnvironmentalProtectionLaw02Scene",
+      "layout": "regime-band-house-2",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "three-simultaneous-band",
+        "tax-standard-band"
+      ],
+      "textTreatments": [
+        "chip",
+        "stamp",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "icon",
+        "motion"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "environmental-protection-law-knowledge-2",
+        "environmental-protection-law-scene-02-simultaneous",
+        "environmental-protection-law-scene-02-tax"
+      ],
+      "statefulObjects": [
+        "pollution-tax-travel"
+      ]
+    },
+    {
+      "id": "environmental-protection-law-scene-03",
+      "export": "EnvironmentalProtectionLaw03Scene",
+      "layout": "daily-penalty-lane-3",
+      "anchor": "flow-path",
+      "grammar": [
+        "penalty-clock-lane",
+        "close-gate"
+      ],
+      "textTreatments": [
+        "chip",
+        "stamp",
+        "external-negation"
+      ],
+      "focalChannels": [
+        "motion",
+        "connector",
+        "contrast"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "environmental-protection-law-knowledge-3",
+        "environmental-protection-law-scene-03-exceed",
+        "environmental-protection-law-knowledge-4"
+      ],
+      "statefulObjects": [
+        "daily-penalty-travel"
+      ]
+    }
+  ]
+}

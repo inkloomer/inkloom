@@ -1,0 +1,16 @@
+{
+  "directionId": "eco-evaluation-gatehall",
+  "derivedFrom": "demo-clerk-desk",
+  "variation": "生态评价关卡: 环评文件沿规划与建设项目两道闸行进, 按日计罚的处罚数额徽章在拒不改正后逐日累加, 三同时与公益诉讼两栏并立",
+  "family": "eco-evaluation-gatehall",
+  "palette": "#EFECE4 + #2B2B33 + #2C4A6E + #8A4B2F + #15725F + #B23A30 + #B98A2F",
+  "typography": "WenKai 关卡大厅栏标 + 环评文件徽章 + 原数额刻度",
+  "composition": "规划与项目环评 + 制度群与环保税 + 责任与按日计罚",
+  "surface": "关卡大厅纸卡、环评文件徽章、按日计罚刻度, 无圆角",
+  "motion": "环评文件沿两道闸分诊, 处罚数额徽章逐日累加, 格板按分类三档点亮",
+  "transition": "藏蓝关卡大厅贯穿三场, 铜色制度与红色责任双线呼应",
+  "catalog": {
+    "status": "variant",
+    "sourceDirectionId": "eco-evaluation-gatehall"
+  }
+}
