@@ -1,0 +1,53 @@
+{
+  "animationId": "trademark-infringement",
+  "compositionId": "TrademarkInfringement",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-09-01T12:44:12.954Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 319,
+      "frameCount": 160,
+      "id": "trademark-infringement-scene-01",
+      "number": "01",
+      "startFrame": 0,
+      "title": "侵权四行为",
+      "durationMs": 5333,
+      "file": "trademark-infringement-scene-01.avif",
+      "fileSize": 472066,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "bc68cc93528ea17e7112e57852f1bc53169b76221b0dc9a41229eec29a414fef",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "a8529a09f4e3f2f270da5312ba4b50c8652a546b584559dc64c08def0168ffe7"
+    },
+    {
+      "endFrame": 639,
+      "frameCount": 160,
+      "id": "trademark-infringement-scene-02",
+      "number": "02",
+      "startFrame": 320,
+      "title": "不侵权抗辩",
+      "durationMs": 5333,
+      "file": "trademark-infringement-scene-02.avif",
+      "fileSize": 462111,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "9bf8f594142ff54df3740062e0405483cf0bfbd80728f1b336601ee1b7e02103",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "a8529a09f4e3f2f270da5312ba4b50c8652a546b584559dc64c08def0168ffe7"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "a8529a09f4e3f2f270da5312ba4b50c8652a546b584559dc64c08def0168ffe7",
+  "targetFps": 30,
+  "totalFileSize": 934177
+}
