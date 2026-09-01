@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "priority-purchase-renewal",
+      "export": "PriorityPurchaseScene",
+      "layout": "priority-desk-with-limit-stamps",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "only-housing-tenants-hold-purchase-priority-with-fifteen-day-or-five-day-auction-notice",
+        "breach-of-priority-pays-damages-but-never-voids-the-third-party-sale",
+        "five-stamps-block-priority-from-co-owners-relatives-registration-silence-and-missing-auction",
+        "whole-building-transfers-deny-floor-tenants-for-lack-of-equal-terms"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "external-negation"],
+      "focalChannels": ["connector", "contrast", "enclosure", "motion"],
+      "tokens": ["Bell", "House", "Ban"],
+      "finalKnowledge": ["priority-purchase-rules"],
+      "statefulObjects": []
+    },
+    {
+      "id": "renewal-succession",
+      "export": "RenewalSuccessionScene",
+      "layout": "renewal-bench-with-succession-desk",
+      "anchor": "flow-path",
+      "grammar": [
+        "expired-tenants-renew-at-equal-terms-under-housing-leases",
+        "death-reroutes-the-lease-to-prior-cohabitants-or-co-operators-on-original-terms",
+        "renewal-runs-at-expiry-while-succession-triggers-on-death-during-the-term",
+        "both-protections-keep-the-tenant-side-seated-against-new-landlords"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["connector", "contrast", "enclosure", "motion"],
+      "tokens": ["Bell", "House", "Users"],
+      "finalKnowledge": ["renewal-succession-rights"],
+      "statefulObjects": []
+    },
+    {
+      "id": "sale-no-break-lease",
+      "export": "NoBreakLeaseScene",
+      "layout": "transfer-band-over-mortgage-gate",
+      "anchor": "timeline-gate",
+      "grammar": [
+        "ownership-transfers-leave-the-tenancy-untouched-for-every-tenant-who-holds-possession",
+        "transfers-without-prior-possession-get-no-protection-in-the-registered-sale-case",
+        "known-earlier-mortgages-and-court-seizures-block-protection-only-when-the-mortgage-is-exercised",
+        "car-case-protection-holds-for-later-mortgages-and-ordinary-sales-but-fails-on-earlier-mortgage-enforcement"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["connector", "contrast", "enclosure", "motion"],
+      "tokens": ["House", "Scale", "Gavel"],
+      "finalKnowledge": ["no-break-rule", "no-break-limits", "car-case-verdicts"],
+      "statefulObjects": []
+    }
+  ]
+}

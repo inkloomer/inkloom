@@ -1,0 +1,20 @@
+{
+  "directionId": "shield-lease-lease-protection-hall",
+  "family": "shield-lease-lease-protection-hall",
+  "palette": "moss shield lease hall, gold priority lanterns, brick limit stamps, indigo notice rails, bone paper, pine ink",
+  "typography": "protection headings on shield rail tabs, bone chips with gold and brick seals",
+  "composition": "a protection hall where the purchase-priority desk posts fifteen-day notice lanterns beside five limit stamps, the renewal bench seats cohabitants, and the no-break board routes ownership transfers around a mortgage gate with the car case running three verdict lanes",
+  "surface": "bone paper dossiers, shield green desk rails, gold lantern posts",
+  "motion": "notice lanterns light before sale signs flip, limit stamps knock priority chips off the desk, ownership tokens pass over the tenancy band untouched until the mortgage gate stops them, and three car-case chips land on separate verdict rails",
+  "transition": "the shield hall floor, gold lanterns and brick stamp posts persist while desks, benches and boards are re-dressed between scenes",
+  "conceptTokens": {
+    "优先购买权": "Bell",
+    "买卖不破租赁": "House"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/civil-law/12/lease-protection-hall/",
+    "title": "黛蓝护租馆"
+  }
+}
