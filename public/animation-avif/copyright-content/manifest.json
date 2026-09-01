@@ -1,0 +1,70 @@
+{
+  "animationId": "copyright-content",
+  "compositionId": "CopyrightContent",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-09-01T08:03:15.467Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 309,
+      "frameCount": 155,
+      "id": "copyright-content-scene-01",
+      "number": "01",
+      "startFrame": 0,
+      "title": "著作人身权",
+      "durationMs": 5167,
+      "file": "copyright-content-scene-01.avif",
+      "fileSize": 503138,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "38e4486cc06a15361fbc503fa720aa896a2dc8dfcf22fda4228a31158901a696",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "43818db840a8eedf0a1caab44f64f86b2db6546851847d64a6e96953e8a551cc"
+    },
+    {
+      "endFrame": 609,
+      "frameCount": 150,
+      "id": "copyright-content-scene-02",
+      "number": "02",
+      "startFrame": 310,
+      "title": "复制发行网传",
+      "durationMs": 5000,
+      "file": "copyright-content-scene-02.avif",
+      "fileSize": 464629,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "62ec93cc8c5d7ee67ff90daa054d0a88a7e0e0b54212a331374c5b37088f0b43",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "43818db840a8eedf0a1caab44f64f86b2db6546851847d64a6e96953e8a551cc"
+    },
+    {
+      "endFrame": 909,
+      "frameCount": 150,
+      "id": "copyright-content-scene-03",
+      "number": "03",
+      "startFrame": 610,
+      "title": "表演广播出租",
+      "durationMs": 5000,
+      "file": "copyright-content-scene-03.avif",
+      "fileSize": 386515,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "74329577b7edfa20a7fe0c1c9fceb0667037d740f9eab6c598274b5839782626",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "43818db840a8eedf0a1caab44f64f86b2db6546851847d64a6e96953e8a551cc"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "43818db840a8eedf0a1caab44f64f86b2db6546851847d64a6e96953e8a551cc",
+  "targetFps": 30,
+  "totalFileSize": 1354282
+}
