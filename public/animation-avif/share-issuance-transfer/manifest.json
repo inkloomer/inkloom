@@ -1,0 +1,70 @@
+{
+  "animationId": "share-issuance-transfer",
+  "compositionId": "ShareIssuanceTransfer",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-09-01T13:21:34.256Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 395,
+      "frameCount": 198,
+      "id": "share-issuance-transfer-scene-01",
+      "number": "01",
+      "startFrame": 0,
+      "title": "资本制与票面",
+      "durationMs": 6600,
+      "file": "share-issuance-transfer-scene-01.avif",
+      "fileSize": 851645,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "29cc5435f443ba55597000556aa4c0c003a97b57867f9ab570a51e892b4f5bcb",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "bc590a2b0091eadf040f2fbd3f8fc672292d53509c0c0c2de6c0e16b00195593"
+    },
+    {
+      "endFrame": 785,
+      "frameCount": 195,
+      "id": "share-issuance-transfer-scene-02",
+      "number": "02",
+      "startFrame": 396,
+      "title": "转让的三限",
+      "durationMs": 6500,
+      "file": "share-issuance-transfer-scene-02.avif",
+      "fileSize": 546134,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "645e2d11f87990234930c9da48fa527280afff7fe468cec708d78af3f4e58415",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "bc590a2b0091eadf040f2fbd3f8fc672292d53509c0c0c2de6c0e16b00195593"
+    },
+    {
+      "endFrame": 1181,
+      "frameCount": 198,
+      "id": "share-issuance-transfer-scene-03",
+      "number": "03",
+      "startFrame": 786,
+      "title": "回购限制与财务资助",
+      "durationMs": 6600,
+      "file": "share-issuance-transfer-scene-03.avif",
+      "fileSize": 822060,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "7086c6616b6582e27eba649a89eef06efc18ee8a682981ac05b3ebf6d1d7474b",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "bc590a2b0091eadf040f2fbd3f8fc672292d53509c0c0c2de6c0e16b00195593"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "bc590a2b0091eadf040f2fbd3f8fc672292d53509c0c0c2de6c0e16b00195593",
+  "targetFps": 30,
+  "totalFileSize": 2219839
+}

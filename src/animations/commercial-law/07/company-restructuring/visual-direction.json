@@ -9,6 +9,13 @@
   "surface": "轨道细线与方形站牌, 无圆角",
   "motion": "双轨依次进站, 救济岔道分向点亮, 减资流水线逐站推进",
   "transition": "轨道与站牌颜色角色贯穿场景",
+  "conceptTokens": {
+    "增资": "TrendingUp",
+    "减资": "TrendingDown",
+    "合并": "Merge",
+    "分立": "Split",
+    "债权人": "HandCoins"
+  },
   "catalog": {
     "status": "variant",
     "sourceDirectionId": "transit-map"

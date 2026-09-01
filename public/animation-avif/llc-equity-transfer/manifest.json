@@ -1,0 +1,70 @@
+{
+  "animationId": "llc-equity-transfer",
+  "compositionId": "LlcEquityTransfer",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-09-01T13:19:52.673Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 377,
+      "frameCount": 189,
+      "id": "llc-equity-transfer-scene-01",
+      "number": "01",
+      "startFrame": 0,
+      "title": "对内与对外转让",
+      "durationMs": 6300,
+      "file": "llc-equity-transfer-scene-01.avif",
+      "fileSize": 564094,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "4f8302c15a3e9e352be4c11ef8b47a13787c79765ce89da36c6e1c9f68149ddd",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "97550cbf5561e12903371f114d48712ffbdfbda95c177901802e53a11c5071ff"
+    },
+    {
+      "endFrame": 779,
+      "frameCount": 201,
+      "id": "llc-equity-transfer-scene-02",
+      "number": "02",
+      "startFrame": 378,
+      "title": "侵害优先购买权之后",
+      "durationMs": 6700,
+      "file": "llc-equity-transfer-scene-02.avif",
+      "fileSize": 803430,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "aa7993685079dba988131121458f15a1abb4bcad011677857cf04b1ea2b390cd",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "97550cbf5561e12903371f114d48712ffbdfbda95c177901802e53a11c5071ff"
+    },
+    {
+      "endFrame": 1181,
+      "frameCount": 201,
+      "id": "llc-equity-transfer-scene-03",
+      "number": "03",
+      "startFrame": 780,
+      "title": "特殊转让与异议回购",
+      "durationMs": 6700,
+      "file": "llc-equity-transfer-scene-03.avif",
+      "fileSize": 783606,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "5ff7ca6e2e8e0abf15fb16ebf30dabc96b9468deec9b04de14cab8dff84851e7",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "97550cbf5561e12903371f114d48712ffbdfbda95c177901802e53a11c5071ff"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "97550cbf5561e12903371f114d48712ffbdfbda95c177901802e53a11c5071ff",
+  "targetFps": 30,
+  "totalFileSize": 2151130
+}

@@ -7,6 +7,13 @@
   "surface": "市集档口分隔线与方形牌匾, 无圆角",
   "motion": "双档口先后开张, 侵害分支沿档口分叉, 特殊卡依次上架, 回购档按期限开合",
   "transition": "档口框架与牌匾颜色角色贯穿场景",
+  "conceptTokens": {
+    "股东": "Users",
+    "通知": "BellRing",
+    "优先购买权": "Handshake",
+    "反悔": "Undo2",
+    "章程": "ScrollText"
+  },
   "catalog": {
     "status": "featured",
     "source": "original-node",

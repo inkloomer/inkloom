@@ -9,6 +9,13 @@
   "surface": "档口牌匾与刻度细线, 方形期限章, 无圆角",
   "motion": "双制档先后开张, 转让限制按刻度依次封禁, 回购闸口逐项开合",
   "transition": "档口框架与牌匾颜色角色贯穿场景",
+  "conceptTokens": {
+    "股份": "Ticket",
+    "限制": "Lock",
+    "期限": "Clock3",
+    "回购": "Landmark",
+    "资助": "PiggyBank"
+  },
   "catalog": {
     "status": "variant",
     "sourceDirectionId": "transfer-mart"

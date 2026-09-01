@@ -1,0 +1,70 @@
+{
+  "animationId": "company-restructuring",
+  "compositionId": "CompanyRestructuring",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-09-01T13:23:16.473Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 395,
+      "frameCount": 198,
+      "id": "company-restructuring-scene-01",
+      "number": "01",
+      "startFrame": 0,
+      "title": "增资与减资",
+      "durationMs": 6600,
+      "file": "company-restructuring-scene-01.avif",
+      "fileSize": 837699,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "30380e7b330fe9a2361229568f03641c5f776ddea5677c090a0df05b239bf5bb",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "2dc2a9412d54ead0fed8271108b1753fdac19d3e31dad1c5dbe67a9723ff0868"
+    },
+    {
+      "endFrame": 791,
+      "frameCount": 198,
+      "id": "company-restructuring-scene-02",
+      "number": "02",
+      "startFrame": 396,
+      "title": "合并与分立",
+      "durationMs": 6600,
+      "file": "company-restructuring-scene-02.avif",
+      "fileSize": 706579,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "b4900cb0abce54dc4e4e0ce65434cca1655b5734319fb97dac6d0b821d1a4a3f",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "2dc2a9412d54ead0fed8271108b1753fdac19d3e31dad1c5dbe67a9723ff0868"
+    },
+    {
+      "endFrame": 1187,
+      "frameCount": 198,
+      "id": "company-restructuring-scene-03",
+      "number": "03",
+      "startFrame": 792,
+      "title": "减资程序与违法减资",
+      "durationMs": 6600,
+      "file": "company-restructuring-scene-03.avif",
+      "fileSize": 551421,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "bb2cdf9f69eb978aa4fd24be4ca08d832b361ecdc49042913cb9b90f561a0e45",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "2dc2a9412d54ead0fed8271108b1753fdac19d3e31dad1c5dbe67a9723ff0868"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "2dc2a9412d54ead0fed8271108b1753fdac19d3e31dad1c5dbe67a9723ff0868",
+  "targetFps": 30,
+  "totalFileSize": 2095699
+}
