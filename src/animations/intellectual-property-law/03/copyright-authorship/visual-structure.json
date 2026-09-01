@@ -1,0 +1,119 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "copyright-authorship-scene-01",
+      "export": "CopyrightAuthorship01Scene",
+      "layout": "authorship-gate-split-1",
+      "anchor": "boundary",
+      "grammar": [
+        "authorship-gate",
+        "helper-exclude-band"
+      ],
+      "textTreatments": [
+        "chip",
+        "stamp",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "motion",
+        "icon"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "copyright-authorship-knowledge-1",
+        "copyright-authorship-scene-01-author"
+      ],
+      "statefulObjects": [
+        "authorship-claim-travel"
+      ]
+    },
+    {
+      "id": "copyright-authorship-scene-02",
+      "export": "CopyrightAuthorship02Scene",
+      "layout": "derivative-compile-joint-2",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "derivative-double-permit",
+        "compile-split-band"
+      ],
+      "textTreatments": [
+        "chip",
+        "stamp",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "motion",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "copyright-authorship-scene-02-derivative",
+        "copyright-authorship-law-knowledge-1"
+      ],
+      "statefulObjects": [
+        "stage-adapt-travel"
+      ]
+    },
+    {
+      "id": "copyright-authorship-scene-03",
+      "export": "CopyrightAuthorship03Scene",
+      "layout": "audiovisual-entrust-columns-3",
+      "anchor": "role-pair",
+      "grammar": [
+        "audiovisual-producer-band",
+        "entrust-gate"
+      ],
+      "textTreatments": [
+        "chip",
+        "stamp",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "icon",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "copyright-authorship-scene-03-audiovisual",
+        "copyright-authorship-scene-03-entrust",
+        "copyright-authorship-law-knowledge-1",
+        "copyright-authorship-scene-03-workforhire"
+      ],
+      "statefulObjects": []
+    },
+    {
+      "id": "copyright-authorship-scene-04",
+      "export": "CopyrightAuthorship04Scene",
+      "layout": "original-transfer-scale-4",
+      "anchor": "boundary",
+      "grammar": [
+        "original-transfer-scale",
+        "wechat-misuse-band"
+      ],
+      "textTreatments": [
+        "chip",
+        "external-negation",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "motion",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "copyright-authorship-scene-04-transfer",
+        "copyright-authorship-knowledge-2"
+      ],
+      "statefulObjects": [
+        "original-transfer-travel"
+      ]
+    }
+  ]
+}

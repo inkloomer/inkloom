@@ -233,6 +233,8 @@ import {typography as typographyAutoEnvironmentalProtectionLaw} from '../animati
 import {typography as typographyAutoNaturalResourcesLaw} from '../animations/environment-resource-law/02/natural-resources-law/animation.meta';
 import {typography as typographyAutoCopyrightSubjectMatter} from '../animations/intellectual-property-law/01/copyright-subject-matter/animation.meta';
 import {typography as typographyAutoCopyrightContent} from '../animations/intellectual-property-law/02/copyright-content/animation.meta';
+import {typography as typographyAutoCopyrightAuthorship} from '../animations/intellectual-property-law/03/copyright-authorship/animation.meta';
+import {typography as typographyAutoCopyrightLimitations} from '../animations/intellectual-property-law/04/copyright-limitations/animation.meta';
 import {typography as typographyAutoShareholderContribution} from '../animations/commercial-law/02/shareholder-contribution/animation.meta';
 import {typography as typographyAutoPromoter} from '../animations/commercial-law/02/promoter/animation.meta';
 import {typography as typographyAutoCompanyIncorporation} from '../animations/commercial-law/02/company-incorporation/animation.meta';
@@ -288,6 +290,11 @@ import {typography as typographyAutoSentencingMeasureHall} from '../animations/c
 import {typography as typographyAutoComplicityPrinciplesJointPrincipal} from '../animations/criminal/12/complicity-principles-joint-principal/animation.meta';
 import {typography as typographyAutoIndirectPerpetratorDominion} from '../animations/criminal/12/indirect-perpetrator-dominion/animation.meta';
 import {typography as typographyAutoInstigatorAbettorRoles} from '../animations/criminal/12/instigator-abettor-roles/animation.meta';
+import {typography as typographyAutoResponsibilityAgeCapacity} from '../animations/criminal/12/responsibility-age-capacity/animation.meta';
+import {typography as typographyAutoParticipationTimingWithdrawal} from '../animations/criminal/12/participation-timing-withdrawal/animation.meta';
+import {typography as typographyAutoUnilateralComplicity} from '../animations/criminal/12/unilateral-complicity/animation.meta';
+import {typography as typographyAutoComplicityCombinationErrors} from '../animations/criminal/12/complicity-combination-errors/animation.meta';
+import {typography as typographyAutoPunishmentRoleClassification} from '../animations/criminal/12/punishment-role-classification/animation.meta';
 import {typography as typographyAutoExecutionExpiryStation} from '../animations/criminal/16/execution-expiry-station/animation.meta';
 import {typography as typographyAutoClauseAtlasNoticeFiction} from '../animations/criminal/17/clause-atlas-notice-fiction/animation.meta';
 import {typography as typographyAutoBodyCrimePurposeMap} from '../animations/criminal/18/body-crime-purpose-map/animation.meta';
@@ -643,6 +650,11 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'complicity-principles-joint-principal': {metadata: typographyAutoComplicityPrinciplesJointPrincipal, scope: {animationId: 'complicity-principles-joint-principal', subject: 'criminal', topic: '12'}},
   'indirect-perpetrator-dominion': {metadata: typographyAutoIndirectPerpetratorDominion, scope: {animationId: 'indirect-perpetrator-dominion', subject: 'criminal', topic: '12'}},
   'instigator-abettor-roles': {metadata: typographyAutoInstigatorAbettorRoles, scope: {animationId: 'instigator-abettor-roles', subject: 'criminal', topic: '12'}},
+  'responsibility-age-capacity': {metadata: typographyAutoResponsibilityAgeCapacity, scope: {animationId: 'responsibility-age-capacity', subject: 'criminal', topic: '12'}},
+  'participation-timing-withdrawal': {metadata: typographyAutoParticipationTimingWithdrawal, scope: {animationId: 'participation-timing-withdrawal', subject: 'criminal', topic: '12'}},
+  'unilateral-complicity': {metadata: typographyAutoUnilateralComplicity, scope: {animationId: 'unilateral-complicity', subject: 'criminal', topic: '12'}},
+  'complicity-combination-errors': {metadata: typographyAutoComplicityCombinationErrors, scope: {animationId: 'complicity-combination-errors', subject: 'criminal', topic: '12'}},
+  'punishment-role-classification': {metadata: typographyAutoPunishmentRoleClassification, scope: {animationId: 'punishment-role-classification', subject: 'criminal', topic: '12'}},
   'execution-expiry-station': {metadata: typographyAutoExecutionExpiryStation, scope: {animationId: 'execution-expiry-station', subject: 'criminal', topic: '16'}},
   'clause-atlas-notice-fiction': {metadata: typographyAutoClauseAtlasNoticeFiction, scope: {animationId: 'clause-atlas-notice-fiction', subject: 'criminal', topic: '17'}},
   'body-crime-purpose-map': {metadata: typographyAutoBodyCrimePurposeMap, scope: {animationId: 'body-crime-purpose-map', subject: 'criminal', topic: '18'}},
@@ -756,6 +768,8 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'natural-resources-law': {metadata: typographyAutoNaturalResourcesLaw, scope: {animationId: 'natural-resources-law', subject: 'environment-resource-law', topic: '02'}},
   'copyright-subject-matter': {metadata: typographyAutoCopyrightSubjectMatter, scope: {animationId: 'copyright-subject-matter', subject: 'intellectual-property-law', topic: '01'}},
   'copyright-content': {metadata: typographyAutoCopyrightContent, scope: {animationId: 'copyright-content', subject: 'intellectual-property-law', topic: '02'}},
+  'copyright-authorship': {metadata: typographyAutoCopyrightAuthorship, scope: {animationId: 'copyright-authorship', subject: 'intellectual-property-law', topic: '03'}},
+  'copyright-limitations': {metadata: typographyAutoCopyrightLimitations, scope: {animationId: 'copyright-limitations', subject: 'intellectual-property-law', topic: '04'}},
   ...COMMERCIAL_LAW_TYPOGRAPHY_CONFIGURATIONS,
 };
 

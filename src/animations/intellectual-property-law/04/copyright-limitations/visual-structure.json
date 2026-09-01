@@ -1,0 +1,94 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "copyright-limitations-scene-01",
+      "export": "CopyrightLimitations01Scene",
+      "layout": "protection-period-clock-1",
+      "anchor": "timeline-gate",
+      "grammar": [
+        "permanent-term-split",
+        "period-clock"
+      ],
+      "textTreatments": [
+        "chip",
+        "stamp",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "motion",
+        "connector",
+        "contrast"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "copyright-limitations-knowledge-1",
+        "copyright-limitations-scene-01-permanent",
+        "copyright-limitations-law-knowledge-1"
+      ],
+      "statefulObjects": [
+        "protection-clock-travel"
+      ]
+    },
+    {
+      "id": "copyright-limitations-scene-02",
+      "export": "CopyrightLimitations02Scene",
+      "layout": "fair-use-quadrant-2",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "fairuse-quadrant",
+        "notice-band"
+      ],
+      "textTreatments": [
+        "chip",
+        "stamp",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "icon",
+        "motion"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "copyright-limitations-knowledge-2",
+        "copyright-limitations-scene-02-require",
+        "copyright-limitations-scene-02-fairuse"
+      ],
+      "statefulObjects": [
+        "fair-use-check-travel"
+      ]
+    },
+    {
+      "id": "copyright-limitations-scene-03",
+      "export": "CopyrightLimitations03Scene",
+      "layout": "statutory-license-board-3",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "statutory-band",
+        "three-step-model"
+      ],
+      "textTreatments": [
+        "chip",
+        "stamp",
+        "external-negation"
+      ],
+      "focalChannels": [
+        "contrast",
+        "motion",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "copyright-limitations-scene-03-license",
+        "copyright-limitations-scene-03-model",
+        "copyright-limitations-knowledge-4"
+      ],
+      "statefulObjects": [
+        "statutory-license-travel"
+      ]
+    }
+  ]
+}
