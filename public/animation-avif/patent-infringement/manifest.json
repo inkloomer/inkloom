@@ -1,0 +1,53 @@
+{
+  "animationId": "patent-infringement",
+  "compositionId": "PatentInfringement",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-09-01T12:04:13.808Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 319,
+      "frameCount": 160,
+      "id": "patent-infringement-scene-01",
+      "number": "01",
+      "startFrame": 0,
+      "title": "构成侵权",
+      "durationMs": 5333,
+      "file": "patent-infringement-scene-01.avif",
+      "fileSize": 406175,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "cb9a96b07b343bd7446b06c2932a939265bd248d6bbb2dde3624f7083f029951",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "1f61e848ac45bf7f27627a91857387f75341e315f62103ff6019575420843b91"
+    },
+    {
+      "endFrame": 639,
+      "frameCount": 160,
+      "id": "patent-infringement-scene-02",
+      "number": "02",
+      "startFrame": 320,
+      "title": "七道免责盾",
+      "durationMs": 5333,
+      "file": "patent-infringement-scene-02.avif",
+      "fileSize": 520253,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "938293fc848bf14ca8aec2e3981ed9bdf120e78a6b3289e4b45cb3c05754844e",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "1f61e848ac45bf7f27627a91857387f75341e315f62103ff6019575420843b91"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "1f61e848ac45bf7f27627a91857387f75341e315f62103ff6019575420843b91",
+  "targetFps": 30,
+  "totalFileSize": 926428
+}
