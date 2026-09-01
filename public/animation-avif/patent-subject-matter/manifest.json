@@ -1,0 +1,53 @@
+{
+  "animationId": "patent-subject-matter",
+  "compositionId": "PatentSubjectMatter",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-09-01T10:02:15.406Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 319,
+      "frameCount": 160,
+      "id": "patent-subject-matter-scene-01",
+      "number": "01",
+      "startFrame": 0,
+      "title": "对象与新颖性",
+      "durationMs": 5333,
+      "file": "patent-subject-matter-scene-01.avif",
+      "fileSize": 516746,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "32562a1061d4f5f5076a0030e2b879c9d553428b116db7f81bc03cc615528574",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "a001202667fcae2005abfd5f14d813b66545d1bc19f499f181a0d9c511dc8097"
+    },
+    {
+      "endFrame": 639,
+      "frameCount": 160,
+      "id": "patent-subject-matter-scene-02",
+      "number": "02",
+      "startFrame": 320,
+      "title": "不授三闸",
+      "durationMs": 5333,
+      "file": "patent-subject-matter-scene-02.avif",
+      "fileSize": 553415,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "d40b9731f8c9af264ba7cec1aba54401fe4bf6dda69b0b2b7a1404638f571652",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "a001202667fcae2005abfd5f14d813b66545d1bc19f499f181a0d9c511dc8097"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "a001202667fcae2005abfd5f14d813b66545d1bc19f499f181a0d9c511dc8097",
+  "targetFps": 30,
+  "totalFileSize": 1070161
+}
