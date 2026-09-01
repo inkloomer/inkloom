@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 2,
+  "scenes": [
+    {
+      "id": "patent-rights-invalidity-scene-01",
+      "export": "PatentRightsInvalidity01Scene",
+      "layout": "license-triple-track-1",
+      "anchor": "flow-path",
+      "grammar": [
+        "license-triple-track",
+        "open-license-gate"
+      ],
+      "textTreatments": [
+        "chip",
+        "stamp",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "motion",
+        "connector",
+        "contrast"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "patent-rights-invalidity-knowledge-1",
+        "patent-rights-invalidity-scene-01-open",
+        "patent-rights-invalidity-scene-01-license"
+      ],
+      "statefulObjects": [
+        "open-license-travel"
+      ]
+    },
+    {
+      "id": "patent-rights-invalidity-scene-02",
+      "export": "PatentRightsInvalidity02Scene",
+      "layout": "term-invalidity-board-2",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "term-clock-band",
+        "invalidity-scale"
+      ],
+      "textTreatments": [
+        "chip",
+        "stamp",
+        "external-negation"
+      ],
+      "focalChannels": [
+        "contrast",
+        "motion",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "patent-rights-invalidity-scene-02-term",
+        "patent-rights-invalidity-law-knowledge-2",
+        "patent-rights-invalidity-knowledge-3"
+      ],
+      "statefulObjects": [
+        "term-clock-travel"
+      ]
+    }
+  ]
+}
