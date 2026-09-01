@@ -1,0 +1,64 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 2,
+  "scenes": [
+    {
+      "id": "ip-infringement-litigation-scene-01",
+      "export": "IpInfringementLitigation01Scene",
+      "layout": "license-suit-board-1",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "license-tri-band",
+        "suit-ability-lane"
+      ],
+      "textTreatments": [
+        "chip",
+        "stamp",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "motion",
+        "icon"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "ip-infringement-litigation-scene-01-license",
+        "ip-infringement-law-knowledge-1"
+      ],
+      "statefulObjects": [
+        "license-type-travel"
+      ]
+    },
+    {
+      "id": "ip-infringement-litigation-scene-02",
+      "export": "IpInfringementLitigation02Scene",
+      "layout": "damgage-compensation-board-2",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "jurisdiction-band",
+        "compensation-stairs"
+      ],
+      "textTreatments": [
+        "chip",
+        "stamp",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "motion",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "ip-infringement-litigation-scene-02-jurisdiction",
+        "ip-infringement-law-knowledge-2",
+        "ip-infringement-litigation-knowledge-3"
+      ],
+      "statefulObjects": [
+        "litigation-file-travel"
+      ]
+    }
+  ]
+}

@@ -200,6 +200,7 @@ import {typography as typographyAutoContractPerformanceHall} from '../animations
 import {typography as typographyAutoContractRescissionHall} from '../animations/civil-law/11/contract-rescission-hall/animation.meta';
 import {typography as typographyAutoBreachLiabilityHall} from '../animations/civil-law/11/breach-liability-hall/animation.meta';
 import {typography as typographyAutoSaleCounterHall} from '../animations/civil-law/12/sale-counter-hall/animation.meta';
+import {typography as typographyAutoQualityInspectionHall} from '../animations/civil-law/12/quality-inspection-hall/animation.meta';
 import {typography as typographyAutoAdoptionDossierRegistry} from '../animations/civil-law/21/adoption-dossier-registry/animation.meta';
 import {typography as typographyAutoMarriageValidityChain} from '../animations/civil-law/20/marriage-validity-chain/animation.meta';
 import {typography as typographyAutoMaritalPropertyDivorceDesk} from '../animations/civil-law/20/marital-property-divorce-desk/animation.meta';
@@ -245,6 +246,7 @@ import {typography as typographyAutoTrademarkOverview} from '../animations/intel
 import {typography as typographyAutoTrademarkAcquisition} from '../animations/intellectual-property-law/11/trademark-acquisition/animation.meta';
 import {typography as typographyAutoTrademarkRightsTermination} from '../animations/intellectual-property-law/12/trademark-rights-termination/animation.meta';
 import {typography as typographyAutoTrademarkInfringement} from '../animations/intellectual-property-law/13/trademark-infringement/animation.meta';
+import {typography as typographyAutoIpInfringementLitigation} from '../animations/intellectual-property-law/14/ip-infringement-litigation/animation.meta';
 import {typography as typographyAutoShareholderContribution} from '../animations/commercial-law/02/shareholder-contribution/animation.meta';
 import {typography as typographyAutoPromoter} from '../animations/commercial-law/02/promoter/animation.meta';
 import {typography as typographyAutoCompanyIncorporation} from '../animations/commercial-law/02/company-incorporation/animation.meta';
@@ -556,6 +558,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'contract-rescission-hall': {metadata: typographyAutoContractRescissionHall, scope: {animationId: 'contract-rescission-hall', subject: 'civil-law', topic: '11'}},
   'breach-liability-hall': {metadata: typographyAutoBreachLiabilityHall, scope: {animationId: 'breach-liability-hall', subject: 'civil-law', topic: '11'}},
   'sale-counter-hall': {metadata: typographyAutoSaleCounterHall, scope: {animationId: 'sale-counter-hall', subject: 'civil-law', topic: '12'}},
+  'quality-inspection-hall': {metadata: typographyAutoQualityInspectionHall, scope: {animationId: 'quality-inspection-hall', subject: 'civil-law', topic: '12'}},
   'dividend-right': {metadata: typographyAutoDividendRight, scope: {animationId: 'dividend-right', subject: 'commercial-law', topic: '04'}},
   'shareholder-qualification': {metadata: typographyAutoShareholderQualification, scope: {animationId: 'shareholder-qualification', subject: 'commercial-law', topic: '03'}},
   'nominal-shareholder': {metadata: typographyAutoNominalShareholder, scope: {animationId: 'nominal-shareholder', subject: 'commercial-law', topic: '03'}},
@@ -789,6 +792,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'trademark-acquisition': {metadata: typographyAutoTrademarkAcquisition, scope: {animationId: 'trademark-acquisition', subject: 'intellectual-property-law', topic: '11'}},
   'trademark-rights-termination': {metadata: typographyAutoTrademarkRightsTermination, scope: {animationId: 'trademark-rights-termination', subject: 'intellectual-property-law', topic: '12'}},
   'trademark-infringement': {metadata: typographyAutoTrademarkInfringement, scope: {animationId: 'trademark-infringement', subject: 'intellectual-property-law', topic: '13'}},
+  'ip-infringement-litigation': {metadata: typographyAutoIpInfringementLitigation, scope: {animationId: 'ip-infringement-litigation', subject: 'intellectual-property-law', topic: '14'}},
   ...COMMERCIAL_LAW_TYPOGRAPHY_CONFIGURATIONS,
 };
 
