@@ -1,0 +1,70 @@
+{
+  "animationId": "urban-real-estate-law",
+  "compositionId": "UrbanRealEstateLaw",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-09-01T04:43:10.935Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 309,
+      "frameCount": 155,
+      "id": "urban-real-estate-law-scene-01",
+      "number": "01",
+      "startFrame": 0,
+      "title": "限期动工",
+      "durationMs": 5167,
+      "file": "urban-real-estate-law-scene-01.avif",
+      "fileSize": 350395,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "6a8f281550134b9c47c9c7ccfdd17eb25c0fddb8d36cac44d1450a365e0c4ac5",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "ad10917e40b3880450ec153fa04564557818e50308a11921908b5538f6c21826"
+    },
+    {
+      "endFrame": 629,
+      "frameCount": 160,
+      "id": "urban-real-estate-law-scene-02",
+      "number": "02",
+      "startFrame": 310,
+      "title": "房地产转让",
+      "durationMs": 5333,
+      "file": "urban-real-estate-law-scene-02.avif",
+      "fileSize": 596200,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "2da075d75519b0127076eb45e6fe20e50cf2ed11c9983bbde8bf58a52c7392a2",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "ad10917e40b3880450ec153fa04564557818e50308a11921908b5538f6c21826"
+    },
+    {
+      "endFrame": 949,
+      "frameCount": 160,
+      "id": "urban-real-estate-law-scene-03",
+      "number": "03",
+      "startFrame": 630,
+      "title": "预售抵押租赁",
+      "durationMs": 5333,
+      "file": "urban-real-estate-law-scene-03.avif",
+      "fileSize": 403932,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "f94b19f42090e91fe0de171e549acab974be0d36af928e78320f998761915fb2",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "ad10917e40b3880450ec153fa04564557818e50308a11921908b5538f6c21826"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "ad10917e40b3880450ec153fa04564557818e50308a11921908b5538f6c21826",
+  "targetFps": 30,
+  "totalFileSize": 1350527
+}
