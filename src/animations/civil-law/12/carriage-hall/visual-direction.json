@@ -1,0 +1,21 @@
+{
+  "directionId": "indigo-carriage-carriage-hall",
+  "family": "indigo-carriage-carriage-hall",
+  "palette": "indigo platform hall, teal passenger ribbons, gold cargo lanes, brick exemption stamps, bone paper, slate ink",
+  "typography": "carriage headings on indigo rail tabs, bone chips with teal and gold seals",
+  "composition": "a platform hall where four traveler badges queue the liability gate, three cargo lanes split personal checked and goods regimes, and the shipper switchboard reroutes freight before delivery",
+  "surface": "bone paper dossiers, indigo desk rails, teal ribbon stamps",
+  "motion": "traveler badges pass the no-fault gate whose two exemption blades bounce them back, cargo chips run three lanes with different liability colors, and the shipper token forks four reroute switches before the delivery gate closes",
+  "transition": "the indigo hall floor, teal ribbons and brick stamp posts persist while the gate, lanes and switchboard are re-dressed between scenes",
+  "conceptTokens": {
+    "承运人": "Key",
+    "旅客": "Users",
+    "货物": "Package"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/civil-law/12/carriage-hall/",
+    "title": "靛蓝站台馆"
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "passenger-liability",
+      "export": "PassengerLiabilityScene",
+      "layout": "traveler-queue-into-exemption-gate",
+      "anchor": "flow-path",
+      "grammar": [
+        "four-traveler-kinds-count-ticket-free-discounted-and-permitted-stowaways",
+        "personal-injury-uses-no-fault-liability-with-only-two-exemptions",
+        "own-health-or-deliberate-gross-fault-bounces-the-claim-back",
+        "taxi-case-third-party-rock-fails-the-exemption-while-lean-out-gross-fault-passes-it"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "external-negation"],
+      "focalChannels": ["connector", "contrast", "enclosure", "motion"],
+      "tokens": ["Users", "Key", "Gavel"],
+      "finalKnowledge": ["traveler-definition", "injury-no-fault-rule"],
+      "statefulObjects": []
+    },
+    {
+      "id": "cargo-liability-split",
+      "export": "CargoLiabilityScene",
+      "layout": "three-lane-liability-split",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "goods-loss-uses-no-fault-with-force-majeure-nature-and-consignor-fault-exemptions",
+        "carry-on-items-use-fault-liability-so-no-fault-means-no-pay",
+        "checked-luggage-follows-the-goods-regime-by-reference",
+        "leaking-pipe-pays-while-another-passenger-spill-does-not"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["connector", "contrast", "enclosure", "motion"],
+      "tokens": ["Package", "Users", "Scale"],
+      "finalKnowledge": ["cargo-no-fault-rule", "luggage-regime-split"],
+      "statefulObjects": []
+    },
+    {
+      "id": "shipper-free-change",
+      "export": "ShipperChangeScene",
+      "layout": "pre-delivery-switchboard",
+      "anchor": "timeline-gate",
+      "grammar": [
+        "free-change-rights-run-only-before-delivery-to-the-consignee",
+        "no-cause-is-needed-to-halt-return-redirect-or-replace-consignee",
+        "four-switches-cover-halt-return-redirect-and-replace",
+        "loss-caused-to-the-carrier-must-be-compensated"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["connector", "contrast", "enclosure", "motion"],
+      "tokens": ["Package", "Users", "Coins"],
+      "finalKnowledge": ["free-change-window", "four-reroute-switches"],
+      "statefulObjects": []
+    }
+  ]
+}
