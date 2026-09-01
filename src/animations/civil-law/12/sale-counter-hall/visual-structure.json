@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "unauthorized-frame",
+      "export": "UnauthorizedFrameScene",
+      "layout": "always-valid-gate-with-acquisition-fork",
+      "anchor": "flow-path",
+      "grammar": [
+        "unauthorized-disposition-contracts-remain-valid-with-creditor-effect",
+        "ratification-leads-to-derivative-acquisition-by-the-buyer",
+        "good-faith-acquisition-conditions-lead-to-original-acquisition",
+        "the-rules-extend-to-chattel-pledge-and-real-property-mortgage"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["connector", "contrast", "enclosure", "motion"],
+      "tokens": ["Ban", "ShieldCheck", "Coins"],
+      "finalKnowledge": ["sale-definition", "unauthorized-valid", "acquisition-fork", "extend-scope"],
+      "statefulObjects": []
+    },
+    {
+      "id": "agency-coexist-fork",
+      "export": "AgencyForkScene",
+      "layout": "narrow-versus-apparent-agency-fork",
+      "anchor": "document-fork",
+      "grammar": [
+        "narrow-agency-binds-the-agent-until-principal-ratifies-or-refuses",
+        "ratification-binds-principal-and-buyer-gains-derivative-title",
+        "refusal-blocks-good-faith-acquisition-but-leaves-breach-liability",
+        "apparent-agency-binds-the-principal-and-buyer-always-gains-derivative-title"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "external-negation"],
+      "focalChannels": ["connector", "contrast", "enclosure", "annotation"],
+      "tokens": ["Ban", "ShieldCheck", "Users"],
+      "finalKnowledge": ["narrow-agency-limb", "ratify-refuse-split", "apparent-limb", "comparison-table"],
+      "statefulObjects": []
+    },
+    {
+      "id": "multi-sale-lanes",
+      "export": "MultiSaleScene",
+      "layout": "parallel-multi-sale-lanes-with-remedy-strip",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "ordinary-goods-rank-possession-then-payment-then-earlier-contract",
+        "vehicle-goods-rank-possession-then-registration-then-earlier-contract",
+        "possession-always-beats-registration-for-vehicles",
+        "losing-buyers-rescind-and-claim-breach"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["connector", "contrast", "enclosure", "motion"],
+      "tokens": ["ArrowRightLeft", "Coins", "Gavel"],
+      "finalKnowledge": ["ordinary-lane", "vehicle-lane", "possession-beats-registration", "remedy-strip"],
+      "statefulObjects": []
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "directionId": "terracotta-counter-sale-counter-hall",
+  "family": "terracotta-counter-sale-counter-hall",
+  "palette": "deep terracotta rust, sage sage-green, warm sand paper, bone ink, coral stamp",
+  "typography": "counter-hall headings on terracotta rail tabs, sand chips and coral wax stamps",
+  "composition": "a sales counter where unauthorized disposition runs through validity-acquisition gates, an agency fork splits narrow versus apparent coexistence across a three-party diagram, and multi-sale lanes race ordinary versus vehicle goods to the finish",
+  "surface": "warm sand files, terracotta desk rails, sage tags, coral wax stamps",
+  "motion": "the unauthorized chip slides past the always-valid gate then forks into追认 or 善意取得 acquisition paths, agency threads weave narrow and apparent into a three-party diagram where consent determines who is bound, and multi-sale chips race down two lanes to reach possession-registration-contract finish lines in different orders",
+  "transition": "the terracotta hall floor, terracotta rails and coral stamp posts persist while gates, forks and lanes are re-dressed between scenes",
+  "conceptTokens": {
+    "无权处分": "Ban",
+    "多重买卖": "ArrowRightLeft",
+    "善意取得": "ShieldCheck"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/civil-law/12/sale-counter-hall/",
+    "title": "赤陶柜台馆"
+  }
+}
