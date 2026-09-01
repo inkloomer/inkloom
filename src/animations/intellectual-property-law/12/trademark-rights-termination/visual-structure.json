@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 2,
+  "scenes": [
+    {
+      "id": "trademark-rights-termination-scene-01",
+      "export": "TrademarkRightsTermination01Scene",
+      "layout": "renewal-clock-lane-1",
+      "anchor": "timeline-gate",
+      "grammar": [
+        "renewal-clock",
+        "transfer-license-band"
+      ],
+      "textTreatments": [
+        "chip",
+        "stamp",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "motion",
+        "connector",
+        "contrast"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "trademark-rights-termination-scene-01-renewal",
+        "trademark-rights-termination-law-knowledge-1",
+        "trademark-rights-termination-knowledge-1"
+      ],
+      "statefulObjects": [
+        "renewal-clock-travel"
+      ]
+    },
+    {
+      "id": "trademark-rights-termination-scene-02",
+      "export": "TrademarkRightsTermination02Scene",
+      "layout": "cancel-invalid-gates-2",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "cancel-invalid-gates",
+        "mnemonic-band"
+      ],
+      "textTreatments": [
+        "chip",
+        "external-negation",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "motion",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "trademark-rights-termination-scene-02-cancel",
+        "trademark-rights-termination-law-knowledge-1",
+        "trademark-rights-termination-knowledge-2"
+      ],
+      "statefulObjects": [
+        "cancel-claim-travel"
+      ]
+    }
+  ]
+}
