@@ -1,0 +1,92 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "labor-law-scene-01",
+      "export": "LaborLaw01Scene",
+      "layout": "worktime-leave-board-1",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "worktime-trio",
+        "leave-stairs"
+      ],
+      "textTreatments": [
+        "chip",
+        "stamp",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "motion",
+        "icon"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "labor-law-knowledge-1",
+        "labor-law-scene-01-worktime"
+      ],
+      "statefulObjects": [
+        "annual-leave-travel"
+      ]
+    },
+    {
+      "id": "labor-law-scene-02",
+      "export": "LaborLaw02Scene",
+      "layout": "overtime-pay-ladder-2",
+      "anchor": "flow-path",
+      "grammar": [
+        "overtime-limit-band",
+        "pay-ladder"
+      ],
+      "textTreatments": [
+        "chip",
+        "stamp",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "motion",
+        "connector",
+        "contrast"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "labor-law-knowledge-2",
+        "labor-law-scene-02-limit",
+        "labor-law-scene-02-pay"
+      ],
+      "statefulObjects": [
+        "overtime-pay-travel"
+      ]
+    },
+    {
+      "id": "labor-law-scene-03",
+      "export": "LaborLaw03Scene",
+      "layout": "protection-shield-columns-3",
+      "anchor": "role-pair",
+      "grammar": [
+        "protection-stage-band",
+        "minor-guard-band"
+      ],
+      "textTreatments": [
+        "chip",
+        "external-negation",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "icon",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "labor-law-knowledge-3",
+        "labor-law-scene-03-female"
+      ],
+      "statefulObjects": [
+        "minor-guard-travel"
+      ]
+    }
+  ]
+}
