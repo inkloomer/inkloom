@@ -423,7 +423,7 @@ export const InvalidSubleaseScene = () => {
               <Mover delay={70} span={52} fromX={20} toX={380} style={{position: 'absolute', top: 62, left: 0}}>
                 <Chip tone={C.indigoLike} toneBg={C.billowLike}><Users size={18} color={C.indigoLike} strokeWidth={2.4} /><span style={{fontSize: 16, fontWeight: 950, color: C.indigoLike}}>承租人擅自转租</span></Chip>
               </Mover>
-              <span style={{position: 'absolute', left: 470, top: 62, fontSize: 16, fontWeight: 900, color: C.inkSoft, opacity: prog(frame, 150, 12)}}>→ 出租人可<Soft color={C.brick}>解除</Soft>与承租人的合同</span>
+              <span style={{position: 'absolute', left: 560, top: 62, fontSize: 16, fontWeight: 900, color: C.inkSoft, opacity: prog(frame, 150, 12)}}>→ 出租人可<Soft color={C.brick}>解除</Soft>与承租人的合同</span>
             </div>
             <IconChip icon={<Gavel size={22} color={C.cream} strokeWidth={2.2} />} tone={C.brick} title="先解约·再要房：">合同解除后 → 出租人有权请求<Soft color={C.indigoLike}>次承租人返还</Soft>租赁物；逾期腾房 → 支付<Soft color={C.gold}>占有使用费</Soft></IconChip>
             <IconChip icon={<Coins size={22} color={C.cream} strokeWidth={2.2} />} tone={C.moss} title="次承租人代为履行：">承租人拖欠租金·出租人欲解约 → <Soft color={C.moss}>合法转租</Soft>的次承租人可<Soft color={C.moss}>代付租金</Soft>并担违约责任·<Soft color={C.moss}>阻止解除</Soft></IconChip>

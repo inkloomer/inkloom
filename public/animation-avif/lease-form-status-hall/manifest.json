@@ -1,0 +1,70 @@
+{
+  "animationId": "lease-form-status-hall",
+  "compositionId": "LeaseFormHall",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-09-01T14:24:27.008Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 659,
+      "frameCount": 330,
+      "id": "lease-form-indefinite",
+      "number": "01",
+      "startFrame": 0,
+      "title": "租赁的形式与不定期",
+      "durationMs": 11000,
+      "file": "lease-form-indefinite.avif",
+      "fileSize": 444538,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "2319dcf8e84e29c6c7dde23050f1ebb04afbedb7fdd0a0f0ee27378638a35f94",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "4ebcd22c64a03849c36fd0837439feca40cd55e51250b9ad486d364fe6f8317b"
+    },
+    {
+      "endFrame": 1319,
+      "frameCount": 330,
+      "id": "one-house-leases",
+      "number": "02",
+      "startFrame": 660,
+      "title": "一房数租的领奖台",
+      "durationMs": 11000,
+      "file": "one-house-leases.avif",
+      "fileSize": 351778,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "3722133a5dacd7cceacae4c910b0d7007ce0ea51aac67d834b3ba5773d342a18",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "4ebcd22c64a03849c36fd0837439feca40cd55e51250b9ad486d364fe6f8317b"
+    },
+    {
+      "endFrame": 2039,
+      "frameCount": 360,
+      "id": "invalid-sublease",
+      "number": "03",
+      "startFrame": 1320,
+      "title": "无效红线与转租闸机",
+      "durationMs": 12000,
+      "file": "invalid-sublease.avif",
+      "fileSize": 645263,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "36fc82617e2782fcf5df8211f21e0ad2069d91433b4846a189ab7321b422d18d",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "4ebcd22c64a03849c36fd0837439feca40cd55e51250b9ad486d364fe6f8317b"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "4ebcd22c64a03849c36fd0837439feca40cd55e51250b9ad486d364fe6f8317b",
+  "targetFps": 30,
+  "totalFileSize": 1441579
+}
