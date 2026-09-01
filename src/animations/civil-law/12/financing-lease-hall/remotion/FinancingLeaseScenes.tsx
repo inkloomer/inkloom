@@ -368,15 +368,15 @@ export const RentProtectionScene = () => {
         <Enter delay={4} from="left" marker="rent-default-paths" style={{position: 'absolute', left: 0, top: 0, width: 1776, height: 240}}>
           <Panel tone={C.brick} watermark={<Coins size={120} color={C.brick} strokeWidth={1.6} />} style={{height: '100%', display: 'flex', flexDirection: 'column', gap: 8, padding: '10px 18px'}}>
             <PanelTab tone={C.brick} icon={<Coins size={24} color={C.cream} strokeWidth={2.2} />}>欠租两径 · 共同前置 = 催告后合理期限仍不支付</PanelTab>
-            <div style={{position: 'relative', height: 56, border: `2px solid ${C.edge}`, backgroundColor: C.creamDim, overflow: 'hidden'}}>
-              <div style={{position: 'absolute', left: 14, top: 12, width: 420, height: 26, border: `2px solid ${C.edge}`, backgroundColor: C.cream, borderRadius: 4, overflow: 'hidden'}}>
+            <div style={{position: 'relative', height: 48, border: `2px solid ${C.edge}`, backgroundColor: C.creamDim, overflow: 'hidden'}}>
+              <div style={{position: 'absolute', left: 14, top: 9, width: 420, height: 28, border: `2px solid ${C.edge}`, backgroundColor: C.cream, borderRadius: 4, overflow: 'hidden'}}>
                 <div style={{position: 'absolute', left: 0, top: 0, bottom: 0, backgroundColor: C.brick, opacity: 0.7, width: `${Math.min(100, (frame / 130) * 100)}%`}} />
-                <span style={{position: 'absolute', left: 12, top: 3, fontSize: 14, fontWeight: 950, color: C.ink}}>欠租累积</span>
+                <span style={{position: 'absolute', left: 12, top: 4, fontSize: 14, fontWeight: 950, color: C.ink}}>欠租累积</span>
               </div>
-              <span style={{position: 'absolute', left: 470, top: 15, fontSize: 18, fontWeight: 950, color: tripped ? C.brick : C.inkSoft}}>＋ 催告 → 触发 ↓</span>
-              <span style={{position: 'absolute', left: 700, top: 6, fontSize: 17, fontWeight: 950, color: C.gold}}>径① 期数无规定（≥1期）→ <Seal delay={180} tone={C.gold} size={16}>一次性支付全部未付租金</Seal>（剥夺期限利益）</span>
-              <span style={{position: 'absolute', left: 700, top: 30, fontSize: 17, fontWeight: 950, color: C.brick}}>径② <Seal delay={220} tone={C.brick} size={16}>2期以上</Seal> 或 达全部租金<Seal delay={260} tone={C.brick} size={16}>15%以上</Seal> → 解除合同取回租赁物</span>
+              <span style={{position: 'absolute', left: 470, top: 13, fontSize: 18, fontWeight: 950, color: tripped ? C.brick : C.inkSoft}}>＋ 催告 → 触发 ↓</span>
             </div>
+            <span style={{fontSize: 17, fontWeight: 950, color: C.gold}}>径① 期数无规定（≥1期）→ <Seal delay={180} tone={C.gold} size={16}>一次性支付全部未付租金</Seal>（剥夺期限利益）</span>
+            <span style={{fontSize: 17, fontWeight: 950, color: C.brick}}>径② <Seal delay={220} tone={C.brick} size={16}>2期以上</Seal> 或 达全部租金<Seal delay={260} tone={C.brick} size={16}>15%以上</Seal> → 解除合同取回租赁物</span>
             <div style={{fontSize: 18, fontWeight: 900, color: C.inkSoft, opacity: tripped ? 1 : 0.4}}>取回后：以租赁物价值<Soft color={C.brick}>充抵</Soft>承租人所负债务（本质 = <Soft color={C.brick}>优先受偿</Soft>·担保功能的落地）</div>
           </Panel>
         </Enter>
