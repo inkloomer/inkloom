@@ -1,0 +1,64 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 2,
+  "scenes": [
+    {
+      "id": "patent-subject-matter-scene-01",
+      "export": "PatentSubjectMatter01Scene",
+      "layout": "novelty-gate-lane-1",
+      "anchor": "timeline-gate",
+      "grammar": [
+        "novelty-gate",
+        "grace-band"
+      ],
+      "textTreatments": [
+        "chip",
+        "stamp",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "motion",
+        "connector",
+        "contrast"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "patent-subject-matter-knowledge-1",
+        "patent-subject-matter-scene-01-objects",
+        "patent-subject-matter-scene-01-novelty"
+      ],
+      "statefulObjects": [
+        "novelty-check-travel"
+      ]
+    },
+    {
+      "id": "patent-subject-matter-scene-02",
+      "export": "PatentSubjectMatter02Scene",
+      "layout": "exclusion-gate-triad-2",
+      "anchor": "flow-target",
+      "grammar": [
+        "exclusion-gate-triad",
+        "exception-band"
+      ],
+      "textTreatments": [
+        "chip",
+        "external-negation",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "icon",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "patent-subject-matter-scene-02-gate1",
+        "patent-subject-matter-scene-02-gate2",
+        "patent-subject-matter-scene-02-gate3",
+        "patent-subject-matter-knowledge-2"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}
