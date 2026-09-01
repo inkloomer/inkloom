@@ -1,0 +1,21 @@
+{
+  "directionId": "quartz-check-quality-inspection-hall",
+  "family": "quartz-check-quality-inspection-hall",
+  "palette": "quartz grey-lavender, coral check stamp, ink blue ribbon, bone paper, graphite ink",
+  "typography": "inspection-hall headings on quartz rail tabs, bone chips and coral check stamps",
+  "composition": "an inspection hall where fruit-ip strips run parallel to the possession rule, quality gates chain three computer verdicts, risk lanes split direct and indirect handover routes, and an indirect ledger logs destination clarity against risk transfer",
+  "surface": "bone paper files, quartz grey desk rails, coral check stamps",
+  "motion": "fruit coins slide to whoever holds possession not ownership, inspection gates chain three computer verdicts left to right, risk arrows snap at delivery versus copy service moments, and the indirect ledger logs destination clarity determining when risk flips",
+  "transition": "the quartz hall floor, quartz rails and coral stamp posts persist while strips, gates, lanes and ledgers are re-dressed between scenes",
+  "conceptTokens": {
+    "孳息收取": "Coins",
+    "风险承担": "Scale",
+    "品质瑕疵": "ScanSearch"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/civil-law/12/quality-inspection-hall/",
+    "title": "石英检验馆"
+  }
+}

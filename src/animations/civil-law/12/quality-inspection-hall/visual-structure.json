@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "fruit-ip-strip",
+      "export": "FruitIpScene",
+      "layout": "possession-strip-with-ip-split",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "sale-fruit-follows-possession-not-ownership",
+        "possession-modification-flips-back-to-general-ownership-rule",
+        "ip-does-not-transfer-with-ownership-by-default",
+        "exhibition-right-and-agreement-are-the-only-ip-exceptions"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["contrast", "connector", "enclosure", "annotation"],
+      "tokens": ["Coins", "Scale", "ScrollText"],
+      "finalKnowledge": ["fruit-possession-rule", "modification-exception", "ip-default-rule", "ip-exceptions"],
+      "statefulObjects": []
+    },
+    {
+      "id": "inspection-gate-series",
+      "export": "InspectionGateScene",
+      "layout": "inspection-gate-chain-with-computer-verdicts",
+      "anchor": "flow-path",
+      "grammar": [
+        "agreed-short-period-covers-appearance-only-not-hidden-defects",
+        "no-agreement-cap-is-two-years-with-signing-presumption",
+        "signing-presumption-covers-appearance-not-hidden",
+        "written-notes-on-the-delivery-note-break-the-presumption"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "external-negation"],
+      "focalChannels": ["connector", "contrast", "enclosure", "motion"],
+      "tokens": ["ScanSearch", "Hourglass", "Ban"],
+      "finalKnowledge": ["delivery-duty", "period-rules", "signing-presumption", "computer-verdicts"],
+      "statefulObjects": []
+    },
+    {
+      "id": "risk-direct-lanes",
+      "export": "RiskDirectScene",
+      "layout": "direct-handover-lanes-with-delay-exception",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "contract-plus-delivery-snap-risk-regardless-of-order-or-title",
+        "delayed-acceptance-shifts-risk-to-the-refusing-buyer",
+        "seller-cured-goods-block-the-delay-acceptance-snap",
+        "delivery-to-buyer-appointed-third-party-uses-same-rule"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["connector", "contrast", "enclosure", "motion"],
+      "tokens": ["Scale", "Coins", "ArrowRight"],
+      "finalKnowledge": ["direct-snap-rule", "fire-verdict", "delay-acceptance-rules", "third-party-extension"],
+      "statefulObjects": []
+    },
+    {
+      "id": "risk-indirect-ledger",
+      "export": "RiskIndirectScene",
+      "layout": "indirect-ledger-with-parallel-principle",
+      "anchor": "timeline-gate",
+      "grammar": [
+        "clear-destination-blocks-risk-until-delivery-at-that-point",
+        "unclear-destination-snaps-risk-at-carrier-handover",
+        "transit-goods-snap-risk-at-contract-formation-unless-agreed-otherwise",
+        "risk-bearing-never-blocks-parallel-breach-claims"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["connector", "contrast", "enclosure", "motion"],
+      "tokens": ["Scale", "Coins", "Gavel"],
+      "finalKnowledge": ["clear-destination-rule", "unclear-transit-rules", "parallel-principle", "ledger-summary"],
+      "statefulObjects": []
+    }
+  ]
+}
