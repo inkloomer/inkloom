@@ -1,0 +1,70 @@
+{
+  "animationId": "carriage-hall",
+  "compositionId": "CarriageHall",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-09-01T18:58:09.955Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 659,
+      "frameCount": 330,
+      "id": "passenger-liability",
+      "number": "01",
+      "startFrame": 0,
+      "title": "旅客的身份与免责闸",
+      "durationMs": 11000,
+      "file": "passenger-liability.avif",
+      "fileSize": 390479,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "4bb961f708f70b4f0e0f38fd3d5206b298c32481a682c9accf2ab966f060a419",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "870768d316c803baa193920af9c813ff128af724ec0956f6a62fefc90e610715"
+    },
+    {
+      "endFrame": 1319,
+      "frameCount": 330,
+      "id": "cargo-liability-split",
+      "number": "02",
+      "startFrame": 660,
+      "title": "三条责任车道",
+      "durationMs": 11000,
+      "file": "cargo-liability-split.avif",
+      "fileSize": 359590,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "6202127afb16d294e546278b2ce2a8adf2b493467b4b0ac8390c20f6e0fb9d84",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "870768d316c803baa193920af9c813ff128af724ec0956f6a62fefc90e610715"
+    },
+    {
+      "endFrame": 1919,
+      "frameCount": 300,
+      "id": "shipper-free-change",
+      "number": "03",
+      "startFrame": 1320,
+      "title": "交付前的四向闸刀",
+      "durationMs": 10000,
+      "file": "shipper-free-change.avif",
+      "fileSize": 356675,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "15c96758fbf68f611215e4aa454127a10239a66bc62a735f43f88fc8fe37ed98",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "870768d316c803baa193920af9c813ff128af724ec0956f6a62fefc90e610715"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "870768d316c803baa193920af9c813ff128af724ec0956f6a62fefc90e610715",
+  "targetFps": 30,
+  "totalFileSize": 1106744
+}
