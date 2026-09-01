@@ -1,0 +1,70 @@
+{
+  "animationId": "labor-law",
+  "compositionId": "LaborLaw",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-09-01T04:52:37.149Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 319,
+      "frameCount": 160,
+      "id": "labor-law-scene-01",
+      "number": "01",
+      "startFrame": 0,
+      "title": "工时与年休假",
+      "durationMs": 5333,
+      "file": "labor-law-scene-01.avif",
+      "fileSize": 396177,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "a52c6ba1cd1ddc072cea95655108df165f7af29be15f61d4cb2c47bca6d0c403",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "26af570d1198937c1a2ad597d60d7647b0abb489d48d150ee66c1e16a2ed7b1b"
+    },
+    {
+      "endFrame": 649,
+      "frameCount": 165,
+      "id": "labor-law-scene-02",
+      "number": "02",
+      "startFrame": 320,
+      "title": "加班与工资",
+      "durationMs": 5500,
+      "file": "labor-law-scene-02.avif",
+      "fileSize": 688914,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "05cf5c9eb07f72a65c1770dba501e4ca9385a8f69243af7ab30392e88180c622",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "26af570d1198937c1a2ad597d60d7647b0abb489d48d150ee66c1e16a2ed7b1b"
+    },
+    {
+      "endFrame": 969,
+      "frameCount": 160,
+      "id": "labor-law-scene-03",
+      "number": "03",
+      "startFrame": 650,
+      "title": "特殊保护",
+      "durationMs": 5333,
+      "file": "labor-law-scene-03.avif",
+      "fileSize": 496688,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "dc8f90d61839b2fa7a3cf30928a0ee2f9eac1e103032dfad504c9c4458e886e8",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "26af570d1198937c1a2ad597d60d7647b0abb489d48d150ee66c1e16a2ed7b1b"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "26af570d1198937c1a2ad597d60d7647b0abb489d48d150ee66c1e16a2ed7b1b",
+  "targetFps": 30,
+  "totalFileSize": 1581779
+}
