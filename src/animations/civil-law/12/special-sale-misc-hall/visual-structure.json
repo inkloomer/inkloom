@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "sample-quality-clause",
+      "export": "SampleClauseScene",
+      "layout": "sample-balance-versus-description",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "quality-clause-combines-the-sealed-sample-and-its-written-description",
+        "unchanged-sample-governs-while-changed-or-disputed-sample-yields-to-description",
+        "unknown-latent-defect-disqualifies-the-sample-as-quality-clause",
+        "disqualified-sample-falls-back-to-the-usual-standard"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["connector", "contrast", "enclosure", "motion"],
+      "tokens": ["ScrollText", "ScanSearch", "Ban"],
+      "finalKnowledge": ["sample-definition", "sample-mismatch-rule", "sample-hidden-defect"],
+      "statefulObjects": []
+    },
+    {
+      "id": "housing-permit-gate",
+      "export": "HousingPermitScene",
+      "layout": "housing-permit-gate-with-registration-desk",
+      "anchor": "flow-path",
+      "grammar": [
+        "commodity-housing-sales-are-developer-contracts-excluding-second-hand-homes",
+        "missing-pre-sale-licence-voids-the-contract-unless-obtained-before-suit",
+        "registration-filing-default-does-not-affect-validity-unless-agreed-as-condition",
+        "consumer-law-triple-punitive-damages-never-apply-to-housing-sales"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "external-negation"],
+      "focalChannels": ["connector", "contrast", "enclosure", "motion"],
+      "tokens": ["House", "ScrollText", "Gavel"],
+      "finalKnowledge": ["housing-scope", "housing-permit-rule", "housing-registration-consumer"],
+      "statefulObjects": []
+    },
+    {
+      "id": "power-supply-duties",
+      "export": "PowerSupplyScene",
+      "layout": "power-board-cause-duty-branches",
+      "anchor": "timeline-gate",
+      "grammar": [
+        "delivery-place-defaults-to-the-property-boundary-of-the-supply-facility",
+        "active-interruption-owes-advance-notice-while-passive-outage-owes-prompt-repair",
+        "suspension-for-unpaid-fees-exercises-the-prior-performance-defence-after-notice",
+        "fee-delay-never-grounds-rescission-and-water-gas-heat-follow-by-reference"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["connector", "contrast", "enclosure", "motion"],
+      "tokens": ["Zap", "Bell", "Ban"],
+      "finalKnowledge": ["power-delivery-place", "power-interruption-duties", "power-suspension-rule"],
+      "statefulObjects": []
+    }
+  ]
+}

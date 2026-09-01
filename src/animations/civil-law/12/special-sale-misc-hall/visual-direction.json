@@ -1,0 +1,21 @@
+{
+  "directionId": "celadon-misc-special-sale-hall",
+  "family": "celadon-misc-special-sale-hall",
+  "palette": "celadon mist hall, pine quality seals, amber permit lanterns, brick exclusion stamps, bone paper, moss ink",
+  "typography": "misc-hall headings on celadon rail tabs, bone chips with pine and amber seals",
+  "composition": "a miscellany hall where the sample stand balances specimen against written description, the housing desk runs a permit gate over pre-sale contracts, and the power board splits interruption duties from suspension self-help",
+  "surface": "bone paper dossiers, celadon desk rails, amber permit lanterns",
+  "motion": "the sample balance tips between specimen and description as states change, the permit gate lights valid only when the licence precedes suit, and power tokens branch by cause into notice or repair duties with the suspension gate refusing rescission",
+  "transition": "the celadon hall floor, mist rails and amber lantern posts persist while the balance, gate and power board are re-dressed between scenes",
+  "conceptTokens": {
+    "凭样品买卖": "ScanSearch",
+    "商品房买卖": "House",
+    "供用电合同": "Zap"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/civil-law/12/special-sale-misc-hall/",
+    "title": "青瓷杂肆馆"
+  }
+}
