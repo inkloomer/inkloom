@@ -1,0 +1,53 @@
+{
+  "animationId": "trademark-acquisition",
+  "compositionId": "TrademarkAcquisition",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-09-01T12:24:46.585Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 319,
+      "frameCount": 160,
+      "id": "trademark-acquisition-scene-01",
+      "number": "01",
+      "startFrame": 0,
+      "title": "申请原则与代理",
+      "durationMs": 5333,
+      "file": "trademark-acquisition-scene-01.avif",
+      "fileSize": 489508,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "dd0e274b7895717521a10a4395e222e88b8d72c0120eb0ddad22cf13b20a7815",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "399758542a48895225a7856ffdb5979ee9d69e8ba0ec8de46ab9a85823fdbae3"
+    },
+    {
+      "endFrame": 639,
+      "frameCount": 160,
+      "id": "trademark-acquisition-scene-02",
+      "number": "02",
+      "startFrame": 320,
+      "title": "异议制度",
+      "durationMs": 5333,
+      "file": "trademark-acquisition-scene-02.avif",
+      "fileSize": 386842,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "b42e66226dbe092c1566407094969c99e7bf471577cd8f4e374cfe0e926c2749",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "399758542a48895225a7856ffdb5979ee9d69e8ba0ec8de46ab9a85823fdbae3"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "399758542a48895225a7856ffdb5979ee9d69e8ba0ec8de46ab9a85823fdbae3",
+  "targetFps": 30,
+  "totalFileSize": 876350
+}
