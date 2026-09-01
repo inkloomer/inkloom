@@ -501,37 +501,36 @@ export const RiskIndirectScene = () => {
         <Enter delay={4} from="left" marker="clear-destination-rule" style={{position: 'absolute', left: 0, top: 0, width: 866, height: 252}}>
           <Panel tone={C.indigoLike} watermark={<Truck size={110} color={C.indigoLike} strokeWidth={1.6} />} style={{height: '100%', display: 'flex', flexDirection: 'column', gap: 7, padding: '9px 16px'}}>
             <PanelTab tone={C.indigoLike} icon={<Truck size={24} color={C.cream} strokeWidth={2.2} />}>代办托运 · 目的地明确</PanelTab>
-            <div style={{border: `2px dashed ${C.edge}`, backgroundColor: C.creamDim, position: 'relative', height: 80, overflow: 'hidden'}}>
-              <div style={{position: 'absolute', left: 20, right: 20, top: 56, height: 4, backgroundColor: C.edge}} />
-              <div style={{position: 'absolute', left: 240, top: 12, width: 9, height: 58, borderRadius: 4, backgroundColor: C.coral}} />
-              <span style={{position: 'absolute', left: 186, top: 0, fontSize: 14, fontWeight: 900, color: C.coral}}>风险不转 ✗</span>
-              <div style={{position: 'absolute', left: 660, top: 12, width: 9, height: 58, borderRadius: 4, backgroundColor: frame > 300 ? C.jade : C.edge}} />
-              <span style={{position: 'absolute', left: 606, top: 0, fontSize: 14, fontWeight: 900, color: frame > 300 ? C.jade : C.inkSoft}}>运抵交付 ✓</span>
-              <Mover delay={90} span={54} fromX={20} toX={120} style={{position: 'absolute', top: 34, left: 0}}>
+            <div style={{border: `2px dashed ${C.edge}`, backgroundColor: C.creamDim, position: 'relative', height: 60, overflow: 'hidden'}}>
+              <div style={{position: 'absolute', left: 20, right: 20, top: 50, height: 4, backgroundColor: C.edge}} />
+              <div style={{position: 'absolute', left: 240, top: 16, width: 9, height: 34, borderRadius: 4, backgroundColor: C.coral}} />
+              <span style={{position: 'absolute', left: 148, top: 0, fontSize: 13, fontWeight: 900, color: C.coral}}>货交承运人·风险不转 ✗</span>
+              <div style={{position: 'absolute', left: 660, top: 16, width: 9, height: 34, borderRadius: 4, backgroundColor: frame > 300 ? C.jade : C.edge}} />
+              <span style={{position: 'absolute', left: 626, top: 0, fontSize: 13, fontWeight: 900, color: frame > 300 ? C.jade : C.inkSoft}}>运抵交付 ✓</span>
+              <Mover delay={90} span={54} fromX={20} toX={120} style={{position: 'absolute', top: 20, left: 0}}>
                 <Chip tone={C.indigoLike} toneBg={C.billowLike}><Coins size={16} color={C.indigoLike} strokeWidth={2.4} /><span style={{fontSize: 15, fontWeight: 950, color: C.indigoLike}}>货物</span></Chip>
               </Mover>
-              <Mover delay={310} span={54} fromX={120} toX={520} fadeAt={380} style={{position: 'absolute', top: 34, left: 0}}>
+              <Mover delay={310} span={54} fromX={120} toX={520} fadeAt={380} style={{position: 'absolute', top: 20, left: 0}}>
                 <Chip tone={C.indigoLike} toneBg={C.billowLike}><Coins size={16} color={C.indigoLike} strokeWidth={2.4} /><span style={{fontSize: 15, fontWeight: 950, color: C.indigoLike}}>货物</span></Chip>
               </Mover>
-              <span style={{position: 'absolute', left: 266, top: 36, fontSize: 14, fontWeight: 900, color: C.inkSoft}}>货交承运人</span>
             </div>
-            <IconChip icon={<Scale size={22} color={C.cream} strokeWidth={2.2} />} tone={C.indigoLike} title="风险：">运抵该地<Soft color={C.indigoLike}>交付买受人时</Soft>才转移——旅游鞋案：明确收货地·途中毁损·乙<Soft color={C.indigoLike}>不付价金</Soft></IconChip>
+            <IconChip icon={<Scale size={22} color={C.cream} strokeWidth={2.2} />} tone={C.indigoLike} title="风险：">运抵该地<Soft color={C.indigoLike}>交付买受人时</Soft>才转移——旅游鞋案：乙<Soft color={C.jade}>不付价金</Soft></IconChip>
             <IconChip icon={<Coins size={22} color={C.cream} strokeWidth={2.2} />} tone={C.jade} title="所有权：">货交承运人时<Soft color={C.jade}>已转移</Soft>（指示交付）</IconChip>
           </Panel>
         </Enter>
         <Enter delay={34} from="right" marker="unclear-transit-rules" style={{position: 'absolute', left: 910, top: 0, width: 866, height: 252}}>
           <Panel tone={C.coral} watermark={<Truck size={110} color={C.coral} strokeWidth={1.6} />} style={{height: '100%', display: 'flex', flexDirection: 'column', gap: 7, padding: '9px 16px'}}>
             <PanelTab tone={C.coral} icon={<Truck size={24} color={C.cream} strokeWidth={2.2} />}>代办托运 · 目的地不明确</PanelTab>
-            <div style={{border: `2px dashed ${C.edge}`, backgroundColor: C.creamDim, position: 'relative', height: 80, overflow: 'hidden'}}>
-              <div style={{position: 'absolute', left: 20, right: 20, top: 56, height: 4, backgroundColor: C.edge}} />
-              <div style={{position: 'absolute', left: 240, top: 12, width: 9, height: 58, borderRadius: 4, backgroundColor: frame > 150 ? C.jade : C.edge}} />
-              <span style={{position: 'absolute', left: 176, top: 0, fontSize: 14, fontWeight: 900, color: frame > 150 ? C.jade : C.inkSoft}}>交承运人 ✓ 风险即转</span>
-              <Mover delay={90} span={50} fromX={20} toX={170} style={{position: 'absolute', top: 34, left: 0}}>
+            <div style={{border: `2px dashed ${C.edge}`, backgroundColor: C.creamDim, position: 'relative', height: 60, overflow: 'hidden'}}>
+              <div style={{position: 'absolute', left: 20, right: 20, top: 50, height: 4, backgroundColor: C.edge}} />
+              <div style={{position: 'absolute', left: 240, top: 16, width: 9, height: 34, borderRadius: 4, backgroundColor: frame > 150 ? C.jade : C.edge}} />
+              <span style={{position: 'absolute', left: 148, top: 0, fontSize: 13, fontWeight: 900, color: frame > 150 ? C.jade : C.inkSoft}}>交承运人 ✓ 风险即转</span>
+              <Mover delay={90} span={50} fromX={20} toX={170} style={{position: 'absolute', top: 20, left: 0}}>
                 <Chip tone={C.coral} toneBg={C.coralPale}><Coins size={16} color={C.coral} strokeWidth={2.4} /><span style={{fontSize: 15, fontWeight: 950, color: C.coral}}>货物</span></Chip>
               </Mover>
-              <span style={{position: 'absolute', left: 300, top: 34, fontSize: 14, fontWeight: 900, color: C.inkSoft}}>无明确目的地 → 交运即过门</span>
+              <span style={{position: 'absolute', left: 300, top: 28, fontSize: 13, fontWeight: 900, color: C.inkSoft}}>无明确目的地 → 交运即过门</span>
             </div>
-            <IconChip icon={<Scale size={22} color={C.cream} strokeWidth={2.2} />} tone={C.coral} title="风险：">出卖人<Soft color={C.coral}>货交承运人</Soft>时即转<Soft color={C.coral}>买受人</Soft>——设备案：交运后毁损·乙<Soft color={C.coral}>应付款</Soft></IconChip>
+            <IconChip icon={<Scale size={22} color={C.cream} strokeWidth={2.2} />} tone={C.coral} title="风险：">出卖人<Soft color={C.coral}>货交承运人</Soft>时即转<Soft color={C.coral}>买受人</Soft>——设备案：乙<Soft color={C.coral}>应付款</Soft></IconChip>
             <IconChip icon={<Coins size={22} color={C.cream} strokeWidth={2.2} />} tone={C.indigoLike} title="所有权：">同样货交承运人时<Soft color={C.indigoLike}>转移</Soft></IconChip>
           </Panel>
         </Enter>
