@@ -1,0 +1,23 @@
+{
+  "directionId": "ochre-credit-credit-sale-trilogy-hall",
+  "family": "ochre-credit-credit-sale-trilogy-hall",
+  "palette": "ochre umber hall, bronze credit rails, teal pay lane, rust rescind lane, bone paper, walnut ink",
+  "typography": "credit-hall headings on umber rail tabs, bone chips with bronze seals",
+  "composition": "a credit hall where the trial cycle forks three exit gates, the installment gauge snaps at the one-fifth mark into pay and rescind lanes, the retention loop carries goods back through retrieval redemption and resale, and a parallel ledger contrasts the two repayment regimes",
+  "surface": "bone paper dossiers, umber desk rails, bronze credit stamps",
+  "motion": "trial goods sit with the tester until an exit gate flips them, the installment gauge fills to one fifth and forks two repayment lanes, retained-title goods travel back to the seller through retrieval then fork to redemption or resale, and the ledger rows light in contrast pairs",
+  "transition": "the ochre hall floor, umber rails and bronze stamp posts persist while gates, gauges, loops and ledgers are re-dressed between scenes",
+  "conceptTokens": {
+    "试用买卖": "FlaskConical",
+    "分期付款": "Wallet",
+    "保留所有权": "Anchor",
+    "取回权": "Undo2",
+    "风险承担": "Scale"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/civil-law/12/credit-sale-trilogy-hall/",
+    "title": "赭石三赊馆"
+  }
+}

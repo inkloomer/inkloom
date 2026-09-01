@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "trial-purchase-cycle",
+      "export": "TrialPurchaseScene",
+      "layout": "trial-three-exit-gates",
+      "anchor": "flow-path",
+      "grammar": [
+        "trial-sale-is-try-first-pay-later-with-contract-unformed-during-trial",
+        "expression-table-silence-at-expiry-counts-as-purchase",
+        "purchase-means-promise-contract-forms-simple-delivery-passes-title-and-risk",
+        "no-agreement-fee-is-free-trial-and-trial-risk-stays-with-the-seller"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["connector", "contrast", "enclosure", "motion"],
+      "tokens": ["FlaskConical", "Hourglass", "Scale"],
+      "finalKnowledge": ["trial-definition", "trial-expression-rules", "trial-purchase-effects", "trial-fee-risk"],
+      "statefulObjects": []
+    },
+    {
+      "id": "installment-protection-fork",
+      "export": "InstallmentForkScene",
+      "layout": "installment-gauge-double-fork",
+      "anchor": "timeline-gate",
+      "grammar": [
+        "protection-triggers-when-arrears-reach-one-fifth-plus-notice-still-unpaid",
+        "pay-path-demands-lump-sum-and-strips-installment-timeline-benefit",
+        "rescind-path-takes-back-goods-and-refunds-paid-price-minus-usage-fee-and-damages",
+        "agreed-price-forfeiture-clauses-are-invalid-and-rescission-restores-status-quo"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["connector", "contrast", "enclosure", "motion"],
+      "tokens": ["Wallet", "Hourglass", "ArrowRight"],
+      "finalKnowledge": ["installment-trigger", "installment-pay-path", "installment-rescind-path"],
+      "statefulObjects": []
+    },
+    {
+      "id": "retention-retrieval-loop",
+      "export": "RetentionLoopScene",
+      "layout": "retention-anchor-retrieval-loop",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "retained-title-sits-with-seller-as-security-like-a-registered-chattel-mortgage",
+        "three-grounds-open-retrieval-with-seventy-five-percent-and-good-faith-limits",
+        "retrieved-goods-can-be-redeemed-by-curing-the-default-within-the-redemption-window",
+        "unredeemed-goods-are-resold-and-proceeds-settle-with-refund-or-balance"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["connector", "contrast", "enclosure", "motion"],
+      "tokens": ["Anchor", "Undo2", "RotateCcw"],
+      "finalKnowledge": ["retention-definition", "retention-reclaim-grounds", "retention-redemption-resale"],
+      "statefulObjects": []
+    },
+    {
+      "id": "trilogy-comparison-ledger",
+      "export": "TrilogyLedgerScene",
+      "layout": "trilogy-parallel-ledger-with-phone-verdicts",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "retention-mode-needs-no-rescission-while-installment-mode-rescinds-first",
+        "ratio-contrast-seventy-five-percent-ceiling-versus-one-fifth-trigger",
+        "consequence-contrast-variable-price-settlement-versus-refund-minus-deductions",
+        "phone-case-both-claims-succeed-under-their-own-rules"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["connector", "contrast", "enclosure", "motion"],
+      "tokens": ["Scale", "Gavel", "Wallet"],
+      "finalKnowledge": ["trilogy-mode-contrast", "trilogy-ratio-contrast", "trilogy-consequence-contrast", "phone-case-verdict"],
+      "statefulObjects": []
+    }
+  ]
+}
