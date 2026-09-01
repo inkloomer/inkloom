@@ -8,6 +8,7 @@ const scenes: readonly RemotionScene[] = [
   {id: 'combined-serial-yard', number: '03', title: '两个行为·结合犯·连续犯', ...SCENES.combinedSerialYard},
   {id: 'absorb-post-acts', number: '04', title: '吸收犯·不可罚的事后行为', ...SCENES.absorbPostActs},
   {id: 'involved-principle-floor', number: '05', title: '牵连犯·罪数底层原理', ...SCENES.involvedPrincipleFloor},
+  {id: 'aggravate-one-act-upgrade', number: '06', title: '加重犯·一个行为·法定刑升格', ...SCENES.aggravateOneActUpgrade},
 ];
 
 export const CrimeNumberReckoningPlayer = () => <RemotionDeck animationId="crime-number-reckoning" component={CrimeNumberReckoning} scenes={scenes} durationInFrames={DURATION_FRAMES} fps={FPS} title="罪数：一行为·两行为·处断原理" />;

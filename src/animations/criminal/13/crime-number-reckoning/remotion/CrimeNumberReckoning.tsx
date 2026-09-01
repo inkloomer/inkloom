@@ -6,6 +6,7 @@ import {ContinueAggravateLaneScene} from './scenes-lanes';
 import {CombinedSerialYardScene} from './scenes-combined';
 import {AbsorbPostActsScene} from './scenes-absorb';
 import {InvolvedPrincipleFloorScene} from './scenes-principle';
+import {AggravateOneActUpgradeScene} from './scenes-aggravate';
 
 export const CrimeNumberReckoning = () => (
   <AbsoluteFill>
@@ -14,5 +15,6 @@ export const CrimeNumberReckoning = () => (
     <TimelineSequence name="03-combined-serial-yard" {...SCENES.combinedSerialYard}><CombinedSerialYardScene /></TimelineSequence>
     <TimelineSequence name="04-absorb-post-acts" {...SCENES.absorbPostActs}><AbsorbPostActsScene /></TimelineSequence>
     <TimelineSequence name="05-involved-principle-floor" {...SCENES.involvedPrincipleFloor}><InvolvedPrincipleFloorScene /></TimelineSequence>
+    <TimelineSequence name="06-aggravate-one-act-upgrade" {...SCENES.aggravateOneActUpgrade}><AggravateOneActUpgradeScene /></TimelineSequence>
   </AbsoluteFill>
 );

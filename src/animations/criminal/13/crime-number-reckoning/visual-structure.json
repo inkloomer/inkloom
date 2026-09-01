@@ -200,6 +200,50 @@
         "exam-floor"
       ],
       "statefulObjects": []
+    },
+    {
+      "id": "aggravate-one-act-upgrade",
+      "export": "AggravateOneActUpgradeScene",
+      "layout": "aggravate-upgrade-pipeline",
+      "anchor": "flow-path",
+      "grammar": [
+        "act-merge-gate",
+        "statute-upgrade-meter",
+        "relation-pair-rows",
+        "form-shift-band"
+      ],
+      "textTreatments": [
+        "chip",
+        "label-block",
+        "soft-highlight",
+        "thin-underline",
+        "external-negation",
+        "stamp"
+      ],
+      "focalChannels": [
+        "icon",
+        "contrast",
+        "enclosure",
+        "connector"
+      ],
+      "tokens": [
+        "Zap",
+        "Gavel",
+        "TrendingUp",
+        "Scale",
+        "Landmark",
+        "ScrollText",
+        "RefreshCw"
+      ],
+      "finalKnowledge": [
+        "one-act-evaluation",
+        "origin-imaginary-lane",
+        "statute-upgrade-lane",
+        "relation-AB",
+        "relation-AAB",
+        "form-shift-band"
+      ],
+      "statefulObjects": []
     }
   ]
 }

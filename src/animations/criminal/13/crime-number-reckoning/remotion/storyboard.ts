@@ -7,8 +7,9 @@ export const SCENES = {
   combinedSerialYard: scene(510, 250),
   absorbPostActs: scene(760, 250),
   involvedPrincipleFloor: scene(1010, 260),
+  aggravateOneActUpgrade: scene(1270, 310),
 } as const;
 
-export const DURATION_FRAMES = 1270;
+export const DURATION_FRAMES = 1580;
 export const DURATION_SECONDS = DURATION_FRAMES / FPS;
 export const toSourceFrame = (frame: number) => frame;

@@ -3,16 +3,20 @@
   "family": "weighbridge-toll-plaza",
   "palette": "沥青灰 asphalt + 磅台黄 scale-yellow + 计费屏绿 screen + 警示锥红 cone + 岗亭墨绿 booth",
   "typography": "heavy plaza headings, toll-ticket chips, lane label blocks, double-frame ticket verdicts",
-  "composition": "a toll plaza where each conduct count pulls onto the weighbridge: three relation lanes, a continuing-aggravate duo board, combined and serial yards, and the principle floor with the exam strip",
+  "composition": "a toll plaza where each conduct count pulls onto the weighbridge: three relation lanes, a continuing-aggravate duo board, combined and serial yards, the principle floor with the exam strip, and an aggravate upgrade pipeline where one act merges and the statute meter lifts",
   "surface": "asphalt grain with lane lines, yellow curb strips, screen-green boards, cone-red dashed zones; no glossy panels",
-  "motion": "cars enter lane by lane in reasoning order, tickets land as verdicts, the display flips to the heavier charge; no idle loops",
+  "motion": "cars enter lane by lane in reasoning order, tickets land as verdicts, the display flips to the heavier charge, the upgrade meter draws from base penalty to upgraded penalty; no idle loops",
   "transition": "the plaza ground and lane grid persist while each scene re-stages the weighing",
   "conceptTokens": {
     "行为": "Zap",
     "择一重罪": "Scale",
     "数罪并罚": "BrickWall",
     "法条竞合": "ScrollText",
-    "案例": "GraduationCap"
+    "案例": "GraduationCap",
+    "基本犯": "Gavel",
+    "法定刑升格": "TrendingUp",
+    "法律特殊规定": "Landmark",
+    "关系调整": "RefreshCw"
   },
   "catalog": {
     "status": "featured",
