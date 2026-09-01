@@ -1,0 +1,64 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 2,
+  "scenes": [
+    {
+      "id": "patent-grant-scene-01",
+      "export": "PatentGrant01Scene",
+      "layout": "grant-ownership-quartet-1",
+      "anchor": "role-pair",
+      "grammar": [
+        "ownership-quartet",
+        "secret-tech-band"
+      ],
+      "textTreatments": [
+        "chip",
+        "stamp",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "motion",
+        "icon"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "patent-grant-scene-01-ownership",
+        "patent-grant-law-knowledge-1"
+      ],
+      "statefulObjects": [
+        "patent-claim-travel"
+      ]
+    },
+    {
+      "id": "patent-grant-scene-02",
+      "export": "PatentGrant02Scene",
+      "layout": "filing-principles-board-2",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "filing-principles-band",
+        "priority-clock"
+      ],
+      "textTreatments": [
+        "chip",
+        "stamp",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "motion",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "patent-grant-scene-02-principles",
+        "patent-grant-scene-02-priority",
+        "patent-grant-knowledge-2"
+      ],
+      "statefulObjects": [
+        "priority-date-travel"
+      ]
+    }
+  ]
+}
