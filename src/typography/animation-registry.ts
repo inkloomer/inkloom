@@ -226,6 +226,7 @@ import {typography as typographyAutoUrbanRuralPlanningLaw} from '../animations/e
 import {typography as typographyAutoUrbanRealEstateLaw} from '../animations/economic-law/10/urban-real-estate-law/animation.meta';
 import {typography as typographyAutoLaborLaw} from '../animations/labor-social-law/01/labor-law/animation.meta';
 import {typography as typographyAutoLaborContractLaw} from '../animations/labor-social-law/02/labor-contract-law/animation.meta';
+import {typography as typographyAutoLaborDisputeResolution} from '../animations/labor-social-law/03/labor-dispute-resolution/animation.meta';
 import {typography as typographyAutoShareholderContribution} from '../animations/commercial-law/02/shareholder-contribution/animation.meta';
 import {typography as typographyAutoPromoter} from '../animations/commercial-law/02/promoter/animation.meta';
 import {typography as typographyAutoCompanyIncorporation} from '../animations/commercial-law/02/company-incorporation/animation.meta';
@@ -742,6 +743,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'urban-real-estate-law': {metadata: typographyAutoUrbanRealEstateLaw, scope: {animationId: 'urban-real-estate-law', subject: 'economic-law', topic: '10'}},
   'labor-law': {metadata: typographyAutoLaborLaw, scope: {animationId: 'labor-law', subject: 'labor-social-law', topic: '01'}},
   'labor-contract-law': {metadata: typographyAutoLaborContractLaw, scope: {animationId: 'labor-contract-law', subject: 'labor-social-law', topic: '02'}},
+  'labor-dispute-resolution': {metadata: typographyAutoLaborDisputeResolution, scope: {animationId: 'labor-dispute-resolution', subject: 'labor-social-law', topic: '03'}},
   ...COMMERCIAL_LAW_TYPOGRAPHY_CONFIGURATIONS,
 };
 

@@ -1,0 +1,90 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "labor-dispute-resolution-scene-01",
+      "export": "LaborDisputeResolution01Scene",
+      "layout": "four-step-dispute-track-1",
+      "anchor": "flow-path",
+      "grammar": [
+        "fourstep-track",
+        "limitation-clock"
+      ],
+      "textTreatments": [
+        "chip",
+        "stamp",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "motion",
+        "connector",
+        "contrast"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "labor-dispute-resolution-knowledge-1",
+        "labor-dispute-resolution-scene-01-track"
+      ],
+      "statefulObjects": [
+        "dispute-claim-travel"
+      ]
+    },
+    {
+      "id": "labor-dispute-resolution-scene-02",
+      "export": "LaborDisputeResolution02Scene",
+      "layout": "final-verdict-scale-2",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "final-verdict-scale",
+        "expedite-band"
+      ],
+      "textTreatments": [
+        "chip",
+        "stamp",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "motion",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "labor-dispute-resolution-knowledge-2",
+        "labor-dispute-resolution-scene-02-worker",
+        "labor-dispute-resolution-knowledge-3"
+      ],
+      "statefulObjects": [
+        "verdict-review-travel"
+      ]
+    },
+    {
+      "id": "labor-dispute-resolution-scene-03",
+      "export": "LaborDisputeResolution03Scene",
+      "layout": "nonenforcement-triad-3",
+      "anchor": "concept-icon",
+      "grammar": [
+        "nonenforce-triad",
+        "appeal-band"
+      ],
+      "textTreatments": [
+        "chip",
+        "external-negation",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "icon",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "labor-dispute-resolution-scene-03-triad",
+        "labor-dispute-resolution-knowledge-4"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}
