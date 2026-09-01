@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "culpa-formula-gates",
+      "export": "CulpaFormulaScene",
+      "layout": "culpa-formula-gates-with-five-type-cards",
+      "anchor": "flow-path",
+      "grammar": [
+        "pre-contract-duty-roots-in-good-faith-covering-care-notice-and-secrecy",
+        "the-window-runs-from-offer-effective-to-contract-effective",
+        "relative-binds-only-the-negotiating-pair-never-the-outsider",
+        "five-statutory-breaches-span-sham-negotiation-fraud-secrecy-void-and-good-faith"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["connector", "contrast", "enclosure", "motion"],
+      "tokens": ["Handshake", "Gavel", "Scale"],
+      "finalKnowledge": ["culpa-formula", "time-actor-elements", "five-type-cards", "toy-maker-verdicts"],
+      "statefulObjects": []
+    },
+    {
+      "id": "strict-liability-scales",
+      "export": "StrictLiabilityScene",
+      "layout": "strict-liability-scales-with-five-exception-cards",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "strict-liability-ignores-fault-and-even-third-party-causes-bind",
+        "gratuitous-contracts-need-intent-or-gross-negligence",
+        "five-named-contracts-need-fault-as-the-condition",
+        "direct-loss-always-pays-while-expectancy-needs-foreseeability"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["contrast", "icon", "enclosure", "annotation"],
+      "tokens": ["Scale", "Coins", "Ban"],
+      "finalKnowledge": ["strict-principle", "five-exceptions", "direct-expectancy-split", "price-gap-rules"],
+      "statefulObjects": []
+    },
+    {
+      "id": "harmful-performance-fork",
+      "export": "HarmfulPerformanceScene",
+      "layout": "harmful-fork-with-tort-contract-shelves",
+      "anchor": "document-fork",
+      "grammar": [
+        "harmful-performance-merges-breach-and-tort-for-the-same-harm",
+        "tort-shelf-omits-expectancy-while-contract-shelf-adds-it-plus-penalties",
+        "personality-injury-unlocks-emotional-damages-on-either-shelf",
+        "carrier-without-harmful-performance-blocks-emotional-damages"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "external-negation"],
+      "focalChannels": ["connector", "contrast", "enclosure", "annotation"],
+      "tokens": ["Zap", "Scale", "Ban"],
+      "finalKnowledge": ["concise-definition", "tort-contract-shelves", "emotional-unlock", "carrier-block-rule"],
+      "statefulObjects": []
+    },
+    {
+      "id": "penalty-deposit-ledgers",
+      "export": "PenaltyDepositScene",
+      "layout": "penalty-deposit-ledgers-with-adjustment-window",
+      "anchor": "timeline-gate",
+      "grammar": [
+        "penalty-absorbs-damages-when-not-excessively-high",
+        "creditor-raises-and-debtor-reduces-across-the-30-percent-line",
+        "malicious-defaulters-lose-the-reduction-right",
+        "penalty-versus-deposit-is-either-or-while-deposit-plus-damage-continues"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["connector", "contrast", "enclosure", "motion"],
+      "tokens": ["Coins", "Scale", "Gavel"],
+      "finalKnowledge": ["absorb-adjust-ledger", "thirty-percent-window", "deposit-either-or", "continuation-principle"],
+      "statefulObjects": []
+    }
+  ]
+}

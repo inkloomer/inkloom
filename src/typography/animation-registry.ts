@@ -198,6 +198,7 @@ import {typography as typographyAutoContractOverviewHall} from '../animations/ci
 import {typography as typographyAutoContractConclusionHall} from '../animations/civil-law/11/contract-conclusion-hall/animation.meta';
 import {typography as typographyAutoContractPerformanceHall} from '../animations/civil-law/11/contract-performance-hall/animation.meta';
 import {typography as typographyAutoContractRescissionHall} from '../animations/civil-law/11/contract-rescission-hall/animation.meta';
+import {typography as typographyAutoBreachLiabilityHall} from '../animations/civil-law/11/breach-liability-hall/animation.meta';
 import {typography as typographyAutoAdoptionDossierRegistry} from '../animations/civil-law/21/adoption-dossier-registry/animation.meta';
 import {typography as typographyAutoMarriageValidityChain} from '../animations/civil-law/20/marriage-validity-chain/animation.meta';
 import {typography as typographyAutoMaritalPropertyDivorceDesk} from '../animations/civil-law/20/marital-property-divorce-desk/animation.meta';
@@ -222,6 +223,7 @@ import {typography as typographyAutoBankingLaw} from '../animations/economic-law
 import {typography as typographyAutoTaxLaw} from '../animations/economic-law/07/tax-law/animation.meta';
 import {typography as typographyAutoLandManagementLaw} from '../animations/economic-law/08/land-management-law/animation.meta';
 import {typography as typographyAutoUrbanRuralPlanningLaw} from '../animations/economic-law/09/urban-rural-planning-law/animation.meta';
+import {typography as typographyAutoUrbanRealEstateLaw} from '../animations/economic-law/10/urban-real-estate-law/animation.meta';
 import {typography as typographyAutoShareholderContribution} from '../animations/commercial-law/02/shareholder-contribution/animation.meta';
 import {typography as typographyAutoPromoter} from '../animations/commercial-law/02/promoter/animation.meta';
 import {typography as typographyAutoCompanyIncorporation} from '../animations/commercial-law/02/company-incorporation/animation.meta';
@@ -526,6 +528,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'contract-conclusion-hall': {metadata: typographyAutoContractConclusionHall, scope: {animationId: 'contract-conclusion-hall', subject: 'civil-law', topic: '11'}},
   'contract-performance-hall': {metadata: typographyAutoContractPerformanceHall, scope: {animationId: 'contract-performance-hall', subject: 'civil-law', topic: '11'}},
   'contract-rescission-hall': {metadata: typographyAutoContractRescissionHall, scope: {animationId: 'contract-rescission-hall', subject: 'civil-law', topic: '11'}},
+  'breach-liability-hall': {metadata: typographyAutoBreachLiabilityHall, scope: {animationId: 'breach-liability-hall', subject: 'civil-law', topic: '11'}},
   'dividend-right': {metadata: typographyAutoDividendRight, scope: {animationId: 'dividend-right', subject: 'commercial-law', topic: '04'}},
   'shareholder-qualification': {metadata: typographyAutoShareholderQualification, scope: {animationId: 'shareholder-qualification', subject: 'commercial-law', topic: '03'}},
   'nominal-shareholder': {metadata: typographyAutoNominalShareholder, scope: {animationId: 'nominal-shareholder', subject: 'commercial-law', topic: '03'}},
@@ -734,6 +737,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'tax-law': {metadata: typographyAutoTaxLaw, scope: {animationId: 'tax-law', subject: 'economic-law', topic: '07'}},
   'land-management-law': {metadata: typographyAutoLandManagementLaw, scope: {animationId: 'land-management-law', subject: 'economic-law', topic: '08'}},
   'urban-rural-planning-law': {metadata: typographyAutoUrbanRuralPlanningLaw, scope: {animationId: 'urban-rural-planning-law', subject: 'economic-law', topic: '09'}},
+  'urban-real-estate-law': {metadata: typographyAutoUrbanRealEstateLaw, scope: {animationId: 'urban-real-estate-law', subject: 'economic-law', topic: '10'}},
   ...COMMERCIAL_LAW_TYPOGRAPHY_CONFIGURATIONS,
 };
 

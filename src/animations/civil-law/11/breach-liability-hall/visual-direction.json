@@ -1,0 +1,21 @@
+{
+  "directionId": "oxblood-gavel-breach-liability-hall",
+  "family": "oxblood-gavel-breach-liability-hall",
+  "palette": "deep oxblood maroon, bronze gavel gold, bone paper, rose-quartz pale, graphite ink",
+  "typography": "gavel-hall headings on oxblood rail tabs, bone chips and bronze wax verdicts",
+  "composition": "a gavel hall where culpa formula gates check pre-contract breaches, strict liability scales weigh exceptions, a harmful-performance fork splits tort versus contract remedies, and penalty-deposit ledgers run adjustment windows with the 30-percent threshold",
+  "surface": "bone paper files, oxblood desk rails, rose-quartz pale tags, bronze wax seals",
+  "motion": "culpa gates check pre-contract timing-actors and bounce the outsider, strict liability scales tip heavy on no-fault but flip for five named contracts, the harmful fork routes tort-loss and contract-loss to separate remedy shelves, and penalty coins slide across the 30-percent line to trigger adjustment windows",
+  "transition": "the oxblood hall floor, oxblood rails and bronze seal posts persist while gates, scales, forks and ledgers are re-dressed between scenes",
+  "conceptTokens": {
+    "缔约过失": "Handshake",
+    "违约金": "Coins",
+    "加害给付": "Zap"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/civil-law/11/breach-liability-hall/",
+    "title": "赤檀法槌馆"
+  }
+}
