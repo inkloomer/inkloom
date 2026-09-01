@@ -1,0 +1,70 @@
+{
+  "animationId": "lease-protection-hall",
+  "compositionId": "LeaseProtectHall",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-09-01T14:43:44.159Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 599,
+      "frameCount": 300,
+      "id": "priority-purchase-renewal",
+      "number": "01",
+      "startFrame": 0,
+      "title": "承租人的优先购买权",
+      "durationMs": 10000,
+      "file": "priority-purchase-renewal.avif",
+      "fileSize": 281779,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "455de1e7290efcbe9028237892cd4569c00cb8372ff68a3c1930cf423c0649e4",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "495b553fa25d06e4a5c59b07304ed6411e6f9f342549681e6fc0e1e5a73ecee2"
+    },
+    {
+      "endFrame": 1079,
+      "frameCount": 240,
+      "id": "renewal-succession",
+      "number": "02",
+      "startFrame": 600,
+      "title": "期满与身后的承租位",
+      "durationMs": 8000,
+      "file": "renewal-succession.avif",
+      "fileSize": 319244,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "6bb7c1f85165ca1b713cc834011d1ccc1f2a1bff9af1a8b0436bb8ed3885b28b",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "495b553fa25d06e4a5c59b07304ed6411e6f9f342549681e6fc0e1e5a73ecee2"
+    },
+    {
+      "endFrame": 1799,
+      "frameCount": 360,
+      "id": "sale-no-break-lease",
+      "number": "03",
+      "startFrame": 1080,
+      "title": "买卖不破租赁与两道闸",
+      "durationMs": 12000,
+      "file": "sale-no-break-lease.avif",
+      "fileSize": 613782,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "e2a8b58e6e54a786c29c4173204f80b5486b7c47d3bbe7c7a805506a33cc9e9c",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "495b553fa25d06e4a5c59b07304ed6411e6f9f342549681e6fc0e1e5a73ecee2"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "495b553fa25d06e4a5c59b07304ed6411e6f9f342549681e6fc0e1e5a73ecee2",
+  "targetFps": 30,
+  "totalFileSize": 1214805
+}

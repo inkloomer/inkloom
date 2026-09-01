@@ -321,12 +321,12 @@ export const RenewalSuccessionScene = () => {
             <PanelTab tone={C.indigoLike} icon={<Users size={24} color={C.cream} strokeWidth={2.2} />}>继续承租权 · 身后不逐客</PanelTab>
             <div style={{border: `2px dashed ${C.edge}`, backgroundColor: C.creamDim, position: 'relative', height: 130, overflow: 'hidden'}}>
               <div style={{position: 'absolute', left: 24, right: 24, top: 96, height: 4, backgroundColor: C.edge}} />
-              <Mover delay={200} span={54} fromX={20} toX={300} style={{position: 'absolute', top: 58, left: 0}}>
+              <Mover delay={200} span={54} fromX={20} toX={230} style={{position: 'absolute', top: 58, left: 0}}>
                 <Chip tone={C.brick} toneBg={C.brickPale}><Users size={17} color={C.brick} strokeWidth={2.4} /><span style={{fontSize: 16, fontWeight: 950, color: C.brick}}>承租人死亡·宣告死亡</span></Chip>
               </Mover>
-              <div style={{position: 'absolute', left: 380, top: 30, width: 9, height: 74, borderRadius: 4, backgroundColor: frame > 280 ? C.indigoLike : C.edge}} />
-              <span style={{position: 'absolute', left: 330, top: 8, fontSize: 14, fontWeight: 900, color: frame > 280 ? C.indigoLike : C.inkSoft}}>租赁权移交 ✓</span>
-              <span style={{position: 'absolute', left: 420, top: 58, fontSize: 16, fontWeight: 900, color: C.inkSoft, opacity: prog(frame, 290, 12)}}>→ 按<Soft color={C.indigoLike}>原租赁合同</Soft>继续租赁</span>
+              <div style={{position: 'absolute', left: 460, top: 30, width: 9, height: 74, borderRadius: 4, backgroundColor: frame > 280 ? C.indigoLike : C.edge}} />
+              <span style={{position: 'absolute', left: 408, top: 8, fontSize: 14, fontWeight: 900, color: frame > 280 ? C.indigoLike : C.inkSoft}}>租赁权移交 ✓</span>
+              <span style={{position: 'absolute', left: 500, top: 58, fontSize: 16, fontWeight: 900, color: C.inkSoft, opacity: prog(frame, 290, 12)}}>→ 按<Soft color={C.indigoLike}>原租赁合同</Soft>继续租赁</span>
             </div>
             <IconChip icon={<House size={22} color={C.cream} strokeWidth={2.2} />} tone={C.indigoLike} title="承接主体：">生前<Soft color={C.indigoLike}>共同居住的人</Soft>或<Soft color={C.indigoLike}>共同经营人</Soft>——房屋租赁场景的保护</IconChip>
             <div style={{marginTop: 'auto', display: 'flex', justifyContent: 'center'}}><Seal delay={320} tone={C.indigoLike} size={20}>人走租不散·同住同营接手</Seal></div>
