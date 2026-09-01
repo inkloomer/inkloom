@@ -1,0 +1,70 @@
+{
+  "animationId": "special-sale-misc-hall",
+  "compositionId": "MiscSaleHall",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-09-01T13:46:58.285Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 659,
+      "frameCount": 330,
+      "id": "sample-quality-clause",
+      "number": "01",
+      "startFrame": 0,
+      "title": "样品与文字说明之争",
+      "durationMs": 11000,
+      "file": "sample-quality-clause.avif",
+      "fileSize": 394755,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "463b42d0d8e1f1d0dc8287d8cf606de42a5b3a5ebd9ba604215206d96d28d347",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "bd96bdf224d0bfadd0f7f32a191670d3eb7c6209112aa64821688576655a79ab"
+    },
+    {
+      "endFrame": 1379,
+      "frameCount": 360,
+      "id": "housing-permit-gate",
+      "number": "02",
+      "startFrame": 660,
+      "title": "商品房的许可与备案",
+      "durationMs": 12000,
+      "file": "housing-permit-gate.avif",
+      "fileSize": 526882,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "212308b74df20ef8c76330d515da4a940eaef7de67ecc8b3bc510aaab2e1671c",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "bd96bdf224d0bfadd0f7f32a191670d3eb7c6209112aa64821688576655a79ab"
+    },
+    {
+      "endFrame": 2099,
+      "frameCount": 360,
+      "id": "power-supply-duties",
+      "number": "03",
+      "startFrame": 1380,
+      "title": "供用电的责任与自助",
+      "durationMs": 12000,
+      "file": "power-supply-duties.avif",
+      "fileSize": 436483,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "a417152eb171a5e0a88d091edc7dfd90a3704cccb73d3f0ed6c59c52e2cf01ec",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "bd96bdf224d0bfadd0f7f32a191670d3eb7c6209112aa64821688576655a79ab"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "bd96bdf224d0bfadd0f7f32a191670d3eb7c6209112aa64821688576655a79ab",
+  "targetFps": 30,
+  "totalFileSize": 1358120
+}

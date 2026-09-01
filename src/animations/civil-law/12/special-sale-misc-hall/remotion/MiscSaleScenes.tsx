@@ -1,5 +1,5 @@
 import type {CSSProperties, ReactNode} from 'react';
-import {ArrowRight, Ban, Bell, Gavel, House, Hourglass, Scale, ScanSearch, ScrollText, Wrench, Zap} from 'lucide-react';
+import {ArrowRight, Ban, Bell, Coins, Gavel, House, Hourglass, Scale, ScanSearch, ScrollText, Wrench, Zap} from 'lucide-react';
 import {AbsoluteFill, interpolate, useCurrentFrame} from 'remotion';
 import {CLAMP} from '../../../../shared/remotion-runtime';
 
