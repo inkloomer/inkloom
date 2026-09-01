@@ -1,0 +1,92 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "urban-real-estate-law-scene-01",
+      "export": "UrbanRealEstateLaw01Scene",
+      "layout": "idle-clock-lane-1",
+      "anchor": "timeline-gate",
+      "grammar": [
+        "idle-clock-lane",
+        "qualification-gate"
+      ],
+      "textTreatments": [
+        "chip",
+        "stamp",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "motion",
+        "connector",
+        "contrast"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "urban-real-estate-law-knowledge-1",
+        "urban-real-estate-law-scene-01-idle"
+      ],
+      "statefulObjects": [
+        "idle-clock-travel"
+      ]
+    },
+    {
+      "id": "urban-real-estate-law-scene-02",
+      "export": "UrbanRealEstateLaw02Scene",
+      "layout": "transfer-dual-deed-2",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "transfer-condition-band",
+        "change-use-gate"
+      ],
+      "textTreatments": [
+        "chip",
+        "stamp",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "motion",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "urban-real-estate-law-knowledge-2",
+        "urban-real-estate-law-scene-02-grant",
+        "urban-real-estate-law-scene-02-alloc"
+      ],
+      "statefulObjects": [
+        "transfer-deed-travel"
+      ]
+    },
+    {
+      "id": "urban-real-estate-law-scene-03",
+      "export": "UrbanRealEstateLaw03Scene",
+      "layout": "pre-sale-mortgage-board-3",
+      "anchor": "role-pair",
+      "grammar": [
+        "presale-condition-band",
+        "mortgage-dual-lane"
+      ],
+      "textTreatments": [
+        "chip",
+        "external-negation",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "motion",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "urban-real-estate-law-knowledge-3",
+        "urban-real-estate-law-scene-03-presale"
+      ],
+      "statefulObjects": [
+        "presale-license-travel"
+      ]
+    }
+  ]
+}
