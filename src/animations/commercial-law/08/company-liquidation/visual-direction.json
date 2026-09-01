@@ -9,6 +9,13 @@
   "surface": "编年栏线与方形期限章, 无圆角",
   "motion": "双栏先后展开, 注销双闸按公告期开合, 分配瀑布逐级跌落",
   "transition": "编年带与期限章颜色角色贯穿场景",
+  "conceptTokens": {
+    "清算组": "Users",
+    "清算": "Scale",
+    "注销": "FileCheck2",
+    "顺序": "Coins",
+    "出资": "Timer"
+  },
   "catalog": {
     "status": "variant",
     "sourceDirectionId": "timeline-chronicle"

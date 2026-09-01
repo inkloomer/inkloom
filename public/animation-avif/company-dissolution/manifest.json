@@ -1,0 +1,70 @@
+{
+  "animationId": "company-dissolution",
+  "compositionId": "CompanyDissolution",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-09-01T13:39:55.997Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 371,
+      "frameCount": 186,
+      "id": "company-dissolution-scene-01",
+      "number": "01",
+      "startFrame": 0,
+      "title": "解散的三种原因",
+      "durationMs": 6200,
+      "file": "company-dissolution-scene-01.avif",
+      "fileSize": 575455,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "96052a14dbed5c3f73179f42dc5899c87a6a7315233fc1d4c6bfa884a024189f",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "8850872408f611c14da4930309fb2f3acdc853354edc1c6107e695878cb89575"
+    },
+    {
+      "endFrame": 755,
+      "frameCount": 192,
+      "id": "company-dissolution-scene-02",
+      "number": "02",
+      "startFrame": 372,
+      "title": "司法解散的受理边界",
+      "durationMs": 6400,
+      "file": "company-dissolution-scene-02.avif",
+      "fileSize": 511924,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "db87efb20da5a056b3d062f8eeafd5accfa8ac018bb78f06d676c9a2eb6d863d",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "8850872408f611c14da4930309fb2f3acdc853354edc1c6107e695878cb89575"
+    },
+    {
+      "endFrame": 1139,
+      "frameCount": 192,
+      "id": "company-dissolution-scene-03",
+      "number": "03",
+      "startFrame": 756,
+      "title": "诉讼主体与调解救济",
+      "durationMs": 6400,
+      "file": "company-dissolution-scene-03.avif",
+      "fileSize": 576919,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "7944a8cb933df312a2fce6e201929406c2cff77735d7155548d11a7e68b77c83",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "8850872408f611c14da4930309fb2f3acdc853354edc1c6107e695878cb89575"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "8850872408f611c14da4930309fb2f3acdc853354edc1c6107e695878cb89575",
+  "targetFps": 30,
+  "totalFileSize": 1664298
+}

@@ -1,0 +1,70 @@
+{
+  "animationId": "company-liquidation",
+  "compositionId": "CompanyLiquidation",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-09-01T13:43:51.536Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 365,
+      "frameCount": 183,
+      "id": "company-liquidation-scene-01",
+      "number": "01",
+      "startFrame": 0,
+      "title": "自行清算与指定清算",
+      "durationMs": 6100,
+      "file": "company-liquidation-scene-01.avif",
+      "fileSize": 610806,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "c19bbdb8e16856aa08895540f5619eccb446960095c7f5fc405738178b146154",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "762931dc881fa0a3d68a1da3ed84796bbb814a9d6e4829b85effae55801b145c"
+    },
+    {
+      "endFrame": 749,
+      "frameCount": 192,
+      "id": "company-liquidation-scene-02",
+      "number": "02",
+      "startFrame": 366,
+      "title": "简易注销与强制注销",
+      "durationMs": 6400,
+      "file": "company-liquidation-scene-02.avif",
+      "fileSize": 545368,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "07fed4a7aa76446a381394a7c6b59249d5b99c888d729b9cad5c70ee69361217",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "762931dc881fa0a3d68a1da3ed84796bbb814a9d6e4829b85effae55801b145c"
+    },
+    {
+      "endFrame": 1139,
+      "frameCount": 195,
+      "id": "company-liquidation-scene-03",
+      "number": "03",
+      "startFrame": 750,
+      "title": "清算财产的分配顺序",
+      "durationMs": 6500,
+      "file": "company-liquidation-scene-03.avif",
+      "fileSize": 487878,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "7947b59c5a4051b2a59bee38e0b3cc7baa88c8f2ab15ab3787f3308ab17ee7e6",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "762931dc881fa0a3d68a1da3ed84796bbb814a9d6e4829b85effae55801b145c"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "762931dc881fa0a3d68a1da3ed84796bbb814a9d6e4829b85effae55801b145c",
+  "targetFps": 30,
+  "totalFileSize": 1644052
+}

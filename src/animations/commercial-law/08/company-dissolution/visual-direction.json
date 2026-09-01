@@ -9,6 +9,13 @@
   "surface": "分支细线与闸门框, 方形结论牌, 无圆角",
   "motion": "解散原因沿三分叉跌落, 受理边界逐个封闸, 调解方式依次点亮",
   "transition": "分叉结构与结论牌颜色角色贯穿场景",
+  "conceptTokens": {
+    "解散": "Gavel",
+    "股东会": "Users",
+    "公司": "Building2",
+    "调解": "Handshake",
+    "期限": "CalendarClock"
+  },
   "catalog": {
     "status": "variant",
     "sourceDirectionId": "decision-tree"
