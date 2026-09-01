@@ -232,6 +232,7 @@ import {typography as typographyAutoSocialSecurityLaw} from '../animations/labor
 import {typography as typographyAutoEnvironmentalProtectionLaw} from '../animations/environment-resource-law/01/environmental-protection-law/animation.meta';
 import {typography as typographyAutoNaturalResourcesLaw} from '../animations/environment-resource-law/02/natural-resources-law/animation.meta';
 import {typography as typographyAutoCopyrightSubjectMatter} from '../animations/intellectual-property-law/01/copyright-subject-matter/animation.meta';
+import {typography as typographyAutoCopyrightContent} from '../animations/intellectual-property-law/02/copyright-content/animation.meta';
 import {typography as typographyAutoShareholderContribution} from '../animations/commercial-law/02/shareholder-contribution/animation.meta';
 import {typography as typographyAutoPromoter} from '../animations/commercial-law/02/promoter/animation.meta';
 import {typography as typographyAutoCompanyIncorporation} from '../animations/commercial-law/02/company-incorporation/animation.meta';
@@ -754,6 +755,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'environmental-protection-law': {metadata: typographyAutoEnvironmentalProtectionLaw, scope: {animationId: 'environmental-protection-law', subject: 'environment-resource-law', topic: '01'}},
   'natural-resources-law': {metadata: typographyAutoNaturalResourcesLaw, scope: {animationId: 'natural-resources-law', subject: 'environment-resource-law', topic: '02'}},
   'copyright-subject-matter': {metadata: typographyAutoCopyrightSubjectMatter, scope: {animationId: 'copyright-subject-matter', subject: 'intellectual-property-law', topic: '01'}},
+  'copyright-content': {metadata: typographyAutoCopyrightContent, scope: {animationId: 'copyright-content', subject: 'intellectual-property-law', topic: '02'}},
   ...COMMERCIAL_LAW_TYPOGRAPHY_CONFIGURATIONS,
 };
 

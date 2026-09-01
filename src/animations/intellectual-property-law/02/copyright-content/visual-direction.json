@@ -1,0 +1,16 @@
+{
+  "directionId": "copyright-dual-ledger",
+  "derivedFrom": "demo-clerk-desk",
+  "variation": "著作权双账台: 人身权四枚印章钉死不能继承转让, 发表权一次性印章用后即废, 财产权徽章在复制发行网传三车道上按时空属性分流, 出租权仅放行视听与软件",
+  "family": "copyright-dual-ledger",
+  "palette": "#EFECE4 + #2B2B33 + #2C4A6E + #8A4B2F + #15725F + #B23A30 + #B98A2F",
+  "typography": "WenKai 双账台标 + 权利印章 + 倍率车道",
+  "composition": "人身权四项与发表一次性 + 复制发行网传三车道 + 表演广播出租三格",
+  "surface": "账台纸卡、权利印章、车道闸口与金口诀条, 无圆角",
+  "motion": "发表印章用后即废, 上传徽章同侵复制与网传两格, 出租徽章在对象闸口前被书拦下",
+  "transition": "藏蓝账台贯穿三场, 铜色人身权与红色财产权侵权双线呼应",
+  "catalog": {
+    "status": "variant",
+    "sourceDirectionId": "copyright-dual-ledger"
+  }
+}

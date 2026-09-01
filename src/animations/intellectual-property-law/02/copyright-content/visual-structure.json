@@ -1,0 +1,92 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "copyright-content-scene-01",
+      "export": "CopyrightContent01Scene",
+      "layout": "moral-rights-quartet-1",
+      "anchor": "role-pair",
+      "grammar": [
+        "moral-quartet-band",
+        "publish-once-clock"
+      ],
+      "textTreatments": [
+        "chip",
+        "stamp",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "motion",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "copyright-content-knowledge-1",
+        "copyright-content-scene-01-quartet",
+        "copyright-content-law-knowledge-1"
+      ],
+      "statefulObjects": [
+        "publish-once-travel"
+      ]
+    },
+    {
+      "id": "copyright-content-scene-02",
+      "export": "CopyrightContent02Scene",
+      "layout": "property-copy-upload-lane-2",
+      "anchor": "flow-path",
+      "grammar": [
+        "copy-reproduce-band",
+        "upload-gate"
+      ],
+      "textTreatments": [
+        "chip",
+        "stamp",
+        "external-negation"
+      ],
+      "focalChannels": [
+        "motion",
+        "connector",
+        "contrast"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "copyright-content-law-knowledge-2",
+        "copyright-content-scene-02-copy",
+        "copyright-content-knowledge-3"
+      ],
+      "statefulObjects": [
+        "upload-novel-travel"
+      ]
+    },
+    {
+      "id": "copyright-content-scene-03",
+      "export": "CopyrightContent03Scene",
+      "layout": "perform-broadcast-rent-triad-3",
+      "anchor": "concept-icon",
+      "grammar": [
+        "perform-broadcast-split",
+        "rent-object-gate"
+      ],
+      "textTreatments": [
+        "chip",
+        "external-negation",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "icon",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "copyright-content-scene-03-perform",
+        "copyright-content-scene-03-broadcast",
+        "copyright-content-scene-03-rent"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}
