@@ -1,0 +1,70 @@
+{
+  "animationId": "recovery-right",
+  "compositionId": "RecoveryRight",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-09-01T15:01:41.694Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 359,
+      "frameCount": 180,
+      "id": "recovery-right-scene-01",
+      "number": "01",
+      "startFrame": 0,
+      "title": "追回的三类对象",
+      "durationMs": 6000,
+      "file": "recovery-right-scene-01.avif",
+      "fileSize": 395928,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "ea9c207b95243c5f1289fae79f2e16d1ef11f233d1b782f2e0ef60aa3c5badd7",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "aa810bcfe69cf1d859c52d2b94efaa77e344aa328705c3dca157788d59f8c464"
+    },
+    {
+      "endFrame": 749,
+      "frameCount": 195,
+      "id": "recovery-right-scene-02",
+      "number": "02",
+      "startFrame": 360,
+      "title": "董监高的非正常收入",
+      "durationMs": 6500,
+      "file": "recovery-right-scene-02.avif",
+      "fileSize": 491630,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "df905d442eaa6c7c6af847da54e0a10ea5ce49e5921c4171a4cae8f51b6355da",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "aa810bcfe69cf1d859c52d2b94efaa77e344aa328705c3dca157788d59f8c464"
+    },
+    {
+      "endFrame": 1115,
+      "frameCount": 183,
+      "id": "recovery-right-scene-03",
+      "number": "03",
+      "startFrame": 750,
+      "title": "出资追回不受期限限制",
+      "durationMs": 6100,
+      "file": "recovery-right-scene-03.avif",
+      "fileSize": 328117,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "a4c743648b7c46a89aae238d669ad7e71f781890bcaae1d1f8840a92a4bef9cb",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "aa810bcfe69cf1d859c52d2b94efaa77e344aa328705c3dca157788d59f8c464"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "aa810bcfe69cf1d859c52d2b94efaa77e344aa328705c3dca157788d59f8c464",
+  "targetFps": 30,
+  "totalFileSize": 1215675
+}

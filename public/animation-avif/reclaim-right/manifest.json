@@ -1,0 +1,70 @@
+{
+  "animationId": "reclaim-right",
+  "compositionId": "ReclaimRight",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-09-01T14:55:45.930Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 377,
+      "frameCount": 189,
+      "id": "reclaim-right-scene-01",
+      "number": "01",
+      "startFrame": 0,
+      "title": "取回权的总规则",
+      "durationMs": 6300,
+      "file": "reclaim-right-scene-01.avif",
+      "fileSize": 471478,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "00167dd52f37023a2faaac2faa181097ded8bc569c14da1a8140941c24744b21",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "85b3f74471c45dba9c5534ae66240825bad1ed74b34369d55120018a3a3ec239"
+    },
+    {
+      "endFrame": 743,
+      "frameCount": 183,
+      "id": "reclaim-right-scene-02",
+      "number": "02",
+      "startFrame": 378,
+      "title": "违法转让与毁损灭失",
+      "durationMs": 6100,
+      "file": "reclaim-right-scene-02.avif",
+      "fileSize": 488631,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "dd30ee82c2a6e9413b79f6ddcab7749de6dd62af1334d219baa2d8279081c50f",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "85b3f74471c45dba9c5534ae66240825bad1ed74b34369d55120018a3a3ec239"
+    },
+    {
+      "endFrame": 1127,
+      "frameCount": 192,
+      "id": "reclaim-right-scene-03",
+      "number": "03",
+      "startFrame": 744,
+      "title": "在途货物的取回",
+      "durationMs": 6400,
+      "file": "reclaim-right-scene-03.avif",
+      "fileSize": 457623,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "b53f65acc981f2ac3f313e7e3ccdf3cdd87cacead88ae520a76aadc68d974744",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "85b3f74471c45dba9c5534ae66240825bad1ed74b34369d55120018a3a3ec239"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "85b3f74471c45dba9c5534ae66240825bad1ed74b34369d55120018a3a3ec239",
+  "targetFps": 30,
+  "totalFileSize": 1417732
+}

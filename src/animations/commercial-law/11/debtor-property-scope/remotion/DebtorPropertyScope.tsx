@@ -1,5 +1,5 @@
 import type {ReactNode} from 'react';
-import {Scale, Landmark, Wallet, Boxes, FileX2, Gem} from 'lucide-react';
+import {Scale, Landmark, Wallet, Boxes, FileX2, Gem, Coins, ShieldCheck, Users, Ban, Undo2} from 'lucide-react';
 import {AbsoluteFill, interpolate, useCurrentFrame} from 'remotion';
 import {CLAMP, TimelineSequence} from '../../../../shared/remotion-runtime';
 import {SCENES} from './storyboard';
@@ -15,30 +15,37 @@ const Shell=({code,title,children}:{readonly code:string;readonly title:string;r
   </AbsoluteFill>
 );
 
+const Watermark=({icon,size=170,color}:{readonly icon:ReactNode;readonly size?:number;readonly color:string})=>(
+  <div style={{position:'absolute',right:6,bottom:-4,opacity:0.09,pointerEvents:'none'}}>
+    {icon}
+  </div>
+);
+
+const Row=({icon,children,delay,color,pad='10px 14px'}:{readonly icon:ReactNode;readonly children:ReactNode;readonly delay:number;readonly color:string;readonly pad?:string})=>{
+  const frame=useCurrentFrame();
+  return <div style={{display:'flex',alignItems:'center',gap:12,padding:pad,background:COLORS.paper,borderLeft:'6px solid '+color,fontSize:22,fontWeight:800,lineHeight:1.45,opacity:interpolate(frame,[delay,delay+22],[0,1],CLAMP),translate:interpolate(frame,[delay,delay+22],['0px 18px','0px 0px'],CLAMP)}}>
+    <span style={{flexShrink:0,display:'flex'}}>{icon}</span>
+    <span>{children}</span>
+  </div>;
+};
+
 export const DebtorPropertyScope01Scene=()=>{
   const frame=useCurrentFrame();
   const enter=(a:number,b:number)=>interpolate(frame,[a,b],[0,1],CLAMP);
-  return <Shell code="11.1" title="一个标准：所有权">
-    <div data-layout="title-test-1" data-visual-anchor="boundary" data-visual-grammar="title-ownership-test,registry-possession-ignored" data-text-treatments="label-block,thin-underline,soft-highlight" data-focal-rule="debtor-property-scope-scene-01-rule" data-focal-channels="enclosure,spatial,icon" style={{position:'absolute',inset:0}}>
-      <div data-final-knowledge="debtor-property-scope-scene-01-test" style={{position:'absolute',left:0,right:0,top:40,display:'grid',gridTemplateColumns:'1fr 1fr',gap:24}}>
-        <div style={{padding:'26px 30px',border:'5px solid '+COLORS.green,background:COLORS.paper,opacity:enter(28,54)}}>
-          <div style={{display:'flex',alignItems:'center',gap:14,marginBottom:12}}>
-            <Scale size={46} color={COLORS.green}/>
-            <div style={{fontSize:30,fontWeight:900}}>破产财产 ＝</div>
-          </div>
-          <div style={{fontSize:26,fontWeight:900,lineHeight:1.5}}><span style={{background:COLORS.green+'28',padding:'2px 10px'}}>所有权属于债务人</span>的财产</div>
-        </div>
-        <div style={{padding:'26px 30px',border:'5px dashed '+COLORS.red,background:COLORS.paper,opacity:enter(46,72)}}>
-          <div style={{display:'flex',alignItems:'center',gap:14,marginBottom:12}}>
-            <FileX2 size={46} color={COLORS.red}/>
-            <div style={{fontSize:30,fontWeight:900}}>归属判断：</div>
-          </div>
-          <div style={{fontSize:26,fontWeight:900,lineHeight:1.5}}>只问<span style={{fontWeight:900}}>所有权</span>，<span style={{color:COLORS.red}}>不看登记、占有</span></div>
-        </div>
+  return <Shell code="11.1" title="唯一判断标准：所有权">
+    <div data-layout="title-test-1" data-visual-anchor="boundary" data-visual-grammar="title-ownership-test,registry-possession-ignored" data-text-treatments="label-block,thin-underline,soft-highlight" data-focal-rule="debtor-property-scope-scene-01-rule" data-focal-channels="enclosure,spatial,icon" style={{position:'absolute',inset:0,display:'flex',flexDirection:'column',gap:20}}>
+      <div data-final-knowledge="debtor-property-scope-knowledge-1" style={{flexShrink:0,display:'flex',alignItems:'center',gap:14,opacity:enter(12,36)}}>
+        <Scale size={42} color={COLORS.green}/>
+        <div style={{fontSize:28,fontWeight:900}}>债务人财产范围——只看一件事</div>
       </div>
-      <div data-final-knowledge="debtor-property-scope-knowledge-1" style={{position:'absolute',left:0,right:0,bottom:0,display:'flex',alignItems:'center',gap:18,border:'4px solid '+COLORS.ink,background:COLORS.paper,padding:'16px 28px',opacity:enter(74,102)}}>
-        <Landmark size={42} color={COLORS.gold}/>
-        <div style={{fontSize:24,fontWeight:800,lineHeight:1.5}}>核心：<span style={{background:COLORS.gold+'40',padding:'2px 10px',fontWeight:900}}>一个标准</span>——所有权是否属于债务人；登记外观、占有状态都不是判断依据</div>
+      <div data-final-knowledge="debtor-property-scope-scene-01-test" style={{flex:'1 1 0',minHeight:0,position:'relative',padding:'24px 28px',border:'6px solid '+COLORS.green,background:COLORS.green+'4D',display:'flex',flexDirection:'column',justifyContent:'center',gap:20,opacity:enter(28,54)}}>
+        <Watermark icon={<Scale size={180} color={COLORS.green} strokeWidth={1.2}/>} color={COLORS.green}/>
+        <div style={{textAlign:'center',fontSize:34,fontWeight:900}}><span style={{background:COLORS.green+'28',padding:'4px 16px'}}>所有权</span> 是否属于 <span style={{background:COLORS.green+'28',padding:'4px 16px'}}>债务人</span></div>
+        <div style={{display:'grid',gridTemplateColumns:'repeat(2,minmax(0,1fr))',gap:20}}>
+          <Row icon={<ShieldCheck size={26} color={COLORS.green}/>} delay={46} color={COLORS.green} pad="16px 18px">属于 → <span style={{fontWeight:900,color:COLORS.green}}>债务人财产</span>（含已设担保物权的财产）</Row>
+          <Row icon={<Ban size={26} color={COLORS.red}/>} delay={62} color={COLORS.red} pad="16px 18px">不属于 → <span style={{fontWeight:900,color:COLORS.red}}>他人可取回</span>（保管/租赁物等）</Row>
+        </div>
+        <Row icon={<Landmark size={26} color={COLORS.green}/>} delay={78} color={COLORS.green} pad="12px 16px">担保物权<span style={{fontWeight:900}}>不转移所有权</span> → 已设担保的财产<span style={{fontWeight:900,color:COLORS.green}}>仍属债务人财产</span>，但担保权人享有<span style={{fontWeight:900}}>别除权</span>，担保物在债权范围内不得用于集体清偿</Row>
       </div>
     </div>
   </Shell>;
@@ -47,35 +54,37 @@ export const DebtorPropertyScope01Scene=()=>{
 export const DebtorPropertyScope02Scene=()=>{
   const frame=useCurrentFrame();
   const enter=(a:number,b:number)=>interpolate(frame,[a,b],[0,1],CLAMP);
+  const slide=(a:number,b:number,from:string)=>interpolate(frame,[a,b],[from,'0px 0px'],CLAMP);
   return <Shell code="11.1" title="属于债务人财产">
-    <div data-layout="in-scope-2" data-visual-anchor="typographic-sequence" data-visual-grammar="secured-assets-included,co-owned-assets-included" data-text-treatments="stamp,soft-highlight,label-block" data-focal-rule="debtor-property-scope-scene-02-rule" data-focal-channels="enclosure,motion,annotation" style={{position:'absolute',inset:0}}>
-      <div data-final-knowledge="debtor-property-scope-knowledge-2" style={{position:'absolute',left:0,right:0,top:0,textAlign:'center',fontSize:26,fontWeight:900,letterSpacing:4,color:'#5C6B64',opacity:enter(12,36)}}>三类属于</div>
-      <div style={{position:'absolute',left:0,right:0,top:70,display:'grid',gridTemplateColumns:'repeat(3,minmax(0,1fr))',gap:20}}>
-        <div data-final-knowledge="debtor-property-scope-scene-02-item-0" style={{padding:'22px 26px',border:'4px solid '+COLORS.ink,borderTop:'12px solid '+COLORS.green,background:COLORS.paper,minHeight:240,opacity:enter(28,54)}}>
-          <div style={{display:'flex',alignItems:'center',gap:12,marginBottom:12}}>
-            <Wallet size={38} color={COLORS.green}/>
-            <div style={{fontSize:26,fontWeight:900}}>一般财产</div>
-          </div>
-          <div style={{fontSize:22,fontWeight:700,lineHeight:1.55}}>债务人所有的<span style={{fontWeight:900}}>货币、实物、股权、知识产权</span></div>
-        </div>
-        <div data-final-knowledge="debtor-property-scope-scene-02-item-1" style={{padding:'22px 26px',border:'4px solid '+COLORS.ink,borderTop:'12px solid '+COLORS.gold,background:COLORS.paper,minHeight:240,opacity:enter(44,70)}}>
-          <div style={{display:'flex',alignItems:'center',gap:12,marginBottom:12}}>
-            <Landmark size={38} color={COLORS.gold}/>
-            <div style={{fontSize:26,fontWeight:900}}>已设担保的财产</div>
-          </div>
-          <div style={{fontSize:22,fontWeight:700,lineHeight:1.55}}>已设定担保物权的特定财产<span style={{fontWeight:900}}>属于</span>债务人财产——担保物权<span style={{background:COLORS.gold+'40',padding:'2px 6px',fontWeight:900}}>不转移所有权</span>，但担保权人享有别除权</div>
-        </div>
-        <div data-final-knowledge="debtor-property-scope-scene-02-item-2" style={{padding:'22px 26px',border:'4px solid '+COLORS.ink,borderTop:'12px solid '+COLORS.red,background:COLORS.paper,minHeight:240,opacity:enter(60,86)}}>
-          <div style={{display:'flex',alignItems:'center',gap:12,marginBottom:12}}>
-            <Boxes size={38} color={COLORS.red}/>
-            <div style={{fontSize:26,fontWeight:900}}>共有财产</div>
-          </div>
-          <div style={{fontSize:22,fontWeight:700,lineHeight:1.55}}>共有的财产等——债务人所享有的份额属于债务人财产</div>
-        </div>
+    <div data-layout="in-scope-2" data-visual-anchor="typographic-sequence" data-visual-grammar="secured-assets-included,co-owned-assets-included" data-text-treatments="stamp,soft-highlight,label-block" data-focal-rule="debtor-property-scope-scene-02-rule" data-focal-channels="enclosure,motion,annotation" style={{position:'absolute',inset:0,display:'flex',flexDirection:'column',gap:16}}>
+      <div data-final-knowledge="debtor-property-scope-knowledge-2" style={{flexShrink:0,display:'flex',alignItems:'center',gap:14,opacity:enter(12,36)}}>
+        <Wallet size={40} color={COLORS.green}/>
+        <div style={{fontSize:27,fontWeight:900}}>三类：<span style={{color:COLORS.green}}>自有财产 · 已设担保财产 · 共有财产</span></div>
       </div>
-      <div style={{position:'absolute',left:0,right:0,bottom:0,display:'flex',alignItems:'center',gap:16,border:'3px dashed '+COLORS.gold,background:COLORS.paper,padding:'14px 24px',opacity:enter(84,110)}}>
-        <Gem size={38} color={COLORS.gold}/>
-        <div style={{fontSize:22,fontWeight:800,lineHeight:1.45}}>易错：设定抵押权的生产设备<span style={{fontWeight:900}}>仍属于</span>债务人财产——担保物在债权范围内不得用于集体清偿，其余部分照常</div>
+      <div style={{flex:'1 1 0',minHeight:0,display:'grid',gridTemplateColumns:'repeat(3,minmax(0,1fr))',gap:20}}>
+        <div data-final-knowledge="debtor-property-scope-scene-02-item-0" style={{position:'relative',padding:'18px 24px',border:'4px solid '+COLORS.ink,borderTop:'12px solid '+COLORS.green,background:COLORS.green+'4D',display:'flex',flexDirection:'column',opacity:enter(28,54),translate:slide(28,54,'0px 22px')}}>
+          <Watermark icon={<Coins size={140} color={COLORS.green} strokeWidth={1.2}/>} color={COLORS.green}/>
+          <div style={{display:'flex',alignItems:'center',gap:12,fontSize:24,fontWeight:900,marginBottom:8,flexShrink:0}}><Coins size={30} color={COLORS.green}/>① 自有财产</div>
+          <div style={{display:'flex',flexDirection:'column',gap:10,flex:1,justifyContent:'space-evenly'}}>
+            <Row icon={<Coins size={22} color={COLORS.green}/>} delay={40} color={COLORS.green} pad="9px 12px">债务人所有的<span style={{fontWeight:900 }}>货币、实物</span></Row>
+            <Row icon={<Gem size={22} color={COLORS.green}/>} delay={52} color={COLORS.green} pad="9px 12px"><span style={{fontWeight:900}}>股权、知识产权</span>等财产权利</Row>
+          </div>
+        </div>
+        <div data-final-knowledge="debtor-property-scope-scene-02-item-1" style={{position:'relative',padding:'18px 24px',border:'4px solid '+COLORS.ink,borderTop:'12px solid '+COLORS.green,background:COLORS.green+'4D',display:'flex',flexDirection:'column',opacity:enter(44,70),translate:slide(44,70,'0px 22px')}}>
+          <Watermark icon={<Scale size={140} color={COLORS.green} strokeWidth={1.2}/>} color={COLORS.green}/>
+          <div style={{display:'flex',alignItems:'center',gap:12,fontSize:24,fontWeight:900,marginBottom:8,flexShrink:0}}><Scale size={30} color={COLORS.green}/>② 已设担保物权的特定财产</div>
+          <div style={{display:'flex',flexDirection:'column',gap:10,flex:1,justifyContent:'space-evenly'}}>
+            <Row icon={<Scale size={22} color={COLORS.green}/>} delay={56} color={COLORS.green} pad="9px 12px">担保物权<span style={{fontWeight:900}}>不转移所有权</span></Row>
+            <Row icon={<ShieldCheck size={22} color={COLORS.green}/>} delay={68} color={COLORS.green} pad="9px 12px">仍属债务人财产——担保权人行使<span style={{fontWeight:900,color:COLORS.gold}}>别除权</span></Row>
+          </div>
+        </div>
+        <div data-final-knowledge="debtor-property-scope-scene-02-item-2" style={{position:'relative',padding:'18px 24px',border:'4px solid '+COLORS.ink,borderTop:'12px solid '+COLORS.green,background:COLORS.green+'4D',display:'flex',flexDirection:'column',opacity:enter(60,86),translate:slide(60,86,'0px 22px')}}>
+          <Watermark icon={<Users size={140} color={COLORS.green} strokeWidth={1.2}/>} color={COLORS.green}/>
+          <div style={{display:'flex',alignItems:'center',gap:12,fontSize:24,fontWeight:900,marginBottom:8,flexShrink:0}}><Users size={30} color={COLORS.green}/>③ 共有财产</div>
+          <div style={{display:'flex',flexDirection:'column',gap:10,flex:1,justifyContent:'space-evenly'}}>
+            <Row icon={<Users size={22} color={COLORS.green}/>} delay={72} color={COLORS.green} pad="9px 12px">与他人<span style={{fontWeight:900}}>共有</span>的财产份额等</Row>
+          </div>
+        </div>
       </div>
     </div>
   </Shell>;
@@ -84,35 +93,37 @@ export const DebtorPropertyScope02Scene=()=>{
 export const DebtorPropertyScope03Scene=()=>{
   const frame=useCurrentFrame();
   const enter=(a:number,b:number)=>interpolate(frame,[a,b],[0,1],CLAMP);
+  const slide=(a:number,b:number,from:string)=>interpolate(frame,[a,b],[from,'0px 0px'],CLAMP);
   return <Shell code="11.1" title="不属于债务人财产">
-    <div data-layout="out-scope-3" data-visual-anchor="comparison-axis" data-visual-grammar="bailment-borrow-lease,title-retention" data-text-treatments="external-negation,label-block,soft-highlight" data-focal-rule="debtor-property-scope-scene-03-rule" data-focal-channels="contrast,spatial,annotation" style={{position:'absolute',inset:0}}>
-      <div data-final-knowledge="debtor-property-scope-knowledge-3" style={{position:'absolute',left:0,right:0,top:0,textAlign:'center',fontSize:26,fontWeight:900,letterSpacing:4,color:'#5C6B64',opacity:enter(12,36)}}>三类不属于——可被取回</div>
-      <div style={{position:'absolute',left:0,right:0,top:70,display:'grid',gridTemplateColumns:'repeat(3,minmax(0,1fr))',gap:20}}>
-        <div data-final-knowledge="debtor-property-scope-scene-03-item-0" style={{padding:'22px 26px',border:'4px solid '+COLORS.ink,borderTop:'12px solid '+COLORS.red,background:COLORS.paper,minHeight:240,opacity:enter(28,54)}}>
-          <div style={{display:'flex',alignItems:'center',gap:12,marginBottom:12}}>
-            <Boxes size={38} color={COLORS.red}/>
-            <div style={{fontSize:26,fontWeight:900}}>保管·借用·租赁</div>
-          </div>
-          <div style={{fontSize:22,fontWeight:700,lineHeight:1.55}}>保管、借用、租赁的<span style={{fontWeight:900}}>他人财产</span>——所有权仍在他人</div>
-        </div>
-        <div data-final-knowledge="debtor-property-scope-scene-03-item-1" style={{padding:'22px 26px',border:'4px solid '+COLORS.ink,borderTop:'12px solid '+COLORS.red,background:COLORS.paper,minHeight:240,opacity:enter(44,70)}}>
-          <div style={{display:'flex',alignItems:'center',gap:12,marginBottom:12}}>
-            <FileX2 size={38} color={COLORS.red}/>
-            <div style={{fontSize:26,fontWeight:900}}>所有权保留</div>
-          </div>
-          <div style={{fontSize:22,fontWeight:700,lineHeight:1.55}}>所有权保留买卖中<span style={{fontWeight:900}}>尚未取得所有权</span>的财产</div>
-        </div>
-        <div data-final-knowledge="debtor-property-scope-scene-03-item-2" style={{padding:'22px 26px',border:'4px solid '+COLORS.ink,borderTop:'12px solid '+COLORS.red,background:COLORS.paper,minHeight:240,opacity:enter(60,86)}}>
-          <div style={{display:'flex',alignItems:'center',gap:12,marginBottom:12}}>
-            <Gem size={38} color={COLORS.red}/>
-            <div style={{fontSize:26,fontWeight:900}}>国家专属</div>
-          </div>
-          <div style={{fontSize:22,fontWeight:700,lineHeight:1.55}}>专属于国家且<span style={{fontWeight:900}}>不得转让</span>的财产等</div>
-        </div>
+    <div data-layout="out-scope-3" data-visual-anchor="comparison-axis" data-visual-grammar="bailment-borrow-lease,title-retention" data-text-treatments="external-negation,label-block,soft-highlight" data-focal-rule="debtor-property-scope-scene-03-rule" data-focal-channels="contrast,spatial,annotation" style={{position:'absolute',inset:0,display:'flex',flexDirection:'column',gap:16}}>
+      <div data-final-knowledge="debtor-property-scope-knowledge-3" style={{flexShrink:0,display:'flex',alignItems:'center',gap:14,opacity:enter(12,36)}}>
+        <FileX2 size={40} color={COLORS.red}/>
+        <div style={{fontSize:27,fontWeight:900}}>所有权不属于债务人——<span style={{color:COLORS.red }}>权利人可取回</span></div>
       </div>
-      <div style={{position:'absolute',left:0,right:0,bottom:0,display:'flex',alignItems:'center',gap:16,border:'3px dashed '+COLORS.green,background:COLORS.paper,padding:'14px 24px',opacity:enter(84,110)}}>
-        <Landmark size={38} color={COLORS.green}/>
-        <div style={{fontSize:22,fontWeight:800,lineHeight:1.45}}>例：根据代管协议合法占有的委托人房产，所有权属于委托人，<span style={{fontWeight:900,color:COLORS.red}}>不属于债务人财产</span>——委托人可取回</div>
+      <div style={{flex:'1 1 0',minHeight:0,display:'grid',gridTemplateColumns:'repeat(3,minmax(0,1fr))',gap:20}}>
+        <div data-final-knowledge="debtor-property-scope-scene-03-item-0" style={{position:'relative',padding:'18px 24px',border:'4px solid '+COLORS.ink,borderTop:'12px solid '+COLORS.red,background:COLORS.red+'4D',display:'flex',flexDirection:'column',opacity:enter(28,54),translate:slide(28,54,'0px 22px')}}>
+          <Watermark icon={<Boxes size={140} color={COLORS.red} strokeWidth={1.2}/>} color={COLORS.red}/>
+          <div style={{display:'flex',alignItems:'center',gap:12,fontSize:24,fontWeight:900,marginBottom:8,flexShrink:0}}><Boxes size={30} color={COLORS.red}/>① 占有他人的财产</div>
+          <div style={{display:'flex',flexDirection:'column',gap:10,flex:1,justifyContent:'space-evenly'}}>
+            <Row icon={<Boxes size={22} color={COLORS.red}/>} delay={40} color={COLORS.red} pad="9px 12px"><span style={{fontWeight:900}}>保管、借用、租赁</span>的他人财产</Row>
+            <Row icon={<Undo2 size={22} color={COLORS.red}/>} delay={52} color={COLORS.red} pad="9px 12px">所有权人可通过管理人<span style={{fontWeight:900,color:COLORS.red}}>取回</span></Row>
+          </div>
+        </div>
+        <div data-final-knowledge="debtor-property-scope-scene-03-item-1" style={{position:'relative',padding:'18px 24px',border:'4px solid '+COLORS.ink,borderTop:'12px solid '+COLORS.red,background:COLORS.red+'4D',display:'flex',flexDirection:'column',opacity:enter(44,70),translate:slide(44,70,'0px 22px')}}>
+          <Watermark icon={<FileX2 size={140} color={COLORS.red} strokeWidth={1.2}/>} color={COLORS.red}/>
+          <div style={{display:'flex',alignItems:'center',gap:12,fontSize:24,fontWeight:900,marginBottom:8,flexShrink:0}}><FileX2 size={30} color={COLORS.red}/>② 所有权保留买卖</div>
+          <div style={{display:'flex',flexDirection:'column',gap:10,flex:1,justifyContent:'space-evenly'}}>
+            <Row icon={<FileX2 size={22} color={COLORS.red}/>} delay={56} color={COLORS.red} pad="9px 12px"><span style={{fontWeight:900}}>尚未取得所有权</span>的财产</Row>
+            <Row icon={<Ban size={22} color={COLORS.red}/>} delay={68} color={COLORS.red} pad="9px 12px">出卖人保留所有权 → <span style={{fontWeight:900,color:COLORS.red}}>不属于</span>债务人财产</Row>
+          </div>
+        </div>
+        <div data-final-knowledge="debtor-property-scope-scene-03-item-2" style={{position:'relative',padding:'18px 24px',border:'4px solid '+COLORS.ink,borderTop:'12px solid '+COLORS.red,background:COLORS.red+'4D',display:'flex',flexDirection:'column',opacity:enter(60,86),translate:slide(60,86,'0px 22px')}}>
+          <Watermark icon={<Landmark size={140} color={COLORS.red} strokeWidth={1.2}/>} color={COLORS.red}/>
+          <div style={{display:'flex',alignItems:'center',gap:12,fontSize:24,fontWeight:900,marginBottom:8,flexShrink:0}}><Landmark size={30} color={COLORS.red}/>③ 专属国家财产</div>
+          <div style={{display:'flex',flexDirection:'column',gap:10,flex:1,justifyContent:'space-evenly'}}>
+            <Row icon={<Landmark size={22} color={COLORS.red}/>} delay={72} color={COLORS.red} pad="9px 12px"><span style={{fontWeight:900}}>专属于国家</span>且不得转让的财产等</Row>
+          </div>
+        </div>
       </div>
     </div>
   </Shell>;

@@ -1,5 +1,5 @@
 import type {ReactNode} from 'react';
-import {CalendarDays, ShieldCheck, AlertOctagon, Ban, Gift, Percent, HandCoins, Wallet} from 'lucide-react';
+import {CalendarDays, ShieldCheck, AlertOctagon, Ban, Gift, Percent, HandCoins, Wallet, Scale, Users, Landmark, Lock, TrendingUp, Coins} from 'lucide-react';
 import {AbsoluteFill, interpolate, useCurrentFrame} from 'remotion';
 import {CLAMP, TimelineSequence} from '../../../../shared/remotion-runtime';
 import {SCENES} from './storyboard';
@@ -10,43 +10,68 @@ const PLAYER_CONTROL_SAFE_BOTTOM = 160;
 const Shell=({code,title,children}:{readonly code:string;readonly title:string;readonly children:ReactNode})=>(
   <AbsoluteFill data-player-control-safe-bottom={PLAYER_CONTROL_SAFE_BOTTOM} style={{background:COLORS.background, color:COLORS.ink, overflow:'hidden'}}>
     <div style={{position:'absolute',left:76,top:40,padding:'14px 22px',fontSize:24,fontWeight:900,letterSpacing:4,background:COLORS.red,color:COLORS.paper}}>{code}</div>
-    <div style={{position:'absolute',left:190,right:76,top:46,fontSize:46,fontWeight:900,lineHeight:1.12,borderBottom:'5px solid '+COLORS.gold,paddingBottom:12}}>{title}</div>
+    <div style={{position:'absolute',left:190,right:76,top:46,fontSize:46,fontWeight:900,lineHeight:1.12,borderBottom:'5px solid '+COLORS.green,paddingBottom:12}}>{title}</div>
     <div style={{position:'absolute',left:76,right:76,top:150,bottom: PLAYER_CONTROL_SAFE_BOTTOM}}>{children}</div>
   </AbsoluteFill>
 );
 
+const Watermark=({icon,size=170,color}:{readonly icon:ReactNode;readonly size?:number;readonly color:string})=>(
+  <div style={{position:'absolute',right:6,bottom:-4,opacity:0.09,pointerEvents:'none'}}>
+    {icon}
+  </div>
+);
+
+const Row=({icon,children,delay,color,pad='10px 14px'}:{readonly icon:ReactNode;readonly children:ReactNode;readonly delay:number;readonly color:string;readonly pad?:string})=>{
+  const frame=useCurrentFrame();
+  return <div style={{display:'flex',alignItems:'center',gap:12,padding:pad,background:COLORS.paper,borderLeft:'6px solid '+color,fontSize:22,fontWeight:800,lineHeight:1.45,opacity:interpolate(frame,[delay,delay+22],[0,1],CLAMP),translate:interpolate(frame,[delay,delay+22],['0px 18px','0px 0px'],CLAMP)}}>
+    <span style={{flexShrink:0,display:'flex'}}>{icon}</span>
+    <span>{children}</span>
+  </div>;
+};
+
 export const BankruptcyRevocationRight01Scene=()=>{
   const frame=useCurrentFrame();
   const enter=(a:number,b:number)=>interpolate(frame,[a,b],[0,1],CLAMP);
-  const axisProgress=interpolate(frame,[100,230],[0,1],CLAMP);
-  return <Shell code="11.4" title="临界期四阶段">
-    <div data-layout="critical-calendar-1" data-visual-anchor="timeline-gate" data-visual-grammar="critical-period-axis,four-stage-zones" data-text-treatments="label-block,thin-underline,soft-highlight" data-focal-rule="bankruptcy-revocation-right-scene-01-rule" data-focal-channels="connector,motion,locator" style={{position:'absolute',inset:0}}>
-      <div data-final-knowledge="bankruptcy-revocation-right-knowledge-1" style={{position:'absolute',left:0,right:0,top:0,display:'flex',alignItems:'center',gap:14,opacity:enter(12,36)}}>
-        <CalendarDays size={42} color={COLORS.red}/>
-        <div style={{fontSize:28,fontWeight:900}}>受理前的临界期内，有害全体债权人利益的行为——管理人可请求法院撤销</div>
+  const clockProgress=interpolate(frame,[110,230],[0,1],CLAMP);
+  return <Shell code="11.4" title="撤销权的时间轴">
+    <div data-layout="critical-calendar-1" data-visual-anchor="timeline-gate" data-visual-grammar="critical-period-axis,four-stage-zones" data-text-treatments="label-block,thin-underline,soft-highlight" data-focal-rule="bankruptcy-revocation-right-scene-01-rule" data-focal-channels="connector,motion,locator" style={{position:'absolute',inset:0,display:'flex',flexDirection:'column',gap:14}}>
+      <div data-final-knowledge="bankruptcy-revocation-right-knowledge-1" style={{flexShrink:0,display:'flex',alignItems:'center',gap:14,opacity:enter(12,36)}}>
+        <CalendarDays size={40} color={COLORS.red}/>
+        <div style={{fontSize:26,fontWeight:900 }}>受理前<span style={{color:COLORS.red }}>临界期</span>内有害于全体债权人利益的行为 → 管理人请求法院<span style={{color:COLORS.red }}>撤销</span></div>
       </div>
-      <div style={{position:'absolute',left:140,right:140,top:150,height:10,background:COLORS.ink}}/>
-      <div style={{position:'absolute',left:140,top:130,width:10,height:50,background:COLORS.ink}}/>
-      <div style={{position:'absolute',right:140,top:130,width:10,height:50,background:COLORS.ink}}/>
-      <div style={{position:'absolute',left:140,top:150,width:interpolate(axisProgress,[0,1],[0,1500],CLAMP),height:10,background:COLORS.red,opacity:enter(100,122)}}/>
-      <div data-stateful-source="bankruptcy-revocation-right-calendar" style={{position:'absolute',left:interpolate(axisProgress,[0,1],[135,1610],CLAMP),top:132,width:0,height:0,borderLeft:'14px solid transparent',borderRight:'14px solid transparent',borderBottom:'30px solid '+COLORS.gold,opacity:axisProgress>0.94?0:1,zIndex:4}}/>
-      <div data-final-knowledge="bankruptcy-revocation-right-scene-01-stage-0" style={{position:'absolute',left:140,top:240,width:330,padding:'16px 20px',border:'4px solid '+COLORS.ink,background:COLORS.paper,opacity:enter(46,72)}}>
-        <div style={{fontSize:25,fontWeight:900,marginBottom:6,color:COLORS.green}}>A 安全阶段 · 1年前</div>
-        <div style={{fontSize:21,fontWeight:700,lineHeight:1.45}}>任何行为均<span style={{fontWeight:900}}>不可撤销</span></div>
+      <div style={{flexShrink:0,position:'relative',height:40}}>
+        <div style={{position:'absolute',left:40,width:interpolate(clockProgress,[0,1],[0,1600],CLAMP),top:15,height:8,background:COLORS.ink}}/>
+        <div style={{position:'absolute',left:40,top:1,width:10,height:38,background:COLORS.ink}}/>
+        <div style={{position:'absolute',left:1680,top:1,width:10,height:38,background:COLORS.ink}}/>
+        <div data-stateful-source="bankruptcy-revocation-right-calendar" style={{position:'absolute',left:interpolate(clockProgress,[0,1],[40,1590],CLAMP),top:-8,width:0,height:0,borderLeft:'14px solid transparent',borderRight:'14px solid transparent',borderBottom:'30px solid '+COLORS.red,opacity:clockProgress>0.94?0:1,zIndex:4}}/>
+        <div data-stateful-terminal="bankruptcy-revocation-right-calendar" style={{position:'absolute',left:1600,top:44,padding:'4px 12px',border:'3px solid '+COLORS.ink,background:COLORS.red,color:COLORS.paper,fontSize:17,fontWeight:900,opacity:enter(150,172)}}>受理日</div>
       </div>
-      <div data-final-knowledge="bankruptcy-revocation-right-scene-01-stage-1" style={{position:'absolute',left:500,top:240,width:330,padding:'16px 20px',border:'4px solid '+COLORS.ink,background:COLORS.paper,opacity:enter(62,88)}}>
-        <div style={{fontSize:25,fontWeight:900,marginBottom:6,color:'#7A5B12'}}>B 重病阶段 · 受理前1年内</div>
-        <div style={{fontSize:21,fontWeight:700,lineHeight:1.45}}><span style={{fontWeight:900}}>欺诈行为</span>可撤销</div>
+      <div style={{flex:'1 1 0',minHeight:0,display:'grid',gridTemplateColumns:'repeat(4,minmax(0,1fr))',gap:16}}>
+        <div data-final-knowledge="bankruptcy-revocation-right-scene-01-stage-0" style={{position:'relative',padding:'14px 20px',border:'4px solid '+COLORS.ink,borderTop:'12px solid '+COLORS.green,background:COLORS.green+'4D',display:'flex',flexDirection:'column',opacity:enter(40,66)}}>
+          <Watermark icon={<ShieldCheck size={110} color={COLORS.green} strokeWidth={1.2}/>} color={COLORS.green}/>
+          <div style={{fontSize:23,fontWeight:900,marginBottom:6,flexShrink:0,color:COLORS.green }}>A 安全阶段</div>
+          <Row icon={<ShieldCheck size={22} color={COLORS.green}/>} delay={52} color={COLORS.green} pad="8px 12px"><span style={{fontWeight:900 }}>1年前</span>——任何行为均<span style={{fontWeight:900,color:COLORS.green }}>不可撤</span></Row>
+        </div>
+        <div data-final-knowledge="bankruptcy-revocation-right-scene-01-stage-1" style={{position:'relative',padding:'14px 20px',border:'4px solid '+COLORS.ink,borderTop:'12px solid '+COLORS.gold,background:COLORS.gold+'4D',display:'flex',flexDirection:'column',opacity:enter(54,80)}}>
+          <Watermark icon={<AlertOctagon size={110} color={COLORS.gold} strokeWidth={1.2}/>} color={COLORS.gold}/>
+          <div style={{fontSize:23,fontWeight:900,marginBottom:6,flexShrink:0,color:'#7A5B12'}}>B 重病阶段</div>
+          <Row icon={<AlertOctagon size={22} color={COLORS.gold}/>} delay={66} color={COLORS.gold} pad="8px 12px">受理前<span style={{fontWeight:900,color:COLORS.gold }}>1年内</span>——<span style={{fontWeight:900 }}>欺诈行为</span>可撤</Row>
+        </div>
+        <div data-final-knowledge="bankruptcy-revocation-right-scene-01-stage-2" style={{position:'relative',padding:'14px 20px',border:'4px solid '+COLORS.ink,borderTop:'12px solid '+COLORS.red,background:COLORS.red+'4D',display:'flex',flexDirection:'column',opacity:enter(68,94)}}>
+          <Watermark icon={<HandCoins size={110} color={COLORS.red} strokeWidth={1.2}/>} color={COLORS.red}/>
+          <div style={{fontSize:23,fontWeight:900,marginBottom:6,flexShrink:0,color:COLORS.red }}>C 垂死阶段</div>
+          <Row icon={<HandCoins size={22} color={COLORS.red}/>} delay={80} color={COLORS.red} pad="8px 12px">已有<span style={{fontWeight:900 }}>破产原因</span>，受理前<span style={{fontWeight:900,color:COLORS.red }}>6个月内</span>——<span style={{fontWeight:900 }}>个别清偿</span>可撤</Row>
+        </div>
+        <div data-final-knowledge="bankruptcy-revocation-right-scene-01-stage-3" style={{position:'relative',padding:'14px 20px',border:'4px solid '+COLORS.ink,borderTop:'12px solid '+COLORS.ink,background:COLORS.ink+'4D',display:'flex',flexDirection:'column',opacity:enter(82,108)}}>
+          <Watermark icon={<Ban size={110} color={COLORS.ink} strokeWidth={1.2}/>} color={COLORS.ink}/>
+          <div style={{fontSize:23,fontWeight:900,marginBottom:6,flexShrink:0}}>D 破产阶段</div>
+          <Row icon={<Ban size={22} color={COLORS.ink}/>} delay={94} color={COLORS.ink} pad="8px 12px">受理后——<span style={{fontWeight:900,color:COLORS.red }}>禁止个别清偿</span></Row>
+        </div>
       </div>
-      <div data-final-knowledge="bankruptcy-revocation-right-scene-01-stage-2" style={{position:'absolute',left:860,top:240,width:330,padding:'16px 20px',border:'4px solid '+COLORS.ink,background:COLORS.paper,opacity:enter(78,104)}}>
-        <div style={{fontSize:25,fontWeight:900,marginBottom:6,color:COLORS.red}}>C 垂死阶段 · 受理前6个月内</div>
-        <div style={{fontSize:21,fontWeight:700,lineHeight:1.45}}>有破产原因——<span style={{fontWeight:900}}>个别清偿</span>可撤销</div>
+      <div style={{flexShrink:0,display:'flex',alignItems:'center',gap:16,border:'3px dashed '+COLORS.red,background:COLORS.red+'4D',padding:'13px 24px',opacity:enter(112,138)}}>
+        <CalendarDays size={34} color={COLORS.red}/>
+        <div style={{fontSize:22,fontWeight:900}}>口诀：<span style={{color:COLORS.red}}>欺诈看一年，个别看半年，一年之外全不撤</span></div>
       </div>
-      <div data-final-knowledge="bankruptcy-revocation-right-scene-01-stage-3" style={{position:'absolute',left:1220,top:240,width:380,padding:'16px 20px',border:'5px solid '+COLORS.red,background:COLORS.paper,opacity:enter(94,120)}}>
-        <div style={{fontSize:25,fontWeight:900,marginBottom:6,color:COLORS.red}}>D 破产阶段 · 受理后</div>
-        <div style={{fontSize:21,fontWeight:700,lineHeight:1.45}}><span style={{fontWeight:900}}>禁止个别清偿</span></div>
-      </div>
-      <div data-stateful-terminal="bankruptcy-revocation-right-calendar" style={{position:'absolute',left:1440,top:180,padding:'8px 16px',border:'3px solid '+COLORS.ink,background:COLORS.gold,color:COLORS.paper,fontSize:20,fontWeight:900,opacity:enter(140,162)}}>1年线 → 6个月线 → 受理日</div>
     </div>
   </Shell>;
 };
@@ -54,50 +79,37 @@ export const BankruptcyRevocationRight01Scene=()=>{
 export const BankruptcyRevocationRight02Scene=()=>{
   const frame=useCurrentFrame();
   const enter=(a:number,b:number)=>interpolate(frame,[a,b],[0,1],CLAMP);
-  return <Shell code="11.4" title="欺诈破产行为：1年内可撤销">
-    <div data-layout="fraud-five-2" data-visual-anchor="typographic-sequence" data-visual-grammar="fraudulent-acts,one-year-window" data-text-treatments="stamp,soft-highlight,label-block" data-focal-rule="bankruptcy-revocation-right-scene-02-rule" data-focal-channels="enclosure,motion,annotation" style={{position:'absolute',inset:0}}>
-      <div data-final-knowledge="bankruptcy-revocation-right-knowledge-2" style={{position:'absolute',left:0,right:0,top:0,display:'flex',alignItems:'center',gap:14,opacity:enter(12,36)}}>
-        <AlertOctagon size={42} color={COLORS.red}/>
-        <div style={{fontSize:28,fontWeight:900}}>受理前<span style={{background:COLORS.red+'20',padding:'2px 10px'}}>1年内</span>的五类行为，均可撤销</div>
-      </div>
-      <div style={{position:'absolute',left:0,right:0,top:80,display:'grid',gridTemplateColumns:'repeat(3,minmax(0,1fr))',gap:18}}>
-        <div data-final-knowledge="bankruptcy-revocation-right-scene-02-act-0" style={{padding:'18px 22px',border:'4px solid '+COLORS.ink,borderTop:'12px solid '+COLORS.red,background:COLORS.paper,minHeight:140,opacity:enter(28,54)}}>
-          <div style={{display:'flex',alignItems:'center',gap:10,marginBottom:8}}>
-            <Gift size={32} color={COLORS.red}/>
-            <div style={{fontSize:25,fontWeight:900}}>① 无偿转让财产</div>
-          </div>
+  const slide=(a:number,b:number,from:string)=>interpolate(frame,[a,b],[from,'0px 0px'],CLAMP);
+  const Act=({id,title,delay,icon,children}:{readonly id:string;readonly title:string;readonly delay:number;readonly icon:ReactNode;readonly children:ReactNode})=>(
+    <div data-final-knowledge={id} style={{position:'relative',padding:'12px 20px',border:'4px solid '+COLORS.ink,borderTop:'10px solid '+COLORS.red,background:COLORS.red+'4D',display:'flex',flexDirection:'column',opacity:enter(delay,delay+26),translate:slide(delay,delay+26,'0px 20px')}}>
+      <div style={{display:'flex',alignItems:'center',gap:12,fontSize:23,fontWeight:900,marginBottom:4,flexShrink:0}}>{icon}{title}</div>
+      <div style={{display:'flex',flexDirection:'column',gap:7,flex:1,justifyContent:'space-evenly'}}>{children}</div>
+    </div>
+  );
+  return <Shell code="11.4" title="欺诈破产行为（第一类）">
+    <div data-layout="fraud-five-2" data-visual-anchor="typographic-sequence" data-visual-grammar="fraudulent-acts,one-year-window" data-text-treatments="stamp,soft-highlight,label-block" data-focal-rule="bankruptcy-revocation-right-scene-02-rule" data-focal-channels="enclosure,motion,annotation" style={{position:'absolute',inset:0,display:'flex',flexDirection:'column',gap:14}}>
+      <div data-final-knowledge="bankruptcy-revocation-right-knowledge-2" style={{flexShrink:0,textAlign:'center',fontSize:26,fontWeight:900,letterSpacing:4,color:'#6E6757',opacity:enter(12,36)}}>受理前<span style={{color:COLORS.red }}>1年内</span>的下列行为——<span style={{color:COLORS.red }}>均可撤销</span></div>
+      <div style={{flex:'1 1 0',minHeight:0,display:'grid',gridTemplateColumns:'repeat(3,minmax(0,1fr))',gridTemplateRows:'repeat(2,minmax(0,1fr))',gap:14}}>
+        <div data-final-knowledge="bankruptcy-revocation-right-scene-02-act-0" style={{position:'relative',padding:'12px 20px',border:'4px solid '+COLORS.ink,borderTop:'10px solid '+COLORS.red,background:COLORS.red+'4D',display:'flex',flexDirection:'column',opacity:enter(26,52),translate:slide(26,52,'0px 20px')}}>
+          <Row icon={<Gift size={22} color={COLORS.red}/>} delay={38} color={COLORS.red} pad="6px 12px">无对价送人——纯减损</Row>
         </div>
-        <div data-final-knowledge="bankruptcy-revocation-right-scene-02-act-1" style={{padding:'18px 22px',border:'4px solid '+COLORS.ink,borderTop:'12px solid '+COLORS.red,background:COLORS.paper,minHeight:140,opacity:enter(44,70)}}>
-          <div style={{display:'flex',alignItems:'center',gap:10,marginBottom:8}}>
-            <Percent size={32} color={COLORS.red}/>
-            <div style={{fontSize:25,fontWeight:900}}>② 明显不合理价格交易</div>
-          </div>
+        <div data-final-knowledge="bankruptcy-revocation-right-scene-02-act-1" style={{position:'relative',padding:'12px 20px',border:'4px solid '+COLORS.ink,borderTop:'10px solid '+COLORS.red,background:COLORS.red+'4D',display:'flex',flexDirection:'column',opacity:enter(40,66),translate:slide(40,66,'0px 20px')}}>
+          <Row icon={<Percent size={22} color={COLORS.red}/>} delay={50} color={COLORS.red} pad="6px 12px">低价卖 / 高价买</Row>
         </div>
-        <div data-final-knowledge="bankruptcy-revocation-right-scene-02-act-2" style={{padding:'18px 22px',border:'4px solid '+COLORS.ink,borderTop:'12px solid '+COLORS.red,background:COLORS.paper,minHeight:140,opacity:enter(60,86)}}>
-          <div style={{display:'flex',alignItems:'center',gap:10,marginBottom:8}}>
-            <HandCoins size={32} color={COLORS.red}/>
-            <div style={{fontSize:25,fontWeight:900}}>③ 对没有担保的债务提供担保</div>
-          </div>
+        <div data-final-knowledge="bankruptcy-revocation-right-scene-02-act-2" style={{position:'relative',padding:'12px 20px',border:'4px solid '+COLORS.ink,borderTop:'10px solid '+COLORS.red,background:COLORS.red+'4D',display:'flex',flexDirection:'column',opacity:enter(54,80),translate:slide(54,80,'0px 20px')}}>
+          <Row icon={<Lock size={22} color={COLORS.red}/>} delay={62} color={COLORS.red} pad="6px 12px">原本无担保 → 事后补担保</Row>
         </div>
-        <div data-final-knowledge="bankruptcy-revocation-right-scene-02-act-3" style={{padding:'18px 22px',border:'4px solid '+COLORS.ink,borderTop:'12px solid '+COLORS.red,background:COLORS.paper,minHeight:140,opacity:enter(76,102)}}>
-          <div style={{display:'flex',alignItems:'center',gap:10,marginBottom:8}}>
-            <Ban size={32} color={COLORS.red}/>
-            <div style={{fontSize:25,fontWeight:900}}>④ 放弃债权</div>
-          </div>
+        <div data-final-knowledge="bankruptcy-revocation-right-scene-02-act-3" style={{position:'relative',padding:'12px 20px',border:'4px solid '+COLORS.ink,borderTop:'10px solid '+COLORS.red,background:COLORS.red+'4D',display:'flex',flexDirection:'column',opacity:enter(68,94),translate:slide(68,94,'0px 20px')}}>
+          <Row icon={<Ban size={22} color={COLORS.red}/>} delay={74} color={COLORS.red} pad="6px 12px">自扔债权——损害全体债权人</Row>
         </div>
-        <div data-final-knowledge="bankruptcy-revocation-right-scene-02-act-4" style={{padding:'18px 22px',border:'4px solid '+COLORS.ink,borderTop:'12px solid '+COLORS.red,background:COLORS.paper,minHeight:140,opacity:enter(92,118)}}>
-          <div style={{display:'flex',alignItems:'center',gap:10,marginBottom:8}}>
-            <Wallet size={32} color={COLORS.red}/>
-            <div style={{fontSize:25,fontWeight:900}}>⑤ 提前清偿未到期债务</div>
-          </div>
+        <div data-final-knowledge="bankruptcy-revocation-right-scene-02-act-4" style={{position:'relative',padding:'12px 20px',border:'4px solid '+COLORS.ink,borderTop:'10px solid '+COLORS.red,background:COLORS.red+'4D',display:'flex',flexDirection:'column',opacity:enter(82,108),translate:slide(82,108,'0px 20px')}}>
+          <Row icon={<Wallet size={22} color={COLORS.red}/>} delay={86} color={COLORS.red} pad="6px 12px">例外：受理日<span style={{fontWeight:900 }}>前已到期</span> → <span style={{fontWeight:900,color:COLORS.green }}>不可撤</span>（除非属可撤的个别清偿）</Row>
         </div>
-        <div style={{padding:'18px 22px',border:'4px dashed '+COLORS.gold,background:COLORS.paper,minHeight:140,opacity:enter(104,130),display:'grid',alignItems:'center'}}>
-          <div style={{fontSize:23,fontWeight:800,lineHeight:1.5}}>例外：受理日前<span style={{fontWeight:900}}>已到期</span>的不可撤销——除非属于可撤销的个别清偿</div>
+        <div style={{position:'relative',padding:'12px 20px',border:'4px dashed '+COLORS.green,background:COLORS.green+'4D',display:'flex',flexDirection:'column',justifyContent:'center',gap:8,opacity:enter(96,122)}}>
+          <Watermark icon={<Scale size={110} color={COLORS.green} strokeWidth={1.2}/>} color={COLORS.green}/>
+          <div style={{fontSize:22,fontWeight:900,color:COLORS.green,flexShrink:0 }}>共同本质</div>
+          <div style={{fontSize:20,fontWeight:800,lineHeight:1.45 }}>五种行为都是<span style={{fontWeight:900,color:COLORS.green }}>减损债务人财产</span>、损害全体债权人公平受偿的行为——管理人请求法院撤销后，财产<span style={{fontWeight:900,color:COLORS.green }}>归入债务人财产</span></div>
         </div>
-      </div>
-      <div style={{position:'absolute',left:0,right:0,bottom:0,display:'flex',alignItems:'center',gap:16,border:'3px dashed '+COLORS.red,background:COLORS.paper,padding:'14px 24px',opacity:enter(118,144)}}>
-        <CalendarDays size={38} color={COLORS.red}/>
-        <div style={{fontSize:22,fontWeight:800,lineHeight:1.45}}>口诀：<span style={{background:COLORS.red+'20',padding:'2px 8px',fontWeight:900}}>欺诈看一年</span>，个别看半年，一年之外全不撤</div>
       </div>
     </div>
   </Shell>;
@@ -106,19 +118,41 @@ export const BankruptcyRevocationRight02Scene=()=>{
 export const BankruptcyRevocationRight03Scene=()=>{
   const frame=useCurrentFrame();
   const enter=(a:number,b:number)=>interpolate(frame,[a,b],[0,1],CLAMP);
-  return <Shell code="11.4" title="个别清偿：可撤销与例外">
-    <div data-layout="repayment-exceptions-3" data-visual-anchor="boundary" data-visual-grammar="individual-repayment,exception-gates" data-text-treatments="external-negation,soft-highlight,stamp" data-focal-rule="bankruptcy-revocation-right-scene-03-rule" data-focal-channels="enclosure,contrast,annotation" style={{position:'absolute',inset:0}}>
-      <div data-final-knowledge="bankruptcy-revocation-right-scene-03-rule" style={{position:'absolute',left:0,top:0,width:900,padding:'20px 26px',border:'5px solid '+COLORS.red,background:COLORS.paper,opacity:enter(28,54)}}>
-        <div style={{fontSize:27,fontWeight:900,marginBottom:8}}>原则：可撤销</div>
-        <div style={{fontSize:22,fontWeight:700,lineHeight:1.5}}>受理前<span style={{fontWeight:900}}>6个月内</span>，有破产原因，对个别债权人清偿的——<span style={{background:COLORS.red+'20',padding:'2px 6px',fontWeight:900}}>可撤销</span></div>
+  const slide=(a:number,b:number,from:string)=>interpolate(frame,[a,b],[from,'0px 0px'],CLAMP);
+  return <Shell code="11.4" title="个别清偿：原则与例外">
+    <div data-layout="repayment-exceptions-3" data-visual-anchor="boundary" data-visual-grammar="individual-repayment,exception-gates" data-text-treatments="external-negation,soft-highlight,stamp" data-focal-rule="bankruptcy-revocation-right-scene-03-rule" data-focal-channels="enclosure,contrast,annotation" style={{position:'absolute',inset:0,display:'flex',flexDirection:'column',gap:16}}>
+      <div data-final-knowledge="bankruptcy-revocation-right-knowledge-3" style={{flexShrink:0,textAlign:'center',fontSize:26,fontWeight:900,letterSpacing:4,color:'#6E6757',opacity:enter(12,36)}}>第二类：受理前<span style={{color:COLORS.red }}>6个月内</span>＋有破产原因的<span style={{color:COLORS.red }}>个别清偿</span></div>
+      <div style={{flex:'1 1 0',minHeight:0,display:'grid',gridTemplateColumns:'1fr 1.3fr',gap:20}}>
+        <div data-final-knowledge="bankruptcy-revocation-right-scene-03-rule" style={{position:'relative',padding:'16px 24px',border:'5px solid '+COLORS.red,background:COLORS.red+'4D',display:'flex',flexDirection:'column',opacity:enter(28,54),translate:slide(28,54,'-24px 0px')}}>
+          <Watermark icon={<HandCoins size={150} color={COLORS.red} strokeWidth={1.2}/>} color={COLORS.red}/>
+          <div style={{display:'flex',alignItems:'center',gap:12,marginBottom:8,flexShrink:0}}>
+            <HandCoins size={32} color={COLORS.red}/>
+            <div style={{padding:'8px 18px',background:COLORS.red,color:COLORS.paper,fontSize:24,fontWeight:900 }}>原则：可撤销</div>
+          </div>
+          <div style={{display:'flex',flexDirection:'column',gap:10,flex:1,justifyContent:'space-evenly'}}>
+            <Row icon={<HandCoins size={22} color={COLORS.red}/>} delay={40} color={COLORS.red} pad="9px 13px">受理前<span style={{fontWeight:900,color:COLORS.red }}>6个月内</span></Row>
+            <Row icon={<Scale size={22} color={COLORS.red}/>} delay={52} color={COLORS.red} pad="9px 13px">已有<span style={{fontWeight:900 }}>破产原因</span></Row>
+            <Row icon={<Users size={22} color={COLORS.red}/>} delay={64} color={COLORS.red} pad="9px 13px">对<span style={{fontWeight:900 }}>个别债权人</span>清偿——偏颇清偿</Row>
+          </div>
+        </div>
+        <div data-final-knowledge="bankruptcy-revocation-right-scene-03-exceptions" style={{position:'relative',padding:'16px 24px',border:'5px solid '+COLORS.green,background:COLORS.green+'4D',display:'flex',flexDirection:'column',opacity:enter(46,72),translate:slide(46,72,'24px 0px')}}>
+          <Watermark icon={<ShieldCheck size={150} color={COLORS.green} strokeWidth={1.2}/>} color={COLORS.green}/>
+          <div style={{display:'flex',alignItems:'center',gap:12,marginBottom:8,flexShrink:0}}>
+            <ShieldCheck size={32} color={COLORS.green}/>
+            <div style={{padding:'8px 18px',background:COLORS.green,color:COLORS.paper,fontSize:24,fontWeight:900 }}>例外：不可撤（五项）</div>
+          </div>
+          <div style={{display:'flex',flexDirection:'column',gap:8,flex:1,justifyContent:'space-evenly'}}>
+            <Row icon={<Landmark size={22} color={COLORS.green}/>} delay={54} color={COLORS.green} pad="7px 12px">① 经<span style={{fontWeight:900 }}>司法程序</span>清偿</Row>
+            <Row icon={<Coins size={22} color={COLORS.green}/>} delay={64} color={COLORS.green} pad="7px 12px">② <span style={{fontWeight:900 }}>水电费</span></Row>
+            <Row icon={<Scale size={22} color={COLORS.green}/>} delay={74} color={COLORS.green} pad="7px 12px">③ <span style={{fontWeight:900 }}>有担保</span>且担保财产价值<span style={{fontWeight:900 }}>≥债权额</span></Row>
+            <Row icon={<Users size={22} color={COLORS.green}/>} delay={84} color={COLORS.green} pad="7px 12px">④ <span style={{fontWeight:900 }}>劳动报酬</span>或<span style={{fontWeight:900 }}>人身损害赔偿金</span></Row>
+            <Row icon={<TrendingUp size={22} color={COLORS.green}/>} delay={94} color={COLORS.green} pad="7px 12px">⑤ 使债务人财产<span style={{fontWeight:900,color:COLORS.green }}>受益</span>的个别清偿</Row>
+          </div>
+        </div>
       </div>
-      <div data-final-knowledge="bankruptcy-revocation-right-scene-03-exceptions" style={{position:'absolute',right:0,top:0,width:780,padding:'20px 26px',border:'5px solid '+COLORS.green,background:COLORS.paper,opacity:enter(46,72)}}>
-        <div style={{fontSize:27,fontWeight:900,marginBottom:8,color:COLORS.green}}>例外：不可撤销</div>
-        <div style={{fontSize:22,fontWeight:700,lineHeight:1.55}}>① 司法程序清偿 ② <span style={{fontWeight:900}}>水电费</span> ③ 有担保且担保财产价值≥债权额 ④ <span style={{fontWeight:900}}>劳动报酬</span>或<span style={{fontWeight:900}}>人身损害赔偿金</span> ⑤ 使债务人财产受益的个别清偿</div>
-      </div>
-      <div data-final-knowledge="bankruptcy-revocation-right-knowledge-3" style={{position:'absolute',left:0,right:0,bottom:0,display:'flex',alignItems:'center',gap:16,border:'3px dashed '+COLORS.gold,background:COLORS.paper,padding:'14px 24px',opacity:enter(76,104)}}>
-        <ShieldCheck size={38} color={COLORS.gold}/>
-        <div style={{fontSize:22,fontWeight:800,lineHeight:1.45}}>例：以自有房产（价值300万）担保并清偿200万债务——担保财产价值≥债权额，<span style={{fontWeight:900}}>不可撤销</span>；支付劳动报酬的，<span style={{fontWeight:900}}>不可撤销</span></div>
+      <div style={{flexShrink:0,display:'flex',alignItems:'center',gap:16,border:'3px dashed '+COLORS.red,background:COLORS.red+'4D',padding:'13px 24px',opacity:enter(100,126)}}>
+        <CalendarDays size={34} color={COLORS.red}/>
+        <div style={{fontSize:22,fontWeight:900 }}>口诀：<span style={{color:COLORS.red }}>欺诈看一年，个别看半年，一年之外全不撤</span></div>
       </div>
     </div>
   </Shell>;

@@ -9,6 +9,13 @@
   "surface": "双栏分隔与方形标准章, 无圆角",
   "motion": "试金石先落定, 属于列依次落入, 不属于列随后分拣",
   "transition": "双栏分隔与标准章颜色角色贯穿场景",
+  "conceptTokens": {
+    "所有权": "Scale",
+    "债务人财产": "Wallet",
+    "担保": "Landmark",
+    "取回": "Boxes",
+    "共有": "Users"
+  },
   "catalog": {
     "status": "variant",
     "sourceDirectionId": "split-screen-comparison"

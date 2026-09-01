@@ -1,0 +1,70 @@
+{
+  "animationId": "bankruptcy-revocation-right",
+  "compositionId": "BankruptcyRevocationRight",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-09-01T14:57:22.906Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 395,
+      "frameCount": 198,
+      "id": "bankruptcy-revocation-right-scene-01",
+      "number": "01",
+      "startFrame": 0,
+      "title": "临界期四阶段",
+      "durationMs": 6600,
+      "file": "bankruptcy-revocation-right-scene-01.avif",
+      "fileSize": 433175,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "c8352afce281cc8745fac6c42af1a2b2e86cc7afe3429c8838b471e3a34ff262",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "6e6931f1403f143f66a0e2bf59636d9479ac4a194ef219d1c8922f8ed35615d6"
+    },
+    {
+      "endFrame": 779,
+      "frameCount": 192,
+      "id": "bankruptcy-revocation-right-scene-02",
+      "number": "02",
+      "startFrame": 396,
+      "title": "欺诈破产行为",
+      "durationMs": 6400,
+      "file": "bankruptcy-revocation-right-scene-02.avif",
+      "fileSize": 422590,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "533093b8788a529603f1ec04845da9b3ce9cbe92e7c20c206c5154480b6d237b",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "6e6931f1403f143f66a0e2bf59636d9479ac4a194ef219d1c8922f8ed35615d6"
+    },
+    {
+      "endFrame": 1169,
+      "frameCount": 195,
+      "id": "bankruptcy-revocation-right-scene-03",
+      "number": "03",
+      "startFrame": 780,
+      "title": "个别清偿的例外",
+      "durationMs": 6500,
+      "file": "bankruptcy-revocation-right-scene-03.avif",
+      "fileSize": 502342,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "18dd244f93276131778a198c888b954bc85c474298425e49a5cbdef467329c33",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "6e6931f1403f143f66a0e2bf59636d9479ac4a194ef219d1c8922f8ed35615d6"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "6e6931f1403f143f66a0e2bf59636d9479ac4a194ef219d1c8922f8ed35615d6",
+  "targetFps": 30,
+  "totalFileSize": 1358107
+}

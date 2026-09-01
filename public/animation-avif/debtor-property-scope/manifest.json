@@ -1,0 +1,70 @@
+{
+  "animationId": "debtor-property-scope",
+  "compositionId": "DebtorPropertyScope",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-09-01T14:59:27.199Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 341,
+      "frameCount": 171,
+      "id": "debtor-property-scope-scene-01",
+      "number": "01",
+      "startFrame": 0,
+      "title": "所有权标准",
+      "durationMs": 5700,
+      "file": "debtor-property-scope-scene-01.avif",
+      "fileSize": 371136,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "2b66b1411a50b99bf8f342235336498e55d6a37298964019df79de78d2ab9df1",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "8517b05574e3c6c83cb5aa71b2e1ad7f222277fc55d7e779839a1c7eb5e17bb2"
+    },
+    {
+      "endFrame": 701,
+      "frameCount": 180,
+      "id": "debtor-property-scope-scene-02",
+      "number": "02",
+      "startFrame": 342,
+      "title": "属于债务人财产",
+      "durationMs": 6000,
+      "file": "debtor-property-scope-scene-02.avif",
+      "fileSize": 354140,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "32ccae3d2d53df942aba15eabe1120ceb609e152d0bedfd9987c5ccdfc771891",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "8517b05574e3c6c83cb5aa71b2e1ad7f222277fc55d7e779839a1c7eb5e17bb2"
+    },
+    {
+      "endFrame": 1067,
+      "frameCount": 183,
+      "id": "debtor-property-scope-scene-03",
+      "number": "03",
+      "startFrame": 702,
+      "title": "不属于债务人财产",
+      "durationMs": 6100,
+      "file": "debtor-property-scope-scene-03.avif",
+      "fileSize": 359080,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "480c5c2196173af06a2cefd34e413ed446e29adaada380317b03369bf5be52c5",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "8517b05574e3c6c83cb5aa71b2e1ad7f222277fc55d7e779839a1c7eb5e17bb2"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "8517b05574e3c6c83cb5aa71b2e1ad7f222277fc55d7e779839a1c7eb5e17bb2",
+  "targetFps": 30,
+  "totalFileSize": 1084356
+}

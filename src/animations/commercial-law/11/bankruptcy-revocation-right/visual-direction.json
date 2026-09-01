@@ -7,6 +7,13 @@
   "surface": "日历刻度与硬边档条, 方形期限章, 无圆角",
   "motion": "时间轴从1年前走到受理日, 欺诈行为依次盖章, 个别清偿例外逐个豁免",
   "transition": "日历轴与期限章颜色角色贯穿场景",
+  "conceptTokens": {
+    "撤销": "AlertOctagon",
+    "临界期": "CalendarDays",
+    "个别清偿": "HandCoins",
+    "欺诈": "Gift",
+    "例外": "ShieldCheck"
+  },
   "catalog": {
     "status": "featured",
     "source": "original-node",

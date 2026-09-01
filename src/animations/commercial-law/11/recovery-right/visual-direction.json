@@ -9,6 +9,13 @@
   "surface": "网线与档条, 方形追回章, 无圆角",
   "motion": "三对象依次落网, 收入按档分流成两种债权, 出资追回跨越期限线",
   "transition": "网线与追回章颜色角色贯穿场景",
+  "conceptTokens": {
+    "追回": "Fish",
+    "非正常收入": "BadgePercent",
+    "出资": "Coins",
+    "董监高": "Briefcase",
+    "归入": "Undo2"
+  },
   "catalog": {
     "status": "variant",
     "sourceDirectionId": "insolvency-diagnosis"

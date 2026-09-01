@@ -1,5 +1,5 @@
 import type {ReactNode} from 'react';
-import {Fish, Banknote, Users, Timer, Scale, ShieldAlert} from 'lucide-react';
+import {Fish, Banknote, Users, Timer, Scale, ShieldAlert, Briefcase, Coins, Undo2, BadgePercent, Landmark, Handshake} from 'lucide-react';
 import {AbsoluteFill, interpolate, useCurrentFrame} from 'remotion';
 import {CLAMP, TimelineSequence} from '../../../../shared/remotion-runtime';
 import {SCENES} from './storyboard';
@@ -15,28 +15,58 @@ const Shell=({code,title,children}:{readonly code:string;readonly title:string;r
   </AbsoluteFill>
 );
 
+const Watermark=({icon,size=170,color}:{readonly icon:ReactNode;readonly size?:number;readonly color:string})=>(
+  <div style={{position:'absolute',right:6,bottom:-4,opacity:0.09,pointerEvents:'none'}}>
+    {icon}
+  </div>
+);
+
+const Row=({icon,children,delay,color,pad='10px 14px'}:{readonly icon:ReactNode;readonly children:ReactNode;readonly delay:number;readonly color:string;readonly pad?:string})=>{
+  const frame=useCurrentFrame();
+  return <div style={{display:'flex',alignItems:'center',gap:12,padding:pad,background:COLORS.paper,borderLeft:'6px solid '+color,fontSize:22,fontWeight:800,lineHeight:1.45,opacity:interpolate(frame,[delay,delay+22],[0,1],CLAMP),translate:interpolate(frame,[delay,delay+22],['0px 18px','0px 0px'],CLAMP)}}>
+    <span style={{flexShrink:0,display:'flex'}}>{icon}</span>
+    <span>{children}</span>
+  </div>;
+};
+
 export const RecoveryRight01Scene=()=>{
   const frame=useCurrentFrame();
   const enter=(a:number,b:number)=>interpolate(frame,[a,b],[0,1],CLAMP);
-  return <Shell code="11.2" title="追回权：三类对象">
-    <div data-layout="clawback-net-1" data-visual-anchor="flow-path" data-visual-grammar="clawback-targets,debtor-property-return" data-text-treatments="label-block,thin-underline,soft-highlight" data-focal-rule="recovery-right-scene-01-rule" data-focal-channels="connector,motion,enclosure" style={{position:'absolute',inset:0}}>
-      <div data-final-knowledge="recovery-right-knowledge-1" style={{position:'absolute',left:0,right:0,top:0,display:'flex',alignItems:'center',gap:14,opacity:enter(12,36)}}>
-        <Fish size={42} color={COLORS.red}/>
-        <div style={{fontSize:28,fontWeight:900}}>破产程序中，管理人<span style={{background:COLORS.red+'20',padding:'2px 10px'}}>可以追回</span></div>
+  const slide=(a:number,b:number,from:string)=>interpolate(frame,[a,b],[from,'0px 0px'],CLAMP);
+  return <Shell code="11.2" title="追回权：两张网">
+    <div data-layout="clawback-net-1" data-visual-anchor="flow-path" data-visual-grammar="clawback-targets,debtor-property-return" data-text-treatments="label-block,thin-underline,soft-highlight" data-focal-rule="recovery-right-scene-01-rule" data-focal-channels="connector,motion,enclosure" style={{position:'absolute',inset:0,display:'flex',flexDirection:'column',gap:16}}>
+      <div data-final-knowledge="recovery-right-knowledge-1" style={{flexShrink:0,display:'flex',alignItems:'center',gap:14,opacity:enter(12,36)}}>
+        <Fish size={40} color={COLORS.red}/>
+        <div style={{fontSize:27,fontWeight:900}}>管理人可<span style={{color:COLORS.red}}>追回</span>——非法转移、处分或侵占的债务人财产</div>
       </div>
-      <div style={{position:'absolute',left:0,right:0,top:80,display:'grid',gridTemplateColumns:'repeat(2,minmax(0,1fr))',gap:18}}>
-        <div data-final-knowledge="recovery-right-scene-01-target-0" style={{padding:'18px 24px',border:'4px solid '+COLORS.ink,borderTop:'12px solid '+COLORS.red,background:COLORS.paper,minHeight:170,opacity:enter(28,54)}}>
-          <div style={{fontSize:26,fontWeight:900,marginBottom:8}}>非法转移、处分或侵占的财产</div>
-          <div style={{fontSize:22,fontWeight:700,lineHeight:1.5}}>债务人财产被非法转移、处分或侵占的</div>
+      <div style={{flex:'1 1 0',minHeight:0,display:'grid',gridTemplateColumns:'repeat(2,minmax(0,1fr))',gap:20}}>
+        <div data-final-knowledge="recovery-right-scene-01-target-0" style={{position:'relative',padding:'18px 24px',border:'5px solid '+COLORS.red,background:COLORS.red+'4D',display:'flex',flexDirection:'column',opacity:enter(28,54),translate:slide(28,54,'-24px 0px')}}>
+          <Watermark icon={<ShieldAlert size={150} color={COLORS.red} strokeWidth={1.2}/>} color={COLORS.red}/>
+          <div style={{display:'flex',alignItems:'center',gap:12,marginBottom:10,flexShrink:0}}>
+            <ShieldAlert size={34} color={COLORS.red}/>
+            <div style={{padding:'8px 18px',background:COLORS.red,color:COLORS.paper,fontSize:25,fontWeight:900 }}>对董监高追回</div>
+          </div>
+          <div style={{display:'flex',flexDirection:'column',gap:10,flex:1,justifyContent:'space-evenly'}}>
+            <Row icon={<ShieldAlert size={24} color={COLORS.red}/>} delay={40} color={COLORS.red} pad="10px 13px">董监高<span style={{fontWeight:900,color:COLORS.red}}>侵占</span>的债务人财产</Row>
+            <Row icon={<Briefcase size={24} color={COLORS.red}/>} delay={54} color={COLORS.red} pad="10px 13px">存在<span style={{fontWeight:900}}>破产原因</span>时，利用职权获取的<span style={{fontWeight:900,color:COLORS.red}}>非正常收入</span></Row>
+          </div>
         </div>
-        <div data-final-knowledge="recovery-right-scene-01-target-1" style={{padding:'18px 24px',border:'4px solid '+COLORS.ink,borderTop:'12px solid '+COLORS.gold,background:COLORS.paper,minHeight:170,opacity:enter(44,70)}}>
-          <div style={{fontSize:26,fontWeight:900,marginBottom:8}}>未缴 / 抽逃的出资</div>
-          <div style={{fontSize:22,fontWeight:700,lineHeight:1.5}}>出资人未缴或抽逃的出资——<span style={{background:COLORS.gold+'40',padding:'2px 6px',fontWeight:900}}>不受出资期限的限制</span></div>
+        <div data-final-knowledge="recovery-right-scene-01-target-1" style={{position:'relative',padding:'18px 24px',border:'5px solid '+COLORS.gold,background:COLORS.gold+'4D',display:'flex',flexDirection:'column',opacity:enter(46,72),translate:slide(46,72,'24px 0px')}}>
+          <Watermark icon={<Coins size={150} color={COLORS.gold} strokeWidth={1.2}/>} color={COLORS.gold}/>
+          <div style={{display:'flex',alignItems:'center',gap:12,marginBottom:10,flexShrink:0}}>
+            <Coins size={34} color={COLORS.gold}/>
+            <div style={{padding:'8px 18px',background:COLORS.gold,color:COLORS.paper,fontSize:25,fontWeight:900 }}>对出资人追回</div>
+          </div>
+          <div style={{display:'flex',flexDirection:'column',gap:10,flex:1,justifyContent:'space-evenly'}}>
+            <Row icon={<Coins size={24} color={COLORS.gold}/>} delay={58} color={COLORS.gold} pad="10px 13px">出资人<span style={{fontWeight:900,color:COLORS.gold}}>未缴出资 / 抽逃出资</span></Row>
+            <Row icon={<Timer size={24} color={COLORS.gold}/>} delay={72} color={COLORS.gold} pad="10px 13px"><span style={{fontWeight:900,color:COLORS.gold}}>不受出资期限的限制</span>——未届期也要缴</Row>
+          </div>
         </div>
       </div>
-      <div data-final-knowledge="recovery-right-scene-01-effect" style={{position:'absolute',left:0,right:0,bottom:0,display:'flex',alignItems:'center',gap:18,border:'5px solid '+COLORS.green,background:COLORS.paper,padding:'16px 26px',opacity:enter(72,100)}}>
-        <Banknote size={40} color={COLORS.green}/>
-        <div style={{fontSize:23,fontWeight:800,lineHeight:1.5}}>追回效果：财产<span style={{fontWeight:900}}>归入债务人财产</span>，用来清偿给全体债权人——对接出资责任，可追其他发起人、负有责任的董监高、协助抽逃人员等责任主体</div>
+      <div data-final-knowledge="recovery-right-scene-01-effect" style={{flexShrink:0,display:'flex',alignItems:'center',gap:18,border:'5px solid '+COLORS.green,background:COLORS.green+'4D',padding:'15px 26px',opacity:enter(90,116)}}>
+        <Undo2 size={36} color={COLORS.green}/>
+        <div style={{fontSize:23,fontWeight:800,lineHeight:1.5}}>追回效果：财产<span style={{fontWeight:900,color:COLORS.green}}>归入债务人财产</span> → 用来<span style={{fontWeight:900,color:COLORS.green}}>清偿给全体债权人</span></div>
+        <Landmark size={34} color={COLORS.green}/>
       </div>
     </div>
   </Shell>;
@@ -45,26 +75,39 @@ export const RecoveryRight01Scene=()=>{
 export const RecoveryRight02Scene=()=>{
   const frame=useCurrentFrame();
   const enter=(a:number,b:number)=>interpolate(frame,[a,b],[0,1],CLAMP);
-  return <Shell code="11.2" title="董监高的非正常收入">
-    <div data-layout="abnormal-income-2" data-visual-anchor="role-pair" data-visual-grammar="abnormal-income-tiers,wage-vs-ordinary" data-text-treatments="soft-highlight,stamp,external-negation" data-focal-rule="recovery-right-scene-02-rule" data-focal-channels="contrast,connector,annotation" style={{position:'absolute',inset:0}}>
-      <div data-final-knowledge="recovery-right-knowledge-2" style={{position:'absolute',left:0,right:0,top:0,display:'flex',alignItems:'center',gap:14,opacity:enter(12,36)}}>
-        <ShieldAlert size={42} color={COLORS.red}/>
-        <div style={{fontSize:27,fontWeight:900}}>企业存在破产原因时，董监高利用职权获取的<span style={{background:COLORS.red+'20',padding:'2px 8px'}}>非正常收入</span></div>
+  const slide=(a:number,b:number,from:string)=>interpolate(frame,[a,b],[from,'0px 0px'],CLAMP);
+  return <Shell code="11.2" title="非正常收入与退还">
+    <div data-layout="abnormal-income-2" data-visual-anchor="role-pair" data-visual-grammar="abnormal-income-tiers,wage-vs-ordinary" data-text-treatments="soft-highlight,stamp,external-negation" data-focal-rule="recovery-right-scene-02-rule" data-focal-channels="contrast,connector,annotation" style={{position:'absolute',inset:0,display:'flex',flexDirection:'column',gap:16}}>
+      <div data-final-knowledge="recovery-right-knowledge-2" style={{flexShrink:0,display:'flex',alignItems:'center',gap:14,opacity:enter(12,36)}}>
+        <BadgePercent size={40} color={COLORS.red}/>
+        <div style={{fontSize:27,fontWeight:900}}>破产原因下的<span style={{color:COLORS.red}}>非正常收入</span>——有违公平，应当追回</div>
       </div>
-      <div data-final-knowledge="recovery-right-scene-02-income" style={{position:'absolute',left:24,top:80,width:850,padding:'24px 28px',border:'5px solid '+COLORS.red,background:COLORS.paper,opacity:enter(28,54)}}>
-        <div style={{fontSize:26,fontWeight:900,marginBottom:12}}>三档非正常收入</div>
-        <div style={{fontSize:23,fontWeight:800,lineHeight:1.55}}>① 普遍拖欠职工工资情况下获取的<span style={{fontWeight:900}}>工资性收入</span></div>
-        <div style={{fontSize:23,fontWeight:800,lineHeight:1.55}}>② <span style={{fontWeight:900}}>绩效奖金</span></div>
-        <div style={{fontSize:23,fontWeight:800,lineHeight:1.55}}>③ 其他<span style={{fontWeight:900}}>非正常收入</span>——并不违法，被追回后董监高可以向债权人申报债权</div>
-      </div>
-      <div data-final-knowledge="recovery-right-scene-02-return" style={{position:'absolute',right:24,top:80,width:850,padding:'24px 28px',border:'5px solid '+COLORS.green,background:COLORS.paper,opacity:enter(46,72)}}>
-        <div style={{fontSize:26,fontWeight:900,marginBottom:12}}>退还收入后的债性分流</div>
-        <div style={{fontSize:23,fontWeight:800,lineHeight:1.55,padding:'10px 14px',background:COLORS.green+'10',marginBottom:8}}>工资性收入未超出企业职工<span style={{background:COLORS.green+'28',padding:'2px 6px',fontWeight:900}}>平均工资</span>的部分 → <span style={{fontWeight:900}}>职工债权</span></div>
-        <div style={{fontSize:23,fontWeight:800,lineHeight:1.55,padding:'10px 14px',background:COLORS.gold+'14'}}>超出平均工资的部分、绩效奖金、其他非正常收入 → <span style={{background:COLORS.gold+'40',padding:'2px 6px',fontWeight:900}}>普通破产债权</span></div>
-      </div>
-      <div style={{position:'absolute',left:0,right:0,bottom:0,display:'flex',alignItems:'center',gap:16,border:'3px dashed '+COLORS.gold,background:COLORS.paper,padding:'14px 24px',opacity:enter(76,104)}}>
-        <Scale size={38} color={COLORS.gold}/>
-        <div style={{fontSize:22,fontWeight:800,lineHeight:1.45}}>原理：企业已不能足额保障职工、债权人利益时，董监高利用职务便利获取额外收益有违<span style={{fontWeight:900}}>公平原则</span>——认定为非正常收入，但<span style={{fontWeight:900}}>并不违法</span></div>
+      <div style={{flex:'1 1 0',minHeight:0,display:'grid',gridTemplateColumns:'repeat(2,minmax(0,1fr))',gap:20}}>
+        <div data-final-knowledge="recovery-right-scene-02-income" style={{position:'relative',padding:'16px 24px',border:'5px solid '+COLORS.red,background:COLORS.red+'4D',display:'flex',flexDirection:'column',opacity:enter(28,54),translate:slide(28,54,'-24px 0px')}}>
+          <Watermark icon={<BadgePercent size={140} color={COLORS.red} strokeWidth={1.2}/>} color={COLORS.red}/>
+          <div style={{display:'flex',alignItems:'center',gap:12,marginBottom:8,flexShrink:0}}>
+            <BadgePercent size={32} color={COLORS.red}/>
+            <div style={{fontSize:24,fontWeight:900}}>非正常收入三类</div>
+          </div>
+          <div style={{display:'flex',flexDirection:'column',gap:10,flex:1,justifyContent:'space-evenly'}}>
+            <Row icon={<Users size={22} color={COLORS.red}/>} delay={40} color={COLORS.red} pad="9px 13px"><span style={{fontWeight:900,color:COLORS.red}}>普遍拖欠职工工资</span>情况下获取的工资性收入</Row>
+            <Row icon={<BadgePercent size={22} color={COLORS.red}/>} delay={52} color={COLORS.red} pad="9px 13px"><span style={{fontWeight:900,color:COLORS.red}}>绩效奖金</span></Row>
+            <Row icon={<Coins size={22} color={COLORS.red}/>} delay={64} color={COLORS.red} pad="9px 13px">其他<span style={{fontWeight:900,color:COLORS.red}}>非正常收入</span></Row>
+            <Row icon={<Scale size={22} color={COLORS.green}/>} delay={76} color={COLORS.green} pad="9px 13px">原理：企业已有破产原因，董监高还借职务便利<span style={{fontWeight:900}}>额外获利</span>，有违公平——但不违法，追回后可向债权人<span style={{fontWeight:900,color:COLORS.green}}>申报债权</span></Row>
+          </div>
+        </div>
+        <div data-final-knowledge="recovery-right-scene-02-return" style={{position:'relative',padding:'16px 24px',border:'5px solid '+COLORS.green,background:COLORS.green+'4D',display:'flex',flexDirection:'column',opacity:enter(46,72),translate:slide(46,72,'24px 0px')}}>
+          <Watermark icon={<Banknote size={140} color={COLORS.green} strokeWidth={1.2}/>} color={COLORS.green}/>
+          <div style={{display:'flex',alignItems:'center',gap:12,marginBottom:8,flexShrink:0}}>
+            <Banknote size={32} color={COLORS.green}/>
+            <div style={{fontSize:24,fontWeight:900}}>退还后的定性</div>
+          </div>
+          <div style={{display:'flex',flexDirection:'column',gap:10,flex:1,justifyContent:'space-evenly'}}>
+            <Row icon={<Users size={22} color={COLORS.green}/>} delay={58} color={COLORS.green} pad="9px 13px">①工资性收入：未超出企业职工<span style={{fontWeight:900,color:COLORS.green}}>平均工资</span>的部分 → <span style={{fontWeight:900,color:COLORS.green}}>职工债权</span></Row>
+            <Row icon={<Coins size={22} color={COLORS.green}/>} delay={70} color={COLORS.green} pad="9px 13px">①超出平均工资的部分 → <span style={{fontWeight:900,color:COLORS.gold }}>普通破产债权</span></Row>
+            <Row icon={<Banknote size={22} color={COLORS.green}/>} delay={82} color={COLORS.green} pad="9px 13px">②绩效奖金 ③其他非正常收入 → <span style={{fontWeight:900,color:COLORS.gold}}>普通破产债权</span></Row>
+          </div>
+        </div>
       </div>
     </div>
   </Shell>;
@@ -73,28 +116,35 @@ export const RecoveryRight02Scene=()=>{
 export const RecoveryRight03Scene=()=>{
   const frame=useCurrentFrame();
   const enter=(a:number,b:number)=>interpolate(frame,[a,b],[0,1],CLAMP);
-  return <Shell code="11.2" title="出资追回：不受期限限制">
-    <div data-layout="contribution-clawback-3" data-visual-anchor="boundary" data-visual-grammar="unpaid-contribution,withdrawn-contribution" data-text-treatments="external-negation,label-block,stamp" data-focal-rule="recovery-right-scene-03-rule" data-focal-channels="enclosure,contrast,annotation" data-final-knowledge="recovery-right-knowledge-3" style={{position:'absolute',inset:0}}>
-      <div data-final-knowledge="recovery-right-scene-03-contribution" style={{position:'absolute',left:24,top:20,width:850,padding:'24px 28px',border:'5px solid '+COLORS.green,background:COLORS.paper,opacity:enter(28,54)}}>
-        <div style={{display:'flex',alignItems:'center',gap:14,marginBottom:12}}>
-          <Timer size={42} color={COLORS.green}/>
-          <div style={{fontSize:28,fontWeight:900}}>未缴 / 抽逃出资</div>
+  const slide=(a:number,b:number,from:string)=>interpolate(frame,[a,b],[from,'0px 0px'],CLAMP);
+  return <Shell code="11.2" title="出资追回与责任主体">
+    <div data-layout="contribution-clawback-3" data-visual-anchor="boundary" data-visual-grammar="unpaid-contribution,withdrawn-contribution" data-text-treatments="external-negation,label-block,stamp" data-focal-rule="recovery-right-scene-03-rule" data-focal-channels="enclosure,contrast,annotation" style={{position:'absolute',inset:0,display:'flex',flexDirection:'column',gap:16}}>
+      <div data-final-knowledge="recovery-right-knowledge-3" style={{flexShrink:0,textAlign:'center',fontSize:26,fontWeight:900,letterSpacing:4,color:'#6E6757',opacity:enter(12,36)}}>追缴出资——<span style={{color:COLORS.gold }}>不受出资期限限制</span></div>
+      <div style={{flex:'1 1 0',minHeight:0,display:'grid',gridTemplateColumns:'repeat(2,minmax(0,1fr))',gap:20}}>
+        <div data-final-knowledge="recovery-right-scene-03-contribution" style={{position:'relative',padding:'18px 24px',border:'5px solid '+COLORS.gold,background:COLORS.gold+'4D',display:'flex',flexDirection:'column',opacity:enter(28,54),translate:slide(28,54,'-24px 0px')}}>
+          <Watermark icon={<Coins size={150} color={COLORS.gold} strokeWidth={1.2}/>} color={COLORS.gold}/>
+          <div style={{display:'flex',alignItems:'center',gap:12,marginBottom:10,flexShrink:0}}>
+            <Coins size={34} color={COLORS.gold}/>
+            <div style={{padding:'8px 18px',background:COLORS.gold,color:COLORS.paper,fontSize:25,fontWeight:900 }}>对出资人追回</div>
+          </div>
+          <div style={{display:'flex',flexDirection:'column',gap:10,flex:1,justifyContent:'space-evenly'}}>
+            <Row icon={<Coins size={24} color={COLORS.gold}/>} delay={40} color={COLORS.gold} pad="10px 13px"><span style={{fontWeight:900 }}>未缴出资</span>（含未届期）——加速缴纳</Row>
+            <Row icon={<Undo2 size={24} color={COLORS.gold}/>} delay={54} color={COLORS.gold} pad="10px 13px"><span style={{fontWeight:900,color:COLORS.red}}>抽逃出资</span>——追回</Row>
+            <Row icon={<Timer size={24} color={COLORS.gold}/>} delay={68} color={COLORS.gold} pad="10px 13px">判断：管理人追回出资<span style={{fontWeight:900,color:COLORS.gold }}>不受出资期限限制</span></Row>
+          </div>
         </div>
-        <div style={{fontSize:24,fontWeight:800,lineHeight:1.55}}>管理人追回出资，<span style={{background:COLORS.green+'28',padding:'2px 8px',fontWeight:900}}>不受出资期限的限制</span>——出资人不能以出资未到期为由抗辩</div>
-      </div>
-      <div data-final-knowledge="recovery-right-scene-03-parties" style={{position:'absolute',right:24,top:20,width:850,padding:'24px 28px',border:'5px solid '+COLORS.gold,background:COLORS.paper,opacity:enter(46,72)}}>
-        <div style={{display:'flex',alignItems:'center',gap:14,marginBottom:12}}>
-          <Users size={42} color={COLORS.gold}/>
-          <div style={{fontSize:28,fontWeight:900}}>可追的责任主体</div>
+        <div data-final-knowledge="recovery-right-scene-03-parties" style={{position:'relative',padding:'18px 24px',border:'5px solid '+COLORS.red,background:COLORS.red+'4D',display:'flex',flexDirection:'column',opacity:enter(46,72),translate:slide(46,72,'24px 0px')}}>
+          <Watermark icon={<Users size={150} color={COLORS.red} strokeWidth={1.2}/>} color={COLORS.red}/>
+          <div style={{display:'flex',alignItems:'center',gap:12,marginBottom:10,flexShrink:0}}>
+            <Users size={34} color={COLORS.red}/>
+            <div style={{padding:'8px 18px',background:COLORS.red,color:COLORS.paper,fontSize:25,fontWeight:900 }}>可追的其他责任主体</div>
+          </div>
+          <div style={{display:'flex',flexDirection:'column',gap:10,flex:1,justifyContent:'space-evenly'}}>
+            <Row icon={<Users size={24} color={COLORS.red}/>} delay={58} color={COLORS.red} pad="10px 13px">其他<span style={{fontWeight:900,color:COLORS.red }}>发起人</span>（出资连带责任）</Row>
+            <Row icon={<Briefcase size={24} color={COLORS.red}/>} delay={72} color={COLORS.red} pad="10px 13px"><span style={{fontWeight:900,color:COLORS.red }}>负有责任的董监高</span></Row>
+            <Row icon={<Handshake size={24} color={COLORS.red}/>} delay={86} color={COLORS.red} pad="10px 13px"><span style={{fontWeight:900,color:COLORS.red }}>协助抽逃</span>出资的人员等</Row>
+          </div>
         </div>
-        <div style={{fontSize:24,fontWeight:800,lineHeight:1.55}}>管理人可追其他责任主体：<span style={{fontWeight:900}}>其他发起人</span>、负有责任的<span style={{fontWeight:900}}>董监高</span>、<span style={{fontWeight:900}}>协助抽逃</span>的人员等</div>
-      </div>
-      <div style={{position:'absolute',left:0,right:0,bottom:0,display:'flex',alignItems:'center',gap:16,border:'3px dashed '+COLORS.red,background:COLORS.paper,padding:'14px 24px',opacity:enter(74,102)}}>
-        <div style={{width:36,height:36,border:'3px solid '+COLORS.red,position:'relative',flexShrink:0}}>
-          <div style={{position:'absolute',left:14,top:4,width:4,height:22,background:COLORS.red,transform:'rotate(45deg)'}}/>
-          <div style={{position:'absolute',left:14,top:4,width:4,height:22,background:COLORS.red,transform:'rotate(-45deg)'}}/>
-        </div>
-        <div style={{fontSize:22,fontWeight:800,lineHeight:1.45}}>例：乙有100万出资未缴纳，<span style={{fontWeight:900,color:COLORS.red}}>不能以出资未到期为由抗辩</span>——管理人有权追回全部未缴出资</div>
       </div>
     </div>
   </Shell>;

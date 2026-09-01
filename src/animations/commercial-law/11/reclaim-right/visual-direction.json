@@ -9,6 +9,13 @@
   "surface": "轨道与驿站框, 方形时点章, 无圆角",
   "motion": "取回规则依次亮起, 损失沿受理前后分轨, 在途货物沿主张与否分叉",
   "transition": "轨道与驿站颜色角色贯穿场景",
+  "conceptTokens": {
+    "取回": "PackageSearch",
+    "时点": "CalendarClock",
+    "留置": "Lock",
+    "在途": "Truck",
+    "价款": "Banknote"
+  },
   "catalog": {
     "status": "variant",
     "sourceDirectionId": "transit-map"
