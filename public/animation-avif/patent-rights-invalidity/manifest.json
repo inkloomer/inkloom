@@ -1,0 +1,53 @@
+{
+  "animationId": "patent-rights-invalidity",
+  "compositionId": "PatentRightsInvalidity",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-09-01T11:51:59.938Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 319,
+      "frameCount": 160,
+      "id": "patent-rights-invalidity-scene-01",
+      "number": "01",
+      "startFrame": 0,
+      "title": "许可三轨",
+      "durationMs": 5333,
+      "file": "patent-rights-invalidity-scene-01.avif",
+      "fileSize": 456589,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "461ce8e451b1519cc10dd1162759192e6e61437b29898226654dd5971fbaab71",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "53ce1a0916fa0e21f9c216e5182039c18d307a651009e27d04e6d8cc2d337bab"
+    },
+    {
+      "endFrame": 639,
+      "frameCount": 160,
+      "id": "patent-rights-invalidity-scene-02",
+      "number": "02",
+      "startFrame": 320,
+      "title": "保护期与无效",
+      "durationMs": 5333,
+      "file": "patent-rights-invalidity-scene-02.avif",
+      "fileSize": 640584,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "da232889365d8b2c073c337e7a91408cd0431224c1a9bb07349d22bc06482884",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "53ce1a0916fa0e21f9c216e5182039c18d307a651009e27d04e6d8cc2d337bab"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "53ce1a0916fa0e21f9c216e5182039c18d307a651009e27d04e6d8cc2d337bab",
+  "targetFps": 30,
+  "totalFileSize": 1097173
+}
