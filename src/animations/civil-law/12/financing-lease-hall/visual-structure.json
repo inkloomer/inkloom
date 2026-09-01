@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "financing-overview",
+      "export": "FinancingOverviewScene",
+      "layout": "tripartite-loop-with-leaseback-mirror",
+      "anchor": "flow-path",
+      "grammar": [
+        "lessor-buys-from-the-seller-on-the-lessee-choice-and-leases-it-for-rent-keeping-title",
+        "sale-leaseback-keeps-possession-by-agreement-so-the-lessee-seller-never-moves",
+        "unregistered-lessor-title-cannot-oppose-good-faith-third-parties",
+        "price-is-funding-rent-is-principal-plus-interest-and-the-asset-is-the-security"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["connector", "contrast", "enclosure", "motion"],
+      "tokens": ["Coins", "Key", "ScrollText"],
+      "finalKnowledge": ["financing-structure", "financing-security-nature"],
+      "statefulObjects": []
+    },
+    {
+      "id": "liability-allocation",
+      "export": "LiabilityAllocationScene",
+      "layout": "liability-board-with-two-defect-paths",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "claiming-the-seller-needs-explicit-tripartite-agreement-because-of-privity",
+        "lessor-who-blocked-the-claim-pays-when-failing-to-assist-or-hiding-known-defects",
+        "lessor-interference-with-lessee-choice-opens-damages-and-rent-reduction",
+        "tort-to-third-parties-and-repair-during-possession-belong-to-the-lessee"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["connector", "contrast", "enclosure", "motion"],
+      "tokens": ["Scale", "Gavel", "Wrench"],
+      "finalKnowledge": ["quality-defect-paths", "tort-repair-duty"],
+      "statefulObjects": []
+    },
+    {
+      "id": "rent-protection",
+      "export": "RentProtectionScene",
+      "layout": "rent-default-gauge-into-repo-ledger",
+      "anchor": "timeline-gate",
+      "grammar": [
+        "one-missed-installment-after-notice-forfeits-the-timeline-into-lump-sum-payment",
+        "two-periods-or-fifteen-percent-after-notice-opens-rescission-and-repossession",
+        "repossessed-value-offsets-the-debt-as-priority-satisfaction",
+        "three-regimes-differ-on-trigger-and-whether-rescission-precedes-take-back"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["connector", "contrast", "enclosure", "motion"],
+      "tokens": ["Coins", "Undo2", "Gavel"],
+      "finalKnowledge": ["rent-default-paths", "three-regime-repo-table"],
+      "statefulObjects": []
+    }
+  ]
+}
