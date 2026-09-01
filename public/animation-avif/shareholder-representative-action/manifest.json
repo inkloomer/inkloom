@@ -1,0 +1,70 @@
+{
+  "animationId": "shareholder-representative-action",
+  "compositionId": "ShareholderRepresentativeAction",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-09-01T12:58:05.031Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 365,
+      "frameCount": 183,
+      "id": "shareholder-representative-action-scene-01",
+      "number": "01",
+      "startFrame": 0,
+      "title": "前置程序与请求对象",
+      "durationMs": 6100,
+      "file": "shareholder-representative-action-scene-01.avif",
+      "fileSize": 737322,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "f23f9431377dd67177bc803556fd1a0bc509783c004d8682136bc421e20efe79",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "df23dff9c1975fa8a3586b3a9d927dfc5cf1f312d4f61a2ecbf7214e52c249b3"
+    },
+    {
+      "endFrame": 743,
+      "frameCount": 189,
+      "id": "shareholder-representative-action-scene-02",
+      "number": "02",
+      "startFrame": 366,
+      "title": "无需前置的例外",
+      "durationMs": 6300,
+      "file": "shareholder-representative-action-scene-02.avif",
+      "fileSize": 746603,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "95bcda841a41f8e3273ca76f5e018f9a30902f4ee07c75f34fddb247324b57bb",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "df23dff9c1975fa8a3586b3a9d927dfc5cf1f312d4f61a2ecbf7214e52c249b3"
+    },
+    {
+      "endFrame": 1133,
+      "frameCount": 195,
+      "id": "shareholder-representative-action-scene-03",
+      "number": "03",
+      "startFrame": 744,
+      "title": "诉讼主体与效果",
+      "durationMs": 6500,
+      "file": "shareholder-representative-action-scene-03.avif",
+      "fileSize": 674083,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "ba254527da4fd4457952b9720ae819d26e99c821455b0ff8a0685b638338a953",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "df23dff9c1975fa8a3586b3a9d927dfc5cf1f312d4f61a2ecbf7214e52c249b3"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "df23dff9c1975fa8a3586b3a9d927dfc5cf1f312d4f61a2ecbf7214e52c249b3",
+  "targetFps": 30,
+  "totalFileSize": 2158008
+}

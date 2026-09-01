@@ -9,6 +9,13 @@
   "surface": "回路轨道与站牌, 方形期限章, 无圆角",
   "motion": "请求沿切换器分轨, 四闸依次旁通, 胜诉利益沿回路送回公司",
   "transition": "轨道与原告被告第三人色角色贯穿场景",
+  "conceptTokens": {
+    "股东": "UserRound",
+    "公司": "Building2",
+    "侵权人": "Gavel",
+    "书面请求": "ScrollText",
+    "期限": "AlarmClock"
+  },
   "catalog": {
     "status": "variant",
     "sourceDirectionId": "transit-map"

@@ -9,6 +9,14 @@
   "surface": "硬边抽屉与闸门, 方形封禁章, 无圆角",
   "motion": "四类禁入依次封闸, 义务抽屉从上到下拉开, 责任线依次点亮",
   "transition": "闸柜框架与封禁章颜色角色贯穿场景",
+  "conceptTokens": {
+    "董监高": "Users",
+    "违规": "Ban",
+    "期限": "Clock3",
+    "失信": "Coins",
+    "决议": "Handshake",
+    "公司": "Building2"
+  },
   "catalog": {
     "status": "variant",
     "sourceDirectionId": "resolution-cabinet"

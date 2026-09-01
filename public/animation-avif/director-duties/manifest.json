@@ -1,0 +1,70 @@
+{
+  "animationId": "director-duties",
+  "compositionId": "DirectorDuties",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-09-01T12:56:18.873Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 395,
+      "frameCount": 198,
+      "id": "director-duties-scene-01",
+      "number": "01",
+      "startFrame": 0,
+      "title": "任职资格的禁入情形",
+      "durationMs": 6600,
+      "file": "director-duties-scene-01.avif",
+      "fileSize": 846214,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "a568f8dfc983bf5202b35d730c4158204eaaf17cfa83017d3fcb417a5b6cf34c",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "19486dd04ccd839f5572df7e2380fa84de8ae66bafdfc75ba210fa86ea32eb23"
+    },
+    {
+      "endFrame": 779,
+      "frameCount": 192,
+      "id": "director-duties-scene-02",
+      "number": "02",
+      "startFrame": 396,
+      "title": "绝对禁止与相对禁止",
+      "durationMs": 6400,
+      "file": "director-duties-scene-02.avif",
+      "fileSize": 684509,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "0f9bcda7f77037864d22c19ca33600844c3ebfc4f7dec16aa5c57a25194d1818",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "19486dd04ccd839f5572df7e2380fa84de8ae66bafdfc75ba210fa86ea32eb23"
+    },
+    {
+      "endFrame": 1163,
+      "frameCount": 192,
+      "id": "director-duties-scene-03",
+      "number": "03",
+      "startFrame": 780,
+      "title": "四条责任线",
+      "durationMs": 6400,
+      "file": "director-duties-scene-03.avif",
+      "fileSize": 580578,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "7e7ad8a5748e11905f78d8498b59deca0ed82d476dc00d1cb90018a43d2eb5af",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "19486dd04ccd839f5572df7e2380fa84de8ae66bafdfc75ba210fa86ea32eb23"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "19486dd04ccd839f5572df7e2380fa84de8ae66bafdfc75ba210fa86ea32eb23",
+  "targetFps": 30,
+  "totalFileSize": 2111301
+}
