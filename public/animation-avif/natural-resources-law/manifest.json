@@ -1,0 +1,70 @@
+{
+  "animationId": "natural-resources-law",
+  "compositionId": "NaturalResourcesLaw",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-09-01T06:44:10.091Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 319,
+      "frameCount": 160,
+      "id": "natural-resources-law-scene-01",
+      "number": "01",
+      "startFrame": 0,
+      "title": "森林权属争议",
+      "durationMs": 5333,
+      "file": "natural-resources-law-scene-01.avif",
+      "fileSize": 562770,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "fa2c3efcb8ec501454e31a4c18405e64bb6cab7410dfe68ab97a8d3428b21137",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "ee254db095346d3c005fcc38a33884955cf599225a25a3b018defcedd7bf83be"
+    },
+    {
+      "endFrame": 639,
+      "frameCount": 160,
+      "id": "natural-resources-law-scene-02",
+      "number": "02",
+      "startFrame": 320,
+      "title": "占用与采伐",
+      "durationMs": 5333,
+      "file": "natural-resources-law-scene-02.avif",
+      "fileSize": 533706,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "68c140c29acbdcf607eb1ef448a89d82ca8ce53ce06e4359880ac8d1a71a589f",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "ee254db095346d3c005fcc38a33884955cf599225a25a3b018defcedd7bf83be"
+    },
+    {
+      "endFrame": 959,
+      "frameCount": 160,
+      "id": "natural-resources-law-scene-03",
+      "number": "03",
+      "startFrame": 640,
+      "title": "矿业权",
+      "durationMs": 5333,
+      "file": "natural-resources-law-scene-03.avif",
+      "fileSize": 674793,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "a344bdc673e0ed16038243ac83c6cd8654a7bd2b2fadf60c85d004897452417e",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "ee254db095346d3c005fcc38a33884955cf599225a25a3b018defcedd7bf83be"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "ee254db095346d3c005fcc38a33884955cf599225a25a3b018defcedd7bf83be",
+  "targetFps": 30,
+  "totalFileSize": 1771269
+}
