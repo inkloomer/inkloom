@@ -1,0 +1,16 @@
+{
+  "directionId": "resource-registry-fence",
+  "derivedFrom": "demo-clerk-desk",
+  "variation": "自然资源登记围栏: 林地权属争议先送政府处理闸再进诉讼口, 占地审批章沿两年刻度行进, 矿业权徽章走招拍挂闸与探转采转轨, 盗伐滥伐罚则刻度并排",
+  "family": "resource-registry-fence",
+  "palette": "#EFECE4 + #2B2B33 + #2C4A6E + #8A4B2F + #15725F + #B23A30 + #B98A2F",
+  "typography": "WenKai 登记围栏栏标 + 权属徽章 + 罚则刻度",
+  "composition": "森林权属与争议先行政 + 占地审批与采伐罚则 + 矿业权全流程与生态修复",
+  "surface": "登记围栏纸卡、权属徽章、罚则刻度与金口诀条, 无圆角",
+  "motion": "争议徽章先入政府闸再入诉讼口, 审批章沿两年刻度行进, 矿业权徽章经招拍挂闸驶向许可证口",
+  "transition": "藏蓝登记围栏贯穿三场, 铜色森林与红色罚则双线呼应",
+  "catalog": {
+    "status": "variant",
+    "sourceDirectionId": "resource-registry-fence"
+  }
+}

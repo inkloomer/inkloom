@@ -1,0 +1,93 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "natural-resources-law-scene-01",
+      "export": "NaturalResourcesLaw01Scene",
+      "layout": "forest-dispute-split-1",
+      "anchor": "flow-target",
+      "grammar": [
+        "forest-ownership-band",
+        "dispute-first-track"
+      ],
+      "textTreatments": [
+        "chip",
+        "stamp",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "motion",
+        "icon"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "natural-resources-law-knowledge-1",
+        "natural-resources-law-scene-01-ownership",
+        "natural-resources-law-knowledge-2"
+      ],
+      "statefulObjects": [
+        "forest-claim-travel"
+      ]
+    },
+    {
+      "id": "natural-resources-law-scene-02",
+      "export": "NaturalResourcesLaw02Scene",
+      "layout": "felling-penalty-lane-2",
+      "anchor": "flow-path",
+      "grammar": [
+        "occupy-lane",
+        "penalty-scale-band"
+      ],
+      "textTreatments": [
+        "chip",
+        "stamp",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "motion",
+        "connector",
+        "contrast"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "natural-resources-law-knowledge-3",
+        "natural-resources-law-scene-02-occupy"
+      ],
+      "statefulObjects": [
+        "temporary-occupy-travel"
+      ]
+    },
+    {
+      "id": "natural-resources-law-scene-03",
+      "export": "NaturalResourcesLaw03Scene",
+      "layout": "mining-right-lane-3",
+      "anchor": "role-pair",
+      "grammar": [
+        "mining-right-lane",
+        "repair-duty-band"
+      ],
+      "textTreatments": [
+        "chip",
+        "stamp",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "motion",
+        "connector",
+        "contrast"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "natural-resources-law-scene-03-ownership",
+        "natural-resources-law-scene-03-terms",
+        "natural-resources-law-knowledge-4"
+      ],
+      "statefulObjects": [
+        "mining-permit-travel"
+      ]
+    }
+  ]
+}
