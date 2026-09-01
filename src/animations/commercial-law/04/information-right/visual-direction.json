@@ -9,6 +9,13 @@
   "surface": "站牌与轨道细线, 方形闸口章, 无圆角",
   "motion": "查阅请求沿轨道进站, 双轨依次亮起, 闸口按情形逐个关闭, 诉讼分叉依次展开",
   "transition": "轨道与站牌色角色贯穿场景",
+  "conceptTokens": {
+    "股东": "Users",
+    "查阅": "FileSearch",
+    "拒绝": "ShieldX",
+    "公司": "Building2",
+    "章程": "ScrollText"
+  },
   "catalog": {
     "status": "variant",
     "sourceDirectionId": "transit-map"

@@ -1,0 +1,70 @@
+{
+  "animationId": "information-right",
+  "compositionId": "InformationRight",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-09-01T11:44:21.538Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 359,
+      "frameCount": 180,
+      "id": "information-right-scene-01",
+      "number": "01",
+      "startFrame": 0,
+      "title": "查阅对象的两条线路",
+      "durationMs": 6000,
+      "file": "information-right-scene-01.avif",
+      "fileSize": 738851,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "f9902e7371cfbb91672db15c53a62c5b0e6acf3e96b9cbef558a1ba83c5ee46c",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "5c2c9a854aa1e6f632264efffd8e696b152c83d9d589539a405c2926b139dd4b"
+    },
+    {
+      "endFrame": 743,
+      "frameCount": 192,
+      "id": "information-right-scene-02",
+      "number": "02",
+      "startFrame": 360,
+      "title": "不正当目的与拒绝",
+      "durationMs": 6400,
+      "file": "information-right-scene-02.avif",
+      "fileSize": 572740,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "099e76c2786293a252e2c177ad979d0a56e6990fa6ddf1013f409fb7d43aed81",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "5c2c9a854aa1e6f632264efffd8e696b152c83d9d589539a405c2926b139dd4b"
+    },
+    {
+      "endFrame": 1127,
+      "frameCount": 192,
+      "id": "information-right-scene-03",
+      "number": "03",
+      "startFrame": 744,
+      "title": "知情权诉讼",
+      "durationMs": 6400,
+      "file": "information-right-scene-03.avif",
+      "fileSize": 668314,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "a07f0d9de13b1c0b0c046f6e244f6626befd275dfdab1c6ab8788472b727652d",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "5c2c9a854aa1e6f632264efffd8e696b152c83d9d589539a405c2926b139dd4b"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "5c2c9a854aa1e6f632264efffd8e696b152c83d9d589539a405c2926b139dd4b",
+  "targetFps": 30,
+  "totalFileSize": 1979905
+}

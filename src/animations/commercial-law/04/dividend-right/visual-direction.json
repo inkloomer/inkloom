@@ -9,6 +9,13 @@
   "surface": "硬楔块与阶梯平台, 方形数字章, 无圆角",
   "motion": "利润沿瀑布逐级跌落, 三个公积金数字依次盖章, 例外从闸口弹出",
   "transition": "瀑布阶梯与数字章颜色角色贯穿场景",
+  "conceptTokens": {
+    "股东会决议": "ScrollText",
+    "分红": "Coins",
+    "公积金": "PiggyBank",
+    "股东": "Users",
+    "比例": "Percent"
+  },
   "catalog": {
     "status": "variant",
     "sourceDirectionId": "constructivist-geometry"

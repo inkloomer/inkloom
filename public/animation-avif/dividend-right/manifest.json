@@ -1,0 +1,70 @@
+{
+  "animationId": "dividend-right",
+  "compositionId": "DividendRight",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-09-01T11:42:47.469Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 353,
+      "frameCount": 177,
+      "id": "dividend-right-scene-01",
+      "number": "01",
+      "startFrame": 0,
+      "title": "分配依据与期限",
+      "durationMs": 5900,
+      "file": "dividend-right-scene-01.avif",
+      "fileSize": 619506,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "c703e3db7e8528c0e87aa1c2332dade11f0e7a7febeb81c8e085cc65d0cdbd7e",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "9e908d023ffac49cf2aba13d7a8fd11444c48c0559dde3c63105d5fb9dd144eb"
+    },
+    {
+      "endFrame": 743,
+      "frameCount": 195,
+      "id": "dividend-right-scene-02",
+      "number": "02",
+      "startFrame": 354,
+      "title": "利润瀑布与公积金",
+      "durationMs": 6500,
+      "file": "dividend-right-scene-02.avif",
+      "fileSize": 633149,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "7f587eedd7682404f2a4a5a3ddfe51f14f307a3ba4556be8ddbb9ff022949729",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "9e908d023ffac49cf2aba13d7a8fd11444c48c0559dde3c63105d5fb9dd144eb"
+    },
+    {
+      "endFrame": 1115,
+      "frameCount": 186,
+      "id": "dividend-right-scene-03",
+      "number": "03",
+      "startFrame": 744,
+      "title": "分红诉讼与违法分配",
+      "durationMs": 6200,
+      "file": "dividend-right-scene-03.avif",
+      "fileSize": 625856,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "e90d6add6f6095a159bfb9b37b59c33f0c9bcfe61375b371e50cb2a71dd58add",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "9e908d023ffac49cf2aba13d7a8fd11444c48c0559dde3c63105d5fb9dd144eb"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "9e908d023ffac49cf2aba13d7a8fd11444c48c0559dde3c63105d5fb9dd144eb",
+  "targetFps": 30,
+  "totalFileSize": 1878511
+}
