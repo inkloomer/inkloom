@@ -1,0 +1,64 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 2,
+  "scenes": [
+    {
+      "id": "patent-infringement-scene-01",
+      "export": "PatentInfringement01Scene",
+      "layout": "infringe-lane-goodfaith-1",
+      "anchor": "flow-path",
+      "grammar": [
+        "infringe-lane",
+        "goodfaith-gate"
+      ],
+      "textTreatments": [
+        "chip",
+        "stamp",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "motion",
+        "connector",
+        "contrast"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "patent-infringement-knowledge-1",
+        "patent-infringement-scene-01-elements",
+        "patent-infringement-law-knowledge-1"
+      ],
+      "statefulObjects": [
+        "infringe-act-travel"
+      ]
+    },
+    {
+      "id": "patent-infringement-scene-02",
+      "export": "PatentInfringement02Scene",
+      "layout": "exemption-shield-hall-2",
+      "anchor": "concept-icon",
+      "grammar": [
+        "exemption-shield-hall",
+        "case-verdict-band"
+      ],
+      "textTreatments": [
+        "chip",
+        "external-negation",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "icon",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "patent-infringement-scene-02-exemptions",
+        "patent-infringement-law-knowledge-2"
+      ],
+      "statefulObjects": [
+        "exemption-shield-travel"
+      ]
+    }
+  ]
+}
