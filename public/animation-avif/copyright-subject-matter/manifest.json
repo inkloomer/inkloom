@@ -1,0 +1,70 @@
+{
+  "animationId": "copyright-subject-matter",
+  "compositionId": "CopyrightSubjectMatter",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-09-01T07:39:41.000Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 299,
+      "frameCount": 150,
+      "id": "copyright-subject-matter-scene-01",
+      "number": "01",
+      "startFrame": 0,
+      "title": "作品认定",
+      "durationMs": 5000,
+      "file": "copyright-subject-matter-scene-01.avif",
+      "fileSize": 415256,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "fca0580408f997c5bb7cd246cce95deee6106e5457d18dafdca5415bd54931ee",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "c32a0183ecc31e3996af302eea37a15bc82e28a6a1efdcba340567f8d480e068"
+    },
+    {
+      "endFrame": 599,
+      "frameCount": 150,
+      "id": "copyright-subject-matter-scene-02",
+      "number": "02",
+      "startFrame": 300,
+      "title": "保护条件",
+      "durationMs": 5000,
+      "file": "copyright-subject-matter-scene-02.avif",
+      "fileSize": 486511,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "b924631927f624d3a952be628ba10306f64c307cbca89921e729e81bf37c2921",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "c32a0183ecc31e3996af302eea37a15bc82e28a6a1efdcba340567f8d480e068"
+    },
+    {
+      "endFrame": 899,
+      "frameCount": 150,
+      "id": "copyright-subject-matter-scene-03",
+      "number": "03",
+      "startFrame": 600,
+      "title": "三类排除",
+      "durationMs": 5000,
+      "file": "copyright-subject-matter-scene-03.avif",
+      "fileSize": 527875,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "0c8649aec5c26b84970288de791b63f3d2e1bc3eb9438a3cd6ea647b05220c73",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "c32a0183ecc31e3996af302eea37a15bc82e28a6a1efdcba340567f8d480e068"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "c32a0183ecc31e3996af302eea37a15bc82e28a6a1efdcba340567f8d480e068",
+  "targetFps": 30,
+  "totalFileSize": 1429642
+}
