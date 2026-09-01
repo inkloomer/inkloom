@@ -3,7 +3,7 @@
   "compositionId": "CompanyDissolution",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-09-01T13:39:55.997Z",
+  "generatedAt": "2026-09-01T15:48:35.837Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -16,13 +16,13 @@
       "title": "解散的三种原因",
       "durationMs": 6200,
       "file": "company-dissolution-scene-01.avif",
-      "fileSize": 575455,
+      "fileSize": 577887,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "96052a14dbed5c3f73179f42dc5899c87a6a7315233fc1d4c6bfa884a024189f",
+      "sha256": "9a5f6105e566fa814ff1d84c6980641f212d893f85f192ab30e7bec1aca4aa90",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "8850872408f611c14da4930309fb2f3acdc853354edc1c6107e695878cb89575"
+      "sceneFingerprint": "76ec110f6babe1295066bcb9ad9f1d0cf964640d006566e383f4bd84a4adcaee"
     },
     {
       "endFrame": 755,
@@ -39,7 +39,7 @@
       "sha256": "db87efb20da5a056b3d062f8eeafd5accfa8ac018bb78f06d676c9a2eb6d863d",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "8850872408f611c14da4930309fb2f3acdc853354edc1c6107e695878cb89575"
+      "sceneFingerprint": "76ec110f6babe1295066bcb9ad9f1d0cf964640d006566e383f4bd84a4adcaee"
     },
     {
       "endFrame": 1139,
@@ -56,7 +56,7 @@
       "sha256": "7944a8cb933df312a2fce6e201929406c2cff77735d7155548d11a7e68b77c83",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "8850872408f611c14da4930309fb2f3acdc853354edc1c6107e695878cb89575"
+      "sceneFingerprint": "76ec110f6babe1295066bcb9ad9f1d0cf964640d006566e383f4bd84a4adcaee"
     }
   ],
   "size": {
@@ -64,7 +64,7 @@
     "width": 2560
   },
   "sourceFps": 60,
-  "sourceFingerprint": "8850872408f611c14da4930309fb2f3acdc853354edc1c6107e695878cb89575",
+  "sourceFingerprint": "76ec110f6babe1295066bcb9ad9f1d0cf964640d006566e383f4bd84a4adcaee",
   "targetFps": 30,
-  "totalFileSize": 1664298
+  "totalFileSize": 1666730
 }

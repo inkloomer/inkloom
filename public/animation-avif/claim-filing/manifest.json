@@ -3,7 +3,7 @@
   "compositionId": "ClaimFiling",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-09-01T14:21:23.574Z",
+  "generatedAt": "2026-09-01T16:04:34.143Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -16,13 +16,13 @@
       "title": "申报范围与期限",
       "durationMs": 6600,
       "file": "claim-filing-scene-01.avif",
-      "fileSize": 668962,
+      "fileSize": 669313,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "6656d64255824d87e29b4434f09403c758ff80310acc7511675b5c7420f6ae89",
+      "sha256": "d61ba69ed6faee22a5e74c85065bb1e843f1915dec6fc06a7774c239654d41f2",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "cdad1ef69e20c46d7b843a34e8a86a08188b95811a3babe1892caca0da64c832"
+      "sceneFingerprint": "2db772f2a07d82f8573c11043f3589a5460361f8dc3b0dffb435de379215fd85"
     },
     {
       "endFrame": 767,
@@ -39,7 +39,7 @@
       "sha256": "653e1039d80d354bf141666a24a7f8647ce801cbf8ee576a9b51c44c8bb97ef8",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "cdad1ef69e20c46d7b843a34e8a86a08188b95811a3babe1892caca0da64c832"
+      "sceneFingerprint": "2db772f2a07d82f8573c11043f3589a5460361f8dc3b0dffb435de379215fd85"
     },
     {
       "endFrame": 1151,
@@ -56,7 +56,7 @@
       "sha256": "2ac2d6622a86a1a12073e99cde2a787d55c0ff5ce5cba232e95b8cdd49efce36",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "cdad1ef69e20c46d7b843a34e8a86a08188b95811a3babe1892caca0da64c832"
+      "sceneFingerprint": "2db772f2a07d82f8573c11043f3589a5460361f8dc3b0dffb435de379215fd85"
     }
   ],
   "size": {
@@ -64,7 +64,7 @@
     "width": 2560
   },
   "sourceFps": 60,
-  "sourceFingerprint": "cdad1ef69e20c46d7b843a34e8a86a08188b95811a3babe1892caca0da64c832",
+  "sourceFingerprint": "2db772f2a07d82f8573c11043f3589a5460361f8dc3b0dffb435de379215fd85",
   "targetFps": 30,
-  "totalFileSize": 1561321
+  "totalFileSize": 1561672
 }

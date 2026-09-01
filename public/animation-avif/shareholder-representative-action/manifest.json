@@ -3,7 +3,7 @@
   "compositionId": "ShareholderRepresentativeAction",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-09-01T12:58:05.031Z",
+  "generatedAt": "2026-09-01T15:51:28.266Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -22,7 +22,7 @@
       "sha256": "f23f9431377dd67177bc803556fd1a0bc509783c004d8682136bc421e20efe79",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "df23dff9c1975fa8a3586b3a9d927dfc5cf1f312d4f61a2ecbf7214e52c249b3"
+      "sceneFingerprint": "7e61a5c7967a05aa3da69db765b552cdca8021bd72789d67d0897c7bd149fcf9"
     },
     {
       "endFrame": 743,
@@ -39,7 +39,7 @@
       "sha256": "95bcda841a41f8e3273ca76f5e018f9a30902f4ee07c75f34fddb247324b57bb",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "df23dff9c1975fa8a3586b3a9d927dfc5cf1f312d4f61a2ecbf7214e52c249b3"
+      "sceneFingerprint": "7e61a5c7967a05aa3da69db765b552cdca8021bd72789d67d0897c7bd149fcf9"
     },
     {
       "endFrame": 1133,
@@ -56,7 +56,7 @@
       "sha256": "ba254527da4fd4457952b9720ae819d26e99c821455b0ff8a0685b638338a953",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "df23dff9c1975fa8a3586b3a9d927dfc5cf1f312d4f61a2ecbf7214e52c249b3"
+      "sceneFingerprint": "7e61a5c7967a05aa3da69db765b552cdca8021bd72789d67d0897c7bd149fcf9"
     }
   ],
   "size": {
@@ -64,7 +64,7 @@
     "width": 2560
   },
   "sourceFps": 60,
-  "sourceFingerprint": "df23dff9c1975fa8a3586b3a9d927dfc5cf1f312d4f61a2ecbf7214e52c249b3",
+  "sourceFingerprint": "7e61a5c7967a05aa3da69db765b552cdca8021bd72789d67d0897c7bd149fcf9",
   "targetFps": 30,
   "totalFileSize": 2158008
 }

@@ -3,7 +3,7 @@
   "compositionId": "BankruptcyReorganization",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-09-01T15:18:25.089Z",
+  "generatedAt": "2026-09-01T16:20:29.978Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -16,13 +16,13 @@
       "title": "重整程序流程",
       "durationMs": 6700,
       "file": "bankruptcy-reorganization-scene-01.avif",
-      "fileSize": 488187,
+      "fileSize": 489183,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "94781566a23b309124776fb103b67d8d353a4b7b4cb8e44187a7a41170d90fd6",
+      "sha256": "f0c07f27af474970f4824b7fdcca09a2fb79dc90f5f952fbea804d01ce59f252",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "69b3136a52162714b32dea27c0a8488706378966a2e15dd57709e0f889d3c6e9"
+      "sceneFingerprint": "d224dc7b396b9477a9711087aa0e0d4f1fb44004461936846836afc9d5a2b6d8"
     },
     {
       "endFrame": 785,
@@ -39,7 +39,7 @@
       "sha256": "9697a23d3fe48a9c644191ac66f4d129b98a8573dace48cbbd980a9d930165d8",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "69b3136a52162714b32dea27c0a8488706378966a2e15dd57709e0f889d3c6e9"
+      "sceneFingerprint": "d224dc7b396b9477a9711087aa0e0d4f1fb44004461936846836afc9d5a2b6d8"
     },
     {
       "endFrame": 1175,
@@ -50,13 +50,13 @@
       "title": "重整期间的营业保护",
       "durationMs": 6500,
       "file": "bankruptcy-reorganization-scene-03.avif",
-      "fileSize": 494302,
+      "fileSize": 494939,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "57cfc37cfdbaa29087058b4b1de75c06e1c6ee2e3e008c6c3f20a4a0219f7e40",
+      "sha256": "08f9f32ac39437366115cae8822062e60fe0937e9ae7cc49cfa4b0262afd9965",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "69b3136a52162714b32dea27c0a8488706378966a2e15dd57709e0f889d3c6e9"
+      "sceneFingerprint": "d224dc7b396b9477a9711087aa0e0d4f1fb44004461936846836afc9d5a2b6d8"
     }
   ],
   "size": {
@@ -64,7 +64,7 @@
     "width": 2560
   },
   "sourceFps": 60,
-  "sourceFingerprint": "69b3136a52162714b32dea27c0a8488706378966a2e15dd57709e0f889d3c6e9",
+  "sourceFingerprint": "d224dc7b396b9477a9711087aa0e0d4f1fb44004461936846836afc9d5a2b6d8",
   "targetFps": 30,
-  "totalFileSize": 1486510
+  "totalFileSize": 1488143
 }

@@ -3,7 +3,7 @@
   "compositionId": "BankruptcyCosts",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-09-01T14:10:06.291Z",
+  "generatedAt": "2026-09-01T16:02:14.493Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -16,13 +16,13 @@
       "title": "破产费用与共益债务",
       "durationMs": 6200,
       "file": "bankruptcy-costs-scene-01.avif",
-      "fileSize": 569061,
+      "fileSize": 570441,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "90c41951405ffe4abacd46a6072675e544e20deb6f5a1a1b9b4f470f65a1eb05",
+      "sha256": "0937d5bd5063c2d1fe17d5265dedc366bd2f1674dcd9b47493eb82df0ee13650",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "6087cf39f361f9e8454066e4d207acfde41a4fd9cff0cb0780db275bec05a868"
+      "sceneFingerprint": "3bb5bf8c47b5005f0b47e91868bd0a2c26c3e6e49572de757e61650480b7ccc3"
     },
     {
       "endFrame": 755,
@@ -33,13 +33,13 @@
       "title": "共益债务的六项",
       "durationMs": 6400,
       "file": "bankruptcy-costs-scene-02.avif",
-      "fileSize": 516091,
+      "fileSize": 517704,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "ec0943f226bb74703eb02226e2285e7471c264ee837ef5f5db05681daf08cceb",
+      "sha256": "11b9e20654e05341cbee9a971488fe0322208136715e86b1d18f59611b314917",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "6087cf39f361f9e8454066e4d207acfde41a4fd9cff0cb0780db275bec05a868"
+      "sceneFingerprint": "3bb5bf8c47b5005f0b47e91868bd0a2c26c3e6e49572de757e61650480b7ccc3"
     },
     {
       "endFrame": 1139,
@@ -50,13 +50,13 @@
       "title": "清偿规则",
       "durationMs": 6400,
       "file": "bankruptcy-costs-scene-03.avif",
-      "fileSize": 390517,
+      "fileSize": 390074,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "8bd5533013d68ccc8a6fa38a855d7a14deca9e51b42444c85cab0958263f5e7f",
+      "sha256": "adb50a83a4681a561aac21897e402735af494d3859a78c1616c5ac46762c4a21",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "6087cf39f361f9e8454066e4d207acfde41a4fd9cff0cb0780db275bec05a868"
+      "sceneFingerprint": "3bb5bf8c47b5005f0b47e91868bd0a2c26c3e6e49572de757e61650480b7ccc3"
     }
   ],
   "size": {
@@ -64,7 +64,7 @@
     "width": 2560
   },
   "sourceFps": 60,
-  "sourceFingerprint": "6087cf39f361f9e8454066e4d207acfde41a4fd9cff0cb0780db275bec05a868",
+  "sourceFingerprint": "3bb5bf8c47b5005f0b47e91868bd0a2c26c3e6e49572de757e61650480b7ccc3",
   "targetFps": 30,
-  "totalFileSize": 1475669
+  "totalFileSize": 1478219
 }

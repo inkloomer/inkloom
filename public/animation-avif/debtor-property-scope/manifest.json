@@ -3,7 +3,7 @@
   "compositionId": "DebtorPropertyScope",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-09-01T14:59:27.199Z",
+  "generatedAt": "2026-09-01T16:09:39.658Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -22,7 +22,7 @@
       "sha256": "2b66b1411a50b99bf8f342235336498e55d6a37298964019df79de78d2ab9df1",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "8517b05574e3c6c83cb5aa71b2e1ad7f222277fc55d7e779839a1c7eb5e17bb2"
+      "sceneFingerprint": "f80e8ec1df40701dccc2a8f742fea33548dc2569af10d91864e824a923692344"
     },
     {
       "endFrame": 701,
@@ -39,7 +39,7 @@
       "sha256": "32ccae3d2d53df942aba15eabe1120ceb609e152d0bedfd9987c5ccdfc771891",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "8517b05574e3c6c83cb5aa71b2e1ad7f222277fc55d7e779839a1c7eb5e17bb2"
+      "sceneFingerprint": "f80e8ec1df40701dccc2a8f742fea33548dc2569af10d91864e824a923692344"
     },
     {
       "endFrame": 1067,
@@ -50,13 +50,13 @@
       "title": "不属于债务人财产",
       "durationMs": 6100,
       "file": "debtor-property-scope-scene-03.avif",
-      "fileSize": 359080,
+      "fileSize": 360721,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "480c5c2196173af06a2cefd34e413ed446e29adaada380317b03369bf5be52c5",
+      "sha256": "660cb9a5657bfda1a5b6820c163ca5104b1b99a682290e067ddb452f428823fe",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "8517b05574e3c6c83cb5aa71b2e1ad7f222277fc55d7e779839a1c7eb5e17bb2"
+      "sceneFingerprint": "f80e8ec1df40701dccc2a8f742fea33548dc2569af10d91864e824a923692344"
     }
   ],
   "size": {
@@ -64,7 +64,7 @@
     "width": 2560
   },
   "sourceFps": 60,
-  "sourceFingerprint": "8517b05574e3c6c83cb5aa71b2e1ad7f222277fc55d7e779839a1c7eb5e17bb2",
+  "sourceFingerprint": "f80e8ec1df40701dccc2a8f742fea33548dc2569af10d91864e824a923692344",
   "targetFps": 30,
-  "totalFileSize": 1084356
+  "totalFileSize": 1085997
 }

@@ -3,7 +3,7 @@
   "compositionId": "CorporateOrgans",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-09-01T12:59:47.687Z",
+  "generatedAt": "2026-09-01T15:36:06.671Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -16,13 +16,13 @@
       "title": "四层机构与人事权",
       "durationMs": 6300,
       "file": "corporate-organs-scene-01.avif",
-      "fileSize": 671207,
+      "fileSize": 674681,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "19341ec2d68f004f634b9469edb60c53e0e8ffab5746e3ba80e505649009251f",
+      "sha256": "f05f5f6960d38247f1bc733254555dd47b1d24a882260195123fab97c4708d43",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "b88f9134720c17895df430a2839d6e57d68cb8481368cb65aac772ad6b10698f"
+      "sceneFingerprint": "d8a483dc6e63438f2570abf8d9f9257aaef4f1507be6afeb32a961252d921c6c"
     },
     {
       "endFrame": 761,
@@ -39,7 +39,7 @@
       "sha256": "7257227ffc0f0c6ad26d057212dde7b9fa3982a99184c9cd72dfd9e6cc6719b6",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "b88f9134720c17895df430a2839d6e57d68cb8481368cb65aac772ad6b10698f"
+      "sceneFingerprint": "d8a483dc6e63438f2570abf8d9f9257aaef4f1507be6afeb32a961252d921c6c"
     },
     {
       "endFrame": 1151,
@@ -56,7 +56,7 @@
       "sha256": "21723a525e4882a8d82ae81eeb98b1ceff78b5b6f053fc745509c74c82ec65d6",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "b88f9134720c17895df430a2839d6e57d68cb8481368cb65aac772ad6b10698f"
+      "sceneFingerprint": "d8a483dc6e63438f2570abf8d9f9257aaef4f1507be6afeb32a961252d921c6c"
     }
   ],
   "size": {
@@ -64,7 +64,7 @@
     "width": 2560
   },
   "sourceFps": 60,
-  "sourceFingerprint": "b88f9134720c17895df430a2839d6e57d68cb8481368cb65aac772ad6b10698f",
+  "sourceFingerprint": "d8a483dc6e63438f2570abf8d9f9257aaef4f1507be6afeb32a961252d921c6c",
   "targetFps": 30,
-  "totalFileSize": 2040884
+  "totalFileSize": 2044358
 }

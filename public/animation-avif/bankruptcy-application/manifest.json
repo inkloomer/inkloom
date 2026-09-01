@@ -3,7 +3,7 @@
   "compositionId": "BankruptcyApplication",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-09-01T14:06:33.472Z",
+  "generatedAt": "2026-09-01T15:56:56.446Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -16,13 +16,13 @@
       "title": "谁可以申请什么",
       "durationMs": 6600,
       "file": "bankruptcy-application-scene-01.avif",
-      "fileSize": 397683,
+      "fileSize": 399774,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "55335d583490f527a14b145c559f3e4acc4db1de3fd291c8263404ce74df5d24",
+      "sha256": "809b7e4a0dddc1d408f9cb2975c58270e069895150fd49d3f363129be43ff4d8",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "2caa4f37f83953e98549d03e82585738defea5db52d433ca7d08ab10eeb0332f"
+      "sceneFingerprint": "32f947005686fa588927652f3fcff71490d743671a10d1bfe3df42d6b2640c51"
     },
     {
       "endFrame": 779,
@@ -33,13 +33,13 @@
       "title": "受理后的三重效果",
       "durationMs": 6400,
       "file": "bankruptcy-application-scene-02.avif",
-      "fileSize": 515138,
+      "fileSize": 512994,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "cae0d421441e3b5b3165b79ad0644f76babdd9bdce01ad57866ed44ec5a6a0d9",
+      "sha256": "35544f2f3118140756cc34cc3e9cb7b70e96c516e211dec51358fca6f98f902a",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "2caa4f37f83953e98549d03e82585738defea5db52d433ca7d08ab10eeb0332f"
+      "sceneFingerprint": "32f947005686fa588927652f3fcff71490d743671a10d1bfe3df42d6b2640c51"
     },
     {
       "endFrame": 1139,
@@ -56,7 +56,7 @@
       "sha256": "76d3f5606a55b51feb2c2e9f0ad88c84ec60f6d0741b69025d10804ce6d029c5",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "2caa4f37f83953e98549d03e82585738defea5db52d433ca7d08ab10eeb0332f"
+      "sceneFingerprint": "32f947005686fa588927652f3fcff71490d743671a10d1bfe3df42d6b2640c51"
     }
   ],
   "size": {
@@ -64,7 +64,7 @@
     "width": 2560
   },
   "sourceFps": 60,
-  "sourceFingerprint": "2caa4f37f83953e98549d03e82585738defea5db52d433ca7d08ab10eeb0332f",
+  "sourceFingerprint": "32f947005686fa588927652f3fcff71490d743671a10d1bfe3df42d6b2640c51",
   "targetFps": 30,
-  "totalFileSize": 1396565
+  "totalFileSize": 1396512
 }

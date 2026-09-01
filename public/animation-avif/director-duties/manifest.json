@@ -3,7 +3,7 @@
   "compositionId": "DirectorDuties",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-09-01T12:56:18.873Z",
+  "generatedAt": "2026-09-01T15:31:42.963Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -16,13 +16,13 @@
       "title": "任职资格的禁入情形",
       "durationMs": 6600,
       "file": "director-duties-scene-01.avif",
-      "fileSize": 846214,
+      "fileSize": 844931,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "a568f8dfc983bf5202b35d730c4158204eaaf17cfa83017d3fcb417a5b6cf34c",
+      "sha256": "d7c074c67203d36a5578d334500902b5d26e0e6a010b7d83dc8ade4b927a67d1",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "19486dd04ccd839f5572df7e2380fa84de8ae66bafdfc75ba210fa86ea32eb23"
+      "sceneFingerprint": "e39e6621705412f012fb3266b2312ffbe14062675fdff5d0459d68c6941fc5d7"
     },
     {
       "endFrame": 779,
@@ -39,7 +39,7 @@
       "sha256": "0f9bcda7f77037864d22c19ca33600844c3ebfc4f7dec16aa5c57a25194d1818",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "19486dd04ccd839f5572df7e2380fa84de8ae66bafdfc75ba210fa86ea32eb23"
+      "sceneFingerprint": "e39e6621705412f012fb3266b2312ffbe14062675fdff5d0459d68c6941fc5d7"
     },
     {
       "endFrame": 1163,
@@ -56,7 +56,7 @@
       "sha256": "7e7ad8a5748e11905f78d8498b59deca0ed82d476dc00d1cb90018a43d2eb5af",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "19486dd04ccd839f5572df7e2380fa84de8ae66bafdfc75ba210fa86ea32eb23"
+      "sceneFingerprint": "e39e6621705412f012fb3266b2312ffbe14062675fdff5d0459d68c6941fc5d7"
     }
   ],
   "size": {
@@ -64,7 +64,7 @@
     "width": 2560
   },
   "sourceFps": 60,
-  "sourceFingerprint": "19486dd04ccd839f5572df7e2380fa84de8ae66bafdfc75ba210fa86ea32eb23",
+  "sourceFingerprint": "e39e6621705412f012fb3266b2312ffbe14062675fdff5d0459d68c6941fc5d7",
   "targetFps": 30,
-  "totalFileSize": 2111301
+  "totalFileSize": 2110018
 }

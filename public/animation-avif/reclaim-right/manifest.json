@@ -3,7 +3,7 @@
   "compositionId": "ReclaimRight",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-09-01T14:55:45.930Z",
+  "generatedAt": "2026-09-01T16:15:44.870Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -22,7 +22,7 @@
       "sha256": "00167dd52f37023a2faaac2faa181097ded8bc569c14da1a8140941c24744b21",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "85b3f74471c45dba9c5534ae66240825bad1ed74b34369d55120018a3a3ec239"
+      "sceneFingerprint": "88f763ef5569fb604b5749486951546736ae980c93a240e1137ac5fb7c11a450"
     },
     {
       "endFrame": 743,
@@ -39,7 +39,7 @@
       "sha256": "dd30ee82c2a6e9413b79f6ddcab7749de6dd62af1334d219baa2d8279081c50f",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "85b3f74471c45dba9c5534ae66240825bad1ed74b34369d55120018a3a3ec239"
+      "sceneFingerprint": "88f763ef5569fb604b5749486951546736ae980c93a240e1137ac5fb7c11a450"
     },
     {
       "endFrame": 1127,
@@ -53,10 +53,10 @@
       "fileSize": 457623,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "b53f65acc981f2ac3f313e7e3ccdf3cdd87cacead88ae520a76aadc68d974744",
+      "sha256": "c2a6b711f3ca148432a9dafbf1744f2833fb778b401749fa017a77dcbd2f202b",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "85b3f74471c45dba9c5534ae66240825bad1ed74b34369d55120018a3a3ec239"
+      "sceneFingerprint": "88f763ef5569fb604b5749486951546736ae980c93a240e1137ac5fb7c11a450"
     }
   ],
   "size": {
@@ -64,7 +64,7 @@
     "width": 2560
   },
   "sourceFps": 60,
-  "sourceFingerprint": "85b3f74471c45dba9c5534ae66240825bad1ed74b34369d55120018a3a3ec239",
+  "sourceFingerprint": "88f763ef5569fb604b5749486951546736ae980c93a240e1137ac5fb7c11a450",
   "targetFps": 30,
   "totalFileSize": 1417732
 }

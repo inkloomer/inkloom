@@ -3,7 +3,7 @@
   "compositionId": "BankruptcyAdministrator",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-09-01T14:08:20.360Z",
+  "generatedAt": "2026-09-01T15:59:11.120Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -22,7 +22,7 @@
       "sha256": "b75796425f20e46acd1a19d3ea09cf5011f1af7921181d3990d9121ec5b874fd",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "93ade994027882be5242d5de6b2c8a82729fa54048c5bd39d0460839048d39e7"
+      "sceneFingerprint": "ef54c37b98098c18389bfcc00345bbf5d497cb47beaec079c6e801e814af7777"
     },
     {
       "endFrame": 761,
@@ -39,7 +39,7 @@
       "sha256": "7ba92bfbf561e4a04add60157a7667dd7fb3bd7f1b47e05ebce05fe7d02f60a1",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "93ade994027882be5242d5de6b2c8a82729fa54048c5bd39d0460839048d39e7"
+      "sceneFingerprint": "ef54c37b98098c18389bfcc00345bbf5d497cb47beaec079c6e801e814af7777"
     },
     {
       "endFrame": 1133,
@@ -50,13 +50,13 @@
       "title": "管理人的四舱职权",
       "durationMs": 6200,
       "file": "bankruptcy-administrator-scene-03.avif",
-      "fileSize": 377933,
+      "fileSize": 377921,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "6f30970ebfb575281bcdc4342a554415c042da25a6c3879308f3285058bed312",
+      "sha256": "adb86e6da3eba72dcf6a44ce1c913d43ed3e5fa75b184cdbd5b1d4659b058e66",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "93ade994027882be5242d5de6b2c8a82729fa54048c5bd39d0460839048d39e7"
+      "sceneFingerprint": "ef54c37b98098c18389bfcc00345bbf5d497cb47beaec079c6e801e814af7777"
     }
   ],
   "size": {
@@ -64,7 +64,7 @@
     "width": 2560
   },
   "sourceFps": 60,
-  "sourceFingerprint": "93ade994027882be5242d5de6b2c8a82729fa54048c5bd39d0460839048d39e7",
+  "sourceFingerprint": "ef54c37b98098c18389bfcc00345bbf5d497cb47beaec079c6e801e814af7777",
   "targetFps": 30,
-  "totalFileSize": 1367451
+  "totalFileSize": 1367439
 }

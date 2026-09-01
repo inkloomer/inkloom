@@ -3,7 +3,7 @@
   "compositionId": "BankruptcyGrounds",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-09-01T14:04:30.780Z",
+  "generatedAt": "2026-09-01T15:54:45.689Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -16,13 +16,13 @@
       "title": "破产原因的三项判定",
       "durationMs": 6300,
       "file": "bankruptcy-grounds-scene-01.avif",
-      "fileSize": 521590,
+      "fileSize": 519744,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "ba898509e5af1932c14889ee9a777ef6335660ed1d39a19da85f8bd7cd05e64b",
+      "sha256": "1c3577450b866b693ce4821b0e71de02d4168df5cc5eb89afd88ba042ae9993e",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "bcf70112229710feb49e3575f7cebdca45d652aabfb555f067ec7a7bf245d59e"
+      "sceneFingerprint": "2dcd98b484ed04b70bdba5ae84e975e4373fd80a2a57725be14051d898c06579"
     },
     {
       "endFrame": 749,
@@ -33,13 +33,13 @@
       "title": "缺乏清偿力的四种情形",
       "durationMs": 6200,
       "file": "bankruptcy-grounds-scene-02.avif",
-      "fileSize": 593440,
+      "fileSize": 591164,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "ae5a1d0e015cbdd19cfebe045ae9c1458b49e3527435c84d738edb436d1d3798",
+      "sha256": "ba79b8a352174c18b535e50946bc0bbcfb006c9040ffaf27c2b79500c111349a",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "bcf70112229710feb49e3575f7cebdca45d652aabfb555f067ec7a7bf245d59e"
+      "sceneFingerprint": "2dcd98b484ed04b70bdba5ae84e975e4373fd80a2a57725be14051d898c06579"
     },
     {
       "endFrame": 1097,
@@ -50,13 +50,13 @@
       "title": "仅看债务人自身",
       "durationMs": 5800,
       "file": "bankruptcy-grounds-scene-03.avif",
-      "fileSize": 526888,
+      "fileSize": 526720,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "b77f563f7257b3bb1dc3bee85fc72941899347657c13b193f84b9d468f6e73f1",
+      "sha256": "0e967dc09f810618b51026b0670a9e21187660e221c2695c40714a72d7b2b055",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "bcf70112229710feb49e3575f7cebdca45d652aabfb555f067ec7a7bf245d59e"
+      "sceneFingerprint": "2dcd98b484ed04b70bdba5ae84e975e4373fd80a2a57725be14051d898c06579"
     }
   ],
   "size": {
@@ -64,7 +64,7 @@
     "width": 2560
   },
   "sourceFps": 60,
-  "sourceFingerprint": "bcf70112229710feb49e3575f7cebdca45d652aabfb555f067ec7a7bf245d59e",
+  "sourceFingerprint": "2dcd98b484ed04b70bdba5ae84e975e4373fd80a2a57725be14051d898c06579",
   "targetFps": 30,
-  "totalFileSize": 1641918
+  "totalFileSize": 1637628
 }

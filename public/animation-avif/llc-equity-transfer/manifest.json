@@ -3,7 +3,7 @@
   "compositionId": "LlcEquityTransfer",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-09-01T13:19:52.673Z",
+  "generatedAt": "2026-09-01T15:41:48.888Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -22,7 +22,7 @@
       "sha256": "4f8302c15a3e9e352be4c11ef8b47a13787c79765ce89da36c6e1c9f68149ddd",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "97550cbf5561e12903371f114d48712ffbdfbda95c177901802e53a11c5071ff"
+      "sceneFingerprint": "53a60cdb406f17e10200f11b441584dea8ea019107a301e9695e4dbe2419ccfe"
     },
     {
       "endFrame": 779,
@@ -39,7 +39,7 @@
       "sha256": "aa7993685079dba988131121458f15a1abb4bcad011677857cf04b1ea2b390cd",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "97550cbf5561e12903371f114d48712ffbdfbda95c177901802e53a11c5071ff"
+      "sceneFingerprint": "53a60cdb406f17e10200f11b441584dea8ea019107a301e9695e4dbe2419ccfe"
     },
     {
       "endFrame": 1181,
@@ -50,13 +50,13 @@
       "title": "特殊转让与异议回购",
       "durationMs": 6700,
       "file": "llc-equity-transfer-scene-03.avif",
-      "fileSize": 783606,
+      "fileSize": 782527,
       "format": "avif",
       "pixelFormat": "gbrp",
-      "sha256": "5ff7ca6e2e8e0abf15fb16ebf30dabc96b9468deec9b04de14cab8dff84851e7",
+      "sha256": "1558807df3cad17ff98a2f47f83c5f840d3f7d6ec4f1a929524d4bb6d47a2961",
       "crf": 35,
       "quality": 45,
-      "sceneFingerprint": "97550cbf5561e12903371f114d48712ffbdfbda95c177901802e53a11c5071ff"
+      "sceneFingerprint": "53a60cdb406f17e10200f11b441584dea8ea019107a301e9695e4dbe2419ccfe"
     }
   ],
   "size": {
@@ -64,7 +64,7 @@
     "width": 2560
   },
   "sourceFps": 60,
-  "sourceFingerprint": "97550cbf5561e12903371f114d48712ffbdfbda95c177901802e53a11c5071ff",
+  "sourceFingerprint": "53a60cdb406f17e10200f11b441584dea8ea019107a301e9695e4dbe2419ccfe",
   "targetFps": 30,
-  "totalFileSize": 2151130
+  "totalFileSize": 2150051
 }
