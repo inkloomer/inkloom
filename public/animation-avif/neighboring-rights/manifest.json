@@ -1,0 +1,53 @@
+{
+  "animationId": "neighboring-rights",
+  "compositionId": "NeighboringRights",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-09-01T09:47:35.110Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 309,
+      "frameCount": 155,
+      "id": "neighboring-rights-scene-01",
+      "number": "01",
+      "startFrame": 0,
+      "title": "三主体",
+      "durationMs": 5167,
+      "file": "neighboring-rights-scene-01.avif",
+      "fileSize": 509355,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "7465d6479093df690b893c8a48092b8058572385c04762823c0d0197601446bb",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "49592d115ab81293e2fc67a3ce278a040d30d173cae17f000e03ef03492b0d8c"
+    },
+    {
+      "endFrame": 619,
+      "frameCount": 155,
+      "id": "neighboring-rights-scene-02",
+      "number": "02",
+      "startFrame": 310,
+      "title": "侵权判断",
+      "durationMs": 5167,
+      "file": "neighboring-rights-scene-02.avif",
+      "fileSize": 558828,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "164f335eb058a8b7907d50f3eea10ca496a760f8136060358c73084c9ed07960",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "49592d115ab81293e2fc67a3ce278a040d30d173cae17f000e03ef03492b0d8c"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "49592d115ab81293e2fc67a3ce278a040d30d173cae17f000e03ef03492b0d8c",
+  "targetFps": 30,
+  "totalFileSize": 1068183
+}
