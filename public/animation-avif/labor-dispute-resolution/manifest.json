@@ -1,0 +1,70 @@
+{
+  "animationId": "labor-dispute-resolution",
+  "compositionId": "LaborDisputeResolution",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-09-01T06:11:02.148Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 309,
+      "frameCount": 155,
+      "id": "labor-dispute-resolution-scene-01",
+      "number": "01",
+      "startFrame": 0,
+      "title": "争议四步走",
+      "durationMs": 5167,
+      "file": "labor-dispute-resolution-scene-01.avif",
+      "fileSize": 482588,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "7c3159bb606401420ec0debf1c1881dcb5aa62df052759bf4167d7e7531c0651",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "b3f513f6ca9629204727d34d18a071769a2eeabbe95f5c366cfd1aa9dfbac26e"
+    },
+    {
+      "endFrame": 629,
+      "frameCount": 160,
+      "id": "labor-dispute-resolution-scene-02",
+      "number": "02",
+      "startFrame": 310,
+      "title": "一裁终局",
+      "durationMs": 5333,
+      "file": "labor-dispute-resolution-scene-02.avif",
+      "fileSize": 662055,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "8ae2a917430486e0ed800c366e8e002bdcb92bd9789b548c8e7ded627576fe80",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "b3f513f6ca9629204727d34d18a071769a2eeabbe95f5c366cfd1aa9dfbac26e"
+    },
+    {
+      "endFrame": 929,
+      "frameCount": 150,
+      "id": "labor-dispute-resolution-scene-03",
+      "number": "03",
+      "startFrame": 630,
+      "title": "不予执行",
+      "durationMs": 5000,
+      "file": "labor-dispute-resolution-scene-03.avif",
+      "fileSize": 458296,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "1127429d214cd6485832a18a1cca3278b30f86b4cdce9db6c0573b5b8d71f0aa",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "b3f513f6ca9629204727d34d18a071769a2eeabbe95f5c366cfd1aa9dfbac26e"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "b3f513f6ca9629204727d34d18a071769a2eeabbe95f5c366cfd1aa9dfbac26e",
+  "targetFps": 30,
+  "totalFileSize": 1602939
+}
