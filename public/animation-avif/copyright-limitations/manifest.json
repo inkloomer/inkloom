@@ -1,0 +1,70 @@
+{
+  "animationId": "copyright-limitations",
+  "compositionId": "CopyrightLimitations",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-09-01T09:20:56.244Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 309,
+      "frameCount": 155,
+      "id": "copyright-limitations-scene-01",
+      "number": "01",
+      "startFrame": 0,
+      "title": "权利保护期",
+      "durationMs": 5167,
+      "file": "copyright-limitations-scene-01.avif",
+      "fileSize": 511904,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "a6a2f3300fd9ed49d523847300cee6ff85cf74eb7c2b2c2b1fa1afb2ddb12733",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "efab24e856f824bcad732a66430cbba1a1ca6dfb24e7559d61c5a7d8ebba9c4c"
+    },
+    {
+      "endFrame": 629,
+      "frameCount": 160,
+      "id": "copyright-limitations-scene-02",
+      "number": "02",
+      "startFrame": 310,
+      "title": "合理使用",
+      "durationMs": 5333,
+      "file": "copyright-limitations-scene-02.avif",
+      "fileSize": 526206,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "4e35ae42a6c7f4d2267ca3936d96fa278f95b75dbed82d4ac29aa1c8e9501542",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "efab24e856f824bcad732a66430cbba1a1ca6dfb24e7559d61c5a7d8ebba9c4c"
+    },
+    {
+      "endFrame": 949,
+      "frameCount": 160,
+      "id": "copyright-limitations-scene-03",
+      "number": "03",
+      "startFrame": 630,
+      "title": "法定许可",
+      "durationMs": 5333,
+      "file": "copyright-limitations-scene-03.avif",
+      "fileSize": 633564,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "8583480145c02455dd962f8f01a593feb4aa460d3a267ee4514c453dc604d030",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "efab24e856f824bcad732a66430cbba1a1ca6dfb24e7559d61c5a7d8ebba9c4c"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "efab24e856f824bcad732a66430cbba1a1ca6dfb24e7559d61c5a7d8ebba9c4c",
+  "targetFps": 30,
+  "totalFileSize": 1671674
+}
