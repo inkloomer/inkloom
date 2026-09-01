@@ -1,5 +1,5 @@
 import type {CSSProperties, ReactNode} from 'react';
-import {Anchor, ArrowRight, Ban, Coins, FlaskConical, Gavel, Hourglass, Repeat, RotateCcw, Scale, ScrollText, ShieldCheck, Wallet} from 'lucide-react';
+import {Anchor, ArrowRight, Ban, Coins, FlaskConical, Gavel, Hourglass, Repeat, RotateCcw, Scale, ScrollText, ShieldCheck, Undo2, Wallet} from 'lucide-react';
 import {AbsoluteFill, interpolate, useCurrentFrame} from 'remotion';
 import {CLAMP} from '../../../../shared/remotion-runtime';
 
@@ -292,7 +292,7 @@ export const TrialPurchaseScene = () => {
           <Panel tone={C.teal} watermark={<Scale size={120} color={C.teal} strokeWidth={1.6} />} style={{height: '100%', display: 'flex', flexDirection: 'column', gap: 8, padding: '10px 16px'}}>
             <PanelTab tone={C.teal} icon={<Scale size={24} color={C.cream} strokeWidth={2.2} />}>表示购买 · 三重后果</PanelTab>
             <IconChip icon={<ScrollText size={22} color={C.cream} strokeWidth={2.2} />} tone={C.bronze} title="承诺：">购买表示即构成<Soft color={C.bronze}>承诺</Soft> → 买卖合同<Soft color={C.teal}>成立</Soft></IconChip>
-            <IconChip icon={<Anchor size={22} color={C.cream} strokeWidth={2.2} />} tone={C.teal} title="所有权：">事先已占有 → 基于<Soft color={C.teal}>简易交付</Soft>取得所有权（电脑案：再卖=有权处分）</IconChip>
+            <IconChip icon={<Anchor size={22} color={C.cream} strokeWidth={2.2} />} tone={C.teal} title="所有权：">事先已占有 → <Soft color={C.teal}>简易交付</Soft>取得所有权（电脑案再卖=有权处分）</IconChip>
             <IconChip icon={<Scale size={22} color={C.cream} strokeWidth={2.2} />} tone={C.rust} title="风险：">自此时起标的物<Soft color={C.rust}>风险</Soft>归买受人承担</IconChip>
             <div style={{marginTop: 'auto', fontSize: 20, fontWeight: 900, color: C.inkSoft}}><Under color={C.rust} delay={200}>拒绝购买</Under>：退还货物·<Soft color={C.teal}>无需支付使用费</Soft>（另有约定除外）</div>
           </Panel>
@@ -302,7 +302,7 @@ export const TrialPurchaseScene = () => {
             <PanelTab tone={C.rust} icon={<Coins size={24} color={C.cream} strokeWidth={2.2} />}>使用费 与 试用风险</PanelTab>
             <IconChip icon={<Ban size={22} color={C.cream} strokeWidth={2.2} />} tone={C.bronze} title="使用费（第639条）：">无约定或不明 → 出卖人<Soft color={C.rust}>无权请求</Soft>支付·<Soft color={C.teal}>免费试用</Soft>（第10天不买归还：无使用费折旧费）</IconChip>
             <IconChip icon={<Scale size={22} color={C.cream} strokeWidth={2.2} />} tone={C.rust} title="风险（第640条）：">试用期内毁损灭失 → 由<Soft color={C.rust}>出卖人</Soft>承担</IconChip>
-            <div style={{border: `2px dashed ${C.edge}`, backgroundColor: C.creamDim, padding: '6px 12px', fontSize: 18, fontWeight: 880, color: C.ink, lineHeight: 1.5}}>理由：试用期交付<Soft color={C.bronze}>非主要义务</Soft>之交付·买受人<Soft color={C.bronze}>未取得所有权</Soft>·只能试用不能收益——暴雨泡坏机器人：孟某<Soft color={C.teal}>不赔偿</Soft></div>
+            <div style={{border: `2px dashed ${C.edge}`, backgroundColor: C.creamDim, padding: '6px 12px', fontSize: 18, fontWeight: 880, color: C.ink, lineHeight: 1.5}}>理由：交付<Soft color={C.bronze}>非主要义务</Soft>·<Soft color={C.bronze}>未取得所有权</Soft>·只能试用——暴雨泡坏机器人：孟某<Soft color={C.teal}>不赔偿</Soft></div>
             <div style={{marginTop: 'auto', fontSize: 20, fontWeight: 900, color: C.inkSoft}}>买或不买的选择权 = <Soft color={C.plumLike}>形成权</Soft>（单方意思表示即生私法效果）</div>
           </Panel>
         </Enter>
@@ -330,13 +330,12 @@ export const InstallmentForkScene = () => {
           <Panel tone={C.rust} watermark={<Wallet size={120} color={C.rust} strokeWidth={1.6} />} style={{height: '100%', display: 'flex', flexDirection: 'column', gap: 8, padding: '9px 18px'}}>
             <PanelTab tone={C.rust} icon={<Wallet size={24} color={C.cream} strokeWidth={2.2} />}>出卖人价金债权特殊保护 · 触发要件</PanelTab>
             <div style={{position: 'relative', height: 54, border: `2px solid ${C.edge}`, backgroundColor: C.creamDim, overflow: 'hidden'}}>
-              <div style={{position: 'absolute', left: 12, top: 12, bottom: 12, width: 1200, borderRadius: 4, overflow: 'hidden', border: `2px solid ${C.edge}`, backgroundColor: C.cream}}>
+              <div style={{position: 'absolute', left: 12, top: 8, width: 1200, height: 20, borderRadius: 4, overflow: 'hidden', border: `2px solid ${C.edge}`, backgroundColor: C.cream}}>
                 <div style={{position: 'absolute', left: 0, top: 0, bottom: 0, backgroundColor: C.rust, width: `${Math.min(100, (frame / 140) * 100)}%`, opacity: 0.75}} />
                 <div style={{position: 'absolute', left: '20%', top: 0, bottom: 0, width: 4, backgroundColor: tripped ? C.rust : C.edge}} />
-                <span style={{position: 'absolute', left: '20.8%', top: 14, fontSize: 17, fontWeight: 950, color: tripped ? C.rust : C.inkSoft}}>总价款 1/5</span>
-                <span style={{position: 'absolute', left: 16, top: 14, fontSize: 17, fontWeight: 950, color: C.ink}}>迟延支付进度</span>
               </div>
-              <span style={{position: 'absolute', left: 1250, top: 14, fontSize: 19, fontWeight: 950, color: tripped ? C.rust : C.inkSoft}}>＋ <Hourglass size={18} color={C.rust} strokeWidth={2.4} style={{verticalAlign: '-3px'}} /> 催告后合理期限仍不付 → <Soft color={C.rust}>保护触发</Soft></span>
+              <span style={{position: 'absolute', left: 16, top: 32, fontSize: 15, fontWeight: 950, color: C.inkSoft}}>迟延支付进度 · 红线刻度 = 总价款 1/5</span>
+              <span style={{position: 'absolute', left: 1250, top: 16, fontSize: 19, fontWeight: 950, color: tripped ? C.rust : C.inkSoft}}>＋ <Hourglass size={18} color={C.rust} strokeWidth={2.4} style={{verticalAlign: '-3px'}} /> 催告后合理期限仍不付 → <Soft color={C.rust}>保护触发</Soft></span>
             </div>
             <div style={{fontSize: 19, fontWeight: 900, color: C.inkSoft, opacity: tripped ? 1 : 0.4}}>概念：出卖人交付动产或不动产·买受人<Soft color={C.bronze}>分期支付价款</Soft>——触发后出卖人可在两径中<Soft color={C.bronze}>择一</Soft></div>
           </Panel>
