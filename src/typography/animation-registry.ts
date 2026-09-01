@@ -232,6 +232,7 @@ import {typography as typographyAutoSocialSecurityLaw} from '../animations/labor
 import {typography as typographyAutoEnvironmentalProtectionLaw} from '../animations/environment-resource-law/01/environmental-protection-law/animation.meta';
 import {typography as typographyAutoNaturalResourcesLaw} from '../animations/environment-resource-law/02/natural-resources-law/animation.meta';
 import {typography as typographyAutoCopyrightSubjectMatter} from '../animations/intellectual-property-law/01/copyright-subject-matter/animation.meta';
+import {typography as typographyAutoCopyrightObject} from '../animations/intellectual-property-law/01/copyright-object/animation.meta';
 import {typography as typographyAutoCopyrightContent} from '../animations/intellectual-property-law/02/copyright-content/animation.meta';
 import {typography as typographyAutoCopyrightAuthorship} from '../animations/intellectual-property-law/03/copyright-authorship/animation.meta';
 import {typography as typographyAutoCopyrightLimitations} from '../animations/intellectual-property-law/04/copyright-limitations/animation.meta';
@@ -243,6 +244,7 @@ import {typography as typographyAutoPatentInfringement} from '../animations/inte
 import {typography as typographyAutoTrademarkOverview} from '../animations/intellectual-property-law/10/trademark-overview/animation.meta';
 import {typography as typographyAutoTrademarkAcquisition} from '../animations/intellectual-property-law/11/trademark-acquisition/animation.meta';
 import {typography as typographyAutoTrademarkRightsTermination} from '../animations/intellectual-property-law/12/trademark-rights-termination/animation.meta';
+import {typography as typographyAutoTrademarkInfringement} from '../animations/intellectual-property-law/13/trademark-infringement/animation.meta';
 import {typography as typographyAutoShareholderContribution} from '../animations/commercial-law/02/shareholder-contribution/animation.meta';
 import {typography as typographyAutoPromoter} from '../animations/commercial-law/02/promoter/animation.meta';
 import {typography as typographyAutoCompanyIncorporation} from '../animations/commercial-law/02/company-incorporation/animation.meta';
@@ -786,6 +788,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'trademark-overview': {metadata: typographyAutoTrademarkOverview, scope: {animationId: 'trademark-overview', subject: 'intellectual-property-law', topic: '10'}},
   'trademark-acquisition': {metadata: typographyAutoTrademarkAcquisition, scope: {animationId: 'trademark-acquisition', subject: 'intellectual-property-law', topic: '11'}},
   'trademark-rights-termination': {metadata: typographyAutoTrademarkRightsTermination, scope: {animationId: 'trademark-rights-termination', subject: 'intellectual-property-law', topic: '12'}},
+  'trademark-infringement': {metadata: typographyAutoTrademarkInfringement, scope: {animationId: 'trademark-infringement', subject: 'intellectual-property-law', topic: '13'}},
   ...COMMERCIAL_LAW_TYPOGRAPHY_CONFIGURATIONS,
 };
 

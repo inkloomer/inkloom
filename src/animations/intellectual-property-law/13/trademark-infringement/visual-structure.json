@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 2,
+  "scenes": [
+    {
+      "id": "trademark-infringement-scene-01",
+      "export": "TrademarkInfringement01Scene",
+      "layout": "infringe-trio-lane-1",
+      "anchor": "flow-path",
+      "grammar": [
+        "infringe-trio-lane",
+        "seller-gate"
+      ],
+      "textTreatments": [
+        "chip",
+        "stamp",
+        "external-negation"
+      ],
+      "focalChannels": [
+        "motion",
+        "connector",
+        "contrast"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "trademark-infringement-scene-01-trio",
+        "trademark-infringement-scene-01-seller",
+        "trademark-infringement-law-knowledge-1"
+      ],
+      "statefulObjects": [
+        "infringe-trio-travel"
+      ]
+    },
+    {
+      "id": "trademark-infringement-scene-02",
+      "export": "TrademarkInfringement02Scene",
+      "layout": "prioruse-legitimate-gates-2",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "prioruse-gate",
+        "legitimate-band"
+      ],
+      "textTreatments": [
+        "chip",
+        "stamp",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "motion",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "trademark-infringement-scene-02-prioruse",
+        "trademark-infringement-law-knowledge-1",
+        "trademark-infringement-knowledge-2"
+      ],
+      "statefulObjects": [
+        "prioruse-claim-travel"
+      ]
+    }
+  ]
+}
