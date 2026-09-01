@@ -1,0 +1,109 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "contractor-employment-fork",
+      "export": "ContractorEmploymentScene",
+      "layout": "four-row-comparison-counter",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "contractor-completes-work-to-order-delivers-a-result-for-payment",
+        "employment-lends-labor-while-contracting-delivers-labor-plus-a-work-result",
+        "content-tools-and-pace-sort-contracting-independent-from-employment-dependent",
+        "both-are-paid-labor-but-the-contractor-enjoys-stronger-independence"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["connector", "contrast", "enclosure", "motion"],
+      "tokens": ["Hammer", "ScrollText", "Scale"],
+      "finalKnowledge": ["contractor-definition", "employment-contrast"],
+      "statefulObjects": []
+    },
+    {
+      "id": "rescission-trio",
+      "export": "RescissionTrioScene",
+      "layout": "three-gate-foreman-wall",
+      "anchor": "timeline-gate",
+      "grammar": [
+        "contractor-rescinds-when-assistance-fails-after-reminder",
+        "client-rescinds-when-main-work-is-secretly-delegated-otherwise-the-contractor-answers-for-the-third-party",
+        "client-may-change-or-rescind-anytime-without-any-cause-but-pays-the-loss",
+        "personal-performance-means-own-equipment-skill-and-labor-for-the-main-work"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["connector", "contrast", "enclosure", "motion"],
+      "tokens": ["Gavel", "Hammer", "Ban"],
+      "finalKnowledge": ["contractor-rescission", "client-rescission-pair"],
+      "statefulObjects": []
+    },
+    {
+      "id": "site-types-forms",
+      "export": "SiteTypesScene",
+      "layout": "three-type-site-map",
+      "anchor": "flow-path",
+      "grammar": [
+        "survey-design-and-construction-contracts-are-written-formal-special-contracting",
+        "award-runs-owner-to-contractor-while-subcontract-passes-part-and-assignment-passes-all",
+        "subcontract-needs-consent-and-structure-work-stays-personal",
+        "general-contracting-rules-apply-unless-conflicted"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["connector", "contrast", "enclosure", "motion"],
+      "tokens": ["HardHat", "ScrollText", "Ban"],
+      "finalKnowledge": ["site-types-forms"],
+      "statefulObjects": []
+    },
+    {
+      "id": "site-void-causes",
+      "export": "SiteVoidScene",
+      "layout": "void-cause-notice-board",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "missing-planning-permit-voids-unless-cured-before-suit-and-self-held-excuses-fail",
+        "split-award-and-uncured-qualification-void-with-cure-by-completion",
+        "unauthorized-unqualified-structural-or-reauctioned-subcontracts-fail",
+        "assignment-contracts-are-always-void"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "external-negation"],
+      "focalChannels": ["connector", "contrast", "enclosure", "motion"],
+      "tokens": ["Ban", "Stamp", "Gavel"],
+      "finalKnowledge": ["site-void-causes"],
+      "statefulObjects": []
+    },
+    {
+      "id": "site-price-bidding",
+      "export": "SitePriceScene",
+      "layout": "settlement-desk-with-schedule-ruler",
+      "anchor": "timeline-gate",
+      "grammar": [
+        "qualified-acceptance-earns-reference-based-compensation-on-the-performed-contract-or-the-last-signed",
+        "failed-repair-reports-deny-compensation-while-repair-costs-stay-own-burden-when-cured",
+        "the-filed-bid-contract-governs-settlement-and-price-cutting-sidel-deals-are-void",
+        "schedule-extension-needs-visa-or-reasoned-claim-and-retention-runs-from-acceptance-or-report-plus-ninety-days"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["connector", "contrast", "enclosure", "motion"],
+      "tokens": ["Coins", "Hourglass", "Gavel"],
+      "finalKnowledge": ["site-price-bidding", "site-schedule-retention"],
+      "statefulObjects": []
+    },
+    {
+      "id": "site-priority-litigation",
+      "export": "SitePriorityScene",
+      "layout": "priority-pyramid-with-litigation-desks",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "contractor-holds-eighteen-month-priority-from-due-payment-over-actual-expenses-only",
+        "homebuyer-refund-beats-priority-which-beats-mortgage-while-interest-and-penalty-rank-ordinary",
+        "quality-suits-ignore-privity-with-joint-liability-and-fee-suits-use-subrogation-capped-at-unpaid-sums",
+        "waving-priority-that-hurts-workers-is-void-and-counterclaims-merge"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["connector", "contrast", "enclosure", "motion"],
+      "tokens": ["Scale", "Gavel", "Key"],
+      "finalKnowledge": ["site-priority-rules", "site-litigation-rules"],
+      "statefulObjects": []
+    }
+  ]
+}

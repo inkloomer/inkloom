@@ -1,0 +1,21 @@
+{
+  "directionId": "walnut-contractor-contract-work-hall",
+  "family": "walnut-contractor-contract-work-hall",
+  "palette": "walnut workshop hall, copper tool rails, moss rescission ribbons, brick void stamps, gold settlement rulers, bone paper, walnut ink",
+  "typography": "workshop headings on walnut rail tabs, bone chips with copper and gold seals",
+  "composition": "a workshop-to-site hall where the contractor bench faces the employment counter, three rescission gates line the foreman wall, the site map routes award subcontract and assignment hops, void notices pin ten faults, the settlement desk pairs acceptance verdicts with a schedule ruler, and the priority pyramid stacks homebuyer priority and mortgage over ordinary claims",
+  "surface": "bone paper dossiers, walnut desk rails, copper tool stamps, gold settlement rulers",
+  "motion": "work chips sort onto the comparison counter, rescission blades light in turn, work orders hop the site map with legality labels, void stamps pin faults, settlement chips rail by acceptance verdict, and claim chips stack the priority pyramid",
+  "transition": "the walnut hall floor, copper rails and brick stamp posts persist while the counter, gates, site map, notice board, settlement desk and pyramid are re-dressed between scenes",
+  "conceptTokens": {
+    "承揽人": "Hammer",
+    "建设工程": "HardHat",
+    "优先受偿": "Scale"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/civil-law/12/contract-work-hall/",
+    "title": "胡桃工地馆"
+  }
+}
