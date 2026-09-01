@@ -7,6 +7,13 @@
   "surface": "瀑布阶梯与闸口框, 方形顺位章, 无圆角",
   "motion": "宣告闸口落下, 担保债权从瀑布旁路优先, 清偿逐级跌落",
   "transition": "瀑布阶梯与顺位章颜色角色贯穿场景",
+  "conceptTokens": {
+    "宣告": "Gavel",
+    "别除权": "Lock",
+    "集体清偿": "Users",
+    "职工": "HeartPulse",
+    "顺序": "Banknote"
+  },
   "catalog": {
     "status": "featured",
     "source": "original-node",

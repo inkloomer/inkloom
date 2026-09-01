@@ -7,6 +7,13 @@
   "surface": "轨道细线与站牌, 方形期限章, 无圆角",
   "motion": "列车沿轨道逐站进发, 五舱表决依次点亮, 保护线逐条落下",
   "transition": "轨道与站牌颜色角色贯穿场景",
+  "conceptTokens": {
+    "重整": "TrainFront",
+    "表决": "Users",
+    "计划": "FileText",
+    "批准": "Landmark",
+    "保护": "PauseCircle"
+  },
   "catalog": {
     "status": "featured",
     "source": "original-node",

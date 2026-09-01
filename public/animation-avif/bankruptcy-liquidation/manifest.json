@@ -1,0 +1,70 @@
+{
+  "animationId": "bankruptcy-liquidation",
+  "compositionId": "BankruptcyLiquidation",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-09-01T15:20:32.476Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 359,
+      "frameCount": 180,
+      "id": "bankruptcy-liquidation-scene-01",
+      "number": "01",
+      "startFrame": 0,
+      "title": "宣告破产的效果",
+      "durationMs": 6000,
+      "file": "bankruptcy-liquidation-scene-01.avif",
+      "fileSize": 452113,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "7b695fcaa6cb5eb2d453e947d37e6f531cffba9eb2d51b43a014cefbf070e464",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "02420fc11c565bd6a322f156cc65dddeb989dcd4f32760f6c06744ec28aaec87"
+    },
+    {
+      "endFrame": 731,
+      "frameCount": 186,
+      "id": "bankruptcy-liquidation-scene-02",
+      "number": "02",
+      "startFrame": 360,
+      "title": "别除权与集体清偿",
+      "durationMs": 6200,
+      "file": "bankruptcy-liquidation-scene-02.avif",
+      "fileSize": 509645,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "e4a6338628bc7535edee77d26331179d489ca79f34e046b0032cda41e30b1276",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "02420fc11c565bd6a322f156cc65dddeb989dcd4f32760f6c06744ec28aaec87"
+    },
+    {
+      "endFrame": 1127,
+      "frameCount": 198,
+      "id": "bankruptcy-liquidation-scene-03",
+      "number": "03",
+      "startFrame": 732,
+      "title": "清偿顺序瀑布",
+      "durationMs": 6600,
+      "file": "bankruptcy-liquidation-scene-03.avif",
+      "fileSize": 533231,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "04290c5e9780f0e7c7db196a6f851d2b586cd3f9df3d6791f905808cf1960860",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "02420fc11c565bd6a322f156cc65dddeb989dcd4f32760f6c06744ec28aaec87"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "02420fc11c565bd6a322f156cc65dddeb989dcd4f32760f6c06744ec28aaec87",
+  "targetFps": 30,
+  "totalFileSize": 1494989
+}
