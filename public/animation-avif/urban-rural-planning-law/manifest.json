@@ -1,0 +1,70 @@
+{
+  "animationId": "urban-rural-planning-law",
+  "compositionId": "UrbanRuralPlanningLaw",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-09-01T04:29:18.917Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 319,
+      "frameCount": 160,
+      "id": "urban-rural-planning-law-scene-01",
+      "number": "01",
+      "startFrame": 0,
+      "title": "许可三条路",
+      "durationMs": 5333,
+      "file": "urban-rural-planning-law-scene-01.avif",
+      "fileSize": 641322,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "4a94540bafc3e82576fafcdcc90fc55d34dcad714f52d7ef6aed41727b444dba",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "617d1efb389f8e2c613cf0982f8cff5e859edf9d5d141a78999af1cfa99e9192"
+    },
+    {
+      "endFrame": 619,
+      "frameCount": 150,
+      "id": "urban-rural-planning-law-scene-02",
+      "number": "02",
+      "startFrame": 320,
+      "title": "临时建设",
+      "durationMs": 5000,
+      "file": "urban-rural-planning-law-scene-02.avif",
+      "fileSize": 359829,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "2c434e2e0bc898fbc11a3c3336a0b9723242da23fd35e0b20b3e71190db25f74",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "617d1efb389f8e2c613cf0982f8cff5e859edf9d5d141a78999af1cfa99e9192"
+    },
+    {
+      "endFrame": 919,
+      "frameCount": 150,
+      "id": "urban-rural-planning-law-scene-03",
+      "number": "03",
+      "startFrame": 620,
+      "title": "出让与划拨",
+      "durationMs": 5000,
+      "file": "urban-rural-planning-law-scene-03.avif",
+      "fileSize": 342192,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "1d47b209789e4865de661a52b766e85d7736356bc1c38263708aa2fb518df318",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "617d1efb389f8e2c613cf0982f8cff5e859edf9d5d141a78999af1cfa99e9192"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "617d1efb389f8e2c613cf0982f8cff5e859edf9d5d141a78999af1cfa99e9192",
+  "targetFps": 30,
+  "totalFileSize": 1343343
+}
