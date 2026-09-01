@@ -240,6 +240,7 @@ import {typography as typographyAutoPatentSubjectMatter} from '../animations/int
 import {typography as typographyAutoPatentGrant} from '../animations/intellectual-property-law/07/patent-grant/animation.meta';
 import {typography as typographyAutoPatentRightsInvalidity} from '../animations/intellectual-property-law/08/patent-rights-invalidity/animation.meta';
 import {typography as typographyAutoPatentInfringement} from '../animations/intellectual-property-law/09/patent-infringement/animation.meta';
+import {typography as typographyAutoTrademarkOverview} from '../animations/intellectual-property-law/10/trademark-overview/animation.meta';
 import {typography as typographyAutoShareholderContribution} from '../animations/commercial-law/02/shareholder-contribution/animation.meta';
 import {typography as typographyAutoPromoter} from '../animations/commercial-law/02/promoter/animation.meta';
 import {typography as typographyAutoCompanyIncorporation} from '../animations/commercial-law/02/company-incorporation/animation.meta';
@@ -780,6 +781,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'patent-grant': {metadata: typographyAutoPatentGrant, scope: {animationId: 'patent-grant', subject: 'intellectual-property-law', topic: '07'}},
   'patent-rights-invalidity': {metadata: typographyAutoPatentRightsInvalidity, scope: {animationId: 'patent-rights-invalidity', subject: 'intellectual-property-law', topic: '08'}},
   'patent-infringement': {metadata: typographyAutoPatentInfringement, scope: {animationId: 'patent-infringement', subject: 'intellectual-property-law', topic: '09'}},
+  'trademark-overview': {metadata: typographyAutoTrademarkOverview, scope: {animationId: 'trademark-overview', subject: 'intellectual-property-law', topic: '10'}},
   ...COMMERCIAL_LAW_TYPOGRAPHY_CONFIGURATIONS,
 };
 

@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 2,
+  "scenes": [
+    {
+      "id": "trademark-overview-scene-01",
+      "export": "TrademarkOverview01Scene",
+      "layout": "forbid-register-gates-1",
+      "anchor": "flow-path",
+      "grammar": [
+        "forbid-gate-pair",
+        "distinctive-band"
+      ],
+      "textTreatments": [
+        "chip",
+        "external-negation",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "motion",
+        "connector",
+        "contrast"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "trademark-overview-knowledge-1",
+        "trademark-overview-scene-01-forbid",
+        "trademark-overview-law-knowledge-1"
+      ],
+      "statefulObjects": [
+        "mark-application-travel"
+      ]
+    },
+    {
+      "id": "trademark-overview-scene-02",
+      "export": "TrademarkOverview02Scene",
+      "layout": "classification-famous-board-2",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "classification-duo",
+        "famous-scale"
+      ],
+      "textTreatments": [
+        "chip",
+        "stamp",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "motion",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "trademark-overview-scene-02-classification",
+        "trademark-overview-scene-02-famous",
+        "trademark-overview-knowledge-2"
+      ],
+      "statefulObjects": [
+        "famous-claim-travel"
+      ]
+    }
+  ]
+}

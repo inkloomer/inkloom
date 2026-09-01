@@ -1,0 +1,16 @@
+{
+  "directionId": "trademark-gate-hall",
+  "derivedFrom": "demo-clerk-desk",
+  "variation": "商标注册关卡: 注册申请先过禁用闸（官方挂钩、道德公益）再过禁注闸（缺乏显著性、获显著可注册）, 集体证明商标双牌并挂, 驰名天平在已注册与未注册之间配重",
+  "family": "trademark-gate-hall",
+  "palette": "#EFECE4 + #2B2B33 + #2C4A6E + #8A4B2F + #15725F + #B23A30 + #B98A2F",
+  "typography": "WenKai 关卡栏标 + 申请徽章 + 双闸刻度",
+  "composition": "禁用禁注两道闸 + 集体证明商标双牌 + 驰名商标天平",
+  "surface": "关卡纸卡、申请徽章、双闸刻度与金口诀条, 无圆角",
+  "motion": "申请徽章先撞禁用闸再撞禁注闸, 驰名请求章滑向已注册未注册天平两侧",
+  "transition": "藏蓝关卡贯穿两场, 铜色集体商标与红色禁用双线呼应",
+  "catalog": {
+    "status": "variant",
+    "sourceDirectionId": "trademark-gate-hall"
+  }
+}
