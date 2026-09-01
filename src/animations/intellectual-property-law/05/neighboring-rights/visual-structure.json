@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 2,
+  "scenes": [
+    {
+      "id": "neighboring-rights-scene-01",
+      "export": "NeighboringRights01Scene",
+      "layout": "subject-chain-lane-1",
+      "anchor": "flow-path",
+      "grammar": [
+        "subject-chain-lane",
+        "term-band"
+      ],
+      "textTreatments": [
+        "chip",
+        "stamp",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "motion",
+        "connector",
+        "contrast"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "neighboring-rights-knowledge-1",
+        "neighboring-rights-scene-01-chain",
+        "neighboring-rights-scene-01-performer"
+      ],
+      "statefulObjects": [
+        "song-chain-travel"
+      ]
+    },
+    {
+      "id": "neighboring-rights-scene-02",
+      "export": "NeighboringRights02Scene",
+      "layout": "infringe-rent-gate-2",
+      "anchor": "flow-target",
+      "grammar": [
+        "case-verdict-band",
+        "rent-object-gate"
+      ],
+      "textTreatments": [
+        "chip",
+        "external-negation",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "motion",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "neighboring-rights-knowledge-2",
+        "neighboring-rights-scene-02-case",
+        "neighboring-rights-knowledge-3"
+      ],
+      "statefulObjects": [
+        "rent-object-travel"
+      ]
+    }
+  ]
+}
