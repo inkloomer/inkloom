@@ -2,7 +2,7 @@ import type {CSSProperties, ReactNode} from 'react';
 import {Ban, Coins, Gavel, Hammer, HardHat, Hourglass, Key, Scale, ScrollText, Stamp, Users} from 'lucide-react';
 import {AbsoluteFill, interpolate, useCurrentFrame} from 'remotion';
 import {CLAMP} from '../../../../shared/remotion-runtime';
-import {C, Enter, Mover, Panel, PanelTab, IconChip, Seal, Under, Soft, Chip, prog, PLAYER_CONTROL_SAFE_BOTTOM} from './ContractWorkScenes';
+import {C, Enter, Mover, Panel, PanelTab, IconChip, Seal, Shell, Under, Soft, Chip, prog, PLAYER_CONTROL_SAFE_BOTTOM} from './ContractWorkScenes';
 
 export const SiteTypesScene = () => {
   /* data-final-knowledge="site-types-forms" */
@@ -155,8 +155,8 @@ export const SitePriceScene = () => {
               <div style={{position: 'absolute', left: 20, top: 68, width: 4, height: 20, backgroundColor: C.copper}} />
               <div style={{position: 'absolute', left: 300, top: 68, width: 4, height: 20, backgroundColor: C.gold}} />
               <span style={{position: 'absolute', left: 16, top: 92, fontSize: 13, fontWeight: 900, color: C.copper}}>起点：约定 / 竣工验收日 / 提交报告90日后</span>
-              <span style={{position: 'absolute', left: 286, top: 40, fontSize: 13, fontWeight: 900, color: C.gold}}>长度：约定 / 2年</span>
-              <Mover delay={240} span={50} fromX={20} toX={280} style={{position: 'absolute', top: 28, left: 0}}>
+              <span style={{position: 'absolute', left: 330, top: 40, fontSize: 13, fontWeight: 900, color: C.gold}}>长度：约定 / 2年</span>
+              <Mover delay={240} span={50} fromX={20} toX={170} style={{position: 'absolute', top: 28, left: 0}}>
                 <Chip tone={C.copper} toneBg={C.copperPale}><Coins size={15} color={C.copper} strokeWidth={2.4} /><span style={{fontSize: 14, fontWeight: 950, color: C.copper}}>质量保证金</span></Chip>
               </Mover>
             </div>
