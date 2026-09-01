@@ -548,10 +548,10 @@ export const LoanInterestScene = () => {
               <Mover delay={60} span={46} fromX={20} toX={230} style={{position: 'absolute', top: 42, left: 0}}>
                 <Chip tone={C.gold} toneBg={C.goldPale}><Coins size={18} color={C.gold} strokeWidth={2.4} /><span style={{fontSize: 17, fontWeight: 950, color: C.gold}}>约定借10万·息1万</span></Chip>
               </Mover>
-              <Mover delay={150} span={46} fromX={360} toX={560} style={{position: 'absolute', top: 42, left: 0}}>
+              <Mover delay={150} span={46} fromX={360} toX={470} style={{position: 'absolute', top: 42, left: 0}}>
                 <Chip tone={C.brick} toneBg={C.brickPale}><Coins size={18} color={C.brick} strokeWidth={2.4} /><span style={{fontSize: 17, fontWeight: 950, color: C.brick}}>实际只付9万</span></Chip>
               </Mover>
-              <span style={{position: 'absolute', left: 620, top: 44, fontSize: 17, fontWeight: 950, color: C.inkSoft, opacity: prog(frame, 220, 12)}}>→ 按<Soft color={C.gold}>实际借款数额</Soft>还本计息：期满还<Seal delay={260} tone={C.brick} size={17}>本息共9.9万</Seal></span>
+              <span style={{position: 'absolute', left: 660, top: 44, fontSize: 17, fontWeight: 950, color: C.inkSoft, opacity: prog(frame, 220, 12)}}>→ 按<Soft color={C.gold}>实际借款数额</Soft>还本计息：期满还<Seal delay={260} tone={C.brick} size={17}>本息共9.9万</Seal></span>
             </div>
             <div style={{display: 'flex', alignItems: 'center', gap: 16, flex: 1}}>
               <div style={{flex: 1, position: 'relative', height: 70, border: `2px solid ${C.edge}`, backgroundColor: C.creamDim, overflow: 'hidden'}}>
