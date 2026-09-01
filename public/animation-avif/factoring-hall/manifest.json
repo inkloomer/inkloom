@@ -1,0 +1,70 @@
+{
+  "animationId": "factoring-hall",
+  "compositionId": "FactoringHall",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-09-01T15:16:24.624Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 659,
+      "frameCount": 330,
+      "id": "recourse-fork",
+      "number": "01",
+      "startFrame": 0,
+      "title": "保理的双桌对比",
+      "durationMs": 11000,
+      "file": "recourse-fork.avif",
+      "fileSize": 608434,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "152d1e2b2cc8716a8ee15e161a45824f95ed1edf586aa4db727b3b0c3ddce5d5",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "21004830d5393dae1b1b7fc42574cc94139d9b5359cb05a443fb95b6adc4d855"
+    },
+    {
+      "endFrame": 1319,
+      "frameCount": 330,
+      "id": "fictional-credit-notice",
+      "number": "02",
+      "startFrame": 660,
+      "title": "假账与通知时刻的裁判",
+      "durationMs": 11000,
+      "file": "fictional-credit-notice.avif",
+      "fileSize": 459276,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "fb231fc67e987115e0165ff08febc3689c5a824aaa2a7d7599ee9b35c01741e1",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "21004830d5393dae1b1b7fc42574cc94139d9b5359cb05a443fb95b6adc4d855"
+    },
+    {
+      "endFrame": 2039,
+      "frameCount": 360,
+      "id": "priority-race",
+      "number": "03",
+      "startFrame": 1320,
+      "title": "登记通知比例三连赛",
+      "durationMs": 12000,
+      "file": "priority-race.avif",
+      "fileSize": 424413,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "b0a1d33e2c8872e001bb2d4d2193721f54c8ee99389a1eb2ee39256d1032058e",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "21004830d5393dae1b1b7fc42574cc94139d9b5359cb05a443fb95b6adc4d855"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "21004830d5393dae1b1b7fc42574cc94139d9b5359cb05a443fb95b6adc4d855",
+  "targetFps": 30,
+  "totalFileSize": 1492123
+}
