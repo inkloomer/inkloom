@@ -1,0 +1,53 @@
+{
+  "animationId": "ip-infringement-litigation",
+  "compositionId": "IpInfringementLitigation",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-09-01T12:53:16.216Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 319,
+      "frameCount": 160,
+      "id": "ip-infringement-litigation-scene-01",
+      "number": "01",
+      "startFrame": 0,
+      "title": "许可与起诉",
+      "durationMs": 5333,
+      "file": "ip-infringement-litigation-scene-01.avif",
+      "fileSize": 345063,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "779aa9e9b565cc96314cf759a357c781bf62741293094ab3365392ad8bc4cd37",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "a20600a96f2e1fb6534689bfc7773fd827f4662c2704faaf7b01bfa5a22157bd"
+    },
+    {
+      "endFrame": 639,
+      "frameCount": 160,
+      "id": "ip-infringement-litigation-scene-02",
+      "number": "02",
+      "startFrame": 320,
+      "title": "管辖与赔偿",
+      "durationMs": 5333,
+      "file": "ip-infringement-litigation-scene-02.avif",
+      "fileSize": 496436,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "2ae460bfc957beaaee654698674c18af57744f7bb01ac033924028480ad272f0",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "a20600a96f2e1fb6534689bfc7773fd827f4662c2704faaf7b01bfa5a22157bd"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "a20600a96f2e1fb6534689bfc7773fd827f4662c2704faaf7b01bfa5a22157bd",
+  "targetFps": 30,
+  "totalFileSize": 841499
+}
