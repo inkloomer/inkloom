@@ -1,0 +1,53 @@
+{
+  "animationId": "trademark-rights-termination",
+  "compositionId": "TrademarkRightsTermination",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-09-01T12:34:13.906Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 319,
+      "frameCount": 160,
+      "id": "trademark-rights-termination-scene-01",
+      "number": "01",
+      "startFrame": 0,
+      "title": "内容与续展",
+      "durationMs": 5333,
+      "file": "trademark-rights-termination-scene-01.avif",
+      "fileSize": 440993,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "885d22888aacd1fa98d4b4b2f8bd542fa45a2bf57545b7b8582d7990995f550a",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "b6d5a658ff3f2ebb5d713ea650f3993641057fddc39b818b387486120e6aaaae"
+    },
+    {
+      "endFrame": 639,
+      "frameCount": 160,
+      "id": "trademark-rights-termination-scene-02",
+      "number": "02",
+      "startFrame": 320,
+      "title": "撤销与无效",
+      "durationMs": 5333,
+      "file": "trademark-rights-termination-scene-02.avif",
+      "fileSize": 700901,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "e5faff80c707e5c44ed9eb25306e406e52b28a4fdf441ac820b35829c81a2f5a",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "b6d5a658ff3f2ebb5d713ea650f3993641057fddc39b818b387486120e6aaaae"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "b6d5a658ff3f2ebb5d713ea650f3993641057fddc39b818b387486120e6aaaae",
+  "targetFps": 30,
+  "totalFileSize": 1141894
+}
