@@ -1,0 +1,27 @@
+{
+  "directionId": "merit-rank-dais-hall",
+  "family": "rank-dais",
+  "palette": "殿堂纸 hall-paper + 绛紫 dais-violet + 金铜 merit-gold + 定谳红 verdict-red + 青灰 slate-teal + 墨 ink",
+  "typography": "double-underlined hall headings, gold laurel highlights, violet dais stamps, red verdict negations",
+  "composition": "a merit-rank dais hall: two classification columns, chief-vs-ringleader cross strips, dual clause lanes, accessory-coerced tier cabinets",
+  "surface": "hall paper ground with violet-gold line hatch, double-bordered tier cards, stamped conclusion strips; no glossy panels",
+  "motion": "ranks descend onto the dais, clause arrows route between lanes, stamps settle each verdict; no idle loops",
+  "transition": "hall paper ground and violet header band persist while each scene opens a new tier",
+  "conceptTokens": {
+    "主犯": "Crown",
+    "从犯": "Feather",
+    "胁从犯": "Siren",
+    "实行犯": "Sword",
+    "教唆犯": "Megaphone",
+    "帮助犯": "Hand",
+    "犯罪集团": "Castle",
+    "全部罪行": "Files",
+    "紧急避险": "LifeBuoy"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/criminal/12/punishment-role-classification/",
+    "title": "功次授勋廊"
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "playerControlSafeBottom": 168,
+  "scenes": [
+    {
+      "id": "unilateral-overview",
+      "export": "UnilateralOverviewScene",
+      "layout": "mirror-overview-split",
+      "anchor": "comparison-axis",
+      "grammar": ["mutual-vs-unilateral-split", "three-type-band"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
+      "tokens": ["Users", "Eye", "EyeOff", "Hand", "Megaphone", "Swords"],
+      "finalKnowledge": ["overview-head", "mutual-split", "three-type-band"],
+      "statefulObjects": []
+    },
+    {
+      "id": "unilateral-help-case",
+      "export": "UnilateralHelpCaseScene",
+      "layout": "help-two-theory-lens",
+      "anchor": "role-pair",
+      "grammar": ["trip-case-board", "affirmation-negation-lenses"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
+      "tokens": ["EyeOff", "Users", "Ban", "Hand", "Eye"],
+      "finalKnowledge": ["case-board", "affirmation-lens", "negation-lens", "status-strip"],
+      "statefulObjects": []
+    },
+    {
+      "id": "unilateral-lookout-debate",
+      "export": "UnilateralLookoutDebateScene",
+      "layout": "lookout-balance-stand",
+      "anchor": "boundary",
+      "grammar": ["lookout-debate-bay", "actual-effect-threshold"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
+      "tokens": ["House", "Eye", "EyeOff", "CircleCheck"],
+      "finalKnowledge": ["lookout-head", "minority-bay", "majority-bay", "threshold-strip"],
+      "statefulObjects": []
+    },
+    {
+      "id": "unilateral-instigation-case",
+      "export": "UnilateralInstigationCaseScene",
+      "layout": "instigation-photo-lane",
+      "anchor": "flow-path",
+      "grammar": ["photo-planted-lane", "theory-verdict-rows"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "enclosure"],
+      "tokens": ["Camera", "EyeOff", "Megaphone", "Users", "Ban", "Swords"],
+      "finalKnowledge": ["case-lane", "affirmation-row", "negation-row", "contrast-strip"],
+      "statefulObjects": []
+    },
+    {
+      "id": "unilateral-execution-case",
+      "export": "UnilateralExecutionCaseScene",
+      "layout": "execution-double-bay",
+      "anchor": "document-fork",
+      "grammar": ["knockout-case-bay", "theory-verdict-rows"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
+      "tokens": ["Swords", "EyeOff", "Ban", "Split", "Hand", "Users"],
+      "finalKnowledge": ["case-bay", "affirmation-bay", "negation-bay", "quiz-strip"],
+      "statefulObjects": []
+    },
+    {
+      "id": "exam-two-cases",
+      "export": "ExamTwoCasesScene",
+      "layout": "exam-dual-docket",
+      "anchor": "typographic-sequence",
+      "grammar": ["dual-exam-docket", "overlimit-baseline-strip"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
+      "tokens": ["ClipboardCheck", "EyeOff", "Swords"],
+      "finalKnowledge": ["exam-2017-docket", "exam-2019-docket", "recap-strip"],
+      "statefulObjects": []
+    }
+  ]
+}

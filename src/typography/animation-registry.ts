@@ -235,6 +235,7 @@ import {typography as typographyAutoCopyrightSubjectMatter} from '../animations/
 import {typography as typographyAutoCopyrightContent} from '../animations/intellectual-property-law/02/copyright-content/animation.meta';
 import {typography as typographyAutoCopyrightAuthorship} from '../animations/intellectual-property-law/03/copyright-authorship/animation.meta';
 import {typography as typographyAutoCopyrightLimitations} from '../animations/intellectual-property-law/04/copyright-limitations/animation.meta';
+import {typography as typographyAutoNeighboringRights} from '../animations/intellectual-property-law/05/neighboring-rights/animation.meta';
 import {typography as typographyAutoShareholderContribution} from '../animations/commercial-law/02/shareholder-contribution/animation.meta';
 import {typography as typographyAutoPromoter} from '../animations/commercial-law/02/promoter/animation.meta';
 import {typography as typographyAutoCompanyIncorporation} from '../animations/commercial-law/02/company-incorporation/animation.meta';
@@ -770,6 +771,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'copyright-content': {metadata: typographyAutoCopyrightContent, scope: {animationId: 'copyright-content', subject: 'intellectual-property-law', topic: '02'}},
   'copyright-authorship': {metadata: typographyAutoCopyrightAuthorship, scope: {animationId: 'copyright-authorship', subject: 'intellectual-property-law', topic: '03'}},
   'copyright-limitations': {metadata: typographyAutoCopyrightLimitations, scope: {animationId: 'copyright-limitations', subject: 'intellectual-property-law', topic: '04'}},
+  'neighboring-rights': {metadata: typographyAutoNeighboringRights, scope: {animationId: 'neighboring-rights', subject: 'intellectual-property-law', topic: '05'}},
   ...COMMERCIAL_LAW_TYPOGRAPHY_CONFIGURATIONS,
 };
 

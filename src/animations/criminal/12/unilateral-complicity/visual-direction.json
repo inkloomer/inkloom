@@ -1,0 +1,24 @@
+{
+  "directionId": "one-way-mirror-darkroom",
+  "family": "mirror-darkroom",
+  "palette": "相纸白 photo-paper + 镜银 mirror-silver + 安全灯琥珀 safelight-amber + 显影红 develop-red + 定影绿 fixer-green + 墨 ink",
+  "typography": "film-frame double-rule headings, amber exposure highlights, red develop negations, green fixer verdicts",
+  "composition": "a one-way mirror darkroom: mutual-vs-unilateral split lens, secret-help case board, lookout balance stand, photo-planted lane, knockout double bay, dual exam docket",
+  "surface": "photo paper ground with silver-amber line hatch, squared plate cards, dashed safelight notes; no glossy panels",
+  "motion": "theories develop side by side, exposure arrows reveal the secret actor, fixer stamps settle verdicts; no idle loops",
+  "transition": "photo paper ground and amber header band persist while each scene develops a new plate",
+  "conceptTokens": {
+    "片面": "EyeOff",
+    "参与意识": "Eye",
+    "单独犯罪": "Users",
+    "肯定说": "CircleCheck",
+    "否定说": "Ban",
+    "想象竞合": "Split"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/criminal/12/unilateral-complicity/",
+    "title": "单向镜暗房"
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "playerControlSafeBottom": 168,
+  "scenes": [
+    {
+      "id": "status-crime-roles",
+      "export": "StatusCrimeRolesScene",
+      "layout": "status-role-split",
+      "anchor": "role-pair",
+      "grammar": ["status-role-counter", "separate-analysis-strip"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
+      "tokens": ["IdCard", "Ban", "Hand", "Split", "Users"],
+      "finalKnowledge": ["status-head", "role-rows", "analysis-strip"],
+      "statefulObjects": []
+    },
+    {
+      "id": "status-combination-table",
+      "export": "StatusCombinationTableScene",
+      "layout": "combination-lane-rows",
+      "anchor": "comparison-axis",
+      "grammar": ["three-lane-rows", "judicial-interpretation-strip"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
+      "tokens": ["IdCard", "Swords", "Split", "Landmark"],
+      "finalKnowledge": ["combination-rows", "judicial-strip"],
+      "statefulObjects": []
+    },
+    {
+      "id": "omission-combination",
+      "export": "OmissionCombinationScene",
+      "layout": "omission-ward-bays",
+      "anchor": "document-fork",
+      "grammar": ["three-ward-bays", "prior-conduct-note"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
+      "tokens": ["PauseCircle", "EyeOff", "ShieldAlert", "Users", "Hand"],
+      "finalKnowledge": ["bay-duty", "bay-help", "bay-prior"],
+      "statefulObjects": []
+    },
+    {
+      "id": "excess-concept-standard",
+      "export": "ExcessConceptStandardScene",
+      "layout": "excess-gate-standard",
+      "anchor": "boundary",
+      "grammar": ["excess-gate-row", "knowledge-trap-strip"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
+      "tokens": ["ArrowUpRight", "Ban", "AlertTriangle", "Users", "Swords"],
+      "finalKnowledge": ["excess-head", "standard-rows", "trap-board", "classify-strip"],
+      "statefulObjects": []
+    },
+    {
+      "id": "excess-three-roles",
+      "export": "ExcessThreeRolesScene",
+      "layout": "excess-role-columns",
+      "anchor": "comparison-axis",
+      "grammar": ["three-role-columns", "negligent-quiz-strip"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
+      "tokens": ["Users", "Megaphone", "Hand", "ClipboardCheck"],
+      "finalKnowledge": ["co-principal-column", "instigator-column", "helper-column", "quiz-strip"],
+      "statefulObjects": []
+    },
+    {
+      "id": "shortfall-vs-excess",
+      "export": "ShortfallVsExcessScene",
+      "layout": "shortfall-excess-mirror",
+      "anchor": "flow-path",
+      "grammar": ["shortfall-excess-track", "inclusive-eval-strip"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "enclosure"],
+      "tokens": ["ArrowDownRight", "ArrowUpRight", "Layers", "Gavel"],
+      "finalKnowledge": ["mirror-track", "inclusive-strip", "quiz-strip"],
+      "statefulObjects": []
+    },
+    {
+      "id": "mistake-principal-instigator",
+      "export": "MistakePrincipalInstigatorScene",
+      "layout": "mistake-mirror-cabinets",
+      "anchor": "document-fork",
+      "grammar": ["mistake-cabinet-pair", "separate-judgment-strip"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
+      "tokens": ["Users", "Megaphone", "ClipboardCheck", "Split"],
+      "finalKnowledge": ["co-principal-cabinet", "separate-cabinet"],
+      "statefulObjects": []
+    },
+    {
+      "id": "mistake-instigator-indirect",
+      "export": "MistakeInstigatorIndirectScene",
+      "layout": "error-funnel-converge",
+      "anchor": "flow-path",
+      "grammar": ["error-converge-funnel", "two-model-rows"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "enclosure"],
+      "tokens": ["Layers", "Megaphone", "Swords", "GitCompare", "Gavel"],
+      "finalKnowledge": ["converge-strip", "model-rows"],
+      "statefulObjects": []
+    },
+    {
+      "id": "victim-among-offenders",
+      "export": "VictimAmongOffendersScene",
+      "layout": "victim-ward-three",
+      "anchor": "role-pair",
+      "grammar": ["three-ward-rows", "no-crime-strips"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
+      "tokens": ["Fish", "Swords", "Users", "Split", "Ban"],
+      "finalKnowledge": ["ward-one", "ward-two", "ward-three"],
+      "statefulObjects": []
+    }
+  ]
+}

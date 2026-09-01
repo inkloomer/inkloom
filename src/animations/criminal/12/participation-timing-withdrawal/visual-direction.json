@@ -1,0 +1,27 @@
+{
+  "directionId": "junction-timetable-desk",
+  "family": "timetable-desk",
+  "palette": "浅时刻纸 timetable-paper + 藏青夜表 night-indigo + 站台灯绿 signal-green + 车票杏黄 ticket-apricot + 警示红 alert-red + 墨 ink",
+  "typography": "corner-bracketed stop headings, green route highlights, punched ticket verdicts, indigo timing chips",
+  "composition": "a junction timetable desk: three participation tracks, successive-liability gate, rollback inference path, four-case docket, punched option grid",
+  "surface": "pale timetable sheet with ruled rows, squared ticket cards, punch-hole verdict stamps; no glossy panels",
+  "motion": "tracks light up in arrival order, arrows roll along the timetable, punches stamp each verdict; no idle loops",
+  "transition": "timetable sheet and indigo header rule persist while each scene changes the platform",
+  "conceptTokens": {
+    "承继": "Milestone",
+    "脱离": "DoorOpen",
+    "中止": "CircleCheck",
+    "既遂": "Flag",
+    "物理性贡献": "Hand",
+    "心理性贡献": "Brain",
+    "窝藏包庇": "CarFront",
+    "掩饰隐瞒": "PackageSearch",
+    "帮助毁灭证据": "Trash2"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/criminal/12/participation-timing-withdrawal/",
+    "title": "接力时刻闸"
+  }
+}

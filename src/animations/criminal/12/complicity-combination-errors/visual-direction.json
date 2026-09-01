@@ -1,0 +1,28 @@
+{
+  "directionId": "confluence-clinic-board",
+  "family": "clinic-board",
+  "palette": "诊室白 ward-paper + 病历蓝 chart-blue + 标本紫 spec-purple + 皮损红 lesion-red + 器械灰 instrument-gray + 墨 ink",
+  "typography": "triage double-rule headings, purple note highlights, red consult stamps, blue referral chips",
+  "composition": "a confluence clinic board: status-role counter seats, three-lane combination wards, excess gate, shortfall-excess mirror tracks, mistake cabinets, victim ward rows",
+  "surface": "ward paper ground with blue-purple line hatch, rounded chart cards, dashed trap notes; no glossy panels",
+  "motion": "charts get referred between desks, referral arrows traverse, consult stamps land on verdicts; no idle loops",
+  "transition": "ward paper ground and blue header band persist while each scene opens a new triage desk",
+  "conceptTokens": {
+    "真正身份犯": "IdCard",
+    "实行过限": "ArrowUpRight",
+    "实行不足": "ArrowDownRight",
+    "包容评价": "Layers",
+    "想象竞合": "Split",
+    "认识错误": "GitCompare",
+    "教唆犯": "Megaphone",
+    "帮助犯": "Hand",
+    "共同正犯": "Users",
+    "不作为": "PauseCircle"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/criminal/12/complicity-combination-errors/",
+    "title": "结合会诊台"
+  }
+}

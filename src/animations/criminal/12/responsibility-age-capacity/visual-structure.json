@@ -1,0 +1,103 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "playerControlSafeBottom": 168,
+  "scenes": [
+    {
+      "id": "two-stage-evaluation",
+      "export": "TwoStageEvaluationScene",
+      "layout": "two-tier-bench",
+      "anchor": "comparison-axis",
+      "grammar": ["two-tier-evaluation-bench", "perpetrator-conditions-strip"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
+      "tokens": ["Flame", "Gavel", "Hourglass", "Brain", "Users", "Split", "Scale"],
+      "finalKnowledge": ["head-strip", "conditions-board", "evaluation-board", "verdict-strip"],
+      "statefulObjects": []
+    },
+    {
+      "id": "age-gap-co-principals",
+      "export": "AgeGapCoPrincipalsScene",
+      "layout": "age-contrast-rail",
+      "anchor": "boundary",
+      "grammar": ["three-tier-rail", "four-element-defect-note"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
+      "tokens": ["Users", "Ban", "Gavel", "TrendingUp", "AlertTriangle"],
+      "finalKnowledge": ["age-head-strip", "tier-rail", "defect-note"],
+      "statefulObjects": []
+    },
+    {
+      "id": "capacity-gap-co-principals",
+      "export": "CapacityGapCoPrincipalsScene",
+      "layout": "capacity-mirror-board",
+      "anchor": "comparison-axis",
+      "grammar": ["illness-mirror-pair", "joint-liability-transfer", "four-element-defect-note"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
+      "tokens": ["Brain", "Ban", "Users", "Swords", "Weight", "Gavel", "AlertTriangle"],
+      "finalKnowledge": ["capacity-head-strip", "liability-board", "acquittal-board", "defect-strip"],
+      "statefulObjects": []
+    },
+    {
+      "id": "helper-principal-pairs",
+      "export": "HelperPrincipalPairsScene",
+      "layout": "helper-pair-cabinets",
+      "anchor": "role-pair",
+      "grammar": ["dual-cabinet-role-analysis", "verdict-row-sets"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
+      "tokens": ["Hand", "Eye", "Users", "Swords", "Ban", "Gavel", "Hourglass", "Brain"],
+      "finalKnowledge": ["cabinet-age", "cabinet-capacity"],
+      "statefulObjects": []
+    },
+    {
+      "id": "instigator-three-branches",
+      "export": "InstigatorThreeBranchesScene",
+      "layout": "instigation-fork-trident",
+      "anchor": "document-fork",
+      "grammar": ["trident-fork", "inclusive-promotion-strip"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
+      "tokens": ["Megaphone", "Users", "Baby", "Hourglass", "TrendingUp"],
+      "finalKnowledge": ["fork-head-strip", "branch-qualified-teen", "branch-unqualified-child", "branch-mature-teen"],
+      "statefulObjects": []
+    },
+    {
+      "id": "dominion-real-standard",
+      "export": "DominionRealStandardScene",
+      "layout": "dominion-scale-contrast",
+      "anchor": "flow-path",
+      "grammar": ["formal-vs-real-track", "inclusive-eval-chain", "false-age-case-bay"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "enclosure"],
+      "tokens": ["Hourglass", "Crosshair", "Grab", "Swords", "Ban", "Gavel", "Users", "AlertTriangle"],
+      "finalKnowledge": ["formal-track", "real-track", "false-age-bay"],
+      "statefulObjects": []
+    },
+    {
+      "id": "minor-adult-role-creed",
+      "export": "MinorAdultRoleCreedScene",
+      "layout": "role-creed-scroll",
+      "anchor": "typographic-sequence",
+      "grammar": ["three-role-creed-rows", "omission-extra-verdict"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
+      "tokens": ["Baby", "Hand", "Crosshair", "EyeOff", "Users"],
+      "finalKnowledge": ["creed-head", "creed-lookout-row", "creed-dominion-row", "creed-omission-row"],
+      "statefulObjects": []
+    },
+    {
+      "id": "instigator-capacity-case",
+      "export": "InstigatorCapacityCaseScene",
+      "layout": "instigator-capacity-verdict",
+      "anchor": "role-pair",
+      "grammar": ["capable-instigator-case", "legacy-view-rebuttal-strip"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
+      "tokens": ["Megaphone", "Brain", "Users", "Swords", "Crosshair", "Ban", "AlertTriangle"],
+      "finalKnowledge": ["case-head-strip", "disposition-board", "rebuttal-strip"],
+      "statefulObjects": []
+    }
+  ]
+}

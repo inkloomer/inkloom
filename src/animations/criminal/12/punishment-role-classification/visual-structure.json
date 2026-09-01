@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "playerControlSafeBottom": 168,
+  "scenes": [
+    {
+      "id": "two-classification-methods",
+      "export": "TwoClassificationMethodsScene",
+      "layout": "method-split-columns",
+      "anchor": "comparison-axis",
+      "grammar": ["method-split-columns", "overlay-concurrent-strip"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
+      "tokens": ["Sword", "Megaphone", "Hand", "Crown", "Feather", "Siren", "Ban"],
+      "finalKnowledge": ["division-column", "function-column", "overlay-strip"],
+      "statefulObjects": []
+    },
+    {
+      "id": "ringleader-relations",
+      "export": "RingleaderRelationsScene",
+      "layout": "ringleader-vine-chart",
+      "anchor": "boundary",
+      "grammar": ["chief-main-cross-strip", "crowd-two-mode-bay"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
+      "tokens": ["Crown", "Users", "Gavel"],
+      "finalKnowledge": ["clause-head", "cross-strips", "crowd-bay", "conclusion-strip"],
+      "statefulObjects": []
+    },
+    {
+      "id": "ringleader-punishment",
+      "export": "RingleaderPunishmentScene",
+      "layout": "punishment-two-clauses",
+      "anchor": "flow-path",
+      "grammar": ["clause-26-3-lane", "clause-26-4-lane"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "enclosure"],
+      "tokens": ["Castle", "Crown", "Files", "Gavel"],
+      "finalKnowledge": ["clause-3-lane", "clause-4-lane"],
+      "statefulObjects": []
+    },
+    {
+      "id": "accessory-coerced-roles",
+      "export": "AccessoryCoercedRolesScene",
+      "layout": "accessory-coerced-tier",
+      "anchor": "role-pair",
+      "grammar": ["clause-27-28-tiers", "pilot-case-strip"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
+      "tokens": ["Feather", "Siren", "Crown", "Megaphone", "Sword", "Plane", "LifeBuoy"],
+      "finalKnowledge": ["accessory-tier", "coerced-tier"],
+      "statefulObjects": []
+    }
+  ]
+}

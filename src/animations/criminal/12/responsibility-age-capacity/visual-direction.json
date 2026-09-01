@@ -1,0 +1,27 @@
+{
+  "directionId": "stratified-scale-bench",
+  "family": "scale-bench",
+  "palette": "暖米纸 parchment + 黛青 bench-teal + 朱砂 vermilion + 铜黄 bronze + 玄墨 ink",
+  "typography": "double-bordered bench headings, teal condition strips, bronze verdict seals, vermilion rebuttal dashes",
+  "composition": "a tiered weighing bench: two-stage evaluation lanes, age/capacity contrast rails, trident instigation fork, formal-vs-real tracks, role creed scroll",
+  "surface": "parchment ground with teal-bronze line hatch, double-bordered paper boards, dashed rebuttal notes; no glossy panels",
+  "motion": "verdict seals stamp scene by scene, tier rails descend with the evaluation, trident branches fork left-right; no idle loops",
+  "transition": "parchment ground and teal header bar persist while each scene re-weighs the bench",
+  "conceptTokens": {
+    "责任年龄": "Hourglass",
+    "责任能力": "Brain",
+    "违法事实": "Flame",
+    "无罪": "Ban",
+    "共同正犯": "Users",
+    "教唆犯": "Megaphone",
+    "帮助犯": "Hand",
+    "间接正犯": "Crosshair",
+    "支配力": "Grab"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/criminal/12/responsibility-age-capacity/",
+    "title": "台秤量责坊"
+  }
+}

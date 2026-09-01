@@ -1,0 +1,103 @@
+{
+  "version": 1,
+  "minimumDistinctLayouts": 3,
+  "playerControlSafeBottom": 168,
+  "scenes": [
+    {
+      "id": "timing-three-phases",
+      "export": "TimingThreePhasesScene",
+      "layout": "timetable-three-tracks",
+      "anchor": "timeline-gate",
+      "grammar": ["three-track-timetable", "aftermath-help-triptych"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline"],
+      "focalChannels": ["icon", "connector", "contrast", "spatial"],
+      "tokens": ["Clock", "Milestone", "Users", "History", "CarFront", "PackageSearch", "Trash2"],
+      "finalKnowledge": ["timing-head", "pre-track-row", "mid-track-row", "post-track-row"],
+      "statefulObjects": []
+    },
+    {
+      "id": "successive-liability-rule",
+      "export": "SuccessiveLiabilityRuleScene",
+      "layout": "successive-gate-strip",
+      "anchor": "boundary",
+      "grammar": ["succession-gate-row", "causation-cut-strip"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
+      "tokens": ["Milestone", "Swords", "Users", "TrendingUp", "Ban", "Unlink"],
+      "finalKnowledge": ["rule-strip", "case-one-board"],
+      "statefulObjects": []
+    },
+    {
+      "id": "death-time-inference",
+      "export": "DeathTimeInferenceScene",
+      "layout": "inference-rollback-path",
+      "anchor": "flow-path",
+      "grammar": ["rollback-inference-steps", "early-death-benefit-strip"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "connector", "contrast", "enclosure"],
+      "tokens": ["Swords", "Hourglass", "Users"],
+      "finalKnowledge": ["quiz-head", "rollback-steps", "benefit-strip"],
+      "statefulObjects": []
+    },
+    {
+      "id": "house-entry-successive-quiz",
+      "export": "HouseEntrySuccessiveQuizScene",
+      "layout": "entry-quiz-bay",
+      "anchor": "role-pair",
+      "grammar": ["entry-quiz-board", "aggravation-exclusion-strip"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
+      "tokens": ["Milestone", "Swords", "Users", "Hand", "TrendingUp", "EyeOff", "History"],
+      "finalKnowledge": ["quiz-head", "disposition-rows", "aggravation-exclusion-strip"],
+      "statefulObjects": []
+    },
+    {
+      "id": "withdrawal-conditions",
+      "export": "WithdrawalConditionsScene",
+      "layout": "withdrawal-checklist-desk",
+      "anchor": "concept-icon",
+      "grammar": ["contribution-erasure-row", "dual-contribution-chips"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
+      "tokens": ["DoorOpen", "Hand", "Brain", "Scissors", "Ban"],
+      "finalKnowledge": ["withdrawal-head", "contribution-chips"],
+      "statefulObjects": []
+    },
+    {
+      "id": "role-withdrawal-requirements",
+      "export": "RoleWithdrawalRequirementsScene",
+      "layout": "role-requirement-columns",
+      "anchor": "comparison-axis",
+      "grammar": ["three-role-requirement-columns", "stage-split-strip"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
+      "tokens": ["Users", "Megaphone", "Hand", "Flag"],
+      "finalKnowledge": ["instigator-column", "helper-column", "co-principal-column", "stage-split-strip"],
+      "statefulObjects": []
+    },
+    {
+      "id": "withdrawal-four-cases",
+      "export": "WithdrawalFourCasesScene",
+      "layout": "case-docket-four",
+      "anchor": "document-fork",
+      "grammar": ["four-case-docket", "verdict-stamp-rows"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "external-negation", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
+      "tokens": ["Eye", "Megaphone", "Key", "EyeOff", "Users"],
+      "finalKnowledge": ["docket-head", "case-rows"],
+      "statefulObjects": []
+    },
+    {
+      "id": "exam-2024-options",
+      "export": "Exam2024OptionsScene",
+      "layout": "option-grid-verdicts",
+      "anchor": "typographic-sequence",
+      "grammar": ["four-option-grid", "rule-recap-strip"],
+      "textTreatments": ["chip", "label-block", "soft-highlight", "thin-underline", "stamp"],
+      "focalChannels": ["icon", "contrast", "enclosure", "spatial"],
+      "tokens": ["Swords", "CircleCheck"],
+      "finalKnowledge": ["quiz-head", "option-a", "option-b", "option-c", "option-d", "rule-recap-strip"],
+      "statefulObjects": []
+    }
+  ]
+}
