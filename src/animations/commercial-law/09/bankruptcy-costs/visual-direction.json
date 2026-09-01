@@ -9,6 +9,13 @@
   "surface": "池区分隔线与方形刻度章, 无圆角",
   "motion": "双池先后注水, 六项共益逐条点亮, 清偿刻度沿顺序走完",
   "transition": "池区框架与刻度章颜色角色贯穿场景",
+  "conceptTokens": {
+    "费用": "ReceiptText",
+    "共益债务": "Handshake",
+    "清偿": "Banknote",
+    "比例": "Scale",
+    "财产": "Coins"
+  },
   "catalog": {
     "status": "variant",
     "sourceDirectionId": "insolvency-diagnosis"

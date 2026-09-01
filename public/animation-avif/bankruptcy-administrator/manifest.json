@@ -1,0 +1,70 @@
+{
+  "animationId": "bankruptcy-administrator",
+  "compositionId": "BankruptcyAdministrator",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-09-01T14:08:20.360Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 365,
+      "frameCount": 183,
+      "id": "bankruptcy-administrator-scene-01",
+      "number": "01",
+      "startFrame": 0,
+      "title": "管理人由法院指定",
+      "durationMs": 6100,
+      "file": "bankruptcy-administrator-scene-01.avif",
+      "fileSize": 526683,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "b75796425f20e46acd1a19d3ea09cf5011f1af7921181d3990d9121ec5b874fd",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "93ade994027882be5242d5de6b2c8a82729fa54048c5bd39d0460839048d39e7"
+    },
+    {
+      "endFrame": 761,
+      "frameCount": 198,
+      "id": "bankruptcy-administrator-scene-02",
+      "number": "02",
+      "startFrame": 366,
+      "title": "双务合同的选择权",
+      "durationMs": 6600,
+      "file": "bankruptcy-administrator-scene-02.avif",
+      "fileSize": 462835,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "7ba92bfbf561e4a04add60157a7667dd7fb3bd7f1b47e05ebce05fe7d02f60a1",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "93ade994027882be5242d5de6b2c8a82729fa54048c5bd39d0460839048d39e7"
+    },
+    {
+      "endFrame": 1133,
+      "frameCount": 186,
+      "id": "bankruptcy-administrator-scene-03",
+      "number": "03",
+      "startFrame": 762,
+      "title": "管理人的四舱职权",
+      "durationMs": 6200,
+      "file": "bankruptcy-administrator-scene-03.avif",
+      "fileSize": 377933,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "6f30970ebfb575281bcdc4342a554415c042da25a6c3879308f3285058bed312",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "93ade994027882be5242d5de6b2c8a82729fa54048c5bd39d0460839048d39e7"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "93ade994027882be5242d5de6b2c8a82729fa54048c5bd39d0460839048d39e7",
+  "targetFps": 30,
+  "totalFileSize": 1367451
+}

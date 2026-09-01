@@ -9,6 +9,13 @@
   "surface": "开关面板与方形限制章, 无圆角",
   "motion": "四类申请者依次拨动开关, 受理三闸逐个落下, 管辖刻度划过受理线",
   "transition": "开关面板与限制章颜色角色贯穿场景",
+  "conceptTokens": {
+    "申请": "ClipboardList",
+    "债权人": "Users",
+    "债务人": "Building2",
+    "法院": "Landmark",
+    "管辖": "MapPin"
+  },
   "catalog": {
     "status": "variant",
     "sourceDirectionId": "insolvency-diagnosis"

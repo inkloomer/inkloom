@@ -7,6 +7,13 @@
   "surface": "仪表刻度与诊断框, 方形结论牌, 无圆角",
   "motion": "三个判定指标依次点亮, 四情形按口诀顺序排档, 第三人从诊断视野中排除",
   "transition": "诊断台框架与结论牌颜色角色贯穿场景",
+  "conceptTokens": {
+    "破产原因": "Scale",
+    "债务人": "UserRound",
+    "重整": "RefreshCw",
+    "清算": "Gavel",
+    "财产": "Coins"
+  },
   "catalog": {
     "status": "featured",
     "source": "original-node",

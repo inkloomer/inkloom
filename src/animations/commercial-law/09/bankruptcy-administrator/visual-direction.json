@@ -9,6 +9,13 @@
   "surface": "蓝图层网格与方形指挥章, 无圆角",
   "motion": "法院指定线先划出, 合同开关左右拨动, 职权舱依次接管",
   "transition": "蓝图网格与指挥章颜色角色贯穿场景",
+  "conceptTokens": {
+    "管理人": "KeyRound",
+    "法院": "Landmark",
+    "合同": "Handshake",
+    "财产": "Coins",
+    "诉讼": "Scale"
+  },
   "catalog": {
     "status": "variant",
     "sourceDirectionId": "courtroom-blueprint"

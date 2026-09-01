@@ -1,0 +1,70 @@
+{
+  "animationId": "bankruptcy-grounds",
+  "compositionId": "BankruptcyGrounds",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-09-01T14:04:30.780Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 377,
+      "frameCount": 189,
+      "id": "bankruptcy-grounds-scene-01",
+      "number": "01",
+      "startFrame": 0,
+      "title": "破产原因的三项判定",
+      "durationMs": 6300,
+      "file": "bankruptcy-grounds-scene-01.avif",
+      "fileSize": 521590,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "ba898509e5af1932c14889ee9a777ef6335660ed1d39a19da85f8bd7cd05e64b",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "bcf70112229710feb49e3575f7cebdca45d652aabfb555f067ec7a7bf245d59e"
+    },
+    {
+      "endFrame": 749,
+      "frameCount": 186,
+      "id": "bankruptcy-grounds-scene-02",
+      "number": "02",
+      "startFrame": 378,
+      "title": "缺乏清偿力的四种情形",
+      "durationMs": 6200,
+      "file": "bankruptcy-grounds-scene-02.avif",
+      "fileSize": 593440,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "ae5a1d0e015cbdd19cfebe045ae9c1458b49e3527435c84d738edb436d1d3798",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "bcf70112229710feb49e3575f7cebdca45d652aabfb555f067ec7a7bf245d59e"
+    },
+    {
+      "endFrame": 1097,
+      "frameCount": 174,
+      "id": "bankruptcy-grounds-scene-03",
+      "number": "03",
+      "startFrame": 750,
+      "title": "仅看债务人自身",
+      "durationMs": 5800,
+      "file": "bankruptcy-grounds-scene-03.avif",
+      "fileSize": 526888,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "b77f563f7257b3bb1dc3bee85fc72941899347657c13b193f84b9d468f6e73f1",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "bcf70112229710feb49e3575f7cebdca45d652aabfb555f067ec7a7bf245d59e"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "bcf70112229710feb49e3575f7cebdca45d652aabfb555f067ec7a7bf245d59e",
+  "targetFps": 30,
+  "totalFileSize": 1641918
+}
