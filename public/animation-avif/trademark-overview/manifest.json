@@ -1,0 +1,53 @@
+{
+  "animationId": "trademark-overview",
+  "compositionId": "TrademarkOverview",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-09-01T12:11:52.703Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 319,
+      "frameCount": 160,
+      "id": "trademark-overview-scene-01",
+      "number": "01",
+      "startFrame": 0,
+      "title": "禁用与禁注",
+      "durationMs": 5333,
+      "file": "trademark-overview-scene-01.avif",
+      "fileSize": 534834,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "f6d101362709b884530ad5b151cfd7bb7d6aa6d6b8fc1eb4491903b7a7a6f61e",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "61e117ac1bd76d115dfe56c8b82bab969ed0678392806573d4c4a3cb41fdd90b"
+    },
+    {
+      "endFrame": 639,
+      "frameCount": 160,
+      "id": "trademark-overview-scene-02",
+      "number": "02",
+      "startFrame": 320,
+      "title": "分类与驰名",
+      "durationMs": 5333,
+      "file": "trademark-overview-scene-02.avif",
+      "fileSize": 525785,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "7840122ede27022db2647150744172bdd67300419d3bc7cbe0b443eb5ca68205",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "61e117ac1bd76d115dfe56c8b82bab969ed0678392806573d4c4a3cb41fdd90b"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "61e117ac1bd76d115dfe56c8b82bab969ed0678392806573d4c4a3cb41fdd90b",
+  "targetFps": 30,
+  "totalFileSize": 1060619
+}
