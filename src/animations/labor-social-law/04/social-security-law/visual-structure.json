@@ -1,0 +1,119 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "social-security-law-scene-01",
+      "export": "SocialSecurityLaw01Scene",
+      "layout": "pension-account-split-1",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "mode-split-band",
+        "pension-account-split"
+      ],
+      "textTreatments": [
+        "chip",
+        "stamp",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "motion",
+        "icon"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "social-security-law-knowledge-1",
+        "social-security-law-scene-01-mode",
+        "social-security-law-scene-01-pension"
+      ],
+      "statefulObjects": [
+        "pension-account-travel"
+      ]
+    },
+    {
+      "id": "social-security-law-scene-02",
+      "export": "SocialSecurityLaw02Scene",
+      "layout": "medical-injury-split-2",
+      "anchor": "boundary",
+      "grammar": [
+        "medical-exclude-band",
+        "injury-gate"
+      ],
+      "textTreatments": [
+        "chip",
+        "external-negation",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "motion",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "social-security-law-knowledge-2",
+        "social-security-law-scene-02-medical",
+        "social-security-law-scene-02-injury"
+      ],
+      "statefulObjects": [
+        "injury-claim-travel"
+      ]
+    },
+    {
+      "id": "social-security-law-scene-03",
+      "export": "SocialSecurityLaw03Scene",
+      "layout": "unemployment-stairs-3",
+      "anchor": "flow-path",
+      "grammar": [
+        "unemployment-gate",
+        "term-stairs"
+      ],
+      "textTreatments": [
+        "chip",
+        "stamp",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "motion",
+        "connector",
+        "contrast"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "social-security-law-knowledge-3",
+        "social-security-law-scene-03-conditions"
+      ],
+      "statefulObjects": [
+        "unemployment-claim-travel"
+      ]
+    },
+    {
+      "id": "social-security-law-scene-04",
+      "export": "SocialSecurityLaw04Scene",
+      "layout": "military-insurance-band-4",
+      "anchor": "role-pair",
+      "grammar": [
+        "military-band",
+        "mnemonic-band"
+      ],
+      "textTreatments": [
+        "chip",
+        "stamp",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "icon",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "social-security-law-knowledge-4",
+        "social-security-law-scene-04-military"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}
