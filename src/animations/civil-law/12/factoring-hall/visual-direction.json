@@ -1,0 +1,21 @@
+{
+  "directionId": "slate-factoring-factoring-hall",
+  "family": "slate-factoring-factoring-hall",
+  "palette": "slate navy factoring hall, gold funding rails, teal recourse ribbons, brick void stamps, bone paper, gunmetal ink",
+  "typography": "factoring headings on slate rail tabs, bone chips with gold and teal seals",
+  "composition": "a factoring hall where the receivable fork splits recourse and non-recourse desks, the confirmation board rules on fictional credits by notice moment, and the priority racetrack ranks registration notice and proportion with the five-claimant case ledger",
+  "surface": "bone paper dossiers, slate desk rails, gold funding stamps",
+  "motion": "receivable coins run to the factor while the recourse ribbon either returns them to the creditor or not, confirmation and notice-moment stamps flip the debtor payment verdict, and priority tokens sprint the racetrack from registration through notice to proportion",
+  "transition": "the slate hall floor, gold rails and brick stamp posts persist while desks, boards and racetracks are re-dressed between scenes",
+  "conceptTokens": {
+    "保理人": "Coins",
+    "应收账款": "ScrollText",
+    "受偿顺位": "Scale"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/civil-law/12/factoring-hall/",
+    "title": "藏青保理馆"
+  }
+}

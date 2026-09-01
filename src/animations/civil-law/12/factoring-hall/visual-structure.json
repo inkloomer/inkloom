@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "recourse-fork",
+      "export": "RecourseForkScene",
+      "layout": "recourse-double-desk",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "factoring-transfers-present-or-future-receivables-for-funding-management-or-guarantee-in-writing",
+        "recourse-factoring-can-demand-refund-or-buyback-from-the-creditor-and-returns-surplus-so-only-interest-is-earned",
+        "non-recourse-factoring-cannot-touch-the-creditor-and-keeps-surplus-beyond-interest",
+        "sued-creditor-who-pays-the-factor-can-turn-to-the-debtor-for-the-receivable"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["connector", "contrast", "enclosure", "motion"],
+      "tokens": ["Coins", "ScrollText", "Scale"],
+      "finalKnowledge": ["factoring-definition", "recourse-contrast"],
+      "statefulObjects": []
+    },
+    {
+      "id": "fictional-credit-notice",
+      "export": "FictionalCreditScene",
+      "layout": "confirmation-board-with-notice-moment",
+      "anchor": "timeline-gate",
+      "grammar": [
+        "debtor-confirmation-binds-payment-even-if-the-receivable-was-fictional-unless-the-factor-knew",
+        "unconfirmed-receivables-are-judged-at-the-moment-the-notice-reaches-the-debtor",
+        "existing-at-notice-means-pay-while-absent-at-notice-means-no-payment",
+        "bank-case-confirmation-defeats-the-no-underlying-contract-defence"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["connector", "contrast", "enclosure", "motion"],
+      "tokens": ["ScrollText", "Hourglass", "Gavel"],
+      "finalKnowledge": ["confirmed-fictional-rule", "notice-moment-rule"],
+      "statefulObjects": []
+    },
+    {
+      "id": "priority-race",
+      "export": "PriorityRaceScene",
+      "layout": "priority-racetrack-with-transfer-ladder",
+      "anchor": "flow-path",
+      "grammar": [
+        "registered-factoring-beats-unregistered-and-double-registration-ranks-by-time",
+        "unregistered-claims-rank-by-earliest-notice-and-none-notice-ranks-by-proportion",
+        "multiple-assignments-are-performed-to-the-earliest-notified-assignee-and-wrong-payment-never-discharges",
+        "earliest-assignee-cannot-take-from-later-assignee-unless-the-later-one-knew"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["connector", "contrast", "enclosure", "motion"],
+      "tokens": ["Scale", "Coins", "ScrollText"],
+      "finalKnowledge": ["multi-factoring-priority", "multi-transfer-rules"],
+      "statefulObjects": []
+    }
+  ]
+}

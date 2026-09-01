@@ -207,6 +207,7 @@ import {typography as typographyAutoGiftLoanHall} from '../animations/civil-law/
 import {typography as typographyAutoLeaseFormStatusHall} from '../animations/civil-law/12/lease-form-status-hall/animation.meta';
 import {typography as typographyAutoLeaseProtectionHall} from '../animations/civil-law/12/lease-protection-hall/animation.meta';
 import {typography as typographyAutoFinancingLeaseHall} from '../animations/civil-law/12/financing-lease-hall/animation.meta';
+import {typography as typographyAutoFactoringHall} from '../animations/civil-law/12/factoring-hall/animation.meta';
 import {typography as typographyAutoAdoptionDossierRegistry} from '../animations/civil-law/21/adoption-dossier-registry/animation.meta';
 import {typography as typographyAutoMarriageValidityChain} from '../animations/civil-law/20/marriage-validity-chain/animation.meta';
 import {typography as typographyAutoMaritalPropertyDivorceDesk} from '../animations/civil-law/20/marital-property-divorce-desk/animation.meta';
@@ -571,6 +572,7 @@ const ANIMATION_TYPOGRAPHY_CONFIGURATIONS: Readonly<Record<string, AnimationTypo
   'lease-form-status-hall': {metadata: typographyAutoLeaseFormStatusHall, scope: {animationId: 'lease-form-status-hall', subject: 'civil-law', topic: '12'}},
   'lease-protection-hall': {metadata: typographyAutoLeaseProtectionHall, scope: {animationId: 'lease-protection-hall', subject: 'civil-law', topic: '12'}},
   'financing-lease-hall': {metadata: typographyAutoFinancingLeaseHall, scope: {animationId: 'financing-lease-hall', subject: 'civil-law', topic: '12'}},
+  'factoring-hall': {metadata: typographyAutoFactoringHall, scope: {animationId: 'factoring-hall', subject: 'civil-law', topic: '12'}},
   'dividend-right': {metadata: typographyAutoDividendRight, scope: {animationId: 'dividend-right', subject: 'commercial-law', topic: '04'}},
   'shareholder-qualification': {metadata: typographyAutoShareholderQualification, scope: {animationId: 'shareholder-qualification', subject: 'commercial-law', topic: '03'}},
   'nominal-shareholder': {metadata: typographyAutoNominalShareholder, scope: {animationId: 'nominal-shareholder', subject: 'commercial-law', topic: '03'}},
