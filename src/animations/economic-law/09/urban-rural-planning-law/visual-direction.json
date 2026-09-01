@@ -1,0 +1,16 @@
+{
+  "directionId": "planning-permit-gatehouse",
+  "derivedFrom": "demo-clerk-desk",
+  "variation": "规划许可关卡: 许可申请表在划拨出让乡村三条车道间分诊, 临时展棚在期限届满时驶向自拆闸口, 出让划拨两种用地在待遇带上对照",
+  "family": "planning-permit-gatehouse",
+  "palette": "#EFECE4 + #2B2B33 + #2C4A6E + #8A4B2F + #15725F + #B23A30 + #B98A2F",
+  "typography": "WenKai 关卡栏标 + 申请表徽章 + 口诀金条",
+  "composition": "许可三车道 + 口诀与优先项目带 + 临时建设与开发用地对照",
+  "surface": "关卡纸卡、申请表徽章、自拆闸杆, 无圆角",
+  "motion": "申请表徽章沿三条车道分诊, 临时展棚届满驶向自拆闸口",
+  "transition": "藏蓝关卡贯穿两场, 铜色划拨与青色出让双线呼应",
+  "catalog": {
+    "status": "variant",
+    "sourceDirectionId": "planning-permit-gatehouse"
+  }
+}

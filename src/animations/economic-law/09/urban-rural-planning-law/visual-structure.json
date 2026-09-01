@@ -1,0 +1,92 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "urban-rural-planning-law-scene-01",
+      "export": "UrbanRuralPlanningLaw01Scene",
+      "layout": "permit-three-lanes-1",
+      "anchor": "flow-path",
+      "grammar": [
+        "permit-lane-triad",
+        "mnemonic-band"
+      ],
+      "textTreatments": [
+        "chip",
+        "stamp",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "motion",
+        "connector",
+        "contrast"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "urban-rural-planning-law-knowledge-1",
+        "urban-rural-planning-law-scene-01-alloc",
+        "urban-rural-planning-law-scene-01-grant",
+        "urban-rural-planning-law-scene-01-rural"
+      ],
+      "statefulObjects": [
+        "permit-form-travel"
+      ]
+    },
+    {
+      "id": "urban-rural-planning-law-scene-02",
+      "export": "UrbanRuralPlanningLaw02Scene",
+      "layout": "temporary-development-lane-2",
+      "anchor": "boundary",
+      "grammar": [
+        "temporary-demolish-gate",
+        "mnemonic-contrast"
+      ],
+      "textTreatments": [
+        "chip",
+        "external-negation",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "motion",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "urban-rural-planning-law-knowledge-2",
+        "urban-rural-planning-law-scene-02-temporary"
+      ],
+      "statefulObjects": [
+        "temporary-build-travel"
+      ]
+    },
+    {
+      "id": "urban-rural-planning-law-scene-03",
+      "export": "UrbanRuralPlanningLaw03Scene",
+      "layout": "grant-alloc-comparison-3",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "grant-alloc-band",
+        "deadline-gate"
+      ],
+      "textTreatments": [
+        "chip",
+        "soft-highlight",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "contrast",
+        "icon",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "urban-rural-planning-law-knowledge-3",
+        "urban-rural-planning-law-scene-03-grant",
+        "urban-rural-planning-law-scene-03-alloc"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}
