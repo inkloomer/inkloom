@@ -1,0 +1,70 @@
+{
+  "animationId": "resolution-validity",
+  "compositionId": "ResolutionValidity",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-09-01T13:03:11.308Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 371,
+      "frameCount": 186,
+      "id": "resolution-validity-scene-01",
+      "number": "01",
+      "startFrame": 0,
+      "title": "不成立、无效与可撤销",
+      "durationMs": 6200,
+      "file": "resolution-validity-scene-01.avif",
+      "fileSize": 636593,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "40b9d9efa8a7d97b2c5f4804aa9289ce5cdf3a174636e848331872a111d47fab",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "81474f63992cf77972fdf7c2008b71c3eed079878c9676d98f6b67d0dc880cba"
+    },
+    {
+      "endFrame": 737,
+      "frameCount": 183,
+      "id": "resolution-validity-scene-02",
+      "number": "02",
+      "startFrame": 372,
+      "title": "轻微与重大瑕疵",
+      "durationMs": 6100,
+      "file": "resolution-validity-scene-02.avif",
+      "fileSize": 649730,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "468d8045ba43092998fcc93acecdf279fe9883b8b32093980a67f8c0ccf7a432",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "81474f63992cf77972fdf7c2008b71c3eed079878c9676d98f6b67d0dc880cba"
+    },
+    {
+      "endFrame": 1127,
+      "frameCount": 195,
+      "id": "resolution-validity-scene-03",
+      "number": "03",
+      "startFrame": 738,
+      "title": "撤销之诉的期限与效果",
+      "durationMs": 6500,
+      "file": "resolution-validity-scene-03.avif",
+      "fileSize": 527434,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "0e31d63f6d5063665098a9d0f31acb669dc3bcd6ce79e6cba9667581ee6f34f0",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "81474f63992cf77972fdf7c2008b71c3eed079878c9676d98f6b67d0dc880cba"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "81474f63992cf77972fdf7c2008b71c3eed079878c9676d98f6b67d0dc880cba",
+  "targetFps": 30,
+  "totalFileSize": 1813757
+}

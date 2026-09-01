@@ -9,6 +9,13 @@
   "surface": "分支细线与矩形结论牌, 方形刻度章, 无圆角",
   "motion": "瑕疵沿三分叉跌落, 轻微与重大瑕疵成对点亮, 期限刻度依次走完",
   "transition": "分叉结构与结论牌颜色角色贯穿场景",
+  "conceptTokens": {
+    "决议": "FileWarning",
+    "撤销": "PencilLine",
+    "期限": "Clock3",
+    "瑕疵": "GitBranch",
+    "公司": "Landmark"
+  },
   "catalog": {
     "status": "variant",
     "sourceDirectionId": "decision-tree"

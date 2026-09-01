@@ -9,6 +9,13 @@
   "surface": "舱室隔板与传动细线, 方形标牌, 无圆角",
   "motion": "四舱依次点亮并传动人事权, 双条款舱并排翻开, 召集顺序沿舱梯逐级下传",
   "transition": "舱室框架与标牌颜色角色贯穿场景",
+  "conceptTokens": {
+    "股东会": "Crown",
+    "董事会": "Users",
+    "经理": "Briefcase",
+    "监事会": "ShieldCheck",
+    "表决": "Megaphone"
+  },
   "catalog": {
     "status": "variant",
     "sourceDirectionId": "isometric-mechanism"

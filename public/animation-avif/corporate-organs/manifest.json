@@ -1,0 +1,70 @@
+{
+  "animationId": "corporate-organs",
+  "compositionId": "CorporateOrgans",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-09-01T12:59:47.687Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 377,
+      "frameCount": 189,
+      "id": "corporate-organs-scene-01",
+      "number": "01",
+      "startFrame": 0,
+      "title": "四层机构与人事权",
+      "durationMs": 6300,
+      "file": "corporate-organs-scene-01.avif",
+      "fileSize": 671207,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "19341ec2d68f004f634b9469edb60c53e0e8ffab5746e3ba80e505649009251f",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "b88f9134720c17895df430a2839d6e57d68cb8481368cb65aac772ad6b10698f"
+    },
+    {
+      "endFrame": 761,
+      "frameCount": 192,
+      "id": "corporate-organs-scene-02",
+      "number": "02",
+      "startFrame": 378,
+      "title": "组成任期与解任辞任",
+      "durationMs": 6400,
+      "file": "corporate-organs-scene-02.avif",
+      "fileSize": 649805,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "7257227ffc0f0c6ad26d057212dde7b9fa3982a99184c9cd72dfd9e6cc6719b6",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "b88f9134720c17895df430a2839d6e57d68cb8481368cb65aac772ad6b10698f"
+    },
+    {
+      "endFrame": 1151,
+      "frameCount": 195,
+      "id": "corporate-organs-scene-03",
+      "number": "03",
+      "startFrame": 762,
+      "title": "股东会的召集与表决",
+      "durationMs": 6500,
+      "file": "corporate-organs-scene-03.avif",
+      "fileSize": 719872,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "21723a525e4882a8d82ae81eeb98b1ceff78b5b6f053fc745509c74c82ec65d6",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "b88f9134720c17895df430a2839d6e57d68cb8481368cb65aac772ad6b10698f"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "b88f9134720c17895df430a2839d6e57d68cb8481368cb65aac772ad6b10698f",
+  "targetFps": 30,
+  "totalFileSize": 2040884
+}
