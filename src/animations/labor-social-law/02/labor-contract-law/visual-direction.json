@@ -1,0 +1,16 @@
+{
+  "directionId": "contract-term-stairwall",
+  "derivedFrom": "demo-clerk-desk",
+  "variation": "劳动合同梯墙: 无固定期限主张过双十与2+1两道闸, 二倍工资沿月钟走满11格, 试用期四档阶梯逐级落位, 解除徽章在终止分流台上按补偿阶梯落座",
+  "family": "contract-term-stairwall",
+  "palette": "#EFECE4 + #2B2B33 + #5B4A8A + #8A4B2F + #15725F + #B23A30 + #B98A2F",
+  "typography": "WenKai 梯墙栏标 + 月钟徽章 + 补偿阶梯",
+  "composition": "无固定期限双闸 + 试用期服务期对栏 + 竞业派遣双卡 + 非全日制与解除限制 + 终止分流与补偿阶梯",
+  "surface": "梯墙纸卡、月钟徽章、竞业紫标与补偿金条, 无圆角",
+  "motion": "主张徽章过双十闸再落二倍工资钟, 试用期段沿四档阶梯落位, 解除徽章按谁提出与何种解除分流落座",
+  "transition": "藏蓝梯墙贯穿五场, 紫色竞业与红色禁止双线呼应",
+  "catalog": {
+    "status": "variant",
+    "sourceDirectionId": "contract-term-stairwall"
+  }
+}
