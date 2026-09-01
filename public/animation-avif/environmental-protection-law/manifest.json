@@ -1,0 +1,70 @@
+{
+  "animationId": "environmental-protection-law",
+  "compositionId": "EnvironmentalProtectionLaw",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-09-01T06:32:11.108Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 319,
+      "frameCount": 160,
+      "id": "environmental-protection-law-scene-01",
+      "number": "01",
+      "startFrame": 0,
+      "title": "环评制度",
+      "durationMs": 5333,
+      "file": "environmental-protection-law-scene-01.avif",
+      "fileSize": 588147,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "547d3131edf961fab982f10dacdf7b2d5b379d435af605088800fbe09efc8c22",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "73099780441e1cf077fbf4556db05dd37e8790e222789ccba43095b45c43cabb"
+    },
+    {
+      "endFrame": 639,
+      "frameCount": 160,
+      "id": "environmental-protection-law-scene-02",
+      "number": "02",
+      "startFrame": 320,
+      "title": "环保制度群",
+      "durationMs": 5333,
+      "file": "environmental-protection-law-scene-02.avif",
+      "fileSize": 684413,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "46446f7c8f42dce56b5309280d44f09a948d32cf86cca1bf8591a60d14227513",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "73099780441e1cf077fbf4556db05dd37e8790e222789ccba43095b45c43cabb"
+    },
+    {
+      "endFrame": 949,
+      "frameCount": 155,
+      "id": "environmental-protection-law-scene-03",
+      "number": "03",
+      "startFrame": 640,
+      "title": "法律责任",
+      "durationMs": 5167,
+      "file": "environmental-protection-law-scene-03.avif",
+      "fileSize": 424647,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "3bf14b013023ec0d7857ceee42d1f6cf75dd84960862b3c3c5fa71514b805922",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "73099780441e1cf077fbf4556db05dd37e8790e222789ccba43095b45c43cabb"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "73099780441e1cf077fbf4556db05dd37e8790e222789ccba43095b45c43cabb",
+  "targetFps": 30,
+  "totalFileSize": 1697207
+}
