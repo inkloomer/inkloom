@@ -1,0 +1,64 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 2,
+  "scenes": [
+    {
+      "id": "trademark-acquisition-scene-01",
+      "export": "TrademarkAcquisition01Scene",
+      "layout": "application-agent-board-1",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "application-principles-band",
+        "agent-rule-band"
+      ],
+      "textTreatments": [
+        "chip",
+        "stamp",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "motion",
+        "icon"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "trademark-acquisition-scene-01-principles",
+        "trademark-acquisition-law-knowledge-1"
+      ],
+      "statefulObjects": [
+        "application-form-travel"
+      ]
+    },
+    {
+      "id": "trademark-acquisition-scene-02",
+      "export": "TrademarkAcquisition02Scene",
+      "layout": "opposition-gate-track-2",
+      "anchor": "flow-path",
+      "grammar": [
+        "opposition-gate",
+        "reason-split-band"
+      ],
+      "textTreatments": [
+        "chip",
+        "stamp",
+        "thin-underline"
+      ],
+      "focalChannels": [
+        "motion",
+        "connector",
+        "contrast"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "trademark-acquisition-scene-02-flow",
+        "trademark-acquisition-law-knowledge-1",
+        "trademark-acquisition-knowledge-1"
+      ],
+      "statefulObjects": [
+        "opposition-claim-travel"
+      ]
+    }
+  ]
+}
