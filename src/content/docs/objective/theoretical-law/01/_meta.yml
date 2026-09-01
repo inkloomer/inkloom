@@ -1,46 +1,47 @@
 label: 01 法概念·本质·特征·作用·局限·价值·规则与原则
+order: 1
 entries:
-  - concept-of-law-dispute
-  - marxist-law-essence
-  - features-of-law
-  - functions-of-law
-  - limitations-of-law
-  - value-conflict
-  - legal-rules
-  - legal-principles
-  - sources-of-law
-  - legal-departments-system
-  - legal-validity
-  - legal-relations
-  - liability-concurrence
-  - judicial-vs-administrative
-  - application-of-law
-  - legal-loopholes
-  - legal-reasoning
-  - legal-families
-  - legal-modernization
-  - law-and-morality
-  - law-and-human-rights
-  - legislation-law
-  - features-of-constitution
-  - creation-of-constitution
-  - constitution-classification
-  - constitution-development
-  - constitution-principles
-  - constitution-sources-structure
-  - state-system
-  - election-law
-  - state-structure-divisions
-  - regional-ethnic-autonomy
-  - special-administrative-regions
-  - grassroots-autonomy
-  - citizen-fundamental-rights
-  - npc-standing-committee
-  - national-honors
-  - state-council
-  - emergency-decisions
-  - central-military-commission
-  - supervisory-organs
-  - local-people-congresses
-  - constitutional-supervision
-  - economic-system
+- concept-of-law-dispute
+- marxist-law-essence
+- features-of-law
+- functions-of-law
+- limitations-of-law
+- value-conflict
+- legal-rules
+- legal-principles
+- sources-of-law
+- legal-departments-system
+- legal-validity
+- legal-relations
+- liability-concurrence
+- judicial-vs-administrative
+- application-of-law
+- legal-loopholes
+- legal-reasoning
+- legal-families
+- legal-modernization
+- law-and-morality
+- law-and-human-rights
+- legislation-law
+- features-of-constitution
+- creation-of-constitution
+- constitution-classification
+- constitution-development
+- constitution-principles
+- constitution-sources-structure
+- state-system
+- election-law
+- state-structure-divisions
+- regional-ethnic-autonomy
+- special-administrative-regions
+- grassroots-autonomy
+- citizen-fundamental-rights
+- npc-standing-committee
+- national-honors
+- state-council
+- emergency-decisions
+- central-military-commission
+- supervisory-organs
+- local-people-congresses
+- constitutional-supervision
+- economic-system

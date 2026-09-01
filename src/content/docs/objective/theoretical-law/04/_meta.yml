@@ -1,32 +1,33 @@
 label: 04 司法制度与法律职业伦理
+order: 4
 entries:
-  - judicial-system-overview
-  - judicial-characteristics
-  - judicial-functions
-  - judicial-fairness-efficiency
-  - judicial-independence
-  - legal-professional-ethics
-  - judge-qualifications
-  - judge-management
-  - judge-ethics
-  - judge-liability
-  - people-assessors
-  - procuratorial-principles
-  - procuratorate-leadership
-  - procurator-ethics
-  - judge-procurator-discipline
-  - lawyer-system
-  - law-firm-establishment
-  - law-firm-types
-  - client-attorney-relations
-  - lawyer-promotion
-  - lawyer-fees
-  - lawyer-peer-relations
-  - legal-aid
-  - notary-qualifications
-  - notary-organs
-  - notary-refusal
-  - notary-procedure
-  - notary-rights-duties
-  - notary-remedies
-  - notary-ethics-liability
+- judicial-system-overview
+- judicial-characteristics
+- judicial-functions
+- judicial-fairness-efficiency
+- judicial-independence
+- legal-professional-ethics
+- judge-qualifications
+- judge-management
+- judge-ethics
+- judge-liability
+- people-assessors
+- procuratorial-principles
+- procuratorate-leadership
+- procurator-ethics
+- judge-procurator-discipline
+- lawyer-system
+- law-firm-establishment
+- law-firm-types
+- client-attorney-relations
+- lawyer-promotion
+- lawyer-fees
+- lawyer-peer-relations
+- legal-aid
+- notary-qualifications
+- notary-organs
+- notary-refusal
+- notary-procedure
+- notary-rights-duties
+- notary-remedies
+- notary-ethics-liability

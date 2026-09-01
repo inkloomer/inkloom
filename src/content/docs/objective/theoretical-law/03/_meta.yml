@@ -1,11 +1,12 @@
 label: 03 法制史
+order: 3
 entries:
-  - zhou-legal-history
-  - spring-autumn-warring-states
-  - han-confucianization
-  - wei-jin-nanbei-chaodai
-  - tang-code-liuzang-liusha
-  - qing-dynasty-examples
-  - republic-constitution-history
-  - new-democratic-legal-system
-  - legal-history-firsts
+- zhou-legal-history
+- spring-autumn-warring-states
+- han-confucianization
+- wei-jin-nanbei-chaodai
+- tang-code-liuzang-liusha
+- qing-dynasty-examples
+- republic-constitution-history
+- new-democratic-legal-system
+- legal-history-firsts

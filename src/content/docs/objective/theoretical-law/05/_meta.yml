@@ -1,5 +1,6 @@
 label: 05 习近平法治思想
+order: 5
 entries:
-  - xi-rule-of-law-formation
-  - xi-rule-of-law-core
-  - xi-rule-of-law-practice
+- xi-rule-of-law-formation
+- xi-rule-of-law-core
+- xi-rule-of-law-practice
