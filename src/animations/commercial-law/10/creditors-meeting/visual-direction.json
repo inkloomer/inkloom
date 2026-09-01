@@ -9,6 +9,13 @@
   "surface": "硬边抽屉与镜像分隔, 方形比例章, 无圆角",
   "motion": "三舱镜像依次点亮, 职权抽屉逐个拉开, 处分流程沿四步推进",
   "transition": "镜像柜框架与比例章颜色角色贯穿场景",
+  "conceptTokens": {
+    "债权人会议": "Users",
+    "管理人": "Crown",
+    "债委会": "ShieldCheck",
+    "监督": "ShieldCheck",
+    "表决": "Stamp"
+  },
   "catalog": {
     "status": "variant",
     "sourceDirectionId": "resolution-cabinet"

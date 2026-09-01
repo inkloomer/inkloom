@@ -1,0 +1,70 @@
+{
+  "animationId": "claim-filing",
+  "compositionId": "ClaimFiling",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-09-01T14:21:23.574Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 395,
+      "frameCount": 198,
+      "id": "claim-filing-scene-01",
+      "number": "01",
+      "startFrame": 0,
+      "title": "申报范围与期限",
+      "durationMs": 6600,
+      "file": "claim-filing-scene-01.avif",
+      "fileSize": 668962,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "6656d64255824d87e29b4434f09403c758ff80310acc7511675b5c7420f6ae89",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "cdad1ef69e20c46d7b843a34e8a86a08188b95811a3babe1892caca0da64c832"
+    },
+    {
+      "endFrame": 767,
+      "frameCount": 186,
+      "id": "claim-filing-scene-02",
+      "number": "02",
+      "startFrame": 396,
+      "title": "债务人破产时保证人申报",
+      "durationMs": 6200,
+      "file": "claim-filing-scene-02.avif",
+      "fileSize": 420005,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "653e1039d80d354bf141666a24a7f8647ce801cbf8ee576a9b51c44c8bb97ef8",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "cdad1ef69e20c46d7b843a34e8a86a08188b95811a3babe1892caca0da64c832"
+    },
+    {
+      "endFrame": 1151,
+      "frameCount": 192,
+      "id": "claim-filing-scene-03",
+      "number": "03",
+      "startFrame": 768,
+      "title": "保证人破产与双破产",
+      "durationMs": 6400,
+      "file": "claim-filing-scene-03.avif",
+      "fileSize": 472354,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "2ac2d6622a86a1a12073e99cde2a787d55c0ff5ce5cba232e95b8cdd49efce36",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "cdad1ef69e20c46d7b843a34e8a86a08188b95811a3babe1892caca0da64c832"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "cdad1ef69e20c46d7b843a34e8a86a08188b95811a3babe1892caca0da64c832",
+  "targetFps": 30,
+  "totalFileSize": 1561321
+}

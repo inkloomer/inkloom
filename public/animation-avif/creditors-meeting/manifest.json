@@ -1,0 +1,70 @@
+{
+  "animationId": "creditors-meeting",
+  "compositionId": "CreditorsMeeting",
+  "crf": 35,
+  "format": "animated-avif",
+  "generatedAt": "2026-09-01T14:23:16.844Z",
+  "loopCount": 1,
+  "quality": 45,
+  "scenes": [
+    {
+      "endFrame": 377,
+      "frameCount": 189,
+      "id": "creditors-meeting-scene-01",
+      "number": "01",
+      "startFrame": 0,
+      "title": "三会类比",
+      "durationMs": 6300,
+      "file": "creditors-meeting-scene-01.avif",
+      "fileSize": 493125,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "ee0b6c9967353b4401af571f429b8b5a19f81234220883eaeb6a588dfb98b2e7",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "78cd05aeb4f337f9b481c3025362763197e76caddec4e9f58819ea280f430a24"
+    },
+    {
+      "endFrame": 749,
+      "frameCount": 186,
+      "id": "creditors-meeting-scene-02",
+      "number": "02",
+      "startFrame": 378,
+      "title": "职权与决议规则",
+      "durationMs": 6200,
+      "file": "creditors-meeting-scene-02.avif",
+      "fileSize": 450139,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "62e4cc5bbb0ca4cce665b3fbacb8a2feffc40b5ffc4671893b468770046d7f1d",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "78cd05aeb4f337f9b481c3025362763197e76caddec4e9f58819ea280f430a24"
+    },
+    {
+      "endFrame": 1139,
+      "frameCount": 195,
+      "id": "creditors-meeting-scene-03",
+      "number": "03",
+      "startFrame": 750,
+      "title": "重大财产处分的流程",
+      "durationMs": 6500,
+      "file": "creditors-meeting-scene-03.avif",
+      "fileSize": 501923,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "85c163e0b5d6feb7cdc974d7eacc1a011ed4c765437cbd7ed5c00bab1269cc61",
+      "crf": 35,
+      "quality": 45,
+      "sceneFingerprint": "78cd05aeb4f337f9b481c3025362763197e76caddec4e9f58819ea280f430a24"
+    }
+  ],
+  "size": {
+    "height": 1440,
+    "width": 2560
+  },
+  "sourceFps": 60,
+  "sourceFingerprint": "78cd05aeb4f337f9b481c3025362763197e76caddec4e9f58819ea280f430a24",
+  "targetFps": 30,
+  "totalFileSize": 1445187
+}

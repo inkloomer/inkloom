@@ -9,6 +9,13 @@
   "surface": "柜台档条与方形申报章, 无圆角",
   "motion": "三要件依次盖章, 保证人申报沿双档分流, 双破产两栏并置对照",
   "transition": "柜台框架与申报章颜色角色贯穿场景",
+  "conceptTokens": {
+    "申报": "FileText",
+    "债权人": "Users",
+    "保证人": "Handshake",
+    "求偿权": "Undo2",
+    "期限": "CalendarClock"
+  },
   "catalog": {
     "status": "variant",
     "sourceDirectionId": "archival-dossier"
