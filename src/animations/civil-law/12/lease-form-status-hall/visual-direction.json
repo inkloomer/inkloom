@@ -1,0 +1,21 @@
+{
+  "directionId": "steel-lease-lease-form-status-hall",
+  "family": "steel-lease-lease-form-status-hall",
+  "palette": "steel blue lease hall, lapis filing rails, moss tenancy ribbons, brick void stamps, bone paper, slate ink",
+  "typography": "lease headings on steel rail tabs, bone chips with lapis and brick seals",
+  "composition": "a lease hall where form rules gate six-month contracts, three indefinite entries drain into one pool, the one-house podium ranks three tenants by possession filing and seniority, and the sublease switchboard routes a six-month rescission window into consent",
+  "surface": "bone paper dossiers, steel desk rails, lapis filing stamps",
+  "motion": "lease chips hop the written-form gate, three entries converge into the indefinite pool, tenant chips climb the podium in statutory order while losers keep valid claims, and the sublease token passes a six-month gate that either opens rescission or flips to consent",
+  "transition": "the steel hall floor, lapis rails and brick stamp posts persist while gates, pools, podiums and switchboards are re-dressed between scenes",
+  "conceptTokens": {
+    "租赁合同": "House",
+    "不定期租赁": "Hourglass",
+    "擅自转租": "Users"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/civil-law/12/lease-form-status-hall/",
+    "title": "黛蓝租赁馆"
+  }
+}

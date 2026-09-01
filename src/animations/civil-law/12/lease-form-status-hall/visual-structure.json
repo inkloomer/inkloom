@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "lease-form-indefinite",
+      "export": "LeaseFormScene",
+      "layout": "written-form-gate-into-indefinite-pool",
+      "anchor": "flow-path",
+      "grammar": [
+        "leases-over-six-months-need-writing-or-fail-unless-performed-and-accepted",
+        "registration-filing-is-administrative-and-never-blocks-validity-unless-agreed-as-condition",
+        "three-entries-produce-indefinite-tenancy-which-either-party-exits-by-notice",
+        "debt-offset-rent-lets-the-term-be-computed-so-it-stays-periodic"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["connector", "contrast", "enclosure", "motion"],
+      "tokens": ["ScrollText", "Hourglass", "House"],
+      "finalKnowledge": ["lease-form-rule", "lease-indefinite-types"],
+      "statefulObjects": []
+    },
+    {
+      "id": "one-house-leases",
+      "export": "OneHouseLeasesScene",
+      "layout": "tenant-podium-with-cross-regime-table",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "possession-beats-filing-and-filing-beats-earlier-formation-in-rank",
+        "ranked-out-tenants-keep-valid-contracts-and-claim-rescission-with-damages",
+        "ordinary-chattels-rank-payment-second-while-vehicles-rank-transfer-registration-second",
+        "housing-leases-rank-filing-second-keeping-formation-last-across-all-regimes"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["connector", "contrast", "enclosure", "motion"],
+      "tokens": ["Key", "Stamp", "ScrollText"],
+      "finalKnowledge": ["lease-priority-order", "lease-order-comparison"],
+      "statefulObjects": []
+    },
+    {
+      "id": "invalid-sublease",
+      "export": "InvalidSubleaseScene",
+      "layout": "void-list-then-sublease-switchboard",
+      "anchor": "timeline-gate",
+      "grammar": [
+        "illegal-structures-void-leases-and-overshooting-terms-fail-part-wise",
+        "void-leases-owe-no-rent-but-usage-fees-by-unjust-enrichment",
+        "unauthorized-sublease-gives-a-six-month-rescission-window-that-expires-into-consent",
+        "rescission-first-then-reclaim-and-lawful-subtenants-may-pay-rent-to-block-termination"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "external-negation"],
+      "focalChannels": ["connector", "contrast", "enclosure", "motion"],
+      "tokens": ["Ban", "Users", "Hourglass"],
+      "finalKnowledge": ["lease-void-types", "lease-sublease-rules", "sublease-case-verdicts"],
+      "statefulObjects": []
+    }
+  ]
+}
