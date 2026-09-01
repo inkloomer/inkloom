@@ -1,0 +1,22 @@
+{
+  "directionId": "rosewood-gift-gift-loan-hall",
+  "family": "rosewood-gift-gift-loan-hall",
+  "palette": "rosewood gift hall, plum revocation seals, moss refusal ribbons, gold interest rails, bone paper, walnut ink",
+  "typography": "gift-loan headings on rosewood rail tabs, bone chips with plum and gold seals",
+  "composition": "a gift-and-loan hall where two revocation gates sit side by side, the statutory revocation runs a one-year six-month clock into take-back outcomes, three gift lanes sequence their promise steps, the loan desk separates practice from consensus formation over three invalidity gateways, and the interest board splits presumption from capped rates",
+  "surface": "bone paper dossiers, rosewood desk rails, gold interest rulers",
+  "motion": "gift tokens pass revocation gates that void or preserve the contract, the statutory clock lights one-year and six-month windows before take-back stamps, lane steps fire in legal order, loan coins arrive at accounts to form contracts and bounce through invalidity gates, and the rate gauge marks the four-times-LPR redline",
+  "transition": "the rosewood hall floor, plum seals and gold rails persist while gates, clocks, lanes and boards are re-dressed between scenes",
+  "conceptTokens": {
+    "赠与合同": "Gift",
+    "撤销权": "Gavel",
+    "民间借贷": "Coins",
+    "利息": "Percent"
+  },
+  "catalog": {
+    "status": "featured",
+    "source": "original-node",
+    "route": "/inkloom/objective/civil-law/12/gift-loan-hall/",
+    "title": "绛红赠贷馆"
+  }
+}

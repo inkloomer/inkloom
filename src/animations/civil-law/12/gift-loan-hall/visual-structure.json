@@ -1,0 +1,92 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "gift-revocation-duo",
+      "export": "GiftRevocationDuoScene",
+      "layout": "gift-revocation-refusal-gates",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "gift-contract-is-bilateral-and-consensual-formed-by-agreement-without-delivery",
+        "arbitrary-revocation-needs-untransferred-rights-and-voids-the-contract-except-two-public-gifts",
+        "refusal-right-needs-deteriorated-economy-and-only-suspends-performance",
+        "refusal-keeps-the-contract-valid-while-revocation-kills-it-from-the-start"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["connector", "contrast", "enclosure", "motion"],
+      "tokens": ["Gift", "Ban", "Scale"],
+      "finalKnowledge": ["gift-nature", "arbitrary-revocation", "refusal-right"],
+      "statefulObjects": []
+    },
+    {
+      "id": "statutory-revocation",
+      "export": "StatutoryRevocationScene",
+      "layout": "statutory-clock-take-back-verdicts",
+      "anchor": "timeline-gate",
+      "grammar": [
+        "three-statutory-grounds-cover-serious-harm-unfulfilled-duty-and-broken-obligation",
+        "donor-exercises-within-one-year-while-heirs-and-agents-get-six-months-after-death-or-incapacity",
+        "transferred-property-is-claimed-back-and-untransferred-property-is-withheld",
+        "car-case-both-revocations-block-car-b-and-only-statutory-revocation-recalls-car-a"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["connector", "contrast", "enclosure", "motion"],
+      "tokens": ["Gavel", "Hourglass", "Gift"],
+      "finalKnowledge": ["statutory-grounds", "statutory-period-effect"],
+      "statefulObjects": []
+    },
+    {
+      "id": "obligation-condition-order",
+      "export": "ObligationOrderScene",
+      "layout": "three-lane-step-sequencer",
+      "anchor": "flow-path",
+      "grammar": [
+        "obligated-gift-performs-the-gift-first-then-the-obligation-falls-due",
+        "conditioned-gift-waits-for-the-condition-before-the-gift-becomes-due",
+        "support-agreement-cares-for-life-and-pays-with-the-estate-after-death",
+        "mansion-case-transfers-before-death-so-it-is-an-obligated-gift-revocable-within-one-year"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["connector", "contrast", "enclosure", "motion"],
+      "tokens": ["ScrollText", "Hourglass", "Gift"],
+      "finalKnowledge": ["obligation-condition-order", "support-agreement-case"],
+      "statefulObjects": []
+    },
+    {
+      "id": "loan-formation-invalidity",
+      "export": "LoanFormationScene",
+      "layout": "loan-desk-with-three-invalidity-gates",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "inter-individual-loans-are-real-contracts-formed-when-the-borrower-gains-control",
+        "loans-with-legal-persons-are-consensual-unless-otherwise-agreed",
+        "three-invalidity-gateways-cover-relending-crowdfunding-and-unlicensed-profit-lending",
+        "invalid-loans-strip-interest-and-term-and-refund-principal-as-unjust-enrichment"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "external-negation"],
+      "focalChannels": ["connector", "contrast", "enclosure", "motion"],
+      "tokens": ["Coins", "Landmark", "Ban"],
+      "finalKnowledge": ["loan-formation", "loan-invalidity"],
+      "statefulObjects": []
+    },
+    {
+      "id": "loan-interest-rules",
+      "export": "LoanInterestScene",
+      "layout": "interest-board-with-capped-gauge",
+      "anchor": "timeline-gate",
+      "grammar": [
+        "no-agreement-means-no-interest-by-default-rule",
+        "unclear-terms-are-interest-free-between-individuals-but-interest-bearing-with-legal-persons",
+        "interest-must-not-be-deducted-upfront-and-repayment-follows-the-actual-sum",
+        "rates-beyond-four-times-the-lpr-are-usury-and-void-for-the-excess"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["connector", "contrast", "enclosure", "motion"],
+      "tokens": ["Percent", "Coins", "Scale"],
+      "finalKnowledge": ["interest-presumption", "interest-caps"],
+      "statefulObjects": []
+    }
+  ]
+}
