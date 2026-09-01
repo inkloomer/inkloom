@@ -3,7 +3,7 @@
   "compositionId": "CrimeNumberReckoning",
   "crf": 35,
   "format": "animated-avif",
-  "generatedAt": "2026-08-30T10:16:15.980Z",
+  "generatedAt": "2026-09-01T14:07:59.647Z",
   "loopCount": 1,
   "quality": 45,
   "scenes": [
@@ -91,6 +91,22 @@
       "crf": 35,
       "quality": 45,
       "sceneFingerprint": "b32c724329250c6e419f75890ad389ec9a9343a1093dacd4f3ffdd3c05c08989"
+    },
+    {
+      "endFrame": 1579,
+      "frameCount": 310,
+      "id": "aggravate-one-act-upgrade",
+      "number": "06",
+      "startFrame": 1270,
+      "title": "加重犯·一个行为·法定刑升格",
+      "durationMs": 10333,
+      "file": "aggravate-one-act-upgrade.avif",
+      "fileSize": 572009,
+      "format": "avif",
+      "pixelFormat": "gbrp",
+      "sha256": "89cf9eb88766c5900453968b3f7630871c25304cc0e41f580c0bf7ee7cd1a105",
+      "crf": 35,
+      "quality": 45
     }
   ],
   "size": {
@@ -98,7 +114,6 @@
     "width": 2560
   },
   "sourceFps": 30,
-  "sourceFingerprint": "6c4b2fd086f20e4782eaa3bb924ed4f7883cbfdfd2da9bb5ef21252e62cb193c",
   "targetFps": 30,
-  "totalFileSize": 2868928
+  "totalFileSize": 3440937
 }
