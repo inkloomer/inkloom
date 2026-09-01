@@ -1,0 +1,16 @@
+{
+  "directionId": "ip-originality-press",
+  "derivedFrom": "demo-clerk-desk",
+  "variation": "独创性印社: 创意徽章在表达思想天平上滑向不保护侧, 外国人身份卡走所属国居住地首发出版国三门, 三类排除对象格板并排",
+  "family": "ip-originality-press",
+  "palette": "#EFECE4 + #2B2B33 + #2C4A6E + #8A4B2F + #15725F + #B23A30 + #B98A2F",
+  "typography": "WenKai 印社栏标 + 身份卡徽章 + 排除格板",
+  "composition": "表达思想天平与三要素 + 国人外国人保护双门 + 三类排除格板",
+  "surface": "印社纸卡、身份卡徽章、排除格板与金口诀条, 无圆角",
+  "motion": "创意徽章沿天平滑向不保护侧, 身份卡过三门之一落定保护, 格板逐格点亮",
+  "transition": "藏蓝印社贯穿三场, 铜色创作与红色排除双线呼应",
+  "catalog": {
+    "status": "variant",
+    "sourceDirectionId": "ip-originality-press"
+  }
+}

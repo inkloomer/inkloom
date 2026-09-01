@@ -1,0 +1,91 @@
+{
+  "version": 1,
+  "playerControlSafeBottom": 160,
+  "minimumDistinctLayouts": 3,
+  "scenes": [
+    {
+      "id": "copyright-subject-matter-scene-01",
+      "export": "CopyrightSubjectMatter01Scene",
+      "layout": "idea-expression-scale-1",
+      "anchor": "boundary",
+      "grammar": [
+        "idea-expression-scale",
+        "sports-exclude-band"
+      ],
+      "textTreatments": [
+        "chip",
+        "stamp",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "motion",
+        "icon"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "copyright-subject-matter-knowledge-1",
+        "copyright-subject-matter-scene-01-scale",
+        "copyright-subject-matter-scene-01-elements"
+      ],
+      "statefulObjects": [
+        "idea-expression-travel"
+      ]
+    },
+    {
+      "id": "copyright-subject-matter-scene-02",
+      "export": "CopyrightSubjectMatter02Scene",
+      "layout": "nationality-gate-pair-2",
+      "anchor": "role-pair",
+      "grammar": [
+        "nationality-gate",
+        "forbidden-works-band"
+      ],
+      "textTreatments": [
+        "chip",
+        "stamp",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "motion",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "copyright-subject-matter-knowledge-2",
+        "copyright-subject-matter-scene-02-chinese",
+        "copyright-subject-matter-scene-02-foreign"
+      ],
+      "statefulObjects": [
+        "foreigner-link-travel"
+      ]
+    },
+    {
+      "id": "copyright-subject-matter-scene-03",
+      "export": "CopyrightSubjectMatter03Scene",
+      "layout": "exclusion-triad-hall-3",
+      "anchor": "concept-icon",
+      "grammar": [
+        "exclusion-triad",
+        "news-split-band"
+      ],
+      "textTreatments": [
+        "chip",
+        "external-negation",
+        "soft-highlight"
+      ],
+      "focalChannels": [
+        "contrast",
+        "icon",
+        "annotation"
+      ],
+      "tokens": [],
+      "finalKnowledge": [
+        "copyright-subject-matter-scene-03-triad",
+        "copyright-subject-matter-knowledge-3"
+      ],
+      "statefulObjects": []
+    }
+  ]
+}
