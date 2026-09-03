@@ -9,6 +9,19 @@
   "surface": "mechanical rails, square sockets, and visible state switches without decorative rotation",
   "motion": "each legal input engages only its authorized enforcement output; objections reroute to review or trial without implying merits identity",
   "transition": "a central enforcement rail persists through launch, jurisdiction, agreements, objections, and special measures",
+  "conceptTokens": {
+    "被执行人": "UserX",
+    "申请执行人": "UserCheck",
+    "第三人": "UserRound",
+    "案外人": "UserRoundX",
+    "法院": "Landmark",
+    "查封、扣押、冻结": "Lock",
+    "中止执行": "PauseCircle",
+    "终结执行": "Flag",
+    "恢复执行": "RotateCcw",
+    "异议": "MessageSquareWarning",
+    "另行起诉": "Gavel"
+  },
   "catalog": {
     "status": "variant",
     "sourceDirectionId": "isometric-mechanism"

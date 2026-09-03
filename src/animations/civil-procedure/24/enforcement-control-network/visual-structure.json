@@ -175,6 +175,181 @@
         "personal-and-delay-relief"
       ],
       "statefulObjects": []
+    },
+    {
+      "id": "settlement-forms-consequences",
+      "export": "SettlementFormsConsequencesScene",
+      "layout": "settlement-forms-consequences-panel-fork",
+      "anchor": "document-fork",
+      "grammar": [
+        "three-forms-submit-court-counterparty-approval-recorded-in-notes",
+        "agreement-effects-suspension-and-release-of-seizure",
+        "fulfilled-means-execution-terminal-plus-separate-suit",
+        "breach-means-restore-original-execution-or-sue-on-agreement-but-choose-one"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "external-negation"],
+      "focalChannels": ["connector", "contrast", "enclosure", "motion"],
+      "tokens": ["Handshake", "PauseCircle", "Ban", "Flag", "Gavel", "RotateCcw", "Clock", "MapPin", "Check"],
+      "finalKnowledge": ["settlement-forms-effect", "settlement-fulfilled-terminal", "settlement-breach-election"],
+      "statefulObjects": []
+    },
+    {
+      "id": "outside-settlement-objection",
+      "export": "OutsideSettlementObjectionScene",
+      "layout": "outside-settlement-objection-rail",
+      "anchor": "flow-path",
+      "grammar": [
+        "agreement-without-court-submission-or-unapproved-keeps-execution-running",
+        "debtor-raises-conduct-objection",
+        "court-reviews-into-terminal-suspension-or-rejection"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "external-negation"],
+      "focalChannels": ["connector", "motion", "contrast", "enclosure"],
+      "tokens": ["FileText", "MessageSquareWarning", "UserRound", "Flag", "PauseCircle", "Ban"],
+      "finalKnowledge": ["outside-settlement-forms", "outside-settlement-objection-rulings"],
+      "statefulObjects": []
+    },
+    {
+      "id": "party-change-and-addition",
+      "export": "PartyChangeAndAdditionScene",
+      "layout": "party-change-two-lane-remedy-split",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "identity-lanes-only-need-status-so-review-by-higher-court",
+        "entity-lanes-need-substantive-conditions-so-separate-lawsuit",
+        "five-identity-cases-versus-four-entity-cases"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "external-negation"],
+      "focalChannels": ["contrast", "enclosure", "icon", "motion"],
+      "tokens": ["UserCheck", "UserX", "Merge", "Split", "UserCog", "Users", "Coins", "CircleDollarSign", "Building2", "FileX2", "RotateCcw", "Gavel"],
+      "finalKnowledge": ["party-change-identity-lane", "party-change-entity-lane", "party-change-remedy-fork"],
+      "statefulObjects": []
+    },
+    {
+      "id": "participation-distribution-gate",
+      "export": "ParticipationDistributionGateScene",
+      "layout": "participation-distribution-subject-condition-boundary",
+      "anchor": "boundary",
+      "grammar": [
+        "citizens-and-organizations-only-legal-persons-excluded",
+        "four-conditions-money-claims-insufficient-assets-execution-window",
+        "priority-holders-claim-first-others-share-by-claim-ratio"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "external-negation"],
+      "focalChannels": ["enclosure", "contrast", "icon", "motion"],
+      "tokens": ["Users", "Ban", "ShieldCheck", "Percent", "FileText", "Coins", "CircleDollarSign", "Clock"],
+      "finalKnowledge": ["distribution-subject-and-priority", "distribution-four-conditions"],
+      "statefulObjects": []
+    },
+    {
+      "id": "distribution-plan-objection-suit",
+      "export": "DistributionPlanObjectionSuitScene",
+      "layout": "distribution-plan-objection-correction-rail",
+      "anchor": "flow-path",
+      "grammar": [
+        "court-drafts-plan-and-delivers-to-creditors-and-debtor",
+        "no-objection-means-distribute-as-planned",
+        "objection-means-corrected-plan-then-opposition-spawns-distribution-objection-suit"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "external-negation"],
+      "focalChannels": ["connector", "motion", "contrast", "enclosure"],
+      "tokens": ["ScrollText", "BadgeCheck", "Coins", "Mail", "Gavel", "MessageSquareWarning"],
+      "finalKnowledge": ["distribution-plan-delivery", "distribution-no-objection-path", "distribution-objection-suit-path"],
+      "statefulObjects": []
+    },
+    {
+      "id": "mature-claim-notice-fork",
+      "export": "MatureClaimNoticeForkScene",
+      "layout": "mature-claim-notice-three-outcome-fork",
+      "anchor": "document-fork",
+      "grammar": [
+        "conditions-no-assets-plus-mature-claim-plus-application",
+        "third-party-fifteen-days-into-perform-object-or-face-enforcement",
+        "two-non-objections-and-one-shot-only"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "external-negation"],
+      "focalChannels": ["connector", "motion", "contrast", "enclosure"],
+      "tokens": ["Bell", "Check", "Gavel", "MessageSquareWarning", "Ban", "Landmark", "Clock"],
+      "finalKnowledge": ["mature-claim-conditions", "mature-claim-three-outcomes", "mature-claim-non-objections", "mature-claim-boundaries"],
+      "statefulObjects": []
+    },
+    {
+      "id": "co-owned-property-partition",
+      "export": "CoOwnedPropertyPartitionScene",
+      "layout": "co-owned-partition-agreement-lawsuit-branches",
+      "anchor": "flow-target",
+      "grammar": [
+        "co-owned-property-first-seizable-then-partitioned",
+        "agreement-partition-needs-creditor-approval-and-releases-others-shares",
+        "partition-lawsuit-suspends-execution-and-never-sells-before-partition",
+        "real-property-exclusive-jurisdiction"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "external-negation"],
+      "focalChannels": ["connector", "contrast", "enclosure", "motion"],
+      "tokens": ["Lock", "UserCheck", "UserX", "Unlock", "Gavel", "PauseCircle", "Ban", "Home", "MapPin", "Handshake"],
+      "finalKnowledge": ["co-owned-seizable-first", "co-owned-agreement-partition", "co-owned-partition-lawsuit", "co-owned-partition-jurisdiction"],
+      "statefulObjects": []
+    },
+    {
+      "id": "specific-thing-substitute",
+      "export": "SpecificThingSubstituteScene",
+      "layout": "specific-thing-original-substitute-timeline",
+      "anchor": "timeline-gate",
+      "grammar": [
+        "specific-thing-executes-the-original-thing-only",
+        "damage-or-loss-creates-substantive-compensation-dispute",
+        "agreement-or-lawsuit-then-execution-terminal-not-suspension"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "external-negation"],
+      "focalChannels": ["connector", "motion", "contrast", "enclosure"],
+      "tokens": ["Package", "Ban", "Scale", "Handshake", "Gavel", "Flag", "MessageSquareWarning"],
+      "finalKnowledge": ["specific-thing-original-rule", "specific-thing-compensation-dispute", "specific-thing-terminal-then-sue"],
+      "statefulObjects": []
+    },
+    {
+      "id": "retained-title-execution",
+      "export": "RetainedTitleExecutionScene",
+      "layout": "retained-title-two-scenario-split",
+      "anchor": "comparison-axis",
+      "grammar": [
+        "debtor-sells-then-third-party-pays-court-full-balance-to-release-seizure",
+        "debtor-buys-then-registered-retention-gets-priority-and-takeback-uses-outsider-objection"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "external-negation"],
+      "focalChannels": ["contrast", "enclosure", "icon", "motion"],
+      "tokens": ["UserX", "Coins", "Lock", "Unlock", "Ban", "Package", "Percent", "UserRoundX"],
+      "finalKnowledge": ["retained-title-sold-to-third-party", "retained-title-bought-from-third-party"],
+      "statefulObjects": []
+    },
+    {
+      "id": "apology-publication-execution",
+      "export": "ApologyPublicationExecutionScene",
+      "layout": "apology-publication-announcement-board",
+      "anchor": "concept-icon",
+      "grammar": [
+        "behavioral-duties-impact-reputation-apology",
+        "refusal-triggers-media-publication-or-judgment-disclosure-at-actor-expense"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["icon", "enclosure", "contrast", "motion"],
+      "tokens": ["MessageSquareWarning", "Eye", "BadgeCheck", "Ban", "Megaphone", "ScrollText", "Coins"],
+      "finalKnowledge": ["apology-behavioral-duties", "apology-publication-and-cost"],
+      "statefulObjects": []
+    },
+    {
+      "id": "delayed-performance-money",
+      "export": "DelayedPerformanceMoneyScene",
+      "layout": "delayed-performance-money-other-fork",
+      "anchor": "document-fork",
+      "grammar": [
+        "money-duty-pays-double-delay-interest",
+        "other-duty-pays-delay-fine-double-loss-or-court-discretion"
+      ],
+      "textTreatments": ["label-block", "chip", "stamp", "soft-highlight"],
+      "focalChannels": ["connector", "contrast", "icon", "motion"],
+      "tokens": ["Clock", "CircleDollarSign", "Gavel", "Percent", "Scale"],
+      "finalKnowledge": ["delayed-performance-premise", "delayed-money-double-interest", "delayed-other-duty-fine"],
+      "statefulObjects": []
     }
   ]
 }

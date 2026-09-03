@@ -1,41 +1,21 @@
-import type {CSSProperties,ReactNode} from 'react';
 import {Handshake, MapPin, PlayCircle, Scale, Wrench} from 'lucide-react';
-import {AbsoluteFill,interpolate,useCurrentFrame} from 'remotion';
-import {CLAMP,TimelineSequence,createMotionPrimitives} from '../../../../shared/remotion-runtime';
-import {SCENES,toSourceFrame} from './storyboard';
-
-const C={bg:'#e8edf0',ink:'#172129',red:'#0a7a73',teal:'#c54135',gold:'#d89b21',paper:'#fffdf7'};
-const STYLE={"backgroundImage":"linear-gradient(90deg,#0a7a7312 1px,transparent 1px),linear-gradient(#17212912 1px,transparent 1px)","backgroundSize":"38px 38px","codeLeft":72,"codeTop":46,"codeWidth":154,"codeHeight":68,"codeRadius":4,"codeRotate":"0deg","titleLeft":260,"titleTop":42,"titleRight":72,"titleSize":48,"titleAlign":"left","ruleLeft":72,"ruleRight":72,"ruleTop":136,"contentTop":166,"nodeRadius":4,"nodeBorderWidth":4,"nodeShadow":"6px 6px 0 #d89b2140,-6px -6px 0 #0a7a7320","nodeClip":"polygon(0 0,94% 0,100% 12%,100% 100%,6% 100%,0 88%)","nodePadding":"24px 26px","iconRadius":4} as const;
-const PLAYER_CONTROL_SAFE_BOTTOM = 160;
-const {Enter,MaskedReveal}=createMotionPrimitives(toSourceFrame);
-type Anchor='boundary'|'comparison-axis'|'concept-icon'|'document-fork'|'flow-path'|'flow-target'|'role-pair'|'timeline-gate'|'typographic-sequence';
-
-const Shell=({code,title,children}:{code:string;title:string;children:ReactNode})=><AbsoluteFill data-player-control-safe-bottom={PLAYER_CONTROL_SAFE_BOTTOM} style={{backgroundColor:C.bg,color:C.ink,overflow:'hidden'}}>
-  <div style={{position:'absolute',inset:0,backgroundImage:STYLE.backgroundImage,backgroundSize:STYLE.backgroundSize}}/>
-  <div style={{position:'absolute',left:STYLE.codeLeft,top:STYLE.codeTop,width:STYLE.codeWidth,height:STYLE.codeHeight,display:'grid',placeItems:'center',backgroundColor:C.ink,color:C.paper,fontSize:26,fontWeight:900,borderRadius:STYLE.codeRadius,rotate:STYLE.codeRotate}}>{code}</div>
-  <MaskedReveal style={{position:'absolute',left:STYLE.titleLeft,top:STYLE.titleTop,right:STYLE.titleRight,fontSize:STYLE.titleSize,fontWeight:900,lineHeight:1.2,textAlign:STYLE.titleAlign}}>{title}</MaskedReveal>
-  <div style={{position:'absolute',left:STYLE.ruleLeft,right:STYLE.ruleRight,top:STYLE.ruleTop,height:6,background:`linear-gradient(90deg,${C.red},${C.gold} 48%,${C.teal})`}}/>
-  <div style={{position:'absolute',left:72,right:72,top:STYLE.contentTop,bottom: PLAYER_CONTROL_SAFE_BOTTOM}}>{children}</div>
-</AbsoluteFill>;
-
-const anchorStyle=(anchor:Anchor,count:number):CSSProperties=>({
-  position:'absolute',inset:0,display:'grid',gap:24,alignItems:'stretch',
-  gridTemplateColumns:anchor==='typographic-sequence'?'1fr':anchor==='comparison-axis'||anchor==='role-pair'||anchor==='document-fork'?'repeat(2,minmax(0,1fr))':count>4?'repeat(3,minmax(0,1fr))':'repeat('+Math.min(count,4)+',minmax(0,1fr))',
-  gridAutoRows:'minmax(0,1fr)',padding:anchor==='boundary'?'40px 52px':'32px 28px',
-});
-
-const Diagram=({anchor,count,children}:{anchor:Anchor;count:number;children:ReactNode})=>{const frame=toSourceFrame(useCurrentFrame());const p=interpolate(frame,[12,92],[0,1],CLAMP);return <div style={{position:'absolute',inset:0}}>
-  <div style={{position:'absolute',left:anchor==='timeline-gate'||anchor==='flow-path'?40:'50%',right:anchor==='timeline-gate'||anchor==='flow-path'?40:undefined,top:anchor==='timeline-gate'||anchor==='flow-path'?'50%':34,bottom:anchor==='boundary'?34:undefined,width:anchor==='boundary'?'calc(100% - 100px)':anchor==='comparison-axis'?'6px':undefined,height:anchor==='boundary'?'calc(100% - 68px)':anchor==='timeline-gate'||anchor==='flow-path'?'6px':anchor==='comparison-axis'?'calc(100% - 68px)':'8px',border:anchor==='boundary'?'5px solid '+C.teal:undefined,backgroundColor:anchor==='boundary'?undefined:C.gold,borderRadius:STYLE.nodeRadius,scale:anchor==='timeline-gate'||anchor==='flow-path'?p+' 1':'1 '+p,transformOrigin:'left center',opacity:.8}}/>
-  {anchor==='document-fork'?<><div style={{position:'absolute',left:'24%',right:'24%',top:'50%',height:5,backgroundColor:C.red,scale:p+' 1',transformOrigin:'center'}}/><div style={{position:'absolute',left:'50%',top:'24%',bottom:'24%',width:5,backgroundColor:C.teal,scale:'1 '+p,transformOrigin:'center'}}/></>:null}
-  {anchor==='flow-target'?<><div style={{position:'absolute',left:'18%',top:'25%',width:'64%',height:5,backgroundColor:C.red,rotate:'18deg',scale:p+' 1'}}/><div style={{position:'absolute',left:'18%',bottom:'25%',width:'64%',height:5,backgroundColor:C.teal,rotate:'-18deg',scale:p+' 1'}}/></>:null}
-  <div style={anchorStyle(anchor,count)}>{children}</div>
-  </div>};
-
-const Knowledge=({index,icon,label,detail,...data}:{index:number;icon:ReactNode;label:string;detail:string;'data-final-knowledge':string})=><Enter delay={24+index*18} from={index%2===0?'left':'right'} style={{height:'100%'}}><div {...data} data-audit-boundary="true" style={{height:'100%',minHeight:112,backgroundColor:index%3===0?C.paper:index%3===1?C.teal+'12':C.gold+'18',border:STYLE.nodeBorderWidth+'px solid '+(index%3===0?C.ink:index%3===1?C.teal:C.gold),boxShadow:STYLE.nodeShadow,padding:STYLE.nodePadding,borderRadius:STYLE.nodeRadius,clipPath:STYLE.nodeClip,display:'grid',gridTemplateColumns:'48px minmax(0,1fr)',gridTemplateRows:'auto 1fr',columnGap:16,alignContent:'start'}}>
-  <div style={{gridRow:'1 / 3',width:46,height:46,display:'grid',placeItems:'center',backgroundColor:index%2===0?C.red:C.teal,color:C.paper,borderRadius:STYLE.iconRadius}}>{icon}</div>
-  <div style={{fontSize:30,fontWeight:900,lineHeight:1.18,borderBottom:'3px solid '+(index%2===0?C.gold:C.red),paddingBottom:8}}>{label}</div>
-  <div style={{fontSize:23,fontWeight:650,lineHeight:1.5,paddingTop:10,whiteSpace:'pre-wrap'}}>{detail.replaceAll('｜',' · ')}</div>
-  </div></Enter>;
+import {AbsoluteFill} from 'remotion';
+import {TimelineSequence} from '../../../../shared/remotion-runtime';
+import {Diagram, Knowledge, Shell} from './enforcement-shared';
+import {SCENES} from './storyboard';
+import {
+  ApologyPublicationExecutionScene,
+  CoOwnedPropertyPartitionScene,
+  DelayedPerformanceMoneyScene,
+  DistributionPlanObjectionSuitScene,
+  MatureClaimNoticeForkScene,
+  OutsideSettlementObjectionScene,
+  PartyChangeAndAdditionScene,
+  ParticipationDistributionGateScene,
+  RetainedTitleExecutionScene,
+  SettlementFormsConsequencesScene,
+  SpecificThingSubstituteScene,
+} from './EnforcementScenes';
 
 export const EnforcementLaunchClockScene=()=> <Shell code="24.1" title="生效文书与 2 年申请执行时效"><div data-layout="enforcement-launch-clock-direct-timeline-gate-diagram" data-visual-anchor="timeline-gate" data-visual-grammar="enforceable-title,clear-obligation,two-year-period,starting-points,suspension-interruption" data-text-treatments="thin-underline,label-block,stamp" data-focal-rule="enforcement-launch-clock-rule" data-focal-channels="motion,locator,icon" style={{position:'absolute',inset:0}}>
       <Diagram anchor="timeline-gate" count={5}>
@@ -93,4 +73,15 @@ export const EnforcementControlNetwork=()=> <AbsoluteFill>    <TimelineSequence 
     <TimelineSequence name="03-security-and-settlement" start={SCENES.securityAndSettlement.start} duration={SCENES.securityAndSettlement.duration}><SecurityAndSettlementScene/></TimelineSequence>
     <TimelineSequence name="04-objections-and-actions" start={SCENES.objectionsAndActions.start} duration={SCENES.objectionsAndActions.duration}><ObjectionsAndActionsScene/></TimelineSequence>
     <TimelineSequence name="05-special-enforcement-measures" start={SCENES.specialEnforcementMeasures.start} duration={SCENES.specialEnforcementMeasures.duration}><SpecialEnforcementMeasuresScene/></TimelineSequence>
+    <TimelineSequence name="06-settlement-forms-consequences" start={SCENES.settlementFormsConsequences.start} duration={SCENES.settlementFormsConsequences.duration}><SettlementFormsConsequencesScene/></TimelineSequence>
+    <TimelineSequence name="07-outside-settlement-objection" start={SCENES.outsideSettlementObjection.start} duration={SCENES.outsideSettlementObjection.duration}><OutsideSettlementObjectionScene/></TimelineSequence>
+    <TimelineSequence name="08-party-change-and-addition" start={SCENES.partyChangeAndAddition.start} duration={SCENES.partyChangeAndAddition.duration}><PartyChangeAndAdditionScene/></TimelineSequence>
+    <TimelineSequence name="09-participation-distribution-gate" start={SCENES.participationDistributionGate.start} duration={SCENES.participationDistributionGate.duration}><ParticipationDistributionGateScene/></TimelineSequence>
+    <TimelineSequence name="10-distribution-plan-objection-suit" start={SCENES.distributionPlanObjectionSuit.start} duration={SCENES.distributionPlanObjectionSuit.duration}><DistributionPlanObjectionSuitScene/></TimelineSequence>
+    <TimelineSequence name="11-mature-claim-notice-fork" start={SCENES.matureClaimNoticeFork.start} duration={SCENES.matureClaimNoticeFork.duration}><MatureClaimNoticeForkScene/></TimelineSequence>
+    <TimelineSequence name="12-co-owned-property-partition" start={SCENES.coOwnedPropertyPartition.start} duration={SCENES.coOwnedPropertyPartition.duration}><CoOwnedPropertyPartitionScene/></TimelineSequence>
+    <TimelineSequence name="13-specific-thing-substitute" start={SCENES.specificThingSubstitute.start} duration={SCENES.specificThingSubstitute.duration}><SpecificThingSubstituteScene/></TimelineSequence>
+    <TimelineSequence name="14-retained-title-execution" start={SCENES.retainedTitleExecution.start} duration={SCENES.retainedTitleExecution.duration}><RetainedTitleExecutionScene/></TimelineSequence>
+    <TimelineSequence name="15-apology-publication-execution" start={SCENES.apologyPublicationExecution.start} duration={SCENES.apologyPublicationExecution.duration}><ApologyPublicationExecutionScene/></TimelineSequence>
+    <TimelineSequence name="16-delayed-performance-money" start={SCENES.delayedPerformanceMoney.start} duration={SCENES.delayedPerformanceMoney.duration}><DelayedPerformanceMoneyScene/></TimelineSequence>
   </AbsoluteFill>;
